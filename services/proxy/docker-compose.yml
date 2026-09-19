@@ -1,0 +1,19 @@
+services:
+  neon-lion-knowledge-proxy:
+    build: .
+    container_name: neon-lion-knowledge-proxy
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      VIRTUAL_HOST: ${PROXY_PUBLIC_HOST}
+      LETSENCRYPT_HOST: ${PROXY_PUBLIC_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+    expose:
+      - "8000"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

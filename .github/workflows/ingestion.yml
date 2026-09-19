@@ -1,0 +1,38 @@
+name: Daily knowledge ingestion
+
+on:
+  schedule:
+    # 08:17 Asia/Shanghai. GitHub may delay scheduled runs during busy periods.
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: neon-lion-ingestion
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    # Scheduled jobs must not silently run with empty credentials.
+    if: ${{ secrets.SUPABASE_URL != '' && secrets.SUPABASE_SERVICE_ROLE_KEY != '' }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -r workers/ingestion/requirements.txt
+      - name: Lease and process due jobs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          APP_TIMEZONE: Asia/Shanghai
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        working-directory: workers/ingestion
+        run: python worker.py
