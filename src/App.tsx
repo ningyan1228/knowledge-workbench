@@ -11,22 +11,25 @@ import { proxyRequest } from './lib/api'
 import { insufficientEvidenceReply, type ReplyTone } from './lib/qa'
 import { addCatalogSource, ensureInitialProducts, enqueueIngestion, enqueueSourceValidation, listArticleSummaries, listArticles, listProducts, listSources, setSourceEnabled, sourceCatalog, uploadDocument, type WorkspaceArticle, type WorkspaceProduct, type WorkspaceSource } from './lib/workspace'
 import type { ProductSummary } from './lib/types'
+import { MarketIntelligence } from './features/market/MarketIntelligence'
 
-type Page = 'dashboard' | 'products' | 'intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
+type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
 type Draft = { title: string; body: string; translation: string; productName: string; savedAt: string }
+const marketIntelligenceEnabled = import.meta.env.VITE_FEATURE_MARKET_INTELLIGENCE !== 'false'
 
 const navigation: Array<{ id: Page; label: string; icon: typeof LayoutDashboard }> = [
   { id: 'dashboard', label: '今日工作台', icon: LayoutDashboard },
   { id: 'products', label: '产品知识库', icon: BookOpen },
   { id: 'intelligence', label: '行业情报', icon: Globe2 },
+  { id: 'market-intelligence', label: '市场情报', icon: Globe2 },
   { id: 'practice', label: '外贸实务', icon: GraduationCap },
   { id: 'assistant', label: '资料问答', icon: Sparkles },
   { id: 'studio', label: '内容工作室', icon: Clipboard },
 ]
 
 function getPage(): Page {
-  const requested = window.location.hash.replace(/^#\/?/, '') as Page
-  return navigation.some((item) => item.id === requested) || requested === 'settings' ? requested : 'dashboard'
+  const requested = window.location.hash.replace(/^#\/?/, '').split('/')[0] as Page
+  return (requested !== 'market-intelligence' || marketIntelligenceEnabled) && (navigation.some((item) => item.id === requested) || requested === 'settings') ? requested : 'dashboard'
 }
 
 function StatusPill({ status }: { status: string }) {
@@ -65,7 +68,7 @@ export function App() {
   return <div className="app-shell">
     <aside className={`sidebar ${sidebarOpen ? 'is-open' : ''}`} aria-label="主导航">
       <div className="brand"><div className="brand-mark">NL</div><div><strong>阳光心材料</strong><span>知识工作台</span></div><button className="icon-button mobile-only" onClick={() => setSidebarOpen(false)} aria-label="关闭导航"><X size={18} /></button></div>
-      <nav>{navigation.map(({ id, label, icon: Icon }) => <button key={id} className={page === id ? 'nav-item active' : 'nav-item'} onClick={() => navigate(id)}><Icon size={18} />{label}</button>)}</nav>
+      <nav>{navigation.filter((item) => item.id !== 'market-intelligence' || marketIntelligenceEnabled).map(({ id, label, icon: Icon }) => <button key={id} className={page === id ? 'nav-item active' : 'nav-item'} onClick={() => navigate(id)}><Icon size={18} />{label}</button>)}</nav>
       <div className="sidebar-footer"><div className="setup-card"><span>当前模式</span><strong>{hasSupabaseConfig ? '已连接 Supabase' : '本地预览'}</strong><p>{hasSupabaseConfig ? '请先登录以读取你的私人数据。' : '尚未连接数据库；示例资料不会上传。'}</p><button onClick={() => navigate('settings')}>查看配置 <ChevronRight size={14} /></button></div><button className="nav-item" onClick={() => navigate('settings')}><Settings size={18} />资料与设置</button></div>
     </aside>
     {sidebarOpen && <button className="scrim" aria-label="关闭导航遮罩" onClick={() => setSidebarOpen(false)} />}
@@ -77,6 +80,7 @@ export function App() {
         {page === 'dashboard' && <Dashboard onNavigate={navigate} onSelectProduct={(id) => { setSelectedProductId(id); navigate('products') }} />}
         {page === 'products' && <ProductLibrary selected={selectedProduct} onSelect={setSelectedProductId} onNotice={setNotice} />}
         {page === 'intelligence' && <Intelligence />}
+        {page === 'market-intelligence' && marketIntelligenceEnabled && <MarketIntelligence />}
         {page === 'practice' && <Practice />}
         {page === 'assistant' && <Assistant product={selectedProduct} />}
         {page === 'studio' && <Studio product={selectedProduct} />}

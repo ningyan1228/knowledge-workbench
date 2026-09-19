@@ -3,7 +3,7 @@
 ## 1. Supabase
 
 1. 新建私人 Supabase 项目，关闭公开注册或改为仅允许你自己的登录方式。
-2. 在 SQL Editor 按文件名顺序执行 `supabase/migrations/` 中的迁移。迁移会创建私有 `private-documents` bucket、RLS、文件路径策略、幂等任务和 worker 租约 RPC。
+2. 在 SQL Editor 按文件名顺序执行 `supabase/migrations/` 中的迁移。迁移会创建私有 `private-documents` bucket、RLS、文件路径策略、幂等任务和 worker 租约 RPC；二期还会增加私有市场情报实体，详见 `docs/market-intelligence-phase-2.md`。
 3. 创建你的第一个 Auth 用户。首次登录后，向 `profiles` 插入一条 `id` 与 `owner_id` 都等于该用户 UUID 的记录。
 4. 浏览器 `.env` 只填项目 URL 与 publishable key；绝不填 `service_role`、AI 或搜索密钥。
 
