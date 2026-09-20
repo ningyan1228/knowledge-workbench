@@ -1,6 +1,6 @@
 -- Stable, user-scoped keys make the three initial catalog entries idempotent without inventing product grades.
 alter table public.products add column import_key text;
-create unique index products_owner_import_key_idx on public.products(owner_id, import_key) where import_key is not null;
+alter table public.products add constraint products_owner_import_key_key unique(owner_id, import_key);
 
 -- A profile is created with the Auth user, so the first-login setup does not require manual SQL inserts.
 create or replace function public.handle_new_user() returns trigger language plpgsql security definer set search_path = public, pg_temp as $$
