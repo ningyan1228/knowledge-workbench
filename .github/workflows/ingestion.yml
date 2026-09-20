@@ -16,13 +16,20 @@ concurrency:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    # Scheduled jobs must not silently run with empty credentials.
-    if: ${{ secrets.SUPABASE_URL != '' && secrets.SUPABASE_SERVICE_ROLE_KEY != '' }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Check required worker secrets
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in repository Actions Secrets."
+            exit 1
+          fi
       - run: pip install -r workers/ingestion/requirements.txt
       - name: Lease and process due jobs
         env:

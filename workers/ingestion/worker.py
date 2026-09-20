@@ -42,7 +42,9 @@ class Worker:
     def __init__(self, config: Settings):
         self.config = config
         self.base = config.supabase_url.rstrip('/')
-        self.headers = {'apikey': config.supabase_service_role_key, 'Authorization': f'Bearer {config.supabase_service_role_key}', 'Content-Type': 'application/json'}
+        # Supabase's current server keys are `sb_secret_...` values. They belong
+        # in the API-key header and must never be logged or sent to a browser.
+        self.headers = {'apikey': config.supabase_service_role_key, 'Content-Type': 'application/json'}
         self.http = httpx.AsyncClient(timeout=httpx.Timeout(20, connect=8), follow_redirects=False)
 
     async def close(self):
