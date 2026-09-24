@@ -3,7 +3,7 @@ import { proxyRequest } from './api'
 import { supabase } from './supabase'
 import { products as catalog } from './demoData'
 
-export type WorkspaceProduct = { id: string; import_key: string | null; name_zh: string; name_en: string | null; grade: string | null }
+export type WorkspaceProduct = { id: string; import_key: string | null; name_zh: string; name_en: string | null; grade: string | null; current_version_id: string | null }
 export type WorkspaceSource = { id: string; name: string; endpoint_url: string; adapter: string; verification_status: string; enabled: boolean; last_verified_at: string | null; last_success_at: string | null; failure_reason: string | null }
 export type WorkspaceArticle = { id: string; title: string; canonical_url: string; source_published_at: string | null; source_published_text: string | null; content_access: string; content_text: string | null; kind: string; source_id: string | null }
 
@@ -31,7 +31,7 @@ export async function ensureInitialProducts(user: User): Promise<WorkspaceProduc
 }
 
 export async function listProducts(): Promise<WorkspaceProduct[]> {
-  const { data, error } = await client().from('products').select('id,import_key,name_zh,name_en,grade').order('created_at')
+  const { data, error } = await client().from('products').select('id,import_key,name_zh,name_en,grade,current_version_id').order('created_at')
   if (error) throw error
   return data ?? []
 }

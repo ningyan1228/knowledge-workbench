@@ -5,13 +5,14 @@ import {
   FileUp, Globe2, GraduationCap, LayoutDashboard, Menu, Moon, PanelLeftClose, Plus,
   Search, Send, Settings, Sparkles, Sun, X,
 } from 'lucide-react'
-import { articles, practiceTopics, products } from './lib/demoData'
+import { articles, products } from './lib/demoData'
 import { apiBaseUrl, hasSupabaseConfig, supabase } from './lib/supabase'
 import { proxyRequest } from './lib/api'
 import { insufficientEvidenceReply, type ReplyTone } from './lib/qa'
 import { addCatalogSource, ensureInitialProducts, enqueueIngestion, enqueueSourceValidation, listArticleSummaries, listArticles, listProducts, listSources, setSourceEnabled, sourceCatalog, uploadDocument, type WorkspaceArticle, type WorkspaceProduct, type WorkspaceSource } from './lib/workspace'
 import type { ProductSummary } from './lib/types'
 import { MarketIntelligence } from './features/market/MarketIntelligence'
+import { LearningWorkspace } from './features/learning/Learning'
 
 type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
 type Draft = { title: string; body: string; translation: string; productName: string; savedAt: string }
@@ -22,14 +23,15 @@ const navigation: Array<{ id: Page; label: string; icon: typeof LayoutDashboard 
   { id: 'products', label: '产品知识库', icon: BookOpen },
   { id: 'intelligence', label: '行业情报', icon: Globe2 },
   { id: 'market-intelligence', label: '市场情报', icon: Globe2 },
-  { id: 'practice', label: '外贸实务', icon: GraduationCap },
+  { id: 'practice', label: '外贸学习', icon: GraduationCap },
   { id: 'assistant', label: '资料问答', icon: Sparkles },
   { id: 'studio', label: '内容工作室', icon: Clipboard },
 ]
 
 function getPage(): Page {
-  const requested = window.location.hash.replace(/^#\/?/, '').split('/')[0] as Page
-  return (requested !== 'market-intelligence' || marketIntelligenceEnabled) && (navigation.some((item) => item.id === requested) || requested === 'settings') ? requested : 'dashboard'
+  const requested = window.location.hash.replace(/^#\/?/, '').split('/')[0]
+  if (requested === 'learning') return 'practice'
+  return (requested !== 'market-intelligence' || marketIntelligenceEnabled) && (navigation.some((item) => item.id === requested) || requested === 'settings') ? requested as Page : 'dashboard'
 }
 
 function StatusPill({ status }: { status: string }) {
@@ -81,7 +83,7 @@ export function App() {
         {page === 'products' && <ProductLibrary selected={selectedProduct} onSelect={setSelectedProductId} onNotice={setNotice} />}
         {page === 'intelligence' && <Intelligence />}
         {page === 'market-intelligence' && marketIntelligenceEnabled && <MarketIntelligence />}
-        {page === 'practice' && <Practice />}
+        {page === 'practice' && <LearningWorkspace />}
         {page === 'assistant' && <Assistant product={selectedProduct} />}
         {page === 'studio' && <Studio product={selectedProduct} />}
         {page === 'settings' && <SettingsPage onNotice={setNotice} />}
@@ -96,7 +98,7 @@ function Dashboard({ onNavigate, onSelectProduct }: { onNavigate: (page: Page) =
   return <><div className="page-heading"><div><p className="eyebrow">Asia/Shanghai · {new Intl.DateTimeFormat('zh-CN', { dateStyle: 'full' }).format(new Date())}</p><h1>今天，先把一件事弄清楚。</h1><p>从可核对的产品资料开始，再去理解行业与客户问题。</p></div><button className="primary-button" onClick={() => onNavigate('assistant')}><Sparkles size={17} />问一个客户问题</button></div>
     <div className="metric-grid"><Metric value="0" label="今日新增资讯" hint="尚未配置采集来源" /><Metric value="3" label="待上传原文件" hint="导入后才可建立引用" /><Metric value="8" label="待确认事项" hint="先向工厂核对再对外使用" /></div>
     <div className="content-grid"><section className="card span-2"><div className="card-heading"><div><p className="eyebrow">今日精选</p><h2>暂无重要更新</h2></div><button className="text-button" onClick={() => onNavigate('intelligence')}>查看行业情报 <ChevronRight size={16} /></button></div><EmptyState title="等你启用来源" description="正式采集完成后，这里只显示有原始链接、发布日期和中文摘要的内容。" action={<button className="secondary-button" onClick={() => onNavigate('settings')}>管理来源</button>} /></section>
-      <section className="card"><div className="card-heading"><div><p className="eyebrow">今日学习</p><h2>从 PP 附着力开始</h2></div><BookOpen size={19} /></div><p className="muted">学习“低表面能基材”与 “water-based adhesion promoter” 的关系。</p><button className="text-button" onClick={() => onSelectProduct('nl-w1201')}>打开 NL-W1201 专题 <ChevronRight size={16} /></button></section>
+      <section className="card"><div className="card-heading"><div><p className="eyebrow">今日学习</p><h2>从一笔订单的角色开始</h2></div><GraduationCap size={19} /></div><p className="muted">40 节外贸核心课：先阅读，再提交练习和确认已读；答案仅保存到你的私人资料库。</p><button className="text-button" onClick={() => onNavigate('practice')}>打开外贸学习 <ChevronRight size={16} /></button></section>
       <section className="card span-2"><div className="card-heading"><div><p className="eyebrow">工厂待确认</p><h2>先问清楚，再写进邮件</h2></div><button className="text-button" onClick={() => onNavigate('products')}>查看全部</button></div><div className="task-list">{products.flatMap((product) => product.reviewTasks.slice(0, 1).map((task) => <div className="task" key={product.id}><span className="task-dot" /><div><strong>{product.name}</strong><p>{task}</p></div><StatusPill status="待确认" /></div>))}</div></section>
       <section className="card"><div className="card-heading"><div><p className="eyebrow">下一步</p><h2>完成首次设置</h2></div></div><ol className="step-list"><li><span>1</span>连接 Supabase</li><li><span>2</span>上传三份原始资料</li><li><span>3</span>验证至少三个来源</li></ol><button className="primary-button full-width" onClick={() => onNavigate('settings')}>开始设置</button></section>
     </div></>
@@ -124,7 +126,6 @@ function Intelligence() {
   useEffect(() => { void refresh() }, [])
   return <><div className="page-heading"><div><p className="eyebrow">行业情报</p><h1>资讯要有出处，才值得花时间。</h1><p>{actual.length ? '以下是你的资料库实际入库结果；每条均保留原文链接和访问级别。' : '尚无实际入库文章；候选来源不能视为已采集成功。'}</p></div><button className="primary-button" onClick={() => window.location.hash = 'settings'}><Plus size={17} />管理来源</button></div><div className="filter-bar"><button className="filter active" onClick={() => void refresh()}>刷新</button><button className="filter">技术指南</button><button className="filter">行业资讯</button><button className="filter">规则更新</button></div><div className="article-list">{actual.length ? actual.map((article) => <article className="article-card" key={article.id}><div className="article-meta"><span>{article.kind}</span><span>{article.content_access === 'summary_only' ? '仅摘要' : '公开页面'}</span><span>{article.source_published_text || article.source_published_at || '日期未知'}</span></div><h2>{article.title}</h2><p>{summaries[article.id]?.summary_zh || (article.content_text ? '已提取原文摘要，等待中文摘要配置或生成。' : '来源未提供可处理的正文或摘要，不能生成内容摘要。')}</p>{article.content_text && <details><summary>查看已提取原文摘要</summary><p className="source-excerpt">{article.content_text}</p></details>}<div className="article-footer"><span className="chip">{summaries[article.id] ? '中文摘要已入库' : '尚无中文摘要'}</span><span className="muted">{summaries[article.id]?.business_meaning || '请回到原始来源核对；不得作为自有产品性能。'}</span><a href={article.canonical_url} target="_blank" rel="noreferrer">打开原文 <ArrowUpRight size={15} /></a></div></article>) : articles.map((article) => <article className="article-card" key={article.id}><div className="article-meta"><span>{article.kind}</span><span>{article.source}</span><span>{article.publishedAt}</span></div><h2>{article.title}</h2><p>{article.summary}</p><div className="article-footer"><span className="chip">{article.products.join(' / ')}</span><span className="muted">{article.relevance}</span><a href={article.sourceUrl} target="_blank" rel="noreferrer">打开候选网站 <ArrowUpRight size={15} /></a></div></article>)}</div>{!actual.length && <div className="callout"><CircleAlert size={18} /><div><strong>{loaded ? '尚未完成实际采集' : '正在读取你的资料库'}</strong><p>先在“资料与设置”添加来源、验证端点、启用来源并运行 worker；官网主页和 HTTP 200 都不是完成标准。</p></div></div>}</> }
 
-function Practice() { const [selected, setSelected] = useState(0); const [learned, setLearned] = useState(false); return <><div className="page-heading"><div><p className="eyebrow">外贸实务</p><h1>先理解流程，再处理一封邮件。</h1><p>法规、运输、税务等内容在接入前均需标明地区、来源与最后核验日期。</p></div></div><div className="practice-layout"><aside className="practice-nav">{practiceTopics.map(([name], index) => <button key={name} onClick={() => { setSelected(index); setLearned(false) }} className={selected === index ? 'active' : ''}>{name}<ChevronRight size={16} /></button>)}</aside><article className="lesson-card"><p className="eyebrow">入门学习 · 待补充经核对来源</p><h2>{practiceTopics[selected][0]}</h2><p>{practiceTopics[selected][1]}</p><div className="lesson-note"><strong>学习提示</strong><p>先把事实和未知项分开记录。涉及目的国规则、HS 编码、危险品属性时，请回到主管机构、物流商或具备资质的顾问确认。</p></div><button className={learned ? 'secondary-button' : 'primary-button'} onClick={() => setLearned(!learned)}>{learned ? <><CheckCircle2 size={17} />已标记完成</> : '标记本节已学习'}</button></article></div></> }
 
 function Assistant({ product }: { product: ProductSummary }) {
   const [question, setQuestion] = useState('')
