@@ -1,0 +1,68 @@
+import { describe, expect, it } from 'vitest'
+import { marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications } from '../src/lib/productMarketMap'
+
+describe('global product lead map', () => {
+  it('gives each product a defined customer-search route', () => {
+    expect(marketProducts.map((product) => product.id).sort()).toEqual(['elo', 'fertilizer-coating', 'nl-w1201'])
+    for (const product of marketProducts) {
+      expect(product.tdsApplicationIds.length).toBeGreaterThan(0)
+      expect(product.searchLogic).not.toHaveLength(0)
+      expect(product.searchTerms.length).toBeGreaterThan(0)
+      expect(product.tdsScope).toMatch(/已提供|TDS/)
+    }
+  })
+
+  it('keeps TDS applications, market extensions, and target company types as separate evidence-linked records', () => {
+    for (const application of tdsVerifiedApplications) {
+      expect(marketProducts.some((product) => product.id === application.productId)).toBe(true)
+      expect(application.sourceDocument).not.toHaveLength(0)
+    }
+    for (const extension of marketExtendedApplications) {
+      const parent = tdsVerifiedApplications.find((application) => application.id === extension.basedOnTdsApplicationId)
+      expect(parent?.productId).toBe(extension.productId)
+      expect(extension.sourceName).not.toHaveLength(0)
+      expect(extension.sourceUrl).toMatch(/^https:\/\//)
+      expect(extension.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+    }
+    for (const type of targetCompanyTypes) {
+      expect(type.applicationReferences.length).toBeGreaterThan(0)
+      for (const reference of type.applicationReferences) {
+        const application = reference.layer === 'tds-verified' ? tdsVerifiedApplications.find((item) => item.id === reference.applicationId) : marketExtendedApplications.find((item) => item.id === reference.applicationId)
+        expect(application?.productId).toBe(type.productId)
+      }
+    }
+  })
+
+  it('does not display a public lead without place, evidence, or a qualification label', () => {
+    expect(publicLeads).toHaveLength(21)
+    for (const product of marketProducts) expect(publicLeads.filter((lead) => lead.productId === product.id).length).toBeGreaterThanOrEqual(5)
+    for (const lead of publicLeads) {
+      expect(marketProducts.some((product) => product.id === lead.productId)).toBe(true)
+      expect(lead.city).not.toHaveLength(0)
+      expect(lead.latitude).toBeGreaterThanOrEqual(-90)
+      expect(lead.longitude).toBeLessThanOrEqual(180)
+      expect(lead.signal).not.toHaveLength(0)
+      expect(lead.source.url).toMatch(/^https:\/\//)
+      expect(lead.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+      expect(['优先核验', '可开发候选', '替代方案研究']).toContain(lead.fit)
+      const targetType = targetCompanyTypes.find((type) => type.id === lead.targetCompanyTypeId)
+      expect(targetType?.productId).toBe(lead.productId)
+      const application = lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications.find((item) => item.id === lead.companyEvidence.applicationId) : marketExtendedApplications.find((item) => item.id === lead.companyEvidence.applicationId)
+      expect(application?.productId).toBe(lead.productId)
+      expect(lead.companyEvidence.sourceUrl).toMatch(/^https:\/\//)
+      expect(lead.companyEvidence.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+      expect(lead.profile.website).toMatch(/^https:\/\//)
+      expect(lead.profile.sources.length).toBeGreaterThan(0)
+      expect(Array.isArray(lead.profile.contacts)).toBe(true)
+      expect(Array.isArray(lead.profile.departmentEmails)).toBe(true)
+    }
+  })
+
+  it('keeps named people and department mailboxes separately attributable', () => {
+    const icl = publicLeads.find((lead) => lead.id === 'icl-charleston')!
+    const pursell = publicLeads.find((lead) => lead.id === 'pursell-sylacauga')!
+    expect(icl.profile.contacts[0]).toMatchObject({ name: 'Jolene Miller', department: 'Technical' })
+    expect(pursell.profile.contacts[0]).toMatchObject({ name: 'Jason Woulfin', department: 'Sales' })
+    expect(pursell.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'jason@fertilizer.com' })
+  })
+})
