@@ -28,8 +28,8 @@ export async function enrollLearning(user: User, values: { startMode: LearningEn
   if (error) throw error
 }
 
-export async function confirmLessonRead(user: User, lessonId: string, productId: string | null) {
-  void user
+export async function confirmLessonRead(user: User | null, lessonId: string, productId: string | null) {
+  if (!user) throw new Error('访客可直接学习；登录后才可保存已读状态。')
   const { error } = await client().rpc('confirm_learning_lesson_read', { p_lesson_id: lessonId, p_product_id: productId })
   if (error) throw error
 }
@@ -49,12 +49,14 @@ export async function submitLearningAttempt(values: { exerciseId: string; lesson
   return data as string
 }
 
-export async function saveLearningNote(user: User, lessonId: string, note: string) {
+export async function saveLearningNote(user: User | null, lessonId: string, note: string) {
+  if (!user) throw new Error('访客可直接学习；登录后才可保存笔记。')
   const { error } = await client().from('learning_notes').upsert({ owner_id: user.id, lesson_id: lessonId, note }, { onConflict: 'owner_id,lesson_id' })
   if (error) throw error
 }
 
-export async function addReview(user: User, targetType: 'lesson' | 'term', targetId: string) {
+export async function addReview(user: User | null, targetType: 'lesson' | 'term', targetId: string) {
+  if (!user) throw new Error('访客可直接学习；登录后才可保存复习计划。')
   const { error } = await client().from('review_items').upsert({ owner_id: user.id, target_type: targetType, target_id: targetId, due_on: new Date(Date.now() + 86_400_000).toISOString().slice(0, 10), interval_stage: 0, active: true }, { onConflict: 'owner_id,target_type,target_id' })
   if (error) throw error
 }
