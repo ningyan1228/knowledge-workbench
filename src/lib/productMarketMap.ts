@@ -10,6 +10,7 @@ export type MarketProduct = {
 }
 
 export type ApplicationLayer = 'tds-verified' | 'market-extended'
+export type CommercialRole = 'demand_side' | 'peer_supplier' | 'competitor' | 'distributor' | 'unknown'
 
 export type TdsVerifiedApplication = {
   id: string
@@ -89,6 +90,8 @@ export type PublicLead = {
   city: string
   latitude: number
   longitude: number
+  commercialRole: CommercialRole
+  leadEligible: boolean
   targetCompanyTypeId: string
   fit: '优先核验' | '可开发候选' | '替代方案研究'
   signal: string
@@ -163,7 +166,6 @@ export const targetCompanyTypes: TargetCompanyType[] = [
   { id: 'specialty-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '特种肥生产商', nameEn: 'Specialty Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'controlled-release-fertilizer' }, { layer: 'tds-verified', applicationId: 'slow-release-fertilizer' }] },
   { id: 'primer-adhesion-promoter-formulator', productId: 'nl-w1201', name: '水性底涂 / 附着力促进剂配方商', nameEn: 'Primer / Adhesion Promoter Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'pe-primer' }, { layer: 'tds-verified', applicationId: 'opp-primer' }, { layer: 'tds-verified', applicationId: 'pet-primer' }, { layer: 'tds-verified', applicationId: 'abs-surface-treatment' }] },
   { id: 'coating-manufacturer', productId: 'nl-w1201', name: '涂料企业', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'metal-primer' }, { layer: 'tds-verified', applicationId: 'glass-adhesion-promotion' }] },
-  { id: 'alternative-primer-supplier', productId: 'nl-w1201', name: '底涂 / 附着力促进剂技术路线供应商', nameEn: 'Alternative Primer Supplier', kind: 'alternative-research', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }] },
   { id: 'polymer-formulator', productId: 'elo', name: '聚合物配方商', nameEn: 'Polymer Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }, { layer: 'tds-verified', applicationId: 'polymer-stabilizer' }] },
   { id: 'plasticizer-user-compounder', productId: 'elo', name: '增塑剂使用商 / 复配商', nameEn: 'Plasticizer User / Compounder', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }, { layer: 'market-extended', applicationId: 'elo-pvc-plasticizer' }] },
   { id: 'elo-coating-manufacturer', productId: 'elo', name: '涂料生产商', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'coatings' }] },
@@ -171,13 +173,12 @@ export const targetCompanyTypes: TargetCompanyType[] = [
   { id: 'ink-manufacturer', productId: 'elo', name: '油墨生产商', nameEn: 'Ink Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'inks' }] },
   { id: 'sealant-manufacturer', productId: 'elo', name: '密封剂生产商', nameEn: 'Sealant Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'sealants' }] },
   { id: 'resin-modifier-formulator', productId: 'elo', name: '树脂改性 / 配方商', nameEn: 'Resin Modifier / Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'resin-modification' }] },
-  { id: 'alternative-elo-supplier', productId: 'elo', name: 'ELO 技术路线供应商', nameEn: 'Alternative ELO Supplier', kind: 'alternative-research', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }] },
 ]
 
 // These are public-business-contact research leads, not confirmed buyers or demand claims.
 // Every visible contact is paired with its first-party source and a verification date.
 // Kept only as the original research note; it is deliberately not exposed as the lead relationship.
-type RawPublicLead = Omit<PublicLead, 'profile' | 'targetCompanyTypeId' | 'companyEvidence'> & { legacyCompanyDescription: string }
+type RawPublicLead = Omit<PublicLead, 'profile' | 'targetCompanyTypeId' | 'companyEvidence' | 'commercialRole' | 'leadEligible'> & { legacyCompanyDescription: string }
 const rawPublicLeads: RawPublicLead[] = [
   {
     id: 'icl-charleston', productId: 'fertilizer-coating', company: 'ICL Growing Solutions Charleston', country: 'United States', countryZh: '美国', city: 'Charleston, South Carolina', latitude: 32.7765, longitude: -79.9311,
@@ -405,12 +406,26 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
   return override ? { ...base, ...override, sources: [...base.sources, ...(override.sources ?? [])] } : base
 }
 
-export const publicLeads: PublicLead[] = rawPublicLeads.map((lead) => {
+// The map and Lead workflow accept demand-side companies only. Similar-material
+// suppliers are excluded until first-party evidence shows they buy and use our input.
+const demandSideLeadIds = new Set([
+  'icl-charleston',
+  'haifa-israel',
+  'pursell-sylacauga',
+  'cotex-dartmouth',
+  'simofert-beuningen',
+  'sk-specialties-sibu',
+  'smart-fert-klang',
+])
+
+export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
   const qualification = leadQualifications[lead.id]
   if (!qualification) throw new Error(`Missing application qualification for ${lead.id}`)
   const { legacyCompanyDescription: _legacyCompanyDescription, ...record } = lead
   return {
     ...record,
+    commercialRole: 'demand_side',
+    leadEligible: true,
     targetCompanyTypeId: qualification.targetCompanyTypeId,
     companyEvidence: {
       applicationLayer: qualification.applicationLayer,

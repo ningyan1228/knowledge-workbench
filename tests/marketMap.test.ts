@@ -33,9 +33,9 @@ describe('global product lead map', () => {
     }
   })
 
-  it('does not display a public lead without place, evidence, or a qualification label', () => {
-    expect(publicLeads).toHaveLength(21)
-    for (const product of marketProducts) expect(publicLeads.filter((lead) => lead.productId === product.id).length).toBeGreaterThanOrEqual(5)
+  it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
+    expect(publicLeads).toHaveLength(7)
+    expect(publicLeads.every((lead) => lead.productId === 'fertilizer-coating')).toBe(true)
     for (const lead of publicLeads) {
       expect(marketProducts.some((product) => product.id === lead.productId)).toBe(true)
       expect(lead.city).not.toHaveLength(0)
@@ -44,9 +44,12 @@ describe('global product lead map', () => {
       expect(lead.signal).not.toHaveLength(0)
       expect(lead.source.url).toMatch(/^https:\/\//)
       expect(lead.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/)
-      expect(['优先核验', '可开发候选', '替代方案研究']).toContain(lead.fit)
+      expect(['优先核验', '可开发候选']).toContain(lead.fit)
+      expect(lead.commercialRole).toBe('demand_side')
+      expect(lead.leadEligible).toBe(true)
       const targetType = targetCompanyTypes.find((type) => type.id === lead.targetCompanyTypeId)
       expect(targetType?.productId).toBe(lead.productId)
+      expect(targetType?.kind).toBe('target')
       const application = lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications.find((item) => item.id === lead.companyEvidence.applicationId) : marketExtendedApplications.find((item) => item.id === lead.companyEvidence.applicationId)
       expect(application?.productId).toBe(lead.productId)
       expect(lead.companyEvidence.sourceUrl).toMatch(/^https:\/\//)
