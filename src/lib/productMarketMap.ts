@@ -195,6 +195,13 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Haifa Multicote controlled-release fertilizer handbook', url: 'https://www.haifa-group.com/files/Knowledge_Center/Articles/Multicote_Agri_Handbook_final.pdf' }, checkedAt: '2026-09-25',
   },
   {
+    id: 'crf-agritech-st-thomas', productId: 'fertilizer-coating', company: 'CRF AgriTech', country: 'Canada', countryZh: '加拿大', city: 'St. Thomas, Ontario', latitude: 42.7772, longitude: -81.1827,
+    legacyCompanyDescription: '聚合物包膜尿素 / 控释肥生产商', fit: '优先核验',
+    signal: '官网说明其 St. Thomas 工厂生产定制控释肥，并明确 PurYield 为 polymer coated urea，适合核验包衣原料采购与技术负责人。',
+    contact: { label: 'Official contact form and business phone', phone: '+1 519-633-5810', contactUrl: 'https://www.crfagritech.com/#contact' },
+    source: { label: 'CRF AgriTech controlled-release fertilizer and PurYield page', url: 'https://www.crfagritech.com/' }, checkedAt: '2026-09-25',
+  },
+  {
     id: 'aqua-based-us', productId: 'nl-w1201', company: 'Aqua Based Technologies', country: 'United States', countryZh: '美国', city: 'Northvale, New Jersey', latitude: 41.0068, longitude: -73.9496,
     legacyCompanyDescription: '水性 PP / PE / OPP 底涂与软包装配方商', fit: '替代方案研究',
     signal: '官方页面列出 PP、PE 薄膜用水性底涂产品；可作为技术路线、竞品与原料合作方向核验。',
@@ -334,6 +341,7 @@ type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'application
 const leadQualifications: Record<string, LeadQualification> = {
   'icl-charleston': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'haifa-israel': { targetCompanyTypeId: 'specialty-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'crf-agritech-st-thomas': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'pursell-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cotex-dartmouth': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'simofert-beuningen': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -411,6 +419,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 const demandSideLeadIds = new Set([
   'icl-charleston',
   'haifa-israel',
+  'crf-agritech-st-thomas',
   'pursell-sylacauga',
   'cotex-dartmouth',
   'simofert-beuningen',
