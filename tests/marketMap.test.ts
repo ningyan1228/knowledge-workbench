@@ -55,6 +55,9 @@ describe('global product lead map', () => {
       expect(lead.profile.sources.length).toBeGreaterThan(0)
       expect(Array.isArray(lead.profile.contacts)).toBe(true)
       expect(Array.isArray(lead.profile.departmentEmails)).toBe(true)
+      for (const contact of lead.profile.contacts) {
+        if (contact.verifiedAt) expect(contact.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+      }
     }
   })
 
@@ -63,6 +66,7 @@ describe('global product lead map', () => {
     const pursell = publicLeads.find((lead) => lead.id === 'pursell-sylacauga')!
     expect(icl.profile.contacts[0]).toMatchObject({ name: 'Jolene Miller', department: 'Technical' })
     expect(pursell.profile.contacts[0]).toMatchObject({ name: 'Jason Woulfin', department: 'Sales' })
+    expect(icl.profile.contacts[0].verifiedAt).toBe('2026-09-25')
     expect(pursell.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'jason@fertilizer.com' })
   })
 })

@@ -58,6 +58,7 @@ export type CompanyContact = {
   phone?: string
   linkedIn?: string
   source?: { label: string; url: string }
+  verifiedAt?: string
 }
 
 export type DepartmentEmail = {
@@ -373,6 +374,7 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       name: 'Jolene Miller', title: 'Product Lead, Controlled Release Fertilizers', department: 'Technical',
       email: 'jolene.miller@icl-group.com', phone: '+1 843-609-2859',
       source: { label: 'ICL agriculture experts directory', url: 'https://icl-growingsolutions.com/en-us/agriculture/our-experts/' },
+      verifiedAt: '2026-09-25',
     }],
     departmentEmails: [{ department: 'Technical', email: 'jolene.miller@icl-group.com', source: { label: 'ICL agriculture experts directory', url: 'https://icl-growingsolutions.com/en-us/agriculture/our-experts/' } }],
   },
@@ -381,6 +383,7 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       name: 'Jason Woulfin', title: 'Director of International Sales', department: 'Sales',
       email: 'jason@fertilizer.com', phone: '+1 256-208-9509',
       source: { label: 'Pursell contact page', url: 'https://fertilizer.com/contact-us/' },
+      verifiedAt: '2026-09-25',
     }],
     departmentEmails: [{ department: 'Sales', email: 'jason@fertilizer.com', source: { label: 'Pursell contact page', url: 'https://fertilizer.com/contact-us/' } }],
   },
