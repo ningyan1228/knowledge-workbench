@@ -8,6 +8,35 @@ export type MarketProduct = {
   tdsScope: string
 }
 
+export type CompanyContact = {
+  name: string
+  title?: string
+  department?: 'Sales' | 'Procurement' | 'Technical' | 'Management' | 'Other'
+  email?: string
+  phone?: string
+  linkedIn?: string
+  source?: { label: string; url: string }
+}
+
+export type DepartmentEmail = {
+  department: 'Sales' | 'Procurement' | 'Technical' | 'General'
+  email: string
+  source?: { label: string; url: string }
+}
+
+export type CompanyProfile = {
+  website?: string
+  contactPage?: string
+  linkedIn?: string
+  whatsapp?: string
+  generalEmail?: string
+  generalPhone?: string
+  contacts: CompanyContact[]
+  departmentEmails: DepartmentEmail[]
+  address?: string
+  sources: Array<{ label: string; url: string }>
+}
+
 export type PublicLead = {
   id: string
   productId: MarketProduct['id']
@@ -23,6 +52,7 @@ export type PublicLead = {
   contact: { label: string; email?: string; phone?: string; contactUrl?: string }
   source: { label: string; url: string }
   checkedAt: string
+  profile: CompanyProfile
 }
 
 export const marketProducts: MarketProduct[] = [
@@ -48,7 +78,7 @@ export const marketProducts: MarketProduct[] = [
 
 // These are public-business-contact research leads, not confirmed buyers or demand claims.
 // Every visible contact is paired with its first-party source and a verification date.
-export const publicLeads: PublicLead[] = [
+const rawPublicLeads: Omit<PublicLead, 'profile'>[] = [
   {
     id: 'icl-charleston', productId: 'fertilizer-coating', company: 'ICL Growing Solutions Charleston', country: 'United States', countryZh: '美国', city: 'Charleston, South Carolina', latitude: 32.7765, longitude: -79.9311,
     customerType: '控释肥生产商', fit: '优先核验',
@@ -197,3 +227,54 @@ export const publicLeads: PublicLead[] = [
     source: { label: 'Traditem epoxidized linseed oil listing', url: 'https://traditem.com/en/products/epoxies' }, checkedAt: '2026-09-25',
   },
 ]
+
+function originOf(url: string) {
+  try { return new URL(url).origin } catch { return undefined }
+}
+
+function looksLikeContactPage(url?: string) {
+  return Boolean(url && /(contact|our-experts|contact-us)/i.test(url))
+}
+
+function departmentFor(label: string): DepartmentEmail['department'] | undefined {
+  if (/sales/i.test(label)) return 'Sales'
+  if (/technical|primer/i.test(label)) return 'Technical'
+  return undefined
+}
+
+const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  'icl-charleston': {
+    contacts: [{
+      name: 'Jolene Miller', title: 'Product Lead, Controlled Release Fertilizers', department: 'Technical',
+      email: 'jolene.miller@icl-group.com', phone: '+1 843-609-2859',
+      source: { label: 'ICL agriculture experts directory', url: 'https://icl-growingsolutions.com/en-us/agriculture/our-experts/' },
+    }],
+    departmentEmails: [{ department: 'Technical', email: 'jolene.miller@icl-group.com', source: { label: 'ICL agriculture experts directory', url: 'https://icl-growingsolutions.com/en-us/agriculture/our-experts/' } }],
+  },
+  'pursell-sylacauga': {
+    contacts: [{
+      name: 'Jason Woulfin', title: 'Director of International Sales', department: 'Sales',
+      email: 'jason@fertilizer.com', phone: '+1 256-208-9509',
+      source: { label: 'Pursell contact page', url: 'https://fertilizer.com/contact-us/' },
+    }],
+    departmentEmails: [{ department: 'Sales', email: 'jason@fertilizer.com', source: { label: 'Pursell contact page', url: 'https://fertilizer.com/contact-us/' } }],
+  },
+}
+
+function profileFor(lead: Omit<PublicLead, 'profile'>): CompanyProfile {
+  const contactUrl = lead.contact.contactUrl
+  const department = lead.contact.email ? departmentFor(lead.contact.label) : undefined
+  const base: CompanyProfile = {
+    website: originOf(contactUrl ?? lead.source.url),
+    contactPage: looksLikeContactPage(contactUrl) ? contactUrl : undefined,
+    generalEmail: lead.contact.email,
+    generalPhone: lead.contact.phone,
+    contacts: [],
+    departmentEmails: department && lead.contact.email ? [{ department, email: lead.contact.email, source: lead.source }] : [],
+    sources: [lead.source],
+  }
+  const override = profileOverrides[lead.id]
+  return override ? { ...base, ...override, sources: [...base.sources, ...(override.sources ?? [])] } : base
+}
+
+export const publicLeads: PublicLead[] = rawPublicLeads.map((lead) => ({ ...lead, profile: profileFor(lead) }))
