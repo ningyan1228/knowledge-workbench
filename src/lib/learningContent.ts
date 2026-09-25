@@ -4,6 +4,8 @@ export type Lesson = {
   terms: string[]; exercise: { id: string; kind: ExerciseKind; prompt: string; reference: string; checklist: string[] }
 }
 export type Stage = { id: number; title: string; outcome: string; principles: string[]; misunderstandings: string[]; sourceNote: string }
+export type OutreachPracticeSection = { id: string; title: string; outcome: string; guidance: string[]; checklist: string[]; template?: string }
+export type OutreachPracticeModule = { id: string; title: string; subtitle: string; sourceNote: string; boundaries: string[]; sections: OutreachPracticeSection[] }
 
 export const stages: Stage[] = [
   { id: 1, title: '先认识一笔外贸业务', outcome: '能说清角色、文件、规格与产品业务卡片', principles: ['外贸不是背术语，而是把客户需求、供应能力和可验证文件连接起来。', '每个数字都要连同单位、范围、测试条件和来源一起记录。', '教学案例只用于练习，不等于某个产品真实承诺。'], misunderstandings: ['把 TDS、SDS、COA 当作可以互相替代的文件。', '看到一个指标就推断其适用所有工艺和目的地。'], sourceNote: '基础业务教育内容；产品、法规和目的国要求须回到原始文件与主管机构核验。' },
@@ -78,4 +80,67 @@ export function usdPerKg(usdPerMt: string): string {
   const result = milli / 1000n // USD/MT in thousandths divided by 1,000 kg => thousandths USD/kg
   const whole = result / 1000n; const fraction = (result % 1000n).toString().padStart(3, '0').replace(/0+$/, '')
   return fraction ? `${whole}.${fraction}` : whole.toString()
+}
+
+/** A public, transformed teaching module. The user-provided DOCX itself is never bundled or published. */
+export const fertilizerOutreachPractice: OutreachPracticeModule = {
+  id: 'fertilizer-outreach',
+  title: '肥料包膜材料：开发信实操',
+  subtitle: '把公开证据、短邮件、技术资料、打样与报价串成一条可人工执行的获客路径。',
+  sourceNote: '根据用户提供的《化工外贸开发信实操手册·肥料包膜材料篇》转化为公开教学内容。原始 DOCX、联系人资料和任何私有产品数据均不会上传到网站。',
+  boundaries: [
+    '这是训练路径，不代表任何产品具备特定性能、认证、供应能力或价格，也不构成对外销售承诺。',
+    '只使用能人工复查的公开网页、产品页或文件；把“推测”“未知”和“已证实”分开记录。',
+    '不批量群发、不伪造 Re:/Fwd: 主题、不绕过网站限制、不采集不必要的个人信息；所有外发邮件都必须由人审核。',
+    '客户明确拒收或要求停止联系后，记录并停止营销联系；各目的地的隐私、反垃圾邮件、运输和贸易规则需在发送前另行核验。',
+  ],
+  sections: [
+    {
+      id: 'evidence',
+      title: '1. 先做产品与客户证据卡',
+      outcome: '先判断“为什么值得联系”，而不是先写一封泛化的开发信。',
+      guidance: [
+        '产品侧只写已经核实的材料描述、适用场景、TDS/SDS/COA 版本及缺口。没有证据时，不写“最佳”“保证释放期”“完美替代”等结论。',
+        '客户侧从官网产品、制造/设施、技术下载和公开联系入口交叉核验。看到 coated NPK 或 controlled-release fertilizer 只说明相关线索，不自动证明对方采购某种包膜原料。',
+        '每家公司建立一张证据卡：公司/国家、精确产品名、页面链接与日期、包膜或制造证据、联系入口、已知项、未知项和下一步问题。',
+      ],
+      checklist: ['能打开并保存原始产品页面链接', '能解释材料与客户应用的相关性', '能写出至少一个“未知/待确认”项', '没有把成品肥料与包膜原料混为一谈'],
+    },
+    {
+      id: 'first-email',
+      title: '2. 用“一封一目标”写首封邮件',
+      outcome: '首封的成功标准是获得小而明确的回复：找对人、允许看 TDS，或确认是否自有包膜环节。',
+      guidance: [
+        '每封只围绕一项经核实的客户事实：准确产品名、官网页面或公开业务信息。不能把 A 公司的信息写给 B 公司。',
+        '优先向公开的采购、原料采购、研发或技术部门入口沟通；找不到人时，只请官方通用邮箱转给负责原料评估的同事。',
+        '正文保持短：说明你看到的事实、说明联系的包膜原料场景、提出一个问题，再给出一个低压力的下一步。',
+      ],
+      template: 'Subject: Technical contact for fertilizer coating materials\n\nDear [Name or Team],\nI saw [verified product or page] on your website. May I ask whether your team evaluates raw materials for this coating application? If relevant, I can send the available TDS for an initial technical review.\n\nBest regards,\n[verified signature and a clear way to opt out]',
+      checklist: ['称呼、公司、页面和产品名均已替换并复核', '只提出一个问题或一个下一步', '签名中的公司、邮箱、网站和地址是真实当前信息', '未夹带未经核实的性能、认证、价格或交期'],
+    },
+    {
+      id: 'followup',
+      title: '3. 无回复、已有供应商与技术问题怎么跟进',
+      outcome: '用有限、可解释的跟进来减少打扰，而不是通过频繁追信制造压力。',
+      guidance: [
+        '无回复时，第一次跟进只确认是否找对人，并再次给出“采购或研发同事”的转介选项。第二次才询问当前更关注工艺兼容性、释放表现还是材料成本；不知道时不要暗示你已经能改善它。',
+        '对方已有供应商时，可询问是否愿意留存可用 TDS 作为未来备选；明确拒绝后停止联系。',
+        '技术问题先逐条记录，向供应商或工程团队核实可证明的材料版本、测试条件和答复时间。没有结果就明确“待确认”，不补写数值。',
+      ],
+      template: 'Dear [Name],\nI am following up on my note about raw materials for [verified application]. Are you the right person for material evaluation, or is this handled by a purchasing or R&D colleague? If relevant, I can share a short TDS for review.\n\nBest regards,\n[signature]',
+      checklist: ['跟进基于先前真实发送的邮件线程', '未使用虚假的紧迫性、转发或客户背书', '拒收/不相关/长期无回复均有明确记录', '未承诺未经验证的性能或供货能力'],
+    },
+    {
+      id: 'sample-quote',
+      title: '4. 从 TDS、打样到报价：把兴趣变成可核验的下一步',
+      outcome: '在获取技术资料、安排样品或报价前，把关键条件变成双方可以确认的字段。',
+      guidance: [
+        '客户要 TDS：发送正确的材料或牌号版本，并询问肥料类型、包膜设备和主要评估目标；初步讨论不要求客户交出保密配方。',
+        '客户要报价：先收集材料规格/应用、数量、目的国城市或港口、交付术语，再与供应商核实包装、价格、交期和包含项。未知快递费、总价或交期要写待确认，不能写成 0 或保证值。',
+        '样品寄出后，记录材料/批次、净数量、承运与追踪、预计到达、签收和测试计划。结果反馈要问测试条件、包膜用量、评价方法和主要观察，而不是先判定原因。',
+        '每个客户与每个联系人分开留痕：联系了什么、客户明确说了什么、缺什么信息、谁在何时做下一步，以及何时关闭或停止联系。',
+      ],
+      checklist: ['报价前已核对规格、数量、包装、目的地和交付条件', '样品安排已核对收件资料、费用和运输文件责任', '每项技术结论都有对应文件、测试或确认人', 'CRM 记录中有下一步和停止联系状态'],
+    },
+  ],
 }

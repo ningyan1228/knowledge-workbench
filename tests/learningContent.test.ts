@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { lessonById, lessons, stages, usdPerKg } from '../src/lib/learningContent'
+import { fertilizerOutreachPractice, lessonById, lessons, stages, usdPerKg } from '../src/lib/learningContent'
 
 describe('learning route content', () => {
   it('ships eight stages, forty direct lessons, and the four required teaching exercises', () => {
@@ -12,5 +12,11 @@ describe('learning route content', () => {
   it('keeps the L11 teaching unit conversion decimal-safe and never implies volume-to-weight conversion', () => {
     expect(usdPerKg('3065')).toBe('3.065')
     expect(lessonById.L11.exercise.reference).toContain('未知密度时不能将 mL 转 kg')
+  })
+
+  it('includes the fertilizer coating outreach module without exposing the original private handbook', () => {
+    expect(fertilizerOutreachPractice.sections).toHaveLength(4)
+    expect(fertilizerOutreachPractice.boundaries.join('')).toContain('不批量群发')
+    expect(fertilizerOutreachPractice.sourceNote).toContain('原始 DOCX')
   })
 })
