@@ -1,92 +1,71 @@
 import { useEffect, useMemo, useState } from 'react'
-import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
-import { ArrowUpRight, Building2, ChevronRight, CircleAlert, Database, Globe2, MapPinned, Search, Sparkles, Target, Users } from 'lucide-react'
+import { CircleMarker, MapContainer, TileLayer, useMap } from 'react-leaflet'
+import { Building2, CheckCircle2, ChevronRight, Copy, ExternalLink, Globe2, Mail, MapPinned, Phone, Search, Target, TriangleAlert } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
-import { brazilAgricultureDemo, marketRoute, type DemoRegion } from '../../lib/marketDemo'
-import { seedBrazilAgricultureDemo } from '../../lib/marketWorkspace'
-import { hasSupabaseConfig, supabase } from '../../lib/supabase'
+import { marketProducts, publicLeads, type MarketProduct, type PublicLead } from '../../lib/productMarketMap'
 
-type MarketTab = 'overview' | 'map' | 'applications' | 'opportunities' | 'companies' | 'news' | 'sources'
-const tabs: Array<{ id: MarketTab; label: string }> = [
-  { id: 'overview', label: '总览' }, { id: 'map', label: '地图' }, { id: 'applications', label: '应用' },
-  { id: 'opportunities', label: '机会' }, { id: 'companies', label: '公司' }, { id: 'news', label: '新闻' }, { id: 'sources', label: '来源' },
-]
+type MarketTab = 'overview' | 'map' | 'leads' | 'products' | 'sources'
+type CountrySummary = { country: string; countryZh: string; latitude: number; longitude: number; count: number }
+const tabs: Array<{ id: MarketTab; label: string }> = [{ id: 'overview', label: '总览' }, { id: 'map', label: '全球地图' }, { id: 'leads', label: '线索库' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
 function setHash(value: string) { window.location.hash = value }
+function productOf(id: MarketProduct['id']) { return marketProducts.find((product) => product.id === id)! }
+function sourceHost(url: string) { try { return new URL(url).hostname.replace(/^www\./, '') } catch { return url } }
+function route() { return window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean) }
 
-function DemoBadge() { return <span className="market-demo-badge"><Database size={13} />Demo · 未采集</span> }
-
-function MapFocus({ region }: { region: DemoRegion | null }) {
+function MapFocus({ target }: { target: PublicLead | CountrySummary | null }) {
   const map = useMap()
-  useEffect(() => { if (region) map.flyTo([region.latitude, region.longitude], 6, { duration: 0.7 }) }, [map, region])
+  useEffect(() => { if (target) map.flyTo([target.latitude, target.longitude], 'count' in target ? 4 : 7, { duration: 0.65 }) }, [map, target])
   return null
 }
 
-function BrazilMap({ selected, onSelect }: { selected: DemoRegion | null; onSelect: (region: DemoRegion) => void }) {
-  return <MapContainer className="market-map" center={[-15.8, -51.5]} zoom={4} scrollWheelZoom aria-label="巴西农业区域地图">
-    <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-    <MapFocus region={selected} />
-    {brazilAgricultureDemo.regions.map((region) => <CircleMarker
-      key={region.id} center={[region.latitude, region.longitude]} radius={selected?.id === region.id ? 12 : 9}
-      pathOptions={{ color: selected?.id === region.id ? '#14532d' : '#2f6f61', fillColor: selected?.id === region.id ? '#4ade80' : '#86efac', fillOpacity: 0.88 }}
-      eventHandlers={{ click: () => onSelect(region) }}
-    ><Popup><strong>{region.name}</strong><br />Demo region · verify sources before use</Popup></CircleMarker>)}
-  </MapContainer>
+function ProductPicker({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  return <div className="lead-product-picker" aria-label="按产品筛选">{marketProducts.map((product) => <button key={product.id} className={value === product.id ? 'active' : ''} onClick={() => onChange(product.id)}><i style={{ background: product.color }} />{product.name}</button>)}<button className={value === 'all' ? 'active' : ''} onClick={() => onChange('all')}>全部产品</button></div>
 }
 
-function RegionPanel({ region }: { region: DemoRegion }) {
-  return <article className="market-region-panel"><div className="card-heading"><div><p className="eyebrow">区域情报 · Demo</p><h3>{region.name}</h3></div><MapPinned size={19} /></div><div className="market-panel-section"><small>主要应用</small><div className="chip-row">{region.crops.map((crop) => <span className="chip" key={crop}>{crop}</span>)}</div></div><div className="market-panel-section"><small>研究方向</small><ul>{region.demand.map((item) => <li key={item}>{item}</li>)}</ul></div><p className="muted">公司 {region.companies} · 新闻 {region.news}。这些计数为 Demo 零值，不代表市场实际数量。</p></article>
+function LeadCard({ lead, selected, onSelect }: { lead: PublicLead; selected?: boolean; onSelect: (lead: PublicLead) => void }) {
+  const product = productOf(lead.productId)
+  const contactText = [lead.contact.email, lead.contact.phone].filter(Boolean).join(' · ')
+  return <article className={selected ? 'lead-card selected' : 'lead-card'}><button className="lead-card-main" onClick={() => onSelect(lead)}><span className="lead-dot" style={{ background: product.color }} /><span><small>{lead.countryZh} · {lead.city}</small><h3>{lead.company}</h3><p>{lead.customerType}</p></span><ChevronRight size={17} /></button><div className="lead-card-meta"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span>{lead.checkedAt} 已核验</span></div>{selected && <div className="lead-card-detail"><p>{lead.signal}</p><div className="contact-row"><span>{lead.contact.email ? <Mail size={14} /> : <Phone size={14} />}{contactText || '请通过官网联系'}</span>{contactText && <button title="复制联系方式" onClick={() => void navigator.clipboard.writeText(contactText)}><Copy size={14} /></button>}</div><div className="lead-card-actions">{lead.contact.email && <a href={`mailto:${lead.contact.email}`}><Mail size={14} />写开发信</a>}<a href={lead.source.url} target="_blank" rel="noreferrer">查看证据 <ExternalLink size={14} /></a></div></div>}</article>
 }
 
-function MarketHome() {
+function GlobalLeadMap({ leads, selectedLead, onSelectLead, selectedCountry, onSelectCountry }: { leads: PublicLead[]; selectedLead: PublicLead | null; onSelectLead: (lead: PublicLead) => void; selectedCountry: CountrySummary | null; onSelectCountry: (country: CountrySummary) => void }) {
+  const countries = useMemo(() => Object.values(leads.reduce<Record<string, CountrySummary>>((all, lead) => { const old = all[lead.country]; all[lead.country] = old ? { ...old, count: old.count + 1 } : { country: lead.country, countryZh: lead.countryZh, latitude: lead.latitude, longitude: lead.longitude, count: 1 }; return all }, {})), [leads])
+  return <MapContainer className="market-map global-lead-map" center={[20, 8]} zoom={2} minZoom={2} scrollWheelZoom aria-label="全球产品线索地图"><TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /><MapFocus target={selectedLead ?? selectedCountry} />{countries.map((country) => <CircleMarker key={country.country} center={[country.latitude, country.longitude]} radius={13 + country.count * 4} pathOptions={{ color: '#f59e0b', fillColor: '#fbbf24', fillOpacity: .28, weight: 1 }} eventHandlers={{ click: () => onSelectCountry(country) }} />)}{leads.map((lead) => { const product = productOf(lead.productId); return <CircleMarker key={lead.id} center={[lead.latitude, lead.longitude]} radius={selectedLead?.id === lead.id ? 10 : 6} pathOptions={{ color: '#fff', fillColor: product.color, fillOpacity: 1, weight: selectedLead?.id === lead.id ? 4 : 2 }} eventHandlers={{ click: () => onSelectLead(lead) }} /> })}</MapContainer>
+}
+
+function MapLegend() { return <p className="map-legend"><i />大号黄圈 = 国家内已核验公开线索密度；彩色点 = 一家可研究的公司。它们不是市场规模、成交概率或真实需求量。</p> }
+
+function Overview({ productId, leads, onProduct, onOpenMap }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void; onOpenMap: () => void }) {
+  const countries = new Set(leads.map((lead) => lead.country)).size
+  return <div className="market-overview global-overview"><section className="market-intro"><p className="eyebrow">GLOBAL OUTBOUND MAP</p><h1>从产品需求，找到可开发的公司。</h1><p>先用 TDS 界定应找的客户类型，再把公开可核验的公司、城市、联系方式与证据放在同一张地图。每一条记录都有状态，不把“同行 / 竞品”误写成“已确认客户”。</p><ProductPicker value={productId} onChange={onProduct} /><button className="primary-button" onClick={onOpenMap}><MapPinned size={17} />打开全球地图</button></section><section className="market-stat-grid"><div><Globe2 size={19} /><strong>{countries}</strong><span>覆盖国家</span></div><div><Building2 size={19} /><strong>{leads.length}</strong><span>公开公司线索</span></div><div><CheckCircle2 size={19} /><strong>{leads.filter((lead) => lead.fit === '优先核验').length}</strong><span>优先核验</span></div></section><section className="market-data-section product-radar"><div className="section-heading"><div><p className="eyebrow">PRODUCT TO CUSTOMER</p><h2>三条开发路线</h2><p>点击路线会筛选地图和线索库。</p></div></div><div className="product-route-grid">{marketProducts.map((product) => { const count = publicLeads.filter((lead) => lead.productId === product.id).length; return <button key={product.id} onClick={() => onProduct(product.id)} className={productId === product.id ? 'product-route active' : 'product-route'}><i style={{ background: product.color }} /><span><small>{product.nameEn}</small><strong>{product.name}</strong><em>{product.customerTypes.join(' · ')}</em></span><b>{count} 条公开线索</b></button> })}</div></section></div>
+}
+
+function MapView({ productId, leads, onProduct }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void }) {
+  const [selectedLead, setSelectedLead] = useState<PublicLead | null>(leads[0] ?? null)
+  const [selectedCountry, setSelectedCountry] = useState<CountrySummary | null>(null)
+  useEffect(() => { setSelectedLead(leads[0] ?? null); setSelectedCountry(null) }, [productId])
+  return <section className="market-map-workspace"><div className="section-heading"><div><p className="eyebrow">GEO QUALIFICATION</p><h2>全球公开线索地图</h2><p>选产品，再点国家或公司。右侧显示可用于首封开发前核验的公司、城市、公开业务联系方式和证据链接。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><div className="market-map-layout lead-map-layout"><div><GlobalLeadMap leads={leads} selectedLead={selectedLead} selectedCountry={selectedCountry} onSelectLead={setSelectedLead} onSelectCountry={(country) => { setSelectedCountry(country); setSelectedLead(null) }} /><MapLegend /></div><aside className="lead-map-sidebar"><div className="sidebar-title"><Target size={16} /><strong>{selectedCountry ? `${selectedCountry.countryZh} · ${selectedCountry.count} 条线索` : '公司线索'}</strong></div>{leads.filter((lead) => !selectedCountry || lead.country === selectedCountry.country).map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selectedLead?.id} onSelect={setSelectedLead} />)}</aside></div></section>
+}
+
+function LeadsView({ productId, leads, onProduct }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void }) {
   const [query, setQuery] = useState('')
-  const matched = useMemo(() => `${brazilAgricultureDemo.country} ${brazilAgricultureDemo.title} ${brazilAgricultureDemo.applications.join(' ')}`.toLowerCase().includes(query.trim().toLowerCase()), [query])
-  return <><div className="page-heading market-heading"><div><p className="eyebrow">Global Market Intelligence</p><h1>理解市场，发现可验证的机会。</h1><p>从国家、行业与应用出发，逐步建立来源可追溯的市场、企业与客户开发线索。</p></div><DemoBadge /></div>
-    <div className="market-search"><Search size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索国家、行业、作物、材料或公司…" /><kbd>Demo</kbd></div>
-    <div className="market-filter-row"><button className="filter active">全部市场</button><button className="filter">国家</button><button className="filter">行业</button><button className="filter">应用</button><span>真实市场数据将在来源验证后显示</span></div>
-    {matched ? <button className="market-card" onClick={() => setHash('market-intelligence/brazil-agriculture')}><div className="market-card-flag">🇧🇷</div><div className="market-card-copy"><div className="market-card-title"><div><p>Brazil · Agriculture · Fertilizer</p><h2>Brazil Agriculture</h2></div><DemoBadge /></div><p>首个信息架构 Demo：区域、应用、机会、公司、新闻与来源将围绕同一个市场对象关联。</p><div className="chip-row">{brazilAgricultureDemo.applications.slice(0, 4).map((item) => <span className="chip" key={item}>{item}</span>)}</div><footer><span>6 个区域 · 0 条真实公司 · 0 条真实新闻</span><span>打开市场 <ChevronRight size={16} /></span></footer></div></button> : <div className="empty-state"><Search size={28} /><strong>没有匹配的市场专题</strong><span>Demo 只包含 Brazil Agriculture。真实专题将在你保存并核验来源后出现。</span></div>}
-  </>
+  const matching = leads.filter((lead) => `${lead.company} ${lead.countryZh} ${lead.city} ${lead.customerType}`.toLowerCase().includes(query.toLowerCase()))
+  const [selected, setSelected] = useState<PublicLead | null>(matching[0] ?? null)
+  useEffect(() => setSelected(matching[0] ?? null), [productId, query])
+  return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">LEAD RESEARCH QUEUE</p><h2>可开发线索库</h2><p>“优先核验”表示公司官网已明确相关业务，仍应在发信前确认采购角色、应用、进口资格与实际需求。“替代方案研究”用于竞品 / 技术路线情报，不应直接当成买家。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><label className="lead-search"><Search size={17} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索公司、国家、城市或客户类型" /></label><div className="lead-list">{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selected?.id} onSelect={setSelected} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>没有匹配的公开线索</strong><span>切换产品或缩短搜索词。</span></div>}</div></section>
 }
 
-function MarketDetail() {
-  const [route, setRoute] = useState(marketRoute)
-  const [selectedRegion, setSelectedRegion] = useState<DemoRegion>(brazilAgricultureDemo.regions[0])
-  const [seedState, setSeedState] = useState<string | null>(null)
-  useEffect(() => { const listener = () => setRoute(marketRoute()); window.addEventListener('hashchange', listener); return () => window.removeEventListener('hashchange', listener) }, [])
-  const tab = (tabs.find((item) => item.id === route[2])?.id ?? 'overview') as MarketTab
-  const selectTab = (next: MarketTab) => setHash(next === 'overview' ? 'market-intelligence/brazil-agriculture' : `market-intelligence/brazil-agriculture/${next}`)
-  const persistDemo = async () => {
-    if (!hasSupabaseConfig || !supabase) return setSeedState('请先连接 Supabase 并登录，才能保存私有 Demo 数据。')
-    const { data } = await supabase.auth.getUser()
-    if (!data.user) return setSeedState('请先在“资料与设置”登录。')
-    try { await seedBrazilAgricultureDemo(); setSeedState('Demo 已写入你的私人市场库。仍需为每条真实事实添加来源后才能对外使用。') } catch (error) { setSeedState(`未写入：${error instanceof Error ? error.message : '未知错误'}`) }
-  }
-  return <><button className="back-link" onClick={() => setHash('market-intelligence')}><ChevronRight size={16} />全部市场</button><div className="market-detail-hero"><div><p className="eyebrow">🇧🇷 Brazil · {brazilAgricultureDemo.industry}</p><h1>{brazilAgricultureDemo.title}</h1><p>{brazilAgricultureDemo.description}</p><div className="chip-row"><DemoBadge /><span className="chip">6 个区域</span><span className="chip">来源待验证</span></div></div><button className="secondary-button" onClick={() => void persistDemo()}><Database size={16} />保存 Demo 到私人库</button></div>{seedState && <div className="callout warning"><CircleAlert size={18} /><div><strong>Demo 数据状态</strong><p>{seedState}</p></div></div>}
-    <div className="market-tabs" role="tablist">{tabs.map((item) => <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => selectTab(item.id)}>{item.label}</button>)}</div>
-    {tab === 'overview' && <Overview selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />}
-    {tab === 'map' && <MapView selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />}
-    {tab === 'applications' && <Applications />}
-    {tab === 'opportunities' && <Opportunities />}
-    {tab === 'companies' && <Companies />}
-    {tab === 'news' && <News />}
-    {tab === 'sources' && <Sources />}
-  </>
-}
+function ProductsView({ productId, onProduct }: { productId: string; onProduct: (id: string) => void }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">TDS-DRIVEN TARGETING</p><h2>产品如何变成开发名单</h2><p>每条产品路线只使用客户类型和应用方向，绝不把 TDS 的指标自动拼成对客户的性能承诺。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><div className="product-detail-grid">{marketProducts.filter((product) => productId === 'all' || product.id === productId).map((product) => <article className="product-detail" key={product.id}><i style={{ background: product.color }} /><h3>{product.name}</h3><p>{product.tdsScope}</p><h4>优先搜索对象</h4><div className="chip-row">{product.customerTypes.map((type) => <span key={type} className="chip">{type}</span>)}</div><h4>建议检索词</h4><ul>{product.searchTerms.map((term) => <li key={term}>{term}</li>)}</ul></article>)}</div></section> }
 
-function Overview({ selectedRegion, setSelectedRegion }: { selectedRegion: DemoRegion; setSelectedRegion: (region: DemoRegion) => void }) {
-  return <div className="market-overview"><section className="card"><div className="card-heading"><div><p className="eyebrow">Market Snapshot · Demo</p><h2>市场快照</h2></div><Globe2 size={19} /></div><dl className="market-facts"><div><dt>国家</dt><dd>Brazil / 巴西</dd></div><div><dt>行业</dt><dd>Agriculture · Fertilizer</dd></div><div><dt>关联产品</dt><dd>NL-FC-PU <small>仅机会假设，非产品声明</small></dd></div><div><dt>数据状态</dt><dd>Demo · 等待真实来源</dd></div></dl></section><section className="card"><div className="card-heading"><div><p className="eyebrow">Opportunity Summary</p><h2>机会需要证据链</h2></div><Target size={19} /></div><p className="muted">当前只呈现用于验证信息架构的研究方向；没有市场规模、需求量、客户或性能结论。</p><button className="text-button" onClick={() => setHash('market-intelligence/brazil-agriculture/opportunities')}>查看机会卡 <ChevronRight size={16} /></button></section><section className="market-region-grid"><div className="section-heading"><div><p className="eyebrow">Key Regions · Demo</p><h2>重点区域</h2></div><button className="text-button" onClick={() => setHash('market-intelligence/brazil-agriculture/map')}>打开地图 <ArrowUpRight size={15} /></button></div>{brazilAgricultureDemo.regions.map((region) => <button className={selectedRegion.id === region.id ? 'region-card selected' : 'region-card'} onClick={() => setSelectedRegion(region)} key={region.id}><MapPinned size={18} /><strong>{region.name}</strong><span>{region.crops.join(' · ')}</span><small>Demo · 待添加来源</small></button>)}</section><RegionPanel region={selectedRegion} /></div>
-}
-
-function MapView({ selectedRegion, setSelectedRegion }: { selectedRegion: DemoRegion; setSelectedRegion: (region: DemoRegion) => void }) { return <div className="market-map-layout"><section><div className="section-heading"><div><p className="eyebrow">Map Intelligence · Demo</p><h2>地图与区域卡片联动</h2></div><DemoBadge /></div><BrazilMap selected={selectedRegion} onSelect={setSelectedRegion} /></section><aside className="market-region-list">{brazilAgricultureDemo.regions.map((region) => <button key={region.id} className={selectedRegion.id === region.id ? 'active' : ''} onClick={() => setSelectedRegion(region)}><span><strong>{region.name}</strong><small>{region.crops.join(' · ')}</small></span><ChevronRight size={16} /></button>)}<RegionPanel region={selectedRegion} /></aside></div> }
-
-function Applications() { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">Applications · Demo</p><h2>应用 / 作物</h2><p>农业以 crop 为 subtype；其他市场可使用材料、工艺或终端应用，不会限制为作物模型。</p></div></div><div className="market-mini-grid">{brazilAgricultureDemo.applications.map((item) => <article className="card" key={item}><span className="market-icon"><Sparkles size={18} /></span><h3>{item}</h3><p>Demo application · 研究信息需保存原始来源与核验时间。</p></article>)}</div></section> }
-function Opportunities() { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">Product Opportunities · Demo</p><h2>产品机会</h2><p>以下是架构示例，不是市场结论或可对外使用的产品性能承诺。</p></div></div><div className="opportunity-list">{brazilAgricultureDemo.opportunities.map((item) => <article className="opportunity-card" key={item.id}><div><p>{item.application} · {item.product}</p><h3>{item.title}</h3><p>{item.demand}</p></div><div><span className="chip">{item.target}</span><span className="status review">{item.status}</span></div></article>)}</div></section> }
-function Companies() { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">Companies · Demo</p><h2>公司不是线索</h2><p>发现公司后先保存来源和核验时间，只有人工确认后才可转换为 Lead。</p></div><button className="secondary-button" disabled><Search size={16} />发现公司（后续）</button></div><div className="company-list">{brazilAgricultureDemo.companies.map((company) => <article className="company-card" key={company.id}><Building2 size={20} /><div><h3>{company.name}</h3><p>{company.type} · {company.region}</p><small>{company.source}</small></div><span className="status review">{company.status}</span></article>)}</div></section> }
-function News() { return <section className="empty-state"><Globe2 size={28} /><strong>尚无真实市场情报</strong><span>二期会复用一期 `articles` 与 `sources`，以关系表关联市场、区域、公司和应用；仅有 HTTP 200 的来源不会显示为已采集。</span><button className="secondary-button" onClick={() => setHash('intelligence')}>查看行业情报</button></section> }
-function Sources() { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">Data Provenance</p><h2>来源与核验</h2><p>Demo 没有真实市场来源。真实记录必须保存原始 URL、发布时间、获取时间、来源类型与最后核验日期。</p></div></div><div className="callout"><CircleAlert size={18} /><div><strong>当前无可引用来源</strong><p>请先在一期“资料与设置”添加并验证来源，再将真实文章关联到市场专题。</p></div></div></section> }
+function SourcesView({ leads }: { leads: PublicLead[] }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">EVIDENCE TRAIL</p><h2>来源与使用边界</h2><p>线索卡只展示公司官网上公开的业务描述和联系方式。官网的存在不证明其正在采购本产品；发信前先核对联系人是否仍在职、采购职责和具体项目。</p></div></div><div className="source-evidence-list">{leads.map((lead) => <article key={lead.id}><span>{productOf(lead.productId).name}</span><div><strong>{lead.company}</strong><p>{lead.signal}</p><a href={lead.source.url} target="_blank" rel="noreferrer">{lead.source.label} · {sourceHost(lead.source.url)} <ExternalLink size={14} /></a></div><small>核验：{lead.checkedAt}</small></article>)}</div><div className="callout warning"><TriangleAlert size={18} /><div><strong>使用前必做两步</strong><p>第一步，打开每条来源确认网页与联系方式仍有效；第二步，仅向与业务相关的公开业务邮箱或官网表单发送一封个性化 B2B 开发信，并遵守目的地的反垃圾邮件规则。</p></div></div></section> }
 
 export function MarketIntelligence() {
-  const [route, setRoute] = useState(marketRoute)
-  useEffect(() => { const listener = () => setRoute(marketRoute()); window.addEventListener('hashchange', listener); return () => window.removeEventListener('hashchange', listener) }, [])
-  return route[1] === brazilAgricultureDemo.slug ? <MarketDetail /> : <MarketHome />
+  const [currentRoute, setRoute] = useState(route())
+  const [productId, setProductId] = useState<string>('all')
+  useEffect(() => { const listener = () => setRoute(route()); window.addEventListener('hashchange', listener); return () => window.removeEventListener('hashchange', listener) }, [])
+  const tab = (tabs.find((item) => item.id === currentRoute[1])?.id ?? 'overview') as MarketTab
+  const filteredLeads = useMemo(() => publicLeads.filter((lead) => productId === 'all' || lead.productId === productId), [productId])
+  const openTab = (next: MarketTab) => setHash(next === 'overview' ? 'market-intelligence' : `market-intelligence/${next}`)
+  return <><div className="page-heading market-heading"><div><p className="eyebrow">GLOBAL MARKET INTELLIGENCE</p><h1>客户地图，而不是一张漂亮的世界地图。</h1><p>围绕三款产品建立“产品 → 需求场景 → 公司 → 联系方式 → 证据”的开发链路。</p></div><span className="market-research-badge"><CheckCircle2 size={14} />公开来源研究</span></div><div className="market-tabs" role="tablist">{tabs.map((item) => <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => openTab(item.id)}>{item.label}</button>)}</div>{tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}{tab === 'map' && <MapView productId={productId} leads={filteredLeads} onProduct={setProductId} />}{tab === 'leads' && <LeadsView productId={productId} leads={filteredLeads} onProduct={setProductId} />}{tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}{tab === 'sources' && <SourcesView leads={filteredLeads} />}</>
 }
