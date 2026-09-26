@@ -401,6 +401,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Jieh-Ming PVC compound and plasticizer-use description', url: 'https://www.hose.com.tw/pvc-compound/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'vinyl-base-ipoh', productId: 'elo', company: 'Vinyl Base Sdn. Bhd.', country: 'Malaysia', countryZh: '马来西亚', city: 'Ipoh, Perak', latitude: 4.6000, longitude: 101.0720,
+    legacyCompanyDescription: 'PVC 配方与医疗挤出制品制造商', fit: '可开发候选',
+    signal: '官网说明该公司在马来西亚生产 PVC compound，并开发医疗塑料挤出管材；其公开资料明确列出 plasticizer selection criteria 与 non-phthalate 等增塑化配方选择。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方公司介绍：其公开业务为 PVC compound 与下游医疗塑料挤出制品制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Vinyl Base public business contact', email: 'admin@vinyl-base.com', phone: '+60 5-526 7231', contactUrl: 'https://vinyl-base.com/about-us/' },
+    source: { label: 'Vinyl Base PVC compound manufacturing and plasticizer-selection description', url: 'https://vinyl-base.com/about-us/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -533,6 +541,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'farmhannong-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'jcam-agri-tokyo': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'jieh-ming-new-taipei': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'vinyl-base-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -666,6 +675,14 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.hose.com.tw/aboutus/',
     }],
   },
+  'vinyl-base-ipoh': {
+    contacts: [],
+    departmentEmails: [],
+    sources: [{
+      label: 'Vinyl Base public PVC-compound and medical-extrusion company profile',
+      url: 'https://vinyl-base.com/about-us/',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -737,6 +754,7 @@ const demandSideLeadIds = new Set([
   'farmhannong-ulsan',
   'jcam-agri-tokyo',
   'jieh-ming-new-taipei',
+  'vinyl-base-ipoh',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
