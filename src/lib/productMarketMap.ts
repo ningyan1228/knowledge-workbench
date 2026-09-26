@@ -361,6 +361,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Twin Arrow fertilizer manufacturing and controlled-release fertilizer', url: 'https://twinarrow.com.my/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'agro-berjaya-mojokerto', productId: 'fertilizer-coating', company: 'PT Agro Berjaya Nusantara', country: 'Indonesia', countryZh: '印度尼西亚', city: 'Mojokerto, East Java', latitude: -7.4722, longitude: 112.4340,
+    legacyCompanyDescription: '控释肥生产商', fit: '优先核验',
+    signal: '行业展会报道显示该公司生产 Ferti Best Controlled Release Fertilizer，并在 Mojokerto 自有工厂生产；其公开 LinkedIn 同时显示肥料工厂操作员与 QC 实验室岗位，支持其为下游肥料制造企业。可进一步核验包衣原料采购和生产负责人。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核公开展会报道与公司 LinkedIn：其公开业务为 CRF 成品肥及肥料制造；本轮检索的公开来源未显示其销售肥料包衣原料。' },
+    contact: { label: 'Public customer enquiry line cited in HaiSawit event report', phone: '+62 811-5705-318', contactUrl: 'https://haisawit.co.id/news/detail/pt-agro-berjaya-nusantara-perkenalkan-pupuk-crf-paling-ekonomis-di-gelaran-hasi-2026-jakarta' },
+    source: { label: 'HaiSawit report: Agro Berjaya CRF and Mojokerto factory', url: 'https://haisawit.co.id/news/detail/pt-agro-berjaya-nusantara-perkenalkan-pupuk-crf-paling-ekonomis-di-gelaran-hasi-2026-jakarta' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -488,6 +496,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'simplot-boise': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'agrofarm-ponorogo': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'twin-arrow-shah-alam': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'agro-berjaya-mojokerto': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -565,6 +574,16 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.genustek.com/contact',
     }],
   },
+  'agro-berjaya-mojokerto': {
+    website: undefined,
+    linkedIn: 'https://id.linkedin.com/company/agroberjayanusantara',
+    contacts: [],
+    departmentEmails: [],
+    sources: [{
+      label: 'PT Agro Berjaya Nusantara public LinkedIn company page',
+      url: 'https://id.linkedin.com/company/agroberjayanusantara',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -631,6 +650,7 @@ const demandSideLeadIds = new Set([
   'simplot-boise',
   'agrofarm-ponorogo',
   'twin-arrow-shah-alam',
+  'agro-berjaya-mojokerto',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
