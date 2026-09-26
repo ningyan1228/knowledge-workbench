@@ -377,6 +377,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Diversatech AJIB CRF polymer-coated agglomeration technology', url: 'https://www.diversatechfertilizer.com/node/58' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'farmhannong-ulsan', productId: 'fertilizer-coating', company: 'FarmHannong Co., Ltd.', country: 'South Korea', countryZh: '韩国', city: 'Ulsan', latitude: 35.5384, longitude: 129.3114,
+    legacyCompanyDescription: '聚合物包膜控释肥生产商', fit: '优先核验',
+    signal: '官网列出 Ulsan 肥料生产设施以及 Coated Urea、Coated DAP、Coated N-K 等聚合物包膜控释肥产品，并说明肥料颗粒在生产中由超薄聚合物层包覆；该企业生产下游包膜肥，具备包衣原料采购和技术负责人核验价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、生产设施与联系页：其公开业务为包膜控释肥及其他成品肥制造；本轮检索的官方来源未显示其销售肥料包衣原料。' },
+    contact: { label: 'FarmHannong Procurement desk', email: 'jhkim0424@farmhannong.com', phone: '+82 2-3159-5836', contactUrl: 'https://www.farmhannong.com/eng/cs/direct/inquiry/write.do' },
+    source: { label: 'FarmHannong CRF polymer-coated fertilizer products', url: 'https://www.farmhannong.com/eng/Fertilizers/CRF/contentsid/215/index.do' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -506,6 +514,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'twin-arrow-shah-alam': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'agro-berjaya-mojokerto': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'diversatech-bangi': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'farmhannong-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -609,6 +618,17 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink',
     }],
   },
+  'farmhannong-ulsan': {
+    departmentEmails: [
+      { department: 'Procurement', email: 'jhkim0424@farmhannong.com', source: { label: 'FarmHannong public procurement desk', url: 'https://www.farmhannong.com/eng/cs/direct/inquiry/write.do' } },
+      { department: 'General', email: 'dllion@farmhannong.com', source: { label: 'FarmHannong public fertilizer international sales desk', url: 'https://www.farmhannong.com/eng/cs/direct/inquiry/write.do' } },
+    ],
+    contacts: [],
+    sources: [{
+      label: 'FarmHannong fertilizer production facility overview',
+      url: 'https://www.farmhannong.com/eng/company/contentsid/154/index.do',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -677,6 +697,7 @@ const demandSideLeadIds = new Set([
   'twin-arrow-shah-alam',
   'agro-berjaya-mojokerto',
   'diversatech-bangi',
+  'farmhannong-ulsan',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
