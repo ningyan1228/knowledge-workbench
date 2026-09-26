@@ -435,14 +435,6 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Turf Care Supply polymer-coated urea and controlled-release fertilizer manufacturing', url: 'https://www.turfcaresupply.com/EEF_Technologies' }, checkedAt: '2026-09-26',
   },
   {
-    id: 'polyblu-blumenau', productId: 'elo', company: 'Polyblu Indústria de Polímeros Ltda', country: 'Brazil', countryZh: '巴西', city: 'Blumenau, Santa Catarina', latitude: -26.9194, longitude: -49.0661,
-    legacyCompanyDescription: '柔性 PVC 配方制造商', fit: '可开发候选',
-    signal: '官网说明其在 Blumenau 生产定制 PVC compounds；柔性 PVC 产品页明确写明其热塑性配方由 PVC、plasticizers、stabilizers 和 additives 组成，并用于注塑、挤出和吹塑。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
-    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品与公司介绍：其公开业务为定制 PVC、C-PVC、WPC 和特种聚合物 compound 制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
-    contact: { label: 'Polyblu commercial and technical contact', email: 'comercial@polyblu.com.br', phone: '+55 47 3322-9716', contactUrl: 'https://www.polyblu.com.br/sobre/' },
-    source: { label: 'Polyblu flexible PVC compound formulation with plasticizers and stabilizers', url: 'https://www.polyblu.com.br/produtos/pvc-flexivel/' }, checkedAt: '2026-09-26',
-  },
-  {
     id: 'omega-polimeros-trujui', productId: 'elo', company: 'Omega Polímeros', country: 'Argentina', countryZh: '阿根廷', city: 'Trujui, Moreno, Buenos Aires', latitude: -34.6460, longitude: -58.7920,
     legacyCompanyDescription: '柔性 PVC 配方制造商', fit: '可开发候选',
     signal: '官网明确其为 PVC compounds 生产商；柔性 PVC 产品页说明该类 compound 以不同类型的 plasticizers 制造，以获得柔韧性、抗撕裂或橡胶般外观。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
@@ -611,7 +603,6 @@ const leadQualifications: Record<string, LeadQualification> = {
   'schramm-coatings-offenbach': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'periwal-bhiwadi': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'turf-care-martins-ferry': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
-  'polyblu-blumenau': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'omega-polimeros-trujui': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'supernovae-funza': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'vivacor-diadema': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
@@ -796,19 +787,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.turfcaresupply.com/martins-ferry-facility',
     }],
   },
-  'polyblu-blumenau': {
-    contacts: [],
-    departmentEmails: [{
-      department: 'Sales', email: 'comercial@polyblu.com.br',
-      source: { label: 'Polyblu commercial and technical contact', url: 'https://www.polyblu.com.br/sobre/' },
-    }],
-    whatsapp: 'https://wa.me/554733402591',
-    address: 'Rua Guido Kaestner Sênior, 44 e 80, Boa Vista, Blumenau, SC 89012-360, Brazil',
-    sources: [{
-      label: 'Polyblu formulation workflow and commercial/technical contact',
-      url: 'https://www.polyblu.com.br/sobre/',
-    }],
-  },
   'omega-polimeros-trujui': {
     contacts: [],
     departmentEmails: [{
@@ -936,7 +914,6 @@ const demandSideLeadIds = new Set([
   'schramm-coatings-offenbach',
   'periwal-bhiwadi',
   'turf-care-martins-ferry',
-  'polyblu-blumenau',
   'omega-polimeros-trujui',
   'supernovae-funza',
   'vivacor-diadema',
