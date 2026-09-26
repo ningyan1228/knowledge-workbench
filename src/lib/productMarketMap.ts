@@ -573,6 +573,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Public business email', email: 'info@traditem.com', phone: '+49 2103-25372-90', contactUrl: 'https://traditem.com/en/products/epoxies' },
     source: { label: 'Traditem epoxidized linseed oil listing', url: 'https://traditem.com/en/products/epoxies' }, checkedAt: '2026-09-25',
   },
+  {
+    id: 'astra-chemtech-mumbai', productId: 'nl-w1201', company: 'Astra Chemtech Private Limited', country: 'India', countryZh: '印度', city: 'Mumbai, Maharashtra', latitude: 19.0760, longitude: 72.8777,
+    legacyCompanyDescription: '水性 PP / BOPP 底涂与胶黏剂配方制造商', fit: '可开发候选',
+    signal: '官网产品页列出 Astra Aqueous Primer，明确用于 PP / BOPP film，并说明为树脂和丙烯酸聚合物的配方；公司介绍同时确认其自有制造单元及 adhesives、primers、water-based coatings 产品线。PP 与 OPP/BOPP 均属于 NL-W1201 TDS 已验证基材，因此该企业作为下游水性 primer 配方制造商，具备核验附着力材料采购和技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、制造能力与联系页：其公开业务为水性 primer、胶黏剂和涂层等下游配方产品制造；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'Astra Chemtech public director and technical-support contact', phone: '+91 80 4896 4978', contactUrl: 'https://www.astrachemtech.com/enquiry.html' },
+    source: { label: 'Astra water-based primer for PP/BOPP film', url: 'https://www.astrachemtech.com/astra-water-based-primer-for-paper-board.html' }, checkedAt: '2026-09-26',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -630,6 +638,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'inbra-orangeburg': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'adeka-tokyo': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'traditem-hilden': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
+  'astra-chemtech-mumbai': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
 }
 
 function originOf(url: string) {
@@ -863,6 +872,26 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       source: { label: 'Polymer-Chemie public contact-person directory', url: 'https://www.polymer-chemie.de/en/contact/all-contact-persons' },
     }],
   },
+  'astra-chemtech-mumbai': {
+    contacts: [
+      {
+        name: 'Farid Sorathiya', title: 'Director', department: 'Management',
+        source: { label: 'Astra Chemtech public contact page', url: 'https://www.astrachemtech.com/enquiry.html' },
+        verifiedAt: '2026-09-26',
+      },
+      {
+        name: 'Gautham Bhat', title: 'Technical Support', department: 'Technical',
+        source: { label: 'Astra Chemtech public contact page', url: 'https://www.astrachemtech.com/enquiry.html' },
+        verifiedAt: '2026-09-26',
+      },
+    ],
+    departmentEmails: [],
+    address: 'No. 306, Nav - Vivek Industrial Estate, Mogul Lane, Mahim West, Mumbai 400016, Maharashtra, India',
+    sources: [
+      { label: 'Astra Chemtech manufacturing profile and product lines', url: 'https://www.astrachemtech.com/profile.html' },
+      { label: 'Astra Chemtech public contact and technical-support listing', url: 'https://www.astrachemtech.com/enquiry.html' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -923,6 +952,7 @@ const demandSideLeadIds = new Set([
   'nutrien-carseland',
   'ichemco-cuggiono',
   'polymer-chemie-bad-sobernheim',
+  'astra-chemtech-mumbai',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
