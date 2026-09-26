@@ -62,6 +62,8 @@ describe('global product lead map', () => {
       expect(['优先核验', '可开发候选']).toContain(lead.fit)
       expect(lead.commercialRole).toBe('demand_side')
       expect(lead.leadEligible).toBe(true)
+      expect(lead.demandSideReason).not.toHaveLength(0)
+      expect(lead.country).not.toBe('China')
       const targetType = targetCompanyTypes.find((type) => type.id === lead.targetCompanyTypeId)
       expect(targetType?.productId).toBe(lead.productId)
       expect(targetType?.kind).toBe('target')

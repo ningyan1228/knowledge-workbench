@@ -92,6 +92,7 @@ export type PublicLead = {
   longitude: number
   commercialRole: CommercialRole
   leadEligible: boolean
+  demandSideReason: string
   targetCompanyTypeId: string
   fit: '优先核验' | '可开发候选' | '替代方案研究'
   signal: string
@@ -180,7 +181,7 @@ export const targetCompanyTypes: TargetCompanyType[] = [
 // These are public-business-contact research leads, not confirmed buyers or demand claims.
 // Every visible contact is paired with its first-party source and a verification date.
 // Kept only as the original research note; it is deliberately not exposed as the lead relationship.
-type RawPublicLead = Omit<PublicLead, 'profile' | 'targetCompanyTypeId' | 'companyEvidence' | 'commercialRole' | 'leadEligible'> & { legacyCompanyDescription: string }
+type RawPublicLead = Omit<PublicLead, 'profile' | 'targetCompanyTypeId' | 'companyEvidence' | 'commercialRole' | 'leadEligible' | 'demandSideReason'> & { legacyCompanyDescription: string }
 const rawPublicLeads: RawPublicLead[] = [
   {
     id: 'icl-charleston', productId: 'fertilizer-coating', company: 'ICL Growing Solutions Charleston', country: 'United States', countryZh: '美国', city: 'Charleston, South Carolina', latitude: 32.7765, longitude: -79.9311,
@@ -589,6 +590,9 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
     ...record,
     commercialRole: 'demand_side',
     leadEligible: true,
+    // This is intentionally distinct from a purchase claim: it records the
+    // public downstream-use rationale that made the company eligible for review.
+    demandSideReason: lead.signal,
     targetCompanyTypeId: qualification.targetCompanyTypeId,
     companyEvidence: {
       applicationLayer: qualification.applicationLayer,
