@@ -89,4 +89,12 @@ describe('global product lead map', () => {
     expect(icl.profile.contacts[0].verifiedAt).toBe('2026-09-25')
     expect(pursell.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'jason@fertilizer.com' })
   })
+
+  it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
+    for (const id of ['simplot-boise', 'mica-shelton', 'ac-profil-huttwil']) {
+      const lead = publicLeads.find((item) => item.id === id)!
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-26')
+      expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
+    }
+  })
 })

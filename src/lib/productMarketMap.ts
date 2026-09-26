@@ -51,6 +51,11 @@ export type CompanyEvidence = {
   verifiedAt: string
 }
 
+export type SupplierCompetitorCheck = {
+  checkedAt: string
+  conclusion: string
+}
+
 export type CompanyContact = {
   name: string
   title?: string
@@ -93,6 +98,7 @@ export type PublicLead = {
   commercialRole: CommercialRole
   leadEligible: boolean
   demandSideReason: string
+  supplierCompetitorCheck?: SupplierCompetitorCheck
   targetCompanyTypeId: string
   fit: '优先核验' | '可开发候选' | '替代方案研究'
   signal: string
@@ -334,6 +340,7 @@ const rawPublicLeads: RawPublicLead[] = [
     id: 'simplot-boise', productId: 'fertilizer-coating', company: 'J.R. Simplot Company (Turf & Horticulture)', country: 'United States', countryZh: '美国', city: 'Boise, Idaho', latitude: 43.6150, longitude: -116.2023,
     legacyCompanyDescription: '聚合物包膜控释肥生产商', fit: '优先核验',
     signal: '官网明确 GAL-XeONE 为 Simplot 的 polymer-coated controlled-release fertilizer，并说明聚合物包衣控制养分释放；该公司销售成品包膜肥而非包衣原料，属于包衣剂的下游肥料制造场景，可核验包衣原料采购和生产负责人。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品资料：其公开资料描述的是成品聚合物包膜肥；本轮检索的官方来源未显示其销售肥料包衣原料。' },
     contact: { label: 'Simplot Turf & Horticulture public business line', phone: '+1 800-832-8891', contactUrl: 'https://th.simplot.com/granulated-fertilizer/gal-xe-one' },
     source: { label: 'Simplot GAL-XeONE polymer-coated controlled-release fertilizer', url: 'https://th.simplot.com/granulated-fertilizer/gal-xe-one' }, checkedAt: '2026-09-26',
   },
@@ -341,6 +348,7 @@ const rawPublicLeads: RawPublicLead[] = [
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品目录：其公开产品为下游水性 primer/coating 配方；本轮检索的官方来源未显示其销售水性聚烯烃乳液或同类附着力原料。' },
     contact: { label: 'Mica Corporation public business contact', phone: '+1 203-922-8888', contactUrl: 'https://mica-corp.com/contact-us/' },
     source: { label: 'Mica water-based primers and coatings product catalog', url: 'https://mica-corp.com/products/' }, checkedAt: '2026-09-26',
   },
@@ -348,6 +356,7 @@ const rawPublicLeads: RawPublicLead[] = [
     id: 'ac-profil-huttwil', productId: 'elo', company: 'AC-Profil AG', country: 'Switzerland', countryZh: '瑞士', city: 'Huttwil', latitude: 47.1150, longitude: 7.8600,
     legacyCompanyDescription: 'PVC 配方与型材制造商', fit: '可开发候选',
     signal: '官网说明其在 Huttwil 自行进行 PVC compounding，并将 PVC、TPE、PP 配方用于自有挤出和下游型材制造；PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方业务页：其公开业务为 PVC compound 与型材制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
     contact: { label: 'AC-Profil public business contact', email: 'info@ac-profil.ch', phone: '+41 62 965 38 78', contactUrl: 'https://ac-profil.ch/en/contact' },
     source: { label: 'AC-Profil PVC compounding service', url: 'https://ac-profil.ch/en/services/plastic-compounding' }, checkedAt: '2026-09-26',
   },
