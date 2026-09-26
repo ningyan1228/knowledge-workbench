@@ -33,6 +33,20 @@ describe('global product lead map', () => {
     }
   })
 
+  it('keeps NL-W1201 substrate scope and ELO PVC expansion evidence precise', () => {
+    const nl = marketProducts.find((product) => product.id === 'nl-w1201')!
+    expect(nl.tdsApplicationIds).toEqual(expect.arrayContaining(['pvc-primer', 'aluminum-primer']))
+    expect(tdsVerifiedApplications.some((application) => application.id === 'metal-primer')).toBe(false)
+
+    const pvcType = targetCompanyTypes.find((type) => type.id === 'pvc-compound-manufacturer')!
+    expect(pvcType.applicationReferences).toEqual([{ layer: 'market-extended', applicationId: 'elo-pvc-plasticizer' }])
+    expect(targetCompanyTypes.some((type) => type.nameEn === 'Plastic Product Manufacturer')).toBe(false)
+    for (const lead of publicLeads.filter((item) => ['plastchem-hardenberg', 'polyflex-baltic', 'stir-barletta'].includes(item.id))) {
+      expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' })
+      expect(lead.targetCompanyTypeId).toBe('pvc-compound-manufacturer')
+    }
+  })
+
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
     expect(publicLeads).toHaveLength(18)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)

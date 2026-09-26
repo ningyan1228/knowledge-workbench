@@ -54,7 +54,7 @@ export type CompanyEvidence = {
 export type CompanyContact = {
   name: string
   title?: string
-  department?: 'Sales' | 'Procurement' | 'Technical' | 'Management' | 'Other'
+  department?: 'Sales' | 'Procurement' | 'Technical' | 'Production' | 'Management' | 'Other'
   email?: string
   phone?: string
   linkedIn?: string
@@ -63,7 +63,7 @@ export type CompanyContact = {
 }
 
 export type DepartmentEmail = {
-  department: 'Sales' | 'Procurement' | 'Technical' | 'General'
+  department: 'Sales' | 'Procurement' | 'Technical' | 'Production' | 'General'
   email: string
   source?: { label: string; url: string }
 }
@@ -106,21 +106,21 @@ export const marketProducts: MarketProduct[] = [
   {
     id: 'fertilizer-coating', name: '缓释肥料包膜原料', nameEn: 'Controlled-release Fertilizer Coating Material', color: '#d97706',
     tdsApplicationIds: ['controlled-release-fertilizer', 'slow-release-fertilizer', 'coated-urea', 'polyurethane-coated-urea', 'coated-compound-fertilizer'],
-    searchLogic: '从已验证包膜场景反查肥料生产商：控释肥 / 缓释肥 → 包膜尿素 / 包膜复合肥 → 特种肥生产商。',
+    searchLogic: '只反查有公开包膜证据的肥料生产商：明确生产控释肥 / 缓释肥 / 包膜尿素 / 包膜复合肥，或有包衣生产能力；普通特种肥企业不得仅凭分类入库。',
     searchTerms: ['controlled-release fertilizer manufacturer', 'slow-release fertilizer manufacturer', 'polymer-coated urea manufacturer', 'coated compound fertilizer manufacturer'],
     tdsScope: '基于已提供产品介绍：用于控释肥、包膜尿素及相关包膜工艺；具体配方、释放期和合规须逐案确认。',
   },
   {
     id: 'nl-w1201', name: 'NL-W1201 水性表面处理剂', nameEn: 'Water-Based Surface Treatment Agent', color: '#0f766e',
-    tdsApplicationIds: ['untreated-pp-primer', 'pe-primer', 'opp-primer', 'pet-primer', 'abs-surface-treatment'],
+    tdsApplicationIds: ['untreated-pp-primer', 'pe-primer', 'opp-primer', 'pet-primer', 'abs-surface-treatment', 'pvc-primer', 'glass-adhesion-promotion', 'aluminum-primer', 'wood-surface-treatment'],
     searchLogic: '按“已验证基材 + primer / adhesion promoter + 配方商或涂料企业”寻找，不把终端行业推断为 TDS 应用。',
     searchTerms: ['PP primer formulator', 'PE OPP adhesion promoter manufacturer', 'water-based polyolefin primer formulator', 'coating adhesion promoter company'],
-    tdsScope: '基于已提供英文 TDS：面向 PP、PE、OPP 等低表面能材料的水性底涂 / 附着力促进应用；终端体系需测试确认。',
+    tdsScope: '基于已提供英文 TDS：面向 PP、PE、OPP、PET、ABS、PVC、glass、aluminum、wood 的水性底涂 / 附着力促进应用；不将 aluminum 自动泛化为所有 metal，终端体系需测试确认。',
   },
   {
     id: 'elo', name: '环氧化亚麻油 ELO', nameEn: 'Epoxidized Linseed Oil', color: '#7c3aed',
     tdsApplicationIds: ['polymer-plasticizer', 'polymer-stabilizer', 'coatings', 'adhesives', 'inks', 'sealants', 'resin-modification'],
-    searchLogic: '优先寻找实际使用功能添加剂的聚合物配方、增塑剂复配、涂料、胶黏剂、油墨、密封剂和树脂改性企业，而非只搜 ELO 生产商。',
+    searchLogic: '优先寻找实际使用功能添加剂的聚合物配方、增塑剂使用型 compound、涂料、胶黏剂、油墨、密封剂和树脂改性企业，而非只搜 ELO 生产商；PVC、电缆与柔性 PVC 仅在有来源的市场扩展应用下搜索。',
     searchTerms: ['polymer formulator plasticizer user', 'plasticizer compounder', 'coating manufacturer bio-based additive', 'adhesive ink sealant resin formulator'],
     tdsScope: '基于已提供英文 TDS：ELO 可作为聚合物添加剂，并用于涂料、胶黏剂、油墨、密封胶和树脂改性；适用性须由客户配方验证。',
   },
@@ -139,7 +139,8 @@ export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
   { id: 'opp-primer', productId: 'nl-w1201', name: 'OPP 底涂', nameEn: 'OPP Primer', description: '用于 OPP 基材的水性表面处理 / 底涂。', sourceDocument: '用户提供：NL-W1201 TDS' },
   { id: 'pet-primer', productId: 'nl-w1201', name: 'PET 底涂', nameEn: 'PET Primer', description: '用于 PET 基材的水性表面处理 / 底涂。', sourceDocument: '用户提供：NL-W1201 TDS' },
   { id: 'abs-surface-treatment', productId: 'nl-w1201', name: 'ABS 表面处理', nameEn: 'ABS Surface Treatment', description: '用于 ABS 基材表面处理。', sourceDocument: '用户提供：NL-W1201 TDS' },
-  { id: 'metal-primer', productId: 'nl-w1201', name: '金属附着力促进', nameEn: 'Metal Primer / Adhesion Promotion', description: '用于金属基材附着力促进。', sourceDocument: '用户提供：NL-W1201 TDS' },
+  { id: 'pvc-primer', productId: 'nl-w1201', name: 'PVC 底涂', nameEn: 'PVC Primer', description: '用于 PVC 基材的水性表面处理 / 底涂。', sourceDocument: '用户提供：NL-W1201 TDS' },
+  { id: 'aluminum-primer', productId: 'nl-w1201', name: '铝材附着力促进', nameEn: 'Aluminum Primer / Adhesion Promotion', description: '用于 aluminum 基材附着力促进；不自动泛化为所有金属。', sourceDocument: '用户提供：NL-W1201 TDS' },
   { id: 'glass-adhesion-promotion', productId: 'nl-w1201', name: '玻璃附着力促进', nameEn: 'Glass Adhesion Promotion', description: '用于玻璃基材附着力促进。', sourceDocument: '用户提供：NL-W1201 TDS' },
   { id: 'wood-surface-treatment', productId: 'nl-w1201', name: '木材表面处理', nameEn: 'Wood Surface Treatment', description: '用于木材表面处理。', sourceDocument: '用户提供：NL-W1201 TDS' },
   { id: 'polymer-plasticizer', productId: 'elo', name: '聚合物增塑剂', nameEn: 'Polymer Plasticizer', description: '作为聚合物体系增塑剂。', sourceDocument: '用户提供：ELO TDS' },
@@ -165,9 +166,10 @@ export const targetCompanyTypes: TargetCompanyType[] = [
   { id: 'coated-compound-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '包膜复合肥生产商', nameEn: 'Coated Compound Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'coated-compound-fertilizer' }] },
   { id: 'specialty-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '特种肥生产商', nameEn: 'Specialty Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'controlled-release-fertilizer' }, { layer: 'tds-verified', applicationId: 'slow-release-fertilizer' }] },
   { id: 'primer-adhesion-promoter-formulator', productId: 'nl-w1201', name: '水性底涂 / 附着力促进剂配方商', nameEn: 'Primer / Adhesion Promoter Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'pe-primer' }, { layer: 'tds-verified', applicationId: 'opp-primer' }, { layer: 'tds-verified', applicationId: 'pet-primer' }, { layer: 'tds-verified', applicationId: 'abs-surface-treatment' }] },
-  { id: 'coating-manufacturer', productId: 'nl-w1201', name: '涂料企业', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'metal-primer' }, { layer: 'tds-verified', applicationId: 'glass-adhesion-promotion' }] },
+  { id: 'coating-manufacturer', productId: 'nl-w1201', name: '涂料企业', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'pvc-primer' }, { layer: 'tds-verified', applicationId: 'aluminum-primer' }, { layer: 'tds-verified', applicationId: 'glass-adhesion-promotion' }] },
   { id: 'polymer-formulator', productId: 'elo', name: '聚合物配方商', nameEn: 'Polymer Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }, { layer: 'tds-verified', applicationId: 'polymer-stabilizer' }] },
-  { id: 'plasticizer-user-compounder', productId: 'elo', name: '增塑剂使用商 / 复配商', nameEn: 'Plasticizer User / Compounder', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }, { layer: 'market-extended', applicationId: 'elo-pvc-plasticizer' }] },
+  { id: 'plasticizer-using-polymer-compounder', productId: 'elo', name: '增塑剂使用型聚合物配方商', nameEn: 'Plasticizer-Using Polymer Compounder', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }] },
+  { id: 'pvc-compound-manufacturer', productId: 'elo', name: 'PVC 配方生产商（需扩展证据）', nameEn: 'PVC Compound Manufacturer (Sourced Extension Required)', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'elo-pvc-plasticizer' }] },
   { id: 'elo-coating-manufacturer', productId: 'elo', name: '涂料生产商', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'coatings' }] },
   { id: 'adhesive-manufacturer', productId: 'elo', name: '胶黏剂生产商', nameEn: 'Adhesive Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'adhesives' }] },
   { id: 'ink-manufacturer', productId: 'elo', name: '油墨生产商', nameEn: 'Ink Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'inks' }] },
@@ -409,7 +411,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'florikan-bowling-green': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'genus-brunswick': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'pol-coatings-twello': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
-  'plastchem-hardenberg': { targetCompanyTypeId: 'polymer-formulator', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
+  'plastchem-hardenberg': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'pursell-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cotex-dartmouth': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'simofert-beuningen': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -418,8 +420,8 @@ const leadQualifications: Record<string, LeadQualification> = {
   'aqua-based-us': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'deltachem-born': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cic-mckinney': { targetCompanyTypeId: 'coating-manufacturer', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
-  'polyflex-baltic': { targetCompanyTypeId: 'polymer-formulator', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
-  'stir-barletta': { targetCompanyTypeId: 'polymer-formulator', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
+  'polyflex-baltic': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'stir-barletta': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'paramelt-netherlands': { targetCompanyTypeId: 'alternative-primer-supplier', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'nippon-paper-japan': { targetCompanyTypeId: 'alternative-primer-supplier', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'aline-detroit': { targetCompanyTypeId: 'alternative-primer-supplier', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
@@ -430,7 +432,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'polar-canada': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'tds-verified', applicationId: 'coatings' },
   'cargill-minneapolis': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'acs-griffith': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
-  'inbra-orangeburg': { targetCompanyTypeId: 'plasticizer-user-compounder', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'inbra-orangeburg': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'adeka-tokyo': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'traditem-hilden': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
 }
