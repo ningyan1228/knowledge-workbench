@@ -417,6 +417,22 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'AkzoNobel waterborne PP/EPDM and ABS primers developed and produced by SCHRAMM Coatings', url: 'https://automotive.akzonobel.com/en/products/filters/comp_Waterborne' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'periwal-bhiwadi', productId: 'elo', company: 'Periwal Polymers Private Limited', country: 'India', countryZh: '印度', city: 'Bhiwadi, Rajasthan', latitude: 28.2040, longitude: 76.8460,
+    legacyCompanyDescription: 'PVC 配方与线缆制品材料制造商', fit: '可开发候选',
+    signal: '官网说明该公司在 Bhiwadi 自有 PVC compounding 工厂；其 PVC 产品规格明确写明配方由 resin、plasticizers、stabilizers 与其他 additives 组成，并用于线缆绝缘、护套等下游制品。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方公司、工厂与 PVC 产品资料：其公开业务为 PVC/TPE compound 制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Periwal Polymers public sales contact', email: 'sales@periwalpolymers.com', phone: '+91 9602295997', contactUrl: 'https://www.periwalpolymers.com/contact' },
+    source: { label: 'Periwal PVC compound formulation with plasticizers and stabilizers', url: 'https://www.periwalpolymers.com/PP-VIN-T399.php' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'turf-care-martins-ferry', productId: 'fertilizer-coating', company: 'Turf Care Supply, LLC', country: 'United States', countryZh: '美国', city: 'Martins Ferry, Ohio', latitude: 40.0951, longitude: -80.7231,
+    legacyCompanyDescription: '聚合物包膜尿素与控释肥制造商', fit: '优先核验',
+    signal: '官网明确其 Martins Ferry 工厂是制造与肥料包衣设施，设有 polymer coating 能力；公司 EEF 产品页明确列出 PCU（Polymer Coated Urea）及 60、90、120、180 天释放规格。该企业生产下游包膜尿素和控释肥成品，具备包衣原料采购与生产负责人核验价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方 EEF 产品与 Martins Ferry 工厂资料：其公开业务为 PCU/控释肥成品制造、包衣和配混；本轮检索的官方来源未显示其销售肥料包衣树脂或包衣原料。' },
+    contact: { label: 'Martins Ferry facility public contact', email: 'bmengeu@tcscusa.com', phone: '+1 740-633-6366', contactUrl: 'https://www.turfcaresupply.com/locations' },
+    source: { label: 'Turf Care Supply polymer-coated urea and controlled-release fertilizer manufacturing', url: 'https://www.turfcaresupply.com/EEF_Technologies' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -551,6 +567,8 @@ const leadQualifications: Record<string, LeadQualification> = {
   'jieh-ming-new-taipei': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'vinyl-base-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'schramm-coatings-offenbach': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
+  'periwal-bhiwadi': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'turf-care-martins-ferry': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -700,6 +718,37 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.akzonobel.com/en/countries/germany/unsere-standorte',
     }],
   },
+  'periwal-bhiwadi': {
+    contacts: [{
+      name: 'Pawan Periwal', title: 'Managing Director', department: 'Management',
+      source: { label: 'Periwal Polymers official managing-director page', url: 'https://www.periwalpolymers.com/message-from-md.php' },
+      verifiedAt: '2026-09-26',
+    }],
+    departmentEmails: [{
+      department: 'Sales', email: 'sales@periwalpolymers.com',
+      source: { label: 'Periwal Polymers public contact page', url: 'https://www.periwalpolymers.com/contact' },
+    }],
+    sources: [{
+      label: 'Periwal PVC-compounding plant and capacity',
+      url: 'https://www.periwalpolymers.com/about',
+    }],
+  },
+  'turf-care-martins-ferry': {
+    contacts: [{
+      name: 'Brian Mengeu', title: 'General Manager, Martins Ferry Manufacturing & Coating Facility', department: 'Production',
+      email: 'bmengeu@tcscusa.com', phone: '+1 740-633-6366',
+      source: { label: 'Turf Care Supply Martins Ferry facility contact', url: 'https://www.turfcaresupply.com/locations' },
+      verifiedAt: '2026-09-26',
+    }],
+    departmentEmails: [{
+      department: 'Production', email: 'bmengeu@tcscusa.com',
+      source: { label: 'Turf Care Supply Martins Ferry facility contact', url: 'https://www.turfcaresupply.com/locations' },
+    }],
+    sources: [{
+      label: 'Turf Care Supply Martins Ferry polymer-coating facility',
+      url: 'https://www.turfcaresupply.com/martins-ferry-facility',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -773,6 +822,8 @@ const demandSideLeadIds = new Set([
   'jieh-ming-new-taipei',
   'vinyl-base-ipoh',
   'schramm-coatings-offenbach',
+  'periwal-bhiwadi',
+  'turf-care-martins-ferry',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
