@@ -34,7 +34,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(9)
+    expect(publicLeads).toHaveLength(10)
     expect(publicLeads.every((lead) => lead.productId === 'fertilizer-coating')).toBe(true)
     for (const lead of publicLeads) {
       expect(marketProducts.some((product) => product.id === lead.productId)).toBe(true)

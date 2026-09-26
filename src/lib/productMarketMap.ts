@@ -209,6 +209,13 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'COMPO EXPERT controlled-release fertilizer technology', url: 'https://compo-expert.com/product-groups/controlled-release-fertilizers' }, checkedAt: '2026-09-25',
   },
   {
+    id: 'florikan-bowling-green', productId: 'fertilizer-coating', company: 'Florikan ESA LLC (Profile Products)', country: 'United States', countryZh: '美国', city: 'Bowling Green, Florida', latitude: 27.6384, longitude: -81.8239,
+    legacyCompanyDescription: '控释肥 / 聚合物包膜肥生产商', fit: '优先核验',
+    signal: 'Profile Products 官网公告明确 Florikan 采购肥料基础原料，并在佛罗里达生产线上将其进行聚合物包膜以生产控释肥；这是下游肥料制造与包衣使用场景，不是包衣原料供应商。',
+    contact: { label: 'Public corporate contact', email: 'florikan.corporate@florikan.com', phone: '+1 800-322-8666', contactUrl: 'https://www.profileproducts.com/contact/' },
+    source: { label: 'Florikan partnership: fertilizer raw-material purchasing and polymer coating', url: 'https://www.profileproducts.com/florikan-partners-with-eurochem-group/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'aqua-based-us', productId: 'nl-w1201', company: 'Aqua Based Technologies', country: 'United States', countryZh: '美国', city: 'Northvale, New Jersey', latitude: 41.0068, longitude: -73.9496,
     legacyCompanyDescription: '水性 PP / PE / OPP 底涂与软包装配方商', fit: '替代方案研究',
     signal: '官方页面列出 PP、PE 薄膜用水性底涂产品；可作为技术路线、竞品与原料合作方向核验。',
@@ -350,6 +357,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'haifa-israel': { targetCompanyTypeId: 'specialty-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'crf-agritech-st-thomas': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'compo-expert-krefeld': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'florikan-bowling-green': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'pursell-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cotex-dartmouth': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'simofert-beuningen': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -404,6 +412,14 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     }],
     departmentEmails: [{ department: 'Sales', email: 'jason@fertilizer.com', source: { label: 'Pursell contact page', url: 'https://fertilizer.com/contact-us/' } }],
   },
+  'florikan-bowling-green': {
+    contacts: [],
+    departmentEmails: [],
+    sources: [{
+      label: 'Profile Products acquisition announcement and public Florikan contact',
+      url: 'https://www.profileproducts.com/profile-products-acquires-controlled-release-fertilizer-manufacturer-florikan/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -429,6 +445,7 @@ const demandSideLeadIds = new Set([
   'haifa-israel',
   'crf-agritech-st-thomas',
   'compo-expert-krefeld',
+  'florikan-bowling-green',
   'pursell-sylacauga',
   'cotex-dartmouth',
   'simofert-beuningen',
