@@ -385,6 +385,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'FarmHannong CRF polymer-coated fertilizer products', url: 'https://www.farmhannong.com/eng/Fertilizers/CRF/contentsid/215/index.do' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'jcam-agri-tokyo', productId: 'fertilizer-coating', company: 'JCAM Agri Co., Ltd.', country: 'Japan', countryZh: '日本', city: 'Tokyo', latitude: 35.6812, longitude: 139.7671,
+    legacyCompanyDescription: '聚烯烃树脂包膜尿素生产商', fit: '优先核验',
+    signal: '官网说明 LP-Coat 与 M-Coat 为以聚烯烃树脂和天然矿物膜包覆尿素的产品；公司主营化成肥料等的制造和销售，并运营多座工厂。该企业制造下游包膜尿素，具备包衣原料采购和技术负责人核验价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、公司业务与技术资料：其公开业务为包膜肥及其他成品肥制造；本轮检索的官方来源未显示其销售肥料包衣原料。' },
+    contact: { label: 'JCAM Agri Technical Management Division', email: 'gijutsu@jcam-agri.co.jp', phone: '+81 3-5297-8906', contactUrl: 'https://www.jcam-agri.co.jp/pdf/20231225_news_release.pdf' },
+    source: { label: 'JCAM LP-Coat and M-Coat polyolefin-resin coated urea', url: 'https://www.jcam-agri.co.jp/en/product_introduction/lp-coat-m-coat/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -515,6 +523,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'agro-berjaya-mojokerto': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'diversatech-bangi': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'farmhannong-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'jcam-agri-tokyo': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -629,6 +638,17 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.farmhannong.com/eng/company/contentsid/154/index.do',
     }],
   },
+  'jcam-agri-tokyo': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Technical', email: 'gijutsu@jcam-agri.co.jp',
+      source: { label: 'JCAM Agri technical-management contact in J-Coat release', url: 'https://www.jcam-agri.co.jp/pdf/20231225_news_release.pdf' },
+    }],
+    sources: [{
+      label: 'JCAM Agri company profile and manufacturing sites',
+      url: 'https://www.jcam-agri.co.jp/company/',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -698,6 +718,7 @@ const demandSideLeadIds = new Set([
   'agro-berjaya-mojokerto',
   'diversatech-bangi',
   'farmhannong-ulsan',
+  'jcam-agri-tokyo',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
