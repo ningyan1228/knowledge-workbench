@@ -409,6 +409,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Vinyl Base PVC compound manufacturing and plasticizer-selection description', url: 'https://vinyl-base.com/about-us/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'schramm-coatings-offenbach', productId: 'nl-w1201', company: 'SCHRAMM Coatings GmbH (AkzoNobel)', country: 'Germany', countryZh: '德国', city: 'Offenbach am Main', latitude: 50.0956, longitude: 8.7761,
+    legacyCompanyDescription: '水性汽车底涂与工业涂料配方商', fit: '可开发候选',
+    signal: 'AkzoNobel 官网明确说明其 Automotive Specialty Coatings 由 SCHRAMM Coatings 开发和生产，并列出 EWP-079、EWP-204 等适用于 flamed PP/EPDM 与 ABS 的单组分水性 primer。该企业制造下游水性底涂成品，PP 与 ABS 均属 NL-W1201 TDS 已验证基材，可核验水性附着力材料采购及技术负责人。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方汽车涂料产品与德国实体资料：其公开业务为下游汽车/特种涂料和水性 primer 制造；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'SCHRAMM Coatings public business contact', email: 'schramm-coatings@akzonobel.com', phone: '+49 69 8603 0', contactUrl: 'https://www.akzonobel.com/en/countries/germany/unsere-standorte' },
+    source: { label: 'AkzoNobel waterborne PP/EPDM and ABS primers developed and produced by SCHRAMM Coatings', url: 'https://automotive.akzonobel.com/en/products/filters/comp_Waterborne' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -542,6 +550,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'jcam-agri-tokyo': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'jieh-ming-new-taipei': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'vinyl-base-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'schramm-coatings-offenbach': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -683,6 +692,14 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://vinyl-base.com/about-us/',
     }],
   },
+  'schramm-coatings-offenbach': {
+    contacts: [],
+    departmentEmails: [],
+    sources: [{
+      label: 'AkzoNobel Germany: SCHRAMM Coatings entity contact and production address',
+      url: 'https://www.akzonobel.com/en/countries/germany/unsere-standorte',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -755,6 +772,7 @@ const demandSideLeadIds = new Set([
   'jcam-agri-tokyo',
   'jieh-ming-new-taipei',
   'vinyl-base-ipoh',
+  'schramm-coatings-offenbach',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
