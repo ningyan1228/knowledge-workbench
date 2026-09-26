@@ -597,6 +597,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Dacarto public commercial contact', email: 'comercial@dacarto.com.br', phone: '+55 11 3658-9490', contactUrl: 'https://dacarto.com.br/produtos/' },
     source: { label: 'Dacarto PVC compounds formulated with plasticizers', url: 'https://dacarto.com.br/produtos/' }, checkedAt: '2026-09-26',
   },
+  {
+    id: 'flint-group-malmo', productId: 'nl-w1201', company: 'Flint Group Packaging Solutions', country: 'Sweden', countryZh: '瑞典', city: 'Malmö', latitude: 55.6050, longitude: 13.0038,
+    legacyCompanyDescription: 'PP / PE 薄膜水性包装油墨配方制造商', fit: '可开发候选',
+    signal: '官网公开其 PremoFilm SXS/2 为用于聚烯烃薄膜表印和里印的水性油墨，并明确列出 PE 膜应用；官网同时说明其包装业务提供油墨、涂层和底涂等下游配方产品。PP / PE 水性油墨附着力底涂属于已有独立来源支持的 NL-W1201 市场扩展场景，因此该企业作为水性油墨配方制造商，具备核验水性附着力材料采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方水性包装油墨、包装产品与研发中心资料：其公开业务为油墨、涂层和底涂等下游配方成品；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'Flint Group Packaging Solutions public business email', email: 'info.packaginginks@flintgrp.com', contactUrl: 'https://www.flintgrp.com/news-and-events/news/2810-flint-group-introduces-premofilm-sxs-2/' },
+    source: { label: 'Flint Group PremoFilm water-based inks for polyolefin films', url: 'https://www.flintgrp.com/news-and-events/news/2810-flint-group-introduces-premofilm-sxs-2/' }, checkedAt: '2026-09-26',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -657,6 +665,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'astra-chemtech-mumbai': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'nam-ah-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'dacarto-osasco': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'flint-group-malmo': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
 }
 
 function originOf(url: string) {
@@ -938,6 +947,21 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://dacarto.com.br/sobre/',
     }],
   },
+  'flint-group-malmo': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'info.packaginginks@flintgrp.com',
+      source: { label: 'Flint Group PremoFilm public packaging-inks contact', url: 'https://www.flintgrp.com/news-and-events/news/2810-flint-group-introduces-premofilm-sxs-2/' },
+    }],
+    address: 'Flint Group Global Innovation Centre, Malmö, Sweden',
+    sources: [{
+      label: 'Flint Group water-based packaging inks for PE / polyolefin film',
+      url: 'https://www.flintgrp.com/news-and-events/news/2810-flint-group-introduces-premofilm-sxs-2/',
+    }, {
+      label: 'Flint Group Global Innovation Centre for packaging inks and print solutions',
+      url: 'https://www.flintgrp.com/services/centres-of-excellence/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1001,6 +1025,7 @@ const demandSideLeadIds = new Set([
   'astra-chemtech-mumbai',
   'nam-ah-ipoh',
   'dacarto-osasco',
+  'flint-group-malmo',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
