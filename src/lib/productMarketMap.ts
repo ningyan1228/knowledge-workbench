@@ -251,6 +251,20 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'DeltaChem controlled-release fertilizer coating technology', url: 'https://www.deltachem.pro/coating/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'cic-mckinney', productId: 'nl-w1201', company: 'Custom Industrial Coatings (CIC Coatings)', country: 'United States', countryZh: '美国', city: 'McKinney, Texas', latitude: 33.1972, longitude: -96.6398,
+    legacyCompanyDescription: '工业涂层 / 水性底涂与 PP 附着力体系生产商', fit: '可开发候选',
+    signal: '官网公开低 VOC 水性底涂和用于 TPO、PP 等塑料表面的 Mustang 附着力促进体系；该企业生产工业涂层体系，属于 NL-W1201 的下游涂层配方使用场景，可核验水性附着力材料采购。',
+    contact: { label: 'Public business contact', email: 'info@ciccoatings.com', phone: '+1 877-258-8797', contactUrl: 'https://ciccoatings.com/plastic-bumper-coatings/' },
+    source: { label: 'CIC water-based primer and polypropylene adhesion promoter', url: 'https://ciccoatings.com/plastic-bumper-coatings/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'polyflex-baltic', productId: 'elo', company: 'Polyflex (Flex Technologies)', country: 'United States', countryZh: '美国', city: 'Baltic, Ohio', latitude: 40.4398, longitude: -82.1457,
+    legacyCompanyDescription: '高性能柔性 PVC 配方与生产企业', fit: '可开发候选',
+    signal: '官网说明 Polyflex 在六条生产线上工程化并生产高性能 PVC 配方，产品覆盖高度柔性至半硬质 PVC；属于 ELO 聚合物增塑剂应用方向的下游配方场景，可核验增塑剂/稳定剂原料采购。',
+    contact: { label: 'Zach Alexander · Sales contact', email: 'zachalexander@flextechnologies.com', phone: '+1 330-407-0009', contactUrl: 'https://www.flextechnologies.com/polyflex' },
+    source: { label: 'Polyflex flexible PVC compound manufacturing and sales contact', url: 'https://www.flextechnologies.com/polyflex' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'stir-barletta', productId: 'elo', company: 'STIR Compounds s.r.l.', country: 'Italy', countryZh: '意大利', city: 'Barletta', latitude: 41.3195, longitude: 16.2832,
     legacyCompanyDescription: '高度增塑 PVC 定制配方与生产企业', fit: '可开发候选',
     signal: '官网说明其开发和生产定制 PVC 配方，其中柔性 PVC 为高度增塑 compound；这是 ELO 聚合物增塑剂应用方向的下游配方场景，可核验增塑剂/稳定剂原料采购。',
@@ -403,6 +417,8 @@ const leadQualifications: Record<string, LeadQualification> = {
   'smart-fert-klang': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'aqua-based-us': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'deltachem-born': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'cic-mckinney': { targetCompanyTypeId: 'coating-manufacturer', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
+  'polyflex-baltic': { targetCompanyTypeId: 'polymer-formulator', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
   'stir-barletta': { targetCompanyTypeId: 'polymer-formulator', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
   'paramelt-netherlands': { targetCompanyTypeId: 'alternative-primer-supplier', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'nippon-paper-japan': { targetCompanyTypeId: 'alternative-primer-supplier', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
@@ -471,6 +487,18 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.genustek.com/contact',
     }],
   },
+  'polyflex-baltic': {
+    contacts: [{
+      name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
+      email: 'zachalexander@flextechnologies.com', phone: '+1 330-407-0009',
+      source: { label: 'Polyflex public contact section', url: 'https://www.flextechnologies.com/polyflex' },
+      verifiedAt: '2026-09-26',
+    }],
+    departmentEmails: [{
+      department: 'Sales', email: 'zachalexander@flextechnologies.com',
+      source: { label: 'Polyflex public contact section', url: 'https://www.flextechnologies.com/polyflex' },
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -502,6 +530,8 @@ const demandSideLeadIds = new Set([
   'plastchem-hardenberg',
   'aqua-based-us',
   'deltachem-born',
+  'cic-mckinney',
+  'polyflex-baltic',
   'stir-barletta',
   'pursell-sylacauga',
   'cotex-dartmouth',
