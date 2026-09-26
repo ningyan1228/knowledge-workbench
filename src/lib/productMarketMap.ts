@@ -163,6 +163,7 @@ export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
 
 export const marketExtendedApplications: MarketExtendedApplication[] = [
   { id: 'elo-pvc-plasticizer', productId: 'elo', name: 'PVC 增塑剂应用', nameEn: 'PVC Plasticizer Application', basedOnTdsApplicationId: 'polymer-plasticizer', sourceName: 'Wiley: The epoxidized linseed oil as a secondary plasticizer in PVC processing', sourceUrl: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/vjch.202000023', verifiedAt: '2026-09-26' },
+  { id: 'waterborne-ink-anchorage-on-pp-pe', productId: 'nl-w1201', name: 'PP / PE 水性油墨附着力底涂', nameEn: 'Waterborne Ink Anchorage Primer on PP / PE', basedOnTdsApplicationId: 'pe-primer', sourceName: 'ICHEMCO technical catalog: waterborne primer for PP/PE improves anchorage of waterborne inks', sourceUrl: 'https://services.ichemco.com/eng/Catalogs/Ichemco%20Products%20for%20Tapes%20and%20Protective%20Films%202020.pdf', verifiedAt: '2026-09-26' },
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
@@ -174,6 +175,7 @@ export const targetCompanyTypes: TargetCompanyType[] = [
   { id: 'specialty-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '特种肥生产商', nameEn: 'Specialty Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'controlled-release-fertilizer' }, { layer: 'tds-verified', applicationId: 'slow-release-fertilizer' }] },
   { id: 'primer-adhesion-promoter-formulator', productId: 'nl-w1201', name: '水性底涂 / 附着力促进剂配方商', nameEn: 'Primer / Adhesion Promoter Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'pe-primer' }, { layer: 'tds-verified', applicationId: 'opp-primer' }, { layer: 'tds-verified', applicationId: 'pet-primer' }, { layer: 'tds-verified', applicationId: 'abs-surface-treatment' }] },
   { id: 'coating-manufacturer', productId: 'nl-w1201', name: '涂料企业', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'untreated-pp-primer' }, { layer: 'tds-verified', applicationId: 'pvc-primer' }, { layer: 'tds-verified', applicationId: 'aluminum-primer' }, { layer: 'tds-verified', applicationId: 'glass-adhesion-promotion' }] },
+  { id: 'waterborne-ink-manufacturer', productId: 'nl-w1201', name: '水性油墨生产商（需扩展证据）', nameEn: 'Water-Based Ink Manufacturer (Sourced Extension Required)', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' }] },
   { id: 'polymer-formulator', productId: 'elo', name: '聚合物配方商', nameEn: 'Polymer Formulator', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }, { layer: 'tds-verified', applicationId: 'polymer-stabilizer' }] },
   { id: 'plasticizer-using-polymer-compounder', productId: 'elo', name: '增塑剂使用型聚合物配方商', nameEn: 'Plasticizer-Using Polymer Compounder', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }] },
   { id: 'pvc-compound-manufacturer', productId: 'elo', name: 'PVC 配方生产商（需扩展证据）', nameEn: 'PVC Compound Manufacturer (Sourced Extension Required)', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'elo-pvc-plasticizer' }] },
@@ -441,6 +443,38 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Polyblu flexible PVC compound formulation with plasticizers and stabilizers', url: 'https://www.polyblu.com.br/produtos/pvc-flexivel/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'omega-polimeros-trujui', productId: 'elo', company: 'Omega Polímeros', country: 'Argentina', countryZh: '阿根廷', city: 'Trujui, Moreno, Buenos Aires', latitude: -34.6460, longitude: -58.7920,
+    legacyCompanyDescription: '柔性 PVC 配方制造商', fit: '可开发候选',
+    signal: '官网明确其为 PVC compounds 生产商；柔性 PVC 产品页说明该类 compound 以不同类型的 plasticizers 制造，以获得柔韧性、抗撕裂或橡胶般外观。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、公司与联系资料：其公开业务为 PVC compound、masterbatch 和后续工程塑料/热塑性弹性体产品；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Omega Polímeros public business contact', email: 'info@omegapolimeros.com.ar', phone: '+54 237 460 5440', contactUrl: 'https://omegapolimeros.com.ar/contacto/' },
+    source: { label: 'Omega flexible PVC compounds made with plasticizers', url: 'https://omegapolimeros.com.ar/compuesto-pvc/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'supernovae-funza', productId: 'elo', company: 'Supernovae S.A.S.', country: 'Colombia', countryZh: '哥伦比亚', city: 'Funza, Cundinamarca', latitude: 4.7164, longitude: -74.2119,
+    legacyCompanyDescription: 'PVC 配方制造商', fit: '可开发候选',
+    signal: '官网明确 Supernovae 制造定制 PVC compounds；其技术说明写明 PVC compound 由 resin、plasticizer、stabilizer 和 lubricants 制造，并提供柔性 PVC compound。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、公司与联系资料：其公开业务为技术型 PVC compound 制造与定制配方；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Supernovae public sales contact', email: 'ventas@supernovae.com.co', phone: '+57 601 0242761', contactUrl: 'https://supernovae.com.co/portal/contacto/' },
+    source: { label: 'Supernovae PVC compound formulation with plasticizer and stabilizer inputs', url: 'https://supernovae.com.co/portal/productos-servicios/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'vivacor-diadema', productId: 'nl-w1201', company: 'Vivacor Indústria de Tintas e Vernizes Ltda.', country: 'Brazil', countryZh: '巴西', city: 'Diadema, São Paulo', latitude: -23.6856, longitude: -46.6186,
+    legacyCompanyDescription: '水性柔版 / 凹版油墨制造商', fit: '可开发候选',
+    signal: '官网明确该公司开发和制造柔性包装用水性与溶剂型油墨和清漆；水性产品线列有用于 PP 扭结包装的油墨和用于 HDPE 购物袋的油墨。官方技术资料另证实 PP/PE 水性油墨可通过水性 primer 提升附着力，因此属于有来源支持的 NL-W1201 下游水性油墨/底涂扩展场景，可核验水性聚烯烃附着力材料的采购与技术负责人。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方公司、产品和质量介绍：其公开业务为包装用水性/溶剂型油墨与清漆成品配方和制造；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'Vivacor public business contact', email: 'sac@vivacor.com.br', phone: '+55 11 2713-3611', contactUrl: 'https://www.vivacor.com.br/v2/quem-somos/' },
+    source: { label: 'Vivacor water-based inks for PP and HDPE flexible packaging', url: 'https://www.vivacor.com.br/v2/linha-a-base-de-agua/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'agrobiotech-jardinopolis', productId: 'fertilizer-coating', company: 'Agrobiotech Agronegócio Ltda.', country: 'Brazil', countryZh: '巴西', city: 'Jardinópolis, São Paulo', latitude: -21.0172, longitude: -47.7626,
+    legacyCompanyDescription: '聚合物包膜尿素与特种颗粒肥制造商', fit: '优先核验',
+    signal: '官网明确 Agrobiotech 在巴西生产颗粒和液体肥料；其 Biocoat 产品页明确为 polymer-coated urea，通过聚合物包衣实现缓释。该企业生产下游包膜尿素成品，具备包衣原料采购与技术/生产负责人核验价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方公司、产品与服务资料：其公开业务为肥料、助剂和定制肥料的配方制造；本轮检索的官方来源未显示其生产或销售肥料包衣树脂、聚氨酯包衣原料或同类包衣原料。' },
+    contact: { label: 'Agrobiotech public business contact', email: 'contato.site@agrobiotech.com.br', phone: '+55 16 99793-6989', contactUrl: 'https://agrobiotech.com.br/en/' },
+    source: { label: 'Agrobiotech Biocoat polymer-coated urea product', url: 'https://agrobiotech.com.br/en/produtos/biocoat/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -578,6 +612,10 @@ const leadQualifications: Record<string, LeadQualification> = {
   'periwal-bhiwadi': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'turf-care-martins-ferry': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'polyblu-blumenau': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'omega-polimeros-trujui': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'supernovae-funza': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'vivacor-diadema': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'agrobiotech-jardinopolis': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -771,6 +809,58 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.polyblu.com.br/sobre/',
     }],
   },
+  'omega-polimeros-trujui': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'info@omegapolimeros.com.ar',
+      source: { label: 'Omega Polímeros public contact page', url: 'https://omegapolimeros.com.ar/contacto/' },
+    }],
+    address: 'Parque Industrial Buen Ayre, General Martín de Gainza 801, Ed. 2, Of. 67, Trujui – Moreno, Buenos Aires, Argentina',
+    sources: [{
+      label: 'Omega Polímeros PVC compound production and public contact',
+      url: 'https://omegapolimeros.com.ar/contacto/',
+    }],
+  },
+  'supernovae-funza': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'ventas@supernovae.com.co',
+      source: { label: 'Supernovae public contact page', url: 'https://supernovae.com.co/portal/contacto/' },
+    }],
+    address: 'Celta Trade Park – Bodega 100, Autopista Medellín Km 7, Vía Bogotá – La Vega, Funza, Cundinamarca, Colombia',
+    sources: [{
+      label: 'Supernovae PVC compound manufacturing and public contact',
+      url: 'https://supernovae.com.co/portal/',
+    }],
+  },
+  'vivacor-diadema': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'sac@vivacor.com.br',
+      source: { label: 'Vivacor public company contact', url: 'https://www.vivacor.com.br/v2/quem-somos/' },
+    }],
+    address: 'Rua Rio Grande do Sul, 81, Vila Oriental, Diadema, SP 09950-140, Brazil',
+    sources: [{
+      label: 'Vivacor develops and manufactures flexible-packaging inks',
+      url: 'https://www.vivacor.com.br/v2/quem-somos/',
+    }, {
+      label: 'ICHEMCO PP/PE waterborne-ink primer technical catalog',
+      url: 'https://services.ichemco.com/eng/Catalogs/Ichemco%20Products%20for%20Tapes%20and%20Protective%20Films%202020.pdf',
+    }],
+  },
+  'agrobiotech-jardinopolis': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'contato.site@agrobiotech.com.br',
+      source: { label: 'Agrobiotech public company contact', url: 'https://agrobiotech.com.br/en/' },
+    }],
+    whatsapp: 'https://wa.me/5516997936989',
+    address: 'Rua Domiciano Leite de Assis, 260, Distrito Industrial Adib Rassi, Jardinópolis, SP 14684-722, Brazil',
+    sources: [{
+      label: 'Agrobiotech Brazilian fertilizer manufacturing and public contact',
+      url: 'https://agrobiotech.com.br/en/',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -847,6 +937,10 @@ const demandSideLeadIds = new Set([
   'periwal-bhiwadi',
   'turf-care-martins-ferry',
   'polyblu-blumenau',
+  'omega-polimeros-trujui',
+  'supernovae-funza',
+  'vivacor-diadema',
+  'agrobiotech-jardinopolis',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
