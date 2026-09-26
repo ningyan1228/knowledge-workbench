@@ -155,7 +155,7 @@ export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
 ]
 
 export const marketExtendedApplications: MarketExtendedApplication[] = [
-  { id: 'elo-pvc-plasticizer', productId: 'elo', name: 'PVC 增塑剂应用', nameEn: 'PVC Plasticizer Application', basedOnTdsApplicationId: 'polymer-plasticizer', sourceName: 'INBRA epoxidized linseed oil plasticizer page', sourceUrl: 'https://inbra.com.br/en/produtos/plastificantes/', verifiedAt: '2026-09-25' },
+  { id: 'elo-pvc-plasticizer', productId: 'elo', name: 'PVC 增塑剂应用', nameEn: 'PVC Plasticizer Application', basedOnTdsApplicationId: 'polymer-plasticizer', sourceName: 'Wiley: The epoxidized linseed oil as a secondary plasticizer in PVC processing', sourceUrl: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/vjch.202000023', verifiedAt: '2026-09-26' },
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
@@ -330,6 +330,27 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Smart Fert controlled-release fertilizer products', url: 'https://www.smart-fert.com/products/' }, checkedAt: '2026-09-25',
   },
   {
+    id: 'nutrien-carseland', productId: 'fertilizer-coating', company: 'Nutrien Ltd. (Agrium Canada Partnership)', country: 'Canada', countryZh: '加拿大', city: 'Carseland, Alberta', latitude: 50.7070, longitude: -113.3960,
+    legacyCompanyDescription: '聚合物包膜尿素生产商', fit: '优先核验',
+    signal: 'Nutrien 官方产品页将 ESN 明确列为在 Carseland 生产的 polymer coated urea；官方数据表同时列出 2.9% coating weight。该企业生产下游包膜尿素，适合核验包衣原料的采购与生产负责人。',
+    contact: { label: 'Agrium Canada Partnership public product information line', phone: '+1 800-403-2861', contactUrl: 'https://products.nutrien.com/products/87' },
+    source: { label: 'Nutrien ESN Polymer Coated Urea product data sheet', url: 'https://products.nutrien.com/docs/1234' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'ichemco-cuggiono', productId: 'nl-w1201', company: 'ICHEMCO S.r.l.', country: 'Italy', countryZh: '意大利', city: 'Cuggiono, Milan', latitude: 45.5050, longitude: 8.8170,
+    legacyCompanyDescription: '水性 PE / PP / PVC 底涂与胶黏剂配方商', fit: '可开发候选',
+    signal: '官网水性底涂页面列出用于 corona-treated PE、PP 膜的水性 Primer EPA W 5，以及用于 PVC 膜的水性 Vinilprimer E 45；公司面向胶黏剂行业开发和制造底涂体系，属于下游配方使用场景，可核验水性附着力原料采购。',
+    contact: { label: 'ICHEMCO public business contact', email: 'info@ichemco.it', phone: '+39 02 97243.1', contactUrl: 'https://www.ichemco.it/en/Contact' },
+    source: { label: 'ICHEMCO water-based primers for PE, PP and PVC films', url: 'https://www.ichemco.it/en/Product/120' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'polymer-chemie-bad-sobernheim', productId: 'elo', company: 'Polymer-Chemie GmbH', country: 'Germany', countryZh: '德国', city: 'Bad Sobernheim', latitude: 49.7830, longitude: 7.6790,
+    legacyCompanyDescription: '定制 PVC compound 配方与生产企业', fit: '优先核验',
+    signal: '官网明确其修改和配制 PVC、开发客户定制配方，并披露 15 条 compounding 生产线；PVC compound 是 ELO 已有来源支持的 PVC 增塑剂市场扩展下游场景，可核验增塑剂/稳定剂原料采购。',
+    contact: { label: 'Christian Leinberger · Head of Sales and R&D', email: 'christian.leinberger@polymer-chemie.de', phone: '+49 6751 84-635', contactUrl: 'https://www.polymer-chemie.de/en/contact/all-contact-persons' },
+    source: { label: 'Polymer-Chemie PVC compounding and customer-specific formulation', url: 'https://www.polymer-chemie.de/en/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'aline-detroit', productId: 'nl-w1201', company: 'A-Line Products Corporation', country: 'United States', countryZh: '美国', city: 'Detroit, Michigan', latitude: 42.3346, longitude: -83.0005,
     legacyCompanyDescription: '水性 PP / TPO 附着力促进剂与涂层配方商', fit: '替代方案研究',
     signal: '官网公开水性聚烯烃附着力促进剂用于 PP、TPO 基材，并提供底涂与涂层产品。',
@@ -417,6 +438,9 @@ const leadQualifications: Record<string, LeadQualification> = {
   'simofert-beuningen': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'sk-specialties-sibu': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'smart-fert-klang': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'ichemco-cuggiono': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'pe-primer' },
+  'polymer-chemie-bad-sobernheim': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'aqua-based-us': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'deltachem-born': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cic-mckinney': { targetCompanyTypeId: 'coating-manufacturer', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
@@ -501,6 +525,18 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       source: { label: 'Polyflex public contact section', url: 'https://www.flextechnologies.com/polyflex' },
     }],
   },
+  'polymer-chemie-bad-sobernheim': {
+    contacts: [{
+      name: 'Christian Leinberger', title: 'Head of Sales and R&D', department: 'Technical',
+      email: 'christian.leinberger@polymer-chemie.de', phone: '+49 6751 84-635',
+      source: { label: 'Polymer-Chemie public contact-person directory', url: 'https://www.polymer-chemie.de/en/contact/all-contact-persons' },
+      verifiedAt: '2026-09-26',
+    }],
+    departmentEmails: [{
+      department: 'Technical', email: 'christian.leinberger@polymer-chemie.de',
+      source: { label: 'Polymer-Chemie public contact-person directory', url: 'https://www.polymer-chemie.de/en/contact/all-contact-persons' },
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -540,6 +576,9 @@ const demandSideLeadIds = new Set([
   'simofert-beuningen',
   'sk-specialties-sibu',
   'smart-fert-klang',
+  'nutrien-carseland',
+  'ichemco-cuggiono',
+  'polymer-chemie-bad-sobernheim',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
