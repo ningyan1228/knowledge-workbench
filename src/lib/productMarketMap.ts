@@ -605,6 +605,30 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Flint Group Packaging Solutions public business email', email: 'info.packaginginks@flintgrp.com', contactUrl: 'https://www.flintgrp.com/news-and-events/news/2810-flint-group-introduces-premofilm-sxs-2/' },
     source: { label: 'Flint Group PremoFilm water-based inks for polyolefin films', url: 'https://www.flintgrp.com/news-and-events/news/2810-flint-group-introduces-premofilm-sxs-2/' }, checkedAt: '2026-09-26',
   },
+  {
+    id: 'inx-schaumburg', productId: 'nl-w1201', company: 'INX International Ink Co.', country: 'United States', countryZh: '美国', city: 'Schaumburg, Illinois', latitude: 42.0334, longitude: -88.0834,
+    legacyCompanyDescription: 'HDPE / 聚烯烃包装水性油墨配方制造商', fit: '可开发候选',
+    signal: '官网公开 INX 为油墨与涂层解决方案制造商；其 2026 年包装资料明确 Aquamax 为用于 HDPE 超市袋等应用的可回收水性油墨体系，并公开说明其拥有油墨生产实验室与研发能力。HDPE 属于 PE 聚烯烃，PP / PE 水性油墨附着力底涂属于已有独立来源支持的 NL-W1201 市场扩展场景，因此该企业作为水性油墨配方制造商，具备核验水性附着力材料采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方水性油墨、包装涂层、技术服务与联系资料：其公开业务为油墨、涂层及相关下游配方成品；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'INX public technical, vendor and customer-service contact page', phone: '+1 630-382-1800', contactUrl: 'https://www.inxinternational.com/contact-us' },
+    source: { label: 'INX Aquamax water-based ink for HDPE packaging bags', url: 'https://www.inxinternational.com/news/inx-international-showcase-sustainable-packaging-inks-and-nitrocellulose-free-technologies' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'shakun-vadodara', productId: 'elo', company: 'Shakun Polymers Private Limited', country: 'India', countryZh: '印度', city: 'Vadodara, Gujarat', latitude: 22.3072, longitude: 73.1812,
+    legacyCompanyDescription: '增塑剂使用型 PVC 电缆配方制造商', fit: '可开发候选',
+    signal: '官网产品与技术资料显示 Shakun 为 PVC compound 制造商；其 SPL-VTEK-S 52 电缆护套 PVC compound 明确由高质量树脂、special plasticizers 与 stabilizers 配制，并用于电力电缆。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，因此该企业作为实际使用增塑剂的下游 PVC 配方制造商，具备核验 ELO 类功能添加剂采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、PVC compound 技术资料和联系页：其公开业务为电缆与汽车等用途的下游 PVC compounds；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油、增塑剂或同类原料。' },
+    contact: { label: 'Shakun Polymers public business contact', email: 'contacts@shakunpolymers.com', phone: '+91-265-6196 500', contactUrl: 'https://www.shakunpolymers.com/contact/' },
+    source: { label: 'Shakun PVC cable compound formulated with plasticizers and stabilizers', url: 'https://shakunpolymers.com/admin/assets/img/itempdfs/SPL-VTEK-S%2052.pdf' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'pvc-colouring-ahmedabad', productId: 'elo', company: 'PVC Colouring Compounding & Processing', country: 'India', countryZh: '印度', city: 'Ahmedabad, Gujarat', latitude: 23.0225, longitude: 72.5714,
+    legacyCompanyDescription: '增塑剂使用型柔性 PVC 配方制造商', fit: '可开发候选',
+    signal: '官网明确该企业生产 PVC compounds，并公开其管材用柔性 PVC compound 的 plasticizer content 为 30–45%；公司介绍同时公开其自有制造设施及 PVC compound、软管和医疗管材等产品范围。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，因此该企业作为实际使用增塑剂的下游 PVC 配方制造商，具备核验 ELO 类功能添加剂采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方 PVC compound 产品、制造能力与公开联系资料：其公开业务为 PVC compounds、型材和管材等下游配方/制品制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油、增塑剂或同类原料。' },
+    contact: { label: 'PVC Colouring public marketing contact', phone: '+91 8045477858', contactUrl: 'https://www.pvccompound.in/' },
+    source: { label: 'PVC Colouring flexible PVC compound with published plasticizer content', url: 'https://www.pvccompound.in/tubes-pvc-compound-4681561.html' }, checkedAt: '2026-09-26',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -666,6 +690,9 @@ const leadQualifications: Record<string, LeadQualification> = {
   'nam-ah-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'dacarto-osasco': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'flint-group-malmo': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'inx-schaumburg': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'shakun-vadodara': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'pvc-colouring-ahmedabad': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
 }
 
 function originOf(url: string) {
@@ -962,6 +989,54 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.flintgrp.com/services/centres-of-excellence/',
     }],
   },
+  'inx-schaumburg': {
+    contacts: [],
+    departmentEmails: [],
+    address: '150 North Martingale Road, Suite 700, Schaumburg, IL 60173, United States',
+    sources: [{
+      label: 'INX Aquamax water-based HDPE packaging ink',
+      url: 'https://www.inxinternational.com/news/inx-international-showcase-sustainable-packaging-inks-and-nitrocellulose-free-technologies',
+    }, {
+      label: 'INX public technical, vendor and customer-service contact routes',
+      url: 'https://www.inxinternational.com/contact-us',
+    }, {
+      label: 'INX R&D and production-lab services',
+      url: 'https://www.inxinternational.com/sites/default/files/pdf/INX_RandD_Guide-11072022.pdf',
+    }],
+  },
+  'shakun-vadodara': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'contacts@shakunpolymers.com',
+      source: { label: 'Shakun Polymers public contact page', url: 'https://www.shakunpolymers.com/contact/' },
+    }],
+    address: '101, 1st Floor, Sears Tower 1, Gotri Sevasi Road, Sevasi, Vadodara 391101, Gujarat, India',
+    sources: [{
+      label: 'Shakun PVC cable compound formulated with plasticizers and stabilizers',
+      url: 'https://shakunpolymers.com/admin/assets/img/itempdfs/SPL-VTEK-S%2052.pdf',
+    }, {
+      label: 'Shakun Polymers public business contact',
+      url: 'https://www.shakunpolymers.com/contact/',
+    }, {
+      label: 'Shakun PVC compound product range',
+      url: 'https://www.shakunpolymers.com/products.php',
+    }],
+  },
+  'pvc-colouring-ahmedabad': {
+    contacts: [{
+      name: 'Girish Perkar', title: 'Marketing', department: 'Sales', phone: '+91 8045477858',
+      source: { label: 'PVC Colouring public marketing contact', url: 'https://www.pvccompound.in/' }, verifiedAt: '2026-09-26',
+    }],
+    departmentEmails: [],
+    address: '64, G.I.D.C. Phase-I, Opp. Citizen Industries, Naroda, Ahmedabad 382330, Gujarat, India',
+    sources: [{
+      label: 'PVC Colouring flexible PVC compound with published plasticizer content',
+      url: 'https://www.pvccompound.in/tubes-pvc-compound-4681561.html',
+    }, {
+      label: 'PVC Colouring manufacturing profile and public marketing contact',
+      url: 'https://www.pvccompound.in/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1026,6 +1101,9 @@ const demandSideLeadIds = new Set([
   'nam-ah-ipoh',
   'dacarto-osasco',
   'flint-group-malmo',
+  'inx-schaumburg',
+  'shakun-vadodara',
+  'pvc-colouring-ahmedabad',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
