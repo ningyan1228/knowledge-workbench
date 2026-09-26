@@ -47,6 +47,7 @@ function NextActions({ lead }: { lead: PublicLead }) {
 
 function CopyOutreachPrompt({ lead }: { lead: PublicLead }) {
   const [copied, setCopied] = useState(false)
+  const [showPrompt, setShowPrompt] = useState(false)
   const product = productOf(lead.productId)
   const targetType = targetCompanyTypeOf(lead.targetCompanyTypeId)
   const application = applicationOf(lead.companyEvidence.applicationLayer, lead.companyEvidence.applicationId)
@@ -54,13 +55,14 @@ function CopyOutreachPrompt({ lead }: { lead: PublicLead }) {
     && lead.leadEligible
     && targetType.kind === 'target'
     && Boolean(lead.companyEvidence.statement && lead.companyEvidence.sourceName && lead.companyEvidence.sourceUrl && lead.companyEvidence.verifiedAt)
+  const prompt = createDevelopmentEmailPrompt({ lead, product, application, targetType })
   const copyPrompt = async () => {
     if (!qualified) return
-    await navigator.clipboard.writeText(createDevelopmentEmailPrompt({ lead, product, application, targetType }))
+    await navigator.clipboard.writeText(prompt)
     setCopied(true)
     window.setTimeout(() => setCopied(false), 2200)
   }
-  return <section className="outreach-prompt"><div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />开发信工作区</h3>{qualified ? <p>将已核验的客户证据链、允许使用的产品事实、禁用声明及收件人 CTA 复制为 Prompt。不会自动生成、发送邮件或写入 CRM。</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div><button className="secondary-button outreach-copy-button" disabled={!qualified} onClick={() => void copyPrompt()}><Copy size={15} />{copied ? 'Prompt 已复制' : '复制开发信 Prompt'}</button></section>
+  return <section className="outreach-prompt"><div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />开发信工作区</h3>{qualified ? <p>将已核验的客户证据链、允许使用的产品事实、禁用声明及收件人 CTA 复制为 Prompt。不会自动生成、发送邮件或写入 CRM。</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div><div className="outreach-actions"><button className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起 Prompt' : '查看 Prompt'}</button><button className="secondary-button outreach-copy-button" disabled={!qualified} onClick={() => void copyPrompt()}><Copy size={15} />{copied ? 'Prompt 已复制' : '复制开发信 Prompt'}</button></div>{showPrompt && qualified && <div className="outreach-prompt-preview"><div><strong>Prompt 预览</strong><span>请先核对公司证据、产品事实和限制，再复制。</span></div><pre>{prompt}</pre></div>}</section>
 }
 
 function CompanyDetail({ lead, onClose }: { lead: PublicLead | null; onClose: () => void }) {

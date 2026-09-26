@@ -35,7 +35,7 @@ const productReferences: Record<MarketProduct['id'], ProductReference> = {
       'Acid value: 0.51 mg KOH/g.',
       'Compatible coating processes: drum coating and fluidized-bed coating.',
       'The product information describes good flowability/spraying behavior and film formation in mainstream fertilizer-coating equipment.',
-      'The product information describes customizable release periods and polyurethane-coated urea applications.',
+      'The product information describes customizable release periods and polyurethane-coated urea applications. This is a product-reference fact only, not a claim about the customer’s coating chemistry.',
     ],
     prohibitedClaims: [
       'Do not claim the company currently uses polyurethane or the same coating chemistry.',
@@ -179,7 +179,7 @@ Source name: ${lead.companyEvidence.sourceName}
 Source URL: ${lead.companyEvidence.sourceUrl}
 Verified at: ${lead.companyEvidence.verifiedAt}
 
-Allowed Product Reference
+Allowed Product Reference (facts about our product only; not evidence about the customer)
 Positioning: ${reference.positioning}
 Use only 2–5 facts that are relevant to this recipient and the verified application:
 ${reference.allowedFacts.map((fact) => `- ${fact}`).join('\n')}
@@ -192,6 +192,7 @@ Non-negotiable restrictions
 - Do not invent a supplier, purchase volume, project, problem, performance result, application, technical data, contact, email, or certification.
 - Do not say “TDS attached” unless an attachment is actually present. Use: “I can send the TDS and arrange a sample if relevant.”
 - Do not make price, free-sample, freight, exclusivity, delivery-time, regulatory-approval, or guarantee claims.
+- Do not transfer an application or chemistry from our Product Reference onto the customer unless the customer’s own public evidence supports it.
 ${reference.prohibitedClaims.map((claim) => `- ${claim}`).join('\n')}
 
 Writing requirements

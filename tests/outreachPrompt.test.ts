@@ -22,6 +22,7 @@ describe('development-email prompt', () => {
     expect(prompt).toContain('Hydroxyl value: 249 mg KOH/g.')
     expect(prompt).toContain('could direct the message to the person responsible for raw-material purchasing')
     expect(prompt).toContain('Do not claim the company currently uses polyurethane')
+    expect(prompt).toContain('Do not transfer an application or chemistry from our Product Reference onto the customer unless the customer’s own public evidence supports it.')
   })
 
   it('carries a sourced market extension and ELO-specific safeguards', () => {
@@ -32,5 +33,12 @@ describe('development-email prompt', () => {
     expect(prompt).toContain('Epoxy value: ≥ 9.0%.')
     expect(prompt).toContain('Do not claim PVC applicability unless the sourced market-extension evidence below is present.')
     expect(prompt).toContain('Sales Team')
+  })
+
+  it('keeps Haifa’s product-line evidence separate from its public contact channel', () => {
+    const prompt = promptFor('haifa-israel')
+    expect(prompt).toContain('Target company type: Controlled Release Fertilizer Manufacturer')
+    expect(prompt).toContain('Haifa Group publicly markets its Multicote controlled-release fertilizer product line.')
+    expect(prompt).not.toContain('Multicote product line and headquarters public business email')
   })
 })

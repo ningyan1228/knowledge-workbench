@@ -200,8 +200,8 @@ const rawPublicLeads: RawPublicLead[] = [
   },
   {
     id: 'haifa-israel', productId: 'fertilizer-coating', company: 'Haifa Group', country: 'Israel', countryZh: '以色列', city: 'Haifa', latitude: 32.7940, longitude: 34.9896,
-    legacyCompanyDescription: '控释肥 / 特种肥生产商', fit: '可开发候选',
-    signal: '官方控释肥资料公开了其 Multicote 产品线和总部公开业务邮箱。',
+    legacyCompanyDescription: '控释肥生产商', fit: '可开发候选',
+    signal: 'Haifa Group publicly markets its Multicote controlled-release fertilizer product line. This establishes a verified downstream relationship to controlled-release fertilizer production, but does not establish which coating chemistry or raw materials the company currently uses.',
     contact: { label: 'Haifa Group general business contact', email: 'info@haifa-group.com', phone: '+972-74-7373737', contactUrl: 'https://www.haifa-group.com/' },
     source: { label: 'Haifa Multicote controlled-release fertilizer handbook', url: 'https://www.haifa-group.com/files/Knowledge_Center/Articles/Multicote_Agri_Handbook_final.pdf' }, checkedAt: '2026-09-25',
   },
@@ -603,7 +603,7 @@ type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'application
 
 const leadQualifications: Record<string, LeadQualification> = {
   'icl-charleston': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
-  'haifa-israel': { targetCompanyTypeId: 'specialty-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'haifa-israel': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'crf-agritech-st-thomas': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'compo-expert-krefeld': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'florikan-bowling-green': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
