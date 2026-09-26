@@ -369,6 +369,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'HaiSawit report: Agro Berjaya CRF and Mojokerto factory', url: 'https://haisawit.co.id/news/detail/pt-agro-berjaya-nusantara-perkenalkan-pupuk-crf-paling-ekonomis-di-gelaran-hasi-2026-jakarta' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'diversatech-bangi', productId: 'fertilizer-coating', company: 'Diversatech (M) Sdn Bhd', country: 'Malaysia', countryZh: '马来西亚', city: 'Bandar Baru Bangi, Selangor', latitude: 2.9030, longitude: 101.7740,
+    legacyCompanyDescription: '聚合物包覆控释肥生产商', fit: '优先核验',
+    signal: '官网说明 AJIB CRF 采用获得专利的 Polymer Coated Agglomeration Technology；马来西亚肥料工业协会将该公司列为 Manufacturer，并列出 Controlled Release Fertilizer 产品。该企业生产下游控释肥，具备包衣原料采购与技术负责人核验价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官网与行业协会公司目录：其公开业务为控释肥、微量元素肥和其他成品肥制造；本轮检索的公开来源未显示其销售肥料包衣原料。' },
+    contact: { label: 'Director public business contact', email: 'syedamir@diversatechfertilizer.com', phone: '+60 3-8926 3103', contactUrl: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
+    source: { label: 'Diversatech AJIB CRF polymer-coated agglomeration technology', url: 'https://www.diversatechfertilizer.com/node/58' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -497,6 +505,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'agrofarm-ponorogo': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'twin-arrow-shah-alam': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'agro-berjaya-mojokerto': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'diversatech-bangi': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -584,6 +593,22 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://id.linkedin.com/company/agroberjayanusantara',
     }],
   },
+  'diversatech-bangi': {
+    contacts: [{
+      name: 'Syed Muhamad Amir bin Syed Omar', title: 'Director', department: 'Management',
+      email: 'syedamir@diversatechfertilizer.com', phone: '+60 3-8926 3103',
+      source: { label: 'Fertilizer Industry Association of Malaysia company directory', url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
+      verifiedAt: '2026-09-26',
+    }],
+    departmentEmails: [{
+      department: 'General', email: 'syedamir@diversatechfertilizer.com',
+      source: { label: 'Fertilizer Industry Association of Malaysia company directory', url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
+    }],
+    sources: [{
+      label: 'Fertilizer Industry Association of Malaysia: Diversatech manufacturer listing',
+      url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -651,6 +676,7 @@ const demandSideLeadIds = new Set([
   'agrofarm-ponorogo',
   'twin-arrow-shah-alam',
   'agro-berjaya-mojokerto',
+  'diversatech-bangi',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
