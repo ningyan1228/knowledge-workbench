@@ -629,6 +629,38 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'PVC Colouring public marketing contact', phone: '+91 8045477858', contactUrl: 'https://www.pvccompound.in/' },
     source: { label: 'PVC Colouring flexible PVC compound with published plasticizer content', url: 'https://www.pvccompound.in/tubes-pvc-compound-4681561.html' }, checkedAt: '2026-09-26',
   },
+  {
+    id: 'sun-chemical-parsippany', productId: 'nl-w1201', company: 'Sun Chemical Corporation', country: 'United States', countryZh: '美国', city: 'Parsippany, New Jersey', latitude: 40.8653, longitude: -74.4174,
+    legacyCompanyDescription: 'OPP / PE 水性软包装油墨配方制造商', fit: '可开发候选',
+    signal: '官网公开 SunStrato AquaLam 为用于复合结构的水性包装油墨，明确适用于 OPP/OPP 与 OPP/PE 薄膜并具备附着力和复合粘结表现；官网同时说明其开发水性软包装油墨。PP/PE 水性油墨附着力底涂属于已有独立来源支持的 NL-W1201 市场扩展场景，因此该企业作为水性油墨配方制造商，具备核验水性附着力材料采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方水性包装油墨、产品联系与区域资料：其公开业务为油墨、涂层、颜料及包装解决方案；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'Sun Chemical public product contact page', contactUrl: 'https://www.sunchemical.com/contact-us/' },
+    source: { label: 'Sun Chemical SunStrato AquaLam water-based inks for OPP / PE films', url: 'https://www.sunchemical.com/packaging_product_sunstrato/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'crf-malaysia-kuala-lumpur', productId: 'fertilizer-coating', company: 'CRF Malaysia Sdn Bhd', country: 'Malaysia', countryZh: '马来西亚', city: 'Kuala Lumpur', latitude: 3.1390, longitude: 101.6869,
+    legacyCompanyDescription: '控释/缓释肥与 OEM 制造商', fit: '可开发候选',
+    signal: '官网说明 CRF Malaysia 专注于控释和缓释肥配方，并公开其工厂采用 polymer coating、polymer-layered coating 与 film coating 等工艺；官网同时披露两座马来西亚生产设施及 OEM 服务。该企业生产下游控释/缓释肥成品而非普通肥料，因而具备核验包衣原料采购、技术及工厂负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官网技术、工厂和联系资料：其公开业务为控释/缓释肥配方、OEM 和成品肥制造；本轮检索的官方来源未显示其生产或销售肥料包衣树脂、聚氨酯包衣原料或同类包衣原料。' },
+    contact: { label: 'CRF Malaysia public business contact', email: 'inquiry@crfm.com.my', phone: '+60 3-4819 2728', contactUrl: 'https://crfm.com.my/' },
+    source: { label: 'CRF Malaysia controlled-release fertilizer facilities and coating technology', url: 'https://crfm.com.my/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'cai-georgetown', productId: 'nl-w1201', company: 'CAI Inc.', country: 'United States', countryZh: '美国', city: 'Georgetown, Massachusetts', latitude: 42.7262, longitude: -70.9934,
+    legacyCompanyDescription: 'PP / PE 水性柔版与凹版油墨配方制造商', fit: '可开发候选',
+    signal: '官网明确 CAI 自行制造水性和溶剂型柔版/凹版油墨体系，并说明其水性油墨用于 polyethylene、polypropylene、polyester、PVC 膜等基材；官网同时公开其配方定制、实验室及制造设备。PP/PE 水性油墨附着力底涂属于已有独立来源支持的 NL-W1201 市场扩展场景，因此该企业作为水性油墨配方制造商，具备核验水性附着力材料采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官网的水性油墨、涂层、实验室与公开联系资料：其公开业务为油墨和涂层等下游配方成品制造；本轮检索的官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着力原料。' },
+    contact: { label: 'CAI public business email', email: 'info@caiink.com', phone: '+1 978-352-4510', contactUrl: 'https://www.caiink.com/' },
+    source: { label: 'CAI water-based flexographic and gravure inks for PE / PP films', url: 'https://www.caiink.com/' }, checkedAt: '2026-09-26',
+  },
+  {
+    id: 'applied-db-samut-prakan', productId: 'elo', company: 'Applied DB Public Company Limited (ADB)', country: 'Thailand', countryZh: '泰国', city: 'Samut Prakan', latitude: 13.5670, longitude: 100.6445,
+    legacyCompanyDescription: '增塑剂使用型软质 PVC 配方制造商', fit: '可开发候选',
+    signal: '官网明确 ADB 制造软质 PVC compound，覆盖线缆、软管与医疗级配方；官方年报进一步说明 PVC compound 由 PVC resin 与 plasticizer、热稳定剂、填料和颜料等添加剂按比例混配。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，因此该企业作为实际使用增塑剂的下游 PVC 配方制造商，具备核验 ELO 类功能添加剂采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官网 PVC compound、软质配方、工厂与公开联系资料：其公开业务为 PVC compounds、胶黏剂和密封胶等下游配方产品制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油、增塑剂或同类原料。' },
+    contact: { label: 'ADB overseas customer service and sales contact', email: 'adb_marketing@adb.co.th', phone: '+66 2-323-1906', contactUrl: 'https://www.adb.co.th/en/contact-us-2/' },
+    source: { label: 'ADB annual report: PVC compound formulated with plasticizer', url: 'https://www.adb.co.th/wp-content/uploads/2024/03/Annual-Report-2023.pdf' }, checkedAt: '2026-09-26',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -693,6 +725,10 @@ const leadQualifications: Record<string, LeadQualification> = {
   'inx-schaumburg': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'shakun-vadodara': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'pvc-colouring-ahmedabad': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'sun-chemical-parsippany': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'crf-malaysia-kuala-lumpur': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'cai-georgetown': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'applied-db-samut-prakan': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
 }
 
 function originOf(url: string) {
@@ -1037,6 +1073,63 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.pvccompound.in/',
     }],
   },
+  'sun-chemical-parsippany': {
+    contacts: [],
+    departmentEmails: [],
+    address: '35 Waterview Boulevard, Parsippany, NJ 07054-1285, United States',
+    sources: [{
+      label: 'Sun Chemical AquaLam water-based OPP / PE packaging inks',
+      url: 'https://www.sunchemical.com/packaging_product_sunstrato/',
+    }, {
+      label: 'Sun Chemical public product-contact page',
+      url: 'https://www.sunchemical.com/contact-us/',
+    }, {
+      label: 'Sun Chemical global headquarters and regional business contacts',
+      url: 'https://www.sunchemical.com/regions/',
+    }],
+  },
+  'crf-malaysia-kuala-lumpur': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'inquiry@crfm.com.my',
+      source: { label: 'CRF Malaysia public business contact', url: 'https://crfm.com.my/' },
+    }],
+    address: 'B-5-2 Northpoint Offices, 1 Medan Syed Putra Utara, Mid Valley City, 59200 Kuala Lumpur, Malaysia',
+    sources: [{
+      label: 'CRF Malaysia controlled-release fertilizer facilities and coating technology',
+      url: 'https://crfm.com.my/',
+    }],
+  },
+  'cai-georgetown': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'info@caiink.com',
+      source: { label: 'CAI public business email and manufacturing profile', url: 'https://www.caiink.com/' },
+    }],
+    address: '7 Martel Way, Georgetown, MA 01833, United States',
+    sources: [{
+      label: 'CAI water-based flexographic and gravure inks for PE / PP films',
+      url: 'https://www.caiink.com/',
+    }],
+  },
+  'applied-db-samut-prakan': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'adb_marketing@adb.co.th',
+      source: { label: 'ADB public Sales & Marketing contact', url: 'https://www.adb.co.th/en/contact-us-2/' },
+    }],
+    address: '252 M.4 Bangpoo Industrial Soi 3C, Sukhumvit Rd., Prakasa, Muang, Samutprakan 10280, Thailand',
+    sources: [{
+      label: 'ADB PVC compound manufacturing and soft PVC product range',
+      url: 'https://www.adb.co.th/en/plastic-compound/',
+    }, {
+      label: 'ADB annual report: PVC compound formulated with plasticizer',
+      url: 'https://www.adb.co.th/wp-content/uploads/2024/03/Annual-Report-2023.pdf',
+    }, {
+      label: 'ADB public customer-service and Sales & Marketing contact',
+      url: 'https://www.adb.co.th/en/contact-us-2/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1104,6 +1197,10 @@ const demandSideLeadIds = new Set([
   'inx-schaumburg',
   'shakun-vadodara',
   'pvc-colouring-ahmedabad',
+  'sun-chemical-parsippany',
+  'crf-malaysia-kuala-lumpur',
+  'cai-georgetown',
+  'applied-db-samut-prakan',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
