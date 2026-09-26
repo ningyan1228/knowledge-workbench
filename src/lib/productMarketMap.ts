@@ -393,6 +393,14 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'JCAM LP-Coat and M-Coat polyolefin-resin coated urea', url: 'https://www.jcam-agri.co.jp/en/product_introduction/lp-coat-m-coat/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'jieh-ming-new-taipei', productId: 'elo', company: 'Jieh-Ming Plastics Mfg. Co., Ltd.', country: 'Taiwan', countryZh: '中国台湾', city: 'New Taipei City', latitude: 24.9909, longitude: 121.4215,
+    legacyCompanyDescription: 'PVC 配方与挤出制品制造商', fit: '可开发候选',
+    signal: '官网显示该公司在新北拥有 PVC compound 生产线与工厂；其 NonP PVC compound 产品页明确说明 PVC 配方材料包括 plasticizer，且公司将该类 compound 用于医疗、软管和挤出制品。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方 PVC compound 与公司生产页：其公开业务为 PVC compound 和下游塑料制品制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Jieh-Ming public business contact', email: 'spring@hose.com.tw', phone: '+886 2-2689-5731', contactUrl: 'https://www.hose.com.tw/' },
+    source: { label: 'Jieh-Ming PVC compound and plasticizer-use description', url: 'https://www.hose.com.tw/pvc-compound/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'mica-shelton', productId: 'nl-w1201', company: 'Mica Corporation', country: 'United States', countryZh: '美国', city: 'Shelton, Connecticut', latitude: 41.3165, longitude: -73.0932,
     legacyCompanyDescription: '水性 primer / 附着力涂层配方商', fit: '可开发候选',
     signal: '官网产品目录显示其配制水性 primers 与 coatings：包括用于挤出 PP 的水性树脂配方，以及可附着 PE、PP、PVC 和铝材等基材的水性体系；该企业生产下游 primer/coating 成品，适合核验水性附着力材料的采购与技术负责人。',
@@ -524,6 +532,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'diversatech-bangi': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'farmhannong-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'jcam-agri-tokyo': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'jieh-ming-new-taipei': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'mica-shelton': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'ac-profil-huttwil': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'nutrien-carseland': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -649,6 +658,14 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.jcam-agri.co.jp/company/',
     }],
   },
+  'jieh-ming-new-taipei': {
+    contacts: [],
+    departmentEmails: [],
+    sources: [{
+      label: 'Jieh-Ming factory and PVC compound production lines',
+      url: 'https://www.hose.com.tw/aboutus/',
+    }],
+  },
   'polyflex-baltic': {
     contacts: [{
       name: 'Zach Alexander', title: 'Sales contact', department: 'Sales',
@@ -719,6 +736,7 @@ const demandSideLeadIds = new Set([
   'diversatech-bangi',
   'farmhannong-ulsan',
   'jcam-agri-tokyo',
+  'jieh-ming-new-taipei',
   'mica-shelton',
   'ac-profil-huttwil',
   'nutrien-carseland',
