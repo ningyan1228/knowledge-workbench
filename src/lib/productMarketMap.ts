@@ -581,6 +581,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Astra Chemtech public director and technical-support contact', phone: '+91 80 4896 4978', contactUrl: 'https://www.astrachemtech.com/enquiry.html' },
     source: { label: 'Astra water-based primer for PP/BOPP film', url: 'https://www.astrachemtech.com/astra-water-based-primer-for-paper-board.html' }, checkedAt: '2026-09-26',
   },
+  {
+    id: 'nam-ah-ipoh', productId: 'elo', company: 'Syarikat Nam Ah Sdn. Bhd.', country: 'Malaysia', countryZh: '马来西亚', city: 'Ipoh, Perak', latitude: 4.6000, longitude: 101.0720,
+    legacyCompanyDescription: '增塑化 PVC 配方制造商', fit: '可开发候选',
+    signal: '官网明确该公司为马来西亚 flexible 与 rigid PVC compounds 制造商；其产品范围明确包括 plasticized PVC compounds，并用于线缆、钢丝包覆、软管/管材和鞋材。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，因此该企业作为下游 PVC 配方制造商，具备核验增塑剂/稳定剂原料采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、制造能力与联系页：其公开业务为 flexible/rigid PVC compound 的下游配方制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油、增塑剂或同类原料。' },
+    contact: { label: 'Syarikat Nam Ah public sales contact', email: 'sales@snasb.com', phone: '+60 5-291 9961', contactUrl: 'https://www.snasb.com/' },
+    source: { label: 'Syarikat Nam Ah plasticized PVC compound manufacturing', url: 'https://www.snasb.com/' }, checkedAt: '2026-09-26',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -639,6 +647,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'adeka-tokyo': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'traditem-hilden': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
   'astra-chemtech-mumbai': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
+  'nam-ah-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
 }
 
 function originOf(url: string) {
@@ -892,6 +901,18 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'Astra Chemtech public contact and technical-support listing', url: 'https://www.astrachemtech.com/enquiry.html' },
     ],
   },
+  'nam-ah-ipoh': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'sales@snasb.com',
+      source: { label: 'Syarikat Nam Ah public contact page', url: 'https://www.snasb.com/' },
+    }],
+    address: 'Lot 69, Jalan Portland, Tasek Industrial Estate, 31400 Ipoh, Perak, Malaysia',
+    sources: [{
+      label: 'Syarikat Nam Ah PVC-compound manufacturing and public sales contact',
+      url: 'https://www.snasb.com/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -953,6 +974,7 @@ const demandSideLeadIds = new Set([
   'ichemco-cuggiono',
   'polymer-chemie-bad-sobernheim',
   'astra-chemtech-mumbai',
+  'nam-ah-ipoh',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
