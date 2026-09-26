@@ -216,6 +216,13 @@ const rawPublicLeads: RawPublicLead[] = [
     source: { label: 'Florikan partnership: fertilizer raw-material purchasing and polymer coating', url: 'https://www.profileproducts.com/florikan-partners-with-eurochem-group/' }, checkedAt: '2026-09-26',
   },
   {
+    id: 'genus-brunswick', productId: 'fertilizer-coating', company: 'GENUS LLC.', country: 'United States', countryZh: '美国', city: 'Brunswick, Ohio', latitude: 41.2389, longitude: -81.8418,
+    legacyCompanyDescription: '精密包膜控释氮肥生产商', fit: '优先核验',
+    signal: 'GENUS 官网明确其生产 precision coated fertilizers，并披露自有制造设施配备包衣机械、对颗粒实施精确包衣；属于包衣肥下游制造场景，可核验包衣原料采购。',
+    contact: { label: 'Public sales contact', email: 'sales@genustek.com', phone: '+1 330-220-0524', contactUrl: 'https://www.genustek.com/contact' },
+    source: { label: 'GENUS precision coated fertilizer manufacturing', url: 'https://www.genustek.com/' }, checkedAt: '2026-09-26',
+  },
+  {
     id: 'aqua-based-us', productId: 'nl-w1201', company: 'Aqua Based Technologies', country: 'United States', countryZh: '美国', city: 'Northvale, New Jersey', latitude: 41.0068, longitude: -73.9496,
     legacyCompanyDescription: '水性 PP / PE / OPP 底涂与软包装配方商', fit: '替代方案研究',
     signal: '官方页面列出 PP、PE 薄膜用水性底涂产品；可作为技术路线、竞品与原料合作方向核验。',
@@ -358,6 +365,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'crf-agritech-st-thomas': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'compo-expert-krefeld': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'florikan-bowling-green': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'genus-brunswick': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'pursell-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cotex-dartmouth': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'simofert-beuningen': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -420,6 +428,17 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.profileproducts.com/profile-products-acquires-controlled-release-fertilizer-manufacturer-florikan/',
     }],
   },
+  'genus-brunswick': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'sales@genustek.com',
+      source: { label: 'GENUS public contact page', url: 'https://www.genustek.com/contact' },
+    }],
+    sources: [{
+      label: 'GENUS public contact page',
+      url: 'https://www.genustek.com/contact',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -446,6 +465,7 @@ const demandSideLeadIds = new Set([
   'crf-agritech-st-thomas',
   'compo-expert-krefeld',
   'florikan-bowling-green',
+  'genus-brunswick',
   'pursell-sylacauga',
   'cotex-dartmouth',
   'simofert-beuningen',
