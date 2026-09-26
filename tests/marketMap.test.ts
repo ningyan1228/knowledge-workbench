@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(35)
+    expect(publicLeads).toHaveLength(36)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -91,7 +91,7 @@ describe('global product lead map', () => {
   })
 
   it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
-    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'mica-shelton', 'ac-profil-huttwil']) {
+    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'polyblu-blumenau', 'mica-shelton', 'ac-profil-huttwil']) {
       const lead = publicLeads.find((item) => item.id === id)!
       expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-26')
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
