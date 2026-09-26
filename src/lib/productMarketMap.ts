@@ -589,6 +589,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Syarikat Nam Ah public sales contact', email: 'sales@snasb.com', phone: '+60 5-291 9961', contactUrl: 'https://www.snasb.com/' },
     source: { label: 'Syarikat Nam Ah plasticized PVC compound manufacturing', url: 'https://www.snasb.com/' }, checkedAt: '2026-09-26',
   },
+  {
+    id: 'dacarto-osasco', productId: 'elo', company: 'Dacarto Indústria e Comércio de Plásticos Ltda.', country: 'Brazil', countryZh: '巴西', city: 'Osasco, São Paulo', latitude: -23.5329, longitude: -46.7919,
+    legacyCompanyDescription: '增塑化 PVC 配方制造商', fit: '可开发候选',
+    signal: '官网明确 Dacarto 为巴西 PVC compounds 制造商；其产品技术页明确 PVC compound 由 PVC resin 与 thermal stabilizers、plasticizers、lubricants、pigments 等 additives 组成，并列出面向线缆的 plasticized PVC compounds。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，因此该企业作为下游 PVC 配方制造商，具备核验增塑剂/稳定剂原料采购及技术/生产负责人的价值。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、公司介绍与公开联系资料：其公开业务为 PVC、聚烯烃 compounds、blends 和 masterbatches 等下游配方制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油、增塑剂或同类原料。' },
+    contact: { label: 'Dacarto public commercial contact', email: 'comercial@dacarto.com.br', phone: '+55 11 3658-9490', contactUrl: 'https://dacarto.com.br/produtos/' },
+    source: { label: 'Dacarto PVC compounds formulated with plasticizers', url: 'https://dacarto.com.br/produtos/' }, checkedAt: '2026-09-26',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -648,6 +656,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'traditem-hilden': { targetCompanyTypeId: 'alternative-elo-supplier', applicationLayer: 'tds-verified', applicationId: 'polymer-plasticizer' },
   'astra-chemtech-mumbai': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'nam-ah-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'dacarto-osasco': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
 }
 
 function originOf(url: string) {
@@ -913,6 +922,22 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.snasb.com/',
     }],
   },
+  'dacarto-osasco': {
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'comercial@dacarto.com.br',
+      source: { label: 'Dacarto public commercial contact', url: 'https://dacarto.com.br/produtos/' },
+    }],
+    whatsapp: 'https://wa.me/5511950950121',
+    address: 'Estrada da Alpina, 59, Industrial Anhanguera, Osasco, SP 06276-180, Brazil',
+    sources: [{
+      label: 'Dacarto PVC-compound manufacturing, plasticizer formulation and public contact',
+      url: 'https://dacarto.com.br/produtos/',
+    }, {
+      label: 'Dacarto company manufacturing profile',
+      url: 'https://dacarto.com.br/sobre/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -975,6 +1000,7 @@ const demandSideLeadIds = new Set([
   'polymer-chemie-bad-sobernheim',
   'astra-chemtech-mumbai',
   'nam-ah-ipoh',
+  'dacarto-osasco',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
