@@ -733,11 +733,29 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Harrell’s current corporate contact telephone', phone: '+1 863-687-2774', contactUrl: 'https://harrells.com/contact/' },
     source: { label: 'Harrell’s POLYON Sylacauga fertilizer-coating facility', url: 'https://harrells.com/blog/slow-release-fertilizer-versus-controlled-release-fertilizer/' }, checkedAt: '2026-09-27',
   },
+  {
+    id: 'fortgreen-varginha', productId: 'fertilizer-coating', company: 'Fortgreen Comercial Agrícola', country: 'Brazil', countryZh: '巴西', city: 'Varginha, Minas Gerais', latitude: -21.5515, longitude: -45.4303,
+    legacyCompanyDescription: '控释肥生产商', fit: '优先核验',
+    signal: '母公司 Origin Enterprises 年报明确记载 Fortgreen 在巴西 Varginha 建有生产树脂包覆控释肥的产线；Fortgreen 当前官网仍列出 Varginha 工厂。该公司是下游控释肥制造商，有核验包衣原料采购与工艺适配的业务逻辑；公开资料未证明其采购我方原料，且年报所述热塑性树脂体系不能直接等同于我方产品化学体系。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核 Fortgreen 官方产品、公司与联系页面及母公司年报：其公开业务是肥料及农用成品制造；本轮所查官方资料未显示对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Fortgreen public company contact', email: 'sac@fortgreen.com.br', phone: '+55 44 3127-2700', contactUrl: 'https://fortgreen.com.br/contato' },
+    source: { label: 'Origin Enterprises annual report: Fortgreen Varginha resin-covered controlled-release fertilizer production line', url: 'https://wp-origin-resources-2024.s3.eu-west-2.amazonaws.com/media/2024/09/Origin_2021_Annual_Report.pdf' }, checkedAt: '2026-09-27',
+  },
+  {
+    id: 'grupo-equilibrio-catalao', productId: 'fertilizer-coating', company: 'Grupo Equilíbrio', country: 'Brazil', countryZh: '巴西', city: 'Catalão, Goiás', latitude: -18.1661, longitude: -47.9460,
+    legacyCompanyDescription: '包覆控释肥生产商', fit: '可开发候选',
+    signal: '官网说明 Grupo Equilíbrio 在 Catalão 等地拥有肥料工厂与生产能力，其 eQcoat 成品肥料线对氮、磷、钾肥颗粒实施包覆以调节养分释放。该公司是下游包覆肥制造商，具备核验包衣原料采购与配方负责人的业务逻辑；官网未说明现有包衣化学体系，也未证明其采购我方原料。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网公司、eQcoat 产品及联系资料：其另销售尿素、MAP、KCl 等普通肥料原料，但本轮所查官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂；因此不属于我方包衣原料的同业供给侧。' },
+    contact: { label: 'Grupo Equilíbrio public commercial contact', email: 'comercial@equilibriofertilizantes.com.br', contactUrl: 'https://grupoequilibrio.agr.br/solucoes/linha/eqcoat/' },
+    source: { label: 'Grupo Equilíbrio eQcoat coated fertilizer product line', url: 'https://grupoequilibrio.agr.br/solucoes/linha/eqcoat/' }, checkedAt: '2026-09-27',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'icl-charleston': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'haifa-israel': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1031,6 +1049,31 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     sources: [{
       label: 'Agrobiotech Brazilian fertilizer manufacturing and public contact',
       url: 'https://agrobiotech.com.br/en/',
+    }],
+  },
+  'fortgreen-varginha': {
+    website: 'https://fortgreen.com.br/',
+    contactPage: 'https://fortgreen.com.br/contato',
+    contacts: [],
+    departmentEmails: [],
+    address: 'Av. José Ribeiro Tristão, 120, Aeroporto, Varginha, MG 37031-075, Brazil',
+    sources: [{
+      label: 'Fortgreen current factory locations and public contact', url: 'https://fortgreen.com.br/contato',
+    }, {
+      label: 'Fortgreen official company page confirming two Brazilian factories', url: 'https://fortgreen.com.br/quem-somos',
+    }],
+  },
+  'grupo-equilibrio-catalao': {
+    website: 'https://grupoequilibrio.agr.br/',
+    contactPage: 'https://grupoequilibrio.agr.br/solucoes/linha/eqcoat/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'comercial@equilibriofertilizantes.com.br',
+      source: { label: 'Grupo Equilíbrio eQcoat official product and contact page', url: 'https://grupoequilibrio.agr.br/solucoes/linha/eqcoat/' },
+    }],
+    address: 'Rodovia BR-050, Zona Rural, Catalão, GO 75707-265, Brazil',
+    sources: [{
+      label: 'Grupo Equilíbrio factories, fertilizer production and supplier check', url: 'https://grupoequilibrio.agr.br/sobre-nos/',
     }],
   },
   'polyflex-baltic': {
@@ -1389,6 +1432,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'fortgreen-varginha',
+  'grupo-equilibrio-catalao',
   'harrells-sylacauga',
   'icl-charleston',
   'haifa-israel',

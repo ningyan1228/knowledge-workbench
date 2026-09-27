@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(59)
+    expect(publicLeads).toHaveLength(61)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -149,6 +149,19 @@ describe('global product lead map', () => {
     expect(harrells.profile.contactPage).toBe('https://harrells.com/contact/')
     expect(harrells.profile.contacts).toHaveLength(0)
     expect(harrells.profile.generalEmail).toBeUndefined()
+  })
+
+  it('keeps new Brazilian coating-fertilizer factories separate from confirmed purchases', () => {
+    for (const id of ['fortgreen-varginha', 'grupo-equilibrio-catalao']) {
+      const lead = publicLeads.find((item) => item.id === id)!
+      expect(lead.country).toBe('Brazil')
+      expect(lead.productId).toBe('fertilizer-coating')
+      expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-27' })
+      expect(lead.profile.contactPage).toMatch(/^https:\/\//)
+      expect(lead.profile.contacts).toHaveLength(0)
+    }
   })
 
   it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
