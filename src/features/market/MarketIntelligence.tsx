@@ -22,12 +22,23 @@ function MapFocus({ target, leads, overviewToken }: { target: PublicLead | Count
   const map = useMap()
   useEffect(() => {
     map.invalidateSize()
+    // Keep one full world across the viewport; zoom 0/1 repeats OSM tiles on wide screens.
+    map.setMinZoom(Math.max(0, Math.log2(map.getSize().x / 256)))
     if (!leads.length) {
-      map.setView([20, 0], 1)
+      map.setView([20, 0], map.getMinZoom())
       return
     }
     map.fitBounds(latLngBounds(leads.map((lead) => [lead.latitude, lead.longitude])), { padding: [24, 24], maxZoom: 3, animate: false })
   }, [map, leads, overviewToken])
+  useEffect(() => {
+    const onResize = () => {
+      map.invalidateSize()
+      map.setMinZoom(Math.max(0, Math.log2(map.getSize().x / 256)))
+      if (!target && leads.length) map.fitBounds(latLngBounds(leads.map((lead) => [lead.latitude, lead.longitude])), { padding: [24, 24], maxZoom: 3, animate: false })
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [map, leads, target])
   useEffect(() => { if (target) map.flyTo([target.latitude, target.longitude], 'count' in target ? 4 : 7, { duration: 0.65 }) }, [map, target])
   return null
 }
@@ -87,7 +98,7 @@ function CompanyDetail({ lead, onClose }: { lead: PublicLead | null; onClose: ()
 
 function GlobalLeadMap({ leads, selectedLead, onSelectLead, selectedCountry, onSelectCountry, overviewToken }: { leads: PublicLead[]; selectedLead: PublicLead | null; onSelectLead: (lead: PublicLead) => void; selectedCountry: CountrySummary | null; onSelectCountry: (country: CountrySummary) => void; overviewToken: number }) {
   const countries = useMemo(() => Object.values(leads.reduce<Record<string, CountrySummary>>((all, lead) => { const old = all[lead.country]; all[lead.country] = old ? { ...old, count: old.count + 1 } : { country: lead.country, countryZh: lead.countryZh, latitude: lead.latitude, longitude: lead.longitude, count: 1 }; return all }, {})), [leads])
-  return <MapContainer className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} scrollWheelZoom aria-label="全球产品线索地图"><TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /><MapFocus target={selectedLead ?? selectedCountry} leads={leads} overviewToken={overviewToken} />{countries.map((country) => <CircleMarker key={country.country} center={[country.latitude, country.longitude]} radius={13 + country.count * 4} pathOptions={{ color: '#f59e0b', fillColor: '#fbbf24', fillOpacity: .28, weight: 1 }} eventHandlers={{ click: () => onSelectCountry(country) }} />)}{leads.map((lead) => { const product = productOf(lead.productId); return <CircleMarker key={lead.id} center={[lead.latitude, lead.longitude]} radius={selectedLead?.id === lead.id ? 10 : 6} pathOptions={{ color: '#fff', fillColor: product.color, fillOpacity: 1, weight: selectedLead?.id === lead.id ? 4 : 2 }} eventHandlers={{ click: () => onSelectLead(lead) }} /> })}</MapContainer>
+  return <MapContainer className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图"><TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /><MapFocus target={selectedLead ?? selectedCountry} leads={leads} overviewToken={overviewToken} />{countries.map((country) => <CircleMarker key={country.country} center={[country.latitude, country.longitude]} radius={13 + country.count * 4} pathOptions={{ color: '#f59e0b', fillColor: '#fbbf24', fillOpacity: .28, weight: 1 }} eventHandlers={{ click: () => onSelectCountry(country) }} />)}{leads.map((lead) => { const product = productOf(lead.productId); return <CircleMarker key={lead.id} center={[lead.latitude, lead.longitude]} radius={selectedLead?.id === lead.id ? 10 : 6} pathOptions={{ color: '#fff', fillColor: product.color, fillOpacity: 1, weight: selectedLead?.id === lead.id ? 4 : 2 }} eventHandlers={{ click: () => onSelectLead(lead) }} /> })}</MapContainer>
 }
 
 function MapLegend() { return <p className="map-legend"><i />大号黄圈 = 国家内已核验公开线索密度；彩色点 = 一家可研究的公司。它们不是市场规模、成交概率或真实需求量。</p> }
