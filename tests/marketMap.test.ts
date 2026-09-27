@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(52)
+    expect(publicLeads).toHaveLength(54)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -100,10 +100,24 @@ describe('global product lead map', () => {
     expect(centralChemical.profile.contacts).toHaveLength(0)
   })
 
+  it('keeps Mexico water-based ink and South Africa PVC compound leads distinct from confirmed purchases', () => {
+    const tinta = publicLeads.find((lead) => lead.id === 'tintas-prisma-tlalnepantla')!
+    const alpha = publicLeads.find((lead) => lead.id === 'alpha-plast-devland')!
+    expect(tinta.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(tinta.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'ventas@tintasprisma.com.mx' })
+    expect(alpha.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' })
+    expect(alpha.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'sales@alphaplast.co.za' })
+    for (const lead of [tinta, alpha]) {
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.profile.contacts).toHaveLength(0)
+      expect(lead.profile.contactPage).toMatch(/^https:\/\//)
+    }
+  })
+
   it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
-    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan', 'ceccan-san-jose-iturbide', 'central-chemical-ube']) {
+    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan', 'ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland']) {
       const lead = publicLeads.find((item) => item.id === id)!
-      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(['ceccan-san-jose-iturbide', 'central-chemical-ube'].includes(id) ? '2026-09-27' : '2026-09-26')
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(['ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland'].includes(id) ? '2026-09-27' : '2026-09-26')
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
     }
   })

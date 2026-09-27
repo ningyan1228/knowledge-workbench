@@ -677,6 +677,22 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Central Chemical official Ube plant telephone', phone: '+81 836-34-5848', contactUrl: 'https://www.cgc-jp.com/company/affiliates/centralgodo.html' },
     source: { label: 'Central Glass Cera-coat R coated-urea product page', url: 'https://www.cgc-jp.com/products/detail/ceracoat.html' }, checkedAt: '2026-09-27',
   },
+  {
+    id: 'tintas-prisma-tlalnepantla', productId: 'nl-w1201', company: 'Tintas para Impresión Prisma, S.A. de C.V.', country: 'Mexico', countryZh: '墨西哥', city: 'Tlalnepantla de Baz, Estado de México', latitude: 19.5367, longitude: -99.1947,
+    legacyCompanyDescription: 'HDPE 薄膜水性柔版油墨制造商', fit: '可开发候选',
+    signal: '官网确认 Tintas Prisma 自行制造油墨，其 AQUAPOLY 系列为在电晕处理 HDPE 薄膜上印刷的水性柔版油墨。PE 是 NL-W1201 的 TDS 已验证基材；PP/PE 水性油墨附着力方向另有独立市场扩展来源。该公司生产下游水性油墨配方，具备核验水性附着促进材料适配性及采购/技术负责人的逻辑；公开资料未证明其采购或使用 NL-W1201，也未证明其当前使用聚烯烃底涂。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网水性/溶剂型油墨及辅助添加剂产品页：虽销售 pH 调节、消泡、干燥调节等油墨辅助剂，本轮官方来源未显示其生产或销售水性聚烯烃乳液、CPO/PO dispersion 或同类附着促进原料。' },
+    contact: { label: 'Tintas Prisma public sales contact', email: 'ventas@tintasprisma.com.mx', phone: '+52 55 5384 7600', contactUrl: 'https://tintasprisma.com.mx/contacto.html' },
+    source: { label: 'Tintas Prisma AQUAPOLY water-based flexographic ink for HDPE film', url: 'https://tintasprisma.com.mx/p-2.html' }, checkedAt: '2026-09-27',
+  },
+  {
+    id: 'alpha-plast-devland', productId: 'elo', company: 'Alpha Plast (Pty) Ltd', country: 'South Africa', countryZh: '南非', city: 'Devland, Johannesburg', latitude: -26.2735, longitude: 27.9357,
+    legacyCompanyDescription: '使用增塑剂的 PVC 配方生产商', fit: '可开发候选',
+    signal: 'Alpha Plast 官网明确其自有 PVC compound 配方工厂将增塑剂、稳定剂和其他添加剂混入 PVC 树脂，并生产供挤出和注塑加工的软质/硬质 PVC compounds。PVC 增塑剂方向已有独立市场扩展来源，因此该企业属于 ELO 的潜在下游配方使用场景；公开资料未证明其采购或使用 ELO 或环氧化植物油。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网 PVC compound、生产工艺及联系资料：公开销售的是下游 PVC compounds；本轮官方来源未显示其生产或销售 ELO、ESBO、环氧化植物油、增塑剂或类似原料。' },
+    contact: { label: 'Alpha Plast public sales contact', email: 'sales@alphaplast.co.za', phone: '+27 11 933 3200', contactUrl: 'https://alphaplast.co.za/contact-us/' },
+    source: { label: 'Alpha Plast PVC compounding process using plasticizers', url: 'https://alphaplast.co.za/markets-and-applications/' }, checkedAt: '2026-09-27',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -747,6 +763,8 @@ const leadQualifications: Record<string, LeadQualification> = {
   'applied-db-samut-prakan': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'ceccan-san-jose-iturbide': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'central-chemical-ube': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'tintas-prisma-tlalnepantla': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'alpha-plast-devland': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
 }
 
 function originOf(url: string) {
@@ -1181,6 +1199,38 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.cgc-jp.com/products/detail/ceracoat.html',
     }],
   },
+  'tintas-prisma-tlalnepantla': {
+    website: 'https://tintasprisma.com.mx/',
+    contactPage: 'https://tintasprisma.com.mx/contacto.html',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'ventas@tintasprisma.com.mx',
+      source: { label: 'Tintas Prisma official contact page', url: 'https://tintasprisma.com.mx/contacto.html' },
+    }],
+    address: 'Cda. San Juan 20, Industrial la Presa, 54187 Tlalnepantla de Baz, Estado de México, Mexico (third-party directory; street not confirmed on company site)',
+    sources: [{
+      label: 'Tintas Prisma AQUAPOLY water-based HDPE ink', url: 'https://tintasprisma.com.mx/p-2.html',
+    }, {
+      label: 'Tintas Prisma official contact page', url: 'https://tintasprisma.com.mx/contacto.html',
+    }, {
+      label: 'AllBiz Tintas Prisma street address (third-party)', url: 'https://www.allbiz.mx/tintas-prisma-55-5384-7598',
+    }],
+  },
+  'alpha-plast-devland': {
+    website: 'https://alphaplast.co.za/',
+    contactPage: 'https://alphaplast.co.za/contact-us/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'sales@alphaplast.co.za',
+      source: { label: 'Alpha Plast official contact page', url: 'https://alphaplast.co.za/contact-us/' },
+    }],
+    address: '118 Gibbs Road, Devland, Johannesburg, 1811, South Africa',
+    sources: [{
+      label: 'Alpha Plast PVC compounding process and plasticizer inputs', url: 'https://alphaplast.co.za/markets-and-applications/',
+    }, {
+      label: 'Alpha Plast official contact details', url: 'https://alphaplast.co.za/contact-us/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1254,6 +1304,8 @@ const demandSideLeadIds = new Set([
   'applied-db-samut-prakan',
   'ceccan-san-jose-iturbide',
   'central-chemical-ube',
+  'tintas-prisma-tlalnepantla',
+  'alpha-plast-devland',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
