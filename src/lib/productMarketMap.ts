@@ -661,6 +661,22 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'ADB overseas customer service and sales contact', email: 'adb_marketing@adb.co.th', phone: '+66 2-323-1906', contactUrl: 'https://www.adb.co.th/en/contact-us-2/' },
     source: { label: 'ADB annual report: PVC compound formulated with plasticizer', url: 'https://www.adb.co.th/wp-content/uploads/2024/03/Annual-Report-2023.pdf' }, checkedAt: '2026-09-26',
   },
+  {
+    id: 'ceccan-san-jose-iturbide', productId: 'elo', company: 'Plásticos Ceccan S.A. de C.V.', country: 'Mexico', countryZh: '墨西哥', city: 'San José Iturbide, Guanajuato', latitude: 21.0002, longitude: -100.3858,
+    legacyCompanyDescription: '使用增塑剂的软质 PVC 配方生产商', fit: '可开发候选',
+    signal: 'CECCAN 官网明确其自行生产软质 PVC compounds，并披露每月 3,000 吨配方产能及可储存 550 吨增塑剂的设施。这证明其属于使用增塑剂开展下游 PVC 配方制造的企业；PVC 增塑剂方向已有独立市场扩展来源。公开资料未证明该公司目前采购或使用 ELO，需进一步向采购或技术部门核实。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网产品、设施和联系资料：公开销售产品为刚性、半刚性和软质 PVC compounds；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油、增塑剂或类似原料。' },
+    contact: { label: 'CECCAN public sales contact', email: 'ventas@ceccan.com.mx', phone: '+52 419 198 4037', contactUrl: 'https://www.ceccan.com.mx/en/' },
+    source: { label: 'CECCAN PVC compounds and plasticizer-storage facilities', url: 'https://www.ceccan.com.mx/en/' }, checkedAt: '2026-09-27',
+  },
+  {
+    id: 'central-chemical-ube', productId: 'fertilizer-coating', company: 'Central Chemical Co., Ltd.', country: 'Japan', countryZh: '日本', city: 'Ube, Yamaguchi', latitude: 33.9519, longitude: 131.2472,
+    legacyCompanyDescription: '包膜尿素与控释肥生产商', fit: '可开发候选',
+    signal: 'Central Chemical 官网与母公司 Central Glass 的产品资料确认其制造 Cera-coat R 包膜尿素/控释肥，包膜使用植物油来源的聚氨酯树脂；其宇部工厂和公司电话公开。它是包膜肥成品的下游制造商，具备探讨包衣原料适配性的业务逻辑，但公开资料未证明其采购外部包衣原料或计划更换现有配方。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核公司和母公司的包膜肥产品、企业及工厂页面：公开销售产品为 Cera-coat R 等肥料成品；本轮检索的官方来源未显示其对外销售包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Central Chemical official Ube plant telephone', phone: '+81 836-34-5848', contactUrl: 'https://www.cgc-jp.com/company/affiliates/centralgodo.html' },
+    source: { label: 'Central Glass Cera-coat R coated-urea product page', url: 'https://www.cgc-jp.com/products/detail/ceracoat.html' }, checkedAt: '2026-09-27',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -729,6 +745,8 @@ const leadQualifications: Record<string, LeadQualification> = {
   'crf-malaysia-kuala-lumpur': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'cai-georgetown': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'applied-db-samut-prakan': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'ceccan-san-jose-iturbide': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'central-chemical-ube': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
 }
 
 function originOf(url: string) {
@@ -1130,6 +1148,39 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       url: 'https://www.adb.co.th/en/contact-us-2/',
     }],
   },
+  'ceccan-san-jose-iturbide': {
+    website: 'https://www.ceccan.com.mx/en/',
+    contactPage: 'https://www.ceccan.com.mx/en/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Sales', email: 'ventas@ceccan.com.mx',
+      source: { label: 'CECCAN public sales contact', url: 'https://www.ceccan.com.mx/en/' },
+    }],
+    address: 'Santa Fe Norte 3, Parque Opción, 37980 San José Iturbide, Guanajuato, Mexico',
+    sources: [{
+      label: 'CECCAN PVC compounds, plasticizer-storage facilities and contact',
+      url: 'https://www.ceccan.com.mx/en/',
+    }, {
+      label: 'Cosmos Online CECCAN business address',
+      url: 'https://www.cosmos.com.mx/empresa/plasticos-ceccan-3n0d.html',
+    }],
+  },
+  'central-chemical-ube': {
+    website: 'https://www.central-chemical.co.jp/',
+    contacts: [],
+    departmentEmails: [],
+    address: '7-5254 Okiube, Ube City, Yamaguchi 755-0001, Japan',
+    sources: [{
+      label: 'Central Chemical official Ube plant address and telephone',
+      url: 'https://www.cgc-jp.com/company/affiliates/centralgodo.html',
+    }, {
+      label: 'Central Chemical manufactured fertilizer products',
+      url: 'https://www.central-chemical.co.jp/entry21.html',
+    }, {
+      label: 'Central Glass Cera-coat R coated-urea product page',
+      url: 'https://www.cgc-jp.com/products/detail/ceracoat.html',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1201,6 +1252,8 @@ const demandSideLeadIds = new Set([
   'crf-malaysia-kuala-lumpur',
   'cai-georgetown',
   'applied-db-samut-prakan',
+  'ceccan-san-jose-iturbide',
+  'central-chemical-ube',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {

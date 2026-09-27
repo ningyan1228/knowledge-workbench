@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(50)
+    expect(publicLeads).toHaveLength(52)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -90,10 +90,20 @@ describe('global product lead map', () => {
     expect(pursell.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'jason@fertilizer.com' })
   })
 
+  it('keeps the new Mexico and Japan candidates tied to distinct downstream evidence', () => {
+    const ceccan = publicLeads.find((lead) => lead.id === 'ceccan-san-jose-iturbide')!
+    const centralChemical = publicLeads.find((lead) => lead.id === 'central-chemical-ube')!
+    expect(ceccan.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' })
+    expect(ceccan.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'ventas@ceccan.com.mx' })
+    expect(centralChemical.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(centralChemical.profile.generalPhone).toBe('+81 836-34-5848')
+    expect(centralChemical.profile.contacts).toHaveLength(0)
+  })
+
   it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
-    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan']) {
+    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan', 'ceccan-san-jose-iturbide', 'central-chemical-ube']) {
       const lead = publicLeads.find((item) => item.id === id)!
-      expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-26')
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(['ceccan-san-jose-iturbide', 'central-chemical-ube'].includes(id) ? '2026-09-27' : '2026-09-26')
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
     }
   })
