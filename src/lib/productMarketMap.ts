@@ -693,6 +693,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Alpha Plast public sales contact', email: 'sales@alphaplast.co.za', phone: '+27 11 933 3200', contactUrl: 'https://alphaplast.co.za/contact-us/' },
     source: { label: 'Alpha Plast PVC compounding process using plasticizers', url: 'https://alphaplast.co.za/markets-and-applications/' }, checkedAt: '2026-09-27',
   },
+  {
+    id: 'mivena-maastricht', productId: 'fertilizer-coating', company: 'Mivena B.V.', country: 'Netherlands', countryZh: '荷兰', city: 'Maastricht', latitude: 50.8514, longitude: 5.6909,
+    legacyCompanyDescription: '控释包膜肥生产商', fit: '可开发候选',
+    signal: 'Mivena 官网确认其在 Maastricht 工厂生产 Granucote、Horti-Cote 等包膜控释肥，官方资料说明其使用树脂包衣技术，工厂对入厂原料进行检验。该公司处于包衣肥成品制造环节，具备核验包衣原料适配性和采购负责人的逻辑；公开资料未证明其采购外部包衣树脂或使用我方材料。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网产品目录、工厂和包衣技术资料：公开销售的是控释肥、缓释肥及其他肥料成品；本轮官方来源未显示其对外销售肥料包衣树脂、PU 包衣原料或同类包衣剂。' },
+    contact: { label: 'Mivena public general contact', email: 'info@mivena.nl', phone: '+31 416 337 464', contactUrl: 'https://mivena.nl/contact/' },
+    source: { label: 'Mivena Maastricht coated-fertilizer production facility', url: 'https://mivena.nl/factory-2020/' }, checkedAt: '2026-09-27',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -765,6 +773,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'central-chemical-ube': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'tintas-prisma-tlalnepantla': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'alpha-plast-devland': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'mivena-maastricht': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
 }
 
 function originOf(url: string) {
@@ -1231,6 +1240,26 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Alpha Plast official contact details', url: 'https://alphaplast.co.za/contact-us/',
     }],
   },
+  'mivena-maastricht': {
+    website: 'https://mivena.nl/',
+    contactPage: 'https://mivena.nl/contact/',
+    contacts: [{
+      name: 'Coert Rasenberg', title: 'CEO Managing Partner', department: 'Management',
+      source: { label: 'Mivena CEO Managing Partner public company article', url: 'https://mivena.nl/about-us/coertrasenberg/' },
+      verifiedAt: '2026-09-27',
+    }],
+    departmentEmails: [],
+    address: 'Ankerkade 154, 6222 NM Maastricht, Netherlands',
+    sources: [{
+      label: 'Mivena coated fertilizer manufacturing and incoming raw-material testing', url: 'https://mivena.nl/factory-2020/',
+    }, {
+      label: 'Mivena fertilizer product catalog', url: 'https://mivena.nl/products/',
+    }, {
+      label: 'Mivena contact page with office and factory addresses', url: 'https://mivena.nl/contact/',
+    }, {
+      label: 'Mivena CEO Managing Partner public company article', url: 'https://mivena.nl/about-us/coertrasenberg/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1306,6 +1335,7 @@ const demandSideLeadIds = new Set([
   'central-chemical-ube',
   'tintas-prisma-tlalnepantla',
   'alpha-plast-devland',
+  'mivena-maastricht',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
