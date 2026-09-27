@@ -701,6 +701,30 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Mivena public general contact', email: 'info@mivena.nl', phone: '+31 416 337 464', contactUrl: 'https://mivena.nl/contact/' },
     source: { label: 'Mivena Maastricht coated-fertilizer production facility', url: 'https://mivena.nl/factory-2020/' }, checkedAt: '2026-09-27',
   },
+  {
+    id: 'greenbest-henstridge', productId: 'fertilizer-coating', company: 'GreenBest Ltd', country: 'United Kingdom', countryZh: '英国', city: 'Henstridge, Somerset', latitude: 50.9773, longitude: -2.3945,
+    legacyCompanyDescription: '聚合物包膜尿素生产商', fit: '可开发候选',
+    signal: 'GreenBest 官网展示 Henstridge 自有肥料包衣产线，并明确说明将尿素颗粒加工成 Nutrilong V90 聚合物包膜肥。其招聘页还列出原料配料与包衣设备操作岗位，证明其处于包膜肥成品制造环节；公开资料未证明其采购我方原料或采用相同包衣化学体系。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网包衣工厂、产品目录、招聘及联系资料：公开销售的是包膜肥及其他肥料成品；本轮官方来源未显示其对外销售包衣树脂、PU 包衣原料或同类包衣剂。' },
+    contact: { label: 'GreenBest public sales contact', email: 'sales@greenbest.co.uk', phone: '+44 1963 364788', contactUrl: 'https://www.greenbest.co.uk/contact-us/' },
+    source: { label: 'GreenBest factory tour documenting in-house polymer-coated urea production', url: 'https://www.greenbest.co.uk/uk-lawn-care-association-visit-greenbest-factory/' }, checkedAt: '2026-09-27',
+  },
+  {
+    id: 'palini-vernici-pisogne', productId: 'nl-w1201', company: 'Palini Vernici S.r.l. (PALINAL)', country: 'Italy', countryZh: '意大利', city: 'Pisogne, Brescia', latitude: 45.8110, longitude: 10.1083,
+    legacyCompanyDescription: '水性塑料底涂配方生产商', fit: '可开发候选',
+    signal: 'PALINAL 官网列出自行生产的 ABS 用水性底涂 100I0611 和 ABS/PP 用水性底涂 100I2091；其研发实验室明确研究新一代原料并配制涂料成品，属于 NL-W1201 已验证 ABS 基材的下游配方场景。官网同时注明 PP 应用需要预处理，不能将该公司现有产品说成适用于未经处理 PP；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网底涂产品、制造与研发、联系资料：公开销售的是下游涂料及底涂成品；本轮官方来源未显示其对外销售水性聚烯烃乳液、附着促进原料或类似原料。' },
+    contact: { label: 'Palini Vernici public general contact', email: 'mail@palinal.com', phone: '+39 0364 882727', contactUrl: 'https://www.palinal.com/contacts.html' },
+    source: { label: 'PALINAL water-based primers for ABS and ABS/PP', url: 'https://www.palinal.com/products/plastic/primers-and-fillers/motorbike-ids19/' }, checkedAt: '2026-09-27',
+  },
+  {
+    id: 'sankhla-industries-bengaluru', productId: 'elo', company: 'Sankhla Industries', country: 'India', countryZh: '印度', city: 'Bengaluru, Karnataka', latitude: 13.0891, longitude: 77.4104,
+    legacyCompanyDescription: '增塑剂使用型 PVC 配方生产商', fit: '可开发候选',
+    signal: 'Sankhla Industries 官网销售自行配制的软质 PVC compounds，其官方 SP90 技术单明确列出 PVC 树脂、增塑剂和稳定剂作为配方组分；公开判决材料还记载其在 PVC compound 制造中使用过 ESBO。PVC 中使用环氧化植物油有独立市场扩展来源，因此属于 ELO 类添加剂的潜在下游使用场景；ESBO 的使用记录不证明其使用 ELO、正在外购 ELO 或已有采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网首页、PVC compound 产品页与技术单：公开销售的是下游 PVC compounds；本轮官方来源未显示其生产或销售 ELO、ESBO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Sankhla Industries public company contact in official product specification', email: 'info@sankhlaindustries.com', phone: '+91 80 41179362', contactUrl: 'https://www.sankhlaindustries.com/blank-1' },
+    source: { label: 'Sankhla Industries SP90 PVC compound specification naming plasticizers and stabilizers', url: 'https://www.sankhlaindustries.com/sankhlaspecifications/SP90.pdf' }, checkedAt: '2026-09-27',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -774,6 +798,9 @@ const leadQualifications: Record<string, LeadQualification> = {
   'tintas-prisma-tlalnepantla': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'alpha-plast-devland': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'mivena-maastricht': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'greenbest-henstridge': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'palini-vernici-pisogne': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'abs-surface-treatment' },
+  'sankhla-industries-bengaluru': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
 }
 
 function originOf(url: string) {
@@ -1260,6 +1287,64 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Mivena CEO Managing Partner public company article', url: 'https://mivena.nl/about-us/coertrasenberg/',
     }],
   },
+  'greenbest-henstridge': {
+    website: 'https://www.greenbest.co.uk/',
+    contactPage: 'https://www.greenbest.co.uk/contact-us/',
+    contacts: [{
+      name: 'Jack Baxter', title: 'Sales and Product Development', department: 'Other',
+      source: { label: 'GreenBest current public staff directory', url: 'https://www.greenbest.co.uk/staff/' },
+      verifiedAt: '2026-09-27',
+    }],
+    departmentEmails: [{
+      department: 'Sales', email: 'sales@greenbest.co.uk',
+      source: { label: 'GreenBest official contact page', url: 'https://www.greenbest.co.uk/contact-us/' },
+    }],
+    address: 'Unit 2, The Marsh, Henstridge, Somerset BA8 0TF, United Kingdom',
+    sources: [{
+      label: 'GreenBest in-house polymer-coated urea and coating plant', url: 'https://www.greenbest.co.uk/uk-lawn-care-association-visit-greenbest-factory/',
+    }, {
+      label: 'GreenBest production job listing documenting raw-material mixing and coating-plant operations', url: 'https://www.greenbest.co.uk/home/careers/',
+    }, {
+      label: 'GreenBest current public staff directory', url: 'https://www.greenbest.co.uk/staff/',
+    }, {
+      label: 'GreenBest official contact page', url: 'https://www.greenbest.co.uk/contact-us/',
+    }],
+  },
+  'palini-vernici-pisogne': {
+    website: 'https://www.palinal.com/',
+    contactPage: 'https://www.palinal.com/contacts.html',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Technical', email: 'lab@palinal.com',
+      source: { label: 'PALINAL technical assistance and color laboratory contact', url: 'https://www.palinal.com/training-and-technical-assistance.html' },
+    }],
+    address: 'Via San Gerolamo 14, 25055 Pisogne (BS), Italy',
+    sources: [{
+      label: 'PALINAL ABS and ABS/PP water-based primer products', url: 'https://www.palinal.com/products/plastic/primers-and-fillers/motorbike-ids19/',
+    }, {
+      label: 'PALINAL R&D laboratory researches coating raw materials', url: 'https://www.palinal.com/research-and-development.html',
+    }, {
+      label: 'PALINAL technical assistance and color laboratory contact', url: 'https://www.palinal.com/training-and-technical-assistance.html',
+    }, {
+      label: 'PALINAL official contact page', url: 'https://www.palinal.com/contacts.html',
+    }],
+  },
+  'sankhla-industries-bengaluru': {
+    website: 'https://www.sankhlaindustries.com/',
+    contactPage: 'https://www.sankhlaindustries.com/blank-1',
+    contacts: [],
+    departmentEmails: [],
+    address: 'Works: Survey No. 127, Budhihai Village, Kasaba Hobli, Nelamangala Taluk, Bengaluru Rural, Karnataka 562123, India',
+    sources: [{
+      label: 'Sankhla Industries flexible PVC compound products', url: 'https://www.sankhlaindustries.com/projects',
+    }, {
+      label: 'Sankhla official SP90 PVC compound specification: plasticizers and stabilizers', url: 'https://www.sankhlaindustries.com/sankhlaspecifications/SP90.pdf',
+    }, {
+      label: 'Public court judgment documenting ESBO use in Sankhla PVC compounding (not evidence of ELO use)', url: 'https://www.casemine.com/judgement/in/679a4a7603415e3e7f4af6b0',
+    }, {
+      label: 'Sankhla official contact page', url: 'https://www.sankhlaindustries.com/blank-1',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1336,6 +1421,9 @@ const demandSideLeadIds = new Set([
   'tintas-prisma-tlalnepantla',
   'alpha-plast-devland',
   'mivena-maastricht',
+  'greenbest-henstridge',
+  'palini-vernici-pisogne',
+  'sankhla-industries-bengaluru',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {

@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(55)
+    expect(publicLeads).toHaveLength(58)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -123,10 +123,28 @@ describe('global product lead map', () => {
     expect(mivena.demandSideReason).toMatch(/未证明其采购外部包衣树脂/)
   })
 
+  it('qualifies the three new downstream companies without treating application fit as a purchase claim', () => {
+    const greenbest = publicLeads.find((lead) => lead.id === 'greenbest-henstridge')!
+    const palini = publicLeads.find((lead) => lead.id === 'palini-vernici-pisogne')!
+    const sankhla = publicLeads.find((lead) => lead.id === 'sankhla-industries-bengaluru')!
+    expect(greenbest.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(greenbest.profile.contacts[0]).toMatchObject({ name: 'Jack Baxter', title: 'Sales and Product Development', verifiedAt: '2026-09-27' })
+    expect(greenbest.profile.contacts[0].email).toBeUndefined()
+    expect(palini.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'abs-surface-treatment' })
+    expect(palini.profile.departmentEmails[0]).toMatchObject({ department: 'Technical', email: 'lab@palinal.com' })
+    expect(sankhla.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' })
+    expect(sankhla.demandSideReason).toMatch(/不证明其使用 ELO/)
+    for (const lead of [greenbest, palini, sankhla]) {
+      expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-27' })
+      expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
+      expect(lead.profile.contactPage).toMatch(/^https:\/\//)
+    }
+  })
+
   it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
-    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan', 'ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht']) {
+    for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan', 'ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht', 'greenbest-henstridge', 'palini-vernici-pisogne', 'sankhla-industries-bengaluru']) {
       const lead = publicLeads.find((item) => item.id === id)!
-      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(['ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht'].includes(id) ? '2026-09-27' : '2026-09-26')
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(['ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht', 'greenbest-henstridge', 'palini-vernici-pisogne', 'sankhla-industries-bengaluru'].includes(id) ? '2026-09-27' : '2026-09-26')
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
     }
   })
