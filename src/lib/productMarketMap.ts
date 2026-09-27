@@ -725,11 +725,20 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Sankhla Industries public company contact in official product specification', email: 'info@sankhlaindustries.com', phone: '+91 80 41179362', contactUrl: 'https://www.sankhlaindustries.com/blank-1' },
     source: { label: 'Sankhla Industries SP90 PVC compound specification naming plasticizers and stabilizers', url: 'https://www.sankhlaindustries.com/sankhlaspecifications/SP90.pdf' }, checkedAt: '2026-09-27',
   },
+  {
+    id: 'harrells-sylacauga', productId: 'fertilizer-coating', company: "Harrell's LLC", country: 'United States', countryZh: '美国', city: 'Sylacauga, Alabama', latitude: 33.1732, longitude: -86.2516,
+    legacyCompanyDescription: 'POLYON 聚合物包膜控释肥生产商', fit: '可开发候选',
+    signal: 'Harrell’s 官网明确其在 Sylacauga, Alabama 设有 POLYON 肥料包衣工厂，并说明自行采购及包覆 POLYON 产品所用颗粒基材。该公司生产下游聚合物包膜控释肥成品，具备核验包衣原料适配性和生产/采购负责人的业务逻辑；公开资料未证明其外购我方包衣原料、愿意更换现有配方或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网 POLYON 产品、包衣工厂和联系资料：其公开销售的是控释肥成品与其他园艺/农用产品；本轮检索的官方来源未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Harrell’s current corporate contact telephone', phone: '+1 863-687-2774', contactUrl: 'https://harrells.com/contact/' },
+    source: { label: 'Harrell’s POLYON Sylacauga fertilizer-coating facility', url: 'https://harrells.com/blog/slow-release-fertilizer-versus-controlled-release-fertilizer/' }, checkedAt: '2026-09-27',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'icl-charleston': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'haifa-israel': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'crf-agritech-st-thomas': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
@@ -818,6 +827,20 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  'harrells-sylacauga': {
+    website: 'https://harrells.com/',
+    contactPage: 'https://harrells.com/contact/',
+    contacts: [],
+    departmentEmails: [],
+    address: '151 Gene E. Stewart Boulevard, Sylacauga, AL 35151, United States',
+    sources: [{
+      label: 'Harrell’s published Sylacauga plant directory (older document; reconfirm address before outreach)', url: 'https://files.harrells.com/corporate/Contact_Lists/Plant%20and%20Distribution%20Centers.pdf',
+    }, {
+      label: 'Harrell’s current corporate contact page', url: 'https://harrells.com/contact/',
+    }, {
+      label: 'Harrell’s POLYON coating facility and substrate sourcing', url: 'https://harrells.com/blog/the-polyon-difference/',
+    }],
+  },
   'icl-charleston': {
     contacts: [{
       name: 'Jolene Miller', title: 'Product Lead, Controlled Release Fertilizers', department: 'Technical',
@@ -1366,6 +1389,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'harrells-sylacauga',
   'icl-charleston',
   'haifa-israel',
   'crf-agritech-st-thomas',
