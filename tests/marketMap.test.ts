@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(69)
+    expect(publicLeads).toHaveLength(74)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -222,6 +222,35 @@ describe('global product lead map', () => {
       expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
       expect(lead.profile.contacts).toHaveLength(0)
+    }
+  })
+
+  it('adds five more verified downstream manufacturers with attributable contacts', () => {
+    const knox = publicLeads.find((lead) => lead.id === 'knox-fertilizer-knox')!
+    const andersons = publicLeads.find((lead) => lead.id === 'andersons-maumee')!
+    const doneck = publicLeads.find((lead) => lead.id === 'doneck-euroflex-grevenmacher')!
+    const wikoff = publicLeads.find((lead) => lead.id === 'wikoff-fort-mill')!
+    const aurora = publicLeads.find((lead) => lead.id === 'aurora-material-streetsboro')!
+
+    expect(knox.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(knox.profile.generalEmail).toBe('info@knoxfert.com')
+    expect(andersons.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(andersons.profile.departmentEmails[0]).toMatchObject({ email: 'lawnlogistics@andersonsinc.com' })
+    expect(doneck.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(doneck.profile.contacts[0]).toMatchObject({ name: 'Edgar Becker', department: 'Sales' })
+    expect(wikoff.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(wikoff.profile.contacts).toEqual(expect.arrayContaining([
+      expect.objectContaining({ name: 'Sachin Nayar', department: 'Technical' }),
+      expect.objectContaining({ name: 'David Donnelly', department: 'Production' }),
+    ]))
+    expect(aurora.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' })
+    expect(aurora.profile.contacts[0]).toMatchObject({ name: 'Chris Coco', title: 'Business Development Manager, Flexible PVC' })
+
+    for (const lead of [knox, andersons, doneck, wikoff, aurora]) {
+      expect(lead.commercialRole).toBe('demand_side')
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
+      expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
     }
   })
 

@@ -813,6 +813,46 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Jowat public general company contact', email: 'info@jowat.de', phone: '+49 5231 749-0', contactUrl: 'https://www.jowat.com/en/' },
     source: { label: 'Jowat official company site: industrial adhesive manufacturer and production scale', url: 'https://www.jowat.com/en/' }, checkedAt: '2026-09-28',
   },
+  {
+    id: 'knox-fertilizer-knox', productId: 'fertilizer-coating', company: 'Knox Fertilizer Company, Inc.', country: 'United States', countryZh: '美国', city: 'Knox, Indiana', latitude: 41.2959, longitude: -86.6250,
+    legacyCompanyDescription: 'SurfCote 聚合物包膜控释肥生产商', fit: '优先核验',
+    signal: 'Knox Fertilizer 官网说明其在印第安纳州生产特种植物营养产品；官方目录将 SurfCote 描述为采用专有聚合物树脂封装的控释肥技术，并展示尿素颗粒的 polymer coating 与 wax coating。目录还明确公司采购原料并在自有设施制造产品。该企业处于下游包膜肥制造环节，具备核验包衣原料、生产工艺和采购负责人的业务逻辑；公开资料未证明其采购我方包衣原料、采用相同化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Knox 官方公司、制造、SurfCote 产品及联系资料：其公开销售的是专业草坪和园艺肥料成品；本轮官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Knox Fertilizer public general business contact', email: 'info@knoxfert.com', phone: '+1 574-772-6275', contactUrl: 'https://www.knoxfert.com/contact-us/' },
+    source: { label: 'Knox Fertilizer official catalog: proprietary polymer-resin-encapsulated SurfCote fertilizer', url: 'https://www.knoxfert.com/wp-content/uploads/2019/11/GroFine-Catalog-2019RevisePages.pdf' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'andersons-maumee', productId: 'fertilizer-coating', company: 'The Andersons, Inc. (Professional Turf & Ornamental)', country: 'United States', countryZh: '美国', city: 'Maumee, Ohio', latitude: 41.5628, longitude: -83.6538,
+    legacyCompanyDescription: '聚合物包膜腐植酸包膜尿素生产商', fit: '优先核验',
+    signal: 'The Andersons 官方产品资料将 PCHCU 列为带腐植酸包层和聚合物包层的尿素，并在当前产品标签中将含 PCHCU 的 CarbonCoat 缓释肥标为由 The Andersons 制造；官方专业产品目录还说明公司拥有专用草坪肥料工厂和持续的制造、研发投入。该企业具备直接核验聚合物包衣原料、配方和生产负责人的业务逻辑；公开资料未证明其采购我方包衣原料或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 The Andersons 官方专业草坪产品、PCHCU/CarbonCoat 技术、制造历史与联系资料：其公开销售的是肥料和植物营养成品；本轮官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'The Andersons Professional Turf customer service', email: 'lawnlogistics@andersonsinc.com', phone: '+1 800-253-5296', contactUrl: 'https://andersonspro.com/get-started' },
+    source: { label: 'The Andersons official CarbonCoat product label: polymer-coated humic-coated urea fertilizer manufactured by The Andersons', url: 'https://assets.theandersons.com/m/20f80e4eb69d7058/original/10008031.pdf' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'doneck-euroflex-grevenmacher', productId: 'nl-w1201', company: 'Doneck Euroflex S.A.', country: 'Luxembourg', countryZh: '卢森堡', city: 'Grevenmacher', latitude: 49.6747, longitude: 6.4419,
+    legacyCompanyDescription: 'PE/PP 薄膜用水性柔版与凹印油墨生产商', fit: '优先核验',
+    signal: 'Doneck Euroflex 官网将 Euro-Film WFK/WFF 列为薄膜包装用水性柔版/凹印油墨，并明确其在 PE/PP 上具有附着与耐性表现；研发页面说明公司在自有实验室进行配方开发和原料筛选。既有市场扩展来源已支持 PP/PE 水性油墨附着力底涂应用，因此该企业属于可核验配方、技术与采购负责人的下游水性油墨制造场景；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Doneck 官方水性油墨、研发、公司网络及联系资料：其公开销售的是柔版和凹印油墨配方成品；本轮官方资料未显示其对外销售水性聚烯烃乳液、CPO/PO 分散体、附着力促进原料或与 NL-W1201 相同的原料。' },
+    contact: { label: 'Doneck Euroflex public general company contact', email: 'euroflex@doneck.com', phone: '+352 710 810 1', contactUrl: 'https://www.doneck.com/contact' },
+    source: { label: 'Doneck Euroflex official Euro-Film water-based inks with adhesion on PE/PP', url: 'https://www.doneck.com/products/water-based-inks/euro-film-wfk/wff' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'wikoff-fort-mill', productId: 'nl-w1201', company: 'Wikoff Color Corporation', country: 'United States', countryZh: '美国', city: 'Fort Mill, South Carolina', latitude: 35.0074, longitude: -80.9451,
+    legacyCompanyDescription: '聚烯烃薄膜用水性油墨与涂层生产商', fit: '优先核验',
+    signal: 'Wikoff 官方产品库公开 AlphaPlast、AquaSal 和 PolyLam 等水性油墨，其中基材明确包含 treated HDPE、LDPE、polypropylene、BOPP 与 PET；官网同时确认其为油墨、涂层和色彩技术制造商。既有市场扩展来源已支持 PP/PE 水性油墨附着力底涂应用，因此该企业属于可核验配方、R&D 与生产负责人的下游水性油墨制造场景；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Wikoff 官方产品库、公司、技术服务、领导团队及联系资料：其公开销售的是印刷油墨和涂层配方成品；本轮官方资料未显示其对外销售水性聚烯烃乳液、CPO/PO 分散体、附着力促进原料或与 NL-W1201 相同的原料。' },
+    contact: { label: 'Wikoff public general company contact', email: 'contact@wikoff.com', phone: '+1 803-548-2210', contactUrl: 'https://wikoff.com/contact-us/' },
+    source: { label: 'Wikoff official product library: water-based inks for HDPE, LDPE, polypropylene, BOPP and PET', url: 'https://wikoff.com/products/' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'aurora-material-streetsboro', productId: 'elo', company: 'Aurora Material Solutions LLC', country: 'United States', countryZh: '美国', city: 'Streetsboro, Ohio', latitude: 41.2392, longitude: -81.3459,
+    legacyCompanyDescription: '柔性 PVC 配方与配混生产商', fit: '优先核验',
+    signal: 'Aurora Material Solutions 官网明确其开发并制造柔性 PVC 配混料，并说明技术团队会针对目标性能优化 plasticizer systems、stabilizer packages 和 additive levels；其柔性 PVC 页面还列出 35A–95A 的塑化配方范围。PVC 中使用 ELO 作为二级增塑剂已有独立市场扩展来源，因此该企业属于可核验塑化剂适配性、技术与采购负责人的下游配混场景；公开资料未证明其采购、使用 ELO 或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Aurora 官方 PVC 配混料、柔性材料、公司与联系资料：其公开业务为定制热塑性配混料，另有阻燃浓缩料，但本轮官方资料未显示其生产或销售 ELO、ESBO、环氧化植物油、生物基增塑剂或其他同类 ELO 原料。' },
+    contact: { label: 'Aurora Material Solutions public technical-center contact', phone: '+1 330-422-0700', contactUrl: 'https://www.auroramaterialsolutions.com/contact-aurora-material-solutions/' },
+    source: { label: 'Aurora official PVC compounds page: flexible PVC formulation and plasticizer-system optimization', url: 'https://www.auroramaterialsolutions.com/pvc-polyvinyl-chloride-compounds/' }, checkedAt: '2026-09-28',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -826,6 +866,11 @@ const leadQualifications: Record<string, LeadQualification> = {
   'plantacote-herentals': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'siegwerk-siegburg': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'jowat-detmold': { targetCompanyTypeId: 'adhesive-manufacturer', applicationLayer: 'tds-verified', applicationId: 'adhesives' },
+  'knox-fertilizer-knox': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'andersons-maumee': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'doneck-euroflex-grevenmacher': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'wikoff-fort-mill': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'aurora-material-streetsboro': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1627,6 +1672,108 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Jowat official reactive adhesive product portfolio', url: 'https://www.jowat.com/en/adhesives/reactive-adhesives/',
     }],
   },
+  'knox-fertilizer-knox': {
+    website: 'https://www.knoxfert.com/',
+    contactPage: 'https://www.knoxfert.com/contact-us/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'info@knoxfert.com',
+      source: { label: 'Knox Fertilizer official contact page', url: 'https://www.knoxfert.com/contact-us/' },
+    }],
+    address: '2660 E 100 S, Knox, IN 46534, United States',
+    sources: [{
+      label: 'Knox Fertilizer official SurfCote polymer-resin coating catalog', url: 'https://www.knoxfert.com/wp-content/uploads/2019/11/GroFine-Catalog-2019RevisePages.pdf',
+    }, {
+      label: 'Knox Fertilizer official manufacturing and company profile', url: 'https://www.knoxfert.com/about/',
+    }, {
+      label: 'Knox Fertilizer current controlled-release professional products', url: 'https://www.knoxfert.com/professional-brands/',
+    }, {
+      label: 'Knox Fertilizer official contact page', url: 'https://www.knoxfert.com/contact-us/',
+    }],
+  },
+  'andersons-maumee': {
+    website: 'https://andersonspro.com/',
+    contactPage: 'https://andersonspro.com/get-started',
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'lawnlogistics@andersonsinc.com',
+      source: { label: 'The Andersons Professional Turf customer service', url: 'https://andersonspro.com/get-started' },
+    }],
+    address: '1947 Briarfield Blvd., Maumee, OH 43537, United States',
+    sources: [{
+      label: 'The Andersons CarbonCoat polymer-coated humic-coated urea product label', url: 'https://assets.theandersons.com/m/20f80e4eb69d7058/original/10008031.pdf',
+    }, {
+      label: 'The Andersons official professional catalog: fertilizer plant and manufacturing history', url: 'https://assets.theandersons.com/m/6bafaa20710b0758/original/Andersons-Pro-Catalog_web.pdf',
+    }, {
+      label: 'The Andersons Professional Turf contact and customer-service page', url: 'https://andersonspro.com/get-started',
+    }],
+  },
+  'doneck-euroflex-grevenmacher': {
+    website: 'https://www.doneck.com/',
+    contactPage: 'https://www.doneck.com/contact',
+    contacts: [{
+      name: 'Edgar Becker', title: 'Managing Director Sales', department: 'Sales',
+      source: { label: 'Doneck Euroflex official company network management listing', url: 'https://www.doneck.com/company/doneck-network' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [{
+      department: 'General', email: 'euroflex@doneck.com',
+      source: { label: 'Doneck Euroflex official legal notice and company contact', url: 'https://www.doneck.com/legal-notice-1' },
+    }],
+    address: '4, an de Längten, L-6776 Grevenmacher, Luxembourg',
+    sources: [{
+      label: 'Doneck Euroflex water-based Euro-Film inks with PE/PP adhesion', url: 'https://www.doneck.com/products/water-based-inks/euro-film-wfk/wff',
+    }, {
+      label: 'Doneck Euroflex R&D and raw-material selection', url: 'https://www.doneck.com/service/research-development',
+    }, {
+      label: 'Doneck Euroflex official company network and management', url: 'https://www.doneck.com/company/doneck-network',
+    }, {
+      label: 'Doneck Euroflex official contact page', url: 'https://www.doneck.com/contact',
+    }],
+  },
+  'wikoff-fort-mill': {
+    website: 'https://wikoff.com/',
+    contactPage: 'https://wikoff.com/contact-us/',
+    contacts: [{
+      name: 'Sachin Nayar', title: 'Chief Technology Officer', department: 'Technical',
+      source: { label: 'Wikoff official CTO appointment and leadership page', url: 'https://wikoff.com/news/wikoff-names-sachin-nayar-chief-technology-officer/' }, verifiedAt: '2026-09-28',
+    }, {
+      name: 'David Donnelly', title: 'Chief Operations Officer', department: 'Production',
+      source: { label: 'Wikoff official current leadership team', url: 'https://wikoff.com/leadership/' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [{
+      department: 'General', email: 'contact@wikoff.com',
+      source: { label: 'Wikoff official contact page', url: 'https://wikoff.com/contact-us/' },
+    }],
+    address: '1886 Merritt Road, Fort Mill, SC 29715, United States',
+    sources: [{
+      label: 'Wikoff water-based ink systems for HDPE, LDPE, polypropylene, BOPP and PET', url: 'https://wikoff.com/products/',
+    }, {
+      label: 'Wikoff official current leadership team', url: 'https://wikoff.com/leadership/',
+    }, {
+      label: 'Wikoff official CTO appointment', url: 'https://wikoff.com/news/wikoff-names-sachin-nayar-chief-technology-officer/',
+    }, {
+      label: 'Wikoff official contact page', url: 'https://wikoff.com/contact-us/',
+    }],
+  },
+  'aurora-material-streetsboro': {
+    website: 'https://www.auroramaterialsolutions.com/',
+    contactPage: 'https://www.auroramaterialsolutions.com/contact-aurora-material-solutions/',
+    contacts: [{
+      name: 'Chris Coco', title: 'Business Development Manager, Flexible PVC', department: 'Sales', phone: '+1 603-315-6106',
+      source: { label: 'Aurora official flexible PVC sales representatives', url: 'https://www.auroramaterialsolutions.com/locate-sales-representative/flexible-engineered-compounds/' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [],
+    address: '9280 Jefferson St., Streetsboro, OH 44241, United States',
+    sources: [{
+      label: 'Aurora flexible PVC formulation and plasticizer-system optimization', url: 'https://www.auroramaterialsolutions.com/pvc-polyvinyl-chloride-compounds/',
+    }, {
+      label: 'Aurora company profile and R&D raw-material work', url: 'https://www.auroramaterialsolutions.com/company/about-aurora-material-solutions/',
+    }, {
+      label: 'Aurora official flexible PVC business-development contact', url: 'https://www.auroramaterialsolutions.com/locate-sales-representative/flexible-engineered-compounds/',
+    }, {
+      label: 'Aurora official contact page and technical-center address', url: 'https://www.auroramaterialsolutions.com/contact-aurora-material-solutions/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1656,6 +1803,11 @@ const demandSideLeadIds = new Set([
   'plantacote-herentals',
   'siegwerk-siegburg',
   'jowat-detmold',
+  'knox-fertilizer-knox',
+  'andersons-maumee',
+  'doneck-euroflex-grevenmacher',
+  'wikoff-fort-mill',
+  'aurora-material-streetsboro',
   'fortgreen-varginha',
   'grupo-equilibrio-catalao',
   'harrells-sylacauga',
