@@ -853,6 +853,46 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Aurora Material Solutions public technical-center contact', phone: '+1 330-422-0700', contactUrl: 'https://www.auroramaterialsolutions.com/contact-aurora-material-solutions/' },
     source: { label: 'Aurora official PVC compounds page: flexible PVC formulation and plasticizer-system optimization', url: 'https://www.auroramaterialsolutions.com/pvc-polyvinyl-chloride-compounds/' }, checkedAt: '2026-09-28',
   },
+  {
+    id: 'sun-agro-tokyo', productId: 'fertilizer-coating', company: 'Sun Agro Co., Ltd.', country: 'Japan', countryZh: '日本', city: 'Tokyo', latitude: 35.6846, longitude: 139.7808,
+    legacyCompanyDescription: '硫黄包衣尿素与包衣复合肥生产商', fit: '优先核验',
+    signal: 'Sun Agro 官网明确列出硫黄被覆尿素（SCU）与硫黄被覆化成（SC 化成），说明以硫黄和可生物降解蜡双层包覆尿素或水溶性肥料并实现缓慢释放；官网同时公开商品开发室、制造本部和原料战略负责人。该企业处于下游缓释包衣肥制造环节，具备核验包衣原料、配方、生产与采购负责人的业务逻辑；公开资料未证明其采购我方包衣原料、采用相同化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Sun Agro 官方肥料产品、公司、机构与联系资料：其公开销售的是硫黄包衣肥和其他肥料成品；本轮官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Sun Agro public fertilizer enquiry email', email: 'info@sunagro.co.jp', phone: '+81 3-6311-4314', contactUrl: 'https://www.sunagro.co.jp/contact/' },
+    source: { label: 'Sun Agro official sulfur-coated fertilizer page: SCU and sulfur-coated compound fertilizers', url: 'https://www.sunagro.co.jp/pickup/fertilizer/' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'katakura-coop-akita', productId: 'fertilizer-coating', company: 'Katakura & Co-op Agri Corporation', country: 'Japan', countryZh: '日本', city: 'Akita', latitude: 39.7102, longitude: 140.1026,
+    legacyCompanyDescription: '包衣尿素复合肥与包衣肥设备运营商', fit: '优先核验',
+    signal: 'Katakura & Co-op Agri 官网将公司定位为日本主要肥料制造商，公开销售配入包衣尿素的肥效调节型复合肥；官方沿革明确记载 1993 年在秋田工厂新设包衣肥设备，当前据点页仍将秋田工厂列为肥料制造基地。该企业具备直接核验包衣原料、设备工艺、生技与工厂负责人的业务逻辑；公开资料未证明其采购我方包衣原料、采用相同化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Katakura & Co-op Agri 官方肥料业务、沿革、现役工厂、组织与联系资料：其公开销售的是肥料及农业资材成品；本轮官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Katakura Akita fertilizer plant public contact', phone: '+81 18-864-6001', contactUrl: 'https://www.katakuraco-op.com/contact/' },
+    source: { label: 'Katakura official history: coating-fertilizer equipment installed at Akita plant', url: 'https://www.katakuraco-op.com/profile/history_coop.html' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'gefink-burzaco', productId: 'nl-w1201', company: 'General Ink Factory S.A. (Gefink)', country: 'Argentina', countryZh: '阿根廷', city: 'Burzaco, Buenos Aires', latitude: -34.8404, longitude: -58.3993,
+    legacyCompanyDescription: 'PE/PP 薄膜用水性柔版油墨生产商', fit: '优先核验',
+    signal: 'Gefink 官网将 GEF.WATER 列为专为聚乙烯薄膜和聚丙烯柔版印刷开发、用于替代溶剂型油墨的水性油墨，并公开其工厂地址与公司邮箱。既有市场扩展来源已支持 PP/PE 水性油墨附着力底涂应用，因此该企业属于可核验配方、技术和采购负责人的下游水性油墨制造场景；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Gefink 官方产品、公司、质量和联系资料：其公开销售的是水性与溶剂型印刷油墨配方成品；本轮官方资料未显示其对外销售水性聚烯烃乳液、CPO/PO 分散体、附着力促进原料或与 NL-W1201 相同的原料。' },
+    contact: { label: 'Gefink public general company contact', email: 'info@gefink.com.ar', phone: '+54 11 4238-6879', contactUrl: 'https://www.gefink.com.ar/en/contact/' },
+    source: { label: 'Gefink official products: GEF.WATER water-based inks for PE film and PP flexography', url: 'https://gefink.com.ar/en/products/' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'colorprint-coseano', productId: 'nl-w1201', company: 'Colorprint S.p.A.', country: 'Italy', countryZh: '意大利', city: 'Coseano, Udine', latitude: 46.0966, longitude: 13.0208,
+    legacyCompanyDescription: 'PE 薄膜用水性柔版油墨生产商', fit: '优先核验',
+    signal: 'Colorprint 官网列出 Idropol Flexo acqua 聚乙烯印刷用水性油墨，并说明公司自 1981 年生产专业印刷油墨和涂层、提供定制油墨及自有制造能力。既有市场扩展来源已支持 PP/PE 水性油墨附着力底涂应用，因此该企业属于可核验配方、R&D 和采购负责人的下游水性油墨制造场景；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Colorprint 官方产品、公司、制造和联系资料：其公开销售的是印刷油墨、清漆和涂层配方成品；本轮官方资料未显示其对外销售水性聚烯烃乳液、CPO/PO 分散体、附着力促进原料或与 NL-W1201 相同的原料。' },
+    contact: { label: 'Colorprint public general company contact', email: 'colorprint@colorprint.it', phone: '+39 0432 861112', contactUrl: 'https://www.colorprint.it/en/contacts' },
+    source: { label: 'Colorprint official water-based flexo range: Idropol inks for polyethylene', url: 'https://www.colorprint.it/en/products/water-based-flexo' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'manner-polymers-mckinney', productId: 'elo', company: 'Manner Polymers', country: 'United States', countryZh: '美国', city: 'McKinney, Texas', latitude: 33.1972, longitude: -96.6381,
+    legacyCompanyDescription: '柔性 PVC 定制配混料生产商', fit: '优先核验',
+    signal: 'Manner Polymers 官网明确其开发并制造特种、通用及定制柔性 PVC 配混料，公开十条生产线、高强度混合与双螺杆/Buss 配混设备；研发岗位资料进一步确认其开展聚合物配方、原料测试和新产品试制。PVC 中使用 ELO 作为二级增塑剂已有独立市场扩展来源，因此该企业属于可核验塑化剂/稳定剂适配性、产品技术和采购负责人的下游配混场景；公开资料未证明其采购、使用 ELO 或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Manner Polymers 官方柔性 PVC、制造、研发岗位与联系资料：其公开业务为柔性 PVC 配混料成品，本轮官方资料未显示其生产或销售 ELO、ESBO、环氧化植物油、生物基增塑剂或其他同类 ELO 原料。' },
+    contact: { label: 'Manner Polymers public technical-service contact', email: 'TechServ@mannerpolymers.com', phone: '+1 972-542-6789', contactUrl: 'https://mannerpolymers.com/contact/' },
+    source: { label: 'Manner Polymers official flexible and custom PVC manufacturing capabilities', url: 'https://mannerpolymers.com/flexible-custom-pvc-compounds/' }, checkedAt: '2026-09-28',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -871,6 +911,11 @@ const leadQualifications: Record<string, LeadQualification> = {
   'doneck-euroflex-grevenmacher': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'wikoff-fort-mill': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'aurora-material-streetsboro': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'sun-agro-tokyo': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'katakura-coop-akita': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'gefink-burzaco': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'colorprint-coseano': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'manner-polymers-mckinney': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1774,6 +1819,119 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Aurora official contact page and technical-center address', url: 'https://www.auroramaterialsolutions.com/contact-aurora-material-solutions/',
     }],
   },
+  'sun-agro-tokyo': {
+    website: 'https://www.sunagro.co.jp/',
+    contactPage: 'https://www.sunagro.co.jp/contact/',
+    contacts: [{
+      name: '矢作 真也', title: 'President; responsible for Product Development Office', department: 'Technical',
+      source: { label: 'Sun Agro official company profile and current officers', url: 'https://www.sunagro.co.jp/company/profile/' }, verifiedAt: '2026-09-28',
+    }, {
+      name: '田守 隆宏', title: 'Director, Head of Manufacturing; Osaka Plant Manager', department: 'Production',
+      source: { label: 'Sun Agro official company profile and current officers', url: 'https://www.sunagro.co.jp/company/profile/' }, verifiedAt: '2026-09-28',
+    }, {
+      name: '大庭 樹', title: 'Deputy Head of Sales; Head of Raw Materials Strategy Group', department: 'Procurement',
+      source: { label: 'Sun Agro official company profile and current officers', url: 'https://www.sunagro.co.jp/company/profile/' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [{
+      department: 'General', email: 'info@sunagro.co.jp',
+      source: { label: 'Sun Agro official enquiry page', url: 'https://www.sunagro.co.jp/contact/' },
+    }],
+    address: 'Nihonbashi Koamicho Square Building 3F, 17-10 Nihonbashi Koamicho, Chuo-ku, Tokyo 103-0016, Japan',
+    sources: [{
+      label: 'Sun Agro sulfur-coated fertilizer products and coating construction', url: 'https://www.sunagro.co.jp/pickup/fertilizer/',
+    }, {
+      label: 'Sun Agro fertilizer lineup including sulfur-coated urea and compounds', url: 'https://www.sunagro.co.jp/fertilizer/lineup/',
+    }, {
+      label: 'Sun Agro current officers and raw-material strategy responsibility', url: 'https://www.sunagro.co.jp/company/profile/',
+    }, {
+      label: 'Sun Agro offices, plants and product-development contacts', url: 'https://www.sunagro.co.jp/company/office/',
+    }, {
+      label: 'Sun Agro official enquiry page and public email', url: 'https://www.sunagro.co.jp/contact/',
+    }],
+  },
+  'katakura-coop-akita': {
+    website: 'https://www.katakuraco-op.com/',
+    contactPage: 'https://www.katakuraco-op.com/contact/',
+    contacts: [{
+      name: '星野 訓', title: 'Executive Officer, Head of Production Technology Headquarters', department: 'Production',
+      source: { label: 'Katakura official 2026 organization and personnel announcement', url: 'https://www.katakuraco-op.com/dl/1175/5992a36f48359b338b9cef0eab85d6dd' }, verifiedAt: '2026-09-28',
+    }, {
+      name: '丹波 進', title: 'Akita Plant Manager', department: 'Production',
+      source: { label: 'Katakura official 2026 organization and personnel announcement', url: 'https://www.katakuraco-op.com/dl/1175/5992a36f48359b338b9cef0eab85d6dd' }, verifiedAt: '2026-09-28',
+    }, {
+      name: '一條 龍男', title: 'Director and Senior Executive Officer, Head of Fertilizer Headquarters', department: 'Production',
+      source: { label: 'Katakura official 2026 organization and personnel announcement', url: 'https://www.katakuraco-op.com/dl/1175/5992a36f48359b338b9cef0eab85d6dd' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [],
+    address: '3-1-6 Barajima, Akita-shi, Akita 010-0065, Japan',
+    sources: [{
+      label: 'Katakura fertilizer business and coated-urea compound fertilizers', url: 'https://www.katakuraco-op.com/business/fertilizer/',
+    }, {
+      label: 'Katakura history: coating-fertilizer equipment installed at Akita plant', url: 'https://www.katakuraco-op.com/profile/history_coop.html',
+    }, {
+      label: 'Katakura current Akita fertilizer plant and production-technology contacts', url: 'https://www.katakuraco-op.com/profile/network.html',
+    }, {
+      label: 'Katakura 2026 production and fertilizer leadership announcement', url: 'https://www.katakuraco-op.com/dl/1175/5992a36f48359b338b9cef0eab85d6dd',
+    }, {
+      label: 'Katakura official enquiry form', url: 'https://www.katakuraco-op.com/contact/',
+    }],
+  },
+  'gefink-burzaco': {
+    website: 'https://gefink.com.ar/',
+    contactPage: 'https://www.gefink.com.ar/en/contact/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'info@gefink.com.ar',
+      source: { label: 'Gefink official contact page', url: 'https://www.gefink.com.ar/en/contact/' },
+    }],
+    address: 'J. Melián 3275, Parque Industrial Almirante Brown, Burzaco, Buenos Aires 1852, Argentina',
+    sources: [{
+      label: 'Gefink GEF.WATER water-based inks for PE film and PP flexography', url: 'https://gefink.com.ar/en/products/',
+    }, {
+      label: 'Gefink official company profile', url: 'https://gefink.com.ar/en/about-us/',
+    }, {
+      label: 'Gefink official contact page and public email', url: 'https://www.gefink.com.ar/en/contact/',
+    }],
+  },
+  'colorprint-coseano': {
+    website: 'https://www.colorprint.it/',
+    contactPage: 'https://www.colorprint.it/en/contacts',
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'colorprint@colorprint.it',
+      source: { label: 'Colorprint official water-based flexo page and footer contact', url: 'https://www.colorprint.it/en/products/water-based-flexo' },
+    }],
+    address: 'Via dell’Artigianato 5, 33030 Coseano UD, Italy',
+    sources: [{
+      label: 'Colorprint water-based Idropol flexo inks for polyethylene', url: 'https://www.colorprint.it/en/products/water-based-flexo',
+    }, {
+      label: 'Colorprint official company profile', url: 'https://www.colorprint.it/en/about-us',
+    }, {
+      label: 'Colorprint official ink-manufacturing capabilities', url: 'https://www.colorprint.it/en/ink-manufacturing',
+    }, {
+      label: 'Colorprint official contact page', url: 'https://www.colorprint.it/en/contacts',
+    }],
+  },
+  'manner-polymers-mckinney': {
+    website: 'https://mannerpolymers.com/',
+    contactPage: 'https://mannerpolymers.com/contact/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Technical', email: 'TechServ@mannerpolymers.com',
+      source: { label: 'Manner Polymers official contact page', url: 'https://mannerpolymers.com/contact/' },
+    }, {
+      department: 'Sales', email: 'sales@mannerpolymers.com',
+      source: { label: 'Manner Polymers official contact page', url: 'https://mannerpolymers.com/contact/' },
+    }],
+    address: '500 Interchange Street, McKinney, TX 75071, United States',
+    sources: [{
+      label: 'Manner Polymers flexible and custom PVC manufacturing capabilities', url: 'https://mannerpolymers.com/flexible-custom-pvc-compounds/',
+    }, {
+      label: 'Manner Polymers R&D formulation and product-testing role', url: 'https://mannerpolymers.com/careers/rd-technical-associate/',
+    }, {
+      label: 'Manner Polymers official technical-service and sales contacts', url: 'https://mannerpolymers.com/contact/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1808,6 +1966,11 @@ const demandSideLeadIds = new Set([
   'doneck-euroflex-grevenmacher',
   'wikoff-fort-mill',
   'aurora-material-streetsboro',
+  'sun-agro-tokyo',
+  'katakura-coop-akita',
+  'gefink-burzaco',
+  'colorprint-coseano',
+  'manner-polymers-mckinney',
   'fortgreen-varginha',
   'grupo-equilibrio-catalao',
   'harrells-sylacauga',

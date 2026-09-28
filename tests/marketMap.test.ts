@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(74)
+    expect(publicLeads).toHaveLength(79)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -247,6 +247,41 @@ describe('global product lead map', () => {
     expect(aurora.profile.contacts[0]).toMatchObject({ name: 'Chris Coco', title: 'Business Development Manager, Flexible PVC' })
 
     for (const lead of [knox, andersons, doneck, wikoff, aurora]) {
+      expect(lead.commercialRole).toBe('demand_side')
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
+      expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
+    }
+  })
+
+  it('adds five verified demand-side manufacturers in the September 28 continuation batch', () => {
+    const sunAgro = publicLeads.find((lead) => lead.id === 'sun-agro-tokyo')!
+    const katakura = publicLeads.find((lead) => lead.id === 'katakura-coop-akita')!
+    const gefink = publicLeads.find((lead) => lead.id === 'gefink-burzaco')!
+    const colorprint = publicLeads.find((lead) => lead.id === 'colorprint-coseano')!
+    const manner = publicLeads.find((lead) => lead.id === 'manner-polymers-mckinney')!
+
+    expect(sunAgro.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' })
+    expect(sunAgro.profile.contacts).toEqual(expect.arrayContaining([
+      expect.objectContaining({ name: '田守 隆宏', department: 'Production' }),
+      expect.objectContaining({ name: '大庭 樹', department: 'Procurement' }),
+    ]))
+    expect(katakura.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' })
+    expect(katakura.profile.contacts).toEqual(expect.arrayContaining([
+      expect.objectContaining({ name: '星野 訓', department: 'Production' }),
+      expect.objectContaining({ name: '丹波 進', title: 'Akita Plant Manager' }),
+    ]))
+    expect(gefink.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(gefink.profile.generalEmail).toBe('info@gefink.com.ar')
+    expect(colorprint.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(colorprint.profile.generalEmail).toBe('colorprint@colorprint.it')
+    expect(manner.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' })
+    expect(manner.profile.departmentEmails).toEqual(expect.arrayContaining([
+      expect.objectContaining({ department: 'Technical', email: 'TechServ@mannerpolymers.com' }),
+      expect.objectContaining({ department: 'Sales', email: 'sales@mannerpolymers.com' }),
+    ]))
+
+    for (const lead of [sunAgro, katakura, gefink, colorprint, manner]) {
       expect(lead.commercialRole).toBe('demand_side')
       expect(lead.demandSideReason).toMatch(/未证明/)
       expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
