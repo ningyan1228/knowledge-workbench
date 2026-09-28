@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(61)
+    expect(publicLeads).toHaveLength(66)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -161,6 +161,46 @@ describe('global product lead map', () => {
       expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-27' })
       expect(lead.profile.contactPage).toMatch(/^https:\/\//)
       expect(lead.profile.contacts).toHaveLength(0)
+    }
+  })
+
+  it('qualifies Adubos Paranaíba by its coated compound fertilizer, not a generic fertilizer label', () => {
+    const lead = publicLeads.find((item) => item.id === 'adubos-paranaiba-uberlandia')!
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' })
+    expect(lead.targetCompanyTypeId).toBe('coated-compound-fertilizer-manufacturer')
+    expect(lead.demandSideReason).toMatch(/未证明其采购我方包衣原料/)
+    expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-27' })
+    expect(lead.profile.contacts).toHaveLength(0)
+    expect(lead.profile.generalPhone).toBe('+55 34 3233-9600')
+  })
+
+  it('adds four dated demand-side candidates with attributable functional contacts', () => {
+    const indigrow = publicLeads.find((lead) => lead.id === 'indigrow-brimpton')!
+    const lebanon = publicLeads.find((lead) => lead.id === 'lebanon-seaboard-lebanon')!
+    const follmann = publicLeads.find((lead) => lead.id === 'follmann-minden')!
+    const mapei = publicLeads.find((lead) => lead.id === 'mapei-india-bengaluru')!
+
+    expect(indigrow.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(indigrow.profile.departmentEmails[0]).toMatchObject({ department: 'Technical', email: 'aghort@indigrow.com' })
+    expect(lebanon.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+    expect(lebanon.profile.departmentEmails).toEqual(expect.arrayContaining([
+      expect.objectContaining({ email: 'Purchasing@lebsea.com' }),
+      expect.objectContaining({ department: 'Production', email: 'Operations@lebsea.com' }),
+    ]))
+    expect(follmann.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(follmann.profile.contacts[0]).toMatchObject({ name: 'Roland Geiselhart', department: 'Technical', verifiedAt: '2026-09-28' })
+    expect(mapei.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'adhesives' })
+    expect(mapei.profile.contacts).toEqual(expect.arrayContaining([
+      expect.objectContaining({ name: 'Vasudevan MK', department: 'Procurement' }),
+      expect.objectContaining({ name: 'Alok Shrivastava', department: 'Production' }),
+      expect.objectContaining({ name: 'Santhosh M Prakash', department: 'Technical' }),
+    ]))
+
+    for (const lead of [indigrow, lebanon, follmann, mapei]) {
+      expect(lead.commercialRole).toBe('demand_side')
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
+      expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
     }
   })
 

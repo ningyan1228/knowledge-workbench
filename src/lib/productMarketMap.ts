@@ -749,11 +749,56 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Grupo Equilíbrio public commercial contact', email: 'comercial@equilibriofertilizantes.com.br', contactUrl: 'https://grupoequilibrio.agr.br/solucoes/linha/eqcoat/' },
     source: { label: 'Grupo Equilíbrio eQcoat coated fertilizer product line', url: 'https://grupoequilibrio.agr.br/solucoes/linha/eqcoat/' }, checkedAt: '2026-09-27',
   },
+  {
+    id: 'adubos-paranaiba-uberlandia', productId: 'fertilizer-coating', company: 'Adubos Paranaíba', country: 'Brazil', countryZh: '巴西', city: 'Uberlândia, Minas Gerais', latitude: -18.9113, longitude: -48.2622,
+    legacyCompanyDescription: 'SUPERCOAT 聚合物包覆肥生产商', fit: '可开发候选',
+    signal: '官网称其配方工艺用于生产肥料，并展示 Ureia、MAP、NPK SUPERCOAT 聚合物包覆控释肥；巴西政府企业记录将其登记为肥料制造企业。该企业有下游包覆肥生产角色，具备包衣原料采购与生产工艺核验价值；公开资料未证明其采购我方包衣原料或采用相同化学体系。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-27', conclusion: '已复核官网产品和公司资料：公开销售的是肥料成品；本轮所查官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Adubos Paranaíba public company telephone', phone: '+55 34 3233-9600', contactUrl: 'https://www.adubosparanaiba.com.br/' },
+    source: { label: 'Adubos Paranaíba SUPERCOAT fertilizer product and formulation page', url: 'https://www.adubosparanaiba.com.br/' }, checkedAt: '2026-09-27',
+  },
+  {
+    id: 'indigrow-brimpton', productId: 'fertilizer-coating', company: 'Indigrow Ltd', country: 'United Kingdom', countryZh: '英国', city: 'Brimpton, Berkshire', latitude: 51.3901, longitude: -1.1872,
+    legacyCompanyDescription: '树脂包膜尿素控释肥生产商', fit: '优先核验',
+    signal: 'Indigrow 官网宣布其在英国制造 Impact CGF 树脂包膜尿素（RCU）颗粒肥，并列出 20% 至 91% RCU 的控释肥成品。该企业属于下游包膜肥制造环节，具备核验包衣原料、生产工艺和采购负责人的业务逻辑；公开资料未证明其采购我方原料、采用相同包衣化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核官网 RCU 产品、制造说明及联系资料：其公开销售的是草坪用控释肥成品；本轮官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Indigrow public technical and general business contact', email: 'growth@indigrow.com', phone: '+44 (0) 1189 710 995', contactUrl: 'https://www.indigrow.com/contact/' },
+    source: { label: 'Indigrow announcement: UK manufacture of Impact CGF resin-coated urea fertilizers', url: 'https://www.indigrow.com/new-impact-cgf-resin-coated-urea-fertilisers/' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'lebanon-seaboard-lebanon', productId: 'fertilizer-coating', company: 'Lebanon Seaboard Corporation', country: 'United States', countryZh: '美国', city: 'Lebanon, Pennsylvania', latitude: 40.3409, longitude: -76.4113,
+    legacyCompanyDescription: '控释肥生产商', fit: '优先核验',
+    signal: 'Lebanon Seaboard 官网将自身描述为肥力产品制造商，专业产品部门说明其生产先进控释肥；LebanonTurf 产品页还公开其 PCU（polymer coated urea）控释肥组成。该企业处于下游控释肥制造环节，具备核验包衣原料采购、技术与生产负责人的业务逻辑；公开资料未证明其采购我方原料、采用相同包衣化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核官网公司、控释肥产品、部门联系资料：其公开销售的是草坪和园艺肥料成品；本轮官方资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Lebanon Seaboard public Purchasing and Operations contacts', phone: '+1 800-532-0090', contactUrl: 'https://www.lebsea.com/contact-us/' },
+    source: { label: 'Lebanon Seaboard professional division: producer of advanced controlled-release fertilizers', url: 'https://www.lebsea.com/professional/professional-division-overview/' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'follmann-minden', productId: 'nl-w1201', company: 'Follmann GmbH & Co. KG', country: 'Germany', countryZh: '德国', city: 'Minden, North Rhine-Westphalia', latitude: 52.2895, longitude: 8.9146,
+    legacyCompanyDescription: '水性油墨 / 涂层配方生产商', fit: '可开发候选',
+    signal: 'Follmann 官网说明其开发并生产水性印刷油墨和涂层；其水性涂层页面列出 PP、PE、PET 等薄膜基材，且独立水性油墨页面说明其水性油墨体系用于薄膜。既有市场扩展来源已支持 PP/PE 水性油墨附着力底涂这一应用，因此该企业属于可核验配方、技术和采购负责人的下游水性油墨制造场景；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核官网产品、技术及联系资料：其公开销售的是水性油墨、涂层和胶黏剂配方成品；本轮官方资料未显示其对外销售水性聚烯烃乳液、CPO/PO 分散体、附着力促进原料或与 NL-W1201 相同的原料。' },
+    contact: { label: 'Follmann public printing-inks business email', email: 'printinginks@follmann.com', phone: '+49 571 9339-0', contactUrl: 'https://www.follmann.com/en/contact' },
+    source: { label: 'Follmann water-based coatings for PP, PE and PET films', url: 'https://www.follmann.com/en/water-based-coatings' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'mapei-india-bengaluru', productId: 'elo', company: 'Mapei Construction Products India Pvt. Ltd.', country: 'India', countryZh: '印度', city: 'Bengaluru, Karnataka', latitude: 12.9675, longitude: 77.5764,
+    legacyCompanyDescription: '胶黏剂与密封剂生产商', fit: '优先核验',
+    signal: 'Mapei 印度官网将其列为胶黏剂、密封剂和建筑化学品制造商，并公开 Bangalore 工厂与采购、运营、产品管理负责人。胶黏剂和密封剂为 ELO TDS 已验证应用，因此该企业属于可核验 ELO 在下游配方中适配性的需求侧候选；公开资料未证明其采购、使用 ELO 或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Mapei 印度官方公司、工厂和联系资料：其公开销售的是胶黏剂、密封剂及建筑化学品成品；本轮官方资料未显示其生产或销售 ELO、ESBO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Mapei India public Procurement, Operations and Product Management contacts', phone: '+91 80 2222 1810', contactUrl: 'https://www.mapei.com/in/en/contact-us' },
+    source: { label: 'Mapei India official contact page: adhesives, sealants, Bangalore factory and functional leads', url: 'https://www.mapei.com/in/en/contact-us' }, checkedAt: '2026-09-28',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'adubos-paranaiba-uberlandia': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'indigrow-brimpton': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'lebanon-seaboard-lebanon': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'follmann-minden': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'mapei-india-bengaluru': { targetCompanyTypeId: 'adhesive-manufacturer', applicationLayer: 'tds-verified', applicationId: 'adhesives' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1074,6 +1119,18 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     address: 'Rodovia BR-050, Zona Rural, Catalão, GO 75707-265, Brazil',
     sources: [{
       label: 'Grupo Equilíbrio factories, fertilizer production and supplier check', url: 'https://grupoequilibrio.agr.br/sobre-nos/',
+    }],
+  },
+  'adubos-paranaiba-uberlandia': {
+    website: 'https://www.adubosparanaiba.com.br/',
+    contactPage: 'https://www.adubosparanaiba.com.br/',
+    contacts: [],
+    departmentEmails: [],
+    address: 'Av. Aírton Borges da Silva, 1129, Uberlândia, MG, Brazil',
+    sources: [{
+      label: 'Brazil government register classifies the company as fertilizer manufacturing', url: 'https://portaldatransparencia.gov.br/pessoa-juridica/18868117000157',
+    }, {
+      label: 'Company public telephone and address', url: 'https://www.adubosparanaiba.com.br/',
     }],
   },
   'polyflex-baltic': {
@@ -1411,6 +1468,91 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Sankhla official contact page', url: 'https://www.sankhlaindustries.com/blank-1',
     }],
   },
+  'indigrow-brimpton': {
+    website: 'https://www.indigrow.com/',
+    contactPage: 'https://www.indigrow.com/contact/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Technical', email: 'aghort@indigrow.com',
+      source: { label: 'Indigrow public agricultural and horticultural technical contact', url: 'https://www.indigrow.com/wp-content/uploads/2020/08/Indigrow-Catalogue-2021-FINAL-UK-Version-email.pdf' },
+    }],
+    address: 'The Old Bakery, Hyde End Lane, Brimpton, Berkshire RG7 4RH, United Kingdom',
+    sources: [{
+      label: 'Indigrow announcement: UK manufacture of Impact CGF resin-coated urea fertilizers', url: 'https://www.indigrow.com/new-impact-cgf-resin-coated-urea-fertilisers/',
+    }, {
+      label: 'Indigrow public contact page', url: 'https://www.indigrow.com/contact/',
+    }, {
+      label: 'Indigrow agricultural and horticultural technical contact', url: 'https://www.indigrow.com/wp-content/uploads/2020/08/Indigrow-Catalogue-2021-FINAL-UK-Version-email.pdf',
+    }],
+  },
+  'lebanon-seaboard-lebanon': {
+    website: 'https://www.lebsea.com/',
+    contactPage: 'https://www.lebsea.com/contact-us/',
+    contacts: [{
+      name: 'Katherine Bishop', title: 'President, CEO and Chairperson', department: 'Management',
+      source: { label: 'Lebanon Seaboard public personnel page', url: 'https://www.lebsea.com/about-us/personnel/' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [{
+      department: 'General', email: 'Purchasing@lebsea.com',
+      source: { label: 'Lebanon Seaboard public Purchasing department contact', url: 'https://www.lebsea.com/about-us/personnel/' },
+    }, {
+      department: 'Production', email: 'Operations@lebsea.com',
+      source: { label: 'Lebanon Seaboard public Operations department contact', url: 'https://www.lebsea.com/about-us/personnel/' },
+    }],
+    address: '1600 E. Cumberland St., Lebanon, PA 17042, United States',
+    sources: [{
+      label: 'Lebanon Seaboard professional division: producer of advanced controlled-release fertilizers', url: 'https://www.lebsea.com/professional/professional-division-overview/',
+    }, {
+      label: 'LebanonTurf PCU controlled-release fertilizer technology', url: 'https://www.lebanonturf.com/technologies/pcu',
+    }, {
+      label: 'Lebanon Seaboard public Purchasing, Operations and leadership contacts', url: 'https://www.lebsea.com/about-us/personnel/',
+    }, {
+      label: 'Lebanon Seaboard official contact page', url: 'https://www.lebsea.com/contact-us/',
+    }],
+  },
+  'follmann-minden': {
+    website: 'https://www.follmann.com/',
+    contactPage: 'https://www.follmann.com/en/contact',
+    contacts: [{
+      name: 'Roland Geiselhart', title: 'Director Business Unit Print + Packaging', department: 'Technical',
+      source: { label: 'Follmann public news release naming Print + Packaging business-unit director', url: 'https://www.follmann.com/en/news/follmann-cleaner' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [{
+      department: 'Technical', email: 'printinginks@follmann.com',
+      source: { label: 'Follmann water-based printing-ink application guide', url: 'https://www.follmann.com/sites/default/files/2021-12/Application_guide_water-based_printing_inks_Corrugated_postprint.pdf' },
+    }],
+    address: 'Heinrich-Follmann-Str. 1, 32423 Minden, Germany',
+    sources: [{
+      label: 'Follmann water-based coatings for PP, PE and PET films', url: 'https://www.follmann.com/en/water-based-coatings',
+    }, {
+      label: 'Follmann water-based printing inks', url: 'https://www.follmann.com/en/printing-inks',
+    }, {
+      label: 'Follmann public contact page', url: 'https://www.follmann.com/en/contact',
+    }, {
+      label: 'Follmann public Print + Packaging business-unit director', url: 'https://www.follmann.com/en/news/follmann-cleaner',
+    }],
+  },
+  'mapei-india-bengaluru': {
+    website: 'https://www.mapei.com/in/en/',
+    contactPage: 'https://www.mapei.com/in/en/contact-us',
+    contacts: [{
+      name: 'Vasudevan MK', title: 'Procurement', department: 'Procurement',
+      source: { label: 'Mapei India official Procurement contact', url: 'https://www.mapei.com/in/en/contact-us' }, verifiedAt: '2026-09-28',
+    }, {
+      name: 'Alok Shrivastava', title: 'Vice President Operations', department: 'Production', phone: '+91 9726420707',
+      source: { label: 'Mapei India official Operations contact', url: 'https://www.mapei.com/in/en/contact-us' }, verifiedAt: '2026-09-28',
+    }, {
+      name: 'Santhosh M Prakash', title: 'Vice President - Product Management (BL)', department: 'Technical', phone: '+91 9483540424',
+      source: { label: 'Mapei India official Product Management contact', url: 'https://www.mapei.com/in/en/contact-us' }, verifiedAt: '2026-09-28',
+    }],
+    departmentEmails: [],
+    address: 'A01, B01, 1st Floor, Solus Jain Heights, JC Road 1st Cross, Bengaluru, Karnataka 560002, India',
+    sources: [{
+      label: 'Mapei India official contact page: adhesives, sealants, Bangalore factory and functional leads', url: 'https://www.mapei.com/in/en/contact-us',
+    }, {
+      label: 'Mapei official sealing, bonding and anchoring product line', url: 'https://www.mapei.com/it/en/products-and-solutions/lines/elastic-sealants-and-adhesives',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1432,6 +1574,11 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'adubos-paranaiba-uberlandia',
+  'indigrow-brimpton',
+  'lebanon-seaboard-lebanon',
+  'follmann-minden',
+  'mapei-india-bengaluru',
   'fortgreen-varginha',
   'grupo-equilibrio-catalao',
   'harrells-sylacauga',
