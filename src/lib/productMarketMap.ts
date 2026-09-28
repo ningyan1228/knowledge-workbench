@@ -789,6 +789,30 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Mapei India public Procurement, Operations and Product Management contacts', phone: '+91 80 2222 1810', contactUrl: 'https://www.mapei.com/in/en/contact-us' },
     source: { label: 'Mapei India official contact page: adhesives, sealants, Bangalore factory and functional leads', url: 'https://www.mapei.com/in/en/contact-us' }, checkedAt: '2026-09-28',
   },
+  {
+    id: 'plantacote-herentals', productId: 'fertilizer-coating', company: 'Plantacote N.V.', country: 'Belgium', countryZh: '比利时', city: 'Herentals, Antwerp', latitude: 51.1763, longitude: 4.8356,
+    legacyCompanyDescription: '全包膜 NPK 与控释肥生产商', fit: '优先核验',
+    signal: 'Plantacote 官方产品册将 Plantacote Pluss、Ultra、Straights 和 Specials 列为 100% coated NPK 或 100% coated fertilizer，并公开比利时公司地址；独立的 RHP 认证资料进一步将 Plantacote N.V. 描述为控释肥生产企业。该公司处于下游包膜控释肥制造环节，具备核验包衣原料、生产工艺和采购负责人的业务逻辑；公开资料未证明其采购我方包衣原料、采用相同包衣化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Plantacote 官方产品册及 RHP 企业认证资料：其公开销售的是包膜控释肥成品；本轮所查资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Plantacote public company contact', email: 'info@plantacote.com', phone: '+32 (0)14 39 30 98', contactUrl: 'https://www.plantacote.com/' },
+    source: { label: 'Plantacote official brochure: 100% coated NPK and controlled-release fertilizer products', url: 'https://uploads-ssl.webflow.com/59e265717032510001bb81cc/649cae409f1c19656549325f_Plantacote_Brochure_EN_2023.pdf' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'siegwerk-siegburg', productId: 'nl-w1201', company: 'Siegwerk Druckfarben AG & Co. KGaA', country: 'Germany', countryZh: '德国', city: 'Siegburg, North Rhine-Westphalia', latitude: 50.8002, longitude: 7.2075,
+    legacyCompanyDescription: '非吸收性薄膜用水性油墨与涂层生产商', fit: '优先核验',
+    signal: 'Siegwerk 官方白皮书说明其水性喷墨油墨可用于 PA、PET、PE、PP、BOPP、PVC 等非吸收性基材；官网亦公开面向 PE、OPP、PET 和铝箔的水性罩光涂层。既有市场扩展来源已支持 PP/PE 水性油墨附着力底涂这一应用，因此该企业属于可核验配方、技术和采购负责人的下游水性油墨/涂层制造场景；公开资料未证明其采购或使用 NL-W1201。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Siegwerk 官方油墨、涂层、技术白皮书及联系资料：其公开销售的是印刷油墨和功能涂层配方成品；本轮官方资料未显示其对外销售水性聚烯烃乳液、CPO/PO 分散体、附着力促进原料或与 NL-W1201 相同的原料。' },
+    contact: { label: 'Siegwerk public general company contact', email: 'info@siegwerk.com', phone: '+49 2241 304-0', contactUrl: 'https://www.siegwerk.com/en/contact.html' },
+    source: { label: 'Siegwerk official white paper: water-based inkjet inks for PA, PET, PE, PP, BOPP and PVC', url: 'https://www.siegwerk.com/fileadmin/Data/Documents/Publications/Whitepaper/SW_WhitePaperINKJet_210x297mm_RZ_digital.pdf' }, checkedAt: '2026-09-28',
+  },
+  {
+    id: 'jowat-detmold', productId: 'elo', company: 'Jowat SE', country: 'Germany', countryZh: '德国', city: 'Detmold, North Rhine-Westphalia', latitude: 51.9363, longitude: 8.8792,
+    legacyCompanyDescription: '工业胶黏剂生产商', fit: '可开发候选',
+    signal: 'Jowat 官网将公司定位为工业胶黏剂制造商，并公开年产约 100,000 吨胶黏剂；其反应型胶黏剂产品线包括 SMP、PUR、SE 与环氧树脂体系。胶黏剂为 ELO TDS 已验证应用，因此该企业属于可核验 ELO 在下游胶黏剂配方中适配性的需求侧候选；公开资料未证明其采购、使用 ELO 或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-28', conclusion: '已复核 Jowat 官方公司、胶黏剂产品和联系资料：其公开销售的是工业胶黏剂配方成品；本轮官方资料未显示其生产或销售 ELO、ESBO、环氧化植物油或同类增塑剂原料。' },
+    contact: { label: 'Jowat public general company contact', email: 'info@jowat.de', phone: '+49 5231 749-0', contactUrl: 'https://www.jowat.com/en/' },
+    source: { label: 'Jowat official company site: industrial adhesive manufacturer and production scale', url: 'https://www.jowat.com/en/' }, checkedAt: '2026-09-28',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -799,6 +823,9 @@ const leadQualifications: Record<string, LeadQualification> = {
   'lebanon-seaboard-lebanon': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'follmann-minden': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'mapei-india-bengaluru': { targetCompanyTypeId: 'adhesive-manufacturer', applicationLayer: 'tds-verified', applicationId: 'adhesives' },
+  'plantacote-herentals': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'siegwerk-siegburg': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'jowat-detmold': { targetCompanyTypeId: 'adhesive-manufacturer', applicationLayer: 'tds-verified', applicationId: 'adhesives' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1553,6 +1580,53 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Mapei official sealing, bonding and anchoring product line', url: 'https://www.mapei.com/it/en/products-and-solutions/lines/elastic-sealants-and-adhesives',
     }],
   },
+  'plantacote-herentals': {
+    website: 'https://www.plantacote.com/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'info@plantacote.com',
+      source: { label: 'Plantacote official product brochure company contact', url: 'https://uploads-ssl.webflow.com/59e265717032510001bb81cc/649cae409f1c19656549325f_Plantacote_Brochure_EN_2023.pdf' },
+    }],
+    address: 'Atealaan 34a, 2200 Herentals, Belgium',
+    sources: [{
+      label: 'Plantacote official brochure: 100% coated NPK and controlled-release fertilizer products', url: 'https://uploads-ssl.webflow.com/59e265717032510001bb81cc/649cae409f1c19656549325f_Plantacote_Brochure_EN_2023.pdf',
+    }, {
+      label: 'RHP certification: Plantacote controlled-release fertilizer production', url: 'https://www.rhp.nl/en/rhp-certification-for-plantacote-nv',
+    }],
+  },
+  'siegwerk-siegburg': {
+    website: 'https://www.siegwerk.com/',
+    contactPage: 'https://www.siegwerk.com/en/contact.html',
+    contacts: [],
+    departmentEmails: [{
+      department: 'Technical', email: 'contact.inkjet@siegwerk.com',
+      source: { label: 'Siegwerk official inkjet product flyer technical contact', url: 'https://www.siegwerk.com/fileadmin/Data/Products/Colorseries/Inkjet/SICURA_NutriJet_LMX_Flyer.pdf' },
+    }],
+    address: 'Alfred-Keller-Strasse 55, 53721 Siegburg, Germany',
+    sources: [{
+      label: 'Siegwerk official white paper: water-based inkjet inks for non-absorbing films', url: 'https://www.siegwerk.com/fileadmin/Data/Documents/Publications/Whitepaper/SW_WhitePaperINKJet_210x297mm_RZ_digital.pdf',
+    }, {
+      label: 'Siegwerk water-based coatings for PE, OPP, PET and aluminum film', url: 'https://www.siegwerk.com/de/news-medien/pressemitteilungen/details/siegwerk-enables-antimicrobial-coatings-for-film-application-using-the-lock-3-technology.html',
+    }, {
+      label: 'Siegwerk official contact page', url: 'https://www.siegwerk.com/en/contact.html',
+    }, {
+      label: 'Siegwerk official locations page', url: 'https://www.siegwerk.com/en/company/locations.html',
+    }],
+  },
+  'jowat-detmold': {
+    website: 'https://www.jowat.com/en/',
+    contacts: [],
+    departmentEmails: [{
+      department: 'General', email: 'info@jowat.de',
+      source: { label: 'Jowat official company contact', url: 'https://www.jowat.com/en/' },
+    }],
+    address: 'Ernst-Hilker-Strasse 10-14, 32758 Detmold, Germany',
+    sources: [{
+      label: 'Jowat official company site: industrial adhesive manufacturer and public contact', url: 'https://www.jowat.com/en/',
+    }, {
+      label: 'Jowat official reactive adhesive product portfolio', url: 'https://www.jowat.com/en/adhesives/reactive-adhesives/',
+    }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -1579,6 +1653,9 @@ const demandSideLeadIds = new Set([
   'lebanon-seaboard-lebanon',
   'follmann-minden',
   'mapei-india-bengaluru',
+  'plantacote-herentals',
+  'siegwerk-siegburg',
+  'jowat-detmold',
   'fortgreen-varginha',
   'grupo-equilibrio-catalao',
   'harrells-sylacauga',

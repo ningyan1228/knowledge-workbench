@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(66)
+    expect(publicLeads).toHaveLength(69)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -201,6 +201,27 @@ describe('global product lead map', () => {
       expect(lead.demandSideReason).toMatch(/未证明/)
       expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
+    }
+  })
+
+  it('adds three further verified demand-side candidates without inventing named contacts', () => {
+    const plantacote = publicLeads.find((lead) => lead.id === 'plantacote-herentals')!
+    const siegwerk = publicLeads.find((lead) => lead.id === 'siegwerk-siegburg')!
+    const jowat = publicLeads.find((lead) => lead.id === 'jowat-detmold')!
+
+    expect(plantacote.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' })
+    expect(plantacote.profile.generalEmail).toBe('info@plantacote.com')
+    expect(siegwerk.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' })
+    expect(siegwerk.profile.departmentEmails[0]).toMatchObject({ department: 'Technical', email: 'contact.inkjet@siegwerk.com' })
+    expect(jowat.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'adhesives' })
+    expect(jowat.profile.generalEmail).toBe('info@jowat.de')
+
+    for (const lead of [plantacote, siegwerk, jowat]) {
+      expect(lead.commercialRole).toBe('demand_side')
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.supplierCompetitorCheck).toMatchObject({ checkedAt: '2026-09-28' })
+      expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
+      expect(lead.profile.contacts).toHaveLength(0)
     }
   })
 
