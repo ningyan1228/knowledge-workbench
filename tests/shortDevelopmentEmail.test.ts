@@ -22,7 +22,8 @@ describe('ready-to-copy short development emails', () => {
       expect(draft!.body.indexOf(leadEmailFacts[lead.id])).toBeLessThan(draft!.body.indexOf('I’m Zhiwu'))
       expect(draft!.text).toContain('Ningbo Neon Lion Technology Co., Ltd.')
       expect(draft!.text).toContain('zhiwu@neonlion.cn')
-      expect(draft!.text).toContain('+86 17852862361')
+      expect(draft!.text).not.toContain('+86 17852862361')
+      expect(draft!.text).not.toMatch(/\b(?:Tel|Phone|Mobile):/i)
       expect(draft!.evidenceUrl).toBe(lead.companyEvidence.sourceUrl)
       expect(draft!.text).not.toMatch(/much lower price|equivalent substitute|you (currently )?(buy|need|use) our/i)
     }

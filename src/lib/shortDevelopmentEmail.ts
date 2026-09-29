@@ -79,7 +79,6 @@ I’m Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ${productName},
 Best regards,
 Zhiwu
 Ningbo Neon Lion Technology Co., Ltd.
-Email: zhiwu@neonlion.cn
-Tel: +86 17852862361`
+Email: zhiwu@neonlion.cn`
   return { subject, body, text: `Subject: ${subject}\n\n${body}`, evidenceUrl: evidence.sourceUrl, verifiedAt: evidence.verifiedAt }
 }
