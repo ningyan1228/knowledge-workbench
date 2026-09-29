@@ -20,3 +20,7 @@ supabase/.temp/
 # User-owned source material and exports are never committed.
 private-imports/
 exports/
+
+# Unverified lead discoveries remain local and never enter the public repo/site.
+research/lead-discovery-queue.ndjson
+research/incoming*.json
