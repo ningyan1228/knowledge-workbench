@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(81)
+    expect(publicLeads).toHaveLength(82)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -104,6 +104,19 @@ describe('global product lead map', () => {
       expect(lead.profile.contacts).toHaveLength(0)
       expect(lead.profile.generalEmail).toMatch(/@/)
     }
+  })
+
+  it('qualifies MARINCOAT by its own coating manufacture without asserting ELO use', () => {
+    const lead = publicLeads.find((item) => item.id === 'marincoat-calvignasco')!
+    expect(lead.company).toBe('MARINCOAT S.r.l.')
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coatings' })
+    expect(lead.targetCompanyTypeId).toBe('elo-coating-manufacturer')
+    expect(lead.demandSideReason).toContain('未证明其采购或使用 ELO')
+    expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')
+    expect(lead.profile.contactPage).toBe('https://www.marincoat.com/')
+    expect(lead.profile.generalEmail).toBe('info@marincoat.it')
+    expect(lead.profile.departmentEmails).toEqual(expect.arrayContaining([expect.objectContaining({ department: 'Sales', email: 'sales@marincoat.it' })]))
+    expect(lead.profile.contacts).toHaveLength(0)
   })
 
   it('keeps the new Mexico and Japan candidates tied to distinct downstream evidence', () => {

@@ -11,7 +11,7 @@ function draftFor(id: string) {
 
 describe('ready-to-copy short development emails', () => {
   it('prepares a reviewable first email for every currently qualified demand-side company', () => {
-    expect(publicLeads).toHaveLength(81)
+    expect(publicLeads).toHaveLength(82)
     for (const lead of publicLeads) {
       const draft = createShortDevelopmentEmail(lead)
       expect(draft, lead.id).not.toBeNull()
@@ -43,6 +43,13 @@ describe('ready-to-copy short development emails', () => {
     expect(draft.body).toContain('industrial protective coatings')
     expect(draft.body).toContain('epoxidized linseed oil (ELO)')
     expect(draft.body).not.toMatch(/corrosion resistance|tested|approved|qualified/i)
+  })
+
+  it('keeps MARINCOAT outreach limited to a possible coating formulation fit', () => {
+    const draft = draftFor('marincoat-calvignasco')
+    expect(draft.body).toContain('coating formulations')
+    expect(draft.body).toContain('epoxidized linseed oil (ELO)')
+    expect(draft.body).not.toMatch(/corrosion resistance|tested|approved|qualified|currently uses/i)
   })
 
   it('does not generate a draft for a supplier or missing source', () => {

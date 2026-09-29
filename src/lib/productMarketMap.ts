@@ -911,6 +911,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Duramax official commercial contact', email: 'comercial@duramaxtintas.ind.br', phone: '+55 45 99823-0474', contactUrl: 'https://duramaxtintas.ind.br/sobre/' },
     source: { label: 'Duramax Epóxi HS Poliamina Dupla Função anticorrosion coating', url: 'https://duramaxtintas.ind.br/produtos/dupla-funcao-maxdual/epoxi-hs-poliamina-dupla-funcao/' }, checkedAt: '2026-09-29',
   },
+  {
+    id: 'marincoat-calvignasco', productId: 'elo', company: 'MARINCOAT S.r.l.', country: 'Italy', countryZh: '意大利', city: 'Calvignasco, Milan', latitude: 45.3264, longitude: 9.0265,
+    legacyCompanyDescription: '海上及陆上管线防护涂层配方生产商', fit: '可开发候选',
+    signal: 'MARINCOAT 官网明确其自行配制、生产并施工用于管线、接头、管件、阀门和储罐的涂层。涂料属于 ELO TDS 已验证的大类应用，因此该企业是可核验 ELO 类功能添加剂配方适配性的下游制造商；公开资料未证明其采购或使用 ELO，也未证明我方 ELO 已适用于其防腐体系。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已复核官网公开的涂层产品和业务资料：其公开销售的是管线及设备涂层解决方案与施工服务；本轮所查官方资料未显示其对外销售 ELO、ESBO、环氧化植物油或同类功能添加剂原料。' },
+    contact: { label: 'MARINCOAT official general company contact', email: 'info@marincoat.it', phone: '+39 02 9051901', contactUrl: 'https://www.marincoat.com/' },
+    source: { label: 'MARINCOAT official homepage: formulated and produced pipeline coatings', url: 'https://www.marincoat.com/' }, checkedAt: '2026-09-29',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -936,6 +944,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'manner-polymers-mckinney': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'vernital-cercola': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'duramax-cascavel': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
+  'marincoat-calvignasco': { targetCompanyTypeId: 'elo-coating-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coatings' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1977,6 +1986,14 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'Independent ELO anticorrosion-coating research, not evidence of Duramax ELO use', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8588247/' },
     ],
   },
+  'marincoat-calvignasco': {
+    website: 'https://www.marincoat.com/',
+    contactPage: 'https://www.marincoat.com/',
+    contacts: [],
+    departmentEmails: [{ department: 'Sales', email: 'sales@marincoat.it', source: { label: 'MARINCOAT official homepage business contacts', url: 'https://www.marincoat.com/' } }],
+    address: 'Via dell’Industria 12, 20080 Calvignasco (MI), Italy',
+    sources: [{ label: 'MARINCOAT official homepage: coating formulation, production and contact details', url: 'https://www.marincoat.com/' }],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2079,6 +2096,7 @@ const demandSideLeadIds = new Set([
   'sankhla-industries-bengaluru',
   'vernital-cercola',
   'duramax-cascavel',
+  'marincoat-calvignasco',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
