@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(82)
+    expect(publicLeads).toHaveLength(83)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -88,6 +88,38 @@ describe('global product lead map', () => {
     expect(pursell.profile.contacts[0]).toMatchObject({ name: 'Jason Woulfin', department: 'Sales' })
     expect(icl.profile.contacts[0].verifiedAt).toBe('2026-09-25')
     expect(pursell.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'jason@fertilizer.com' })
+  })
+
+  it('adds sourced procurement, engineering and production contacts to the existing Diversatech lead', () => {
+    const lead = publicLeads.find((item) => item.id === 'diversatech-bangi')!
+    expect(publicLeads.filter((item) => item.id === 'diversatech-bangi')).toHaveLength(1)
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+    expect(lead.profile.contacts).toEqual(expect.arrayContaining([
+      expect.objectContaining({ name: 'Khairulnizam Bin Po’at', department: 'Procurement', verifiedAt: '2026-09-29' }),
+      expect.objectContaining({ name: 'Mohd. Sopian Bin Mohd. Nor', department: 'Technical', verifiedAt: '2026-09-29' }),
+      expect.objectContaining({ name: 'Ahmad Khuzir Bin Abdul Wahab', department: 'Production', verifiedAt: '2026-09-29' }),
+    ]))
+    expect(lead.profile.departmentEmails).toEqual(expect.arrayContaining([
+      expect.objectContaining({ department: 'Procurement', email: 'perolehan@diversatech.my' }),
+    ]))
+    expect(lead.profile.contactPage).toBe('https://diversatech.my/contact/')
+    expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')
+    expect(lead.demandSideReason).toContain('未证明其采购或使用我方包衣剂')
+  })
+
+  it('adds one Vietnamese coated-fertilizer manufacturer without claiming a confirmed purchase', () => {
+    const matches = publicLeads.filter((item) => item.id === 'rynan-smart-fertilizers-long-duc')
+    expect(matches).toHaveLength(1)
+    const lead = matches[0]
+    expect(lead.country).toBe('Vietnam')
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+    expect(lead.targetCompanyTypeId).toBe('controlled-release-fertilizer-manufacturer')
+    expect(lead.profile.contactPage).toBe('https://rynan.vn/lien-he')
+    expect(lead.profile.generalEmail).toBe('hotrokhachhang@rynantech.com')
+    expect(lead.profile.contacts).toHaveLength(0)
+    expect(lead.profile.sources.some((source) => source.url.includes('vietnamplus.vn'))).toBe(true)
+    expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')
+    expect(lead.demandSideReason).toContain('未证明其采购或使用我方产品')
   })
 
   it('treats ELO anticorrosion coatings as a sourced research direction, not proven customer use', () => {
@@ -321,7 +353,7 @@ describe('global product lead map', () => {
   it('keeps a dated supplier and competitor exclusion check for newly researched candidates', () => {
     for (const id of ['simplot-boise', 'agrofarm-ponorogo', 'twin-arrow-shah-alam', 'agro-berjaya-mojokerto', 'diversatech-bangi', 'farmhannong-ulsan', 'jcam-agri-tokyo', 'jieh-ming-new-taipei', 'vinyl-base-ipoh', 'schramm-coatings-offenbach', 'periwal-bhiwadi', 'turf-care-martins-ferry', 'omega-polimeros-trujui', 'supernovae-funza', 'vivacor-diadema', 'agrobiotech-jardinopolis', 'mica-shelton', 'ac-profil-huttwil', 'astra-chemtech-mumbai', 'nam-ah-ipoh', 'dacarto-osasco', 'flint-group-malmo', 'inx-schaumburg', 'shakun-vadodara', 'pvc-colouring-ahmedabad', 'sun-chemical-parsippany', 'crf-malaysia-kuala-lumpur', 'cai-georgetown', 'applied-db-samut-prakan', 'ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht', 'greenbest-henstridge', 'palini-vernici-pisogne', 'sankhla-industries-bengaluru', 'harrells-sylacauga']) {
       const lead = publicLeads.find((item) => item.id === id)!
-      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(['ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht', 'greenbest-henstridge', 'palini-vernici-pisogne', 'sankhla-industries-bengaluru', 'harrells-sylacauga'].includes(id) ? '2026-09-27' : '2026-09-26')
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe(id === 'diversatech-bangi' ? '2026-09-29' : ['ceccan-san-jose-iturbide', 'central-chemical-ube', 'tintas-prisma-tlalnepantla', 'alpha-plast-devland', 'mivena-maastricht', 'greenbest-henstridge', 'palini-vernici-pisogne', 'sankhla-industries-bengaluru', 'harrells-sylacauga'].includes(id) ? '2026-09-27' : '2026-09-26')
       expect(lead.supplierCompetitorCheck?.conclusion).toMatch(/未显示/)
     }
   })

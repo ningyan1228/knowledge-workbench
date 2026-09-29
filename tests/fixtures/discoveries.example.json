@@ -1,0 +1,24 @@
+[
+  {
+    "companyName": "Haifa Group Ltd.",
+    "country": "Israel",
+    "productId": "fertilizer-coating",
+    "website": "https://www.haifa-group.com/",
+    "discoveredAt": "2026-09-29",
+    "discoverySource": {
+      "name": "Existing company duplicate fixture",
+      "url": "https://www.haifa-group.com/"
+    }
+  },
+  {
+    "companyName": "Example Coated Fertilizer Works",
+    "country": "Vietnam",
+    "productId": "fertilizer-coating",
+    "website": "https://example.org/",
+    "discoveredAt": "2026-09-29",
+    "discoverySource": {
+      "name": "Fictional example only — not a customer",
+      "url": "https://example.org/products"
+    }
+  }
+]

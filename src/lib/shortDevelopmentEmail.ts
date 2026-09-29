@@ -5,6 +5,7 @@ import {
   tdsVerifiedApplications,
   type PublicLead,
 } from './productMarketMap'
+import { leadEmailFacts } from './leadEmailFacts'
 
 export type ShortDevelopmentEmail = {
   subject: string
@@ -14,52 +15,40 @@ export type ShortDevelopmentEmail = {
   verifiedAt: string
 }
 
-const observations: Record<string, string> = {
-  'controlled-release-fertilizer': 'controlled-release fertilizer products',
-  'slow-release-fertilizer': 'slow-release fertilizer products',
-  'coated-urea': 'coated urea products',
-  'polyurethane-coated-urea': 'coated urea products',
-  'coated-compound-fertilizer': 'coated compound fertilizers',
-  'untreated-pp-primer': 'primers or coatings for PP surfaces',
-  'pe-primer': 'primers or coatings for PE surfaces',
-  'opp-primer': 'primers or coatings for OPP surfaces',
-  'pet-primer': 'primers or coatings for PET surfaces',
-  'abs-surface-treatment': 'coatings or surface treatments for ABS',
-  'pvc-primer': 'primers or coatings for PVC surfaces',
-  'aluminum-primer': 'coatings or primers for aluminum',
-  'glass-adhesion-promotion': 'coatings or surface treatments for glass',
-  'wood-surface-treatment': 'coatings or surface treatments for wood',
-  'waterborne-ink-anchorage-on-pp-pe': 'water-based ink or primer formulations for PP/PE',
-  'elo-pvc-plasticizer': 'PVC compound formulations',
-  'elo-anticorrosion-coating-research': 'industrial protective coatings',
-  'polymer-plasticizer': 'polymer formulations',
-  'polymer-stabilizer': 'polymer formulations',
-  coatings: 'coating formulations',
-  adhesives: 'adhesive formulations',
-  inks: 'ink formulations',
-  sealants: 'sealant formulations',
-  'resin-modification': 'resin formulations',
+const productNames: Record<PublicLead['productId'], string> = {
+  'fertilizer-coating': 'fertilizer coating material',
+  'nl-w1201': 'NL-W1201',
+  elo: 'epoxidized linseed oil (ELO)',
 }
 
-const productCopy: Record<PublicLead['productId'], { name: string; positioning: string }> = {
-  'fertilizer-coating': {
-    name: 'fertilizer coating material',
-    positioning: 'a raw material for controlled- and slow-release fertilizer coating formulations',
-  },
-  'nl-w1201': {
-    name: 'NL-W1201',
-    positioning: 'a water-based surface treatment material for primer and adhesion-promoter formulation trials',
-  },
-  elo: {
-    name: 'epoxidized linseed oil (ELO)',
-    positioning: 'a bio-based functional additive for formulation evaluation',
-  },
+function positioningFor(lead: PublicLead) {
+  const applicationId = lead.companyEvidence.applicationId
+  if (lead.productId === 'fertilizer-coating') {
+    return applicationId === 'coated-urea' || applicationId === 'polyurethane-coated-urea'
+      ? 'a raw material for possible fertilizer-granule coating formulation trials'
+      : applicationId === 'coated-compound-fertilizer'
+        ? 'a raw material for possible coated-compound-fertilizer formulation trials'
+        : 'a raw material for possible controlled-release fertilizer coating formulation trials'
+  }
+  if (lead.productId === 'nl-w1201') {
+    return applicationId === 'waterborne-ink-anchorage-on-pp-pe'
+      ? 'a water-based surface treatment material for preliminary PP/PE adhesion-formulation evaluation'
+      : 'a water-based surface treatment material for primer and adhesion-promoter formulation evaluation'
+  }
+  if (applicationId === 'elo-pvc-plasticizer') return 'a bio-based functional additive for preliminary plasticizer evaluation in PVC formulations'
+  if (applicationId === 'coatings' || applicationId === 'elo-anticorrosion-coating-research') return 'a bio-based functional additive for preliminary coating-formulation evaluation'
+  if (applicationId === 'adhesives') return 'a bio-based functional additive for preliminary adhesive-formulation evaluation'
+  return 'a bio-based functional additive for preliminary formulation evaluation'
 }
 
 function recipientFor(lead: PublicLead) {
-  const contact = lead.profile.contacts.find((item) =>
-    item.source?.url && item.verifiedAt && /procurement|purchasing|sourcing|technical|r&d|research|product|production|plant/i.test(item.title ?? item.department ?? ''),
-  )
+  const contactPriority = (role: string) => /procurement|purchasing|sourcing/i.test(role) ? 0
+    : /technical|r&d|research|product/i.test(role) ? 1
+      : /production|plant|operations/i.test(role) ? 2
+        : /managing|general manager|director/i.test(role) ? 3 : 4
+  const contact = lead.profile.contacts
+    .filter((item) => item.email && item.source?.url && item.verifiedAt)
+    .sort((a, b) => contactPriority(`${a.title ?? ''} ${a.department ?? ''}`) - contactPriority(`${b.title ?? ''} ${b.department ?? ''}`))[0]
   return contact ? `Hi ${contact.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
 }
 
@@ -77,18 +66,15 @@ export function createShortDevelopmentEmail(lead: PublicLead): ShortDevelopmentE
     || !/^\d{4}-\d{2}-\d{2}$/.test(evidence.verifiedAt)
     || !(lead.profile.website || lead.profile.contactPage || lead.profile.linkedIn || lead.profile.generalEmail || lead.profile.generalPhone || lead.profile.departmentEmails.length)) return null
 
-  const observation = observations[evidence.applicationId]
-  if (!observation) return null
-  const selectedProduct = productCopy[lead.productId]
-  const subject = `${selectedProduct.name} — a brief introduction`
-  const positioning = lead.productId === 'elo' && ['coatings', 'elo-anticorrosion-coating-research'].includes(evidence.applicationId)
-    ? 'a bio-based functional additive for coating formulation evaluation'
-    : selectedProduct.positioning
+  const companyFact = leadEmailFacts[lead.id]
+  if (!companyFact) return null
+  const productName = productNames[lead.productId]
+  const subject = `${productName} — a brief introduction`
   const body = `${recipientFor(lead)}
 
-I’m Zhiwu from Ningbo Neon Lion Technology Co., Ltd. I came across public information about ${lead.company}’s ${observation}.
+${companyFact}
 
-We supply ${selectedProduct.name}, ${positioning}. Would you be open to a short TDS for review? If another colleague handles raw materials, could you point me to the right person?
+I’m Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ${productName}, ${positioningFor(lead)}. Would your technical or sourcing team be open to reviewing its TDS? If another colleague handles raw-material evaluation, could you point me to the right person?
 
 Best regards,
 Zhiwu

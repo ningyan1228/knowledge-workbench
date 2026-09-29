@@ -375,10 +375,10 @@ const rawPublicLeads: RawPublicLead[] = [
   {
     id: 'diversatech-bangi', productId: 'fertilizer-coating', company: 'Diversatech (M) Sdn Bhd', country: 'Malaysia', countryZh: '马来西亚', city: 'Bandar Baru Bangi, Selangor', latitude: 2.9030, longitude: 101.7740,
     legacyCompanyDescription: '聚合物包覆控释肥生产商', fit: '优先核验',
-    signal: '官网说明 AJIB CRF 采用获得专利的 Polymer Coated Agglomeration Technology；马来西亚肥料工业协会将该公司列为 Manufacturer，并列出 Controlled Release Fertilizer 产品。该企业生产下游控释肥，具备包衣原料采购与技术负责人核验价值。',
-    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官网与行业协会公司目录：其公开业务为控释肥、微量元素肥和其他成品肥制造；本轮检索的公开来源未显示其销售肥料包衣原料。' },
+    signal: 'Diversatech 官网列出 AJIB CRF 包覆控释肥产品及 Polymer Coated Agglomeration Technology，联系页明确给出 Pulau Indah 肥料工厂；马来西亚肥料工业协会将其列为 Controlled Release Fertilizer Manufacturer。该企业生产下游成品肥，具备包衣原料配方与采购适配性核验价值；公开资料未证明其采购或使用我方包衣剂。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已复核 Diversatech 新版官网产品、公司及联系页面和行业协会目录：公开业务为控释肥等成品肥制造；本轮所查资料未显示其对外销售聚氨酯包衣原料、包衣树脂或与我方相同的包衣剂。' },
     contact: { label: 'Director public business contact', email: 'syedamir@diversatechfertilizer.com', phone: '+60 3-8926 3103', contactUrl: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
-    source: { label: 'Diversatech AJIB CRF polymer-coated agglomeration technology', url: 'https://www.diversatechfertilizer.com/node/58' }, checkedAt: '2026-09-26',
+    source: { label: 'Diversatech official AJIB CRF polymer-coated agglomeration product', url: 'https://diversatech.my/ajib-crf/' }, checkedAt: '2026-09-29',
   },
   {
     id: 'farmhannong-ulsan', productId: 'fertilizer-coating', company: 'FarmHannong Co., Ltd.', country: 'South Korea', countryZh: '韩国', city: 'Ulsan', latitude: 35.5384, longitude: 129.3114,
@@ -919,6 +919,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'MARINCOAT official general company contact', email: 'info@marincoat.it', phone: '+39 02 9051901', contactUrl: 'https://www.marincoat.com/' },
     source: { label: 'MARINCOAT official homepage: formulated and produced pipeline coatings', url: 'https://www.marincoat.com/' }, checkedAt: '2026-09-29',
   },
+  {
+    id: 'rynan-smart-fertilizers-long-duc', productId: 'fertilizer-coating', company: 'RYNAN Smart Fertilizers JSC', country: 'Vietnam', countryZh: '越南', city: 'Long Duc, Vinh Long', latitude: 9.97337, longitude: 106.34564,
+    legacyCompanyDescription: '纳米聚合物包覆控释肥生产商', fit: '可开发候选',
+    signal: 'RYNAN 官网公开其自产 RYNAN Smart Fertilizers，说明采用纳米聚合物包覆技术并展示制造工艺；越南通讯社独立报道其位于 Long Duc 工业园的包覆肥工厂。该企业是包膜控释肥的下游制造商，具备核验包衣原料技术适配性的理由；其自有专利工艺的具体化学体系及是否外购包衣原料均未获公开证实，也未证明其采购或使用我方产品。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已复核 RYNAN Agriculture 的产品、制造、公司及联系页面和 RYNAN 越南官网公开产品目录：公开业务是成品智能肥料与农业技术；本轮所查官网未显示其对外销售包衣树脂、聚氨酯包衣原料或同类包衣剂。其自有包覆技术不等于已证实外购我方原料，需再做技术适配核验。' },
+    contact: { label: 'RYNAN Smart Fertilizers official Vietnam company contact', email: 'hotrokhachhang@rynantech.com', phone: '+84 2943 746 991', contactUrl: 'https://rynan.vn/lien-he' },
+    source: { label: 'RYNAN Agriculture official smart-fertilizer manufacturing and nano-polymer coating description', url: 'https://rynanagriculture.com/rynan-smart-fertilizers' }, checkedAt: '2026-09-29',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -945,6 +953,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'vernital-cercola': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'duramax-cascavel': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'marincoat-calvignasco': { targetCompanyTypeId: 'elo-coating-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coatings' },
+  'rynan-smart-fertilizers-long-duc': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1098,20 +1107,36 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     }],
   },
   'diversatech-bangi': {
+    website: 'https://diversatech.my/',
+    contactPage: 'https://diversatech.my/contact/',
+    generalEmail: 'admin@diversatech.my',
+    generalPhone: '+60 3-8926 3103',
     contacts: [{
       name: 'Syed Muhamad Amir bin Syed Omar', title: 'Director', department: 'Management',
-      email: 'syedamir@diversatechfertilizer.com', phone: '+60 3-8926 3103',
+      email: 'syedamir@diversatechfertilizer.com',
       source: { label: 'Fertilizer Industry Association of Malaysia company directory', url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
       verifiedAt: '2026-09-26',
+    }, {
+      name: 'Khairulnizam Bin Po’at', title: 'Senior Manager, Logistics, Procurement & Quality Control', department: 'Procurement',
+      source: { label: 'Diversatech official leadership list', url: 'https://diversatech.my/about-us/' }, verifiedAt: '2026-09-29',
+    }, {
+      name: 'Mohd. Sopian Bin Mohd. Nor', title: 'Head of Engineering', department: 'Technical',
+      source: { label: 'Diversatech official leadership list', url: 'https://diversatech.my/about-us/' }, verifiedAt: '2026-09-29',
+    }, {
+      name: 'Ahmad Khuzir Bin Abdul Wahab', title: 'Acting General Manager, Manufacturing', department: 'Production',
+      source: { label: 'Diversatech official leadership list', url: 'https://diversatech.my/about-us/' }, verifiedAt: '2026-09-29',
     }],
-    departmentEmails: [{
-      department: 'General', email: 'syedamir@diversatechfertilizer.com',
-      source: { label: 'Fertilizer Industry Association of Malaysia company directory', url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
-    }],
-    sources: [{
-      label: 'Fertilizer Industry Association of Malaysia: Diversatech manufacturer listing',
-      url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink',
-    }],
+    departmentEmails: [
+      { department: 'Procurement', email: 'perolehan@diversatech.my', source: { label: 'Diversatech official contact page', url: 'https://diversatech.my/contact/' } },
+      { department: 'General', email: 'admin@diversatech.my', source: { label: 'Diversatech official contact page', url: 'https://diversatech.my/contact/' } },
+    ],
+    address: 'A-01-02, Jalan Medan PB5, Paragon Point, Seksyen 9, 43650 Bandar Baru Bangi, Selangor, Malaysia',
+    sources: [
+      { label: 'Diversatech official AJIB CRF product', url: 'https://diversatech.my/ajib-crf/' },
+      { label: 'Diversatech official leadership list', url: 'https://diversatech.my/about-us/' },
+      { label: 'Diversatech official factory and procurement contact', url: 'https://diversatech.my/contact/' },
+      { label: 'Fertilizer Industry Association of Malaysia: Diversatech manufacturer listing', url: 'https://www.fiam.org.my/index.php?Itemid=118&link_id=26&option=com_mtree&task=viewlink' },
+    ],
   },
   'farmhannong-ulsan': {
     departmentEmails: [
@@ -1994,6 +2019,18 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     address: 'Via dell’Industria 12, 20080 Calvignasco (MI), Italy',
     sources: [{ label: 'MARINCOAT official homepage: coating formulation, production and contact details', url: 'https://www.marincoat.com/' }],
   },
+  'rynan-smart-fertilizers-long-duc': {
+    website: 'https://rynanagriculture.com/',
+    contactPage: 'https://rynan.vn/lien-he',
+    contacts: [],
+    departmentEmails: [],
+    address: 'Long Duc Industrial Park, Long Duc Ward, Vinh Long Province, Vietnam',
+    sources: [
+      { label: 'RYNAN Agriculture smart-fertilizer manufacturing and polymer-coating technology', url: 'https://rynanagriculture.com/rynan-smart-fertilizers' },
+      { label: 'RYNAN Smart Fertilizers official Vietnam contact page', url: 'https://rynan.vn/lien-he' },
+      { label: 'Vietnam News Agency: RYNAN Smart Fertilizers Long Duc coated-fertilizer plant', url: 'https://en.vietnamplus.vn/vietnams-first-smart-fertilizer-factory-opened-in-tra-vinh-post124844.vnp' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2097,6 +2134,7 @@ const demandSideLeadIds = new Set([
   'vernital-cercola',
   'duramax-cascavel',
   'marincoat-calvignasco',
+  'rynan-smart-fertilizers-long-duc',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
