@@ -27,12 +27,21 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Require configured site password gate
+        env:
+          SITE_GATE_SHA256: ${{ secrets.SITE_GATE_SHA256 }}
+        run: |
+          if [[ ! "$SITE_GATE_SHA256" =~ ^[0-9a-fA-F]{64}$ ]]; then
+            echo "Set the SITE_GATE_SHA256 repository Actions secret before deploying."
+            exit 1
+          fi
       - name: Build public frontend only
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
           VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
+          VITE_SITE_GATE_SHA256: ${{ secrets.SITE_GATE_SHA256 }}
         run: pnpm build
       - uses: actions/upload-pages-artifact@v4
         with:

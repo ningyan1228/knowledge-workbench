@@ -17,6 +17,26 @@
 
 `.github/workflows/deploy-pages.yml` 会设置仓库子路径 base；使用自定义域名时请把 `VITE_BASE_PATH` 调整为 `/`。前端使用 Hash 路由，刷新产品页不会请求不存在的静态路径。
 
+### 临时整站密码弹窗
+
+发布前，在本机 PowerShell 运行下面的命令。输入时密码不会回显；请使用不与其他账号共用的长密码，不要把明文密码发到聊天或提交进仓库。
+
+```powershell
+$sitePassword = Read-Host '输入工作台访问密码' -AsSecureString
+$sitePasswordPtr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($sitePassword)
+try {
+  $sitePasswordText = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($sitePasswordPtr)
+  $sitePasswordBytes = [Text.Encoding]::UTF8.GetBytes($sitePasswordText)
+  $sitePasswordSha = [Security.Cryptography.SHA256]::Create()
+  try { ($sitePasswordSha.ComputeHash($sitePasswordBytes) | ForEach-Object { $_.ToString('x2') }) -join '' }
+  finally { $sitePasswordSha.Dispose(); [Array]::Clear($sitePasswordBytes, 0, $sitePasswordBytes.Length); Remove-Variable sitePasswordText -ErrorAction SilentlyContinue }
+} finally { [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($sitePasswordPtr) }
+```
+
+将输出的 64 位十六进制值存入 GitHub 仓库 Settings → Secrets and variables → Actions → Repository secrets，名称为 `SITE_GATE_SHA256`。发布工作流缺少这个值会停止构建，避免上线一个未设置密码的页面。不要将原密码或哈希值提交到代码仓库。设置新密码后更新这个 secret 并重新发布；旧浏览器会话也会失效。本地要测试弹窗，可把哈希值填入未提交的 `.env` 中的 `VITE_SITE_GATE_SHA256`；本地开发模式不配置时可直接预览。
+
+此弹窗只阻止普通访客直接操作页面，**不保护静态 JS 或公开 GitHub 历史中的客户资料**。真正需要保密的数据仍须移出公开仓库，登录后再由受 RLS 保护的服务读取。
+
 ## 3. 无状态代理
 
 在小服务器上构建 `services/proxy/Dockerfile`。只配置其 `.env.example` 中的服务端变量，反向代理仅允许 GitHub Pages 实际域名进入 CORS。服务不使用本地数据库、队列或附件目录；日志不得写入问题全文、客户信息、token 或签名 URL。
