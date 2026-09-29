@@ -86,4 +86,8 @@ export const leadEmailFacts: Record<string, string> = {
   'duramax-cascavel': 'Your Epóxi HS Poliamina range includes high-solids industrial anticorrosion coatings.',
   'marincoat-calvignasco': 'Your company describes formulating and producing coatings for pipelines and storage equipment.',
   'rynan-smart-fertilizers-long-duc': 'Your RYNAN Smart Fertilizers range describes a nano-polymer coating process.',
+  'pungnong-seoul': 'Your production fact sheet lists controlled-release compound fertilizer at your second factory.',
+  'ec-grow-eau-claire': 'Your company announced its own polymer-coating facility and now offers EPEC polymer-coated urea.',
+  'sumika-agro-niihama': 'Your Ehime fertilizer plant lists coated-fertilizer production and dedicated coating-material tanks.',
+  'nousbo-ulsan': 'Your Ulsan facility operates dedicated fluid-bed coating lines for controlled-release fertilizers.',
 }

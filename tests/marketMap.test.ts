@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(83)
+    expect(publicLeads).toHaveLength(87)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -120,6 +120,34 @@ describe('global product lead map', () => {
     expect(lead.profile.sources.some((source) => source.url.includes('vietnamplus.vn'))).toBe(true)
     expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')
     expect(lead.demandSideReason).toContain('未证明其采购或使用我方产品')
+  })
+
+  it('adds three independently evidenced coating-fertilizer manufacturers without claiming purchases', () => {
+    const ecGrow = publicLeads.find((item) => item.id === 'ec-grow-eau-claire')!
+    const sumika = publicLeads.find((item) => item.id === 'sumika-agro-niihama')!
+    const nousbo = publicLeads.find((item) => item.id === 'nousbo-ulsan')!
+
+    expect(ecGrow.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(ecGrow.targetCompanyTypeId).toBe('polymer-coated-urea-manufacturer')
+    expect(ecGrow.profile.contacts[0]).toMatchObject({ name: 'Joe Ernst', department: 'Sales', verifiedAt: '2026-09-29' })
+    expect(ecGrow.profile.generalPhone).toBe('+1 715-876-6422')
+
+    expect(sumika.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+    expect(sumika.profile.generalEmail).toBe('toiawase@sumika-agro.co.jp')
+    expect(sumika.profile.generalPhone).toBe('+81 897-37-4012')
+    expect(sumika.profile.sources.some((source) => source.url.endsWith('/brunch.html'))).toBe(true)
+
+    expect(nousbo.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+    expect(nousbo.fit).toBe('可开发候选')
+    expect(nousbo.profile.generalEmail).toBe('nousbo@nousbo.com')
+    expect(nousbo.demandSideReason).toContain('内部合成')
+
+    for (const lead of [ecGrow, sumika, nousbo]) {
+      expect(lead.productId).toBe('fertilizer-coating')
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')
+      expect(lead.demandSideReason).toMatch(/未证明/)
+      expect(lead.profile.contactPage).toMatch(/^https:\/\//)
+    }
   })
 
   it('treats ELO anticorrosion coatings as a sourced research direction, not proven customer use', () => {

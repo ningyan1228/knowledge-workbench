@@ -927,6 +927,38 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'RYNAN Smart Fertilizers official Vietnam company contact', email: 'hotrokhachhang@rynantech.com', phone: '+84 2943 746 991', contactUrl: 'https://rynan.vn/lien-he' },
     source: { label: 'RYNAN Agriculture official smart-fertilizer manufacturing and nano-polymer coating description', url: 'https://rynanagriculture.com/rynan-smart-fertilizers' }, checkedAt: '2026-09-29',
   },
+  {
+    id: 'pungnong-seoul', productId: 'fertilizer-coating', company: 'Pungnong Co., Ltd. (NPKO)', country: 'South Korea', countryZh: '韩国', city: 'Seoul', latitude: 37.5665, longitude: 126.9780,
+    legacyCompanyDescription: '控释复合肥及全包衣肥生产商', fit: '可开发候选',
+    signal: 'Pungnong 官网生产情况表明确第二工厂生产 controlled release compound fertilizer，并列示控释复合肥产能；官网研发沿革记录开发 all-coat controlled release fertilizer，产品新闻介绍 100% 包衣的 All-Coating Hanpolo。公司还公开了肥料原料进口情况。其生产下游控释/包衣肥，具备核验包衣原料技术适配性的业务逻辑；公开资料没有证明其采购我方原料、使用相同包衣化学体系或存在明确采购需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已检查 Pungnong 官网业务、肥料产品、工厂生产表和原料进口资料：公开销售的是肥料成品，所查官方页面未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Pungnong official general business contact', email: 'pungnong@pungnong.co.kr', phone: '+82 2-712-8791', contactUrl: 'https://www.npko.co.kr/eng/' },
+    source: { label: 'Pungnong official Production Fact Sheet: second factory controlled-release compound fertilizer', url: 'https://www.npko.co.kr/eng/s1/s1_1_5.php' }, checkedAt: '2026-09-29',
+  },
+  {
+    id: 'ec-grow-eau-claire', productId: 'fertilizer-coating', company: 'EC Grow, Inc.', country: 'United States', countryZh: '美国', city: 'Eau Claire, Wisconsin', latitude: 44.8113, longitude: -91.4985,
+    legacyCompanyDescription: '自建聚合物包膜设施的控释尿素生产商', fit: '优先核验',
+    signal: 'EC Grow 官网新闻明确披露其在 Eau Claire 自建聚合物包膜设施，可生产不同粒径和释放曲线的控释尿素；当前官网继续销售 EPEC 聚合物包膜尿素。该企业是具备自有包膜产线的下游肥料制造商，适合核验包衣原料、释放曲线和配方适配性；公开资料未证明其采购、使用我方包衣剂或存在明确采购计划。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已复核 EC Grow 公司、产品、包膜设施和联系页面：公开业务为肥料及融雪剂制造和销售，本轮所查资料未显示其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'EC Grow official corporate contact', phone: '+1 715-876-6422', contactUrl: 'https://ecgrow.com/index.php/contact-ec-grow/' },
+    source: { label: 'EC Grow official polymer-coating facility announcement', url: 'https://ecgrowproturf.com/index.php/2021/01/22/ec-grow-inc-plans-to-offer-a-new-polymer-coated-urea-by-fall-2021/' }, checkedAt: '2026-09-29',
+  },
+  {
+    id: 'sumika-agro-niihama', productId: 'fertilizer-coating', company: 'Sumika Agro Manufacturing Co., Ltd.', country: 'Japan', countryZh: '日本', city: 'Niihama, Ehime', latitude: 33.9603, longitude: 133.2834,
+    legacyCompanyDescription: '包膜肥受托制造商及爱媛生产工厂', fit: '优先核验',
+    signal: '住化アグロ製造官网说明其为农药制剂与肥料的受托制造企业；爱媛肥料工厂页面明确列出包膜肥生产，并展示包膜原料罐，产品页列出 80 日和 120 日型スミコート包膜肥。该企业属于直接使用包膜原料的下游制造场景，可核验原料适配性和受托制造供应链；公开资料未证明其采购或使用我方包衣剂。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已复核住化アグロ製造的公司、工厂、产品和联系资料：官网定位为农药制剂及肥料受托制造，公开产品为包膜肥成品；本轮所查官方资料未显示其对外销售包衣树脂、聚氨酯包衣原料或同类包衣剂。' },
+    contact: { label: 'Sumika Agro Manufacturing official enquiry and Ehime fertilizer plant contact', email: 'toiawase@sumika-agro.co.jp', phone: '+81 897-37-4012', contactUrl: 'https://www.sumika-agro.co.jp/contact.html' },
+    source: { label: 'Sumika Agro Manufacturing official Ehime coated-fertilizer plant and coating-material tanks', url: 'https://www.sumika-agro.co.jp/brunch.html' }, checkedAt: '2026-09-29',
+  },
+  {
+    id: 'nousbo-ulsan', productId: 'fertilizer-coating', company: 'Nousbo Co., Ltd.', country: 'South Korea', countryZh: '韩国', city: 'Ulsan', latitude: 35.4350, longitude: 129.3140,
+    legacyCompanyDescription: '流化床聚合物包膜控释肥生产商', fit: '可开发候选',
+    signal: 'NOUSBO 官网公开其 Ulsan 工厂两条控释肥专用生产线、流化床包膜工艺和聚合物包膜产品，并说明工厂覆盖原料、包膜厚度和释放曲线质量控制。该企业是明确的包膜控释肥下游制造商；但官网同时说明部分聚合物包膜材料为内部合成，因此仅作为可开发候选，公开资料未证明其外购我方包衣剂或存在替换需求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已复核 NOUSBO 官方技术、工厂、全球网络和联系资料：公司销售控释肥成品并提供 OEM，且内部合成部分包膜聚合物；未发现其将包衣树脂作为独立原料对外销售，但其自有材料能力会降低外购概率，开发前应先核验是否存在补充或替代原料需求。' },
+    contact: { label: 'NOUSBO official company contact', email: 'nousbo@nousbo.com', phone: '+82 31-295-6178', contactUrl: 'https://global.nousbo.com/contact-us/' },
+    source: { label: 'NOUSBO official CRF manufacturing technology and Ulsan production lines', url: 'https://global.nousbo.com/technology/crf-manufacturing/' }, checkedAt: '2026-09-29',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -954,6 +986,10 @@ const leadQualifications: Record<string, LeadQualification> = {
   'duramax-cascavel': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'marincoat-calvignasco': { targetCompanyTypeId: 'elo-coating-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coatings' },
   'rynan-smart-fertilizers-long-duc': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'pungnong-seoul': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'ec-grow-eau-claire': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'sumika-agro-niihama': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'nousbo-ulsan': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -2031,6 +2067,62 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'Vietnam News Agency: RYNAN Smart Fertilizers Long Duc coated-fertilizer plant', url: 'https://en.vietnamplus.vn/vietnams-first-smart-fertilizer-factory-opened-in-tra-vinh-post124844.vnp' },
     ],
   },
+  'pungnong-seoul': {
+    website: 'https://www.npko.co.kr/eng/',
+    contactPage: 'https://www.npko.co.kr/eng/',
+    contacts: [],
+    departmentEmails: [],
+    address: '8 Mapo-daero, Mapo-gu, Seoul 04176, Republic of Korea',
+    sources: [
+      { label: 'Pungnong official second-factory controlled-release compound fertilizer production', url: 'https://www.npko.co.kr/eng/s1/s1_1_5.php' },
+      { label: 'Pungnong official all-coat controlled-release fertilizer development history', url: 'https://www.npko.co.kr/eng/s1/s1_1_4.php' },
+      { label: 'Pungnong official raw-material import status and public company contact', url: 'https://www.npko.co.kr/eng/s6/s6_1.php' },
+      { label: 'Pungnong official All-Coating Hanpolo coated-fertilizer product news', url: 'https://www.npko.co.kr/bbs/board.php?bo_table=s4_1_2&wr_id=12' },
+    ],
+  },
+  'ec-grow-eau-claire': {
+    website: 'https://ecgrow.com/',
+    contactPage: 'https://ecgrow.com/index.php/contact-ec-grow/',
+    contacts: [{
+      name: 'Joe Ernst', title: 'Director of Professional Sales (title stated in 2021 official facility announcement)', department: 'Sales',
+      source: { label: 'EC Grow official polymer-coating facility announcement', url: 'https://ecgrowproturf.com/index.php/2021/01/22/ec-grow-inc-plans-to-offer-a-new-polymer-coated-urea-by-fall-2021/' }, verifiedAt: '2026-09-29',
+    }],
+    departmentEmails: [],
+    address: '4970 Kane Road, Eau Claire, WI 54703, United States',
+    sources: [
+      { label: 'EC Grow official polymer-coating facility announcement', url: 'https://ecgrowproturf.com/index.php/2021/01/22/ec-grow-inc-plans-to-offer-a-new-polymer-coated-urea-by-fall-2021/' },
+      { label: 'EC Grow current EPEC polymer-coated urea product and manufacturing statement', url: 'https://ecgrowproturf.com/' },
+      { label: 'EC Grow official corporate contact page', url: 'https://ecgrow.com/index.php/contact-ec-grow/' },
+      { label: '2025 industry directory listing Joe Ernst as an EC Grow employee', url: 'https://www.mnla.biz/members/?id=25522495' },
+    ],
+  },
+  'sumika-agro-niihama': {
+    website: 'https://www.sumika-agro.co.jp/',
+    contactPage: 'https://www.sumika-agro.co.jp/contact.html',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'toiawase@sumika-agro.co.jp', source: { label: 'Sumika Agro Manufacturing official enquiry page', url: 'https://www.sumika-agro.co.jp/contact.html' } }],
+    address: '5-1 Sobirakicho, Niihama, Ehime 792-0001, Japan',
+    sources: [
+      { label: 'Sumika Agro Manufacturing official Ehime coated-fertilizer plant and coating-material tanks', url: 'https://www.sumika-agro.co.jp/brunch.html' },
+      { label: 'Sumika Agro Manufacturing official coated-fertilizer product examples', url: 'https://www.sumika-agro.co.jp/product.html' },
+      { label: 'Sumika Agro Manufacturing company profile and contract-manufacturing business', url: 'https://www.sumika-agro.co.jp/profile.html' },
+      { label: 'Sumika Agro Manufacturing official enquiry email and telephone', url: 'https://www.sumika-agro.co.jp/contact.html' },
+    ],
+  },
+  'nousbo-ulsan': {
+    website: 'https://global.nousbo.com/',
+    contactPage: 'https://global.nousbo.com/contact-us/',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'nousbo@nousbo.com', source: { label: 'NOUSBO official company brochure', url: 'https://www.nousbo.com/download/brochure_jp.pdf' } }],
+    address: '106 Daejung-ro, Onsan-eup, Ulju-gun, Ulsan 45010, Republic of Korea',
+    sources: [
+      { label: 'NOUSBO official CRF manufacturing technology and Ulsan production lines', url: 'https://global.nousbo.com/technology/crf-manufacturing/' },
+      { label: 'NOUSBO official production and R&D network', url: 'https://global.nousbo.com/company/global-agriculture-business/' },
+      { label: 'NOUSBO official global network and in-house polymer statement', url: 'https://global.nousbo.com/ko/company/global-network/' },
+      { label: 'NOUSBO official company brochure with public email, plant and headquarters contacts', url: 'https://www.nousbo.com/download/brochure_jp.pdf' },
+      { label: 'NOUSBO official customer inquiry page', url: 'https://global.nousbo.com/contact-us/' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2135,6 +2227,10 @@ const demandSideLeadIds = new Set([
   'duramax-cascavel',
   'marincoat-calvignasco',
   'rynan-smart-fertilizers-long-duc',
+  'pungnong-seoul',
+  'ec-grow-eau-claire',
+  'sumika-agro-niihama',
+  'nousbo-ulsan',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
