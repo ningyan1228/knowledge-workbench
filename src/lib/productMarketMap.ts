@@ -127,8 +127,8 @@ export const marketProducts: MarketProduct[] = [
   {
     id: 'elo', name: '环氧化亚麻油 ELO', nameEn: 'Epoxidized Linseed Oil', color: '#7c3aed',
     tdsApplicationIds: ['polymer-plasticizer', 'polymer-stabilizer', 'coatings', 'adhesives', 'inks', 'sealants', 'resin-modification'],
-    searchLogic: '优先寻找实际使用功能添加剂的聚合物配方、增塑剂使用型 compound、涂料、胶黏剂、油墨、密封剂和树脂改性企业，而非只搜 ELO 生产商；PVC、电缆与柔性 PVC 仅在有来源的市场扩展应用下搜索。',
-    searchTerms: ['polymer formulator plasticizer user', 'plasticizer compounder', 'coating manufacturer bio-based additive', 'adhesive ink sealant resin formulator'],
+    searchLogic: '当前客户开发优先只寻找自行研发和生产重防腐 / 工业防护涂料的下游配方商；ELO 用于涂料是 TDS 已验证的大类，防腐涂层为有独立研究来源的市场扩展方向。涂料企业入选不代表它已使用 ELO，须进一步核实配方兼容性和采购需求。',
+    searchTerms: ['heavy-duty anticorrosion coating manufacturer', 'industrial protective coating formulator epoxy', 'marine protective coating manufacturer', 'anti-corrosion paint manufacturer R&D'],
     tdsScope: '基于已提供英文 TDS：ELO 可作为聚合物添加剂，并用于涂料、胶黏剂、油墨、密封胶和树脂改性；适用性须由客户配方验证。',
   },
 ]
@@ -163,6 +163,7 @@ export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
 
 export const marketExtendedApplications: MarketExtendedApplication[] = [
   { id: 'elo-pvc-plasticizer', productId: 'elo', name: 'PVC 增塑剂应用', nameEn: 'PVC Plasticizer Application', basedOnTdsApplicationId: 'polymer-plasticizer', sourceName: 'Wiley: The epoxidized linseed oil as a secondary plasticizer in PVC processing', sourceUrl: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/vjch.202000023', verifiedAt: '2026-09-26' },
+  { id: 'elo-anticorrosion-coating-research', productId: 'elo', name: '防腐涂层研究方向', nameEn: 'Anticorrosion Coating Research Direction', basedOnTdsApplicationId: 'coatings', sourceName: 'Composite Materials from Renewable Resources as Sustainable Corrosion Protection Coatings (Polymers, 2021)', sourceUrl: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8588247/', verifiedAt: '2026-09-29' },
   { id: 'waterborne-ink-anchorage-on-pp-pe', productId: 'nl-w1201', name: 'PP / PE 水性油墨附着力底涂', nameEn: 'Waterborne Ink Anchorage Primer on PP / PE', basedOnTdsApplicationId: 'pe-primer', sourceName: 'ICHEMCO technical catalog: waterborne primer for PP/PE improves anchorage of waterborne inks', sourceUrl: 'https://services.ichemco.com/eng/Catalogs/Ichemco%20Products%20for%20Tapes%20and%20Protective%20Films%202020.pdf', verifiedAt: '2026-09-26' },
 ]
 
@@ -180,6 +181,7 @@ export const targetCompanyTypes: TargetCompanyType[] = [
   { id: 'plasticizer-using-polymer-compounder', productId: 'elo', name: '增塑剂使用型聚合物配方商', nameEn: 'Plasticizer-Using Polymer Compounder', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'polymer-plasticizer' }] },
   { id: 'pvc-compound-manufacturer', productId: 'elo', name: 'PVC 配方生产商（需扩展证据）', nameEn: 'PVC Compound Manufacturer (Sourced Extension Required)', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'elo-pvc-plasticizer' }] },
   { id: 'elo-coating-manufacturer', productId: 'elo', name: '涂料生产商', nameEn: 'Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'coatings' }] },
+  { id: 'elo-anticorrosion-coating-formulator', productId: 'elo', name: '防腐涂料配方生产商（需扩展证据）', nameEn: 'Anticorrosion Coating Formulator (Sourced Extension Required)', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' }] },
   { id: 'adhesive-manufacturer', productId: 'elo', name: '胶黏剂生产商', nameEn: 'Adhesive Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'adhesives' }] },
   { id: 'ink-manufacturer', productId: 'elo', name: '油墨生产商', nameEn: 'Ink Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'inks' }] },
   { id: 'sealant-manufacturer', productId: 'elo', name: '密封剂生产商', nameEn: 'Sealant Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'sealants' }] },
@@ -893,6 +895,22 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Manner Polymers public technical-service contact', email: 'TechServ@mannerpolymers.com', phone: '+1 972-542-6789', contactUrl: 'https://mannerpolymers.com/contact/' },
     source: { label: 'Manner Polymers official flexible and custom PVC manufacturing capabilities', url: 'https://mannerpolymers.com/flexible-custom-pvc-compounds/' }, checkedAt: '2026-09-28',
   },
+  {
+    id: 'vernital-cercola', productId: 'elo', company: 'Vernital S.p.A.', country: 'Italy', countryZh: '意大利', city: 'Cercola, Naples', latitude: 40.8552, longitude: 14.3579,
+    legacyCompanyDescription: '工业防腐涂料配方生产商', fit: '可开发候选',
+    signal: 'Vernital 官网说明其在 Cercola 自有研发实验室与生产基地，并生产用于钢结构、储罐、化工设施和海洋环境的双组分环氧防腐涂料。ELO 在防腐涂层中的技术研究有独立论文来源，故可向其技术团队核实生物基 ELO 是否适配现有或新配方；公司官网并未证明其目前使用、采购 ELO，亦未证明我方产品已满足重防腐性能要求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已检查官网公司介绍、防腐涂料产品和联系页：公开生产与销售的是涂料成品，本轮官方来源未显示其对外销售 ELO、ESBO、环氧化植物油或同类功能原料。' },
+    contact: { label: 'Vernital official general contact', email: 'info@vernital.it', phone: '+39 081 7331188', contactUrl: 'https://www.vernital.it/contatti/' },
+    source: { label: 'Vernital Vernitex Bianco industrial and marine anticorrosion epoxy coating', url: 'https://www.vernital.it/i-nostri-prodotti/prodotti-anticorrosivi-per-lindustria/surface-tolerant/vernitex-bianco/' }, checkedAt: '2026-09-29',
+  },
+  {
+    id: 'duramax-cascavel', productId: 'elo', company: 'Duramax Tintas Industriais', country: 'Brazil', countryZh: '巴西', city: 'Cascavel, Paraná', latitude: -24.9555, longitude: -53.4552,
+    legacyCompanyDescription: '工业及重防腐涂料配方生产商', fit: '可开发候选',
+    signal: 'Duramax 官网明确其自行研发、生产工业与防腐涂料；其双组分高固体分环氧聚胺涂料用于恶劣工业环境中的金属结构防腐。ELO 的防腐涂层方向有独立研究来源，因此属于可询问 ELO 类添加剂配方适配性的下游涂料厂；公开资料未证明其已使用或采购 ELO，也不能据此宣称我方 ELO 已达到其重防腐产品要求。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-29', conclusion: '已检查官网公司介绍、重防腐环氧产品及联系资料：公开销售的是下游工业涂料及表面处理成品，本轮官方来源未显示其生产或销售 ELO、ESBO、环氧化植物油或同类增塑/稳定原料。' },
+    contact: { label: 'Duramax official commercial contact', email: 'comercial@duramaxtintas.ind.br', phone: '+55 45 99823-0474', contactUrl: 'https://duramaxtintas.ind.br/sobre/' },
+    source: { label: 'Duramax Epóxi HS Poliamina Dupla Função anticorrosion coating', url: 'https://duramaxtintas.ind.br/produtos/dupla-funcao-maxdual/epoxi-hs-poliamina-dupla-funcao/' }, checkedAt: '2026-09-29',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -916,6 +934,8 @@ const leadQualifications: Record<string, LeadQualification> = {
   'gefink-burzaco': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'colorprint-coseano': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'manner-polymers-mckinney': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
+  'vernital-cercola': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
+  'duramax-cascavel': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1932,6 +1952,31 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       label: 'Manner Polymers official technical-service and sales contacts', url: 'https://mannerpolymers.com/contact/',
     }],
   },
+  'vernital-cercola': {
+    website: 'https://www.vernital.it/',
+    contactPage: 'https://www.vernital.it/contatti/',
+    contacts: [],
+    departmentEmails: [{ department: 'Sales', email: 'commerciale@vernital.it', source: { label: 'Vernital official contacts', url: 'https://www.vernital.it/contatti/' } }],
+    address: 'Via A. De Curtis 4, 80040 Cercola (NA), Italy',
+    sources: [
+      { label: 'Vernital company R&D and production facilities', url: 'https://www.vernital.it/azienda/' },
+      { label: 'Vernital industrial and marine anticorrosion epoxy coating', url: 'https://www.vernital.it/i-nostri-prodotti/prodotti-anticorrosivi-per-lindustria/surface-tolerant/vernitex-bianco/' },
+      { label: 'Vernital official contacts', url: 'https://www.vernital.it/contatti/' },
+      { label: 'Independent ELO anticorrosion-coating research, not evidence of Vernital ELO use', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8588247/' },
+    ],
+  },
+  'duramax-cascavel': {
+    website: 'https://duramaxtintas.ind.br/',
+    contactPage: 'https://duramaxtintas.ind.br/sobre/',
+    contacts: [],
+    departmentEmails: [{ department: 'Sales', email: 'comercial@duramaxtintas.ind.br', source: { label: 'Duramax official company and commercial contact', url: 'https://duramaxtintas.ind.br/sobre/' } }],
+    address: 'R. Sergio Gaspareto 423, Cascavel, Paraná 85804-608, Brazil',
+    sources: [
+      { label: 'Duramax company manufacturing and research', url: 'https://duramaxtintas.ind.br/sobre/' },
+      { label: 'Duramax heavy-duty anticorrosion epoxy coating product', url: 'https://duramaxtintas.ind.br/produtos/dupla-funcao-maxdual/epoxi-hs-poliamina-dupla-funcao/' },
+      { label: 'Independent ELO anticorrosion-coating research, not evidence of Duramax ELO use', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8588247/' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2032,6 +2077,8 @@ const demandSideLeadIds = new Set([
   'greenbest-henstridge',
   'palini-vernici-pisogne',
   'sankhla-industries-bengaluru',
+  'vernital-cercola',
+  'duramax-cascavel',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {

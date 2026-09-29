@@ -5,6 +5,7 @@ import { Building2, CalendarCheck, CheckCircle2, ChevronRight, Copy, ExternalLin
 import 'leaflet/dist/leaflet.css'
 import { marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications, type MarketProduct, type PublicLead } from '../../lib/productMarketMap'
 import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
+import { createShortDevelopmentEmail } from '../../lib/shortDevelopmentEmail'
 
 type MarketTab = 'overview' | 'map' | 'leads' | 'products' | 'sources'
 type CountrySummary = { country: string; countryZh: string; latitude: number; longitude: number; count: number }
@@ -71,18 +72,16 @@ function CopyOutreachPrompt({ lead }: { lead: PublicLead }) {
   const product = productOf(lead.productId)
   const targetType = targetCompanyTypeOf(lead.targetCompanyTypeId)
   const application = applicationOf(lead.companyEvidence.applicationLayer, lead.companyEvidence.applicationId)
-  const qualified = lead.commercialRole === 'demand_side'
-    && lead.leadEligible
-    && targetType.kind === 'target'
-    && Boolean(lead.companyEvidence.statement && lead.companyEvidence.sourceName && lead.companyEvidence.sourceUrl && lead.companyEvidence.verifiedAt)
+  const email = createShortDevelopmentEmail(lead)
+  const qualified = Boolean(email)
   const prompt = createDevelopmentEmailPrompt({ lead, product, application, targetType })
-  const copyPrompt = async () => {
-    if (!qualified) return
-    await navigator.clipboard.writeText(prompt)
+  const copyEmail = async () => {
+    if (!email) return
+    await navigator.clipboard.writeText(email.text)
     setCopied(true)
     window.setTimeout(() => setCopied(false), 2200)
   }
-  return <section className="outreach-prompt"><div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />开发信工作区</h3>{qualified ? <p>将已核验的客户证据链、允许使用的产品事实、禁用声明及收件人 CTA 复制为 Prompt。不会自动生成、发送邮件或写入 CRM。</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div><div className="outreach-actions"><button className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起 Prompt' : '查看 Prompt'}</button><button className="secondary-button outreach-copy-button" disabled={!qualified} onClick={() => void copyPrompt()}><Copy size={15} />{copied ? 'Prompt 已复制' : '复制开发信 Prompt'}</button></div>{showPrompt && qualified && <div className="outreach-prompt-preview"><div><strong>Prompt 预览</strong><span>请先核对公司证据、产品事实和限制，再复制。</span></div><pre>{prompt}</pre></div>}</section>
+  return <section className="outreach-prompt"><div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />简短英文开发信</h3>{qualified ? <p>已按该公司的公开业务和对应产品写好首封信。复制前请核对官网证据与收件人；不会自动发送、提交表单或写入 CRM。</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div><div className="outreach-actions"><button className="secondary-button outreach-copy-button" disabled={!qualified} onClick={() => void copyEmail()}><Copy size={15} />{copied ? '开发信已复制' : '复制开发信'}</button><button className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button></div>{email && <div className="outreach-prompt-preview outreach-email-preview"><div><strong>邮件预览 · {lead.company}</strong><span>业务依据：<a href={email.evidenceUrl} target="_blank" rel="noreferrer">查看公开来源</a> · {email.verifiedAt} 核验</span></div><pre>{email.text}</pre></div>}{showPrompt && qualified && <div className="outreach-prompt-preview"><div><strong>原 Prompt 预览</strong><span>供需要进一步定制时使用，不是待发送邮件。</span></div><pre>{prompt}</pre></div>}</section>
 }
 
 function CompanyDetail({ lead, onClose }: { lead: PublicLead | null; onClose: () => void }) {
@@ -120,10 +119,21 @@ function MapView({ productId, leads, onProduct }: { productId: string; leads: Pu
 function LeadsView({ productId, leads, onProduct }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void }) {
   const [query, setQuery] = useState('')
   const matching = leads.filter((lead) => `${lead.company} ${lead.countryZh} ${lead.city} ${targetCompanyTypeOf(lead.targetCompanyTypeId).name} ${applicationOf(lead.companyEvidence.applicationLayer, lead.companyEvidence.applicationId).name}`.toLowerCase().includes(query.toLowerCase()))
+  const readyEmails = matching.map((lead) => ({ lead, email: createShortDevelopmentEmail(lead) })).filter((item) => item.email !== null)
   const [selected, setSelected] = useState<PublicLead | null>(matching[0] ?? null)
   const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
   useEffect(() => setSelected(matching[0] ?? null), [productId, query])
-  return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">DEMAND-SIDE CUSTOMER QUEUE</p><h2>可开发客户线索</h2><p>这里只收录有证据表明会采购并在自身配方或生产中使用对应原料的下游企业；同行、竞争对手、同类原料供应商一律排除。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><label className="lead-search"><Search size={17} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索公司、国家、城市或客户类型" /></label><div className="lead-list">{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selected?.id} onSelect={setSelected} onOpenDetail={setDetailLead} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>暂无已核验的需求侧线索</strong><span>不会用同行、供应商或竞品凑数量。</span></div>}</div><CompanyDetail lead={detailLead} onClose={() => setDetailLead(null)} /></section>
+  const downloadEmails = () => {
+    if (!readyEmails.length) return
+    const contents = readyEmails.map(({ lead, email }) => `${lead.company} | ${lead.country} | ${marketProducts.find((item) => item.id === lead.productId)?.nameEn}\nEvidence: ${email!.evidenceUrl}\nVerified: ${email!.verifiedAt}\n\n${email!.text}`).join('\n\n' + '='.repeat(72) + '\n\n')
+    const url = URL.createObjectURL(new Blob([contents], { type: 'text/plain;charset=utf-8' }))
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `demand-side-first-emails-${productId}-${new Date().toISOString().slice(0, 10)}.txt`
+    link.click()
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+  }
+  return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">DEMAND-SIDE CUSTOMER QUEUE</p><h2>可开发客户线索</h2><p>这里只收录有证据支持下游制造或配方角色的潜在客户，不代表已确认采购。同行、竞争对手、同类原料供应商一律排除。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><label className="lead-search"><Search size={17} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索公司、国家、城市或客户类型" /></label><div className="lead-email-download"><span>当前筛选：{matching.length} 家公司 · {readyEmails.length} 封待人工核对的简短首封信</span><button type="button" className="secondary-button" disabled={!readyEmails.length} onClick={downloadEmails}><FileText size={15} />下载当前筛选开发信</button></div><div className="lead-list">{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selected?.id} onSelect={setSelected} onOpenDetail={setDetailLead} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>暂无已核验的需求侧线索</strong><span>不会用同行、供应商或竞品凑数量。</span></div>}</div><CompanyDetail lead={detailLead} onClose={() => setDetailLead(null)} /></section>
 }
 
 function ProductsView({ productId, onProduct }: { productId: string; onProduct: (id: string) => void }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">TDS-DRIVEN TARGETING</p><h2>产品如何变成开发名单</h2><p>系统把 TDS 已验证应用、市场扩展应用和目标公司类型分开存储。市场扩展项必须带独立公开来源、来源名称和核验日期。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><div className="product-detail-grid">{marketProducts.filter((product) => productId === 'all' || product.id === productId).map((product) => { const tdsApplications = tdsVerifiedApplications.filter((item) => item.productId === product.id); const extensions = marketExtendedApplications.filter((item) => item.productId === product.id); const targets = targetCompanyTypes.filter((item) => item.productId === product.id && item.kind === 'target'); return <article className="product-detail" key={product.id}><i style={{ background: product.color }} /><h3>{product.name}</h3><p>{product.tdsScope}</p><h4>TDS 已验证应用</h4><div className="chip-row">{tdsApplications.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>目标公司类型</h4><div className="chip-row">{targets.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>市场扩展应用</h4>{extensions.length ? <div className="extension-list">{extensions.map((item) => <a key={item.id} href={item.sourceUrl} target="_blank" rel="noreferrer"><span>{item.nameEn}</span><small>{item.sourceName} · {item.verifiedAt}</small><ExternalLink size={13} /></a>)}</div> : <p className="detail-empty">暂无；不会仅因材料性质推测新增。</p>}<h4>检索逻辑</h4><p className="product-search-logic">{product.searchLogic}</p><h4>建议检索词</h4><ul>{product.searchTerms.map((term) => <li key={term}>{term}</li>)}</ul></article> })}</div></section> }

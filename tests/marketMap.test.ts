@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(79)
+    expect(publicLeads).toHaveLength(81)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -88,6 +88,22 @@ describe('global product lead map', () => {
     expect(pursell.profile.contacts[0]).toMatchObject({ name: 'Jason Woulfin', department: 'Sales' })
     expect(icl.profile.contacts[0].verifiedAt).toBe('2026-09-25')
     expect(pursell.profile.departmentEmails[0]).toMatchObject({ department: 'Sales', email: 'jason@fertilizer.com' })
+  })
+
+  it('treats ELO anticorrosion coatings as a sourced research direction, not proven customer use', () => {
+    const extension = marketExtendedApplications.find((item) => item.id === 'elo-anticorrosion-coating-research')!
+    expect(extension.basedOnTdsApplicationId).toBe('coatings')
+    expect(extension.sourceUrl).toMatch(/^https:\/\//)
+    for (const id of ['vernital-cercola', 'duramax-cascavel']) {
+      const lead = publicLeads.find((item) => item.id === id)!
+      expect(lead.productId).toBe('elo')
+      expect(lead.targetCompanyTypeId).toBe('elo-anticorrosion-coating-formulator')
+      expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: extension.id })
+      expect(lead.demandSideReason).toMatch(/未证明|未.*使用/)
+      expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')
+      expect(lead.profile.contacts).toHaveLength(0)
+      expect(lead.profile.generalEmail).toMatch(/@/)
+    }
   })
 
   it('keeps the new Mexico and Japan candidates tied to distinct downstream evidence', () => {

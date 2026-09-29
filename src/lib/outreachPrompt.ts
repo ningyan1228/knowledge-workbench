@@ -76,6 +76,7 @@ const productReferences: Record<MarketProduct['id'], ProductReference> = {
       'Do not claim replacement of a specific plasticizer, regulated-use approval, or performance beyond the TDS wording.',
       'Do not claim the company already uses epoxidized vegetable oil.',
       'Do not claim PVC applicability unless the sourced market-extension evidence below is present.',
+      'Do not claim our ELO grade has been tested or qualified for heavy-duty anticorrosion service; independent coating research is not customer-specific formulation or performance evidence.',
     ],
   },
 }
