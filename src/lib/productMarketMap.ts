@@ -959,6 +959,46 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'NOUSBO official company contact', email: 'nousbo@nousbo.com', phone: '+82 31-295-6178', contactUrl: 'https://global.nousbo.com/contact-us/' },
     source: { label: 'NOUSBO official CRF manufacturing technology and Ulsan production lines', url: 'https://global.nousbo.com/technology/crf-manufacturing/' }, checkedAt: '2026-09-29',
   },
+  {
+    id: 'dupan-anugerah-lestari-pungging', productId: 'fertilizer-coating', company: 'PT Dupan Anugerah Lestari', country: 'Indonesia', countryZh: '印度尼西亚', city: 'Pungging, Mojokerto, East Java', latitude: -7.5416, longitude: 112.5696,
+    legacyCompanyDescription: '采用化学包覆工艺生产缓释 NPK 复合肥的制造商', fit: '优先核验',
+    signal: 'PT Dupan Anugerah Lestari 官网确认其自行配制、生产 PUPINDO NPK 复合肥，并在包装前使用化学材料进行颗粒包覆，以调节溶解速度、生产 slow-release 肥料；官网另列出 Pungging 工厂。该公司处于包衣肥成品的下游制造环节，具备核验包衣原料技术适配性及采购/生产负责人的合理业务逻辑；公开资料未证明其使用聚氨酯体系、外购我方原料或存在采购计划。',
+    supplierCompetitorCheck: { checkedAt: '2026-09-30', conclusion: '已复核官网产品、公司、生产工艺和联系页：公开销售的是 PUPINDO NPK 肥料成品；所查官方资料未显示其对外销售包衣树脂、聚氨酯包衣原料或同类肥料包衣剂。其具体包覆化学体系尚未公开。' },
+    contact: { label: 'PT Dupan Anugerah Lestari official head-office and factory telephone', phone: '+62 31 82516888', contactUrl: 'https://pupindo.id/contact-us/' },
+    source: { label: 'PUPINDO official product and coating-process description', url: 'https://pupindo.id/product/' }, checkedAt: '2026-09-30',
+  },
+  {
+    id: 'hanampi-sejahtera-kahuripan-gresik', productId: 'fertilizer-coating', company: 'PT Hanampi Sejahtera Kahuripan', country: 'Indonesia', countryZh: '印度尼西亚', city: 'Gresik, East Java', latitude: -7.1550, longitude: 112.6560,
+    legacyCompanyDescription: '硫磺与聚合物双层包膜尿素生产商', fit: '可开发候选',
+    signal: 'Hanampi 官网确认其在 Gresik 自行生产 Haracoat 缓控释包膜尿素，且产品采用硫磺和聚合物双层包覆；Gresik 当地政府工厂目录也列出该厂的 Sulfur Coated Urea 生产。其生产下游包膜肥，具有评估包衣原料的合理业务逻辑；但公开资料未说明聚合物层的具体化学体系，也未证明其外购、使用或需要我方聚氨酯包衣原料。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-08', conclusion: '已核对官网公司介绍、首页及产品目录：公开销售的是 Haracoat 包膜尿素和 Buamax 复合肥成品；所查官网未显示其对外销售包衣树脂、聚氨酯包衣剂或同类原料。母公司集团有肥料经销业务，但本条主体自身有包膜尿素生产工厂，按下游制造商判断。' },
+    contact: { label: 'PT Hanampi Sejahtera Kahuripan official company contact', email: 'bizteam@hanampi.com', phone: '+62 31 3930722', contactUrl: 'https://hanampi.com/contact' },
+    source: { label: 'Hanampi official Haracoat sulfur-and-polymer coated urea and company manufacturing statement', url: 'https://hanampi.com/home' }, checkedAt: '2026-10-08',
+  },
+  {
+    id: 'dgo-defix-phu-nghia', productId: 'elo', company: 'DGO Group (DEFIX)', country: 'Vietnam', countryZh: '越南', city: 'Phu Nghia, Hanoi', latitude: 20.9294, longitude: 105.6691,
+    legacyCompanyDescription: '船舶及工业重防腐涂料配方生产商', fit: '可开发候选',
+    signal: 'DEFIX 官网将 DGO Group 定位为拥有河内 Phu Nghia 工厂的涂料生产商，列出船舶用环氧防腐涂料、环氧底漆及其他重防腐产品；DGO 官网另公开其按配方采购和混合成膜材料、助剂等原料的生产流程。ELO 的涂料用途属于 TDS 已验证大类，防腐涂层另有独立研究来源，因此该公司是可询问 ELO 类原料配方评估的下游涂料制造商；公开资料并未证明其当前使用或采购 ELO，也不能宣称我方 ELO 已满足其海洋防腐性能要求。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-08', conclusion: '已检查 DEFIX 船舶涂料、DGO Group 公司介绍、生产流程与公开产品资料：公开销售的是涂料及防水材料成品；所查官网未显示其生产或销售 ELO、ESBO、环氧化植物油或同类功能原料。' },
+    contact: { label: 'DEFIX official general contact', email: 'dgotmdt@gmail.com', phone: '+84 926 66 77 22', contactUrl: 'https://defix.vn/gioi-thieu/' },
+    source: { label: 'DEFIX official marine anticorrosion coatings and manufacturing overview', url: 'https://defix.vn/' }, checkedAt: '2026-10-08',
+  },
+  {
+    id: 'son-mien-bac-hung-yen', productId: 'elo', company: 'Son Mien Bac Co., Ltd.', country: 'Vietnam', countryZh: '越南', city: 'Viet Yen, Hung Yen', latitude: 20.8570, longitude: 106.0310,
+    legacyCompanyDescription: '工业与钢结构防腐涂料制造商', fit: '可开发候选',
+    signal: 'Sơn Miền Bắc 官网明确记载其在越南兴安省拥有涂料工厂，自行研发、生产用于钢结构防护及防腐蚀的工业涂料，并公开原料选择和采购环节。ELO 的涂料用途属于 TDS 已验证大类，防腐涂层有独立市场扩展来源；该公司是可询问 ELO 类原料技术评估的下游涂料制造商，但公开资料未证明其目前使用或采购 ELO，也未证明 ELO 适用于其具体配方。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-08', conclusion: '已检查公司官网工厂、产品与联系页：其公开产品为工业、钢结构保护及防腐涂料成品；所查官网未显示其对外销售 ELO、ESBO、环氧化植物油或同类原料。' },
+    contact: { label: 'Sơn Miền Bắc official company contact', email: 'sonmienbac.vn@gmail.com', phone: '+84 221 358 9170', contactUrl: 'https://sonmienbac.com.vn/lien-he/' },
+    source: { label: 'Sơn Miền Bắc official coating factory and anticorrosion product overview', url: 'https://sonmienbac.com.vn/xuong-san-xuat-son-mien-bac/' }, checkedAt: '2026-10-08',
+  },
+  {
+    id: 'dolphin-inks-thane', productId: 'nl-w1201', company: 'Dolphin Inks', country: 'India', countryZh: '印度', city: 'Thane, Maharashtra', latitude: 19.1943, longitude: 72.9709,
+    legacyCompanyDescription: 'PP/PE 薄膜水性油墨配方与制造商', fit: '可开发候选',
+    signal: 'Dolphin Inks 官网明确表示自行配制、生产水性油墨，柔性包装产品页分别列出用于聚丙烯 PP 与聚乙烯 PE（LDPE、HDPE）基材的水性油墨。PP/PE 是 NL-W1201 TDS 已验证基材；水性薄膜油墨作为终端应用另有独立市场扩展来源，因此它具备评估附着力原料的下游配方逻辑。公开资料未证明其目前使用或采购 NL-W1201、水性聚烯烃乳液或相同化学体系。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-08', conclusion: '已检查官网公司介绍、产品目录及联系页：公司对外销售水性印刷油墨、成品水性涂层及印刷辅助品；所查资料未显示其生产或销售水性聚烯烃乳液、PP/PE 附着促进原料或同类 NL-W1201 原料。' },
+    contact: { label: 'Dolphin Inks official business contact', email: 'info@dolphininks.com', phone: '+91 8828260191', contactUrl: 'https://dolphininks.com/contact-us/' },
+    source: { label: 'Dolphin Inks official water-based ink product catalog for PP and PE substrates', url: 'https://dolphininks.com/product/' }, checkedAt: '2026-10-08',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -990,6 +1030,11 @@ const leadQualifications: Record<string, LeadQualification> = {
   'ec-grow-eau-claire': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'sumika-agro-niihama': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'nousbo-ulsan': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'dupan-anugerah-lestari-pungging': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'hanampi-sejahtera-kahuripan-gresik': { targetCompanyTypeId: 'coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'dgo-defix-phu-nghia': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
+  'son-mien-bac-hung-yen': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
+  'dolphin-inks-thane': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -2123,6 +2168,72 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'NOUSBO official customer inquiry page', url: 'https://global.nousbo.com/contact-us/' },
     ],
   },
+  'dupan-anugerah-lestari-pungging': {
+    website: 'https://pupindo.id/',
+    contactPage: 'https://pupindo.id/contact-us/',
+    contacts: [],
+    departmentEmails: [],
+    address: 'Kompleks Industri Saraswanti, Jl. Raden Patah, Desa Lebaksono, Kecamatan Pungging, Mojokerto, East Java, Indonesia',
+    sources: [
+      { label: 'PUPINDO official product and coating-process description', url: 'https://pupindo.id/product/' },
+      { label: 'PUPINDO official factory and head-office contact page', url: 'https://pupindo.id/contact-us/' },
+      { label: 'Saraswanti Group Dupan brochure with historical public company email (reconfirm before outreach)', url: 'https://saraswantifertilizer.com/wp-content/uploads/2021/02/Brosur-Pupindo-Sawit.pdf' },
+    ],
+  },
+  'hanampi-sejahtera-kahuripan-gresik': {
+    website: 'https://hanampi.com/',
+    contactPage: 'https://hanampi.com/contact',
+    generalEmail: 'bizteam@hanampi.com',
+    generalPhone: '+62 31 3930722',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'bizteam@hanampi.com', source: { label: 'Hanampi official contact page', url: 'https://hanampi.com/contact' } }],
+    address: 'Beta Maspion Blok I, Kawasan Industri Maspion, Jalan Manyar KM 25, Desa Manyar Sidomukti, Gresik 61151, East Java, Indonesia',
+    sources: [
+      { label: 'Hanampi official Haracoat sulfur-and-polymer coated urea description', url: 'https://hanampi.com/home' },
+      { label: 'Hanampi official company profile and manufacturing statement', url: 'https://hanampi.com/home/profil' },
+      { label: 'Hanampi official coated-urea product catalog', url: 'https://hanampi.com/product' },
+      { label: 'Gresik government 2023 factory directory listing SCU production', url: 'https://dpmptsp.gresikkab.go.id/ebook/e13/DIREKTORI%20PERUSAHAAN%20KABUPATEN%20GRESIK%20TAHUN%202023.pdf' },
+      { label: 'Hanampi official public contact details', url: 'https://hanampi.com/contact' },
+    ],
+  },
+  'dgo-defix-phu-nghia': {
+    website: 'https://defix.vn/',
+    contactPage: 'https://defix.vn/gioi-thieu/',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'dgotmdt@gmail.com', source: { label: 'DEFIX official company introduction and contact details', url: 'https://defix.vn/gioi-thieu/' } }],
+    address: 'Lot CN2, Phu Nghia Industrial Park, Chuong My, Hanoi, Vietnam',
+    sources: [
+      { label: 'DEFIX official marine anticorrosion coating range', url: 'https://defix.vn/' },
+      { label: 'DEFIX/DGO official factory and public contact', url: 'https://defix.vn/gioi-thieu/' },
+      { label: 'DGO Group official coating formulation and raw-material production process', url: 'https://dgo.com.vn/quy-trinh-san-xuat-son-tai-dgo-group-dien-ra-nhu-the-nao/' },
+    ],
+  },
+  'son-mien-bac-hung-yen': {
+    website: 'https://sonmienbac.com.vn/',
+    contactPage: 'https://sonmienbac.com.vn/lien-he/',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'sonmienbac.vn@gmail.com', source: { label: 'Sơn Miền Bắc official contact page', url: 'https://sonmienbac.com.vn/lien-he/' } }],
+    address: 'Luc Dien, Viet Yen, Hung Yen, Vietnam',
+    sources: [
+      { label: 'Sơn Miền Bắc official factory, manufacturing and anticorrosion product overview', url: 'https://sonmienbac.com.vn/xuong-san-xuat-son-mien-bac/' },
+      { label: 'Sơn Miền Bắc official contact page', url: 'https://sonmienbac.com.vn/lien-he/' },
+    ],
+  },
+  'dolphin-inks-thane': {
+    website: 'https://dolphininks.com/',
+    contactPage: 'https://dolphininks.com/contact-us/',
+    contacts: [],
+    departmentEmails: [
+      { department: 'General', email: 'info@dolphininks.com', source: { label: 'Dolphin Inks official contact page', url: 'https://dolphininks.com/contact-us/' } },
+      { department: 'Sales', email: 'sales@dolphininks.com', source: { label: 'Dolphin Inks official contact page', url: 'https://dolphininks.com/contact-us/' } },
+    ],
+    address: 'A 426, Lodha Supremus 2, Wagle Industrial Estate, Thane 400604, Maharashtra, India',
+    sources: [
+      { label: 'Dolphin Inks official PP/PE water-based ink product catalog', url: 'https://dolphininks.com/product/' },
+      { label: 'Dolphin Inks official manufacturing and formulation overview', url: 'https://dolphininks.com/' },
+      { label: 'Dolphin Inks official contact page', url: 'https://dolphininks.com/contact-us/' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2231,6 +2342,11 @@ const demandSideLeadIds = new Set([
   'ec-grow-eau-claire',
   'sumika-agro-niihama',
   'nousbo-ulsan',
+  'dupan-anugerah-lestari-pungging',
+  'hanampi-sejahtera-kahuripan-gresik',
+  'dgo-defix-phu-nghia',
+  'son-mien-bac-hung-yen',
+  'dolphin-inks-thane',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {

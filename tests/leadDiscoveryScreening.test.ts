@@ -49,7 +49,7 @@ describe('private discovery pre-screen', () => {
     } }], refs)[0]
     expect(mainland.status).toBe('excluded')
     expect(supplier.status).toBe('excluded')
-    expect(publicLeads).toHaveLength(87)
+    expect(publicLeads).toHaveLength(92)
   })
 
   it('does not mechanically exclude Hong Kong, but still requires evidence', () => {

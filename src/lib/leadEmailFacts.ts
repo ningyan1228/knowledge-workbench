@@ -90,4 +90,9 @@ export const leadEmailFacts: Record<string, string> = {
   'ec-grow-eau-claire': 'Your company announced its own polymer-coating facility and now offers EPEC polymer-coated urea.',
   'sumika-agro-niihama': 'Your Ehime fertilizer plant lists coated-fertilizer production and dedicated coating-material tanks.',
   'nousbo-ulsan': 'Your Ulsan facility operates dedicated fluid-bed coating lines for controlled-release fertilizers.',
+  'dupan-anugerah-lestari-pungging': 'Your PUPINDO production information describes a coating step used to make slow-release NPK fertilizer.',
+  'hanampi-sejahtera-kahuripan-gresik': 'Your Haracoat range includes controlled-release urea with sulfur and polymer coating layers.',
+  'dgo-defix-phu-nghia': 'Your DEFIX range includes epoxy anticorrosion coatings for marine vessels.',
+  'son-mien-bac-hung-yen': 'Your Hung Yen factory describes manufacturing protective and anticorrosion coatings for steel structures.',
+  'dolphin-inks-thane': 'Your flexible-packaging range includes water-based inks for polypropylene and polyethylene substrates.',
 }
