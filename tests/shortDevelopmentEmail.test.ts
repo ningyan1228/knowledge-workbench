@@ -12,7 +12,7 @@ function draftFor(id: string) {
 
 describe('ready-to-copy short development emails', () => {
   it('prepares a reviewable first email for every currently qualified demand-side company', () => {
-    expect(publicLeads).toHaveLength(92)
+    expect(publicLeads).toHaveLength(93)
     expect(new Set(Object.keys(leadEmailFacts))).toEqual(new Set(publicLeads.map((lead) => lead.id)))
     expect(new Set(Object.values(leadEmailFacts)).size).toBe(publicLeads.length)
     for (const lead of publicLeads) {

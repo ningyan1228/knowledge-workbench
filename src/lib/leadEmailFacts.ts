@@ -95,4 +95,5 @@ export const leadEmailFacts: Record<string, string> = {
   'dgo-defix-phu-nghia': 'Your DEFIX range includes epoxy anticorrosion coatings for marine vessels.',
   'son-mien-bac-hung-yen': 'Your Hung Yen factory describes manufacturing protective and anticorrosion coatings for steel structures.',
   'dolphin-inks-thane': 'Your flexible-packaging range includes water-based inks for polypropylene and polyethylene substrates.',
+  'toa-paint-products-nilai': 'Your Heavyguard Epoguard Enamel range includes protective epoxy coatings for steel structures and ships.',
 }

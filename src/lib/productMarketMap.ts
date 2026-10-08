@@ -999,6 +999,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Dolphin Inks official business contact', email: 'info@dolphininks.com', phone: '+91 8828260191', contactUrl: 'https://dolphininks.com/contact-us/' },
     source: { label: 'Dolphin Inks official water-based ink product catalog for PP and PE substrates', url: 'https://dolphininks.com/product/' }, checkedAt: '2026-10-08',
   },
+  {
+    id: 'toa-paint-products-nilai', productId: 'elo', company: 'TOA Paint Products Sdn. Bhd.', country: 'Malaysia', countryZh: '马来西亚', city: 'Nilai, Negeri Sembilan', latitude: 2.8194, longitude: 101.7988,
+    legacyCompanyDescription: '重防腐环氧涂料制造商', fit: '可开发候选',
+    signal: 'TOA 马来西亚官网明确将 Heavyguard Epoguard Enamel 列为重防腐涂料产品；其产品资料说明该双组分环氧面漆用于钢结构、桥梁、船舶及化工厂防护。官网另列出 Nilai 工厂，集团资料确认该马来西亚公司制造涂料成品。ELO 的涂料应用属于 TDS 已验证大类，防腐涂层有独立市场扩展来源，因此具备询问 ELO 类原料配方评估的下游逻辑；公开资料不证明其目前采购或使用 ELO，也不证明我方 ELO 已适用于其具体环氧配方。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-08', conclusion: '已核对 TOA 马来西亚官网涂料、重防腐及建筑化学品产品目录与集团公司资料：所查资料显示其生产、销售涂料和其他下游成品，未发现其对外销售 ELO、ESBO、环氧化植物油或类似增塑/改性原料。集团资料中笼统的 chemicals 描述不能解释为其销售 ELO 类原料。' },
+    contact: { label: 'TOA Paint Products official Malaysia general contact', email: 'toa@toagroup.com.my', phone: '+60 3 7725 2699', contactUrl: 'https://toagroup.com.my/contact-us/' },
+    source: { label: 'TOA Malaysia Heavyguard Epoguard Enamel protective epoxy topcoat', url: 'https://toagroup.com.my/product/heavyguard-epoguard-enamel-part-a/' }, checkedAt: '2026-10-08',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -1035,6 +1043,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'dgo-defix-phu-nghia': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'son-mien-bac-hung-yen': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'dolphin-inks-thane': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
+  'toa-paint-products-nilai': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -2234,6 +2243,20 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'Dolphin Inks official contact page', url: 'https://dolphininks.com/contact-us/' },
     ],
   },
+  'toa-paint-products-nilai': {
+    website: 'https://toagroup.com.my/',
+    contactPage: 'https://toagroup.com.my/contact-us/',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'toa@toagroup.com.my', source: { label: 'TOA Group official Malaysian subsidiary listing', url: 'https://www.toagroup.com/en/about-toa/company-info/toa-group-of-companies' } }],
+    address: 'Lot 21, Jalan Nilam 3, Nilai Utama Enterprise Park, 71800 Nilai, Negeri Sembilan, Malaysia',
+    sources: [
+      { label: 'TOA Malaysia Heavyguard Epoguard Enamel protective epoxy topcoat', url: 'https://toagroup.com.my/product/heavyguard-epoguard-enamel-part-a/' },
+      { label: 'TOA Malaysia manufacturing and heavy-duty coatings overview', url: 'https://toagroup.com.my/toa-paint-products-sdn-bhd-in-malaysia/' },
+      { label: 'MIDA report on Nilai paint production and local formulation R&D', url: 'https://www.mida.gov.my/mida-news/toa-paint-ramping-up-production-capacity-while-keeping-prices-stable/' },
+      { label: 'TOA Malaysia official office and Nilai factory contacts', url: 'https://toagroup.com.my/contact-us/' },
+      { label: 'TOA Group official Malaysian subsidiary listing and public email', url: 'https://www.toagroup.com/en/about-toa/company-info/toa-group-of-companies' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2347,6 +2370,7 @@ const demandSideLeadIds = new Set([
   'dgo-defix-phu-nghia',
   'son-mien-bac-hung-yen',
   'dolphin-inks-thane',
+  'toa-paint-products-nilai',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
