@@ -1,0 +1,25 @@
+客户研究双流程使用说明
+
+begin：node --experimental-strip-types scripts/lead-research-round.mjs begin
+输出固定轮换范围、runId、两家负责人目标和两项待补证据。20分钟内再次begin会返回同一个未完成轮次；过期轮次归档为interrupted。状态使用锁和原子写入，避免并发重置。
+
+结果JSON格式：
+{
+  "runId": "使用begin返回值",
+  "queries": [{"query": "实际检索词", "channel": "实际渠道", "outcome": "发现了什么或遇到什么阻碍"}],
+  "discoveries": ["使用research/README.md的DiscoveryInput对象；不能放字符串"],
+  "contactFindings": [
+    {"leadId":"现有公司ID", "outcome":"found或fallback_only或blocked", "name":"found时必填", "title":"found时必填", "verifiedAt":"YYYY-MM-DD", "email":"仅明确公开的业务邮箱，如无则省略", "sources":[{"name":"官方来源名称","url":"https://...","summary":"实际看到的证据短摘录"}]}
+  ],
+  "blockers": ["实际阻碍；没有则空数组"]
+}
+
+discoveries和contactFindings可为空数组。found表示找到了有来源的具名负责人，但记录仍待人工复核，不代表已联系或已购买。fallback_only表示检查后只有业务联系入口，blocked表示网站/权限等具体阻碍；二者7天后再试。已找到的联系人进入awaiting_review，不再重复搜索。
+
+finish：node --experimental-strip-types scripts/lead-research-round.mjs finish research/private/round-results.json
+完成后查看research/private/latest-summary.json和research/private/runs/；进度必须保存，不能只输出“0新增”。发现队列自动补充、复核和移除被排除项；不会写公开地图或CRM。新客户、联系人正式发布前仍需核验。
+
+status：node --experimental-strip-types scripts/lead-research-round.mjs status
+
+既有单独预筛工具新增 --recheck：node --experimental-strip-types scripts/screen-lead-discoveries.mjs --input research/incoming.json --recheck --save
+用于补充已有待核验记录，不把自己的旧记录当重复项；正式客户仍按原逻辑去重。

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { marketExtendedApplications, publicLeads, targetCompanyTypes, tdsVerifiedApplications } from '../src/lib/productMarketMap'
-import { normalizeCompanyName, screenDiscoveryBatch, type DiscoveryInput, type DiscoveryQueueEntry } from '../src/lib/leadDiscoveryScreening'
+import { normalizeCompanyName, screenDiscoveryBatch, recheckDiscoveryBatch, type DiscoveryInput, type DiscoveryQueueEntry } from '../src/lib/leadDiscoveryScreening'
 
 const refs = {
   leads: publicLeads,
@@ -32,6 +32,33 @@ const complete: DiscoveryInput = {
 }
 
 describe('private discovery pre-screen', () => {
+  it('counts repeated input once during a recheck round', () => {
+    const updated = recheckDiscoveryBatch([complete, { ...complete }], refs)
+    expect(updated.results.map((item) => item.status)).toEqual(['ready_for_review', 'duplicate'])
+    expect(updated.queue).toHaveLength(1)
+  })
+  it('allows a pending research item to gain evidence without deduplicating it against itself', () => {
+    const pending = screenDiscoveryBatch([{ ...complete, supplierCheck: undefined }], refs)[0]
+    const queue = [{ ...pending, screenedAt: '2026-09-29T00:00:00Z' }]
+    const updated = recheckDiscoveryBatch([complete], { ...refs, queue })
+    expect(updated.results[0].status).toBe('ready_for_review')
+    expect(updated.queue).toHaveLength(1)
+    expect(updated.queue[0].candidate.supplierCheck).toEqual(complete.supplierCheck)
+  })
+
+  it('removes a pending company from the research queue if supplier evidence disqualifies it', () => {
+    const pending = screenDiscoveryBatch([complete], refs)[0]
+    const queue = [{ ...pending, screenedAt: '2026-09-29T00:00:00Z' }]
+    const updated = recheckDiscoveryBatch([{ ...complete, supplierCheck: { ...complete.supplierCheck!, sellsSimilarRawMaterial: true } }], { ...refs, queue })
+    expect(updated.results[0].status).toBe('excluded')
+    expect(updated.queue).toEqual([])
+  })
+
+  it('still rejects existing public customers during evidence recheck', () => {
+    const updated = recheckDiscoveryBatch([{ ...complete, companyName: 'Haifa Group', country: 'Israel' }], refs)
+    expect(updated.results[0].status).toBe('duplicate')
+    expect(updated.queue).toEqual([])
+  })
   it('normalizes legal suffixes and detects a duplicate already on the map', () => {
     expect(normalizeCompanyName('Haifa Group Ltd.')).toBe(normalizeCompanyName('Haifa Group'))
     const result = screenDiscoveryBatch([{

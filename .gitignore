@@ -24,3 +24,5 @@ exports/
 # Unverified lead discoveries remain local and never enter the public repo/site.
 research/lead-discovery-queue.ndjson
 research/incoming*.json
+research/private/
+.tmp/

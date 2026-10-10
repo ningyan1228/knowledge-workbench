@@ -1,0 +1,17 @@
+全球需求侧客户线索持续核验：每 10 分钟执行一轮，使用“发现新公司”和“补已有公司负责人”两条工作流。保留当前任务和频率，不另建重复任务。
+
+工作目录：F:\文档\ChatGPT\外贸知识工作台。先读取 research/README.md、research/lead-research-workflow.txt 及 global-demand-side-lead-research 技能和必读引用。每轮必须执行 node --experimental-strip-types scripts/lead-research-round.mjs begin，按返回的 runId、job、contactTargets、evidenceTargets 工作。若 resumed=true，继续未完成轮次，不能重新从第一家公司开始。
+
+发现新公司：每轮仅按返回的一个产品、一个国家和一个渠道搜索。至少执行 3 个不同查询，采用当地语言的行业/产品/工厂词汇；在“本地语言与官网搜索、协会会员名录、展会参展商目录”之间轮换。记录实际 query、channel、outcome。优先检查 3–5 家未核验公司；这只是工作量目标，不是新增配额。官网打不开时换官方技术资料、公开官方新闻、协会或展会来源；未完成证据不得凭搜索摘要入库。不要反复检索已经收录的品牌；记录重复原因，转向下一家。
+
+核验标准：只找中国大陆以外、有公司官网或官方资料证明其制造/配制下游产品的需求侧企业。证据链为我方产品→TDS明确应用或已有独立来源的市场扩展→下游场景→目标公司类型→公司证据→公开业务联系入口。必须保存来源、核验日期、合理的 demand_side_reason，并做同类原料供应商/同行/竞争对手排除及去重。潜在采购逻辑不等于已确认采购：不要求企业公开承认采购我方牌号，也不能因此声称其使用或需要我方产品。销售同类原料的企业排除，不能为新增数量降低标准。
+
+产品范围：肥料包膜原料仅找有包膜尿素、控释/缓释肥、包膜复合肥或包膜生产线证据的生产企业；普通肥料公司不够。W1201找自主制造或配制水性底涂、涂层、油墨、胶黏剂、表面处理体系的企业，基材边界依TDS，不能把铝泛化为全部金属。ELO新增发现统一聚焦自主研发/生产重防腐、防护、船舶或工业防腐涂料的制造/配方企业；本轮不泛搜普通塑料厂、PVC配混厂和装饰墙漆厂。既有其他ELO客户不因本次搜索方向变化自动删除。配方应用只说明评估方向，不推断已使用ELO。
+
+补负责人：独立执行 contactTargets；启动阶段优先补 research/private/priority-contact-targets.json 的10家肥料客户，每轮至少核验其中2家。优先采购/供应链，其次研发/技术、产品、生产、管理。只查官网、公开LinkedIn、官方新闻、展会或协会资料。记录姓名、公开职位、明确披露的业务联系方式、来源URL、证据短摘录及核验日期。不得猜邮箱、编职位、收集私人联系方式，不能把sales@当具名联系人。未找到负责人也保存 fallback_only 或 blocked、已查来源及下一步，不丢弃已核验通用邮箱；7天内不反复查同一家无新增证据的公司。
+
+待补证据：完成 evidenceTargets 的最多2个缺项，补齐公司证据、应用、供应商排除或公开联系入口。通过 recheckDiscoveryBatch 更新原研究项，不把它判为自己的重复项。公司资料不全放入内部research/lead-discovery-queue.ndjson并写明缺项，不进入地图或CRM。完全核验的研究项保持 ready_for_review，只有独立人工核验后才可转正式客户；发现同行立即排除。
+
+每轮完成：按 research/lead-research-workflow.txt 保存结果JSON，执行 node --experimental-strip-types scripts/lead-research-round.mjs finish <结果文件>。不得只回复“0家”。将发现、重复、排除、无效、待补证据、待人工复核、实际新增合格客户、找到负责人、仅业务入口分别计数；newQualified 只统计真正完成正式核验/入库的客户，不把待复核当新增。每轮详细记录保存 research/private/runs/，最新摘要保存 research/private/latest-summary.json，联系人证据保存私有队列；可随时查看，不将未核验信息公开。
+
+不得发送邮件、提交联系表单、写CRM或自动发布到GitHub/外部网站。内部进度每轮必须保存，报告时说明具体结果及来源。

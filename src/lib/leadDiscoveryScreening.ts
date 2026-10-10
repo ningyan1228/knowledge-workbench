@@ -26,6 +26,40 @@ export type DiscoveryResult = {
 }
 export type DiscoveryQueueEntry = DiscoveryResult & { screenedAt: string }
 
+export function discoveryKey(candidate: Pick<DiscoveryInput, 'productId' | 'country' | 'companyName'>) {
+  return companyKey(candidate.productId, candidate.country, candidate.companyName)
+}
+
+// Recheck the same research item against current evidence without deduplicating
+// it against itself. Published customers and other companies still deduplicate.
+export function recheckDiscoveryBatch(candidates: DiscoveryInput[], refs: ScreeningReferences) {
+  const queue = [...refs.queue]
+  const results: DiscoveryResult[] = []
+  const seen = new Set<string>()
+  for (const candidate of candidates) {
+    if (!candidate || typeof candidate !== 'object' || !candidate.companyName || !candidate.country || !candidate.productId) {
+      results.push(screenDiscoveryBatch([candidate], refs)[0])
+      continue
+    }
+    const key = discoveryKey(candidate)
+    if (seen.has(key)) {
+      results.push({ candidate, status: 'duplicate', reasons: ['同一轮重复提交的公司发现记录'] })
+      continue
+    }
+    seen.add(key)
+    const existing = queue.find((entry) => discoveryKey(entry.candidate) === key)
+    const merged = existing ? { ...existing.candidate, ...candidate } : candidate
+    const remaining = queue.filter((entry) => discoveryKey(entry.candidate) !== key)
+    const result = screenDiscoveryBatch([merged], { ...refs, queue: remaining })[0]
+    results.push(result)
+    queue.splice(0, queue.length, ...remaining)
+    if (['needs_evidence', 'possible_duplicate', 'ready_for_review'].includes(result.status)) {
+      queue.push({ ...result, screenedAt: new Date().toISOString() })
+    }
+  }
+  return { results, queue }
+}
+
 type ScreeningReferences = {
   leads: PublicLead[]
   queue: DiscoveryQueueEntry[]
