@@ -5,7 +5,7 @@ export type Continent = typeof continents[number]
 type LocatedLead = Pick<PublicLead, 'country' | 'countryZh'>
 
 const countriesByContinent: Partial<Record<Continent, string[]>> = {
-  亚洲: ['China', 'India', 'Indonesia', 'Israel', 'Japan', 'Malaysia', 'South Korea', 'Taiwan', 'Thailand', 'Vietnam'],
+  亚洲: ['China', 'India', 'Indonesia', 'Israel', 'Japan', 'Malaysia', 'Philippines', 'South Korea', 'Taiwan', 'Thailand', 'Vietnam'],
   欧洲: ['Belgium', 'Germany', 'Italy', 'Luxembourg', 'Netherlands', 'Sweden', 'Switzerland', 'Turkey', 'United Kingdom'],
   北美洲: ['Canada', 'Mexico', 'United States'],
   南美洲: ['Argentina', 'Brazil', 'Colombia'],

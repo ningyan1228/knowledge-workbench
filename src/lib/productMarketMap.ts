@@ -1120,11 +1120,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-10"
   },
+  {
+    "id": "agrotiger-mabalacat",
+    "company": "Agrotiger Philippines Corporation",
+    "country": "Philippines",
+    "countryZh": "菲律宾",
+    "city": "Mabalacat City, Pampanga",
+    "latitude": 15.225,
+    "longitude": 120.572,
+    "legacyCompanyDescription": "有机包覆尿素与复合肥制造商",
+    "signal": "FPA 2026 年 8 月制造商名录列出其 Mabalacat 制造地点；2026 年 4 月产品登记列有本地包覆的 HYFER Complete 14-14-14 及 HYFER Urea Max，官网研发资料说明自主肥料配方与制造。官网将 HYFER 固体肥描述为有机包覆、持续释放产品。作为下游包覆肥制造商，可先讨论是否评估其他包覆体系；未确认其采用 PU/聚合物包膜、采购我方产品或存在当前采购计划，原料适配需另行评估。",
+    "contact": {
+      "label": "Official published business inbox; named person and procurement role not inferred",
+      "email": "markp@agrotiger.com",
+      "phone": "+63 2 7745 3096",
+      "contactUrl": "https://agrotiger.com/coated-solid-fertilizers/"
+    },
+    "source": {
+      "label": "FPA April 2026 registered locally coated HYFER products, PDF pages 7–8; corroborated by company product/R&D pages",
+      "url": "https://fpa.da.gov.ph/wp-content/uploads/2026/04/FOR-POSTING-FERTILIZER_PRODUCT_LISTING-AS-OF-4.15.2026_Optimized.pdf"
+    },
+    "productId": "fertilizer-coating",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-10",
+      "conclusion": "独立重读官网包覆肥、研发及其他产品目录，并核对 FPA 原料与成品登记。该公司兼有进口、分销及一般肥料原料登记（包括 Humate Powder、Ozoneem）；没有把原料登记等同于对外销售同类包衣剂。所查官网产品为成品肥、叶面肥、土壤调理剂及生物刺激素，未发现其对外供应 PU 包衣树脂、同类包衣原料或成套包衣剂的公开证据。按成品包覆复合肥制造需求侧收录，不作为聚合物包膜客户。Agrotiger Phils. Corp. 与 Agrotiger Philippines Corporation 为同一账户；核对最新 main 与本地公司名、官网域名和地点，无重复。"
+    },
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "id": "rcf-mumbai",
+    "company": "Rashtriya Chemicals and Fertilizers Limited (RCF)",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "legacyCompanyDescription": "硫包衣尿素生产商",
+    "signal": "公司 2024–25 年报明确记载自产 Urea Gold 硫包衣尿素 0.26 lakh MT（26,000 吨），官网公司概况亦列出该产品，确认是实际包覆肥制造商。可就包覆原料技术评估入口进行开发，但其已证实路线为硫包衣，未确认 PU/聚合物体系、我方原料适配或当前采购需求。官网供应商说明公开 Thal 采购部门邮箱，页面制度起始于 2015 年；该入口用于公司采购转介，不认定为 Trombay 包衣线负责人，邮箱送达及具体技术职能待确认。Mumbai/Trombay 与 Thal 按同一公司账户收录。",
+    "contact": {
+      "label": "Official vendor information: Thal procurement inbox; company routing, not a verified Trombay coating-line contact",
+      "email": "thalpurchase@rcfltd.com",
+      "phone": "+91 22 2552 3000",
+      "contactUrl": "https://www.rcfltd.com/tenderlist/details/9"
+    },
+    "source": {
+      "label": "RCF official 2024–25 annual report: own Sulphur Coated Urea production, PDF page 6",
+      "url": "https://rcfltd.com/public/storage/investers/1758606773.pdf"
+    },
+    "productId": "fertilizer-coating",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-10",
+      "conclusion": "独立重读公司概况、2024–25 年报及官网工业化学品业务公告。确认其为自产硫包衣尿素下游制造商；兼营甲醇、硝酸、甲胺及硫酸等一般工业化学品，所查业务未显示对外供应同类 PU 包衣树脂、包衣原料或包衣剂。没有因其一般化学品业务而把它当作同类原料买家，也未将自有硫包衣技术误标为聚合物包膜。以公司全名、RCF、rcfltd.com 及 Mumbai/Thal 地点核对最新 main 与本地名单，无重复；工厂不拆分计数。"
+    },
+    "checkedAt": "2026-10-10"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'rcf-mumbai': { targetCompanyTypeId: 'coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'agrotiger-mabalacat': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'chobi-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'greenfeed-agro-shah-alam': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'saraswanti-anugerah-indonesia-mempawah': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1255,6 +1313,76 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  'rcf-mumbai': {
+    "website": "https://rcfltd.com/",
+    "contactPage": "https://www.rcfltd.com/tenderlist/details/9",
+    "generalPhone": "+91 22 2552 3000",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "thalpurchase@rcfltd.com",
+        "source": {
+          "label": "Official vendor information, Thal procurement inbox (policy dates from 2015; routing and delivery unconfirmed)",
+          "url": "https://www.rcfltd.com/tenderlist/details/9"
+        }
+      }
+    ],
+    "address": "Registered office: Priyadarshini Building, Eastern Express Highway, Sion, Mumbai, Maharashtra 400022, India. Manufacturing units: Trombay and Thal; one company account. Map represents Mumbai, not a precise coating-line location.",
+    "sources": [
+      {
+        "label": "Official RCF company overview, manufacturing units and Urea Gold",
+        "url": "https://rcfltd.com/rcf-at-glance-1"
+      },
+      {
+        "label": "Official FY 2024–25 annual report, PDF page 6: 0.26 lakh MT of own sulphur-coated urea production; historical production, not a current purchasing signal",
+        "url": "https://rcfltd.com/public/storage/investers/1758606773.pdf"
+      },
+      {
+        "label": "Official Mumbai office telephone and address; placeholder info@example.com explicitly rejected",
+        "url": "https://www.rcfltd.com/contact/contact"
+      },
+      {
+        "label": "Official vendor-information page: Thal procurement department inbox, specific coating-line role and delivery unconfirmed",
+        "url": "https://www.rcfltd.com/tenderlist/details/9"
+      },
+      {
+        "label": "Official industrial chemical sales scope, supplier/competitor exclusion review",
+        "url": "https://rcfltd.com/files/Advt%20for%20Actual%20Users%20(All%20Products).pdf"
+      }
+    ]
+  },
+  'agrotiger-mabalacat': {
+    "website": "https://agrotiger.com/",
+    "contactPage": "https://agrotiger.com/coated-solid-fertilizers/",
+    "generalEmail": "markp@agrotiger.com",
+    "generalPhone": "+63 2 7745 3096",
+    "contacts": [],
+    "departmentEmails": [],
+    "address": "FPA licensed manufacturing location: Brgy. Paralayunan, Mabalacat City, Pampanga, Philippines. Business office: Room 205 One Greenhills Shopping Plaza Bldg., Eisenhower St., Greenhills, San Juan, Metro Manila 1504. Map location represents the city, not an exact factory coordinate.",
+    "sources": [
+      {
+        "label": "Official HYFER organically coated solid-fertilizer range and published business email",
+        "url": "https://agrotiger.com/coated-solid-fertilizers/"
+      },
+      {
+        "label": "Official proprietary formulation, research and fertilizer manufacturing information",
+        "url": "https://agrotiger.com/research-development/"
+      },
+      {
+        "label": "FPA licensed handlers as of August 31, 2026: Agrotiger manufacturer at Mabalacat, expiry May 25, 2027",
+        "url": "https://fpa.da.gov.ph/resources/reports/licensed-handlers/"
+      },
+      {
+        "label": "FPA active registered fertilizers April 15, 2026, PDF pages 7–8: locally coated HYFER Complete and Urea Max; raw-material entries also reviewed",
+        "url": "https://fpa.da.gov.ph/wp-content/uploads/2026/04/FOR-POSTING-FERTILIZER_PRODUCT_LISTING-AS-OF-4.15.2026_Optimized.pdf"
+      },
+      {
+        "label": "Official other-product range, supplier/competitor scope check",
+        "url": "https://agrotiger.com/other-products/"
+      }
+    ]
+  },
   'chobi-ulsan': {
     "website": "https://www.chobi.co.kr/",
     "contactPage": "https://fert-kfia.or.kr/new/05_member/member01_view04.asp",
@@ -2548,6 +2676,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'rcf-mumbai',
+  'agrotiger-mabalacat',
   'chobi-ulsan',
   'greenfeed-agro-shah-alam',
   'saraswanti-anugerah-indonesia-mempawah',
