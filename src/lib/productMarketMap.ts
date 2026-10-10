@@ -1031,6 +1031,14 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Agroplanta official commercial contact', email: 'comercial@agroplanta.com.br', phone: '+55 16 3660-6500', contactUrl: 'https://agroplanta.com.br/contato/' },
     source: { label: 'Agroplanta official Greencote polymer-coated controlled-release fertilizer', url: 'https://agroplanta.com.br/produtos/greencote/' }, checkedAt: '2026-10-10',
   },
+  {
+    id: 'moravia-istanbul', productId: 'elo', company: 'Moravia Boya ve Kimya San. Tic. Ltd. Şti.', country: 'Turkey', countryZh: '土耳其', city: 'Istanbul', latitude: 41.0092, longitude: 28.7867,
+    legacyCompanyDescription: '船舶与工业重防腐涂料生产商', fit: '可开发候选',
+    signal: 'Moravia 官网确认其在土耳其自有工厂生产船舶、游艇和工业涂料，官方 MORAZINC HI-BUILD 产品页列有用于海工、桥梁及石化设施的富锌重防腐环氧底漆。ELO 的涂料用途属于 TDS 已验证大类，防腐涂层应用另有独立学术研究，因此具备询问 ELO 配方评估的下游逻辑；公开资料未证明该公司正在采购、使用或需要 ELO，也未证明我方 ELO 适用于其现有配方。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-10', conclusion: '已重新检查 Moravia 官方公司介绍和船舶/工业涂料产品目录：所查资料展示的是涂料与相关稀释剂成品，未显示其对外销售 ELO、环氧化植物油或类似增塑添加剂原料。' },
+    contact: { label: 'Moravia official general business contact', email: 'moravia@moravia.com.tr', phone: '+90 212 579 13 36', contactUrl: 'https://www.moravia.com.tr/en/kurumsal.html' },
+    source: { label: 'Moravia official MORAZINC HI-BUILD anticorrosive epoxy primer', url: 'https://www.moravia.com.tr/urunler/gemi-boyalari/astar-boyalar/morazinc-hi-build.html' }, checkedAt: '2026-10-10',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -1071,6 +1079,7 @@ const leadQualifications: Record<string, LeadQualification> = {
   'jotun-paints-malaysia-shah-alam': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'mc-ferticom-tokyo': { targetCompanyTypeId: 'coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'agroplanta-batatais': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'moravia-istanbul': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -2336,6 +2345,20 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'Agroplanta official contact page', url: 'https://agroplanta.com.br/contato/' },
     ],
   },
+  'moravia-istanbul': {
+    website: 'https://www.moravia.com.tr/',
+    contactPage: 'https://www.moravia.com.tr/en/kurumsal.html',
+    generalEmail: 'moravia@moravia.com.tr',
+    generalPhone: '+90 212 579 13 36',
+    contacts: [],
+    departmentEmails: [{ department: 'General', email: 'moravia@moravia.com.tr', source: { label: 'Moravia official About Us and public contact details', url: 'https://www.moravia.com.tr/en/kurumsal.html' } }],
+    address: 'Halkalı Merkez Mah. 1. İkitelli Cad. No:2, Küçükçekmece, Istanbul, Türkiye',
+    sources: [
+      { label: 'Moravia official manufacturing and product range', url: 'https://www.moravia.com.tr/en/kurumsal.html' },
+      { label: 'Moravia MORAZINC HI-BUILD marine anticorrosive epoxy primer', url: 'https://www.moravia.com.tr/urunler/gemi-boyalari/astar-boyalar/morazinc-hi-build.html' },
+      { label: 'PubMed indexed ELO anticorrosion coating research (application extension only)', url: 'https://pubmed.ncbi.nlm.nih.gov/34771350/' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2453,6 +2476,7 @@ const demandSideLeadIds = new Set([
   'jotun-paints-malaysia-shah-alam',
   'mc-ferticom-tokyo',
   'agroplanta-batatais',
+  'moravia-istanbul',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {

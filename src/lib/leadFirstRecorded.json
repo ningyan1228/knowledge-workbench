@@ -431,6 +431,10 @@
     "recordedAt": "2026-09-26T11:11:56+08:00",
     "commit": "d39a557dfb0f2bac4e6401a93150875ab0d453f9"
   },
+  "moravia-istanbul": {
+    "recordedAt": "2026-10-10T12:18:00+08:00",
+    "commit": "pending-first-publication"
+  },
   "vivacor-diadema": {
     "recordedAt": "2026-09-26T11:53:50+08:00",
     "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
