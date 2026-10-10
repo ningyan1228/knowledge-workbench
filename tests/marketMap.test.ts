@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(97)
+    expect(publicLeads).toHaveLength(99)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -149,8 +149,8 @@ describe('global product lead map', () => {
     expect(lead.country).toBe('Vietnam')
     expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
     expect(lead.targetCompanyTypeId).toBe('controlled-release-fertilizer-manufacturer')
-    expect(lead.profile.contactPage).toBe('https://rynan.vn/lien-he')
-    expect(lead.profile.generalEmail).toBe('hotrokhachhang@rynantech.com')
+    expect(lead.profile.contactPage).toBe('https://rynanagriculture.com/contact-us')
+    expect(lead.profile.generalEmail).toBe('info@rynanagriculture.com')
     expect(lead.profile.contacts).toHaveLength(0)
     expect(lead.profile.sources.some((source) => source.url.includes('vietnamplus.vn'))).toBe(true)
     expect(lead.supplierCompetitorCheck?.checkedAt).toBe('2026-09-29')

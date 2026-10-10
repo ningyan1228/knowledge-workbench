@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'greenfeed-agro-shah-alam': 'Your official controlled-release fertilizer page describes a coating step in production, and your contact page lists a manufacturing facility in Shah Alam.',
+  'saraswanti-anugerah-indonesia-mempawah': 'Your official NPK product page describes coating before packing to regulate nutrient release, and your contact page identifies the Mempawah manufacturing site within Saraswanti Group.',
   'icl-charleston': 'I saw that your Charleston site produces coated controlled-release fertilizers.',
   'haifa-israel': 'I noticed Haifa Group markets the Multicote controlled-release fertilizer range.',
   'crf-agritech-st-thomas': 'Your St. Thomas site describes PurYield as polymer-coated urea.',

@@ -1039,11 +1039,67 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'Moravia official general business contact', email: 'moravia@moravia.com.tr', phone: '+90 212 579 13 36', contactUrl: 'https://www.moravia.com.tr/en/kurumsal.html' },
     source: { label: 'Moravia official MORAZINC HI-BUILD anticorrosive epoxy primer', url: 'https://www.moravia.com.tr/urunler/gemi-boyalari/astar-boyalar/morazinc-hi-build.html' }, checkedAt: '2026-10-10',
   },
+  {
+    id: "greenfeed-agro-shah-alam",
+    productId: "fertilizer-coating",
+    company: "Greenfeed Agro Sdn Bhd",
+    country: "Malaysia",
+    countryZh: "马来西亚",
+    city: "Shah Alam, Selangor",
+    latitude: 3.0256,
+    longitude: 101.558,
+    legacyCompanyDescription: "控释肥生产商",
+    fit: "可开发候选",
+    signal: "官网控释肥 17:10:10 产品页明确描述生产中的包覆工序；制造页与联系页确认自有制造能力及 Shah Alam 工厂，因此具备包衣原料下游评估逻辑。旧缓释丸粒系列采用水溶性氮与沸石包覆，不能据此推断新控释系列采用聚氨酯；尚未证明其使用、外购或需要我方包衣原料，应先核对包覆体系与技术适配性。",
+    supplierCompetitorCheck: {
+      checkedAt: "2026-10-10",
+      conclusion: "独立复核官方产品目录、控释肥产品、制造与技术页：公开业务为控释/缓释成品肥及制造服务，所查资料未显示对外销售包衣树脂、聚氨酯包衣原料或同类包衣剂。官网注册号 200201016183 / 583846-P；与现有公开客户按名称、官网及联系资料去重，无重复主体。"
+    },
+    contact: {
+      label: "Greenfeed official head-office business phone and contact form",
+      phone: "+60 3 2201 8135",
+      contactUrl: "https://www.greenfeed.com.my/contact/"
+    },
+    source: {
+      label: "Greenfeed official controlled-release fertilizer production and coating process",
+      url: "https://www.greenfeed.com.my/product/greenfeed-controlled-release-fertilizer-1710102mgote/"
+    },
+    checkedAt: "2026-10-10"
+  },
+  {
+    id: "saraswanti-anugerah-indonesia-mempawah",
+    productId: "fertilizer-coating",
+    company: "PT Saraswanti Anugerah Indonesia (Saraswanti Group)",
+    country: "Indonesia",
+    countryZh: "印尼",
+    city: "Sungai Kunyit, Mempawah, West Kalimantan",
+    latitude: 0.482,
+    longitude: 108.9145,
+    legacyCompanyDescription: "包膜复合肥生产商",
+    fit: "可开发候选",
+    signal: "官网产品页描述自产 NPK 颗粒在包装前实施化学包覆以调节溶解性和缓释；公司及联系页、集团工厂开业公告确认 Mempawah 制造实体，存在包衣原料下游评估逻辑。同属 Saraswanti Group，与已收录 PT Dupan Anugerah Lestari 为关联企业并共用总部电话；此条是不同制造实体/工厂，不代表新增独立集团客户，须避免重复开发。未确认聚氨酯体系、独立采购权或采购我方产品。",
+    supplierCompetitorCheck: {
+      checkedAt: "2026-10-10",
+      conclusion: "独立复核公司、产品、工厂联系及集团资料：所查公开业务为 NPK 成品肥制造，产品页中的有机/无机包覆原料是其生产用料描述，未显示对外销售包衣树脂、PU 包衣原料或同类包衣剂。与 Dupan 公司名称、官网及工厂地点不同；明确保留同集团关系，不按独立新集团账户计数。"
+    },
+    contact: {
+      label: "Saraswanti Group shared head-office business phone; request Mempawah plant referral",
+      phone: "+62 31 82516888",
+      contactUrl: "https://pupuksawit.id/contact-us/"
+    },
+    source: {
+      label: "PT Saraswanti Anugerah Indonesia official NPK melting and coating manufacturing process",
+      url: "https://pupuksawit.id/product/"
+    },
+    checkedAt: "2026-10-10"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'greenfeed-agro-shah-alam': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
+  'saraswanti-anugerah-indonesia-mempawah': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'adubos-paranaiba-uberlandia': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'indigrow-brimpton': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'lebanon-seaboard-lebanon': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -1171,6 +1227,58 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  'greenfeed-agro-shah-alam': {
+    website: "https://www.greenfeed.com.my/",
+    contactPage: "https://www.greenfeed.com.my/contact/",
+    generalPhone: "+60 3 2201 8135",
+    contacts: [],
+    departmentEmails: [],
+    address: "Manufacturing facility: Lot 56–57, Jalan Sepintas 26/13, Hicom Industrial Estate, Section 26, 40400 Shah Alam, Selangor, Malaysia; Head office: Unit 9-7, 7th Floor, The Boulevard Mid Valley, Lingkaran Syed Putra, 59200 Kuala Lumpur, Malaysia",
+    sources: [
+      {
+        label: "Greenfeed official product catalogue and supplier/competitor scope check",
+        url: "https://www.greenfeed.com.my/products/"
+      },
+      {
+        label: "Greenfeed official manufacturing capability",
+        url: "https://www.greenfeed.com.my/resource/manufacturing/"
+      },
+      {
+        label: "Greenfeed official factory address and public business phones (factory: +60 3 5192 8135)",
+        url: "https://www.greenfeed.com.my/contact/"
+      },
+      {
+        label: "Greenfeed old slow-release nugget technology: nitrogen/zeolite, not polyurethane proof",
+        url: "https://www.greenfeed.com.my/product-technology/"
+      }
+    ]
+  },
+  'saraswanti-anugerah-indonesia-mempawah': {
+    website: "https://pupuksawit.id/",
+    contactPage: "https://pupuksawit.id/contact-us/",
+    generalPhone: "+62 31 82516888",
+    contacts: [],
+    departmentEmails: [],
+    address: "Factory: Jl. Raya Sungai Kunyit, Kel. Sungai Dungun, Kec. Sungai Kunyit, Kab. Mempawah, Kalimantan Barat, Indonesia; Shared group head office: AMG Tower, 20th Floor, Jl. Dukuh Menanggal 1-A, Gayungan, Surabaya 60234, East Java, Indonesia",
+    sources: [
+      {
+        label: "PT Saraswanti Anugerah Indonesia official company manufacturing role",
+        url: "https://pupuksawit.id/about/"
+      },
+      {
+        label: "Official Mempawah factory address and shared group business contact",
+        url: "https://pupuksawit.id/contact-us/"
+      },
+      {
+        label: "Saraswanti Group official Mempawah NPK factory opening (29 February 2024)",
+        url: "https://saraswantifertilizer.com/peresmian-pabrik-pupuk-npk-pt-saraswanti-anugerah-indonesia-dan-pabrik-dolomit-pt-anugerah-dolomit-indonesia-di-mempawah/"
+      },
+      {
+        label: "Saraswanti Group official Dupan and Mempawah affiliated production entities (25 March 2026)",
+        url: "https://saraswantifertilizer.com/divisi-pupuk-saraswanti-mengadakan-acara-pembagian-sembako-untuk-warga-di-sekitar-pabrik/"
+      }
+    ]
+  },
   'harrells-sylacauga': {
     website: 'https://harrells.com/',
     contactPage: 'https://harrells.com/contact/',
@@ -2147,11 +2255,13 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
   },
   'rynan-smart-fertilizers-long-duc': {
     website: 'https://rynanagriculture.com/',
-    contactPage: 'https://rynan.vn/lien-he',
+    contactPage: 'https://rynanagriculture.com/contact-us',
+    generalEmail: 'info@rynanagriculture.com',
     contacts: [],
-    departmentEmails: [],
+    departmentEmails: [{ department: 'General', email: 'info@rynanagriculture.com', source: { label: 'RYNAN Smart Agriculture official general business inbox (Singapore/Vietnam offices)', url: 'https://rynanagriculture.com/contact-us' } }],
     address: 'Long Duc Industrial Park, Long Duc Ward, Vinh Long Province, Vietnam',
     sources: [
+      { label: 'RYNAN official general business contact; verified 2026-10-10', url: 'https://rynanagriculture.com/contact-us' },
       { label: 'RYNAN Agriculture smart-fertilizer manufacturing and polymer-coating technology', url: 'https://rynanagriculture.com/rynan-smart-fertilizers' },
       { label: 'RYNAN Smart Fertilizers official Vietnam contact page', url: 'https://rynan.vn/lien-he' },
       { label: 'Vietnam News Agency: RYNAN Smart Fertilizers Long Duc coated-fertilizer plant', url: 'https://en.vietnamplus.vn/vietnams-first-smart-fertilizer-factory-opened-in-tra-vinh-post124844.vnp' },
@@ -2380,6 +2490,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'greenfeed-agro-shah-alam',
+  'saraswanti-anugerah-indonesia-mempawah',
   'adubos-paranaiba-uberlandia',
   'indigrow-brimpton',
   'lebanon-seaboard-lebanon',
