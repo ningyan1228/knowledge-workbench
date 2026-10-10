@@ -9,7 +9,9 @@ import { LeadTimelineControls } from './LeadTimelineControls'
 import { filterLeadGeography, geographyOptions } from '../../lib/leadGeography'
 import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { createShortDevelopmentEmail } from '../../lib/shortDevelopmentEmail'
-import { activeOutreachSend, localDateToday } from '../../lib/outreachLedger'
+import { localDateToday } from '../../lib/outreachLedger'
+import { firstContactPlan, firstContactExport } from '../../lib/customerDevelopment'
+import { CustomerDevelopmentPanel } from './CustomerDevelopmentPanel'
 import { useOutreachLedger, type OutreachLedger } from './useOutreachLedger'
 
 type MarketTab = 'overview' | 'map' | 'leads' | 'products' | 'sources'
@@ -231,19 +233,18 @@ function LeadsView({ productId, leads, onProduct, ledger }: { productId: string;
   const [day, setDay] = useState('all')
   const searchMatches = leads.filter((lead) => `${lead.company} ${lead.countryZh} ${lead.city} ${targetCompanyTypeOf(lead.targetCompanyTypeId).name} ${applicationOf(lead.companyEvidence.applicationLayer, lead.companyEvidence.applicationId).name}`.toLowerCase().includes(query.toLowerCase()))
   const matching = timelineLeads(searchMatches, order, day)
-  const readyEmails = matching.map((lead) => ({ lead, email: createShortDevelopmentEmail(lead) })).filter((item) => item.email !== null)
   const [selected, setSelected] = useState<PublicLead | null>(matching[0] ?? null)
   const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
   useEffect(() => setSelected(matching[0] ?? null), [productId, query, order, day])
-  const unsentEmails = ledger.status === 'ready' ? readyEmails.filter(({ lead }) => !ledger.activeSend(lead)) : []
+  const unsentEmails = firstContactPlan(matching, ledger.status === 'ready' ? ledger.sends : null, Number.MAX_SAFE_INTEGER, undefined, false).batch
   const downloadEmails = async () => {
     if (ledger.status !== 'ready') { window.alert('共享发送记录未连接，无法安全排除已联系公司。请先登录或检查数据库迁移。'); return }
     let currentSends
     try { currentSends = await ledger.fetchCurrentSends() }
     catch (error) { window.alert(`下载前无法核对发送记录：${error instanceof Error ? error.message : '未知错误'}`); return }
-    const freshUnsent = readyEmails.filter(({ lead }) => !activeOutreachSend(currentSends, lead))
+    const freshUnsent = firstContactPlan(matching, currentSends, Number.MAX_SAFE_INTEGER, undefined, false).batch
     if (!freshUnsent.length) { window.alert('当前筛选中没有未记录发送的合格开发信。'); return }
-    const contents = freshUnsent.map(({ lead, email }) => `${lead.company} | ${lead.country} | ${marketProducts.find((item) => item.id === lead.productId)?.nameEn}\nEvidence: ${email!.evidenceUrl}\nVerified: ${email!.verifiedAt}\n\n${email!.text}`).join('\n\n' + '='.repeat(72) + '\n\n')
+    const contents = firstContactExport(freshUnsent)
     const url = URL.createObjectURL(new Blob([contents], { type: 'text/plain;charset=utf-8' }))
     const link = document.createElement('a')
     link.href = url
@@ -266,5 +267,5 @@ export function MarketIntelligence() {
   const tab = (tabs.find((item) => item.id === currentRoute[1])?.id ?? 'overview') as MarketTab
   const filteredLeads = useMemo(() => publicLeads.filter((lead) => productId === 'all' || lead.productId === productId), [productId])
   const openTab = (next: MarketTab) => setHash(next === 'overview' ? 'market-intelligence' : `market-intelligence/${next}`)
-  return <><div className="page-heading market-heading"><div><p className="eyebrow">GLOBAL MARKET INTELLIGENCE</p><h1>客户地图，而不是一张漂亮的世界地图。</h1><p>围绕三款产品建立“产品 → 需求场景 → 公司 → 联系方式 → 证据”的开发链路。</p></div><span className="market-research-badge"><CheckCircle2 size={14} />公开来源研究</span></div><div className="market-tabs" role="tablist">{tabs.map((item) => <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => openTab(item.id)}>{item.label}</button>)}</div>{(tab === 'map' || tab === 'leads') && <OutreachLedgerNotice ledger={ledger} />}{tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}{tab === 'map' && <MapView key={productId} productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} />}{tab === 'leads' && <LeadsView productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} />}{tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}{tab === 'sources' && <SourcesView leads={filteredLeads} />}</>
+  return <><div className="page-heading market-heading"><div><p className="eyebrow">GLOBAL MARKET INTELLIGENCE</p><h1>客户地图，而不是一张漂亮的世界地图。</h1><p>围绕三款产品建立“产品 → 需求场景 → 公司 → 联系方式 → 证据”的开发链路。</p></div><span className="market-research-badge"><CheckCircle2 size={14} />公开来源研究</span></div><div className="market-tabs" role="tablist">{tabs.map((item) => <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => openTab(item.id)}>{item.label}</button>)}</div>{(tab === 'map' || tab === 'leads') && <OutreachLedgerNotice ledger={ledger} />}{(tab === 'overview' || tab === 'leads') && <CustomerDevelopmentPanel ledger={ledger} />}{tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}{tab === 'map' && <MapView key={productId} productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} />}{tab === 'leads' && <LeadsView productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} />}{tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}{tab === 'sources' && <SourcesView leads={filteredLeads} />}</>
 }

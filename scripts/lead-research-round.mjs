@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile, rename, open, unlink, appendFile } from 'no
 import { resolve } from 'node:path'
 import { publicLeads, marketExtendedApplications, targetCompanyTypes, tdsVerifiedApplications } from '../src/lib/productMarketMap.ts'
 import { recheckDiscoveryBatch } from '../src/lib/leadDiscoveryScreening.ts'
-import { jobFor, contactBacklog, nextContacts, validateContactFinding, roundCounts } from './lib/lead-research-state.mjs'
+import { jobFor, contactBacklog, nextContacts, validateContactFinding, validateProjectFinding, roundCounts } from './lib/lead-research-state.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const research = resolve(root, 'research')
@@ -34,7 +34,9 @@ try {
       if (state.activeRun) await atomic(resolve(privateRoot, 'runs', `${state.activeRun.runId}.json`), { ...state.activeRun, status: 'interrupted', endedAt: now })
       const runId = now.replace(/[^\d]/g, '')
       const queue = await readQueue()
-      state.activeRun = { runId, startedAt: now, leaseUntil: new Date(Date.parse(now) + 20 * 60 * 1000).toISOString(), job: jobFor(state.cursor), contactTargets: nextContacts(state.contacts, now, 2), evidenceTargets: queue.filter((item) => item.status === 'needs_evidence').sort((a, b) => a.screenedAt.localeCompare(b.screenedAt)).slice(0, 2).map((item) => ({ company: item.candidate.companyName, country: item.candidate.country, candidate: item.candidate, missing: item.reasons })) }
+      const coatingLeads = publicLeads.filter((lead) => lead.productId === 'fertilizer-coating')
+      const projectTargets = [0, 1].map((offset) => coatingLeads[(state.cursor * 2 + offset) % coatingLeads.length]).filter(Boolean).map((lead) => ({ leadId: lead.id, company: lead.company, country: lead.country, website: lead.profile.website, queries: [`"${lead.company}" coating production expansion`, `"${lead.company}" controlled release fertilizer research`, `"${lead.company}" procurement recruitment`] }))
+      state.activeRun = { runId, startedAt: now, leaseUntil: new Date(Date.parse(now) + 20 * 60 * 1000).toISOString(), job: jobFor(state.cursor), contactTargets: nextContacts(state.contacts, now, 2), projectTargets, evidenceTargets: queue.filter((item) => item.status === 'needs_evidence').sort((a, b) => a.screenedAt.localeCompare(b.screenedAt)).slice(0, 2).map((item) => ({ company: item.candidate.companyName, country: item.candidate.country, candidate: item.candidate, missing: item.reasons })) }
       state.cursor++
       await atomic(statePath, state)
       console.log(JSON.stringify({ resumed: false, ...state.activeRun }, null, 2))
@@ -47,18 +49,34 @@ try {
     if (!Array.isArray(input.queries) || !input.queries.length || input.queries.some((item) => !item.query || !item.channel || !item.outcome)) throw new Error('Record actual searches and their outcomes')
     if (!Array.isArray(input.discoveries) || !Array.isArray(input.contactFindings)) throw new Error('Provide discoveries and contactFindings arrays; empty arrays are valid')
     const findings = input.contactFindings.map((item) => validateContactFinding(item, new Set(publicLeads.map((lead) => lead.id))))
+    if (input.projectFindings !== undefined && !Array.isArray(input.projectFindings)) throw new Error('projectFindings must be an array')
+    const projectPath = resolve(privateRoot, 'project-findings.json')
+    const oldProjects = await readJson(projectPath, [])
+    const projectKeys = new Set(oldProjects.map((item) => item.key))
+    const projects = (input.projectFindings ?? []).map((item) => validateProjectFinding(item, new Set(publicLeads.map((lead) => lead.id)))).filter((item) => { if (projectKeys.has(item.key)) return false; projectKeys.add(item.key); return true })
     const originalQueue = await readQueue()
     const screened = recheckDiscoveryBatch(input.discoveries, { ...refs, queue: originalQueue })
-    const counts = roundCounts(screened.results, findings)
+    const counts = roundCounts(screened.results, findings, projects)
     for (const finding of findings) {
-      const item = state.contacts.find((entry) => entry.leadId === finding.leadId)
-      if (item) { item.attempts++; item.lastAttemptAt = now; item.status = finding.outcome === 'found' ? 'awaiting_review' : 'pending'; item.nextRetryAt = new Date(Date.parse(now) + 7 * 86400000).toISOString() }
+      const target = state.activeRun.contactTargets.find((entry) => entry.leadId === finding.leadId && (!finding.taskKey || entry.taskKey === finding.taskKey))
+      const taskKey = finding.taskKey ?? target?.taskKey
+      const item = state.contacts.find((entry) => entry.taskKey === taskKey && entry.leadId === finding.leadId)
+      if (!item) throw new Error('Contact finding must identify a current gap taskKey')
+      if (finding.outcome === 'business_email' && item.gap !== 'business-email') throw new Error('Business inbox does not complete a named role task')
+      if (finding.outcome === 'found') {
+        const role = finding.title + ' ' + (finding.department ?? '')
+        if (item.gap === 'procurement' && !/procurement|purchas|sourcing/i.test(role)) throw new Error('Technical contact cannot complete procurement task')
+        if (item.gap === 'technical' && !/technical|r&d|research|研发/i.test(role)) throw new Error('Contact does not complete the technical role task')
+        if (item.gap === 'business-email' && !finding.email) throw new Error('Email gap requires a disclosed email')
+      }
+      item.attempts++; item.lastAttemptAt = now; item.status = ['found', 'business_email'].includes(finding.outcome) ? 'awaiting_review' : 'pending'; item.nextRetryAt = new Date(Date.parse(now) + 7 * 86400000).toISOString()
     }
-    const report = { ...state.activeRun, endedAt: now, status: 'completed', queries: input.queries, counts, discoveries: screened.results, contactFindings: findings, blockers: input.blockers ?? [] }
+    const report = { ...state.activeRun, endedAt: now, status: 'completed', queries: input.queries, counts, discoveries: screened.results, contactFindings: findings, projectFindings: projects, blockers: input.blockers ?? [] }
     // The run file is also a recovery journal if a subsequent state write fails.
     await atomic(resolve(privateRoot, 'runs', `${input.runId}.json`), report)
     await writeFile(queuePath, screened.queue.map((item) => JSON.stringify(item)).join('\n') + (screened.queue.length ? '\n' : ''))
     if (findings.length) await appendFile(resolve(privateRoot, 'contact-findings.ndjson'), findings.map((item) => JSON.stringify({ ...item, runId: input.runId, savedAt: now })).join('\n') + '\n')
+    if (projects.length) await atomic(projectPath, [...oldProjects, ...projects.map((item) => ({ ...item, runId: input.runId, savedAt: now }))])
     state.latestRun = { runId: input.runId, endedAt: now, job: state.activeRun.job, counts }
     state.activeRun = null
     await atomic(statePath, state)

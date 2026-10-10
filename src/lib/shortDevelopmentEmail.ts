@@ -53,7 +53,7 @@ function recipientFor(lead: PublicLead) {
 }
 
 /** Pre-written, review-first first contact. It never asserts a purchase or product fit. */
-export function createShortDevelopmentEmail(lead: PublicLead): ShortDevelopmentEmail | null {
+export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: string | null): ShortDevelopmentEmail | null {
   const evidence = lead.companyEvidence
   const targetType = targetCompanyTypes.find((item) => item.id === lead.targetCompanyTypeId)
   const application = (evidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications)
@@ -70,7 +70,8 @@ export function createShortDevelopmentEmail(lead: PublicLead): ShortDevelopmentE
   if (!companyFact) return null
   const productName = productNames[lead.productId]
   const subject = `${productName} — a brief introduction`
-  const body = `${recipientFor(lead)}
+  const greeting = recipientName === undefined ? recipientFor(lead) : recipientName ? `Hi ${recipientName.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
+  const body = `${greeting}
 
 ${companyFact}
 
