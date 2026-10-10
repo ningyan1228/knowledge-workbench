@@ -4,6 +4,7 @@ import { CircleMarker, MapContainer, TileLayer, useMap } from 'react-leaflet'
 import { Building2, CalendarCheck, CheckCircle2, ChevronRight, Copy, ExternalLink, FileText, Globe2, Linkedin, Mail, MapPin, MapPinned, MessageCircle, Phone, Search, Target, TriangleAlert, UserRound, X } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 import { marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications, type MarketProduct, type PublicLead } from '../../lib/productMarketMap'
+import { filterLeadGeography, geographyOptions } from '../../lib/leadGeography'
 import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { createShortDevelopmentEmail } from '../../lib/shortDevelopmentEmail'
 import { activeOutreachSend, localDateToday } from '../../lib/outreachLedger'
@@ -189,9 +190,33 @@ function MapView({ productId, leads, onProduct, ledger }: { productId: string; l
   const [selectedLead, setSelectedLead] = useState<PublicLead | null>(null)
   const [selectedCountry, setSelectedCountry] = useState<CountrySummary | null>(null)
   const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
+  const [continent, setContinent] = useState('all')
+  const [country, setCountry] = useState('all')
   const [overviewToken, setOverviewToken] = useState(0)
-  const showAll = () => { setSelectedLead(null); setSelectedCountry(null); setOverviewToken((value) => value + 1) }
-  return <section className="market-map-workspace"><div className="section-heading"><div><p className="eyebrow">GEO QUALIFICATION</p><h2>全球公开线索地图</h2><p>默认显示当前产品的全部已核验地点；点国家或公司可放大查看，随时点“显示全部”返回总览。地图卡只保留核心信息；完整联系方式、来源与核验状态请打开 Company Detail。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><div className="market-map-toolbar"><span>当前筛选：{leads.length} 家公司 · {new Set(leads.map((lead) => lead.country)).size} 个国家</span><button type="button" onClick={showAll}>显示全部</button></div><div className="market-map-layout lead-map-layout"><div><GlobalLeadMap leads={leads} selectedLead={selectedLead} selectedCountry={selectedCountry} overviewToken={overviewToken} onSelectLead={(lead) => { setSelectedLead(lead); setSelectedCountry(null) }} onSelectCountry={(country) => { setSelectedCountry(country); setSelectedLead(null) }} /><MapLegend /></div><aside className="lead-map-sidebar"><div className="sidebar-title"><Target size={16} /><strong>{selectedCountry ? `${selectedCountry.countryZh} · ${selectedCountry.count} 条线索` : `全部公司线索 · ${leads.length} 家`}</strong></div>{leads.filter((lead) => !selectedCountry || lead.country === selectedCountry.country).map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selectedLead?.id} onSelect={(item) => { setSelectedLead(item); setSelectedCountry(null) }} onOpenDetail={setDetailLead} ledger={ledger} />)}</aside></div><CompanyDetail lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} /></section>
+  const options = useMemo(() => geographyOptions(leads, continent), [leads, continent])
+  const matching = useMemo(() => filterLeadGeography(leads, continent, country), [leads, continent, country])
+  const resetFocus = () => { setSelectedLead(null); setSelectedCountry(null); setDetailLead(null); setOverviewToken((value) => value + 1) }
+  const showAll = () => { setContinent('all'); setCountry('all'); resetFocus() }
+  const selectCountry = (value: string) => {
+    setCountry(value)
+    resetFocus()
+    const countryLeads = filterLeadGeography(leads, continent, value)
+    const first = countryLeads[0]
+    if (value !== 'all' && first) setSelectedCountry({ country: value, countryZh: first.countryZh, latitude: first.latitude, longitude: first.longitude, count: countryLeads.length })
+  }
+  const regionLabel = country !== 'all' ? options.countries.find((item) => item.value === country)?.label : continent !== 'all' ? continent : '全部地区'
+  return <section className="market-map-workspace">
+    <div className="section-heading"><div><p className="eyebrow">GEO QUALIFICATION</p><h2>全球公开线索地图</h2><p>按产品、大洲和国家筛选已核验地点；地图与公司列表同步更新。点国家或公司可放大查看，点“显示全部”返回当前产品的全球总览。完整联系方式、来源与核验状态请打开 Company Detail。</p></div></div>
+    <ProductPicker value={productId} onChange={onProduct} />
+    <div className="lead-geography-filters" role="group" aria-label="按地区筛选">
+      <label>大洲<select value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label>
+      <label>国家／地区<select value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label>
+    </div>
+    <div className="market-map-toolbar"><span role="status">当前筛选：{regionLabel} · {matching.length} 家公司 · {new Set(matching.map((lead) => lead.country)).size} 个国家／地区</span><button type="button" onClick={showAll}>显示全部</button></div>
+    <div className="market-map-layout lead-map-layout"><div><GlobalLeadMap leads={matching} selectedLead={selectedLead} selectedCountry={selectedCountry} overviewToken={overviewToken} onSelectLead={(lead) => { setSelectedLead(lead); setSelectedCountry(null) }} onSelectCountry={(item) => selectCountry(item.country)} /><MapLegend /></div>
+      <aside className="lead-map-sidebar"><div className="sidebar-title"><Target size={16} /><strong>{regionLabel}公司线索 · {matching.length} 家</strong></div>{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selectedLead?.id} onSelect={(item) => { setSelectedLead(item); setSelectedCountry(null) }} onOpenDetail={setDetailLead} ledger={ledger} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>该地区暂无已核验线索</strong><span>可选择其他大洲或国家，或点击“显示全部”。</span></div>}</aside>
+    </div><CompanyDetail lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} />
+  </section>
 }
 
 function LeadsView({ productId, leads, onProduct, ledger }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void; ledger: OutreachLedger }) {

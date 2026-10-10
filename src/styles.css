@@ -71,3 +71,10 @@ nav { display:grid; gap:4px }.nav-item { color:var(--muted); background:transpar
 .outreach-send-form label { display:grid;gap:5px;min-width:175px;flex:1;font-size:12px;font-weight:650 }
 .outreach-send-form input { width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font-size:13px }
 .outreach-send-form button { min-height:38px }
+
+/* Country and continent filters for the global customer map. */
+.lead-geography-filters { display:flex;flex-wrap:wrap;gap:14px;margin:16px 0 }
+.lead-geography-filters label { display:grid;gap:6px;min-width:200px;color:var(--muted);font-size:13px;font-weight:650 }
+.lead-geography-filters select { width:100%;min-height:42px;padding:8px 32px 8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font:inherit }
+.lead-geography-filters select:focus-visible { outline:2px solid var(--blue);outline-offset:2px }
+@media(max-width:620px) { .lead-geography-filters label { min-width:0;flex:1 1 150px }.market-map-toolbar { align-items:flex-start }.market-map-toolbar>span { line-height:1.65 } }
