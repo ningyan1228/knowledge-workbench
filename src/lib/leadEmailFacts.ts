@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'namhae-chemical-yeosu': "Your 오래가올원 30-8-8 product page describes a controlled-release fertilizer with every granule coated.",
+  'taiwan-fertilizer-taipei': "Your 2025 annual report describes coated-fertilizer sample production and kilogram-scale batch process testing with the Plastics Industry Development Center.",
   'agrotiger-mabalacat': "Your HYFER solid-fertilizer range includes organically coated urea and compound fertilizers, and your website describes sustained nutrient release.",
   'rcf-mumbai': "Your 2024–25 annual report records production of Urea Gold sulphur-coated urea using technology developed by your company.",
   'chobi-ulsan': 'Your official J AGRI 2025 brochure lists coated urea with linear and sigmoid release patterns, and identifies your fertilizer manufacturing plant in Ulsan.',

@@ -462,5 +462,13 @@
   "rcf-mumbai": {
     "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
     "recordedAt": "2026-10-10T14:46:38Z"
+  },
+  "namhae-chemical-yeosu": {
+    "recordedAt": "2026-10-10T15:27:25.270Z",
+    "commit": ""
+  },
+  "taiwan-fertilizer-taipei": {
+    "recordedAt": "2026-10-10T15:27:25.271Z",
+    "commit": ""
   }
 }
