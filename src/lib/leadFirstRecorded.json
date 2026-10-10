@@ -442,5 +442,17 @@
   "wikoff-fort-mill": {
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  },
+  "chobi-ulsan": {
+    "recordedAt": "2026-10-10T11:44:13Z",
+    "commit": "622de47170dff829d535b1fea66238a0f31dac71"
+  },
+  "greenfeed-agro-shah-alam": {
+    "recordedAt": "2026-10-10T14:55:56+08:00",
+    "commit": "3ed635f7e2a006d19c4a5a33445aced040007645"
+  },
+  "saraswanti-anugerah-indonesia-mempawah": {
+    "recordedAt": "2026-10-10T14:55:56+08:00",
+    "commit": "3ed635f7e2a006d19c4a5a33445aced040007645"
   }
 }
