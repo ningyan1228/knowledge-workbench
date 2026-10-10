@@ -96,4 +96,7 @@ export const leadEmailFacts: Record<string, string> = {
   'son-mien-bac-hung-yen': 'Your Hung Yen factory describes manufacturing protective and anticorrosion coatings for steel structures.',
   'dolphin-inks-thane': 'Your flexible-packaging range includes water-based inks for polypropylene and polyethylene substrates.',
   'toa-paint-products-nilai': 'Your Heavyguard Epoguard Enamel range includes protective epoxy coatings for steel structures and ships.',
+  'jotun-paints-malaysia-shah-alam': 'Your Malaysian R&D centre develops protective coatings and evaluates alternative raw materials.',
+  'mc-ferticom-tokyo': 'Your company describes manufacturing coated controlled-release fertilizers and lists coated urea fertilizer in its product range.',
+  'agroplanta-batatais': 'Your Greencote range includes polymer-coated controlled-release fertilizers made in Brazil.',
 }

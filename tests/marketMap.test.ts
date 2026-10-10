@@ -48,7 +48,7 @@ describe('global product lead map', () => {
   })
 
   it('displays demand-side customers only, never peer suppliers or technical-route references', () => {
-    expect(publicLeads).toHaveLength(93)
+    expect(publicLeads).toHaveLength(96)
     expect(publicLeads.some((lead) => lead.productId === 'nl-w1201')).toBe(true)
     expect(publicLeads.some((lead) => lead.productId === 'elo')).toBe(true)
     for (const lead of publicLeads) {
@@ -79,6 +79,41 @@ describe('global product lead map', () => {
         if (contact.verifiedAt) expect(contact.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/)
       }
     }
+  })
+
+  it('records Jotun Malaysia as a downstream anticorrosive-coating formulator without implying ELO use', () => {
+    const lead = publicLeads.find((item) => item.id === 'jotun-paints-malaysia-shah-alam')!
+    expect(lead.productId).toBe('elo')
+    expect(lead.targetCompanyTypeId).toBe('elo-anticorrosion-coating-formulator')
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' })
+    expect(lead.demandSideReason).toContain('防护涂料')
+    expect(lead.signal).toContain('未证明其采购或使用 ELO')
+    expect(lead.profile.contactPage).toContain('/supplier-information/contact-us-suppliers')
+    expect(lead.profile.contacts).toEqual([])
+    expect(lead.profile.departmentEmails).toEqual([])
+  })
+
+  it('keeps MC Ferticom coating-fertilizer manufacturing distinct from its unrelated fertilizer raw-material sales', () => {
+    const lead = publicLeads.find((item) => item.id === 'mc-ferticom-tokyo')!
+    expect(publicLeads.filter((item) => item.id === lead.id)).toHaveLength(1)
+    expect(lead.productId).toBe('fertilizer-coating')
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'coated-urea' })
+    expect(lead.demandSideReason).toContain('包膜肥')
+    expect(lead.signal).toContain('未证明其外购')
+    expect(lead.supplierCompetitorCheck.conclusion).toContain('硫酸铵')
+    expect(lead.profile.generalEmail).toBe('mcfcqa.overseas@mcferticom.jp')
+    expect(lead.profile.contacts[0]).toMatchObject({ name: 'Tetsuya Kuroda', department: 'Management', verifiedAt: '2026-10-10' })
+  })
+
+  it('records Agroplanta as a downstream coated-fertilizer manufacturer without inferring polyurethane use', () => {
+    const lead = publicLeads.find((item) => item.id === 'agroplanta-batatais')!
+    expect(publicLeads.filter((item) => item.id === lead.id)).toHaveLength(1)
+    expect(lead.productId).toBe('fertilizer-coating')
+    expect(lead.companyEvidence).toMatchObject({ applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' })
+    expect(lead.signal).toContain('未证明使用、外购或需要我方聚氨酯')
+    expect(lead.supplierCompetitorCheck.checkedAt).toBe('2026-10-10')
+    expect(lead.profile.generalEmail).toBe('comercial@agroplanta.com.br')
+    expect(lead.profile.contacts).toEqual([])
   })
 
   it('keeps named people and department mailboxes separately attributable', () => {

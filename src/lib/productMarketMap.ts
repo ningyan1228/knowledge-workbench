@@ -1007,6 +1007,30 @@ const rawPublicLeads: RawPublicLead[] = [
     contact: { label: 'TOA Paint Products official Malaysia general contact', email: 'toa@toagroup.com.my', phone: '+60 3 7725 2699', contactUrl: 'https://toagroup.com.my/contact-us/' },
     source: { label: 'TOA Malaysia Heavyguard Epoguard Enamel protective epoxy topcoat', url: 'https://toagroup.com.my/product/heavyguard-epoguard-enamel-part-a/' }, checkedAt: '2026-10-08',
   },
+  {
+    id: 'jotun-paints-malaysia-shah-alam', productId: 'elo', company: 'Jotun Paints (Malaysia) Sdn. Bhd.', country: 'Malaysia', countryZh: '马来西亚', city: 'Shah Alam, Selangor', latitude: 3.0738, longitude: 101.5183,
+    legacyCompanyDescription: '重防腐涂料制造与配方企业', fit: '可开发候选',
+    signal: 'Jotun 马来西亚官网列出 Jotamastic 87 防腐环氧底涂；集团官网确认 Shah Alam 工厂设有防护涂料研发中心，并明确把新产品开发、配方工作和替代原料测试列为其职责。ELO 的涂料应用属于 TDS 已验证大类，ELO 防腐涂层研究另有独立公开来源，因此该公司具备评估涂料配方原料的下游逻辑；公开资料未证明其采购或使用 ELO，也未证明我方 ELO 适用于 Jotamastic 87 的现有配方。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-09', conclusion: '已检查 Jotun 官网防腐涂料产品页、马来西亚研发与工厂介绍及供应商资料：对外产品为涂料成品，所查资料未显示该公司生产或销售 ELO、ESBO、环氧化植物油或同类原料；官网另明确设有原料采购和替代原料评估流程。' },
+    contact: { label: 'Jotun Malaysia public supplier contact', phone: '+60 3 5123 5500', contactUrl: 'https://www.jotun.com/my-en/about-jotun/supplier-information/contact-us-suppliers' },
+    source: { label: 'Jotun Malaysia Jotamastic 87 anticorrosive epoxy primer', url: 'https://www.jotun.com/my-en/products-and-services/products/Jotamastic-87' }, checkedAt: '2026-10-09',
+  },
+  {
+    id: 'mc-ferticom-tokyo', productId: 'fertilizer-coating', company: 'MC Ferticom Co., Ltd.', country: 'Japan', countryZh: '日本', city: 'Tokyo', latitude: 35.6830, longitude: 139.7436,
+    legacyCompanyDescription: '自有包膜肥工厂的控释肥制造商', fit: '可开发候选',
+    signal: 'MC Ferticom 官网明确称其研发并制造包膜控释肥，产品目录列有包膜尿素肥；公司沿革记录包膜肥制造工厂于 1996 年建成、2003 年扩建。该企业具备自行生产下游包膜肥并评估包衣原料的业务逻辑；公开资料未证明其外购、使用或需要我方包衣材料，也未证明其包衣化学体系与我方产品相同。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-10', conclusion: '已复核公司官网包膜肥产品、业务介绍、原料销售及化成品销售页：其确有硫酸铵、过磷酸钙等肥料营养原料及精制硫酸销售业务，但所查资料未显示其对外销售肥料包衣树脂、聚氨酯包衣材料或同类包衣剂；本条仅按其自行制造包膜肥的下游角色收录，不能将其他肥料原料销售等同于外购包衣材料的证据。' },
+    contact: { label: 'MC Ferticom official overseas enquiry', email: 'mcfcqa.overseas@mcferticom.jp', phone: '+81-3-3263-8530', contactUrl: 'https://www.mcferticom.jp/english/inquiry/' },
+    source: { label: 'MC Ferticom official statement of coated controlled-release fertilizer manufacturing', url: 'https://www.mcferticom.jp/english/company/greeting.html' }, checkedAt: '2026-10-10',
+  },
+  {
+    id: 'agroplanta-batatais', productId: 'fertilizer-coating', company: 'Agroplanta Fertilizantes e Inovações S.A.', country: 'Brazil', countryZh: '巴西', city: 'Batatais, São Paulo', latitude: -20.8911, longitude: -47.5851,
+    legacyCompanyDescription: '聚合物包覆控释肥制造商', fit: '可开发候选',
+    signal: 'Agroplanta 官网列出 Greencote 和 Maxcote 植物基可降解聚合物包覆控释肥，并说明 Batatais 第三工厂生产聚合物基增效肥料。该公司制造下游包覆肥成品，具备核验包衣原料配方与采购负责人的业务逻辑；其公开描述的是植物基聚合物体系，未证明使用、外购或需要我方聚氨酯包衣原料，也不能推定两种体系兼容。',
+    supplierCompetitorCheck: { checkedAt: '2026-10-10', conclusion: '已复核 Agroplanta 官方公司、Greencote、Maxcote 与产品目录：所查资料显示其生产销售包覆控释肥成品、其他肥料及肥料营养配料；未发现其对外销售肥料包衣树脂、聚氨酯包衣原料或同类包衣剂。肥料营养配料销售不等于包衣原料同行。' },
+    contact: { label: 'Agroplanta official commercial contact', email: 'comercial@agroplanta.com.br', phone: '+55 16 3660-6500', contactUrl: 'https://agroplanta.com.br/contato/' },
+    source: { label: 'Agroplanta official Greencote polymer-coated controlled-release fertilizer', url: 'https://agroplanta.com.br/produtos/greencote/' }, checkedAt: '2026-10-10',
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
@@ -1044,6 +1068,9 @@ const leadQualifications: Record<string, LeadQualification> = {
   'son-mien-bac-hung-yen': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
   'dolphin-inks-thane': { targetCompanyTypeId: 'waterborne-ink-manufacturer', applicationLayer: 'market-extended', applicationId: 'waterborne-ink-anchorage-on-pp-pe' },
   'toa-paint-products-nilai': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
+  'jotun-paints-malaysia-shah-alam': { targetCompanyTypeId: 'elo-anticorrosion-coating-formulator', applicationLayer: 'market-extended', applicationId: 'elo-anticorrosion-coating-research' },
+  'mc-ferticom-tokyo': { targetCompanyTypeId: 'coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
+  'agroplanta-batatais': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'fortgreen-varginha': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'grupo-equilibrio-catalao': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'harrells-sylacauga': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
@@ -2257,6 +2284,58 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       { label: 'TOA Group official Malaysian subsidiary listing and public email', url: 'https://www.toagroup.com/en/about-toa/company-info/toa-group-of-companies' },
     ],
   },
+  'jotun-paints-malaysia-shah-alam': {
+    website: 'https://www.jotun.com/my-en',
+    contactPage: 'https://www.jotun.com/my-en/about-jotun/supplier-information/contact-us-suppliers',
+    generalPhone: '+60 3 5123 5500',
+    contacts: [],
+    departmentEmails: [],
+    address: 'Lot 7, Persiaran Perusahaan, Section 23, 40300 Shah Alam, Selangor, Malaysia',
+    sources: [
+      { label: 'Jotun Malaysia Jotamastic 87 anticorrosive epoxy primer', url: 'https://www.jotun.com/my-en/products-and-services/products/Jotamastic-87' },
+      { label: 'Jotun R&D network: Shah Alam factory, protective-coatings formulation and alternative-raw-material evaluation', url: 'https://www.jotun.com/ww-en/our-commitment/innovation-and-technology/overview/articles/rd-network-from-local-to-global' },
+      { label: 'Jotun supplier contact information for Malaysia', url: 'https://www.jotun.com/my-en/about-jotun/supplier-information/contact-us-suppliers' },
+      { label: 'Jotun Malaysia official head-office address', url: 'https://www.jotun.com/my-en/decorative/our-services/contact-us' },
+      { label: 'Jotun official Malaysian protective-coatings office phone', url: 'https://cp.jotun.com/siteassetsjot03/_b2b/product-brochures/marathon-1000-brochure.pdf' },
+    ],
+  },
+  'mc-ferticom-tokyo': {
+    website: 'https://www.mcferticom.jp/english/',
+    contactPage: 'https://www.mcferticom.jp/english/inquiry/',
+    generalEmail: 'mcfcqa.overseas@mcferticom.jp',
+    generalPhone: '+81-3-3263-8530',
+    contacts: [{
+      name: 'Tetsuya Kuroda', title: 'President and CEO', department: 'Management',
+      source: { label: 'MC Ferticom official president message', url: 'https://www.mcferticom.jp/english/company/greeting.html' }, verifiedAt: '2026-10-10',
+    }],
+    departmentEmails: [{ department: 'General', email: 'mcfcqa.overseas@mcferticom.jp', source: { label: 'MC Ferticom official overseas enquiry page', url: 'https://www.mcferticom.jp/english/inquiry/' } }],
+    address: '4th Floor, Kojimachi Koyo Building, 10 Kojimachi 1-Chome, Chiyoda-ku, Tokyo 102-0083, Japan',
+    sources: [
+      { label: 'MC Ferticom official statement of coated controlled-release fertilizer manufacturing', url: 'https://www.mcferticom.jp/english/company/greeting.html' },
+      { label: 'MC Ferticom official coated-urea fertilizer product category', url: 'https://www.mcferticom.jp/english/commodity/' },
+      { label: 'MC Ferticom official history of coated-fertilizer plant construction and expansion', url: 'https://www.mcferticom.jp/company/history.html' },
+      { label: 'MC Ferticom official fertilizer-nutrient raw-material sales (supplier exclusion check)', url: 'https://www.mcferticom.jp/introduction/export.html' },
+      { label: 'MC Ferticom official chemical sales (supplier exclusion check)', url: 'https://www.mcferticom.jp/introduction/chemical.html' },
+      { label: 'MC Ferticom official overseas business contact', url: 'https://www.mcferticom.jp/english/inquiry/' },
+      { label: 'MC Ferticom official head-office address', url: 'https://www.mcferticom.jp/english/company/outline.html' },
+    ],
+  },
+  'agroplanta-batatais': {
+    website: 'https://agroplanta.com.br/',
+    contactPage: 'https://agroplanta.com.br/contato/',
+    generalEmail: 'comercial@agroplanta.com.br',
+    generalPhone: '+55 16 3660-6500',
+    contacts: [],
+    departmentEmails: [{ department: 'Commercial', email: 'comercial@agroplanta.com.br', source: { label: 'Agroplanta official contact page', url: 'https://agroplanta.com.br/contato/' } }],
+    address: 'Rodovia Cândido Portinari SP 334, km 349.5, Batatais, São Paulo, Brazil',
+    sources: [
+      { label: 'Agroplanta Greencote polymer-coated controlled-release fertilizer', url: 'https://agroplanta.com.br/produtos/greencote/' },
+      { label: 'Agroplanta Maxcote polymer-coated fertilizer range', url: 'https://agroplanta.com.br/produtos/maxcote/' },
+      { label: 'Agroplanta company information on Batatais manufacturing units and polymer-based fertilizer production', url: 'https://agroplanta.com.br/quem-somos/' },
+      { label: 'Agroplanta official product catalog for supplier exclusion check', url: 'https://agroplanta.com.br/produtos/' },
+      { label: 'Agroplanta official contact page', url: 'https://agroplanta.com.br/contato/' },
+    ],
+  },
 }
 
 function profileFor(lead: RawPublicLead): CompanyProfile {
@@ -2371,6 +2450,9 @@ const demandSideLeadIds = new Set([
   'son-mien-bac-hung-yen',
   'dolphin-inks-thane',
   'toa-paint-products-nilai',
+  'jotun-paints-malaysia-shah-alam',
+  'mc-ferticom-tokyo',
+  'agroplanta-batatais',
 ])
 
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
