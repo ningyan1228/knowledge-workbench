@@ -6,6 +6,7 @@ import {
   Search, Send, Settings, Sparkles, Sun, X,
 } from 'lucide-react'
 import { articles, products } from './lib/demoData'
+import { ProductHandbook } from './features/products/ProductHandbook'
 import { apiBaseUrl, hasSupabaseConfig, supabase } from './lib/supabase'
 import { proxyRequest } from './lib/api'
 import { insufficientEvidenceReply, type ReplyTone } from './lib/qa'
@@ -77,7 +78,7 @@ export function App() {
 
     <main className="main-area">
       <header className="topbar"><div className="topbar-left"><button className="icon-button mobile-menu" onClick={() => setSidebarOpen(true)} aria-label="打开导航"><Menu size={20} /></button><button className="search-box" onClick={() => setSearchOpen(true)}><Search size={17} /><span>搜索产品、参数、CAS 或术语</span><kbd>⌘ K</kbd></button></div><div className="topbar-actions"><button className="icon-button" onClick={() => setDark(!dark)} aria-label="切换深色模式">{dark ? <Sun size={18} /> : <Moon size={18} />}</button><button className="avatar" onClick={() => navigate('settings')} aria-label="打开设置">NL</button></div></header>
-      {!hasSupabaseConfig && <div className="preview-banner"><CircleAlert size={17} /><span><strong>本地预览模式：</strong>首批资料均待上传，所有“待确认”内容不能用于对外承诺。</span><button onClick={() => navigate('settings')}>完成连接</button></div>}
+      {!hasSupabaseConfig && <div className="preview-banner"><CircleAlert size={17} /><span><strong>本地预览模式：</strong>三款产品学习资料已更新；原始附件与参数审批记录需登录私人资料库核对。</span><button onClick={() => navigate('settings')}>完成连接</button></div>}
       <section className="page-content">
         {page === 'dashboard' && <Dashboard onNavigate={navigate} onSelectProduct={(id) => { setSelectedProductId(id); navigate('products') }} />}
         {page === 'products' && <ProductLibrary selected={selectedProduct} onSelect={setSelectedProductId} onNotice={setNotice} />}
@@ -96,7 +97,7 @@ export function App() {
 
 function Dashboard({ onNavigate, onSelectProduct }: { onNavigate: (page: Page) => void; onSelectProduct: (id: string) => void }) {
   return <><div className="page-heading"><div><p className="eyebrow">Asia/Shanghai · {new Intl.DateTimeFormat('zh-CN', { dateStyle: 'full' }).format(new Date())}</p><h1>今天，先把一件事弄清楚。</h1><p>从可核对的产品资料开始，再去理解行业与客户问题。</p></div><button className="primary-button" onClick={() => onNavigate('assistant')}><Sparkles size={17} />问一个客户问题</button></div>
-    <div className="metric-grid"><Metric value="0" label="今日新增资讯" hint="尚未配置采集来源" /><Metric value="3" label="待上传原文件" hint="导入后才可建立引用" /><Metric value="8" label="待确认事项" hint="先向工厂核对再对外使用" /></div>
+    <div className="metric-grid"><Metric value="0" label="今日新增资讯" hint="尚未配置采集来源" /><Metric value="3" label="产品学习资料已更新" hint="产品介绍、参数解读与询盘判断" /><Metric value={String(products.reduce((sum, product) => sum + product.reviewTasks.length, 0))} label="工厂核对清单" hint="先向工厂核对再对外使用" /></div>
     <div className="content-grid"><section className="card span-2"><div className="card-heading"><div><p className="eyebrow">今日精选</p><h2>暂无重要更新</h2></div><button className="text-button" onClick={() => onNavigate('intelligence')}>查看行业情报 <ChevronRight size={16} /></button></div><EmptyState title="等你启用来源" description="正式采集完成后，这里只显示有原始链接、发布日期和中文摘要的内容。" action={<button className="secondary-button" onClick={() => onNavigate('settings')}>管理来源</button>} /></section>
       <section className="card"><div className="card-heading"><div><p className="eyebrow">今日学习</p><h2>从一笔订单的角色开始</h2></div><GraduationCap size={19} /></div><p className="muted">40 节外贸核心课：先阅读，再提交练习和确认已读；答案仅保存到你的私人资料库。</p><button className="text-button" onClick={() => onNavigate('practice')}>打开外贸学习 <ChevronRight size={16} /></button></section>
       <section className="card span-2"><div className="card-heading"><div><p className="eyebrow">工厂待确认</p><h2>先问清楚，再写进邮件</h2></div><button className="text-button" onClick={() => onNavigate('products')}>查看全部</button></div><div className="task-list">{products.flatMap((product) => product.reviewTasks.slice(0, 1).map((task) => <div className="task" key={product.id}><span className="task-dot" /><div><strong>{product.name}</strong><p>{task}</p></div><StatusPill status="待确认" /></div>))}</div></section>
@@ -108,13 +109,14 @@ function Metric({ value, label, hint }: { value: string; label: string; hint: st
 
 function ProductLibrary({ selected, onSelect, onNotice }: { selected: ProductSummary; onSelect: (id: string) => void; onNotice: (message: string) => void }) {
   const uploader = useRef<HTMLInputElement>(null)
-  return <><div className="page-heading"><div><p className="eyebrow">产品知识库</p><h1>每个参数，都能回到原文。</h1><p>目前显示的是待原始文件核对的初始化清单。</p></div><button className="primary-button" onClick={() => uploader.current?.click()}><FileUp size={17} />上传 TDS / DOCX</button><input ref={uploader} hidden type="file" accept=".pdf,.docx" onChange={(event) => { const file = event.target.files?.[0]; if (file) onNotice(`已选择“${file.name}”。请先完成 Supabase 配置，文件会直传到私人存储后再解析。`); event.currentTarget.value = '' }} /></div>
-    <div className="library-layout"><aside className="product-list"><div className="filter-label">3 个待整理产品</div>{products.map((product) => <button key={product.id} className={selected.id === product.id ? 'product-item selected' : 'product-item'} onClick={() => onSelect(product.id)}><span className="product-icon">{product.name.slice(0, 1)}</span><span><strong>{product.name}</strong><small>{product.category}</small></span><StatusPill status={product.status} /></button>)}</aside>
+  return <><div className="page-heading"><div><p className="eyebrow">产品知识库</p><h1>每个参数，都能回到原文。</h1><p>已更新三款核心产品的介绍、参数解读、应用与询盘学习手册。</p></div><button className="primary-button" onClick={() => uploader.current?.click()}><FileUp size={17} />上传 TDS / DOCX</button><input ref={uploader} hidden type="file" accept=".pdf,.docx" onChange={(event) => { const file = event.target.files?.[0]; if (file) onNotice(`已选择“${file.name}”。请先完成 Supabase 配置，文件会直传到私人存储后再解析。`); event.currentTarget.value = '' }} /></div>
+    <div className="library-layout"><aside className="product-list"><div className="filter-label">3 款核心产品 · 学习资料已更新</div>{products.map((product) => <button key={product.id} className={selected.id === product.id ? 'product-item selected' : 'product-item'} onClick={() => onSelect(product.id)}><span className="product-icon">{product.name.slice(0, 1)}</span><span><strong>{product.name}</strong><small>{product.category}</small></span><StatusPill status={product.status} /></button>)}</aside>
       <article className="product-detail"><div className="detail-title"><div><div className="title-row"><h2>{selected.name}</h2><StatusPill status={selected.status} /></div><p>{selected.englishName} {selected.grade ? `· ${selected.grade}` : '· 牌号待填写'}</p></div><button className="secondary-button" onClick={() => onNotice('本地预览不创建正式笔记。连接 Supabase 后，笔记会按当前登录账户保存。')}>添加笔记</button></div>
-        <div className="callout warning"><CircleAlert size={18} /><div><strong>资料状态：原始文件待上传</strong><p>{selected.description}</p></div></div>
-        <div className="detail-section"><h3>已摘录参数 <span>全部待确认</span></h3><div className="table-wrap"><table><thead><tr><th>字段</th><th>原始值（按摘录保留）</th><th>条件 / 备注</th><th>状态</th></tr></thead><tbody>{selected.specs.map((spec) => <tr key={spec.name}><td>{spec.name}</td><td className="mono">{spec.originalValue}</td><td>{spec.condition || spec.note || '—'}</td><td><StatusPill status="待确认" /></td></tr>)}</tbody></table></div></div>
+        <div className="callout warning"><CircleAlert size={18} /><div><strong>产品介绍 · 学习资料摘录</strong><p>{selected.description}</p></div></div>
+        <div className="detail-section"><h3>技术参数 <span>按学习手册摘录 · 待原件复核</span></h3><div className="table-wrap"><table><thead><tr><th>字段</th><th>原始值（按摘录保留）</th><th>条件 / 备注</th><th>状态</th></tr></thead><tbody>{selected.specs.map((spec) => <tr key={spec.name}><td>{spec.name}</td><td className="mono">{spec.originalValue}</td><td>{[spec.condition, spec.note].filter(Boolean).join('；') || '—'}</td><td><StatusPill status="待确认" /></td></tr>)}</tbody></table></div></div>
         <div className="detail-section two-columns"><div><h3>应用与关键词</h3><div className="chip-row">{selected.applications.map((item) => <span className="chip" key={item}>{item}</span>)}</div><p className="keyword-copy">搜索词：{selected.keywords.join(' · ')}</p></div><div><h3>工厂待确认事项</h3><ul className="plain-list">{selected.reviewTasks.map((item) => <li key={item}><CircleAlert size={15} />{item}</li>)}</ul></div></div>
-        <div className="evidence-box"><BookOpen size={20} /><div><strong>引用与版本</strong><p>尚无可点击的原文，因为原始 TDS/DOCX 尚未放入工作区。上传后会保存文件版本、页码/段落、短摘录和确认记录。</p></div></div>
+        <div className="evidence-box"><BookOpen size={20} /><div><strong>引用与版本</strong><p>来源：《三款核心产品：外贸入门学习手册》，2026年10月10日，依据两份 TDS 和一份肥料包膜产品介绍整理。下方可阅读完整章节与来源清单。学习手册不等于新的 TDS 或性能保证；原始附件的上传、解析和审批状态请在私人资料库核对。</p></div></div>
+        <ProductHandbook key={selected.id} productId={selected.id} />
       </article></div></>
 }
 

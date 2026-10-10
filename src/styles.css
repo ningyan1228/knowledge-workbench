@@ -87,3 +87,14 @@ nav { display:grid; gap:4px }.nav-item { color:var(--muted); background:transpar
 .lead-timeline-days button[aria-pressed="true"] { border-color:var(--blue);background:var(--blue-soft) }.lead-timeline-days span,.lead-timeline-days strong { display:block }.lead-timeline-days span { color:var(--muted);font-size:12px }.lead-timeline-days strong { margin-top:6px;font-size:15px }
 .lead-timeline-note { margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.65 }.lead-card-recorded { display:flex;gap:6px;align-items:center;padding:0 .85rem .75rem;color:var(--muted);font-size:11px;line-height:1.5 }.lead-card-recorded svg { flex:0 0 auto }
 @media(max-width:620px) { .lead-timeline-heading { align-items:flex-start;flex-direction:column }.lead-timeline-controls { padding:12px }.lead-timeline-heading label { width:100%;justify-content:space-between } }
+
+/* Core product study handbook. */
+.handbook-section { margin:12px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface) }
+.handbook-section>summary { padding:14px 16px;cursor:pointer;font-weight:650;line-height:1.6;background:var(--surface-soft) }
+.handbook-section>.handbook-section { margin:12px }
+.handbook-text { padding:4px 16px 16px;font-size:14px;line-height:1.85;overflow-wrap:anywhere }
+.handbook-text p { margin:12px 0 }.handbook-text ul,.handbook-text ol { padding-left:23px }.handbook-text li { margin:6px 0 }
+.handbook-text h4 { margin:20px 0 8px;font-size:15px }.handbook-text a { color:var(--blue) }
+.handbook-text blockquote { margin:12px 0;padding:12px 16px;border-left:3px solid var(--blue);background:var(--surface-soft) }
+.handbook-text code { font-size:12px;overflow-wrap:anywhere }.handbook-text table { min-width:600px }.handbook-text td { vertical-align:top;white-space:normal }
+@media(max-width:620px) { .handbook-text { padding:4px 12px 12px;font-size:13px }.handbook-section>summary { padding:12px } }

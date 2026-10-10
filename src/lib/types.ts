@@ -15,7 +15,7 @@ export interface ProductSummary {
   englishName: string
   grade: string | null
   category: string
-  status: '待上传原文件' | '待确认' | '已确认'
+  status: '待上传原文件' | '待确认' | '已确认' | '学习资料已更新'
   description: string
   applications: string[]
   keywords: string[]
