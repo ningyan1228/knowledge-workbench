@@ -4,7 +4,6 @@
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
   'namhae-chemical-yeosu': "Your 오래가올원 30-8-8 product page describes a controlled-release fertilizer with every granule coated.",
-  'taiwan-fertilizer-taipei': "Your 2025 annual report describes coated-fertilizer sample production and kilogram-scale batch process testing with the Plastics Industry Development Center.",
   'agrotiger-mabalacat': "Your HYFER solid-fertilizer range includes organically coated urea and compound fertilizers, and your website describes sustained nutrient release.",
   'rcf-mumbai': "Your 2024–25 annual report records production of Urea Gold sulphur-coated urea using technology developed by your company.",
   'chobi-ulsan': 'Your official J AGRI 2025 brochure lists coated urea with linear and sigmoid release patterns, and identifies your fertilizer manufacturing plant in Ulsan.',
@@ -35,7 +34,6 @@ export const leadEmailFacts: Record<string, string> = {
   'diversatech-bangi': 'Your AJIB CRF range describes polymer-coated agglomeration technology.',
   'farmhannong-ulsan': 'Your fertilizer range includes coated urea, coated DAP and coated N-K products.',
   'jcam-agri-tokyo': 'Your LP-Coat and M-Coat ranges describe coated urea made with resin and mineral layers.',
-  'jieh-ming-new-taipei': 'Your NonP PVC compound information lists plasticizer among its formulation materials.',
   'vinyl-base-ipoh': 'Your PVC compounding information discusses plasticizer selection for medical extrusion products.',
   'schramm-coatings-offenbach': 'The SCHRAMM water-based primer range lists products for PP/EPDM and ABS surfaces.',
   'periwal-bhiwadi': 'Your PVC compound specifications name plasticizers and stabilizers among the formulation inputs.',

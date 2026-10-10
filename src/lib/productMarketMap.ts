@@ -1,3 +1,5 @@
+import { isTaiwanMarket } from './leadMarketScope.ts'
+
 export type MarketProduct = {
   id: 'fertilizer-coating' | 'nl-w1201' | 'elo'
   name: string
@@ -395,14 +397,6 @@ const rawPublicLeads: RawPublicLead[] = [
     supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方产品、公司业务与技术资料：其公开业务为包膜肥及其他成品肥制造；本轮检索的官方来源未显示其销售肥料包衣原料。' },
     contact: { label: 'JCAM Agri Technical Management Division', email: 'gijutsu@jcam-agri.co.jp', phone: '+81 3-5297-8906', contactUrl: 'https://www.jcam-agri.co.jp/pdf/20231225_news_release.pdf' },
     source: { label: 'JCAM LP-Coat and M-Coat polyolefin-resin coated urea', url: 'https://www.jcam-agri.co.jp/en/product_introduction/lp-coat-m-coat/' }, checkedAt: '2026-09-26',
-  },
-  {
-    id: 'jieh-ming-new-taipei', productId: 'elo', company: 'Jieh-Ming Plastics Mfg. Co., Ltd.', country: 'Taiwan', countryZh: '中国台湾', city: 'New Taipei City', latitude: 24.9909, longitude: 121.4215,
-    legacyCompanyDescription: 'PVC 配方与挤出制品制造商', fit: '可开发候选',
-    signal: '官网显示该公司在新北拥有 PVC compound 生产线与工厂；其 NonP PVC compound 产品页明确说明 PVC 配方材料包括 plasticizer，且公司将该类 compound 用于医疗、软管和挤出制品。PVC 配方属于有独立来源支持的 ELO 增塑剂市场扩展场景，可核验增塑剂/稳定剂原料采购。',
-    supplierCompetitorCheck: { checkedAt: '2026-09-26', conclusion: '已复核官方 PVC compound 与公司生产页：其公开业务为 PVC compound 和下游塑料制品制造；本轮检索的官方来源未显示其生产或销售 ELO、环氧化植物油或同类增塑剂原料。' },
-    contact: { label: 'Jieh-Ming public business contact', email: 'spring@hose.com.tw', phone: '+886 2-2689-5731', contactUrl: 'https://www.hose.com.tw/' },
-    source: { label: 'Jieh-Ming PVC compound and plasticizer-use description', url: 'https://www.hose.com.tw/pvc-compound/' }, checkedAt: '2026-09-26',
   },
   {
     id: 'vinyl-base-ipoh', productId: 'elo', company: 'Vinyl Base Sdn. Bhd.', country: 'Malaysia', countryZh: '马来西亚', city: 'Ipoh, Perak', latitude: 4.6000, longitude: 101.0720,
@@ -1204,39 +1198,11 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-10"
   },
-  {
-    "id": "taiwan-fertilizer-taipei",
-    "company": "Taiwan Fertilizer Co., Ltd.",
-    "country": "Taiwan",
-    "countryZh": "中国台湾",
-    "city": "Taipei",
-    "latitude": 25.033,
-    "longitude": 121.5654,
-    "legacyCompanyDescription": "包覆肥研发试制与控释复合肥配方制造商",
-    "signal": "官网给力肥1号和3号登记为裹覆复合肥料；2024年报明确给力肥1号是复肥混合裹覆尿素，不能据品牌推定尿素包覆颗粒自产。独立读取最新2025年报（2026年5月公开）PDF第69–70页，确认其与塑胶中心合作开发包覆材料、已完成包覆肥小量试制及公斤级批次制程放大和耐候测试，属于实际下游研发试制/配方活动。可从包覆材料评估与制程参数切入技术开发；不把实验试制或规划当作商业包覆产线投产，未确认PU体系或当前采购。已核实公开公司电话与农业技术服务电话，尚未找到合适公开业务邮箱，不能计入每日邮件客户数量。",
-    "contact": {
-      "label": "Official corporate phone; agricultural technical-service phone also published; business email not verified",
-      "phone": "+886 2 2542 2231",
-      "contactUrl": "https://www.taifer.com.tw/ProductDetailC003210.aspx?Cond=bac6cb26-b48b-4721-b313-2b76c5da3b79"
-    },
-    "source": {
-      "label": "Official 2025 annual report, PDF pages 69–70: actual coated-fertilizer pilot formulation and kilogram-scale process tests, not a commissioned commercial coating line",
-      "url": "https://www.taifer.com.tw/StandardTemplates/Handlers/FileHandler.ashx?fid=0684f8ce-a497-436b-8213-d73f9285ecff&no=1&sourceType=0&type=FileUpload"
-    },
-    "productId": "fertilizer-coating",
-    "fit": "可开发候选",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-10",
-      "conclusion": "独立重读官方公司业务、化学产品目录、包覆肥登记及最新年报。兼营一般肥料和工业尿素、美耐明、无机酸及氨；所查对外目录未发现同类PU包衣树脂、包衣原料或成套包衣剂销售。自行研发用于下游肥料试制的包覆材料不等同于对外出售包衣原料，合作研发单位塑胶中心不作为买家。以Taiwan Fertilizer/TFC/台肥/台湾肥料/台灣肥料、taifer.com.tw及总部地点核对最新main和本地名单，无重复；Taipei总部、Miaoli农业技术服务与其他工厂按同一公司账户收录。"
-    },
-    "checkedAt": "2026-10-10"
-  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
-  'taiwan-fertilizer-taipei': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'namhae-chemical-yeosu': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'rcf-mumbai': { targetCompanyTypeId: 'coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'agrotiger-mabalacat': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1302,7 +1268,6 @@ const leadQualifications: Record<string, LeadQualification> = {
   'diversatech-bangi': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'farmhannong-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'jcam-agri-tokyo': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
-  'jieh-ming-new-taipei': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'vinyl-base-ipoh': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
   'schramm-coatings-offenbach': { targetCompanyTypeId: 'primer-adhesion-promoter-formulator', applicationLayer: 'tds-verified', applicationId: 'untreated-pp-primer' },
   'periwal-bhiwadi': { targetCompanyTypeId: 'pvc-compound-manufacturer', applicationLayer: 'market-extended', applicationId: 'elo-pvc-plasticizer' },
@@ -1370,40 +1335,6 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
-  'taiwan-fertilizer-taipei': {
-    "website": "https://www.taifer.com.tw/",
-    "contactPage": "https://www.taifer.com.tw/ServiceMailExplanationC001700.aspx",
-    "generalPhone": "+886 2 2542 2231",
-    "contacts": [],
-    "departmentEmails": [],
-    "address": "Corporate headquarters: 17F., No. 170, Jingmao 1st Rd., Nangang Dist., Taipei City, Taiwan. Agricultural technical-service unit: 210 Fuxing, Fu'an Village, Miaoli City; published phone +886 37 269345 (technical service, not a verified coating R&D or procurement owner). Map represents Taipei headquarters, not a coating plant.",
-    "sources": [
-      {
-        "label": "Official 2025 annual report, PDF pages 69–70: coated-fertilizer sample manufacturing, coating-material tests and kilogram-scale batch process work; disclosed 2026-05-18",
-        "url": "https://www.taifer.com.tw/StandardTemplates/Handlers/FileHandler.ashx?fid=0684f8ce-a497-436b-8213-d73f9285ecff&no=1&sourceType=0&type=FileUpload"
-      },
-      {
-        "label": "Official 2024 annual report, PDF page 67: Geili 1 is compound fertilizer blended with coated urea; own coated granule commercial manufacturing not inferred",
-        "url": "https://www.taifer.com.tw/StandardTemplates/Handlers/FileHandler.ashx?fid=881b3b5b-15c4-415f-b444-d81f8cf0eed1&no=1&sourceType=0&type=FileUpload"
-      },
-      {
-        "label": "Official Geili 3 coated-compound registration and agricultural technical-service phone",
-        "url": "https://www.taifer.com.tw/ProductDetailC003210.aspx?Cond=bac6cb26-b48b-4721-b313-2b76c5da3b79"
-      },
-      {
-        "label": "Official corporate manufacturing activities, headquarters address and phone",
-        "url": "https://www.taifer.com.tw/english/AboutTaiferEN/AboutUs/CompanyProfile.htm"
-      },
-      {
-        "label": "Official chemical products catalogue, peer/similar coating-input scope check",
-        "url": "https://www.taifer.com.tw/english/Products/ChemicalProductEN.htm"
-      },
-      {
-        "label": "Official annual-report index confirms latest 2025 report publication on 2026-05-18",
-        "url": "https://www.taifer.com.tw/FileUploadCategoryListC005230.aspx?CategoryID=9247f698-ab42-47ad-bae4-9e85303eb2ef"
-      }
-    ]
-  },
   'namhae-chemical-yeosu': {
     "website": "https://www.nhchem.co.kr/",
     "contactPage": "https://www.nhchem.co.kr/sub/customer/e_data/view.html?curpage=1&idx=10",
@@ -1712,14 +1643,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     sources: [{
       label: 'JCAM Agri company profile and manufacturing sites',
       url: 'https://www.jcam-agri.co.jp/company/',
-    }],
-  },
-  'jieh-ming-new-taipei': {
-    contacts: [],
-    departmentEmails: [],
-    sources: [{
-      label: 'Jieh-Ming factory and PVC compound production lines',
-      url: 'https://www.hose.com.tw/aboutus/',
     }],
   },
   'vinyl-base-ipoh': {
@@ -2810,7 +2733,6 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
-  'taiwan-fertilizer-taipei',
   'namhae-chemical-yeosu',
   'rcf-mumbai',
   'agrotiger-mabalacat',
@@ -2863,7 +2785,6 @@ const demandSideLeadIds = new Set([
   'diversatech-bangi',
   'farmhannong-ulsan',
   'jcam-agri-tokyo',
-  'jieh-ming-new-taipei',
   'vinyl-base-ipoh',
   'schramm-coatings-offenbach',
   'periwal-bhiwadi',
@@ -2916,7 +2837,7 @@ const demandSideLeadIds = new Set([
   'moravia-istanbul',
 ])
 
-export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id)).map((lead) => {
+export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map((lead) => {
   const qualification = leadQualifications[lead.id]
   if (!qualification) throw new Error(`Missing application qualification for ${lead.id}`)
   const { legacyCompanyDescription: _legacyCompanyDescription, ...record } = lead

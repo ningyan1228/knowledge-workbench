@@ -207,10 +207,6 @@
     "recordedAt": "2026-09-26T11:03:50+08:00",
     "commit": "d91dc83dcb110dabcf72c27f4a482b03d21ca013"
   },
-  "jieh-ming-new-taipei": {
-    "recordedAt": "2026-09-26T11:09:09+08:00",
-    "commit": "9a66fb953a81de9d46116de8e1c8791943bd4560"
-  },
   "jotun-paints-malaysia-shah-alam": {
     "recordedAt": "2026-10-10T09:29:20+08:00",
     "commit": "a7eba902e33c6fa46a32cf5a2ee97847f045473c"
@@ -464,10 +460,6 @@
     "recordedAt": "2026-10-10T14:46:38Z"
   },
   "namhae-chemical-yeosu": {
-    "recordedAt": "2026-10-10T15:29:03Z",
-    "commit": "a075819370d88731c3d41ca1ab979d65e09a4d1b"
-  },
-  "taiwan-fertilizer-taipei": {
     "recordedAt": "2026-10-10T15:29:03Z",
     "commit": "a075819370d88731c3d41ca1ab979d65e09a4d1b"
   }

@@ -83,6 +83,20 @@ describe('private discovery pre-screen', () => {
     expect(screenDiscoveryBatch([{ ...complete, country: 'Hong Kong', companyEvidence: undefined }], refs)[0].status).toBe('needs_evidence')
   })
 
+  it('excludes Taiwan for every product and removes it when rechecking queued research', () => {
+    for (const country of ['Taiwan', '中国台湾', '台灣', 'Taiwan (ROC)', 'Chinese Taipei']) {
+      for (const productId of ['fertilizer-coating', 'nl-w1201', 'elo'] as const) {
+        const result = screenDiscoveryBatch([{ ...complete, country, productId }], refs)[0]
+        expect(result.status).toBe('excluded')
+        expect(result.reasons).toContain('用户业务市场范围排除台湾地区企业')
+      }
+    }
+    const candidate = { ...complete, country: 'Taiwan' }
+    const queue: DiscoveryQueueEntry[] = [{ candidate, status: 'ready_for_review', reasons: [], screenedAt: '2026-10-10T00:00:00Z' }]
+    expect(recheckDiscoveryBatch([candidate], { ...refs, queue }).queue).toEqual([])
+    expect(publicLeads.some((lead) => /taiwan|台[湾灣]|chinese\s+taipei/i.test(lead.country))).toBe(false)
+  })
+
   it('keeps new ELO discovery focused on coating companies, not PVC compounds', () => {
     const result = screenDiscoveryBatch([{
       ...complete, productId: 'elo', application: { layer: 'market-extended', id: 'elo-pvc-plasticizer' },

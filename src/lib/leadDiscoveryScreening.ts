@@ -1,4 +1,5 @@
 import type { MarketExtendedApplication, PublicLead, TargetCompanyType, TdsVerifiedApplication } from './productMarketMap'
+import { isTaiwanMarket } from './leadMarketScope.ts'
 
 // This is an internal research inbox, not Company Candidate, Lead, CRM, or
 // the public map. Screening can never set commercial_role or lead_eligible.
@@ -169,6 +170,9 @@ export function screenDiscoveryBatch(candidates: DiscoveryInput[], refs: Screeni
     }
     if (isMainlandChina(candidate.country)) {
       return { candidate, status: 'excluded', reasons: ['中国大陆企业不进入海外客户研究队列'] }
+    }
+    if (isTaiwanMarket(candidate.country)) {
+      return { candidate, status: 'excluded', reasons: ['用户业务市场范围排除台湾地区企业'] }
     }
     if (candidate.productId === 'elo' && candidate.application && !['coatings', 'elo-anticorrosion-coating-research'].includes(candidate.application.id)) {
       return { candidate, status: 'excluded', reasons: ['按当前开发方向，新的 ELO 研究只聚焦重防腐涂料制造/配方企业'] }
