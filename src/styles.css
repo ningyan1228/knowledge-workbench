@@ -78,3 +78,12 @@ nav { display:grid; gap:4px }.nav-item { color:var(--muted); background:transpar
 .lead-geography-filters select { width:100%;min-height:42px;padding:8px 32px 8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font:inherit }
 .lead-geography-filters select:focus-visible { outline:2px solid var(--blue);outline-offset:2px }
 @media(max-width:620px) { .lead-geography-filters label { min-width:0;flex:1 1 150px }.market-map-toolbar { align-items:flex-start }.market-map-toolbar>span { line-height:1.65 } }
+
+/* Customer first-recorded timeline and daily counts. */
+.lead-timeline-controls { margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface) }
+.lead-timeline-heading { display:flex;justify-content:space-between;align-items:center;gap:14px }.lead-timeline-heading strong { font-size:15px }.lead-timeline-heading p { margin:5px 0;color:var(--muted);font-size:12px }
+.lead-timeline-heading label { display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px }.lead-timeline-heading select { min-height:38px;padding:7px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text) }
+.lead-timeline-days { display:flex;gap:8px;overflow-x:auto;padding:12px 0 8px }.lead-timeline-days button { flex:0 0 auto;min-width:108px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface-soft);color:var(--text);text-align:left }
+.lead-timeline-days button[aria-pressed="true"] { border-color:var(--blue);background:var(--blue-soft) }.lead-timeline-days span,.lead-timeline-days strong { display:block }.lead-timeline-days span { color:var(--muted);font-size:12px }.lead-timeline-days strong { margin-top:6px;font-size:15px }
+.lead-timeline-note { margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.65 }.lead-card-recorded { display:flex;gap:6px;align-items:center;padding:0 .85rem .75rem;color:var(--muted);font-size:11px;line-height:1.5 }.lead-card-recorded svg { flex:0 0 auto }
+@media(max-width:620px) { .lead-timeline-heading { align-items:flex-start;flex-direction:column }.lead-timeline-controls { padding:12px }.lead-timeline-heading label { width:100%;justify-content:space-between } }

@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           version: 11
@@ -27,6 +29,8 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Record first customer appearances from repository history
+        run: node scripts/update-lead-timeline.mjs
       - name: Require configured site password gate
         env:
           SITE_GATE_SHA256: ${{ secrets.SITE_GATE_SHA256 }}

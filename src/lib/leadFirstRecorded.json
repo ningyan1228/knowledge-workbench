@@ -1,0 +1,442 @@
+{
+  "ac-profil-huttwil": {
+    "recordedAt": "2026-09-26T10:10:39+08:00",
+    "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
+  },
+  "acs-griffith": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "adeka-tokyo": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "adubos-paranaiba-uberlandia": {
+    "recordedAt": "2026-09-28T10:37:24+08:00",
+    "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "agro-berjaya-mojokerto": {
+    "recordedAt": "2026-09-26T10:37:44+08:00",
+    "commit": "44e538886cf858e594c8c8411c431e2192bc85dc"
+  },
+  "agrobiotech-jardinopolis": {
+    "recordedAt": "2026-09-26T11:53:50+08:00",
+    "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
+  },
+  "agrofarm-ponorogo": {
+    "recordedAt": "2026-09-26T10:21:35+08:00",
+    "commit": "084ef79cfcd99663da89d8ffdc9ba3df5e2016ce"
+  },
+  "agroplanta-batatais": {
+    "recordedAt": "2026-10-10T09:29:20+08:00",
+    "commit": "a7eba902e33c6fa46a32cf5a2ee97847f045473c"
+  },
+  "aline-detroit": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "alpha-plast-devland": {
+    "recordedAt": "2026-09-27T17:08:29+08:00",
+    "commit": "55a03ff7e5ce2b5e8435b33d69b8ab7f6971d42a"
+  },
+  "andersons-maumee": {
+    "recordedAt": "2026-09-28T11:59:17+08:00",
+    "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  },
+  "applied-db-samut-prakan": {
+    "recordedAt": "2026-09-26T18:51:07+08:00",
+    "commit": "3b3c8a7d31c67aa37f19f0deab75b4ecc4b67d16"
+  },
+  "aqua-based-us": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "astra-chemtech-mumbai": {
+    "recordedAt": "2026-09-26T12:32:53+08:00",
+    "commit": "bb960fa40ae3b8e15878bf7cdc2f59cb733349d6"
+  },
+  "aurora-material-streetsboro": {
+    "recordedAt": "2026-09-28T11:59:17+08:00",
+    "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  },
+  "cai-georgetown": {
+    "recordedAt": "2026-09-26T18:51:07+08:00",
+    "commit": "3b3c8a7d31c67aa37f19f0deab75b4ecc4b67d16"
+  },
+  "cargill-minneapolis": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "ceccan-san-jose-iturbide": {
+    "recordedAt": "2026-09-27T15:58:40+08:00",
+    "commit": "1cbfd3d8012afa586fa4669f537bc7e00bfec5c3"
+  },
+  "central-chemical-ube": {
+    "recordedAt": "2026-09-27T15:58:40+08:00",
+    "commit": "1cbfd3d8012afa586fa4669f537bc7e00bfec5c3"
+  },
+  "cic-mckinney": {
+    "recordedAt": "2026-09-26T09:29:49+08:00",
+    "commit": "2b47348b9f7025140abb28b41375dd17a599d5e2"
+  },
+  "colorprint-coseano": {
+    "recordedAt": "2026-09-28T20:57:49+08:00",
+    "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
+  },
+  "compo-expert-krefeld": {
+    "recordedAt": "2026-09-25T23:47:22+08:00",
+    "commit": "7190e937f432954ff36c893f4fd95386f49cbf9b"
+  },
+  "cotex-dartmouth": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "crf-agritech-st-thomas": {
+    "recordedAt": "2026-09-25T23:42:52+08:00",
+    "commit": "e5081bd0ff5895b10e337e9c73081de37283b630"
+  },
+  "crf-malaysia-kuala-lumpur": {
+    "recordedAt": "2026-09-26T18:51:07+08:00",
+    "commit": "3b3c8a7d31c67aa37f19f0deab75b4ecc4b67d16"
+  },
+  "dacarto-osasco": {
+    "recordedAt": "2026-09-26T13:05:11+08:00",
+    "commit": "70067bc58dcf4596baa61873e2321be6558287e8"
+  },
+  "deltachem-born": {
+    "recordedAt": "2026-09-26T09:20:24+08:00",
+    "commit": "8b5c561e0eeb1f06cf343345cef3e2e9a2697ec2"
+  },
+  "dgo-defix-phu-nghia": {
+    "recordedAt": "2026-10-08T14:40:34+08:00",
+    "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
+  },
+  "diversatech-bangi": {
+    "recordedAt": "2026-09-26T10:57:43+08:00",
+    "commit": "6f21de34563663ab892b247b0a1aa5a8c053d190"
+  },
+  "dolphin-inks-thane": {
+    "recordedAt": "2026-10-08T14:40:34+08:00",
+    "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
+  },
+  "doneck-euroflex-grevenmacher": {
+    "recordedAt": "2026-09-28T11:59:17+08:00",
+    "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  },
+  "dupan-anugerah-lestari-pungging": {
+    "recordedAt": "2026-10-08T14:40:34+08:00",
+    "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
+  },
+  "duramax-cascavel": {
+    "recordedAt": "2026-09-29T10:18:27+08:00",
+    "commit": "0d36ce0020d07fe06c46646469c7fbf2a7ee65c7"
+  },
+  "ec-grow-eau-claire": {
+    "recordedAt": "2026-09-29T21:33:21+08:00",
+    "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
+  },
+  "farmhannong-ulsan": {
+    "recordedAt": "2026-09-26T11:00:32+08:00",
+    "commit": "d1b34431304204579daee2470f722d965107b764"
+  },
+  "flint-group-malmo": {
+    "recordedAt": "2026-09-26T17:07:07+08:00",
+    "commit": "1a737ea468a49478253ddf7f553aef3efc364e27"
+  },
+  "florikan-bowling-green": {
+    "recordedAt": "2026-09-26T09:09:47+08:00",
+    "commit": "7674336facbd2486dfb8e08e07fda7f30c4a570b"
+  },
+  "follmann-minden": {
+    "recordedAt": "2026-09-28T10:37:24+08:00",
+    "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "fortgreen-varginha": {
+    "recordedAt": "2026-09-27T22:11:31+08:00",
+    "commit": "fb38c652daeee6ad2f381203681e42b02f48aebd"
+  },
+  "gefink-burzaco": {
+    "recordedAt": "2026-09-28T20:57:49+08:00",
+    "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
+  },
+  "genus-brunswick": {
+    "recordedAt": "2026-09-26T09:12:11+08:00",
+    "commit": "2b4752598cee116204b10231e7031425f129e7be"
+  },
+  "greenbest-henstridge": {
+    "recordedAt": "2026-09-27T20:24:50+08:00",
+    "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
+  },
+  "grupo-equilibrio-catalao": {
+    "recordedAt": "2026-09-27T22:11:31+08:00",
+    "commit": "fb38c652daeee6ad2f381203681e42b02f48aebd"
+  },
+  "haifa-israel": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "hanampi-sejahtera-kahuripan-gresik": {
+    "recordedAt": "2026-10-08T14:40:34+08:00",
+    "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
+  },
+  "harrells-sylacauga": {
+    "recordedAt": "2026-09-27T20:53:01+08:00",
+    "commit": "fc887df5d1401a80b8a531c61669f11db12277f5"
+  },
+  "ichemco-cuggiono": {
+    "recordedAt": "2026-09-26T09:57:46+08:00",
+    "commit": "148c79bdf9d108684ad4e9203fee8e740ac455c9"
+  },
+  "icl-charleston": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "inbra-orangeburg": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "indigrow-brimpton": {
+    "recordedAt": "2026-09-28T10:37:24+08:00",
+    "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "inx-schaumburg": {
+    "recordedAt": "2026-09-26T17:34:36+08:00",
+    "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
+  },
+  "jcam-agri-tokyo": {
+    "recordedAt": "2026-09-26T11:03:50+08:00",
+    "commit": "d91dc83dcb110dabcf72c27f4a482b03d21ca013"
+  },
+  "jieh-ming-new-taipei": {
+    "recordedAt": "2026-09-26T11:09:09+08:00",
+    "commit": "9a66fb953a81de9d46116de8e1c8791943bd4560"
+  },
+  "jotun-paints-malaysia-shah-alam": {
+    "recordedAt": "2026-10-10T09:29:20+08:00",
+    "commit": "a7eba902e33c6fa46a32cf5a2ee97847f045473c"
+  },
+  "jowat-detmold": {
+    "recordedAt": "2026-09-28T11:21:53+08:00",
+    "commit": "7d2a597e42ac4031363416a89dfb554746710dec"
+  },
+  "katakura-coop-akita": {
+    "recordedAt": "2026-09-28T20:57:49+08:00",
+    "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
+  },
+  "knox-fertilizer-knox": {
+    "recordedAt": "2026-09-28T11:59:17+08:00",
+    "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  },
+  "lebanon-seaboard-lebanon": {
+    "recordedAt": "2026-09-28T10:37:24+08:00",
+    "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "manner-polymers-mckinney": {
+    "recordedAt": "2026-09-28T20:57:49+08:00",
+    "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
+  },
+  "mapei-india-bengaluru": {
+    "recordedAt": "2026-09-28T10:37:24+08:00",
+    "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "marincoat-calvignasco": {
+    "recordedAt": "2026-09-29T15:16:40+08:00",
+    "commit": "ad9575f2d922e8455fff976108a6a5d3ba17fb7e"
+  },
+  "mc-ferticom-tokyo": {
+    "recordedAt": "2026-10-10T09:29:20+08:00",
+    "commit": "a7eba902e33c6fa46a32cf5a2ee97847f045473c"
+  },
+  "mica-shelton": {
+    "recordedAt": "2026-09-26T10:10:39+08:00",
+    "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
+  },
+  "mivena-maastricht": {
+    "recordedAt": "2026-09-27T18:10:39+08:00",
+    "commit": "d14f2e4fbb6ddba0ef1bae1e3623c9ea0c04a470"
+  },
+  "nam-ah-ipoh": {
+    "recordedAt": "2026-09-26T12:36:23+08:00",
+    "commit": "e58dc2d6b74eeb870fbb4a6001eda083bccc3d25"
+  },
+  "nippon-paper-japan": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "nousbo-ulsan": {
+    "recordedAt": "2026-09-29T21:33:21+08:00",
+    "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
+  },
+  "nutrien-carseland": {
+    "recordedAt": "2026-09-26T09:57:46+08:00",
+    "commit": "148c79bdf9d108684ad4e9203fee8e740ac455c9"
+  },
+  "omega-polimeros-trujui": {
+    "recordedAt": "2026-09-26T11:53:50+08:00",
+    "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
+  },
+  "palini-vernici-pisogne": {
+    "recordedAt": "2026-09-27T20:24:50+08:00",
+    "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
+  },
+  "paramelt-netherlands": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "periwal-bhiwadi": {
+    "recordedAt": "2026-09-26T11:18:42+08:00",
+    "commit": "eaed0cd026538d9e3b31040c20c5f1e31c8a2d11"
+  },
+  "plantacote-herentals": {
+    "recordedAt": "2026-09-28T11:21:53+08:00",
+    "commit": "7d2a597e42ac4031363416a89dfb554746710dec"
+  },
+  "plastchem-hardenberg": {
+    "recordedAt": "2026-09-26T09:16:56+08:00",
+    "commit": "31d371a34935291d2c238aa40500aa3ea7823f19"
+  },
+  "pol-coatings-twello": {
+    "recordedAt": "2026-09-26T09:16:56+08:00",
+    "commit": "31d371a34935291d2c238aa40500aa3ea7823f19"
+  },
+  "polar-canada": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "polyblu-blumenau": {
+    "recordedAt": "2026-09-26T11:46:58+08:00",
+    "commit": "9ae8e471ca6678a1794cb3e2203cab0af3e3b630"
+  },
+  "polyflex-baltic": {
+    "recordedAt": "2026-09-26T09:29:49+08:00",
+    "commit": "2b47348b9f7025140abb28b41375dd17a599d5e2"
+  },
+  "polymer-chemie-bad-sobernheim": {
+    "recordedAt": "2026-09-26T09:57:46+08:00",
+    "commit": "148c79bdf9d108684ad4e9203fee8e740ac455c9"
+  },
+  "pungnong-seoul": {
+    "recordedAt": "2026-09-29T21:33:21+08:00",
+    "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
+  },
+  "pursell-sylacauga": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "pvc-colouring-ahmedabad": {
+    "recordedAt": "2026-09-26T17:34:36+08:00",
+    "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
+  },
+  "rstone-jiaxing": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "rynan-smart-fertilizers-long-duc": {
+    "recordedAt": "2026-09-29T16:34:18+08:00",
+    "commit": "38593d17f93a1ad6874353f0b67dee9a45714981"
+  },
+  "sankhla-industries-bengaluru": {
+    "recordedAt": "2026-09-27T20:24:50+08:00",
+    "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
+  },
+  "schramm-coatings-offenbach": {
+    "recordedAt": "2026-09-26T11:14:09+08:00",
+    "commit": "52443d11f43cad7a2512d5f49ed70cbd7c24530a"
+  },
+  "shakun-vadodara": {
+    "recordedAt": "2026-09-26T17:34:36+08:00",
+    "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
+  },
+  "siegwerk-siegburg": {
+    "recordedAt": "2026-09-28T11:21:53+08:00",
+    "commit": "7d2a597e42ac4031363416a89dfb554746710dec"
+  },
+  "simofert-beuningen": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "simplot-boise": {
+    "recordedAt": "2026-09-26T10:10:39+08:00",
+    "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
+  },
+  "sk-specialties-sibu": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "smart-fert-klang": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "son-mien-bac-hung-yen": {
+    "recordedAt": "2026-10-08T14:40:34+08:00",
+    "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
+  },
+  "stir-barletta": {
+    "recordedAt": "2026-09-26T09:20:24+08:00",
+    "commit": "8b5c561e0eeb1f06cf343345cef3e2e9a2697ec2"
+  },
+  "sumika-agro-niihama": {
+    "recordedAt": "2026-09-29T21:33:21+08:00",
+    "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
+  },
+  "sun-agro-tokyo": {
+    "recordedAt": "2026-09-28T20:57:49+08:00",
+    "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
+  },
+  "sun-chemical-parsippany": {
+    "recordedAt": "2026-09-26T18:51:07+08:00",
+    "commit": "3b3c8a7d31c67aa37f19f0deab75b4ecc4b67d16"
+  },
+  "supernovae-funza": {
+    "recordedAt": "2026-09-26T11:53:50+08:00",
+    "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
+  },
+  "tintas-prisma-tlalnepantla": {
+    "recordedAt": "2026-09-27T17:08:29+08:00",
+    "commit": "55a03ff7e5ce2b5e8435b33d69b8ab7f6971d42a"
+  },
+  "tize-zhaoqing": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "toa-paint-products-nilai": {
+    "recordedAt": "2026-10-08T19:50:33+08:00",
+    "commit": "807cc2cae8d28bd225c21cebf8433de0eb7c8e29"
+  },
+  "traditem-hilden": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "tramaco-tornesch": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "turf-care-martins-ferry": {
+    "recordedAt": "2026-09-26T11:18:42+08:00",
+    "commit": "eaed0cd026538d9e3b31040c20c5f1e31c8a2d11"
+  },
+  "twin-arrow-shah-alam": {
+    "recordedAt": "2026-09-26T10:26:58+08:00",
+    "commit": "fd3001c65c661b96ea9cee049ebe504ffdf606a7"
+  },
+  "unitika-tokyo": {
+    "recordedAt": "2026-09-25T17:18:17+08:00",
+    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  },
+  "vernital-cercola": {
+    "recordedAt": "2026-09-29T10:18:27+08:00",
+    "commit": "0d36ce0020d07fe06c46646469c7fbf2a7ee65c7"
+  },
+  "vinyl-base-ipoh": {
+    "recordedAt": "2026-09-26T11:11:56+08:00",
+    "commit": "d39a557dfb0f2bac4e6401a93150875ab0d453f9"
+  },
+  "vivacor-diadema": {
+    "recordedAt": "2026-09-26T11:53:50+08:00",
+    "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
+  },
+  "wikoff-fort-mill": {
+    "recordedAt": "2026-09-28T11:59:17+08:00",
+    "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  }
+}
