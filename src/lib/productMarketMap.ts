@@ -1093,11 +1093,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     checkedAt: "2026-10-10"
   },
+  {
+    "id": "chobi-ulsan",
+    "productId": "fertilizer-coating",
+    "company": "Chobi Co., Ltd. (DongO Group)",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Ulsan",
+    "latitude": 35.5384,
+    "longitude": 129.3114,
+    "legacyCompanyDescription": "包膜尿素与控释肥生产商",
+    "fit": "可开发候选",
+    "signal": "J AGRI 2025 公司展会资料明确列出自产包膜尿素及线性/延迟释放系列，官网确认乌山肥料工厂和缓释肥研发生产；韩国肥料协会 2023 年资料进一步记载其包膜肥生产设施。作为成品控释肥制造商，具有包衣原料技术评估逻辑。属于 DongO Group（与 Kyung Nong 关联），按一个公司账户收录；未确认其采购我方产品、当前采购意向或与我方原料的适配性。公开工厂电话已核实，采购/技术邮箱待补，不计入可发开发信名单。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-10",
+      "conclusion": "独立重读官网公司介绍、当前产品展示和官方展会资料：公开业务为成品肥、土壤改良与农业产品，所查资料未显示对外销售同类包衣树脂、PU 包衣原料或包衣剂。协会资料描述引入外部树脂用于包膜生产，支持下游角色；未将该历史资料视为当前采购意向。与最新 main 的公司名、域名及集团别名核对，无重复公开公司；未另收录 Kyung Nong/DongO 为新增客户。"
+    },
+    "contact": {
+      "label": "KFIA published Ulsan factory business phone; procurement/technical email pending",
+      "phone": "+82 52 270 7910",
+      "contactUrl": "https://fert-kfia.or.kr/new/05_member/member01_view04.asp"
+    },
+    "source": {
+      "label": "CHOBI official J AGRI 2025 coated-urea product and manufacturing brochure",
+      "url": "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-6e034eed-44b2-41dd-9aaa-707d926e1e67/e3e0fe7f-7a79-4d7b-b205-cfcbd7342211.pdf"
+    },
+    "checkedAt": "2026-10-10"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'chobi-ulsan': { targetCompanyTypeId: 'polymer-coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'greenfeed-agro-shah-alam': { targetCompanyTypeId: 'controlled-release-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'controlled-release-fertilizer' },
   'saraswanti-anugerah-indonesia-mempawah': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'adubos-paranaiba-uberlandia': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1227,6 +1255,36 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  'chobi-ulsan': {
+    "website": "https://www.chobi.co.kr/",
+    "contactPage": "https://fert-kfia.or.kr/new/05_member/member01_view04.asp",
+    "generalPhone": "+82 52 270 7910",
+    "contacts": [],
+    "departmentEmails": [],
+    "address": "Head office: 13th Floor, DongO Building, 28 Hyoryeong-ro 77-gil, Seocho-gu, Seoul 06627, South Korea; fertilizer manufacturing plant: Ulsan, South Korea",
+    "sources": [
+      {
+        "label": "CHOBI official company and Ulsan fertilizer manufacturing information",
+        "url": "https://www.chobi.co.kr/chobi/company/companyinfo/"
+      },
+      {
+        "label": "CHOBI official 2025 exhibitor brochure: coated urea and release patterns",
+        "url": "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-6e034eed-44b2-41dd-9aaa-707d926e1e67/e3e0fe7f-7a79-4d7b-b205-cfcbd7342211.pdf"
+      },
+      {
+        "label": "KFIA company profile and public head-office/factory contact details",
+        "url": "https://fert-kfia.or.kr/new/05_member/member01_view04.asp"
+      },
+      {
+        "label": "KFIA May 2023: coated-fertilizer factory and downstream coating technology (historical evidence)",
+        "url": "https://fert-kfia.or.kr/bbs/ftp/2305.pdf"
+      },
+      {
+        "label": "CHOBI official current product range; supplier/competitor scope review",
+        "url": "https://www.chobi.co.kr/"
+      }
+    ]
+  },
   'greenfeed-agro-shah-alam': {
     website: "https://www.greenfeed.com.my/",
     contactPage: "https://www.greenfeed.com.my/contact/",
@@ -2490,6 +2548,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'chobi-ulsan',
   'greenfeed-agro-shah-alam',
   'saraswanti-anugerah-indonesia-mempawah',
   'adubos-paranaiba-uberlandia',
