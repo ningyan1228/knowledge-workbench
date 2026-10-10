@@ -1198,11 +1198,67 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-10"
   },
+  {
+    "id": "hankook-hyeophwa-pohang",
+    "company": "Hankook Hyeophwa Co., Ltd.",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Pohang",
+    "latitude": 36.019,
+    "longitude": 129.3435,
+    "legacyCompanyDescription": "包覆复合肥制造与配方企业",
+    "signal": "现有官网 땅심올코팅（30-6-9）产品明确为氮、磷、钾100%全包覆肥；官网企业信息和业务页确认其为肥料制造企业，拥有复合肥及BB肥工厂和配料、混合、反应、造粒、包装工序。属于包覆复合肥下游制造/配方方向。尚不能据成品目录确认所有包覆颗粒自产、独立包衣线位置或PU路线，未证明使用我方产品或当前采购需求。已核实总部及Pohang工厂公开业务电话，业务邮箱未核实，不计入每日邮件客户数量。",
+    "contact": {
+      "label": "Official corporate and factory business phones; no verified business email",
+      "phone": "+82 54 272 5072",
+      "contactUrl": "https://fert-kfia.or.kr/new/05_member/member01_view08.asp"
+    },
+    "source": {
+      "label": "Official current 땅심올코팅 30-6-9 product: N, P and K fully coated; public product detail independently reread via own website API",
+      "url": "https://api.khhc.co.kr/products/info/246"
+    },
+    "productId": "fertilizer-coating",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读官网全包覆NPK产品原始详情、公司制造业务和现有肥料目录，及KFIA公司/工厂资料。对外目录为土壤改良剂、有机肥、底肥、追肥、缓释肥及出口肥料，未发现销售同类PU包衣树脂、成套包衣剂或包衣原料的公开证据；同名Hyeophwa Chemical不因名称近似替代本公司的制造证据。以Hankook Hyeophwa/Hyeop Hwa/한국협화/khhc.co.kr及Pohang地址核对最新main与本地公司账户，无重复；Seoul总部与Pohang工厂按同一法人账户收录，不拆分为两个客户。"
+    },
+    "checkedAt": "2026-10-11"
+  },
+  {
+    "id": "kg-chemical-ulsan",
+    "company": "KG Chemical Corporation",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Ulsan",
+    "latitude": 35.5384,
+    "longitude": 129.3114,
+    "legacyCompanyDescription": "全包覆微生物缓释肥制造与研发企业",
+    "signal": "公司2025年报（2026年3月披露）的肥料研发成果列出 미생물올코팅 全包覆微生物肥上市；报告和KFIA资料确认KG Chemical自身制造复合肥及功能性肥料。KFIA 2023年3月原始会刊进一步说明该成品的缓释养分溶出设计和微生物包覆，以及当时研发团队负责人。可作为包覆肥下游配方/制造方向评估；资料未证明其包覆体系为PU、所有被覆颗粒自产、使用我方产品或当前采购计划。只有经协会及公司披露核实的业务电话，尚无可靠业务邮箱，不能计入每日邮件客户数量。",
+    "contact": {
+      "label": "KFIA published KG Chemical corporate/factory business phone; no verified business email",
+      "phone": "+82 52 231 1700",
+      "contactUrl": "https://fert-kfia.or.kr/new/05_member/member01_view06.asp"
+    },
+    "source": {
+      "label": "KG Chemical 2025 official annual report disclosed March 2026: own fertilizer manufacture and R&D launch of 미생물올코팅 coated microbial fertilizer",
+      "url": "https://kind.krx.co.kr/external/2026/03/23/002346/20260323009924/11011.htm"
+    },
+    "productId": "fertilizer-coating",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读最新官方年报的肥料、建筑材料、环境化学品研发及产品范围，及KFIA制造企业资料。该法人同时生产PNS/PCE混凝土外加剂、分散剂和水处理剂，此类化学品不能据通用polymer字样认定为肥料PU包衣树脂；所查目录未发现对外出售同类肥料包衣原料或成套包衣剂的证据。按KG集团旗下KG Chemical自身法人/肥料业务账户收录，不把集团钢铁、能源、汽车或旗下品牌拆为新增。以KG Chemical/KG케미칼/Gyeonggi Chemical/경기화학/kgchem.co.kr及Ulsan地址核对最新main和本地账户，无重复。KGfarmmall由Songhyun Chemical零售商经营，其邮箱不归入KG Chemical；ChemicalBook目录邮箱未获官方来源佐证，WHOIS和财务披露邮箱不作开发入口。"
+    },
+    "checkedAt": "2026-10-11"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  'kg-chemical-ulsan': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
+  'hankook-hyeophwa-pohang': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'namhae-chemical-yeosu': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'rcf-mumbai': { targetCompanyTypeId: 'coated-urea-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-urea' },
   'agrotiger-mabalacat': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1335,6 +1391,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  'kg-chemical-ulsan': {
+    "website": "https://www.kgchem.co.kr/",
+    "contactPage": "https://fert-kfia.or.kr/new/05_member/member01_view06.asp",
+    "generalPhone": "+82 52 231 1700",
+    "contacts": [],
+    "departmentEmails": [],
+    "address": "322 Dangwol-ro, Onsan-eup, Ulju-gun, Ulsan, South Korea. Corporate/factory phone +82 52 231 1700 from KFIA; own website could not be securely retrieved in this round, so company-filed KRX materials and original association records used. Map represents Ulsan city, not an exact coating line.",
+    "sources": [
+      {
+        "label": "Official 2025 annual report disclosed in March 2026, own fertilizer production, coated microbial fertilizer R&D and chemical-product scope",
+        "url": "https://kind.krx.co.kr/external/2026/03/23/002346/20260323009924/11011.htm"
+      },
+      {
+        "label": "KFIA original March 2023 magazine, pages 4–5, KG coated slow-release product and then-published R&D team; historic roles not asserted as current contacts",
+        "url": "https://fert-kfia.or.kr/bbs/ftp/2303.pdf"
+      },
+      {
+        "label": "KFIA corporate identity, manufacturing scope, Ulsan address and business phone",
+        "url": "https://fert-kfia.or.kr/new/05_member/member01_view06.asp"
+      },
+      {
+        "label": "Official November 2025 company quarterly disclosure independently cross-checking coated microbial fertilizer launch and chemical business",
+        "url": "https://kind.krx.co.kr/external/2025/11/14/003298/20251114007634/11013.htm"
+      }
+    ]
+  },
+  'hankook-hyeophwa-pohang': {
+    "website": "https://www.khhc.co.kr/",
+    "contactPage": "https://www.khhc.co.kr/support",
+    "generalPhone": "+82 2 737 2751",
+    "contacts": [],
+    "departmentEmails": [],
+    "address": "Pohang factory: 63 Daesong-ro 253beon-gil, Nam-gu, Pohang-si, Gyeongsangbuk-do, South Korea. Headquarters: 6F Doryeom Building, 37 Saemunan-ro 5-gil, Jongno-gu, Seoul. Factory phone +82 54 272 5072 from KFIA directory; headquarters phone +82 2 737 2751 independently matches current own website footer. Map represents Pohang city, not an exact coating line.",
+    "sources": [
+      {
+        "label": "Official product detail, 땅심올코팅 30-6-9, N/P/K fully coated; actual manufacturing of each coated component and coating chemistry unconfirmed",
+        "url": "https://api.khhc.co.kr/products/info/246"
+      },
+      {
+        "label": "Official product page for independently reread public API item 246",
+        "url": "https://www.khhc.co.kr/product/246"
+      },
+      {
+        "label": "Official fertilizer factory manufacturing and formulation processes",
+        "url": "https://www.khhc.co.kr/business"
+      },
+      {
+        "label": "Official company identity, own fertilizer manufacture, factory address and corporate phone",
+        "url": "https://www.khhc.co.kr/information"
+      },
+      {
+        "label": "Official public product catalogue; same-input supplier exclusion check",
+        "url": "https://api.khhc.co.kr/products/list?language=kor"
+      },
+      {
+        "label": "KFIA manufacturer member directory and headquarters/factory business phones",
+        "url": "https://fert-kfia.or.kr/new/05_member/member01_view08.asp"
+      }
+    ]
+  },
   'namhae-chemical-yeosu': {
     "website": "https://www.nhchem.co.kr/",
     "contactPage": "https://www.nhchem.co.kr/sub/customer/e_data/view.html?curpage=1&idx=10",
@@ -2733,6 +2849,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  'kg-chemical-ulsan',
+  'hankook-hyeophwa-pohang',
   'namhae-chemical-yeosu',
   'rcf-mumbai',
   'agrotiger-mabalacat',

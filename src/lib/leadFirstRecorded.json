@@ -462,5 +462,13 @@
   "namhae-chemical-yeosu": {
     "recordedAt": "2026-10-10T15:29:03Z",
     "commit": "a075819370d88731c3d41ca1ab979d65e09a4d1b"
+  },
+  "hankook-hyeophwa-pohang": {
+    "recordedAt": "2026-10-10T16:08:01.091Z",
+    "commit": ""
+  },
+  "kg-chemical-ulsan": {
+    "recordedAt": "2026-10-10T16:08:01.092Z",
+    "commit": ""
   }
 }
