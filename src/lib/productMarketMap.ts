@@ -2326,7 +2326,7 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
     generalEmail: 'comercial@agroplanta.com.br',
     generalPhone: '+55 16 3660-6500',
     contacts: [],
-    departmentEmails: [{ department: 'Commercial', email: 'comercial@agroplanta.com.br', source: { label: 'Agroplanta official contact page', url: 'https://agroplanta.com.br/contato/' } }],
+    departmentEmails: [{ department: 'Sales', email: 'comercial@agroplanta.com.br', source: { label: 'Agroplanta official contact page', url: 'https://agroplanta.com.br/contato/' } }],
     address: 'Rodovia Cândido Portinari SP 334, km 349.5, Batatais, São Paulo, Brazil',
     sources: [
       { label: 'Agroplanta Greencote polymer-coated controlled-release fertilizer', url: 'https://agroplanta.com.br/produtos/greencote/' },
