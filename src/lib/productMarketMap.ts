@@ -4405,6 +4405,89 @@ const demandSideLeadIds = new Set([
 ])
 
 // Separately verified Indian protective-coating manufacturers, not confirmed buyers.
+const independentlyVerifiedKossanLeads: PublicLead[] = [
+  {
+    "id": "kossan-paint-kapar",
+    "productId": "elo",
+    "company": "Kossan Paint (M) Sdn Bhd",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Kapar, Selangor",
+    "latitude": 3.1387,
+    "longitude": 101.3718,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "fit": "可开发候选",
+    "signal": "官网独立复核确认 Kossan Paint（281816-H）在 Klang/Kapar 自有工厂及综合研发部门制造工业防护和船舶涂料；成品目录包括富锌底漆、MIO 防护体系、储罐用环氧涂料及聚氨酯面漆。该法人是 Transocean Coatings Association 会员；出口地区、营销名称和协会共享品牌不拆分为新客户。坐标仅代表 Kapar 城市，并非精确工厂位置。",
+    "demandSideReason": "ELO TDS 明确涂料应用；该企业自产工业防护/防腐及船舶成品涂料，是潜在下游配方评估对象。公开证据不证明其采购、使用或需要 ELO/我方牌号，也不证明其环氧或聚氨酯配方与 ELO 的相容性或防腐性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读公司自有制造说明、工业防护与船舶完整目录及协会会员原文；已查看的对外业务为成品涂料、胶黏和防护体系，未见 ELO、ESBO、环氧化植物油或同类增塑/稳定输入原料外售。普通 epoxy resin/glue 类别不等同于环氧化植物油。结论限所查法人及来源，不声称全面覆盖其他同名控股集团。以 Kossan Paint、281816-H、kossanpaint.com / .com.my 及协会关联核对最新 main、本地正式数据和私有队列，无重复；仅一个法人账户。来源：https://www.kossanpaint.com/about-us；https://www.kossanpaint.com/products/industrial-coating-paint；https://www.kossanpaint.com/products/marine-coating-paint；https://transocean-coatings.com/"
+    },
+    "contact": {
+      "label": "Association-published corporate sales inbox and current official business phone; no named purchasing contact",
+      "email": "sales@kossanpaint.com.my",
+      "phone": "+60 3 3392 2799",
+      "contactUrl": "https://www.kossanpaint.com/contact-us"
+    },
+    "source": {
+      "label": "Official own industrial protective coating catalogue",
+      "url": "https://www.kossanpaint.com/products/industrial-coating-paint"
+    },
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "公司官网明确自有制造工厂与研发部门；工业防护目录包含富锌、MIO、储罐用环氧和聚氨酯成品体系，船舶目录另列防腐底漆、罐衬及防污涂料。协会原文确认 Kossan 法人会员与公开业务邮箱。",
+      "sourceName": "Kossan Paint original manufacturing, protective/marine product and association sources",
+      "sourceUrl": "https://www.kossanpaint.com/products/industrial-coating-paint",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://www.kossanpaint.com/",
+      "contactPage": "https://www.kossanpaint.com/contact-us",
+      "generalEmail": "sales@kossanpaint.com.my",
+      "generalPhone": "+60 3 3392 2799",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "sales@kossanpaint.com.my",
+          "source": {
+            "label": "Transocean official Malaysia member corporate business email",
+            "url": "https://transocean-coatings.com/"
+          }
+        }
+      ],
+      "address": "No. 1, Jalan Koporat 1/KU 9, Taman Perindustrian Meru, 42200 Kapar, Selangor, Malaysia",
+      "sources": [
+        {
+          "label": "Official own industrial protective coating catalogue",
+          "url": "https://www.kossanpaint.com/products/industrial-coating-paint"
+        },
+        {
+          "label": "Own plant, R&D and legal company",
+          "url": "https://www.kossanpaint.com/about-us"
+        },
+        {
+          "label": "Own marine anti-corrosion finished systems",
+          "url": "https://www.kossanpaint.com/products/marine-coating-paint"
+        },
+        {
+          "label": "Current official business telephone and address",
+          "url": "https://www.kossanpaint.com/contact-us"
+        },
+        {
+          "label": "Association membership and public corporate sales email",
+          "url": "https://transocean-coatings.com/"
+        }
+      ]
+    }
+  }
+]
+
+
 const independentlyVerifiedTechnicalFinishesLeads: PublicLead[] = [
   {
     "id": "technical-finishes-germiston",
@@ -4916,4 +4999,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads)
+]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads)
