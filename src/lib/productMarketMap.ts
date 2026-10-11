@@ -1308,11 +1308,69 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
   },
+  {
+    "id": "elchemus-bukit-mertajam",
+    "company": "ELCHEMUS Sdn Bhd",
+    "productId": "nl-w1201",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Bukit Mertajam, Penang",
+    "latitude": 5.363,
+    "longitude": 100.4667,
+    "fit": "可开发候选",
+    "signal": "官网明确 ELCHEMUS Sdn Bhd（1466813-P）自行研发、制造水性涂料；木器系统列水性 SC800 木材封闭底层、TC901i 水性木器面漆及 EPC300/600 填充/封闭/底涂产品。水性木材表面处理是潜在下游评估方向，未证明使用、外购或需要 NL-W1201。创始人曾经营家具企业 Woodalogy，相关企业不拆为新增客户；地图坐标代表 Bukit Mertajam 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次阅读 https://www.elchemus.com/、https://www.elchemus.com/general-7、https://www.elchemus.com/surface-max 及完整导航：所查为木器底层/面漆、Surface Max 水性填充底涂和 Artist Gesso 成品涂料，未发现对外出售水性聚烯烃乳液、CPO/PO 分散液或同类附着力原料的证据；网页 Raw Material 图片是未涂饰木板，不是原料产品销售。按 ELCHEMUS 法人账户收录，Woodalogy 家具关联及各产品品牌不拆为新增。公司名、法人号、域名与最新 main、本地客户及研究队列去重，无重复。"
+    },
+    "contact": {
+      "label": "Official general business inbox; named procurement contact not inferred",
+      "email": "contactus@elchemus.com",
+      "phone": "+60 12-4219-533",
+      "contactUrl": "https://www.elchemus.com/"
+    },
+    "source": {
+      "label": "Official in-house waterborne coating development/manufacturing and company business contact",
+      "url": "https://www.elchemus.com/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
+  },
+  {
+    "id": "duraway-coating-kapar",
+    "company": "Duraway Coating Sdn Bhd",
+    "productId": "nl-w1201",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Kapar, Selangor",
+    "latitude": 3.1387,
+    "longitude": 101.3718,
+    "fit": "可开发候选",
+    "signal": "官网介绍确认 Duraway Coating Sdn Bhd（185844-P）自行研发、制造涂料并有生产工厂；木器产品目录明确水性木材 filler/putty、室内外家具用水性封闭底层/清漆及水性木地板清涂层。符合水性木材表面处理下游配方评估方向；未证明其采购、使用或需要 NL-W1201。不从 generic plastic 或 metal 产品推断其他 TDS 基材。地图坐标代表 Kapar 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次阅读官网 AboutUs、木器完整系统、ContactUs 及首页生产说明；对外范围是成品木器漆、保护性金属涂料和相关涂装产品，所查未发现水性聚烯烃乳液、CPO/PO 分散液或同类附着力输入原料销售。木器目录中的 PU 指成品清漆类别，不据此把它当作聚氨酯分散液供应商。以 Duraway/固耐威、法人号 185844-P、durawaycoating.com 及 Kapar 地址核对最新 main、本地正式数据和私有队列，无重复。公开 Gmail 是官网标明的业务询问入口，不推断个人姓名或采购职责。"
+    },
+    "contact": {
+      "label": "Official general business inbox; named procurement contact not inferred",
+      "email": "datolowsh7@gmail.com",
+      "phone": "+60 3-33927798",
+      "contactUrl": "https://durawaycoating.com/ContactUs"
+    },
+    "source": {
+      "label": "Official wood coating system including waterborne sealer/lacquer and floor clearcoat",
+      "url": "https://durawaycoating.com/ProductDetail/wood-coating/123ae639-0c94-48a9-a04f-596da22b3c56"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "duraway-coating-kapar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "elchemus-bukit-mertajam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mowilex-indonesia-cikande": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tectona-warna-cirebon": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   'kg-chemical-ulsan': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1449,6 +1507,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "duraway-coating-kapar": {
+    "website": "https://durawaycoating.com/",
+    "contactPage": "https://durawaycoating.com/ContactUs",
+    "generalEmail": "datolowsh7@gmail.com",
+    "generalPhone": "+60 3-33927798",
+    "address": "No. 19, Jalan Korporat 9/KU9, Taman Perindustrian Meru, 42200 Kapar, Selangor, Malaysia",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "datolowsh7@gmail.com",
+        "source": {
+          "label": "Official business contact",
+          "url": "https://durawaycoating.com/ContactUs"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official wood coating system including waterborne sealer/lacquer and floor clearcoat",
+        "url": "https://durawaycoating.com/ProductDetail/wood-coating/123ae639-0c94-48a9-a04f-596da22b3c56"
+      },
+      {
+        "label": "Official own manufacturing plant and coating research",
+        "url": "https://durawaycoating.com/AboutUs"
+      },
+      {
+        "label": "Official business email, phone, address and legal registration",
+        "url": "https://durawaycoating.com/ContactUs"
+      }
+    ]
+  },
+  "elchemus-bukit-mertajam": {
+    "website": "https://www.elchemus.com/",
+    "contactPage": "https://www.elchemus.com/",
+    "generalEmail": "contactus@elchemus.com",
+    "generalPhone": "+60 12-4219-533",
+    "address": "9, Jalan Industri Tangkas 2, Taman Industri Tangkas, 14000 Bukit Mertajam, Penang, Malaysia",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "contactus@elchemus.com",
+        "source": {
+          "label": "Official business contact",
+          "url": "https://www.elchemus.com/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official in-house waterborne coating development/manufacturing and company business contact",
+        "url": "https://www.elchemus.com/"
+      },
+      {
+        "label": "Official SC800 waterborne wood sealer and TC901i wood topcoat",
+        "url": "https://www.elchemus.com/general-7"
+      },
+      {
+        "label": "Official Surface Max waterborne filler/sealer/primer catalog",
+        "url": "https://www.elchemus.com/surface-max"
+      }
+    ]
+  },
   "mowilex-indonesia-cikande": {
     "website": "https://mowilex.com/",
     "contactPage": "https://shop.mowilex.com/en/pages/contact",
@@ -2961,6 +3083,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "duraway-coating-kapar",
+  "elchemus-bukit-mertajam",
   "mowilex-indonesia-cikande",
   "tectona-warna-cirebon",
   'kg-chemical-ulsan',
