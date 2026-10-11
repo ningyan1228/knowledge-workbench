@@ -4405,6 +4405,81 @@ const demandSideLeadIds = new Set([
 ])
 
 // Separately verified Indian protective-coating manufacturers, not confirmed buyers.
+const independentlyVerifiedTechnicalFinishesLeads: PublicLead[] = [
+  {
+    "id": "technical-finishes-germiston",
+    "productId": "elo",
+    "company": "Technical Finishes SA (Pty) Ltd (Saint-Gobain South Africa)",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Germiston, Gauteng",
+    "latitude": -26.2319,
+    "longitude": 28.1734,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "fit": "可开发候选",
+    "signal": "独立重读官网：Technical Finishes 明确自主制造工业防腐体系，覆盖管道耐磨保护、储罐衬里及高耐化学性环氧防护系统，非仅普通装饰地坪或施工服务。母公司官方确认 TFSA 已由 Saint-Gobain Construction Products South Africa 收购；仅收录一个集团关联主体，不拆分品牌或分支。Germiston 坐标为城市代表点，联系地址为公开业务分支，并非宣称精确工厂位置。",
+    "demandSideReason": "ELO TDS 明确涂料应用；该公司自产工业防腐、防护成品体系，是潜在下游配方评估对象。公开证据不证明其采购、使用或需要 ELO/我方牌号，也不证明其环氧或乙烯基酯体系与 ELO 的具体相容性或防腐性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重新读取产品总目录、非地坪工业防腐制造说明、公司及母公司收购公告和 a.b.e. 集团构造化学品介绍。所查公开业务为配制成品地坪、防护、修补体系及复合材料；未发现 ELO、ESBO、环氧化植物油或同类增塑/稳定原料外售。普通环氧复合体系不等于环氧化植物油供应。结论仅限所查来源，不宣称涵盖集团所有业务。Technical Finishes/TFSA 与 Saint-Gobain Construction Products South Africa 关联已注明，Gauteng 等分支不拆分新增；最新 main、本地公开数据及私有队列无另一个正式同集团客户。来源：https://technicalfinishes.com/products/；https://technicalfinishes.com/non-flooring/；https://technicalfinishes.com/joining-forces-and-laying-foundations/；https://www.abe.co.za/about-abe-construction-chemicals/"
+    },
+    "contact": {
+      "label": "Gauteng 官方业务分支电话／联系页；未核验采购负责人",
+      "phone": "+27 11 822 7242",
+      "contactUrl": "https://technicalfinishes.com/gauteng/"
+    },
+    "source": {
+      "label": "Official own industrial anti-corrosion manufacturing",
+      "url": "https://technicalfinishes.com/non-flooring/"
+    },
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "官网明确自产管道用环氧耐磨保护体系、储罐乙烯基酯衬里和耐化学性环氧防腐产品；公司及母公司原始收购公告确认南非 TFSA 制造主体和 Saint-Gobain 集团关联。",
+      "sourceName": "Technical Finishes original industrial protective manufacturing and parent confirmation",
+      "sourceUrl": "https://technicalfinishes.com/non-flooring/",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://technicalfinishes.com/",
+      "contactPage": "https://technicalfinishes.com/gauteng/",
+      "generalPhone": "+27 11 822 7242",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "35 Activia Road, Activia Park, Germiston, South Africa",
+      "sources": [
+        {
+          "label": "Own industrial anti-corrosion manufacture",
+          "url": "https://technicalfinishes.com/non-flooring/"
+        },
+        {
+          "label": "Own complete downstream product categories",
+          "url": "https://technicalfinishes.com/products/"
+        },
+        {
+          "label": "Current official business branch and telephone",
+          "url": "https://technicalfinishes.com/gauteng/"
+        },
+        {
+          "label": "Own TFSA/Saint-Gobain acquisition announcement",
+          "url": "https://technicalfinishes.com/joining-forces-and-laying-foundations/"
+        },
+        {
+          "label": "Parent official completed acquisition confirmation",
+          "url": "https://www.saint-gobain-africa.com/en/saint-gobain-construction-products-south-africa-completes-acquisition-technical-finishes"
+        },
+        {
+          "label": "Related construction-chemical product scope",
+          "url": "https://www.abe.co.za/about-abe-construction-chemicals/"
+        }
+      ]
+    }
+  }
+]
+
 const independentlyVerifiedKanatLeads: PublicLead[] = [
   {
     "id": "kanat-boya-kemalpasa",
@@ -4841,4 +4916,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads)
+]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads)
