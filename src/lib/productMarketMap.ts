@@ -4405,6 +4405,89 @@ const demandSideLeadIds = new Set([
 ])
 
 // Separately verified Indian protective-coating manufacturers, not confirmed buyers.
+const independentlyVerifiedKanatLeads: PublicLead[] = [
+  {
+    "id": "kanat-boya-kemalpasa",
+    "productId": "elo",
+    "company": "Kanat Boyacılık Ticaret ve Sanayi A.Ş. (KANAT BOYA)",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Kemalpaşa, İzmir",
+    "latitude": 38.428,
+    "longitude": 27.417,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "fit": "可开发候选",
+    "signal": "独立重读官网制造、研发和防护涂料目录：KANAT 在 Kemalpaşa 自有工厂研发生产工业防护成品涂料，目录覆盖钢结构、管线、储罐等并列出 KANEPOX 底漆、玻璃鳞片和衬里产品。Therna 为官网明示自有品牌，Osmaniye 工厂及海外经营点均不拆分为新增。地图坐标仅代表 Kemalpaşa 城市，非精确厂址。",
+    "demandSideReason": "ELO TDS 明确涂料应用；该公司自主研发制造工业防护成品体系，属于潜在下游配方评估对象。此理由不证明其采购、使用、需要或兼容 ELO/我方牌号，也不推断现有 KANEPOX 配方含 ELO。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次读取制造说明、防护涂料完整目录、一般工业目录、研发、联系及 Therna 自有品牌来源。所查对外产品为成品防护/工业涂料及家庭器具涂层；未发现 ELO、ESBO、环氧化植物油或同类增塑/稳定输入原料外售。自有树脂研发或 polyester 专利不等于此类原料销售；成品 epoxy 底漆不等于环氧化植物油。按 KANAT BOYA/Kanat Boyacılık、kanatboya.com.tr、Therna/therna.com.tr 和 Kemalpaşa/Osmaniye 关联核对最新 main、本地及研究队列，无既有同一客户。来源：https://kanatboya.com.tr/hakkimizda.html；https://kanatboya.com.tr/koruyucu-boyalar-ve-kaplamar.html；https://therna.com.tr/；https://kanatboya.com.tr/arge.html"
+    },
+    "contact": {
+      "label": "官方通用业务邮箱；未核验采购负责人",
+      "email": "info@kanatboya.com.tr",
+      "phone": "+90 232 878 95 00",
+      "contactUrl": "https://kanatboya.com.tr/iletisim.html"
+    },
+    "source": {
+      "label": "Official own protective-coating manufacture and R&D",
+      "url": "https://kanatboya.com.tr/hakkimizda.html"
+    },
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "公司官网明确自有 Kemalpaşa 工厂、防护涂料制造及研发；防护目录列钢结构、管线、储罐、设备等成品系统，非仅经销或施工服务。",
+      "sourceName": "KANAT original manufacturing, R&D and protective-coating catalogue",
+      "sourceUrl": "https://kanatboya.com.tr/hakkimizda.html",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://kanatboya.com.tr/",
+      "contactPage": "https://kanatboya.com.tr/iletisim.html",
+      "generalEmail": "info@kanatboya.com.tr",
+      "generalPhone": "+90 232 878 95 00",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "General",
+          "email": "info@kanatboya.com.tr",
+          "source": {
+            "label": "Official headquarters business contact",
+            "url": "https://kanatboya.com.tr/iletisim.html"
+          }
+        }
+      ],
+      "address": "Kemalpaşa OSB Mah. 500 Sokak No:321, Kemalpaşa / İzmir, Turkey",
+      "sources": [
+        {
+          "label": "Own factory/manufacturing",
+          "url": "https://kanatboya.com.tr/hakkimizda.html"
+        },
+        {
+          "label": "Protective coating products",
+          "url": "https://kanatboya.com.tr/koruyucu-boyalar-ve-kaplamar.html"
+        },
+        {
+          "label": "R&D",
+          "url": "https://kanatboya.com.tr/arge.html"
+        },
+        {
+          "label": "Business contact",
+          "url": "https://kanatboya.com.tr/iletisim.html"
+        },
+        {
+          "label": "Therna brand relationship",
+          "url": "https://therna.com.tr/"
+        }
+      ]
+    }
+  }
+]
+
+
 const independentlyVerifiedIndiaCoatingLeads: PublicLead[] = [
   {
     "id": "advance-paints-mumbai",
@@ -4758,4 +4841,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-]).concat(independentlyVerifiedIndiaCoatingLeads)
+]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads)

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'kanat-boya-kemalpasa': 'Your company manufactures protective coatings in Kemalpasa for steel structures, pipelines and storage tanks.',
 "advance-paints-mumbai": "Your company documents its own paint plants in Mumbai and Ankleshwar and an Advoguard coating range for severely corrosive and marine environments.",
 "goa-paints-panaji": "Your company describes its own manufacture of high-performance protective paints and a Galaxy epoxy range for heavy-duty, marine and industrial protection.",
 "rainbow-industries-navi-mumbai": "Your company documents its own industrial paint factory in Rabale and develops epoxy primers and coatings for highly corrosive and marine environments.",
