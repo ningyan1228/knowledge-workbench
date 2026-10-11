@@ -1748,11 +1748,69 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
   },
+  {
+    "id": "pinturas-jemah-nuevo-leon",
+    "company": "Pinturas Jemah de México, S.A. de C.V.",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Nuevo León (officially disclosed region)",
+    "latitude": 26.5,
+    "longitude": -100,
+    "fit": "可开发候选",
+    "signal": "独立复读官方 Nosotros、PEMEX/CFE 和其他产品目录：JEMAH 明确自制工业防腐与水性成品涂料、定制开发，型号表列环氧底漆/面漆及聚氨酯等成品涂层。作为 ELO TDS 涂料应用对应的潜在下游配方方，未确认 ELO 采购、使用、需求或相容性。官网明示所在 Nuevo León 北部及业务邮箱/电话；没有把第三方目录街道地址当作官方核验地址，地图仅代表所披露州级区域，非精确工厂定位。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "发现队列后重新独立读取官方公司与全部三类公开目录，并直接读取 PEMEX 1990 型号表：产品是配制成品防腐底漆、面漆、密封/防水涂料；未发现 ELO、ESBO、环氧化植物油或同类增塑/稳定输入原料销售。成品 epoxy/polyurethane 名称不等同同类原料供应。按完整法人名、JEMAH、pinturasjemah.com、公开电话核对最新 main、本地与队列，仅有待审核研究项，无已有正式同一公司；不拆分 PEMEX/CFE 产品系列为新增。具名采购/技术人员未核验，公开 ventas 邮箱标为 Commercial，未伪造成采购邮箱。制造资格不依赖第三方目录；地址只保留官方披露的区域层级。结论限所查公开范围。"
+    },
+    "contact": {
+      "label": "Official public Commercial inbox",
+      "email": "ventas@pinturasjemah.com",
+      "phone": "+52 81 8355 7600",
+      "contactUrl": "https://pinturasjemah.com/contacto.html"
+    },
+    "source": {
+      "label": "Official own anticorrosive and water-based coating manufacture and disclosed location",
+      "url": "https://pinturasjemah.com/nosotros.html"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
+  {
+    "id": "protectometal-ciudad-mexico",
+    "company": "Protectometal, S.A.",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Ciudad de México",
+    "latitude": 19.433,
+    "longitude": -99.133,
+    "fit": "可开发候选",
+    "signal": "独立复读官方首页与公司历史：Protectometal 自行开发定制工业防腐体系、生产60–600 L批次及自有 PROTEC 品牌，所查目录为环氧、聚氨酯及其他工业防护成品涂料；不是仅靠施工服务推断制造。官方 Contact 明示 Planta CDMX 和公开邮箱/电话，街道地址未独立核验，地图为城市代表位置。对应 ELO TDS 涂料应用，可作潜在下游配方评估，未确认 ELO 的采购、使用、需求或相容性。Protectometal 与 PROTEC 是同一账户，不分别计数。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "发现后独立再次读取当前研发/制造原文、公司历史、完整产品分类和目录入口、公开厂区联系页。产品范围含成品工业防腐/防火涂层及 Promotores de Aherencia；这些类别与施工业务被保留，不将含原料相关词的类别直接判成 ELO/ESBO 原料外售。所查范围未发现环氧化植物油、生物增塑剂或同类增塑/稳定输入原料销售。完整分型号目录部分内容未公开展示，结论限实际可查业务和产品分类，不称穷尽核验。按 Protectometal, S.A./PROTEC、主站和产品子域、公开电话核对最新 main、本地及队列，仅有待审核研究项，无既有正式同一账户；不制造品牌或产品子站新增。具名采购/技术联系尚未核验，使用官方一般业务邮箱，不构造个人邮箱或采用旧第三方邮箱。"
+    },
+    "contact": {
+      "label": "Official public general business inbox",
+      "email": "contacto@protectometal.mx",
+      "phone": "+52 55 5368 0347",
+      "contactUrl": "https://protectometal.mx/contacto/"
+    },
+    "source": {
+      "label": "Official own custom anticorrosive coating formulation and manufacturing, 60–600 L batches",
+      "url": "https://protectometal.mx/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "protectometal-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "pinturas-jemah-nuevo-leon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "nervion-tlalnepantla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chugoku-marine-paints-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hempel-lyngby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -1905,6 +1963,90 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "protectometal-ciudad-mexico": {
+    "website": "https://protectometal.mx/",
+    "contactPage": "https://protectometal.mx/contacto/",
+    "generalEmail": "contacto@protectometal.mx",
+    "generalPhone": "+52 55 5368 0347",
+    "address": "Planta CDMX, Ciudad de México, Mexico (official plant contact; street address not published on the reviewed contact page)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "contacto@protectometal.mx",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://protectometal.mx/contacto/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own custom anticorrosive coating formulation and manufacturing, 60–600 L batches",
+        "url": "https://protectometal.mx/"
+      },
+      {
+        "label": "Official legal identity and own PROTEC brand history",
+        "url": "https://protectometal.mx/acerca-de-protectometal/"
+      },
+      {
+        "label": "Official current manufactured product scope, including epoxy finished coatings",
+        "url": "https://productos.protectometal.mx/"
+      },
+      {
+        "label": "Official catalogue category scope, not a complete individual-item list",
+        "url": "https://productos.protectometal.mx/catalogo-productos-protectometal/"
+      },
+      {
+        "label": "Official Planta CDMX public business contact",
+        "url": "https://protectometal.mx/contacto/"
+      }
+    ]
+  },
+  "pinturas-jemah-nuevo-leon": {
+    "website": "https://pinturasjemah.com/",
+    "contactPage": "https://pinturasjemah.com/contacto.html",
+    "generalEmail": "ventas@pinturasjemah.com",
+    "generalPhone": "+52 81 8355 7600",
+    "address": "Northern Nuevo León, Mexico (official company page; precise street address not independently verified)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas@pinturasjemah.com",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://pinturasjemah.com/contacto.html"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own anticorrosive and water-based coating manufacture and disclosed location",
+        "url": "https://pinturasjemah.com/nosotros.html"
+      },
+      {
+        "label": "Official anticorrosive product manufacturing",
+        "url": "https://pinturasjemah.com/pemex.html"
+      },
+      {
+        "label": "Official epoxy primer/topcoat and protective coating product table",
+        "url": "https://pinturasjemah.com/pemex-1990.html"
+      },
+      {
+        "label": "Official CFE finished-coating manufacturing scope",
+        "url": "https://pinturasjemah.com/cfe.html"
+      },
+      {
+        "label": "Official complete other finished-coating catalogue",
+        "url": "https://pinturasjemah.com/otros-productos.html"
+      },
+      {
+        "label": "Official quotation/sales inbox and telephone",
+        "url": "https://pinturasjemah.com/contacto.html"
+      }
+    ]
+  },
   "nervion-tlalnepantla": {
     "website": "https://www.nervion.com.mx/",
     "contactPage": "https://www.nervion.com.mx/contacto",
@@ -4136,6 +4278,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "protectometal-ciudad-mexico",
+  "pinturas-jemah-nuevo-leon",
   "nervion-tlalnepantla",
   "chugoku-marine-paints-tokyo",
   "hempel-lyngby",

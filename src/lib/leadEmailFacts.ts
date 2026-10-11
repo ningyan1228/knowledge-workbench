@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "protectometal-ciudad-mexico": "Your company describes its own development and manufacture of custom anticorrosive coatings, including batches from 60 to 600 litres and its PROTEC product line.",
+  "pinturas-jemah-nuevo-leon": "Your company states that it manufactures anticorrosive and water-based coatings and publishes industrial epoxy primer and topcoat ranges.",
   "nervion-tlalnepantla": "Your company states that it designs and manufactures high-performance coatings and publishes industrial epoxy and marine protective coating ranges.",
   "chugoku-marine-paints-tokyo": "Your company fact sheet states that CMP manufactures marine, industrial and container paints, and your locations page identifies its factories and R&D centres in Japan.",
   "hempel-lyngby": "Your company documents a global coating manufacturing network, R&D centres and finished marine and protective coating systems.",
