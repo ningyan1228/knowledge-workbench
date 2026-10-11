@@ -1474,11 +1474,95 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
   },
+  {
+    "id": "general-finishes-east-troy",
+    "company": "General Finishes",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "East Troy, Wisconsin",
+    "latitude": 42.785,
+    "longitude": -88.405,
+    "fit": "可开发候选",
+    "signal": "官网公司资料介绍 East Troy 自有制造厂及扩建，当前 OEM 页面明确自有实验室定制配方；Enduro Sanding Sealer 产品为水性木器封闭底层。品牌官网 Terms 列运营法人 General Finishes Sales and Service Corp.，历史公司介绍使用 General Finishes Corporation；按同一 General Finishes 品牌账户收录，不据名称差异制造新增。已收购 TransTint 木器染料品牌，亦不单独计数。对应木材水性表面处理的潜在配方评估对象，未确认采购、使用或适配 NL-W1201。坐标代表 East Troy 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立第二次读取公司自有工厂、当前 OEM 定制/实验室说明、Enduro 木器封闭底层、完整产品导航、官网 Terms 及 TransTint 官网收购说明。产品范围为成品木器漆、染色剂、染料浓缩液、延缓剂、加速剂和清洁护理用品；木器染料浓缩液不是 PO/CPO 乳液或附着力聚烯烃输入原料，成品 PU 清漆也不是原料分散液。所查未发现对外供应水性聚烯烃乳液、CPO/PO 分散液或同类附着力输入原料。按 General Finishes 两个历史/运营法人名称、generalfinishes.com、TransTint 品牌及 East Troy 地址核对 main 1a2e4f0、本地正式数据及私有队列，无既有同一账户；OEM 客户/经销商不新增。公开采购邮箱未找到，保留官方工业业务联系入口，不猜测邮箱或使用隐私专用入口。"
+    },
+    "contact": {
+      "label": "Official business contact entry; no public business inbox independently verified",
+      "contactUrl": "https://generalfinishes.com/register/general-finishes-manufacturer-account-registration-form"
+    },
+    "source": {
+      "label": "Official own East Troy factory and coating manufacturing",
+      "url": "https://generalfinishes.com/waterbase-finishes-manufacturer-wisconsin"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料配方与制造企业"
+  },
+  {
+    "id": "target-coatings-fair-lawn",
+    "company": "Target Coatings, Inc.",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Fair Lawn, New Jersey",
+    "latitude": 40.94,
+    "longitude": -74.132,
+    "fit": "可开发候选",
+    "signal": "官网明确 Target Coatings 自行研发制造水性木器涂料，Jeff Weiss 公开说明其 owner / formulating chemist 角色及采购外部树脂开发配方的历史；当前 EMTECH 木器封闭底层/底漆和 EMCAT 木器面漆为自有系统。Fair Lawn 官方地址标为 Sales / Administration / Warehouse，不把它改写成已核验生产厂址。EMTECH 与 EMCAT 品牌归属同一 Target Coatings 法人，只计一家公司。木材水性表面处理可作为潜在配方评估方向；未确认其需要、使用或适配我方牌号。地图为 Fair Lawn 城市代表坐标。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读公司开发/制造说明、木器封闭底层目录、完整导航、联系页、EMCAT EC2A 成品木器面漆及两款全部 finish additives。CL100 官方化学说明为 ester diol blend 交联助剂；SA5 为降低黏度、延缓干燥的施工助剂，不把交联/流平功能泛化为 PO/CPO 或聚烯烃附着力原料。EMCAT 的 acrylic resin topcoat 是可喷涂木器的成品涂料套装，不能按标题当作 raw acrylic resin。公开目录所查未发现水性聚烯烃乳液、CPO/PO 分散液或同类附着力原料对外供应；公司原始叙述另明确外购树脂配方开发。按 Target Coatings Inc.、targetcoatings.com、EMTECH/EMCAT 与 Fair Lawn 地址核对 main、本地及队列，无同一账户；品牌不拆分。未找到公开采购邮箱；使用官网国际业务电话及联系入口，Jeff Weiss 仅保存公开原文角色，不猜测邮箱。"
+    },
+    "contact": {
+      "label": "Official business contact entry; no public business inbox independently verified",
+      "phone": "+1 201 821 0150",
+      "contactUrl": "https://www.targetcoatings.com/contact_us/"
+    },
+    "source": {
+      "label": "Official own waterborne formulation/manufacturing and owner chemist",
+      "url": "https://www.targetcoatings.com/about-target-coatings/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料配方与制造企业"
+  },
+  {
+    "id": "vermont-natural-coatings-hardwick",
+    "company": "Vermont Natural Coatings",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Hardwick, Vermont",
+    "latitude": 44.504,
+    "longitude": -72.367,
+    "fit": "可开发候选",
+    "signal": "当前官网 Böhme 页面明确 Vermont Natural Coatings 通过合作自行制造并在北美分销水性木器成品涂饰系统；About / PolyWhey 技术页面说明自有产品开发，当前 PolyWhey Exterior Penetrating Wood Stain 明确为 water-based 木材染色保护层。因此制造资格使用当前原始网页，不以无法完整下载的历史产品册作核验依据。Böhme 是官网明示合作制造品牌，未断言收购或共同法人，也不将品牌新增。公开通用业务邮箱及 Hardwick 地址已核验；未确认 NL-W1201 采购、使用或配方兼容性。地图为 Hardwick 城市代表坐标。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读当前 About、PolyWhey 技术、PolyWhey 水性木材产品和 Böhme 明确制造合作说明，并核查全部导航：公开产品为木器底层/面层/染色剂、混凝土成品保护涂层及施工/木材清洁用品。Hydro Seal / Hydro-Oil Primer 均列成品木器处理系统，所查未发现水性聚烯烃乳液、CPO/PO 分散液或同类附着力输入原料外售。生物基/whey 技术不构成我方牌号兼容性证据。按 Vermont Natural Coatings、vermontnaturalcoatings.com、Hardwick 地址核对 main、本地及队列，无同一公司；PolyWhey 和 Böhme 合作产品不拆分。未发现公开采购负责人邮箱，使用官网明示通用公司业务邮箱，不推断个人身份。"
+    },
+    "contact": {
+      "label": "Official general business inbox; procurement identity not inferred",
+      "email": "info@vermontnaturalcoatings.com",
+      "phone": "+1 802 472 8700",
+      "contactUrl": "https://vermontnaturalcoatings.com/pages/bohme"
+    },
+    "source": {
+      "label": "Official current own manufacture of partnered waterborne wood finish systems",
+      "url": "https://vermontnaturalcoatings.com/pages/bohme"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料配方与制造企业"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vermont-natural-coatings-hardwick": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "target-coatings-fair-lawn": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "general-finishes-east-troy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chambal-fertilizers-gadepan": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "madras-fertilizers-manali": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "national-fertilizers-nangal": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -1621,6 +1705,120 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vermont-natural-coatings-hardwick": {
+    "website": "https://vermontnaturalcoatings.com/",
+    "contactPage": "https://vermontnaturalcoatings.com/pages/bohme",
+    "generalEmail": "info@vermontnaturalcoatings.com",
+    "generalPhone": "+1 802 472 8700",
+    "address": "190 Junction Rd, Hardwick, Vermont 05843, United States",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@vermontnaturalcoatings.com",
+        "source": {
+          "label": "Official footer business inbox",
+          "url": "https://vermontnaturalcoatings.com/pages/bohme"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current own manufacture of partnered waterborne wood finish systems",
+        "url": "https://vermontnaturalcoatings.com/pages/bohme"
+      },
+      {
+        "label": "Official current proprietary coating product development",
+        "url": "https://vermontnaturalcoatings.com/pages/about-us"
+      },
+      {
+        "label": "Official water-based PolyWhey exterior wood stain",
+        "url": "https://vermontnaturalcoatings.com/products/exterior-penetrating-wood-stain"
+      },
+      {
+        "label": "Official PolyWhey technology and product scope",
+        "url": "https://vermontnaturalcoatings.com/pages/polywhey"
+      }
+    ]
+  },
+  "target-coatings-fair-lawn": {
+    "website": "https://www.targetcoatings.com/",
+    "contactPage": "https://www.targetcoatings.com/contact_us/",
+    "generalPhone": "+1 201 821 0150",
+    "address": "Sales / Administration / Warehouse: 17-12 River Road, Fair Lawn, NJ 07410, United States",
+    "contacts": [
+      {
+        "name": "Jeff Weiss",
+        "title": "Owner and Formulating Chemist",
+        "department": "Technical",
+        "source": {
+          "label": "Official first-person company statement; role retained as published",
+          "url": "https://www.targetcoatings.com/about-target-coatings/"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own waterborne formulation/manufacturing and owner chemist",
+        "url": "https://www.targetcoatings.com/about-target-coatings/"
+      },
+      {
+        "label": "Official water-based wood sealer range",
+        "url": "https://www.targetcoatings.com/shop/water-based-wood-sealers/"
+      },
+      {
+        "label": "Official international business phone and office/warehouse address",
+        "url": "https://www.targetcoatings.com/contact_us/"
+      },
+      {
+        "label": "Official full two-item finishing additive catalogue",
+        "url": "https://www.targetcoatings.com/shop/water-based-finish-additives-application-aids/"
+      },
+      {
+        "label": "Official CL100 ester-diol finishing additive chemistry",
+        "url": "https://www.targetcoatings.com/product/water-based-crosslinker/"
+      },
+      {
+        "label": "Official SA5 application-retarding aid",
+        "url": "https://www.targetcoatings.com/product/water-based-spray-brush-retarder/"
+      },
+      {
+        "label": "Official EMCAT EC2A finished wood topcoat kit",
+        "url": "https://www.targetcoatings.com/product/emcat-ec2a-acrylic-resin-topcoat-kit/"
+      }
+    ]
+  },
+  "general-finishes-east-troy": {
+    "website": "https://generalfinishes.com/",
+    "contactPage": "https://generalfinishes.com/register/general-finishes-manufacturer-account-registration-form",
+    "address": "2462 Corporate Circle, East Troy, WI 53120, United States",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own East Troy factory and coating manufacturing",
+        "url": "https://generalfinishes.com/waterbase-finishes-manufacturer-wisconsin"
+      },
+      {
+        "label": "Official waterborne wood sanding sealer",
+        "url": "https://generalfinishes.com/wood-finishes-retail/water-based-topcoats-and-sanding-sealer/enduro-water-based-sanding-sealer"
+      },
+      {
+        "label": "Official OEM formulation lab and industrial business entry",
+        "url": "https://generalfinishes.com/register/general-finishes-manufacturer-account-registration-form"
+      },
+      {
+        "label": "Official site operating legal entity",
+        "url": "https://generalfinishes.com/terms"
+      },
+      {
+        "label": "Official TransTint acquisition and brand deduplication",
+        "url": "https://transtintdyes.com/"
+      }
+    ]
+  },
   "chambal-fertilizers-gadepan": {
     "website": "https://www.chambalfertilisers.com/",
     "contactPage": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article",
@@ -3375,6 +3573,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vermont-natural-coatings-hardwick",
+  "target-coatings-fair-lawn",
+  "general-finishes-east-troy",
   "chambal-fertilizers-gadepan",
   "madras-fertilizers-manali",
   "national-fertilizers-nangal",
