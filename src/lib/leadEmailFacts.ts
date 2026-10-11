@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "kupsa-oyon": "Your Polish subsidiary describes developing its own water-based formulations and manufacturing water-based varnishes at its plant, alongside your group’s wood-coating product range.",
+  "kofarb-czestochowa": "Your company describes its own waterborne-paint manufacturing and laboratories, and your KOFATERM range includes water-based finished coatings for wood and other substrates.",
   'thai-do-no-gen-gen-rayong': 'Your company manufactures coatings at its Rayong factory and lists Daimyo Crown water-based wood stains and water-based two-component polyurethane coatings.',
   "soilmate-bangkok": "The 2024 Kasetsart University research identifies your Soilmate brand as a controlled-release fertilizer manufacturer, and your official product pages describe CRF formulations for sugarcane.",
   "pv-paint-ho-chi-minh": "Your 2026 annual general meeting describes marine and industrial paint production and development, and your official catalogue includes EPOSHIN epoxy protective coatings.",

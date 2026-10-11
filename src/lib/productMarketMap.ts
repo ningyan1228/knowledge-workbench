@@ -1888,11 +1888,69 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "控释肥制造企业；包膜树脂类型及我方产品适配、采购未确认"
   },
+  {
+    "id": "kofarb-czestochowa",
+    "company": "KOFARB Sp. z o.o.",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Częstochowa",
+    "latitude": 50.8118,
+    "longitude": 19.1203,
+    "legacyCompanyDescription": "自主配方制造水性木材及多基材成品热反射涂料；NL-W1201 使用、采购及适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立读取当前官网 About、KOFATERM 原理、六类产品及 OUTDOOR PAINT：KOFARB 在波兰自行生产水性及溶剂型成品涂料，拥有生产设备和实验室；KOFATERM 明确为水性涂料/膏体，产品页明确可用于木材，OUTDOOR PAINT 明示 wooden surfaces。按 NL-W1201 TDS 已验证木材基材对应下游配方方；实际产品主要为建筑用多基材热反射成品涂料，不冒称家具专用漆，不外推 TDS 未验证基材适配。未确认购买或使用 NL-W1201，也未证明有特定附着力改进需求。坐标为城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次读取自主制造/实验室介绍、完整六类公开成品目录及各类产品原文、公司/分销/国际合作及业务联系页。所查是室内、室外、屋顶成品水性涂料与膏体；未发现对外销售水性聚烯烃乳液、CPO/PO分散体或同类附着力输入原料，结论限所查公开范围。按 KOFARB 法人、KOFATERM 品牌、kofarb.pl、Częstochowa 地址及邮箱与最新 main 的135家实际公开客户、本地与研究队列去重，无同一正式账户；KOFARB Distribution、Mazowsze及西班牙销售联系不拆为客户。官网 CEO Robert Koza 仅保留真实姓名职务，通用邮箱不绑定为个人邮箱；未猜测采购联系人。"
+    },
+    "contact": {
+      "label": "Official public general business inbox",
+      "email": "biuro@kofarb.pl",
+      "phone": "+48 605 342 957",
+      "contactUrl": "https://www.kofarb.pl/en/contact/"
+    },
+    "source": {
+      "label": "Official own waterborne-paint manufacturing, machinery, laboratories and CEO",
+      "url": "https://www.kofarb.pl/en/about-us/"
+    },
+    "checkedAt": "2026-10-11"
+  },
+  {
+    "id": "kupsa-oyon",
+    "company": "Industrias Químicas Kupsa, S.L. (KUPSA Group)",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Oyón",
+    "latitude": 42.5048,
+    "longitude": -2.4369,
+    "legacyCompanyDescription": "集团自有工厂与实验室研发制造水性木器成品涂料；树脂/半成品工厂历史已注明，NL-W1201 使用及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取西班牙官网 Wood Water-Based Products、R&D、法人 Legal Notice，以及波兰子公司当前 About 原文：集团有自有水性产品制造设施、研发与应用实验室，波兰工厂明确自行配方和生产水性木器清漆；当前产品为木器底漆/面漆、家具及地板成品配方。属于 NL-W1201 TDS 木材应用的潜在需求侧配方制造方，未确认使用、采购、适配或具体需求。按西班牙法人 CIF B01006766 和 Oyón 工厂建单一集团账户，波兰、墨西哥、印度、葡萄牙子公司与厂区不拆为新增；公开历史披露 Tintas Lacca、Barnipol、Industrias Carpo、Pinturas Ordesa 等并购及 Abehon/Alaba 品牌，纳入集团去重。地图为 Oyón 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "发现后独立重读西班牙水性/成品产品导航、R&D、历史、法人和业务邮箱，并直接抓取波兰 About、Contact 及全部七个当前公开产品分页。所查目录为水性/溶剂型/UV木器成品涂料和底漆，未发现对外销售水性聚烯烃乳液、CPO/PO分散体或同类附着力原料，结论限所查公开范围。明确保留1998年树脂工厂和2001年中间产品制造区域等历史事实，不声称没有树脂制造，也不从未披露树脂类别推断其为同类聚烯烃供应商或全部仅内部自用。按集团/法人名、CIF、域名、工厂/邮箱，以及 Lacca、Barnipol、Ordesa、Isolack、Abehon、Alaba、Carpo 与最新main的135家实际公开客户、本地/队列去重，无正式同集团账户，多个国家子公司仅计一户。西班牙官网直接抓取证书失败，使用公开网页读取工具取得该官网原文，保留工具来源期间；波兰原文已于2026-10-11直接读取交叉核验。具名联系人为波兰子公司CEO而非西班牙采购人员，西班牙通用邮箱不绑定到该个人。"
+    },
+    "contact": {
+      "label": "Official public general business inbox",
+      "email": "webkupsa@kupsa.es",
+      "phone": "+34 945 622 222",
+      "contactUrl": "https://www.kupsa.es/en/legal-notice"
+    },
+    "source": {
+      "label": "Official own Polish subsidiary water-based formulation and manufacturing plant",
+      "url": "https://kupsa.pl/en/about-us"
+    },
+    "checkedAt": "2026-10-11"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "kupsa-oyon": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "kofarb-czestochowa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "soilmate-bangkok": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "pv-paint-ho-chi-minh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "specialized-coating-systems-boksburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -2050,6 +2108,160 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "kupsa-oyon": {
+    "website": "https://www.kupsa.es/en/",
+    "contactPage": "https://www.kupsa.es/en/legal-notice",
+    "generalEmail": "webkupsa@kupsa.es",
+    "generalPhone": "+34 945 622 222",
+    "address": "Manufacturing plant: Ctra. N-111 Logroño-Pamplona Km. 2.3, 01320 Oyón (Álava), Spain; postal contact: PO Box 1081, 26080 Logroño (La Rioja), Spain",
+    "contacts": [
+      {
+        "name": "Adam Budziński",
+        "title": "CEO, Kupsa Polska (Polish subsidiary)",
+        "department": "Management",
+        "source": {
+          "label": "Official Polish subsidiary About: named CEO and own water-based formulation/manufacture",
+          "url": "https://kupsa.pl/en/about-us"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "webkupsa@kupsa.es",
+        "source": {
+          "label": "Official publicly disclosed general business inbox",
+          "url": "https://www.kupsa.es/en/legal-notice"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own Polish subsidiary water-based formulation and manufacturing plant",
+        "url": "https://kupsa.pl/en/about-us"
+      },
+      {
+        "label": "Official Spanish wood water-based finished coating portfolio",
+        "url": "https://www.kupsa.es/en/products/water-based"
+      },
+      {
+        "label": "Official R&D, laboratories and own manufacturing",
+        "url": "https://www.kupsa.es/en/technology/r-d"
+      },
+      {
+        "label": "Official Spanish legal company identity and public business inbox",
+        "url": "https://www.kupsa.es/en/legal-notice"
+      },
+      {
+        "label": "Official group resin/intermediate-production history, subsidiaries and acquisitions",
+        "url": "https://www.kupsa.es/en/company/history"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 1",
+        "url": "https://kupsa.pl/en/products"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 2",
+        "url": "https://kupsa.pl/en/products?start=12"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 3",
+        "url": "https://kupsa.pl/en/products?start=24"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 4",
+        "url": "https://kupsa.pl/en/products?start=36"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 5",
+        "url": "https://kupsa.pl/en/products?start=48"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 6",
+        "url": "https://kupsa.pl/en/products?start=60"
+      },
+      {
+        "label": "Official current Polish finished coating catalogue, page 7",
+        "url": "https://kupsa.pl/en/products?start=72"
+      },
+      {
+        "label": "Official Polish subsidiary contact and factory/Spanish business contact",
+        "url": "https://kupsa.pl/en/contact"
+      }
+    ]
+  },
+  "kofarb-czestochowa": {
+    "website": "https://www.kofarb.pl/en/",
+    "contactPage": "https://www.kofarb.pl/en/contact/",
+    "generalEmail": "biuro@kofarb.pl",
+    "generalPhone": "+48 605 342 957",
+    "address": "ul. Jagiellońska 85/87, 42-200 Częstochowa, Poland",
+    "contacts": [
+      {
+        "name": "Robert Koza",
+        "title": "CEO",
+        "department": "Management",
+        "source": {
+          "label": "Official About: Robert Koza, CEO",
+          "url": "https://www.kofarb.pl/en/about-us/"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "biuro@kofarb.pl",
+        "source": {
+          "label": "Official publicly disclosed general business inbox",
+          "url": "https://www.kofarb.pl/en/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own waterborne-paint manufacturing, machinery, laboratories and CEO",
+        "url": "https://www.kofarb.pl/en/about-us/"
+      },
+      {
+        "label": "Official KOFATERM water-based paints/pastes and wood substrate",
+        "url": "https://www.kofarb.pl/en/"
+      },
+      {
+        "label": "Official complete six-category finished coating range",
+        "url": "https://www.kofarb.pl/en/products/"
+      },
+      {
+        "label": "Official outdoor finished paint specifically for wooden surfaces",
+        "url": "https://www.kofarb.pl/en/products/outdoor-paint/"
+      },
+      {
+        "label": "Official indoor paint scope",
+        "url": "https://www.kofarb.pl/en/products/indoor-paint/"
+      },
+      {
+        "label": "Official roof paint scope",
+        "url": "https://www.kofarb.pl/en/products/roof-paint/"
+      },
+      {
+        "label": "Official indoor paste scope",
+        "url": "https://www.kofarb.pl/en/products/indoor-paste/"
+      },
+      {
+        "label": "Official outdoor paste scope",
+        "url": "https://www.kofarb.pl/en/products/outdoor-paste/"
+      },
+      {
+        "label": "Official roof paste scope",
+        "url": "https://www.kofarb.pl/en/products/roof-paste/"
+      },
+      {
+        "label": "Official legal company, business inbox and telephone",
+        "url": "https://www.kofarb.pl/en/contact/"
+      }
+    ]
+  },
   "soilmate-bangkok": {
     "website": "https://www.soilmate.co.th/",
     "contactPage": "https://www.mitrphol.com/page_detail.php?p=6&topic=34",
@@ -4504,6 +4716,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "kupsa-oyon",
+  "kofarb-czestochowa",
   "soilmate-bangkok",
   "pv-paint-ho-chi-minh",
   "specialized-coating-systems-boksburg",
