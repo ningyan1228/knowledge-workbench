@@ -1364,11 +1364,125 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
   },
+  {
+    "id": "iffco-kalol",
+    "company": "Indian Farmers Fertiliser Cooperative Limited (IFFCO)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Kalol, Gandhinagar, Gujarat",
+    "latitude": 23.24,
+    "longitude": 72.5,
+    "fit": "可开发候选",
+    "signal": "官网 Kalol 工厂资料明确自 2015 年起全面生产苦楝油包衣尿素，当前尿素产品页明确 neem oil coating；作为同一 IFFCO 合作社账户收录，Kalol、Phulpur、Aonla 与其他工厂不拆为新增。已公开包衣能力可用于一般尿素包衣方向的潜在技术评估；苦楝油包衣不是聚氨酯或聚合物包膜，不证明使用或适配我方包膜剂。坐标代表 Kalol 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次读取 Kalol 工厂、Neem Coated Urea 产品、主要养分产品目录、Our Businesses 集团/合资清单与采购入口；公开业务包括成品肥料、磷酸/氨尿素中间体、农业生物制品及其他非同类业务，所查未发现对外供应 PU 原料、包衣树脂或同类成套肥料包衣剂。未把一般化工中间体等同包衣原料。按 IFFCO 法人和 iffco.in 域名去重，工厂、品牌、国际合资企业不增加数量；核对最新 main ddc6df1 与本地数据及私有队列，无现有同一账户。"
+    },
+    "contact": {
+      "label": "Official procurement portal; named purchase and plant roles verified separately",
+      "contactUrl": "https://www.iffco.in/en/tenders"
+    },
+    "source": {
+      "label": "Official Kalol own neem-coated urea production and unit head",
+      "url": "https://www.iffco.in/en/production-unit-kalol-gujarat"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
+  },
+  {
+    "id": "national-fertilizers-nangal",
+    "company": "National Fertilizers Limited (NFL)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Naya Nangal, Punjab",
+    "latitude": 31.38,
+    "longitude": 76.37,
+    "fit": "可开发候选",
+    "signal": "官网 Startup 业务说明及公开质量手册均明确 NFL 自行制造、营销苦楝油包衣尿素；质量手册列自有 Nangal、Bathinda、Panipat、Vijaipur 制造网络。按 NFL 一个法人账户收录，地图代表 Nangal 城市而非推算厂区坐标。2026 年 Nangal 官方招标文件公开 Materials Department 业务邮箱及电话；其招标标的是防腐阳极，联系方式不构成包衣原料采购证明。苦楝油包衣不等同 PU/聚合物包膜，未确认我方产品采购、使用或配方适配。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次阅读官方制造/贸易范围和质量手册产品清单，区分自产尿素、Bio-Fertilizers、Bentonite Sulphur 与一般成品农资贸易。工业产品为氨、硝酸、硝酸盐、工业气体等，所查未发现 PU 原料、包衣树脂或同类肥料包衣剂对外供应。按 National Fertilizers/NFL、nfl.co.in 及法人号 L74899DL1974GOI007417 核对最新 main、本地正式数据和研究队列，无同一账户。Nangal 等分厂和 KISAN/BHARAT 品牌不另计；RFCL 合资关系不拆成新增。"
+    },
+    "contact": {
+      "label": "Official business department inbox; no personal identity inferred",
+      "email": "ranjits@nfl.co.in",
+      "phone": "+91 9464966819",
+      "contactUrl": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
+    },
+    "source": {
+      "label": "Official company quality manual: own neem-coated urea and industrial product scope",
+      "url": "https://www.nfl.co.in/nflportal/Quality/Manual.pdf?menu=33&pmenu=10"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
+  },
+  {
+    "id": "madras-fertilizers-manali",
+    "company": "Madras Fertilizers Limited (MFL)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Manali, Chennai, Tamil Nadu",
+    "latitude": 13.168,
+    "longitude": 80.265,
+    "fit": "可开发候选",
+    "signal": "官网工厂业绩直接报告 2024–25 财年自行生产 528,400 吨 Neem Coated Urea，工厂及公司页面确认 Manali 自有氨/尿素生产。Bharat/Vijay 尿素品牌按一个 MFL 法人账户处理。公开联系页提供 General Manager (Plant) 职能邮箱和电话，未猜测个人姓名。对应一般尿素包衣应用的潜在技术评估对象；苦楝油包衣不证明 PU 或聚合物包膜能力，也不证明采购或适配我方包膜剂。坐标代表 Manali 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读 The Company、The Plant、Achievements、Chemical Fertilizers、Bio Fertilizers 与 Agro Chemicals–Neem Based 产品目录，确认自产包衣尿素而非仅经销。Neem-based 商品是 Vijay Neem 植保农药，不能改标为我方同类肥料包衣原料；一般氨等工业品销售也不等同 PU 输入原料。所查未发现 PU 包衣树脂、同类包衣原料或成套包衣剂销售。以 Madras Fertilizers/MFL、madrasfert.co.in、Manali 地址和法人号 L32201TN1966GOI005469 核对最新 main、本地客户与私有队列，无重复；品牌和工厂不拆分。"
+    },
+    "contact": {
+      "label": "Official business department inbox; no personal identity inferred",
+      "email": "gmplant@madrasfert.co.in",
+      "phone": "+91 44 25945310",
+      "contactUrl": "https://madrasfert.co.in/contact-us/"
+    },
+    "source": {
+      "label": "Official factory performance: own neem-coated urea production in FY2024–25",
+      "url": "https://madrasfert.co.in/the-plant/achievements/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
+  },
+  {
+    "id": "chambal-fertilizers-gadepan",
+    "company": "Chambal Fertilisers and Chemicals Limited",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Gadepan, Kota, Rajasthan",
+    "latitude": 25.215,
+    "longitude": 76.004,
+    "fit": "可开发候选",
+    "signal": "2020–21 官方年报第 49 页明确公司自产尿素为 neem-coated；2025–26 最新官方年报确认 Gadepan 三套自有尿素工厂持续生产，并区分外购复杂肥/植保产品。当前 Bharat Urea 官方资料说明缓慢供氮，但不把它当作当前 PU 包膜证据；包衣事实保留原始年报时期。作为有公开包衣制造能力的一般尿素包衣评估对象，未确认采用、采购或适配我方材料。Uttam/Bharat 品牌与三套工厂只计一个法人；地图代表 Gadepan 地区。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立读取官网 Who We Are、Our Facilities、成品肥目录和 2025–26 年报及子公司业务，公开范围为自产尿素、农业成品贸易、氨及 TAN 业务，所查未发现 PU 输入原料、包衣树脂或同类肥料包衣剂销售。年报区分 inactive/信息技术子公司及 IMACID 磷酸合资，不将这些品牌、工厂和集团名称新增计数。以 Chambal/CFCL、chambalfertilisers.com、chambal.in 与法人号 L24124RJ1985PLC003293 核对最新 main、本地正式数据和研究队列，无重复。Purchase 邮箱从官网公开防垃圾脚本的数值实体和字面串展开，未按姓名或域名猜测；isc@chambal.in 为投资者邮箱，未用于采购联络。"
+    },
+    "contact": {
+      "label": "Official business department inbox; no personal identity inferred",
+      "email": "cg_purcom1@chambal.in",
+      "phone": "+91 744 2782915",
+      "contactUrl": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article"
+    },
+    "source": {
+      "label": "Official annual report 2020–21 p49: own neem-coated urea manufacture",
+      "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year-2020-2021.pdf"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chambal-fertilizers-gadepan": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "madras-fertilizers-manali": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "national-fertilizers-nangal": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "iffco-kalol": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "duraway-coating-kapar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "elchemus-bukit-mertajam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mowilex-indonesia-cikande": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -1507,6 +1621,184 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chambal-fertilizers-gadepan": {
+    "website": "https://www.chambalfertilisers.com/",
+    "contactPage": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article",
+    "generalPhone": "+91 744 2782915",
+    "address": "P.O. Gadepan 325208, District Kota, Rajasthan, India",
+    "contacts": [
+      {
+        "name": "Narinder Goyal",
+        "title": "Business Head - Manufacturing Operations",
+        "department": "Production",
+        "source": {
+          "label": "Official 2025–26 annual report leadership team",
+          "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year_2025-26.pdf"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "cg_purcom1@chambal.in",
+        "source": {
+          "label": "Official Purchase mailbox; encoded public script expanded",
+          "url": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official annual report 2020–21 p49: own neem-coated urea manufacture",
+        "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year-2020-2021.pdf"
+      },
+      {
+        "label": "Official annual report 2025–26: current own plants and business scope",
+        "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year_2025-26.pdf"
+      },
+      {
+        "label": "Official Gadepan manufacturing facilities",
+        "url": "https://www.chambalfertilisers.com/indexc0bc.html"
+      },
+      {
+        "label": "Official Purchase email and general plant telephone",
+        "url": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article"
+      },
+      {
+        "label": "Official current Bharat Urea brochure",
+        "url": "https://www.chambalfertilisers.com/pdf/English-Bulk/Urea-Eng.pdf"
+      }
+    ]
+  },
+  "madras-fertilizers-manali": {
+    "website": "https://madrasfert.co.in/",
+    "contactPage": "https://madrasfert.co.in/contact-us/",
+    "generalPhone": "+91 44 25945310",
+    "address": "Madras Fertilizers Limited, Manali, Chennai 600068, India",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Production",
+        "email": "gmplant@madrasfert.co.in",
+        "source": {
+          "label": "Official General Manager (Plant) inbox",
+          "url": "https://madrasfert.co.in/contact-us/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official factory performance: own neem-coated urea production in FY2024–25",
+        "url": "https://madrasfert.co.in/the-plant/achievements/"
+      },
+      {
+        "label": "Official company and own Manali plant",
+        "url": "https://madrasfert.co.in/the-company/"
+      },
+      {
+        "label": "Official neem-coated urea product category",
+        "url": "https://madrasfert.co.in/marketing/chemical-fertilizers/"
+      },
+      {
+        "label": "Official plant-management business contact",
+        "url": "https://madrasfert.co.in/contact-us/"
+      },
+      {
+        "label": "Official neem-based pesticide catalogue for supplier exclusion",
+        "url": "https://madrasfert.co.in/marketing/agro-chemicals-neem-based/"
+      }
+    ]
+  },
+  "national-fertilizers-nangal": {
+    "website": "https://nfl.co.in/",
+    "contactPage": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf",
+    "generalPhone": "+91 9464966819",
+    "address": "National Fertilizers Limited, Naya Nangal, Punjab 140126, India",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "ranjits@nfl.co.in",
+        "source": {
+          "label": "Official Nangal Materials Department",
+          "url": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
+        }
+      },
+      {
+        "department": "Procurement",
+        "email": "tilak@nfl.co.in",
+        "source": {
+          "label": "Official Nangal Materials Department",
+          "url": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official company quality manual: own neem-coated urea and industrial product scope",
+        "url": "https://www.nfl.co.in/nflportal/Quality/Manual.pdf?menu=33&pmenu=10"
+      },
+      {
+        "label": "Official manufacturing and agro-input trading business statement",
+        "url": "https://nfl.co.in/Startup2024/startupInNFL.jsp"
+      },
+      {
+        "label": "Official 2026 Nangal Materials Department business contact",
+        "url": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
+      }
+    ]
+  },
+  "iffco-kalol": {
+    "website": "https://www.iffco.in/",
+    "contactPage": "https://www.iffco.in/en/tenders",
+    "address": "IFFCO Kalol Unit, Kasturi Nagar, Gandhinagar, Gujarat 382423, India",
+    "contacts": [
+      {
+        "name": "M M Patel",
+        "title": "DGM (Purchase)",
+        "department": "Procurement",
+        "source": {
+          "label": "Official Kalol purchase department directory",
+          "url": "https://appskalol.iffco.coop/NFPDIR"
+        },
+        "verifiedAt": "2026-10-11"
+      },
+      {
+        "name": "Pravin Kumar Singh",
+        "title": "General Manager & Unit Head, Kalol",
+        "department": "Production",
+        "source": {
+          "label": "Official Kalol unit head",
+          "url": "https://www.iffco.in/en/production-unit-kalol-gujarat"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Kalol own neem-coated urea production and unit head",
+        "url": "https://www.iffco.in/en/production-unit-kalol-gujarat"
+      },
+      {
+        "label": "Official neem-oil-coated urea product",
+        "url": "https://www.iffco.in/en/urea-fertilizer"
+      },
+      {
+        "label": "Official business and group-venture overview",
+        "url": "https://www.iffco.in/en/our-business"
+      },
+      {
+        "label": "Official procurement and vendor contact portal",
+        "url": "https://www.iffco.in/en/tenders"
+      },
+      {
+        "label": "Official purchase department business names; residential details not retained",
+        "url": "https://appskalol.iffco.coop/NFPDIR"
+      }
+    ]
+  },
   "duraway-coating-kapar": {
     "website": "https://durawaycoating.com/",
     "contactPage": "https://durawaycoating.com/ContactUs",
@@ -3083,6 +3375,10 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chambal-fertilizers-gadepan",
+  "madras-fertilizers-manali",
+  "national-fertilizers-nangal",
+  "iffco-kalol",
   "duraway-coating-kapar",
   "elchemus-bukit-mertajam",
   "mowilex-indonesia-cikande",

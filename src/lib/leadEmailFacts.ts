@@ -3,6 +3,10 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "chambal-fertilizers-gadepan": "Your annual report documents in-house neem-coated urea manufacture, and the FY2025–26 report confirms continued operation of your Gadepan urea plants.",
+  "madras-fertilizers-manali": "Your Manali plant reports production of 528,400 tonnes of neem-coated urea in FY2024–25.",
+  "national-fertilizers-nangal": "Your company describes its own manufacture of neem-coated urea, and its quality manual separates this production from other agro-input trading.",
+  "iffco-kalol": "Your Kalol unit documents its production of neem-coated urea, and your product page identifies the coating as neem oil.",
   "duraway-coating-kapar": "Your wood-coating catalogue includes water-based sealers and lacquers for indoor and outdoor furniture, and your company describes its own production plant.",
   "elchemus-bukit-mertajam": "Your wood-coating system includes the SC800 water-based wood sealer and TC901i water-based topcoat, and your website describes in-house development and manufacturing.",
   "mowilex-indonesia-cikande": "Your Woodstain product page specifies water as the solvent for its wood coating, and your company describes its manufacturing plant in Cikande.",
