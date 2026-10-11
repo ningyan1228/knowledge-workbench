@@ -170,6 +170,7 @@ export const marketExtendedApplications: MarketExtendedApplication[] = [
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
+  { id: 'waterbased-wood-coating-manufacturer', productId: 'nl-w1201', name: '水性木器涂料生产商', nameEn: 'Water-Based Wood Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },
   { id: 'controlled-release-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '控释肥生产商', nameEn: 'Controlled Release Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'controlled-release-fertilizer' }] },
   { id: 'slow-release-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '缓释肥生产商', nameEn: 'Slow Release Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'slow-release-fertilizer' }] },
   { id: 'polymer-coated-urea-manufacturer', productId: 'fertilizer-coating', name: '聚合物包膜尿素生产商', nameEn: 'Polymer-Coated Urea Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'coated-urea' }, { layer: 'tds-verified', applicationId: 'polyurethane-coated-urea' }] },
@@ -1252,11 +1253,97 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-11"
   },
+  {
+    "id": "tectona-warna-cirebon",
+    "productId": "nl-w1201",
+    "company": "PT Tectona Warna Indonesia (Tectona Paint)",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Palimanan, Cirebon",
+    "latitude": -6.7063,
+    "longitude": 108.557,
+    "fit": "可开发候选",
+    "signal": "官网联系页明确 Tectona 为 PT Tectona Warna Indonesia 的水性木器涂料品牌，并在 Palimanan, Cirebon 生产；当前产品系统包括 WoodFiller、WoodStain/木色剂、WoodSeal 水性砂光封闭层及 WoodCoat 清面漆。属于水性木材涂料下游配方/制造方向，不代表已使用 NL-W1201。地图坐标仅代表 Cirebon 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次阅读 https://tectonapaint.id/ 与 https://tectonapaint.id/id/kontak/ 的制造主体、完整产品系统及公开业务范围：所查为水性木器成品涂料，未发现对外销售水性聚烯烃乳液、CPO/PO 分散液或同类附着力原料的证据。Tectona 品牌、PT Tectona Warna Indonesia、tectonapaint.id 与最新 main、本地正式数据及私有队列无重复；经销商和城市代理不拆为新增。"
+    },
+    "contact": {
+      "label": "Official general business entry; no named procurement person inferred",
+      "phone": "08132239997",
+      "email": "info@tectonapaint.id",
+      "contactUrl": "https://tectonapaint.id/id/kontak/"
+    },
+    "source": {
+      "label": "Official Tectona waterborne wood finishing system",
+      "url": "https://tectonapaint.id/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
+  },
+  {
+    "id": "propan-raya-tangerang",
+    "productId": "nl-w1201",
+    "company": "PT Propan Raya ICC",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Tangerang, Banten",
+    "latitude": -6.1783,
+    "longitude": 106.6319,
+    "fit": "可开发候选",
+    "signal": "官方当前 ACRYLUX AAC-955 产品明确为水性实色涂料，并列木材用途；公司介绍确认自研木材/藤材涂饰系统及 RPS 涂料生产技术。水性木材涂料配方属于潜在下游评估方向；不把目录中的 generic plastic 推断为 PP/PE，也不将该成品称作底漆。未证明使用或采购我方产品。地图坐标代表 Tangerang 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次阅读 https://www.propanraya.com/tentang-kami、https://www.propanraya.com/id/produk/acrylux 及官网产品类别：所查主营成品木器/建筑/工业涂料和建筑化学品，未发现对外出售水性聚烯烃乳液、CPO/PO 分散液或同类附着力原料的公开证据。以 PT Propan Raya ICC、Propan、propanraya.com 与最新 main、本地数据及研究队列去重，无重复；总部、工厂、IMPRA/ULTRAN/ACRYLUX 品牌按一个公司账户。"
+    },
+    "contact": {
+      "label": "Official general business entry; no named procurement person inferred",
+      "phone": "+62 811-9366-182",
+      "email": "info@propanraya.com",
+      "contactUrl": "https://www.propanraya.com/kontak"
+    },
+    "source": {
+      "label": "Official ACRYLUX AAC-955 waterborne coating for wood",
+      "url": "https://www.propanraya.com/id/produk/acrylux"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
+  },
+  {
+    "id": "mowilex-indonesia-cikande",
+    "productId": "nl-w1201",
+    "company": "PT Mowilex Indonesia (Asia Coatings Enterprises group)",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Cikande, Serang, Banten",
+    "latitude": -6.1204,
+    "longitude": 106.1502,
+    "fit": "可开发候选",
+    "signal": "当前官方 Woodstain 木器涂料页明确木材用途，并列 Pelarut: Air（水）；官方 2023-03-21 工厂公告确认 PT Mowilex Indonesia 在 Cikande 的新厂已揭幕并替代 Daan Mogot 旧厂。属于水性木器成品涂料制造/研发方向；该历史公告不作为本轮新项目，未证明使用或采购我方产品。其为 Asia Coatings Enterprises (ACE) 子公司。地图坐标代表 Serang 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次阅读 https://mowilex.com/mowilex-woodstain/、官方工厂公告与 https://shop.mowilex.com/en/collections/additive：所查 Additive 类目是 BC1000 Alcasit 水泥/石膏用建筑外加剂，不是 W1201 类聚烯烃乳液或附着力原料；未发现对外出售同类水性聚烯烃/CPO/PO 输入原料的证据。以 Mowilex、PT Mowilex Indonesia、mowilex.com/shop.mowilex.com 与最新 main、本地数据及研究队列去重，无重复。集团 ACE、Cendana 品牌和各地区分支不拆为新增。"
+    },
+    "contact": {
+      "label": "Official general business entry; no named procurement person inferred",
+      "phone": "+62 21 5406663",
+      "contactUrl": "https://shop.mowilex.com/en/pages/contact"
+    },
+    "source": {
+      "label": "Official Woodstain wood coating and water solvent specification",
+      "url": "https://mowilex.com/mowilex-woodstain/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mowilex-indonesia-cikande": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "propan-raya-tangerang": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "tectona-warna-cirebon": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   'kg-chemical-ulsan': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'hankook-hyeophwa-pohang': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'namhae-chemical-yeosu': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1391,6 +1478,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mowilex-indonesia-cikande": {
+    "website": "https://mowilex.com/",
+    "contactPage": "https://shop.mowilex.com/en/pages/contact",
+    "address": "Headquarters: Jl. Daan Mogot KM 10 No. 18, Jakarta 11710; manufacturing plant: Cikande, Serang, Banten, Indonesia",
+    "generalPhone": "+62 21 5406663",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Woodstain wood coating and water solvent specification",
+        "url": "https://mowilex.com/mowilex-woodstain/"
+      },
+      {
+        "label": "Official 2023-03-21 Cikande plant inauguration and ACE parent relationship",
+        "url": "https://mowilex.com/en/press-release/mowilexs-new-factory-production-increase-with-green-building-concept-and-carbon-emission-reduction-up-to-7/"
+      },
+      {
+        "label": "Official company shop business contact and headquarters",
+        "url": "https://shop.mowilex.com/en/pages/contact"
+      },
+      {
+        "label": "Official additive category: BC1000 cement additive, supplier exclusion check",
+        "url": "https://shop.mowilex.com/en/collections/additive"
+      }
+    ]
+  },
+  "propan-raya-tangerang": {
+    "website": "https://www.propanraya.com/",
+    "contactPage": "https://www.propanraya.com/kontak",
+    "address": "Jl. Gatot Subroto Km. 8, Kadu Jaya 15810, Kabupaten Tangerang, Indonesia",
+    "generalPhone": "+62 811-9366-182",
+    "generalEmail": "info@propanraya.com",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@propanraya.com",
+        "source": {
+          "label": "Official business contact page",
+          "url": "https://www.propanraya.com/kontak"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official ACRYLUX AAC-955 waterborne coating for wood",
+        "url": "https://www.propanraya.com/id/produk/acrylux"
+      },
+      {
+        "label": "Official own development and RPS production history",
+        "url": "https://www.propanraya.com/tentang-kami"
+      },
+      {
+        "label": "Official business email, phone and headquarters",
+        "url": "https://www.propanraya.com/kontak"
+      }
+    ]
+  },
+  "tectona-warna-cirebon": {
+    "website": "https://tectonapaint.id/",
+    "contactPage": "https://tectonapaint.id/id/kontak/",
+    "address": "Blok Prapatan RT 013/RW 005, Desa Palimanan Timur, Kecamatan Palimanan, Kabupaten Cirebon, Jawa Barat, Indonesia",
+    "generalPhone": "08132239997",
+    "generalEmail": "info@tectonapaint.id",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@tectonapaint.id",
+        "source": {
+          "label": "Official business contact page",
+          "url": "https://tectonapaint.id/id/kontak/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official Tectona waterborne wood finishing system",
+        "url": "https://tectonapaint.id/"
+      },
+      {
+        "label": "Official manufacturing entity, Palimanan production and business contacts",
+        "url": "https://tectonapaint.id/id/kontak/"
+      }
+    ]
+  },
   'kg-chemical-ulsan': {
     "website": "https://www.kgchem.co.kr/",
     "contactPage": "https://fert-kfia.or.kr/new/05_member/member01_view06.asp",
@@ -2849,6 +3022,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mowilex-indonesia-cikande",
+  "propan-raya-tangerang",
+  "tectona-warna-cirebon",
   'kg-chemical-ulsan',
   'hankook-hyeophwa-pohang',
   'namhae-chemical-yeosu',
