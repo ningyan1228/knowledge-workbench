@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "nervion-tlalnepantla": "Your company states that it designs and manufactures high-performance coatings and publishes industrial epoxy and marine protective coating ranges.",
+  "chugoku-marine-paints-tokyo": "Your company fact sheet states that CMP manufactures marine, industrial and container paints, and your locations page identifies its factories and R&D centres in Japan.",
+  "hempel-lyngby": "Your company documents a global coating manufacturing network, R&D centres and finished marine and protective coating systems.",
   "bvfcl-namrup": "Your 2019–20 annual report documents in-house neem-coating facilities, and your current plant page lists the operating Namrup-III urea unit.",
   "hurl-new-delhi": "Your company describes its neem-coated urea product and its own manufacturing plants at Gorakhpur, Barauni and Sindri.",
   "kribhco-hazira": "Your product page describes neem oil being uniformly applied to prilled urea during manufacture at the Hazira and Shahjahanpur plants.",

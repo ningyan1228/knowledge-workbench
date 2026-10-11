@@ -1665,11 +1665,97 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
   },
+  {
+    "id": "hempel-lyngby",
+    "company": "Hempel A/S",
+    "productId": "elo",
+    "country": "Denmark",
+    "countryZh": "丹麦",
+    "city": "Kgs. Lyngby, Copenhagen",
+    "latitude": 55.771,
+    "longitude": 12.503,
+    "fit": "可开发候选",
+    "signal": "官方2025年报记载集团自有生产网络，当前官网说明涂料研发和制造业务；船舶应用与产品品牌目录列船壳、防腐、罐体内衬及环氧成品涂料。作为 ELO TDS 涂料应用对应的潜在下游配方方，未确认其采购、使用或适配 ELO。Hempel 各国子公司、Crown、Wattyl、Farrow & Ball、Neogard/Jones-Blair 关联作为一个集团账户；不拆分品牌/分厂，大陆及台湾分公司不收录。坐标为总部地区代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立复读官方2025年报、当前研发/制造与船舶页面及 All Brands/All Products。所查产品范围为防腐、船舶、防火、装饰及防水成品涂层；未观察到 ELO、ESBO、环氧化植物油或同类增塑/稳定输入原料外售。目录中的 epoxy/silicone/rosin 等是成品涂料体系说明，不推断其使用 ELO。年报第91页已渲染目视核对所有权关系，核对 Hempel/Crown/Wattyl/Farrow & Ball/Neogard/Jones-Blair、域名、总部地址与最新 main、本地及研究队列，无已有同一集团正式客户。技术负责人姓名职务由官网明示；未核验采购专用或个人邮箱，保留官网通用业务邮箱。结论限已查公开范围。"
+    },
+    "contact": {
+      "label": "Official public general business inbox and contact entry",
+      "email": "hempel@hempel.com",
+      "phone": "+45 4593 3800",
+      "contactUrl": "https://www.hempel.com/contact-us"
+    },
+    "source": {
+      "label": "Official 2025 annual report: manufacturing network and group ownership, original PDF p91 visually checked",
+      "url": "https://www.hempel.com/-/media/Hempel/Files/Annual-Reports/Hempel-Annual-Report-2025.pdf"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
+  {
+    "id": "chugoku-marine-paints-tokyo",
+    "company": "Chugoku Marine Paints, Ltd. (CMP)",
+    "productId": "elo",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Minato-ku, Tokyo",
+    "latitude": 35.666,
+    "longitude": 139.75,
+    "fit": "可开发候选",
+    "signal": "当前官方 Fact Sheet 明确公司制造船舶、工业和集装箱涂料；Factory/R&D 页面列九州、滋贺工厂及大竹、滋贺研发设施，船舶产品页列自有防污及环氧保护涂料。法人与全球总部位于日本，中文名称含“中国”不改变日本主体国家。与 ELO TDS 涂料应用对应，未确认 ELO 使用、购买、需求或配方相容性。CMP 子公司、分厂和 SEAJET 品牌归并一个集团账户；大陆/台湾子公司不收录。既有 Renner Herrmann 的技术许可关系不等同股权同一主体。地图为东京总部地区代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立复读当前公司 Fact Sheet、实际工厂研发页、船舶目录、完整产品分类与 Functional Compounds，以及官方集团目录。产品范围包括成品防污/工业/集装箱涂料及铁路用 CUS 聚氨酯填充材料；CUS 是成品铁路支撑/减振填料，不能据 PU 字样判为 ELO/ESBO 输入原料。未发现环氧化植物油、同类增塑/稳定原料的公开外售条目。按 CMP/Chugoku Marine Paints/SEAJET、cmp.co.jp、总部及关联子公司核对最新 main、本地及私有队列，无既有同一账户。日本总部电话来自官方公司资料，公开联系页保留；没有独立核验采购邮箱，不猜测邮箱。Kenshi Date 姓名职位来自当前官方资料。结论限已查公开范围。"
+    },
+    "contact": {
+      "label": "Official public headquarters business phone and contact entry; no procurement inbox independently verified",
+      "phone": "+81 3 6457 9025",
+      "contactUrl": "https://www.cmp.co.jp/en/contact/"
+    },
+    "source": {
+      "label": "Official own marine/industrial/container coating manufacturing and legal headquarters",
+      "url": "https://www.cmp.co.jp/en/company/corporate_data.html"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
+  {
+    "id": "nervion-tlalnepantla",
+    "company": "El Nervión, S.A. de C.V. (Pinturas Nervión)",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Tlalnepantla de Baz, Estado de México",
+    "latitude": 19.537,
+    "longitude": -99.195,
+    "fit": "可开发候选",
+    "signal": "当前官网 Nosotros 明确自行设计制造高性能涂料；Dónde 列 Tlalnepantla 工厂，环氧/海洋产品目录列自研工业防腐底漆、面漆、船舶及其他成品保护涂层。Privacy 明确 El Nervión 法人与 Aldama 5 业务地址；技术咨询入口和联系页提供公开业务邮箱/电话。作为 ELO TDS 涂料应用的潜在下游配方评估对象，未确认其采购、使用、需求或配方适配。Nervión 商标、DUREPOXY/EPONER/其他自有品牌与销售网点只计一个公司；经销商不是新增制造客户。坐标代表 Tlalnepantla 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重新读取当前 Nosotros、工厂网点、法人与业务地址、环氧/海洋目录及所有产品分类导航，额外反查 Solventes y Reactores，保留其涂料配套溶剂/固化组分业务事实；这不等同 ELO/ESBO 或环氧化植物油增塑/稳定原料销售。Familias de Resina 的环氧等分类下为有型号的底漆、面漆、地坪及修补成品，不能把树脂类别名直接当作原料卖方。所查对外范围未发现同类环氧化油输入原料。按 El Nervión/Pinturas Nervión、品牌、nervion.com.mx、Aldama 5 核对最新 main、本地及队列，只有待审核研究项，没有已有正式同一公司；未把研究 ready_for_review 状态当作核验。采购/研发具名联系尚未核验，使用当前官网一般业务邮箱和销售咨询电话，不使用隐私权办理邮箱作为开发联系人。结论限已查公开范围。"
+    },
+    "contact": {
+      "label": "Official public general business inbox and contact entry",
+      "email": "informacion@nervion.com.mx",
+      "phone": "+52 55 2169 0470",
+      "contactUrl": "https://www.nervion.com.mx/contacto"
+    },
+    "source": {
+      "label": "Official direct design and manufacturing statement",
+      "url": "https://www.nervion.com.mx/nosotros"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "nervion-tlalnepantla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "chugoku-marine-paints-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "hempel-lyngby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bvfcl-namrup": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "hurl-new-delhi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "kribhco-hazira": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -1819,6 +1905,154 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "nervion-tlalnepantla": {
+    "website": "https://www.nervion.com.mx/",
+    "contactPage": "https://www.nervion.com.mx/contacto",
+    "generalEmail": "informacion@nervion.com.mx",
+    "generalPhone": "+52 55 2169 0470",
+    "address": "Aldama 5, Col. La Escuela, Tlalnepantla, C.P. 54090, Estado de México, Mexico",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "informacion@nervion.com.mx",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://www.nervion.com.mx/contacto"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official direct design and manufacturing statement",
+        "url": "https://www.nervion.com.mx/nosotros"
+      },
+      {
+        "label": "Official own factory location, distinct from distributors",
+        "url": "https://www.nervion.com.mx/donde"
+      },
+      {
+        "label": "Official industrial epoxy finished-coating range",
+        "url": "https://www.nervion.com.mx/productos/familia/epoxicos"
+      },
+      {
+        "label": "Official marine finished-coating applications",
+        "url": "https://www.nervion.com.mx/productos/sector/marinoynautico"
+      },
+      {
+        "label": "Official solvents/reactors product scope countercheck",
+        "url": "https://www.nervion.com.mx/productos/certificaciones/h-d-s-solventes-y-reactores"
+      },
+      {
+        "label": "Official legal identity and business address",
+        "url": "https://www.nervion.com.mx/privacy"
+      },
+      {
+        "label": "Official public business inbox and quotation/sales phone",
+        "url": "https://www.nervion.com.mx/contacto"
+      }
+    ]
+  },
+  "chugoku-marine-paints-tokyo": {
+    "website": "https://www.cmp.co.jp/en.html",
+    "contactPage": "https://www.cmp.co.jp/en/contact/",
+    "generalPhone": "+81 3 6457 9025",
+    "address": "Toranomon Hills Station Tower 16F, 2-6-1 Toranomon, Minato-ku, Tokyo 105-5516, Japan",
+    "contacts": [
+      {
+        "name": "Kenshi Date",
+        "title": "President & CEO",
+        "department": "Management",
+        "source": {
+          "label": "Official current company Fact Sheet",
+          "url": "https://www.cmp.co.jp/en/company/corporate_data.html"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own marine/industrial/container coating manufacturing and legal headquarters",
+        "url": "https://www.cmp.co.jp/en/company/corporate_data.html"
+      },
+      {
+        "label": "Official own factories and R&D centres",
+        "url": "https://www.cmp.co.jp/en/company/tech_fac.html"
+      },
+      {
+        "label": "Official marine finished-coating range",
+        "url": "https://www.cmp.co.jp/en/products/marine_coatings.html"
+      },
+      {
+        "label": "Official railway CUS finished polyurethane filler, countercheck",
+        "url": "https://www.cmp.co.jp/en/products/functional_compounds.html"
+      },
+      {
+        "label": "Official group relationship directory",
+        "url": "https://www.cmp.co.jp/en/company/group_east-asia.html"
+      },
+      {
+        "label": "Official public business contact entry",
+        "url": "https://www.cmp.co.jp/en/contact/"
+      }
+    ]
+  },
+  "hempel-lyngby": {
+    "website": "https://www.hempel.com/",
+    "contactPage": "https://www.hempel.com/contact-us",
+    "generalEmail": "hempel@hempel.com",
+    "generalPhone": "+45 4593 3800",
+    "address": "Lundtoftegårdsvej 91, DK-2800 Kgs. Lyngby, Denmark",
+    "contacts": [
+      {
+        "name": "Emilie Barriau",
+        "title": "Executive Vice President and Chief Technology Officer",
+        "department": "Technical",
+        "source": {
+          "label": "Official Executive Group Management",
+          "url": "https://www.hempel.com/about-us/who-we-are"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "hempel@hempel.com",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://www.hempel.com/contact-us"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official 2025 annual report: manufacturing network and group ownership, original PDF p91 visually checked",
+        "url": "https://www.hempel.com/-/media/Hempel/Files/Annual-Reports/Hempel-Annual-Report-2025.pdf"
+      },
+      {
+        "label": "Official manufacturing scope and current executive technology role",
+        "url": "https://www.hempel.com/about-us/who-we-are"
+      },
+      {
+        "label": "Official research and coating development",
+        "url": "https://www.hempel.com/about-us/what-we-do"
+      },
+      {
+        "label": "Official marine coating applications",
+        "url": "https://www.hempel.com/industries/marine/all-applications"
+      },
+      {
+        "label": "Official finished-coating brands and scope",
+        "url": "https://www.hempel.com/all-products/all-brands"
+      },
+      {
+        "label": "Official legal headquarters and public business inbox",
+        "url": "https://www.hempel.com/contact-us"
+      }
+    ]
+  },
   "bvfcl-namrup": {
     "website": "https://bvfcl.com/",
     "contactPage": "https://bvfcl.com/management/",
@@ -3902,6 +4136,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "nervion-tlalnepantla",
+  "chugoku-marine-paints-tokyo",
+  "hempel-lyngby",
   "bvfcl-namrup",
   "hurl-new-delhi",
   "kribhco-hazira",
