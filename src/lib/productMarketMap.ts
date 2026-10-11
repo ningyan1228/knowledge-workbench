@@ -1555,11 +1555,125 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "水性木器成品涂料配方与制造企业"
   },
+  {
+    "id": "renner-italia-minerbio",
+    "company": "Renner Italia S.p.A.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Minerbio, Bologna",
+    "latitude": 44.622,
+    "longitude": 11.491,
+    "fit": "可开发候选",
+    "signal": "独立读取2026官方 Wood 企业册并目视核对第10页：Minerbio 自有水性涂料生产、实验室和包装工厂；木器产品章节明确水性家具及室内/室外成品涂料。Renner Italia 隶属 Renner Herrmann 集团并协调 Renner Global Alliance，Renner Sayerlack、各国公司及 Rio Verde 品牌关联已注明，只收录一个集团需求侧账户，不拆分地区或品牌。作为木材水性表面处理的潜在配方评估对象，未确认其采购、使用或适配 NL-W1201。坐标代表 Minerbio 城市位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读2026完整木器企业册、官网 Company and group / Group、Research / Our suppliers and us 及完整成品目录导航。Rennerlab 有内部水/溶剂树脂合成，官网说明特殊聚合物为自有/许可给 Renner Italia、服务定制成品涂料；该制造事实保留，不将内部树脂合成或仓库 Raw Materials 标签改写成原料对外销售。供应链页面明确外部原料与树脂采购，但不据此声称采购我方材料。所查对外范围为木器/金属/塑料/玻璃成品涂料及调色系统，集团其他产业为包装、林业、家具及乳制品，未发现同类水性聚烯烃乳液、CPO/PO 分散液或附着力输入原料外售。以 Renner Italia/Global Alliance/Herrmann/Sayerlack/Rio Verde、官网域名及 VAT 02433001209 核对 main 7a1c464、本地及队列，无已有同一账户。未核验采购专用邮箱；使用官网通用业务邮箱及明示 President 姓名，不猜个人邮箱。"
+    },
+    "contact": {
+      "label": "Official public business inbox; role verified separately",
+      "email": "info@renneritalia.com",
+      "phone": "+39 051 6618211",
+      "contactUrl": "https://renneritalia.com/en/the-company-and-the-group/"
+    },
+    "source": {
+      "label": "Official 2026 wood catalogue p10 and wood coating chapters; PDF independently rendered",
+      "url": "https://renneritalia.com/wp-content/uploads/cataloghi/en_corporate26-wood.pdf"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
+  },
+  {
+    "id": "kribhco-hazira",
+    "company": "Krishak Bharati Cooperative Limited (KRIBHCO)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Hazira, Surat, Gujarat",
+    "latitude": 21.118,
+    "longitude": 72.65,
+    "fit": "可开发候选",
+    "signal": "官网 Neem Coated Urea 原文明确 Hazira 与 Shahjahanpur 工厂在自产尿素制造过程中均匀喷涂苦楝油；制造资格来自直接工艺说明，不是仅凭政府政策或销售品名。KRIBHCO 合作社与 KFL 子公司/两厂作为一个需求侧账户；与既有 IFFCO 共同参股 OMIFCO 的关联已记录，这种共同合资关系不代表两合作社同一法人。对应一般尿素包衣技术评估方向，苦楝油包衣不证明 PU/聚合物包膜或我方材料适配及采购意向。地图坐标为 Hazira 地区代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立第二次读取实际尿素包衣工艺、全产品导航与 Products & Services、官网 Contact、Subsidiaries/Joint Venture 范围。公开业务为自产/成品肥料、种子及农技服务，未发现 PU 输入原料、包衣树脂或同类成套包衣剂对外销售；不将苦楝油-coated 成品尿素当成包衣原料销售。KRIBHCO、Krishak Bharati Cooperative、KFL/kribhco.net 与相关品牌/地址核对 main、本地正式记录及私有队列，无既有同一账户；KFL 子公司和 Hazira/Shahjahanpur 两厂不额外计数。公开采购邮箱未核验成功；以官网厂区电话/联系入口为保底，不构造邮箱或虚构负责人。"
+    },
+    "contact": {
+      "label": "Official public business phone/contact page; procurement inbox not independently verified",
+      "phone": "+91 261 2862766",
+      "contactUrl": "https://www.kribhco.net/contact.html"
+    },
+    "source": {
+      "label": "Official own neem-oil coating during manufacturing at Hazira/Shahjahanpur",
+      "url": "https://www.kribhco.net/urea.html"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
+  },
+  {
+    "id": "hurl-new-delhi",
+    "company": "Hindustan Urvarak & Rasayan Limited (HURL)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "New Delhi",
+    "latitude": 28.631,
+    "longitude": 77.278,
+    "fit": "可开发候选",
+    "signal": "当前官方 Product Overview 与 Products 原文明确 HURL 的 Neem-Coated Urea 成品及 Gorakhpur、Barauni、Sindri 三家自有生产工厂；全目录另标进口 NPK 等成品业务，未混同自产。官网联系人表明示 Contracts & Materials 采购负责人 C. S. Prasad 及邮箱。HURL 是 CIL/NTPC/IOCL/FCIL/HFCL 合资法人，三厂和 Bharat/Apna 品牌只计一个账户；与其他肥企的合作公告不制造新增。作为一般包衣尿素工艺评估对象，未确认聚合物/PU 包膜，也不确认我方材料采购、使用或适配。地图为 New Delhi 总部位置，不代替三厂厂址。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次读取当前 Neem-Coated Urea 产品与明确自有工厂说明、完整 bulk/non-bulk 产品、Contact 各职能负责人及法人合资身份。成品目录包括尿素、磷钾/复合肥、硫/微量元素和生物肥，一般肥料贸易与自产已分开；公开 HURL 对外业务未发现 PU 原料、包衣树脂或同类肥料包衣剂销售。不把一般农资成品/合资股东所有上游行业等同 HURL 自身同类原料销售。按 HURL、Hindustan Urvarak & Rasayan、hurl.net.in 及合资法人/品牌核对 main、本地、队列，无既有正式同一公司；三个生产厂和股东不拆为本轮新增。采购与技术角色姓名/邮箱只用官网明示，不按域名猜测。"
+    },
+    "contact": {
+      "label": "Official public business inbox; role verified separately",
+      "email": "VPCnM@hurl.net.in",
+      "phone": "+91 11 22402305",
+      "contactUrl": "https://hurl.net.in/contact/"
+    },
+    "source": {
+      "label": "Official current own coated-urea product and three manufacturing plants",
+      "url": "https://hurl.net.in/ProductOverview/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
+  },
+  {
+    "id": "bvfcl-namrup",
+    "company": "Brahmaputra Valley Fertilizer Corporation Limited (BVFCL)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Namrup, Dibrugarh, Assam",
+    "latitude": 27.181,
+    "longitude": 95.333,
+    "fit": "可开发候选",
+    "signal": "独立读取2019–20官方年报原文：BVFCL 自行设计建立 Namrup-II/III 苦楝油包衣设施，自2015年8月20日起两厂均生产包衣尿素；制造证据保留原报告期。当前官网 Plant Highlights（页面标注2026更新）列实际运行的 Namrup-III 氨/尿素装置，未声称 Namrup-II 仍运行。当前 Product 页的进口 MUKTA Neem Coated Urea 明确在 Trading Products 中，不用进口品替代自产证明。公开采购联系表列 C P Singh（Manager MM）及业务邮箱。属于一般尿素包衣潜在评估对象，苦楝油包衣不证明 PU/聚合物包膜或我方产品兼容性、采购及使用。地图为 Namrup 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读原官方年报包衣线段落、当前运行装置、自产/进口产品分类、总部联系与 Management 材料/合同/技术部门表。所查对外范围是肥料/生物肥/种子等成品、进口农资与一般氨业务，未发现 PU 输入原料、包衣树脂或同类包衣剂销售；年报中的原料采购不能改写成外售原料。按 BVFCL 全称、bvfcl.com/bvfcl.co.in 与 Namrup 地址核对 main、本地和队列，无既有同一账户；Bharat/Mukta 品牌、两装置及待建设项目不单独计数。负责人仅用官网 Office Email；原始 Management 快照的住宅分机列已删除，未保留或使用私人联系电话。"
+    },
+    "contact": {
+      "label": "Official public business inbox; role verified separately",
+      "email": "cpsingh@bvfcl.com",
+      "contactUrl": "https://bvfcl.com/management/"
+    },
+    "source": {
+      "label": "Official annual report 2019–20: own neem coating plant and production history",
+      "url": "https://www.bvfcl.com/wp-content/uploads/2020/12/18th_Annual_Report_of_BVFCL_for_the_year_2019-20.pdf"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bvfcl-namrup": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "hurl-new-delhi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "kribhco-hazira": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "renner-italia-minerbio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vermont-natural-coatings-hardwick": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "target-coatings-fair-lawn": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "general-finishes-east-troy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -1705,6 +1819,221 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bvfcl-namrup": {
+    "website": "https://bvfcl.com/",
+    "contactPage": "https://bvfcl.com/management/",
+    "generalEmail": "cpsingh@bvfcl.com",
+    "address": "Namrup, P.O. Parbatpur 786623, District Dibrugarh, Assam, India",
+    "contacts": [
+      {
+        "name": "C P Singh",
+        "title": "Manager (MM)",
+        "department": "Procurement",
+        "email": "cpsingh@bvfcl.com",
+        "source": {
+          "label": "Official Materials Management & Transportation contact table",
+          "url": "https://bvfcl.com/management/"
+        },
+        "verifiedAt": "2026-10-11"
+      },
+      {
+        "name": "N M Das",
+        "title": "DGM, Technical Services",
+        "department": "Technical",
+        "email": "nm.das@bvfcl.com",
+        "source": {
+          "label": "Official Technical Services contact table",
+          "url": "https://bvfcl.com/management/"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "cpsingh@bvfcl.com",
+        "source": {
+          "label": "Official materials-management office inbox",
+          "url": "https://bvfcl.com/management/"
+        }
+      },
+      {
+        "department": "Technical",
+        "email": "nm.das@bvfcl.com",
+        "source": {
+          "label": "Official technical-services office inbox",
+          "url": "https://bvfcl.com/management/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official annual report 2019–20: own neem coating plant and production history",
+        "url": "https://www.bvfcl.com/wp-content/uploads/2020/12/18th_Annual_Report_of_BVFCL_for_the_year_2019-20.pdf"
+      },
+      {
+        "label": "Official currently running Namrup-III manufacturing plant",
+        "url": "https://bvfcl.com/plant-highlights/"
+      },
+      {
+        "label": "Official own product and explicitly imported trading product separation",
+        "url": "https://bvfcl.com/product/"
+      },
+      {
+        "label": "Official materials-management business names and office emails; residential column omitted",
+        "url": "https://bvfcl.com/management/"
+      },
+      {
+        "label": "Official legal business office/address and general inbox",
+        "url": "https://bvfcl.com/contact-us/"
+      }
+    ]
+  },
+  "hurl-new-delhi": {
+    "website": "https://hurl.net.in/",
+    "contactPage": "https://hurl.net.in/contact/",
+    "generalEmail": "VPCnM@hurl.net.in",
+    "generalPhone": "+91 11 22402305",
+    "address": "Core-4, 9th Floor, SCOPE MINAR, Laxmi Nagar, New Delhi 110092, India",
+    "contacts": [
+      {
+        "name": "C. S. Prasad",
+        "title": "Vice President (Contracts & Materials)",
+        "department": "Procurement",
+        "email": "VPCnM@hurl.net.in",
+        "phone": "+91 11 22402305",
+        "source": {
+          "label": "Official HURL headquarters contact table",
+          "url": "https://hurl.net.in/contact/"
+        },
+        "verifiedAt": "2026-10-11"
+      },
+      {
+        "name": "Dibesh Behera",
+        "title": "Associate Vice President (Technical)",
+        "department": "Technical",
+        "email": "dibeshbehera@hurl.net.in",
+        "source": {
+          "label": "Official HURL Barauni contact table",
+          "url": "https://hurl.net.in/contact/"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "VPCnM@hurl.net.in",
+        "source": {
+          "label": "Official Contracts & Materials contact",
+          "url": "https://hurl.net.in/contact/"
+        }
+      },
+      {
+        "department": "Technical",
+        "email": "dibeshbehera@hurl.net.in",
+        "source": {
+          "label": "Official Barauni technical contact",
+          "url": "https://hurl.net.in/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current own coated-urea product and three manufacturing plants",
+        "url": "https://hurl.net.in/ProductOverview/"
+      },
+      {
+        "label": "Official current complete finished-fertilizer catalogue and import distinctions",
+        "url": "https://hurl.net.in/products/"
+      },
+      {
+        "label": "Official procurement and technical business contacts",
+        "url": "https://hurl.net.in/contact/"
+      }
+    ]
+  },
+  "kribhco-hazira": {
+    "website": "https://www.kribhco.net/",
+    "contactPage": "https://www.kribhco.net/contact.html",
+    "generalPhone": "+91 261 2862766",
+    "address": "Hazira Fertilizer Complex, P.O. KRIBHCO Nagar, Surat 394515, Gujarat, India",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own neem-oil coating during manufacturing at Hazira/Shahjahanpur",
+        "url": "https://www.kribhco.net/urea.html"
+      },
+      {
+        "label": "Official complete product/service categories",
+        "url": "https://www.kribhco.net/pages/products/product.html"
+      },
+      {
+        "label": "Official Hazira business phone and contact entry",
+        "url": "https://www.kribhco.net/contact.html"
+      },
+      {
+        "label": "Official joint-venture relationship with IFFCO; not the same cooperative",
+        "url": "https://kribhco.net/pages/about/jv.html"
+      },
+      {
+        "label": "Official subsidiary scope",
+        "url": "https://www.kribhco.net/pages/about/subsidiaries.html"
+      }
+    ]
+  },
+  "renner-italia-minerbio": {
+    "website": "https://renneritalia.com/",
+    "contactPage": "https://renneritalia.com/en/the-company-and-the-group/",
+    "generalEmail": "info@renneritalia.com",
+    "generalPhone": "+39 051 6618211",
+    "address": "Via Ronchi Inferiore 34, 40061 Minerbio (BO), Italy",
+    "contacts": [
+      {
+        "name": "Alexandre Cenacchi",
+        "title": "President of Renner Italia S.p.A.",
+        "department": "Management",
+        "source": {
+          "label": "Official Company and group leadership statement",
+          "url": "https://renneritalia.com/en/the-company-and-the-group/"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@renneritalia.com",
+        "source": {
+          "label": "Official business inbox",
+          "url": "https://renneritalia.com/en/the-company-and-the-group/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official 2026 wood catalogue p10 and wood coating chapters; PDF independently rendered",
+        "url": "https://renneritalia.com/wp-content/uploads/cataloghi/en_corporate26-wood.pdf"
+      },
+      {
+        "label": "Official group relationship, legal identity and business contact",
+        "url": "https://renneritalia.com/en/the-company-and-the-group/"
+      },
+      {
+        "label": "Official internal resin formulation scope",
+        "url": "https://renneritalia.com/en/ricerca/"
+      },
+      {
+        "label": "Official purchased raw material and resin supply chain",
+        "url": "https://renneritalia.com/en/our-suppliers-and-us/"
+      },
+      {
+        "label": "Official complete Herrmann group business history",
+        "url": "https://renneritalia.com/en/group/"
+      }
+    ]
+  },
   "vermont-natural-coatings-hardwick": {
     "website": "https://vermontnaturalcoatings.com/",
     "contactPage": "https://vermontnaturalcoatings.com/pages/bohme",
@@ -3573,6 +3902,10 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bvfcl-namrup",
+  "hurl-new-delhi",
+  "kribhco-hazira",
+  "renner-italia-minerbio",
   "vermont-natural-coatings-hardwick",
   "target-coatings-fair-lawn",
   "general-finishes-east-troy",

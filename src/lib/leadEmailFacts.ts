@@ -3,6 +3,10 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "bvfcl-namrup": "Your 2019–20 annual report documents in-house neem-coating facilities, and your current plant page lists the operating Namrup-III urea unit.",
+  "hurl-new-delhi": "Your company describes its neem-coated urea product and its own manufacturing plants at Gorakhpur, Barauni and Sindri.",
+  "kribhco-hazira": "Your product page describes neem oil being uniformly applied to prilled urea during manufacture at the Hazira and Shahjahanpur plants.",
+  "renner-italia-minerbio": "Your 2026 wood-coatings catalogue documents a dedicated water-based production site in Minerbio and a range of water-based furniture coatings.",
   "vermont-natural-coatings-hardwick": "Your website identifies PolyWhey Exterior Penetrating Wood Stain as a water-based wood finish and describes your own manufacture of partnered Böhme finish systems.",
   "target-coatings-fair-lawn": "Your EMTECH range includes water-based wood sealers, and your company describes its own development of waterborne wood-finish formulations.",
   "general-finishes-east-troy": "Your Enduro range includes a water-based sanding sealer, and your industrial OEM programme describes an on-site laboratory for custom wood-coating formulation.",
