@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'apt-vietnam-noi-bai': 'APT Vietnam manufactures protective coatings at its Noi Bai factory, including chemical-resistant tank and storage-area coating systems.',
+  'son-anh-an-khanh': 'Son Anh manufactures specialty epoxy and chlorinated-rubber coatings for industrial facilities, offshore structures and ships.',
   "kupsa-oyon": "Your Polish subsidiary describes developing its own water-based formulations and manufacturing water-based varnishes at its plant, alongside your group’s wood-coating product range.",
   "kofarb-czestochowa": "Your company describes its own waterborne-paint manufacturing and laboratories, and your KOFATERM range includes water-based finished coatings for wood and other substrates.",
   'thai-do-no-gen-gen-rayong': 'Your company manufactures coatings at its Rayong factory and lists Daimyo Crown water-based wood stains and water-based two-component polyurethane coatings.',

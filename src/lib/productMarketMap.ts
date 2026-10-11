@@ -4926,6 +4926,155 @@ const independentlyVerifiedThaiDonoLeads: PublicLead[] = [
   }
 ]
 
+const independentlyVerifiedVietnamProtectiveLeads: PublicLead[] = [
+  {
+    "id": "apt-vietnam-noi-bai",
+    "productId": "elo",
+    "company": "APT Vietnam",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Hanoi",
+    "latitude": 21.0278,
+    "longitude": 105.8342,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "fit": "可开发候选",
+    "signal": "官方原文确认 Nội Bài 工厂制造工业防腐涂层，KERAGUARD ADG220 面向化学品储存及储罐保护。Hanoi、Ho Chi Minh 与境外分支均作为同一 APT 账户，不拆分品牌或分支；未把未披露的所有权写成已确认集团关系。 坐标为 Hanoi 城市代表点，并非精确厂址。",
+    "demandSideReason": "ELO TDS 明确涂料应用；该企业自主制造工业防护或防腐成品涂层，是潜在下游配方评估对象。公开资料不证明其采购、使用或需要 ELO，也不证明我方产品与其现有配方的相容性、固化方式或性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读自有制造说明及成品目录：所查业务为成品涂料/涂层体系，未见 ELO、ESBO、环氧化植物油或同类增塑输入原料对外销售；普通环氧成品涂层不等于销售环氧化植物油。结论限已查公开业务。名称、域名、品牌及已披露分支与最新 main、本地正式数据和完整私有队列对照未见同一账户；未披露集团所有权不擅自推定。来源：https://apt.net.vn/gioi-thieu/；https://apt.net.vn/son-chong-an-mon/；https://apt.net.vn/he-thong-phu-epoxy-khang-hoa-chat-keraguard-adg220/"
+    },
+    "contact": {
+      "label": "Official public corporate inbox; no named procurement contact",
+      "email": "infor@apt.net.vn",
+      "phone": "+84 904 339 299",
+      "contactUrl": "https://apt.net.vn/lien-he/"
+    },
+    "source": {
+      "label": "Original own manufacture and protective-coating portfolio",
+      "url": "https://apt.net.vn/gioi-thieu/"
+    },
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "APT 原文确认自有生产线与研发；防腐目录说明产品制造于 APT Vietnam Nội Bài 工厂，ADG220 技术页列出化学品储存区及储罐保护涂层。",
+      "sourceName": "Original own manufacturing statement and protective-coating products",
+      "sourceUrl": "https://apt.net.vn/gioi-thieu/",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://apt.net.vn/",
+      "contactPage": "https://apt.net.vn/lien-he/",
+      "generalEmail": "infor@apt.net.vn",
+      "generalPhone": "+84 904 339 299",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "General",
+          "email": "infor@apt.net.vn",
+          "source": {
+            "label": "Official publicly disclosed corporate business inbox",
+            "url": "https://apt.net.vn/lien-he/"
+          }
+        }
+      ],
+      "address": "Factory: Khu 2 - Nội Bài - Hà Nội - Việt Nam",
+      "sources": [
+        {
+          "label": "Own manufacturing and company identity",
+          "url": "https://apt.net.vn/gioi-thieu/"
+        },
+        {
+          "label": "Finished protective-coating portfolio",
+          "url": "https://apt.net.vn/son-chong-an-mon/"
+        },
+        {
+          "label": "Technical product or public contact",
+          "url": "https://apt.net.vn/he-thong-phu-epoxy-khang-hoa-chat-keraguard-adg220/"
+        },
+        {
+          "label": "Corporate public contact",
+          "url": "https://apt.net.vn/lien-he/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "son-anh-an-khanh",
+    "productId": "elo",
+    "company": "Công ty TNHH Thương mại và Sản xuất Sơn Anh",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Hanoi",
+    "latitude": 21.0278,
+    "longitude": 105.8342,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "fit": "可开发候选",
+    "signal": "官网确认自主制造工业、海上设施及船舶涂料，公开 An Khánh 地址与公司业务邮箱。完整法人名称、Sơn Anh 品牌及 sonanhpaint.vn 仅一个账户；原料进口来源不等于目标公司的所在地或集团归属。 坐标为 Hanoi 城市代表点，并非精确厂址。",
+    "demandSideReason": "ELO TDS 明确涂料应用；该企业自主制造工业防护或防腐成品涂层，是潜在下游配方评估对象。公开资料不证明其采购、使用或需要 ELO，也不证明我方产品与其现有配方的相容性、固化方式或性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重读自有制造说明及成品目录：所查业务为成品涂料/涂层体系，未见 ELO、ESBO、环氧化植物油或同类增塑输入原料对外销售；普通环氧成品涂层不等于销售环氧化植物油。结论限已查公开业务。名称、域名、品牌及已披露分支与最新 main、本地正式数据和完整私有队列对照未见同一账户；未披露集团所有权不擅自推定。来源：https://sonanhpaint.vn/3-65/Gioi-thieu；https://sonanhpaint.vn/"
+    },
+    "contact": {
+      "label": "Official public corporate inbox; no named procurement contact",
+      "email": "sonanhpaint@gmail.com",
+      "phone": "+84 916 545 090",
+      "contactUrl": "https://sonanhpaint.vn/vn/lien-he"
+    },
+    "source": {
+      "label": "Original own manufacture and protective-coating portfolio",
+      "url": "https://sonanhpaint.vn/3-65/Gioi-thieu"
+    },
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "公司原文说明自有生产设备及技术队伍，并制造工业、海上设施和船舶用环氧及氯化橡胶涂料；成品目录列船舶防护底涂、中间涂层及聚氨酯面漆。",
+      "sourceName": "Original own manufacturing statement and protective-coating products",
+      "sourceUrl": "https://sonanhpaint.vn/3-65/Gioi-thieu",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://sonanhpaint.vn/",
+      "contactPage": "https://sonanhpaint.vn/vn/lien-he",
+      "generalEmail": "sonanhpaint@gmail.com",
+      "generalPhone": "+84 916 545 090",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "General",
+          "email": "sonanhpaint@gmail.com",
+          "source": {
+            "label": "Official publicly disclosed corporate business inbox",
+            "url": "https://sonanhpaint.vn/vn/lien-he"
+          }
+        }
+      ],
+      "address": "KCN An Khánh, Hoài Đức, Hà Nội, Vietnam",
+      "sources": [
+        {
+          "label": "Own manufacturing and company identity",
+          "url": "https://sonanhpaint.vn/3-65/Gioi-thieu"
+        },
+        {
+          "label": "Finished protective-coating portfolio",
+          "url": "https://sonanhpaint.vn/"
+        },
+        {
+          "label": "Technical product or public contact",
+          "url": "https://sonanhpaint.vn/vn/lien-he"
+        }
+      ]
+    }
+  }
+]
+
 const independentlyVerifiedKossanLeads: PublicLead[] = [
   {
     "id": "kossan-paint-kapar",
@@ -5520,4 +5669,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads)
+]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads)
