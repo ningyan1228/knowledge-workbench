@@ -4404,6 +4404,250 @@ const demandSideLeadIds = new Set([
   'moravia-istanbul',
 ])
 
+// Separately verified Indian protective-coating manufacturers, not confirmed buyers.
+const independentlyVerifiedIndiaCoatingLeads: PublicLead[] = [
+  {
+    "id": "advance-paints-mumbai",
+    "productId": "elo",
+    "company": "Advance Paints Pvt. Ltd.",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-anticorrosion-coating-formulator",
+    "fit": "可开发候选",
+    "signal": "官网确认 Mumbai 和 Ankleshwar 自有涂料生产厂及持续产品研发；Advoguard 环氧中间涂层用于严苛腐蚀、海洋及离岸结构防护。",
+    "demandSideReason": "官网确认 Mumbai 和 Ankleshwar 自有涂料生产厂及持续产品研发；Advoguard 环氧中间涂层用于严苛腐蚀、海洋及离岸结构防护。 ELO 的涂料大类及独立 ELO/木质素防腐研究支持其作为潜在配方评估对象；该研究采用 UV/热双重固化，不能推断本公司的既有配方兼容、已使用 ELO 或已确认采购。Mumbai 与 Ankleshwar 为同一公司两处工厂，仅一个客户；Tambour 为历史技术许可合作，不据此推定集团所有权。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "已重新检查官网公司能力与成品涂层目录：业务为工业/海洋涂料制造和配方；Ankleshwar 树脂生产明确为 captive consumption（自用）。所审阅目录未发现 ELO、ESBO 或同类环氧化植物油原料销售，不将自用树脂等同于同行供应。 来源：https://advancepaints.com/about-us/；https://advancepaints.com/intermediate-industrial-coatings/"
+    },
+    "contact": {
+      "label": "官方联系页及公司电话",
+      "phone": "+91 22 2859 0162",
+      "contactUrl": "https://advancepaints.com/contact-us/"
+    },
+    "source": {
+      "label": "Official manufacturing and protective-coating evidence",
+      "url": "https://advancepaints.com/about-us/"
+    },
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "elo-anticorrosion-coating-research",
+      "statement": "官网确认 Mumbai 和 Ankleshwar 自有涂料生产厂及持续产品研发；Advoguard 环氧中间涂层用于严苛腐蚀、海洋及离岸结构防护。",
+      "sourceName": "Official company manufacturing and coating portfolio",
+      "sourceUrl": "https://advancepaints.com/about-us/",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://advancepaints.com/",
+      "contactPage": "https://advancepaints.com/contact-us/",
+      "generalPhone": "+91 22 2859 0162",
+      "contacts": [
+        {
+          "name": "Harshad Sheth",
+          "title": "Managing Director",
+          "department": "Management",
+          "source": {
+            "label": "Official company philosophy",
+            "url": "https://advancepaints.com/about-us/"
+          },
+          "verifiedAt": "2026-10-11"
+        }
+      ],
+      "departmentEmails": [],
+      "address": "Advance House, Plot-A, Makwana Road, Ark Industrial Compound, Marol Naka, Andheri East, Mumbai 400059, India",
+      "sources": [
+        {
+          "label": "Manufacturing and R&D",
+          "url": "https://advancepaints.com/about-us/"
+        },
+        {
+          "label": "Protective coating products",
+          "url": "https://advancepaints.com/intermediate-industrial-coatings/"
+        },
+        {
+          "label": "Business contact",
+          "url": "https://advancepaints.com/contact-us/"
+        },
+        {
+          "label": "Independent ELO research (original full text)",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8588247/fullTextXML"
+        }
+      ]
+    }
+  },
+  {
+    "id": "goa-paints-panaji",
+    "productId": "elo",
+    "company": "Goa Paints (Dempo Group)",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Panaji",
+    "latitude": 15.4909,
+    "longitude": 73.8278,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-anticorrosion-coating-formulator",
+    "fit": "可开发候选",
+    "signal": "官网确认自主制造高性能防护涂料并提供定制配方；Galaxy 环氧产品包括海洋/工业高膜厚涂层和用于管线重防护的富锌底漆。",
+    "demandSideReason": "官网确认自主制造高性能防护涂料并提供定制配方；Galaxy 环氧产品包括海洋/工业高膜厚涂层和用于管线重防护的富锌底漆。 ELO 的涂料大类及独立 ELO/木质素防腐研究支持其作为潜在配方评估对象；该研究采用 UV/热双重固化，不能推断本公司的既有配方兼容、已使用 ELO 或已确认采购。官网明确标注 Dempo Group；Galaxy、Shipguard 为产品系列，不另算公司；GSIA 历史会员制造地址仅作为交叉证据，不当作最新产能证明。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "已重新检查公司简介、环氧产品和官网全部产品家族导航：显示成品防护涂料及定制配方，未发现 ELO、ESBO 或同类环氧化植物油原料销售；结论限定于已审阅公开目录。 来源：https://www.goapaints.net/about-us/；https://www.goapaints.net/product/epoxy/"
+    },
+    "contact": {
+      "label": "官方公开业务邮箱",
+      "email": "goapaints@goapaints.net",
+      "phone": "+91 8605008862",
+      "contactUrl": "https://www.goapaints.net/about-us/"
+    },
+    "source": {
+      "label": "Official manufacturing and protective-coating evidence",
+      "url": "https://www.goapaints.net/about-us/"
+    },
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "elo-anticorrosion-coating-research",
+      "statement": "官网确认自主制造高性能防护涂料并提供定制配方；Galaxy 环氧产品包括海洋/工业高膜厚涂层和用于管线重防护的富锌底漆。",
+      "sourceName": "Official company manufacturing and coating portfolio",
+      "sourceUrl": "https://www.goapaints.net/about-us/",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://www.goapaints.net/",
+      "contactPage": "https://www.goapaints.net/about-us/",
+      "generalEmail": "goapaints@goapaints.net",
+      "generalPhone": "+91 8605008862",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "General",
+          "email": "goapaints@goapaints.net",
+          "source": {
+            "label": "Official public business contact",
+            "url": "https://www.goapaints.net/about-us/"
+          }
+        }
+      ],
+      "address": "1st floor, Dempo Trade Centre, Patto Plaza, Panaji, Goa, India",
+      "sources": [
+        {
+          "label": "Manufacturing and R&D",
+          "url": "https://www.goapaints.net/about-us/"
+        },
+        {
+          "label": "Protective coating products",
+          "url": "https://www.goapaints.net/product/epoxy/"
+        },
+        {
+          "label": "Business contact",
+          "url": "https://www.goapaints.net/about-us/"
+        },
+        {
+          "label": "Independent ELO research (original full text)",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8588247/fullTextXML"
+        },
+        {
+          "label": "GSIA historical manufacturing cross-check",
+          "url": "https://gsia.in/goa-paints-and-allied-products/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "rainbow-industries-navi-mumbai",
+    "productId": "elo",
+    "company": "Rainbow Industries",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Navi Mumbai",
+    "latitude": 19.033,
+    "longitude": 73.0297,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "elo-anticorrosion-coating-formulator",
+    "fit": "可开发候选",
+    "signal": "官网确认 Rabale 自有工业涂料工厂和定制研发；二组分环氧富锌底漆用于高腐蚀钢结构，煤焦油环氧用于海洋、储罐和重型结构防护。",
+    "demandSideReason": "官网确认 Rabale 自有工业涂料工厂和定制研发；二组分环氧富锌底漆用于高腐蚀钢结构，煤焦油环氧用于海洋、储罐和重型结构防护。 ELO 的涂料大类及独立 ELO/木质素防腐研究支持其作为潜在配方评估对象；该研究采用 UV/热双重固化，不能推断本公司的既有配方兼容、已使用 ELO 或已确认采购。按 Rainbow Industries、rainbowindustries.co.in 和 Rabale 地址去重；未发现与现有客户的集团关联。Mayur Chaudhari 未披露职位，未编造其职称。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "已重新检查自有工厂说明、完整产品类别清单与环氧成品页面：成品工业涂料、底漆、配套稀释剂和清洗溶剂未显示 ELO、ESBO 或同类环氧化植物油原料销售；未把配套溶剂销售误认同类原料同行。 来源：https://www.rainbowindustries.co.in/about；https://www.rainbowindustries.co.in/copy-of-epoxy"
+    },
+    "contact": {
+      "label": "官方公开业务邮箱",
+      "email": "rainbow.industries@ymail.com",
+      "phone": "+91 9870086895",
+      "contactUrl": "https://www.rainbowindustries.co.in/products"
+    },
+    "source": {
+      "label": "Official manufacturing and protective-coating evidence",
+      "url": "https://www.rainbowindustries.co.in/about"
+    },
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "elo-anticorrosion-coating-research",
+      "statement": "官网确认 Rabale 自有工业涂料工厂和定制研发；二组分环氧富锌底漆用于高腐蚀钢结构，煤焦油环氧用于海洋、储罐和重型结构防护。",
+      "sourceName": "Official company manufacturing and coating portfolio",
+      "sourceUrl": "https://www.rainbowindustries.co.in/about",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://www.rainbowindustries.co.in/",
+      "contactPage": "https://www.rainbowindustries.co.in/products",
+      "generalEmail": "rainbow.industries@ymail.com",
+      "generalPhone": "+91 9870086895",
+      "contacts": [
+        {
+          "name": "M B Chaudhari",
+          "title": "Founder; supervises research and development (official company description)",
+          "department": "Technical",
+          "source": {
+            "label": "Official company R&D description",
+            "url": "https://www.rainbowindustries.co.in/about"
+          },
+          "verifiedAt": "2026-10-11"
+        }
+      ],
+      "departmentEmails": [
+        {
+          "department": "General",
+          "email": "rainbow.industries@ymail.com",
+          "source": {
+            "label": "Official public business contact",
+            "url": "https://www.rainbowindustries.co.in/products"
+          }
+        }
+      ],
+      "address": "R-927, MIDC TTC Industrial Area, Rabale, Navi Mumbai 400701, India",
+      "sources": [
+        {
+          "label": "Manufacturing and R&D",
+          "url": "https://www.rainbowindustries.co.in/about"
+        },
+        {
+          "label": "Protective coating products",
+          "url": "https://www.rainbowindustries.co.in/copy-of-epoxy"
+        },
+        {
+          "label": "Business contact",
+          "url": "https://www.rainbowindustries.co.in/products"
+        },
+        {
+          "label": "Independent ELO research (original full text)",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8588247/fullTextXML"
+        }
+      ]
+    }
+  }
+]
+
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map<PublicLead>((lead) => {
   const qualification = leadQualifications[lead.id]
   if (!qualification) throw new Error(`Missing application qualification for ${lead.id}`)
@@ -4514,4 +4758,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-])
+]).concat(independentlyVerifiedIndiaCoatingLeads)

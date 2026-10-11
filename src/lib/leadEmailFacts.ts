@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"advance-paints-mumbai": "Your company documents its own paint plants in Mumbai and Ankleshwar and an Advoguard coating range for severely corrosive and marine environments.",
+"goa-paints-panaji": "Your company describes its own manufacture of high-performance protective paints and a Galaxy epoxy range for heavy-duty, marine and industrial protection.",
+"rainbow-industries-navi-mumbai": "Your company documents its own industrial paint factory in Rabale and develops epoxy primers and coatings for highly corrosive and marine environments.",
   "protectometal-ciudad-mexico": "Your company describes its own development and manufacture of custom anticorrosive coatings, including batches from 60 to 600 litres and its PROTEC product line.",
   "pinturas-jemah-nuevo-leon": "Your company states that it manufactures anticorrosive and water-based coatings and publishes industrial epoxy primer and topcoat ranges.",
   "nervion-tlalnepantla": "Your company states that it designs and manufactures high-performance coatings and publishes industrial epoxy and marine protective coating ranges.",

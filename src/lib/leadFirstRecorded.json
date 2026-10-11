@@ -1,7 +1,4 @@
 {
-  "hempel-lyngby": {"recordedAt": "2026-10-11T10:30:19+08:00", "commit": "2909645a21086c6a4cf97377b771ded8dd954121"},
-  "chugoku-marine-paints-tokyo": {"recordedAt": "2026-10-11T10:30:19+08:00", "commit": "2909645a21086c6a4cf97377b771ded8dd954121"},
-  "nervion-tlalnepantla": {"recordedAt": "2026-10-11T10:30:19+08:00", "commit": "2909645a21086c6a4cf97377b771ded8dd954121"},
   "ac-profil-huttwil": {
     "recordedAt": "2026-09-26T10:10:39+08:00",
     "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
@@ -9,6 +6,11 @@
   "adubos-paranaiba-uberlandia": {
     "recordedAt": "2026-09-28T10:37:24+08:00",
     "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "advance-paints-mumbai": {
+    "recordedAt": "2026-10-11T02:45:00Z",
+    "commit": "",
+    "source": "Local formal admission, round 20261011023741744; pending first public commit, not a fabricated commit date."
   },
   "agro-berjaya-mojokerto": {
     "recordedAt": "2026-09-26T10:37:44+08:00",
@@ -77,6 +79,10 @@
   "chobi-ulsan": {
     "recordedAt": "2026-10-10T11:44:13Z",
     "commit": "622de47170dff829d535b1fea66238a0f31dac71"
+  },
+  "chugoku-marine-paints-tokyo": {
+    "recordedAt": "2026-10-11T10:30:19+08:00",
+    "commit": "2909645a21086c6a4cf97377b771ded8dd954121"
   },
   "cic-mckinney": {
     "recordedAt": "2026-09-26T09:29:49+08:00",
@@ -178,6 +184,11 @@
     "recordedAt": "2026-09-26T09:12:11+08:00",
     "commit": "2b4752598cee116204b10231e7031425f129e7be"
   },
+  "goa-paints-panaji": {
+    "recordedAt": "2026-10-11T02:45:00Z",
+    "commit": "",
+    "source": "Local formal admission, round 20261011023741744; pending first public commit, not a fabricated commit date."
+  },
   "greenbest-henstridge": {
     "recordedAt": "2026-09-27T20:24:50+08:00",
     "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
@@ -205,6 +216,10 @@
   "harrells-sylacauga": {
     "recordedAt": "2026-09-27T20:53:01+08:00",
     "commit": "fc887df5d1401a80b8a531c61669f11db12277f5"
+  },
+  "hempel-lyngby": {
+    "recordedAt": "2026-10-11T10:30:19+08:00",
+    "commit": "2909645a21086c6a4cf97377b771ded8dd954121"
   },
   "hurl-new-delhi": {
     "recordedAt": "2026-10-11T10:18:53+08:00",
@@ -310,6 +325,10 @@
     "recordedAt": "2026-10-11T09:34:37+08:00",
     "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
   },
+  "nervion-tlalnepantla": {
+    "recordedAt": "2026-10-11T10:30:19+08:00",
+    "commit": "2909645a21086c6a4cf97377b771ded8dd954121"
+  },
   "nousbo-ulsan": {
     "recordedAt": "2026-09-29T21:33:21+08:00",
     "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
@@ -329,6 +348,10 @@
   "periwal-bhiwadi": {
     "recordedAt": "2026-09-26T11:18:42+08:00",
     "commit": "eaed0cd026538d9e3b31040c20c5f1e31c8a2d11"
+  },
+  "pinturas-jemah-nuevo-leon": {
+    "recordedAt": "2026-10-11T10:38:10+08:00",
+    "commit": "4cfcbadea211284ca7393267db98f54d777e1b79"
   },
   "plantacote-herentals": {
     "recordedAt": "2026-09-28T11:21:53+08:00",
@@ -350,6 +373,10 @@
     "recordedAt": "2026-09-26T09:57:46+08:00",
     "commit": "148c79bdf9d108684ad4e9203fee8e740ac455c9"
   },
+  "protectometal-ciudad-mexico": {
+    "recordedAt": "2026-10-11T10:38:10+08:00",
+    "commit": "4cfcbadea211284ca7393267db98f54d777e1b79"
+  },
   "pungnong-seoul": {
     "recordedAt": "2026-09-29T21:33:21+08:00",
     "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
@@ -361,6 +388,11 @@
   "pvc-colouring-ahmedabad": {
     "recordedAt": "2026-09-26T17:34:36+08:00",
     "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
+  },
+  "rainbow-industries-navi-mumbai": {
+    "recordedAt": "2026-10-11T02:45:00Z",
+    "commit": "",
+    "source": "Local formal admission, round 20261011023741744; pending first public commit, not a fabricated commit date."
   },
   "rcf-mumbai": {
     "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
@@ -443,9 +475,8 @@
     "commit": "ce810d39c5bbb382520872189d522e0ef0724f6d"
   },
   "teknova-esenyurt": {
-    "recordedAt": "2026-10-11T02:28:00Z",
-    "commit": "",
-    "source": "Local formal public admission in run 20261011021811183; repository commit pending. Deployment history replaces this with actual first-appearance commit."
+    "recordedAt": "2026-10-11T10:33:22+08:00",
+    "commit": "c74b1586de24a58d15e5c9adc67b1b25c1a312b7"
   },
   "tintas-prisma-tlalnepantla": {
     "recordedAt": "2026-09-27T17:08:29+08:00",
