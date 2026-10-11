@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "mowilex-indonesia-cikande": "Your Woodstain product page specifies water as the solvent for its wood coating, and your company describes its manufacturing plant in Cikande.",
+  "tectona-warna-cirebon": "Your website describes a water-based wood-finishing system with WoodSeal sanding sealer and identifies production in Palimanan, Cirebon.",
   'hankook-hyeophwa-pohang': "Your 땅심올코팅 30-6-9 product description states that nitrogen, phosphorus and potassium are fully coated.",
   'kg-chemical-ulsan': "Your 2025 annual report lists the launch of 미생물올코팅 among your fertilizer R&D results.",
   'namhae-chemical-yeosu': "Your 오래가올원 30-8-8 product page describes a controlled-release fertilizer with every granule coated.",

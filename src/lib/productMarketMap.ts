@@ -1282,34 +1282,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
   },
   {
-    "id": "propan-raya-tangerang",
-    "productId": "nl-w1201",
-    "company": "PT Propan Raya ICC",
-    "country": "Indonesia",
-    "countryZh": "印度尼西亚",
-    "city": "Tangerang, Banten",
-    "latitude": -6.1783,
-    "longitude": 106.6319,
-    "fit": "可开发候选",
-    "signal": "官方当前 ACRYLUX AAC-955 产品明确为水性实色涂料，并列木材用途；公司介绍确认自研木材/藤材涂饰系统及 RPS 涂料生产技术。水性木材涂料配方属于潜在下游评估方向；不把目录中的 generic plastic 推断为 PP/PE，也不将该成品称作底漆。未证明使用或采购我方产品。地图坐标代表 Tangerang 城市位置。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立再次阅读 https://www.propanraya.com/tentang-kami、https://www.propanraya.com/id/produk/acrylux 及官网产品类别：所查主营成品木器/建筑/工业涂料和建筑化学品，未发现对外出售水性聚烯烃乳液、CPO/PO 分散液或同类附着力原料的公开证据。以 PT Propan Raya ICC、Propan、propanraya.com 与最新 main、本地数据及研究队列去重，无重复；总部、工厂、IMPRA/ULTRAN/ACRYLUX 品牌按一个公司账户。"
-    },
-    "contact": {
-      "label": "Official general business entry; no named procurement person inferred",
-      "phone": "+62 811-9366-182",
-      "email": "info@propanraya.com",
-      "contactUrl": "https://www.propanraya.com/kontak"
-    },
-    "source": {
-      "label": "Official ACRYLUX AAC-955 waterborne coating for wood",
-      "url": "https://www.propanraya.com/id/produk/acrylux"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
-  },
-  {
     "id": "mowilex-indonesia-cikande",
     "productId": "nl-w1201",
     "company": "PT Mowilex Indonesia (Asia Coatings Enterprises group)",
@@ -1342,7 +1314,6 @@ type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'application
 
 const leadQualifications: Record<string, LeadQualification> = {
   "mowilex-indonesia-cikande": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "propan-raya-tangerang": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tectona-warna-cirebon": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   'kg-chemical-ulsan': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
   'hankook-hyeophwa-pohang': { targetCompanyTypeId: 'coated-compound-fertilizer-manufacturer', applicationLayer: 'tds-verified', applicationId: 'coated-compound-fertilizer' },
@@ -1501,38 +1472,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       {
         "label": "Official additive category: BC1000 cement additive, supplier exclusion check",
         "url": "https://shop.mowilex.com/en/collections/additive"
-      }
-    ]
-  },
-  "propan-raya-tangerang": {
-    "website": "https://www.propanraya.com/",
-    "contactPage": "https://www.propanraya.com/kontak",
-    "address": "Jl. Gatot Subroto Km. 8, Kadu Jaya 15810, Kabupaten Tangerang, Indonesia",
-    "generalPhone": "+62 811-9366-182",
-    "generalEmail": "info@propanraya.com",
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "info@propanraya.com",
-        "source": {
-          "label": "Official business contact page",
-          "url": "https://www.propanraya.com/kontak"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official ACRYLUX AAC-955 waterborne coating for wood",
-        "url": "https://www.propanraya.com/id/produk/acrylux"
-      },
-      {
-        "label": "Official own development and RPS production history",
-        "url": "https://www.propanraya.com/tentang-kami"
-      },
-      {
-        "label": "Official business email, phone and headquarters",
-        "url": "https://www.propanraya.com/kontak"
       }
     ]
   },
@@ -3023,7 +2962,6 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
   "mowilex-indonesia-cikande",
-  "propan-raya-tangerang",
   "tectona-warna-cirebon",
   'kg-chemical-ulsan',
   'hankook-hyeophwa-pohang',
