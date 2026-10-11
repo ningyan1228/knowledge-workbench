@@ -4260,7 +4260,7 @@ const demandSideLeadIds = new Set([
   'moravia-istanbul',
 ])
 
-export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map((lead) => {
+export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map<PublicLead>((lead) => {
   const qualification = leadQualifications[lead.id]
   if (!qualification) throw new Error(`Missing application qualification for ${lead.id}`)
   const { legacyCompanyDescription: _legacyCompanyDescription, ...record } = lead
@@ -4282,4 +4282,92 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
     },
     profile: profileFor(lead),
   }
-})
+}).concat([
+  {
+    "id": "teknova-esenyurt",
+    "productId": "nl-w1201",
+    "company": "Teknova Matbaacılık Kimya Sanayi ve Ticaret A.Ş.",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Istanbul (Esenyurt manufacturing; city-level marker)",
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "waterborne-ink-manufacturer",
+    "fit": "可开发候选",
+    "signal": "自有 Esenyurt 工厂生产水性柔版油墨；Hydroflex HP 面向 PE、PP、OPP/BOPP 薄膜，官网要求电晕处理 38–42 dyne。可评估水性油墨附着力底涂方向，不代表已采购或使用 NL-W1201。",
+    "demandSideReason": "NL-W1201 TDS 的 PE/PP 表面处理范围，经独立 ICHEMCO 目录支持的水性底涂改善 PP/PE 水性油墨附着类别，连接至 Teknova 自产薄膜水性成品油墨。配方兼容性、基材处理及包装合规须验证，不推断已确认采购需求。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立复读 https://www.teknova.com.tr/hakkimizda/、https://www.teknova.com.tr/ozel-urunler/、https://www.teknova.com.tr/cases/temsilciliklerimiz/：所查产品为成品油墨/上光涂层、印刷清洁和工艺助剂、设备及胶带；未发现所查公开目录销售 PO/CPO 分散液、水性聚烯烃乳液或同类附着力原料。消泡剂等其他助剂不等于同类原料。Hydroflex 是产品线；代理品牌不是母公司证明。名称、域名、品牌与最新 main、本地正式数据及私有队列无重复；工厂和销售办公室不拆为新增。"
+    },
+    "contact": {
+      "label": "Official general business/orders inbox; not a named procurement contact",
+      "email": "siparis@teknova.com.tr",
+      "phone": "+90 212 485 3700",
+      "contactUrl": "https://www.teknova.com.tr/iletisim/"
+    },
+    "source": {
+      "label": "Official Hydroflex HP waterborne film ink",
+      "url": "https://www.teknova.com.tr/hydroflex-hp-serisi-su-bazli-murekkepleri/"
+    },
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "waterborne-ink-anchorage-on-pp-pe",
+      "statement": "官方生产页确认 Esenyurt 自有设施与水性柔版油墨生产；HP 官方页明确水性体系和 PE/PP/OPP/BOPP 薄膜，并注明电晕处理条件，不能据此推断未处理 PP 性能。",
+      "sourceName": "Official Teknova manufacturing and HP product pages",
+      "sourceUrl": "https://www.teknova.com.tr/hydroflex-hp-serisi-su-bazli-murekkepleri/",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://www.teknova.com.tr/",
+      "contactPage": "https://www.teknova.com.tr/iletisim/",
+      "generalEmail": "siparis@teknova.com.tr",
+      "generalPhone": "+90 212 485 3700",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "General",
+          "email": "siparis@teknova.com.tr",
+          "source": {
+            "label": "Official business contact page",
+            "url": "https://www.teknova.com.tr/iletisim/"
+          }
+        }
+      ],
+      "address": "Contact page: Akçaburgaz Mah. 3042. Sk. No:14, Esenyurt/Istanbul, Türkiye. Footer also lists another street address; not a separate customer.",
+      "sources": [
+        {
+          "label": "hp",
+          "url": "https://www.teknova.com.tr/hydroflex-hp-serisi-su-bazli-murekkepleri/"
+        },
+        {
+          "label": "manufacturing",
+          "url": "https://www.teknova.com.tr/cases/mu%CC%88rekkep-ve-matbaa-kimyasallari-u%CC%88retimi/"
+        },
+        {
+          "label": "about",
+          "url": "https://www.teknova.com.tr/hakkimizda/"
+        },
+        {
+          "label": "contact",
+          "url": "https://www.teknova.com.tr/iletisim/"
+        },
+        {
+          "label": "products",
+          "url": "https://www.teknova.com.tr/ozel-urunler/"
+        },
+        {
+          "label": "brands",
+          "url": "https://www.teknova.com.tr/cases/temsilciliklerimiz/"
+        },
+        {
+          "label": "application",
+          "url": "https://services.ichemco.com/eng/Catalogs/Ichemco%20Products%20for%20Tapes%20and%20Protective%20Films%202020.pdf"
+        }
+      ]
+    }
+  }
+])

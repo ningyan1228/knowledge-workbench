@@ -1,15 +1,10 @@
 {
+  "hempel-lyngby": {"recordedAt": "2026-10-11T10:30:19+08:00", "commit": "2909645a21086c6a4cf97377b771ded8dd954121"},
+  "chugoku-marine-paints-tokyo": {"recordedAt": "2026-10-11T10:30:19+08:00", "commit": "2909645a21086c6a4cf97377b771ded8dd954121"},
+  "nervion-tlalnepantla": {"recordedAt": "2026-10-11T10:30:19+08:00", "commit": "2909645a21086c6a4cf97377b771ded8dd954121"},
   "ac-profil-huttwil": {
     "recordedAt": "2026-09-26T10:10:39+08:00",
     "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
-  },
-  "acs-griffith": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
-  },
-  "adeka-tokyo": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
   },
   "adubos-paranaiba-uberlandia": {
     "recordedAt": "2026-09-28T10:37:24+08:00",
@@ -31,9 +26,9 @@
     "recordedAt": "2026-10-10T09:29:20+08:00",
     "commit": "a7eba902e33c6fa46a32cf5a2ee97847f045473c"
   },
-  "aline-detroit": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  "agrotiger-mabalacat": {
+    "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
+    "recordedAt": "2026-10-10T14:46:38Z"
   },
   "alpha-plast-devland": {
     "recordedAt": "2026-09-27T17:08:29+08:00",
@@ -59,13 +54,13 @@
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
   },
+  "bvfcl-namrup": {
+    "recordedAt": "2026-10-11T10:18:53+08:00",
+    "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
+  },
   "cai-georgetown": {
     "recordedAt": "2026-09-26T18:51:07+08:00",
     "commit": "3b3c8a7d31c67aa37f19f0deab75b4ecc4b67d16"
-  },
-  "cargill-minneapolis": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
   },
   "ceccan-san-jose-iturbide": {
     "recordedAt": "2026-09-27T15:58:40+08:00",
@@ -74,6 +69,14 @@
   "central-chemical-ube": {
     "recordedAt": "2026-09-27T15:58:40+08:00",
     "commit": "1cbfd3d8012afa586fa4669f537bc7e00bfec5c3"
+  },
+  "chambal-fertilizers-gadepan": {
+    "recordedAt": "2026-10-11T09:34:37+08:00",
+    "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
+  },
+  "chobi-ulsan": {
+    "recordedAt": "2026-10-10T11:44:13Z",
+    "commit": "622de47170dff829d535b1fea66238a0f31dac71"
   },
   "cic-mckinney": {
     "recordedAt": "2026-09-26T09:29:49+08:00",
@@ -131,9 +134,17 @@
     "recordedAt": "2026-09-29T10:18:27+08:00",
     "commit": "0d36ce0020d07fe06c46646469c7fbf2a7ee65c7"
   },
+  "duraway-coating-kapar": {
+    "recordedAt": "2026-10-11T09:15:33+08:00",
+    "commit": "ddc6df1f9b4b99b5c9f9874ef247c9910c8e107a"
+  },
   "ec-grow-eau-claire": {
     "recordedAt": "2026-09-29T21:33:21+08:00",
     "commit": "1dbcb88624ee68d57478b1b965b1c26409747cda"
+  },
+  "elchemus-bukit-mertajam": {
+    "recordedAt": "2026-10-11T09:15:33+08:00",
+    "commit": "ddc6df1f9b4b99b5c9f9874ef247c9910c8e107a"
   },
   "farmhannong-ulsan": {
     "recordedAt": "2026-09-26T11:00:32+08:00",
@@ -159,6 +170,10 @@
     "recordedAt": "2026-09-28T20:57:49+08:00",
     "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
   },
+  "general-finishes-east-troy": {
+    "recordedAt": "2026-10-11T10:06:45+08:00",
+    "commit": "7a1c4649e367f45a3f24bc6b53bc34e8524fe139"
+  },
   "genus-brunswick": {
     "recordedAt": "2026-09-26T09:12:11+08:00",
     "commit": "2b4752598cee116204b10231e7031425f129e7be"
@@ -166,6 +181,10 @@
   "greenbest-henstridge": {
     "recordedAt": "2026-09-27T20:24:50+08:00",
     "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
+  },
+  "greenfeed-agro-shah-alam": {
+    "recordedAt": "2026-10-10T14:55:56+08:00",
+    "commit": "3ed635f7e2a006d19c4a5a33445aced040007645"
   },
   "grupo-equilibrio-catalao": {
     "recordedAt": "2026-09-27T22:11:31+08:00",
@@ -179,9 +198,17 @@
     "recordedAt": "2026-10-08T14:40:34+08:00",
     "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
   },
+  "hankook-hyeophwa-pohang": {
+    "recordedAt": "2026-10-11T00:09:05+08:00",
+    "commit": "89e3b4d272958c83ee0aff54c4cbebecb4db5d5a"
+  },
   "harrells-sylacauga": {
     "recordedAt": "2026-09-27T20:53:01+08:00",
     "commit": "fc887df5d1401a80b8a531c61669f11db12277f5"
+  },
+  "hurl-new-delhi": {
+    "recordedAt": "2026-10-11T10:18:53+08:00",
+    "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
   },
   "ichemco-cuggiono": {
     "recordedAt": "2026-09-26T09:57:46+08:00",
@@ -191,9 +218,9 @@
     "recordedAt": "2026-09-25T17:18:17+08:00",
     "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
   },
-  "inbra-orangeburg": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  "iffco-kalol": {
+    "recordedAt": "2026-10-11T09:34:37+08:00",
+    "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
   },
   "indigrow-brimpton": {
     "recordedAt": "2026-09-28T10:37:24+08:00",
@@ -219,13 +246,25 @@
     "recordedAt": "2026-09-28T20:57:49+08:00",
     "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
   },
+  "kg-chemical-ulsan": {
+    "recordedAt": "2026-10-11T00:09:05+08:00",
+    "commit": "89e3b4d272958c83ee0aff54c4cbebecb4db5d5a"
+  },
   "knox-fertilizer-knox": {
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
   },
+  "kribhco-hazira": {
+    "recordedAt": "2026-10-11T10:18:53+08:00",
+    "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
+  },
   "lebanon-seaboard-lebanon": {
     "recordedAt": "2026-09-28T10:37:24+08:00",
     "commit": "0da24742f53e9bf75375735e219880257a923261"
+  },
+  "madras-fertilizers-manali": {
+    "recordedAt": "2026-10-11T09:34:37+08:00",
+    "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
   },
   "manner-polymers-mckinney": {
     "recordedAt": "2026-09-28T20:57:49+08:00",
@@ -251,13 +290,25 @@
     "recordedAt": "2026-09-27T18:10:39+08:00",
     "commit": "d14f2e4fbb6ddba0ef1bae1e3623c9ea0c04a470"
   },
+  "moravia-istanbul": {
+    "recordedAt": "2026-10-10T12:18:00+08:00",
+    "commit": "485e33b04c3e70671e4aea8e20cc77e8a55c2fe1"
+  },
+  "mowilex-indonesia-cikande": {
+    "recordedAt": "2026-10-11T09:07:21+08:00",
+    "commit": "ce810d39c5bbb382520872189d522e0ef0724f6d"
+  },
   "nam-ah-ipoh": {
     "recordedAt": "2026-09-26T12:36:23+08:00",
     "commit": "e58dc2d6b74eeb870fbb4a6001eda083bccc3d25"
   },
-  "nippon-paper-japan": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  "namhae-chemical-yeosu": {
+    "recordedAt": "2026-10-10T15:29:03Z",
+    "commit": "a075819370d88731c3d41ca1ab979d65e09a4d1b"
+  },
+  "national-fertilizers-nangal": {
+    "recordedAt": "2026-10-11T09:34:37+08:00",
+    "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
   },
   "nousbo-ulsan": {
     "recordedAt": "2026-09-29T21:33:21+08:00",
@@ -275,10 +326,6 @@
     "recordedAt": "2026-09-27T20:24:50+08:00",
     "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
   },
-  "paramelt-netherlands": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
-  },
   "periwal-bhiwadi": {
     "recordedAt": "2026-09-26T11:18:42+08:00",
     "commit": "eaed0cd026538d9e3b31040c20c5f1e31c8a2d11"
@@ -294,14 +341,6 @@
   "pol-coatings-twello": {
     "recordedAt": "2026-09-26T09:16:56+08:00",
     "commit": "31d371a34935291d2c238aa40500aa3ea7823f19"
-  },
-  "polar-canada": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
-  },
-  "polyblu-blumenau": {
-    "recordedAt": "2026-09-26T11:46:58+08:00",
-    "commit": "9ae8e471ca6678a1794cb3e2203cab0af3e3b630"
   },
   "polyflex-baltic": {
     "recordedAt": "2026-09-26T09:29:49+08:00",
@@ -323,9 +362,13 @@
     "recordedAt": "2026-09-26T17:34:36+08:00",
     "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
   },
-  "rstone-jiaxing": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  "rcf-mumbai": {
+    "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
+    "recordedAt": "2026-10-10T14:46:38Z"
+  },
+  "renner-italia-minerbio": {
+    "recordedAt": "2026-10-11T10:18:53+08:00",
+    "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
   },
   "rynan-smart-fertilizers-long-duc": {
     "recordedAt": "2026-09-29T16:34:18+08:00",
@@ -334,6 +377,10 @@
   "sankhla-industries-bengaluru": {
     "recordedAt": "2026-09-27T20:24:50+08:00",
     "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
+  },
+  "saraswanti-anugerah-indonesia-mempawah": {
+    "recordedAt": "2026-10-10T14:55:56+08:00",
+    "commit": "3ed635f7e2a006d19c4a5a33445aced040007645"
   },
   "schramm-coatings-offenbach": {
     "recordedAt": "2026-09-26T11:14:09+08:00",
@@ -387,25 +434,26 @@
     "recordedAt": "2026-09-26T11:53:50+08:00",
     "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
   },
+  "target-coatings-fair-lawn": {
+    "recordedAt": "2026-10-11T10:06:45+08:00",
+    "commit": "7a1c4649e367f45a3f24bc6b53bc34e8524fe139"
+  },
+  "tectona-warna-cirebon": {
+    "recordedAt": "2026-10-11T09:07:21+08:00",
+    "commit": "ce810d39c5bbb382520872189d522e0ef0724f6d"
+  },
+  "teknova-esenyurt": {
+    "recordedAt": "2026-10-11T02:28:00Z",
+    "commit": "",
+    "source": "Local formal public admission in run 20261011021811183; repository commit pending. Deployment history replaces this with actual first-appearance commit."
+  },
   "tintas-prisma-tlalnepantla": {
     "recordedAt": "2026-09-27T17:08:29+08:00",
     "commit": "55a03ff7e5ce2b5e8435b33d69b8ab7f6971d42a"
   },
-  "tize-zhaoqing": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
-  },
   "toa-paint-products-nilai": {
     "recordedAt": "2026-10-08T19:50:33+08:00",
     "commit": "807cc2cae8d28bd225c21cebf8433de0eb7c8e29"
-  },
-  "traditem-hilden": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
-  },
-  "tramaco-tornesch": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
   },
   "turf-care-martins-ferry": {
     "recordedAt": "2026-09-26T11:18:42+08:00",
@@ -415,9 +463,9 @@
     "recordedAt": "2026-09-26T10:26:58+08:00",
     "commit": "fd3001c65c661b96ea9cee049ebe504ffdf606a7"
   },
-  "unitika-tokyo": {
-    "recordedAt": "2026-09-25T17:18:17+08:00",
-    "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
+  "vermont-natural-coatings-hardwick": {
+    "recordedAt": "2026-10-11T10:06:45+08:00",
+    "commit": "7a1c4649e367f45a3f24bc6b53bc34e8524fe139"
   },
   "vernital-cercola": {
     "recordedAt": "2026-09-29T10:18:27+08:00",
@@ -427,10 +475,6 @@
     "recordedAt": "2026-09-26T11:11:56+08:00",
     "commit": "d39a557dfb0f2bac4e6401a93150875ab0d453f9"
   },
-  "moravia-istanbul": {
-    "recordedAt": "2026-10-10T12:18:00+08:00",
-    "commit": "485e33b04c3e70671e4aea8e20cc77e8a55c2fe1"
-  },
   "vivacor-diadema": {
     "recordedAt": "2026-09-26T11:53:50+08:00",
     "commit": "58c75f6e442dd63de8b8f119b5280b7fe65a9cf8"
@@ -438,37 +482,5 @@
   "wikoff-fort-mill": {
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
-  },
-  "chobi-ulsan": {
-    "recordedAt": "2026-10-10T11:44:13Z",
-    "commit": "622de47170dff829d535b1fea66238a0f31dac71"
-  },
-  "greenfeed-agro-shah-alam": {
-    "recordedAt": "2026-10-10T14:55:56+08:00",
-    "commit": "3ed635f7e2a006d19c4a5a33445aced040007645"
-  },
-  "saraswanti-anugerah-indonesia-mempawah": {
-    "recordedAt": "2026-10-10T14:55:56+08:00",
-    "commit": "3ed635f7e2a006d19c4a5a33445aced040007645"
-  },
-  "agrotiger-mabalacat": {
-    "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
-    "recordedAt": "2026-10-10T14:46:38Z"
-  },
-  "rcf-mumbai": {
-    "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
-    "recordedAt": "2026-10-10T14:46:38Z"
-  },
-  "namhae-chemical-yeosu": {
-    "recordedAt": "2026-10-10T15:29:03Z",
-    "commit": "a075819370d88731c3d41ca1ab979d65e09a4d1b"
-  },
-  "hankook-hyeophwa-pohang": {
-    "recordedAt": "2026-10-10T16:08:01.091Z",
-    "commit": ""
-  },
-  "kg-chemical-ulsan": {
-    "recordedAt": "2026-10-10T16:08:01.092Z",
-    "commit": ""
   }
 }
