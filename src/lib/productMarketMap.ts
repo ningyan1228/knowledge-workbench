@@ -4634,6 +4634,84 @@ const demandSideLeadIds = new Set([
 ])
 
 // Separately verified Indian protective-coating manufacturers, not confirmed buyers.
+const independentlyVerifiedThaiDonoLeads: PublicLead[] = [
+  {
+    "id": "thai-do-no-gen-gen-rayong",
+    "productId": "nl-w1201",
+    "company": "Thai Do No-Gen Gen Co., Ltd.",
+    "country": "Thailand",
+    "countryZh": "泰国",
+    "city": "Rayong",
+    "latitude": 12.6814,
+    "longitude": 101.2816,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "targetCompanyTypeId": "waterbased-wood-coating-manufacturer",
+    "fit": "可开发候选",
+    "signal": "官网确认泰国 Rayong 自有工厂及成品涂料制造业务，水性系列明确列出 Daimyo Crown 水性木器着色涂料及水性双组分聚氨酯涂料。公司是日本 Gen Gen Corporation 的合资/参股企业；品牌、工厂和日本关联企业不拆分新增。坐标为 Rayong 城市代表点，并非精确厂址。",
+    "demandSideReason": "NL-W1201 TDS 明确木材表面处理应用；该公司制造水性木器涂料，属于潜在下游配方与表面处理评估对象。公开证据不证明其采购、使用或需要我方产品，也不证明任何具体配方的相容性或性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立重新读取公司制造说明、成品类别、水性产品原文及 Gen Gen 官方业务和参股关系。已查看业务为成品涂料、OEM 和涂装设备，未见水性聚烯烃乳液、CPO/PO 分散体或同类附着促进输入原料外售；成品水性 PU 2K 不等于聚氨酯原料供应。结论限已查来源，不声称覆盖集团所有业务。名称、thaidonogengen.com、gen2.co.jp、Daimyo/Gen Gen 关联对照最新 main、本地正式数据和私有队列未见重复，仅一个泰国法人账户；不收录中国大陆关联公司。来源：https://www.thaidonogengen.com/en/；https://www.thaidonogengen.com/water-based-product-line/；https://www.gen2.co.jp/english"
+    },
+    "contact": {
+      "label": "Official corporate sales inbox and factory phone; no named procurement contact",
+      "email": "tdn_sales@hotmail.com",
+      "phone": "+66 38 893 651",
+      "contactUrl": "https://www.thaidonogengen.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B2/"
+    },
+    "source": {
+      "label": "Official water-based wood coating product line",
+      "url": "https://www.thaidonogengen.com/water-based-product-line/"
+    },
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "wood-surface-treatment",
+      "statement": "公司自述制造木器等成品涂料并公开 Rayong 工厂；自有水性产品页明确 Daimyo Crown Water Based Wood Stain 与 Water-Based Polyurethane 2K。日本 Gen Gen 官方确认泰国参股法人，未拆分品牌账户。",
+      "sourceName": "Original company manufacturing, water-based wood products and investor confirmation",
+      "sourceUrl": "https://www.thaidonogengen.com/water-based-product-line/",
+      "verifiedAt": "2026-10-11"
+    },
+    "checkedAt": "2026-10-11",
+    "profile": {
+      "website": "https://www.thaidonogengen.com/",
+      "contactPage": "https://www.thaidonogengen.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B2/",
+      "generalEmail": "tdn_sales@hotmail.com",
+      "generalPhone": "+66 38 893 651",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "tdn_sales@hotmail.com",
+          "source": {
+            "label": "Official publicly disclosed corporate sales inbox",
+            "url": "https://www.thaidonogengen.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B2/"
+          }
+        }
+      ],
+      "address": "222 Moo 5, Makamkoo Sub-District, Nikhom Phatthana District, Rayong 21180, Thailand",
+      "sources": [
+        {
+          "label": "Own coating manufacture and factory",
+          "url": "https://www.thaidonogengen.com/en/"
+        },
+        {
+          "label": "Own water-based wood coating products",
+          "url": "https://www.thaidonogengen.com/water-based-product-line/"
+        },
+        {
+          "label": "Current corporate sales contact",
+          "url": "https://www.thaidonogengen.com/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B2/"
+        },
+        {
+          "label": "Gen Gen official invested-company relationship and business scope",
+          "url": "https://www.gen2.co.jp/english"
+        }
+      ]
+    }
+  }
+]
+
 const independentlyVerifiedKossanLeads: PublicLead[] = [
   {
     "id": "kossan-paint-kapar",
@@ -5228,4 +5306,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads)
+]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads)
