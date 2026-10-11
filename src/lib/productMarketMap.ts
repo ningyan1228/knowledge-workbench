@@ -1804,11 +1804,98 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
   },
+  {
+    "id": "specialized-coating-systems-boksburg",
+    "company": "Specialized Coating Systems (Pty) Ltd (SCS)",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Boksburg",
+    "latitude": -26.18988,
+    "longitude": 28.26466,
+    "fit": "可开发候选",
+    "signal": "发现后独立读取当前 About、工业防护、产品分类、矿物业务及 Contact 原文：SCS 自行研发涂料配方、经营制造设施和测试实验室，工业防护涂料为本地配方制造，含防腐、富锌底漆、耐化学品内衬、管道及海事防护；官方 Boksburg 联系页同时标明 Head Office / Manufacturing。作为 ELO TDS coatings 对应的潜在下游配方方，未确认 ELO 的采购、使用、需求或相容性。坐标由官方 Contact 披露的 GPS 度分秒换算。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立再次读取当前全部公开产品分类、实际工业防护描述、制造设施和联系页，并专门反查 GMA Specialty Minerals 类别。公开矿物范围为 ilmenite、pyroxene、rutile、稀土及磨料；设备类别中的 Polyurea & Polyurethane Foam Reactors 为应用设备，成品 polyurethane 涂料不是 ELO/ESBO 原料供应证明。所查业务未发现 ELO、ESBO、环氧化植物油、生物增塑剂或同类添加剂对外销售；保留矿物/磨料和设备销售事实，结论限所查公开范围。按法人全称、SCS/Speccoats、speccoats.co.za、Boksburg 地址及邮箱核对最新 main 的131家实际公开客户、本地和队列，无已有正式同一账户，仅有待审核研究项；品牌/产品分类与厂区不拆分为新增。未核验具名采购或研发人员，使用官方明确标注 Orders / Enquiries / Sales Department 的业务邮箱，不伪称采购联系人。"
+    },
+    "contact": {
+      "label": "Official public Sales business inbox",
+      "email": "enquiries@speccoats.co.za",
+      "phone": "+27 11 552 0300",
+      "contactUrl": "https://www.speccoats.co.za/contact.php"
+    },
+    "source": {
+      "label": "Official own formulation, manufacturing facility and laboratory",
+      "url": "https://www.speccoats.co.za/about-us.php"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
+  {
+    "id": "pv-paint-ho-chi-minh",
+    "company": "Petro Vietnam Paint Joint Stock Company (PV PAINT)",
+    "productId": "elo",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Ho Chi Minh City",
+    "latitude": 10.8231,
+    "longitude": 106.6297,
+    "fit": "可开发候选",
+    "signal": "独立读取当前官方产品目录及2026年5月8日股东大会原文：PV PAINT 有自有 Song Than 3 涂料工厂及研发、生产/OEM业务，公开 EPOSHIN 环氧底漆、富锌防腐和面漆等成品海事/工业防护产品。对应 ELO TDS coatings 的潜在配方原料评估，未确认 ELO 的采购、使用或适配。官网披露当前 Ho Chi Minh City 办公及工厂行政地址，地图为城市代表位置。PVMR 与 Hai Phong Paint 是官方披露的大股东；2023 HPP 年报记载对 PV PAINT 持股31.21%，当前 HPP 成员页仍列为参股公司，并非将其误认成控股子公司。与 CMP 的技术/品牌合作保留，不把 CMP 品牌另计为新增。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "发现后独立重读2026股东大会、当前自有品牌/产品目录、工厂与联系原文；所见是成品环氧、聚氨酯、船舶/工业防护及 OEM 涂料。HPP年报注册经营范围含一般原料及设备业务，已保留此事实，未从宽泛原料字样直接推断 ELO/ESBO 供应；实际所查 PV PAINT 对外目录未发现 ELO、ESBO、环氧化植物油、生物增塑或同类添加剂销售，结论限公开范围。独立读取并渲染2023 HPP年报第22–23页，PV PAINT为31.21%参股账户；2026股东大会与当前成员分类交叉核对关系，历史比例不冒称2026实时比例。按法人名、PV PAINT、旧 Vinashin 名称、pvpaint.vn、PVMR/HPP/CMP与两地址核对最新 main 的131家实际公开客户，本轮未收录 HPP；未将控股公司品牌或同厂区拆为新增。现有 CMP 是另一个法人集团，合作/参股事实明确注明。具名总经理只用官网披露姓名职务，不把通用邮箱绑定为个人邮箱，不构造采购联系人。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "pvpaint@pvpaint.vn",
+      "phone": "+84 28 3636 4751",
+      "contactUrl": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
+    },
+    "source": {
+      "label": "Official own marine/industrial manufacturing and current factory, 2026 AGM",
+      "url": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
+  {
+    "id": "soilmate-bangkok",
+    "company": "บริษัท เพิ่มผลผลิต จำกัด (Soilmate / Mitr Phol Group)",
+    "productId": "fertilizer-coating",
+    "country": "Thailand",
+    "countryZh": "泰国",
+    "city": "Bangkok",
+    "latitude": 13.7563,
+    "longitude": 100.5018,
+    "fit": "可开发候选",
+    "signal": "独立读取2024年 Kasetsart University 原始研究论文第3页：บริษัท เพิ่มผลผลิต จำกัด 以 Soilmate 品牌实际生产 CRF，研究涉及2022/23年 Suphan Buri 甘蔗使用；同时独立读取当前官网27-9-14和24-9-14 CRF产品原文及母集团肥料业务/制造资料。属于控释肥制造潜在下游，包膜树脂类型、是否 PU/聚合物及我方原料适配、采购未确认；官网9个月释肥描述不改写为我方性能保证。按泰文原始法人名保留身份，未猜英文注册名。Mitr Phol 为集团关联；仅计泰国账户一个，老挝及中国厂区不拆分入库。地图为 Bangkok 总部所在城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-11",
+      "conclusion": "独立读取官方完整肥料产品导航、CRF分型号原文、原始田间研究、母集团肥料制造与联系栏目，并反查 Bio-Materials / Planex / CaneX 原文：另有包装用 compostable compounds 与食品包装，并非据此推断 PU 原料或肥料包膜树脂供应。所查范围未发现肥料包膜树脂、PU输入原料或同类包膜剂对外销售；普通46-0-0/18-46-0农用肥料销售不等同包膜输入原料同行。结论限可查范围。按泰文公司名、Soilmate、soilmate.co.th、Mitr Phol、Bangkok地址及公开集团邮箱核对最新main的131家实际公开客户，无同集团正式肥料账户；品牌、配方与境外/中国厂区不分别计数。官网制造/联系主页面直接请求受到验证页或超时影响，产品原文经公开网页读取工具获取，原始研究另下载、提取及渲染核查；不以HTTP 200验证页面冒充企业证据。公开邮箱从母集团Contact栏明示的编码还原，不猜测地址；电话为该栏公开业务号码，不推断具名采购职务。以当前产品页3楼为总部地址，母站2楼仅保留来源差异说明。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "soilmate@mitrphol.com",
+      "phone": "+66 44 810 620",
+      "contactUrl": "https://www.mitrphol.com/page_detail.php?p=6&topic=34"
+    },
+    "source": {
+      "label": "Original Kasetsart University research, 2024, PDF page 3: Soilmate CRF manufacturer",
+      "url": "https://so06.tci-thaijo.org/index.php/JSSP/article/download/268226/181520/1087443"
+    },
+    "checkedAt": "2026-10-11",
+    "legacyCompanyDescription": "控释肥制造企业；包膜树脂类型及我方产品适配、采购未确认"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "soilmate-bangkok": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
+  "pv-paint-ho-chi-minh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "specialized-coating-systems-boksburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "protectometal-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-jemah-nuevo-leon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "nervion-tlalnepantla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -1963,6 +2050,145 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "soilmate-bangkok": {
+    "website": "https://www.soilmate.co.th/",
+    "contactPage": "https://www.mitrphol.com/page_detail.php?p=6&topic=34",
+    "generalEmail": "soilmate@mitrphol.com",
+    "generalPhone": "+66 44 810 620",
+    "address": "Head office: 2 Ploenchit Center, 3rd Floor, Soi Sukhumvit 2, Sukhumvit Road, Khlong Toei, Bangkok 10110, Thailand (current Soilmate product-page footer; parent page retains an older 2nd-floor address)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "soilmate@mitrphol.com",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://www.mitrphol.com/page_detail.php?p=6&topic=34"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original Kasetsart University research, 2024, PDF page 3: Soilmate CRF manufacturer",
+        "url": "https://so06.tci-thaijo.org/index.php/JSSP/article/download/268226/181520/1087443"
+      },
+      {
+        "label": "Official current Soilmate 27-9-14 controlled-release product",
+        "url": "https://www.soilmate.co.th/fertilizer/27-9-14/detail"
+      },
+      {
+        "label": "Official current Soilmate 24-9-14 controlled-release product",
+        "url": "https://www.soilmate.co.th/fertilizer/24-9-14/detail"
+      },
+      {
+        "label": "Official parent fertilizer manufacturing, legal company identity and disclosed business inbox",
+        "url": "https://www.mitrphol.com/page_detail.php?p=6&topic=34"
+      },
+      {
+        "label": "Official parent Bio-Materials scope checked separately",
+        "url": "https://www.mitrphol.com/page_detail.php?p=6&topic=156"
+      },
+      {
+        "label": "Official Planex: food-packaging compostable compounds, not inferred fertilizer coating resin",
+        "url": "https://www.mitrphol.com/page_detail.php?p=6&topic=158"
+      },
+      {
+        "label": "Official CaneX finished-food-packaging scope",
+        "url": "https://www.mitrphol.com/page_detail.php?p=6&topic=157"
+      }
+    ]
+  },
+  "pv-paint-ho-chi-minh": {
+    "website": "https://pvpaint.vn/",
+    "contactPage": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/",
+    "generalEmail": "pvpaint@pvpaint.vn",
+    "generalPhone": "+84 28 3636 4751",
+    "address": "Office: 34 Than Van Nhiep, Quarter 22, Binh Trung Ward, Ho Chi Minh City; factory: 11 Road 2, Song Than 3 Industrial Park, Binh Duong Ward, Ho Chi Minh City, Vietnam (current official administrative names)",
+    "contacts": [
+      {
+        "name": "Vũ Duy Cường",
+        "title": "General Director (Tổng Giám đốc)",
+        "department": "Management",
+        "source": {
+          "label": "Official 2026 annual general meeting, event 8 May 2026",
+          "url": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
+        },
+        "verifiedAt": "2026-10-11"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "pvpaint@pvpaint.vn",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own marine/industrial manufacturing and current factory, 2026 AGM",
+        "url": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
+      },
+      {
+        "label": "Official EPOSHIN finished epoxy protective coating catalogue",
+        "url": "https://pvpaint.vn/danh-muc-san-pham/epoxy-paints/"
+      },
+      {
+        "label": "Official current products, brands, factory and business contacts",
+        "url": "https://pvpaint.vn/"
+      },
+      {
+        "label": "Official current HPP member classification: PV PAINT is an associate",
+        "url": "https://sonhaiphong.com.vn/don-vi-thanh-vien/"
+      },
+      {
+        "label": "Official 2023 HPP annual report, pages 22–23: historical 31.21% PV PAINT holding",
+        "url": "https://sonhaiphong.com.vn/wp-content/uploads/2024/04/BCTN_2023_HPP.pdf"
+      }
+    ]
+  },
+  "specialized-coating-systems-boksburg": {
+    "website": "https://www.speccoats.co.za/",
+    "contactPage": "https://www.speccoats.co.za/contact.php",
+    "generalEmail": "enquiries@speccoats.co.za",
+    "generalPhone": "+27 11 552 0300",
+    "address": "2 Jones Road, Bartlett AH, Boksburg, Gauteng, South Africa",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "enquiries@speccoats.co.za",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://www.speccoats.co.za/contact.php"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own formulation, manufacturing facility and laboratory",
+        "url": "https://www.speccoats.co.za/about-us.php"
+      },
+      {
+        "label": "Official locally formulated/manufactured industrial protective coatings",
+        "url": "https://www.speccoats.co.za/paint-industrial-application.php"
+      },
+      {
+        "label": "Official full product category scope",
+        "url": "https://www.speccoats.co.za/paint-manufacturer.php"
+      },
+      {
+        "label": "Official specialty-mineral scope checked separately from epoxidized-oil additives",
+        "url": "https://www.speccoats.co.za/specialty-minerals.php"
+      },
+      {
+        "label": "Official manufacturing-site address, GPS and Orders/Enquiries/Sales inbox",
+        "url": "https://www.speccoats.co.za/contact.php"
+      }
+    ]
+  },
   "protectometal-ciudad-mexico": {
     "website": "https://protectometal.mx/",
     "contactPage": "https://protectometal.mx/contacto/",
@@ -4278,6 +4504,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "soilmate-bangkok",
+  "pv-paint-ho-chi-minh",
+  "specialized-coating-systems-boksburg",
   "protectometal-ciudad-mexico",
   "pinturas-jemah-nuevo-leon",
   "nervion-tlalnepantla",

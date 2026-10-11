@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "soilmate-bangkok": "The 2024 Kasetsart University research identifies your Soilmate brand as a controlled-release fertilizer manufacturer, and your official product pages describe CRF formulations for sugarcane.",
+  "pv-paint-ho-chi-minh": "Your 2026 annual general meeting describes marine and industrial paint production and development, and your official catalogue includes EPOSHIN epoxy protective coatings.",
+  "specialized-coating-systems-boksburg": "Your company describes its own coating-formulation and manufacturing facilities, including locally manufactured industrial protective coatings and testing laboratories.",
   'kossan-paint-kapar': 'Your company describes its own Malaysian manufacturing plant and R&D department and publishes industrial protective and marine coating ranges.',
   'technical-finishes-germiston': 'Your company manufactures industrial corrosion protection systems, including protective pipe compounds and chemical-resistant tank linings.',
   'kanat-boya-kemalpasa': 'Your company manufactures protective coatings in Kemalpasa for steel structures, pipelines and storage tanks.',
