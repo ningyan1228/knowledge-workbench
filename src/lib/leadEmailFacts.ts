@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vital-agri-nutrients-lahore": "Your Lahore plant operates a commercial sulfur-coating line behind Vital Urea, and your manufacturing page also describes micronutrient coating of fertilizer granules.",
   "polyvine-cheddar": "Your manufacturing facility and laboratory are based together in Cheddar, and your 2K-POLY86 is a two-pack water-based polyurethane varnish for wooden floors and interior timber surfaces.",
   "bedec-dunmow": "Your Essex factory manufactures paints and carries out research and development, and your MSV range is a water-based acrylic varnish reinforced with polyurethane for applications including wood.",
   'anjo-tintas-criciuma': 'Your AnjoTech range includes TechMastic protective coatings for industrial and marine steel structures, supported by your own formulation development.',

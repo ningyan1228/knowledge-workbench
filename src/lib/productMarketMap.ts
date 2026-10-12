@@ -2477,11 +2477,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "vital-agri-nutrients-lahore",
+    "company": "Vital Agri Nutrients (Pvt) Ltd (VAN)",
+    "productId": "fertilizer-coating",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore (city-level business marker)",
+    "latitude": 31.5204,
+    "longitude": 74.3587,
+    "legacyCompanyDescription": "自有商业化硫包衣尿素线及肥料代工制造企业；未确认PU包膜及我方产品使用/采购/适配",
+    "fit": "可开发候选",
+    "signal": "发现后独立重新读取VAN自有工厂、具体Vital Urea、完整品牌/工程能力及公司原文：工厂明确商业化硫包衣尿素生产，直接对应Vital Urea；另有微量元素包衣及混配生产。其硫包衣尿素与我方TDS尿素包衣应用相连，可作潜在配方原料评估；未确认采用PU/聚合物包膜、使用、需求、采购或我方材料适配。新NP线在官网仅为未开始规划，不作为投产/产能证据。地图为Lahore城市业务位置，非厂区GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立再次读VAN完整23品牌及NP系列、工厂5条生产线、工程能力和公司法人/具名业务联系原文。所查为硫包衣尿素、微量元素包衣肥、NP/NPK、液肥、腐植酸土壤营养品等成品及其代工；保留腐植酸生产/销售和SOP贸易事实，不泛称无其他原料/贸易业务。公开Humi Grow用途为土壤营养/施肥，未见将其作为肥料包衣输入剂销售；所查未发现包衣树脂、PU输入原料或同类肥料包衣剂对外销售，结论限所查公开范围。官网双层包衣仅在开发，不冒称已量产PU线。按Vital Agri Nutrients/VAN/Vital Green/Agri Centers、van.com.pk、办公室/工厂地址、info及Fahim业务邮箱核对最新main160家、本地和私有队列，无同一正式账户；自有/代工品牌、经销点及新NP项目只计一个公司。没有从董事同名推断Engro等集团控制关系。官网明确Fahim Asghar为Research & development栏目的Lead, Plant and Product及业务邮箱，职务按原文保留，不改称采购经理。"
+    },
+    "contact": {
+      "label": "Official public general business inbox; technical routing available where specifically published",
+      "email": "info@van.com.pk",
+      "phone": "+92 42 35762215",
+      "contactUrl": "https://www.van.com.pk/about.html"
+    },
+    "source": {
+      "label": "Official own commercial sulfur-coating manufacturing line behind Vital Urea",
+      "url": "https://www.van.com.pk/partner/manufacturing.html"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vital-agri-nutrients-lahore": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "polyvine-cheddar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "bedec-dunmow": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ivm-chemicals-parona": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2660,6 +2689,73 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vital-agri-nutrients-lahore": {
+    "website": "https://www.van.com.pk/",
+    "contactPage": "https://www.van.com.pk/about.html",
+    "generalEmail": "info@van.com.pk",
+    "generalPhone": "+92 42 35762215",
+    "address": "Head office: 605 Al-Hafeez Heights, Gulberg III, Lahore 54660, Pakistan. Plant: 49-Km Multan Road, Phool Nagar Bypass, Lahore (as published by VAN; marker is Lahore city, not factory GPS).",
+    "contacts": [
+      {
+        "name": "Fahim Asghar",
+        "title": "Lead, Plant and Product",
+        "department": "Technical",
+        "email": "fahim@van.com.pk",
+        "source": {
+          "label": "Official Research & development contact: named role and public business email",
+          "url": "https://www.van.com.pk/about.html"
+        },
+        "verifiedAt": "2026-10-12"
+      },
+      {
+        "name": "Muhammad Ali",
+        "title": "Chief Commercial Officer",
+        "department": "Sales",
+        "email": "muhammad.ali@van.com.pk",
+        "source": {
+          "label": "Official current named commercial contact and public business email",
+          "url": "https://www.van.com.pk/about.html"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@van.com.pk",
+        "source": {
+          "label": "Official expressly disclosed general company business inbox",
+          "url": "https://www.van.com.pk/about.html"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own commercial sulfur-coating manufacturing line behind Vital Urea",
+        "url": "https://www.van.com.pk/partner/manufacturing.html"
+      },
+      {
+        "label": "Official current finished sulfur-coated urea product",
+        "url": "https://www.van.com.pk/brands/vital-urea.html"
+      },
+      {
+        "label": "Official complete finished nutrient product and own-brand manufacturing catalogue",
+        "url": "https://www.van.com.pk/brands/index.html"
+      },
+      {
+        "label": "Official actual formulation scope; dual-layer variants explicitly still in development",
+        "url": "https://www.van.com.pk/partner/engineering.html"
+      },
+      {
+        "label": "Official legal company, locations and expressly disclosed technical/commercial business contacts",
+        "url": "https://www.van.com.pk/about.html"
+      },
+      {
+        "label": "Official company profile and business scope",
+        "url": "https://www.van.com.pk/company-profile.html"
+      }
+    ]
+  },
   "polyvine-cheddar": {
     "website": "https://polyvine.com/",
     "contactPage": "https://polyvine.com/contact-us/",
@@ -6344,6 +6440,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vital-agri-nutrients-lahore",
   "polyvine-cheddar",
   "bedec-dunmow",
   "ivm-chemicals-parona",
