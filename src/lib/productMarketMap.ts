@@ -2533,11 +2533,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "axalta-philadelphia",
+    "company": "Axalta Coating Systems Ltd. (Axalta group)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Philadelphia (city-level headquarters marker)",
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "legacyCompanyDescription": "自有工业成品防腐涂料研发制造集团；法定注册Bermuda、总部美国；ELO配方适配、使用及采购未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立再次读取Axalta当前Corroless成品防腐涂料、完整工业产品/配方范围、供应商业务入口和原始FY2025 Form10-K。年报明确自行开发制造工业液体/粉末涂料并从外部供应商采购树脂/颜料/溶剂/单体/异氰酸酯/添加剂；Corroless对应铁钢结构及油气/污水/罐区防腐用途。ELO TDS确认涂料大类，可作潜在配方原料评估；不声称ELO在其防腐体系已适配、已使用或有采购需求。集团只计一个账户；Bermuda为母公司法定注册地，公开总部/业务位于Philadelphia，美国地图点为城市代表位置，非具体厂区GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立重读Axalta FY2025原始Form10-K的完整Performance/Mobility业务、工业成品品牌和KEY RAW MATERIALS章节（PDF第5/6/7/9/10页），并重读当前Corroless、工业全产品/配方及当前公司/供应商网页。所查为成品液体/e-coat/粉末涂料、修补用配套品及实际外购配方输入料，未发现对外销售ELO、ESBO、环氧化植物油或同类生物增塑输入添加剂，结论限所查公开范围，不泛称没有其他配套业务。原始报告明确涂料自有制造及全球外购原料，并未披露采购ELO、替代计划或具体需求，不能从其异氰酸酯采购推定PU原料销售。按Axalta/Corroless/Imron/Corlar/Tufcote/PercoTop/Alesta/Plascoat等集团品牌、法人、官网域名、Philadelphia地址和公开供应商邮箱比对最新main162家/本地/私有队列，无同一Axalta正式账户，品牌/子公司/工厂不拆分。既有SCHRAMM/AkzoNobel关联项已识别；当前双方合并页、8月5日公告和更近8月31日董事安排仍为拟议交易/交割条件，最新官方新闻目录也已复读，不把股东批准或未来董事名单当作已交割。记录拟议关联，交易交割后需重新集团归并检查。实际法律主体Axalta Coating Systems Ltd.注册Bermuda，总部美国Philadelphia，Glen Mills旧业务地址不冒称当前全球总部。采用官网明确supplier-info供应商入口，不收IR/媒体邮箱，不虚构具名采购/技术人员。"
+    },
+    "contact": {
+      "label": "Official expressly disclosed prospective supplier business entry",
+      "email": "supplier-info@axalta.com",
+      "phone": "+1 855 547 1461",
+      "contactUrl": "https://www.axalta.com/corporate/en_US/contacts.html"
+    },
+    "source": {
+      "label": "Official current Corroless finished protective-coating formulation and iron/steel applications",
+      "url": "https://www.axalta.com/liquidindustrial_us/en_US/Products/corroless.html"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "axalta-philadelphia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mahadhan-agritech-pune": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "vital-agri-nutrients-lahore": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "polyvine-cheddar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2718,6 +2747,77 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "axalta-philadelphia": {
+    "website": "https://www.axalta.com/",
+    "contactPage": "https://www.axalta.com/corporate/en_US/contacts.html",
+    "generalPhone": "+1 855 547 1461",
+    "address": "Principal executive office: 1050 Constitution Avenue, Philadelphia, Pennsylvania 19112, United States. Parent legal incorporation: Bermuda. Marker is Philadelphia city, not a specific manufacturing-site GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "supplier-info@axalta.com",
+        "source": {
+          "label": "Official explicitly disclosed business entry for prospective suppliers",
+          "url": "https://www.axalta.com/corporate/en_US/contacts.html"
+        }
+      },
+      {
+        "department": "General",
+        "email": "industrialNA@axalta.com",
+        "source": {
+          "label": "Official current industrial customer-service business inbox and liquid formulation scope",
+          "url": "https://www.axalta.com/liquidindustrial_us/en_US/general-industrial.html"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current Corroless finished protective-coating formulation and iron/steel applications",
+        "url": "https://www.axalta.com/liquidindustrial_us/en_US/Products/corroless.html"
+      },
+      {
+        "label": "Original Axalta FY2025 Form 10-K: actual industrial manufacture, full business scope and external raw-material purchase",
+        "url": "https://www.akzonobel.com/content/dam/akzonobel-corporate/global/en/merger/axalta-form10-k-fy2025.pdf"
+      },
+      {
+        "label": "Axalta original FY2025 annual-report directory and author-controlled document link",
+        "url": "https://ir.axalta.com/company-information/annual-reports-proxy"
+      },
+      {
+        "label": "Official current company legal identity, Philadelphia executive office and paint/coating manufacturing classification",
+        "url": "https://ir.axalta.com/company-information"
+      },
+      {
+        "label": "Official full North American liquid-industrial finished product portfolio",
+        "url": "https://www.axalta.com/liquidindustrial_us/en_US/Products.html"
+      },
+      {
+        "label": "Official explicitly disclosed business entry for prospective suppliers",
+        "url": "https://www.axalta.com/corporate/en_US/contacts.html"
+      },
+      {
+        "label": "Official current industrial customer-service business inbox and liquid formulation scope",
+        "url": "https://www.axalta.com/liquidindustrial_us/en_US/general-industrial.html"
+      },
+      {
+        "label": "Official merger page: transaction still expected to close in late2026 to early2027",
+        "url": "https://www.akzonobel.com/en/merger-information"
+      },
+      {
+        "label": "Official August2026 shareholder approval remains subject to regulatory and closing conditions",
+        "url": "https://ir.axalta.com/news/press-releases/detail/688/axalta-shareholders-approve-proposed-merger-of-equals-with-akzonobel"
+      },
+      {
+        "label": "Official newer August31 board announcement: appointments take effect upon closing",
+        "url": "https://ir.axalta.com/news/press-releases/detail/689/akzonobel-and-axalta-announce-three-directors-to-finalize-board-of-combined-company"
+      },
+      {
+        "label": "Official current press-release directory reviewed for subsequent closing announcements",
+        "url": "https://ir.axalta.com/news/press-releases"
+      }
+    ]
+  },
   "mahadhan-agritech-pune": {
     "website": "https://www.mahadhanagritech.com/",
     "contactPage": "https://www.mahadhanagritech.com/contact",
@@ -6515,6 +6615,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "axalta-philadelphia",
   "mahadhan-agritech-pune",
   "vital-agri-nutrients-lahore",
   "polyvine-cheddar",

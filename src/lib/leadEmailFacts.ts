@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "axalta-philadelphia": "Your Corroless range is formulated for corrosion protection of iron and steel structures, including applications in oil and gas, wastewater and tank terminals.",
   "mahadhan-agritech-pune": "Your company manufactures NPK fertilisers under the Mahadhan brand, and your Smartek range applies an organic-carbon and mineral coating to individual fertiliser granules.",
   "vital-agri-nutrients-lahore": "Your Lahore plant operates a commercial sulfur-coating line behind Vital Urea, and your manufacturing page also describes micronutrient coating of fertilizer granules.",
   "polyvine-cheddar": "Your manufacturing facility and laboratory are based together in Cheddar, and your 2K-POLY86 is a two-pack water-based polyurethane varnish for wooden floors and interior timber surfaces.",
