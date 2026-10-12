@@ -6,6 +6,11 @@ import {
   type PublicLead,
 } from './productMarketMap'
 import { leadEmailFacts } from './leadEmailFacts'
+import { isTaiwanMarket } from './leadMarketScope'
+
+const verifiedDay = (value?: string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value)
+const publicSource = (value?: string) => Boolean(value && /^https:\/\//.test(value))
+const sourcedPerson = (contact: PublicLead['profile']['contacts'][number]) => Boolean(contact.name.trim() && contact.title?.trim() && contact.email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contact.email) && contact.source?.label && publicSource(contact.source.url) && verifiedDay(contact.verifiedAt))
 
 export type ShortDevelopmentEmail = {
   subject: string
@@ -43,11 +48,11 @@ function positioningFor(lead: PublicLead) {
 
 function recipientFor(lead: PublicLead) {
   const contactPriority = (role: string) => /procurement|purchasing|sourcing/i.test(role) ? 0
-    : /technical|r&d|research|product/i.test(role) ? 1
+    : /technical|r&d|research|\bproduct\b/i.test(role) ? 1
       : /production|plant|operations/i.test(role) ? 2
         : /managing|general manager|director/i.test(role) ? 3 : 4
   const contact = lead.profile.contacts
-    .filter((item) => item.email && item.source?.url && item.verifiedAt)
+    .filter(sourcedPerson)
     .sort((a, b) => contactPriority(`${a.title ?? ''} ${a.department ?? ''}`) - contactPriority(`${b.title ?? ''} ${b.department ?? ''}`))[0]
   return contact ? `Hi ${contact.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
 }
@@ -60,17 +65,22 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
     .find((item) => item.id === evidence.applicationId)
   const product = marketProducts.find((item) => item.id === lead.productId)
   if (lead.commercialRole !== 'demand_side' || !lead.leadEligible || lead.country === 'China'
+    || isTaiwanMarket(lead.country)
+    || !lead.demandSideReason.trim() || !lead.supplierCompetitorCheck?.conclusion.trim() || !verifiedDay(lead.supplierCompetitorCheck.checkedAt)
     || targetType?.kind !== 'target' || targetType.productId !== lead.productId
     || application?.productId !== lead.productId || !product
+    || !targetType.applicationReferences.some((item) => item.layer === evidence.applicationLayer && item.applicationId === evidence.applicationId)
+    || (evidence.applicationLayer === 'market-extended' && (!('sourceUrl' in application) || !publicSource(application.sourceUrl) || !application.sourceName || !verifiedDay(application.verifiedAt)))
     || !evidence.statement || !evidence.sourceName || !/^https:\/\//.test(evidence.sourceUrl)
-    || !/^\d{4}-\d{2}-\d{2}$/.test(evidence.verifiedAt)
+    || !verifiedDay(evidence.verifiedAt)
     || !(lead.profile.website || lead.profile.contactPage || lead.profile.linkedIn || lead.profile.generalEmail || lead.profile.generalPhone || lead.profile.departmentEmails.length)) return null
 
   const companyFact = leadEmailFacts[lead.id]
   if (!companyFact) return null
   const productName = productNames[lead.productId]
   const subject = `${productName} — a brief introduction`
-  const greeting = recipientName === undefined ? recipientFor(lead) : recipientName ? `Hi ${recipientName.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
+  const verifiedRecipient = recipientName && lead.profile.contacts.find((contact) => contact.name === recipientName && sourcedPerson(contact))
+  const greeting = recipientName === undefined ? recipientFor(lead) : verifiedRecipient ? `Hi ${verifiedRecipient.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
   const body = `${greeting}
 
 ${companyFact}

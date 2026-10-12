@@ -1,3 +1,4 @@
+import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
 import {
   type ApplicationLayer,
   type MarketExtendedApplication,
@@ -83,9 +84,9 @@ const productReferences: Record<MarketProduct['id'], ProductReference> = {
 
 function recipientCategory(value: string) {
   if (/procurement|purchasing|sourcing/i.test(value)) return 'procurement' as const
-  if (/director|manager|management|general manager|owner|president|ceo/i.test(value)) return 'management' as const
-  if (/production|plant|manufactur/i.test(value)) return 'production' as const
   if (/technical|r&d|research|\bproduct\b/i.test(value)) return 'technical' as const
+  if (/production|plant|manufactur/i.test(value)) return 'production' as const
+  if (/director|manager|management|general manager|owner|president|ceo/i.test(value)) return 'management' as const
   return 'general' as const
 }
 
@@ -95,6 +96,7 @@ function recipientPriority(category: Recipient['category']) {
 
 function recipientFor(lead: PublicLead): Recipient {
   const named = lead.profile.contacts
+    .filter((contact) => contact.name.trim() && contact.title?.trim() && contact.source?.label && /^https:\/\//.test(contact.source.url) && /^\d{4}-\d{2}-\d{2}$/.test(contact.verifiedAt ?? '') && !Number.isNaN(Date.parse(contact.verifiedAt!)) && new Date(contact.verifiedAt!).toISOString().slice(0, 10) === contact.verifiedAt)
     .map((contact) => {
       const title = contact.title ?? contact.department ?? 'Public business contact'
       return {
@@ -108,6 +110,7 @@ function recipientFor(lead: PublicLead): Recipient {
   if (named[0]) return named[0]
 
   const department = lead.profile.departmentEmails
+    .filter((item) => item.source?.label && /^https:\/\//.test(item.source.url) && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(item.email))
     .map((item) => ({
       name: `${item.department} Team`,
       title: `${item.department} department mailbox`,
@@ -153,6 +156,7 @@ export function createDevelopmentEmailPrompt({
   application: Application
   targetType: TargetCompanyType
 }) {
+  if (!createShortDevelopmentEmail(lead) || product.id !== lead.productId || application.id !== lead.companyEvidence.applicationId || application.productId !== lead.productId || targetType.id !== lead.targetCompanyTypeId || targetType.productId !== lead.productId) return 'Not qualified for outreach\n\nReason:\nThe verified product, application, demand-side evidence, supplier exclusion or contact chain is incomplete or inconsistent.'
   const recipient = recipientFor(lead)
   const reference = productReferences[product.id]
   return `Write a concise, personalized English B2B first-contact email and two follow-ups using only the verified information below. This is a potential-fit outreach, not a confirmed purchase opportunity. Do not send an email or submit any form.
@@ -173,6 +177,10 @@ Product: ${product.name} (${product.nameEn})
 ${applicationBlock(lead.companyEvidence.applicationLayer, application)}
 Target company type: ${targetType.nameEn}
 Downstream-use rationale: ${lead.demandSideReason}
+
+Supplier / competitor exclusion
+Verified at: ${lead.supplierCompetitorCheck!.checkedAt}
+Conclusion: ${lead.supplierCompetitorCheck!.conclusion}
 
 Company evidence (use this for the personalized first paragraph)
 Evidence: ${lead.companyEvidence.statement}
@@ -205,6 +213,9 @@ Writing requirements
 - Sign as:\nBest regards,\n\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn\nWebsite: www.neonliontech.com
 
 Return exactly these sections:
+Qualification
+Company
+Product Match
 Subject A
 Subject B
 First Development Email

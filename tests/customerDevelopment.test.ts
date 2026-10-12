@@ -4,7 +4,7 @@ import { publicLeads, type PublicLead } from '../src/lib/productMarketMap'
 import { outreachCompanyKey, type OutreachSend } from '../src/lib/outreachLedger'
 import { verifiedProjectSignals } from '../src/lib/verifiedProjectSignals'
 
-const coating = publicLeads.filter((lead) => lead.productId === 'fertilizer-coating')
+const coating = publicLeads.filter((lead) => lead.productId === 'fertilizer-coating' && lead.supplierCompetitorCheck?.conclusion)
 const send = (lead: PublicLead, overrides: Partial<OutreachSend> = {}): OutreachSend => ({ id: lead.id, company_key: outreachCompanyKey(lead), company_name: lead.company, lead_id: lead.id, product_id: lead.productId, recipient_email: 'fixture@example.org', sent_on: '2026-10-10', sent_by: null, created_at: '2026-10-10T01:00:00Z', voided_at: null, ...overrides })
 
 describe('daily first-contact planning', () => {

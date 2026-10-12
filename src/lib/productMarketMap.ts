@@ -2421,11 +2421,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "bedec-dunmow",
+    "company": "Bedec Products Ltd (BEDEC)",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Dunmow",
+    "latitude": 51.8739,
+    "longitude": 0.3625,
+    "legacyCompanyDescription": "自有研发制造的水性木器成品涂料账户；NL-W1201使用、采购及配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立再次读取自有制造、完整成品范围、MSV产品、All Prime原始PDF及联系原文：BEDEC在Essex自有工厂制造涂料并做研发；MSV明确为水性丙烯酸/PU成品清漆，适用木材；All Prime原始资料明确水性木材底漆并确认Bedec Products Ltd法人及Dunmow地址。木材属于NL-W1201 TDS基材，仅作潜在配方评估，实际需求、采购、使用及适配未确认。地图为Dunmow城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立再次读公司自有制造、完整Products以及MSV和All Prime原文。公开范围是成品多基材漆、木材清漆、水性底漆、墙漆/地坪漆和硅胶收边工具；All Prime为可直接施工的成品底漆，不按bond coat字样误作原料附着促进剂。所查未发现水性PO乳液、PO/CPO输入分散体或同类附着力原料对外销售，结论限所查公开范围。按BEDEC/Bedec Products Ltd、bedec.co.uk、Dunmow/Poplars地址及info邮箱核对最新main158家、本地和私有队列，无同一正式账户；系列、品牌和经销店不拆户。info为公开一般业务邮箱，未构造具名采购/技术人或专门技术邮箱。"
+    },
+    "contact": {
+      "label": "Official general business inbox; no named technical/procurement person inferred",
+      "email": "info@bedec.co.uk",
+      "phone": "+44 1279 876657",
+      "contactUrl": "https://bedec.co.uk/contact-us/"
+    },
+    "source": {
+      "label": "Official own Essex manufacturing and ongoing research and development",
+      "url": "https://bedec.co.uk/product/multi-surface-paint/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "polyvine-cheddar",
+    "company": "Polyvine Limited",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Cheddar",
+    "latitude": 51.275,
+    "longitude": -2.7766,
+    "legacyCompanyDescription": "自有研发制造的水性木器成品涂料账户；NL-W1201使用、采购及配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立再次读取2026公司制造原文、当前2K-POLY86、Exterior Wood Varnish原始PDF、两个完整范围及联系：Polyvine在Cheddar自有场地研究、开发并制造水性清漆/涂层，实验室、厂区与总部同址；2K-POLY86明确为木地板及室内木材用双组分水性PU成品；原始Exterior Wood Varnish资料明确外用木材水性丙烯酸混合成品。对应NL-W1201 TDS木材基材的潜在配方评估，实际购买、需求、使用及适配未确认。地图为Cheddar市镇代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读制造/家族公司原文、完整Trade及Decorative Effects范围、当前木器水性成品、原始外用清漆技术资料和Contact。保留色浆、装饰调色/釉、木油、成品胶、清洁去漆剂及施工工具事实，不泛称无其他配套材料。所查未发现水性PO乳液、PO/CPO输入分散体或同类原料附着力促进剂对外销售，结论限所查公开范围。按Polyvine Limited、Polyvine Trade/Decorative/Craft关联品牌、polyvine.com/polyvine.co.uk、Cheddar/Vine House地址及info邮箱核对最新main158家、本地和私有队列，无同一正式账户；产品线、渠道和品牌按一个账户。BS27地址来自当前官网，PDF解析中B527不作为现行邮编。info仅记一般业务邮箱，不编造具名研发/采购人。"
+    },
+    "contact": {
+      "label": "Official general business inbox; no named technical/procurement person inferred",
+      "email": "info@polyvine.co.uk",
+      "phone": "+44 1934 740305",
+      "contactUrl": "https://polyvine.com/contact-us/"
+    },
+    "source": {
+      "label": "Official 2026 own water-based formulation/manufacturing laboratory and factory in Cheddar",
+      "url": "https://polyvine.com/national-manufacturer/"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "polyvine-cheddar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "bedec-dunmow": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ivm-chemicals-parona": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rustins-london": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mylands-london": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2602,6 +2660,98 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "polyvine-cheddar": {
+    "website": "https://polyvine.com/",
+    "contactPage": "https://polyvine.com/contact-us/",
+    "generalEmail": "info@polyvine.co.uk",
+    "generalPhone": "+44 1934 740305",
+    "address": "Vine House, Cheddar Business Park, Wedmore Road, Cheddar BS27 3EB, United Kingdom (current official Contact page)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@polyvine.co.uk",
+        "source": {
+          "label": "Official explicitly disclosed general business mailbox",
+          "url": "https://polyvine.com/contact-us/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official 2026 own water-based formulation/manufacturing laboratory and factory in Cheddar",
+        "url": "https://polyvine.com/national-manufacturer/"
+      },
+      {
+        "label": "Official current two-pack water-based wood-floor/interior timber varnish",
+        "url": "https://polyvine.com/product/2k-poly86/"
+      },
+      {
+        "label": "Official original Exterior Wood Varnish technical document; pages1–5",
+        "url": "https://polyvine.com/app/uploads/2025/05/Technical-data-sheet_Exterior-Wood-Varnish.pdf"
+      },
+      {
+        "label": "Official full trade varnish/woodcare/paint/accessory range",
+        "url": "https://polyvine.com/polyvine-trade/products/"
+      },
+      {
+        "label": "Official full decorative finish and accessory range",
+        "url": "https://polyvine.com/polyvine-decorative-effects/products/"
+      },
+      {
+        "label": "Official family business and actual on-site manufacture",
+        "url": "https://polyvine.com/our-story/"
+      },
+      {
+        "label": "Official legal company, current address and public general business inbox",
+        "url": "https://polyvine.com/contact-us/"
+      }
+    ]
+  },
+  "bedec-dunmow": {
+    "website": "https://bedec.co.uk/",
+    "contactPage": "https://bedec.co.uk/contact-us/",
+    "generalEmail": "info@bedec.co.uk",
+    "generalPhone": "+44 1279 876657",
+    "address": "Units 1 & 2 Poplars Farm, Aythorpe Roding, Dunmow, Essex CM6 1RY, United Kingdom (official original All Prime product document)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@bedec.co.uk",
+        "source": {
+          "label": "Official explicitly disclosed general business mailbox",
+          "url": "https://bedec.co.uk/contact-us/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own Essex manufacturing and ongoing research and development",
+        "url": "https://bedec.co.uk/product/multi-surface-paint/"
+      },
+      {
+        "label": "Official actual water-based finished varnish for wood",
+        "url": "https://bedec.co.uk/product/msv-multi-surface-varnish/"
+      },
+      {
+        "label": "Official original All Prime wood-primer document and legal manufacturer/address; pages1–2",
+        "url": "https://bedec.co.uk/wp-content/uploads/2024/08/5.-All-Prime.pdf"
+      },
+      {
+        "label": "Official complete finished paint and accessory range",
+        "url": "https://bedec.co.uk/products/"
+      },
+      {
+        "label": "Official company manufacture and water-based business scope",
+        "url": "https://bedec.co.uk/about-bedec/"
+      },
+      {
+        "label": "Official general business inbox and telephone",
+        "url": "https://bedec.co.uk/contact-us/"
+      }
+    ]
+  },
   "ivm-chemicals-parona": {
     "website": "https://www.ivmgroup.com/en/",
     "contactPage": "https://www.ivmgroup.com/en/requests/new",
@@ -6194,6 +6344,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "polyvine-cheddar",
+  "bedec-dunmow",
   "ivm-chemicals-parona",
   "rustins-london",
   "mylands-london",

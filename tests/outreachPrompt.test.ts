@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { createDevelopmentEmailPrompt } from '../src/lib/outreachPrompt'
-import { marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications } from '../src/lib/productMarketMap'
+import { type PublicLead, marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications } from '../src/lib/productMarketMap'
 
-function promptFor(id: string) {
-  const lead = publicLeads.find((item) => item.id === id)!
+function promptFor(id: string, transform: (lead: PublicLead) => PublicLead = (lead) => lead) {
+  const lead = transform(publicLeads.find((item) => item.id === id)!)
   const product = marketProducts.find((item) => item.id === lead.productId)!
   const application = (lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications).find((item) => item.id === lead.companyEvidence.applicationId)!
   const targetType = targetCompanyTypes.find((item) => item.id === lead.targetCompanyTypeId)!
@@ -11,7 +11,7 @@ function promptFor(id: string) {
 }
 
 describe('development-email prompt', () => {
-  it('carries the verified coating-company path and management-aware CTA', () => {
+  it('carries the verified coating-company path and production-aware CTA', () => {
     const prompt = promptFor('turf-care-martins-ferry')
     expect(prompt).toContain('Turf Care Supply')
     expect(prompt).toContain('United States')
@@ -20,7 +20,7 @@ describe('development-email prompt', () => {
     expect(prompt).toContain('TDS-verified application: Coated Urea / Urea Coating')
     expect(prompt).toContain('Polymer-Coated Urea Manufacturer')
     expect(prompt).toContain('Hydroxyl value: 249 mg KOH/g.')
-    expect(prompt).toContain('could direct the message to the person responsible for raw-material purchasing')
+    expect(prompt).toContain('offer the TDS and a technical evaluation route if relevant')
     expect(prompt).toContain('Do not claim the company currently uses polyurethane')
     expect(prompt).toContain('Do not transfer an application or chemistry from our Product Reference onto the customer unless the customer’s own public evidence supports it.')
   })
@@ -35,10 +35,30 @@ describe('development-email prompt', () => {
     expect(prompt).toContain('Sales Team')
   })
 
-  it('keeps Haifa’s product-line evidence separate from its public contact channel', () => {
-    const prompt = promptFor('haifa-israel')
-    expect(prompt).toContain('Target company type: Controlled Release Fertilizer Manufacturer')
-    expect(prompt).toContain('Haifa Group publicly markets its Multicote controlled-release fertilizer product line.')
-    expect(prompt).not.toContain('Multicote product line and headquarters public business email')
+  it('does not produce a drafting prompt when the independent exclusion record is missing', () => {
+    expect(promptFor('haifa-israel')).toContain('Not qualified for outreach')
+    expect(promptFor('polyvine-cheddar', (lead) => ({ ...lead, commercialRole: 'peer_supplier' }))).toContain('Not qualified for outreach')
+    expect(promptFor('polyvine-cheddar', (lead) => ({ ...lead, country: 'Taiwan' }))).toContain('Not qualified for outreach')
+    expect(promptFor('polyvine-cheddar', (lead) => ({ ...lead, supplierCompetitorCheck: undefined }))).toContain('Not qualified for outreach')
+  })
+
+  it('rejects mismatched product inputs instead of writing a misleading email instruction', () => {
+    const lead = publicLeads.find((item) => item.id === 'polyvine-cheddar')!
+    const prompt = createDevelopmentEmailPrompt({ lead, product: marketProducts.find((item) => item.id === 'elo')!, application: tdsVerifiedApplications.find((item) => item.id === 'wood-surface-treatment')!, targetType: targetCompanyTypes.find((item) => item.id === lead.targetCompanyTypeId)! })
+    expect(prompt).toContain('Not qualified for outreach')
+    expect(prompt).not.toContain('Epoxy value')
+  })
+
+  it('uses a company team when a named contact lacks a public source or verification date', () => {
+    const prompt = promptFor('polyvine-cheddar', (lead) => ({ ...lead, profile: { ...lead.profile, contacts: [{ name: 'Unverified Person', title: 'Procurement Manager', email: 'buyer@example.org' }] } }))
+    expect(prompt).toContain('Name / team: General Team')
+    expect(prompt).not.toContain('Unverified Person')
+    expect(prompt).toContain('Supplier / competitor exclusion')
+  })
+
+  it('prioritizes a verified technical manager over general management', () => {
+    const prompt = promptFor('teknos-helsinki')
+    expect(prompt).toContain('Name / team: Pasi Virtanen')
+    expect(prompt).toContain('technical / R&D team')
   })
 })
