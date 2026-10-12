@@ -2562,11 +2562,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "paradeep-phosphates-bhubaneswar",
+    "company": "Paradeep Phosphates Limited (PPL; Zuari–OCP / Adventz association)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Bhubaneswar (registered-office city marker)",
+    "latitude": 20.2961,
+    "longitude": 85.8245,
+    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；PPL/MCFL/原Zuari Goa合并为一账户，保留与Chambal的集团关联；未确认PU包膜或采购",
+    "fit": "可开发候选",
+    "signal": "独立重读官网自产Jai Kisaan Navratna苦楝油包衣尿素、Goa自有尿素制造与最新FY2025-26原始年报。PPL已整合MCFL及相关Mahad资产，按一个PPL法人收录；不把旧制造页两厂、季度资料三厂当作最新完整四单位范围。TDS尿素包衣应用支持潜在原料评估，苦楝油涂层不证明PU/聚合物包膜、我方材料适配、当前使用或采购。与Chambal有共同Zuari/Adventz背景，但原始年报显示不同法人、控制链、制造及公开业务入口。地图为Bhubaneswar注册城市，非工厂GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "核对PPL最新323页FY2025-26原始年报、完整产品页和合并MCFL工业产品原文。公司确有肥料成品、磷酸/硫酸/氨/HFSA/石膏/ABC及SNF原料业务，不能宣称不销售任何原料；MCFL ChemCF SNF原文为混凝土减水/分散输入，所查范围未发现肥料包衣树脂、PU输入料或同类肥料包衣剂对外供应，结论限公开范围。关联Zuari官网仍含合并前持股/子公司描述，采用2026年报和2026-06-30股权表；OCP相关业务与交易按原始年报记录为磷矿、磷酸及肥料。PPL控股方Zuari Maroc为Zuari Agro与OCP合资；Chambal是现有独立上市法人，其最新年报子公司/合资清单没有PPL。保留共同Zuari/Adventz及共任董事关联，不声称双方没有任何关系；PPL独立制造、采购负责人和公司邮箱与Chambal Gadepan法人/采购邮箱不同，非改名新增。MCFL/Mangala、Jai Kisaan Navratna、原Zuari Goa及Mahad资产并入同一PPL账户，均不另外计数。PPL年报明确CIN由L24129OR1981PLC001020变更为L20122OR1981PLC001020，属于分类编码变更，不是新法人。按全部别名/法人/域名/办公及厂址/邮箱核对main164家和研究队列无既有PPL；采购负责人Raj Kumar Gupta仅存公开姓名职务，无个人邮箱，CorpAffairsBBSR@adventz.com保留一般公司入口，不归给个人。"
+    },
+    "contact": {
+      "label": "Official general corporate business inbox; procurement recipient is not individually attributed",
+      "email": "CorpAffairsBBSR@adventz.com",
+      "phone": "+91 674 6666100",
+      "contactUrl": "https://www.paradeepphosphates.com/contact-us"
+    },
+    "source": {
+      "label": "Official own Jai Kisaan Navratna neem-coated urea product",
+      "url": "https://www.paradeepphosphates.com/brands-and-products"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "paradeep-phosphates-bhubaneswar": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "axalta-philadelphia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mahadhan-agritech-pune": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "vital-agri-nutrients-lahore": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -2748,6 +2777,77 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "paradeep-phosphates-bhubaneswar": {
+    "website": "https://www.paradeepphosphates.com/",
+    "contactPage": "https://www.paradeepphosphates.com/contact-us",
+    "generalPhone": "+91 674 6666100",
+    "address": "Registered office per official contact page: 5th Floor, Bayan Bhavan, Pandit Jawaharlal Nehru Marg, Bhubaneswar 751001, Odisha, India. Corporate office: 3rd Floor, Adventz Centre, 28 Union Street, Off Cubbon Road, Bengaluru 560001. Latest annual report includes Paradeep, Goa, Mangaluru and Mahad manufacturing units; city marker is not factory GPS.",
+    "contacts": [
+      {
+        "name": "Raj Kumar Gupta",
+        "title": "Chief Procurement Officer",
+        "department": "Procurement",
+        "source": {
+          "label": "Official procurement leadership, disclosed title and function; no personal email attributed",
+          "url": "https://www.paradeepphosphates.com/about-us/leadership"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "CorpAffairsBBSR@adventz.com",
+        "source": {
+          "label": "Official PPL general corporate inbox, registered/corporate offices and plants",
+          "url": "https://www.paradeepphosphates.com/contact-us"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own Jai Kisaan Navratna neem-coated urea product",
+        "url": "https://www.paradeepphosphates.com/brands-and-products"
+      },
+      {
+        "label": "Official own acquired Goa urea manufacturing facilities",
+        "url": "https://www.paradeepphosphates.com/our-capabilities/manufacturing"
+      },
+      {
+        "label": "Original PPL FY2025-26 annual report: current CIN, integrated manufacture, four units, portfolio and holding-company relationship",
+        "url": "https://www.paradeepphosphates.com/uploads/content/paradeep-phosphate-ar-24082026-1.pdf"
+      },
+      {
+        "label": "Official completed MCFL merger, effective 16 October 2025; same consolidated PPL account",
+        "url": "https://www.paradeepphosphates.com/uploads/content/17-10-25.pdf"
+      },
+      {
+        "label": "Original 30 June 2026 PPL promoter shareholding; table visually checked",
+        "url": "https://www.paradeepphosphates.com/uploads/content/shp-30062026.pdf"
+      },
+      {
+        "label": "Original Chambal FY2025-26 annual report: separate CIN, facilities, shareholders, subsidiaries and joint venture",
+        "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year_2025-26.pdf"
+      },
+      {
+        "label": "Official complete current fertiliser and industrial scope including ABC and SNF",
+        "url": "https://www.paradeepphosphates.com/about-us"
+      },
+      {
+        "label": "Merged MCFL original SNF powder: concrete-admixture dispersant input scope",
+        "url": "https://www.mangalorechemicals.com/what_we_do/products_md_chemcfnp"
+      },
+      {
+        "label": "Official procurement leadership, disclosed title and function; no personal email attributed",
+        "url": "https://www.paradeepphosphates.com/about-us/leadership"
+      },
+      {
+        "label": "Official PPL general corporate inbox, registered/corporate offices and plants",
+        "url": "https://www.paradeepphosphates.com/contact-us"
+      }
+    ]
+  },
+
   "axalta-philadelphia": {
     "website": "https://www.axalta.com/",
     "contactPage": "https://www.axalta.com/corporate/en_US/contacts.html",
@@ -6616,6 +6716,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "paradeep-phosphates-bhubaneswar",
   "axalta-philadelphia",
   "mahadhan-agritech-pune",
   "vital-agri-nutrients-lahore",
