@@ -61,4 +61,11 @@ describe('development-email prompt', () => {
     expect(prompt).toContain('Name / team: Pasi Virtanen')
     expect(prompt).toContain('technical / R&D team')
   })
+
+  it('routes a disclosed procurement role through the company inbox when no personal email is published', () => {
+    const prompt = promptFor('paradeep-phosphates-bhubaneswar')
+    expect(prompt).toContain('Name / team: General Team')
+    expect(prompt).toContain('appropriate Technical / Procurement contact')
+    expect(prompt).not.toContain('Name / team: Raj Kumar Gupta')
+  })
 })

@@ -96,7 +96,7 @@ function recipientPriority(category: Recipient['category']) {
 
 function recipientFor(lead: PublicLead): Recipient {
   const named = lead.profile.contacts
-    .filter((contact) => contact.name.trim() && contact.title?.trim() && contact.source?.label && /^https:\/\//.test(contact.source.url) && /^\d{4}-\d{2}-\d{2}$/.test(contact.verifiedAt ?? '') && !Number.isNaN(Date.parse(contact.verifiedAt!)) && new Date(contact.verifiedAt!).toISOString().slice(0, 10) === contact.verifiedAt)
+    .filter((contact) => contact.name.trim() && contact.title?.trim() && contact.email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contact.email) && contact.source?.label && /^https:\/\//.test(contact.source.url) && /^\d{4}-\d{2}-\d{2}$/.test(contact.verifiedAt ?? '') && !Number.isNaN(Date.parse(contact.verifiedAt!)) && new Date(contact.verifiedAt!).toISOString().slice(0, 10) === contact.verifiedAt)
     .map((contact) => {
       const title = contact.title ?? contact.department ?? 'Public business contact'
       return {
