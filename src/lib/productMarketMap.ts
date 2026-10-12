@@ -1,5 +1,6 @@
 import { isTaiwanMarket } from './leadMarketScope.ts'
 import { verifiedAnjoLeads } from './verifiedAnjoLead.ts'
+import { verifiedMarindecLeads } from './verifiedMarindecLead.ts'
 
 export type MarketProduct = {
   id: 'fertilizer-coating' | 'nl-w1201' | 'elo'
@@ -7670,4 +7671,4 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads)

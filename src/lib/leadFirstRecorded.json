@@ -1,34 +1,4 @@
 {
-  "berger-seidle-gruenstadt": {"recordedAt":"2026-10-12T02:20:12Z","commit":"9af2ed6bc01caeedf73add98b9d7f62f91b1aebc","source":"Actual first occurrence in main-path commit history."},
-  "mipa-essenbach": {"recordedAt":"2026-10-12T02:20:12Z","commit":"9af2ed6bc01caeedf73add98b9d7f62f91b1aebc","source":"Actual first occurrence in main-path commit history."},
-  "remmers-loeningen": {"recordedAt":"2026-10-12T02:20:12Z","commit":"9af2ed6bc01caeedf73add98b9d7f62f91b1aebc","source":"Actual first occurrence in main-path commit history."},
-  "teknos-helsinki": {"recordedAt":"2026-10-12T02:20:12Z","commit":"9af2ed6bc01caeedf73add98b9d7f62f91b1aebc","source":"Actual first occurrence in main-path commit history."},
-  "dura-paints-edenvale": {"recordedAt":"2026-10-12T02:20:12Z","commit":"9af2ed6bc01caeedf73add98b9d7f62f91b1aebc","source":"Actual first occurrence in main-path commit history."},
-  "troforte-innovations-wangara": {"recordedAt":"2026-10-12T02:54:29Z","commit":"c39de6e3d88bb7fae3652113bb56c51eeeb4a540","source":"Actual first occurrence in main-path commit history."},
-  "incitec-pivot-fertilisers-melbourne": {"recordedAt":"2026-10-12T02:54:29Z","commit":"c39de6e3d88bb7fae3652113bb56c51eeeb4a540","source":"Actual first occurrence in main-path commit history."},
-  "pvcfc-ca-mau": {"recordedAt":"2026-10-12T02:54:29Z","commit":"c39de6e3d88bb7fae3652113bb56c51eeeb4a540","source":"Actual first occurrence in main-path commit history."},
-  "verinlegno-massa-cozzile": {"recordedAt":"2026-10-12T03:26:57Z","commit":"fce0088290830bc2b3f9552ac54b77ba1a80c5b3","source":"Actual first occurrence in main-path commit history."},
-  "fiddes-cardiff": {"recordedAt":"2026-10-12T03:26:57Z","commit":"fce0088290830bc2b3f9552ac54b77ba1a80c5b3","source":"Actual first occurrence in main-path commit history."},
-  "morrells-stockport": {"recordedAt":"2026-10-12T03:26:57Z","commit":"fce0088290830bc2b3f9552ac54b77ba1a80c5b3","source":"Actual first occurrence in main-path commit history."},
-  "mylands-london": {"recordedAt":"2026-10-12T03:26:57Z","commit":"fce0088290830bc2b3f9552ac54b77ba1a80c5b3","source":"Actual first occurrence in main-path commit history."},
-  "rustins-london": {"recordedAt":"2026-10-12T03:26:57Z","commit":"fce0088290830bc2b3f9552ac54b77ba1a80c5b3","source":"Actual first occurrence in main-path commit history."},
-  "ivm-chemicals-parona": {"recordedAt":"2026-10-12T03:26:57Z","commit":"fce0088290830bc2b3f9552ac54b77ba1a80c5b3","source":"Actual first occurrence in main-path commit history."},
-  "anjo-tintas-criciuma": {"recordedAt":"2026-10-12T03:29:00Z","commit":"","source":"Formal admission after separate original-source review; publication commit retained privately."},
-  "medal-paints-johannesburg": {"recordedAt":"2026-10-12T01:58:54Z","commit":"d839180638edf9ef38109db1e91889ed98ac23a2","source":"Actual first public appearance in this concurrent GitHub commit; retained-company timeline metadata."},
-  "hesse-lignal-hamm": {"recordedAt":"2026-10-12T01:58:54Z","commit":"d839180638edf9ef38109db1e91889ed98ac23a2","source":"Actual first public appearance in this concurrent GitHub commit; retained-company timeline metadata."},
-  "ballance-tauranga": {"recordedAt":"2026-10-12T01:58:54Z","commit":"d839180638edf9ef38109db1e91889ed98ac23a2","source":"Actual first public appearance in this concurrent GitHub commit; retained-company timeline metadata."},
-  "penta-prima-tangerang": {"recordedAt":"2026-10-12T02:00:00Z","commit":"","source":"Formal admission after independent original-source review; actual publication commit retained privately."},
-  "kofarb-czestochowa": {"recordedAt":"2026-10-11T11:38:21Z","commit":"9fa2184dd6c153a21d0ff76a4f1946006ae3a87a","source":"Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."},
-  "kupsa-oyon": {"recordedAt":"2026-10-11T11:38:21Z","commit":"9fa2184dd6c153a21d0ff76a4f1946006ae3a87a","source":"Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."},
-  "apt-vietnam-noi-bai": {"recordedAt":"2026-10-11T11:36:12Z","commit":"","source":"Formal admission after separate original-source review; actual publication commit retained privately."},
-  "son-anh-an-khanh": {"recordedAt":"2026-10-11T11:36:12Z","commit":"","source":"Formal admission after separate original-source review; actual publication commit retained privately."},
-  "specialized-coating-systems-boksburg": { "recordedAt": "2026-10-11T11:17:43Z", "commit": "5b0793a2e2a14402903e64fa92e84efd48339f71", "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer." },
-  "pv-paint-ho-chi-minh": { "recordedAt": "2026-10-11T11:17:43Z", "commit": "5b0793a2e2a14402903e64fa92e84efd48339f71", "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer." },
-  "soilmate-bangkok": { "recordedAt": "2026-10-11T11:17:43Z", "commit": "5b0793a2e2a14402903e64fa92e84efd48339f71", "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer." },
-  "thai-do-no-gen-gen-rayong": { "recordedAt": "2026-10-11T11:17:20Z", "commit": "", "source": "Formal admission after independent original-source review; publication commit retained privately." },
-  "kossan-paint-kapar": { "recordedAt": "2026-10-11T10:04:24Z", "commit": "", "source": "Formal admission after independent original-source verification; publication SHA retained in private run record." },
-  "technical-finishes-germiston": { "recordedAt": "2026-10-11T06:06:00Z", "commit": "", "source": "Local formal admission in round 20261011055954664; actual publication commit retained privately." },
-  "kanat-boya-kemalpasa": { "recordedAt": "2026-10-11T05:42:28Z", "commit": "", "source": "Local formal admission, round 20261011053412397; publication commit recorded privately after completion." },
   "ac-profil-huttwil": {
     "recordedAt": "2026-09-26T10:10:39+08:00",
     "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
@@ -38,9 +8,8 @@
     "commit": "0da24742f53e9bf75375735e219880257a923261"
   },
   "advance-paints-mumbai": {
-    "recordedAt": "2026-10-11T02:45:00Z",
-    "commit": "",
-    "source": "Local formal admission, round 20261011023741744; pending first public commit, not a fabricated commit date."
+    "recordedAt": "2026-10-11T10:47:38+08:00",
+    "commit": "25e5d25ef94810cb7b91a1520e42d6a2c3354eb6"
   },
   "agro-berjaya-mojokerto": {
     "recordedAt": "2026-09-26T10:37:44+08:00",
@@ -70,9 +39,18 @@
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
   },
+  "anjo-tintas-criciuma": {
+    "recordedAt": "2026-10-12T03:29:00Z",
+    "commit": "",
+    "source": "Formal admission after separate original-source review; publication commit retained privately."
+  },
   "applied-db-samut-prakan": {
     "recordedAt": "2026-09-26T18:51:07+08:00",
     "commit": "3b3c8a7d31c67aa37f19f0deab75b4ecc4b67d16"
+  },
+  "apt-vietnam-noi-bai": {
+    "recordedAt": "2026-10-11T19:41:18+08:00",
+    "commit": "5f13f99c7c0ea4a1f150fd306dbf4ba9a7f2a0f5"
   },
   "aqua-based-us": {
     "recordedAt": "2026-09-25T17:18:17+08:00",
@@ -85,6 +63,24 @@
   "aurora-material-streetsboro": {
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
+  },
+  "axalta-philadelphia": {
+    "recordedAt": "2026-10-12T20:50:39+08:00",
+    "commit": "7d53e9ca6aab8aa4c5bf13580a54984c9522662d"
+  },
+  "ballance-tauranga": {
+    "recordedAt": "2026-10-12T01:58:54Z",
+    "commit": "d839180638edf9ef38109db1e91889ed98ac23a2",
+    "source": "Actual first public appearance in this concurrent GitHub commit; retained-company timeline metadata."
+  },
+  "bedec-dunmow": {
+    "recordedAt": "2026-10-12T15:30:29+08:00",
+    "commit": "ec54ddf81249ea7547f5026189dd934485cf6ffb"
+  },
+  "berger-seidle-gruenstadt": {
+    "recordedAt": "2026-10-12T02:20:12Z",
+    "commit": "9af2ed6bc01caeedf73add98b9d7f62f91b1aebc",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "bvfcl-namrup": {
     "recordedAt": "2026-10-11T10:18:53+08:00",
@@ -166,6 +162,11 @@
     "recordedAt": "2026-10-08T14:40:34+08:00",
     "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
   },
+  "dura-paints-edenvale": {
+    "recordedAt": "2026-10-12T02:20:12Z",
+    "commit": "9af2ed6bc01caeedf73add98b9d7f62f91b1aebc",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "duramax-cascavel": {
     "recordedAt": "2026-09-29T10:18:27+08:00",
     "commit": "0d36ce0020d07fe06c46646469c7fbf2a7ee65c7"
@@ -185,6 +186,11 @@
   "farmhannong-ulsan": {
     "recordedAt": "2026-09-26T11:00:32+08:00",
     "commit": "d1b34431304204579daee2470f722d965107b764"
+  },
+  "fiddes-cardiff": {
+    "recordedAt": "2026-10-12T03:26:57Z",
+    "commit": "fce0088290830bc2b3f9552ac54b77ba1a80c5b3",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "flint-group-malmo": {
     "recordedAt": "2026-09-26T17:07:07+08:00",
@@ -215,9 +221,8 @@
     "commit": "2b4752598cee116204b10231e7031425f129e7be"
   },
   "goa-paints-panaji": {
-    "recordedAt": "2026-10-11T02:45:00Z",
-    "commit": "",
-    "source": "Local formal admission, round 20261011023741744; pending first public commit, not a fabricated commit date."
+    "recordedAt": "2026-10-11T10:47:38+08:00",
+    "commit": "25e5d25ef94810cb7b91a1520e42d6a2c3354eb6"
   },
   "greenbest-henstridge": {
     "recordedAt": "2026-09-27T20:24:50+08:00",
@@ -251,6 +256,11 @@
     "recordedAt": "2026-10-11T10:30:19+08:00",
     "commit": "2909645a21086c6a4cf97377b771ded8dd954121"
   },
+  "hesse-lignal-hamm": {
+    "recordedAt": "2026-10-12T01:58:54Z",
+    "commit": "d839180638edf9ef38109db1e91889ed98ac23a2",
+    "source": "Actual first public appearance in this concurrent GitHub commit; retained-company timeline metadata."
+  },
   "hurl-new-delhi": {
     "recordedAt": "2026-10-11T10:18:53+08:00",
     "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
@@ -267,6 +277,11 @@
     "recordedAt": "2026-10-11T09:34:37+08:00",
     "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
   },
+  "incitec-pivot-fertilisers-melbourne": {
+    "recordedAt": "2026-10-12T02:54:29Z",
+    "commit": "c39de6e3d88bb7fae3652113bb56c51eeeb4a540",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "indigrow-brimpton": {
     "recordedAt": "2026-09-28T10:37:24+08:00",
     "commit": "0da24742f53e9bf75375735e219880257a923261"
@@ -274,6 +289,11 @@
   "inx-schaumburg": {
     "recordedAt": "2026-09-26T17:34:36+08:00",
     "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
+  },
+  "ivm-chemicals-parona": {
+    "recordedAt": "2026-10-12T03:26:57Z",
+    "commit": "fce0088290830bc2b3f9552ac54b77ba1a80c5b3",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "jcam-agri-tokyo": {
     "recordedAt": "2026-09-26T11:03:50+08:00",
@@ -287,6 +307,10 @@
     "recordedAt": "2026-09-28T11:21:53+08:00",
     "commit": "7d2a597e42ac4031363416a89dfb554746710dec"
   },
+  "kanat-boya-kemalpasa": {
+    "recordedAt": "2026-10-11T13:43:57+08:00",
+    "commit": "534cd6dc72ee264cc6fb5c01491ec6f7c3c4b0ad"
+  },
   "katakura-coop-akita": {
     "recordedAt": "2026-09-28T20:57:49+08:00",
     "commit": "7c5f12eb95e31d84a4dca7b1b707af426a4990d9"
@@ -299,9 +323,23 @@
     "recordedAt": "2026-09-28T11:59:17+08:00",
     "commit": "0a23599e1988cdd3987fc875e49f39b975da8ea2"
   },
+  "kofarb-czestochowa": {
+    "recordedAt": "2026-10-11T11:38:21Z",
+    "commit": "9fa2184dd6c153a21d0ff76a4f1946006ae3a87a",
+    "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."
+  },
+  "kossan-paint-kapar": {
+    "recordedAt": "2026-10-11T18:07:19+08:00",
+    "commit": "e4ce153a6e7806ed198a54682e621809bcd6ec49"
+  },
   "kribhco-hazira": {
     "recordedAt": "2026-10-11T10:18:53+08:00",
     "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
+  },
+  "kupsa-oyon": {
+    "recordedAt": "2026-10-11T11:38:21Z",
+    "commit": "9fa2184dd6c153a21d0ff76a4f1946006ae3a87a",
+    "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."
   },
   "lebanon-seaboard-lebanon": {
     "recordedAt": "2026-09-28T10:37:24+08:00",
@@ -310,6 +348,10 @@
   "madras-fertilizers-manali": {
     "recordedAt": "2026-10-11T09:34:37+08:00",
     "commit": "1a2e4f0093d694385254145d51eaa97c6b035209"
+  },
+  "mahadhan-agritech-pune": {
+    "recordedAt": "2026-10-12T17:17:23+08:00",
+    "commit": "778eada4cbdf408ff853add558b742dc46e9a62c"
   },
   "manner-polymers-mckinney": {
     "recordedAt": "2026-09-28T20:57:49+08:00",
@@ -323,13 +365,28 @@
     "recordedAt": "2026-09-29T15:16:40+08:00",
     "commit": "ad9575f2d922e8455fff976108a6a5d3ba17fb7e"
   },
+  "marindec-paints-gauteng": {
+    "recordedAt": "2026-10-12T13:15:05Z",
+    "commit": "",
+    "source": "Formal admission after separate original-source review; publication commit retained privately."
+  },
   "mc-ferticom-tokyo": {
     "recordedAt": "2026-10-10T09:29:20+08:00",
     "commit": "a7eba902e33c6fa46a32cf5a2ee97847f045473c"
   },
+  "medal-paints-johannesburg": {
+    "recordedAt": "2026-10-12T01:58:54Z",
+    "commit": "d839180638edf9ef38109db1e91889ed98ac23a2",
+    "source": "Actual first public appearance in this concurrent GitHub commit; retained-company timeline metadata."
+  },
   "mica-shelton": {
     "recordedAt": "2026-09-26T10:10:39+08:00",
     "commit": "41044fdff6b7b42f7a9720e0abf14af63c7ad2ec"
+  },
+  "mipa-essenbach": {
+    "recordedAt": "2026-10-12T02:20:12Z",
+    "commit": "9af2ed6bc01caeedf73add98b9d7f62f91b1aebc",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "mivena-maastricht": {
     "recordedAt": "2026-09-27T18:10:39+08:00",
@@ -339,9 +396,19 @@
     "recordedAt": "2026-10-10T12:18:00+08:00",
     "commit": "485e33b04c3e70671e4aea8e20cc77e8a55c2fe1"
   },
+  "morrells-stockport": {
+    "recordedAt": "2026-10-12T03:26:57Z",
+    "commit": "fce0088290830bc2b3f9552ac54b77ba1a80c5b3",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "mowilex-indonesia-cikande": {
     "recordedAt": "2026-10-11T09:07:21+08:00",
     "commit": "ce810d39c5bbb382520872189d522e0ef0724f6d"
+  },
+  "mylands-london": {
+    "recordedAt": "2026-10-12T03:26:57Z",
+    "commit": "fce0088290830bc2b3f9552ac54b77ba1a80c5b3",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "nam-ah-ipoh": {
     "recordedAt": "2026-09-26T12:36:23+08:00",
@@ -375,6 +442,10 @@
     "recordedAt": "2026-09-27T20:24:50+08:00",
     "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
   },
+  "penta-prima-tangerang": {
+    "recordedAt": "2026-10-12T10:04:54+08:00",
+    "commit": "a027abe1457d4b52de4b509c897a1c54af59ba23"
+  },
   "periwal-bhiwadi": {
     "recordedAt": "2026-09-26T11:18:42+08:00",
     "commit": "eaed0cd026538d9e3b31040c20c5f1e31c8a2d11"
@@ -403,6 +474,10 @@
     "recordedAt": "2026-09-26T09:57:46+08:00",
     "commit": "148c79bdf9d108684ad4e9203fee8e740ac455c9"
   },
+  "polyvine-cheddar": {
+    "recordedAt": "2026-10-12T15:30:29+08:00",
+    "commit": "ec54ddf81249ea7547f5026189dd934485cf6ffb"
+  },
   "protectometal-ciudad-mexico": {
     "recordedAt": "2026-10-11T10:38:10+08:00",
     "commit": "4cfcbadea211284ca7393267db98f54d777e1b79"
@@ -415,22 +490,41 @@
     "recordedAt": "2026-09-25T17:18:17+08:00",
     "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
   },
+  "pv-paint-ho-chi-minh": {
+    "recordedAt": "2026-10-11T11:17:43Z",
+    "commit": "5b0793a2e2a14402903e64fa92e84efd48339f71",
+    "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."
+  },
   "pvc-colouring-ahmedabad": {
     "recordedAt": "2026-09-26T17:34:36+08:00",
     "commit": "6dd2b354e2a0e9250209b8d271decd0453a191a5"
   },
+  "pvcfc-ca-mau": {
+    "recordedAt": "2026-10-12T02:54:29Z",
+    "commit": "c39de6e3d88bb7fae3652113bb56c51eeeb4a540",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "rainbow-industries-navi-mumbai": {
-    "recordedAt": "2026-10-11T02:45:00Z",
-    "commit": "",
-    "source": "Local formal admission, round 20261011023741744; pending first public commit, not a fabricated commit date."
+    "recordedAt": "2026-10-11T10:47:38+08:00",
+    "commit": "25e5d25ef94810cb7b91a1520e42d6a2c3354eb6"
   },
   "rcf-mumbai": {
     "commit": "d53e872996fc1a37036ad005f56ed8cd8c4b7f2c",
     "recordedAt": "2026-10-10T14:46:38Z"
   },
+  "remmers-loeningen": {
+    "recordedAt": "2026-10-12T02:20:12Z",
+    "commit": "9af2ed6bc01caeedf73add98b9d7f62f91b1aebc",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "renner-italia-minerbio": {
     "recordedAt": "2026-10-11T10:18:53+08:00",
     "commit": "b8ed5613d584584d83090fd896c785b8eeab67f4"
+  },
+  "rustins-london": {
+    "recordedAt": "2026-10-12T03:26:57Z",
+    "commit": "fce0088290830bc2b3f9552ac54b77ba1a80c5b3",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "rynan-smart-fertilizers-long-duc": {
     "recordedAt": "2026-09-29T16:34:18+08:00",
@@ -472,9 +566,23 @@
     "recordedAt": "2026-09-25T17:18:17+08:00",
     "commit": "4f1bb5691dedb1e33aeae0c22791a5f7ff6371bb"
   },
+  "soilmate-bangkok": {
+    "recordedAt": "2026-10-11T11:17:43Z",
+    "commit": "5b0793a2e2a14402903e64fa92e84efd48339f71",
+    "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."
+  },
+  "son-anh-an-khanh": {
+    "recordedAt": "2026-10-11T19:41:18+08:00",
+    "commit": "5f13f99c7c0ea4a1f150fd306dbf4ba9a7f2a0f5"
+  },
   "son-mien-bac-hung-yen": {
     "recordedAt": "2026-10-08T14:40:34+08:00",
     "commit": "24e6cf555c1440ddf0d13a82d9606960a0f5f88f"
+  },
+  "specialized-coating-systems-boksburg": {
+    "recordedAt": "2026-10-11T11:17:43Z",
+    "commit": "5b0793a2e2a14402903e64fa92e84efd48339f71",
+    "source": "Actual first public appearance in this GitHub commit; necessary timeline metadata for concurrently admitted customer."
   },
   "stir-barletta": {
     "recordedAt": "2026-09-26T09:20:24+08:00",
@@ -500,13 +608,26 @@
     "recordedAt": "2026-10-11T10:06:45+08:00",
     "commit": "7a1c4649e367f45a3f24bc6b53bc34e8524fe139"
   },
+  "technical-finishes-germiston": {
+    "recordedAt": "2026-10-11T17:14:49+08:00",
+    "commit": "2a9224c5a420e00b149c6d9e6706bb5f2b129aaf"
+  },
   "tectona-warna-cirebon": {
     "recordedAt": "2026-10-11T09:07:21+08:00",
     "commit": "ce810d39c5bbb382520872189d522e0ef0724f6d"
   },
+  "teknos-helsinki": {
+    "recordedAt": "2026-10-12T02:20:12Z",
+    "commit": "9af2ed6bc01caeedf73add98b9d7f62f91b1aebc",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "teknova-esenyurt": {
     "recordedAt": "2026-10-11T10:33:22+08:00",
     "commit": "c74b1586de24a58d15e5c9adc67b1b25c1a312b7"
+  },
+  "thai-do-no-gen-gen-rayong": {
+    "recordedAt": "2026-10-11T19:22:58+08:00",
+    "commit": "4d0c1e26721cef7983a0d35363750ca16efcbee8"
   },
   "tintas-prisma-tlalnepantla": {
     "recordedAt": "2026-09-27T17:08:29+08:00",
@@ -516,6 +637,11 @@
     "recordedAt": "2026-10-08T19:50:33+08:00",
     "commit": "807cc2cae8d28bd225c21cebf8433de0eb7c8e29"
   },
+  "troforte-innovations-wangara": {
+    "recordedAt": "2026-10-12T02:54:29Z",
+    "commit": "c39de6e3d88bb7fae3652113bb56c51eeeb4a540",
+    "source": "Actual first occurrence in main-path commit history."
+  },
   "turf-care-martins-ferry": {
     "recordedAt": "2026-09-26T11:18:42+08:00",
     "commit": "eaed0cd026538d9e3b31040c20c5f1e31c8a2d11"
@@ -523,6 +649,11 @@
   "twin-arrow-shah-alam": {
     "recordedAt": "2026-09-26T10:26:58+08:00",
     "commit": "fd3001c65c661b96ea9cee049ebe504ffdf606a7"
+  },
+  "verinlegno-massa-cozzile": {
+    "recordedAt": "2026-10-12T03:26:57Z",
+    "commit": "fce0088290830bc2b3f9552ac54b77ba1a80c5b3",
+    "source": "Actual first occurrence in main-path commit history."
   },
   "vermont-natural-coatings-hardwick": {
     "recordedAt": "2026-10-11T10:06:45+08:00",
@@ -535,6 +666,10 @@
   "vinyl-base-ipoh": {
     "recordedAt": "2026-09-26T11:11:56+08:00",
     "commit": "d39a557dfb0f2bac4e6401a93150875ab0d453f9"
+  },
+  "vital-agri-nutrients-lahore": {
+    "recordedAt": "2026-10-12T16:34:27+08:00",
+    "commit": "210f976d9ea757f68f07bfff66a063f1d33a498f"
   },
   "vivacor-diadema": {
     "recordedAt": "2026-09-26T11:53:50+08:00",
