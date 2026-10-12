@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type MouseEvent } from 'react'
+import { useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { latLngBounds } from 'leaflet'
 import { CircleMarker, MapContainer, TileLayer, useMap } from 'react-leaflet'
 import { Building2, CalendarCheck, CheckCircle2, ChevronRight, Copy, ExternalLink, FileText, Globe2, Linkedin, Mail, MapPin, MapPinned, MessageCircle, Phone, Search, Target, TriangleAlert, UserRound, X } from 'lucide-react'
@@ -9,10 +9,14 @@ import { LeadTimelineControls } from './LeadTimelineControls'
 import { filterLeadGeography, geographyOptions } from '../../lib/leadGeography'
 import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { createShortDevelopmentEmail } from '../../lib/shortDevelopmentEmail'
-import { localDateToday } from '../../lib/outreachLedger'
+import { localDateToday, outreachCompanyKey } from '../../lib/outreachLedger'
 import { firstContactPlan, firstContactExport } from '../../lib/customerDevelopment'
 import { CustomerDevelopmentPanel } from './CustomerDevelopmentPanel'
 import { useOutreachLedger, type OutreachLedger } from './useOutreachLedger'
+import { useLeadWork, type LeadWork } from './useLeadWork'
+import { LeadBusinessControls, LeadEvidenceSummary, LeadPrivatePanel, LeadWorkCard } from './LeadWorkbench'
+import { emptyBusinessFilters, filterWorkbenchLeads, type BusinessFilters } from '../../lib/leadWorkbench'
+import { shanghaiDay } from '../../lib/leadTimeline'
 
 type MarketTab = 'overview' | 'map' | 'leads' | 'products' | 'sources'
 type CountrySummary = { country: string; countryZh: string; latitude: number; longitude: number; count: number }
@@ -47,7 +51,9 @@ function MapFocus({ target, leads, overviewToken }: { target: PublicLead | Count
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [map, leads, target])
-  useEffect(() => { if (target) map.flyTo([target.latitude, target.longitude], 'count' in target ? 4 : 7, { duration: 0.65 }) }, [map, target])
+  useEffect(() => {
+    if (target) map.setView([target.latitude, target.longitude], 'count' in target ? 4 : 7, { animate: false })
+  }, [map, target])
   return null
 }
 
@@ -55,13 +61,13 @@ function ProductPicker({ value, onChange }: { value: string; onChange: (value: s
   return <div className="lead-product-picker" aria-label="按产品筛选">{marketProducts.map((product) => <button key={product.id} className={value === product.id ? 'active' : ''} onClick={() => onChange(product.id)}><i style={{ background: product.color }} />{product.name}</button>)}<button className={value === 'all' ? 'active' : ''} onClick={() => onChange('all')}>全部产品</button></div>
 }
 
-function LeadCard({ lead, selected, onSelect, onOpenDetail, ledger }: { lead: PublicLead; selected?: boolean; onSelect: (lead: PublicLead) => void; onOpenDetail: (lead: PublicLead) => void; ledger: OutreachLedger }) {
+function LeadCard({ lead, selected, onSelect, onOpenDetail, ledger, work }: { lead: PublicLead; selected?: boolean; onSelect: (lead: PublicLead) => void; onOpenDetail: (lead: PublicLead) => void; ledger: OutreachLedger; work: LeadWork }) {
   const product = productOf(lead.productId)
   const targetType = targetCompanyTypeOf(lead.targetCompanyTypeId)
   const primaryContact = lead.profile.contacts[0] ? `${lead.profile.contacts[0].name} · ${lead.profile.contacts[0].title ?? '公开联系人'}` : lead.profile.departmentEmails[0] ? `${lead.profile.departmentEmails[0].department} 部门邮箱已核验` : lead.profile.generalEmail ? '公开业务邮箱已核验' : lead.profile.generalPhone ? '公开业务电话已核验' : '官网联系入口已核验'
   const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
   const sendLabel = ledger.status === 'ready' ? sent ? `已发送 · ${sent.sent_on} · 查看记录` : '未记录发送 · 点击查看' : '发送状态未连接 · 点击查看'
-  return <article className={selected ? 'lead-card selected' : 'lead-card'}><button className="lead-card-main" onClick={() => onSelect(lead)}><span className="lead-dot" style={{ background: product.color }} /><span><small>{lead.countryZh} · {lead.city}</small><h3>{lead.company}</h3><p>{targetType.name}{targetType.kind === 'alternative-research' ? ' · 技术路线研究' : ''}</p></span><ChevronRight size={17} /></button><div className="lead-card-meta"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span>{lead.checkedAt} 核验</span></div><div className="lead-card-recorded"><CalendarCheck size={13} /><span>首次收录：{recordedTimeLabel(lead)}（北京时间）</span></div><div className="lead-card-footer"><span>{primaryContact}</span><button onClick={() => onOpenDetail(lead)}>Company Detail</button></div><button type="button" className={`lead-send-status ${sent ? 'is-sent' : ''}`} onClick={() => onOpenDetail(lead)}>{sendLabel}</button></article>
+  return <article className={selected ? 'lead-card selected' : 'lead-card'}><button className="lead-card-main" onClick={() => onSelect(lead)}><span className="lead-dot" style={{ background: product.color }} /><span><small>{lead.countryZh} · {lead.city}</small><h3>{lead.company}</h3><p>{targetType.name}{targetType.kind === 'alternative-research' ? ' · 技术路线研究' : ''}</p></span><ChevronRight size={17} /></button><LeadWorkCard lead={lead} work={work} ledger={ledger} onOpen={() => onOpenDetail(lead)} /><div className="lead-card-meta"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span>{lead.checkedAt} 核验</span></div><div className="lead-card-recorded"><CalendarCheck size={13} /><span>首次收录：{recordedTimeLabel(lead)}（北京时间）</span></div><div className="lead-card-footer"><span>{primaryContact}</span><button onClick={() => onOpenDetail(lead)}>客户详情</button></div><button type="button" className={`lead-send-status ${sent ? 'is-sent' : ''}`} onClick={() => onOpenDetail(lead)}>{sendLabel}</button></article>
 }
 
 function CopyValue({ value, label }: { value: string; label: string }) {
@@ -157,7 +163,27 @@ function OutreachSendPanel({ lead, ledger }: { lead: PublicLead; ledger: Outreac
   </section>
 }
 
-function CompanyDetail({ lead, onClose, ledger }: { lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger }) {
+function CompanyDetail({ lead, onClose, ledger, work }: { lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger; work: LeadWork }) {
+  const closeRef = useRef(onClose)
+  closeRef.current = onClose
+  useEffect(() => {
+    if (!lead) return
+    const previous = document.activeElement as HTMLElement | null
+    const dialog = document.querySelector<HTMLElement>('.company-detail')
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    dialog?.querySelector<HTMLElement>('.detail-close')?.focus()
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeRef.current()
+      if (event.key !== 'Tab' || !dialog) return
+      const items = [...dialog.querySelectorAll<HTMLElement>('a[href],button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),summary')].filter((element) => element.getClientRects().length > 0)
+      const first = items[0], last = items.at(-1)
+      if (event.shiftKey && document.activeElement === first && last) { event.preventDefault(); last.focus() }
+      else if (!event.shiftKey && document.activeElement === last && first) { event.preventDefault(); first.focus() }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => { document.body.style.overflow = previousOverflow; document.removeEventListener('keydown', onKey); previous?.focus() }
+  }, [lead?.id])
   if (!lead) return null
   const profile = lead.profile
   const product = productOf(lead.productId)
@@ -165,12 +191,12 @@ function CompanyDetail({ lead, onClose, ledger }: { lead: PublicLead | null; onC
   const application = applicationOf(lead.companyEvidence.applicationLayer, lead.companyEvidence.applicationId)
   const extendedSource = lead.companyEvidence.applicationLayer === 'market-extended' ? marketExtendedApplications.find((item) => item.id === application.id) : undefined
   const sources = [...new Map([...profile.sources, ...(extendedSource ? [{ label: extendedSource.sourceName, url: extendedSource.sourceUrl }] : [])].map((source) => [source.url, source])).values()]
-  return <div className="company-detail-backdrop" role="presentation" onMouseDown={onClose}><section className="company-detail" role="dialog" aria-modal="true" aria-labelledby="company-detail-title" onMouseDown={(event) => event.stopPropagation()}><header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p></div><button className="detail-close" onClick={onClose} aria-label="关闭公司详情"><X size={19} /></button></header><div className="company-detail-status"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span><CalendarCheck size={14} />最后核验：{lead.checkedAt}</span><span><CalendarCheck size={14} />首次收录：{recordedTimeLabel(lead)}（北京时间）</span></div><section className="match-path"><h3><Target size={17} />为什么被找到</h3><div className="match-path-steps"><strong>{product.name}</strong><i>→</i><span><small>{applicationLayerName(lead.companyEvidence.applicationLayer)}</small>{application.nameEn}</span><i>→</i><span><small>目标公司类型</small>{targetType.nameEn}</span><i>→</i><strong>{lead.company}</strong></div><div className="match-path-evidence"><b>证据</b><p>{lead.companyEvidence.statement}</p><a href={lead.companyEvidence.sourceUrl} target="_blank" rel="noreferrer">{lead.companyEvidence.sourceName} <ExternalLink size={13} /></a></div>{targetType.kind === 'alternative-research' && <em>这是技术路线研究，不是已确认客户。</em>}</section><div className="company-detail-links">{profile.website && <a href={profile.website} target="_blank" rel="noreferrer"><Globe2 size={15} />官网</a>}{profile.contactPage && <a href={profile.contactPage} target="_blank" rel="noreferrer"><FileText size={15} />Contact Page</a>}{profile.linkedIn && <a href={profile.linkedIn} target="_blank" rel="noreferrer"><Linkedin size={15} />LinkedIn</a>}{profile.whatsapp && <a href={profile.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} />WhatsApp</a>}</div><OutreachSendPanel key={lead.id} lead={lead} ledger={ledger} /><CopyOutreachPrompt lead={lead} ledger={ledger} /><NextActions lead={lead} ledger={ledger} /><div className="company-detail-grid"><section><h3>公司公开联络</h3>{profile.generalEmail && <div className="detail-value"><Mail size={15} /><a href={`mailto:${profile.generalEmail}`} onClick={(event) => void openEmailWithDuplicateCheck(event, lead, ledger, profile.generalEmail!)}>{profile.generalEmail}</a><CopyValue label="邮箱" value={profile.generalEmail} /></div>}{profile.generalPhone && <div className="detail-value"><Phone size={15} /><a href={`tel:${profile.generalPhone.replace(/\s/g, '')}`}>{profile.generalPhone}</a><CopyValue label="电话" value={profile.generalPhone} /></div>}{!profile.generalEmail && !profile.generalPhone && <p className="detail-empty">未核验公开通用邮箱或电话，请使用官网 Contact Page。</p>}</section><section><h3>地址</h3><div className="detail-value"><MapPin size={15} /><span>{profile.address ?? `${lead.city}, ${lead.country}`}</span></div>{!profile.address && <p className="detail-empty">尚未从官方来源核验街道地址。</p>}</section></div>{profile.contacts.length > 0 && <section className="company-detail-section"><h3><UserRound size={17} />具体联系人</h3><div className="contact-detail-grid">{profile.contacts.map((contact) => <article key={`${contact.name}-${contact.email ?? ''}`}><strong>{contact.name}</strong><p>{contact.title ?? contact.department ?? '公开业务联系人'}</p>{contact.email && <div className="detail-value"><Mail size={14} /><a href={`mailto:${contact.email}`} onClick={(event) => void openEmailWithDuplicateCheck(event, lead, ledger, contact.email!)}>{contact.email}</a><CopyValue label="联系人邮箱" value={contact.email} /></div>}{contact.phone && <div className="detail-value"><Phone size={14} /><a href={`tel:${contact.phone.replace(/\s/g, '')}`}>{contact.phone}</a><CopyValue label="联系人电话" value={contact.phone} /></div>}{contact.linkedIn && <a className="detail-inline-link" href={contact.linkedIn} target="_blank" rel="noreferrer"><Linkedin size={14} />联系人 LinkedIn</a>}{contact.source && <a className="detail-source" href={contact.source.url} target="_blank" rel="noreferrer">联系人来源：{contact.source.label} <ExternalLink size={13} /></a>}{contact.verifiedAt && <small className="contact-verified"><CalendarCheck size={13} />核验：{contact.verifiedAt}</small>}</article>)}</div></section>}<section className="company-detail-section"><h3><Mail size={17} />部门邮箱</h3>{profile.departmentEmails.length ? <div className="department-email-grid">{profile.departmentEmails.map((item) => <div key={`${item.department}-${item.email}`}><span>{item.department}</span><a href={`mailto:${item.email}`} onClick={(event) => void openEmailWithDuplicateCheck(event, lead, ledger, item.email)}>{item.email}</a><CopyValue label={`${item.department} 邮箱`} value={item.email} /></div>)}</div> : <p className="detail-empty">尚未核验 Sales / Procurement / Technical 等部门专用邮箱。</p>}</section><section className="company-detail-section"><h3><FileText size={17} />信息来源</h3><div className="detail-sources">{sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.label}</span><small>{sourceHost(source.url)}</small><ExternalLink size={14} /></a>)}</div>{extendedSource && <p className="detail-empty">市场扩展来源核验：{extendedSource.verifiedAt}</p>}</section><p className="company-detail-note">仅展示官网或官方资料中公开的业务联系方式。它们证明的是业务相关性和信息可追溯性，不代表该公司已经采购或确认需求。</p></section></div>
+  return <div className="company-detail-backdrop" role="presentation" onMouseDown={onClose}><section className="company-detail" role="dialog" aria-modal="true" aria-labelledby="company-detail-title" onMouseDown={(event) => event.stopPropagation()}><header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p></div><button className="detail-close" onClick={onClose} aria-label="关闭公司详情"><X size={19} /></button></header><div className="company-detail-status"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span><CalendarCheck size={14} />最后核验：{lead.checkedAt}</span><span><CalendarCheck size={14} />首次收录：{recordedTimeLabel(lead)}（北京时间）</span></div><LeadEvidenceSummary lead={lead} /><LeadPrivatePanel key={work.ownerId ?? work.status} lead={lead} work={work} ledger={ledger} /><section className="match-path"><h3><Target size={17} />为什么被找到</h3><div className="match-path-steps"><strong>{product.name}</strong><i>→</i><span><small>{applicationLayerName(lead.companyEvidence.applicationLayer)}</small>{application.nameEn}</span><i>→</i><span><small>目标公司类型</small>{targetType.nameEn}</span><i>→</i><strong>{lead.company}</strong></div><div className="match-path-evidence"><b>证据</b><p>{lead.companyEvidence.statement}</p><a href={lead.companyEvidence.sourceUrl} target="_blank" rel="noreferrer">{lead.companyEvidence.sourceName} <ExternalLink size={13} /></a></div>{targetType.kind === 'alternative-research' && <em>这是技术路线研究，不是已确认客户。</em>}</section><div className="company-detail-links">{profile.website && <a href={profile.website} target="_blank" rel="noreferrer"><Globe2 size={15} />官网</a>}{profile.contactPage && <a href={profile.contactPage} target="_blank" rel="noreferrer"><FileText size={15} />Contact Page</a>}{profile.linkedIn && <a href={profile.linkedIn} target="_blank" rel="noreferrer"><Linkedin size={15} />LinkedIn</a>}{profile.whatsapp && <a href={profile.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} />WhatsApp</a>}</div><OutreachSendPanel key={lead.id} lead={lead} ledger={ledger} /><CopyOutreachPrompt lead={lead} ledger={ledger} /><NextActions lead={lead} ledger={ledger} /><div className="company-detail-grid"><section><h3>公司公开联络</h3>{profile.generalEmail && <div className="detail-value"><Mail size={15} /><a href={`mailto:${profile.generalEmail}`} onClick={(event) => void openEmailWithDuplicateCheck(event, lead, ledger, profile.generalEmail!)}>{profile.generalEmail}</a><CopyValue label="邮箱" value={profile.generalEmail} /></div>}{profile.generalPhone && <div className="detail-value"><Phone size={15} /><a href={`tel:${profile.generalPhone.replace(/\s/g, '')}`}>{profile.generalPhone}</a><CopyValue label="电话" value={profile.generalPhone} /></div>}{!profile.generalEmail && !profile.generalPhone && <p className="detail-empty">未核验公开通用邮箱或电话，请使用官网 Contact Page。</p>}</section><section><h3>地址</h3><div className="detail-value"><MapPin size={15} /><span>{profile.address ?? `${lead.city}, ${lead.country}`}</span></div>{!profile.address && <p className="detail-empty">尚未从官方来源核验街道地址。</p>}</section></div>{profile.contacts.length > 0 && <section className="company-detail-section"><h3><UserRound size={17} />具体联系人</h3><div className="contact-detail-grid">{profile.contacts.map((contact) => <article key={`${contact.name}-${contact.email ?? ''}`}><strong>{contact.name}</strong><p>{contact.title ?? contact.department ?? '公开业务联系人'}</p>{contact.email && <div className="detail-value"><Mail size={14} /><a href={`mailto:${contact.email}`} onClick={(event) => void openEmailWithDuplicateCheck(event, lead, ledger, contact.email!)}>{contact.email}</a><CopyValue label="联系人邮箱" value={contact.email} /></div>}{contact.phone && <div className="detail-value"><Phone size={14} /><a href={`tel:${contact.phone.replace(/\s/g, '')}`}>{contact.phone}</a><CopyValue label="联系人电话" value={contact.phone} /></div>}{contact.linkedIn && <a className="detail-inline-link" href={contact.linkedIn} target="_blank" rel="noreferrer"><Linkedin size={14} />联系人 LinkedIn</a>}{contact.source && <a className="detail-source" href={contact.source.url} target="_blank" rel="noreferrer">联系人来源：{contact.source.label} <ExternalLink size={13} /></a>}{contact.verifiedAt && <small className="contact-verified"><CalendarCheck size={13} />核验：{contact.verifiedAt}</small>}</article>)}</div></section>}<section className="company-detail-section"><h3><Mail size={17} />部门邮箱</h3>{profile.departmentEmails.length ? <div className="department-email-grid">{profile.departmentEmails.map((item) => <div key={`${item.department}-${item.email}`}><span>{item.department}</span><a href={`mailto:${item.email}`} onClick={(event) => void openEmailWithDuplicateCheck(event, lead, ledger, item.email)}>{item.email}</a><CopyValue label={`${item.department} 邮箱`} value={item.email} /></div>)}</div> : <p className="detail-empty">尚未核验 Sales / Procurement / Technical 等部门专用邮箱。</p>}</section><section className="company-detail-section"><h3><FileText size={17} />信息来源</h3><div className="detail-sources">{sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.label}</span><small>{sourceHost(source.url)}</small><ExternalLink size={14} /></a>)}</div>{extendedSource && <p className="detail-empty">市场扩展来源核验：{extendedSource.verifiedAt}</p>}</section><p className="company-detail-note">仅展示官网或官方资料中公开的业务联系方式。它们证明的是业务相关性和信息可追溯性，不代表该公司已经采购或确认需求。</p></section></div>
 }
 
 function GlobalLeadMap({ leads, selectedLead, onSelectLead, selectedCountry, onSelectCountry, overviewToken }: { leads: PublicLead[]; selectedLead: PublicLead | null; onSelectLead: (lead: PublicLead) => void; selectedCountry: CountrySummary | null; onSelectCountry: (country: CountrySummary) => void; overviewToken: number }) {
   const countries = useMemo(() => Object.values(leads.reduce<Record<string, CountrySummary>>((all, lead) => { const old = all[lead.country]; all[lead.country] = old ? { ...old, count: old.count + 1 } : { country: lead.country, countryZh: lead.countryZh, latitude: lead.latitude, longitude: lead.longitude, count: 1 }; return all }, {})), [leads])
-  return <MapContainer className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图"><TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /><MapFocus target={selectedLead ?? selectedCountry} leads={leads} overviewToken={overviewToken} />{countries.map((country) => <CircleMarker key={country.country} center={[country.latitude, country.longitude]} radius={13 + country.count * 4} pathOptions={{ color: '#f59e0b', fillColor: '#fbbf24', fillOpacity: .28, weight: 1 }} eventHandlers={{ click: () => onSelectCountry(country) }} />)}{leads.map((lead) => { const product = productOf(lead.productId); return <CircleMarker key={lead.id} center={[lead.latitude, lead.longitude]} radius={selectedLead?.id === lead.id ? 10 : 6} pathOptions={{ color: '#fff', fillColor: product.color, fillOpacity: 1, weight: selectedLead?.id === lead.id ? 4 : 2 }} eventHandlers={{ click: () => onSelectLead(lead) }} /> })}</MapContainer>
+  return <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图"><TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /><MapFocus target={selectedLead ?? selectedCountry} leads={leads} overviewToken={overviewToken} />{countries.map((country) => <CircleMarker key={country.country} center={[country.latitude, country.longitude]} radius={13 + country.count * 4} pathOptions={{ color: '#f59e0b', fillColor: '#fbbf24', fillOpacity: .28, weight: 1 }} eventHandlers={{ click: () => onSelectCountry(country) }} />)}{leads.map((lead) => { const product = productOf(lead.productId); return <CircleMarker key={lead.id} center={[lead.latitude, lead.longitude]} radius={selectedLead?.id === lead.id ? 10 : 6} pathOptions={{ color: '#fff', fillColor: product.color, fillOpacity: 1, weight: selectedLead?.id === lead.id ? 4 : 2 }} eventHandlers={{ click: () => onSelectLead(lead) }} /> })}</MapContainer>
 }
 
 function MapLegend() { return <p className="map-legend"><i />大号黄圈 = 国家内已核验公开线索密度；彩色点 = 一家可研究的公司。它们不是市场规模、成交概率或真实需求量。</p> }
@@ -190,69 +216,69 @@ function Overview({ productId, leads, onProduct, onOpenMap }: { productId: strin
   return <div className="market-overview global-overview"><section className="market-intro"><p className="eyebrow">GLOBAL OUTBOUND MAP</p><h1>从产品需求，找到可开发的公司。</h1><p>先用 TDS 界定应用，再映射目标公司类型，并以官网证据连接公司与联系人。市场扩展应用必须独立附来源，不能由材料性质推测。</p><ProductPicker value={productId} onChange={onProduct} /><button className="primary-button" onClick={onOpenMap}><MapPinned size={17} />打开全球地图</button></section><section className="market-stat-grid"><div><Globe2 size={19} /><strong>{countries}</strong><span>覆盖国家</span></div><div><Building2 size={19} /><strong>{leads.length}</strong><span>公开公司线索</span></div><div><CheckCircle2 size={19} /><strong>{leads.filter((lead) => lead.fit === '优先核验').length}</strong><span>优先核验</span></div></section><section className="market-data-section product-radar"><div className="section-heading"><div><p className="eyebrow">PRODUCT TO CUSTOMER</p><h2>三条开发路线</h2><p>三款产品按各自的 TDS 应用与目标公司类型独立检索。</p></div></div><div className="product-route-grid">{marketProducts.map((product) => { const count = publicLeads.filter((lead) => lead.productId === product.id).length; const types = targetCompanyTypes.filter((type) => type.productId === product.id && type.kind === 'target').map((type) => type.name); return <button key={product.id} onClick={() => onProduct(product.id)} className={productId === product.id ? 'product-route active' : 'product-route'}><i style={{ background: product.color }} /><span><small>{product.nameEn}</small><strong>{product.name}</strong><em>{types.join(' · ')}</em></span><b>{count} 条公开线索</b></button> })}</div></section></div>
 }
 
-function MapView({ productId, leads, onProduct, ledger }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void; ledger: OutreachLedger }) {
+function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onView }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void; ledger: OutreachLedger; work: LeadWork; view: 'map' | 'leads'; onView: (view: 'map' | 'leads') => void }) {
   const [selectedLead, setSelectedLead] = useState<PublicLead | null>(null)
   const [selectedCountry, setSelectedCountry] = useState<CountrySummary | null>(null)
   const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
-  const [order, setOrder] = useState<TimelineOrder>('newest')
-  const [day, setDay] = useState('all')
-  const [continent, setContinent] = useState('all')
-  const [country, setCountry] = useState('all')
-  const [overviewToken, setOverviewToken] = useState(0)
+  const [order, setOrder] = useState<TimelineOrder>('newest'), [day, setDay] = useState('all')
+  const [continent, setContinent] = useState('all'), [country, setCountry] = useState('all')
+  const [filters, setFilters] = useState<BusinessFilters>({ ...emptyBusinessFilters })
+  const [overviewToken, setOverviewToken] = useState(0), [downloading, setDownloading] = useState(false)
   const options = useMemo(() => geographyOptions(leads, continent), [leads, continent])
   const regionalLeads = useMemo(() => filterLeadGeography(leads, continent, country), [leads, continent, country])
-  const matching = useMemo(() => timelineLeads(regionalLeads, order, day), [regionalLeads, order, day])
-  const resetFocus = () => { setSelectedLead(null); setSelectedCountry(null); setDetailLead(null); setOverviewToken((value) => value + 1) }
-  const showAll = () => { setContinent('all'); setCountry('all'); setDay('all'); resetFocus() }
-  const selectCountry = (value: string) => {
-    setCountry(value)
-    resetFocus()
-    const countryLeads = timelineLeads(filterLeadGeography(leads, continent, value), order, day)
-    const first = countryLeads[0]
-    if (value !== 'all' && first) setSelectedCountry({ country: value, countryZh: first.countryZh, latitude: first.latitude, longitude: first.longitude, count: countryLeads.length })
-  }
-  const regionLabel = country !== 'all' ? options.countries.find((item) => item.value === country)?.label : continent !== 'all' ? continent : '全部地区'
-  return <section className="market-map-workspace">
-    <div className="section-heading"><div><p className="eyebrow">GEO QUALIFICATION</p><h2>全球公开线索地图</h2><p>按产品、大洲和国家筛选已核验地点；地图与公司列表同步更新。点国家或公司可放大查看，点“显示全部”返回当前产品的全球总览。完整联系方式、来源与核验状态请打开 Company Detail。</p></div></div>
-    <ProductPicker value={productId} onChange={onProduct} />
-    <div className="lead-geography-filters" role="group" aria-label="按地区筛选">
-      <label>大洲<select value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label>
-      <label>国家／地区<select value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label>
-    </div>
-    <LeadTimelineControls leads={regionalLeads} order={order} day={day} onOrder={setOrder} onDay={(value) => { setDay(value); resetFocus() }} />
-    <div className="market-map-toolbar"><span role="status">当前筛选：{regionLabel}{day !== 'all' ? ` · ${day === 'unknown' ? '时间未记录' : day}` : ''} · {matching.length} 家公司 · {new Set(matching.map((lead) => lead.country)).size} 个国家／地区</span><button type="button" onClick={showAll}>显示全部</button></div>
-    <div className="market-map-layout lead-map-layout"><div><GlobalLeadMap leads={matching} selectedLead={selectedLead} selectedCountry={selectedCountry} overviewToken={overviewToken} onSelectLead={(lead) => { setSelectedLead(lead); setSelectedCountry(null) }} onSelectCountry={(item) => selectCountry(item.country)} /><MapLegend /></div>
-      <aside className="lead-map-sidebar"><div className="sidebar-title"><Target size={16} /><strong>{regionLabel}公司线索 · {matching.length} 家</strong></div>{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selectedLead?.id} onSelect={(item) => { setSelectedLead(item); setSelectedCountry(null) }} onOpenDetail={setDetailLead} ledger={ledger} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选暂无已核验线索</strong><span>可选择其他日期或地区，或点击“显示全部”。</span></div>}</aside>
-    </div><CompanyDetail lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} />
-  </section>
-}
-
-function LeadsView({ productId, leads, onProduct, ledger }: { productId: string; leads: PublicLead[]; onProduct: (id: string) => void; ledger: OutreachLedger }) {
-  const [query, setQuery] = useState('')
-  const [order, setOrder] = useState<TimelineOrder>('newest')
-  const [day, setDay] = useState('all')
-  const searchMatches = leads.filter((lead) => `${lead.company} ${lead.countryZh} ${lead.city} ${targetCompanyTypeOf(lead.targetCompanyTypeId).name} ${applicationOf(lead.companyEvidence.applicationLayer, lead.companyEvidence.applicationId).name}`.toLowerCase().includes(query.toLowerCase()))
-  const matching = timelineLeads(searchMatches, order, day)
-  const [selected, setSelected] = useState<PublicLead | null>(matching[0] ?? null)
-  const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
-  useEffect(() => setSelected(matching[0] ?? null), [productId, query, order, day])
-  const unsentEmails = firstContactPlan(matching, ledger.status === 'ready' ? ledger.sends : null, Number.MAX_SAFE_INTEGER, undefined, false).batch
+  const records = work.status === 'ready' ? work.records : null, sends = ledger.status === 'ready' ? ledger.sends : null
+  const today = shanghaiDay(new Date().toISOString())
+  const businessLeads = useMemo(() => filterWorkbenchLeads(regionalLeads, filters, records, sends, today, order), [regionalLeads, filters, records, sends, today, order])
+  const matching = useMemo(() => timelineLeads(businessLeads, order, day).sort((a, b) => businessLeads.indexOf(a) - businessLeads.indexOf(b)), [businessLeads, order, day])
+  const resetFocus = () => { setSelectedLead(null); setSelectedCountry(null); setOverviewToken((value) => value + 1) }
+  useEffect(() => { setFilters((current) => ({ ...current, industry: 'all', application: 'all' })); setDetailLead(null); resetFocus() }, [productId])
+  useEffect(() => {
+    setFilters((current) => {
+      const listMissing = current.list !== 'all' && current.list !== 'favorites' && !work.lists.some((list) => list.id === current.list)
+      return work.status !== 'ready' ? { ...current, stage: 'all', list: 'all', queue: 'all' } : listMissing ? { ...current, list: 'all' } : current
+    })
+  }, [work.status, work.lists])
+  useEffect(() => { if (ledger.status !== 'ready') setFilters((current) => current.queue === 'priority' || current.queue === 'recent' ? { ...current, queue: 'all' } : current) }, [ledger.status])
+  useEffect(() => { if (country !== 'all' && !options.countries.some((item) => item.value === country)) setCountry('all') }, [options, country])
+  useEffect(() => {
+    if (selectedLead && !matching.some((lead) => lead.id === selectedLead.id)) setSelectedLead(null)
+    if (selectedCountry && !matching.some((lead) => lead.country === selectedCountry.country)) setSelectedCountry(null)
+  }, [matching, selectedLead, selectedCountry])
+  const showAll = () => { setContinent('all'); setCountry('all'); setDay('all'); setFilters({ ...emptyBusinessFilters }); resetFocus() }
+  const selectCountry = (value: string) => { setCountry(value); resetFocus() }
+  const regionLabel = country !== 'all' ? options.countries.find((item) => item.value === country)?.label ?? country : continent !== 'all' ? continent : '全部地区'
+  const firstContactLeads = matching.filter((lead) => { const stage = records?.[outreachCompanyKey(lead)]?.stage; return !stage || stage === 'todo' })
+  const unsentEmails = firstContactPlan(firstContactLeads, sends, Number.MAX_SAFE_INTEGER, undefined, false).batch
   const downloadEmails = async () => {
-    if (ledger.status !== 'ready') { window.alert('共享发送记录未连接，无法安全排除已联系公司。请先登录或检查数据库迁移。'); return }
-    let currentSends
-    try { currentSends = await ledger.fetchCurrentSends() }
-    catch (error) { window.alert(`下载前无法核对发送记录：${error instanceof Error ? error.message : '未知错误'}`); return }
-    const freshUnsent = firstContactPlan(matching, currentSends, Number.MAX_SAFE_INTEGER, undefined, false).batch
-    if (!freshUnsent.length) { window.alert('当前筛选中没有未记录发送的合格开发信。'); return }
-    const contents = firstContactExport(freshUnsent)
-    const url = URL.createObjectURL(new Blob([contents], { type: 'text/plain;charset=utf-8' }))
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `demand-side-first-emails-${productId}-${new Date().toISOString().slice(0, 10)}.txt`
-    link.click()
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+    if (ledger.status !== 'ready') return
+    setDownloading(true)
+    try {
+      const currentSends = await ledger.fetchCurrentSends()
+      const eligible = matching.filter((lead) => {
+        const stage = work.status === 'ready' ? work.records[outreachCompanyKey(lead)]?.stage : null
+        return stage !== 'paused' && stage !== 'replied' && stage !== 'sample' && stage !== 'waiting'
+      })
+      const freshUnsent = firstContactPlan(eligible, currentSends, Number.MAX_SAFE_INTEGER, undefined, false).batch
+      if (!freshUnsent.length) { window.alert('当前筛选中没有未记录发送的合格首封开发信。'); return }
+      const url = URL.createObjectURL(new Blob([firstContactExport(freshUnsent)], { type: 'text/plain;charset=utf-8' }))
+      const link = document.createElement('a'); link.href = url; link.download = 'demand-side-first-emails-' + productId + '-' + today + '.txt'; link.click()
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+    } catch (error) { window.alert('下载前无法核对发送记录：' + (error instanceof Error ? error.message : '未知错误')) }
+    finally { setDownloading(false) }
   }
-  return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">DEMAND-SIDE CUSTOMER QUEUE</p><h2>可开发客户线索</h2><p>这里只收录有证据支持下游制造或配方角色的潜在客户，不代表已确认采购。同行、竞争对手、同类原料供应商一律排除。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><label className="lead-search"><Search size={17} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索公司、国家、城市或客户类型" /></label><LeadTimelineControls leads={searchMatches} order={order} day={day} onOrder={setOrder} onDay={setDay} /><div className="lead-email-download"><span>当前筛选：{matching.length} 家公司 · {ledger.status === 'ready' ? unsentEmails.length : '—'} 封未记录发送的简短首封信</span><button type="button" className="secondary-button" disabled={ledger.status !== 'ready' || !unsentEmails.length} onClick={() => void downloadEmails()}><FileText size={15} />下载当前筛选开发信</button></div><div className="lead-list">{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selected?.id} onSelect={setSelected} onOpenDetail={setDetailLead} ledger={ledger} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>暂无已核验的需求侧线索</strong><span>不会用同行、供应商或竞品凑数量。</span></div>}</div><CompanyDetail lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} /></section>
+  return <section className="market-map-workspace">
+    <div className="section-heading"><div><p className="eyebrow">CUSTOMER DEVELOPMENT WORKSPACE</p><h2>{view === 'map' ? '全球客户地图' : '客户开发列表'}</h2><p>筛选合适的潜在客户，查看开发依据，安排自己的联系与跟进计划。</p></div><div className="work-view-toggle" role="group" aria-label="客户展示方式"><button type="button" aria-pressed={view === 'map'} onClick={() => onView('map')}><MapPinned size={15} />地图</button><button type="button" aria-pressed={view === 'leads'} onClick={() => onView('leads')}><Building2 size={15} />列表</button></div></div>
+    <ProductPicker value={productId} onChange={onProduct} />
+    <div className="lead-geography-filters" role="group" aria-label="按地区筛选"><label>大洲<select aria-label="大洲" value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label><label>国家／地区<select aria-label="国家／地区" value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label></div>
+    <LeadBusinessControls leads={regionalLeads} filters={filters} onChange={(value) => { setFilters(value); resetFocus() }} work={work} ledger={ledger} />
+    <LeadTimelineControls leads={businessLeads} order={order} day={day} onOrder={setOrder} onDay={(value) => { setDay(value); resetFocus() }} />
+    <div className="market-map-toolbar"><span role="status">当前筛选：{regionLabel}{day !== 'all' ? ' · ' + (day === 'unknown' ? '时间未记录' : day) : ''} · {matching.length} 条客户记录 · {new Set(matching.map(outreachCompanyKey)).size} 家公司 · {new Set(matching.map((lead) => lead.country)).size} 个国家／地区</span><button type="button" onClick={showAll}>显示全部</button></div>
+    {view === 'leads' && <div className="lead-email-download"><span>当前范围可供核对的首封草稿 {ledger.status === 'ready' ? unsentEmails.length : '—'} 封 · 下载不会标记已发送</span><button type="button" className="secondary-button" disabled={ledger.status !== 'ready' || downloading || !unsentEmails.length} onClick={() => void downloadEmails()}><FileText size={15} />{downloading ? '核对发送记录…' : '下载当前筛选开发信'}</button></div>}
+    <div className={view === 'map' ? 'market-map-layout lead-map-layout' : 'work-list-view'}>
+      {view === 'map' && <div><GlobalLeadMap leads={matching} selectedLead={selectedLead} selectedCountry={selectedCountry} overviewToken={overviewToken} onSelectLead={(lead) => { setSelectedLead(lead); setSelectedCountry(null) }} onSelectCountry={(item) => selectCountry(item.country)} /><MapLegend /></div>}
+      <div className={view === 'map' ? 'lead-map-sidebar' : 'lead-list'}>{view === 'map' && <div className="sidebar-title"><Target size={16} /><strong>{regionLabel}客户 · {matching.length} 条</strong></div>}{matching.map((lead) => <LeadCard key={lead.id} lead={lead} selected={lead.id === selectedLead?.id} onSelect={(item) => { setSelectedLead(item); setSelectedCountry(null); if (view === 'leads') setDetailLead(item) }} onOpenDetail={setDetailLead} ledger={ledger} work={work} />)}{!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选没有符合条件的客户</strong><span>可调整业务条件、日期或地区，或点击“显示全部”。</span></div>}</div>
+    </div><CompanyDetail key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} />
+  </section>
 }
 
 function ProductsView({ productId, onProduct }: { productId: string; onProduct: (id: string) => void }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">TDS-DRIVEN TARGETING</p><h2>产品如何变成开发名单</h2><p>系统把 TDS 已验证应用、市场扩展应用和目标公司类型分开存储。市场扩展项必须带独立公开来源、来源名称和核验日期。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><div className="product-detail-grid">{marketProducts.filter((product) => productId === 'all' || product.id === productId).map((product) => { const tdsApplications = tdsVerifiedApplications.filter((item) => item.productId === product.id); const extensions = marketExtendedApplications.filter((item) => item.productId === product.id); const targets = targetCompanyTypes.filter((item) => item.productId === product.id && item.kind === 'target'); return <article className="product-detail" key={product.id}><i style={{ background: product.color }} /><h3>{product.name}</h3><p>{product.tdsScope}</p><h4>TDS 已验证应用</h4><div className="chip-row">{tdsApplications.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>目标公司类型</h4><div className="chip-row">{targets.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>市场扩展应用</h4>{extensions.length ? <div className="extension-list">{extensions.map((item) => <a key={item.id} href={item.sourceUrl} target="_blank" rel="noreferrer"><span>{item.nameEn}</span><small>{item.sourceName} · {item.verifiedAt}</small><ExternalLink size={13} /></a>)}</div> : <p className="detail-empty">暂无；不会仅因材料性质推测新增。</p>}<h4>检索逻辑</h4><p className="product-search-logic">{product.searchLogic}</p><h4>建议检索词</h4><ul>{product.searchTerms.map((term) => <li key={term}>{term}</li>)}</ul></article> })}</div></section> }
@@ -263,9 +289,10 @@ export function MarketIntelligence() {
   const [currentRoute, setRoute] = useState(route())
   const [productId, setProductId] = useState<string>('all')
   const ledger = useOutreachLedger()
+  const work = useLeadWork()
   useEffect(() => { const listener = () => setRoute(route()); window.addEventListener('hashchange', listener); return () => window.removeEventListener('hashchange', listener) }, [])
   const tab = (tabs.find((item) => item.id === currentRoute[1])?.id ?? 'overview') as MarketTab
   const filteredLeads = useMemo(() => publicLeads.filter((lead) => productId === 'all' || lead.productId === productId), [productId])
   const openTab = (next: MarketTab) => setHash(next === 'overview' ? 'market-intelligence' : `market-intelligence/${next}`)
-  return <><div className="page-heading market-heading"><div><p className="eyebrow">GLOBAL MARKET INTELLIGENCE</p><h1>客户地图，而不是一张漂亮的世界地图。</h1><p>围绕三款产品建立“产品 → 需求场景 → 公司 → 联系方式 → 证据”的开发链路。</p></div><span className="market-research-badge"><CheckCircle2 size={14} />公开来源研究</span></div><div className="market-tabs" role="tablist">{tabs.map((item) => <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => openTab(item.id)}>{item.label}</button>)}</div>{(tab === 'map' || tab === 'leads') && <OutreachLedgerNotice ledger={ledger} />}{(tab === 'overview' || tab === 'leads') && <CustomerDevelopmentPanel ledger={ledger} />}{tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}{tab === 'map' && <MapView key={productId} productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} />}{tab === 'leads' && <LeadsView productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} />}{tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}{tab === 'sources' && <SourcesView leads={filteredLeads} />}</>
+  return <><div className="page-heading market-heading"><div><p className="eyebrow">GLOBAL MARKET INTELLIGENCE</p><h1>客户地图，而不是一张漂亮的世界地图。</h1><p>围绕三款产品建立“产品 → 需求场景 → 公司 → 联系方式 → 证据”的开发链路。</p></div><span className="market-research-badge"><CheckCircle2 size={14} />公开来源研究</span></div><div className="market-tabs" role="tablist">{tabs.map((item) => <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => openTab(item.id)}>{item.label}</button>)}</div>{(tab === 'map' || tab === 'leads') && <OutreachLedgerNotice ledger={ledger} />}{tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} />}{tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}{(tab === 'map' || tab === 'leads') && <LeadsWorkspace productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} work={work} view={tab} onView={openTab} />}{tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}{tab === 'sources' && <SourcesView leads={filteredLeads} />}</>
 }
