@@ -2028,11 +2028,156 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "berger-seidle-gruenstadt",
+    "company": "Berger-Seidle GmbH (Berger Group)",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Grünstadt",
+    "latitude": 49.5649,
+    "longitude": 8.1646,
+    "fit": "可开发候选",
+    "signal": "独立再次读取当前制造、研发、产品范围、法定信息和 AquaChoice SPORT B Mach One 原文：Berger 在自有生产区域配方制造木地板成品涂料，有研发和逐批质控；AquaChoice SPORT B Mach One 明确为双组分水性木地板成品面漆，AquaSeal为水性体系。木材属于 NL-W1201 TDS 已验证基材，实际使用、采购、需求和配方相容性未确认。官网明确 Berger-Lacke、Berger-Zobel 为同一关联品牌范围，不另计新增；地图为 Grünstadt 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "发现后独立重读当前研发、制造、完整产品导航、具体水性木地板漆、法定和联系原文；所见为成品木器涂料、胶黏剂、施工用底漆、木油与清洁维护产品。制造说明的原料/中间品仓储和质检不是对外供应聚烯烃分散体的证据；所查范围未发现水性聚烯烃乳液、CPO/PO分散体或同类附着力输入原料对外销售。按 Berger-Seidle/集团品牌、域名、法人、Maybachstraße地址及各联系邮箱与最新main的143家实际公开客户、本地/队列去重，无同集团正式账户；品牌和国外渠道不拆分。采用官方明确 Technical Service Team 的邮箱，管理人员只记录官网姓名职务，不绑定通用邮箱为个人邮箱。"
+    },
+    "contact": {
+      "label": "Official public Technical business contact",
+      "email": "beratungsteam@berger-seidle.de",
+      "phone": "+49 6359 8005 320",
+      "contactUrl": "https://berger-seidle.de/aquachoice-sport-b-mach-one/?lang=en"
+    },
+    "source": {
+      "label": "Official own production facilities and batch formulation/quality control",
+      "url": "https://berger-seidle.de/produktion-qualitaet-durch-technologie/"
+    },
+    "checkedAt": "2026-10-12",
+    "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
+  },
+  {
+    "id": "mipa-essenbach",
+    "company": "MIPA SE (Mipa Group)",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Essenbach",
+    "latitude": 48.6131,
+    "longitude": 12.2198,
+    "fit": "可开发候选",
+    "signal": "独立再次读取当前公司、集团、完整产品范围、Mipa WBS Wetterschutzfarbe 与法定原文：MIPA集团在 Essenbach 及其他欧洲生产地点研发制造成品涂料；WBS Wetterschutzfarbe 明确为水性木材用底/面漆，另有 Rosner 木器成品涂料业务。木材属于 NL-W1201 TDS 已验证基材，仅作潜在下游配方评估，使用、采购、需求及适配未确认。所有集团厂区及 Rosner/Feycolor/Henelit/Herlac 等关联范围按同一账户去重。地图为 Essenbach 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立重读当前集团主体/厂区、汽车修补、工业、装饰、气雾、木器及非涂料配套产品分类，具体水性木材底面漆及法定/采购联系方式；所查是成品涂料、配套施工用品和设备，未发现水性聚烯烃乳液、CPO/PO输入分散体或同类附着力原料对外销售，结论限所查范围。按 MIPA SE/集团公司与 Rosner 等品牌、域名、注册地址及邮箱核对最新main的143家实际公开客户、本地/队列，无正式同集团账户，不把工厂/品牌拆户。官网 Purchase (Supplier) 明示公开邮件链接，以页面声明的编码向量还原 mailto，并核对公开 purchasing@ 前缀及域名；不是猜测邮箱。采购收件箱为部门邮箱，不构造具名采购人员。"
+    },
+    "contact": {
+      "label": "Official public Procurement business contact",
+      "email": "purchasing@mipa-paints.com",
+      "phone": "+49 8703 9220",
+      "contactUrl": "https://www.mipa-paints.com/en/contact/"
+    },
+    "source": {
+      "label": "Official own development and manufacture at European production sites",
+      "url": "https://www.mipa-paints.com/en/"
+    },
+    "checkedAt": "2026-10-12",
+    "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
+  },
+  {
+    "id": "remmers-loeningen",
+    "company": "Remmers GmbH (Remmers Group)",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Löningen",
+    "latitude": 52.7373,
+    "longitude": 7.7594,
+    "fit": "可开发候选",
+    "signal": "独立读取当前 Remmers 自有研发原文：Löningen/Hiddenhausen 的专业团队研发水性及其他配方系统，明确木材与建筑表面处理开发；具体 Induline DW-601 Aqua Stopp 原文明示水性木材中间/面漆，属于 NL-W1201 TDS 木材应用的潜在配方方，实际使用、需求、购买和适配未确认。按 Remmers GmbH/集团建立单一账户，不另计分支、Hiddenhausen研发点或 Induline品牌；地图为 Löningen 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "发现后独立重读当前研发（含水性体系开发）、公司/法定、木器成品分类与产品检索、DW-601技术原文、供应商栏目和联系方式。所见为自有配方成品木器漆、建筑防护体系、施工用品及配套工具；“供应商”栏目实际为外部供货方联系/收货信息，不误认为 Remmers 对外销售聚烯烃输入原料。所查范围未发现水性聚烯烃乳液、CPO/PO分散体或同类附着力输入原料对外销售，结论限公开范围。按法人/集团、Remmers/Induline品牌、域名、地址和邮箱与最新main的143家实际公开客户、本地/队列去重，无同集团正式账户。公开具名业务联系为室内涂料销售负责人，职务保持原文，不伪称采购或研发负责人。"
+    },
+    "contact": {
+      "label": "Official public Sales business contact",
+      "email": "uboerger@remmers.de",
+      "phone": "+49 5432 830",
+      "contactUrl": "https://www.remmers.com/"
+    },
+    "source": {
+      "label": "Official own R&D at Löningen/Hiddenhausen including water-based formulation systems",
+      "url": "https://www.remmers.com/de/forschung-entwicklung"
+    },
+    "checkedAt": "2026-10-12",
+    "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
+  },
+  {
+    "id": "teknos-helsinki",
+    "company": "Teknos Oy (Teknos Group)",
+    "productId": "elo",
+    "country": "Finland",
+    "countryZh": "芬兰",
+    "city": "Helsinki",
+    "latitude": 60.1699,
+    "longitude": 24.9384,
+    "legacyCompanyDescription": "自有工厂和研发体系的成品工业防护涂料配方制造企业；ELO 使用、采购和适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立再次读取当前公司、创新研发、全球联系及工业成品原文：Teknos Oy 有芬兰 Helsinki/Rajamäki 自有涂料工厂，研发高性能工业防护涂料；INERTA 165 GF和INERTA300明确为防腐/耐化学品环氧成品配方，对应 ELO TDS coatings 潜在下游用途，未确认 ELO 使用、采购、需求或相容性。Teknos Group Oy 为母集团，海外分支和中国制造实体只作集团关联去重，不单独纳入客户或计数。地图为 Helsinki 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "发现后独立重读现行自有工厂/法人信息、集团 About/Innovation、工业完整应用分类、INERTA成品技术原文及公开联系。所查为成品工业/木器/装饰涂料；bio-based wood oil为成品木材涂饰方向，参与回收原料项目不直接等同 ELO/ESBO输入原料销售。所查范围未发现 ELO、ESBO、环氧化植物油、生物增塑剂或同类添加剂对外销售，结论限所查范围。按 Teknos Oy/Group Oy、瑞芬及其他集团关联域名、Finland工厂地址与研发/销售邮箱核对最新main的143家实际公开客户、本地/队列，无同集团正式账户，全球分支只计芬兰账户一个。研发邮箱由官方显式 pasi.virtanen [@]teknos.com 规范化，不猜测；Rajamäki sales邮箱为另一个同一芬兰公司公开销售入口，不绑定给具名研发经理。"
+    },
+    "contact": {
+      "label": "Official public Technical business contact",
+      "email": "pasi.virtanen@teknos.com",
+      "phone": "+358 9 506 091",
+      "contactUrl": "https://www.teknos.com/company/about-us/innovation/"
+    },
+    "source": {
+      "label": "Official current Finnish legal company IDs, Helsinki and Rajamäki factories",
+      "url": "https://www.teknos.com/industrial-coatings/teknos-companies-and-international-contacts/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "dura-paints-edenvale",
+    "company": "Dura Paints (Pty) Ltd",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Edenvale",
+    "latitude": -26.1439,
+    "longitude": 28.1529,
+    "legacyCompanyDescription": "自有设施与实验室的成品工业防护涂料制造企业；ELO 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立再次读取当前 About、制造设施、工业底面漆、配套与联系方式原文：Dura Paints 自行制造工业防护涂料，拥有生产设施和实验室；双组分 Epoxy Enamel、Heavy Duty Epoxy Primer 等用于钢材、混凝土及工业设备防护，对应 ELO TDS coatings 的潜在下游配方评估，未确认使用、需求、采购或适配。地图为 Edenvale 总部城市代表位置，制造设施页面另提 Modderfontein，不将地址混写为精确工厂坐标。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立再次读取当前制造/实验室、工业底漆/面漆/溶剂、装饰漆、标线、ProLong以及表面处理/封闭剂类别和联系原文。所查溶剂为成品漆用稀释剂、ProLong为成品施工修补/防水/封闭/胶黏产品，工业colourant为调色产品；未发现 ELO、ESBO、环氧化植物油、生物增塑剂或同类添加剂销售，结论限所查范围。按南非法人、durapaints.co.za、Edenvale/Modderfontein、公开Orders邮箱、Dura Industrial/Wedgewood/ProLong/GoLine/Lifestyle品牌核对最新main的143家实际公开客户、本地/队列，无同一正式账户；曾待核验的同一Dura记录只更新，不另计同一来源。不同域名/法人 Dura Chemicals Inc 不仅因名字相似推断为关联；没有找到控制关系的证据。集团品牌/门店和厂区不拆户。使用官方总部Orders邮箱，不构造具名采购联系人。"
+    },
+    "contact": {
+      "label": "Official public Sales business contact",
+      "email": "orders@durapaints.co.za",
+      "phone": "+27 11 452 5221",
+      "contactUrl": "https://durapaints.co.za/contact/"
+    },
+    "source": {
+      "label": "Official own industrial coating manufacture and technical laboratory",
+      "url": "https://durapaints.co.za/about/about-dura-paints/"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "dura-paints-edenvale": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "teknos-helsinki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "remmers-loeningen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "mipa-essenbach": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "berger-seidle-gruenstadt": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ballance-tauranga": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "hesse-lignal-hamm": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "medal-paints-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -2195,6 +2340,298 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "dura-paints-edenvale": {
+    "website": "https://durapaints.co.za/",
+    "contactPage": "https://durapaints.co.za/contact/",
+    "generalEmail": "orders@durapaints.co.za",
+    "generalPhone": "+27 11 452 5221",
+    "address": "Head office: 5 Wakefield Road, Founders View South, Edenvale, Gauteng, South Africa; postal: PO Box 303, Edenvale 1610",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "orders@durapaints.co.za",
+        "source": {
+          "label": "Official explicitly disclosed public business inbox",
+          "url": "https://durapaints.co.za/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own industrial coating manufacture and technical laboratory",
+        "url": "https://durapaints.co.za/about/about-dura-paints/"
+      },
+      {
+        "label": "Official manufacturing facilities and laboratory",
+        "url": "https://durapaints.co.za/about/facilities/"
+      },
+      {
+        "label": "Official industrial protective primers including heavy-duty epoxy",
+        "url": "https://durapaints.co.za/product-finder-2/industrial-coatings/industrial-primers/"
+      },
+      {
+        "label": "Official twin-pack industrial epoxy protective topcoats",
+        "url": "https://durapaints.co.za/product-finder-2/industrial-coatings/industrial-top-coats/"
+      },
+      {
+        "label": "Official actual coating thinner/solvent scope",
+        "url": "https://durapaints.co.za/product-finder-2/industrial-coatings/solvents/"
+      },
+      {
+        "label": "Official ProLong finished preparation product scope",
+        "url": "https://durapaints.co.za/brands/prolong/"
+      },
+      {
+        "label": "Official decorative finished coatings",
+        "url": "https://durapaints.co.za/product-finder-2/domestic-decorative-coatings/"
+      },
+      {
+        "label": "Official field-marking finished products",
+        "url": "https://durapaints.co.za/product-finder-2/field-marking/"
+      },
+      {
+        "label": "Official headquarters, telephone and Orders inbox",
+        "url": "https://durapaints.co.za/contact/"
+      }
+    ]
+  },
+  "teknos-helsinki": {
+    "website": "https://www.teknos.com/",
+    "contactPage": "https://www.teknos.com/company/about-us/innovation/",
+    "generalEmail": "sales@teknos.fi",
+    "generalPhone": "+358 9 506 091",
+    "address": "Teknos Oy headquarters / Helsinki factory: Takkatie 3, PO Box 107, FI-00371 Helsinki, Finland; Finnish registry ID 2203752-5",
+    "contacts": [
+      {
+        "name": "Pasi Virtanen",
+        "title": "Group R&D Manager, Innovations",
+        "department": "Technical",
+        "email": "pasi.virtanen@teknos.com",
+        "source": {
+          "label": "Official innovation page: disclosed R&D manager and business mailbox",
+          "url": "https://www.teknos.com/company/about-us/innovation/"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@teknos.fi",
+        "source": {
+          "label": "Official explicitly disclosed public business inbox",
+          "url": "https://www.teknos.com/industrial-coatings/teknos-companies-and-international-contacts/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current Finnish legal company IDs, Helsinki and Rajamäki factories",
+        "url": "https://www.teknos.com/industrial-coatings/teknos-companies-and-international-contacts/"
+      },
+      {
+        "label": "Official company manufacture/coating business and independent Finnish family group",
+        "url": "https://www.teknos.com/company/about-us/"
+      },
+      {
+        "label": "Official own innovation/R&D and named R&D manager",
+        "url": "https://www.teknos.com/company/about-us/innovation/"
+      },
+      {
+        "label": "Official complete industrial finished coating applications",
+        "url": "https://www.teknos.com/industrial-coatings/"
+      },
+      {
+        "label": "Official INERTA 165 GF finished anticorrosive epoxy coating",
+        "url": "https://www.teknos.com/products/inerta-165-gf/"
+      },
+      {
+        "label": "Official INERTA 300 chemical-resistant epoxy tank/industrial coating",
+        "url": "https://www.teknos.com/products/inerta-300/"
+      }
+    ]
+  },
+  "remmers-loeningen": {
+    "website": "https://www.remmers.com/de",
+    "contactPage": "https://www.remmers.com/",
+    "generalEmail": "info@remmers.de",
+    "generalPhone": "+49 5432 830",
+    "address": "Bernhard-Remmers-Straße 13, 49624 Löningen, Germany; group R&D also operates at Hiddenhausen",
+    "contacts": [
+      {
+        "name": "Uwe Börger",
+        "title": "Sales Lead, Interior Coatings (Vertriebsleitung Innenlacke)",
+        "department": "Sales",
+        "email": "uboerger@remmers.de",
+        "phone": "+49 5221 3809 221",
+        "source": {
+          "label": "Official current website: named interior-coatings sales lead and business email",
+          "url": "https://www.remmers.com/"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@remmers.de",
+        "source": {
+          "label": "Official general company business inbox",
+          "url": "https://www.remmers.com/de/impressum/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own R&D at Löningen/Hiddenhausen including water-based formulation systems",
+        "url": "https://www.remmers.com/de/forschung-entwicklung"
+      },
+      {
+        "label": "Official water-based Induline wood intermediate/topcoat technical information",
+        "url": "https://en.remmers.com/en_IN/wood-colours-varnishes/coating-systems-for-wooden-windows-doors/topcoats/induline-dw-601-aqua-stopp/p/000000000000172503"
+      },
+      {
+        "label": "Official current wood coating product categories",
+        "url": "https://www.remmers.com/de/products-a-z/wood"
+      },
+      {
+        "label": "Official company/group facts",
+        "url": "https://www.remmers.com/de/zahlen-fakten"
+      },
+      {
+        "label": "Official supplier-facing scope checked separately",
+        "url": "https://www.remmers.com/de/lieferanten"
+      },
+      {
+        "label": "Official legal company and headquarters",
+        "url": "https://www.remmers.com/de/impressum"
+      },
+      {
+        "label": "Official named interior-coatings contact and explicit business email",
+        "url": "https://www.remmers.com/"
+      }
+    ]
+  },
+  "mipa-essenbach": {
+    "website": "https://www.mipa-paints.com/en/",
+    "contactPage": "https://www.mipa-paints.com/en/contact/",
+    "generalEmail": "mipa@mipa-paints.com",
+    "generalPhone": "+49 8703 9220",
+    "address": "Am Oberen Moos 1, D-84051 Essenbach, Germany (registered headquarters; contact page also lists Landshut site)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "purchasing@mipa-paints.com",
+        "source": {
+          "label": "Official explicitly disclosed public business inbox",
+          "url": "https://www.mipa-paints.com/en/contact/"
+        }
+      },
+      {
+        "department": "General",
+        "email": "mipa@mipa-paints.com",
+        "source": {
+          "label": "Official general company business inbox",
+          "url": "https://www.mipa-paints.com/en/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own development and manufacture at European production sites",
+        "url": "https://www.mipa-paints.com/en/"
+      },
+      {
+        "label": "Official water-based wood priming and finishing paint",
+        "url": "https://www.mipa-paints.com/en/products/technical-safety-data-sheets/decorative/product/prodinfo/produkt3190.html"
+      },
+      {
+        "label": "Official complete finished product categories",
+        "url": "https://www.mipa-paints.com/en/products/"
+      },
+      {
+        "label": "Official Rosner wood coating range within Mipa",
+        "url": "https://www.mipa-paints.com/en/products/wood-coatings/"
+      },
+      {
+        "label": "Official group companies and sites for deduplication",
+        "url": "https://www.mipa-paints.com/en/company/mipa-group/"
+      },
+      {
+        "label": "Official public Purchase (Supplier) inbox; explicit encoded mailto verified",
+        "url": "https://www.mipa-paints.com/en/contact/"
+      },
+      {
+        "label": "Official registered legal entity and headquarters",
+        "url": "https://www.mipa-paints.com/en/legal-notice/"
+      }
+    ]
+  },
+  "berger-seidle-gruenstadt": {
+    "website": "https://berger-seidle.de/",
+    "contactPage": "https://berger-seidle.de/aquachoice-sport-b-mach-one/?lang=en",
+    "generalEmail": "info@berger-seidle.de",
+    "generalPhone": "+49 6359 8005 0",
+    "address": "Maybachstraße 2, 67269 Grünstadt an der Weinstraße, Germany",
+    "contacts": [
+      {
+        "name": "Markus M. Adam",
+        "title": "Managing Director (Geschäftsführer)",
+        "department": "Management",
+        "source": {
+          "label": "Official legal notice: disclosed managing director",
+          "url": "https://berger-seidle.de/impressum/"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "beratungsteam@berger-seidle.de",
+        "source": {
+          "label": "Official explicitly disclosed public business inbox",
+          "url": "https://berger-seidle.de/aquachoice-sport-b-mach-one/?lang=en"
+        }
+      },
+      {
+        "department": "General",
+        "email": "info@berger-seidle.de",
+        "source": {
+          "label": "Official general company business inbox",
+          "url": "https://berger-seidle.de/aquachoice-sport-b-mach-one/?lang=en"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own production facilities and batch formulation/quality control",
+        "url": "https://berger-seidle.de/produktion-qualitaet-durch-technologie/"
+      },
+      {
+        "label": "Official own R&D",
+        "url": "https://berger-seidle.de/entwicklung-innovationen-auf-top-niveau/"
+      },
+      {
+        "label": "Official two-component water-based wood-floor finish and technical service inbox",
+        "url": "https://berger-seidle.de/aquachoice-sport-b-mach-one/?lang=en"
+      },
+      {
+        "label": "Official complete finished product categories",
+        "url": "https://berger-seidle.de/produkte/"
+      },
+      {
+        "label": "Official group brands and own manufacturer identity",
+        "url": "https://berger-seidle.de/"
+      },
+      {
+        "label": "Official legal entity and managing director",
+        "url": "https://berger-seidle.de/impressum/"
+      }
+    ]
+  },
   "ballance-tauranga": {
     "website": "https://ballance.co.nz/",
     "contactPage": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team",
@@ -4974,6 +5411,11 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "dura-paints-edenvale",
+  "teknos-helsinki",
+  "remmers-loeningen",
+  "mipa-essenbach",
+  "berger-seidle-gruenstadt",
   "ballance-tauranga",
   "hesse-lignal-hamm",
   "medal-paints-johannesburg",

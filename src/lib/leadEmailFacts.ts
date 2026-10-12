@@ -3,6 +3,11 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "dura-paints-edenvale": "Your company describes its own industrial-coating manufacturing facilities and laboratory, and your range includes two-component epoxy primers and protective topcoats.",
+  "teknos-helsinki": "Your Finnish company operates its own coating factories, and your INERTA range includes epoxy protective coatings for demanding industrial corrosion environments.",
+  "remmers-loeningen": "Your company describes its own development of water-based systems, and Induline DW-601 Aqua Stopp is a water-based intermediate and finishing coating for wood.",
+  "mipa-essenbach": "Your group develops and manufactures coating systems at its European sites, and Mipa WBS Wetterschutzfarbe is a water-based priming and finishing paint for wood.",
+  "berger-seidle-gruenstadt": "Your company describes its own coating production and development, and AquaChoice SPORT B Mach One is a two-component water-based finish for wood floors.",
   "ballance-tauranga": "Your annual review identifies SustaiN among your New Zealand-manufactured nitrogen products, and your current product information describes its urease-inhibitor coating.",
   "hesse-lignal-hamm": "Your company describes developing and manufacturing water-based coatings for wood and wood-based materials, including one- and two-component Hydro lacquer systems.",
   "medal-paints-johannesburg": "Your company describes its own coating laboratory and manufacturing facilities, and your industrial range includes dual-pack epoxy protective paint for factory floors and steel.",
