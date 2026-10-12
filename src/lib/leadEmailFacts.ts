@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'polen-boya-cigli': 'Your company manufactures coatings, and your AHŞAP VERNİK product is a water-based varnish for interior and exterior wooden surfaces, excluding floors.',
   "paradeep-phosphates-bhubaneswar": "Your published Jai Kisaan Navratna range includes neem-coated urea, and your company operates its own urea manufacturing facilities.",
   'marindec-paints-gauteng': 'Your company manufactures specialist industrial anticorrosive coatings, and your high-build anti-corrosive enamel range includes AGRIP30+ finished products.',
   "axalta-philadelphia": "Your Corroless range is formulated for corrosion protection of iron and steel structures, including applications in oil and gas, wastewater and tank terminals.",

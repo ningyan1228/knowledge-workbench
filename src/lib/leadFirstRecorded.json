@@ -442,6 +442,10 @@
     "recordedAt": "2026-09-27T20:24:50+08:00",
     "commit": "7623a9a084c23de4eea7e0c6f45fe686b2e693b2"
   },
+  "paradeep-phosphates-bhubaneswar": {
+    "recordedAt": "2026-10-12T22:14:31+08:00",
+    "commit": "49f3255341373452afa147d571f23d47fd90c69c"
+  },
   "penta-prima-tangerang": {
     "recordedAt": "2026-10-12T10:04:54+08:00",
     "commit": "a027abe1457d4b52de4b509c897a1c54af59ba23"
@@ -465,6 +469,11 @@
   "pol-coatings-twello": {
     "recordedAt": "2026-09-26T09:16:56+08:00",
     "commit": "31d371a34935291d2c238aa40500aa3ea7823f19"
+  },
+  "polen-boya-cigli": {
+    "recordedAt": "2026-10-12T14:30:13Z",
+    "commit": "",
+    "source": "Actual formal admission after separate original-source review; publication commit saved privately."
   },
   "polyflex-baltic": {
     "recordedAt": "2026-09-26T09:29:49+08:00",
