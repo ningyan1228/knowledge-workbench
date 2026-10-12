@@ -5820,6 +5820,84 @@ const independentlyVerifiedIndiaCoatingLeads: PublicLead[] = [
   }
 ]
 
+const independentlyVerifiedPentaPrimaLeads: PublicLead[] = [
+  {
+    "id": "penta-prima-tangerang",
+    "productId": "elo",
+    "company": "PT Bina Adidaya (Penta Prima)",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Tangerang, Banten",
+    "latitude": -6.18,
+    "longitude": 106.63,
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "PT Bina Adidaya以Penta Prima品牌自主设计和制造涂料；官方完整产品目录明确生产重防腐、船舶及工业防护成品。ELO涂料TDS及独立ELO/木质素防腐研究仅支持潜在配方评估方向，不证明其采购、使用ELO或与现有配方兼容。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立重读完整官方目录16页及公司资料：公开产品为成品漆、涂料、胶、稀释剂及配套固化剂；目录中的环氧/聚氨酯为成品体系，不等同出售基础树脂。未发现ELO、ESBO、环氧植物油或同类生物基增塑剂供应业务。来源：https://pentaprima.co.id/industri 和官方2025产品目录。结论限已核对的公开业务，不推断外购。"
+    },
+    "targetCompanyTypeId": "elo-anticorrosion-coating-formulator",
+    "fit": "可开发候选",
+    "signal": "PT Bina Adidaya以Penta Prima品牌自主设计和制造涂料；官方完整产品目录明确生产重防腐、船舶及工业防护成品。ELO涂料TDS及独立ELO/木质素防腐研究仅支持潜在配方评估方向，不证明其采购、使用ELO或与现有配方兼容。",
+    "contact": {
+      "label": "Official sales business inbox",
+      "email": "sales@pentaprima.co.id",
+      "phone": "+62 21 2938 3000",
+      "contactUrl": "https://pentaprima.co.id/profile"
+    },
+    "source": {
+      "label": "Official PT Bina Adidaya factory/manufacturing profile",
+      "url": "https://pentaprima.co.id/assets/img/bina/compropentaindo.pdf"
+    },
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "elo-anticorrosion-coating-research",
+      "statement": "公司官方PDF第2页列Tangerang工厂，第4页所载证书范围为Design and Manufacture of Paints；官方产品目录第15页明确生产用于油气、管道、码头和桥梁的Heavy Duty Paint及船舶涂料；官网独立关联Penta Prima品牌与PT Bina Adidaya。",
+      "sourceName": "Official company profile and 2025 finished-coating catalogue",
+      "sourceUrl": "https://pentaprima.co.id/assets/img/bina/compropentaindo.pdf",
+      "verifiedAt": "2026-10-12"
+    },
+    "checkedAt": "2026-10-12",
+    "profile": {
+      "website": "https://pentaprima.co.id/",
+      "contactPage": "https://pentaprima.co.id/profile",
+      "generalEmail": "sales@pentaprima.co.id",
+      "generalPhone": "+62 21 2938 3000",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "sales@pentaprima.co.id",
+          "source": {
+            "label": "Original official profile business inbox",
+            "url": "https://pentaprima.co.id/profile"
+          }
+        }
+      ],
+      "address": "Factory: Jl. Industri Raya IV Blok AF No.23, Desa Bunder Jatake, Tangerang, Indonesia",
+      "sources": [
+        {
+          "label": "Company legal identity and business contact",
+          "url": "https://pentaprima.co.id/profile"
+        },
+        {
+          "label": "Factory and paint design/manufacturing",
+          "url": "https://pentaprima.co.id/assets/img/bina/compropentaindo.pdf"
+        },
+        {
+          "label": "Marine and heavy-duty finished paints",
+          "url": "https://mail.pentaprima.co.id/assets/img/kartu_warna/katalog%20produk/E-Product%20Catalogue%202025.pdf"
+        },
+        {
+          "label": "Original independent ELO anticorrosion research (laboratory only)",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8588247/fullTextXML"
+        }
+      ]
+    }
+  }
+]
+
 export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map<PublicLead>((lead) => {
   const qualification = leadQualifications[lead.id]
   if (!qualification) throw new Error(`Missing application qualification for ${lead.id}`)
@@ -5930,4 +6008,4 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
       ]
     }
   }
-]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads)
+]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)

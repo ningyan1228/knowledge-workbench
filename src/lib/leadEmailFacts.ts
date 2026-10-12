@@ -145,4 +145,5 @@ export const leadEmailFacts: Record<string, string> = {
   'mc-ferticom-tokyo': 'Your company describes manufacturing coated controlled-release fertilizers and lists coated urea fertilizer in its product range.',
   'agroplanta-batatais': 'Your Greencote range includes polymer-coated controlled-release fertilizers made in Brazil.',
   'moravia-istanbul': 'Your MORAZINC HI-BUILD range includes anticorrosive epoxy primer for marine and industrial applications.',
+  'penta-prima-tangerang': 'Your Penta Prima industrial catalogue describes heavy-duty paints for oil and gas facilities, pipelines, ports and bridges, alongside marine paints.',
 }
