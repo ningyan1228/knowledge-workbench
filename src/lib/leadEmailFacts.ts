@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pvcfc-ca-mau": "Your N46.Plus is a dual-inhibitor coated urea product, and your original product standard identifies your own Ca Mau fertilizer plant as its manufacturing site.",
+  "incitec-pivot-fertilisers-melbourne": "Your Tasmanian sites have their own liquid coating systems applying Green Urea NV and eNpower to fertiliser before dispatch, and your current supplier page provides a procurement contact.",
+  "troforte-innovations-wangara": "Your company identifies itself as a manufacturer of Langley Fertilizers, and your Macracote range uses polymer-coated NPK granules for controlled nutrient release.",
   "dura-paints-edenvale": "Your company describes its own industrial-coating manufacturing facilities and laboratory, and your range includes two-component epoxy primers and protective topcoats.",
   "teknos-helsinki": "Your Finnish company operates its own coating factories, and your INERTA range includes epoxy protective coatings for demanding industrial corrosion environments.",
   "remmers-loeningen": "Your company describes its own development of water-based systems, and Induline DW-601 Aqua Stopp is a water-based intermediate and finishing coating for wood.",

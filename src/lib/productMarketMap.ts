@@ -2168,11 +2168,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "troforte-innovations-wangara",
+    "company": "Troforte Innovations Pty Ltd (Langley Fertilizers / Sunpalm Australia)",
+    "productId": "fertilizer-coating",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Wangara (Perth)",
+    "latitude": -31.9523,
+    "longitude": 115.8613,
+    "legacyCompanyDescription": "自制 Macracote 聚合物包衣控释肥的澳洲研发制造账户；Langley／Sunpalm／Troforte 品牌合并去重，PU 类型及我方原料适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立再次读取澳洲政府现行 ABN、官网制造/集团/全系列及联系原文，并下载原始 Macracote、Nitroforte PDF。Macracote 原始第2页经渲染核验，明确以聚合物组成的改性蜡与添加剂包覆 NPK 颗粒；当前 Sunpalm 官网列明 Wangara 自有研发制造设施与 Macracote 聚合物包衣CRF。Troforte 当前联系页明确自己是 Langley Fertilizers 制造方，原始 Nitroforte 第3页说明其与 Langley/Sunpalm 的业务关联。仅列为控释肥制造潜在下游，是否 PU、我方产品适配、实际需求及采购未确认。地图使用 Perth 城市代表位置，未声称工厂精确坐标。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立重读当前肥料完整产品导航、Macracote/Typhoon/Troforte/Nitroforte原始资料、政府法人、集团 About、Premium Plastics 完整分类和业务联系。所查为成品颗粒/液体肥料、微生物产品、育苗盆袋等园艺成品；Nitroforte聚合氮是成品液体肥料，不据其resinous描述推断PU输入树脂供应。所查范围未发现包膜树脂、PU原料或独立肥料包膜剂对外销售，结论限可查范围。按 Troforte Innovations、Sunpalm Australia、Langley Fertilizers、Troforte/Macracote/Typhoon、三个关联域名、ABN、Wangara地址与官方邮箱核对最新main实际148家客户、本地和研究队列，无同一正式账户；三品牌/业务单元只计一个。两位技术支持人员的姓名、职务、商务手机号均来自现行官方联系页，未猜测个人邮箱，通用info邮箱不绑定个人。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "info@langleyfertilizers.com.au",
+      "phone": "+61 8 9302 1633",
+      "contactUrl": "https://www.trofortefarming.com.au/contact"
+    },
+    "source": {
+      "label": "Official own Wangara R&D/manufacturing facility and Macracote polymer-coated CRF",
+      "url": "https://www.sunpalmaustralia.com.au/about-us/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "incitec-pivot-fertilisers-melbourne",
+    "company": "Incitec Pivot Pty Ltd (Incitec Pivot Fertilisers; Ridley Group)",
+    "productId": "fertilizer-coating",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Melbourne",
+    "latitude": -37.8136,
+    "longitude": 144.9631,
+    "legacyCompanyDescription": "自有系统生产 NBPT 抑制剂包衣尿素的澳洲肥料账户；现属 Ridley，未确认 PU／聚合物包膜及我方原料采购",
+    "fit": "可开发候选",
+    "signal": "发现后独立读取官网2025年8月21日塔斯马尼亚投资原文，明确 Scottsdale、Circular Head、Longford、Devonport 自有站点装有液体包衣系统，在出库前涂覆 Green Urea NV/eNpower；再读原始 Green Urea NV 配方说明，NBPT 经其共溶剂体系施加到尿素颗粒，100%澳洲制造。属于实际包衣尿素/包衣能力的潜在下游，抑制剂包衣不标为PU或聚合物包膜，我方原料适配、实际需求及采购未确认。政府ABN与现行供应商PDF v3确认运营法人 Incitec Pivot Pty Ltd，2025年9月30日由 Ridley 收购；旧母集团、旧 Limited 法人不沿用。地图为 Melbourne 城市代表位置，登记地区VIC3000，未核验总部街道，不把Tasmania站点当作该坐标。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读取当前 Products、Blends & Coatings、Trace Element Coatings、Nitrogen Retention、eNpower、Green Urea 技术原文、自有站点施加流程、Supplier页面、政府ABN和2026/06官网现行供应商PDF v3。公司有肥料进口分销业务，资格依据是自有肥料颗粒包衣生产和配方；普通尿素/磷钾/微量元素肥料销售不等同PU包膜输入原料。保留 eNpower 原文称其为 patented coating 的事实；当前系列是施于肥料颗粒的成品/内部涂覆业务，所查未见独立包膜剂、包膜树脂或PU原料对外销售，结论限所查范围。按 Incitec Pivot Pty Ltd、现行ABN、IPF、Ridley、EASY Liquids、两个关联官网、公开采购邮箱及Tasmania站点核对最新main实际148家客户、本地和研究队列，无同一正式账户；Ridley/IPF旗下品牌、站点和EASY Liquids不拆户。采购邮箱以官网ROT13公开属性还原并与页面percent-encoded显示字面交叉一致，不猜测，不采用财务发票邮箱作为采购联系。"
+    },
+    "contact": {
+      "label": "Official public Procurement business inbox",
+      "email": "procurement@incitecpivot.com.au",
+      "phone": "1800 009 832 (Australia freecall)",
+      "contactUrl": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/"
+    },
+    "source": {
+      "label": "Official own Tasmanian liquid coating systems applying Green Urea NV before dispatch",
+      "url": "https://www.incitecpivot.com.au/news/latest-news/ipf-backs-tasmanian-producers-with-%2411m-investment/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "pvcfc-ca-mau",
+    "company": "Công ty Cổ phần Tổng công ty Phân bón Dầu khí Cà Mau (PVCFC / Phân Bón Cà Mau)",
+    "productId": "fertilizer-coating",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Cà Mau",
+    "latitude": 9.1768,
+    "longitude": 105.1524,
+    "legacyCompanyDescription": "自制 NBPT/DCD 双抑制剂包衣 N46.Plus 尿素的越南肥料法人；Petrovietnam关联已注明，未确认PU／聚合物包膜",
+    "fit": "可开发候选",
+    "signal": "发现后独立读取当前N46.Plus产品与完整系列，明确尿素表面NBPT和DCD双保护涂层；下载并逐页读取原始TCCS05:2023/PVCFC revision09，PDF第5页明确由该公司制造，第7页经渲染核验明确在Cà Mau尿素工厂生产。另读2016原始投产报道的设备/产线证据与2026年9月23日股东大会，保留Petrovietnam成员关系及新增工业气体范围。仅作为包衣尿素制造潜在下游，非已确认PU/聚合物包膜，我方原料适配、需求或购买未确认。地图为Cà Mau城市代表位置，不作为工厂GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立再次读取当前完整单肥/NPK/有机/其他肥料及服务分类、N46.Plus原文、原始制造标准和2016投入设备产线新闻、2026股东大会的肥料/工业气体/相关化学品范围及官网招标、联系入口。一般petrochemical chemicals经营登记不直接推断其销售PU原料；所查实际产品范围未发现包膜树脂、PU输入原料或独立肥料包衣剂销售，结论限所查范围。按越文完整法人、PVCFC/Phân Bón Cà Mau/DCM、pvcfc.com.vn、总部及尿素工厂、业务邮箱核对最新main实际148家客户、本地和研究队列，无该正式法人或品牌。现有PVPAINT经PVMR/HPP参股，与PVCFC同有Petrovietnam关联，已明确保留；PVCFC是另一个有自有肥料工厂、独立法人/产品/域名/地址的运营账户，不是PVPAINT改名、品牌、子厂或新增地区分支，不重复添加Petrovietnam母集团、旗下肥料品牌或工厂。总经理姓名职务来自当前About页，未绑定通用邮箱为个人邮箱；公司业务contact与footer info以官网公开Cloudflare编码还原，举报邮箱未作为业务联系人收录。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "contact@pvcfc.com.vn",
+      "phone": "+84 290 381 9000",
+      "contactUrl": "https://www.pvcfc.com.vn/lien-he"
+    },
+    "source": {
+      "label": "Official original N46.Plus2023 manufacturing standard rev09; PDF pages5 and7",
+      "url": "https://www.pvcfc.com.vn/Data/Sites/1/media/fileattachment/%5Bsigned%5D05.-tccs-n46.plus-c%C3%A0-mau--rev9.pdf"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pvcfc-ca-mau": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "incitec-pivot-fertilisers-melbourne": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "troforte-innovations-wangara": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "dura-paints-edenvale": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "teknos-helsinki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "remmers-loeningen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2340,6 +2427,223 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pvcfc-ca-mau": {
+    "website": "https://www.pvcfc.com.vn/",
+    "contactPage": "https://www.pvcfc.com.vn/lien-he",
+    "generalEmail": "contact@pvcfc.com.vn",
+    "generalPhone": "+84 290 381 9000",
+    "address": "647–649 Ngô Quyền, Phường An Xuyên, Tỉnh Cà Mau, Vietnam (current headquarters); N46.Plus manufacture: Nhà máy Đạm Cà Mau, Khánh An, U Minh, Cà Mau as specified in the original2023 standard.",
+    "contacts": [
+      {
+        "name": "Nguyễn Thanh Tùng",
+        "title": "General Director (Tổng Giám đốc), current About page states sinceApril2026",
+        "department": "Management",
+        "source": {
+          "label": "Official current General Director",
+          "url": "https://www.pvcfc.com.vn/gioi-thieu"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "contact@pvcfc.com.vn",
+        "source": {
+          "label": "Official expressly published General business inbox",
+          "url": "https://www.pvcfc.com.vn/lien-he"
+        }
+      },
+      {
+        "department": "General",
+        "email": "info@pvcfc.com.vn",
+        "source": {
+          "label": "Official corporate headquarters footer business inbox",
+          "url": "https://www.pvcfc.com.vn/lien-he"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official original N46.Plus2023 manufacturing standard rev09; PDF pages5 and7",
+        "url": "https://www.pvcfc.com.vn/Data/Sites/1/media/fileattachment/%5Bsigned%5D05.-tccs-n46.plus-c%C3%A0-mau--rev9.pdf"
+      },
+      {
+        "label": "Official current N46.Plus dual-protection coating product",
+        "url": "https://www.pvcfc.com.vn/n46plus-ca-mau"
+      },
+      {
+        "label": "Official complete current fertilizer portfolio; NBPT/DCD-coated N46.Plus",
+        "url": "https://www.pvcfc.com.vn/san-pham-dich-vu"
+      },
+      {
+        "label": "Official original coating product launch and invested machinery/line",
+        "url": "https://www.pvcfc.com.vn/tang-cuong-giai-phap-tiet-kiem-phan-bon-cho-nha-nong-dam-ca-mau-ra-mat-san-pham-moi-n46plus"
+      },
+      {
+        "label": "Official2026 extraordinary AGM: Petrovietnam member and actual business scope",
+        "url": "https://www.pvcfc.com.vn/pvcfc-thong-qua-cac-quyet-sach-quan-trong-tai-dai-hoi-co-dong-bat-thuong-2026"
+      },
+      {
+        "label": "Official current legal name, headquarters and public business contacts",
+        "url": "https://www.pvcfc.com.vn/lien-he"
+      },
+      {
+        "label": "Official current company history and General Director fromApril2026",
+        "url": "https://www.pvcfc.com.vn/gioi-thieu"
+      },
+      {
+        "label": "Official public supplier/tender entry; no form submitted",
+        "url": "https://www.pvcfc.com.vn/moi-thau"
+      },
+      {
+        "label": "Official PVMR2026 AGM: existing PVPAINT/Petrovietnam group relationship",
+        "url": "https://www.pvmr.vn/dhdcd-thuong-nien-2026-pvmr-kien-toan-nhan-su-cap-cao-lay-khoa-hoc-cong-nghe-lam-dong-luc-tang-truong/"
+      },
+      {
+        "label": "Existing PVPAINT official2026 AGM: PVMR/HPP shareholders, separate paint account",
+        "url": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
+      }
+    ]
+  },
+  "incitec-pivot-fertilisers-melbourne": {
+    "website": "https://www.incitecpivotfertilisers.com.au/",
+    "contactPage": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/",
+    "generalPhone": "1800 009 832 (Australia freecall)",
+    "address": "Registered main business location: VIC 3000, Australia (ABN 37 007 656 046; street address not independently verified). Own coating operations reported at Scottsdale, Circular Head, Longford and Devonport, Tasmania.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "procurement@incitecpivot.com.au",
+        "source": {
+          "label": "Official expressly published Procurement business inbox",
+          "url": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own Tasmanian liquid coating systems applying Green Urea NV before dispatch",
+        "url": "https://www.incitecpivot.com.au/news/latest-news/ipf-backs-tasmanian-producers-with-%2411m-investment/"
+      },
+      {
+        "label": "Official Green Urea NV own NBPT coating formulation and Australian manufacture",
+        "url": "https://www.incitecpivotfertilisers.com.au/resources/agronomic-insights/green-urea-nv-made-for-australian-soil/"
+      },
+      {
+        "label": "Official current government operating entity, registered business name and VIC3000",
+        "url": "https://abr.business.gov.au/ABN/View/37007656046"
+      },
+      {
+        "label": "Official current supplier legal/ownership document v3, PDF pages3–4",
+        "url": "https://www.incitecpivotfertilisers.com.au/wp-content/uploads/sites/3/2026/06/ippl_-_commercial-credit-information.pdf"
+      },
+      {
+        "label": "Official current Ridley ownership, 14July2026 stakeholder update",
+        "url": "https://www.incitecpivotfertilisers.com.au/news/incitec-pivot-fertilisers-stakeholder-update-14-july-2026/"
+      },
+      {
+        "label": "Official public procurement business inbox; encoded display cross-checked",
+        "url": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/"
+      },
+      {
+        "label": "Official complete fertilizer portfolio",
+        "url": "https://www.incitecpivotfertilisers.com.au/products/"
+      },
+      {
+        "label": "Official blend/coating finished fertilizer scope",
+        "url": "https://www.incitecpivotfertilisers.com.au/products/enhanced/blends-coating/"
+      },
+      {
+        "label": "Official trace-element coated fertilizer product scope",
+        "url": "https://www.incitecpivotfertilisers.com.au/products/enhanced/blends-coating/trace-element-coatings/"
+      },
+      {
+        "label": "Official nitrogen-retention fertilizer range",
+        "url": "https://www.incitecpivotfertilisers.com.au/products/smart/nitrogen-retention/"
+      },
+      {
+        "label": "Official eNpower finished fertilizer application and own coating technology",
+        "url": "https://www.incitecpivotfertilisers.com.au/products/smart/nitrogen-retention/enpower/"
+      }
+    ]
+  },
+  "troforte-innovations-wangara": {
+    "website": "https://www.trofortefarming.com.au/",
+    "contactPage": "https://www.trofortefarming.com.au/contact",
+    "generalEmail": "info@langleyfertilizers.com.au",
+    "generalPhone": "+61 8 9302 1633",
+    "address": "36 Paramount Drive, Wangara, Perth, Western Australia 6065, Australia; Troforte Innovations Pty Ltd ABN 76 111 308 206",
+    "contacts": [
+      {
+        "name": "Paul Storer",
+        "title": "Consultant Microbiologist; official technical support contact",
+        "department": "Technical",
+        "phone": "+61 456 716 061",
+        "source": {
+          "label": "Official current technical support contact",
+          "url": "https://www.trofortefarming.com.au/contact"
+        },
+        "verifiedAt": "2026-10-12"
+      },
+      {
+        "name": "Rob Harper",
+        "title": "Senior Field Advisor; official technical support contact",
+        "department": "Technical",
+        "phone": "+61 427 772 990",
+        "source": {
+          "label": "Official current technical support contact",
+          "url": "https://www.trofortefarming.com.au/contact"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@langleyfertilizers.com.au",
+        "source": {
+          "label": "Official expressly published General business inbox",
+          "url": "https://www.trofortefarming.com.au/contact"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current government ABN and legal entity",
+        "url": "https://abr.business.gov.au/ABN/View?id=76111308206"
+      },
+      {
+        "label": "Official own Wangara R&D/manufacturing facility and Macracote polymer-coated CRF",
+        "url": "https://www.sunpalmaustralia.com.au/about-us/"
+      },
+      {
+        "label": "Official original Macracote brochure; PDF page 2 visually verified polymer-coated NPK manufacture",
+        "url": "https://www.sunpalmaustralia.com.au/uploaded/files/client_added/Brochures/Macracote%20Fertiliser%20Brochure%20Web.pdf"
+      },
+      {
+        "label": "Official current manufacturer, public business inbox and named technical support",
+        "url": "https://www.trofortefarming.com.au/contact"
+      },
+      {
+        "label": "Official Langley/Sunpalm account relationship and controlled-release fertilizer manufacture",
+        "url": "https://troforte.com.au/fertilizer/about"
+      },
+      {
+        "label": "Official original Nitroforte brochure; PDF page 3 Troforte Innovations/Langley/Sunpalm relationship",
+        "url": "https://troforte.com.au/content/pdf/Nitroforte-Liquid-Fertiliser-Brochure.pdf"
+      },
+      {
+        "label": "Official full commercial fertilizer products",
+        "url": "https://www.sunpalmaustralia.com.au/langley-fertilizers/fertilizer-products/"
+      },
+      {
+        "label": "Official Premium Plastics finished horticultural product scope",
+        "url": "https://www.sunpalmaustralia.com.au/premium-plastics/plastic-products/"
+      }
+    ]
+  },
   "dura-paints-edenvale": {
     "website": "https://durapaints.co.za/",
     "contactPage": "https://durapaints.co.za/contact/",
@@ -5411,6 +5715,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pvcfc-ca-mau",
+  "incitec-pivot-fertilisers-melbourne",
+  "troforte-innovations-wangara",
   "dura-paints-edenvale",
   "teknos-helsinki",
   "remmers-loeningen",
