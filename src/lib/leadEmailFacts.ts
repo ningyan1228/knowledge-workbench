@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "ballance-tauranga": "Your annual review identifies SustaiN among your New Zealand-manufactured nitrogen products, and your current product information describes its urease-inhibitor coating.",
+  "hesse-lignal-hamm": "Your company describes developing and manufacturing water-based coatings for wood and wood-based materials, including one- and two-component Hydro lacquer systems.",
+  "medal-paints-johannesburg": "Your company describes its own coating laboratory and manufacturing facilities, and your industrial range includes dual-pack epoxy protective paint for factory floors and steel.",
   'apt-vietnam-noi-bai': 'APT Vietnam manufactures protective coatings at its Noi Bai factory, including chemical-resistant tank and storage-area coating systems.',
   'son-anh-an-khanh': 'Son Anh manufactures specialty epoxy and chlorinated-rubber coatings for industrial facilities, offshore structures and ships.',
   "kupsa-oyon": "Your Polish subsidiary describes developing its own water-based formulations and manufacturing water-based varnishes at its plant, alongside your group’s wood-coating product range.",

@@ -1944,11 +1944,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-11"
   },
+  {
+    "id": "medal-paints-johannesburg",
+    "company": "Medal Paints (Pty) Ltd",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Johannesburg",
+    "latitude": -26.2041,
+    "longitude": 28.0473,
+    "fit": "可开发候选",
+    "signal": "发现后独立再次读取官网 About、工业系列、环氧地坪漆、Steel Cladd 以及成品范围原文：Medal 在南非有自有配方研发实验室、制造设备及逐批测试；成品工业涂料包含用于工厂地坪与钢材的双组分环氧防护漆，以及防锈底漆等。对应 ELO TDS coatings 的潜在下游配方制造方，未确认采购、使用、具体需求或相容性。地图为 Johannesburg 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立重读当前制造/实验室、完整公开产品范围，以及 Panache、Premium、Quality、Professional Trade、Economy、Industrial、Primers/Undercoats、Steel Cladd、Waterproofing 成品类别。所见为成品涂料、底漆、配套施工材料及防水产品；聚氨酯成品漆、Epoxy Thinners、配套固化剂不直接推断为 ELO/ESBO 生物增塑原料。所查公开范围未发现 ELO、ESBO、环氧化植物油、生物增塑剂或同类添加剂对外销售，结论限所查范围。按法人 Medal Paints、medalpaints.co.za/medal.co.za、厂址、邮箱及品牌与最新 main 的139家实际公开客户、本地和私有队列去重，无同一正式账户；Panache/Safari/Melody/Steel Cladd 不拆成新增。未核验具名采购或研发人员，采用官方通用业务邮箱，不猜测个人邮箱。"
+    },
+    "contact": {
+      "label": "Official public general business inbox",
+      "email": "info@medal.co.za",
+      "phone": "+27 86 006 3325",
+      "contactUrl": "https://medalpaints.co.za/contact-us/"
+    },
+    "source": {
+      "label": "Official own laboratory, R&D, formulation controls and manufacturing",
+      "url": "https://medalpaints.co.za/about-medal-paints/"
+    },
+    "checkedAt": "2026-10-12",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
+  {
+    "id": "hesse-lignal-hamm",
+    "company": "Hesse GmbH & Co. KG (Hesse Lignal)",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Hamm",
+    "latitude": 51.6739,
+    "longitude": 7.815,
+    "fit": "可开发候选",
+    "signal": "发现后独立再次读取当前官网、About、Hydro Lacke、产品目录及法定信息：Hesse 自行研发生产水性木材及木质材料成品涂料，具备1K/2K水性木器漆体系和自有制造、创新技术业务。木材属于 NL-W1201 TDS 已验证基材，具有潜在下游配方评估逻辑；未证明实际使用、购买、需求或相容性。Hesse Beteiligungs GmbH 为法定普通合伙人，Hesse 各国子公司及 Hoba-Tec 作为集团关联标注并去重，不另拆为本轮新增。地图为 Hamm 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读取当前自主研发制造说明、Hydro/UV/PUR/Beizen/Oils-Waxes 产品分类和产品检索、法定法人及集团分支导航；产品为配方成品涂料、木器底面漆、木材染色/表面处理及配套施工材料。目录的 Polyolefine PE/PP 是待涂基材筛选项，不误记为销售聚烯烃原料；成品附着力底漆不自动等同 CPO/PO 输入分散体。所查范围未发现水性聚烯烃乳液、CPO/PO分散体或同类附着力输入原料对外销售，结论限所查范围。按 Hesse GmbH & Co. KG、Hesse Lignal、hesse-lignal.com/de、Hesse Beteiligungs/Hoba-Tec/Benelux/Vernis/美国分支、Hamm 地址及邮箱核对最新main的139家实际公开客户、本地和研究队列，无正式同一集团账户。Waldemar Harnos 的姓名、技术支持职务和业务热线由产品页明示；未猜测具名邮箱，通用 info 邮箱不绑定给该个人。"
+    },
+    "contact": {
+      "label": "Official public general business inbox",
+      "email": "info@hesse-lignal.de",
+      "phone": "+49 2381 963 00",
+      "contactUrl": "https://www.hesse-lignal.com/impressum/"
+    },
+    "source": {
+      "label": "Official own water-based wood-coating manufacture and formulation",
+      "url": "https://www.hesse-lignal.com/"
+    },
+    "checkedAt": "2026-10-12",
+    "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
+  },
+  {
+    "id": "ballance-tauranga",
+    "company": "Ballance Agri-Nutrients Limited",
+    "productId": "fertilizer-coating",
+    "country": "New Zealand",
+    "countryZh": "新西兰",
+    "city": "Tauranga",
+    "latitude": -37.6878,
+    "longitude": 176.1651,
+    "legacyCompanyDescription": "自行制造抑制剂包衣尿素；未确认 PU/聚合物包膜及我方原料适配、采购",
+    "fit": "可开发候选",
+    "signal": "发现后独立下载并提取2023年官方 Annual Review，渲染和目视核对 PDF第13页（印刷页24–25）：公司明确将自身新西兰制造的尿素和 SustaiN 列为产品；当前官网 SustaiN 与注册新闻确认产品含 AGROTAIN 脲酶抑制剂包衣，当前 Manufacturing 确认 Kapuni 尿素制造。属于有明确包衣产品和自制证据的潜在下游，未确认聚合物/PU树脂包膜或我方原料适配、采购，不把抑制剂包衣等同控释树脂膜。当前官网明确 Mount Maunganui 超磷酸盐制造已于2025年停止，地图点为 Tauranga 支持办公室城市代表位置，未将办公室标成仍生产的工厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立重读当前农业全产品类别、SustaiN、制造设施、注册公告、Industrials、合作社业务和当前领导层。实际工业产品有尿素、GoClear尿素液、氨、硫酸、HFA等；尿素供木板树脂制造不等同 PU包膜输入原料，对外工业业务事实保留。所查范围未发现肥料包膜树脂、PU输入原料或同类肥料包衣剂对外销售，结论限所查范围。AGROTAIN是成品使用的第三方抑制剂品牌，不将其上游品牌另作客户或误作 Ballance 所有的原料公司。按法定公司名、Ballance合作社、SustaiN、Ballance域名、Tauranga/制造厂区及联系邮箱与最新main的139家实际公开客户、本地和研究队列去重，无同一正式账户；Kapuni/Awarua/支持办公室/品牌只计一户。2023制造报告与当前产品交叉核验，历史年度不冒称2026项目投产日。优先采用当前官网明示的 Sourcing & Supply 负责人 David Healy 及业务邮箱；不把其个人业务邮箱当通用部门收件箱。"
+    },
+    "contact": {
+      "label": "Official public Sourcing & Supply executive business email",
+      "email": "david.healy@ballance.co.nz",
+      "phone": "+64 7 572 7900",
+      "contactUrl": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team"
+    },
+    "source": {
+      "label": "Original official 2023 Annual Review, PDF page 13: own New Zealand-manufactured SustaiN",
+      "url": "https://ballance.co.nz/medias/BAL14055-Annual-Review-2023-website-FA.pdf?attachment=true&context=bWFzdGVyfHJvb3R8ODg5MzAyM3xhcHBsaWNhdGlvbi9wZGZ8YURRd0wyZzFNeTg1TmpBd05EUTVPVE0zTkRNNEwwSkJUREUwTURVMVgwRnViblZoYkY5U1pYWnBaWGRmTWpBeU0xOTNaV0p6YVhSbFgwWkJMbkJrWmd8NWViZGJkM2MzZGIzMzAzNDE1Y2I5ZmEwNzE2ZWZhOThkYzBmMjdiYTBmYmVhMzU1MmM2NmM1OTZkZjY0NzlhMg"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ballance-tauranga": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
+  "hesse-lignal-hamm": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "medal-paints-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "kupsa-oyon": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "kofarb-czestochowa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "soilmate-bangkok": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
@@ -2108,6 +2195,177 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ballance-tauranga": {
+    "website": "https://ballance.co.nz/",
+    "contactPage": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team",
+    "generalPhone": "+64 7 572 7900",
+    "address": "National Support Office: 161 Hewletts Road, Mount Maunganui, Tauranga, New Zealand; postal: Private Bag 12-503, Tauranga",
+    "contacts": [
+      {
+        "name": "David Healy",
+        "title": "General Manager Operations, Sourcing & Supply",
+        "department": "Procurement",
+        "email": "david.healy@ballance.co.nz",
+        "phone": "0800 222 090",
+        "source": {
+          "label": "Official current leadership: Operations, Sourcing & Supply and publicly listed business email",
+          "url": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Original official 2023 Annual Review, PDF page 13: own New Zealand-manufactured SustaiN",
+        "url": "https://ballance.co.nz/medias/BAL14055-Annual-Review-2023-website-FA.pdf?attachment=true&context=bWFzdGVyfHJvb3R8ODg5MzAyM3xhcHBsaWNhdGlvbi9wZGZ8YURRd0wyZzFNeTg1TmpBd05EUTVPVE0zTkRNNEwwSkJUREUwTURVMVgwRnViblZoYkY5U1pYWnBaWGRmTWpBeU0xOTNaV0p6YVhSbFgwWkJMbkJrWmd8NWViZGJkM2MzZGIzMzAzNDE1Y2I5ZmEwNzE2ZWZhOThkYzBmMjdiYTBmYmVhMzU1MmM2NmM1OTZkZjY0NzlhMg"
+      },
+      {
+        "label": "Official current SustaiN inhibitor-coated finished fertilizer",
+        "url": "https://ballance.co.nz/sustain"
+      },
+      {
+        "label": "Official SustaiN registration and inhibitor identity",
+        "url": "https://ballance.co.nz/news/sustain-lands-nz-registration"
+      },
+      {
+        "label": "Official current manufacturing and Mount Maunganui production closure",
+        "url": "https://ballance.co.nz/Our-Business-and-History/Manufacturing"
+      },
+      {
+        "label": "Official actual industrial supply scope checked separately",
+        "url": "https://ballance.co.nz/our-business-and-history/industrials"
+      },
+      {
+        "label": "Official current agricultural product categories",
+        "url": "https://ballance.co.nz/Fertiliser-Products/c/All-Product-Ranges"
+      },
+      {
+        "label": "Official current co-operative business scope",
+        "url": "https://ballance.co.nz/our-business-and-history"
+      },
+      {
+        "label": "Official current sourcing executive and explicit public business email",
+        "url": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team"
+      },
+      {
+        "label": "Official support-office and manufacturing-site contact addresses",
+        "url": "https://ballance.co.nz/contact-us"
+      }
+    ]
+  },
+  "hesse-lignal-hamm": {
+    "website": "https://www.hesse-lignal.com/",
+    "contactPage": "https://www.hesse-lignal.com/impressum/",
+    "generalEmail": "info@hesse-lignal.de",
+    "generalPhone": "+49 2381 963 00",
+    "address": "Warendorfer Straße 21, D-59075 Hamm, Germany",
+    "contacts": [
+      {
+        "name": "Waldemar Harnos",
+        "title": "Technical Hotline / Support (Technische Hotline)",
+        "department": "Technical",
+        "phone": "+49 2381 963 846",
+        "source": {
+          "label": "Official Hydro lacquer product page: named technical hotline contact",
+          "url": "https://www.hesse-lignal.com/produkte/hydro-lacke/"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@hesse-lignal.de",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://www.hesse-lignal.com/impressum/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own water-based wood-coating manufacture and formulation",
+        "url": "https://www.hesse-lignal.com/"
+      },
+      {
+        "label": "Official manufacturer and family group identity",
+        "url": "https://www.hesse-lignal.com/unternehmen/ueber-hesse-lignal/"
+      },
+      {
+        "label": "Official one- and two-component water-based wood coating systems and technical contact",
+        "url": "https://www.hesse-lignal.com/produkte/hydro-lacke/"
+      },
+      {
+        "label": "Official finished coating product categories and substrate filters",
+        "url": "https://www.hesse-lignal.com/produkte/produktsuche/"
+      },
+      {
+        "label": "Official named business contacts",
+        "url": "https://www.hesse-lignal.com/unternehmen/ansprechpartner/"
+      },
+      {
+        "label": "Official legal entity, managing partners, registered address and business inbox",
+        "url": "https://www.hesse-lignal.com/impressum/"
+      }
+    ]
+  },
+  "medal-paints-johannesburg": {
+    "website": "https://medalpaints.co.za/",
+    "contactPage": "https://medalpaints.co.za/contact-us/",
+    "generalEmail": "info@medal.co.za",
+    "generalPhone": "+27 86 006 3325",
+    "address": "Corner of Main Reef Road and Kelvin Street, Industria, Johannesburg, South Africa",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@medal.co.za",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://medalpaints.co.za/contact-us/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own laboratory, R&D, formulation controls and manufacturing",
+        "url": "https://medalpaints.co.za/about-medal-paints/"
+      },
+      {
+        "label": "Official industrial protective finished coating range",
+        "url": "https://medalpaints.co.za/medal-industrial-paint/"
+      },
+      {
+        "label": "Official dual-pack epoxy floor and steel protective paint",
+        "url": "https://medalpaints.co.za/epoxy-floor-paint/"
+      },
+      {
+        "label": "Official Steel Cladd anticorrosive primers and coatings",
+        "url": "https://medalpaints.co.za/steel-cladd/"
+      },
+      {
+        "label": "Official complete finished product category scope",
+        "url": "https://medalpaints.co.za/products/"
+      },
+      {
+        "label": "Official Panache finished coating scope",
+        "url": "https://medalpaints.co.za/panache-range/"
+      },
+      {
+        "label": "Official primers and undercoats scope",
+        "url": "https://medalpaints.co.za/medal-primers-undercoats/"
+      },
+      {
+        "label": "Official waterproofing finished product scope",
+        "url": "https://medalpaints.co.za/medal-waterproofing/"
+      },
+      {
+        "label": "Official public business contact, telephone and company address",
+        "url": "https://medalpaints.co.za/contact-us/"
+      }
+    ]
+  },
   "kupsa-oyon": {
     "website": "https://www.kupsa.es/en/",
     "contactPage": "https://www.kupsa.es/en/legal-notice",
@@ -4716,6 +4974,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ballance-tauranga",
+  "hesse-lignal-hamm",
+  "medal-paints-johannesburg",
   "kupsa-oyon",
   "kofarb-czestochowa",
   "soilmate-bangkok",
