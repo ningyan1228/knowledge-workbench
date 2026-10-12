@@ -1,4 +1,5 @@
 import { isTaiwanMarket } from './leadMarketScope.ts'
+import { verifiedSkFormulationsLeads } from './verifiedSkFormulationsLead.ts'
 import { verifiedPolenLeads } from './verifiedPolenLead.ts'
 import { verifiedAnjoLeads } from './verifiedAnjoLead.ts'
 import { verifiedMarindecLeads } from './verifiedMarindecLead.ts'
@@ -7773,4 +7774,4 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads)
