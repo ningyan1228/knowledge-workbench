@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'anjo-tintas-criciuma': 'Your AnjoTech range includes TechMastic protective coatings for industrial and marine steel structures, supported by your own formulation development.',
   "ivm-chemicals-parona": "Your Parona facility manufactures wood coatings and has dedicated water-based production areas, and Milesi, Ilva and Croma Lacke are brands within your group.",
   "rustins-london": "Your company produces wood-finishing products at its own North London factory, and your Quick Dry Polyurethane Varnish is a water-based coating for wooden surfaces.",
   "mylands-london": "Your London company manufactures paints and wood finishes, and your plant-based multi-surface and floor paints are water-based products for wooden surfaces.",

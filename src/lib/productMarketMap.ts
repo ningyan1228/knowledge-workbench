@@ -1,4 +1,5 @@
 import { isTaiwanMarket } from './leadMarketScope.ts'
+import { verifiedAnjoLeads } from './verifiedAnjoLead.ts'
 
 export type MarketProduct = {
   id: 'fertilizer-coating' | 'nl-w1201' | 'elo'
@@ -7131,7 +7132,7 @@ const independentlyVerifiedPentaPrimaLeads: PublicLead[] = [
   }
 ]
 
-export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map<PublicLead>((lead) => {
+const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandSideLeadIds.has(lead.id) && !isTaiwanMarket(lead.country)).map<PublicLead>((lead) => {
   const qualification = leadQualifications[lead.id]
   if (!qualification) throw new Error(`Missing application qualification for ${lead.id}`)
   const { legacyCompanyDescription: _legacyCompanyDescription, ...record } = lead
@@ -7242,3 +7243,5 @@ export const publicLeads: PublicLead[] = rawPublicLeads.filter((lead) => demandS
     }
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
+
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads)
