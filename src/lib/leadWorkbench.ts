@@ -5,6 +5,11 @@ import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
 
 export const developmentStages = { todo: '待开发', waiting: '待回复', replied: '已回复', sample: '样品沟通', paused: '暂缓' } as const
 export type DevelopmentStage = keyof typeof developmentStages
+export const developmentProgressLabels = { todo: developmentStages.todo, sent: '已发送开发信', waiting: developmentStages.waiting, replied: developmentStages.replied, sample: developmentStages.sample, paused: developmentStages.paused, unknown: '进度未确认' } as const
+export type EffectiveDevelopmentStage = keyof typeof developmentProgressLabels
+export function developmentProgressLabel(stage: EffectiveDevelopmentStage, hasSent: boolean) {
+  return hasSent && stage !== 'sent' && stage !== 'unknown' ? `已发送开发信 · ${developmentProgressLabels[stage]}` : developmentProgressLabels[stage]
+}
 export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | null; followUpOn: string; note: string; favorite: boolean; listIds: string[] }
 export type LeadWorkList = { id: string; name: string }
 export type WorkRecords = Record<string, LeadWorkRecord>
@@ -52,11 +57,12 @@ export function developmentPriority(lead: PublicLead) {
   return { score, label, reasons, parts: { application, evidence, contact, role, exclusion } }
 }
 
-export function effectiveStage(lead: PublicLead, records: WorkRecords | null, sends: OutreachSend[] | null): DevelopmentStage | 'unknown' {
+export function effectiveStage(lead: PublicLead, records: WorkRecords | null, sends: OutreachSend[] | null): EffectiveDevelopmentStage {
+  const manual = records?.[outreachCompanyKey(lead)]?.stage
+  if (manual && manual !== 'todo') return manual
+  if (sends !== null && activeOutreachSend(sends, lead)) return 'sent'
   if (records === null) return 'unknown'
-  const manual = records[outreachCompanyKey(lead)]?.stage
-  if (manual) return manual
-  return sends === null ? 'unknown' : activeOutreachSend(sends, lead) ? 'waiting' : 'todo'
+  return manual ?? (sends === null ? 'unknown' : 'todo')
 }
 
 export function followUpDue(record: LeadWorkRecord | undefined, today: string) {
@@ -73,7 +79,10 @@ export function filterWorkbenchLeads(leads: PublicLead[], filters: BusinessFilte
     if (filters.industry !== 'all' && lead.targetCompanyTypeId !== filters.industry) return false
     if (filters.application !== 'all' && applicationKey(lead) !== filters.application) return false
     if (filters.contact !== 'all' && !channels[filters.contact as keyof typeof channels]) return false
-    if (filters.stage !== 'all' && stage !== filters.stage) return false
+    // Sent is a completed milestone, including companies already at a later stage.
+    if (filters.stage === 'sent' && (sends === null || !activeOutreachSend(sends, lead))) return false
+    if (filters.stage === 'waiting' && stage !== 'waiting' && stage !== 'sent') return false
+    if (filters.stage !== 'all' && filters.stage !== 'sent' && filters.stage !== 'waiting' && stage !== filters.stage) return false
     if (filters.list === 'favorites' && !record?.favorite) return false
     if (filters.list !== 'all' && filters.list !== 'favorites' && !record?.listIds.includes(filters.list)) return false
     if (filters.queue === 'priority' && (sends === null || activeOutreachSend(sends, lead) || stage !== 'todo' || developmentPriority(lead).score < 80)) return false

@@ -3,7 +3,7 @@ import { Bookmark, CalendarClock, CheckCircle2, ExternalLink, ListPlus, Star, Ta
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
 import { shanghaiDay } from '../../lib/leadTimeline'
-import { applicationKey, companyAssociations, developmentPriority, developmentStages, effectiveStage, emptyBusinessFilters, emptyWorkRecord, filterWorkbenchLeads, followUpDue, leadApplication, leadIndustry, type BusinessFilters, type DevelopmentStage, type WorkQueue } from '../../lib/leadWorkbench'
+import { applicationKey, companyAssociations, developmentPriority, developmentProgressLabel, developmentProgressLabels, developmentStages, effectiveStage, emptyBusinessFilters, emptyWorkRecord, filterWorkbenchLeads, followUpDue, leadApplication, leadIndustry, type BusinessFilters, type DevelopmentStage, type WorkQueue } from '../../lib/leadWorkbench'
 import type { LeadWork } from './useLeadWork'
 import type { OutreachLedger } from './useOutreachLedger'
 import './leadWorkbench.css'
@@ -63,7 +63,7 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
       <label>行业／客户类型<select aria-label="行业／客户类型" value={filters.industry} onChange={(event) => patch({ industry: event.target.value })}><option value="all">全部行业</option>{industries.map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label>产品应用<select aria-label="产品应用" value={filters.application} onChange={(event) => patch({ application: event.target.value })}><option value="all">全部应用</option>{applications.map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label>公开联系入口<select aria-label="公开联系入口" value={filters.contact} onChange={(event) => patch({ contact: event.target.value })}><option value="all">全部入口</option><option value="email">有公开业务邮箱</option><option value="form">有官网联系页</option><option value="phone">有公开电话</option><option value="named">有可触达具名联系人</option></select></label>
-      <label>开发进度<select aria-label="开发进度" value={filters.stage} disabled={work.status !== 'ready'} onChange={(event) => patch({ stage: event.target.value })}><option value="all">全部状态</option>{Object.entries(developmentStages).map(([id, label]) => <option key={id} value={id}>{label}</option>)}<option value="unknown">状态未确认</option></select></label>
+      <label>开发进度<select aria-label="开发进度" value={filters.stage} disabled={work.status !== 'ready'} onChange={(event) => patch({ stage: event.target.value })}><option value="all">全部状态</option>{Object.entries(developmentProgressLabels).map(([id, label]) => <option key={id} value={id} disabled={id === 'sent' && ledger.status !== 'ready'}>{label}</option>)}</select></label>
       <label>我的名单<select aria-label="我的名单" value={filters.list} disabled={work.status !== 'ready'} onChange={(event) => patch({ list: event.target.value })}><option value="all">全部客户</option><option value="favorites">我的收藏</option>{work.lists.map((list) => <option key={list.id} value={list.id}>{list.name}</option>)}</select></label>
       <label>排列依据<select aria-label="排列依据" value={filters.sort} onChange={(event) => patch({ sort: event.target.value as BusinessFilters['sort'] })}><option value="time">按收录时间</option><option value="priority">开发优先级</option></select></label>
     </div>
@@ -75,13 +75,14 @@ export function LeadWorkCard({ lead, work, ledger, onOpen }: { lead: PublicLead;
   const [error, setError] = useState('')
   const record = work.status === 'ready' ? work.records[outreachCompanyKey(lead)] : undefined
   const stage = effectiveStage(lead, work.status === 'ready' ? work.records : null, ledger.status === 'ready' ? ledger.sends : null)
+  const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
   const priority = developmentPriority(lead), today = shanghaiDay(new Date().toISOString())
   const favorite = async () => {
     setError('')
     try { await work.save(lead, { favorite: !record?.favorite }) } catch (error) { setError(error instanceof Error ? error.message : '收藏失败') }
   }
   return <div className="work-card-meta"><div><button type="button" className={`work-priority ${priority.score >= 80 ? 'high' : ''}`} title={priority.reasons.join('\n')} onClick={onOpen}>{priority.label} · {priority.score} 分</button><button type="button" className="work-favorite" aria-label={record?.favorite ? '取消收藏' : '收藏客户'} aria-pressed={Boolean(record?.favorite)} disabled={work.status !== 'ready' || work.busy} onClick={() => void favorite()}><Star size={16} fill={record?.favorite ? 'currentColor' : 'none'} /></button></div>
-    <button type="button" className="work-stage-link" onClick={onOpen}>{stage === 'unknown' ? '私人进度未确认' : developmentStages[stage]}{record?.followUpOn && <span className={followUpDue(record, today) ? 'work-due' : ''}> · {record.stage === 'paused' ? '暂缓的计划' : followUpDue(record, today) ? '需跟进' : '下次跟进'} {record.followUpOn}</span>}</button>{error && <p role="alert">{error}</p>}
+    <button type="button" className="work-stage-link" onClick={onOpen}>{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn && <span className={followUpDue(record, today) ? 'work-due' : ''}> · {record.stage === 'paused' ? '暂缓的计划' : followUpDue(record, today) ? '需跟进' : '下次跟进'} {record.followUpOn}</span>}</button>{error && <p role="alert">{error}</p>}
   </div>
 }
 
@@ -95,6 +96,7 @@ export function LeadPrivatePanel({ lead, work, ledger }: { lead: PublicLead; wor
     if (!dirty) { setStage(record.stage ?? ''); setDate(record.followUpOn); setNote(record.note); setFavorite(record.favorite); setListIds(record.listIds) }
   }, [signature, dirty])
   const actualStage = effectiveStage(lead, work.status === 'ready' ? work.records : null, ledger.status === 'ready' ? ledger.sends : null)
+  const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
   const save = async (event: FormEvent) => {
     event.preventDefault(); setMessage('')
     try {
@@ -103,8 +105,8 @@ export function LeadPrivatePanel({ lead, work, ledger }: { lead: PublicLead; wor
     } catch (error) { setMessage(error instanceof Error ? error.message : '保存失败，请重试。') }
   }
   return <section className="work-private-panel" aria-label="私人开发进度"><h3><CalendarClock size={17} />我的开发进度与跟进</h3>
-    {work.status === 'ready' ? <form onSubmit={(event) => void save(event)}><p>当前进度：{actualStage === 'unknown' ? '尚未确认' : developmentStages[actualStage]} · 仅当前账户可见，同公司跨产品共用。</p>
-      <fieldset disabled={work.busy}><div className="work-private-fields"><label>开发状态<select aria-label="开发状态" value={stage} onChange={(event) => { setStage(event.target.value); setDirty(true) }}><option value="">跟随实际发送记录</option>{Object.entries(developmentStages).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label><label>下次跟进日期<input type="date" value={date} onChange={(event) => { setDate(event.target.value); setDirty(true) }} /></label></div>
+    {work.status === 'ready' ? <form onSubmit={(event) => void save(event)}><p>当前进度：{developmentProgressLabel(actualStage, Boolean(sent))}。{sent ? `开发信于 ${sent.sent_on} 发送；后续进度仅当前账户可见，同公司跨产品共用。` : '私人进度仅当前账户可见，同公司跨产品共用。'}</p>
+      <fieldset disabled={work.busy}><div className="work-private-fields"><label>开发状态<select aria-label="开发状态" value={stage} onChange={(event) => { setStage(event.target.value); setDirty(true) }}><option value="">跟随实际发送记录{sent ? '（已发送开发信）' : ''}</option>{Object.entries(developmentStages).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label><label>下次跟进日期<input type="date" value={date} onChange={(event) => { setDate(event.target.value); setDirty(true) }} /></label></div>
       <label className="work-note-label">开发备注<textarea aria-label="开发备注" rows={3} maxLength={4000} value={note} placeholder="记录沟通情况、样品要求或下一步动作" onChange={(event) => { setNote(event.target.value); setDirty(true) }} /></label>
       <label className="work-check"><input type="checkbox" checked={favorite} onChange={(event) => { setFavorite(event.target.checked); setDirty(true) }} />收藏这家公司</label>
       <div className="work-list-checks" role="group" aria-label="加入私人名单">{work.lists.map((list) => <label className="work-check" key={list.id}><input type="checkbox" checked={listIds.includes(list.id)} onChange={(event) => { setListIds((previous) => event.target.checked ? [...previous, list.id] : previous.filter((id) => id !== list.id)); setDirty(true) }} />{list.name}</label>)}{!work.lists.length && <small>可在页面“管理我的名单”中创建名单。</small>}</div>

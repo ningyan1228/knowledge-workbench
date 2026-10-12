@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { publicLeads, type PublicLead } from '../src/lib/productMarketMap'
 import { outreachCompanyKey, type OutreachSend } from '../src/lib/outreachLedger'
-import { applicationKey, contactChannels, developmentPriority, effectiveStage, emptyBusinessFilters, emptyWorkRecord, filterWorkbenchLeads, followUpDue, normalizeWorkRecord, validWorkDate } from '../src/lib/leadWorkbench'
+import { applicationKey, contactChannels, developmentPriority, developmentProgressLabel, effectiveStage, emptyBusinessFilters, emptyWorkRecord, filterWorkbenchLeads, followUpDue, normalizeWorkRecord, validWorkDate } from '../src/lib/leadWorkbench'
 import { companyWorkId } from '../src/lib/leadWorkStorage'
 
 const lead = publicLeads.find((item) => item.companyEvidence.applicationLayer === 'tds-verified' && item.profile.generalEmail && item.supplierCompetitorCheck)!
@@ -24,7 +24,7 @@ describe('customer development workspace', () => {
     expect(effectiveStage(lead, null, [])).toBe('unknown')
     expect(effectiveStage(lead, {}, null)).toBe('unknown')
     expect(effectiveStage(lead, {}, [])).toBe('todo')
-    expect(effectiveStage(lead, {}, [send])).toBe('waiting')
+    expect(effectiveStage(lead, {}, [send])).toBe('sent')
     expect(effectiveStage(lead, { [record.companyKey]: record }, [send])).toBe('replied')
     for (const queue of ['priority', 'recent'] as const) {
       expect(filterWorkbenchLeads([lead], { ...emptyBusinessFilters, queue }, {}, null, '2026-10-12')).toEqual([])
@@ -32,6 +32,24 @@ describe('customer development workspace', () => {
       expect(filterWorkbenchLeads([lead], { ...emptyBusinessFilters, queue }, {}, [send], '2026-10-12')).toEqual([])
       expect(filterWorkbenchLeads([lead], { ...emptyBusinessFilters, queue }, {}, [{ ...send, voided_at: '2026-10-12T01:00:00Z' }], '2026-10-12')).toEqual([lead])
     }
+  })
+  it('treats actual sending as a completed milestone across later stages and products', () => {
+    const second = { ...lead, id: 'other-product', productId: 'nl-w1201' as const }
+    const filters = { ...emptyBusinessFilters, stage: 'sent' }
+    for (const stage of [null, 'todo', 'waiting', 'replied', 'sample', 'paused'] as const) {
+      const records = { [record.companyKey]: { ...record, stage } }
+      expect(filterWorkbenchLeads([lead, second], filters, records, [send], '2026-10-12')).toEqual(expect.arrayContaining([lead, second]))
+      expect(filterWorkbenchLeads([lead], filters, records, [], '2026-10-12')).toEqual([])
+      expect(filterWorkbenchLeads([lead], filters, records, null, '2026-10-12')).toEqual([])
+      expect(filterWorkbenchLeads([lead], filters, records, [{ ...send, voided_at: '2026-10-12T01:00:00Z' }], '2026-10-12')).toEqual([])
+    }
+    expect(effectiveStage(lead, null, [send])).toBe('sent')
+    expect(effectiveStage(lead, { [record.companyKey]: { ...record, stage: 'todo' } }, [send])).toBe('sent')
+    expect(filterWorkbenchLeads([lead], { ...filters, stage: 'waiting' }, {}, [send], '2026-10-12')).toEqual([lead])
+    expect(filterWorkbenchLeads([lead], { ...filters, stage: 'waiting' }, { [record.companyKey]: record }, [send], '2026-10-12')).toEqual([])
+    expect(developmentProgressLabel('sent', true)).toBe('已发送开发信')
+    expect(developmentProgressLabel('replied', true)).toBe('已发送开发信 · 已回复')
+    expect(normalizeWorkRecord({ stage: 'sent' }, 'key').stage).toBeNull()
   })
   it('includes overdue and today follow-ups but excludes future and paused plans', () => {
     expect(followUpDue(record, '2026-10-12')).toBe(true)
