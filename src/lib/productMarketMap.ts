@@ -2252,11 +2252,185 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "verinlegno-massa-cozzile",
+    "company": "Verinlegno S.p.A.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Massa e Cozzile",
+    "latitude": 43.9096,
+    "longitude": 10.7493,
+    "legacyCompanyDescription": "自有配方／制造的水性木器成品涂料账户；NL-W1201 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立再次读取当前自有制造原文、生产范围、具体木器面漆及法定/联系：Verinlegno 在 Massa e Cozzile 自有生产部门混配、检验、包装木器成品涂料，明确独立水性漆生产部门与自有研发实验室；IDRO FINISH、IDROMAT 等原文明示为外用木材的水性成品填孔/面漆。对应 NL-W1201 TDS 木材应用的潜在下游配方评估，实际使用、需求、采购及适配未确认。地图为城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读当前 History/生产范围/完整产品分类、外用水性面漆、Binders/Converter原始栏目及联系法人；该栏目实际列 N600/N710 填孔剂和水性成品清漆，并未因栏目名称推断PO输入树脂供应。所查为木材/金属/玻璃成品漆、调色及涂装配套；未发现水性聚烯烃乳液、PO/CPO分散体或同类附着力输入原料外售，结论限所查公开范围。按法人、VAT、域名、Massa e Cozzile 地址、官方邮箱、产品品牌核对最新main实际151家及本地/队列，无正式同一账户。海外销售渠道和产品系列不拆分，不猜个人/采购邮箱；采用官方一般业务入口。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "info@verinlegno.it",
+      "phone": "+39 0572 92711",
+      "contactUrl": "https://www.verinlegno.it/en/contacts/contact-where-we-are/"
+    },
+    "source": {
+      "label": "Official own formulation/manufacture and water-based production department",
+      "url": "https://www.verinlegno.it/en/company/history-philosophy/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "fiddes-cardiff",
+    "company": "Fiddes & Son Ltd",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Cardiff",
+    "latitude": 51.4816,
+    "longitude": -3.1791,
+    "legacyCompanyDescription": "自有配方／制造的水性木器成品涂料账户；NL-W1201 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立再次读取当前 About、具体 Wood Varnish、完整系列、化学/溶剂栏目及联系原文：Fiddes 在自有专用设施实际生产木器涂饰产品，Wood Varnish 是水性PU/丙烯酸成品配方，用于木地板、家具和室内木构件。木材属于 NL-W1201 TDS 已验证基材，属于潜在配方方，实际采购、使用、需求和适配未确认。地图为 Cardiff 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立再次读自有制造、Wood Varnish、完整产品目录及原始化学/溶剂栏目，后者公开7项白电油、finishing/methylated spirits、除漆剂、液体催干剂、家具修复和刷具清洁品；保留这些配套/输入产品事实，不将催干剂等同PO附着力输入材料。所查未发现水性PO乳液、CPO/PO分散体或同类附着力输入原料外售，结论限公开范围。原生栏目返回29字校验页，不当作证据；官方正文经公开网页读取工具另独立读到并私有留档。按 Fiddes & Son Ltd、fiddes.co.uk、Cardiff厂址、技术/销售邮箱与最新main151家、本地/队列去重，无同一正式账户；渠道和产品不拆户。官网明确 Technical Support 的support邮箱优先，不构造具名研发/采购者。"
+    },
+    "contact": {
+      "label": "Official public Technical business inbox",
+      "email": "support@fiddes.co.uk",
+      "phone": "+44 29 2034 0323",
+      "contactUrl": "https://fiddes.co.uk/contact/"
+    },
+    "source": {
+      "label": "Official own purpose-built wood-finish manufacturing facility",
+      "url": "https://fiddes.co.uk/restores-revives-protects/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "morrells-stockport",
+    "company": "Morrells Woodfinishes Ltd (RPM International)",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Stockport",
+    "latitude": 53.4106,
+    "longitude": -2.1575,
+    "legacyCompanyDescription": "自有配方／制造的水性木器成品涂料账户；NL-W1201 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立读当前公司制造/开发原文、Waterborne Interior Lacquers、技术支持及法定联系：Morrells 自行制造高性能木器涂料并做专门配方开发；水性木器系列包含用于木材的水性底漆、清漆、面漆。对应 NL-W1201 TDS 木材的潜在配方评估，实际使用、购买、需求或适配未确认。当前官网明确属于 RPM International；全国分支、Sprayshop及xerofire/omnia等品牌仅作关联，不计新增。地图为 Stockport 城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读完整Wood Finishes、金属/其他涂料和Sprayshop配套分类、自有制造与水性木器分型号、技术联系、Terms，以及目录中 Epoxyshield Maxx+Additive 原文；R200.0.7明示Antislip Additive，不按additive字样误判为PO附着力输入剂。所查是成品木器/工业漆、涂装配套和成品胶，未发现水性PO乳液、CPO/PO输入分散体或同类附着力原料销售，结论限所查范围。按法人、Morrells/RPM、品牌和域名、Stockport厂址及邮箱核对最新main151家、本地/队列，无同集团正式账户；RPM关联品牌、全国/海外分支不拆户。官网技术支持提供电话转接，hello仍记为一般业务邮箱，不冒称专门技术邮箱或具名采购。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "hello@morrells.co.uk",
+      "phone": "+44 161 406 5300",
+      "contactUrl": "https://www.morrells.co.uk/contact-us/"
+    },
+    "source": {
+      "label": "Official own wood-coating manufacture and bespoke formulation development",
+      "url": "https://www.morrells.co.uk/about-us/company-info/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "mylands-london",
+    "company": "John Myland Ltd (Mylands)",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "London",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "legacyCompanyDescription": "自有配方／制造的水性木器成品涂料账户；NL-W1201 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立读当前 About、具体成品涂料/完整finish分类、原始使用资料、联系及法律条款：John Myland Ltd 在London制造成品漆和木器涂饰；当前 Plant-based Multi-surface Paints 明确为木材及金属用水性面漆，另有水性木地板漆。木材属于NL-W1201 TDS基材，仅作潜在下游配方评估，实际采购、使用、需求与适配未确认；不将metal泛化为所有金属应用。地图为London城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读当前制造、全部finish/木饰涂装范围、明确木材水性面漆与Floor Paint原文、contact和John Myland Ltd现行法律条款。所查是成品墙漆/木器多基材/地坪漆、底漆、木油和涂装配套；plant-based说明成品涂料方向，不直接等同原料PO/CPO销售。所查未发现水性聚烯烃乳液、PO/CPO分散体或同类附着力输入原料外售，结论限公开范围。按John Myland/Mylands、域名、Rothschild地址及Sales/Info邮箱核对最新main151家、本地和队列，无正式同一账户；地域商店、颜色、品牌和wood finishes系列不拆分。未找到当前公开具名采购或专门研发邮箱，采用官网明确sales收件箱，法律条款Info只记一般业务联系方式。"
+    },
+    "contact": {
+      "label": "Official public Sales business inbox",
+      "email": "sales@mylands.com",
+      "phone": "+44 20 8670 9161",
+      "contactUrl": "https://mylands.com/pages/contact"
+    },
+    "source": {
+      "label": "Official own London paint and polish manufacture",
+      "url": "https://mylands.com/pages/about-mylands-1"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "rustins-london",
+    "company": "Rustins Limited",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "London",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "legacyCompanyDescription": "自有配方／制造的水性木器成品涂料账户；NL-W1201 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立读取官方Corporate制造、品牌及注册资料、具体Quick Dry Polyurethane Varnish/Floor Varnish、完整产品和联系原文。Rustins 在NorthLondon自有工厂配方生产木器成品；当前聚氨酯清漆明示水性、木材用，Floor Varnish也明示水性。对应NL-W1201 TDS木材基材的潜在下游配方评估，未确认使用、需求、购买或适配。注册号按官网162273保留，不猜采购人。原生站点403，官方正文经公开网页读取工具独立取得并私有保存；不以失败页面当证据。地图为London城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读当前企业制造及完整品牌、公司注册、木器水性成品技术和整体产品分类；Thixofix为成品接触胶，Bondaglass关联复合树脂/填料业务保留，不把全公司声称为无原料业务。所查范围未见NL同类水性PO乳液、CPO/PO输入分散体或附着力输入原料销售，结论限可查范围。按Rustins Limited、注册号、rustins.ltd/rustins.co.uk、Waterloo厂址与邮箱，以及Briwax/Antiquax/Wudcare/Bondaglass/Heldite等品牌核对最新main151家、本地/队列，无同一正式账户；品牌只计一个账户，不与名称相近的Rust-Oleum/RPM仅因Rust字样混为一家公司。未核验公开具名采购或研发人员，采用官方info业务入口，不推邮箱模式。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "info@rustins.co.uk",
+      "phone": "+44 20 8450 4666",
+      "contactUrl": "https://www.rustins.ltd/contact"
+    },
+    "source": {
+      "label": "Official own North London manufacturing and formulations",
+      "url": "https://www.rustins.ltd/"
+    },
+    "checkedAt": "2026-10-12"
+  },
+  {
+    "id": "ivm-chemicals-parona",
+    "company": "IVM Chemicals S.r.l. (IVM Group: Milesi / Ilva / Croma Lacke)",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Parona",
+    "latitude": 45.28,
+    "longitude": 8.75,
+    "legacyCompanyDescription": "自有配方／制造的水性木器成品涂料账户；NL-W1201 使用、采购和配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "发现后独立读取当前集团制造/产品/品牌原文、Milesi Green水性木器系列及原始法人设施PDF：IVM Chemicals在Parona自有厂区制造木器成品漆，明确专门水性产品生产区域；全系列明示室内/外水性木器成品。原始设施文件第1页确认IVMChemicalsS.r.l.和Parona地址。对应NL-W1201 TDS木材的潜在配方评估，实际使用、需求、采购、适配未确认。Milesi/Ilva/CromaLacke/Intercoating及各集团厂区按一个账户；地图采用Parona市镇代表位置，不是工厂GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立读集团完整Products、经营结构与生产、Milesi当前具体Green系列、官方设施法人PDF和Group Contacts。保留集团Intercoating的上游液体树脂与PU弹性体业务；官网具体列为不饱和聚酯/醇酸树脂及PU弹性体/胶，不将其遗漏或泛称集团无原料供应。在NL-W1201同类输入范围，所查未发现水性PO乳液、CPO/PO输入分散体或同类附着力原料外售，结论限所查材料/产品范围，不据此扩张为ELO账户。按IVMChemicals/IVM、Milesi/Ilva/CromaLacke/Intercoating、域名、VAT、Parona厂址及集团邮箱核对最新main151家、本地/队列，无同一正式集团账户；法国/西班牙/德国/美国实体及品牌不拆户。Group邮箱与号码由官方Contacts明示，标注为集团办公室，不冒称Parona直线或个人采购；Milesi另提供官方技术咨询表单，未提交。"
+    },
+    "contact": {
+      "label": "Official public General business inbox",
+      "email": "ivm@ivmgroup.com",
+      "phone": "+39 02 430 221 (group business office)",
+      "contactUrl": "https://www.ivmgroup.com/en/requests/new"
+    },
+    "source": {
+      "label": "Official own Parona manufacture and dedicated water-based production",
+      "url": "https://www.ivmgroup.com/en/pages/162-production"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ivm-chemicals-parona": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "rustins-london": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "mylands-london": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "morrells-stockport": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "fiddes-cardiff": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "verinlegno-massa-cozzile": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pvcfc-ca-mau": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "incitec-pivot-fertilisers-melbourne": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "troforte-innovations-wangara": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
@@ -2427,6 +2601,310 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ivm-chemicals-parona": {
+    "website": "https://www.ivmgroup.com/en/",
+    "contactPage": "https://www.ivmgroup.com/en/requests/new",
+    "generalEmail": "ivm@ivmgroup.com",
+    "generalPhone": "+39 02 430 221 (group business office)",
+    "address": "Manufacturing entity: IVM Chemicals S.r.l., Viale della Stazione3, 27020 Parona(PV), Italy (official original facility document). Public group business office: Via T. Tasso10, 20123 Milan, Italy.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "ivm@ivmgroup.com",
+        "source": {
+          "label": "Official expressly disclosed General business inbox",
+          "url": "https://www.ivmgroup.com/en/requests/new"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own Parona manufacture and dedicated water-based production",
+        "url": "https://www.ivmgroup.com/en/pages/162-production"
+      },
+      {
+        "label": "Official full wood-coating and raw resin/elastomer product scope",
+        "url": "https://www.ivmgroup.com/en/pages/134-products"
+      },
+      {
+        "label": "Official group structure, Intercoating input business and brand deduplication",
+        "url": "https://www.ivmgroup.com/en/pages/144-the-group-its-history-its-operative-structure"
+      },
+      {
+        "label": "Official current Milesi waterborne wood-coating family",
+        "url": "https://www.milesi.com/en/product/solutions-for-wood/green-en/green/"
+      },
+      {
+        "label": "Official original IVM Chemicals legal/manufacturing facility document;PDF pages1–3",
+        "url": "https://www.ivmgroup.com/uploads/file/275/84275/ISO_-_EN-_CERTIFICATO__GENERALE_PARONA_DEP__SENAGO_BAREGGIO.pdf"
+      },
+      {
+        "label": "Official legal manufacturer/current facility document entry",
+        "url": "https://www.ivmgroup.com/en/certifications/5-iso-9001-2015"
+      },
+      {
+        "label": "Official expressly published group general business contact and address",
+        "url": "https://www.ivmgroup.com/en/requests/new"
+      },
+      {
+        "label": "Official brand technical inquiry page",
+        "url": "https://www.milesi.com/en/contact_us/"
+      }
+    ]
+  },
+  "rustins-london": {
+    "website": "https://www.rustins.ltd/",
+    "contactPage": "https://www.rustins.ltd/contact",
+    "generalEmail": "info@rustins.co.uk",
+    "generalPhone": "+44 20 8450 4666",
+    "address": "43–51 Waterloo Road, London NW2 7TX, United Kingdom; official company registration number162273",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@rustins.co.uk",
+        "source": {
+          "label": "Official expressly disclosed General business inbox",
+          "url": "https://www.rustins.ltd/contact"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own North London manufacturing and formulations",
+        "url": "https://www.rustins.ltd/"
+      },
+      {
+        "label": "Official water-based polyurethane finished varnish for wood",
+        "url": "https://www.rustins.ltd/rustins/our-products/ceramic-care/quick-dry-polyurethane-varnish"
+      },
+      {
+        "label": "Official water-based wood-floor varnish",
+        "url": "https://www.rustins.ltd/rustins/our-products/floor-finishes/quick-dry-floor-varnish"
+      },
+      {
+        "label": "Official complete product categories",
+        "url": "https://www.rustins.ltd/rustins/our-products"
+      },
+      {
+        "label": "Official finished contact-adhesive scope",
+        "url": "https://www.rustins.ltd/rustins/our-products/thixofix"
+      },
+      {
+        "label": "Official full brand/group scope for deduplication",
+        "url": "https://www.rustins.ltd/our-brands"
+      },
+      {
+        "label": "Official legal company and registered address",
+        "url": "https://www.rustins.ltd/company-registration-details"
+      },
+      {
+        "label": "Official public general business inbox and phone",
+        "url": "https://www.rustins.ltd/contact"
+      }
+    ]
+  },
+  "mylands-london": {
+    "website": "https://mylands.com/",
+    "contactPage": "https://mylands.com/pages/contact",
+    "generalEmail": "info@mylands.com",
+    "generalPhone": "+44 20 8670 9161",
+    "address": "26–34 Rothschild Street, West Norwood, London SE27 0HQ, United Kingdom (current contact address); legal terms state John Myland Ltd at26 Rothschild St.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@mylands.com",
+        "source": {
+          "label": "Official expressly disclosed Sales business inbox",
+          "url": "https://mylands.com/pages/contact"
+        }
+      },
+      {
+        "department": "General",
+        "email": "info@mylands.com",
+        "source": {
+          "label": "Official legal terms expressly disclosed company mailbox",
+          "url": "https://mylands.com/policies/terms-of-service"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own London paint and polish manufacture",
+        "url": "https://mylands.com/pages/about-mylands-1"
+      },
+      {
+        "label": "Official water-based multi-surface wood topcoat and wood-floor paint",
+        "url": "https://mylands.com/pages/interior-paint-preparation"
+      },
+      {
+        "label": "Official complete finish categories and relevant coating system",
+        "url": "https://mylands.com/pages/choose-finish"
+      },
+      {
+        "label": "Official finished colour/finish product scope",
+        "url": "https://mylands.com/products/soho-pink"
+      },
+      {
+        "label": "Official current legal company and business inbox",
+        "url": "https://mylands.com/policies/terms-of-service"
+      },
+      {
+        "label": "Official current business address, sales inbox and phone",
+        "url": "https://mylands.com/pages/contact"
+      }
+    ]
+  },
+  "morrells-stockport": {
+    "website": "https://www.morrells.co.uk/",
+    "contactPage": "https://www.morrells.co.uk/contact-us/",
+    "generalEmail": "hello@morrells.co.uk",
+    "generalPhone": "+44 161 406 5300",
+    "address": "Wellington Works, Mill Lane, Woodley, Stockport SK6 1RN, United Kingdom",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "hello@morrells.co.uk",
+        "source": {
+          "label": "Official expressly disclosed General business inbox",
+          "url": "https://www.morrells.co.uk/contact-us/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own wood-coating manufacture and bespoke formulation development",
+        "url": "https://www.morrells.co.uk/about-us/company-info/"
+      },
+      {
+        "label": "Official waterborne finished wood primer/lacquer/topcoat range",
+        "url": "https://www.morrells.co.uk/products/wood-finishes/interior-wood-finishes/waterborne-interior-lacquers/"
+      },
+      {
+        "label": "Official whole finished coating and application-supply scope",
+        "url": "https://www.morrells.co.uk/"
+      },
+      {
+        "label": "Official Maxx+ finished coating and explicitly anti-slip additive scope",
+        "url": "https://www.morrells.co.uk/products/metal-and-other-finishes/rust-oleum/epoxyshield-maxx-plus-additive/"
+      },
+      {
+        "label": "Official technical service through public business switchboard",
+        "url": "https://www.morrells.co.uk/support/technical-support/"
+      },
+      {
+        "label": "Official current RPM relationship, address and public business inbox",
+        "url": "https://www.morrells.co.uk/contact-us/"
+      },
+      {
+        "label": "Official legal/business terms",
+        "url": "https://www.morrells.co.uk/support/terms-conditions-of-sale/"
+      }
+    ]
+  },
+  "fiddes-cardiff": {
+    "website": "https://fiddes.co.uk/",
+    "contactPage": "https://fiddes.co.uk/contact/",
+    "generalEmail": "finishes@fiddes.co.uk",
+    "generalPhone": "+44 29 2034 0323",
+    "address": "Florence Works, Brindley Road, Cardiff CF11 8TX, United Kingdom",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "support@fiddes.co.uk",
+        "source": {
+          "label": "Official expressly disclosed Technical business inbox",
+          "url": "https://fiddes.co.uk/contact/"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "sales@fiddes.co.uk",
+        "source": {
+          "label": "Official public sales department inbox",
+          "url": "https://fiddes.co.uk/contact/"
+        }
+      },
+      {
+        "department": "General",
+        "email": "finishes@fiddes.co.uk",
+        "source": {
+          "label": "Official public business inbox",
+          "url": "https://fiddes.co.uk/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own purpose-built wood-finish manufacturing facility",
+        "url": "https://fiddes.co.uk/restores-revives-protects/"
+      },
+      {
+        "label": "Official water-based polyurethane/acrylic finished wood varnish",
+        "url": "https://fiddes.co.uk/product/wood-varnish/"
+      },
+      {
+        "label": "Official complete product catalogue",
+        "url": "https://fiddes.co.uk/product-catalogue/"
+      },
+      {
+        "label": "Official actual chemical/solvent scope; original web-reader body independently read",
+        "url": "https://fiddes.co.uk/product-category/accessories/chemicals-solvents/"
+      },
+      {
+        "label": "Official current legal identity, address and expressly named technical support inbox",
+        "url": "https://fiddes.co.uk/contact/"
+      }
+    ]
+  },
+  "verinlegno-massa-cozzile": {
+    "website": "https://www.verinlegno.it/en/",
+    "contactPage": "https://www.verinlegno.it/en/contacts/contact-where-we-are/",
+    "generalEmail": "info@verinlegno.it",
+    "generalPhone": "+39 0572 92711",
+    "address": "Via Luigi Galvani 7, 51010 Massa e Cozzile (Pistoia), Italy; VAT00230480477",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@verinlegno.it",
+        "source": {
+          "label": "Official expressly disclosed General business inbox",
+          "url": "https://www.verinlegno.it/en/contacts/contact-where-we-are/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own formulation/manufacture and water-based production department",
+        "url": "https://www.verinlegno.it/en/company/history-philosophy/"
+      },
+      {
+        "label": "Official production scope and own water-based wood-coating manufacture",
+        "url": "https://www.verinlegno.it/en/company/production-range/"
+      },
+      {
+        "label": "Official specific water-based exterior wood topcoats",
+        "url": "https://www.verinlegno.it/en/products/prodotti_ricerca.asp?cla=C&titolo=Water-based%20for%20exterior&clb=6&titolob=Finiture&titolo2=Topcoat"
+      },
+      {
+        "label": "Official Binder/Converter category actual finished filler/varnish scope",
+        "url": "https://www.verinlegno.it/en/products/prodotti_ricerca.asp?cla=C&titolo=Water-based%20for%20exterior&clb=13&titolob=Veicoli/Converter&titolo2=Binders/Converter"
+      },
+      {
+        "label": "Official complete product categories",
+        "url": "https://www.verinlegno.it/en/products/"
+      },
+      {
+        "label": "Official current legal identity, address and public company inbox",
+        "url": "https://www.verinlegno.it/en/contacts/contact-where-we-are/"
+      }
+    ]
+  },
   "pvcfc-ca-mau": {
     "website": "https://www.pvcfc.com.vn/",
     "contactPage": "https://www.pvcfc.com.vn/lien-he",
@@ -5715,6 +6193,12 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ivm-chemicals-parona",
+  "rustins-london",
+  "mylands-london",
+  "morrells-stockport",
+  "fiddes-cardiff",
+  "verinlegno-massa-cozzile",
   "pvcfc-ca-mau",
   "incitec-pivot-fertilisers-melbourne",
   "troforte-innovations-wangara",
