@@ -2505,11 +2505,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "mahadhan-agritech-pune",
+    "company": "Mahadhan AgriTech Limited (formerly Smartchem Technologies; DFPCL group)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Pune (city-level headquarters marker)",
+    "latitude": 18.5204,
+    "longitude": 73.8567,
+    "legacyCompanyDescription": "自有Smartek包衣NPK复合肥制造企业；公开为有机碳/矿物质包衣，未确认PU包膜及我方产品使用/采购/适配",
+    "fit": "可开发候选",
+    "signal": "发现后独立重新读取MAL法人/更名前称、自有Taloja NPK制造、Smartek具体产品及原始FY2024-25/FY2025-26年报。Smartek明确每个肥料颗粒包衣，涂层富含有机碳和矿物质；最新年报确认当前MAL Crop Nutrition业务及Smartek产品，不将旧TAN网页当作当前MAL产线。对应我方TDS包衣复合肥应用，可供潜在原料配方评估；未确认PU/聚合物包膜、缓控释性能、使用、采购需求或我方材料适配。地图为Pune城市总部位置，非Taloja厂区GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-12",
+      "conclusion": "独立核对MAL完整农作物营养产品、自有制造原文和DFPCL FY2025-26原始年报PDF第7、8、37、40、95页完整业务范围，第7页已渲染核对三列产品归属。集团保留硝酸/IPA及药用溶剂/氨/CO2等工业原料业务，另有采矿用硝酸铵；Pickbrite为钢材酸洗添加剂，不能笼统宣称集团不卖任何原料或添加剂。所查公开产品为NP/NPK、硫、水溶肥/微量元素等肥料成品，未发现对外销售肥料包衣树脂、PU输入料或同类包衣剂，结论限所查公开范围。MAL FY2024-25年报明确2024-08-01重组生效、TAN转至DMSL，旧TAN站页不作当前主体证据。原始母公司年报来自公开索引的一方uat.dfpcl.com，属报告原文，未访问或确认QIP认购材料。按Mahadhan/MAL/Smartchem/STL/DFPCL/Deepak集团、两官网域名、Sai Hira总部/Taloja厂区、公开个人业务邮箱查最新main161家和本地/私有队列，无相同正式账户；品牌、改名主体和集团只计一个公司，不把地区办公室/经销商另计。Mahem Dwivedi职务按Crop Nutrition联系页原文AVP – Sales & Marketing Support保留，不改称技术或采购负责人。example@gmail.com及+0744-9999为页头占位，排除；rohan.tambe邮箱不推断姓名、职务，不作为具名联系人。"
+    },
+    "contact": {
+      "label": "Official expressly named crop-nutrition commercial business contact",
+      "email": "mahem.dwivedi@dfpcl.com",
+      "phone": "+91 20 66458171",
+      "contactUrl": "https://www.mahadhanagritech.com/contact"
+    },
+    "source": {
+      "label": "Official Smartek coated NPK granules: organic-carbon and mineral coating",
+      "url": "https://mahadhan.co.in/product-portfolio/value-added-npk-fertilizers-online/"
+    },
+    "checkedAt": "2026-10-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mahadhan-agritech-pune": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "vital-agri-nutrients-lahore": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "polyvine-cheddar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "bedec-dunmow": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2689,6 +2718,52 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mahadhan-agritech-pune": {
+    "website": "https://www.mahadhanagritech.com/",
+    "contactPage": "https://www.mahadhanagritech.com/contact",
+    "generalPhone": "+91 20 66458000",
+    "address": "Corporate and registered office: Sai Hira, Survey No. 93, Mundhwa, Pune 411036, Maharashtra, India. Own NPK manufacturing at Taloja, Raigad; map marker represents Pune headquarters city, not factory GPS.",
+    "contacts": [
+      {
+        "name": "Mahem Dwivedi",
+        "title": "AVP – Sales & Marketing Support",
+        "department": "Sales",
+        "email": "mahem.dwivedi@dfpcl.com",
+        "source": {
+          "label": "Official expressly named crop-nutrition business contact, title, email and corporate address",
+          "url": "https://www.mahadhanagritech.com/contact"
+        },
+        "verifiedAt": "2026-10-12"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Smartek coated NPK granules: organic-carbon and mineral coating",
+        "url": "https://mahadhan.co.in/product-portfolio/value-added-npk-fertilizers-online/"
+      },
+      {
+        "label": "Official current MAL legal identity, former Smartchem name and own Taloja NPK manufacture",
+        "url": "https://www.mahadhanagritech.com/overview"
+      },
+      {
+        "label": "Official own crop-nutrition manufacturing and finished fertiliser portfolio",
+        "url": "https://www.mahadhanagritech.com/crop-nutrition-business"
+      },
+      {
+        "label": "Original MAL FY2024-25 annual report: Smartek manufacture and completed group restructuring",
+        "url": "https://www.mahadhanagritech.com/uploads/2026/02/MAL-ANNUAL-REPORT-F-Y-2024-2025.pdf"
+      },
+      {
+        "label": "Original DFPCL FY2025-26 annual report: MAL crop-nutrition entity and complete group core product scope",
+        "url": "https://uat.dfpcl.com/uploads/2026/08/DFPCL-AR-2025-26.pdf"
+      },
+      {
+        "label": "Official expressly named crop-nutrition business contact, title, email and corporate address",
+        "url": "https://www.mahadhanagritech.com/contact"
+      }
+    ]
+  },
   "vital-agri-nutrients-lahore": {
     "website": "https://www.van.com.pk/",
     "contactPage": "https://www.van.com.pk/about.html",
@@ -6440,6 +6515,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mahadhan-agritech-pune",
   "vital-agri-nutrients-lahore",
   "polyvine-cheddar",
   "bedec-dunmow",
