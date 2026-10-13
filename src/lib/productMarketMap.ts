@@ -1,4 +1,5 @@
 import { isTaiwanMarket } from './leadMarketScope.ts'
+import { verifiedArofineLeads } from './verifiedArofineLead.ts'
 import { verifiedSkFormulationsLeads } from './verifiedSkFormulationsLead.ts'
 import { verifiedPolenLeads } from './verifiedPolenLead.ts'
 import { verifiedAnjoLeads } from './verifiedAnjoLead.ts'
@@ -174,6 +175,7 @@ export const marketExtendedApplications: MarketExtendedApplication[] = [
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
+  { id: 'waterbased-wood-primer-manufacturer', productId: 'nl-w1201', name: '水性木材底漆生产商', nameEn: 'Water-Based Wood Primer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },
   { id: 'waterbased-wood-coating-manufacturer', productId: 'nl-w1201', name: '水性木器涂料生产商', nameEn: 'Water-Based Wood Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },
   { id: 'controlled-release-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '控释肥生产商', nameEn: 'Controlled Release Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'controlled-release-fertilizer' }] },
   { id: 'slow-release-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '缓释肥生产商', nameEn: 'Slow Release Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'slow-release-fertilizer' }] },
@@ -7945,4 +7947,4 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads)
