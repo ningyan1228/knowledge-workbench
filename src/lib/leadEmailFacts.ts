@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "cifo-san-giorgio": "Your slow-release fertilizer for green plants uses granules coated with a porous MCT membrane, and your company describes in-house formulation research and production at San Giorgio di Piano.",
+  "coromandel-chennai": "Your Gromor 28-28-0 product description states that ammonium phosphate is coated over urea prills.",
   "fcp-cerea-bonavicina": "Your Bonavicina site manufactures complex granular NPK, NP and PK fertilizers and includes a coating plant, alongside a chemical and agronomic laboratory.",
   'mum-kimya-tuzla': 'Your company develops and manufactures coating formulations in Tuzla, and your water-based acrylic coating portfolio explicitly includes application on wood.',
   'weha-agro-sejahtera-jakarta': 'Your company manufactures Nagaemas NPK granules, and your published production process includes a coating step intended to support more controlled nutrient release and prevent caking.',

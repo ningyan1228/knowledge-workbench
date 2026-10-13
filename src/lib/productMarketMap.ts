@@ -2764,11 +2764,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "coromandel-chennai",
+    "company": "Coromandel International Limited (Murugappa Group)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Chennai",
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "legacyCompanyDescription": "自产复杂肥及有公开自产记录的磷酸铵包覆尿素品种；PU/膜材料、我方材料适配/使用/采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读当前复杂肥制造业务、Gromor28原文、Q1FY27运营、具名管理层及2026生物产品原始目录，并读164页2014–15原始年报：当时报告PDF30页(印刷28页)明确28:28:0由Kakinada C-train自产；当前Gromor28页面明确磷酸铵包覆尿素粒，当前公司持续自产复杂肥。按已证实的传统包覆尿素/复杂肥角色评估TDS尿素包衣原料；2014–15生产记录保留原年份，未当作2026产量或新投产事件。另有纳米尿素产品，不据此扩展成纳米叶面体系适用结论；PU/膜化学、我方材料需求/使用/采购/适配未确认。地图为Chennai城市代表位置，不是Kakinada工厂定位。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立读公司本体全部五大产品/服务业务、当前生物产品各分类及52页2026完整原始目录、当前复杂肥业务、Gromor28、运营公告、现行管理层与联系原文。保留农药原药、中间体和植物提取制品生产/销售事实，不泛称无上游原料；生物系列所查为Azadirachtin植物保护、Neem油植保配方/饼肥、生物刺激/微生物营养、喷雾助剂及抗蒸腾等，未发现以肥料颗粒包衣剂/树脂或PU反应原料对外销售。结论限所查Coromandel经营范围；Murugappa首页超时，不冒充全集团完整范围证据，也不把共享集团投资关系等同同一经营法人。按Coromandel International/原Coromandel Fertilizers、Gromor/Paramfos、域名、Chennai/Secunderabad/各厂址及公开邮箱核对最新main公司、私有队列与本轮Cifo，无同一正式账户；工厂、品牌和已纳入本体的关联经营不拆户。Amit Rastogi为现行EVP&CTO、Amir Alvi为现行COO–Fertiliser；不沿用2023旧职位，不构造个人邮箱。2026目录第52页明示hellogromor1及技术询问/客服通路，一般公司通路不归给具名人员；投资者/媒体邮箱不用于开发信。 本轮核对main 177家公司，未发现同一正式记录。"
+    },
+    "contact": {
+      "label": "Official general business / customer-care route; no personal mailbox attribution",
+      "email": "hellogromor1@coromandel.murugappa.com",
+      "phone": "1800 425 2828 (India customer-care / technical-enquiry route)",
+      "contactUrl": "https://www.coromandel.biz/contact-us/"
+    },
+    "source": {
+      "label": "Official current own complex-fertiliser manufacturing business and complete business categories",
+      "url": "https://www.coromandel.biz/products-services/"
+    },
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "cifo-san-giorgio",
+    "company": "Cifo S.r.l. (Huber AgroSolutions / J.M. Huber)",
+    "productId": "fertilizer-coating",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "San Giorgio di Piano",
+    "latitude": 44.6478,
+    "longitude": 11.3754,
+    "legacyCompanyDescription": "自有肥料配方研发制造、明确MCT多孔膜缓释颗粒产品；PU/自有膜专线/我方材料适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读Cifo自有工厂/研发原文、当前完整两大产品目录、2026原始145页Home&Garden目录、法人采购条款/隐私/联系及集团范围：Cifo在San Giorgio di Piano研发并生产肥料配方；公司生产范围明确含缓释及颗粒肥。现行绿植用缓释肥与2026目录PDF73页(印刷72页)明确为MCT多孔膜包覆NPK颗粒。按自有肥料研发制造与明确缓释膜产品角色评估TDS缓释肥原料；不把通用制造原文扩充成已确认自有PU包膜专线，也不宣称MCT树脂化学、每颗原料均由Cifo自行包膜。实际需求/采购/使用/配方适配未确认。地图为San Giorgio di Piano城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立读自有研发/制造、全两大成品目录、145页2026原始目录、原始2025-11-03采购条款、植物油/农用润湿助剂叶页及关联Huber/Miller/Pergopak实际范围。保留农用助剂、植物油、其他材料和集团材料供应事实，不泛称从未销售树脂/原料；Cifo Bagnante为含10%异癸醇乙氧基化物的叶面植保润湿配方，亚麻/Neem油为植物保护/强化成品；Miller Pinolene为植物表面喷施助剂。相关HAM Pergopak明确为非熔融热固性PMU颗粒、涂料消光/农药载体；该用途资料未显示是肥料包衣膜树脂或PU反应原料输入供应。所查未发现Cifo/相关经营范围对外销售肥料包衣树脂、PU反应原料或独立肥料颗粒包衣剂，结论限所查公开范围。按Cifo Srl/HuberAgroSolutions/Biolchim关联、cifo域名、Oradour地址及info邮箱核对最新main所有正式公司、私有队列与Coromandel，无同一正式账户；同集团关联记明而不按品牌/目录/地址写法另造公司。info为一般业务邮箱，未验证到能独立归属的具名采购/技术个人邮箱。 本轮核对main 177家公司，未发现同一正式记录。"
+    },
+    "contact": {
+      "label": "Official general business / customer-care route; no personal mailbox attribution",
+      "email": "info@cifo.it",
+      "phone": "+39 051 6655511",
+      "contactUrl": "https://www.cifo.it/contatti/"
+    },
+    "source": {
+      "label": "Official own factory and in-house formulation research; production range includes slow-release fertilizers",
+      "url": "https://www.cifo.it/azienda/"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "cifo-san-giorgio": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
+  "coromandel-chennai": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "fcp-cerea-bonavicina": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "valresa-riba-roja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "isaval-ribarroja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2957,6 +3015,165 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "cifo-san-giorgio": {
+    "website": "https://www.cifo.it/",
+    "contactPage": "https://www.cifo.it/contatti/",
+    "generalEmail": "info@cifo.it",
+    "generalPhone": "+39 051 6655511",
+    "address": "Via Oradour 6/8, 40016 San Giorgio di Piano, Bologna, Italy (current legal/contact). 2026 catalogue printsViaOradour6; same site, not a new company.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@cifo.it",
+        "source": {
+          "label": "Official explicitly disclosed generalbusiness / customer-care inbox",
+          "url": "https://www.cifo.it/contatti/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own factory and in-house formulation research; production range includes slow-release fertilizers",
+        "url": "https://www.cifo.it/azienda/"
+      },
+      {
+        "label": "Official current actual porousMCTmembrane slow-release green-plant fertilizer",
+        "url": "https://www.cifo.it/home-e-garden/prodotti/concime-a-lenta-cessione-per-piante-verdi/"
+      },
+      {
+        "label": "Official original2026 complete145pageHome&Garden catalogue; physicalPDF73/printed72 actualMCTcoatedNPK; noPUchemistry claimed",
+        "url": "https://www.cifo.it/wp-content/uploads/cataloghi/CIFO_catalogo_HG.pdf"
+      },
+      {
+        "label": "Official current whole professionalagriculture products",
+        "url": "https://www.cifo.it/agricoltura-professionale/prodotti/"
+      },
+      {
+        "label": "Official current whole Home&Garden products",
+        "url": "https://www.cifo.it/home-e-garden/prodotti/"
+      },
+      {
+        "label": "Official current legal manufacturer and generalbusiness contact",
+        "url": "https://www.cifo.it/contatti/"
+      },
+      {
+        "label": "Official current CifoSrl legal address and generalemail",
+        "url": "https://www.cifo.it/privacy/"
+      },
+      {
+        "label": "Official originalCifoSrl purchase terms revised2025-11-03; genericterms do not prove specific input purchase",
+        "url": "https://www.cifo.it/wp-content/uploads/HAS-CIFO-PO-TCS-JMH-EU-Form.pdf"
+      },
+      {
+        "label": "Official actual foliage pesticide wetting-adjuvant chemistry/use",
+        "url": "https://www.cifo.it/agricoltura-professionale/prodotti/bagnante-adesivo-cifo/"
+      },
+      {
+        "label": "Official actual plant-defense linseed formulation",
+        "url": "https://www.cifo.it/home-e-garden/prodotti/olio-di-lino/"
+      },
+      {
+        "label": "Official actual plant-strengthening Neemformulation",
+        "url": "https://www.cifo.it/home-e-garden/prodotti/olio-di-neem/"
+      },
+      {
+        "label": "Official Huber currentportfolio and operationalautonomy",
+        "url": "https://www.huber.com/our-businesses/"
+      },
+      {
+        "label": "Official Huber AgroSolutions companies and current Cifoassociation",
+        "url": "https://huberagrosolutions.com/"
+      },
+      {
+        "label": "Official Miller Pinolene current plantsurface application",
+        "url": "https://www.millerchemical.com/about/proprietary-technology"
+      },
+      {
+        "label": "Official related PMU nonmelting functionalparticles, actualmatting/carrier use not assumed fertilizerfilmresin",
+        "url": "https://www.huberadvancedmaterials.com/products/pergopak-organic-matting-agents-and-carriers"
+      }
+    ]
+  },
+  "coromandel-chennai": {
+    "website": "https://www.coromandel.biz/",
+    "contactPage": "https://www.coromandel.biz/contact-us/",
+    "generalEmail": "hellogromor1@coromandel.murugappa.com",
+    "generalPhone": "1800 425 2828 (India customer-care / technical-enquiry route)",
+    "address": "Corporate Office — Olympia Terraces, 15B SP, SIDCO Industrial Estate, Guindy, Chennai 600032, Tamil Nadu, India (June2026 official Bio Products brochure). Registered Coromandel House contact location at Sardar Patel Road, Secunderabad belongs to the same entity.",
+    "contacts": [
+      {
+        "name": "Amit Rastogi",
+        "title": "Executive Vice President & Chief Technology Officer",
+        "source": {
+          "label": "Official current executive title; no personal business inbox disclosed",
+          "url": "https://www.coromandel.biz/company/top-management/"
+        },
+        "verifiedAt": "2026-10-13"
+      },
+      {
+        "name": "Amir Alvi",
+        "title": "Chief Operating Officer — Fertiliser",
+        "source": {
+          "label": "Official current fertiliser executive role; former2023role is not current; no personal business inbox disclosed",
+          "url": "https://www.coromandel.biz/company/top-management/"
+        },
+        "verifiedAt": "2026-10-13"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "hellogromor1@coromandel.murugappa.com",
+        "source": {
+          "label": "Official explicitly disclosed generalbusiness / customer-care inbox",
+          "url": "https://www.coromandel.biz/wp-content/uploads/2026/08/Final_Bio-Product-Brochure_June-2026.pdf"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current own complex-fertiliser manufacturing business and complete business categories",
+        "url": "https://www.coromandel.biz/products-services/"
+      },
+      {
+        "label": "Official current Gromor28 ammonium-phosphate-coated urea-prill description",
+        "url": "https://www.coromandel.biz/gromor-28-28-0/"
+      },
+      {
+        "label": "Official original2014–15 annual report; physicalPDF30/printed28 explicit own28:28:0 production in Kakinada; historical event",
+        "url": "https://www.coromandel.biz/wp-content/uploads/2025/02/AnnualReport_2014_15.pdf"
+      },
+      {
+        "label": "Official Q1FY27 current manufacturing and plannedQ4FY27 expansion; plan not commissioned",
+        "url": "https://www.coromandel.biz/press-release/coromandel-international-limited-posts-q1-fy27-results/"
+      },
+      {
+        "label": "Official June2026 original52page full Bio Products catalogue; page52 public business email/address/technical-enquiry routing",
+        "url": "https://www.coromandel.biz/wp-content/uploads/2026/08/Final_Bio-Product-Brochure_June-2026.pdf"
+      },
+      {
+        "label": "Official whole crop-protection bio-product range; plant-protection inputs not assumed fertilizer-coating agents",
+        "url": "https://www.coromandel.biz/bio-products-crop-protection/"
+      },
+      {
+        "label": "Official crop-nutrition bio-products range",
+        "url": "https://www.coromandel.biz/bio-products-crop-nutrition/"
+      },
+      {
+        "label": "Official actual other spray-adjuvant/anti-transpirant/bee-attractant formulations",
+        "url": "https://www.coromandel.biz/bio-products-others/"
+      },
+      {
+        "label": "Official current corporate and manufacturing-site business contact route",
+        "url": "https://www.coromandel.biz/contact-us/"
+      },
+      {
+        "label": "Official current CTO and fertiliser COO roles, with no inferred personal inbox",
+        "url": "https://www.coromandel.biz/company/top-management/"
+      }
+    ]
+  },
   "fcp-cerea-bonavicina": {
     "website": "https://fcpcerea.it/",
     "contactPage": "https://fcpcerea.it/contatti",
@@ -7296,6 +7513,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "cifo-san-giorgio",
+  "coromandel-chennai",
   "fcp-cerea-bonavicina",
   "valresa-riba-roja",
   "isaval-ribarroja",
