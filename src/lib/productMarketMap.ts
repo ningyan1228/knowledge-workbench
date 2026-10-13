@@ -2820,11 +2820,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "sika-baar",
+    "company": "Sika AG (Sika Group)",
+    "productId": "elo",
+    "country": "Switzerland",
+    "countryZh": "瑞士",
+    "city": "Baar (headquarters city marker)",
+    "latitude": 47.1956,
+    "longitude": 8.5262,
+    "legacyCompanyDescription": "自有成品涂料/胶黏剂及配方体系制造集团；瑞士总部/集团工业业务入口；ELO 适配、使用及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立复读 Sika 自有制造、涂料技术、胶黏剂、全建筑及工业业务和瑞士公开业务联系。自有配方涂料包括 Sikagard 防护涂料、Sikalastic 液体膜、Sikafloor 地坪体系，明确自有技术开发及制造。ELO TDS 支持涂料大类，可作为潜在配方评估原料；未确认其使用、采购 ELO 或具体体系适配。按 Sika AG / Sika Group 一个集团经营与采购账户收录，瑞士总部 Baar 为城市代表点，工业联系入口为同集团 Sika Services AG 的 Zurich 地址，不是声称 Baar 有某个具体生产厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立查看公司整体制造/采购组织、当前完整建筑及工业业务分类、各核心技术、成品涂料/胶黏剂、Advanced Resins 和具体 EP/PUR casting 系统。所查未发现对外销售 ELO、ESBO、环氧化植物油或同类生物增塑原料；结论限这些实际读到的公开范围。保留其混凝土/水泥添加剂及配方树脂经营事实，不泛称不销售任何添加剂或树脂。PCE superplasticizers 的公开应用为水泥/混凝土，不能仅凭 plasticizer 字样等同植物油聚合物增塑原料；SikaBiresin 是已配制的双组分环氧/PU 浇注体系，普通环氧树脂不等同环氧化植物油。集团全球采购按材料类别和地区组织，是下游材料评估的合理业务链，但未披露 ELO 采购。按 Sika AG、Sika Services AG、Sika Group、相关涂料/胶黏剂/浇注品牌、域名、Baar/Zurich 地址及工业邮箱核对最新 main 179家、工作区和私有队列，无同一正式账户；品牌、分支、国家工厂不拆分新增，大陆/台湾子公司不另收录。公开 industry@ch.sika.com 是工业业务一般入口，不能标作采购个人或 Bernhard Bosshard 邮箱；其官网明示 Head of Technology – Coating Systems，仅保留角色，不构造个人邮箱。"
+    },
+    "contact": {
+      "label": "Official Sika Group industrial business entry via Sika Services AG; general team route",
+      "email": "industry@ch.sika.com",
+      "phone": "+41 58 436 40 40",
+      "contactUrl": "https://industry.sika.com/en/home/about-industry/contact.html"
+    },
+    "source": {
+      "label": "Official own developed coating systems and disclosed current technology head",
+      "url": "https://www.sika.com/en/sustainability/innovation/technologies/coating-systems.html"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sika-baar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cifo-san-giorgio": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "coromandel-chennai": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "fcp-cerea-bonavicina": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
@@ -3015,6 +3044,85 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sika-baar": {
+    "website": "https://www.sika.com/",
+    "contactPage": "https://industry.sika.com/en/home/about-industry/contact.html",
+    "generalEmail": "industry@ch.sika.com",
+    "generalPhone": "+41 58 436 40 40",
+    "address": "Group headquarters: Sika AG, Zugerstrasse 50, CH-6340 Baar (ZG), Switzerland. Industrial business contact: Sika Services AG, Tüffenwies 16, 8048 Zurich, Switzerland. Marker represents Baar city, not a manufacturing-site GPS.",
+    "contacts": [
+      {
+        "name": "Bernhard Bosshard",
+        "title": "Head of Technology - Coating Systems",
+        "department": "Technical",
+        "source": {
+          "label": "Official own developed coating systems and disclosed current technology head",
+          "url": "https://www.sika.com/en/sustainability/innovation/technologies/coating-systems.html"
+        },
+        "verifiedAt": "2026-10-13"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "industry@ch.sika.com",
+        "source": {
+          "label": "Official industrial business contact: published industry@ch.sika.com and Swiss Sika Services address",
+          "url": "https://industry.sika.com/en/home/about-industry/contact.html"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own developed coating systems and disclosed current technology head",
+        "url": "https://www.sika.com/en/sustainability/innovation/technologies/coating-systems.html"
+      },
+      {
+        "label": "Official group own production and global manufacturing role",
+        "url": "https://www.sika.com/en/about-us/who-we-are.html"
+      },
+      {
+        "label": "Official global procurement material-category organization and supplier collaboration",
+        "url": "https://www.sika.com/en/about-us/who-we-are/procurement.html"
+      },
+      {
+        "label": "Official full construction business scope",
+        "url": "https://www.sika.com/en/construction.html"
+      },
+      {
+        "label": "Official coating, adhesive and concrete technology scope",
+        "url": "https://www.sika.com/en/sustainability/innovation/technologies.html"
+      },
+      {
+        "label": "Official own formulated adhesive systems and technology scope",
+        "url": "https://www.sika.com/en/sustainability/innovation/technologies/adhesive-systems.html"
+      },
+      {
+        "label": "Official industrial business and finished formulation scope",
+        "url": "https://industry.sika.com/en/home.html"
+      },
+      {
+        "label": "Official Advanced Resins formulated EP/PUR casting systems and functional coatings",
+        "url": "https://industry.sika.com/en/home/advanced-resins.html"
+      },
+      {
+        "label": "Official two-component EP/PUR casting-system applications",
+        "url": "https://industry.sika.com/en/home/advanced-resins/epoxy-and-polyurethanecasting.html"
+      },
+      {
+        "label": "Official industrial business contact: published industry@ch.sika.com and Swiss Sika Services address",
+        "url": "https://industry.sika.com/en/home/about-industry/contact.html"
+      },
+      {
+        "label": "Official Swiss Sika AG legal identity",
+        "url": "https://www.sika.com/en/footer/legal-notice.html"
+      },
+      {
+        "label": "Official Sika AG Baar headquarters address",
+        "url": "https://www.sika.com/en/about-us/who-we-are.html"
+      }
+    ]
+  },
   "cifo-san-giorgio": {
     "website": "https://www.cifo.it/",
     "contactPage": "https://www.cifo.it/contatti/",
@@ -7513,6 +7621,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sika-baar",
   "cifo-san-giorgio",
   "coromandel-chennai",
   "fcp-cerea-bonavicina",
