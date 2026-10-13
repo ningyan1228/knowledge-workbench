@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "valresa-riba-roja": "Your ESFERA range includes 270063, a water-based basecoat and finish described for the complete wood-varnishing process.",
+  "isaval-ribarroja": "Your Xanol Barniz Interior is a single-component water-based polyurethane varnish for wood, and your company states that its product portfolio is developed and manufactured in-house.",
+  "juno-erandio": "Your LASUR ACUOSO is an acrylic-based waterborne finish for wood, and your official contact page identifies your headquarters and factory in Erandio.",
   'arofine-polymers-pune': 'Your company manufactures industrial adhesives and coatings, and your AROBOND 45 is a water-based adhesive explicitly specified as a primer for wood.',
   "gubretas-istanbul": "Your published SLOWFERT SÜPER İNCİ product is NBPT-inhibited urea, and its official registration names GÜBRETAŞ as the manufacturer in Turkey.",
   "toros-agri-istanbul": "Your R&D centre’s 2021 published study evaluated liquid and wax coatings on NP 20-20-0 compound fertiliser supplied by Toros.",

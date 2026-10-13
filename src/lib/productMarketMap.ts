@@ -2649,11 +2649,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "juno-erandio",
+    "company": "Industrias JUNO, S.A. (JUNO / JUNO Industrial)",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Erandio",
+    "latitude": 43.3072,
+    "longitude": -2.945,
+    "legacyCompanyDescription": "自有研发制造的水性木器成品涂料账户；NL-W1201使用、采购及配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取当前公司制造和工厂联系、木器产品、2026完整48页成品目录、24页工业目录及当前链接的原始技术资料：Industrias JUNO在Erandio自有涂料工厂，JUNO Industrial为同一法人工业分部且有自有实验室/工厂；LASUR ACUOSO明确为丙烯酸树脂配方的水性木器成品。原始TDS版本为2016年6月Rev.07，2026官网和目录仍列该品，不把下载日期当修订日期。对应NL-W1201 TDS木材基材，仅为潜在配方评估；使用、采购、需求和适配未确认。地图为Erandio城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立审读完整2026成品目录、工业完整目录、当前木器产品/制造与全部添加剂分类及微球叶页。范围含建筑/工业成品漆、木器清漆、成品底漆、溶剂、色浆、清洁/去漆剂及施工材料。聚乙烯/聚丙烯微球为物理防滑颗粒，不能据材料名称当作PO乳液/分散体；目录p23的附着促进产品为可施工的双组分环氧/硅烷成品锚固底漆。所查未发现水性PO乳液、PO/CPO原料分散体或同类原料附着促进剂销售，结论限所查公开范围。JUNO、JUNO Industrial、junopaints及所有分部/店铺按同一法人一个账户；制造历史中的早期油品不推定为当前NL-W1201同类原料业务。按法人名称、相关域名、Erandio/Ortuella地址和infoweb邮箱查最新main170家、本地及私有队列，无同一正式账户。公开一般邮箱来自工业分部和法条通信原文，不推断具名技术/采购邮箱。"
+    },
+    "contact": {
+      "label": "Official general business mailbox; no named technical/procurement person inferred",
+      "email": "infoweb@juno.es",
+      "phone": "+34 944 670 062",
+      "contactUrl": "https://www.juno.es/contacto/"
+    },
+    "source": {
+      "label": "Official current own paint manufacture and Erandio company history",
+      "url": "https://www.juno.es/quienes-somos/"
+    },
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "isaval-ribarroja",
+    "company": "Pinturas Isaval, S.L. (Isaval; Isaval Global website)",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Riba-roja de Túria",
+    "latitude": 39.5465,
+    "longitude": -0.5694,
+    "legacyCompanyDescription": "自有研发制造的水性木器成品涂料账户；NL-W1201使用、采购及配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取公司实际自有研发/制造、全部25页涂料目录300条产品链接、辅料、联系/法律资料及Xanol原始TDS：Pinturas Isaval在Ribarroja制造自有涂料；Xanol Barniz Interior明确为木材用单组分水性脂肪族PU成品，技术资料1907版本6日期2026-01-13。官网所有者Isaval Global, S.L.与联系原文制造法人Pinturas Isaval, S.L.按一个Isaval账户保留，未捏造母子公司法律持股。对应NL-W1201 TDS木材基材的潜在配方评估，使用、采购、需求和适配未确认。地图为Riba-roja城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立审读300条当前涂料产品的全部25页目录、完整辅料分类、Resul/Sanit/Imperal Primer/Fixenol/Siltop实际叶页、自有制造与联系。保留调色浓缩物、亚麻油/溶剂、其他配套材料销售事实，不泛称无原料。Resul为防滑颗粒，Sanit为防霉/藻添加剂；Imperal Primer为施工用双组分水性环氧底漆，Fixenol为丙烯酸-硅氧烷建筑表面固定剂，Siltop为矿物表面硅酸盐/硅溶胶固定底漆及稀释剂；这些原文未显示PO/CPO同类原料输入销售。所查未发现水性PO乳液、PO/CPO原料分散体或同类原料附着促进剂销售，结论限所查公开范围。按Pinturas Isaval/Isaval Global、CIF B46069654、isaval.es、Velluters/Casanova地址及isaval邮箱核对最新main170家、本地/私有队列，无同一正式账户；Xanol/Rhonatherm/Rheco品牌和海外分部/店铺不拆户。与Valresa同城但法人、CIF、具体地址、域名和邮箱不同，不以同城合并。未找到可独立归属的具名技术/采购个人业务邮箱，使用明确公开的一般业务邮箱。"
+    },
+    "contact": {
+      "label": "Official general business mailbox; no named technical/procurement person inferred",
+      "email": "isaval@isaval.es",
+      "phone": "+34 96 164 00 01",
+      "contactUrl": "https://www.isaval.es/contacto/"
+    },
+    "source": {
+      "label": "Official own product development and manufacture at Ribarroja factory",
+      "url": "https://www.isaval.es/sobre-isaval/quienes-somos/"
+    },
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "valresa-riba-roja",
+    "company": "Valresa Coatings, S.A. (Valresa Group)",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Riba-roja de Túria",
+    "latitude": 39.5465,
+    "longitude": -0.5694,
+    "legacyCompanyDescription": "自有研发制造的水性木器成品涂料账户；NL-W1201使用、采购及配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取集团制造/研发、法律主体、ESFERA水性木器实际叶页及全产品范围：Valresa Coatings, S.A.在西班牙制造涂料/清漆并自有研发，ESFERA270063为木材整个涂装过程用水性底漆/面漆成品；集团现列海外制造场地。另从土耳其合资公司当前原文核实2005年由IBA Kimya与VALRESA成立及Esfera/Valresa/İbavet/İba Sanayi品牌关联；旧私有Esfera ready_for_review不是独立核验依据，也不再另增品牌账户。对应NL-W1201 TDS木材基材的潜在配方评估，需求、采购、使用和适配未确认。地图为Riba-roja城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立审读集团当前制造/研发与跨国场地、木器水性内外用系列和270063/700602成品、完整硝基/PU/聚酯清漆/粉末涂料/调色范围及土耳其合资主体当前全部业务与品牌原文。保留双组分成品配套硬化剂、色浆和历史醇酸树脂生产转移事实，不泛称从未销售树脂或原料；所查未发现水性PO乳液、PO/CPO原料分散体或同类原料附着促进剂销售，结论限所查公开范围。按Valresa Coatings S.A./VALRESA SA、CIF A46030169、valresa.com及关联土耳其域名、ESFERA、IBA VALRESA、地址和一般邮箱核对最新main170家，无同一正式账户。命中旧私有Esfera发现记录，已按当前原文并入同一开发账户，仅本次新增一个；海外工厂和品牌不另计公司。当前46394业务地址与2021法律页46190邮编差异分开保留。一般valresa邮箱不指定个人；粉末涂料分销madrid邮箱不误作木器技术部联系人。"
+    },
+    "contact": {
+      "label": "Official general business mailbox; no named technical/procurement person inferred",
+      "email": "valresa@valresa.com",
+      "phone": "+34 961 669 560",
+      "contactUrl": "https://valresa.com/contact/"
+    },
+    "source": {
+      "label": "Official current international manufacturing sites and own R&D/product development",
+      "url": "https://valresa.com/empresa/grupo/"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "valresa-riba-roja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "isaval-ribarroja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "juno-erandio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gubretas-istanbul": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "toros-agri-istanbul": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "paradeep-phosphates-bhubaneswar": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -2838,6 +2925,202 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "valresa-riba-roja": {
+    "website": "https://valresa.com/",
+    "contactPage": "https://valresa.com/contact/",
+    "generalEmail": "valresa@valresa.com",
+    "generalPhone": "+34 961 669 560",
+    "address": "Polígono Industrial Reva, Av. dels Gremis, s/n, 46394 Riba-roja de Túria, Valencia, Spain (current business contact;2021legal text has46190)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "valresa@valresa.com",
+        "source": {
+          "label": "Official explicitly disclosed general business mailbox",
+          "url": "https://valresa.com/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current international manufacturing sites and own R&D/product development",
+        "url": "https://valresa.com/empresa/grupo/"
+      },
+      {
+        "label": "Official company wood-coating development and history",
+        "url": "https://valresa.com/empresa/"
+      },
+      {
+        "label": "Official ESFERA waterborne wood-finishes own development",
+        "url": "https://valresa.com/barnices-bricolaje/barnices-interior/"
+      },
+      {
+        "label": "Official270063 waterborne basecoat/finish for wood; current page title is Fondo Acabado Base Agua",
+        "url": "https://valresa.com/?page_id=6566"
+      },
+      {
+        "label": "Official700602 waterborne high-resistance wood varnish and paired hardener",
+        "url": "https://valresa.com/?page_id=6569"
+      },
+      {
+        "label": "Official legal manufacturer ValresaCoatingsSA CIF A46030169",
+        "url": "https://valresa.com/aviso-legal/"
+      },
+      {
+        "label": "Official current general business inbox and address",
+        "url": "https://valresa.com/contact/"
+      },
+      {
+        "label": "Official finishedPU varnish systems",
+        "url": "https://valresa.com/acabado-poliuretano/"
+      },
+      {
+        "label": "Official finishedpolyester varnish systems",
+        "url": "https://valresa.com/acabado-poliester/"
+      },
+      {
+        "label": "Official nitrocellulose finishedwood varnishes",
+        "url": "https://valresa.com/barniz-nitrocelulosico/"
+      },
+      {
+        "label": "Official powder-coating scope",
+        "url": "https://valresa.com/pintura-en-polvo/"
+      },
+      {
+        "label": "Official colour-paste/tinting system scope",
+        "url": "https://valresa.com/servicios/sistema-tintometrico/"
+      },
+      {
+        "label": "Official Turkish joint venture legal relationship and actual current business scope",
+        "url": "https://www.ibavalresa.com.tr/hakkimizda.html"
+      },
+      {
+        "label": "Official Esfera/Valresa/İbavet/İba Sanayi same joint venture brands",
+        "url": "https://www.ibavalresa.com.tr/markalar.html"
+      }
+    ]
+  },
+  "isaval-ribarroja": {
+    "website": "https://www.isaval.es/",
+    "contactPage": "https://www.isaval.es/contacto/",
+    "generalEmail": "isaval@isaval.es",
+    "generalPhone": "+34 96 164 00 01",
+    "address": "C/ Velluters, parcela 2–14, Polígono Industrial Casanova, 46394 Ribarroja del Turia, Valencia, Spain",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "isaval@isaval.es",
+        "source": {
+          "label": "Official explicitly disclosed general business mailbox",
+          "url": "https://www.isaval.es/contacto/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own product development and manufacture at Ribarroja factory",
+        "url": "https://www.isaval.es/sobre-isaval/quienes-somos/"
+      },
+      {
+        "label": "Official actual single-component waterborne polyurethane wood varnish",
+        "url": "https://www.isaval.es/productos/xanol-barniz-interior/"
+      },
+      {
+        "label": "Official original Xanol1907 TDS v6,2026-01-13, wood application and general mailbox; pp1–3",
+        "url": "https://www.isaval.es/wp-content/uploads/fichas-tecnicas/1907_es.pdf"
+      },
+      {
+        "label": "Official manufacturer legal identity, general business inbox, phone and address",
+        "url": "https://www.isaval.es/contacto/"
+      },
+      {
+        "label": "Official website legal owner; same Isaval public account",
+        "url": "https://www.isaval.es/nota-legal/"
+      },
+      {
+        "label": "Official full paints/coatings catalogue; all25pagination pages independently saved",
+        "url": "https://www.isaval.es/categoria-de-producto/pinturas-y-revestimientos/"
+      },
+      {
+        "label": "Official accessory/tools whole scope including non-PO adjunct materials",
+        "url": "https://www.isaval.es/categoria-de-producto/herramientas-y-complementos/"
+      },
+      {
+        "label": "Official Resul physical antislip particles",
+        "url": "https://www.isaval.es/productos/aditivo-resul-antideslizante/"
+      },
+      {
+        "label": "Official Sanit anti-mould/anti-algae additive",
+        "url": "https://www.isaval.es/productos/sanit-aditivo/"
+      },
+      {
+        "label": "Official finished epoxy primer actual coating use",
+        "url": "https://www.isaval.es/productos/imperal-primer-acqua/"
+      },
+      {
+        "label": "Official mineral-surface silicate primer/diluent",
+        "url": "https://www.isaval.es/productos/siltop-sol-silicato-concentrado/"
+      }
+    ]
+  },
+  "juno-erandio": {
+    "website": "https://www.juno.es/",
+    "contactPage": "https://www.juno.es/contacto/",
+    "generalEmail": "infoweb@juno.es",
+    "generalPhone": "+34 944 670 062",
+    "address": "Barrio Saconi, 10, 48950 Erandio, Bizkaia, Spain (current official headquarters and factory contact; TDS spells Sakoni)",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "infoweb@juno.es",
+        "source": {
+          "label": "Official explicitly disclosed general business mailbox",
+          "url": "https://www.junoindustrial.com/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current own paint manufacture and Erandio company history",
+        "url": "https://www.juno.es/quienes-somos/"
+      },
+      {
+        "label": "Official headquarters and factory address and phone",
+        "url": "https://www.juno.es/contacto/"
+      },
+      {
+        "label": "Official actual acrylic waterborne wood finish",
+        "url": "https://www.juno.es/productos/pintura/madera/lasures/ficha/lasur-acuoso/"
+      },
+      {
+        "label": "Official original LASUR ACUOSO TDS; June2016Rev07, currently linked; pp1–2",
+        "url": "https://www.juno.es/assets/media/FT_LASUR-ACUOSO.pdf"
+      },
+      {
+        "label": "Official current2026 full48page finished-product catalogue; wood p33 and epoxy/silane finished primers p23",
+        "url": "https://www.juno.es/assets/media/CATALOGO-JUNO2026.pdf"
+      },
+      {
+        "label": "Official full24page industrial finished-coating catalogue; own manufacture/labs p2",
+        "url": "https://www.junoindustrial.com/assets/media/Catalogo-JUNO-Industrial.pdf"
+      },
+      {
+        "label": "Official industrial division same legal company and general mailbox",
+        "url": "https://www.junoindustrial.com/"
+      },
+      {
+        "label": "Official current additive range, physicalPE/PP antislip beads",
+        "url": "https://www.juno.es/productos/pintura/varios/aditivos"
+      },
+      {
+        "label": "Official legal entity and general communication inbox",
+        "url": "https://www.juno.es/aviso-legal/"
+      }
+    ]
+  },
   "gubretas-istanbul": {
     "website": "https://www.gubretas.com.tr/",
     "contactPage": "https://www.gubretas.com.tr/tr/iletisim",
@@ -6889,6 +7172,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "valresa-riba-roja",
+  "isaval-ribarroja",
+  "juno-erandio",
   "gubretas-istanbul",
   "toros-agri-istanbul",
   "paradeep-phosphates-bhubaneswar",
