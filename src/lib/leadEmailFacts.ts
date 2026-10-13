@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "asian-paints-mumbai": "Your FY2025–26 business review describes WoodTech PU Gold polyurethane wood finishes and Aquadur water-based glossy coatings.",
   "sika-baar": "Your coating systems include Sikagard protective coatings, Sikalastic liquid-applied membranes and Sikafloor flooring systems.",
   "cifo-san-giorgio": "Your slow-release fertilizer for green plants uses granules coated with a porous MCT membrane, and your company describes in-house formulation research and production at San Giorgio di Piano.",
   "coromandel-chennai": "Your Gromor 28-28-0 product description states that ammonium phosphate is coated over urea prills.",

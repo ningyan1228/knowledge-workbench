@@ -2848,11 +2848,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "asian-paints-mumbai",
+    "company": "Asian Paints Limited",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai (registered-office city marker)",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "legacyCompanyDescription": "自有木器/建筑成品涂料研发制造企业；原料与集团关联业务已注明；ELO 具体适配、使用和采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立审读 Asian Paints 原始 FY2025–26 Business Review（8页）、BRSR（22页）及公司法律信息章节（11页），并核对当前官网成品分类、木器涂料、供应商入口和 Penta 原料业务。自身法定经营主体 Asian Paints Limited 制造涂料；业务章节明确 WoodTech PU Gold 聚氨酯木器涂料及 Aquadur 水性亮光产品。ELO TDS 确认涂料大类，可作为其下游成品配方原料的潜在评估对象，不代表具体配方已兼容、已使用或有采购需求。Mumbai 点为公司注册地址所在城市代表位置，不代表某个生产厂 GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "所查原始业务/制造报告、当前全成品分类与木器系列及 Penta 官方化学业务未发现对外销售 ELO、ESBO、环氧化植物油或同类生物增塑输入；结论限这些实际查看的公开范围。保留原料和交易业务事实，不泛称集团没有任何上游化学品：Penta 主页明示产品为 Pentaerythritol 各等级及 Sodium Formate，plasticizers/stabilizers 是由其原料制成产品的下游用途，不等于其产品就是环氧化植物油/生物增塑添加剂。原报告 AP Polymers 已于2026-03-31并入本体，VAM/VAE 相关经营关联记明；不把旧计划目标当作已投产证据，亦不另造一个更名/并入主体。报告 Harind/Nova surface-care 和 PPG 合资关联已识别，但不能从纳米表面技术或股权关系推定其采购/使用 ELO；未声称审读所有关联公司的完整目录。按 Asian Paints Limited、CIN、WoodTech/AP品牌、Penta、PPG Asian Paints/Asian Paints PPG、域名、Mumbai 地址与公开邮箱核对最新main180家及本地/私有研究，无同一正式公司账户。各国品牌、子公司和材料分部不拆户。当前官网明确原料供应商入口，customercare 是一般客服业务邮箱，不标为采购个人；pentasales 仅为 Penta 分部商业/采购通路，不转借为成品涂料中央采购邮箱。投资者关系及BRSR报告联系邮箱不用于开发信。"
+    },
+    "contact": {
+      "label": "Official raw-material supplier entry; disclosed general customer-care mailbox for team routing",
+      "email": "customercare@asianpaints.com",
+      "phone": "1800-209-5678 (India customer-care route)",
+      "contactUrl": "https://www.asianpaints.com/more/supplier-registration.html"
+    },
+    "source": {
+      "label": "Original FY2025–26 Business Review: own WoodTech PU Gold and Aquadur coating range, full reviewed eight-page business chapter",
+      "url": "https://static.asianpaints.com/content/dam/annual-report-2526/pdf/Business-review.pdf"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "asian-paints-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sika-baar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cifo-san-giorgio": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "coromandel-chennai": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -3044,6 +3073,58 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "asian-paints-mumbai": {
+    "website": "https://www.asianpaints.com/",
+    "contactPage": "https://www.asianpaints.com/more/supplier-registration.html",
+    "generalEmail": "customercare@asianpaints.com",
+    "generalPhone": "1800-209-5678 (India customer-care route)",
+    "address": "Registered and corporate office: 6A & 6B, Shantinagar, Santacruz (East), Mumbai 400055, Maharashtra, India. CIN L24220MH1945PLC004598. Marker is Mumbai city, not a particular manufacturing-site GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "customercare@asianpaints.com",
+        "source": {
+          "label": "Official expressly disclosed entry for prospective paint raw-material suppliers; customer-care mailbox is general routing only",
+          "url": "https://www.asianpaints.com/more/supplier-registration.html"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original FY2025–26 Business Review: own WoodTech PU Gold and Aquadur coating range, full reviewed eight-page business chapter",
+        "url": "https://static.asianpaints.com/content/dam/annual-report-2526/pdf/Business-review.pdf"
+      },
+      {
+        "label": "Original FY2025–26 BRSR: standalone legal entity, actual manufacturing, reporting boundary and procurement",
+        "url": "https://static.asianpaints.com/content/dam/annual-report-2526/pdf/Business-Responsibility-and-Sustainability-Report.pdf"
+      },
+      {
+        "label": "Original FY2025–26 General Shareholder Information: company CIN and Mumbai registered office",
+        "url": "https://static.asianpaints.com/content/dam/annual-report-2526/pdf/General-shareholder-information.pdf"
+      },
+      {
+        "label": "Official expressly disclosed entry for prospective paint raw-material suppliers; customer-care mailbox is general routing only",
+        "url": "https://www.asianpaints.com/more/supplier-registration.html"
+      },
+      {
+        "label": "Official Penta division full disclosed chemical range and upstream precursor applications",
+        "url": "https://penta.asianpaints.com/"
+      },
+      {
+        "label": "Official current whole finished paint/coating and ancillary business categories",
+        "url": "https://www.asianpaints.com/products.html"
+      },
+      {
+        "label": "Official current own wood-coating families, including water-based WoodTech Aquadur",
+        "url": "https://www.asianpaints.com/products/wood-finish.html"
+      },
+      {
+        "label": "Official current integrated annual-report directory linking the original report sections",
+        "url": "https://www.asianpaints.com/content/annualreport/annual-report-25-26.html"
+      }
+    ]
+  },
   "sika-baar": {
     "website": "https://www.sika.com/",
     "contactPage": "https://industry.sika.com/en/home/about-industry/contact.html",
@@ -7621,6 +7702,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "asian-paints-mumbai",
   "sika-baar",
   "cifo-san-giorgio",
   "coromandel-chennai",
