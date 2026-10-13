@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "rfcl-ramagundam": "Your published company profile describes RFCL’s production of neem-coated prilled urea at the Ramagundam unit.",
   "ppg-pittsburgh": "Your AMERLOCK 400 is a two-component, high-solids epoxy coating, as described in your January 31, 2025 product data sheet.",
   "behr-santa-ana": "Your BEHR PREMIUM Cabinet, Door & Trim range includes water-based enamel for cabinets, doors and woodwork.",
   "benjamin-moore-montvale": "Your ADVANCE Satin 792 is a waterborne alkyd enamel for interior doors, trim and cabinets, including wood surfaces.",

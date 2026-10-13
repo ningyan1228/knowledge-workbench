@@ -2959,11 +2959,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "rfcl-ramagundam",
+    "company": "Ramagundam Fertilizers and Chemicals Limited (RFCL)",
+    "productId": "fertilizer-coating",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ramagundam (disclosed factory city marker)",
+    "latitude": 18.755,
+    "longitude": 79.474,
+    "legacyCompanyDescription": "独立合资自产苦楝油包衣尿素企业；与NFL等股权关联已注明；未确认PU/聚合物包膜或我方材料采购适配",
+    "fit": "可开发候选",
+    "signal": "独立读取当前官网自产尿素工艺、全产品类别（尿素/氨）、法定合资主体、业务联系及原始2025–26年报制造/法律/持股/经营章节。官网明确自产 neem-coated prilled urea，年报确认自身Ramagundam工厂继续制造尿素；苦楝油包衣是确实的下游包衣能力，不等于聚氨酯树脂、同类包膜体系或我方材料已适配/采购。年报2025–26尿素产量8.56LMT，不能把旧官网2024–25的11.95LMT或12.7LMT设计目标当2026实际产量。地图Ramagundam为已披露工厂所在城市代表点，不声称具体厂内GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立查看当前公司整体业务、全部尿素/氨产品、自产流程及年报经营/原料/制造章节，所查未见销售包衣树脂、聚氨酯原料或肥料包衣剂；结论限实际读到的公开范围，不泛称不销售任何工业化学品（保留氨业务）。原报告及官网明确RFCL为2015年独立成立、自产并拥有自身采购流程的合资经营主体，NFL/EIL各26%、FCIL11%等关联已记明，不是NFL工厂更名；不能因NFL既有账户或共同参股自动折叠这个独立法定经营公司。按RFCL全名、CINU24100DL2015PLC276753、rfcl域名、Ramagundam工厂/NewDelhi注册/Noida经营地址及admin邮箱核对最新main184家及本地/私有研究，无同一正式账户；分支工厂不拆户。旧FCIL关停单位与新RFCL复产法人不靠改名制造新增。admin为一般业务路由，不标采购个人；2026-02-16 walkie-talkie招标中Ramya M仅明确Materials地址/公开邮箱，无完整职务且已于3月关闭，不推断原料采购负责人或借该招标写材料需求。年报S.K.Jindal以原披露首字母保存，M&C缩写不展开，不构造个人邮箱；团队称呼。"
+    },
+    "contact": {
+      "label": "Official general RFCL business mailbox; Ramagundam plant public telephone",
+      "email": "admin@rfcl.co.in",
+      "phone": "+91 8728 257488",
+      "contactUrl": "https://rfcl.co.in/contact.php"
+    },
+    "source": {
+      "label": "Official company profile explicitly reports own neem-coated prilled urea production and JV operating identity",
+      "url": "https://rfcl.co.in/"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rfcl-ramagundam": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "ppg-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "behr-santa-ana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "benjamin-moore-montvale": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -3159,6 +3188,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rfcl-ramagundam": {
+    "website": "https://rfcl.co.in/",
+    "contactPage": "https://rfcl.co.in/contact.php",
+    "generalEmail": "admin@rfcl.co.in",
+    "generalPhone": "+91 8728 257488",
+    "address": "RFCL plant: Fertilizers City, RFCL Plant, Ramagundam, Peddapalli, Telangana505210,India. Registered: ScopeComplex,7InstitutionalArea,LodhiRoad,NewDelhi110003. Corporate:4thFloor,Wing-A,KribhcoBhawan,Sector1,Noida201301. CINU24100DL2015PLC276753. Marker is factory city, not precise plant GPS.",
+    "contacts": [
+      {
+        "name": "S. K. Jindal",
+        "title": "DGM (M&C); Unit Head, Ramagundam Unit",
+        "department": "Production",
+        "source": {
+          "label": "Original132-page AnnualReport2025–26, own legal operation and actual urea production; financial chapters not claimed fully read",
+          "url": "https://rfcl.co.in/upload/RFCL%20Annual%20Report%202025-2026.pdf"
+        },
+        "verifiedAt": "2026-10-13"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "admin@rfcl.co.in",
+        "source": {
+          "label": "Official registered/corporate/plant public contact and explicitly published general admin@rfcl.co.in",
+          "url": "https://rfcl.co.in/contact.php"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official company profile explicitly reports own neem-coated prilled urea production and JV operating identity",
+        "url": "https://rfcl.co.in/"
+      },
+      {
+        "label": "Original132-page AnnualReport2025–26, own legal operation and actual urea production; financial chapters not claimed fully read",
+        "url": "https://rfcl.co.in/upload/RFCL%20Annual%20Report%202025-2026.pdf"
+      },
+      {
+        "label": "Official actual own urea-manufacturing process",
+        "url": "https://rfcl.co.in/urea.php"
+      },
+      {
+        "label": "Official whole other product category: own ammonia manufacture",
+        "url": "https://rfcl.co.in/ammonia.php"
+      },
+      {
+        "label": "Official registered/corporate/plant public contact and explicitly published general admin@rfcl.co.in",
+        "url": "https://rfcl.co.in/contact.php"
+      },
+      {
+        "label": "Official current own legal/JV profile",
+        "url": "https://rfcl.co.in/about.php"
+      }
+    ]
+  },
   "ppg-pittsburgh": {
     "website": "https://www.ppg.com/",
     "contactPage": "https://procurement.ppg.com/Raw-Material-Introduction",
@@ -7966,6 +8050,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rfcl-ramagundam",
   "ppg-pittsburgh",
   "behr-santa-ana",
   "benjamin-moore-montvale",
