@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'weha-agro-sejahtera-jakarta': 'Your company manufactures Nagaemas NPK granules, and your published production process includes a coating step intended to support more controlled nutrient release and prevent caking.',
   'genas-gen-boya-tuzla': 'Your company manufactures industrial and marine coatings at its Tuzla facility, and your GENEPOX range includes zinc-rich anticorrosive primers and protective coating formulations.',
   "valresa-riba-roja": "Your ESFERA range includes 270063, a water-based basecoat and finish described for the complete wood-varnishing process.",
   "isaval-ribarroja": "Your Xanol Barniz Interior is a single-component water-based polyurethane varnish for wood, and your company states that its product portfolio is developed and manufactured in-house.",
