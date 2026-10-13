@@ -2736,11 +2736,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "fcp-cerea-bonavicina",
+    "company": "Fabbrica Cooperativa Perfosfati Cerea S.C. (FCP Cerea)",
+    "productId": "fertilizer-coating",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Bonavicina di San Pietro di Morubio",
+    "latitude": 45.207,
+    "longitude": 11.0964,
+    "legacyCompanyDescription": "自产复杂颗粒肥并有实际包衣线；PU/膜材料、我方产品使用/采购/配方适配未确认",
+    "fit": "可开发候选",
+    "signal": "独立读当前自有制造/包衣线、2018建成记录、当前Mastercote与Control、所有四大成品分类及81页原始英文目录：Fabbrica Cooperativa Perfosfati Cerea在Bonavicina实际生产复杂NPK/NP/PK颗粒肥并运行包衣线；原目录PDF43页(印刷84–85页)说明造粒后用液态/粉状微量营养/生物刺激等添加物涂覆自产肥。当前Mastercote为含包衣尿素的NPK成品，Control为含脲甲醛的缓释NPK；不据此宣称Mastercote每粒尿素均由该厂自行包膜，不将生物活化/NBPT/脲甲醛混为PU膜。对应肥料包衣原料TDS包衣复合肥应用的潜在技术评估；PU/聚合物膜树脂类型、使用/采购/需求/适配未确认。地图为Bonavicina城市代表位置。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立审读自有完整制造/研发、全部颗粒/特殊营养/水溶肥/有机认证产品分类、原始81页全目录、Cerere/Reactive/Futura实际成品用途与法名/VAT/业务联系。范围含NPK/NP/PK、包衣/缓释肥、叶面/滴灌营养、微生物/海藻/氨基酸/腐植酸生物刺激成品；保留Cerere含47%中长链多元醇事实，当前叶页明确叶面/根部抗逆成品用途，这不是公开对外销售PU反应多元醇原料或肥料树脂/独立包衣剂的证据。原目录自有包衣过程使用多种输入，并不据此推断全部输入自产或出售；所查未发现肥料包衣树脂、PU反应原料或独立肥料包衣剂对外销售，结论限所查公开范围。按Fabbrica Cooperativa Perfosfati Cerea S.C./FCP Cerea/Cerea FCP、VAT00222260234、fcpcerea域名、Farfusola6厂址及业务/实验室邮箱核对最新main176家、本地和私有队列，无同一正式账户；历史Cerea厂迁至Bonavicina、产品品牌/包衣线不拆户。实验室/出口邮箱按官网部门记录；不从francesca.moretto邮箱推断具名人员当前职位或把一般邮箱归给个人。"
+    },
+    "contact": {
+      "label": "Official laboratory business inbox; no named technical/procurement person inferred",
+      "email": "laboratorio@fcpcerea.it",
+      "phone": "+39 045 7125963",
+      "contactUrl": "https://fcpcerea.it/contatti"
+    },
+    "source": {
+      "label": "Official current own compound-fertilizer manufacture, actual coating plant and chemical/agronomic lab",
+      "url": "https://fcpcerea.it/azienda"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fcp-cerea-bonavicina": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "valresa-riba-roja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "isaval-ribarroja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "juno-erandio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -2928,6 +2957,98 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fcp-cerea-bonavicina": {
+    "website": "https://fcpcerea.it/",
+    "contactPage": "https://fcpcerea.it/contatti",
+    "generalEmail": "fcpcerea@fcpcerea.it",
+    "generalPhone": "+39 045 7125911",
+    "address": "Via Farfusola 6, 37050 Bonavicina di S. Pietro di Morubio, Verona, Italy",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "laboratorio@fcpcerea.it",
+        "source": {
+          "label": "Official current explicitly disclosed department business mailbox",
+          "url": "https://fcpcerea.it/contatti"
+        }
+      },
+      {
+        "department": "General",
+        "email": "fcpcerea@fcpcerea.it",
+        "source": {
+          "label": "Official current explicitly disclosed department business mailbox",
+          "url": "https://fcpcerea.it/contatti"
+        }
+      },
+      {
+        "department": "Technical",
+        "email": "agronomia@fcpcerea.it",
+        "source": {
+          "label": "Official current explicitly disclosed department business mailbox",
+          "url": "https://fcpcerea.it/contatti"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "francesca.moretto@fcpcerea.it",
+        "source": {
+          "label": "Official current explicitly disclosed department business mailbox",
+          "url": "https://fcpcerea.it/contatti"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official current own compound-fertilizer manufacture, actual coating plant and chemical/agronomic lab",
+        "url": "https://fcpcerea.it/azienda"
+      },
+      {
+        "label": "Official2018 coating-plant construction for liquid/powder post-granulation enrichment",
+        "url": "https://fcpcerea.it/fcp-cerea-la-storia"
+      },
+      {
+        "label": "Official original81page English catalogue; physicalPDF43/printed84–85 coating manufacture,PDF29/printed56–57 Cerere; document revision date not assumed from retrieval",
+        "url": "https://fcpcerea.it/uploads/media/catalogo-eng.pdf"
+      },
+      {
+        "label": "Official current Mastercote NPK with coated urea; coating chemistry/manufacturing of every constituent not disclosed",
+        "url": "https://fcpcerea.it/prodotti/mastercote/"
+      },
+      {
+        "label": "Official current Control slow-release urea-formaldehyde NPK; not proof of PU film",
+        "url": "https://fcpcerea.it/prodotti/control/"
+      },
+      {
+        "label": "Official current laboratory/general/agronomic/export business contact and legal/VAT identity",
+        "url": "https://fcpcerea.it/contatti"
+      },
+      {
+        "label": "Official all granular finished fertilizers",
+        "url": "https://fcpcerea.it/categoria/granulari"
+      },
+      {
+        "label": "Official all special plant-nutrition formulations",
+        "url": "https://fcpcerea.it/categoria/nutrizione-speciale"
+      },
+      {
+        "label": "Official all water-soluble finished fertilizers",
+        "url": "https://fcpcerea.it/categoria/idrosolubile"
+      },
+      {
+        "label": "Official all organic-approved finished products",
+        "url": "https://fcpcerea.it/categoria/biologica"
+      },
+      {
+        "label": "Official Cerere polyol/humic plant foliar/root stress-protection formulation; preserve actual use",
+        "url": "https://fcpcerea.it/prodotti/cerere/"
+      },
+      {
+        "label": "Official actual research and formulation activity",
+        "url": "https://fcpcerea.it/ricerca-e-sviluppo-in-fcp-cerea"
+      }
+    ]
+  },
   "valresa-riba-roja": {
     "website": "https://valresa.com/",
     "contactPage": "https://valresa.com/contact/",
@@ -7175,6 +7296,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fcp-cerea-bonavicina",
   "valresa-riba-roja",
   "isaval-ribarroja",
   "juno-erandio",
