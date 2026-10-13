@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "ppg-pittsburgh": "Your AMERLOCK 400 is a two-component, high-solids epoxy coating, as described in your January 31, 2025 product data sheet.",
+  "behr-santa-ana": "Your BEHR PREMIUM Cabinet, Door & Trim range includes water-based enamel for cabinets, doors and woodwork.",
+  "benjamin-moore-montvale": "Your ADVANCE Satin 792 is a waterborne alkyd enamel for interior doors, trim and cabinets, including wood surfaces.",
   "asian-paints-mumbai": "Your FY2025–26 business review describes WoodTech PU Gold polyurethane wood finishes and Aquadur water-based glossy coatings.",
   "sika-baar": "Your coating systems include Sikagard protective coatings, Sikalastic liquid-applied membranes and Sikafloor flooring systems.",
   "cifo-san-giorgio": "Your slow-release fertilizer for green plants uses granules coated with a porous MCT membrane, and your company describes in-house formulation research and production at San Giorgio di Piano.",

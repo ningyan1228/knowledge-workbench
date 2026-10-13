@@ -2876,11 +2876,97 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "benjamin-moore-montvale",
+    "company": "Benjamin Moore & Co.",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Montvale (corporate-office city marker)",
+    "latitude": 41.0468,
+    "longitude": -74.0229,
+    "legacyCompanyDescription": "自有水性木器成品涂料研发制造企业；NL-W1201具体适配、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "2025企业责任报告（2026年4月发表）确认公司自身有制造设施及配方研发，不是涂料零售商。当前官网链接 ADVANCE Satin792 原始两页TDS（US041023）明确 waterborne alkyd、木材及门/柜/饰条用途；当前产品页仍列该系列。NL-W1201 TDS 支持木材，可提出水性木器配方评估，不意味着该水性醇酸已兼容我方PO乳液。Montvale标记为总部所在城市，不是工厂GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立审读2025报告及当前产品分类、INSL-X完整成品类别、Corotech工业成品范围、STIX具体成品底漆与清洁/预处理三项产品，所查未发现对外销售水性PO乳液、CPO/PO原料分散体或原料附着力促进剂；结论限实际查看的公开范围，不称穷尽全SKU。STIX是配制好的acrylic-urethane bonding primer，finished primer不因名字bonding归为原料同行。Gennex为自有着色体系，不等同PO/CPO原料；不从2012宣传材料推定当前对外售卖树脂。原报告Berkshire母公司关联已注明；其他独立经营投资业务不借财务共同母公司自动并户，亦未把整个投资集团声称为非原料供应商。按Benjamin Moore & Co.、INSL-X/Corotech/Gennex/ADVANCE品牌、官网域名、Montvale地址及公开邮箱核对最新main181家，无同一正式账户，品牌/工厂/国家网点不拆新增。sustainmoore报告问题邮箱不用作原料采购，info为一般业务路由，无个人采购邮箱。"
+    },
+    "contact": {
+      "label": "Official general business contact; route to technical/material evaluation team",
+      "email": "info@benjaminmoore.com",
+      "phone": "+1 201 573 9600 (company telephone printed in currently linked TDS US041023)",
+      "contactUrl": "https://www.benjaminmoore.com/en-us/contact-us"
+    },
+    "source": {
+      "label": "Original currently linked ADVANCE Satin 792 TDS, code US041023; waterborne alkyd and wood/cabinet uses",
+      "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_0792/792_TDS_US.pdf"
+    },
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "behr-santa-ana",
+    "company": "Behr Process LLC (Behr Paint Company, Masco)",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Santa Ana (corporate-office city marker)",
+    "latitude": 33.7455,
+    "longitude": -117.8677,
+    "legacyCompanyDescription": "自有水性木器成品涂料研发制造企业；NL-W1201具体适配、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "原始33页 Cabinet Door Trim EPD（2024-09-09签发、5年有效，生命周期基础数据为2021年）明示法定制造主体 Behr Process LLC、当前总部地址、水性配制成品及木器用途，并描述原料计量/预混/分散/let-down制漆流程；当前Behr产品页与Masco旗下Behr制造网点交叉核对。NL-W1201 TDS确认木材，可询问水性木器原料评估，未确认其采购/使用或具体体系适配。Santa Ana为总部城市代表点；不拿生命周期旧数据当2026产量或采购证据。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "当前Behr专业页面完整业务类别包括成品内外墙涂料、木器、底漆、地坪、装饰、气雾剂、caulks/sealants、清洁/去除产品和工具；原始EPD与当前具体木器产品为自身配制并生产的成品。所查未发现对外供应PO乳液、CPO/PO原料分散体或原料附着力促进剂；结论限实际读到的类别/具体文件，不声称21项内墙SKU全部审读。Finished bonding/adhesion primer不因名称被误判为raw adhesion promoter；PP/HDPE容器是包装材料，不是公司在卖PO涂料原料。Masco母公司、Behr Process LLC、BEHR/KILZ/WHIZZ及旧Corporation名称、域名、SantaAna地址、电话与最新main181家核对，无同一正式账户；品牌/地区工厂不另算。EPD kbird@behr.com只标study commissioner邮箱，未披露姓名与采购职位，不用作开发信或猜K.Bird个人名；Veronica公开技术角色可保留，但无个人邮箱，首封与提示均以团队称呼。Architectural reps是涂料客户销售/技术路由，不冒充原料采购。"
+    },
+    "contact": {
+      "label": "Official business and technical contact page; corporate telephone, no verified general outreach mailbox",
+      "phone": "+1 714 545 7101",
+      "contactUrl": "https://www.behr.com/pro/contact-a-rep/"
+    },
+    "source": {
+      "label": "Original33-page Cabinet Door Trim EPD, issued2024-09-09 for5years; own manufacturer and formulation",
+      "url": "https://www.behr.com/binaries/content/assets/behrpro/pdf/epd/121.1_behr_premium_cabinet_door_and_trim.pdf"
+    },
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "ppg-pittsburgh",
+    "company": "PPG Industries, Inc. (Protective and Marine Coatings)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Pittsburgh (principal-office city marker)",
+    "latitude": 40.4406,
+    "longitude": -79.9959,
+    "legacyCompanyDescription": "自有成品防护/船舶涂料制造及采购经营公司；ELO适配、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取原始2025年报10-K法定主体、全部三业务部门/当前产品范围、制造/R&D及原料章节，证明自身美国经营制造，不把客户Plants&Facilities用途页当自有工厂。官网当前链接原始AMERLOCK400美国英文PDS为2025-01-31修订的7页文件，明确双组分高固体环氧成品涂料。ELO TDS确认涂料大类，可提出配方原料评估；不推定该牌号已兼容或买用ELO。全球原料引入流程必须PPG sponsor发起/邀请，不能称开放注册或已有sponsor。Pittsburgh为法定总部城市点，不是工厂GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "原始2025年报公开三部门业务类别/原料与制造范围、当前SpecialtyProducts全类别及具体AMERLOCK400成品资料中，所查未发现销售ELO、ESBO、环氧化植物油或同类生物增塑原料；限定实际查看的公开范围，未声称把所有全球牌号SDS读遍。保留原料及光学monomers/OLED/TESLIN/pretreatment经营事实；普通环氧成品/光学monomer不等同环氧化植物油。当前制造描述和原始采购章节证明外购原料制成自有产品，但没有ELO具体购买事实。按PPG Industries Inc./PPG Ohio/PMC/Sigma及年报品牌、域名、OnePPGPlace、业务邮箱核对最新main181家，无同一集团经营账户；不拆品牌与工厂。既有AsianPaints记录的50:50印度JV关联与本报告alliance对应，双方为独立经营法定主体，PPG美国经营与采购账户不是将印度JV改名新增。现有renner-italia-minerbio属于RennerHerrmann；另核对原集团历史2007年仅decorative division售给PPG，不能从RENNER商标同名将独立RennerItalia或整个Herrmann认作PPG。同样不沿用已剥离美国/加拿大建筑涂料业务的旧联系。pmcorderhelp为北美成品订单/一般路由，不标采购邮箱；两名公开采购职务无个人email，邮件团队称呼，不构造邮箱。"
+    },
+    "contact": {
+      "label": "Sponsor-dependent raw-material introduction procedure; separate disclosed North American PMC general business mailbox for routing",
+      "email": "pmcorderhelp@ppg.com",
+      "phone": "+1 412 434 3131 (registrant corporate telephone)",
+      "contactUrl": "https://procurement.ppg.com/Raw-Material-Introduction"
+    },
+    "source": {
+      "label": "Original currently linked US AMERLOCK400 seven-page PDS, revised2025-01-31",
+      "url": "https://dam-cdn.ppg.com/adaptivemedia/rendition?id=8f0dedb9842d2dca9c1cf6d720c831654e1bef62"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ppg-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "behr-santa-ana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "benjamin-moore-montvale": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "asian-paints-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sika-baar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cifo-san-giorgio": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
@@ -3073,6 +3159,184 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ppg-pittsburgh": {
+    "website": "https://www.ppg.com/",
+    "contactPage": "https://procurement.ppg.com/Raw-Material-Introduction",
+    "generalEmail": "pmcorderhelp@ppg.com",
+    "generalPhone": "+1 412 434 3131 (registrant corporate telephone)",
+    "address": "PPG Industries, Inc.,One PPG Place,Pittsburgh,Pennsylvania15272,United States. Incorporated in Pennsylvania; IRS25-0730780. Principal-office city marker, not a named plant GPS.",
+    "contacts": [
+      {
+        "name": "Christine Camsuzou",
+        "title": "Chief Procurement Officer and Vice-President Integrated Supply Chain",
+        "department": "Procurement",
+        "source": {
+          "label": "Official actual global procurement team; role profiles without inferred personal emails",
+          "url": "https://procurement.ppg.com/Our-Team"
+        },
+        "verifiedAt": "2026-10-13"
+      },
+      {
+        "name": "William Pierce II",
+        "title": "Global Director, Raw Materials",
+        "department": "Procurement",
+        "source": {
+          "label": "Official actual global procurement team; role profiles without inferred personal emails",
+          "url": "https://procurement.ppg.com/Our-Team"
+        },
+        "verifiedAt": "2026-10-13"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "pmcorderhelp@ppg.com",
+        "source": {
+          "label": "Official US/Canada PMC order/business routing mailbox pmcorderhelp@ppg.com, not procurement or personal email",
+          "url": "https://www.ppg.com/en-US/pmc/contact"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original currently linked US AMERLOCK400 seven-page PDS, revised2025-01-31",
+        "url": "https://dam-cdn.ppg.com/adaptivemedia/rendition?id=8f0dedb9842d2dca9c1cf6d720c831654e1bef62"
+      },
+      {
+        "label": "Original2025 Annual Report/Form10-K: own US legal manufacturer, business segments, manufacturing, raw materials and alliances",
+        "url": "https://s25.q4cdn.com/953898558/files/doc_financials/2025/ar/PPG-ANNUAL-REPORT-2025-10K.pdf"
+      },
+      {
+        "label": "Official raw-material introduction procedure requires a PPG sponsor invitation/request",
+        "url": "https://procurement.ppg.com/Raw-Material-Introduction"
+      },
+      {
+        "label": "Official actual global procurement team; role profiles without inferred personal emails",
+        "url": "https://procurement.ppg.com/Our-Team"
+      },
+      {
+        "label": "Official US/Canada PMC order/business routing mailbox pmcorderhelp@ppg.com, not procurement or personal email",
+        "url": "https://www.ppg.com/en-US/pmc/contact"
+      },
+      {
+        "label": "Current whole specialty product/material categories",
+        "url": "https://www.ppg.com/en-US/about-ppg/specialty-products"
+      },
+      {
+        "label": "Official own manufacturing converts bought raw materials into finished products",
+        "url": "https://www.ppg.com/en-US/sustainability/waste"
+      },
+      {
+        "label": "Current own AMERLOCK400 product and US/Canada region",
+        "url": "https://www.ppg.com/en-US/pmc/product/amerlock-400/614103M0302"
+      },
+      {
+        "label": "Renner Herrmann original institutional history: decorative paints divested to PPG in2007, Renner Italia remains a distinct operating business",
+        "url": "https://www.rennercoatings.com/en/institucional/"
+      }
+    ]
+  },
+  "behr-santa-ana": {
+    "website": "https://www.behr.com/",
+    "contactPage": "https://www.behr.com/pro/contact-a-rep/",
+    "generalPhone": "+1 714 545 7101",
+    "address": "Behr Process LLC / Behr Paint Company,1801 East St.Andrew Place,Santa Ana,CA92705,United States. EPD manufacturer address and current corporate-office address agree; city marker, not a particular production-site GPS.",
+    "contacts": [
+      {
+        "name": "Veronica Jimenez",
+        "title": "Director of Primers and Specialty Coatings",
+        "department": "Technical",
+        "source": {
+          "label": "Official2026-06-09 article names Veronica Jimenez, Director of Primers and Specialty Coatings; no personal mailbox disclosed",
+          "url": "https://www.behr.com/pro/onthejob/blog/difficult-paint-substrates/"
+        },
+        "verifiedAt": "2026-10-13"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Original33-page Cabinet Door Trim EPD, issued2024-09-09 for5years; own manufacturer and formulation",
+        "url": "https://www.behr.com/binaries/content/assets/behrpro/pdf/epd/121.1_behr_premium_cabinet_door_and_trim.pdf"
+      },
+      {
+        "label": "Current own waterborne cabinet/door/trim product entry read through public primary web",
+        "url": "https://www.behr.com/products/specialty-paint/behr-premium-cabinet-door-and-trim"
+      },
+      {
+        "label": "Current Masco/Behr actual manufacturing sites and corporate headquarters",
+        "url": "https://jobs.masco.com/behrpaint/us/en/locations"
+      },
+      {
+        "label": "Current company/parent careers source and published corporate telephone",
+        "url": "https://jobs.masco.com/behrpaint/us/en/life-at-behr"
+      },
+      {
+        "label": "Current full professional finished-product category navigation and actual business/technical route, public web after native403",
+        "url": "https://www.behr.com/pro/contact-a-rep/"
+      },
+      {
+        "label": "Current interior coating selector; nine displayed of21 results is not a whole-SKU read",
+        "url": "https://www.behr.com/products/filter/products"
+      },
+      {
+        "label": "Official2026-06-09 article names Veronica Jimenez, Director of Primers and Specialty Coatings; no personal mailbox disclosed",
+        "url": "https://www.behr.com/pro/onthejob/blog/difficult-paint-substrates/"
+      }
+    ]
+  },
+  "benjamin-moore-montvale": {
+    "website": "https://www.benjaminmoore.com/",
+    "contactPage": "https://www.benjaminmoore.com/en-us/contact-us",
+    "generalEmail": "info@benjaminmoore.com",
+    "generalPhone": "+1 201 573 9600 (company telephone printed in currently linked TDS US041023)",
+    "address": "Benjamin Moore & Co.,101 Paragon Drive,Montvale,NJ07645,United States. Corporate-office city marker, not a manufacturing-plant GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@benjaminmoore.com",
+        "source": {
+          "label": "Official general business mailbox info@benjaminmoore.com and Montvale office",
+          "url": "https://www.benjaminmoore.com/en-us/contact-us"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original currently linked ADVANCE Satin 792 TDS, code US041023; waterborne alkyd and wood/cabinet uses",
+        "url": "https://media.benjaminmoore.com/WebServices/prod/assets/production/datasheets/TDS_0792/792_TDS_US.pdf"
+      },
+      {
+        "label": "Original2025 Corporate Responsibility Report, published April2026: own manufacture, formulations, parent and sourcing",
+        "url": "https://www.benjaminmoore.com/-/media/sites/benjaminmoore/files/pdf/corporate-responsibility/2025_corporate_responsibility_report_us.pdf"
+      },
+      {
+        "label": "Current own whole product selector; initially displayed products are not a claimed exhaustive SKU review",
+        "url": "https://www.benjaminmoore.com/en-us/product-catalog"
+      },
+      {
+        "label": "Current INSL-X full finished coating and cleaning/preparation category scope",
+        "url": "https://www.benjaminmoore.com/en-us/interior-exterior-paints-stains/insl-x"
+      },
+      {
+        "label": "Current Corotech commercial and industrial finished coating scope",
+        "url": "https://www.benjaminmoore.com/en-us/contractors/corotech-high-performance-coatings"
+      },
+      {
+        "label": "Actual cleaning/preparation products: degreaser, citrus cleaner and concrete etch",
+        "url": "https://www.benjaminmoore.com/en-us/b/insl-x-cleaning-prep-products"
+      },
+      {
+        "label": "Current STIX: formulated acrylic-urethane finished bonding primer, not evidence of a raw PO/CPO dispersion product",
+        "url": "https://www.benjaminmoore.com/en-us/interior-exterior-paints-stains/insl-x/stix-waterborne-bonding-primer"
+      },
+      {
+        "label": "Official general business mailbox info@benjaminmoore.com and Montvale office",
+        "url": "https://www.benjaminmoore.com/en-us/contact-us"
+      }
+    ]
+  },
   "asian-paints-mumbai": {
     "website": "https://www.asianpaints.com/",
     "contactPage": "https://www.asianpaints.com/more/supplier-registration.html",
@@ -7702,6 +7966,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ppg-pittsburgh",
+  "behr-santa-ana",
+  "benjamin-moore-montvale",
   "asian-paints-mumbai",
   "sika-baar",
   "cifo-san-giorgio",
