@@ -2592,11 +2592,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-12"
   },
+  {
+    "id": "toros-agri-istanbul",
+    "company": "Toros Tarım Sanayi ve Ticaret A.Ş. (Toros Agri; Tekfen Group)",
+    "productId": "fertilizer-coating",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "İstanbul (headquarters city marker)",
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "legacyCompanyDescription": "自有复合肥制造与公开NP颗粒涂覆评估能力；2021研究阶段，商业控释/PU包膜未确认",
+    "fit": "可开发候选",
+    "signal": "独立重读公司自有NPK制造、Mersin研发配方和2021年原始6页论文：Toros研发作者在其NP20-20-0复合肥表面实际涂覆商业液体/蜡涂层并做小袋储存评估。对应TDS包衣复合肥的潜在原料配方评估账户；所引证据为2021年实验研究，不写成已商业投产的控释/PU产线，不把防结块研究效果转给我方材料。FY2025集团年报确认现有制造与完整业务，官网保留一般业务入口。地图为İstanbul总部城市，非Mersin实验室或工厂GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立核对完整成品肥目录、三厂制造、Toros子公司及Tekfen FY2025原始85页年报。公开业务为矿物/水溶/有机/有机矿物成品肥、种子/农产品、包装袋、港口及自由区；关联集团另有工程EPC、钢结构/管道、地产和投资，不能把客户管线/厂房施工或工程采购当原料制造。Toros Gönen涉及腐殖酸和有机肥，不能笼统宣称集团不卖任何原料；所查公开范围未发现对外供应肥料包衣树脂、PU输入原料或同类独立包衣剂。原始论文为已有商业涂层和生物基候选涂层的下游应用评估，没有证据据此宣称公司生产/销售涂层原料。按Toros/Tekfen法人、品牌、toros.com.tr/tekfen.com.tr、当前İstanbul总部及Mersin/Ceyhan/Samsun厂址核对main167家，无同一账户；工厂、终端及子公司不另计。2021论文作者邮件不作为已核验当前员工联系方式，未推断当前职务或个人邮箱；公司当前官方电话和联系入口用于业务转接。"
+    },
+    "contact": {
+      "label": "Official corporate business contact entry; no current business mailbox independently verified",
+      "phone": "+90 212 357 0202",
+      "contactUrl": "https://www.toros.com.tr/tr/toros-kurumsal/iletisim/genel-iletisim-bilgileri"
+    },
+    "source": {
+      "label": "Original 2021 Toros R&D study: actual NP20-20 compound-fertiliser surface-coating evaluation",
+      "url": "https://www.eurjchem.com/index.php/eurjchem/article/view/2120"
+    },
+    "checkedAt": "2026-10-13"
+  },
+  {
+    "id": "gubretas-istanbul",
+    "company": "Gübre Fabrikaları Türk A.Ş. (GÜBRETAŞ; Tarım Kredi Group)",
+    "productId": "fertilizer-coating",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "İstanbul (headquarters city marker)",
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "legacyCompanyDescription": "自产NBPT稳定化尿素SLOWFERT系列；官网缓释分类，非已确认聚合物/PU阻隔包膜",
+    "fit": "可开发候选",
+    "signal": "独立重读SLOWFERT SÜPER İNCİ具体产品与原始登记证。证书列Gübre Fabrikaları Türk Anonim Şirketi为Üretici（生产商）、生产国Türkiye，2023续证及2026签署袋标均已渲染核对；官网将该NBPT抑制剂尿素归入Slow Release Fertilizer系列。以公司公开缓释产品分类与TDS应用进行潜在配方评估，明确实际登记为NBPT稳定化尿素；不等同独立证实的聚合物阻隔膜/控释性能，未确认物理包衣工艺、PU、我方材料适配或采购。地图为İstanbul总部城市，非Yarımca厂区GPS。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-13",
+      "conclusion": "独立核对成品肥全部分类、NBPT成品登记制造主体、当前辅助产品原文与FY2025原始73页集团报告。公司/关联Razi确有氨、硫、硫酸、DAP、尿素等肥料及原料业务，Tarkim属植保，另有金矿；不宣称集团不卖任何原料。N-GATE原文为滴灌15%尿素氮成品肥，GF-MIX/PEHAWET为农业罐混/水质pH及叶面铺展用途，不因品牌名或泛称添加剂就写成肥料颗粒包衣剂。所查公开范围未发现对外销售独立肥料包衣树脂、PU输入料或同类包衣剂，结论限所查范围。Tarım Kredi控股关联和Razi/Tarkim/矿业同一账户均保留；Holding集团网页仅HTML壳，不作为完整业务核验依据。按GUBRETAS/Gübre Fabrikaları/Razi/Tarım Kredi、法人登记47535-0、域名、Bereket Plaza当前总部/Yarımca厂址、公司邮箱核对main167家及私有队列，无同一正式账户；生产基地/品牌不另计。旧英文管理页及FY2025报告仍将Musa Goral列供应链总监，最新2026-10-01原始公司公告已列总经理，采用最新职务；无个人邮箱公开，gubretas@gubretas.com.tr不归给他。原报告列Razi临时停产，不宣称该伊朗厂当前持续运行；土耳其登记NBPT成品制造证据独立保留。"
+    },
+    "contact": {
+      "label": "Official general company business inbox; personal recipient is not attributed",
+      "email": "gubretas@gubretas.com.tr",
+      "phone": "+90 216 468 5050",
+      "contactUrl": "https://www.gubretas.com.tr/tr/iletisim"
+    },
+    "source": {
+      "label": "Official SLOWFERT SÜPER İNCİ NBPT-inhibited urea product, marketed in slow-release series",
+      "url": "https://www.gubretas.com.tr/tr/urun/slowfert-super-inci"
+    },
+    "checkedAt": "2026-10-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "gubretas-istanbul": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
+  "toros-agri-istanbul": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "paradeep-phosphates-bhubaneswar": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "axalta-philadelphia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mahadhan-agritech-pune": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
@@ -2779,6 +2836,118 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "gubretas-istanbul": {
+    "website": "https://www.gubretas.com.tr/",
+    "contactPage": "https://www.gubretas.com.tr/tr/iletisim",
+    "generalPhone": "+90 216 468 5050",
+    "address": "Headquarters: Yamanevler Mahallesi, Ahmet Tevfik İleri Caddesi, Bereket Plaza No.1, İç Kapı No.3, 34768 Ümraniye, İstanbul, Turkey. Production registration names Turkey; city marker is not Yarımca plant GPS.",
+    "contacts": [
+      {
+        "name": "Musa Goral",
+        "title": "General Manager",
+        "department": "Management",
+        "source": {
+          "label": "Official 1 October 2026 announcement: Musa Goral is current General Manager",
+          "url": "https://www.gubretas.com.tr/tr/haber/gubretas-olaganustu-genel-kurulu-yogun-yatirimci-katilimiyla--tamamlandi--"
+        },
+        "verifiedAt": "2026-10-13"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "gubretas@gubretas.com.tr",
+        "source": {
+          "label": "Official current corporate business inbox and production-site contact routes",
+          "url": "https://www.gubretas.com.tr/tr/iletisim"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official SLOWFERT SÜPER İNCİ NBPT-inhibited urea product, marketed in slow-release series",
+        "url": "https://www.gubretas.com.tr/tr/urun/slowfert-super-inci"
+      },
+      {
+        "label": "Official current original product registration: named producer, Turkey, NBPT urea; renewed 2023 registration and 2026 signed label",
+        "url": "https://www.gubretas.com.tr/uploads/files/products/33557-superinci-417.pdf"
+      },
+      {
+        "label": "Official GUBRETAS own manufacturing, full legal identity and consolidated associated businesses",
+        "url": "https://www.gubretas.com.tr/tr/hakkimizda"
+      },
+      {
+        "label": "Original GUBRETAS FY2025 annual report: own production, Razi commodity raw-material scope, Tarkim and mining associations",
+        "url": "https://www.gubretas.com.tr/uploads/files/pages/gubretas_faaliyet_raporu_31122025-1012.pdf"
+      },
+      {
+        "label": "Official complete plant-nutrition and auxiliary-product classifications",
+        "url": "https://www.gubretas.com.tr/tr/urunler/bitki-besleme-grubu"
+      },
+      {
+        "label": "Official auxiliary N-GATE: finished 15% urea-nitrogen fertiliser for drip irrigation",
+        "url": "https://www.gubretas.com.tr/tr/urun/n-gate"
+      },
+      {
+        "label": "Official GF-MIX: agricultural tank-mix and water pH conditioner",
+        "url": "https://www.gubretas.com.tr/tr/urun/gf-mix"
+      },
+      {
+        "label": "Official PEHAWET: foliar/drip application water conditioner and spreader",
+        "url": "https://www.gubretas.com.tr/tr/urun/pehawet"
+      },
+      {
+        "label": "Official 1 October 2026 announcement: Musa Goral is current General Manager",
+        "url": "https://www.gubretas.com.tr/tr/haber/gubretas-olaganustu-genel-kurulu-yogun-yatirimci-katilimiyla--tamamlandi--"
+      },
+      {
+        "label": "Official current corporate business inbox and production-site contact routes",
+        "url": "https://www.gubretas.com.tr/tr/iletisim"
+      },
+      {
+        "label": "Official shareholder structure; retain Tarım Kredi controlling association",
+        "url": "https://www.gubretas.com.tr/tr/ortaklik-yapisi"
+      }
+    ]
+  },
+  "toros-agri-istanbul": {
+    "website": "https://www.toros.com.tr/",
+    "contactPage": "https://www.toros.com.tr/tr/toros-kurumsal/iletisim/genel-iletisim-bilgileri",
+    "generalPhone": "+90 212 357 0202",
+    "address": "Corporate office: Yamanevler Mah., Ahmet Tevfik İleri Cad., No.22-26, İç Kapı No.48, Ümraniye, İstanbul, Turkey. Own fertilizer manufacture in Ceyhan, Mersin and Samsun; marker is headquarters city, not factory or laboratory GPS.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Original 2021 Toros R&D study: actual NP20-20 compound-fertiliser surface-coating evaluation",
+        "url": "https://www.eurjchem.com/index.php/eurjchem/article/view/2120"
+      },
+      {
+        "label": "Original six-page coating study methods: Toros NP samples and applied external commercial liquid/wax coatings",
+        "url": "https://www.eurjchem.com/index.php/eurjchem/article/download/2120/pdf_2120/17837"
+      },
+      {
+        "label": "Official current Toros legal identity, own three fertilizer factories and Mersin formulation/R&D",
+        "url": "https://www.toros.com.tr/tr/toros-kurumsal/hakkinda/genel-bakis"
+      },
+      {
+        "label": "Original Tekfen FY2025 annual report: complete group businesses and actual Toros manufacture",
+        "url": "https://www.tekfen.com.tr/en/Uploads/pdfs/137202613391527tekfen-ar-2025-enr1.pdf"
+      },
+      {
+        "label": "Official complete current Toros finished-fertilizer product portfolio",
+        "url": "https://www.toros.com.tr/tr/gubre-faaliyetleri/urunler/bitki-besleme/klasik-gubreler"
+      },
+      {
+        "label": "Official Toros operating subsidiaries: ports, biogas and finished organic fertilisers",
+        "url": "https://www.toros.com.tr/tr/toros-kurumsal/hakkinda/bagli-ortakliklarimiz"
+      },
+      {
+        "label": "Official Toros corporate business contact entry, telephone and current headquarters",
+        "url": "https://www.toros.com.tr/tr/toros-kurumsal/iletisim/genel-iletisim-bilgileri"
+      }
+    ]
+  },
   "paradeep-phosphates-bhubaneswar": {
     "website": "https://www.paradeepphosphates.com/",
     "contactPage": "https://www.paradeepphosphates.com/contact-us",
@@ -6718,6 +6887,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "gubretas-istanbul",
+  "toros-agri-istanbul",
   "paradeep-phosphates-bhubaneswar",
   "axalta-philadelphia",
   "mahadhan-agritech-pune",

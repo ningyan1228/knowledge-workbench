@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "gubretas-istanbul": "Your published SLOWFERT SÜPER İNCİ product is NBPT-inhibited urea, and its official registration names GÜBRETAŞ as the manufacturer in Turkey.",
+  "toros-agri-istanbul": "Your R&D centre’s 2021 published study evaluated liquid and wax coatings on NP 20-20-0 compound fertiliser supplied by Toros.",
   'sk-formulations-rabale': 'Your company develops and manufactures industrial protective coatings at Rabale, and your ANTICOR range includes industrial anticorrosive and marine coating formulations.',
   'polen-boya-cigli': 'Your company manufactures coatings, and your AHŞAP VERNİK product is a water-based varnish for interior and exterior wooden surfaces, excluding floors.',
   "paradeep-phosphates-bhubaneswar": "Your published Jai Kisaan Navratna range includes neem-coated urea, and your company operates its own urea manufacturing facilities.",
