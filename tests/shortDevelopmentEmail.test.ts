@@ -40,9 +40,10 @@ describe('ready-to-copy short development emails', () => {
       const draft = createShortDevelopmentEmail(lead)
       if (!draft) continue
       expect(draft.style).toBe('concise')
-      expect(draft.body.split(/\s+/).length, lead.id).toBeLessThanOrEqual(85)
+      expect(draft.body.split(/\s+/).length, lead.id).toBeLessThanOrEqual(95)
       expect(draft.body.match(/\?/g), lead.id).toHaveLength(1)
-      expect(draft.body).not.toMatch(/TDS attached|free sample|lowest price|hydroxyl value|epoxy value/i)
+      expect(draft.body).not.toMatch(/TDS|\bour catalog|catalog attached|quotation|target price|\bMOQ\b|free sample|lowest price|hydroxyl value|epoxy value/i)
+      expect(draft.subject).not.toMatch(/TDS|\blowest\b|\bbest\b|^Re:/i)
       const legacy = createShortDevelopmentEmail(lead, undefined, 'legacy')!
       expect(legacy.body).toContain(leadEmailFacts[lead.id])
       expect(legacy.body.split(/\s+/).length).toBeGreaterThan(draft.body.split(/\s+/).length)
@@ -52,7 +53,7 @@ describe('ready-to-copy short development emails', () => {
   it('keeps Troforte’s coated-fertilizer facts distinct from claims about our material', () => {
     const draft = draftFor('troforte-innovations-wangara')
     expect(draft.body).toContain('polymer-coated')
-    expect(draft.body).toContain('fertilizer coating material')
+    expect(draft.body).toContain('raw material for fertilizer coating formulations')
     expect(draft.body).not.toMatch(/you (currently )?(need|buy|use) our/i)
   })
 

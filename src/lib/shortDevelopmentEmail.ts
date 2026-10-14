@@ -9,6 +9,7 @@ import { leadEmailFacts } from './leadEmailFacts'
 import { conciseCompanyFact } from './conciseLeadEmailFacts'
 import { isTaiwanMarket } from './leadMarketScope'
 import { namedEmailVerified, selectBusinessRecipient } from './contactEvidence'
+import { firstContactStrategy } from './firstContactStrategy'
 
 const verifiedDay = (value?: string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value)
 const publicSource = (value?: string) => Boolean(value && /^https:\/\//.test(value))
@@ -74,17 +75,20 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
   const companyFact = style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id)
   if (!companyFact) return null
   const productName = productNames[lead.productId]
-  const subject = style === 'legacy' ? `${productName} — a brief introduction` : `${productName} — TDS for review`
+  const strategy = firstContactStrategy(lead, recipientName)
+  const subject = style === 'legacy' ? `${productName} — a brief introduction` : strategy.subject
   const verifiedRecipient = recipientName && lead.profile.contacts.find((contact) => contact.name === recipientName && namedEmailVerified(lead.company, contact))
   const greeting = recipientName === undefined ? recipientFor(lead) : verifiedRecipient ? `Hi ${verifiedRecipient.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
-  const introduction = lead.productId === 'fertilizer-coating' ? 'We supply fertilizer coating material for formulation evaluation.'
-    : lead.productId === 'nl-w1201' ? 'We supply NL-W1201, a water-based primer and adhesion-promoting material.'
-      : 'We supply epoxidized linseed oil (ELO), a bio-based formulation additive.'
+  const introduction = lead.productId === 'fertilizer-coating' ? 'We supply a raw material for fertilizer coating formulations.'
+    : lead.productId === 'nl-w1201' ? 'We supply NL-W1201, a water-based surface treatment material.'
+      : 'We supply epoxidized linseed oil (ELO).'
   const body = style === 'concise' ? `${greeting}
 
 ${companyFact}
 
-I’m Zhiwu from Neon Lion. ${introduction} May I send the TDS to your technical or sourcing team?
+I’m Zhiwu from Neon Lion. ${introduction}
+
+${strategy.question}
 
 Best regards,
 Zhiwu

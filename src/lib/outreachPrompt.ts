@@ -1,5 +1,6 @@
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
 import { selectBusinessRecipient } from './contactEvidence'
+import { firstContactStrategy } from './firstContactStrategy'
 import {
   type ApplicationLayer,
   type MarketExtendedApplication,
@@ -141,6 +142,7 @@ export function createDevelopmentEmailPrompt({
   if (!createShortDevelopmentEmail(lead) || product.id !== lead.productId || application.id !== lead.companyEvidence.applicationId || application.productId !== lead.productId || targetType.id !== lead.targetCompanyTypeId || targetType.productId !== lead.productId) return 'Not qualified for outreach\n\nReason:\nThe verified product, application, demand-side evidence, supplier exclusion or contact chain is incomplete or inconsistent.'
   const recipient = recipientFor(lead)
   const reference = productReferences[product.id]
+  const strategy = firstContactStrategy(lead)
   return `Write a concise, personalized English B2B first-contact email and two follow-ups using only the verified information below. This is a potential-fit outreach, not a confirmed purchase opportunity. Do not send an email or submit any form.
 
 Company
@@ -176,19 +178,19 @@ ${style === 'concise' ? 'Choose one relevant product description only; keep the 
 ${reference.allowedFacts.map((fact) => `- ${fact}`).join('\n')}
 
 Recipient-aware CTA
-${style === 'concise' ? 'Ask just one permission question: “May I send the TDS to your technical or sourcing team?” Do not add a separate referral, sample or meeting request.' : ctaFor(recipient)}
+${style === 'concise' ? `First-contact approach: ${strategy.approach}. Ask exactly one question: “${strategy.question}” The company’s downstream activity supports potential relevance, not confirmed purchasing needs. Do not open with a TDS, catalog, price or sample offer; share technical documents only after interest or a request.` : ctaFor(recipient)}
 
 Non-negotiable restrictions
 - Do not claim or imply that ${lead.company} currently buys, needs, sources, evaluates, or uses our material.
 - Do not invent a supplier, purchase volume, project, problem, performance result, application, technical data, contact, email, or certification.
-- Do not say “TDS attached” unless an attachment is actually present. Use: “I can send the TDS and arrange a sample if relevant.”
+- ${style === 'concise' ? 'Do not attach or lead with a TDS, catalog or quotation in the first contact; first identify the relevant colleague or confirm relevance. No invented customer case, cost saving, response rate or purchasing timing.' : 'Do not say “TDS attached” unless an attachment is actually present. Use: “I can send the TDS and arrange a sample if relevant.”'}
 - Do not make price, free-sample, freight, exclusivity, delivery-time, regulatory-approval, or guarantee claims.
 - Do not transfer an application or chemistry from our Product Reference onto the customer unless the customer’s own public evidence supports it.
 ${reference.prohibitedClaims.map((claim) => `- ${claim}`).join('\n')}
 
 Writing requirements
 - First paragraph: cite one specific company fact from the company evidence above. Do not use generic “I found your company online” language.
-- ${style === 'concise' ? 'Use the concise first-contact format: about 55–85 words including greeting and signature; two short body paragraphs. One specific company fact, one sentence introducing the matched material, and exactly one question offering the TDS. No technical-data list, attachment claim or extra sample/referral request.' : 'Keep the first email professional, technical, direct, polite, and non-pushy; 90–160 words.'}
+- ${style === 'concise' ? `Use plain everyday English, about 55–95 words including greeting and signature, in short paragraphs. One specific company fact, a brief description of the supplied material, and exactly one question checking the right person or relevance. Subject should use the saved company name and sourced application topic; suggested subject: ${strategy.subject}. Avoid advertising, generic praise, factory strength, target-price/MOQ questions and claims copied from somebody else’s customer case.` : 'Keep the first email professional, technical, direct, polite, and non-pushy; 90–160 words.'}
 - ${style === 'concise' ? 'Keep each follow-up about 30–50 words with one purpose and one question; do not repeat the company introduction.' : 'Keep each follow-up 50–100 words.'}
 - Use the recipient name only if shown above; otherwise use “Dear [Company Name] Team,”. Do not invent a name, gender, or honorific.
 - Do not overstate product–application fit. Preserve the application classification above, especially any sourced market extension.
