@@ -130,11 +130,13 @@ export function createDevelopmentEmailPrompt({
   product,
   application,
   targetType,
+  style = 'concise',
 }: {
   lead: PublicLead
   product: MarketProduct
   application: Application
   targetType: TargetCompanyType
+  style?: 'concise' | 'legacy'
 }) {
   if (!createShortDevelopmentEmail(lead) || product.id !== lead.productId || application.id !== lead.companyEvidence.applicationId || application.productId !== lead.productId || targetType.id !== lead.targetCompanyTypeId || targetType.productId !== lead.productId) return 'Not qualified for outreach\n\nReason:\nThe verified product, application, demand-side evidence, supplier exclusion or contact chain is incomplete or inconsistent.'
   const recipient = recipientFor(lead)
@@ -170,11 +172,11 @@ Verified at: ${lead.companyEvidence.verifiedAt}
 
 Allowed Product Reference (facts about our product only; not evidence about the customer)
 Positioning: ${reference.positioning}
-Use only 2–5 facts that are relevant to this recipient and the verified application:
+${style === 'concise' ? 'Choose one relevant product description only; keep the detailed facts below out of the first email unless specifically requested.' : 'Use only 2–5 facts that are relevant to this recipient and the verified application:'}
 ${reference.allowedFacts.map((fact) => `- ${fact}`).join('\n')}
 
 Recipient-aware CTA
-${ctaFor(recipient)}
+${style === 'concise' ? 'Ask just one permission question: “May I send the TDS to your technical or sourcing team?” Do not add a separate referral, sample or meeting request.' : ctaFor(recipient)}
 
 Non-negotiable restrictions
 - Do not claim or imply that ${lead.company} currently buys, needs, sources, evaluates, or uses our material.
@@ -186,8 +188,8 @@ ${reference.prohibitedClaims.map((claim) => `- ${claim}`).join('\n')}
 
 Writing requirements
 - First paragraph: cite one specific company fact from the company evidence above. Do not use generic “I found your company online” language.
-- Keep the first email professional, technical, direct, polite, and non-pushy; 90–160 words.
-- Keep each follow-up 50–100 words.
+- ${style === 'concise' ? 'Use the concise first-contact format: about 55–85 words including greeting and signature; two short body paragraphs. One specific company fact, one sentence introducing the matched material, and exactly one question offering the TDS. No technical-data list, attachment claim or extra sample/referral request.' : 'Keep the first email professional, technical, direct, polite, and non-pushy; 90–160 words.'}
+- ${style === 'concise' ? 'Keep each follow-up about 30–50 words with one purpose and one question; do not repeat the company introduction.' : 'Keep each follow-up 50–100 words.'}
 - Use the recipient name only if shown above; otherwise use “Dear [Company Name] Team,”. Do not invent a name, gender, or honorific.
 - Do not overstate product–application fit. Preserve the application classification above, especially any sourced market extension.
 - Sign as:\nBest regards,\n\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn\nWebsite: www.neonliontech.com

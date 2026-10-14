@@ -6,6 +6,7 @@ import {
   type PublicLead,
 } from './productMarketMap'
 import { leadEmailFacts } from './leadEmailFacts'
+import { conciseCompanyFact } from './conciseLeadEmailFacts'
 import { isTaiwanMarket } from './leadMarketScope'
 import { namedEmailVerified, selectBusinessRecipient } from './contactEvidence'
 
@@ -13,6 +14,7 @@ const verifiedDay = (value?: string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.t
 const publicSource = (value?: string) => Boolean(value && /^https:\/\//.test(value))
 
 export type ShortDevelopmentEmail = {
+  style: 'concise' | 'legacy'
   subject: string
   body: string
   text: string
@@ -52,7 +54,7 @@ function recipientFor(lead: PublicLead) {
 }
 
 /** Pre-written, review-first first contact. It never asserts a purchase or product fit. */
-export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: string | null): ShortDevelopmentEmail | null {
+export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: string | null, style: ShortDevelopmentEmail['style'] = 'concise'): ShortDevelopmentEmail | null {
   const evidence = lead.companyEvidence
   const targetType = targetCompanyTypes.find((item) => item.id === lead.targetCompanyTypeId)
   const application = (evidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications)
@@ -69,13 +71,25 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
     || !verifiedDay(evidence.verifiedAt)
     || !(lead.profile.website || lead.profile.contactPage || lead.profile.linkedIn || lead.profile.generalEmail || lead.profile.generalPhone || lead.profile.departmentEmails.length)) return null
 
-  const companyFact = leadEmailFacts[lead.id]
+  const companyFact = style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id)
   if (!companyFact) return null
   const productName = productNames[lead.productId]
-  const subject = `${productName} — a brief introduction`
+  const subject = style === 'legacy' ? `${productName} — a brief introduction` : `${productName} — TDS for review`
   const verifiedRecipient = recipientName && lead.profile.contacts.find((contact) => contact.name === recipientName && namedEmailVerified(lead.company, contact))
   const greeting = recipientName === undefined ? recipientFor(lead) : verifiedRecipient ? `Hi ${verifiedRecipient.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
-  const body = `${greeting}
+  const introduction = lead.productId === 'fertilizer-coating' ? 'We supply fertilizer coating material for formulation evaluation.'
+    : lead.productId === 'nl-w1201' ? 'We supply NL-W1201, a water-based primer and adhesion-promoting material.'
+      : 'We supply epoxidized linseed oil (ELO), a bio-based formulation additive.'
+  const body = style === 'concise' ? `${greeting}
+
+${companyFact}
+
+I’m Zhiwu from Neon Lion. ${introduction} May I send the TDS to your technical or sourcing team?
+
+Best regards,
+Zhiwu
+Ningbo Neon Lion Technology Co., Ltd.
+zhiwu@neonlion.cn` : `${greeting}
 
 ${companyFact}
 
@@ -85,5 +99,5 @@ Best regards,
 Zhiwu
 Ningbo Neon Lion Technology Co., Ltd.
 Email: zhiwu@neonlion.cn`
-  return { subject, body, text: `Subject: ${subject}\n\n${body}`, evidenceUrl: evidence.sourceUrl, verifiedAt: evidence.verifiedAt }
+  return { style, subject, body, text: `Subject: ${subject}\n\n${body}`, evidenceUrl: evidence.sourceUrl, verifiedAt: evidence.verifiedAt }
 }

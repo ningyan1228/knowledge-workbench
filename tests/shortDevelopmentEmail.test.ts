@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { publicLeads } from '../src/lib/productMarketMap'
 import { createShortDevelopmentEmail } from '../src/lib/shortDevelopmentEmail'
 import { leadEmailFacts } from '../src/lib/leadEmailFacts'
+import { conciseCompanyFact } from '../src/lib/conciseLeadEmailFacts'
 import { withProvedFirstContact } from './fixtures/contactEvidence'
 
 function draftFor(id: string) {
@@ -23,14 +24,28 @@ describe('ready-to-copy short development emails', () => {
         continue
       }
       expect(draft, lead.id).not.toBeNull()
-      expect(draft!.body, lead.id).toContain(leadEmailFacts[lead.id])
-      expect(draft!.body.indexOf(leadEmailFacts[lead.id])).toBeLessThan(draft!.body.indexOf('I’m Zhiwu'))
+      expect(draft!.body, lead.id).toContain(conciseCompanyFact(lead.id))
+      expect(draft!.body.indexOf(conciseCompanyFact(lead.id)!)).toBeLessThan(draft!.body.indexOf('I’m Zhiwu'))
       expect(draft!.text).toContain('Ningbo Neon Lion Technology Co., Ltd.')
       expect(draft!.text).toContain('zhiwu@neonlion.cn')
       expect(draft!.text).not.toContain('+86 17852862361')
       expect(draft!.text).not.toMatch(/\b(?:Tel|Phone|Mobile):/i)
       expect(draft!.evidenceUrl).toBe(lead.companyEvidence.sourceUrl)
       expect(draft!.text).not.toMatch(/much lower price|equivalent substitute|you (currently )?(buy|need|use) our/i)
+    }
+  })
+
+  it('keeps every eligible first contact concise with one question and no unsolicited data list', () => {
+    for (const lead of publicLeads) {
+      const draft = createShortDevelopmentEmail(lead)
+      if (!draft) continue
+      expect(draft.style).toBe('concise')
+      expect(draft.body.split(/\s+/).length, lead.id).toBeLessThanOrEqual(85)
+      expect(draft.body.match(/\?/g), lead.id).toHaveLength(1)
+      expect(draft.body).not.toMatch(/TDS attached|free sample|lowest price|hydroxyl value|epoxy value/i)
+      const legacy = createShortDevelopmentEmail(lead, undefined, 'legacy')!
+      expect(legacy.body).toContain(leadEmailFacts[lead.id])
+      expect(legacy.body.split(/\s+/).length).toBeGreaterThan(draft.body.split(/\s+/).length)
     }
   })
 

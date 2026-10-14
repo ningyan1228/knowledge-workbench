@@ -21,7 +21,7 @@ describe('development-email prompt', () => {
     expect(prompt).toContain('TDS-verified application: Coated Urea / Urea Coating')
     expect(prompt).toContain('Polymer-Coated Urea Manufacturer')
     expect(prompt).toContain('Hydroxyl value: 249 mg KOH/g.')
-    expect(prompt).toContain('offer the TDS and a technical evaluation route if relevant')
+    expect(prompt).toContain('May I send the TDS to your technical or sourcing team?')
     expect(prompt).toContain('Do not claim the company currently uses polyurethane')
     expect(prompt).toContain('Do not transfer an application or chemistry from our Product Reference onto the customer unless the customer’s own public evidence supports it.')
   })
@@ -60,13 +60,23 @@ describe('development-email prompt', () => {
   it('prioritizes a verified technical manager over general management', () => {
     const prompt = promptFor('teknos-helsinki', withProvedFirstContact)
     expect(prompt).toContain('Name / team: Pasi Virtanen')
-    expect(prompt).toContain('technical / R&D team')
+    expect(prompt).toContain('May I send the TDS to your technical or sourcing team?')
   })
 
   it('routes a disclosed procurement role through the company inbox when no personal email is published', () => {
     const prompt = promptFor('paradeep-phosphates-bhubaneswar')
     expect(prompt).toContain('Name / team: General Team')
-    expect(prompt).toContain('appropriate Technical / Procurement contact')
+    expect(prompt).toContain('May I send the TDS to your technical or sourcing team?')
     expect(prompt).not.toContain('Name / team: Raj Kumar Gupta')
+  })
+
+  it('makes concise drafting the default without losing company evidence or qualification rules', () => {
+    const prompt = promptFor('polyvine-cheddar')
+    expect(prompt).toContain('55–85 words')
+    expect(prompt).toContain('exactly one question')
+    expect(prompt).toContain('30–50 words')
+    expect(prompt).not.toContain('90–160 words')
+    expect(prompt).toContain('Company evidence')
+    expect(prompt).toContain('Do not invent')
   })
 })
