@@ -3071,11 +3071,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-14"
   },
+  {
+    "id": "induron-birmingham",
+    "company": "Induron Coatings, LLC (Induron Protective Coatings)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Birmingham (corporate-office city marker)",
+    "latitude": 33.5186,
+    "longitude": -86.8104,
+    "legacyCompanyDescription": "自有成品防护涂料配方研发制造企业；ELO具体适配、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Induron自有about/all-products明确其家族企业实际制造与R&D配方开发；当前自身PermaClean100SL原始两页TDS明示aliphatic amine epoxy tank lining、双组分成品及steel/concrete water tanks用途，印刷代码0126S。作者URL目录2025/02、文件名0225S均不冒充实际版本签发日期。ELO TDS仅涂料大类，可提出原料技术评估，客户自身NSF/浸水测试不转作我方ELO认证或适配证明。今日TechnicalServicesDirector BillSeawell与wseawell业务邮箱、两公开部门路由已核实。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立阅读当前全部可见acrylic/alkyd/epoxy/primer/urethane/miscellaneous/thinner类别与实际配方产品，另完整审读U50和E60原始TDS：两者为配套成品固化加速剂，未将其说成ELO/ESBO/环氧化植物油或生物增塑剂。所查公开范围未发现对外供应上述ELO同类原料；结论限实际阅读的类别与文件，不声称全球全部SKU或完整配方穷尽。Induraguard9200的linseed-oil alkyd不代表使用epoxidized linseed oil，也不当成卖原料亚麻油。旧2016SDS仅确认公开制造名称/地址，危害成分披露不等同完整配方；不臆测E60胺化学结构或以成分空表证明不存在相关原料。按InduronCoatingsLLC/InduronProtectiveCoatingsLLC历史公开名称、品牌、域名、Birmingham地址/mail核对最新main188，无同一正式账户，旧名称不拆新增。技术Director公开职位保持原样，不标采购/R&D主管；紧急8004249300不作业务电话。"
+    },
+    "contact": {
+      "label": "公开实名TechnicalServicesDirector业务邮箱；不是采购身份或购买承诺",
+      "email": "wseawell@induron.com",
+      "phone": "+1 205 324 9584",
+      "contactUrl": "https://www.induron.com/contact/"
+    },
+    "source": {
+      "label": "Original current Perma-Clean100SL technical data, printed code0126S; own aliphatic-amine epoxy tank lining",
+      "url": "https://www.induron.com/wp-content/uploads/2025/02/PC-100-SL-TDS-0225S.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "id": "farrell-calhoun-memphis",
+    "company": "Farrell-Calhoun Inc.",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Memphis (headquarters/manufacturing city marker)",
+    "latitude": 35.1495,
+    "longitude": -90.049,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自身about页明确研发化学师、自有实验室和制造设施；contact页明确法定Farrell-CalhounInc及CorporateHeadquarters&Manufacturing地址221ECarolinaMemphis。自身WoodKraft1160当前原始两页TDS（2024-09-15）明示waterborne acrylic-polyurethane clear wood varnishes及内外木门/家具/柜等用途，与当前官网具体产品链接对应。NL-W1201 TDS支持木材原料评估，未确认我方乳液与该体系兼容、使用或采购。采购岗位jeremylafrain、TechnicalAssistance gregandre和CustomerService info公开邮箱按岗位记录，不从地址推断姓名或抬升职位。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立阅读当前官网完整可见自产产品类别/产品名称列表，明确水性/油性成品paint/primer/woodcoat/epoxy/clean-up溶剂等；另审读实际AquaBond6-78原始TDS与产品页，确认pigmented water-based acrylic-PU finished bonding primer，不是raw PO/CPO adhesion-promoter dispersion。所查未发现销售水性PO乳液、CPO/PO原料分散体或原料附着力促进剂；限实际查看公开范围，不称每个全球SKU/SDS均已阅读。保留其商店同时销售第三方RustOleum9100的事实；代理产品不当作自产Epoxy证据，此账户用自身WoodKraft原始资料确认。RelatedProducts页面没有可读产品主体，不把空页面作排除证明。按FarrellCalhoun/KentuckyPaint/Town&Ranch/TuffBoy/WoodKraft等经营及品牌关联、主/店铺域名、Memphis地址/mail核对最新main188，无同一正式账户；旧总部/工厂/品牌不拆新增。采购邮箱岗位公开但姓名未在该条披露，保持team greeting，不采用第三方inactive manager记录补猜Jeremy姓名。"
+    },
+    "contact": {
+      "label": "官网公开PurchasingAgent岗位业务邮箱，岗位下未明示个人姓名，首封仅用团队称呼",
+      "email": "jeremylafrain@farrellcalhoun.com",
+      "phone": "+1 901 526 2211",
+      "contactUrl": "https://www.farrellcalhoun.com/contact"
+    },
+    "source": {
+      "label": "Original current WoodKraft1160 two-page TDS, revised2024-09-15: waterborne acrylic-PU wood varnish",
+      "url": "https://assets.speakcdn.com/assets/2859/1160_line_3.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "farrell-calhoun-memphis": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "induron-birmingham": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cloverdale-paint-surrey": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "diamond-vogel-orange-city": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sansin-strathroy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -3275,6 +3333,138 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "farrell-calhoun-memphis": {
+    "website": "https://www.farrellcalhoun.com/",
+    "contactPage": "https://www.farrellcalhoun.com/contact",
+    "generalEmail": "info@farrellcalhoun.com",
+    "generalPhone": "+1 901 526 2211",
+    "address": "221 East Carolina Avenue, Memphis, TN38126, UnitedStates. Own official corporate headquarters and manufacturing address; approximate city marker, not facility GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "jeremylafrain@farrellcalhoun.com",
+        "source": {
+          "label": "Current corporate-headquarters/manufacturing legal identity and Purchasing Agent mailbox; no person name inferred",
+          "url": "https://www.farrellcalhoun.com/contact"
+        }
+      },
+      {
+        "department": "Technical",
+        "email": "gregandre@farrellcalhoun.com",
+        "source": {
+          "label": "Current corporate-headquarters/manufacturing legal identity and Purchasing Agent mailbox; no person name inferred",
+          "url": "https://www.farrellcalhoun.com/contact"
+        }
+      },
+      {
+        "department": "General",
+        "email": "info@farrellcalhoun.com",
+        "source": {
+          "label": "Current corporate-headquarters/manufacturing legal identity and Purchasing Agent mailbox; no person name inferred",
+          "url": "https://www.farrellcalhoun.com/contact"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original current WoodKraft1160 two-page TDS, revised2024-09-15: waterborne acrylic-PU wood varnish",
+        "url": "https://assets.speakcdn.com/assets/2859/1160_line_3.pdf"
+      },
+      {
+        "label": "Current own R&D chemists and manufacturing facility; native403, primary public web independently read",
+        "url": "https://www.farrellcalhoun.com/about-us"
+      },
+      {
+        "label": "Current complete visible own product navigation and categories; third-party retail products separated",
+        "url": "https://www.farrellcalhoun.com/our-products"
+      },
+      {
+        "label": "Current actual own WoodKraft1160 product and originalTDS link",
+        "url": "https://www.farrellcalhoun.com/our-products/farrell%2Bproducts/1160-line-woodkraft-waterborne-acrylic-polyurethane-spar-varnish"
+      },
+      {
+        "label": "Original actual6-78 finished aqueous acrylic-PU bonding primer, not raw PO/CPO adhesion promoter",
+        "url": "https://assets.speakcdn.com/assets/2859/6-78_6.pdf"
+      },
+      {
+        "label": "Own company history and2010 KentuckyPaint asset/manufacturing acquisition; branches/brands not new entities",
+        "url": "https://www.farrellcalhoun.com/history-of-farrell-calhoun"
+      },
+      {
+        "label": "Current corporate-headquarters/manufacturing legal identity and Purchasing Agent mailbox; no person name inferred",
+        "url": "https://www.farrellcalhoun.com/contact"
+      }
+    ]
+  },
+  "induron-birmingham": {
+    "website": "https://www.induron.com/",
+    "contactPage": "https://www.induron.com/contact/",
+    "generalEmail": "service@induron.com",
+    "generalPhone": "+1 205 324 9584",
+    "address": "3333 Richard Arrington Jr. Blvd N, Birmingham, Alabama35234-2303, UnitedStates. MailingPOBox2371,Birmingham35201-2371. Current own company address; office-city marker, not surveyed plant GPS.",
+    "contacts": [
+      {
+        "name": "Bill Seawell",
+        "title": "Technical Services Director",
+        "department": "Technical",
+        "email": "wseawell@induron.com",
+        "source": {
+          "label": "Current public Technical Services Director Bill Seawell, exact personal business email and department routes",
+          "url": "https://www.induron.com/contact/"
+        },
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "techservice@induron.com",
+        "source": {
+          "label": "Current public Technical Services Director Bill Seawell, exact personal business email and department routes",
+          "url": "https://www.induron.com/contact/"
+        }
+      },
+      {
+        "department": "General",
+        "email": "service@induron.com",
+        "source": {
+          "label": "Current public Technical Services Director Bill Seawell, exact personal business email and department routes",
+          "url": "https://www.induron.com/contact/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original current Perma-Clean100SL technical data, printed code0126S; own aliphatic-amine epoxy tank lining",
+        "url": "https://www.induron.com/wp-content/uploads/2025/02/PC-100-SL-TDS-0225S.pdf"
+      },
+      {
+        "label": "Current actual own family-owned manufacture and R&D formula development",
+        "url": "https://www.induron.com/about-us/"
+      },
+      {
+        "label": "Current whole visible product and formulation-additive scope",
+        "url": "https://www.induron.com/all-products/"
+      },
+      {
+        "label": "Current actual own PermaClean100SL matched product",
+        "url": "https://www.induron.com/paint_products/permaclean-100-sl/"
+      },
+      {
+        "label": "Original U-50 TDS, printed0117: paired urethane/fluorourethane cure accelerator",
+        "url": "https://www.induron.com/wp-content/uploads/2024/06/U-50_Tech_Data.pdf"
+      },
+      {
+        "label": "Original E-60 TDS, printed0922: cure accelerator for selected paired epoxies",
+        "url": "https://www.induron.com/wp-content/uploads/2024/06/E-60-Tech-Data-1.pdf"
+      },
+      {
+        "label": "Current public Technical Services Director Bill Seawell, exact personal business email and department routes",
+        "url": "https://www.induron.com/contact/"
+      }
+    ]
+  },
   "cloverdale-paint-surrey": {
     "website": "https://www.cloverdalepaint.com/",
     "contactPage": "https://www.cloverdalepaint.com/industrial/contact-us",
@@ -8343,6 +8533,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "farrell-calhoun-memphis",
+  "induron-birmingham",
   "cloverdale-paint-surrey",
   "diamond-vogel-orange-city",
   "sansin-strathroy",

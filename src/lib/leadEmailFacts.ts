@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "farrell-calhoun-memphis": "Your Wood Kraft 1160 line consists of waterborne acrylic-polyurethane clear varnishes for interior and exterior wood.",
+  "induron-birmingham": "Your Perma-Clean 100 SL is an aliphatic amine epoxy lining for steel or concrete water tanks.",
   "cloverdale-paint-surrey": "Your WeatherOne 100% Acrylic Semi-Transparent Stain is formulated for wood siding, fences, decks and outdoor furniture.",
   "diamond-vogel-orange-city": "Your Grain Stain Semi-Transparent Water-Base Stain is formulated for wood surfaces such as siding, fences, trim and decks.",
   "sansin-strathroy": "Your ENS is a water-dilutable coating for wood, including windows, doors and outdoor furniture.",
