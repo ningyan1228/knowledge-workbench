@@ -2987,11 +2987,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-13"
   },
+  {
+    "id": "sansin-strathroy",
+    "company": "The Sansin Corporation",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Strathroy (corporate-office city marker)",
+    "latitude": 42.9562,
+    "longitude": -81.6223,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "原始ENS两页TDS（October2025）明确water diluent、wood以及木/玻璃纤维门窗和户外家具用途。原始公开SDS（prepared05/4/2017，非新签发）列The Sansin Corporation制造主体；当前公司R&D和Factory Finish业务页交叉确认自有水性木器配方与成品制造角色，非单纯经销商。今日加拿大部门业务邮箱precisioncoat@sansin.com及5192452001电话已核验。NL-W1201仅支持木材原料评估，不转用ENS自身pH8.8/固含40±1或宣传性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立查看当前消费者完整可见产品系列、Factory Finish全部显示类别、自有R&D、ENS原始TDS，以及易混淆的Boracol/AquaGard/StainBlockingPrimer具体成品页。Boracol为含硼木材防腐系统，StainBlockingPrimer为配制好的水性木材封闭底漆；不是由名称推断raw PO/CPO。所查公开范围未发现对外供应水性PO乳液、CPO/PO原料分散体或原料附着力促进剂；不声称全部单品SDS穷尽阅读，不从危害成分未列出推断完整配方。按TheSansinCorporation/SansinAmerica/PrecisionCoat/TimberTek、两官网域名、Strathroy地址及公开mail核对最新main185，无同一正式账户；美国及欧洲联系部门不拆新增。历史美国工厂计划不冒充已投产事实。"
+    },
+    "contact": {
+      "label": "公开部门业务路由，可请求转技术/原料评估团队；不是采购承诺",
+      "email": "precisioncoat@sansin.com",
+      "phone": "+1 519 245 2001",
+      "contactUrl": "https://sansinfactoryfinish.com/contact-us/"
+    },
+    "source": {
+      "label": "Original current ENS TDS, October2025: water diluent and wood/windows/doors/furniture",
+      "url": "https://www.sansin.com/wp-content/uploads/ENS.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "id": "diamond-vogel-orange-city",
+    "company": "Diamond Vogel",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Orange City (corporate-office city marker)",
+    "latitude": 43.007,
+    "longitude": -96.0584,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前公司about/current2026百年页及各制造部门确认Vogel家族自有成品涂料制造、实验室与配方业务。GrainStain BG0520当前官网链接原始两页TDS（revised04/2023）明确自身水性木器着色剂，用于siding/fences/trim/decks；需ACS调色，不称透明清漆。今日architectural部门公开邮箱与电话复核。NL-W1201仅作木器原料初步技术评估，未确认其配方、使用、需求或采购。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立读取当前全部披露的公司市场部门、2026自有业务范围、toll formulation/chemical sourcing、OldMasters完整显示木器系列及实际MastersArmorPartB页面。PartB为仅供其配套成品清漆使用的hardener，不将硬化剂或finished wood primer按名称当作raw PO/CPO adhesion promoter。所查范围未发现水性PO乳液、CPO/PO原料分散体或原料附着力促进剂对外供应；结论限实际公开范围，不称全球全SKU与SDS穷尽。未将搜索未出现的EverlastPolymers臆断为当前关联或生产范围。按DiamondVogel/Vogel/OldMasters/VanSickle、官网与品牌域名、OrangeCity地址/mail核对最新main185，无同一正式账户；同集团品牌/工厂只计一个。既有HesseLignal独立企业，技术许可品牌联系不足以证明共同所有权；不以许可证名称归并。使用官网披露商号DiamondVogel，不臆造Inc/LLC法定后缀。"
+    },
+    "contact": {
+      "label": "公开部门业务路由，可请求转技术/原料评估团队；不是采购承诺",
+      "email": "architectural@diamondvogel.com",
+      "phone": "+1 712 737 8880",
+      "contactUrl": "https://www.diamondvogel.com/architectural/product/grain-stain-semi-transparent-water-base"
+    },
+    "source": {
+      "label": "Original current Grain Stain BG-0520 TDS, revised04/2023: own water-base wood stain",
+      "url": "https://www.diamondvogel.com/documents/sites/documents.vogelpaint.com/files/documents/BG-0520PI.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "id": "cloverdale-paint-surrey",
+    "company": "Cloverdale Paint Inc.",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Surrey (corporate-office city marker)",
+    "latitude": 49.1913,
+    "longitude": -122.849,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自身wood coatings及lab/technical页明确制造水性丙烯酸木器涂料。官网真实链接原始06680法文两页TDS（2025-03-14）明确water-based acrylic、木材siding/fences/decks/outdoor furniture；原始英文两页sell sheet（03/12）及当前具体产品页交叉确认。066半透明和723实色用途必须分开，723不推荐deck不移套至066。今日实名KristopherAgnew工业涂料技术职位和kagnew公司mailto、WarrenDelaney木器产品职位和wdelaney公司mailto分别核验；不标其为采购主管。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立检查当前全部工业类别、八款可见木器产品、六款additives及activators/catalysts，并完整阅读六份实际作者TDS。A60为100%固体polypropylene bead防滑骨料，不是水性PO乳液/CPO原料分散体或附着促进乳液；A65为amine环氧固化加速剂，A66为metallic-soap urethane accelerator，A68为isocyanate solvent-based enamel hardener，A69为polysiloxane-copolymer溶剂型防缩孔/湿润剂，且不推荐底漆，A70为urethane catalyst。保留它销售这些实际配方添加剂的事实，但所查功能及产品范围未发现销售NL同类PO/CPO乳液或原料附着力促进剂；不以所有additives无关为笼统结论。SDS只审读识别/组分/版次，不是完整成分清单，A68SDS未列isocyanate不能推翻TDS明示。按CloverdalePaintInc/Rodda-Miller/Monarch关联、官网、Surrey地址及实名邮箱核对最新main185无同一正式账户，分公司/品牌不拆新增。DarrenRichardson页面mailto为jpandin存在错配，该条不入联系人、不推断全名/email。旧SDS btinsley无公开姓名职位，旧helpdesk不作为今日实名采购邮箱。"
+    },
+    "contact": {
+      "label": "公开实名技术业务联系人，职位及个人公司邮箱已独立核验；不是确认采购人员",
+      "email": "kagnew@cloverdalepaint.com",
+      "phone": "+1 604 596 6261",
+      "contactUrl": "https://www.cloverdalepaint.com/industrial/contact-us"
+    },
+    "source": {
+      "label": "Original current French06680 TDS, revised2025-03-14: water-based acrylic wood stain",
+      "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/trade/TDS-french/cloverdale-tds-06680-f.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "cloverdale-paint-surrey": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "diamond-vogel-orange-city": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "sansin-strathroy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rfcl-ramagundam": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "ppg-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "behr-santa-ana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -3188,6 +3275,212 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "cloverdale-paint-surrey": {
+    "website": "https://www.cloverdalepaint.com/",
+    "contactPage": "https://www.cloverdalepaint.com/industrial/contact-us",
+    "generalPhone": "+1 604 596 6261",
+    "address": "400–2630 Croydon Drive, Surrey, BC V3Z6T3, Canada. Current headquarters address; historical product documents also show6950KingGeorgeBlvd. City marker is not factory GPS.",
+    "contacts": [
+      {
+        "name": "Kristopher Agnew",
+        "title": "Technical Engineering and Marketing Specialist – Industrial Coatings",
+        "department": "Technical",
+        "email": "kagnew@cloverdalepaint.com",
+        "source": {
+          "label": "Public Kristopher Agnew technical role with exact personal business mailto, rechecked2026-10-14",
+          "url": "https://www.cloverdalepaint.com/industrial/contact-us"
+        },
+        "verifiedAt": "2026-10-14"
+      },
+      {
+        "name": "Warren Delaney",
+        "title": "Wood Finishes Manager, Calgary",
+        "department": "Sales",
+        "email": "wdelaney@cloverdalepaint.com",
+        "phone": "+1 403 236 4777",
+        "source": {
+          "label": "Public Warren Delaney Wood Finishes Manager with exact business mailto, rechecked2026-10-14",
+          "url": "https://www.cloverdalepaint.com/about-us-overview/contact-us/sales-departments/wood-finishes-sales-representatives"
+        },
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Original current French06680 TDS, revised2025-03-14: water-based acrylic wood stain",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/trade/TDS-french/cloverdale-tds-06680-f.pdf"
+      },
+      {
+        "label": "Original English WeatherOne sell sheet, printed03/12: own manufacturer and separate066/723 product uses",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/docs/sell%20sheets/Cloverdale-WeatherOne-Stains-E.pdf"
+      },
+      {
+        "label": "Current own manufacture and formulation of water-based acrylic wood coatings",
+        "url": "https://www.cloverdalepaint.com/industrial/markets/wood-coatings-paint-sealer"
+      },
+      {
+        "label": "Current complete industrial category scope",
+        "url": "https://www.cloverdalepaint.com/industrial/products"
+      },
+      {
+        "label": "Current full six-product additive list",
+        "url": "https://www.cloverdalepaint.com/industrial/products/additives"
+      },
+      {
+        "label": "Current paired coating activators/catalysts category",
+        "url": "https://www.cloverdalepaint.com/industrial/products/activators-catalysts"
+      },
+      {
+        "label": "Own laboratories, technical service and custom formulation/manufacture",
+        "url": "https://www.cloverdalepaint.com/about-us-overview/about-us/business-opportunities/lab-tech-services"
+      },
+      {
+        "label": "Current supplier introduction procedure; no submission or buying intent inferred",
+        "url": "https://www.cloverdalepaint.com/about-us-overview/about-us/business-opportunities/cloverdale-paint-suppliers"
+      },
+      {
+        "label": "Current headquarters address and telephone",
+        "url": "https://www.cloverdalepaint.com/about-us-overview/contact-us/head-office"
+      },
+      {
+        "label": "Public Kristopher Agnew technical role with exact personal business mailto, rechecked2026-10-14",
+        "url": "https://www.cloverdalepaint.com/industrial/contact-us"
+      },
+      {
+        "label": "Public Warren Delaney Wood Finishes Manager with exact business mailto, rechecked2026-10-14",
+        "url": "https://www.cloverdalepaint.com/about-us-overview/contact-us/sales-departments/wood-finishes-sales-representatives"
+      },
+      {
+        "label": "Original current linkedA60 TDS; version is historical, actual additive role reviewed",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/industrial/cloverdale-tds-a60-e.pdf"
+      },
+      {
+        "label": "Original current linkedA65 TDS; version is historical, actual additive role reviewed",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/industrial/cloverdale-tds-a65-e.pdf"
+      },
+      {
+        "label": "Original current linkedA66 TDS; version is historical, actual additive role reviewed",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/industrial/cloverdale-tds-a66-e.pdf"
+      },
+      {
+        "label": "Original current linkedA68 TDS; version is historical, actual additive role reviewed",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/industrial/cloverdale-tds-a68-e.pdf"
+      },
+      {
+        "label": "Original current linkedA69 TDS; version is historical, actual additive role reviewed",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/industrial/cloverdale-tds-a69-e.pdf"
+      },
+      {
+        "label": "Original current linkedA70 TDS; version is historical, actual additive role reviewed",
+        "url": "https://pldb.cloverdalepaint.com/documents/Cloverdale/tds/industrial/cloverdale-tds-a70-e.pdf"
+      }
+    ]
+  },
+  "diamond-vogel-orange-city": {
+    "website": "https://www.diamondvogel.com/",
+    "contactPage": "https://www.diamondvogel.com/architectural/product/grain-stain-semi-transparent-water-base",
+    "generalEmail": "architectural@diamondvogel.com",
+    "generalPhone": "+1 712 737 8880",
+    "address": "1110 Albany Place SE, PO Box380, Orange City, IA51041, United States. Current own corporate/architectural address; city marker, not an independently verified plant GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "architectural@diamondvogel.com",
+        "source": {
+          "label": "Current own Grain Stain product and architectural business mailbox/telephone",
+          "url": "https://www.diamondvogel.com/architectural/product/grain-stain-semi-transparent-water-base"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original current Grain Stain BG-0520 TDS, revised04/2023: own water-base wood stain",
+        "url": "https://www.diamondvogel.com/documents/sites/documents.vogelpaint.com/files/documents/BG-0520PI.pdf"
+      },
+      {
+        "label": "Own manufacturing plants and formulation laboratories",
+        "url": "https://www.diamondvogel.com/about-us"
+      },
+      {
+        "label": "All disclosed corporate market divisions and own brands",
+        "url": "https://www.diamondvogel.com/home/our-markets"
+      },
+      {
+        "label": "Current2026 family ownership, manufacture and contract-formulation scope",
+        "url": "https://www.diamondvogel.com/history"
+      },
+      {
+        "label": "Own toll and contract paint/coating manufacture and bulk chemical sourcing",
+        "url": "https://www.diamondvogel.com/toll/"
+      },
+      {
+        "label": "Current full Old Masters finished wood-product family list",
+        "url": "https://www.diamondvogel.com/architectural/old-masters-products"
+      },
+      {
+        "label": "Actual Masters Armor PartB hardener is for its paired finished coating only",
+        "url": "https://myoldmasters.com/product/optional-part-b-hardener"
+      },
+      {
+        "label": "Current own Grain Stain product and architectural business mailbox/telephone",
+        "url": "https://www.diamondvogel.com/architectural/product/grain-stain-semi-transparent-water-base"
+      }
+    ]
+  },
+  "sansin-strathroy": {
+    "website": "https://www.sansin.com/",
+    "contactPage": "https://sansinfactoryfinish.com/contact-us/",
+    "generalEmail": "precisioncoat@sansin.com",
+    "generalPhone": "+1 519 245 2001",
+    "address": "111 MacNab Avenue, Strathroy, Ontario N7G4J6, Canada. Public Canadian office/manufacturer address; city marker, not independently surveyed factory GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "precisioncoat@sansin.com",
+        "source": {
+          "label": "Public Canada factory-finish team mailbox and telephone, rechecked2026-10-14",
+          "url": "https://sansinfactoryfinish.com/contact-us/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original current ENS TDS, October2025: water diluent and wood/windows/doors/furniture",
+        "url": "https://www.sansin.com/wp-content/uploads/ENS.pdf"
+      },
+      {
+        "label": "Current own company research and development of waterborne wood coatings",
+        "url": "https://www.sansin.com/about/about-sansin/"
+      },
+      {
+        "label": "Original currently linked ENS SDS: manufacturer The Sansin Corporation; prepared05/4/2017, not a new issue",
+        "url": "https://www.sansin.com/wp-content/uploads/SDS-ENS.pdf"
+      },
+      {
+        "label": "Current visible complete consumer product-family list; individual SDS not exhaustively reviewed",
+        "url": "https://www.sansin.com/products/find-a-product/"
+      },
+      {
+        "label": "Own industrial/factory-finish formulation business and complete displayed categories",
+        "url": "https://sansinfactoryfinish.com/about-us/"
+      },
+      {
+        "label": "Actual Boracol finished boron wood-preservative system",
+        "url": "https://www.sansin.com/product/boracol/"
+      },
+      {
+        "label": "Actual finished aqueous wood stain-blocking primer",
+        "url": "https://www.sansin.com/product/stain-blocking-primer/"
+      },
+      {
+        "label": "Public Canada factory-finish team mailbox and telephone, rechecked2026-10-14",
+        "url": "https://sansinfactoryfinish.com/contact-us/"
+      }
+    ]
+  },
   "rfcl-ramagundam": {
     "website": "https://rfcl.co.in/",
     "contactPage": "https://rfcl.co.in/contact.php",
@@ -8050,6 +8343,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "cloverdale-paint-surrey",
+  "diamond-vogel-orange-city",
+  "sansin-strathroy",
   "rfcl-ramagundam",
   "ppg-pittsburgh",
   "behr-santa-ana",

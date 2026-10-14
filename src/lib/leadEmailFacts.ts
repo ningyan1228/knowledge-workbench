@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "cloverdale-paint-surrey": "Your WeatherOne 100% Acrylic Semi-Transparent Stain is formulated for wood siding, fences, decks and outdoor furniture.",
+  "diamond-vogel-orange-city": "Your Grain Stain Semi-Transparent Water-Base Stain is formulated for wood surfaces such as siding, fences, trim and decks.",
+  "sansin-strathroy": "Your ENS is a water-dilutable coating for wood, including windows, doors and outdoor furniture.",
   "rfcl-ramagundam": "Your published company profile describes RFCL’s production of neem-coated prilled urea at the Ramagundam unit.",
   "ppg-pittsburgh": "Your AMERLOCK 400 is a two-component, high-solids epoxy coating, as described in your January 31, 2025 product data sheet.",
   "behr-santa-ana": "Your BEHR PREMIUM Cabinet, Door & Trim range includes water-based enamel for cabinets, doors and woodwork.",
