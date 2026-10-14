@@ -1,3 +1,5 @@
+import { contactAssessment, contactIdentityVerified, contactEmailVerified, contactPhoneVerified, selectBusinessRecipient, qualifiedContactCompany, validContactDate, isGenericInbox, namedEmailVerified } from '../../src/lib/contactEvidence.ts'
+
 export const rotation = [
   { productId: 'fertilizer-coating', countries: ['Vietnam', 'Malaysia', 'Indonesia', 'Thailand', 'Philippines', 'South Korea', 'Japan', 'India', 'Brazil', 'Turkey'], terms: ['"controlled release fertilizer" "production line"', '"coated urea" factory expansion', '"fertilizer coating" commissioning', '"controlled release fertilizer" research recruitment'] },
   { productId: 'nl-w1201', countries: ['Turkey', 'India', 'Vietnam', 'Thailand', 'Poland', 'Mexico', 'Brazil', 'Indonesia'], terms: ['"water based" "plastic primer" manufacturer', '"PP primer" coatings manufacturer', '"waterborne" "adhesion" formulator'] },
@@ -26,13 +28,13 @@ export function jobFor(cursor) {
 
 export function contactBacklog(leads, previous = []) {
   const old = new Map(previous.filter((item) => item.taskKey).map((item) => [item.taskKey, item]))
-  return leads.filter((lead) => lead.productId === 'fertilizer-coating' && lead.leadEligible && lead.commercialRole === 'demand_side')
+  return leads.filter((lead) => lead.productId === 'fertilizer-coating' && qualifiedContactCompany(lead))
     .flatMap((lead) => {
-      const contacts = lead.profile.contacts.filter((item) => item.name && item.title && /^https:\/\//.test(item.source?.url ?? '') && /^\d{4}-\d{2}-\d{2}$/.test(item.verifiedAt ?? '') && (item.email || item.phone || item.linkedIn))
+      const contacts = lead.profile.contacts.filter((item) => contactIdentityVerified(lead.company, item))
       const gaps = []
       if (!contacts.some((item) => /procurement|purchas|sourcing/i.test(`${item.department ?? ''} ${item.title}`))) gaps.push('procurement')
       if (!contacts.some((item) => /technical|r&d|research|研发/i.test(`${item.department ?? ''} ${item.title}`))) gaps.push('technical')
-      if (![lead.profile.generalEmail, ...lead.profile.departmentEmails.map((item) => item.email), ...contacts.map((item) => item.email)].some((email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email ?? ''))) gaps.unshift('business-email')
+      if (!selectBusinessRecipient(lead)) gaps.unshift('business-email')
       return gaps.map((gap) => {
         const taskKey = `${lead.id}:${gap}`
         // Old company-wide statuses cannot safely suppress newly separated role tasks.
@@ -52,11 +54,19 @@ export function nextContacts(backlog, now, count = 2) {
 
 export function validateContactFinding(item, knownIds) {
   if (!knownIds.has(item.leadId)) throw new Error('Contact result must reference an existing qualified company')
+  const knownLead = knownIds.get?.(item.leadId)
+  if (knownLead && !qualifiedContactCompany(knownLead)) throw new Error('Company qualification precedes contact research')
   if (!['found', 'business_email', 'fallback_only', 'blocked'].includes(item.outcome)) throw new Error('Invalid contact outcome')
   if (!Array.isArray(item.sources) || !item.sources.length || item.sources.some((source) => !source.name || !/^https:\/\//.test(source.url) || !source.summary)) throw new Error('Contact result requires public source URLs and evidence summaries')
-  if (item.outcome === 'found' && (!item.name || !item.title || !item.verifiedAt || !/^\d{4}-\d{2}-\d{2}$/.test(item.verifiedAt))) throw new Error('Named contact requires name, title and verification date')
+  const company = knownIds.get?.(item.leadId)?.company ?? item.company ?? item.identityEvidence?.company ?? item.emailEvidence?.company
+  if (item.outcome === 'found' && (!validContactDate(item.verifiedAt) || !contactIdentityVerified(company, item))) throw new Error('Named contact requires separately sourced current employer, title, responsibilities and identity verification date')
   if (item.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(item.email)) throw new Error('Invalid disclosed email')
-  if (item.outcome === 'business_email' && (!item.email || !/^\d{4}-\d{2}-\d{2}$/.test(item.verifiedAt ?? ''))) throw new Error('Business email requires a disclosed email and verification date')
+  if (item.email && !contactEmailVerified(company, item.email, item.emailEvidence)) throw new Error('Email requires its own public business evidence, exact address, company and verification date')
+  if (item.emailEvidence?.kind === 'named-business' && (!namedEmailVerified(company, item) || isGenericInbox(item.email ?? ''))) throw new Error('A generic or unattributed inbox cannot be a named personal mailbox')
+  if (item.phone && !contactPhoneVerified(company, item.phone, item.phoneEvidence)) throw new Error('Phone requires its own explicitly public business evidence')
+  if (item.phoneEvidence?.kind === 'named-business' && !contactAssessment(company, item).phone) throw new Error('Phone ownership does not match the verified person')
+  if (item.outcome === 'business_email' && (!item.email || !validContactDate(item.verifiedAt) || item.name || item.emailEvidence?.kind === 'named-business')) throw new Error('Business email finding must use a sourced company / department inbox without a person attribution')
+  if (item.linkedIn && !contactAssessment(company, item).linkedIn) throw new Error('Use the disclosed direct public LinkedIn profile URL')
   return { ...item, reviewStatus: 'needs_review' }
 }
 

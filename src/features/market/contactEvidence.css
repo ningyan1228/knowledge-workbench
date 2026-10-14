@@ -1,0 +1,14 @@
+.contact-evidence-note{color:#64748b;font-size:12px;line-height:1.7;margin:0 0 12px}
+.contact-evidence-panel .contact-detail-grid article{min-width:0}
+.contact-evidence-panel .detail-value{overflow-wrap:anywhere}
+.contact-evidence-badges{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}
+.contact-evidence-badges span{border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:5px;padding:3px 7px;font-size:11px}
+.contact-evidence-badges .pending{border-color:#fde68a;background:#fffbeb;color:#92400e}
+.contact-evidence-row{border-top:1px solid #e2e8f0;padding-top:8px;margin-top:9px;font-size:12px;overflow-wrap:anywhere}
+.contact-evidence-row>b{display:block;color:#475569;font-size:11px}
+.contact-evidence-row>small{display:block;color:#64748b;margin:3px 0 5px}
+.contact-evidence-row a{display:inline-flex;align-items:center;gap:4px;color:#2563eb;line-height:1.5}
+.contact-evidence-panel .contact-evidence-row p,.contact-evidence-row p{margin:3px 0 6px;color:#64748b;font-size:11px;line-height:1.6}
+.contact-evidence-panel .contact-evidence-missing{background:#fffbeb;color:#92400e;border-radius:5px;padding:8px;margin:12px 0 0;font-size:11px;line-height:1.7}
+.contact-evidence-panel .contact-responsibilities{font-size:12px;line-height:1.7;margin-top:8px}
+@media(max-width:620px){.contact-evidence-panel .contact-detail-grid{grid-template-columns:minmax(0,1fr)}}

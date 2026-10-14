@@ -1,4 +1,5 @@
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
+import { selectBusinessRecipient } from './contactEvidence'
 import {
   type ApplicationLayer,
   type MarketExtendedApplication,
@@ -83,42 +84,21 @@ const productReferences: Record<MarketProduct['id'], ProductReference> = {
 }
 
 function recipientCategory(value: string) {
-  if (/procurement|purchasing|sourcing/i.test(value)) return 'procurement' as const
+  if (/procurement|purchasing|sourcing|supply.chain/i.test(value)) return 'procurement' as const
   if (/technical|r&d|research|\bproduct\b/i.test(value)) return 'technical' as const
   if (/production|plant|manufactur/i.test(value)) return 'production' as const
   if (/director|manager|management|general manager|owner|president|ceo/i.test(value)) return 'management' as const
   return 'general' as const
 }
 
-function recipientPriority(category: Recipient['category']) {
-  return ({ procurement: 0, technical: 1, production: 2, management: 3, general: 4 })[category]
-}
-
 function recipientFor(lead: PublicLead): Recipient {
-  const named = lead.profile.contacts
-    .filter((contact) => contact.name.trim() && contact.title?.trim() && contact.email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contact.email) && contact.source?.label && /^https:\/\//.test(contact.source.url) && /^\d{4}-\d{2}-\d{2}$/.test(contact.verifiedAt ?? '') && !Number.isNaN(Date.parse(contact.verifiedAt!)) && new Date(contact.verifiedAt!).toISOString().slice(0, 10) === contact.verifiedAt)
-    .map((contact) => {
-      const title = contact.title ?? contact.department ?? 'Public business contact'
-      return {
-        name: contact.name,
-        title,
-        category: recipientCategory(`${title} ${contact.department ?? ''}`),
-        source: contact.source ? `${contact.source.label} — ${contact.source.url}${contact.verifiedAt ? ` (verified ${contact.verifiedAt})` : ''}` : 'Public company source',
-      }
-    })
-    .sort((left, right) => recipientPriority(left.category) - recipientPriority(right.category))
-  if (named[0]) return named[0]
-
-  const department = lead.profile.departmentEmails
-    .filter((item) => item.source?.label && /^https:\/\//.test(item.source.url) && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(item.email))
-    .map((item) => ({
-      name: `${item.department} Team`,
-      title: `${item.department} department mailbox`,
-      category: recipientCategory(item.department),
-      source: item.source ? `${item.source.label} — ${item.source.url}` : 'Public company source',
-    }))
-    .sort((left, right) => recipientPriority(left.category) - recipientPriority(right.category))
-  if (department[0]) return department[0]
+  const recipient = selectBusinessRecipient(lead)
+  if (recipient) return {
+    name: recipient.name ?? (recipient.label.includes('部门邮箱') ? `${recipient.label.split(' ')[0]} Team` : 'General Team'),
+    title: recipient.label,
+    category: recipientCategory(recipient.label),
+    source: `Identity: ${recipient.identitySources?.map((source) => `${source.label} — ${source.url}`).join('; ') ?? 'Company / department mailbox; no person attributed'}\nEmail: ${recipient.emailSources.map((source) => `${source.label} — ${source.url}`).join('; ')}\nEmail evidence date: ${recipient.verifiedAt ?? 'Legacy company source; separate verification pending'}`,
+  }
 
   return {
     name: `${lead.company} Team`,

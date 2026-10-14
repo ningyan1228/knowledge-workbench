@@ -48,7 +48,7 @@ try {
     if (!state.activeRun || input?.runId !== state.activeRun.runId) throw new Error('Result runId does not match the active research round')
     if (!Array.isArray(input.queries) || !input.queries.length || input.queries.some((item) => !item.query || !item.channel || !item.outcome)) throw new Error('Record actual searches and their outcomes')
     if (!Array.isArray(input.discoveries) || !Array.isArray(input.contactFindings)) throw new Error('Provide discoveries and contactFindings arrays; empty arrays are valid')
-    const findings = input.contactFindings.map((item) => validateContactFinding(item, new Set(publicLeads.map((lead) => lead.id))))
+    const findings = input.contactFindings.map((item) => validateContactFinding(item, new Map(publicLeads.map((lead) => [lead.id, lead]))))
     if (input.projectFindings !== undefined && !Array.isArray(input.projectFindings)) throw new Error('projectFindings must be an array')
     const projectPath = resolve(privateRoot, 'project-findings.json')
     const oldProjects = await readJson(projectPath, [])

@@ -66,21 +66,14 @@ export type SupplierCompetitorCheck = {
   conclusion: string
 }
 
-export type CompanyContact = {
-  name: string
-  title?: string
-  department?: 'Sales' | 'Procurement' | 'Technical' | 'Production' | 'Management' | 'Other'
-  email?: string
-  phone?: string
-  linkedIn?: string
-  source?: { label: string; url: string }
-  verifiedAt?: string
-}
+import type { CompanyContact, EmailEvidence, PhoneEvidence } from './contactEvidence.ts'
+export type { CompanyContact } from './contactEvidence.ts'
 
 export type DepartmentEmail = {
   department: 'Sales' | 'Procurement' | 'Technical' | 'Production' | 'General'
   email: string
   source?: { label: string; url: string }
+  emailEvidence?: EmailEvidence
 }
 
 export type CompanyProfile = {
@@ -90,6 +83,8 @@ export type CompanyProfile = {
   whatsapp?: string
   generalEmail?: string
   generalPhone?: string
+  generalEmailEvidence?: EmailEvidence
+  generalPhoneEvidence?: PhoneEvidence
   contacts: CompanyContact[]
   departmentEmails: DepartmentEmail[]
   address?: string

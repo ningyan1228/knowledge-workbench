@@ -1,5 +1,6 @@
 import { marketExtendedApplications, publicLeads, targetCompanyTypes, tdsVerifiedApplications, type PublicLead } from './productMarketMap'
 import { businessRecipient } from './customerDevelopment'
+import { contactAssessment, contactPhoneVerified } from './contactEvidence'
 import { activeOutreachSend, outreachCompanyKey, type OutreachSend } from './outreachLedger'
 import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
 
@@ -30,8 +31,8 @@ export function contactChannels(lead: PublicLead) {
   return {
     email: Boolean(businessRecipient(lead)),
     form: httpsUrl(profile.contactPage),
-    phone: Boolean(profile.generalPhone || profile.contacts.some((person) => person.phone && httpsUrl(person.source?.url) && person.verifiedAt)),
-    named: profile.contacts.some((person) => person.name && person.title && httpsUrl(person.source?.url) && validWorkDate(person.verifiedAt ?? '') && (person.email || person.phone || httpsUrl(person.linkedIn))),
+    phone: Boolean((profile.generalPhone && (profile.generalPhoneEvidence ? contactPhoneVerified(lead.company, profile.generalPhone, profile.generalPhoneEvidence) && profile.generalPhoneEvidence.kind !== 'named-business' : httpsUrl(profile.contactPage ?? profile.website))) || profile.contacts.some((person) => contactAssessment(lead.company, person).phone)),
+    named: profile.contacts.some((person) => { const status = contactAssessment(lead.company, person); return status.identity && (status.namedEmail || status.phone || status.linkedIn) }),
   }
 }
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { createDevelopmentEmailPrompt } from '../src/lib/outreachPrompt'
 import { type PublicLead, marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications } from '../src/lib/productMarketMap'
+import { withProvedFirstContact } from './fixtures/contactEvidence'
 
 function promptFor(id: string, transform: (lead: PublicLead) => PublicLead = (lead) => lead) {
   const lead = transform(publicLeads.find((item) => item.id === id)!)
@@ -12,7 +13,7 @@ function promptFor(id: string, transform: (lead: PublicLead) => PublicLead = (le
 
 describe('development-email prompt', () => {
   it('carries the verified coating-company path and production-aware CTA', () => {
-    const prompt = promptFor('turf-care-martins-ferry')
+    const prompt = promptFor('turf-care-martins-ferry', withProvedFirstContact)
     expect(prompt).toContain('Turf Care Supply')
     expect(prompt).toContain('United States')
     expect(prompt).toContain('Brian Mengeu')
@@ -57,7 +58,7 @@ describe('development-email prompt', () => {
   })
 
   it('prioritizes a verified technical manager over general management', () => {
-    const prompt = promptFor('teknos-helsinki')
+    const prompt = promptFor('teknos-helsinki', withProvedFirstContact)
     expect(prompt).toContain('Name / team: Pasi Virtanen')
     expect(prompt).toContain('technical / R&D team')
   })

@@ -7,10 +7,10 @@ import {
 } from './productMarketMap'
 import { leadEmailFacts } from './leadEmailFacts'
 import { isTaiwanMarket } from './leadMarketScope'
+import { namedEmailVerified, selectBusinessRecipient } from './contactEvidence'
 
 const verifiedDay = (value?: string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value)
 const publicSource = (value?: string) => Boolean(value && /^https:\/\//.test(value))
-const sourcedPerson = (contact: PublicLead['profile']['contacts'][number]) => Boolean(contact.name.trim() && contact.title?.trim() && contact.email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contact.email) && contact.source?.label && publicSource(contact.source.url) && verifiedDay(contact.verifiedAt))
 
 export type ShortDevelopmentEmail = {
   subject: string
@@ -47,14 +47,8 @@ function positioningFor(lead: PublicLead) {
 }
 
 function recipientFor(lead: PublicLead) {
-  const contactPriority = (role: string) => /procurement|purchasing|sourcing/i.test(role) ? 0
-    : /technical|r&d|research|\bproduct\b/i.test(role) ? 1
-      : /production|plant|operations/i.test(role) ? 2
-        : /managing|general manager|director/i.test(role) ? 3 : 4
-  const contact = lead.profile.contacts
-    .filter(sourcedPerson)
-    .sort((a, b) => contactPriority(`${a.title ?? ''} ${a.department ?? ''}`) - contactPriority(`${b.title ?? ''} ${b.department ?? ''}`))[0]
-  return contact ? `Hi ${contact.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
+  const recipient = selectBusinessRecipient(lead)
+  return recipient?.name ? `Hi ${recipient.name.trim().split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
 }
 
 /** Pre-written, review-first first contact. It never asserts a purchase or product fit. */
@@ -79,7 +73,7 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
   if (!companyFact) return null
   const productName = productNames[lead.productId]
   const subject = `${productName} — a brief introduction`
-  const verifiedRecipient = recipientName && lead.profile.contacts.find((contact) => contact.name === recipientName && sourcedPerson(contact))
+  const verifiedRecipient = recipientName && lead.profile.contacts.find((contact) => contact.name === recipientName && namedEmailVerified(lead.company, contact))
   const greeting = recipientName === undefined ? recipientFor(lead) : verifiedRecipient ? `Hi ${verifiedRecipient.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
   const body = `${greeting}
 

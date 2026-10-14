@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { contactBacklog, jobFor, nextContacts, roundCounts, validateContactFinding, validateProjectFinding } from '../scripts/lib/lead-research-state.mjs'
 import { publicLeads } from '../src/lib/productMarketMap'
+import { provedContact } from './fixtures/contactEvidence'
 
 describe('multichannel coating customer research', () => {
   it('allocates four of six rounds to coating, covers SEA, and rotates discovery channels', () => {
@@ -16,7 +17,7 @@ describe('multichannel coating customer research', () => {
   it('retains procurement gaps despite a researcher and includes phone-only email tasks', () => {
     const base = publicLeads.find((lead) => lead.id === 'chobi-ulsan')!
     expect(base).toBeDefined()
-    const researcher = { ...base, id: 'fixture', profile: { ...base.profile, generalEmail: undefined, departmentEmails: [], contacts: [{ name: 'Fixture Person', title: 'R&D manager', department: 'Technical', linkedIn: 'https://www.linkedin.com/in/fixture', source: { label: 'Public profile', url: 'https://www.linkedin.com/in/fixture' }, verifiedAt: '2026-10-10' }] } }
+    const researcher = { ...base, id: 'fixture', profile: { ...base.profile, generalEmail: undefined, departmentEmails: [], contacts: [provedContact(base.company, { name: 'Fixture Person', title: 'R&D manager', department: 'Technical', email: undefined, emailEvidence: undefined, linkedIn: 'https://www.linkedin.com/in/fixture' })] } }
     const tasks = contactBacklog([researcher])
     expect(tasks.map((item) => item.gap)).toEqual(['business-email', 'procurement'])
     expect(contactBacklog([base]).some((item) => item.gap === 'business-email')).toBe(true)
@@ -31,11 +32,14 @@ describe('multichannel coating customer research', () => {
   })
   it('separates a named person from a sourced general inbox', () => {
     const known = new Set(['company'])
-    const valid = { leadId: 'company', outcome: 'found', name: 'Fixture Person', title: 'R&D manager', verifiedAt: '2026-10-10', sources: [{ name: 'Official team', url: 'https://example.org/team', summary: 'Fixture evidence only' }] }
+    const valid = { ...provedContact('Fixture Company', { name: 'Fixture Person', title: 'R&D manager', email: undefined, emailEvidence: undefined }), leadId: 'company', outcome: 'found', verifiedAt: '2026-10-10', sources: [{ name: 'Official team', url: 'https://example.org/team', summary: 'Fixture evidence only' }] }
     expect(validateContactFinding(valid, known).reviewStatus).toBe('needs_review')
     expect(() => validateContactFinding({ ...valid, title: undefined }, known)).toThrow()
     expect(() => validateContactFinding({ ...valid, sources: [] }, known)).toThrow()
-    expect(validateContactFinding({ ...valid, outcome: 'business_email', name: undefined, title: undefined, email: 'contact@example.org' }, known).reviewStatus).toBe('needs_review')
+    const mailbox = { ...valid, outcome: 'business_email', name: undefined, title: undefined, email: 'contact@example.org', emailEvidence: { ...provedContact('Fixture Company').emailEvidence!, value: 'contact@example.org', kind: 'general', personName: undefined } }
+    expect(validateContactFinding(mailbox, known).reviewStatus).toBe('needs_review')
+    expect(() => validateContactFinding({ ...mailbox, emailEvidence: undefined }, known)).toThrow()
+    expect(() => validateContactFinding({ ...valid, identityEvidence: undefined }, known)).toThrow()
   })
   it('requires project dates, public evidence and a planning/operation stage', () => {
     const project = { leadId: 'company', type: 'coating-line', stage: 'planned', eventDate: '2024', verifiedAt: '2026-10-10', summary: 'Reported plan, not commissioned', source: { name: 'Official report', url: 'https://example.org/report', summary: 'Announces a proposed line' } }

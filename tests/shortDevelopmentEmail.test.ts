@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { publicLeads } from '../src/lib/productMarketMap'
 import { createShortDevelopmentEmail } from '../src/lib/shortDevelopmentEmail'
 import { leadEmailFacts } from '../src/lib/leadEmailFacts'
+import { withProvedFirstContact } from './fixtures/contactEvidence'
 
 function draftFor(id: string) {
   const lead = publicLeads.find((item) => item.id === id)!
@@ -69,7 +70,8 @@ describe('ready-to-copy short development emails', () => {
   })
 
   it('addresses a named person only when their direct business email is sourced', () => {
-    expect(draftFor('teknos-helsinki').body).toMatch(/^Hi Pasi,/)
+    expect(draftFor('teknos-helsinki').body).toMatch(/^Hi Teknos Oy \(Teknos Group\) Team,/)
+    expect(createShortDevelopmentEmail(withProvedFirstContact(publicLeads.find((item) => item.id === 'teknos-helsinki')!))?.body).toMatch(/^Hi Pasi,/)
     expect(draftFor('polyvine-cheddar').body).toMatch(/^Hi Polyvine Limited Team,/)
     const lead = publicLeads.find((item) => item.id === 'teknos-helsinki')!
     const withoutDirectEmail = { ...lead, profile: { ...lead.profile, contacts: lead.profile.contacts.map((contact) => ({ ...contact, email: undefined })) } }
