@@ -1,3 +1,4 @@
+import { verifiedOnpaLeads } from './verifiedOnpaLead.ts'
 import { verifiedMylawLeads } from './verifiedMylawLead.ts'
 import { verifiedSesaBoyaLeads } from './verifiedSesaBoyaLead.ts'
 import { verifiedTintasVinciLeads } from './verifiedTintasVinciLead.ts'
@@ -11325,4 +11326,4 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads)
