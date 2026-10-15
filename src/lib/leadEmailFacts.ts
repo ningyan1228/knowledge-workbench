@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "noroo-paint-anyang": "Your EVACOAT epoxy protective coatings are used for new construction and maintenance of industrial buildings and plants.",
   "kroma-paints-ahmedabad": "Your Kromaguard epoxy zinc phosphate primer is formulated for corrosion protection of steel in industrial and marine environments.",
   "applied-chemical-technology-florence": "Your fertilizer development services include controlled-release coated fertilizers and urethane coating applications.",
   "fertiberia-madrid": "Your NERGETIC DS+ combines a biodegradable polymer around fertilizer granules with a nitrification inhibitor.",

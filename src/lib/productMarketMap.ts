@@ -3349,11 +3349,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "noroo-paint-anyang",
+    "company": "NOROO Paint & Coatings Co., Ltd. (NOROO Group)",
+    "productId": "elo",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Anyang, Gyeonggi-do (approximate headquarters city marker)",
+    "latitude": 37.3943,
+    "longitude": 126.9568,
+    "legacyCompanyDescription": "韩国成品工业防护涂料研发制造企业；NOROO集团一条，ELO配方适配及采购待确认",
+    "fit": "可开发候选",
+    "signal": "独立读取NOROO原始2025英文公司册PDF第4、6、7、14页：韩国经营主体自行制造及销售成品涂料，列有Anyang、Chilseo、Poseung工厂和自有研发中心；EVACOAT明确为用于工业建筑与工厂新建、维护的环氧防护涂料。当前R&D正文说明其涂料制造/销售与投资业务于2006年分离，官网当前重防腐涂料目录与集团化工业务页交叉印证成品涂料制造角色。仅将ELO与用户TDS所列通用涂料应用对应，不认定其配方含ELO、外购我方原料或正在采购。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "按ELO产品单独审读当前NOROO经营主体制造/重防腐产品、集团化工和Bio业务、相关公司目录及R&C现行链接的原始综合目录。该集团确有涂料树脂及助剂业务，不能笼统称无原料销售。R&C原始PDF第21页经视觉核对：Hyres FA1300为epoxy ester phosphate acid金属附着力促进剂，FA5310/5330为改性聚酯颜料分散载体，FA6202/4312为丙烯酸共聚物流平/消泡剂；不是据此认定其销售环氧化植物油或生物增塑剂。附着力促进剂业务使其不作为NL-W1201目标；本条ELO资格仅依据独立审查的成品防护涂料制造和ELO相关原料边界。母公司2026-07-24公告将NAUSOL三种3-HP产品明示为工业清洗溶剂，不将生物来源自动等同生物增塑剂。所审范围未发现ELO、ESBO、环氧化植物油或同类增塑/稳定化原料商品；不声称审完集团全部SKU或证明永不销售此类材料，也未使用外购例外。对照最新main202家及本地未发布公司名/网站，未有NOROO经营集团账户。现有Kossan Paint(M)SdnBhd与NOROO有50:50马来西亚合资关系，另有IPK与AkzoNobel合资关联；这些合作不证明两个母公司同一经营主体或共同控制，不把JV/分支另算新客户。韩国NOROO自身工厂/总部及2006经营主体分别有原始证据，本次仅新增这个韩国经营集团一条，不借1945品牌历史、2006分拆或海外别名制造新增。"
+    },
+    "contact": {
+      "label": "官方Product Inquiries通用业务邮箱/电话；未核实采购或研发负责人",
+      "email": "expoinfo@noroo.com",
+      "phone": "+82 31 467 6473",
+      "contactUrl": "https://noroopaint.com/EngProd/En/Company/Contact.asp"
+    },
+    "source": {
+      "label": "Original company brochure named2025: own manufacture, Anyang/Chilseo/Poseung plants; EVACOAT epoxy protective coatings on actual PDF page14 (printed26–27)",
+      "url": "https://m.noroopaint.com/file/2025%20NOROO%20BROCHURE_English.pdf"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "noroo-paint-anyang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "applied-chemical-technology-florence": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "fertiberia-madrid": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "enecon-medford": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3563,6 +3592,116 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "noroo-paint-anyang": {
+    "website": "https://www.noroopaint.com/en/",
+    "contactPage": "https://noroopaint.com/EngProd/En/Company/Contact.asp",
+    "address": "351 Bakdal-ro, Manan-gu, Anyang-si, Gyeonggi-do, Republic of Korea. Korean headquarters/Anyang plant location identified in own brochure and current company information. Map coordinates are an approximate city marker, not verified plant GPS.",
+    "generalEmail": "expoinfo@noroo.com",
+    "generalPhone": "+82 31 467 6473",
+    "generalEmailEvidence": {
+      "company": "NOROO Paint & Coatings Co., Ltd. (NOROO Group)",
+      "value": "expoinfo@noroo.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official contact body: market contacts distinguished from exact general Product Inquiries mailbox and telephone",
+          "url": "https://noroopaint.com/EngProd/En/Company/Contact.asp",
+          "summary": "Current own Contact page explicitly labels Product Inquiries and prints expoinfo@noroo.com under NOROO Paint & Coatings. This is a corporate product-inquiry route; no raw-material purchasing responsibility or named person inferred. Named market contacts on the same page are not collected for this record."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "NOROO Paint & Coatings Co., Ltd. (NOROO Group)",
+      "value": "+82 31 467 6473",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official contact body: market contacts distinguished from exact general Product Inquiries mailbox and telephone",
+          "url": "https://noroopaint.com/EngProd/En/Company/Contact.asp",
+          "summary": "Current own Contact page explicitly gives Product Inquiries Tel:+82-31-467-6473. Formatting normalized without changing digits; business inquiry telephone, not emergency or a named buyer telephone."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "expoinfo@noroo.com",
+        "source": {
+          "label": "Current official contact body: market contacts distinguished from exact general Product Inquiries mailbox and telephone",
+          "url": "https://noroopaint.com/EngProd/En/Company/Contact.asp"
+        },
+        "emailEvidence": {
+          "company": "NOROO Paint & Coatings Co., Ltd. (NOROO Group)",
+          "value": "expoinfo@noroo.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official contact body: market contacts distinguished from exact general Product Inquiries mailbox and telephone",
+              "url": "https://noroopaint.com/EngProd/En/Company/Contact.asp",
+              "summary": "Exact current corporate Product Inquiries mailbox; General label avoids inventing a purchasing/R&D department."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original company brochure named2025: own manufacture, Anyang/Chilseo/Poseung plants; EVACOAT epoxy protective coatings on actual PDF page14 (printed26–27)",
+        "url": "https://m.noroopaint.com/file/2025%20NOROO%20BROCHURE_English.pdf"
+      },
+      {
+        "label": "Current official R&D and2006 separation of investment from paint manufacture/sales; general product-inquiry channels",
+        "url": "https://noroopaint.com/EngProd/En/Company/ColorPrism_Remix.asp"
+      },
+      {
+        "label": "Current official contact body: market contacts distinguished from exact general Product Inquiries mailbox and telephone",
+        "url": "https://noroopaint.com/EngProd/En/Company/Contact.asp"
+      },
+      {
+        "label": "Current official group chemical business: Korean operating coating manufacturers, resin businesses and50:50 NOROO-KOSSAN venture",
+        "url": "https://www.norooholdings.com/en/business/?pIdx=chemicals"
+      },
+      {
+        "label": "Current official related-company descriptions: Korean/overseas entities and partner affiliations; no regional subsidiaries counted separately",
+        "url": "https://www.noroopaint.com/en/company/affiliated.asp"
+      },
+      {
+        "label": "Current official protective-coating product category; main application body read, not all technical appendix tables",
+        "url": "https://noroopaint.com/EngProd/En/Product/Categories.asp?category1=4"
+      },
+      {
+        "label": "Current R&C catalogue index linking the original comprehensive resin/additive catalogue",
+        "url": "https://www.noroornc.com/en/product/catalog.aspx"
+      },
+      {
+        "label": "Actual original group R&C comprehensive catalogue, undated22PDF pages: additive table on PDF page21 visually inspected; not proof that all products were fully read",
+        "url": "https://www.noroornc.com/onlineCatalog.pdf"
+      },
+      {
+        "label": "Current parent bio-business body:3-HP platform development, commercialization preparation and applications distinguished from commercial epoxidized-oil sale",
+        "url": "https://www.norooholdings.com/en/business/?pIdx=bio"
+      },
+      {
+        "label": "Own2026-07-24 NAUSOL announcement: three3-HP-based products described as industrial cleaning solvents; not proof of ELO/plasticizer sale",
+        "url": "https://www.norooholdings.com/en/media/?pIdx=news&B_Name=center&b_dir=bbs&category=news_en&search=&searchstring=&b_url=contents&list_no=1113&page=1"
+      },
+      {
+        "label": "Current official legal operating-company information; shareholding/sales table explicitly asof2022, not assumed2026",
+        "url": "https://www.noroopaint.com/en/investor/govern_overview.asp"
+      },
+      {
+        "label": "Current official corporate history:2006 operating/holding-company separation and2011 Malaysian joint venture",
+        "url": "https://noroopaint.com/en/company/history.asp"
+      }
+    ]
+  },
   "applied-chemical-technology-florence": {
     "website": "https://appliedchemical.com/",
     "contactPage": "https://appliedchemical.com/contact-us/",
@@ -9619,6 +9758,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "noroo-paint-anyang",
   "applied-chemical-technology-florence",
   "fertiberia-madrid",
   "enecon-medford",
