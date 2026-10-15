@@ -3320,11 +3320,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "applied-chemical-technology-florence",
+    "company": "Applied Chemical Technology, Inc. (ACT)",
+    "productId": "fertilizer-coating",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Florence, Alabama (laboratory and pilot-facility city marker)",
+    "latitude": 34.7998,
+    "longitude": -87.6773,
+    "legacyCompanyDescription": "控释肥包衣研发与中试加工服务企业；原料适配及采购待确认",
+    "fit": "可开发候选",
+    "signal": "当前自有肥料研发页明确控释/缓释包衣肥料、聚合物包衣中的urethane/epoxy等实际研发业务；独立读取bench-scale coating正文，明确其已开发多种包衣产品、养分利用/延迟释放包衣及实际使用过的涂层材料。当前真实Facilities and Equipment页列出自有中试空间、coating drums/fluid beds和熔融尿素处理；原始Pilot Plant Services文件明确中试提供实际产品样品，并说明已完成项目及客户拥有所开发技术/产品。About将其实验室和中试设施定位Florence-Lauderdale Industrial Park。资格依据实际肥料包衣研发、中试加工和用料活动，不能仅凭其制造设备或项目设计服务。不是规模化商品肥料产量、标准SKU或当前订单的认定。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立审读当前完整可见Services/Equipment导航及肥料研发、bench-scale coating、实际中试设备、公司业务与原始Pilot Plant Services相关内容。Coating Materials中的waxes/epoxy/sulfur/urethanes/latex/resins/PVA/polymers是Past Coating Experience用料清单，不能误认成对外出售包膜树脂或PU原料的商品目录。设备销售、工程设计和客户所有IP/产品的试验研发与配套原料销售分开判断；所查范围未发现与我方同类包膜原料、包膜树脂或PU原料对外销售的实际商品入口。没有把其自称world leader、千项经验或历史场地数字当当前采购量。按Applied Chemical Technology/ACT、appliedchemical.com、Florence及已公开创办主体线索核对最新main200家和本地未发布客户，无同一账户；不混同中国同名化工/油田公司、其他ACT设备/涂料企业或把客户/合作伙伴当子公司。网站未给出需与既有客户合并的集团关系，不臆造其完全股权结构。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱/电话；未核实具名采购或研发负责人",
+      "email": "act@appliedchemical.com",
+      "phone": "+1 256 760 9600",
+      "contactUrl": "https://appliedchemical.com/contact-us/"
+    },
+    "source": {
+      "label": "Current own fertilizer development scope: controlled-release coated fertilizers and urethane polymer-coating applications",
+      "url": "https://appliedchemical.com/services/research-development/fertilizer/fertilizer-research-development-commercialization/"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "applied-chemical-technology-florence": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "fertiberia-madrid": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "enecon-medford": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sauereisen-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3533,6 +3562,104 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "applied-chemical-technology-florence": {
+    "website": "https://appliedchemical.com/",
+    "contactPage": "https://appliedchemical.com/contact-us/",
+    "address": "Florence-Lauderdale Industrial Park, Florence, Alabama 35630, United States. Actual own About identifies the industrial park and city; current footer supplies postal code. Street address was not established in the read pages. Approximate city marker, not exact plant GPS.",
+    "generalEmail": "act@appliedchemical.com",
+    "generalPhone": "+1 256 760 9600",
+    "generalEmailEvidence": {
+      "company": "Applied Chemical Technology, Inc. (ACT)",
+      "value": "act@appliedchemical.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own corporate contact page and explicitly published general business mailbox and phone",
+          "url": "https://appliedchemical.com/contact-us/",
+          "summary": "Current official Contact Us footer explicitly gives act@appliedchemical.com under Applied Chemical Technology, Florence, AL35630; the original company brochure independently prints the identical mailbox. General company business route, no named purchasing or R&D ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Applied Chemical Technology, Inc. (ACT)",
+      "value": "+1 256 760 9600",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own corporate contact page and explicitly published general business mailbox and phone",
+          "url": "https://appliedchemical.com/contact-us/",
+          "summary": "Current official Contact Us footer explicitly gives Tel:(256)760-9600. US country prefix added to the same disclosed business telephone. A different800-ACT-3217 number is labelled Fax on the current site and TollFree in the undated brochure; that inconsistent channel is not promoted."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "act@appliedchemical.com",
+        "source": {
+          "label": "Current own corporate contact page and explicitly published general business mailbox and phone",
+          "url": "https://appliedchemical.com/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Applied Chemical Technology, Inc. (ACT)",
+          "value": "act@appliedchemical.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own corporate contact page and explicitly published general business mailbox and phone",
+              "url": "https://appliedchemical.com/contact-us/",
+              "summary": "Exact current public corporate mailbox. Lab/technical capabilities do not turn the generic mailbox into a named technical or purchasing contact."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own fertilizer development scope: controlled-release coated fertilizers and urethane polymer-coating applications",
+        "url": "https://appliedchemical.com/services/research-development/fertilizer/fertilizer-research-development-commercialization/"
+      },
+      {
+        "label": "Current own bench-scale coating services: actual past coated-product development, nutrient-utilization coatings and materials used",
+        "url": "https://appliedchemical.com/services/research-development/lab-and-bench-scale/coating/"
+      },
+      {
+        "label": "Current own pilot facilities and equipment: on-site coating drums/fluid beds, molten urea/sulfur handling and utilities",
+        "url": "https://appliedchemical.com/services/research-development/pilot-plant/facilities-and-equipment/"
+      },
+      {
+        "label": "Actual public original Pilot Plant Services brochure; undated, four PDF pages; sample production, own facilities and client-owned developments",
+        "url": "https://appliedchemical.com/wp-content/uploads/Pilot_Plant.pdf"
+      },
+      {
+        "label": "Current own company identity, Florence-Lauderdale Industrial Park facilities, laboratory/pilot operation and client-assigned patent policy",
+        "url": "https://appliedchemical.com/resources/about-us/"
+      },
+      {
+        "label": "Current own service/equipment scope: research, engineering and fabrication, distinguished from raw chemical sale",
+        "url": "https://appliedchemical.com/"
+      },
+      {
+        "label": "Current own corporate contact page and explicitly published general business mailbox and phone",
+        "url": "https://appliedchemical.com/contact-us/"
+      },
+      {
+        "label": "Current own pilot-services index and individual facility/service links",
+        "url": "https://appliedchemical.com/services/research-development/pilot-plant/"
+      },
+      {
+        "label": "Current brochure index inspected; the older public Pilot_Plant.pdf was found by public search rather than claimed as currently linked here",
+        "url": "https://appliedchemical.com/resources/brochures/"
+      }
+    ]
+  },
   "fertiberia-madrid": {
     "website": "https://www.fertiberia.com/",
     "contactPage": "https://www.fertiberia.com/contacta/",
@@ -9491,6 +9618,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "applied-chemical-technology-florence",
   "fertiberia-madrid",
   "enecon-medford",
   "sauereisen-pittsburgh",
