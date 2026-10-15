@@ -44,6 +44,7 @@ describe('ready-to-copy short development emails', () => {
       expect(draft.body.match(/\?/g), lead.id).toHaveLength(1)
       expect(draft.body).not.toMatch(/TDS|\bour catalog|catalog attached|quotation|target price|\bMOQ\b|free sample|lowest price|hydroxyl value|epoxy value/i)
       expect(draft.subject).not.toMatch(/TDS|\blowest\b|\bbest\b|^Re:/i)
+      expect(draft.body).not.toMatch(/who (handles|would)|right person|point me|forward (this|the)|refer (me|a)|purchasing colleague/i)
       const legacy = createShortDevelopmentEmail(lead, undefined, 'legacy')!
       expect(legacy.body).toContain(leadEmailFacts[lead.id])
       expect(legacy.body.split(/\s+/).length).toBeGreaterThan(draft.body.split(/\s+/).length)

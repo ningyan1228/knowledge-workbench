@@ -1,5 +1,4 @@
 import type { PublicLead } from './productMarketMap'
-import { contactRolePriority, namedEmailVerified, selectBusinessRecipient } from './contactEvidence'
 
 /** Saved application evidence supplies the topic; it never confirms a current purchase. */
 const contexts: Record<string, { application: string; subject: string }> = {
@@ -26,22 +25,14 @@ export function outreachCompanyLabel(company: string) {
   const label = company.replace(/\s*\([^()]*\)\s*$/, '').replace(/,?\s+(?:Limited|Ltd\.?|LLC|Inc\.?|S\.r\.l\.?|S\.A\.?|AG|Oy)$/i, '').trim()
   return label || company
 }
-export function firstContactStrategy(lead: PublicLead, recipientName?: string | null) {
+export function firstContactStrategy(lead: PublicLead, _recipientName?: string | null) {
   const applicationId = lead.companyEvidence.applicationId
   const context = contexts[applicationId] ?? (lead.productId === 'fertilizer-coating'
     ? { application: 'fertilizer coating formulations', subject: 'fertilizer-coating materials' }
     : lead.productId === 'elo'
       ? { application: 'coating formulations', subject: 'coating raw materials' }
       : { application: 'primer formulations', subject: 'primer materials' })
-  const recipient = selectBusinessRecipient(lead)
-  const contact = lead.profile.contacts.find((person) => person.name === (recipientName === undefined ? recipient?.name : recipientName) && namedEmailVerified(lead.company, person))
-  const knownEvaluationRole = Boolean(contact && contactRolePriority(`${contact.department ?? ''} ${contact.title ?? ''}`) <= 1)
-    || Boolean(!contact && !recipient?.name && recipient && recipient.priority <= 1)
-  const approach = knownEvaluationRole ? 'relevance-check' : contact ? 'person-check' : 'route-to-person'
-  const question = approach === 'relevance-check'
-    ? `Would evaluating this material for your ${context.application} be relevant to your team?`
-    : approach === 'person-check'
-      ? `Are you the right person to contact about raw materials for your ${context.application}?`
-      : `Who handles raw-material evaluation or purchasing for your ${context.application}?`
+  const approach = 'relevance-check' as const
+  const question = `Would evaluating this material for your ${context.application} be relevant to your team?`
   return { approach, question, application: context.application, subject: `${outreachCompanyLabel(lead.company)} — ${context.subject}`, buyingNeed: 'unconfirmed' as const }
 }

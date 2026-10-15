@@ -2,7 +2,7 @@
 
 2026-10-14 用户要求：尚未显示“已发送”的客户首封开发信改成简洁版，以后新增客户继续采用简洁版。
 
-默认约55–95个英文词（含称呼与签名），用大白话和短段落：一个公开来源支持的公司事实；简短说明供应的对应原料；再问一个确认负责人或材料相关性的问题。首封不以TDS、目录、报价、目标价或MOQ开场，不列工厂实力、价格优势和技术参数。不引用别人的客户案例或降本数字，不虚构采购需求。TDS留到对方表示有兴趣或主动索取后。
+默认约55–95个英文词（含称呼与签名），用大白话和短段落：一个公开来源支持的公司事实；简短说明供应的对应原料；以温和的材料相关性询问结尾。用户2026-10-15明确要求去掉问谁负责、确认是否找对人及要求转介绍的句子；不让读者替我们找人或转发。首封不以TDS、目录、报价、目标价或MOQ开场，不列工厂实力、价格优势和技术参数。不引用别人的客户案例或降本数字，不虚构采购需求。TDS留到对方表示有兴趣或主动索取后。
 
 示例：
 
@@ -15,7 +15,7 @@ Your 2K-POLY86 is a two-pack water-based polyurethane varnish for wooden floors 
 
 I’m Zhiwu from Neon Lion. We supply NL-W1201, a water-based surface treatment material.
 
-Who handles raw-material evaluation or purchasing for your wood coatings?
+Would evaluating this material for your wood coatings be relevant to your team?
 
 Best regards,
 Zhiwu
@@ -31,10 +31,8 @@ zhiwu@neonlion.cn
 
 后续新增公司仍需保存自己的`leadEmailFacts`公开事实短句，建议12–24词。旧的少数长句通过`conciseLeadEmailFacts`单独缩写，原事实保留用于原版参考；不通过截断、关键词拼接或虚构统一开场句压缩证据。跟进草稿通常30–50词、一个目的，不重复完整首封。
 
-## 按收件人选择开场和结尾
+## 自然、温和的结尾
 
-- 公共或销售邮箱：点名真实产品／配方应用，问谁负责相应原料评估或采购。
-- 已核验姓名和业务邮箱、但职责不明确的管理／商务联系人：坦诚确认是否找对负责原料的人。
-- 已核验采购／供应链或技术／研发负责人、或有来源的相应部门邮箱：问评估此类材料是否与其工作相关，不假定现在采购。
+所有收件人都采用温和的材料相关性结尾，根据各公司真实应用填入场景，例如木器涂料、涂料配方或肥料包衣配方。保留用户认可的“Would evaluating this material for your … be relevant to your team?”方向。不使用“Who handles… / Are you the right person… / Could you point me to…”，也不添加要求转发、寻找联系人、转介绍或回答联系人身份的请求。跟进模板遵守同样的语气规则。
 
 标题用已保存的公司名称和有证据的应用主题。只删法律后缀和解释性集团括号，不编造品牌，也不伪装成已有往来（Re:）。官网业务与我方原料可能相关，是值得联系的依据；具体需求、用量和时机须另有公开直接证据或由买家回复确认。仅“研究市场时发现你”缺少具体业务依据，不作为本工作台首封默认开场。

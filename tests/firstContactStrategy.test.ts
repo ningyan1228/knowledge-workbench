@@ -7,20 +7,20 @@ import { provedContact } from './fixtures/contactEvidence'
 const lead = publicLeads.find((item) => item.id === 'polyvine-cheddar')!
 const withPerson = (title: string) => ({ ...lead, profile: { ...lead.profile, departmentEmails: [], contacts: [provedContact(lead.company, { title })] } })
 describe('specific business context before a first-contact request', () => {
-  it('asks a company inbox for the responsible colleague, without assuming a current purchase', () => {
-    expect(firstContactStrategy(lead)).toMatchObject({ approach: 'route-to-person', application: 'wood coatings', buyingNeed: 'unconfirmed', question: 'Who handles raw-material evaluation or purchasing for your wood coatings?' })
+  it('uses a gentle relevance question for a company inbox without assuming a current purchase', () => {
+    expect(firstContactStrategy(lead)).toMatchObject({ approach: 'relevance-check', application: 'wood coatings', buyingNeed: 'unconfirmed', question: 'Would evaluating this material for your wood coatings be relevant to your team?' })
     const draft = createShortDevelopmentEmail(lead)!
     expect(draft.text).toContain('2K-POLY86')
     expect(draft.subject).toBe('Polyvine — wood-coating materials')
     expect(draft.text).not.toMatch(/TDS|quotation|MOQ|you need|23%|UK client/i)
   })
-  it('asks relevance for a sourced buyer or technical contact, and checks responsibility for other roles', () => {
-    for (const title of ['Procurement Manager', 'R&D Manager', 'Supply Chain Manager']) expect(firstContactStrategy(withPerson(title))).toMatchObject({ approach: 'relevance-check', question: 'Would evaluating this material for your wood coatings be relevant to your team?' })
-    expect(firstContactStrategy(withPerson('CEO'))).toMatchObject({ approach: 'person-check', question: 'Are you the right person to contact about raw materials for your wood coatings?' })
+  it('never asks readers to identify, confirm or refer a colleague, regardless of role evidence', () => {
+    for (const title of ['Procurement Manager', 'R&D Manager', 'Supply Chain Manager', 'CEO', 'Sales Manager']) expect(firstContactStrategy(withPerson(title))).toMatchObject({ approach: 'relevance-check', question: 'Would evaluating this material for your wood coatings be relevant to your team?' })
     const missingIdentity = withPerson('Procurement Manager')
     missingIdentity.profile.contacts[0].identityEvidence = undefined
-    expect(firstContactStrategy(missingIdentity).approach).toBe('route-to-person')
-    expect(firstContactStrategy(withPerson('Procurement Manager'), 'Invented Person').approach).toBe('route-to-person')
+    expect(firstContactStrategy(missingIdentity).approach).toBe('relevance-check')
+    expect(firstContactStrategy(withPerson('Procurement Manager'), 'Invented Person').approach).toBe('relevance-check')
+    expect(createShortDevelopmentEmail(withPerson('Procurement Manager'), 'Invented Person')?.body).not.toContain('Hi Invented,')
   })
   it('uses only the product/application path saved for each company', () => {
     const coated = publicLeads.find((item) => item.id === 'troforte-innovations-wangara')!

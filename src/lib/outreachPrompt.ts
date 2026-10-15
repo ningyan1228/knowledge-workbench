@@ -114,8 +114,8 @@ function ctaFor(recipient: Recipient) {
     procurement: 'Ask whether the procurement / sourcing team would be open to evaluating an external raw material for the relevant formulation, and offer the TDS and a sample if relevant.',
     technical: 'Ask whether the technical / R&D team would be interested in a formulation or laboratory evaluation, and offer the TDS and a sample if relevant.',
     production: 'Ask whether the material could be relevant to the production system, and offer the TDS and a technical evaluation route if relevant.',
-    management: 'Ask whether the recipient could direct the message to the person responsible for raw-material purchasing or technical evaluation; offer the TDS and a sample if relevant.',
-    general: 'Ask the company team to route the message to the appropriate Technical / Procurement contact, and offer the TDS and a sample if relevant.',
+    management: 'Ask gently whether evaluating the material for the sourced application would be relevant to the company; do not ask the reader to identify or refer a colleague.',
+    general: 'Ask gently whether the material would be relevant to the company’s sourced application; do not ask the reader to forward the email or identify a purchasing contact.',
   }
   return ctas[recipient.category]
 }
@@ -178,7 +178,7 @@ ${style === 'concise' ? 'Choose one relevant product description only; keep the 
 ${reference.allowedFacts.map((fact) => `- ${fact}`).join('\n')}
 
 Recipient-aware CTA
-${style === 'concise' ? `First-contact approach: ${strategy.approach}. Ask exactly one question: “${strategy.question}” The company’s downstream activity supports potential relevance, not confirmed purchasing needs. Do not open with a TDS, catalog, price or sample offer; share technical documents only after interest or a request.` : ctaFor(recipient)}
+${style === 'concise' ? `First-contact approach: ${strategy.approach}. Close with one gentle relevance question: “${strategy.question}” Do not ask who handles purchasing, whether this is the right person, or ask the reader to forward the email or refer a colleague. The company’s downstream activity supports potential relevance, not confirmed purchasing needs. Do not open with a TDS, catalog, price or sample offer; share technical documents only after interest or a request.` : ctaFor(recipient)}
 
 Non-negotiable restrictions
 - Do not claim or imply that ${lead.company} currently buys, needs, sources, evaluates, or uses our material.
@@ -190,7 +190,7 @@ ${reference.prohibitedClaims.map((claim) => `- ${claim}`).join('\n')}
 
 Writing requirements
 - First paragraph: cite one specific company fact from the company evidence above. Do not use generic “I found your company online” language.
-- ${style === 'concise' ? `Use plain everyday English, about 55–95 words including greeting and signature, in short paragraphs. One specific company fact, a brief description of the supplied material, and exactly one question checking the right person or relevance. Subject should use the saved company name and sourced application topic; suggested subject: ${strategy.subject}. Avoid advertising, generic praise, factory strength, target-price/MOQ questions and claims copied from somebody else’s customer case.` : 'Keep the first email professional, technical, direct, polite, and non-pushy; 90–160 words.'}
+- ${style === 'concise' ? `Use plain everyday English, about 55–95 words including greeting and signature, in short paragraphs. One specific company fact, a brief description of the supplied material, and one gentle relevance question, without a request to identify or refer a purchasing contact. Subject should use the saved company name and sourced application topic; suggested subject: ${strategy.subject}. Avoid advertising, generic praise, factory strength, target-price/MOQ questions and claims copied from somebody else’s customer case.` : 'Keep the first email professional, technical, direct, polite, and non-pushy; 90–160 words.'}
 - ${style === 'concise' ? 'Keep each follow-up about 30–50 words with one purpose and one question; do not repeat the company introduction.' : 'Keep each follow-up 50–100 words.'}
 - Use the recipient name only if shown above; otherwise use “Dear [Company Name] Team,”. Do not invent a name, gender, or honorific.
 - Do not overstate product–application fit. Preserve the application classification above, especially any sourced market extension.

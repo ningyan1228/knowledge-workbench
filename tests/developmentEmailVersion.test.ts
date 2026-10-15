@@ -11,7 +11,7 @@ describe('concise rewrite scope follows the shared sent badge', () => {
   it('uses the new version only for a company without an active sent record', () => {
     const version = developmentEmailVersion(lead, [])
     expect(version).toMatchObject({ state: 'unsent', style: 'concise' })
-    expect(version.email?.body).toContain('Who handles raw-material evaluation or purchasing for your wood coatings?')
+    expect(version.email?.body).toContain('Would evaluating this material for your wood coatings be relevant to your team?')
     expect(version.email?.body).not.toContain('If another colleague')
     expect(version.email?.subject).toBe('Polyvine — wood-coating materials')
     expect(version.email?.text).not.toContain('TDS')
