@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "the-paint-depot-cape-town": "Your UltraFlex Zinc Phosphate Metal Primer is a water-based coating for prepared steel and industrial metalwork.",
   "agrotolia-gubre-kozan": "Your NITRO-TECH fertilizer combines urea and ammonium nitrogen coated with organic matter and sulfur.",
   "unaldi-gubre-menderes": "Your BIOCOMP product range includes organomineral compound fertilizers coated with organic matter.",
   "kubilay-boya-aliaga": "Your Aqua-Tech range includes water-based acrylic primers for exterior wood, MDF, solid wood and veneered furniture.",

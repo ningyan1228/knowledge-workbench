@@ -3550,11 +3550,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "the-paint-depot-cape-town",
+    "company": "The Paint Depot (UltraFlex / historical Duraflex brand)",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town (approximate city marker)",
+    "latitude": -33.925,
+    "longitude": 18.424,
+    "legacyCompanyDescription": "自有配方/制造的成品防护涂料企业；按官网经营名称收录，ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立重新读取当前自身Homepage/About：The Paint Depot明确在CapeTown自有设施制造并控制配方，当前成品线为UltraFlex，历史Duraflex和当前UltraFlex由同一站点的经营沿革对应。独立读取当前ZincPhosphateMetalPrimer完整正文：水性锌磷酸盐防锈底漆，用于正确处理的普通钢材、结构钢及工业金属构件。完整可见目录列16项产品，均重新读取产品定义，胶结液/水泥改性剂/运动场色层等可疑输入另读完整正文。该条为同一制造经营单位一次，不把零售伙伴或品牌另列客户；不凭ready_for_review标签入库。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "对当前16个实际商品的产品定义及相关正文逐项核验，范围为保护/装饰漆、防水膜、屋面漆、底漆和丙烯酸运动场体系。BondingLiquid实际是水性丙烯酸水泥基粘接底涂/添加剂；CementModifier明确为100%丙烯酸水泥基添加剂；Fill&Patch含丙烯酸修补粘结料/聚合物砂裂缝填料；ColourConcentrate及BlackAcrylicResurfacer的浓缩/加砂/即用规格均是运动场施工体系。真实添加剂/粘结料业务保留，不因名称中modifier、flexibility或binder就等同ELO/ESBO/环氧化植物油或生物增塑/稳定剂。所查可见范围未发现此类同类原料商品；不宣称未披露集团或所有未来SKU无此业务。只按ELO通用涂料应用核验，不因水性或adhesionpromoter字样直接加为NL-W1201客户。当前官网经营名称、自产声明、品牌沿革和同一CapeTown联系地址对应；未发现另一个明确制造主体与之矛盾。未独立确认注册全称/注册号，不添加公司后缀、现存母集团或完全独立所有权结论；这些未披露字段不冒充制造证据，也不把历史Duraflex/UltraFlex拆分新增。"
+    },
+    "contact": {
+      "label": "官方通用业务邮箱和公司公开业务电话；未核实具名采购/研发负责人",
+      "email": "info@thepaintdepot.co.za",
+      "phone": "+27 83 757 3037",
+      "contactUrl": "https://thepaintdepot.co.za/contact-us/"
+    },
+    "source": {
+      "label": "Current own UltraFlex Zinc Phosphate Metal Primer: water-based protective primer for prepared steel and industrial metalwork; current own Cape Town formulation/manufacture established separately",
+      "url": "https://thepaintdepot.co.za/shop/zinc-phosphate-metal-primer/"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "the-paint-depot-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "agrotolia-gubre-kozan": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "unaldi-gubre-menderes": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "everlast-cat-batu-pahat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3771,6 +3800,104 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "the-paint-depot-cape-town": {
+    "website": "https://thepaintdepot.co.za/",
+    "contactPage": "https://thepaintdepot.co.za/contact-us/",
+    "address": "Unit 1, 42 Stella Road, Montague Gardens, Cape Town, 7441, South Africa. Current own company contact. Coordinates are an approximate Cape Town city marker; this is not an independently surveyed factory coordinate or registered-office assertion.",
+    "generalEmail": "info@thepaintdepot.co.za",
+    "generalPhone": "+27 83 757 3037",
+    "generalEmailEvidence": {
+      "company": "The Paint Depot (UltraFlex / historical Duraflex brand)",
+      "value": "info@thepaintdepot.co.za",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own business contact: exact general company mailbox, publicly disclosed business telephone and Cape Town address",
+          "url": "https://thepaintdepot.co.za/contact-us/",
+          "summary": "Current own contact explicitly prints info@thepaintdepot.co.za for The Paint Depot at Unit1,42StellaRoad,MontagueGardens,CapeTown. Generic company inquiry route; no named procurement/technical responsibility or personal address ownership is inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "The Paint Depot (UltraFlex / historical Duraflex brand)",
+      "value": "+27 83 757 3037",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own business contact: exact general company mailbox, publicly disclosed business telephone and Cape Town address",
+          "url": "https://thepaintdepot.co.za/contact-us/",
+          "summary": "Current own contact prints Telephone0837573037 as its business channel. Normalized to+27837573037 without changing digits. This is a company-published business telephone, not a verified named person’s number or a claim that it is a landline."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@thepaintdepot.co.za",
+        "source": {
+          "label": "Current own business contact: exact general company mailbox, publicly disclosed business telephone and Cape Town address",
+          "url": "https://thepaintdepot.co.za/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "The Paint Depot (UltraFlex / historical Duraflex brand)",
+          "value": "info@thepaintdepot.co.za",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own business contact: exact general company mailbox, publicly disclosed business telephone and Cape Town address",
+              "url": "https://thepaintdepot.co.za/contact-us/",
+              "summary": "Current own contact explicitly prints info@thepaintdepot.co.za for The Paint Depot at Unit1,42StellaRoad,MontagueGardens,CapeTown. Generic company inquiry route; no named procurement/technical responsibility or personal address ownership is inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own UltraFlex Zinc Phosphate Metal Primer: water-based protective primer for prepared steel and industrial metalwork; current own Cape Town formulation/manufacture established separately",
+        "url": "https://thepaintdepot.co.za/shop/zinc-phosphate-metal-primer/"
+      },
+      {
+        "label": "Current own Home/About explicitly states own Cape Town formulation/manufacture and Duraflex/UltraFlex brand history; relocation is a company claim, not independently verified commissioning",
+        "url": "https://thepaintdepot.co.za/"
+      },
+      {
+        "label": "Current full visible catalogue:16 actual products; shop#content is a duplicate anchor, not a17th product",
+        "url": "https://thepaintdepot.co.za/shop/"
+      },
+      {
+        "label": "Current own BondingLiquid: acrylic cementitious primer/bonding additive, separately read",
+        "url": "https://thepaintdepot.co.za/shop/bonding-liquid/"
+      },
+      {
+        "label": "Current own CementModifier: water-based100%acrylic cementitious additive, separately read",
+        "url": "https://thepaintdepot.co.za/shop/cement-modifier/"
+      },
+      {
+        "label": "Current own ColourConcentrate: formulated acrylic sports-court coating formats, separately read",
+        "url": "https://thepaintdepot.co.za/shop/colour-concentrate/"
+      },
+      {
+        "label": "Current own Fill&Patch: acrylic repair binder and polymeric sand filler for sports surfaces",
+        "url": "https://thepaintdepot.co.za/shop/fill-patch/"
+      },
+      {
+        "label": "Current own PremiumGlossEnamel: formulated water-based protective finish",
+        "url": "https://thepaintdepot.co.za/shop/premium-gloss-enamel/"
+      },
+      {
+        "label": "Current own business contact: exact general company mailbox, publicly disclosed business telephone and Cape Town address",
+        "url": "https://thepaintdepot.co.za/contact-us/"
+      }
+    ]
+  },
   "agrotolia-gubre-kozan": {
     "website": "https://www.agrotoliagubre.com.tr/",
     "contactPage": "https://www.agrotoliagubre.com.tr/iletisim/",
@@ -10481,6 +10608,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "the-paint-depot-cape-town",
   "agrotolia-gubre-kozan",
   "unaldi-gubre-menderes",
   "everlast-cat-batu-pahat",
