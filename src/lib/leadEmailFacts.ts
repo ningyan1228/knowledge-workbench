@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "son-the-he-moi-ho-chi-minh": "Your EH1601 is a two-component zinc-rich epoxy primer formulated for corrosion protection of marine hulls and steel structures.",
   "enecon-medford": "Your CHEMCLAD SC is a two-component protective coating applied by brush or roller to equipment and structures.",
   "sauereisen-pittsburgh": "Your SewerGard 210XROL is a roll-applied epoxy lining for concrete surfaces in municipal wastewater structures.",
   "dampney-everett": "Your Endcor 700C is a polyamide-cured epoxy coating for protecting steel and concrete in industrial and marine environments.",

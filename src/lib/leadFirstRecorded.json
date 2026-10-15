@@ -1,4 +1,39 @@
 {
+  "son-the-he-moi-ho-chi-minh": {
+    "recordedAt": "2026-10-15T01:34:20.810Z",
+    "commit": "",
+    "source": "Actual formal public-data source creation timestamp after independent original-evidence review; not a Git commit or deployment time."
+  },
+  "bona-malmo": {
+    "recordedAt": "2026-10-15T01:14:41Z",
+    "commit": "b4f0abb54efce835eabaf8cead7d6cb5c52b51c7",
+    "source": "Actual first public main addition; verified absence in parent c942756 and presence in this commit, not verification date."
+  },
+  "v33-domblans": {
+    "recordedAt": "2026-10-15T01:14:41Z",
+    "commit": "b4f0abb54efce835eabaf8cead7d6cb5c52b51c7",
+    "source": "Actual first public main addition; verified absence in parent c942756 and presence in this commit, not verification date."
+  },
+  "blanchon-saint-priest": {
+    "recordedAt": "2026-10-15T01:14:41Z",
+    "commit": "b4f0abb54efce835eabaf8cead7d6cb5c52b51c7",
+    "source": "Actual first public main addition; verified absence in parent c942756 and presence in this commit, not verification date."
+  },
+  "dampney-everett": {
+    "recordedAt": "2026-10-15T01:30:21Z",
+    "commit": "cee77d6ab9a25a61a868c50e341ddbef97b67139",
+    "source": "Actual first public main addition verified from added customer-ID lines in this commit diff, not later re-verification."
+  },
+  "sauereisen-pittsburgh": {
+    "recordedAt": "2026-10-15T01:30:21Z",
+    "commit": "cee77d6ab9a25a61a868c50e341ddbef97b67139",
+    "source": "Actual first public main addition verified from added customer-ID lines in this commit diff, not later re-verification."
+  },
+  "enecon-medford": {
+    "recordedAt": "2026-10-15T01:30:21Z",
+    "commit": "cee77d6ab9a25a61a868c50e341ddbef97b67139",
+    "source": "Actual first public main addition verified from added customer-ID lines in this commit diff, not later re-verification."
+  },
   "coromandel-chennai": {
     "recordedAt": "2026-10-13T05:44:31Z",
     "commit": "b0406c94199aa187e83c742ac1f86885af2bb855",
