@@ -1,4 +1,14 @@
 {
+  "noroo-paint-anyang": {
+    "recordedAt": "2026-10-15T02:55:32Z",
+    "commit": "edf00c14b268de51d3a609bf675637887fec689d",
+    "source": "Actual first main commit adding noroo-paint-anyang, verified from added-ID patch lines; existing account, not a new customer in this research round."
+  },
+  "tintas-vinci-sao-goncalo": {
+    "recordedAt": "2026-10-15T06:51:18.1991291Z",
+    "commit": "",
+    "source": "Actual formal public-data insertion source-file LastWriteTimeUtc after separate original-source independent review; not a commit or deployment timestamp."
+  },
   "applied-chemical-technology-florence": {
     "recordedAt": "2026-10-15T02:25:03Z",
     "commit": "be6c007941d93457abb2cf3c745d7316eefcfca9",
