@@ -1,4 +1,84 @@
 {
+  "coromandel-chennai": {
+    "recordedAt": "2026-10-13T05:44:31Z",
+    "commit": "b0406c94199aa187e83c742ac1f86885af2bb855",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "cifo-san-giorgio": {
+    "recordedAt": "2026-10-13T05:44:31Z",
+    "commit": "b0406c94199aa187e83c742ac1f86885af2bb855",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "sansin-strathroy": {
+    "recordedAt": "2026-10-14T00:50:58Z",
+    "commit": "312db1283b13fe3bdc6696f3ca758839b6d5f655",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "diamond-vogel-orange-city": {
+    "recordedAt": "2026-10-14T00:50:58Z",
+    "commit": "312db1283b13fe3bdc6696f3ca758839b6d5f655",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "cloverdale-paint-surrey": {
+    "recordedAt": "2026-10-14T00:50:58Z",
+    "commit": "312db1283b13fe3bdc6696f3ca758839b6d5f655",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "sika-baar": {
+    "recordedAt": "2026-10-13T07:54:43Z",
+    "commit": "c87739a4a8d03cbd98ca71b260782eed62a23963",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "induron-birmingham": {
+    "recordedAt": "2026-10-14T01:06:02Z",
+    "commit": "9642fb80a3d726f2aa44fe05828dd2e1b6b44874",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "farrell-calhoun-memphis": {
+    "recordedAt": "2026-10-14T01:06:02Z",
+    "commit": "9642fb80a3d726f2aa44fe05828dd2e1b6b44874",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "rfcl-ramagundam": {
+    "recordedAt": "2026-10-13T11:11:03Z",
+    "commit": "238d8218709ae7449891bf0d9183b5cb5414d79e",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "benjamin-moore-montvale": {
+    "recordedAt": "2026-10-13T10:50:45Z",
+    "commit": "6a54fd44433097e4169e863d66607454abb946f9",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "behr-santa-ana": {
+    "recordedAt": "2026-10-13T10:50:45Z",
+    "commit": "6a54fd44433097e4169e863d66607454abb946f9",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "ppg-pittsburgh": {
+    "recordedAt": "2026-10-13T10:50:45Z",
+    "commit": "6a54fd44433097e4169e863d66607454abb946f9",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "asian-paints-mumbai": {
+    "recordedAt": "2026-10-13T10:16:57Z",
+    "commit": "025491a0da9142177e786e1a677220bd9090df7d",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "fcp-cerea-bonavicina": {
+    "recordedAt": "2026-10-13T05:10:18Z",
+    "commit": "b26f4519503078a1ec190bfcf094306555e1443c",
+    "source": "Actual public main addition verified from the productMarketMap commit diff."
+  },
+  "fordon-paints-faridabad": {
+    "recordedAt": "2026-10-15T01:03:04.033Z",
+    "commit": "",
+    "source": "Actual public-data source-record creation file timestamp after independent original-source review; not a Git commit or deployment time."
+  },
+  "ominent-igl-shah-alam": {
+    "recordedAt": "2026-10-15T01:03:04.033Z",
+    "commit": "",
+    "source": "Actual public-data source-record creation file timestamp after independent original-source review; not a Git commit or deployment time."
+  },
   "mum-kimya-tuzla": {"recordedAt":"2026-10-13T02:48:57Z","commit":"","source":"Formal admission confirmed by actual public-ID comparison after separate original-source reread; deployment SHA recorded privately."},
   "weha-agro-sejahtera-jakarta": {"recordedAt":"2026-10-13T02:30:33.290Z","commit":"","source":"Actual formal admission after separate original-source reread; deployment SHA kept privately."},
   "juno-erandio": {"recordedAt":"2026-10-13T01:11:38Z","commit":"5dff6f6be01ec42f91146e413ac7e8a26d675fc4"},
