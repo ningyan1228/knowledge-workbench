@@ -1,11 +1,16 @@
-import { dailyLeadCounts, type TimelineOrder } from '../../lib/leadTimeline'
+import { shanghaiDay, type TimelineOrder } from '../../lib/leadTimeline'
+import { leadTimelineSummary } from '../../lib/leadTimelineSummary'
 import type { PublicLead } from '../../lib/productMarketMap'
+import './LeadTimelineControls.css'
 
 export function LeadTimelineControls({ leads, order, day, onOrder, onDay }: { leads: PublicLead[]; order: TimelineOrder; day: string; onOrder: (order: TimelineOrder) => void; onDay: (day: string) => void }) {
-  const counts = dailyLeadCounts(leads)
-  return <section className="lead-timeline-controls" aria-label="客户收录时间线">
-    <div className="lead-timeline-heading"><div><strong>每日新增收录</strong><p>按当前产品及筛选范围统计 · 北京时间</p></div><label>时间排序<select value={order} onChange={(event) => onOrder(event.target.value as TimelineOrder)}><option value="newest">最近收录优先</option><option value="oldest">最早收录优先</option></select></label></div>
-    <div className="lead-timeline-days" role="group" aria-label="按收录日期筛选"><button type="button" aria-pressed={day === 'all'} onClick={() => onDay('all')}><span>全部日期</span><strong>{leads.length} 家</strong></button>{counts.days.map((item) => <button type="button" key={item.day} aria-pressed={day === item.day} onClick={() => onDay(item.day)}><span>{item.day}</span><strong>{item.count} 家</strong></button>)}{counts.unknown > 0 && <button type="button" aria-pressed={day === 'unknown'} onClick={() => onDay('unknown')}><span>时间未记录</span><strong>{counts.unknown} 家</strong></button>}</div>
-    <p className="lead-timeline-note">首次收录时间由网站版本历史追溯，区别于爬取时间和最后核验日期。数量仅统计当前保留的客户；重复核验不算新增，0 家不代表当天未运行采集。</p>
+  const today = shanghaiDay(new Date().toISOString())
+  const counts = leadTimelineSummary(leads, today)
+  const custom = /^\d{4}-\d{2}-\d{2}$/.test(day)
+  const maxCount = Math.max(1, ...counts.days.map((item) => item.count))
+  return <section className="lead-timeline-compact" aria-label="客户收录时间线">
+    <div className="timeline-summary-row"><dl className="timeline-summary-stats"><div data-stat="today"><dt>今日新增</dt><dd>{counts.today}<small> 家</small></dd></div><div data-stat="last7"><dt>近 7 天新增</dt><dd>{counts.last7}<small> 家</small></dd></div><div data-stat="total"><dt>当前范围客户</dt><dd>{counts.total}<small> 家</small></dd></div></dl><span className="timeline-summary-zone">北京时间</span></div>
+    <div className="timeline-filter-row"><div className="timeline-date-presets" role="group" aria-label="收录日期"><span>收录日期</span><button type="button" aria-pressed={day === 'all'} onClick={() => onDay('all')}>全部</button><button type="button" aria-pressed={day === 'today'} onClick={() => onDay('today')}>今天</button><button type="button" aria-pressed={day === 'last7'} onClick={() => onDay('last7')}>近 7 天</button><button type="button" aria-pressed={custom} onClick={() => onDay(custom ? day : today)}>自选日期</button>{custom && <input type="date" aria-label="自选收录日期" value={day} max={today} onChange={(event) => { if (event.target.value) onDay(event.target.value) }} />}</div><label className="timeline-order">排序<select aria-label="首次收录排序" value={order} onChange={(event) => onOrder(event.target.value as TimelineOrder)}><option value="newest">首次收录由新到旧</option><option value="oldest">首次收录由旧到新</option></select></label></div>
+    <div className="timeline-disclosures"><details className="timeline-trend"><summary>收录趋势</summary><p>近 14 天 · {counts.days[0].day} 至 {today} · 点击柱形查看当天客户</p><div className="timeline-mini-chart" role="group" aria-label="近14天新增收录趋势">{counts.days.map((item) => <button type="button" key={item.day} title={`${item.day} · 新增 ${item.count} 家`} aria-label={`${item.day}新增${item.count}家，按该日筛选`} aria-pressed={day === item.day || (day === 'today' && item.day === today)} onClick={() => onDay(item.day)}><span>{item.count}</span><i className="timeline-bar-track"><i style={{ height: `${item.count ? Math.max(5, item.count / maxCount * 100) : 2}%` }} /></i><small>{Number(item.day.slice(8))}日</small></button>)}</div></details><details className="timeline-method"><summary>统计说明</summary><p>按当前产品、地区和业务条件统计，未叠加收录日期筛选。每家公司在当前范围内按最早的首次收录时间计一次；近 7 天包含今天及前 6 天，均按北京时间计算。</p><p>首次收录时间由网站版本历史追溯，区别于爬取时间和最后核验日期。数量仅统计当前保留的客户；重复核验不算新增，0 家不代表当天未运行采集。潜在应用匹配不代表已确认采购或使用我方产品。</p>{counts.unknown > 0 && <p>当前范围有 {counts.unknown} 家公司的首次收录时间未记录，未计入今日、近 7 天和趋势图。<button type="button" aria-pressed={day === 'unknown'} onClick={() => onDay('unknown')}>查看时间未记录客户</button></p>}</details></div>
   </section>
 }

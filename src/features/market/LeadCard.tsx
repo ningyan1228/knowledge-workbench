@@ -5,14 +5,18 @@ import { recordedDay, recordedTimeLabel, shanghaiDay } from '../../lib/leadTimel
 import { outreachCompanyKey } from '../../lib/outreachLedger'
 import { developmentProgressLabel, effectiveStage, followUpDue, leadApplication, leadIndustry } from '../../lib/leadWorkbench'
 import { publicContactUrl } from '../../lib/contactEvidence'
+import { businessRecipient } from '../../lib/customerDevelopment'
 import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
 import './LeadCard.css'
 
-export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, ledger, work }: {
+export type LeadCardProps = {
   lead: PublicLead; selected?: boolean; onHighlight: (lead: PublicLead | null) => void;
   onSelect: (lead: PublicLead) => void; onOpenDetail: (lead: PublicLead) => void; ledger: OutreachLedger; work: LeadWork;
-}) {
+  variant?: 'card' | 'row';
+}
+
+export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, ledger, work, variant = 'card' }: LeadCardProps) {
   const [error, setError] = useState('')
   const product = marketProducts.find((item) => item.id === lead.productId)!
   const application = leadApplication(lead)
@@ -29,6 +33,14 @@ export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, 
     try { await work.save(lead, { favorite: !record?.favorite }) }
     catch (error) { setError(error instanceof Error ? error.message : '收藏失败') }
   }
+  if (variant === 'row') return <tr data-lead-id={lead.id} className={`customer-lead-row${selected ? ' selected' : ''}`}>
+    <td><button type="button" className="customer-row-company" onClick={() => onSelect(lead)} title={lead.company}><span className="lead-dot" style={{ background: product.color }} /><span><strong>{lead.company}</strong><small>{leadIndustry(lead)}</small></span></button>{showProgress && <span className="customer-row-status">{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn ? ` · 跟进 ${record.followUpOn}` : ''}</span>}</td>
+    <td className="customer-row-country">{lead.countryZh}</td>
+    <td className="customer-row-application" title={lead.companyEvidence.statement}><strong>{application?.name ?? leadIndustry(lead)}</strong><small>{product.name}</small></td>
+    <td className="customer-row-dates" title={`首次收录：${recordedTimeLabel(lead)}（北京时间）`}><span>核验 <time dateTime={lead.checkedAt}>{compactDate(lead.checkedAt)}</time></span><span>收录 {firstDay ? <time dateTime={firstDay}>{compactDate(firstDay)}</time> : '时间未记录'}</span></td>
+    <td className="customer-row-contact">{contactUrl ? <a href={contactUrl} target="_blank" rel="noreferrer">{lead.profile.contactPage === contactUrl ? '官网联系页' : '公司官网'}<ExternalLink size={12} /></a> : <button type="button" className="customer-row-detail" onClick={() => onOpenDetail(lead)}>查看联系资料</button>}<small>{businessRecipient(lead) ? '有公开业务邮箱' : contactUrl ? '可查看公开业务入口' : '待补公开业务入口'}</small></td>
+    <td className="customer-row-actions"><div><button type="button" className="customer-row-detail" onClick={() => onOpenDetail(lead)}>查看客户</button><button type="button" className="customer-row-favorite" aria-label={record?.favorite ? '取消收藏' : '收藏客户'} aria-pressed={Boolean(record?.favorite)} disabled={work.status !== 'ready' || work.busy} title={work.status === 'ready' ? '收藏客户' : '登录后可收藏客户'} onClick={() => void favorite()}><Star size={16} fill={record?.favorite ? 'currentColor' : 'none'} /></button></div>{error && <small className="customer-row-error" role="alert">{error}</small>}</td>
+  </tr>
   return <article id={'map-card-' + lead.id} data-lead-id={lead.id} className={`lead-card customer-lead-card${selected ? ' selected' : ''}`}
     onMouseEnter={() => onHighlight(lead)} onMouseLeave={() => onHighlight(null)} onFocus={() => onHighlight(lead)}
     onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) onHighlight(null) }}>

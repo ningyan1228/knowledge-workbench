@@ -24,8 +24,31 @@ export function recordedTimeLabel(lead: Pick<TimedLead, 'id'>): string {
   return time ? new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', dateStyle: 'short', timeStyle: 'short', hour12: false }).format(new Date(time)) : '时间未记录'
 }
 
-export function timelineLeads<T extends TimedLead>(leads: T[], order: TimelineOrder = 'newest', day = 'all'): T[] {
-  return leads.filter((lead) => day === 'all' || (day === 'unknown' ? !recordedDay(lead) : recordedDay(lead) === day)).sort((a, b) => {
+export function shiftTimelineDay(day: string, offset: number): string {
+  const date = new Date(`${day}T00:00:00Z`)
+  date.setUTCDate(date.getUTCDate() + offset)
+  return date.toISOString().slice(0, 10)
+}
+
+export function timelineDayMatches(recorded: string | null, filter: string, today: string): boolean {
+  if (filter === 'all') return true
+  if (filter === 'unknown') return recorded === null
+  if (!recorded) return false
+  if (filter === 'today') return recorded === today
+  if (filter === 'last7') return recorded >= shiftTimelineDay(today, -6) && recorded <= today
+  return recorded === filter
+}
+
+export function timelineFilterLabel(day: string, today = shanghaiDay(new Date().toISOString())): string {
+  if (day === 'all') return '全部日期'
+  if (day === 'unknown') return '时间未记录'
+  if (day === 'today') return `今天（${today}）`
+  if (day === 'last7') return `近 7 天（${shiftTimelineDay(today, -6)} 至 ${today}）`
+  return day
+}
+
+export function timelineLeads<T extends TimedLead>(leads: T[], order: TimelineOrder = 'newest', day = 'all', today = shanghaiDay(new Date().toISOString())): T[] {
+  return leads.filter((lead) => timelineDayMatches(recordedDay(lead), day, today)).sort((a, b) => {
     const aTime = recordedTime(a), bTime = recordedTime(b)
     if (!aTime && bTime) return 1
     if (aTime && !bTime) return -1
