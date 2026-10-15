@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "mylaw-excelsior-johannesburg": "Your industrial range includes a twin-pack epoxy zinc-phosphate primer formulated under the Excelsior Paints brand.",
   "everlast-cat-batu-pahat": "Your epiPOXY range includes coal-tar, MIO and zinc-rich coatings for protective and marine applications.",
   "lsc-chemical-paints-kapar": "Your LSC Epoxy Finish is a two-component coating for concrete floors and steel structures.",
   "paints-network-puchong": "Your PROC ZP3 is an anti-corrosion zinc phosphate primer in the FOXX coating range.",
