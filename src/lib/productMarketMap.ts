@@ -3379,11 +3379,127 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "bina-integrated-bangi",
+    "company": "Bina Integrated Industries Sdn Bhd (Bina Group / Bina Paint)",
+    "productId": "elo",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Bandar Baru Bangi, Selangor (approximate city marker)",
+    "latitude": 2.96,
+    "longitude": 101.755,
+    "legacyCompanyDescription": "成品工业/防护涂料研发制造企业；ELO配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取Bina当前About及工业地坪正文：Bina Integrated Industries制造Bina品牌建筑涂料、防水及运动场地材料；工业地坪页明确自行制造底漆、砂浆与面漆。原始BINA EF6200产品资料两页明确双组分环氧成品涂料用于钢及水泥表面，末页注明Bina Integrated Industries(715329-T)。另独立视觉核对SIRIM原始证书一页的制造主体、地址及Manufacturing of Construction Chemicals范围。不是仅凭Bina Paint Marketing销售公司名称入库；本条为整个Bina经营集团一条。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "逐项审读当前19个核心产品标题、工业地坪体系、About、原始EF6200及文件索引的可见业务范围：建筑成品漆、防水膜/水泥防水系统、环氧/PU地坪及运动场地系统。未发现所查范围中ELO、ESBO、环氧化植物油、生物增塑剂或相似聚合物增塑/稳定化原料商品；不声称19项即集团所有SKU。研究中出现的水性丙烯酸树脂供应线索保留为不同的基料业务，不以“也是树脂/化工”直接等同ELO同类原料。制造715329-T与销售715326-P为当前自有网站及原始资料明确对应的Bina品牌经营链；不把Bina Paint、Ultrashield、Supercoat、Duracourt或营销公司分拆新增。当前联系入口属于Bina Paint Marketing的集团产品咨询，不伪称制造厂采购邮箱。"
+    },
+    "contact": {
+      "label": "官方公司/集团通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "info@binapaint.com.my",
+      "phone": "+60 3 8926 0012",
+      "contactUrl": "https://www.binapaint.com.my/contact-us/"
+    },
+    "source": {
+      "label": "Actual original BINA EF6200 product data: two-pack epoxy finish for steel/cement; manufacturer identified as Bina Integrated Industries on PDF page2; no printed revision established",
+      "url": "https://www.binapaint.com.my/wp-content/uploads/2026/09/BINA-EF-6200-TDS.pdf"
+    },
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "paints-network-puchong",
+    "company": "Paints Network Sdn. Bhd. (FOXX Coatings)",
+    "productId": "elo",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Puchong, Selangor (approximate company city marker)",
+    "latitude": 3.0327,
+    "longitude": 101.6188,
+    "legacyCompanyDescription": "成品工业/防护涂料研发制造企业；ELO配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取Paints Network自身About、主营产品、Other Products和Coating Solutions正文。About明确为FOXX溶剂型及防护涂料制造商；当前产品页列出PROC ZP3防腐磷酸锌底漆、MIO涂料、船舶防污漆和其他成品底面漆，体系页对应钢结构、船舶、金属屋面及工业地坪。资格依据其自身制造与成品配方/用料场景，不以经销网络、品牌或第三方宣传替代制造证据。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立审读可见完整主产品家族、Other Products及六类涂装体系。PROC483/PRO383等adhesion/etching primer在所读页面作为成品底漆/涂装体系呈现，没有据此虚构其销售水性聚烯烃或ELO原料。所审范围未见ELO、ESBO、环氧化植物油、生物增塑剂或相似聚合物增塑/稳定化原料商品；未将成品涂料用的配套固化剂和稀释剂笼统称无任何原料业务，也未据同属化工直接判为ELO同行。Paints Network与FOXX、Garage386、Harper9、Next398为同一官网明确的公司/品牌体系，仅一条账户。公开网站未提供需并入既有集团的具体关联；不臆造完整股权结构或当前采购。"
+    },
+    "contact": {
+      "label": "官方公司/集团通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "paintsnetwork@gmail.com",
+      "phone": "+60 3 8061 1878",
+      "contactUrl": "https://paintsnetwork.com/contact-us"
+    },
+    "source": {
+      "label": "Current own actual Other Products body: exact PROC ZP3 anti-corrosion zinc phosphate primer listing",
+      "url": "https://paintsnetwork.com/other-products"
+    },
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "lsc-chemical-paints-kapar",
+    "company": "LSC Chemical & Paints Sdn. Bhd.",
+    "productId": "elo",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Kapar, Selangor (approximate company city marker)",
+    "latitude": 3.1376,
+    "longitude": 101.3735,
+    "legacyCompanyDescription": "成品工业/防护涂料研发制造企业；ELO配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取LSC About的实际涂料/化工生产设施、配方研发与化学师背景，当前Factory & HQ资料与公司1029134-A相互对应。原始Heavy Duty Protective Coating Pro四页已下载完整并逐页视觉核对，第2页明确LSC Epoxy Finish/Primer为基料加固化剂的成品体系，用于混凝土地面、钢结构等；当前独立产品正文提供同一环氧成品用途。不是把硬件经销商或仅销售配方原料的企业当涂料厂家。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "完整读取当前53个商品标题五页及工业稀释剂分类，另读取SQS、Bondtech Latex、Epoxy Resin2:1&Hardener、L777与成品环氧用途正文及原始重防护目录。SQS确为混凝土/砂浆减水、促凝外加剂，不能隐瞒plasticizing字样；其公开使用逻辑是减水水灰比/水泥水化，不据此等同ELO聚合物增塑/稳定化原料。Bondtech为砂浆底涂/建筑粘结用途，化学组成未公开，不臆造CPO/PO分散体或ELO身份；L777正文无详细成分，保留缺失。环氧树脂/固化剂确有销售，不把通用基体树脂及配套固化体系误称ELO同类植物油添加剂。所审范围未见ELO/ESBO/环氧化植物油或生物/聚合物增塑稳定化原料商品；本条只作为ELO成品涂料制造路线。LSC DIY Product Trading历史名称、LSC Chemical/&Paints和同一1029134-A品牌主体去重，区域经销商不作子公司或新客户。"
+    },
+    "contact": {
+      "label": "官方公司/集团通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "lscchemical@hotmail.com",
+      "phone": "+60 3 3292 8816",
+      "contactUrl": "https://lscchemical.com.my/contact/"
+    },
+    "source": {
+      "label": "Current own actual ProtectivePaint-Epoxy4:1 description: LSC two-component epoxy finish for concrete floors and steel structures",
+      "url": "https://lscchemical.com.my/product/protectivepaint-epoxy-41/"
+    },
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "everlast-cat-batu-pahat",
+    "company": "Everlast Cat Perindustrian (M) Sdn. Bhd. (EPI)",
+    "productId": "elo",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Batu Pahat, Johor (coordinates publicly supplied by company)",
+    "latitude": 1.926327,
+    "longitude": 102.848943,
+    "legacyCompanyDescription": "成品工业/防护涂料研发制造企业；ELO配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取EPI自身制造商About、保护/船舶涂料页和完整可见业务分类。原始Protective and Marine两页色卡逐页视觉核对，明确制造主体Everlast Cat Perindustrian(M)Sdn Bhd、公司027492-T及epiPOXY防护涂料家族；当前Quality & Environmental Policy再次明确同一法律名称，当前Contact与色卡地址、域名、电话对应。自有涂料制造及epiPOXY成品配方构成需求侧场景；原始色卡不是技术数据表，不借认证标志证明我方性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "按当前真实业务范围独立检查工业/电工/建筑/保护船舶涂料、胶粘密封材料及Fiberglass Trading。其UPR不饱和聚酯树脂、MEKPO催化剂、玻纤毡、胶衣销售为真实原料/材料业务，明确保留；基体树脂、固化催化剂和胶衣不能只因属化工就自动等同ELO/ESBO/环氧化植物油/生物增塑稳定剂。所审可见范围未发现上述同类ELO输入材料商品；不声称集团全部SKU永不销售或已经外购ELO。当前自有政策、色卡及地址相互对应为Everlast Cat Perindustrian(M)/EPI一条；不混同名字类似的Everlasting Base或其他Everlast公司，不把epiPOXY、epiMARIN、epiSHEEN等系列分拆。集团/域名/公司名称与最新main、本地未发布数据逐项查重，没有对应现有账户。"
+    },
+    "contact": {
+      "label": "官方公司/集团通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "enquiry@epicoating.com",
+      "phone": "+60 7 410 2836",
+      "contactUrl": "https://www.epicoating.com/contact-us/"
+    },
+    "source": {
+      "label": "Actual original two-page Protective and Marine colour card, visually read: exact Everlast Cat Perindustrian(M),027492-T and epiPOXY coal-tar/MIO/zinc-rich families; not a technical data sheet",
+      "url": "https://www.epicoating.com/wp-content/uploads/2022/12/Colour-Card-PMC.pdf"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "everlast-cat-batu-pahat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "lsc-chemical-paints-kapar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "paints-network-puchong": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "bina-integrated-bangi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "noroo-paint-anyang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "applied-chemical-technology-florence": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "fertiberia-madrid": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
@@ -3594,6 +3710,366 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "everlast-cat-batu-pahat": {
+    "website": "https://www.epicoating.com/",
+    "contactPage": "https://www.epicoating.com/contact-us/",
+    "address": "6, 8, 10 & 12, Jalan Sri Sulong 19A, Taman Industri Sri Sulong, 83020 Batu Pahat, Johor, Malaysia. Official Contact page publishes these coordinates; not independently surveyed. Original colour card abbreviates the street as SS19A.",
+    "generalEmail": "enquiry@epicoating.com",
+    "generalPhone": "+60 7 410 2836",
+    "generalEmailEvidence": {
+      "company": "Everlast Cat Perindustrian (M) Sdn. Bhd. (EPI)",
+      "value": "enquiry@epicoating.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own exact corporate enquiry mailbox,business telephone,address and published GPS",
+          "url": "https://www.epicoating.com/contact-us/",
+          "summary": "Actual current official EPI Contact page explicitly prints Enquiry Email:enquiry@epicoating.com andTel:+607-4102836. Original scanned colour card separately prints sales@epicoating.com; only the separately current-sourced enquiry mailbox is promoted. Generic route,not founder,Supply Chain employee or R&D manager email."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Everlast Cat Perindustrian (M) Sdn. Bhd. (EPI)",
+      "value": "+60 7 410 2836",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own exact corporate enquiry mailbox,business telephone,address and published GPS",
+          "url": "https://www.epicoating.com/contact-us/",
+          "summary": "Actual current official EPI Contact page explicitly prints Enquiry Email:enquiry@epicoating.com andTel:+607-4102836. Original scanned colour card separately prints sales@epicoating.com; only the separately current-sourced enquiry mailbox is promoted. Generic route,not founder,Supply Chain employee or R&D manager email. Published business telephone normalized without changing digits."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "enquiry@epicoating.com",
+        "source": {
+          "label": "Current own exact corporate enquiry mailbox,business telephone,address and published GPS",
+          "url": "https://www.epicoating.com/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Everlast Cat Perindustrian (M) Sdn. Bhd. (EPI)",
+          "value": "enquiry@epicoating.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own exact corporate enquiry mailbox,business telephone,address and published GPS",
+              "url": "https://www.epicoating.com/contact-us/",
+              "summary": "Actual current official EPI Contact page explicitly prints Enquiry Email:enquiry@epicoating.com andTel:+607-4102836. Original scanned colour card separately prints sales@epicoating.com; only the separately current-sourced enquiry mailbox is promoted. Generic route,not founder,Supply Chain employee or R&D manager email."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual original two-page Protective and Marine colour card, visually read: exact Everlast Cat Perindustrian(M),027492-T and epiPOXY coal-tar/MIO/zinc-rich families; not a technical data sheet",
+        "url": "https://www.epicoating.com/wp-content/uploads/2022/12/Colour-Card-PMC.pdf"
+      },
+      {
+        "label": "Current own About manufacturer/factory-history and product-range body; past40years/2005capacity not upgraded to2026 production claims",
+        "url": "https://www.epicoating.com/about-us/"
+      },
+      {
+        "label": "Current own protective/marine finished coating brands and downstream applications",
+        "url": "https://www.epicoating.com/product-range/protective-and-marine-coatings/"
+      },
+      {
+        "label": "Current own complete visible business categories including actual UPR/MEKPO/fiberglass trading",
+        "url": "https://www.epicoating.com/product-range/"
+      },
+      {
+        "label": "Current own Quality & Environmental Policy explicitly names legal operator Everlast Cat Perindustrian(M); a policy page,not certificate/permit validity proof",
+        "url": "https://www.epicoating.com/sustainability/iso-14001/"
+      },
+      {
+        "label": "Current own exact corporate enquiry mailbox,business telephone,address and published GPS",
+        "url": "https://www.epicoating.com/contact-us/"
+      }
+    ]
+  },
+  "lsc-chemical-paints-kapar": {
+    "website": "https://lscchemical.com.my/",
+    "contactPage": "https://lscchemical.com.my/contact/",
+    "address": "39, Jalan Bestari 2/KU7, Taman Perindustrian Kapar Bestari, 42200 Kapar, Selangor, Malaysia. Official current Factory & HQ address and original catalogue agree. Coordinates are an approximate city marker.",
+    "generalEmail": "lscchemical@hotmail.com",
+    "generalPhone": "+60 3 3292 8816",
+    "generalEmailEvidence": {
+      "company": "LSC Chemical & Paints Sdn. Bhd.",
+      "value": "lscchemical@hotmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own exact Factory & HQ corporate email/office phone; separate regional dealers not assigned to manufacturer",
+          "url": "https://lscchemical.com.my/contact/",
+          "summary": "Current official Contact body expressly labels Email Us:lscchemical@hotmail.com and03-32928816 for the named Factory & HQ,1029134-A. The scanned brochure separately has lsc_cp@hotmail.com; that different original inbox is not silently treated as a current verified recipient. Office number used; dealer mobiles and unrelated named-person contacts not promoted."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "LSC Chemical & Paints Sdn. Bhd.",
+      "value": "+60 3 3292 8816",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own exact Factory & HQ corporate email/office phone; separate regional dealers not assigned to manufacturer",
+          "url": "https://lscchemical.com.my/contact/",
+          "summary": "Current official Contact body expressly labels Email Us:lscchemical@hotmail.com and03-32928816 for the named Factory & HQ,1029134-A. The scanned brochure separately has lsc_cp@hotmail.com; that different original inbox is not silently treated as a current verified recipient. Office number used; dealer mobiles and unrelated named-person contacts not promoted. Published business telephone normalized without changing digits."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "lscchemical@hotmail.com",
+        "source": {
+          "label": "Current own exact Factory & HQ corporate email/office phone; separate regional dealers not assigned to manufacturer",
+          "url": "https://lscchemical.com.my/contact/"
+        },
+        "emailEvidence": {
+          "company": "LSC Chemical & Paints Sdn. Bhd.",
+          "value": "lscchemical@hotmail.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own exact Factory & HQ corporate email/office phone; separate regional dealers not assigned to manufacturer",
+              "url": "https://lscchemical.com.my/contact/",
+              "summary": "Current official Contact body expressly labels Email Us:lscchemical@hotmail.com and03-32928816 for the named Factory & HQ,1029134-A. The scanned brochure separately has lsc_cp@hotmail.com; that different original inbox is not silently treated as a current verified recipient. Office number used; dealer mobiles and unrelated named-person contacts not promoted."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own actual ProtectivePaint-Epoxy4:1 description: LSC two-component epoxy finish for concrete floors and steel structures",
+        "url": "https://lscchemical.com.my/product/protectivepaint-epoxy-41/"
+      },
+      {
+        "label": "Current own About: actual paint/chemical manufacturing, facilities and chemist/product-development history; retrospective date wording retained",
+        "url": "https://lscchemical.com.my/about-us/"
+      },
+      {
+        "label": "Actual original four-page Heavy Duty Protective Coating Pro brochure, visually read; exact company1029134-A and factory address; no issue/revision date established",
+        "url": "https://lscchemical.com.my/wp-content/uploads/2025/09/LSC-HEAVY-DUTY-PROTECTIVE-COATING-PRO.pdf"
+      },
+      {
+        "label": "Current complete visible shop pagination:53products across fivepages, titles read separately",
+        "url": "https://lscchemical.com.my/shop/"
+      },
+      {
+        "label": "Current own concrete/mortar water-reducing plasticizing accelerator; actual cement application distinguished from polymer/ELO plasticizers",
+        "url": "https://lscchemical.com.my/product/skim-quick-set-sqs/"
+      },
+      {
+        "label": "Current own Bondtech Latex: cement/render/screed/plaster bonding-agent/mortar-primer use",
+        "url": "https://lscchemical.com.my/product/bondtech-latex-multipurpose/"
+      },
+      {
+        "label": "Current own epoxy resin/hardener flooring listing; body lacks chemistry details, no composition invented",
+        "url": "https://lscchemical.com.my/product/epoxy-resin-21-hardener/"
+      },
+      {
+        "label": "Current own exact Factory & HQ corporate email/office phone; separate regional dealers not assigned to manufacturer",
+        "url": "https://lscchemical.com.my/contact/"
+      },
+      {
+        "label": "Current own group/distribution structure: regional network, not proof of common ownership of listed dealers",
+        "url": "https://lscchemical.com.my/our-structure"
+      }
+    ]
+  },
+  "paints-network-puchong": {
+    "website": "https://paintsnetwork.com/",
+    "contactPage": "https://paintsnetwork.com/contact-us",
+    "address": "14, Jalan TPP 1/11, Taman Perindustrian Puchong, 47100 Puchong, Selangor, Malaysia. Current official company contact address; coordinates are an approximate city marker, not surveyed factory GPS.",
+    "generalEmail": "paintsnetwork@gmail.com",
+    "generalPhone": "+60 3 8061 1878",
+    "generalEmailEvidence": {
+      "company": "Paints Network Sdn. Bhd. (FOXX Coatings)",
+      "value": "paintsnetwork@gmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own public corporate Gmail mailbox, business telephone and company address",
+          "url": "https://paintsnetwork.com/contact-us",
+          "summary": "Current official company Contact Us explicitly prints paintsnetwork@gmail.com,+603-80611878 and Puchong address. Although hosted on Gmail, this is the exact publicly declared business mailbox of Paints Network, with no personal ownership or named purchasing/R&D role inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Paints Network Sdn. Bhd. (FOXX Coatings)",
+      "value": "+60 3 8061 1878",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own public corporate Gmail mailbox, business telephone and company address",
+          "url": "https://paintsnetwork.com/contact-us",
+          "summary": "Current official company Contact Us explicitly prints paintsnetwork@gmail.com,+603-80611878 and Puchong address. Although hosted on Gmail, this is the exact publicly declared business mailbox of Paints Network, with no personal ownership or named purchasing/R&D role inferred. Published business telephone normalized without changing digits."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "paintsnetwork@gmail.com",
+        "source": {
+          "label": "Current own public corporate Gmail mailbox, business telephone and company address",
+          "url": "https://paintsnetwork.com/contact-us"
+        },
+        "emailEvidence": {
+          "company": "Paints Network Sdn. Bhd. (FOXX Coatings)",
+          "value": "paintsnetwork@gmail.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own public corporate Gmail mailbox, business telephone and company address",
+              "url": "https://paintsnetwork.com/contact-us",
+              "summary": "Current official company Contact Us explicitly prints paintsnetwork@gmail.com,+603-80611878 and Puchong address. Although hosted on Gmail, this is the exact publicly declared business mailbox of Paints Network, with no personal ownership or named purchasing/R&D role inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own actual Other Products body: exact PROC ZP3 anti-corrosion zinc phosphate primer listing",
+        "url": "https://paintsnetwork.com/other-products"
+      },
+      {
+        "label": "Current own About: Paints Network is the Malaysian manufacturer behind FOXX solvent-based/protective coatings",
+        "url": "https://paintsnetwork.com/about-us-foxx-coatings"
+      },
+      {
+        "label": "Current own coating systems for steel/metal structures, marine, roofing and industrial flooring; some model spelling differs from product-list page",
+        "url": "https://paintsnetwork.com/foxx-coatings-solutions"
+      },
+      {
+        "label": "Current own main product families and custom-coating scope",
+        "url": "https://paintsnetwork.com/solvent-paints-products"
+      },
+      {
+        "label": "Current own public corporate Gmail mailbox, business telephone and company address",
+        "url": "https://paintsnetwork.com/contact-us"
+      },
+      {
+        "label": "Current own company homepage and complete visible major category navigation",
+        "url": "https://paintsnetwork.com/"
+      }
+    ]
+  },
+  "bina-integrated-bangi": {
+    "website": "https://www.binapaint.com.my/",
+    "contactPage": "https://www.binapaint.com.my/contact-us/",
+    "address": "No. 10, Jalan 9/7, Taman IKS, Seksyen 9, 43650 Bandar Baru Bangi, Selangor, Malaysia. Current official group contact and original QMS certificate give this location. An undated EF6200 TDS separately prints No.16 Jalan9/3; retained as a different original document address, not silently replaced. Coordinates are an approximate city marker.",
+    "generalEmail": "info@binapaint.com.my",
+    "generalPhone": "+60 3 8926 0012",
+    "generalEmailEvidence": {
+      "company": "Bina Integrated Industries Sdn Bhd (Bina Group / Bina Paint)",
+      "value": "info@binapaint.com.my",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own group business contact: exact info mailbox/telephone, Bina Paint Marketing legal name and715326-P",
+          "url": "https://www.binapaint.com.my/contact-us/",
+          "summary": "Current official Bina contact explicitly publishes info@binapaint.com.my and03-89260012 under Bina Paint Marketing200501033186(715326-P), at the current group Headquarters & Factory. Own About and actual original TDS separately establish Bina Integrated Industries as the same-brand manufacturing arm. Group general product-inquiry route, not a named raw-material buyer; originalfactory@binatech.biz is not upgraded to a current verified inbox."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Bina Integrated Industries Sdn Bhd (Bina Group / Bina Paint)",
+      "value": "+60 3 8926 0012",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own group business contact: exact info mailbox/telephone, Bina Paint Marketing legal name and715326-P",
+          "url": "https://www.binapaint.com.my/contact-us/",
+          "summary": "Current official Bina contact explicitly publishes info@binapaint.com.my and03-89260012 under Bina Paint Marketing200501033186(715326-P), at the current group Headquarters & Factory. Own About and actual original TDS separately establish Bina Integrated Industries as the same-brand manufacturing arm. Group general product-inquiry route, not a named raw-material buyer; originalfactory@binatech.biz is not upgraded to a current verified inbox. Published business telephone normalized without changing digits."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@binapaint.com.my",
+        "source": {
+          "label": "Current own group business contact: exact info mailbox/telephone, Bina Paint Marketing legal name and715326-P",
+          "url": "https://www.binapaint.com.my/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Bina Integrated Industries Sdn Bhd (Bina Group / Bina Paint)",
+          "value": "info@binapaint.com.my",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own group business contact: exact info mailbox/telephone, Bina Paint Marketing legal name and715326-P",
+              "url": "https://www.binapaint.com.my/contact-us/",
+              "summary": "Current official Bina contact explicitly publishes info@binapaint.com.my and03-89260012 under Bina Paint Marketing200501033186(715326-P), at the current group Headquarters & Factory. Own About and actual original TDS separately establish Bina Integrated Industries as the same-brand manufacturing arm. Group general product-inquiry route, not a named raw-material buyer; originalfactory@binatech.biz is not upgraded to a current verified inbox."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual original BINA EF6200 product data: two-pack epoxy finish for steel/cement; manufacturer identified as Bina Integrated Industries on PDF page2; no printed revision established",
+        "url": "https://www.binapaint.com.my/wp-content/uploads/2026/09/BINA-EF-6200-TDS.pdf"
+      },
+      {
+        "label": "Current own About: Bina Integrated Industries manufacturing arm and Bina paint/waterproofing/sports-surface brands",
+        "url": "https://www.binapaint.com.my/about-us-2/"
+      },
+      {
+        "label": "Current own industrial flooring: explicitly manufactures primer, mortar and topcoat systems in-house",
+        "url": "https://www.binapaint.com.my/industrial-flooring/"
+      },
+      {
+        "label": "Current own visible19-core-product catalogue; not asserted as every groupSKU",
+        "url": "https://www.binapaint.com.my/product/"
+      },
+      {
+        "label": "Actual original SIRIM QMS01766 certificate, issued2023-12-27, printed expiry2026-12-14; construction-chemical manufacturing scope and named Bina Integrated Industries; registry validity not independently checked",
+        "url": "https://www.binapaint.com.my/wp-content/uploads/2026/09/BINA-ISO-9001-SIRIM-QAS-CERTIFICATE-2026.pdf"
+      },
+      {
+        "label": "Current own group business contact: exact info mailbox/telephone, Bina Paint Marketing legal name and715326-P",
+        "url": "https://www.binapaint.com.my/contact-us/"
+      },
+      {
+        "label": "Current original-file index linking the actual TDS and certificate",
+        "url": "https://www.binapaint.com.my/resources/"
+      }
+    ]
+  },
   "noroo-paint-anyang": {
     "website": "https://www.noroopaint.com/en/",
     "contactPage": "https://noroopaint.com/EngProd/En/Company/Contact.asp",
@@ -9760,6 +10236,10 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "everlast-cat-batu-pahat",
+  "lsc-chemical-paints-kapar",
+  "paints-network-puchong",
+  "bina-integrated-bangi",
   "noroo-paint-anyang",
   "applied-chemical-technology-florence",
   "fertiberia-madrid",

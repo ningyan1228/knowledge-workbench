@@ -3,6 +3,10 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "everlast-cat-batu-pahat": "Your epiPOXY range includes coal-tar, MIO and zinc-rich coatings for protective and marine applications.",
+  "lsc-chemical-paints-kapar": "Your LSC Epoxy Finish is a two-component coating for concrete floors and steel structures.",
+  "paints-network-puchong": "Your PROC ZP3 is an anti-corrosion zinc phosphate primer in the FOXX coating range.",
+  "bina-integrated-bangi": "Your BINA EF 6200 is a two-pack epoxy finish for steel and cement surfaces.",
   "sesa-boya-tuzla": "Your PAN ASTAR is a water-thinned acrylic-modified wood primer designed to preserve the grain beneath wood topcoats.",
   "tintas-vinci-sao-goncalo": "Your VINCIPOXI 235 is a high-build zinc-phosphate epoxy primer included in your industrial protective and marine coating ranges.",
   "noroo-paint-anyang": "Your EVACOAT epoxy protective coatings are used for new construction and maintenance of industrial buildings and plants.",
