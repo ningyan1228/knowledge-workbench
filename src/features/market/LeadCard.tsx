@@ -1,0 +1,44 @@
+import { useState } from 'react'
+import { CalendarCheck, ChevronRight, ExternalLink, Star } from 'lucide-react'
+import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
+import { recordedDay, recordedTimeLabel, shanghaiDay } from '../../lib/leadTimeline'
+import { outreachCompanyKey } from '../../lib/outreachLedger'
+import { developmentProgressLabel, effectiveStage, followUpDue, leadApplication, leadIndustry } from '../../lib/leadWorkbench'
+import { publicContactUrl } from '../../lib/contactEvidence'
+import type { OutreachLedger } from './useOutreachLedger'
+import type { LeadWork } from './useLeadWork'
+import './LeadCard.css'
+
+export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, ledger, work }: {
+  lead: PublicLead; selected?: boolean; onHighlight: (lead: PublicLead | null) => void;
+  onSelect: (lead: PublicLead) => void; onOpenDetail: (lead: PublicLead) => void; ledger: OutreachLedger; work: LeadWork;
+}) {
+  const [error, setError] = useState('')
+  const product = marketProducts.find((item) => item.id === lead.productId)!
+  const application = leadApplication(lead)
+  const today = shanghaiDay(new Date().toISOString())
+  const compactDate = (day: string) => day.startsWith(today.slice(0, 4)) ? `${Number(day.slice(5, 7))}月${Number(day.slice(8, 10))}日` : day
+  const record = work.status === 'ready' ? work.records[outreachCompanyKey(lead)] : undefined
+  const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
+  const stage = effectiveStage(lead, work.status === 'ready' ? work.records : null, ledger.status === 'ready' ? ledger.sends : null)
+  const showProgress = Boolean(sent) || (stage !== 'todo' && stage !== 'unknown') || Boolean(record?.followUpOn)
+  const firstDay = recordedDay(lead)
+  const contactUrl = publicContactUrl(lead.profile.contactPage) ? lead.profile.contactPage : publicContactUrl(lead.profile.website) ? lead.profile.website : undefined
+  const favorite = async () => {
+    setError('')
+    try { await work.save(lead, { favorite: !record?.favorite }) }
+    catch (error) { setError(error instanceof Error ? error.message : '收藏失败') }
+  }
+  return <article id={'map-card-' + lead.id} data-lead-id={lead.id} className={`lead-card customer-lead-card${selected ? ' selected' : ''}`}
+    onMouseEnter={() => onHighlight(lead)} onMouseLeave={() => onHighlight(null)} onFocus={() => onHighlight(lead)}
+    onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) onHighlight(null) }}>
+    <button type="button" className="customer-card-heading" onClick={() => onSelect(lead)} title="在地图中定位客户">
+      <span className="lead-dot" style={{ background: product.color }} /><span className="customer-card-identity"><span className="customer-card-company"><h3>{lead.company}</h3><small>{lead.countryZh}</small></span><p>{leadIndustry(lead)}</p></span><ChevronRight size={16} />
+    </button>
+    <div className="customer-card-evidence"><p className="customer-card-reason" title={lead.companyEvidence.statement}><strong>匹配理由：</strong>{application?.name ?? leadIndustry(lead)} · {product.name} 原料评估</p><small>潜在应用匹配 · 采购与使用待确认</small></div>
+    <div className="customer-card-dates" title={`最近核验：${lead.checkedAt}；首次收录：${recordedTimeLabel(lead)}（北京时间）`}><CalendarCheck size={13} /><span>最近核验：<time dateTime={lead.checkedAt}>{compactDate(lead.checkedAt)}</time><span className="customer-card-date-divider"> · </span>首次收录：{firstDay ? <time dateTime={firstDay}>{compactDate(firstDay)}</time> : '时间未记录'}</span></div>
+    {showProgress && <button type="button" className="customer-card-progress" onClick={() => onOpenDetail(lead)}>{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn && <span className={followUpDue(record, shanghaiDay(new Date().toISOString())) ? 'work-due' : ''}> · {record.stage === 'paused' ? '暂缓的计划' : '跟进'} {record.followUpOn}</span>}</button>}
+    <div className="customer-card-actions"><button type="button" className="customer-card-open" onClick={() => onOpenDetail(lead)}>查看客户</button>{contactUrl ? <a href={contactUrl} target="_blank" rel="noreferrer">{lead.profile.contactPage === contactUrl ? '查看联系入口' : '查看官网'}<ExternalLink size={12} /></a> : <button type="button" className="customer-card-contact" onClick={() => onOpenDetail(lead)}>查看联系资料</button>}<button type="button" className="customer-card-favorite" aria-label={record?.favorite ? '取消收藏' : '收藏客户'} aria-pressed={Boolean(record?.favorite)} disabled={work.status !== 'ready' || work.busy} title={work.status === 'ready' ? record?.favorite ? '取消收藏' : '收藏客户' : '登录并连接私人客户记录后可收藏'} onClick={() => void favorite()}><Star size={17} fill={record?.favorite ? 'currentColor' : 'none'} /></button></div>
+    {error && <p className="customer-card-error" role="alert">{error}</p>}
+  </article>
+}

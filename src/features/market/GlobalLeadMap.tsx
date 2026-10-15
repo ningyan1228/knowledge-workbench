@@ -1,0 +1,102 @@
+import { Fragment, useEffect, useMemo, useState } from 'react'
+import { divIcon, latLngBounds } from 'leaflet'
+import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip, useMap, useMapEvents } from 'react-leaflet'
+import { leadMapGroups, mapCountryGroups, type LeadMapGroup } from '../../lib/leadMapClusters'
+import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
+import './GlobalLeadMap.css'
+
+function MapFocus({ target, leads, overviewToken }: { target: PublicLead | null; leads: PublicLead[]; overviewToken: number }) {
+  const map = useMap()
+  useEffect(() => {
+    const fit = () => {
+      map.invalidateSize()
+      map.setMinZoom(Math.max(0, Math.log2(map.getSize().x / 256)))
+      if (leads.length) map.fitBounds(latLngBounds(leads.map((lead) => [lead.latitude, lead.longitude])), { padding: [48, 48], maxZoom: 12, animate: false })
+      else map.setView([20, 0], map.getMinZoom())
+    }
+    fit()
+    map.on('resize', fit)
+    return () => { map.off('resize', fit) }
+  }, [map, leads, overviewToken])
+  useEffect(() => {
+    if (target) map.setView([target.latitude, target.longitude], Math.max(map.getZoom(), 12), { animate: false })
+  }, [map, target])
+  return null
+}
+
+function escapeHtml(text: string) {
+  return text.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]!)
+}
+
+function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGroup; active: boolean; compact: boolean; onSelect: (group: LeadMapGroup) => void }) {
+  const map = useMap()
+  const label = `${group.label} · ${group.count} 家`
+  const size = compact ? [72, 46] : [96, 56]
+  const point = map.latLngToContainerPoint([group.latitude, group.longitude])
+  const viewport = map.getSize()
+  // Keep edge labels readable without moving the group's geographic anchor.
+  const anchorX = point.x >= 0 && point.x <= viewport.x ? point.x - Math.max(6, Math.min(point.x - size[0] / 2, viewport.x - size[0] - 6)) : size[0] / 2
+  const anchorY = point.y >= 0 && point.y <= viewport.y ? point.y - Math.max(6, Math.min(point.y - size[1] / 2, viewport.y - size[1] - 6)) : size[1] / 2
+  const icon = useMemo(() => divIcon({
+    className: `lead-map-cluster${compact ? ' is-compact' : ''}${active ? ' is-highlighted' : ''}`,
+    html: `<span>${escapeHtml(group.label)}</span><strong>${group.count}<small> 家</small></strong>`,
+    iconSize: compact ? [72, 46] : [96, 56], iconAnchor: [anchorX, anchorY],
+  }), [group.label, group.count, active, compact, anchorX, anchorY])
+  return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击筛选并展开`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip>{label} · 点击筛选并展开</Tooltip></Marker>
+}
+
+function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead, onSelectGroup }: {
+  leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null; showDensity: boolean;
+  onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void;
+}) {
+  const map = useMap()
+  const [zoom, setZoom] = useState(map.getZoom())
+  const [width, setWidth] = useState(map.getSize().x)
+  const events = useMemo(() => ({ zoomend: () => setZoom(map.getZoom()), resize: () => setWidth(map.getSize().x) }), [map])
+  useMapEvents(events)
+  useEffect(() => { setZoom(map.getZoom()) }, [map])
+  const groups = useMemo(() => leadMapGroups(leads, zoom), [leads, zoom])
+  const countries = useMemo(() => mapCountryGroups(leads), [leads])
+  const activeLead = hoveredLead ?? selectedLead
+  const selectGroup = (group: LeadMapGroup) => {
+    onSelectGroup(group)
+    map.fitBounds(latLngBounds(group.leads.map((lead) => [lead.latitude, lead.longitude])), { padding: [60, 60], maxZoom: 12, animate: false })
+  }
+  return <>
+    {showDensity && countries.map((group) => <CircleMarker key={`density:${group.id}`} center={[group.latitude, group.longitude]} radius={Math.min(64, 12 + Math.sqrt(group.count) * 6)} pathOptions={{ color: '#f59e0b', fillColor: '#fbbf24', fillOpacity: .16, weight: 1, interactive: false }} />)}
+    {groups.map((group) => {
+      const active = group.leads.some((lead) => lead.id === activeLead?.id)
+      if (group.kind !== 'nearby' || (group.leads.length > 1 && zoom < 12)) {
+        return <Fragment key={`${group.kind}:${group.id}`}><ClusterMarker group={group} active={active} compact={width < 500} onSelect={selectGroup} />{active && activeLead && <CircleMarker center={[activeLead.latitude, activeLead.longitude]} radius={10} pathOptions={{ color: '#2563eb', fillColor: '#fff', fillOpacity: 1, weight: 3, interactive: false }}><Tooltip permanent direction="top">{activeLead.company}</Tooltip></CircleMarker>}</Fragment>
+      }
+      // At city level, fan out shared coordinates so every company remains selectable.
+      return <Fragment key={group.id}>{group.leads.map((lead, index) => {
+        const spread = group.leads.length > 1
+        const center = map.project([group.latitude, group.longitude], zoom)
+        const angle = index / group.leads.length * Math.PI * 2 - Math.PI / 2
+        const radius = Math.max(28, group.leads.length * 8)
+        const position = spread ? map.unproject([center.x + Math.cos(angle) * radius, center.y + Math.sin(angle) * radius], zoom) : [lead.latitude, lead.longitude] as [number, number]
+        const color = marketProducts.find((product) => product.id === lead.productId)!.color
+        const highlighted = activeLead?.id === lead.id
+        const icon = divIcon({ className: `lead-map-company${highlighted ? ' is-highlighted' : ''}`, html: `<span style="background:${color}"></span>`, iconSize: [28, 28], iconAnchor: [14, 14] })
+        return <Fragment key={lead.id}>{spread && <Polyline positions={[[lead.latitude, lead.longitude], position]} pathOptions={{ color: '#64748b', opacity: .6, weight: 1, interactive: false }} />}<Marker position={position} icon={icon} zIndexOffset={highlighted ? 1000 : 0} title={lead.company} alt={lead.company} eventHandlers={{ click: () => onSelectLead(lead) }}><Tooltip key={highlighted ? 'active' : 'idle'} permanent={highlighted} direction="top">{lead.company} · {lead.countryZh}{spread ? '（同城位置展开）' : ''}</Tooltip></Marker></Fragment>
+      })}</Fragment>
+    })}
+  </>
+}
+
+export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken }: {
+  leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
+  onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number;
+}) {
+  const [showDensity, setShowDensity] = useState(false)
+  return <>
+    <div className="lead-map-controls"><span>点击聚合点筛选客户 · 放大查看公司</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
+    <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
+      <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <MapFocus target={selectedLead} leads={leads} overviewToken={overviewToken} />
+      <MapLayers leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} showDensity={showDensity} onSelectLead={onSelectLead} onSelectGroup={onSelectGroup} />
+    </MapContainer>
+    <p className="lead-map-legend">数字为当前筛选内的公司数，彩色点按产品区分。{showDensity && '黄圈表示各国已核验公开线索数量，位置为客户坐标汇总。'}数量不代表市场规模、成交概率或真实需求量。</p>
+  </>
+}
