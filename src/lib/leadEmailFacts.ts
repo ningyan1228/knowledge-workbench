@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "sesa-boya-tuzla": "Your PAN ASTAR is a water-thinned acrylic-modified wood primer designed to preserve the grain beneath wood topcoats.",
   "tintas-vinci-sao-goncalo": "Your VINCIPOXI 235 is a high-build zinc-phosphate epoxy primer included in your industrial protective and marine coating ranges.",
   "noroo-paint-anyang": "Your EVACOAT epoxy protective coatings are used for new construction and maintenance of industrial buildings and plants.",
   "kroma-paints-ahmedabad": "Your Kromaguard epoxy zinc phosphate primer is formulated for corrosion protection of steel in industrial and marine environments.",

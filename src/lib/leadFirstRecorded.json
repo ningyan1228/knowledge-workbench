@@ -1,4 +1,9 @@
 {
+  "sesa-boya-tuzla": {
+    "recordedAt": "2026-10-15T07:22:17.8803496Z",
+    "commit": "",
+    "source": "Actual formal public-data module CreationTimeUtc after separate original-source independent review; not a Git commit or deployment timestamp."
+  },
   "noroo-paint-anyang": {
     "recordedAt": "2026-10-15T02:55:32Z",
     "commit": "edf00c14b268de51d3a609bf675637887fec689d",
