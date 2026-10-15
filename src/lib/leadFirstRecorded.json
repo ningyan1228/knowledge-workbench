@@ -1,4 +1,19 @@
 {
+  "applied-chemical-technology-florence": {
+    "recordedAt": "2026-10-15T02:25:03Z",
+    "commit": "be6c007941d93457abb2cf3c745d7316eefcfca9",
+    "source": "Actual first public main addition verified from added customer-ID lines in this commit, not later verification."
+  },
+  "fertiberia-madrid": {
+    "recordedAt": "2026-10-15T02:08:56Z",
+    "commit": "e03174c7de72cd038e2a93de8e603cffd3f88039",
+    "source": "Actual first public main addition verified from added customer-ID lines in this commit, not later contact verification."
+  },
+  "kroma-paints-ahmedabad": {
+    "recordedAt": "2026-10-15T02:20:46.366Z",
+    "commit": "",
+    "source": "Actual formal public-data insertion after independent original-source review, not a deployment or verification date."
+  },
   "son-the-he-moi-ho-chi-minh": {
     "recordedAt": "2026-10-15T01:34:20.810Z",
     "commit": "",

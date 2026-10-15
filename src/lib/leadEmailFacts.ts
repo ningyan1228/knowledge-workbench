@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "kroma-paints-ahmedabad": "Your Kromaguard epoxy zinc phosphate primer is formulated for corrosion protection of steel in industrial and marine environments.",
   "applied-chemical-technology-florence": "Your fertilizer development services include controlled-release coated fertilizers and urethane coating applications.",
   "fertiberia-madrid": "Your NERGETIC DS+ combines a biodegradable polymer around fertilizer granules with a nitrification inhibitor.",
   "son-the-he-moi-ho-chi-minh": "Your EH1601 is a two-component zinc-rich epoxy primer formulated for corrosion protection of marine hulls and steel structures.",
