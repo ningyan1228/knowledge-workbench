@@ -3123,11 +3123,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-14"
   },
+  {
+    "id": "bona-malmo",
+    "company": "Bona AB",
+    "productId": "nl-w1201",
+    "country": "Sweden",
+    "countryZh": "瑞典",
+    "city": "Malmö (corporate-office/manufacturing city marker)",
+    "latitude": 55.605,
+    "longitude": 13.0038,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "实际下载原始TrafficGO EPD10页（2024-09-16发布、注明有效至2029-09-15；持续登记有效性未另行作认证承诺），公司/生产章节明示BonaAB制造木地板漆、Malmö/Sweden生产和self-crosslinking waterborne polyurethane topcoat；生产LCA基础数据为2023，非2026采购或产量证明。80页原始2024–2025目录与当前公开产品页类别交叉核对。当前官方公开联系人页/产品页以BonaAB及556017-6488登记、Murmansgatan130/bona@bona.com/电话确认瑞典账户。EPDowner为BonaLtd，producer描述BonaAB，保留两字段区别，区域BonaLimited不另算新公司。NL-W1201木材应用仅支持技术评估，不承诺与TrafficGO体系兼容。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立读取原始目录总体类别及相关adhesives/primers/woodlacquers/additive章节、当前公开类别及四项可见Additive+条目；实际完整阅读TanninShield2026-01-23、AntiSlip02/2026与Retarder2025-08-26原始TDS。TanninShield为预聚脂肪族异氰酸酯类木提取物阻隔添加剂；AntiSlip为100%固体PP颗粒防滑，不是PO水性乳液；Retarder/Extender为缓干/延长开放时间、Toner为颜料着色；D501/R540等为终端施工的成品基材底漆。所查范围未发现对外供应水性PO乳液、CPO/PO分散体或原料附着促进剂；限实际审读的公开范围，不称所有国家全部SKU/SDS穷尽。自用PUD研发不等同对外卖PO分散体。原始目录2024–25不是2026新目录；2026TrafficGO和Toner英语TDS原网址404，未称取得/已核验新版本。Bona原生HTML仅JS提示不作经营范围证明，当前公开渲染/搜索原文与可下载原始文件分开记录。按BonaAB/BonaKemi/区域Limited/NV、域名、Malmö地址与邮箱核对main192（去重于2026-10-15提交c9427561复核，本地206亦无同一账户），无同一账户；FCP Cerea城市Bonavicina的词片段不是Bona集团。EPD联系人BjornJohansson未披露采购/技术职位，不作为个人开发信收件人；英国2024–25名单不冒充今日瑞典采购团队。"
+    },
+    "contact": {
+      "label": "公开一般业务入口；未核实具名采购或技术负责人，当前采购需求和时机待确认",
+      "email": "bona@bona.com",
+      "phone": "+46 40 385 500",
+      "contactUrl": "https://www.bona.com/en/about-bona/contact-us/"
+    },
+    "source": {
+      "label": "Original live TrafficGO EPD,2024-09-16: ownSwedishmanufacture and waterborne wood floor lacquer; LCAdata2023",
+      "url": "https://www.bona.com/globalassets/catalogassets/epd-bona-traffic-go.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "id": "v33-domblans",
+    "company": "V33 S.A. (V33 Group / Plastor)",
+    "productId": "nl-w1201",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Domblans (registered-office/manufacturing city marker)",
+    "latitude": 46.7665,
+    "longitude": 5.5975,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前V33自有网页明确设计/制造木器涂料及水性木器产品，法定登记V33SA和Domblans总部独立确认，品牌页明确Plastor为同集团品牌。当前Plastor官网真实链接的原始PUR-T4五页TDS（2025-02-21）及法国制造标识、最后生产体系章节明示两组分水性polycarbonate成品清漆和室内木地板用途，非原料乳液供应证明。V33France公开一般业务邮箱从同一页面两份浏览器公开编码独立还原一致为contactgroupe@v33.com，无猜名/拼邮箱；Plastor技术电话另有明确入口。NL-W1201仅支持木材原料评估，客户自身pH9±0.5/固含30±2不转作我方参数。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "当前V33完整集团品牌类别、Plastor全可见产品分类、四款补充primer类别及实际WBPR21P/PRIMUNIV/Plastepox叶页审读；原始PURT4为配制好的木器终端涂料。WBPR21P为直接施工的混凝土基材底漆；Plastepox树脂/硬化剂是配套地坪primer系统，不因Resine或Primer名称当作rawPO/CPO或原料附着促进剂。所查公开范围未发现上述NL同类原料对外销售；Plastor店铺首12项/11分页不是全部SKU审读，PRIMUNIV可读正文有限，不臆断化学配方；集团普通木器蜡/油/成品底漆亦不等同PO原料乳液。按V33SA/V33Group/Plastor/Liberon/CecilProfessionnel/Hypnotik/区域子公司、主与品牌域名、Domblans两明确地址/mail核对main192（去重于2026-10-15提交c9427561复核，本地206亦无同一账户），无同一正式账户；各品牌/区域厂不拆新增。France当前客户洲际元数据缺失，正式新增后只增加France→Europe，既有国家不变。CF公开两份编码确定性解码得到原文字邮箱，与按人名拼造邮箱完全区分；不采用新闻/隐私联系人冒充采购。"
+    },
+    "contact": {
+      "label": "公开一般业务入口；未核实具名采购或技术负责人，当前采购需求和时机待确认",
+      "email": "contactgroupe@v33.com",
+      "phone": "+33 3 84 35 00 33",
+      "contactUrl": "https://en.groupev33.com/nous-contacter"
+    },
+    "source": {
+      "label": "Original current PlastorPUR-T4 five-pageTDS,revised2025-02-21: ownFrenchmanufacture andaqueouswoodfloorvarnish",
+      "url": "https://dxm.dam.v33.com/api/wedia/dam/variation/4at5pr6th3mqharw6r1q7qpaco/pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
+  {
+    "id": "blanchon-saint-priest",
+    "company": "Blanchon SAS (Blanchon Group)",
+    "productId": "nl-w1201",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Saint-Priest (registered-office city marker)",
+    "latitude": 45.6968,
+    "longitude": 4.9442,
+    "legacyCompanyDescription": "自有水性木器成品涂料配方研发制造企业；NL-W1201具体兼容、使用与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自有集团制造/R&D描述与法国原始LasureTechWood两页TDS（May2024）互证自身研发/法国成品制造，明确aqueous polyurethane-acrylic wood stain用于垂直外木材；原始文件法定BLANCHONSAS/RCS390112886及SaintPriest地址、一般邮箱blanchon@blanchon.com与当前公司法律页/技术电话核对。公司法律页RCS漏一位，完整号码仅引用原始TDS，不补猜网页。NL-W1201支持木材原料评估，不将TechWood的UV/adhesion/认证性能或参数转用我方乳液。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-14",
+      "conclusion": "独立审读当前集团/专业产品类别、七款木器lasures、实际TechWood及ConditionneurAntiUV原始TDS、Ciranova/Carver/BlanchonTech可见业务范围。Conditionneur/SuperBond是直接施工的成品木材或硬质基材底涂，不是stir-in原料附着剂。按原始2024-12-03收购公告确认DrSchutz纳入同集团，再审读当前其专业全类别与原始2023目录64页相关primer/additive/woodfinish章节：DuroPlusL为耐刮/消光，Decelerator为缓干，FlexAdd增柔，R10/R11为防滑结构添加，eukula prime adds为颜料；保留这些实际添加剂销售事实，未从名称推定为PO/CPO。所查公开范围未发现对外供应水性PO乳液、CPO/PO分散体或rawadhesionpromoter；不是所有集团全球SKU/SDS穷尽检查，未臆定FlexAdd/R10完整成分。公告Rigo/Bigler等关联如实保留，品牌/工厂/子公司不另计新增。按BlanchonSAS/Group/Syntilor/Ciranova/Carver/Rigo/Bigler/DrSchutz/eukula、域名、SaintPriest地址/mail核对main192（去重于2026-10-15提交c9427561复核，本地206亦无同一账户）无同一正式账户。供应伙伴Allnex/Univar不是自身原料售卖业务或确认NL采购证据；隐私邮箱dpo不作开发信。"
+    },
+    "contact": {
+      "label": "公开一般业务入口；未核实具名采购或技术负责人，当前采购需求和时机待确认",
+      "email": "blanchon@blanchon.com",
+      "phone": "+33 4 72 89 06 06",
+      "contactUrl": "https://www.blanchon.com/professionnels/contact"
+    },
+    "source": {
+      "label": "Original currentLasureTechWood two-pageTDS,May2024: ownFrenchaqueousPU-acrylicwoodstain/legalmanufacturermail",
+      "url": "https://www.blanchon.com/media/docs-pdf/FT_Lasure_Tech-Wood_052024.pdf"
+    },
+    "checkedAt": "2026-10-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "blanchon-saint-priest": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "v33-domblans": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "bona-malmo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "farrell-calhoun-memphis": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "induron-birmingham": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cloverdale-paint-surrey": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -3329,6 +3416,328 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "blanchon-saint-priest": {
+    "website": "https://www.blanchongroup.com/en/",
+    "contactPage": "https://www.blanchon.com/professionnels/contact",
+    "generalEmail": "blanchon@blanchon.com",
+    "generalPhone": "+33 4 72 89 06 06",
+    "address": "BLANCHONSAS,50 8èmeRue–CS60019,69800Saint-Priestcedex,France. OriginalofficialTDS RCSLYON390112886; currentwebsitepublisherRCStexttruncated to8digits,nodigitguessed. Registered-officecitymarker,notplantGPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "blanchon@blanchon.com",
+        "source": {
+          "label": "Original currentLasureTechWood two-pageTDS,May2024: ownFrenchaqueousPU-acrylicwoodstain/legalmanufacturermail",
+          "url": "https://www.blanchon.com/media/docs-pdf/FT_Lasure_Tech-Wood_052024.pdf"
+        },
+        "emailEvidence": {
+          "company": "Blanchon SAS (Blanchon Group)",
+          "value": "blanchon@blanchon.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Blanchon SAS public manufacturer business email in original TDS",
+              "url": "https://www.blanchon.com/media/docs-pdf/FT_Lasure_Tech-Wood_052024.pdf",
+              "summary": "Page 2 of the original May 2024 Lasure TECH-WOOD TDS explicitly prints BLANCHON SAS, RCS LYON 390 112 886 and e-mail blanchon@blanchon.com. The currently available original was re-read on 2026-10-15; the May 2024 document date is retained. General manufacturer mailbox, not a named purchaser."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original currentLasureTechWood two-pageTDS,May2024: ownFrenchaqueousPU-acrylicwoodstain/legalmanufacturermail",
+        "url": "https://www.blanchon.com/media/docs-pdf/FT_Lasure_Tech-Wood_052024.pdf"
+      },
+      {
+        "label": "Currentownmanufacturer,R&D,publicproductrange andsupplierpartnerroles",
+        "url": "https://www.blanchongroup.com/en/"
+      },
+      {
+        "label": "CurrentFrenchlegalpublisherandSaintPriestaddress; truncatedwebsiteRCSnotguessed",
+        "url": "https://www.blanchon.com/professionnels/mentions-legales"
+      },
+      {
+        "label": "Currententireprofessionalcategorynavigation andsevenvisiblewoodstainfamilylist",
+        "url": "https://www.blanchon.com/professionnels/produits-exterieurs/protection-decoration-bois-verticaux/lasures.html?synt_packing=269"
+      },
+      {
+        "label": "OriginalactualConditionneurAntiUV finishedaqueouswoodpretreatment,readytoapplynotstir-inrawpromoter",
+        "url": "https://www.blanchon.com/media/docs-pdf/FT_Conditionneur_Anti_UV.pdf"
+      },
+      {
+        "label": "OwnCiranovaTechindustrialwoodfinishformulation/laboratories/categories",
+        "url": "https://www.industry.blanchongroup.com/en/ciranovatech"
+      },
+      {
+        "label": "CurrentCiranovafinishedwoodproductscope",
+        "url": "https://www.ciranova.eu/en/"
+      },
+      {
+        "label": "CurrentCarverfinishedwoodcoat/glue/preparation/sundriescategories",
+        "url": "https://carver-products-europe.com/"
+      },
+      {
+        "label": "Original2024-12-03 groupDrSchutzacquisition andexistingbrandsRigo/Bigler/Carver/Ciranova",
+        "url": "https://www.dr-schutz.com/wp-content/uploads/PRESS-RELEASE_Blanchon-Group-acquires-Dr.Schutz.pdf"
+      },
+      {
+        "label": "CurrentDrSchutzprofessionalproductcategoryscope",
+        "url": "https://www.dr-schutz.com/en/dr-schutz/professional/products/"
+      },
+      {
+        "label": "OriginalDrSchutz2023 productoverview64pages; relevantprimer/additiveandwoodfinishchaptersread,historicaldatekept",
+        "url": "https://www.dr-schutz.com/wp-content/uploads/DrSchutz_Product_Overview_2023.pdf"
+      },
+      {
+        "label": "Own France technical-business telephone and public contact page",
+        "url": "https://www.blanchon.com/professionnels/contact"
+      }
+    ],
+    "generalEmailEvidence": {
+      "company": "Blanchon SAS (Blanchon Group)",
+      "value": "blanchon@blanchon.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Blanchon SAS public manufacturer business email in original TDS",
+          "url": "https://www.blanchon.com/media/docs-pdf/FT_Lasure_Tech-Wood_052024.pdf",
+          "summary": "Page 2 of the original May 2024 Lasure TECH-WOOD TDS explicitly prints BLANCHON SAS, RCS LYON 390 112 886 and e-mail blanchon@blanchon.com. The currently available original was re-read on 2026-10-15; the May 2024 document date is retained. General manufacturer mailbox, not a named purchaser."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Blanchon SAS (Blanchon Group)",
+      "value": "+33 4 72 89 06 06",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Blanchon current legal company contact telephone",
+          "url": "https://www.blanchon.com/professionnels/mentions-legales",
+          "summary": "Current official legal page explicitly states the Saint-Priest company address and corporate telephone 04 72 89 06 06. Stored as +33 4 72 89 06 06. The separate assistance line ending 0604 is not substituted for this number."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    }
+  },
+  "v33-domblans": {
+    "website": "https://en.groupev33.com/",
+    "contactPage": "https://en.groupev33.com/nous-contacter",
+    "generalEmail": "contactgroupe@v33.com",
+    "generalPhone": "+33 3 84 35 00 33",
+    "address": "V33S.A.,Route de la Muyre,39210Domblans,France; registryB305690158. PublicFranceheadofficemailing:Rue de la Croix Bernard–BP1,F-39210Domblanscedex. Bothpublishedaddressesretained;approximatecitymarker,notfactoryGPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "contactgroupe@v33.com",
+        "source": {
+          "label": "Current V33France head-office business email, independently decoded from both exact published client-side email encodings",
+          "url": "https://en.groupev33.com/nous-contacter"
+        },
+        "emailEvidence": {
+          "company": "V33 S.A. (V33 Group / Plastor)",
+          "value": "contactgroupe@v33.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "V33 France head-office public business email",
+              "url": "https://en.groupev33.com/nous-contacter",
+              "summary": "France Head Office V33 FRANCE block publicly embeds two browser email encodings. Fresh 2026-10-15 native HTML was saved; independently decoding both yields exactly contactgroupe@v33.com. No name, mailbox pattern or address was inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original current PlastorPUR-T4 five-pageTDS,revised2025-02-21: ownFrenchmanufacture andaqueouswoodfloorvarnish",
+        "url": "https://dxm.dam.v33.com/api/wedia/dam/variation/4at5pr6th3mqharw6r1q7qpaco/pdf"
+      },
+      {
+        "label": "Current ownV33wood-product manufacturing andwaterbasedwoodcare",
+        "url": "https://en.groupev33.com/wood/index"
+      },
+      {
+        "label": "Current grouplegalV33SA, registryB305690158, Domblansregisteredoffice",
+        "url": "https://en.groupev33.com/legal-notices"
+      },
+      {
+        "label": "Current groupbrandsV33/Liberon/Hypnotik/CecilProfessionnel/Plastor,oneaccount",
+        "url": "https://en.groupev33.com/brands"
+      },
+      {
+        "label": "CurrentPlastor completevisiblecategorynavigation; firstshop page notall11pages reviewed",
+        "url": "https://www.plastor.com/boutique/"
+      },
+      {
+        "label": "Current full four-product supplementaryprimercategory",
+        "url": "https://www.plastor.com/categorie-produit/produit-complementaire/produit-complementaire_primaires/"
+      },
+      {
+        "label": "Actual WBPR21P readyapplyconcrete-substrateprimer",
+        "url": "https://www.plastor.com/produit/primaire-support-friable-wbpr-21p-primaire-avant-ragreage/"
+      },
+      {
+        "label": "ActualPlastepox epoxy flooringprimersystem component; notrawPO/CPOinput",
+        "url": "https://www.plastor.com/produit/resine-epoxy-plastepox-epoxy-2/"
+      },
+      {
+        "label": "ActualPRIMUNIV finisheduniversalprimercategory; limitedreadablebody,nochemistryguessed",
+        "url": "https://www.plastor.com/produit/prim-univ-primaire-universel/"
+      },
+      {
+        "label": "CurrentPlastorbrandhistory/ownFrenchproduction",
+        "url": "https://www.plastor.com/notre-marque/"
+      },
+      {
+        "label": "CurrentpublicPlastortechnicaltelephone/contactroute",
+        "url": "https://www.plastor.com/nous-contacter/"
+      },
+      {
+        "label": "Current V33France head-office business email, independently decoded from both exact published client-side email encodings",
+        "url": "https://en.groupev33.com/nous-contacter"
+      }
+    ],
+    "generalEmailEvidence": {
+      "company": "V33 S.A. (V33 Group / Plastor)",
+      "value": "contactgroupe@v33.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "V33 France head-office public business email",
+          "url": "https://en.groupev33.com/nous-contacter",
+          "summary": "France Head Office V33 FRANCE block publicly embeds two browser email encodings. Fresh 2026-10-15 native HTML was saved; independently decoding both yields exactly contactgroupe@v33.com. No name, mailbox pattern or address was inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "V33 S.A. (V33 Group / Plastor)",
+      "value": "+33 3 84 35 00 33",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "V33 France head-office general business telephone",
+          "url": "https://en.groupev33.com/nous-contacter",
+          "summary": "The same France Head Office block explicitly publishes Phone (33) 03 84 35 00 33. Stored in international form +33 3 84 35 00 33; no personal ownership asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    }
+  },
+  "bona-malmo": {
+    "website": "https://www.bona.com/",
+    "contactPage": "https://www.bona.com/en/about-bona/contact-us/",
+    "generalEmail": "bona@bona.com",
+    "generalPhone": "+46 40 385 500",
+    "address": "BonaAB,Murmansgatan130,POBox21074,SE-20021Malmö,Sweden. PublicSwedishorgnumber556017-6488. Office/manufacturingcitymarker,notplantGPS; registeredgroupaccountnotUKregionalbranch.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "bona@bona.com",
+        "source": {
+          "label": "Published own BonaAB general contact, Swedish address, phone and legal orgnumber; primary public web after nativeJS shell",
+          "url": "https://www.bona.com/en/about-bona/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Bona AB",
+          "value": "bona@bona.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Bona AB official general business contact",
+              "url": "https://www.bona.com/en/about-bona/contact-us/",
+              "summary": "Official published contact body explicitly gives bona@bona.com, with Bona AB footer and Malmö office address. Re-read on 2026-10-15 through primary-page web extraction; prior native JavaScript-only response is not the proof."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Original live TrafficGO EPD,2024-09-16: ownSwedishmanufacture and waterborne wood floor lacquer; LCAdata2023",
+        "url": "https://www.bona.com/globalassets/catalogassets/epd-bona-traffic-go.pdf"
+      },
+      {
+        "label": "Original currently public80-page UK2024–2025 product catalogue; historical scope/date retained",
+        "url": "https://www.bona.com/globalassets/countries/uk/brochures/bona-product-catalogue-2024-2025-.pdf"
+      },
+      {
+        "label": "Current professional product category navigation throughprimarypublicweb,notnativeJSshell",
+        "url": "https://www.bona.com/en/products/professional/coatings/lacquers/"
+      },
+      {
+        "label": "Current visible additive family list:AntiSlip/Extender/TanninShield/Toner;primarypublicweb evidence,notexhaustiveglobalSKUreview",
+        "url": "https://www.bona.com/en/products/professional/coatings/additives/"
+      },
+      {
+        "label": "Original TanninShield2026-01-23: prepolymerisedaliphaticisocyanate woodextract-blocking additive",
+        "url": "https://www.bona.com/globalassets/catalogassets/tds-bona-tanninshield-en.pdf"
+      },
+      {
+        "label": "Original AntiSlip02/2026:100%solidPPgranules for slipresistance,notPOemulsion",
+        "url": "https://www.bona.com/globalassets/catalogassets/bona-anti-slip-additive-tds.pdf"
+      },
+      {
+        "label": "Original Retarder2025-08-26: drying/open-time additive for pairedwaterbornefinishes",
+        "url": "https://www.bona.com/globalassets/catalogassets/tds-bona-retarder-en_20250826.pdf"
+      },
+      {
+        "label": "Current Toner actual colourpigment additive; originalEnglishTDSnative404notclaimeddownloaded",
+        "url": "https://www.bona.com/en/products/professional/coatings/additives/bona-toner-black-01l/"
+      },
+      {
+        "label": "CurrentD501 readytoapplyacrylatefloorprimer; notrawPO/CPOinput",
+        "url": "https://www.bona.com/en/products/professional/adhesives/primers-/bona-d-501-5-ltr.-ml"
+      },
+      {
+        "label": "Published own BonaAB general contact, Swedish address, phone and legal orgnumber; primary public web after nativeJS shell",
+        "url": "https://www.bona.com/en/about-bona/contact-us/"
+      }
+    ],
+    "generalEmailEvidence": {
+      "company": "Bona AB",
+      "value": "bona@bona.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Bona AB official general business contact",
+          "url": "https://www.bona.com/en/about-bona/contact-us/",
+          "summary": "Official published contact body explicitly gives bona@bona.com, with Bona AB footer and Malmö office address. Re-read on 2026-10-15 through primary-page web extraction; prior native JavaScript-only response is not the proof."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Bona AB",
+      "value": "+46 40 385 500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Bona AB official general business telephone",
+          "url": "https://www.bona.com/en/about-bona/contact-us/",
+          "summary": "Official contact body explicitly publishes +4640385500 beside the Sweden/Malmö business address. General company telephone, not a personal number."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    }
+  },
   "farrell-calhoun-memphis": {
     "website": "https://www.farrellcalhoun.com/",
     "contactPage": "https://www.farrellcalhoun.com/contact",
@@ -8529,6 +8938,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "blanchon-saint-priest",
+  "v33-domblans",
+  "bona-malmo",
   "farrell-calhoun-memphis",
   "induron-birmingham",
   "cloverdale-paint-surrey",

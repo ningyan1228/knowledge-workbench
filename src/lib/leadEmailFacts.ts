@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "blanchon-saint-priest": "Your Lasure TECH-WOOD is a water-based polyurethane-acrylic stain for exterior vertical wood surfaces.",
+  "v33-domblans": "Your Plastor PUR-T4 is a two-component water-based polycarbonate varnish for interior wooden floors.",
+  "bona-malmo": "Your Traffic GO is a self-crosslinking waterborne polyurethane topcoat for wood floors.",
   "farrell-calhoun-memphis": "Your Wood Kraft 1160 line consists of waterborne acrylic-polyurethane clear varnishes for interior and exterior wood.",
   "induron-birmingham": "Your Perma-Clean 100 SL is an aliphatic amine epoxy lining for steel or concrete water tanks.",
   "cloverdale-paint-surrey": "Your WeatherOne 100% Acrylic Semi-Transparent Stain is formulated for wood siding, fences, decks and outdoor furniture.",
