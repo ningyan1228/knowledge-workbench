@@ -3292,11 +3292,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "fertiberia-madrid",
+    "company": "Fertiberia, S.A. (Grupo Fertiberia)",
+    "productId": "fertilizer-coating",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Madrid (group headquarters city marker)",
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "legacyCompanyDescription": "NERGETIC聚合物包覆调控养分释放肥料研发制造集团；我方原料适配、采购和准入未确认",
+    "fit": "可开发候选",
+    "signal": "当前自有C-PRO页明确该聚合物技术应用于NERGETIC COMPLETE成品肥料，在颗粒周围形成物理屏障并调控养分逐步释放；当前NERGETIC DS+页明确聚合物围绕肥粒并另含硝化抑制剂。西班牙农业部当前产品记录将同系列NERGETIC COMPLETE NPK NSAFE的Fabricante列为FERTIBERIA SA；公司当前制造/工厂页面及其技术负责人2022年4月26日公开原始访谈中对自身NERGETIC生产试验的说明互证下游制造角色。并非仅凭普通尿素厂或产品品牌推定包衣加工。C-PRO为客户自己的技术，不推定是PU、不推定符合特定控释释放期/法规测试，也不将其认证或效果移用于我方原料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立读取当前自有C-PRO/NERGETIC成品产品、农业/工业业务分区、制造与集团页面，以及农业部制造商记录和公司技术负责人原始公开访谈。所见C-PRO为嵌入自家成品肥料的技术介绍，未发现其作为独立原料包衣剂、PU原料或包衣树脂对外销售的实际产品入口；自家成品包覆技术与出售同类原料分开判断。工业业务公开销售尿素、氨、硝酸/硝酸盐、锶盐及AdBlue等，不因一般化工原料供应而自动等同本项目肥料包膜原料，也不谎称所有全球SKU已穷尽审读。保留ADP/Fertiberia France/Hellas/Van de Reijt/2F Ouest/Agralia/Intergal/Fercampo/Exceed/Trichodex(TRIXIA)关联与Triton当前投资组合关系，不拆地区、子公司或品牌制造新增。已按这些名称及域名在最新main199家和本地未发布客户中去重，无同账户；本次只收录集团代表账户一家。未发现公开采购本项目原料的RFQ、供应商准入或采购量，不能称正在采购/已使用/需要替换C-PRO。"
+    },
+    "contact": {
+      "label": "公开公司通用业务入口；非具名采购或技术邮箱",
+      "email": "fertiberia@fertiberia.es",
+      "phone": "+34 91 586 62 00",
+      "contactUrl": "https://www.fertiberia.com/contacta/"
+    },
+    "source": {
+      "label": "Current own NERGETIC DS+ finished fertilizer: polymer surrounding granules plus nitrification inhibitor",
+      "url": "https://www.fertiberia.com/productos/agricultura/nergetic-ds/"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fertiberia-madrid": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "enecon-medford": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sauereisen-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "dampney-everett": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3504,6 +3533,122 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fertiberia-madrid": {
+    "website": "https://www.fertiberia.com/",
+    "contactPage": "https://www.fertiberia.com/contacta/",
+    "address": "Fertiberia, S.A., Calle Agustín de Foxá, 27, plantas 8–11, 28036 Madrid, Spain. Official group headquarters; approximate city map marker, not exact factory GPS. Legal NIF A-28165298.",
+    "generalEmail": "fertiberia@fertiberia.es",
+    "generalPhone": "+34 91 586 62 00",
+    "generalEmailEvidence": {
+      "company": "Fertiberia, S.A. (Grupo Fertiberia)",
+      "value": "fertiberia@fertiberia.es",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Fertiberia manufacturing scope, actual factory network, Madrid headquarters and corporate contact",
+          "url": "https://www.fertiberia.com/fertiberia/",
+          "summary": "The current official corporate headquarters page is publicly indexed with the exact fertiberia@fertiberia.es address; the own English legal notice independently discloses that same value for general corporate institutional/communications inquiries. Opened web bodies mask the linked mailbox, native HTML GET returned HTTP403; no HTML decoding, mailbox guessing, named ownership or purchasing role is claimed."
+        },
+        {
+          "label": "Current own English legal notice: FERTIBERIA SA legal identity and general corporate communications route; notice retains 2019 copyright",
+          "url": "https://www.fertiberia.com/en/legal-notice/",
+          "summary": "The current official corporate headquarters page is publicly indexed with the exact fertiberia@fertiberia.es address; the own English legal notice independently discloses that same value for general corporate institutional/communications inquiries. Opened web bodies mask the linked mailbox, native HTML GET returned HTTP403; no HTML decoding, mailbox guessing, named ownership or purchasing role is claimed."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Fertiberia, S.A. (Grupo Fertiberia)",
+      "value": "+34 91 586 62 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Fertiberia manufacturing scope, actual factory network, Madrid headquarters and corporate contact",
+          "url": "https://www.fertiberia.com/fertiberia/",
+          "summary": "Current own Spanish and English company headquarters blocks explicitly publish +34 91 586 62 00 at the Madrid corporate office. General company business line, not a named or emergency number."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "fertiberia@fertiberia.es",
+        "source": {
+          "label": "Current own Fertiberia manufacturing scope, actual factory network, Madrid headquarters and corporate contact",
+          "url": "https://www.fertiberia.com/fertiberia/"
+        },
+        "emailEvidence": {
+          "company": "Fertiberia, S.A. (Grupo Fertiberia)",
+          "value": "fertiberia@fertiberia.es",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own Fertiberia manufacturing scope, actual factory network, Madrid headquarters and corporate contact",
+              "url": "https://www.fertiberia.com/fertiberia/",
+              "summary": "Exact own corporate headquarters mailbox additionally disclosed in its legal notice as a general corporate communications route; never assigned to a named purchaser or technical director."
+            },
+            {
+              "label": "Current own English legal notice: FERTIBERIA SA legal identity and general corporate communications route; notice retains 2019 copyright",
+              "url": "https://www.fertiberia.com/en/legal-notice/",
+              "summary": "Exact own corporate headquarters mailbox additionally disclosed in its legal notice as a general corporate communications route; never assigned to a named purchaser or technical director."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own C-PRO technology page: physical polymer barrier around granules and gradual controlled nutrient release",
+        "url": "https://www.fertiberia.com/c-pro/"
+      },
+      {
+        "label": "Current own NERGETIC DS+ finished fertilizer: polymer surrounding granules plus nitrification inhibitor",
+        "url": "https://www.fertiberia.com/productos/agricultura/nergetic-ds/"
+      },
+      {
+        "label": "Spanish agriculture ministry fertilizer registry: NERGETIC COMPLETE NPK NSAFE manufacturer FERTIBERIA SA",
+        "url": "https://servicio.mapa.gob.es/regfertiwai/DetalleFertilizante.aspx?clave=6313"
+      },
+      {
+        "label": "Current own Fertiberia manufacturing scope, actual factory network, Madrid headquarters and corporate contact",
+        "url": "https://www.fertiberia.com/fertiberia/"
+      },
+      {
+        "label": "Published 26 April 2022 interview with company agronomic innovation director: own NERGETIC production trials incorporating C-PRO and Zimactiv; historical statement",
+        "url": "https://archivo.revistaagricultura.com/grupo-fertiberia/sanidad-y-nutricion/nergetic-dz--la-solucion-de-nutricion-vegetal-nitrogenada-de-ultima-generacion-que-incorpora-las-tecnologias-c-pro-y-zimactiv_14353_119_17842_0_1_in.html"
+      },
+      {
+        "label": "Current own agricultural and industrial business divisions; industrial ammonia/urea/nitrates and environmental solutions distinguished from coating agents",
+        "url": "https://www.fertiberia.com/que-hacemos/industria/"
+      },
+      {
+        "label": "Current own group history and operating entities: ADP, Fertiberia France/Hellas, Van de Reijt, Agralia and Trichodex/TRIXIA",
+        "url": "https://www.fertiberia.com/nuestro-grupo/"
+      },
+      {
+        "label": "Current own ADP page: group manufacturing subsidiary and its three Portuguese production sites",
+        "url": "https://www.fertiberia.com/adp-fertilizantes/"
+      },
+      {
+        "label": "Current sponsor portfolio entry explicitly marks Fertiberia as Current",
+        "url": "https://www.triton-partners.com/portfolio/fertiberia"
+      },
+      {
+        "label": "Current own English legal notice: FERTIBERIA SA legal identity and general corporate communications route; notice retains 2019 copyright",
+        "url": "https://www.fertiberia.com/en/legal-notice/"
+      },
+      {
+        "label": "Current own corporate inquiry page, no submission performed",
+        "url": "https://www.fertiberia.com/contacta/"
+      }
+    ]
+  },
   "enecon-medford": {
     "website": "https://www.enecon.com/",
     "contactPage": "https://www.enecon.com/contact.asp",
@@ -9346,6 +9491,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fertiberia-madrid",
   "enecon-medford",
   "sauereisen-pittsburgh",
   "dampney-everett",
