@@ -3207,11 +3207,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-14"
   },
+  {
+    "id": "dampney-everett",
+    "company": "Dampney Company, Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Everett (manufacturing and office city marker)",
+    "latitude": 42.4084,
+    "longitude": -71.0537,
+    "legacyCompanyDescription": "成品防护涂料配方研发/制造企业；ELO 具体适配、原料采购与需求未确认",
+    "fit": "可开发候选",
+    "signal": "当前自有About页面明确Everett工厂、配方维护/批次生产和产品实验室，证明自身配方与制造。当前Endcor700C页真实链接的原始四页TDS标明polyamide-cured epoxy成品涂料，用于工业、化工及海洋环境中的钢和混凝土；法定公司名、Everett地址及sales业务邮箱在原件底栏公开。保留印刷01/09 Rev.，不把搜索引擎近期收录当作新版；原件内部分技术数值不一致，不据此编造参数或转给ELO。ELO仅按通用涂料TDS应用提出潜在工厂配方评估，不建议现场向700C加料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立读取当前产品全部三个可见分页及全类别、五种thinner/cleaner类别、Alvin成品修补材料与真实Endcor700C原始TDS。Thurmalox/Endcor/Epodur/Apexior等为成品涂料，Alvin的Lab-metal/Hi-Temp Lab-metal为直接使用的金属修补材料；thinner/cleaner不因是配套耗材就等同ELO/ESBO或生物增塑油。所查公开业务范围未发现ELO、ESBO、环氧化植物油或同类生物增塑/稳定原料对外销售；不声称已读取所有旧文件或每份SDS。按Dampney/Alvin/Thurmalox/Epodur/Apexior/StovePaint及域名、地址/mail核对最新main195及本地客户，无同一账户，品牌与网址不拆分新增。"
+    },
+    "contact": {
+      "label": "公开公司/部门业务入口；不推定具名采购身份，实际需求与时机待确认",
+      "email": "sales@dampney.com",
+      "phone": "+1 617 389 2805",
+      "contactUrl": "https://www.dampney.com/Contact-Us"
+    },
+    "source": {
+      "label": "Current Endcor 700C own epoxy-polyamide finished coating and real original-document links",
+      "url": "https://www.dampney.com/Product-Line/AT/View/PID/43/Endcor-700C"
+    },
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "sauereisen-pittsburgh",
+    "company": "Sauereisen, Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Pittsburgh (corporate and manufacturing city marker)",
+    "latitude": 40.4406,
+    "longitude": -79.9959,
+    "legacyCompanyDescription": "成品防护涂料配方研发/制造企业；ELO 具体适配、原料采购与需求未确认",
+    "fit": "可开发候选",
+    "signal": "当前自有首页明确Pittsburgh持续自有研发制造防腐材料；当前木器无关的市政污水产品页与原始三页210XROL TDS互证其为辊涂环氧成品防护衬里，保护污水处理/收集结构的混凝土。原件标October2020，末页法定SauereisenInc与160Gamma地址，未伪称2026新版；能力手册印刷layout7/20/09，只作历史能力辅证。ELO匹配通用涂料制造，不从公司衬里耐化学性反推我方实测性能。原件禁止施工时额外加溶剂/助剂，潜在工厂配方评估不等同现场掺料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立读取当前整个产品类别导航、原始能力手册相关页、污水成品聚合物衬里、五种应用型primer、membranes/joint-sealants和无机陶瓷cement范围。220T确实另售，但原文明示为提高垂直接缝料粘度的thixotropy助剂；不隐藏其销售，也不猜测完整组成或称其为ELO/ESBO。ConoFlex/Fib-R-Thane/69/950等是直接施工的成品衬里/接缝胶，非原料生物增塑油；primer亦为直接施工层。所查范围未发现ELO、ESBO、环氧化植物油或同类生物增塑/稳定原料销售。网站corrosion/ceramic索引部分动态列表未完整渲染，不声称所有全球SKU/SDS穷尽审读。历史收购Nukem/CoatingsComposits/PoconoFabricators及SewerGard/Pre-Krete等关联保留；Metz/Glassbond列为制造伙伴，不臆称子公司。按主体、关联名/品牌、域名、地址与邮箱核对main195及本地客户，无重复，同集团不拆新增。"
+    },
+    "contact": {
+      "label": "公开公司/部门业务入口；不推定具名采购身份，实际需求与时机待确认",
+      "email": "info@sauereisen.com",
+      "phone": "+1 412 963 0303",
+      "contactUrl": "https://www.sauereisen.com/contact/"
+    },
+    "source": {
+      "label": "Original currently linked three-page SewerGard 210XROL TDS; October 2020 retained",
+      "url": "https://www.sauereisen.com/wp-content/uploads/210XROL-2.pdf"
+    },
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "enecon-medford",
+    "company": "ENECON Corporation",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Medford (manufacturing and headquarters city marker)",
+    "latitude": 40.8179,
+    "longitude": -72.9983,
+    "legacyCompanyDescription": "成品防护涂料配方研发/制造企业；ELO 具体适配、原料采购与需求未确认",
+    "fit": "可开发候选",
+    "signal": "当前自有About/FAQ明确其研发制造聚合物涂料，FAQ将实际生产定位Medford；制造岗位页另作工厂活动互证，未把无日期招聘转成已核实扩产项目。当前CHEMCLADSC产品页链接原始两页技术文件，明确双组分成品聚合物防护涂料及刷/辊涂设备结构用途，保留copyright2026和印刷代码20260406。FAQ另明确现有原料来自USA sources，保留此采购政策限制；不推定原料原产地、进口牌号准入或会向中国供应商采购。ELO仅按涂料TDS应用作为潜在配方评估，绝不继承客户饮用水/NSF等认证或具体体系性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立读取当前完整可见METALCLAD/FLEXICLAD/ENECRETE/CHEMCLAD/ENESEAL/ENECLAD/SAFETYCLAD/ENEFLOW产品家族说明和实际P4C、FLEXICLADER、ENEFLOW叶页。P4C是施工于混凝土的成品底涂；FLEXICLADER是直接修补柔性部件的成品双组分体系；ENEFLOW是磁性装置，不能把stabilizepH一词当作化学原料稳定剂销售。当前Family公开关联EA磁件业务及FederatedPackaging包装机械/用品读到的实际范围亦记录，未发现相关ELO/ESBO/环氧化植物油/生物增塑油原料业务；未声称所有关联公司每个SKU/SDS已穷尽审读。各国代表/经销商并非自动其采购部门或新增公司。按ENECON/CHEMCLAD/相关家族名及域名/Medford地址/邮箱核对main195及本地客户，无重复，不混淆ENERCON工程公司、Ennoconn电子公司或Enron。SDS需要提交表单的入口未提交，不称已取得受限SDS。"
+    },
+    "contact": {
+      "label": "公开公司/部门业务入口；不推定具名采购身份，实际需求与时机待确认",
+      "email": "info@enecon.com",
+      "phone": "+1 516 349 0022",
+      "contactUrl": "https://www.enecon.com/contact.asp"
+    },
+    "source": {
+      "label": "Original two-page CHEMCLAD SC technical sheet; copyright 2026 and printed code 20260406",
+      "url": "https://www.enecon.com/pdfs/CHEMCLAD_SC.pdf"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "enecon-medford": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "sauereisen-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "dampney-everett": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "blanchon-saint-priest": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "v33-domblans": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "bona-malmo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -3416,6 +3503,326 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "enecon-medford": {
+    "website": "https://www.enecon.com/",
+    "contactPage": "https://www.enecon.com/contact.asp",
+    "generalEmail": "info@enecon.com",
+    "generalPhone": "+1 516 349 0022",
+    "generalEmailEvidence": {
+      "company": "ENECON Corporation",
+      "value": "info@enecon.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Original two-page CHEMCLAD SC technical sheet; copyright 2026 and printed code 20260406",
+          "url": "https://www.enecon.com/pdfs/CHEMCLAD_SC.pdf",
+          "summary": "Page 1 of the actual original CHEMCLAD SC technical sheet explicitly prints ENECON Corporation, 6 Platinum Court and info@enecon.com. The current FAQ separately identifies this exact inbox as the Tech Center route; no named purchaser inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "ENECON Corporation",
+      "value": "+1 516 349 0022",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current headquarters address and company telephone; regional distributors kept separate",
+          "url": "https://www.enecon.com/contact.asp",
+          "summary": "Current official headquarters contact block explicitly gives +1 (516) 349-0022 at 6 Platinum Court, Medford. A corporate business phone, not a personal or emergency number."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "address": "6 Platinum Court, Medford, New York 11763-2251, United States. Original manufacturer address and current headquarters; approximate city marker, not exact factory GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "info@enecon.com",
+        "source": {
+          "label": "Current FAQ explicitly identifies own Medford production, technical/business routes and USA-source procurement policy",
+          "url": "https://www.enecon.com/faq"
+        },
+        "emailEvidence": {
+          "company": "ENECON Corporation",
+          "value": "info@enecon.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current FAQ explicitly identifies own Medford production, technical/business routes and USA-source procurement policy",
+              "url": "https://www.enecon.com/faq",
+              "summary": "Current official FAQ explicitly directs technical/product-selection questions to the Tech Center at info@enecon.com. This is a company technical route, not a named research or purchasing person."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "sales@enecon.com",
+        "source": {
+          "label": "Current FAQ explicitly identifies own Medford production, technical/business routes and USA-source procurement policy",
+          "url": "https://www.enecon.com/faq"
+        },
+        "emailEvidence": {
+          "company": "ENECON Corporation",
+          "value": "sales@enecon.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current FAQ explicitly identifies own Medford production, technical/business routes and USA-source procurement policy",
+              "url": "https://www.enecon.com/faq",
+              "summary": "Current official FAQ explicitly discloses sales@enecon.com for buying its finished products. Not relabelled as raw-material purchasing."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own coating development and American manufacturing company identity",
+        "url": "https://www.enecon.com/about-enecon.asp"
+      },
+      {
+        "label": "Current FAQ explicitly identifies own Medford production, technical/business routes and USA-source procurement policy",
+        "url": "https://www.enecon.com/faq"
+      },
+      {
+        "label": "Original two-page CHEMCLAD SC technical sheet; copyright 2026 and printed code 20260406",
+        "url": "https://www.enecon.com/pdfs/CHEMCLAD_SC.pdf"
+      },
+      {
+        "label": "Current own CHEMCLAD SC protective coating and real original technical-sheet link",
+        "url": "https://www.enecon.com/product-chemclad-sc"
+      },
+      {
+        "label": "Current complete visible product-family overview of finished polymer coatings and repair systems",
+        "url": "https://www.enecon.com/products.asp"
+      },
+      {
+        "label": "Current P4C finished concrete primer, applied as a coating system layer",
+        "url": "https://www.enecon.com/product-chemclad-p4c.asp"
+      },
+      {
+        "label": "Current FLEXICLAD ER finished flexible repair compound; not raw flexibilizer oil",
+        "url": "https://www.enecon.com/product-flexiclad-er.asp"
+      },
+      {
+        "label": "Current ENEFLOW magnetic-fluid-treatment devices; no raw chemical stabilizer inferred",
+        "url": "https://www.enecon.com/product-eneflow.asp"
+      },
+      {
+        "label": "Current manufacturing-role page corroborates Medford production; undated recruiting text not a dated expansion or demand event",
+        "url": "https://www.enecon.com/careers-manufacturing.asp"
+      },
+      {
+        "label": "Current headquarters address and company telephone; regional distributors kept separate",
+        "url": "https://www.enecon.com/contact.asp"
+      }
+    ]
+  },
+  "sauereisen-pittsburgh": {
+    "website": "https://www.sauereisen.com/",
+    "contactPage": "https://www.sauereisen.com/contact/",
+    "generalEmail": "info@sauereisen.com",
+    "generalPhone": "+1 412 963 0303",
+    "generalEmailEvidence": {
+      "company": "Sauereisen, Inc.",
+      "value": "info@sauereisen.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current corporate public business email, Pittsburgh address, staff roles and general telephone",
+          "url": "https://www.sauereisen.com/contact/",
+          "summary": "Current official Contact page explicitly publishes info@sauereisen.com with the Sauereisen corporate address. Distributor names, laboratory-manager identity and historical SDS emergency addresses are not assigned ownership of this company inbox."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Sauereisen, Inc.",
+      "value": "+1 412 963 0303",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current corporate public business email, Pittsburgh address, staff roles and general telephone",
+          "url": "https://www.sauereisen.com/contact/",
+          "summary": "Current official Contact page explicitly publishes the corporate Phone +1 (412) 963.0303 at 160 Gamma Drive. Individual staff extensions are not substituted for the general number."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "address": "160 Gamma Drive, Pittsburgh, Pennsylvania 15238-2989, United States. Official manufacturer address; city marker is approximate, not exact plant GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@sauereisen.com",
+        "source": {
+          "label": "Current corporate public business email, Pittsburgh address, staff roles and general telephone",
+          "url": "https://www.sauereisen.com/contact/"
+        },
+        "emailEvidence": {
+          "company": "Sauereisen, Inc.",
+          "value": "info@sauereisen.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current corporate public business email, Pittsburgh address, staff roles and general telephone",
+              "url": "https://www.sauereisen.com/contact/",
+              "summary": "Current official company contact block explicitly gives info@sauereisen.com. General business route, no named procurement ownership asserted."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own Pittsburgh downstream manufacture and development of corrosion-resistant materials",
+        "url": "https://www.sauereisen.com/"
+      },
+      {
+        "label": "Current family-run company, acquired-brand history and actual business scope",
+        "url": "https://www.sauereisen.com/about/"
+      },
+      {
+        "label": "Original currently linked three-page SewerGard 210XROL TDS; October 2020 retained",
+        "url": "https://www.sauereisen.com/wp-content/uploads/210XROL-2.pdf"
+      },
+      {
+        "label": "Current municipal-wastewater finished polymer lining products and original TDS links",
+        "url": "https://www.sauereisen.com/products/municipal-wastewater/"
+      },
+      {
+        "label": "Current five visible applied primer systems: PenePrime 500, ConoWeld 501, ConoPrime 502, VEPrime 550, Hi-Temp 560",
+        "url": "https://www.sauereisen.com/products/primers-corrosion/"
+      },
+      {
+        "label": "Current finished joint sealants and membranes; separately sold 220T explicitly has viscosity/thixotropy role",
+        "url": "https://www.sauereisen.com/products/membranes-corrosion/"
+      },
+      {
+        "label": "Current own inorganic ceramic-cement manufacture and product families",
+        "url": "https://www.sauereisen.com/ceramic-cements/"
+      },
+      {
+        "label": "Original capability brochure, 10 PDF pages; printed layout date 7/20/09, historical supporting source",
+        "url": "https://www.sauereisen.com/wp-content/uploads/Capabilities-Brochure.pdf"
+      },
+      {
+        "label": "Current corporate public business email, Pittsburgh address, staff roles and general telephone",
+        "url": "https://www.sauereisen.com/contact/"
+      }
+    ]
+  },
+  "dampney-everett": {
+    "website": "https://www.dampney.com/",
+    "contactPage": "https://www.dampney.com/Contact-Us",
+    "generalEmail": "sales@dampney.com",
+    "generalPhone": "+1 617 389 2805",
+    "generalEmailEvidence": {
+      "company": "Dampney Company, Inc.",
+      "value": "sales@dampney.com",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Original currently linked Endcor 700C four-page TDS; printed 01/09 Rev. retained",
+          "url": "https://www.dampney.com/Portals/1/PropertyAgent/456/Files/43/Endcor_700C.pdf",
+          "summary": "First-page footer of the original currently linked Endcor 700C TDS explicitly publishes Dampney Company, Inc., the Everett address and sales@dampney.com. Historical printed revision code is retained; this is a general sales department mailbox, not a named purchaser."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Dampney Company, Inc.",
+      "value": "+1 617 389 2805",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current business contact page and Everett office telephone",
+          "url": "https://www.dampney.com/Contact-Us",
+          "summary": "Current official contact-page footer explicitly gives the Everett company address and Phone (617) 389-2805. International prefix added for the same disclosed business number; no emergency or personal number used."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "address": "85 Paris Street, Everett, Massachusetts 02149, United States. Official company office/plant city; approximate city map marker, not exact plant GPS.",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@dampney.com",
+        "source": {
+          "label": "Original currently linked Endcor 700C four-page TDS; printed 01/09 Rev. retained",
+          "url": "https://www.dampney.com/Portals/1/PropertyAgent/456/Files/43/Endcor_700C.pdf"
+        },
+        "emailEvidence": {
+          "company": "Dampney Company, Inc.",
+          "value": "sales@dampney.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Original currently linked Endcor 700C four-page TDS; printed 01/09 Rev. retained",
+              "url": "https://www.dampney.com/Portals/1/PropertyAgent/456/Files/43/Endcor_700C.pdf",
+              "summary": "Original author TDS footer explicitly discloses sales@dampney.com as the company business email. No procurement role or personal name inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own Everett manufacturing plant, formula/batch systems and product-development laboratory",
+        "url": "https://www.dampney.com/More-/About-Us"
+      },
+      {
+        "label": "Original currently linked Endcor 700C four-page TDS; printed 01/09 Rev. retained",
+        "url": "https://www.dampney.com/Portals/1/PropertyAgent/456/Files/43/Endcor_700C.pdf"
+      },
+      {
+        "label": "Current Endcor 700C own epoxy-polyamide finished coating and real original-document links",
+        "url": "https://www.dampney.com/Product-Line/AT/View/PID/43/Endcor-700C"
+      },
+      {
+        "label": "Own visible full product-list page 1 of 3 and all product-family navigation",
+        "url": "https://www.dampney.com/Product-Line/AT/ViewType"
+      },
+      {
+        "label": "Own visible full product-list page 2 of 3",
+        "url": "https://www.dampney.com/Product-Line/AT/ViewType/PropertyAgentName/-1/sortBy/cf6/currentpage/2"
+      },
+      {
+        "label": "Own visible full product-list page 3 of 3",
+        "url": "https://www.dampney.com/Product-Line/AT/ViewType/PropertyAgentName/-1/sortBy/cf6/currentpage/3"
+      },
+      {
+        "label": "Current five listed thinner/solvent/cleaner products; not ELO/ESBO raw-oil supply",
+        "url": "https://www.dampney.com/Product-Line/AT/ViewType/PTID/170"
+      },
+      {
+        "label": "Current Alvin-family ready-to-use repair putty, patching compound and rubberized coating",
+        "url": "https://www.dampney.com/Product-Line/AT/ViewType/PTID/46"
+      },
+      {
+        "label": "Current business contact page and Everett office telephone",
+        "url": "https://www.dampney.com/Contact-Us"
+      }
+    ]
+  },
   "blanchon-saint-priest": {
     "website": "https://www.blanchongroup.com/en/",
     "contactPage": "https://www.blanchon.com/professionnels/contact",
@@ -8938,6 +9345,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "enecon-medford",
+  "sauereisen-pittsburgh",
+  "dampney-everett",
   "blanchon-saint-priest",
   "v33-domblans",
   "bona-malmo",

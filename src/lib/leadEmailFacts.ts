@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "enecon-medford": "Your CHEMCLAD SC is a two-component protective coating applied by brush or roller to equipment and structures.",
+  "sauereisen-pittsburgh": "Your SewerGard 210XROL is a roll-applied epoxy lining for concrete surfaces in municipal wastewater structures.",
+  "dampney-everett": "Your Endcor 700C is a polyamide-cured epoxy coating for protecting steel and concrete in industrial and marine environments.",
   "blanchon-saint-priest": "Your Lasure TECH-WOOD is a water-based polyurethane-acrylic stain for exterior vertical wood surfaces.",
   "v33-domblans": "Your Plastor PUR-T4 is a two-component water-based polycarbonate varnish for interior wooden floors.",
   "bona-malmo": "Your Traffic GO is a self-crosslinking waterborne polyurethane topcoat for wood floors.",
