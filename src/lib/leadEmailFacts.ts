@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "agrotolia-gubre-kozan": "Your NITRO-TECH fertilizer combines urea and ammonium nitrogen coated with organic matter and sulfur.",
+  "unaldi-gubre-menderes": "Your BIOCOMP product range includes organomineral compound fertilizers coated with organic matter.",
   "kubilay-boya-aliaga": "Your Aqua-Tech range includes water-based acrylic primers for exterior wood, MDF, solid wood and veneered furniture.",
   "onpa-boya-incesu": "Your epoxy range includes two-component, high-solids anti-corrosive systems for steel structures, storage tanks and marine protection.",
   "mylaw-excelsior-johannesburg": "Your industrial range includes a twin-pack epoxy zinc-phosphate primer formulated under the Excelsior Paints brand.",

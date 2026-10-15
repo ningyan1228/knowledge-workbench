@@ -3494,11 +3494,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "unaldi-gubre-menderes",
+    "company": "Ünaldı Organik Likid Gübre Sanayi ve Ticaret A.Ş. (Ünaldı Gübre)",
+    "productId": "fertilizer-coating",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Menderes, İzmir (approximate city marker)",
+    "latitude": 38.25,
+    "longitude": 27.13,
+    "legacyCompanyDescription": "有机质包衣复合肥研发制造企业；未确认PU/聚合物包膜、我方原料适配或采购",
+    "fit": "可开发候选",
+    "signal": "独立读取当前About：企业从肥料制造发展到将化学肥料用有机质包覆的自身研发，并开发BIOCOMP。当前BIOCOMP12-12-12产品正文说明以有机结构包封矿质养分，37-0-0产品说明自身制造的缓慢释放氮肥。官网E-Katalog当前直接链接的原始16页目录中，第2页重复其包覆研发，第4页BIOCOMP12-12-12及7-18-20袋标明确ÖZEL KAPLAMA GÜBRE，第16页列出制造企业全名。不是仅凭2001/2008历史农艺评价、N21硝化抑制剂或普通肥料贸易入库。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "实际审读About、当前可见八种BIOCOMP复合/氮肥及液体/滴灌/叶面/草坪/特殊肥品类、BIOCOMP12-12-12与37-0-0正文、HF30Max正文及当前原始目录的产品范围。可见商品为成品肥料和农用营养/土壤产品，未发现所查范围中的PU原料、包衣树脂或独立肥料包衣剂销售。HF30Max是直接叶面施用的有机无机液肥，不因含腐殖酸就归为反应型包衣原料。N21的DCD抑制作用不作PU/包膜证明。历史记载1997进口德国土壤改良相关产品、1999与未具名德国生产企业成为合作/参股关系；来源未说明该厂名称、当前股权/控制或PU原料经营，不捏造Humintech或现存集团关系，亦不把历史关联当作无关联保证。BIOCOMP/GH/Nutricomp及同一企业长短名称只计一条；References是对方自行列出的业务参考名单，不认定为其集团或我方客户。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "info@unaldi.com.tr",
+      "phone": "+90 232 281 14 95",
+      "contactUrl": "https://www.unaldi.com.tr/iletisim/"
+    },
+    "source": {
+      "label": "Current own About: own BIOCOMP R&D produced organic-matter-coated chemical fertilizer; history distinguished from current range",
+      "url": "https://www.unaldi.com.tr/hakkimizda/"
+    },
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "agrotolia-gubre-kozan",
+    "company": "Agrotolia Gübre San. Tic. Ltd. Şti.",
+    "productId": "fertilizer-coating",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Kozan, Adana (approximate city marker)",
+    "latitude": 37.45,
+    "longitude": 35.82,
+    "legacyCompanyDescription": "有机质/硫包覆的缓释氮肥研发制造企业；未确认PU/聚合物包膜、我方原料适配或采购",
+    "fit": "可开发候选",
+    "signal": "当前自身About明确制造缓释固体基肥/追肥、硫及液体/粉状肥料；当前Contact明确公司名称和Kozan工厂位置。独立读取四个氮肥产品正文，NITRO-TECH明确尿素及铵态氮用有机质和硫包覆，形成制造主体—具体包衣成品肥料链。不是从普通有机无机复混、产品名或抑制剂推断包膜工艺；来源未证明PU、聚合物阻隔、释放天数或外购我方原料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-15",
+      "conclusion": "独立审读当前九类成品肥料范围、四种氮追肥正文、两个有机土壤改良产品标题、AGROHUM及两个TohumKaplamaPreparatı页面。AGROHUM实际说明直接施用于土壤/植物的液体腐殖酸有机肥；有正文的种子处理制剂说明把植物营养和吸水组分施于种子表面，与向肥料工厂供应PU/树脂包衣原料是不同业务。另一同名种子产品页无成分正文，保留该缺口，不捏造其化学组成。所查范围未见肥料包衣树脂、PU原料或独立肥料包衣剂商品，也不宣称全部SKU永久无此业务。按当前官网所列制造经营主体及同一域名计一条，不分拆NITRO-TECH/AGROMIN/其他肥料品牌。搜索出现2015/2016商会历史同品牌/个人经营者和不同旧址，仅为尚未独立读原PDF的历史发现，不当作现存股权/企业更名或当前工厂地址证据；不新增那些名称。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "info@agrotoliagubre.com.tr",
+      "phone": "+90 322 322 50 00",
+      "contactUrl": "https://www.agrotoliagubre.com.tr/iletisim/"
+    },
+    "source": {
+      "label": "Current own NITRO-TECH product: urea/ammonium nitrogen coated with organic matter and sulfur; current own manufacture and plant supported separately",
+      "url": "https://www.agrotoliagubre.com.tr/urun/nitro-tech/"
+    },
+    "checkedAt": "2026-10-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "agrotolia-gubre-kozan": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
+  "unaldi-gubre-menderes": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "everlast-cat-batu-pahat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "lsc-chemical-paints-kapar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "paints-network-puchong": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3713,6 +3771,190 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "agrotolia-gubre-kozan": {
+    "website": "https://www.agrotoliagubre.com.tr/",
+    "contactPage": "https://www.agrotoliagubre.com.tr/iletisim/",
+    "address": "Kozan Organize Sanayi, 5 Sokak No:5/1, Kozan, Adana, Turkey. Current official contact page explicitly labels this Üretim Yeri (production location) and prints AGROTOLİA GÜBRE SAN.TİC. LTD.ŞTİ. Coordinates are an approximate Kozan city marker.",
+    "generalEmail": "info@agrotoliagubre.com.tr",
+    "generalPhone": "+90 322 322 50 00",
+    "generalEmailEvidence": {
+      "company": "Agrotolia Gübre San. Tic. Ltd. Şti.",
+      "value": "info@agrotoliagubre.com.tr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official corporate business contact; general route, no named purchasing identity",
+          "url": "https://www.agrotoliagubre.com.tr/iletisim/",
+          "summary": "Current own contact page publishes the exact general business address through its public Cloudflare email-protection/data-cfemail field. The first public encoded value660f080009260701140912090a0f0701130414034805090b481214 decodes deterministically to info@agrotoliagubre.com.tr using the page’s public XOR scheme; not an address inferred from the domain. Current company/production location and03223225000 appear on the same page. Personal contact entries on that page are not promoted to procurement identity or recipients."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Agrotolia Gübre San. Tic. Ltd. Şti.",
+      "value": "+90 322 322 50 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official corporate business contact; general route, no named purchasing identity",
+          "url": "https://www.agrotoliagubre.com.tr/iletisim/",
+          "summary": "Exact office/business telephone publicly printed on the current own contact page; normalized without changing digits. No personal ownership or purchasing role is inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@agrotoliagubre.com.tr",
+        "source": {
+          "label": "Current official corporate business contact; general route, no named purchasing identity",
+          "url": "https://www.agrotoliagubre.com.tr/iletisim/"
+        },
+        "emailEvidence": {
+          "company": "Agrotolia Gübre San. Tic. Ltd. Şti.",
+          "value": "info@agrotoliagubre.com.tr",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official corporate business contact; general route, no named purchasing identity",
+              "url": "https://www.agrotoliagubre.com.tr/iletisim/",
+              "summary": "Current own contact page publishes the exact general business address through its public Cloudflare email-protection/data-cfemail field. The first public encoded value660f080009260701140912090a0f0701130414034805090b481214 decodes deterministically to info@agrotoliagubre.com.tr using the page’s public XOR scheme; not an address inferred from the domain. Current company/production location and03223225000 appear on the same page. Personal contact entries on that page are not promoted to procurement identity or recipients."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own NITRO-TECH product: urea/ammonium nitrogen coated with organic matter and sulfur; current own manufacture and plant supported separately",
+        "url": "https://www.agrotoliagubre.com.tr/urun/nitro-tech/"
+      },
+      {
+        "label": "Current own About explicitly manufactures slow-release solid basal/top-dressing fertilizers",
+        "url": "https://www.agrotoliagubre.com.tr/kurumsal/hakkimizda/"
+      },
+      {
+        "label": "Current nitrogen top-dressing category: four actual own products, individually read",
+        "url": "https://www.agrotoliagubre.com.tr/urun-kategori/azotlu-ust-gubreler/"
+      },
+      {
+        "label": "Current seed-treatment preparation: nutrient/absorbent formulation applied to seed, not fertilizer-coating resin supply",
+        "url": "https://www.agrotoliagubre.com.tr/urun/tohum-kaplama-preparati-2/"
+      },
+      {
+        "label": "Second same-name seed-treatment page has no detailed composition body; no chemistry inferred",
+        "url": "https://www.agrotoliagubre.com.tr/urun/tohum-kaplama-preparati/"
+      },
+      {
+        "label": "Current AGROHUM: liquid organic fertilizer applied directly to soil or plants",
+        "url": "https://www.agrotoliagubre.com.tr/urun/agrohum/"
+      },
+      {
+        "label": "Current own contact: exact company/plant, public general mailbox and office phone",
+        "url": "https://www.agrotoliagubre.com.tr/iletisim/"
+      }
+    ]
+  },
+  "unaldi-gubre-menderes": {
+    "website": "https://www.unaldi.com.tr/",
+    "contactPage": "https://www.unaldi.com.tr/iletisim/",
+    "address": "İTOB OSB Mahallesi, İTOB Atatürk Caddesi No:40, 35471 Menderes, İzmir, Turkey. Current own contact page. The undated currently linked catalogue separately prints Ekrem Demirtaş Cad. No:40; preserved as the original wording, with no claim that the street was renamed. Coordinates are an approximate Menderes city marker.",
+    "generalEmail": "info@unaldi.com.tr",
+    "generalPhone": "+90 232 281 14 95",
+    "generalEmailEvidence": {
+      "company": "Ünaldı Organik Likid Gübre Sanayi ve Ticaret A.Ş. (Ünaldı Gübre)",
+      "value": "info@unaldi.com.tr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official corporate business contact; general route, no named purchasing identity",
+          "url": "https://www.unaldi.com.tr/iletisim/",
+          "summary": "Current official contact explicitly prints Ünaldı Organik Likid Gübre Sanayi ve Ticaret A.Ş., info@unaldi.com.tr and the business telephone at its Menderes location. Same legal/brand chain independently appears on the actual original catalogue. General corporate inquiry only; not a named purchasing mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "generalPhoneEvidence": {
+      "company": "Ünaldı Organik Likid Gübre Sanayi ve Ticaret A.Ş. (Ünaldı Gübre)",
+      "value": "+90 232 281 14 95",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official corporate business contact; general route, no named purchasing identity",
+          "url": "https://www.unaldi.com.tr/iletisim/",
+          "summary": "Exact office/business telephone publicly printed on the current own contact page; normalized without changing digits. No personal ownership or purchasing role is inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-15"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@unaldi.com.tr",
+        "source": {
+          "label": "Current official corporate business contact; general route, no named purchasing identity",
+          "url": "https://www.unaldi.com.tr/iletisim/"
+        },
+        "emailEvidence": {
+          "company": "Ünaldı Organik Likid Gübre Sanayi ve Ticaret A.Ş. (Ünaldı Gübre)",
+          "value": "info@unaldi.com.tr",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official corporate business contact; general route, no named purchasing identity",
+              "url": "https://www.unaldi.com.tr/iletisim/",
+              "summary": "Current official contact explicitly prints Ünaldı Organik Likid Gübre Sanayi ve Ticaret A.Ş., info@unaldi.com.tr and the business telephone at its Menderes location. Same legal/brand chain independently appears on the actual original catalogue. General corporate inquiry only; not a named purchasing mailbox."
+            }
+          ],
+          "verifiedAt": "2026-10-15"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own About: own BIOCOMP R&D produced organic-matter-coated chemical fertilizer; history distinguished from current range",
+        "url": "https://www.unaldi.com.tr/hakkimizda/"
+      },
+      {
+        "label": "Current own BIOCOMP12-12-12 product: organomineral compound fertilizer and organic sealing of minerals",
+        "url": "https://www.unaldi.com.tr/urun/biocomp-12-12-12-20-so3-organomineral-gubre/"
+      },
+      {
+        "label": "Current own BIOCOMP37-0-0: own manufactured slow nitrogen release product, no polymer chemistry assertion",
+        "url": "https://www.unaldi.com.tr/urun/biocomp-37-0-0-humus-organomineral-gubre/"
+      },
+      {
+        "label": "Actual original currently linked Turkish catalogue: scanned PDF pages2,3,4,16 independently rendered/read; BIOCOMP bag explicitly labelled special coated fertilizer; no printed revision established",
+        "url": "https://www.unaldi.com.tr/wp-content/uploads/2023/02/unaldi-gubre-e-katalog.pdf"
+      },
+      {
+        "label": "Current own E-Katalog page actually links the downloaded Turkish original",
+        "url": "https://www.unaldi.com.tr/e-katalog/"
+      },
+      {
+        "label": "Current own HF30Max: finished organomineral foliar fertilizer, not a coating-resin sales claim",
+        "url": "https://www.unaldi.com.tr/urun/hf30-max-organomineral-sivi-gubre/"
+      },
+      {
+        "label": "Current own INTRAS N21: DCD nitrification-inhibited ammonium sulfate; not used as physical-coating proof",
+        "url": "https://www.unaldi.com.tr/urun/intras-n21-nitrifikasyon-inhibitorlu-amonyum-sulfat-gubresi/"
+      },
+      {
+        "label": "Current own contact: full manufacturer name, address, exact general mailbox and office number",
+        "url": "https://www.unaldi.com.tr/iletisim/"
+      }
+    ]
+  },
   "everlast-cat-batu-pahat": {
     "website": "https://www.epicoating.com/",
     "contactPage": "https://www.epicoating.com/contact-us/",
@@ -10239,6 +10481,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "agrotolia-gubre-kozan",
+  "unaldi-gubre-menderes",
   "everlast-cat-batu-pahat",
   "lsc-chemical-paints-kapar",
   "paints-network-puchong",
