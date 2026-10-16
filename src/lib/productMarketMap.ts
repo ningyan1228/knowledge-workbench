@@ -3998,11 +3998,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "racsa-pinturas-coacalco",
+    "company": "RACSA Pinturas",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "San Francisco Coacalco, Estado de México (company-published map centre)",
+    "latitude": 19.642227090582786,
+    "longitude": -99.07591185724125,
+    "legacyCompanyDescription": "自主制造工业防腐成品涂料的墨西哥需求侧企业；配套填料颜料业务保留，ELO采购未确认",
+    "fit": "可开发候选",
+    "signal": "RACSA当前自身完整首页明确制造并经销工业防护及维护涂料，长期研发自有产品，同时提供环氧/聚氨酯施工。实际RACSAPOXY完整原文列工业环氧成品，高固体分Altos Sólidos为含防腐助剂、直接附着金属并防氧化的底面合一涂层；RACSAPRIMER原文独立列双组分胺固化环氧防腐底漆等。具体防腐产品角色来自实际自身页面而非目录标题。当前官方Contact地址为San Lorenzo Tetlixtac,55714 San Francisco Coacalco,Méx.；公司品牌按原文RACSA Pinturas，不编造未披露的S.A./注册号。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属检查实际读自身Home、完整Products产品家族索引、Quimicos全部8项、Contact及具体RACSAPOXY/RACSAPRIMER/OTROS完整原文。实际业务包含自制成品工业环氧/PU/丙烯酸/醇酸防护涂料、底漆、地坪、密封修补、反光/建筑品及销售施工，另有真实原料Cabosil/HJSIL200、碳酸钙、硅砂、环氧颜料、三类thinner和丙酮。保留这条原料销售范围，不假称只卖成品；这些填料/颜料/流变粉体/清洗稀释剂不因raw/additive字样自动变成ELO同功能增塑/稳定原料。完整Otros列海用防污成品、防水成品、Guarniciones成品漆和柔性环氧接缝；plastificantes实际出现在Guarniciones成品配方，不是单独销售增塑原料。所查公开经营、配套及相关原料范围未见ELO/ESBO/环氧化植物油、生物增塑/稳定或相似功能输入原料销售；仅限实际读取范围，不声称所有单品TDS或未披露集团业务均已核清。Otros“10年”标题下仍写5年，保留源不一致不擅改、不借用耐久数字；产品页食品/抗菌/防火/Pemex批准自述不转成ELO认证或性能。RACSA/RACSAPOXY/RACSATHANO/RACSADAL/RACSAPRIMER/RACSAVIN与Cancún分支只算一个制造开发账户；不把分店/成品系列拆分新增或假定股权。"
+    },
+    "contact": {
+      "label": "官网实际销售部门邮箱及公司业务电话；未核实具名采购/研发负责人",
+      "email": "ventas03@racsapinturas.com",
+      "phone": "+52 55 2471 3367",
+      "contactUrl": "https://racsapinturas.com.mx/contacto/"
+    },
+    "source": {
+      "label": "Actual current official RACSAPOXY original: Altos Sólidos high-solids epoxy primer-finish for direct-to-metal corrosion protection",
+      "url": "https://racsapinturas.com.mx/racsapoxy/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "racsa-pinturas-coacalco": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pyrolac-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "globalcolor-suzano": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
   "excel-india-protective-paints-badlapur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4235,6 +4264,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "racsa-pinturas-coacalco": {
+    "website": "https://racsapinturas.com.mx/",
+    "contactPage": "https://racsapinturas.com.mx/contacto/",
+    "address": "San Lorenzo Tetlixtac,55714 San Francisco Coacalco,Estado de México,Mexico,asprinted oncurrentofficialContact. ActualownGoogleiframeplaceRACSAcenter19.642227090582786,-99.07591185724125 matchesbusinessaddress,notindependentlysurveyedfactoryentrance. VisiblecompanynameRACSA Pinturas; no unsupportedregisteredlegalname/numberorcorporateownershipclaim. Oneaccountwithallnamedpaintseries/Cancúnbranch. Publicsalesmailisexplicit.comdomainwherewebsiteis.mx; notguessed/corrected.",
+    "generalEmail": "",
+    "generalPhone": "+52 55 2471 3367",
+    "generalPhoneEvidence": {
+      "company": "RACSA Pinturas",
+      "value": "+52 55 2471 3367",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official RACSA Contact phone/address and homepage matching business line",
+          "url": "https://racsapinturas.com.mx/contacto/",
+          "summary": "ActualownContactprints5524713367andhomepage(55)24713367; normalizedwithMexicocountrycode+52fromownaddress. Generalbusinessline,notnamedprivatephoneorassumedWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas03@racsapinturas.com",
+        "source": {
+          "label": "Actual official RACSA homepage company sales business mailbox,printed exact.com address despite.mx website",
+          "url": "https://racsapinturas.com.mx/"
+        },
+        "emailEvidence": {
+          "company": "RACSA Pinturas",
+          "value": "ventas03@racsapinturas.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual official RACSA homepage company sales business mailbox,printed exact.com address despite.mx website",
+              "url": "https://racsapinturas.com.mx/",
+              "summary": "Actualownhomepageexplicitlyprintsventas03@racsapinturas.com besideRACSAcompanybusinessphone. Salesdepartment/companybusinessroute,notnamedemployeeorprocurementperson. Exact.comaddressisnotrewrittento.mxandnoownershipordeliverabilityassumedfromdomain. Companyqualificationprecedesrecipientuse."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual current official RACSAPOXY original: Altos Sólidos high-solids epoxy primer-finish for direct-to-metal corrosion protection",
+        "url": "https://racsapinturas.com.mx/racsapoxy/"
+      },
+      {
+        "label": "Current official Racsa own industrialcoating manufacture/development plus publicsalesmail",
+        "url": "https://racsapinturas.com.mx/"
+      },
+      {
+        "label": "Actual Racsa 8-itemchemical range: fillers,pigments,thinners,acetone; retained rather than blanketexcluded",
+        "url": "https://racsapinturas.com.mx/quimicos/"
+      },
+      {
+        "label": "Actual completeOtrosfinishedproductsandplasticizer-in-finishedpaintcontext",
+        "url": "https://racsapinturas.com.mx/otros/"
+      },
+      {
+        "label": "Actual anticorrosiveprimerfamilyincluding2Kaminecuredepoxy",
+        "url": "https://racsapinturas.com.mx/racsaprimer/"
+      },
+      {
+        "label": "Actual official RACSA Contact phone/address and homepage matching business line",
+        "url": "https://racsapinturas.com.mx/contacto/"
+      }
+    ]
+  },
   "pyrolac-ciudad-mexico": {
     "website": "https://www.pyrolac.com/",
     "contactPage": "https://www.pyrolac.com/contacto/",
@@ -12298,6 +12399,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "racsa-pinturas-coacalco",
   "pyrolac-ciudad-mexico",
   "globalcolor-suzano",
   "excel-india-protective-paints-badlapur",
