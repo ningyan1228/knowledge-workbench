@@ -39,7 +39,7 @@ function escapeHtml(text: string) {
 function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGroup; active: boolean; compact: boolean; onSelect: (group: LeadMapGroup) => void }) {
   const map = useMap()
   const label = `${group.label} · ${group.count} 家`
-  const size = compact ? [58, 40] : [96, 56]
+  const size = compact ? [62, 44] : [112, 44]
   const point = map.latLngToContainerPoint([group.latitude, group.longitude])
   const viewport = map.getSize()
   // Keep edge labels readable without moving the group's geographic anchor.
@@ -48,7 +48,7 @@ function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGro
   const icon = useMemo(() => divIcon({
     className: `lead-map-cluster${compact ? ' is-compact' : ''}${active ? ' is-highlighted' : ''}`,
     html: `<span>${escapeHtml(group.label)}</span><strong>${group.count}<small> 家</small></strong>`,
-    iconSize: compact ? [58, 40] : [96, 56], iconAnchor: [anchorX, anchorY],
+    iconSize: compact ? [62, 44] : [112, 44], iconAnchor: [anchorX, anchorY],
   }), [group.label, group.count, active, compact, anchorX, anchorY])
   return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击筛选并展开`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip>{label} · 点击筛选并展开</Tooltip></Marker>
 }
