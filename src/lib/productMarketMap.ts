@@ -3606,11 +3606,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "sniezka-brzeznica",
+    "company": "Fabryka Farb i Lakierów Śnieżka SA (Śnieżka Group / VIDARON)",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Brzeźnica, Podkarpackie (approximate village marker)",
+    "latitude": 50.1,
+    "longitude": 21.49,
+    "legacyCompanyDescription": "自有水性木器涂料研发制造集团；业务邮箱待补，NL-W1201适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取当前集团Assets：Brzeźnica厂由FFiLŚnieżkaSA制造VIDARON和ŚnieżkaSupermal木材/金属保护产品，并有集团研发中心。当前产品页和实际原始4页VIDARONLakierAkrylowy技术文件（印刷更新2025-11-26）说明室内木制家具、护墙板等用途，第2页明确稀释剂为水。另独立读取当前2026半年报第9–12页：制造/R&D/采购职能在FFiLŚnieżkaSA，ŚnieżkaToC负责品牌营销销售且100%归母公司。本条只计制造集团一条，不把TDS发布销售公司当作另一个制造厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "对当前母集团结构、生产资产、VIDARON15项现售成品标题/具体清漆、Śnieżka七类可见产品及关联Plastbud的树脂/化学品/亚麻仁清油原文进行NL-W1201专属检查。成品漆、木器底漆/清漆、腻子、颜料浓浆及稀释剂不等同向配方厂销售水性聚烯烃/CPO/PO或附着力促进型表面处理原料。2026半年报第12页保留母公司持Plastbud10.07%的资本关联及其原料供货角色，不改写为全资子公司。其实际可见原料为醇酸/苯乙烯化/氨酯化醇酸/不饱和聚酯树脂、颜料浆、WWO71醇酸体系降溶剂乳化剂、OS系列磺基琥珀酸盐润湿/分散/乳化表面活性剂及木材用亚麻仁清油；保留这些真实上游业务。所查具体商品未见以水性聚烯烃/CPO/PO或附着力促进型表面处理原料销售的同类项目，不把所有树脂/表面活性剂仅凭“化工”二字等同NL-W1201，也不作未披露SKU/集团绝不经营同类原料的保证。仅核验NL-W1201木材应用，不顺带清除ELO或肥料包膜同行门槛；不虚构外购我方产品的例外。集团VIDARON/MAGNAT/ŚnieżkaToC/Poli-Farbe及各国子公司不拆分新增；RAFIL清算状态按2026原件保留，不当作新客户或当前新项目。"
+    },
+    "contact": {
+      "label": "集团官方业务联系表单与行政电话；业务邮箱待核实，未核实具名采购/研发负责人",
+      "phone": "+48 14 681 11 11",
+      "contactUrl": "https://www.sniezka.pl/kontakt/"
+    },
+    "source": {
+      "label": "Actual original VIDARON Lakier Akrylowy4-page TDS, printed update2025-11-26: water-thinned varnish for indoor wooden furniture/panelling; manufacturing-group attribution independently verified",
+      "url": "https://www.karty-techniczne.sniezka.pl/pl/VIDARON_LAKIER_AKRYLOWY.pdf"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sniezka-brzeznica": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sooin-suncheon": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "the-paint-depot-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "agrotolia-gubre-kozan": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
@@ -3829,6 +3857,79 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sniezka-brzeznica": {
+    "website": "https://sniezkagroup.com/",
+    "contactPage": "https://www.sniezka.pl/kontakt/",
+    "address": "Manufacturing/R&D and correspondence: ul. Dębicka44,39-207Brzeźnica,Poland. Registered office published separately: ul.Chłodna51,00-867Warszawa. Current corporate assets/contact and ToCcontact agree on the Brzeźnica operating address. Coordinates are an approximate Brzeźnica village marker, not a surveyed plant location.",
+    "generalEmail": "",
+    "generalPhone": "+48 14 681 11 11",
+    "generalPhoneEvidence": {
+      "company": "Fabryka Farb i Lakierów Śnieżka SA (Śnieżka Group / VIDARON)",
+      "value": "+48 14 681 11 11",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official manufacturing-company Contact: administration telephone and Brzeźnica correspondence address; media/privacy mailboxes not used",
+          "url": "https://sniezkagroup.com/kariera-i-kontakt/dane-kontaktowe/",
+          "summary": "Current official Contact names FABRYKA FARB I LAKIERÓW ŚNIEŻKA SA and publishes Administracja Tel.(14)6811111. Same number appears on the wholly owned group marketing company contact/form page and current technical sheet. Normalized with Poland+48; not a named purchasing or technical person."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual original VIDARON Lakier Akrylowy4-page TDS, printed update2025-11-26: water-thinned varnish for indoor wooden furniture/panelling; manufacturing-group attribution independently verified",
+        "url": "https://www.karty-techniczne.sniezka.pl/pl/VIDARON_LAKIER_AKRYLOWY.pdf"
+      },
+      {
+        "label": "Current own Brzeźnica plant: manufacture of VIDARON/Supermal wood/metal protection, R&D and shared administration",
+        "url": "https://sniezkagroup.com/o-nas/aktywa/"
+      },
+      {
+        "label": "Current own group structure and manufacturing/sales competence boundaries",
+        "url": "https://sniezkagroup.com/o-nas/grupa-sniezka/"
+      },
+      {
+        "label": "Actual original2026H1management report, PDFpages9–12read: production/R&D/purchasing vs100%ToCmarketing, minorityPlastbud10.07%, RAFILliquidation and foreign-group roles",
+        "url": "https://sniezkagroup.com/wp-content/uploads/2026/09/GrupaSniezkaSzD1H226.pdf"
+      },
+      {
+        "label": "Current own VIDARON acrylic-varnish product and actual original document links",
+        "url": "https://www.vidaron.pl/produkt/lakier-akrylowy"
+      },
+      {
+        "label": "Current full visible15-product VIDARON catalogue; product labels are not separate companies",
+        "url": "https://www.vidaron.pl/produkty"
+      },
+      {
+        "label": "Current own Śnieżka brand visible finished-product scope including pigment concentrates",
+        "url": "https://www.sniezka.pl/"
+      },
+      {
+        "label": "Capital-related Plastbud Pustków actual resin families; not the homonymous window company",
+        "url": "https://plastbudsp.pl/oferta/zywice/"
+      },
+      {
+        "label": "Plastbud actual WWO71emulsifier andOSwetting/dispersing surfactants; chemistry and stated functions read separately",
+        "url": "https://plastbudsp.pl/oferta/produkty-chemiczne/"
+      },
+      {
+        "label": "Plastbud actual linseed drying oil for wood/plaster treatment; no ELO/epoxidized-oil assertion or cross-product clearance",
+        "url": "https://plastbudsp.pl/oferta/pokost-lniany/"
+      },
+      {
+        "label": "Official group general inquiry form and administrative telephone operated by100%owned ŚnieżkaToC; no verified business email recipient",
+        "url": "https://www.sniezka.pl/kontakt/"
+      },
+      {
+        "label": "Current official manufacturing-company Contact: administration telephone and Brzeźnica correspondence address; media/privacy mailboxes not used",
+        "url": "https://sniezkagroup.com/kariera-i-kontakt/dane-kontaktowe/"
+      }
+    ]
+  },
   "sooin-suncheon": {
     "website": "https://www.allinonecote.com/",
     "contactPage": "https://www.allinonecote.com/contact",
@@ -10735,6 +10836,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sniezka-brzeznica",
   "sooin-suncheon",
   "the-paint-depot-cape-town",
   "agrotolia-gubre-kozan",
