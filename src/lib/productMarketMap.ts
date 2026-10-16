@@ -3746,11 +3746,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "central-megahtama-tangerang",
+    "company": "PT Central Megahtama",
+    "productId": "elo",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Tangerang (approximate city marker)",
+    "latitude": -6.1783,
+    "longitude": 106.6319,
+    "legacyCompanyDescription": "自主制造成品工业涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自身 About 明确 PT Central Megahtama 自2007年为印尼制漆企业，在 Tangerang 的 Telesonik 工业区拥有制漆工厂、化学/测试实验室，描述选料和生产，并列砂磨、搅拌和三辊设备。当前完整产品页以 VAGANZA 品牌列工业/零售成品漆，包括环氧底漆、填补漆、地坪漆及其他工业金属涂料，并列钢结构应用。独立核对当前 Hammertone 工业防护文章和实际商品目录的对应；文章通用性能/引用不冒称具体产品TDS或ELO验证。Citra Raya 旧文章标题是地区营销词，不当作另一个工厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO 专属核验覆盖当前完整自身首页、About、完整八类产品范围及实际 Hammertone 工业防护原文。商品为硝基、丙烯酸、烘烤、聚氨酯、酸固化/三聚氰胺及环氧成品涂料，另有稀释剂、木器着色/填补/腻子、环氧胶粘剂和工业特殊漆。真实稀释剂/胶粘剂业务保留；涂料类别或文章成分不自动变成对外供应原料树脂/添加剂。所查可见商品范围未见 ELO、ESBO、环氧化植物油、生物增塑剂/稳定剂及同类功能原料销售；结论限实际可见范围，不保证未披露关联或所有未来SKU无相关业务。公司、VAGANZA品牌、同域名及Telesonik厂址按一个账户；未证实母集团/股权，不虚构无任何关联。网页的Sony CEO、虚拟姓名、Lorem ipsum和商业辅导模板文字均不作为客户、人员、制造或资质证据。只有具体自述制造/自有产品/当前真实业务联系内容用于核验；未借模板推定身份。此结论只覆盖ELO涂料方向，不清除NL-W1201或肥料同行门槛。"
+    },
+    "contact": {
+      "label": "官方公司业务邮箱及公开业务电话；未核实具名采购/研发负责人",
+      "email": "marketing@centralmegahtama.com",
+      "phone": "+62 21 5900281",
+      "contactUrl": "https://centralmegahtama.com/kontak-kami/"
+    },
+    "source": {
+      "label": "Current complete own VAGANZA product range: industrial epoxy primer, filler and flooring; own manufacturing and laboratory established separately",
+      "url": "https://centralmegahtama.com/produk-kami/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "central-megahtama-tangerang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zaklad-syntezy-kowalanka": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mella-paint-tangerang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tam-victory-cemerlang-cikarang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3974,6 +4003,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "central-megahtama-tangerang": {
+    "website": "https://centralmegahtama.com/",
+    "contactPage": "https://centralmegahtama.com/kontak-kami/",
+    "address": "Jl. Telesonik Ujung No.2, Bunder, Cikupa, Tangerang, Indonesia. Exact current company-published business address; About independently identifies own production in Telesonik industrial area. Coordinates are the approximate Tangerang city marker, not a surveyed factory entrance or a separate Citra Raya plant.",
+    "generalEmail": "marketing@centralmegahtama.com",
+    "generalPhone": "+62 21 5900281",
+    "generalEmailEvidence": {
+      "company": "PT Central Megahtama",
+      "value": "marketing@centralmegahtama.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official PT Central Megahtama Contact: exact public business email, telephone, WhatsApp and Telesonik address",
+          "url": "https://centralmegahtama.com/kontak-kami/",
+          "summary": "Exact marketing@centralmegahtama.com decoded from the actual Contact HTML data-cfemail XOR payload, the mechanism the page uses to display its email. No address guessed or named-person ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "PT Central Megahtama",
+      "value": "+62 21 5900281",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official PT Central Megahtama Contact: exact public business email, telephone, WhatsApp and Telesonik address",
+          "url": "https://centralmegahtama.com/kontak-kami/",
+          "summary": "Current own Contact explicitly publishes021-5900281 and5900282. First public landline formatted with Indonesian+62; not the separately disclosed WhatsApp or an invented buyer phone."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "marketing@centralmegahtama.com",
+        "source": {
+          "label": "Current official PT Central Megahtama Contact: exact public business email, telephone, WhatsApp and Telesonik address",
+          "url": "https://centralmegahtama.com/kontak-kami/"
+        },
+        "emailEvidence": {
+          "company": "PT Central Megahtama",
+          "value": "marketing@centralmegahtama.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official PT Central Megahtama Contact: exact public business email, telephone, WhatsApp and Telesonik address",
+              "url": "https://centralmegahtama.com/kontak-kami/",
+              "summary": "Exact marketing@centralmegahtama.com decoded from the actual Contact HTML data-cfemail XOR payload, the mechanism the page uses to display its email. No address guessed or named-person ownership inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current complete own VAGANZA product range: industrial epoxy primer, filler and flooring; own manufacturing and laboratory established separately",
+        "url": "https://centralmegahtama.com/produk-kami/"
+      },
+      {
+        "label": "Current own About: manufacturer since2007, Telesonik processing plant, chemistry/test laboratory and production equipment",
+        "url": "https://centralmegahtama.com/tentang-kami/"
+      },
+      {
+        "label": "Current actual Hammertone industrial protection article; generic article claims not a product TDS, purchase notice or new commissioning event",
+        "url": "https://centralmegahtama.com/keunggulan-cat-hammertone-untuk-melindungi-mesin-dan-peralatan-industri/"
+      },
+      {
+        "label": "Current official PT Central Megahtama Contact: exact public business email, telephone, WhatsApp and Telesonik address",
+        "url": "https://centralmegahtama.com/kontak-kami/"
+      }
+    ]
+  },
   "zaklad-syntezy-kowalanka": {
     "website": "https://www.zakladsyntezy.pl/",
     "contactPage": "https://www.zakladsyntezy.pl/kontakt.html",
@@ -11313,6 +11420,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "central-megahtama-tangerang",
   "zaklad-syntezy-kowalanka",
   "mella-paint-tangerang",
   "tam-victory-cemerlang-cikarang",

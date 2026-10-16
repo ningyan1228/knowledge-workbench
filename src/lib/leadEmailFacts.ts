@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "central-megahtama-tangerang": "Your VAGANZA range includes epoxy primers, fillers and floor coatings for industrial finishing.",
   "zaklad-syntezy-kowalanka": "Your HYDROKOL is a water-thinnable varnish for indoor wooden panelling, furniture and parquet floors.",
   "orhun-kimya-beylikduzu": "Your industrial epoxy paints and varnishes include protective systems for corrosion and weather resistance.",
   "mella-paint-tangerang": "Your MPEX767 SL is a self-levelling epoxy floor coating manufactured at your Tangerang factory.",
