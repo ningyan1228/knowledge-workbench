@@ -60,7 +60,6 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
   ].filter(({ key }) => filters[key] !== emptyBusinessFilters[key])
   const hasFilters = filters.query !== '' || filters.queue !== 'all' || activeFilters.length > 0
   return <>
-    <PrivateWorkNotice work={work} />
     <section className="work-controls-compact" aria-label="客户开发筛选">
       <div className="work-today" aria-label="今日开发清单"><h3 title={`${today} · 北京时间 · 按当前产品、地区及业务条件统计，不含收录日期筛选`}><CalendarClock size={16} />开发清单</h3><div className="work-queues">{queues.map((queue) => {
         const requiresPrivate = queue.id !== 'all', requiresLedger = queue.id === 'priority' || queue.id === 'recent'

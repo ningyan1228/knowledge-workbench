@@ -90,7 +90,7 @@ export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, 
   onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number;
 }) {
   const [showDensity, setShowDensity] = useState(false)
-  return <>
+  return <div className="lead-map-frame">
     <div className="lead-map-controls"><span>点击聚合点筛选客户 · 放大查看公司</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
     <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
       <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -98,5 +98,5 @@ export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, 
       <MapLayers leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} showDensity={showDensity} onSelectLead={onSelectLead} onSelectGroup={onSelectGroup} />
     </MapContainer>
     <p className="lead-map-legend">数字为当前筛选内的公司数，彩色点按产品区分。{showDensity && '黄圈表示各国已核验公开线索数量，位置为客户坐标汇总。'}数量不代表市场规模、成交概率或真实需求量。</p>
-  </>
+  </div>
 }
