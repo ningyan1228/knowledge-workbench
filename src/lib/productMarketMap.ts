@@ -3718,11 +3718,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "zaklad-syntezy-kowalanka",
+    "company": "Zakład Syntezy Sp. z o.o.",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Kowalanka / Wolanów (company map centre)",
+    "latitude": 51.384451,
+    "longitude": 20.987084,
+    "legacyCompanyDescription": "自主制造水性木器清漆的下游企业；NL-W1201 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取当前公司自身 About：Zakład Syntezy 自述持续生产家具工业用面漆/底漆，公开列水稀释型产品，并明确其生产的全部清漆可按光泽规格供应。完整 Offer 原文中 HYDROKOL 归于水稀释清漆，明确用于室内木制护墙板、家具和拼花地板；不是只凭产品名或经销商简介。当前 Contact 的法人名称、Kowalanka37地址及官网相互对应。仅按当前自身制造声明核验，未冒称现场工厂审计、2026新投产或独立工商登记审计。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "NL-W1201 专属核验覆盖当前自身 About、完整 Offer 和完整可见 Characteristics 目录及 Contact。公开组合是成品硝基/聚氨酯/聚酯/氨酯/苯乙烯化/水性木器清漆、面漆和底漆、家具油/着色剂、溶剂与乙酮，以及 ALILAK、POLUREX、POLIFOR 等双组分成品体系对应固化组分。保留真实溶剂/固化剂业务；不得泛称无任何原料。KAPON/SUPER-SZLIF 是木材施工底漆，不等同对其他配方厂销售附着力促进原料；固化组分亦不因“添加”就自动等同 NL-W1201。所查可见商品未见水性聚烯烃乳液、CPO/PO 分散体或附着力促进型配方原料销售；结论限这些实际公开经营范围，不保证未披露关联/所有未来 SKU。未将未下载的 DOC 安全文件标题当作完整组成、修订日期或同类化学品不存在的证明。Zakład Syntezy、原 spółka cywilna 沿革、HYDROKOL、唯一官网/同一地址按一个账户；未证实注册号/母集团则不填造。SOPUR 的 HYDROLAK 与此 HYDROKOL 是不同公司产品，不能借用被排除 SOPUR 的产品 TDS/采购邮箱或拆分为本公司证据。本结论只核验 NL-W1201 木材应用，不顺带清除肥料 PU 原料或 ELO 同行边界。"
+    },
+    "contact": {
+      "label": "官方通用公司业务邮箱与公开业务电话；未核实具名采购/研发负责人",
+      "email": "zakladsyntezy@wp.pl",
+      "phone": "+48 48 618 61 01",
+      "contactUrl": "https://www.zakladsyntezy.pl/kontakt.html"
+    },
+    "source": {
+      "label": "Current own complete Offer original, HYDROKOL section: water-thinnable varnish for indoor wooden panelling, furniture and parquet; own manufacturing established separately",
+      "url": "https://www.zakladsyntezy.pl/oferta.html"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zaklad-syntezy-kowalanka": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mella-paint-tangerang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tam-victory-cemerlang-cikarang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "warnatama-cemerlang-gresik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3945,6 +3974,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zaklad-syntezy-kowalanka": {
+    "website": "https://www.zakladsyntezy.pl/",
+    "contactPage": "https://www.zakladsyntezy.pl/kontakt.html",
+    "address": "Kowalanka37,26-625Wolanów,Poland. Current own manufacturer/contact address. Coordinates51.384451,20.987084 are the centre of the map link actually published on the company Contact page; they are an approximate local marker, not an independently surveyed factory point.",
+    "generalEmail": "zakladsyntezy@wp.pl",
+    "generalPhone": "+48 48 618 61 01",
+    "generalEmailEvidence": {
+      "company": "Zakład Syntezy Sp. z o.o.",
+      "value": "zakladsyntezy@wp.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Zakład Syntezy business Contact: exact corporate mailbox, telephone, Kowalanka address and company-published map centre",
+          "url": "https://www.zakladsyntezy.pl/kontakt.html",
+          "summary": "Actual current official Contact publishes zakladsyntezy@wp.pl for Zakład Syntezy Sp. z o.o., Kowalanka37. It is an explicitly published company mailbox on an external mail domain, not a guessed company-domain address or a named person."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Zakład Syntezy Sp. z o.o.",
+      "value": "+48 48 618 61 01",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Zakład Syntezy business Contact: exact corporate mailbox, telephone, Kowalanka address and company-published map centre",
+          "url": "https://www.zakladsyntezy.pl/kontakt.html",
+          "summary": "Actual current official Contact publishes +48(48)6186101. Formatting changed only; all national digits retained. This is the public business landline, not an inferred named buyer or emergency number."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "zakladsyntezy@wp.pl",
+        "source": {
+          "label": "Current official Zakład Syntezy business Contact: exact corporate mailbox, telephone, Kowalanka address and company-published map centre",
+          "url": "https://www.zakladsyntezy.pl/kontakt.html"
+        },
+        "emailEvidence": {
+          "company": "Zakład Syntezy Sp. z o.o.",
+          "value": "zakladsyntezy@wp.pl",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official Zakład Syntezy business Contact: exact corporate mailbox, telephone, Kowalanka address and company-published map centre",
+              "url": "https://www.zakladsyntezy.pl/kontakt.html",
+              "summary": "Actual current official Contact publishes zakladsyntezy@wp.pl for Zakład Syntezy Sp. z o.o., Kowalanka37. It is an explicitly published company mailbox on an external mail domain, not a guessed company-domain address or a named person."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own complete Offer original, HYDROKOL section: water-thinnable varnish for indoor wooden panelling, furniture and parquet; own manufacturing established separately",
+        "url": "https://www.zakladsyntezy.pl/oferta.html"
+      },
+      {
+        "label": "Current own About explicitly states manufacture of furniture-industry topcoats/primers, including water-thinnable varnishes; company history not a new commissioning event",
+        "url": "https://www.zakladsyntezy.pl/"
+      },
+      {
+        "label": "Current complete visible safety-document catalogue; DOC originals not downloaded/read or falsely dated",
+        "url": "https://www.zakladsyntezy.pl/charakterystyka.html"
+      },
+      {
+        "label": "Current official Zakład Syntezy business Contact: exact corporate mailbox, telephone, Kowalanka address and company-published map centre",
+        "url": "https://www.zakladsyntezy.pl/kontakt.html"
+      }
+    ]
+  },
   "mella-paint-tangerang": {
     "website": "https://mellapaint.com/",
     "contactPage": "https://mellapaint.com/kontak/",
@@ -11206,6 +11313,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zaklad-syntezy-kowalanka",
   "mella-paint-tangerang",
   "tam-victory-cemerlang-cikarang",
   "warnatama-cemerlang-gresik",

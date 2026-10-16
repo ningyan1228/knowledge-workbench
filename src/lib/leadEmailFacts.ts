@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "zaklad-syntezy-kowalanka": "Your HYDROKOL is a water-thinnable varnish for indoor wooden panelling, furniture and parquet floors.",
   "orhun-kimya-beylikduzu": "Your industrial epoxy paints and varnishes include protective systems for corrosion and weather resistance.",
   "mella-paint-tangerang": "Your MPEX767 SL is a self-levelling epoxy floor coating manufactured at your Tangerang factory.",
   "tam-victory-cemerlang-cikarang": "Your TAM 395 Coaltar Epoxy is a marine coating for barges, tugboats and ballast tanks.",
