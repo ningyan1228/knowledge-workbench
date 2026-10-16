@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "resicolor-sideropolis": "Your Epóxi Power range includes a solvent-based anticorrosive primer for ferrous metal surfaces.",
+  "brasilux-matao": "Your Linha 03 is a two-component epoxy-polyamide primer for metal and wood surfaces.",
+  "hm-rubber-pinhais": "Your HM BM Dupla Função Premium is a modified liquid-rubber coating for metallic surfaces.",
   "central-megahtama-tangerang": "Your VAGANZA range includes epoxy primers, fillers and floor coatings for industrial finishing.",
   "zaklad-syntezy-kowalanka": "Your HYDROKOL is a water-thinnable varnish for indoor wooden panelling, furniture and parquet floors.",
   "orhun-kimya-beylikduzu": "Your industrial epoxy paints and varnishes include protective systems for corrosion and weather resistance.",

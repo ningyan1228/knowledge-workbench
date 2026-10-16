@@ -3774,11 +3774,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "hm-rubber-pinhais",
+    "company": "HM Rubber",
+    "productId": "elo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Pinhais (approximate city marker)",
+    "latitude": -25.4443488,
+    "longitude": -49.1900307,
+    "legacyCompanyDescription": "自主制造成品工业防护涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自身首页和 Contact 明确 HM Rubber 专业制造防水、防腐及隔热隔音涂层，并分别披露 Pinhais 行政总部、Rua Pérola505工厂和 Colombo 配送中心。完整技术目录与 Industrial 原文对应 HM BM Dupla Função Premium 单组分改性液体橡胶底/面涂，用于工业金属结构、管道、阀门及储罐基座等防护。不是把协会会员、经销网络或施工业务当制造证据。未将石墨烯、ISO12944-6、阻燃或成品弹性主张转为ELO性能或认证。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属排除覆盖当前完整可见技术产品正文、Industrial及Contact，并独立取得、实际查看零售目录全部7张商品图卡。所列为成品改性橡胶涂层、底涂/面涂、密封胶、双组分防潮底漆，以及土工布和膨胀聚乙烯填缝型材。零售图卡为SelanteFlexPro、Umizero、SelantePro、BorrachaLíquida7em1、Impertech3em1有色/透明及TelaEstruturante；双组分底漆A/B是成品套装，不自动等同对其他配方厂外售原料。实际聚乙烯型材和防水辅材业务保留，不误称PO/CPO乳液，也不将所有化工辅材称ELO同行。所查可见范围未见ELO、ESBO、环氧化植物油、生物增塑/稳定剂或同类功能添加原料销售；结论不保证未披露关联或未来SKU。HM Rubber、同域名、总部/工厂/配送点和零售/技术品牌统一一个账户；官网国际info@hmrubber.com.uy不冒称巴西具名采购邮箱。旧NL-W1201私有ready_for_review从未正式入库，本次按独立ELO工业涂料证据核验，不增加跨产品重复公司。"
+    },
+    "contact": {
+      "label": "官方公司业务邮箱与公开业务电话；未核实具名采购/研发负责人",
+      "email": "atendimento@hmrubber.com.br",
+      "phone": "+55 41 3557-0660",
+      "contactUrl": "https://hmrubber.com.br/contato/"
+    },
+    "source": {
+      "label": "Current own HM BM Dupla Função Premium industrial coating: modified liquid-rubber base/top coat for metallic surfaces; manufacturing and factory separately verified",
+      "url": "https://hmrubber.com.br/industrial/"
+    },
+    "checkedAt": "2026-10-16"
+  },
+  {
+    "id": "brasilux-matao",
+    "company": "Brasilux Tintas",
+    "productId": "elo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Matão (approximate city marker)",
+    "latitude": -21.6033611,
+    "longitude": -48.3660603,
+    "legacyCompanyDescription": "自主制造成品工业防护涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自身 About 明确 Brasilux 在 Matão 自主研发涂料、清漆、固化组分和树脂，Contact 列主厂1/2、独立树脂单元及配送点。完整 Industrial 目录与 Linha03实际产品原文相互对应：两组分环氧聚酰胺底漆，明确用于金属和木材，成膜后耐化学/物理/湿度环境。所选事实来自实际Linha03正文，不拼接另一HB33/PP87标题页面的不同配方/医院用途，未把抗性、施工比例或固化参数改为ELO性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属排除覆盖当前完整五类成品目录（建筑、装饰、汽车、工业、家具）、About、Contact及实际Linha03底漆、Acelerador para PU Acrílico和Retardador Universal原文。真实树脂工厂、催化/固化组分、溶剂和施工辅助剂业务保留，不泛称没有原料/添加剂。实际Acelerador只描述丙烯酸PU双组分催干，Retardador描述施工缓干；均未作为ELO/ESBO、植物油增塑或稳定功能原料出售，不能仅凭“可添加”一词改写为相同输入。当前树脂生产声明不披露全部化学种类，既不虚构全部仅内部自用，也不把泛称树脂制造自动当作环氧化植物油销售。完整可见销售类目未见ELO、ESBO、环氧化植物油、生物增塑/稳定剂或同类功能原料商品；结论限所查实际范围，不保证未披露业务/关联。Brasilux、Brasilux Tintas Técnicas旧研究名称、同域名、所有产品线和主厂/树脂/配送点一个账户；不从薪酬报告文件名推定工商注册号。旧自动预筛needs_evidence不能替代本次独立全目录及辅助剂复核。"
+    },
+    "contact": {
+      "label": "官方公司业务邮箱与公开业务电话；未核实具名采购/研发负责人",
+      "email": "brasilux@brasilux.com.br",
+      "phone": "+55 16 3383-7000",
+      "contactUrl": "https://brasilux.com.br/contato/"
+    },
+    "source": {
+      "label": "Current own Linha03 epoxy-polyamide primer: two-component coating for metal and wood; own industrial manufacturing and full visible range separately read",
+      "url": "https://brasilux.com.br/portfolio/brasepoxi-primer-linha-03/"
+    },
+    "checkedAt": "2026-10-16"
+  },
+  {
+    "id": "resicolor-sideropolis",
+    "company": "Resicolor Tintas (Resicolor Indústria de Produtos Químicos Ltda.)",
+    "productId": "elo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Siderópolis (approximate city marker)",
+    "latitude": -28.597588,
+    "longitude": -49.4250007,
+    "legacyCompanyDescription": "自主制造成品工业防护涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前自身 A Resi 明确涂料和清漆制造及生产技术投入，列Siderópolis主厂/树脂厂和Goiás工厂，并在可读公司政策中列 Resicolor Indústria de Produtos Químicos Ltda.。完整可见产品目录含Auto-Industrial产品和Epóxi Power体系。实际Epóxi Power primer原文明确溶剂型双组分防腐底漆，在黑色金属形成保护层，并可填补混凝土/木材表面；本条只使用金属防腐涂料事实。未把网页1992/2000树脂沿革表述或copyright当成已审计投产日期，也不冒称读过底漆PDF。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属排除覆盖当前自身About含树脂厂和法人名称、完整可见Encontre产品目录、Epóxi Power primer及Contact实际业务/厂址段。实际组合为建筑/木器/Auto-Industrial/金属底漆、环氧体系、防水涂层、着色/装饰、溶剂稀释剂和对应双组分固化剂；Telhabril的“resina acrílica”在成品屋面涂层目录中，不把商品名直接改写为ELO原料。真实树脂制造和溶剂/固化组分业务保留；不无证声称树脂全内部自用。当前可见销售范围未见ELO、ESBO、环氧化植物油、生物增塑/稳定剂或同类功能原料销售；限实际所查范围，不保证未披露关联/未来SKU。品牌Resicolor、About法人、协会所列Resicolor Tintas名称、Resicolor System及三厂统一一个账户，未虚构名称差异代表新公司或无任何母集团。"
+    },
+    "contact": {
+      "label": "官方公司业务邮箱与公开业务电话；未核实具名采购/研发负责人",
+      "email": "sac@resicolor.com.br",
+      "phone": "+55 48 3435-8000",
+      "contactUrl": "https://resicolor.com.br/contato/"
+    },
+    "source": {
+      "label": "Current own Epóxi Power two-component primer original: solvent-based anticorrosive coating for ferrous metal, with own manufacturing separately verified",
+      "url": "https://resicolor.com.br/produtos/primer-linha-epoxi-power-bicomponente/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "resicolor-sideropolis": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "brasilux-matao": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "hm-rubber-pinhais": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "central-megahtama-tangerang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zaklad-syntezy-kowalanka": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mella-paint-tangerang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4003,6 +4090,264 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "resicolor-sideropolis": {
+    "website": "https://resicolor.com.br/",
+    "contactPage": "https://resicolor.com.br/contato/",
+    "address": "Factory1: Rodovia Padre Herval Fontanella,580,Distrito Industrial,Siderópolis–SC. Factory2 (resins): same road759,Siderópolis–SC. Factory3: Avenida Perimetral Norte,S/N,Lotes1/2,QuadraD,Setor Centro Operacional,Palmeiras de Goiás–GO. Brazil. Separate plants are one manufacturer account. Map coordinates are the approximate city centre from current OpenStreetMap/Nominatim city geocoding, not a surveyed company/factory entrance.",
+    "generalEmail": "sac@resicolor.com.br",
+    "generalPhone": "+55 48 3435-8000",
+    "generalEmailEvidence": {
+      "company": "Resicolor Tintas (Resicolor Indústria de Produtos Químicos Ltda.)",
+      "value": "sac@resicolor.com.br",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://resicolor.com.br/contato/",
+          "summary": "Current own Contact explicitly labels SAC and publishes sac@resicolor.com.br. This is a sourced company customer-service route, not procurement or a named person. Factory telephone(48)3435-8000 is separately published on the same Contact. Recruiting phone is excluded."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Resicolor Tintas (Resicolor Indústria de Produtos Químicos Ltda.)",
+      "value": "+55 48 3435-8000",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://resicolor.com.br/contato/",
+          "summary": "Actual current official Contact publishes this company/factory business telephone; formatted with Brazil+55, no named-person ownership or recruiting telephone inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "sac@resicolor.com.br",
+        "source": {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://resicolor.com.br/contato/"
+        },
+        "emailEvidence": {
+          "company": "Resicolor Tintas (Resicolor Indústria de Produtos Químicos Ltda.)",
+          "value": "sac@resicolor.com.br",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+              "url": "https://resicolor.com.br/contato/",
+              "summary": "Current own Contact explicitly labels SAC and publishes sac@resicolor.com.br. This is a sourced company customer-service route, not procurement or a named person. Factory telephone(48)3435-8000 is separately published on the same Contact. Recruiting phone is excluded."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own Epóxi Power two-component primer original: solvent-based anticorrosive coating for ferrous metal, with own manufacturing separately verified",
+        "url": "https://resicolor.com.br/produtos/primer-linha-epoxi-power-bicomponente/"
+      },
+      {
+        "label": "Current own A Resi: own manufacturing, legal name in environmental policy and three operating plant addresses",
+        "url": "https://resicolor.com.br/a-resi/"
+      },
+      {
+        "label": "Complete current visible Encontre product catalogue: finished coatings, auxiliaries, solvents and matched epoxy kit",
+        "url": "https://resicolor.com.br/encontre/"
+      },
+      {
+        "label": "Current public SAC business channel and separate factory phone and addresses",
+        "url": "https://resicolor.com.br/contato/"
+      },
+      {
+        "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+        "url": "https://resicolor.com.br/contato/"
+      }
+    ]
+  },
+  "brasilux-matao": {
+    "website": "https://brasilux.com.br/",
+    "contactPage": "https://brasilux.com.br/contato/",
+    "address": "Main factories1/2: Rua Bambozzi,240/261,Centro,Matão–SP15990-668. Resin unit: Via Augusto Bambozzi,380,Bairro Industrial,Matão–SP15993-200. Guarulhos distribution centre is separate, not another company. Brazil. Map coordinates are the approximate city centre from current OpenStreetMap/Nominatim city geocoding, not a surveyed company/factory entrance.",
+    "generalEmail": "brasilux@brasilux.com.br",
+    "generalPhone": "+55 16 3383-7000",
+    "generalEmailEvidence": {
+      "company": "Brasilux Tintas",
+      "value": "brasilux@brasilux.com.br",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://brasilux.com.br/contato/",
+          "summary": "Current own Contact explicitly publishes brasilux@brasilux.com.br for the company. General company mailbox, no inferred named purchaser. Factory landline separately printed as+55(16)3383.7000; inconsistent SAC formatting is not selected."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Brasilux Tintas",
+      "value": "+55 16 3383-7000",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://brasilux.com.br/contato/",
+          "summary": "Actual current official Contact publishes this company/factory business telephone; formatted with Brazil+55, no named-person ownership or recruiting telephone inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "brasilux@brasilux.com.br",
+        "source": {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://brasilux.com.br/contato/"
+        },
+        "emailEvidence": {
+          "company": "Brasilux Tintas",
+          "value": "brasilux@brasilux.com.br",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+              "url": "https://brasilux.com.br/contato/",
+              "summary": "Current own Contact explicitly publishes brasilux@brasilux.com.br for the company. General company mailbox, no inferred named purchaser. Factory landline separately printed as+55(16)3383.7000; inconsistent SAC formatting is not selected."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own Linha03 epoxy-polyamide primer: two-component coating for metal and wood; own industrial manufacturing and full visible range separately read",
+        "url": "https://brasilux.com.br/portfolio/brasepoxi-primer-linha-03/"
+      },
+      {
+        "label": "Current own About: coating development/manufacture and separate resin operation retained",
+        "url": "https://brasilux.com.br/sobre/"
+      },
+      {
+        "label": "Current complete visible industrial range including two-component epoxy protective primers/coatings",
+        "url": "https://brasilux.com.br/linha-industrial/"
+      },
+      {
+        "label": "Current complete automotive range, with actual accelerator and retarder read separately",
+        "url": "https://brasilux.com.br/linha-automotiva/"
+      },
+      {
+        "label": "Actual acrylic-PU drying accelerator, not a generic flexibility/plasticizer claim",
+        "url": "https://brasilux.com.br/portfolio/acelerador-para-pu-acrilico/"
+      },
+      {
+        "label": "Actual universal drying retarder, not assumed epoxidized-oil raw material",
+        "url": "https://brasilux.com.br/portfolio/retardador-universal/"
+      },
+      {
+        "label": "Current own public business Contact and separate plant addresses",
+        "url": "https://brasilux.com.br/contato/"
+      },
+      {
+        "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+        "url": "https://brasilux.com.br/contato/"
+      }
+    ]
+  },
+  "hm-rubber-pinhais": {
+    "website": "https://hmrubber.com.br/",
+    "contactPage": "https://hmrubber.com.br/contato/",
+    "address": "Administrative headquarters: Rua Mandaguari,924,Emiliano Perneta,Pinhais–PR83325-015. Actual factory: Rua Pérola,505,Emiliano Perneta,Pinhais–PR83325-200. Distribution centre: Rua Olímpio Cardoso,405,São Dimas,Colombo–PR83411-110, Brazil. These are separate functions within one company account. Map coordinates are the approximate city centre from current OpenStreetMap/Nominatim city geocoding, not a surveyed company/factory entrance.",
+    "generalEmail": "atendimento@hmrubber.com.br",
+    "generalPhone": "+55 41 3557-0660",
+    "generalEmailEvidence": {
+      "company": "HM Rubber",
+      "value": "atendimento@hmrubber.com.br",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://hmrubber.com.br/contato/",
+          "summary": "Exact atendimento@hmrubber.com.br decoded from the actual current Contact HTML data-cfemail payload; page labels it Contato Nacional. The different info@hmrubber.com.uy is international and was not selected for the Brazil route. No name or purchasing title inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "HM Rubber",
+      "value": "+55 41 3557-0660",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://hmrubber.com.br/contato/",
+          "summary": "Actual current official Contact publishes this company/factory business telephone; formatted with Brazil+55, no named-person ownership or recruiting telephone inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "atendimento@hmrubber.com.br",
+        "source": {
+          "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+          "url": "https://hmrubber.com.br/contato/"
+        },
+        "emailEvidence": {
+          "company": "HM Rubber",
+          "value": "atendimento@hmrubber.com.br",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+              "url": "https://hmrubber.com.br/contato/",
+              "summary": "Exact atendimento@hmrubber.com.br decoded from the actual current Contact HTML data-cfemail payload; page labels it Contato Nacional. The different info@hmrubber.com.uy is international and was not selected for the Brazil route. No name or purchasing title inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own HM BM Dupla Função Premium industrial coating: modified liquid-rubber base/top coat for metallic surfaces; manufacturing and factory separately verified",
+        "url": "https://hmrubber.com.br/industrial/"
+      },
+      {
+        "label": "Current own manufacturer and factory statement, separate administrative/factory/distribution functions",
+        "url": "https://hmrubber.com.br/contato/"
+      },
+      {
+        "label": "Current complete visible technical product range, separate finished coatings, sealants and physical construction accessories",
+        "url": "https://hmrubber.com.br/produtoslinhatecnica/"
+      },
+      {
+        "label": "Current retail catalogue: seven actual original product-card images visually inspected; not a text-only catalogue claim",
+        "url": "https://hmrubber.com.br/produtos-linha-varejo/"
+      },
+      {
+        "label": "Current official company business Contact: independently sourced exact corporate mailbox and telephone",
+        "url": "https://hmrubber.com.br/contato/"
+      }
+    ]
+  },
   "central-megahtama-tangerang": {
     "website": "https://centralmegahtama.com/",
     "contactPage": "https://centralmegahtama.com/kontak-kami/",
@@ -11420,6 +11765,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "resicolor-sideropolis",
+  "brasilux-matao",
+  "hm-rubber-pinhais",
   "central-megahtama-tangerang",
   "zaklad-syntezy-kowalanka",
   "mella-paint-tangerang",
