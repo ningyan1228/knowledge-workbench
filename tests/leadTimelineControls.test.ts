@@ -39,10 +39,11 @@ describe('compact first-recorded controls', () => {
     expect(leadTimelineSummary([], today).days.every((day) => day.count === 0)).toBe(true)
   })
 
-  it('shows three metrics and clear filters while keeping chart and methodology collapsed', () => {
+  it('shows recent additions without repeating the customer total and keeps details collapsed', () => {
     vi.useFakeTimers().setSystemTime(new Date('2026-10-15T01:00:00Z'))
     const html = renderToStaticMarkup(createElement(LeadTimelineControls, { leads, order: 'newest', day: 'all', onDay: () => {}, onOrder: () => {} }))
-    for (const label of ['今日新增', '近 7 天新增', '当前范围客户', '收录日期', '自选日期', '首次收录由新到旧', '收录趋势', '统计说明']) expect(html).toContain(label)
+    for (const label of ['今日新增', '近 7 天新增', '收录日期', '自选日期', '首次收录由新到旧', '收录趋势', '统计说明']) expect(html).toContain(label)
+    expect(html).not.toContain('当前范围客户')
     expect(html).toContain('<details class="timeline-trend">')
     expect(html).toContain('<details class="timeline-method">')
     expect(html).not.toContain('lead-timeline-days')

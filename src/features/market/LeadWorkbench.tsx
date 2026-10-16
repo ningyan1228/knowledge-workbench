@@ -47,12 +47,13 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
     { id: 'all', label: '全部客户', description: '查看当前范围的客户' },
     { id: 'priority', label: '优先开发', description: '评分 ≥ 80、待开发且未记录发送' },
     { id: 'followup', label: '今日跟进', description: '包含逾期计划，暂缓客户除外' },
-    { id: 'recent', label: '最近新增', description: '未开发、未记录发送，按最近收录排列' },
+    { id: 'recent', label: '新收录待开发', description: '未开发、未记录发送，按最近收录排列' },
   ]
   const activeFilters = [
     { key: 'industry' as const, label: industries.find(([id]) => id === filters.industry)?.[1] ?? filters.industry },
     { key: 'application' as const, label: applications.find(([id]) => id === filters.application)?.[1] ?? filters.application },
     { key: 'contact' as const, label: ({ email: '有公开业务邮箱', form: '有官网联系页', phone: '有公开电话', named: '有可触达具名联系人' } as Record<string, string>)[filters.contact] },
+    { key: 'sendStatus' as const, label: filters.sendStatus === 'sent' ? '已发开发信' : '未发开发信（无发送记录）' },
     { key: 'stage' as const, label: developmentProgressLabels[filters.stage as keyof typeof developmentProgressLabels] },
     { key: 'list' as const, label: filters.list === 'favorites' ? '我的收藏' : work.lists.find((list) => list.id === filters.list)?.name },
     { key: 'sort' as const, label: '按开发优先级排列' },
@@ -74,6 +75,7 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
       <label>行业／客户类型<select aria-label="行业／客户类型" value={filters.industry} onChange={(event) => patch({ industry: event.target.value })}><option value="all">全部行业</option>{industries.map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label>产品应用<select aria-label="产品应用" value={filters.application} onChange={(event) => patch({ application: event.target.value })}><option value="all">全部应用</option>{applications.map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label>公开联系入口<select aria-label="公开联系入口" value={filters.contact} onChange={(event) => patch({ contact: event.target.value })}><option value="all">全部入口</option><option value="email">有公开业务邮箱</option><option value="form">有官网联系页</option><option value="phone">有公开电话</option><option value="named">有可触达具名联系人</option></select></label>
+      <label title={ledger.status === 'ready' ? '按公司共享的有效发送记录筛选；未发仅指台账中没有发送记录。' : '连接共享发送记录后可用，请先登录。'}>开发信发送<select aria-label="开发信发送" value={filters.sendStatus} disabled={ledger.status !== 'ready'} onChange={(event) => patch({ sendStatus: event.target.value as BusinessFilters['sendStatus'] })}><option value="all">{ledger.status === 'ready' ? '全部' : '连接发送记录后可筛选'}</option><option value="sent">已发开发信</option><option value="unsent">未发开发信（无发送记录）</option></select></label>
       <label>开发进度<select aria-label="开发进度" value={filters.stage} disabled={work.status !== 'ready'} onChange={(event) => patch({ stage: event.target.value })}><option value="all">全部状态</option>{Object.entries(developmentProgressLabels).map(([id, label]) => <option key={id} value={id} disabled={id === 'sent' && ledger.status !== 'ready'}>{label}</option>)}</select></label>
       <label>我的名单<select aria-label="我的名单" value={filters.list} disabled={work.status !== 'ready'} onChange={(event) => patch({ list: event.target.value })}><option value="all">全部客户</option><option value="favorites">我的收藏</option>{work.lists.map((list) => <option key={list.id} value={list.id}>{list.name}</option>)}</select></label>
       <label>排列依据<select aria-label="排列依据" value={filters.sort} onChange={(event) => patch({ sort: event.target.value as BusinessFilters['sort'] })}><option value="time">按收录时间</option><option value="priority">开发优先级</option></select></label>
@@ -98,11 +100,12 @@ export function LeadWorkCard({ lead, work, ledger, onOpen }: { lead: PublicLead;
   </div>
 }
 
-export function LeadPrivatePanel({ lead, work, ledger }: { lead: PublicLead; work: LeadWork; ledger: OutreachLedger }) {
+export function LeadPrivatePanel({ lead, work, ledger, onDirtyChange }: { lead: PublicLead; work: LeadWork; ledger: OutreachLedger; onDirtyChange?: (dirty: boolean) => void }) {
   const record = (work.status === 'ready' ? work.records[outreachCompanyKey(lead)] : null) ?? emptyWorkRecord(outreachCompanyKey(lead))
   const [stage, setStage] = useState(record.stage ?? ''), [date, setDate] = useState(record.followUpOn), [note, setNote] = useState(record.note)
   const [favorite, setFavorite] = useState(record.favorite), [listIds, setListIds] = useState(record.listIds)
   const [dirty, setDirty] = useState(false), [message, setMessage] = useState('')
+  useEffect(() => { onDirtyChange?.(dirty) }, [dirty, onDirtyChange])
   const signature = JSON.stringify(record)
   useEffect(() => {
     if (!dirty) { setStage(record.stage ?? ''); setDate(record.followUpOn); setNote(record.note); setFavorite(record.favorite); setListIds(record.listIds) }

@@ -51,6 +51,28 @@ describe('customer development workspace', () => {
     expect(developmentProgressLabel('replied', true)).toBe('已发送开发信 · 已回复')
     expect(normalizeWorkRecord({ stage: 'sent' }, 'key').stage).toBeNull()
   })
+  it('filters shared sent and unsent history across products independently of private progress', () => {
+    const second = { ...lead, id: 'same-company-other-product', productId: 'nl-w1201' as const }
+    const other = { ...lead, id: 'unsent-company', company: 'Unsent fixture company' }
+    const leads = [lead, second, other]
+    const sentFilter = { ...emptyBusinessFilters, sendStatus: 'sent' as const }
+    const unsentFilter = { ...emptyBusinessFilters, sendStatus: 'unsent' as const }
+    for (const records of [null, {}, { [record.companyKey]: record }]) {
+      expect(filterWorkbenchLeads(leads, sentFilter, records, [send], '2026-10-12')).toEqual(expect.arrayContaining([lead, second]))
+      expect(filterWorkbenchLeads(leads, sentFilter, records, [send], '2026-10-12')).not.toContainEqual(other)
+      expect(filterWorkbenchLeads(leads, unsentFilter, records, [send], '2026-10-12')).toEqual([other])
+    }
+    const voided = { ...send, voided_at: '2026-10-12T01:00:00Z' }
+    expect(filterWorkbenchLeads(leads, sentFilter, {}, [voided], '2026-10-12')).toEqual([])
+    expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toHaveLength(3)
+    expect(filterWorkbenchLeads(leads, { ...unsentFilter, query: 'Unsent fixture' }, {}, [send], '2026-10-12')).toEqual([other])
+  })
+  it('never counts unavailable sending history as unsent', () => {
+    for (const sendStatus of ['sent', 'unsent'] as const) {
+      expect(filterWorkbenchLeads([lead], { ...emptyBusinessFilters, sendStatus }, {}, null, '2026-10-12')).toEqual([])
+    }
+    expect(filterWorkbenchLeads([lead], emptyBusinessFilters, null, null, '2026-10-12')).toEqual([lead])
+  })
   it('includes overdue and today follow-ups but excludes future and paused plans', () => {
     expect(followUpDue(record, '2026-10-12')).toBe(true)
     expect(followUpDue({ ...record, followUpOn: '2026-10-12' }, '2026-10-12')).toBe(true)
