@@ -3914,11 +3914,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "excel-india-protective-paints-badlapur",
+    "company": "Excel India Protective Paints Pvt. Ltd.",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Badlapur, Maharashtra (company-published factory map centre)",
+    "latitude": 19.159376054326806,
+    "longitude": 73.23724601421405,
+    "legacyCompanyDescription": "Badlapur自主制造工业及船舶成品防护涂料的需求侧企业；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Excel 当前自身完整公司历史、Badlapur制造工厂及四类成品涂料原文支持自主研发制造。官网名为Excel India Protective Paints Pvt. Ltd.，厂址A-33/34 MIDC Kulgaon Badlapur East；工厂页披露生产设备及研发/质检实验室，历史页将产线升级明确为2021年，不能当2026年新投产。Industrial实际列Epoxy Paint Scheme、Polyurethane Scheme、Heat Resistant、Anti-Corrosive Heat Resistant和Water based High Performance Paint；Marine/Oil&Gas/Defence为另外三类成品保护体系。Excel Coatings & Consultants及Excel Fabricoat LLP在自身历史中关联，仅保守归并一个制造开发账户，不证明全部股权关系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "针对ELO实际完整读取自身Home、About/Journey、Manufacturing、Products总目录以及全部四个实际产品类别Marine、Defence、Industrial、Oil&Gas和Contact，覆盖成品防护、环氧、聚氨酯、防污、耐热、防腐及施工服务；所查自有生产与成品经营范围未见ELO、ESBO、环氧化植物油、生物增塑/稳定或相同功能涂料输入原料销售。成品涂料中的环氧/聚氨酯词、配套施工及船舶业务不能自动当原料同行。实际额外Global List of Reference Standards附链和四个子页原文也已核清数据来源：页面为Products Loading壳，源码的GET地址全部为www.clearsynth.com/chemical_data.asp的BulkCompounds/StableIsotopes/Impurities/Nitrosamines目录；未执行脚本、未抓取外部实际商品，也未宣称读完整Clearsynth库存。外部参比数据源不自动证明Excel生产或转售该站全部商品；双方所有权/代理关系未知，不编造共同集团或断言网站被入侵。目录标题不构成相同功能塑化剂销售证据；排除结论仅限实际所查Excel自有成品及可见经营资料，不能保证未披露业务。保留Excel原文关于成品PFP、玻璃鳞片聚酯及其他体系的真实范围，但不借用Lloyds/CIPET/CFTRI/ONGC/军用或饮水批准为ELO背书。品牌、服务公司、工厂和伙伴不拆分新增；无相同输入外购/使用例外被虚构。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱及电话；未核实具名采购/研发负责人",
+      "email": "info@excelpaints.in",
+      "phone": "+91-251-269 5520",
+      "contactUrl": "https://www.excelpaints.in/contact.asp"
+    },
+    "source": {
+      "label": "Actual official Excel Industrial original: developed epoxy, polyurethane and anti-corrosive heat-resistant paint schemes",
+      "url": "https://www.excelpaints.in/industrial.asp"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "excel-india-protective-paints-badlapur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "unipaint-factory-sungai-bakap": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fieldtech-services-tuas": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "resicolor-sideropolis": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4148,6 +4177,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "excel-india-protective-paints-badlapur": {
+    "website": "https://www.excelpaints.in/",
+    "contactPage": "https://www.excelpaints.in/contact.asp",
+    "address": "Factory:A-33/34,MIDC,Kulgaon,Badlapur East,Thane421503,Maharashtra,India. Corporateoffice:B/401,BycullaServiceInd.,Byculla(E),Mumbai400027. Company Contact current footer identifies Excel India Protective Paints Pvt. Ltd.; own Journey names Excel Coatings & Consultants and Excel Fabricoat LLP as associated route, conservatively one development account, no ownershippercentage claim. Map19.159376054326806,73.23724601421405 is the actual non-commented company Google iframe centre for33/34MIDCRoad/Kulgaon/Badlapur, not a surveyed factory entrance. Its old commented Bangladesh template iframe was excluded.",
+    "generalEmail": "info@excelpaints.in",
+    "generalPhone": "+91-251-269 5520",
+    "generalEmailEvidence": {
+      "company": "Excel India Protective Paints Pvt. Ltd.",
+      "value": "info@excelpaints.in",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Excel Contact original, separately published company Email Address and Phone Number with Badlapur factory and Mumbai office",
+          "url": "https://www.excelpaints.in/contact.asp",
+          "summary": "Actual Contact Email Address and footer explicitly publish corporate info@excelpaints.in, recovered by exact Cloudflare HTML decoding; consistent with own manufacturing/industrial originals. General company business mailbox, not a named employee or inferred procurement channel."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Excel India Protective Paints Pvt. Ltd.",
+      "value": "+91-251-269 5520",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Excel Contact original, separately published company Email Address and Phone Number with Badlapur factory and Mumbai office",
+          "url": "https://www.excelpaints.in/contact.asp",
+          "summary": "Actual Contact Phone Number explicitly prints +91-251-269 5520 together with corporate/factory addresses and company footer. General business landline, not a private or named purchasing contact. The separately printed+91-7276105284 is not assigned to a person."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@excelpaints.in",
+        "source": {
+          "label": "Current official Excel Contact original, separately published company Email Address and Phone Number with Badlapur factory and Mumbai office",
+          "url": "https://www.excelpaints.in/contact.asp"
+        },
+        "emailEvidence": {
+          "company": "Excel India Protective Paints Pvt. Ltd.",
+          "value": "info@excelpaints.in",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official Excel Contact original, separately published company Email Address and Phone Number with Badlapur factory and Mumbai office",
+              "url": "https://www.excelpaints.in/contact.asp",
+              "summary": "Actual Contact Email Address and footer explicitly publish corporate info@excelpaints.in, recovered by exact Cloudflare HTML decoding; consistent with own manufacturing/industrial originals. General company business mailbox, not a named employee or inferred procurement channel."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official Excel Industrial original: developed epoxy, polyurethane and anti-corrosive heat-resistant paint schemes",
+        "url": "https://www.excelpaints.in/industrial.asp"
+      },
+      {
+        "label": "Actual own manufacturing facility original: Badlapur paint manufacture, R&D and quality control",
+        "url": "https://www.excelpaints.in/manufacturing-facility.asp"
+      },
+      {
+        "label": "Current own Journey original: company name, associated Excel routes and expressly dated2021 manufacturing upgrade",
+        "url": "https://www.excelpaints.in/about.asp"
+      },
+      {
+        "label": "Current official Excel Contact original, separately published company Email Address and Phone Number with Badlapur factory and Mumbai office",
+        "url": "https://www.excelpaints.in/contact.asp"
+      }
+    ]
+  },
   "unipaint-factory-sungai-bakap": {
     "website": "https://unipaintfactory.com/",
     "contactPage": "https://unipaintfactory.com/",
@@ -11971,6 +12078,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "excel-india-protective-paints-badlapur",
   "unipaint-factory-sungai-bakap",
   "fieldtech-services-tuas",
   "resicolor-sideropolis",
