@@ -3942,11 +3942,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "globalcolor-suzano",
+    "company": "Globalcolor Tintas Industriais (GlobalColor)",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Suzano, São Paulo (approximate municipality pin; factory coordinates unverified)",
+    "latitude": -23.54,
+    "longitude": -46.31,
+    "legacyCompanyDescription": "自有Suzano工厂研发制造用于铝材的水性成品底漆；NL-W1201相容性与采购未确认",
+    "fit": "可开发候选",
+    "signal": "GlobalColor当前自身Home/About明确自2003年研发制造工业成品涂料，在Suzano自有厂区设质量控制和开发实验室；Contact独立写Fábrica/Produzimos aqui并列同一Edna Pereira Galafassi50地址。当前GLOBALDUR1290原始产品页和实际链接2页技术表明确改性丙烯酸乳液/水性底漆，用于铝材及木材等；本条仅采用NL-W1201 TDS已验证的aluminum-primer对应，不泛化所有金属或汽车用途。技术表实印Rev01/27Oct2025，2026核验不等于新版2026文件。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "NL-W1201专属排除核验覆盖当前自有Home/About/具体1290产品/Contact完整原文、全部可见产品家族导航及Complementos完整7项索引，并进一步实际读取GlobalSurface7033X1和SoluçãoFosfatizante700具体原文。真实商品包含成品工业漆、水性漆、底漆、清漆、稀释清洗溶剂、配套催化/固化及表面处理制剂，保留这些业务而不抹去。703为水/酸/助剂配制的脱脂-酸洗-磷化成品，明确刷涂/喷淋/浸渍后用水完全冲洗再涂漆；700为磷酸/酒精/水/表活配制的锈蚀中和磷化成品，反应后洗掉残留。这些下游施用清洗的酸性处理配方不自动等于对涂料配方方销售CPO/PO分散、聚烯烃乳液或附着力促进原料。实际所查可见经营和配套范围未见上述NL-W1201相同/相似输入原料对外销售，结论仅限已读公开范围，不声称读完150个单品或保证全部未披露关联业务。GlobalSurface标题703/正文稀释处730不一致保留，未为其擅自修订，也未把酸洗性能/比例借给NL-W1201。未把成品washprimer、磷化剂、溶剂或催化剂名称单独当原料同行排除或准入证据。自身JSON-LD的legalName误填建站代理邮箱，不是公司法律名称或联系人；未冒称工商注册审计、全部股权关系或代理商属于制造集团。GlobalColor和Globaldur/Globalux/Globalthane等品牌、工厂与各地区代理保守一开发账户，不拆分新增。"
+    },
+    "contact": {
+      "label": "原始技术表公开技术部门邮箱及业务电话；未核实具名采购/研发人员",
+      "email": "tecnico@globalcolor.com.br",
+      "phone": "+55 11 98665-0105",
+      "contactUrl": "https://www.globalcolor.com.br/contato/"
+    },
+    "source": {
+      "label": "Current official GLOBALDUR1290 water-based primer product original and linkedRev01/27Oct2025TDS: aluminum and wood",
+      "url": "https://www.globalcolor.com.br/produto/primer-base-agua/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "globalcolor-suzano": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
   "excel-india-protective-paints-badlapur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "unipaint-factory-sungai-bakap": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fieldtech-services-tuas": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4177,6 +4206,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "globalcolor-suzano": {
+    "generalEmail": "",
+    "website": "https://www.globalcolor.com.br/",
+    "contactPage": "https://www.globalcolor.com.br/contato/",
+    "address": "Rua Edna Pereira Galafassi,50,Suzano-SP,Brazil; ownwebsitepostalreference08655-239. Visiblemanufacturingcompany/brandGlobalcolorTintasIndustriais; no Ltda/CNPJ or registeredholder invented from wrongagencyJSON-LD. Map-23.54,-46.31 is deliberately approximateSuzanomunicipality,roundedfromconsistentpubliccityreferences; exactfactoryGPSunverified. OwnGooglemapaddressquerywasread but embedrequestdidnotyieldcoordinates. Currentcompanymanufacturing/product/TDS/addresscorrespondence supportsone account; brandsnotseparatecompanies.",
+    "generalPhone": "+55 11 98665-0105",
+    "generalPhoneEvidence": {
+      "company": "Globalcolor Tintas Industriais (GlobalColor)",
+      "value": "+55 11 98665-0105",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current product-linked original PRIMER BASE ÁGUA1290 technical bulletin, page2 company technical department footer",
+          "url": "https://www.globalcolor.com.br/wp-content/uploads/2025/11/BT_PRIMER_BASE_AGUA_1290.pdf",
+          "summary": "Actual original page2 company technical footer prints (11)98665-0105 next to tecnico@globalcolor.com.br. Normalized to+55 from the verifiedBrazilcompanyaddress. Technical business route,notprivateemployee,WhatsAppassumption or namedprocurement."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "tecnico@globalcolor.com.br",
+        "source": {
+          "label": "Actual current product-linked original PRIMER BASE ÁGUA1290 technical bulletin, page2 company technical department footer",
+          "url": "https://www.globalcolor.com.br/wp-content/uploads/2025/11/BT_PRIMER_BASE_AGUA_1290.pdf"
+        },
+        "emailEvidence": {
+          "company": "Globalcolor Tintas Industriais (GlobalColor)",
+          "value": "tecnico@globalcolor.com.br",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual current product-linked original PRIMER BASE ÁGUA1290 technical bulletin, page2 company technical department footer",
+              "url": "https://www.globalcolor.com.br/wp-content/uploads/2025/11/BT_PRIMER_BASE_AGUA_1290.pdf",
+              "summary": "Actual original two-page technical bulletin page2 explicitly prints GLOBALCOLOR TINTAS INDUSTRIAIS with tecnico@globalcolor.com.br, and refers questions to DepartamentoTécnico. Technical company department mailbox; no personal name or procurement responsibility, no inferred general/info inbox or deliverability. Document printedRev01/27Oct2025,retrieved and read16Oct2026 from current own product link."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current official GLOBALDUR1290 water-based primer product original and linkedRev01/27Oct2025TDS: aluminum and wood",
+        "url": "https://www.globalcolor.com.br/produto/primer-base-agua/"
+      },
+      {
+        "label": "Current official ownfactory/manufacturing/development laboratories and historicalcompanytimeline",
+        "url": "https://www.globalcolor.com.br/a-globalcolor/"
+      },
+      {
+        "label": "Actual current product-linked original PRIMER BASE ÁGUA1290 technical bulletin, page2 company technical department footer",
+        "url": "https://www.globalcolor.com.br/wp-content/uploads/2025/11/BT_PRIMER_BASE_AGUA_1290.pdf"
+      },
+      {
+        "label": "Current ownfactory businesscontactpage and address",
+        "url": "https://www.globalcolor.com.br/contato/"
+      },
+      {
+        "label": "Actual GlobalSurface7033X1 formulated acidcleaner/phosphating application,rinsedbeforepainting; distinctfrompolyolefininput",
+        "url": "https://www.globalcolor.com.br/produto/global-surface-703-3x1/"
+      },
+      {
+        "label": "Actual formulated phosphating700 source,ferrousmetalreactionandwashoffuse",
+        "url": "https://www.globalcolor.com.br/produto/solucao-fosfatizante-700/"
+      }
+    ]
+  },
   "excel-india-protective-paints-badlapur": {
     "website": "https://www.excelpaints.in/",
     "contactPage": "https://www.excelpaints.in/contact.asp",
@@ -12078,6 +12179,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "globalcolor-suzano",
   "excel-india-protective-paints-badlapur",
   "unipaint-factory-sungai-bakap",
   "fieldtech-services-tuas",
