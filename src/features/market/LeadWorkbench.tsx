@@ -36,7 +36,7 @@ export function LeadListManager({ work, leads }: { work: LeadWork; leads: Public
   </details>
 }
 
-export function LeadBusinessControls({ leads, filters, onChange, work, ledger }: { leads: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; work: LeadWork; ledger: OutreachLedger }) {
+export function LeadBusinessControls({ leads, filters, onChange, work, ledger, allCustomerCount, allCustomersActive, onShowAll }: { leads: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; work: LeadWork; ledger: OutreachLedger; allCustomerCount: number; allCustomersActive: boolean; onShowAll: () => void }) {
   const [expanded, setExpanded] = useState(false)
   const industries = [...new Map(leads.map((lead) => [lead.targetCompanyTypeId, leadIndustry(lead)])).entries()]
   const applications = [...new Map(leads.map((lead) => [applicationKey(lead), leadApplication(lead)?.name ?? lead.companyEvidence.applicationId])).entries()]
@@ -44,7 +44,7 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
   const today = shanghaiDay(new Date().toISOString())
   const patch = (values: Partial<BusinessFilters>) => onChange({ ...filters, ...values })
   const queues: Array<{ id: WorkQueue; label: string; description: string }> = [
-    { id: 'all', label: '全部客户', description: '查看当前范围的客户' },
+    { id: 'all', label: '全部客户', description: '清除产品、地区、日期和业务筛选，查看全部公开客户' },
     { id: 'priority', label: '优先开发', description: '评分 ≥ 80、待开发且未记录发送' },
     { id: 'followup', label: '今日跟进', description: '包含逾期计划，暂缓客户除外' },
     { id: 'recent', label: '新收录待开发', description: '未开发、未记录发送，按最近收录排列' },
@@ -61,11 +61,11 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
   const hasFilters = filters.query !== '' || filters.queue !== 'all' || activeFilters.length > 0
   return <>
     <section className="work-controls-compact" aria-label="客户开发筛选">
-      <div className="work-today" aria-label="今日开发清单"><h3 title={`${today} · 北京时间 · 按当前产品、地区及业务条件统计，不含收录日期筛选`}><CalendarClock size={16} />开发清单</h3><div className="work-queues">{queues.map((queue) => {
+      <div className="work-today" aria-label="今日开发清单"><h3 title={`${today} · 北京时间 · 全部客户为公开库总数；其余按当前产品、地区及业务条件统计，不含收录日期筛选`}><CalendarClock size={16} />开发清单</h3><div className="work-queues">{queues.map((queue) => {
         const requiresPrivate = queue.id !== 'all', requiresLedger = queue.id === 'priority' || queue.id === 'recent'
         const unavailable = (requiresPrivate && records === null) || (requiresLedger && sends === null)
-        const count = unavailable ? '—' : new Set(filterWorkbenchLeads(leads, { ...filters, queue: queue.id }, records, sends, today).map(outreachCompanyKey)).size
-        return <button key={queue.id} type="button" title={unavailable ? '连接私人记录及共享发送记录后可用' : queue.description} aria-pressed={filters.queue === queue.id} disabled={unavailable} onClick={() => patch({ queue: queue.id })}><span>{queue.label}</span><strong>{count}</strong></button>
+        const count = queue.id === 'all' ? allCustomerCount : unavailable ? '—' : new Set(filterWorkbenchLeads(leads, { ...filters, queue: queue.id }, records, sends, today).map(outreachCompanyKey)).size
+        return <button key={queue.id} type="button" title={unavailable ? '连接私人记录及共享发送记录后可用' : queue.description} aria-pressed={queue.id === 'all' ? allCustomersActive : filters.queue === queue.id} disabled={unavailable} onClick={() => queue.id === 'all' ? onShowAll() : patch({ queue: queue.id })}><span>{queue.label}</span><strong>{count}</strong></button>
       })}</div></div>
       <div className="work-search-toolbar"><label className="work-search"><Search size={16} /><input aria-label="搜索公司" value={filters.query} placeholder="搜索公司、国家、城市或应用" onChange={(event) => patch({ query: event.target.value })} /></label><button className="work-filter-toggle" type="button" aria-expanded={expanded} aria-controls="work-advanced-filters" onClick={() => setExpanded(!expanded)}><SlidersHorizontal size={15} />更多筛选{activeFilters.length > 0 && <b>{activeFilters.length}</b>}<ChevronDown size={14} className={expanded ? 'is-expanded' : ''} /></button>{hasFilters && <button className="work-clear-filters" type="button" onClick={() => onChange({ ...emptyBusinessFilters })}>清除筛选</button>}</div>
       {activeFilters.length > 0 && <div className="work-active-filters" aria-label="已选业务条件">{activeFilters.map(({ key, label }) => <button type="button" key={key} onClick={() => onChange({ ...filters, [key]: emptyBusinessFilters[key] })} aria-label={`移除筛选：${label}`}><span>{label}</span><X size={12} /></button>)}</div>}

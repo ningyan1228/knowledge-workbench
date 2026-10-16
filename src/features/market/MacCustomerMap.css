@@ -11,6 +11,7 @@
 }
 .mac-customer-map .global-lead-map { border:1px solid var(--map-border);border-radius:20px;box-shadow:0 1px 3px #1b253009;background:#e4e9ec }
 .mac-customer-map .leaflet-tile-pane { filter:none }
+.mac-customer-map .map-return-regions { position:absolute;z-index:500;top:13px;left:13px;display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid var(--map-border);border-radius:12px;background:var(--map-material);color:var(--map-label);box-shadow:var(--map-shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);font:inherit;font-size:11px;cursor:pointer }
 .mac-customer-map .lead-map-cluster { flex-direction:row;gap:8px;padding:7px 10px;border:1px solid rgba(255,255,255,.94);border-radius:24px;background:var(--map-material);color:var(--map-label);box-shadow:var(--map-shadow),inset 0 0 0 1px #3c3c4306;backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);transition:background .15s,box-shadow .15s }
 .mac-customer-map .lead-map-cluster>span { max-width:68px;font-size:11px;font-weight:600;letter-spacing:.01em }
 .mac-customer-map .lead-map-cluster strong { display:flex;align-items:center;justify-content:center;flex-shrink:0;min-width:27px;height:27px;padding:0 5px;border-radius:15px;background:var(--map-accent-soft);color:var(--map-accent);font-size:14px;font-weight:650;line-height:1;font-variant-numeric:tabular-nums }

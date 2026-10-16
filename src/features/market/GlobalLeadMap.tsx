@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { divIcon, latLngBounds } from 'leaflet'
+import { ArrowLeft } from 'lucide-react'
 import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip, useMap, useMapEvents } from 'react-leaflet'
 import { leadMapGroups, mapCountryGroups, type LeadMapGroup } from '../../lib/leadMapClusters'
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
@@ -93,9 +94,9 @@ function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead
   </>
 }
 
-export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false }: {
+export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false, onReturnRegions }: {
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
-  onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number; closeUp?: boolean;
+  onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number; closeUp?: boolean; onReturnRegions?: () => void;
 }) {
   const [showDensity, setShowDensity] = useState(false)
   const frameRef = useRef<HTMLDivElement>(null)
@@ -123,6 +124,7 @@ export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, 
   }, [])
   const viewport = leadMapViewport(leads, closeUp)
   return <div ref={frameRef} className={`lead-map-frame ${viewport.wide ? 'is-world-framing' : 'is-region-framing'}`}>
+    {onReturnRegions && <button className="map-return-regions" type="button" onClick={onReturnRegions}><ArrowLeft size={13} />返回全部地区</button>}
     <div className="lead-map-controls"><span>点击聚合点筛选客户 · 放大查看公司</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
     <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
       <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
