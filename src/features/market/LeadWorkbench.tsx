@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { Bookmark, CalendarClock, CheckCircle2, ExternalLink, ListPlus, Star, Target } from 'lucide-react'
+import { Bookmark, CalendarClock, CheckCircle2, ChevronDown, ExternalLink, ListPlus, Search, SlidersHorizontal, Star, Target, X } from 'lucide-react'
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
 import { shanghaiDay } from '../../lib/leadTimeline'
@@ -37,6 +37,7 @@ export function LeadListManager({ work, leads }: { work: LeadWork; leads: Public
 }
 
 export function LeadBusinessControls({ leads, filters, onChange, work, ledger }: { leads: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; work: LeadWork; ledger: OutreachLedger }) {
+  const [expanded, setExpanded] = useState(false)
   const industries = [...new Map(leads.map((lead) => [lead.targetCompanyTypeId, leadIndustry(lead)])).entries()]
   const applications = [...new Map(leads.map((lead) => [applicationKey(lead), leadApplication(lead)?.name ?? lead.companyEvidence.applicationId])).entries()]
   const records = work.status === 'ready' ? work.records : null, sends = ledger.status === 'ready' ? ledger.sends : null
@@ -48,18 +49,28 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
     { id: 'followup', label: '今日跟进', description: '包含逾期计划，暂缓客户除外' },
     { id: 'recent', label: '最近新增', description: '未开发、未记录发送，按最近收录排列' },
   ]
+  const activeFilters = [
+    { key: 'industry' as const, label: industries.find(([id]) => id === filters.industry)?.[1] ?? filters.industry },
+    { key: 'application' as const, label: applications.find(([id]) => id === filters.application)?.[1] ?? filters.application },
+    { key: 'contact' as const, label: ({ email: '有公开业务邮箱', form: '有官网联系页', phone: '有公开电话', named: '有可触达具名联系人' } as Record<string, string>)[filters.contact] },
+    { key: 'stage' as const, label: developmentProgressLabels[filters.stage as keyof typeof developmentProgressLabels] },
+    { key: 'list' as const, label: filters.list === 'favorites' ? '我的收藏' : work.lists.find((list) => list.id === filters.list)?.name },
+    { key: 'sort' as const, label: '按开发优先级排列' },
+  ].filter(({ key }) => filters[key] !== emptyBusinessFilters[key])
+  const hasFilters = filters.query !== '' || filters.queue !== 'all' || activeFilters.length > 0
   return <>
     <PrivateWorkNotice work={work} />
-    <section className="work-today" aria-label="今日开发清单"><div className="work-today-title"><div><h3><CalendarClock size={18} />今日开发清单</h3><p>{today} · 北京时间 · 按当前产品、地区及业务条件统计 · 不含下方收录日期筛选</p></div><button type="button" onClick={() => onChange({ ...emptyBusinessFilters })}>清除业务筛选</button></div>
-      <div className="work-queues">{queues.map((queue) => {
+    <section className="work-controls-compact" aria-label="客户开发筛选">
+      <div className="work-today" aria-label="今日开发清单"><h3 title={`${today} · 北京时间 · 按当前产品、地区及业务条件统计，不含收录日期筛选`}><CalendarClock size={16} />开发清单</h3><div className="work-queues">{queues.map((queue) => {
         const requiresPrivate = queue.id !== 'all', requiresLedger = queue.id === 'priority' || queue.id === 'recent'
         const unavailable = (requiresPrivate && records === null) || (requiresLedger && sends === null)
         const count = unavailable ? '—' : new Set(filterWorkbenchLeads(leads, { ...filters, queue: queue.id }, records, sends, today).map(outreachCompanyKey)).size
-        return <button key={queue.id} type="button" aria-pressed={filters.queue === queue.id} disabled={unavailable} onClick={() => patch({ queue: queue.id })}><span>{queue.label}</span><strong>{count}</strong><small>{unavailable ? '连接私人记录及共享发送记录后可用' : queue.description}</small></button>
-      })}</div>
-    </section>
-    <div className="work-business-filters" role="group" aria-label="客户业务筛选">
-      <label className="work-search">搜索公司<input value={filters.query} placeholder="公司、国家、城市或应用" onChange={(event) => patch({ query: event.target.value })} /></label>
+        return <button key={queue.id} type="button" title={unavailable ? '连接私人记录及共享发送记录后可用' : queue.description} aria-pressed={filters.queue === queue.id} disabled={unavailable} onClick={() => patch({ queue: queue.id })}><span>{queue.label}</span><strong>{count}</strong></button>
+      })}</div></div>
+      <div className="work-search-toolbar"><label className="work-search"><Search size={16} /><input aria-label="搜索公司" value={filters.query} placeholder="搜索公司、国家、城市或应用" onChange={(event) => patch({ query: event.target.value })} /></label><button className="work-filter-toggle" type="button" aria-expanded={expanded} aria-controls="work-advanced-filters" onClick={() => setExpanded(!expanded)}><SlidersHorizontal size={15} />更多筛选{activeFilters.length > 0 && <b>{activeFilters.length}</b>}<ChevronDown size={14} className={expanded ? 'is-expanded' : ''} /></button>{hasFilters && <button className="work-clear-filters" type="button" onClick={() => onChange({ ...emptyBusinessFilters })}>清除筛选</button>}</div>
+      {activeFilters.length > 0 && <div className="work-active-filters" aria-label="已选业务条件">{activeFilters.map(({ key, label }) => <button type="button" key={key} onClick={() => onChange({ ...filters, [key]: emptyBusinessFilters[key] })} aria-label={`移除筛选：${label}`}><span>{label}</span><X size={12} /></button>)}</div>}
+      <div id="work-advanced-filters" hidden={!expanded}>
+      <div className="work-business-filters" role="group" aria-label="客户业务筛选">
       <label>行业／客户类型<select aria-label="行业／客户类型" value={filters.industry} onChange={(event) => patch({ industry: event.target.value })}><option value="all">全部行业</option>{industries.map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label>产品应用<select aria-label="产品应用" value={filters.application} onChange={(event) => patch({ application: event.target.value })}><option value="all">全部应用</option>{applications.map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label>公开联系入口<select aria-label="公开联系入口" value={filters.contact} onChange={(event) => patch({ contact: event.target.value })}><option value="all">全部入口</option><option value="email">有公开业务邮箱</option><option value="form">有官网联系页</option><option value="phone">有公开电话</option><option value="named">有可触达具名联系人</option></select></label>
@@ -68,6 +79,7 @@ export function LeadBusinessControls({ leads, filters, onChange, work, ledger }:
       <label>排列依据<select aria-label="排列依据" value={filters.sort} onChange={(event) => patch({ sort: event.target.value as BusinessFilters['sort'] })}><option value="time">按收录时间</option><option value="priority">开发优先级</option></select></label>
     </div>
     <LeadListManager work={work} leads={leads} />
+    </div></section>
   </>
 }
 
