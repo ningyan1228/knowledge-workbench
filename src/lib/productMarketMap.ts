@@ -4110,11 +4110,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "br-safra-rolandia",
+    "company": "BR Safra Fertilizantes Ltda.",
+    "productId": "fertilizer-coating",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Rolândia, Paraná (approximate city pin; factory coordinates unverified)",
+    "latitude": -23.31,
+    "longitude": -51.37,
+    "legacyCompanyDescription": "自有Rolândia工厂生产具逐步释放粘结/包埋技术的生物有机矿质颗粒肥；我方PU体系适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "BR Safra自身完整Home及SobreNós原文明确2021年购置造粒设备并开始商业化生产生物有机矿质成品颗粒肥，当前自有Rolândia工厂，直接面向农业生产者销售bigbag成品。About将生物聚合物技术描述为包埋及养分受控释放，当前四项颗粒技术明确使用逐步释放养分的粘结体系；不是仅有普通NPK配方/经销身份的推断。Home产品区完整可见22项颗粒成品配方/有机颗粒名称。采用TDS已验证的缓释肥应用，不把基质内粘结/包埋擅自改称外部PU壳层、流化床/转鼓线或已验证我方化学相容性。2012研发、2021商业生产是其品牌/技术自述历史，不擅自当作现法人注册年份或2026新投产。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "实际完整阅读当前Home全部技术/22项成品配方/工厂/销售/FAQ/联系区、About完整商业生产/四项技术/公司数据及Privacy经营主体原文；本网站其余可见产品入口均为同页锚点，没有另行声称读取不存在的22份TDS。实际销售组合是给种植者的生物有机矿质颗粒肥和有机颗粒，公开渠道为工厂直销、农资经销/合作社、商业代表和农艺支持。粘结剂、保水聚合物、腐植/黄腐/植酸、氨基酸及菌株按其自有颗粒的配方组成保留，不能把成品内部使用或独家研发字样当作已证实单独制造/对外销售同功能包衣原料。实际所读公开业务未见向其他肥料厂销售包衣树脂、PU原料、独立粘结/包衣剂或同功能反应型原料；结论仅限已读公开范围，不保证未披露关联业务。未猜测其粘结剂外购、化学结构/聚氨酯身份或所有技术来自我方。About和Home/Privacy对同一BRSAFRAFERTILIZANTESLTDA、CNPJ49.164.076/0001-41、同一工厂地址和业务渠道对应，自述CNPJ并非已做外部工商许可审计。Sforti技术/托管标识不作为集团持股、产品供应或客户身份依据；未从建站链接或经销合作推定母子公司关系。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱和公司电话/WhatsApp；未核实具名采购/研发人员",
+      "email": "contato@brsafra.com.br",
+      "phone": "+55 43 99668-9070",
+      "contactUrl": "https://brsafra.com.br/#contato"
+    },
+    "source": {
+      "label": "Actual official About and current pellet technology: own commercial manufacture, encapsulation and gradual nutrient-release binder",
+      "url": "https://brsafra.com.br/sobre-nos.html"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "br-safra-rolandia": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "fauji-fertilizer-rawalpindi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "petropipe-coatzacoalcos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aksu-axu-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4351,6 +4380,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "br-safra-rolandia": {
+    "website": "https://brsafra.com.br/",
+    "contactPage": "https://brsafra.com.br/#contato",
+    "address": "Av. Esplanada,1221,Parque Industrial Cafezal,Rolândia–PR,CEP86600-585,Brazil. Own Home/FAQ/About identify this as factory/business address and company BR SAFRA FERTILIZANTES LTDA, self-publishedCNPJ49.164.076/0001-41. Map-23.31,-51.37 deliberately approximates Rolândia city/populatedplace fromGeoNames3450964,not ADM2polygon6322961; factory/streetGPSnotverified. 2012research/2021commercialhistory not asserted legal incorporation date. One company/brand/factory account; softwarehosting/agencylink not ownership evidence or namedbuyer.",
+    "generalEmail": "contato@brsafra.com.br",
+    "generalEmailEvidence": {
+      "company": "BR Safra Fertilizantes Ltda.",
+      "value": "contato@brsafra.com.br",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
+          "url": "https://brsafra.com.br/#contato",
+          "summary": "Actual Home Contato E-mail and footer explicitly publish contato@brsafra.com.br as the general company commercial enquiry route; own About Dados da empresa repeats same mailbox with legal name/CNPJ/address. Commercial section is primary evidence, not the Privacy/DPO use of the same inbox. No named employee, procurement responsibility or deliverability inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhone": "+55 43 99668-9070",
+    "generalPhoneEvidence": {
+      "company": "BR Safra Fertilizantes Ltda.",
+      "value": "+55 43 99668-9070",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
+          "url": "https://brsafra.com.br/#contato",
+          "summary": "Actual Home Contato/Telefone prints (43)99668-9070 at the Rolândia factory address; own About explicitly says Telefone e WhatsApp and actual wa.me5543996689070 agrees. Normalized to +55 from verified Brazil address. Published company business route, not private employee/purchasing line; no call or WhatsApp sent."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "contato@brsafra.com.br",
+        "source": {
+          "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
+          "url": "https://brsafra.com.br/#contato"
+        },
+        "emailEvidence": {
+          "company": "BR Safra Fertilizantes Ltda.",
+          "value": "contato@brsafra.com.br",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
+              "url": "https://brsafra.com.br/#contato",
+              "summary": "Actual Home Contato E-mail and footer explicitly publish contato@brsafra.com.br as the general company commercial enquiry route; own About Dados da empresa repeats same mailbox with legal name/CNPJ/address. Commercial section is primary evidence, not the Privacy/DPO use of the same inbox. No named employee, procurement responsibility or deliverability inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official About and current pellet technology: own commercial manufacture, encapsulation and gradual nutrient-release binder",
+        "url": "https://brsafra.com.br/sobre-nos.html"
+      },
+      {
+        "label": "Actual Home: all22finished-pellet product names, four technological roles, own factory/direct sales and business contact",
+        "url": "https://brsafra.com.br/"
+      },
+      {
+        "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
+        "url": "https://brsafra.com.br/#contato"
+      },
+      {
+        "label": "Actual legal operator/CNPJ/address correspondence; Privacy printed update30Sep2026, not procurement-contact role",
+        "url": "https://brsafra.com.br/politica-de-privacidade.html"
+      }
+    ]
+  },
   "fauji-fertilizer-rawalpindi": {
     "website": "https://www.ffc.com.pk/",
     "contactPage": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
@@ -12753,6 +12860,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "br-safra-rolandia",
   "fauji-fertilizer-rawalpindi",
   "petropipe-coatzacoalcos",
   "aksu-axu-antalya",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "br-safra-rolandia": "Your bio-organomineral fertilizer pellets use a binder designed to release nutrients gradually.",
   "fauji-fertilizer-rawalpindi": "Your 2025 annual report records production of neem-coated and zinc-coated Sona urea.",
   "petropipe-coatzacoalcos": "Your DUC-LINE epoxy cement coating is designed to protect pipelines that are buried or submerged.",
   "aksu-axu-antalya": "Your AXUWOOD AQUA PAINT is a water-based acrylic finish for interior and exterior wood surfaces.",
