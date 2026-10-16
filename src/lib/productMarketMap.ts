@@ -4054,11 +4054,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "petropipe-coatzacoalcos",
+    "company": "Petropipe de México S.A. de C.V.",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Coatzacoalcos, Veracruz (approximate city pin; factory location unverified)",
+    "latitude": 18.15,
+    "longitude": -94.43,
+    "legacyCompanyDescription": "墨西哥自行设计制造成品环氧防腐涂层及管道修复封装体系；ELO配方相容性与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Petropipe自身Sobre Nosotros质量政策和体系范围明确设计、制造、商业化、应用及安装成品环氧涂层和机械补强件；公司Home/Contact以Petropipe de México S.A. de C.V.、Coatzacoalcos业务地址及相同联系路线对应。具体DUC-LINE原文为手工施工的防腐环氧水泥型涂层，用于在用管道、拟埋地或浸水管道及接口。不是仅靠LinkedIn行业分类推断制造，也不把喷砂/涂装服务当作原料配方制造。About自述历史起于1997，而LinkedIn字段1985，差异保留，不擅自统一或据此制造2026新投产；动态面积/人数计数HTML为0，未执行脚本且不拿0当实际厂房面积或产能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属排除实际读取完整Home/About/Contact和可见全部产品/服务家族导航、4项防腐涂层索引、2项环氧封装索引、2项防酸涂层索引及DUC-LINE、DUC-FILL ENCAPSULADOS、DUC-FILL TC三个具体原文。真实业务保留成品防腐/防酸环氧体系、管道修复封装、机械包覆/半管/卡箍及工程检测安装服务。DUC-FILL原文是低黏度环氧砂浆/配合物，向在用管道外的压力封装容器环形空间注入或重力浇注，以传力并固定管件；TC是基料+催化剂+固体填料的三组分成品体系，混合后灌入封装结构，不把resina字样自动等同于ELO或同功能增塑/稳定原料供应。其涂层及现场修复复配体系属于下游成品业务；没有用相近名称推定销售ELO/ESBO。实际所读公开范围未见ELO、ESBO、环氧化植物油、生物基增塑/稳定及相似功能输入原料对外销售，结论限定已读业务范围，不保证未披露股权/关联业务。其余DUC-LINE SP/R、DUC-SEALER、H/324仅索引未读详情，不声称全8项单品TDS或全部网站均已详读。没有另行下载PDF或SDS，HTML原始用途足以支持本条。公司自身DUC品牌、Coatzacoalcos/Paraíso/Toluca分支保守一个账户；LinkedIn相似公司栏的美国/UAE同名企业不作为持股证据，未虚构合并集团。"
+    },
+    "contact": {
+      "label": "官网明确公开的公司业务邮箱及总部业务电话；未核实具名采购/研发人员",
+      "email": "ventas@petropipe.com.mx",
+      "phone": "+52 921 214 6602",
+      "contactUrl": "https://www.petropipe.com.mx/contacto/"
+    },
+    "source": {
+      "label": "Actual official DUC-LINE original: anticorrosive epoxy-cement coating for buried/submerged pipelines",
+      "url": "https://www.petropipe.com.mx/2023/02/16/duc-line/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "petropipe-coatzacoalcos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aksu-axu-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "racsa-pinturas-coacalco": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pyrolac-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4293,6 +4322,101 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "petropipe-coatzacoalcos": {
+    "website": "https://www.petropipe.com.mx/",
+    "contactPage": "https://www.petropipe.com.mx/contacto/",
+    "linkedIn": "https://mx.linkedin.com/company/petropipe-de-m%C3%A9xico-s-a-de-c-v",
+    "address": "Public business address: AV. IGNACIO DE LA LLAVE #1124, COLONIA CENTRO, C.P.96400, COATZACOALCOS, VERACRUZ, MÉXICO. Own manufacturing role verified in About; this office address is not asserted to be the coating factory. Map18.15,-94.43 deliberately approximates Coatzacoalcos city from a public Veracruz city reference, not street/plant geocoding or surveyed GPS. Own About1997 versus LinkedIn1985 history disagreement retained; no founding year asserted. DUC product brands and regional branches one account, no external shareholding audit asserted.",
+    "generalEmail": "ventas@petropipe.com.mx",
+    "generalEmailEvidence": {
+      "company": "Petropipe de México S.A. de C.V.",
+      "value": "ventas@petropipe.com.mx",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current official Contact/footer: public company business mailto, address and phone",
+          "url": "https://www.petropipe.com.mx/contacto/",
+          "summary": "Actual native Contact HTML publishes mailto:ventas@petropipe.com.mx%20 in Envelope business links. URL-decoded trailing whitespace removed only; exact mailbox not guessed. Home separately repeats the same public business link. Company commercial route, not a named employee, independently disclosed procurement role, demand or deliverability proof. Actual original read16Oct2026 in W; date preserved, not claimed re-fetched in X."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhone": "+52 921 214 6602",
+    "generalPhoneEvidence": {
+      "company": "Petropipe de México S.A. de C.V.",
+      "value": "+52 921 214 6602",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Home footer public company business phones and exact mailto sales route",
+          "url": "https://www.petropipe.com.mx/",
+          "summary": "Actual Home/footer and Contact footer print +52 (921)2146602 / +52 (921)2145332 beside the company Coatzacoalcos address. First published business line normalized only. General company contact, not private staff phone or a named purchasing department. Contact page24/7repair-service prose not interpreted as procurement urgency."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "ventas@petropipe.com.mx",
+        "source": {
+          "label": "Actual current official Contact/footer: public company business mailto, address and phone",
+          "url": "https://www.petropipe.com.mx/contacto/"
+        },
+        "emailEvidence": {
+          "company": "Petropipe de México S.A. de C.V.",
+          "value": "ventas@petropipe.com.mx",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual current official Contact/footer: public company business mailto, address and phone",
+              "url": "https://www.petropipe.com.mx/contacto/",
+              "summary": "Actual native Contact HTML publishes mailto:ventas@petropipe.com.mx%20 in Envelope business links. URL-decoded trailing whitespace removed only; exact mailbox not guessed. Home separately repeats the same public business link. Company commercial route, not a named employee, independently disclosed procurement role, demand or deliverability proof. Actual original read16Oct2026 in W; date preserved, not claimed re-fetched in X."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official DUC-LINE original: anticorrosive epoxy-cement coating for buried/submerged pipelines",
+        "url": "https://www.petropipe.com.mx/2023/02/16/duc-line/"
+      },
+      {
+        "label": "Actual own About quality-system scope: design/manufacture/commercialization/application of epoxy coatings, corporate name and historical-date discrepancy retained",
+        "url": "https://www.petropipe.com.mx/sobrenosotros/"
+      },
+      {
+        "label": "Current own complete visible product/service-family scope and public business routes",
+        "url": "https://www.petropipe.com.mx/"
+      },
+      {
+        "label": "Actual epoxy-encapsulation index; two selected product originals separately read",
+        "url": "https://www.petropipe.com.mx/epoxicos-para-encapsulados/"
+      },
+      {
+        "label": "Actual DUC-FILL original: formulated epoxy mortar injected/poured into pipeline encapsulation structures",
+        "url": "https://www.petropipe.com.mx/2023/02/16/duc-fill-encapsulados/"
+      },
+      {
+        "label": "Actual DUC-FILL TC original: base/catalyst/solid-filler three-component encapsulation compound",
+        "url": "https://www.petropipe.com.mx/2023/01/16/duc-fill-tc/"
+      },
+      {
+        "label": "Actual antiacid-coating index; H/324 single-product details not read",
+        "url": "https://www.petropipe.com.mx/recubrimientos-antiacidos/"
+      },
+      {
+        "label": "Actual current official Contact/footer: public company business mailto, address and phone",
+        "url": "https://www.petropipe.com.mx/contacto/"
+      }
+    ]
+  },
   "aksu-axu-antalya": {
     "website": "https://aksuboya.com/",
     "contactPage": "https://aksuboya.com/iletisim/",
@@ -12510,6 +12634,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "petropipe-coatzacoalcos",
   "aksu-axu-antalya",
   "racsa-pinturas-coacalco",
   "pyrolac-ciudad-mexico",
