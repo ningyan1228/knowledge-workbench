@@ -3858,11 +3858,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "fieldtech-services-tuas",
+    "company": "Fieldtech Services Pte Ltd",
+    "productId": "elo",
+    "country": "Singapore",
+    "countryZh": "新加坡",
+    "city": "Tuas South / Singapore (company-published map centre)",
+    "latitude": 1.314356,
+    "longitude": 103.627134,
+    "legacyCompanyDescription": "自主制造成品工业及船舶防护涂料的需求侧企业；合作品牌归并一个账户，ELO适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前 Fieldtech 自身完整官网明确 Fieldtech Services Pte Ltd 除防腐/表面防护供应施工外也制造船舶、油气相关涂料，并说明与 Amourshield Coatings、Avance Manufacturing 在 Tuas South 自有工厂/仓库运营。公司页直接链接的 Amourshield 官网独立列同一67R Tuas South地址与Marine产品；AmourGuard ME实际原文明确双组分聚酰胺固化环氧，用于工业及船舶金属防腐。官网页脚明示ACRA198203164H；未冒称独立工商注册审计或品牌股权持有。Fieldtech制造证据来自自身，具体成品应用来自其直接关联品牌原文；马来西亚经销商不能代替这条证据链。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属核验覆盖当前 Fieldtech 全部可见About/Products&Services/Contact及其实际链接 Amourshield Home、Products、Marine、DataSheets、FireProtection、Contact完整原文。对外范围为成品船舶/工业环氧、聚氨酯、防污及防护涂层，另有Carboline及陶瓷衬里品牌代理、施工/检测、配套技术服务；真实代理和应用服务保留。双组分成品体系和polyamide/isocyanate字样不自动变成对外出售相同功能原料。所查可见经营和商品范围未见ELO、ESBO、环氧化植物油、生物增塑/稳定剂或相似功能输入原料销售；结论限实际公开范围，不保证所有未披露业务/关联。Fieldtech、其合作的Amourshield/Avance以及同品牌Wisertech线索只保留一个制造开发账户，不能拆分厂址、品牌、国家经销商造新增；这种保守去重不等于无证声称共同股东或控股。Carboline、Hempel、PPG及其他陶瓷涂层合作供应商的代理/供货关系不自动等同集团股权。Wisertech只称Fieldtech为principal，其Johor自有设施运营法人仍待核清，不另入库。未将未下载的GoogleDrive技术表当完整成分、独立证书或新修订；准确官方HTML已足够支持本条所选事实。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱及电话；未核实具名采购/研发负责人",
+      "email": "info@fieldtechsvs.com",
+      "phone": "+65 6974 5352",
+      "contactUrl": "https://www.fieldtechsvs.com/"
+    },
+    "source": {
+      "label": "Current directly linked Amourshield Marine original: AmourGuard ME two-pack polyamide-cured epoxy for industrial/marine steel; Fieldtech own manufacturing separately verified",
+      "url": "https://www.amourshieldcoating.com/marine"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fieldtech-services-tuas": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "resicolor-sideropolis": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "brasilux-matao": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hm-rubber-pinhais": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4090,6 +4119,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fieldtech-services-tuas": {
+    "website": "https://www.fieldtechsvs.com/",
+    "contactPage": "https://www.fieldtechsvs.com/",
+    "address": "Office:231 Mountbatten Road,#01-06,Singapore397999. Factory/warehouse:Seatown Industrial Center,67R Tuas South Avenue1,Singapore637512, expressly linked to own manufacturing operations. Amourshield company Contact independently gives the same67R address. Coordinates1.314356,103.627134 are the centre of the actual company-published Amourshield map for this shared address, not a surveyed factory entrance. Fieldtech own published ACRA RegistrationNo.198203164H; no registry database lookup claimed.",
+    "generalEmail": "info@fieldtechsvs.com",
+    "generalPhone": "+65 6974 5352",
+    "generalEmailEvidence": {
+      "company": "Fieldtech Services Pte Ltd",
+      "value": "info@fieldtechsvs.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Fieldtech Contact section: exact public company mailbox and telephone, Mountbatten office and Tuas factory/warehouse",
+          "url": "https://www.fieldtechsvs.com/",
+          "summary": "Actual current official Contact explicitly says reach us at info@fieldtechsvs.com. Footer names Fieldtech Services Pte Ltd and ACRA198203164H. General company mailbox, not inferred procurement or named person; no inferred identity from client logos or form placeholders."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Fieldtech Services Pte Ltd",
+      "value": "+65 6974 5352",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Fieldtech Contact section: exact public company mailbox and telephone, Mountbatten office and Tuas factory/warehouse",
+          "url": "https://www.fieldtechsvs.com/",
+          "summary": "Exact+6569745352 explicitly printed in current company Contact. Company public business telephone, not a named employee/private number. Do not substitute Wisertech Malaysia or Amourshield brand channels as Fieldtech ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@fieldtechsvs.com",
+        "source": {
+          "label": "Current official Fieldtech Contact section: exact public company mailbox and telephone, Mountbatten office and Tuas factory/warehouse",
+          "url": "https://www.fieldtechsvs.com/"
+        },
+        "emailEvidence": {
+          "company": "Fieldtech Services Pte Ltd",
+          "value": "info@fieldtechsvs.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official Fieldtech Contact section: exact public company mailbox and telephone, Mountbatten office and Tuas factory/warehouse",
+              "url": "https://www.fieldtechsvs.com/",
+              "summary": "Actual current official Contact explicitly says reach us at info@fieldtechsvs.com. Footer names Fieldtech Services Pte Ltd and ACRA198203164H. General company mailbox, not inferred procurement or named person; no inferred identity from client logos or form placeholders."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current directly linked Amourshield Marine original: AmourGuard ME two-pack polyamide-cured epoxy for industrial/marine steel; Fieldtech own manufacturing separately verified",
+        "url": "https://www.amourshieldcoating.com/marine"
+      },
+      {
+        "label": "Current whole Fieldtech company original: own coatings manufacture, Tuas factory with Amourshield/Avance partners, public registration and business contacts",
+        "url": "https://www.fieldtechsvs.com/"
+      },
+      {
+        "label": "Current directly linked Amourshield full product/data-sheet index; HTML product descriptions actually read, linked PDFs not read",
+        "url": "https://www.amourshieldcoating.com/data-sheets"
+      },
+      {
+        "label": "Current Amourshield Asia-Pacific company address and actual published map, matching Tuas address",
+        "url": "https://www.amourshieldcoating.com/contact-us"
+      }
+    ]
+  },
   "resicolor-sideropolis": {
     "website": "https://resicolor.com.br/",
     "contactPage": "https://resicolor.com.br/contato/",
@@ -11765,6 +11872,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fieldtech-services-tuas",
   "resicolor-sideropolis",
   "brasilux-matao",
   "hm-rubber-pinhais",
