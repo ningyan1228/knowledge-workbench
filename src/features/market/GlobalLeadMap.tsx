@@ -3,21 +3,24 @@ import { divIcon, latLngBounds } from 'leaflet'
 import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip, useMap, useMapEvents } from 'react-leaflet'
 import { leadMapGroups, mapCountryGroups, type LeadMapGroup } from '../../lib/leadMapClusters'
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
+import { leadMapViewport } from '../../lib/leadMapViewport'
 import './GlobalLeadMap.css'
 
-function MapFocus({ target, leads, overviewToken }: { target: PublicLead | null; leads: PublicLead[]; overviewToken: number }) {
+function MapFocus({ target, leads, overviewToken, closeUp }: { target: PublicLead | null; leads: PublicLead[]; overviewToken: number; closeUp: boolean }) {
   const map = useMap()
+  const { bounds: [[south, west], [north, east]], maxZoom } = leadMapViewport(leads, closeUp)
   useEffect(() => {
     const fit = () => {
       map.invalidateSize()
       map.setMinZoom(Math.max(0, Math.log2(map.getSize().x / 256)))
-      if (leads.length) map.fitBounds(latLngBounds(leads.map((lead) => [lead.latitude, lead.longitude])), { padding: [48, 48], maxZoom: 12, animate: false })
-      else map.setView([20, 0], map.getMinZoom())
+      const narrow = map.getSize().x < 500
+      const horizontalPadding = narrow ? 38 : 56
+      map.fitBounds([[south, west], [north, east]], { paddingTopLeft: [horizontalPadding, narrow ? 40 : 72], paddingBottomRight: [horizontalPadding, narrow ? 48 : 36], maxZoom, animate: false })
     }
     fit()
     map.on('resize', fit)
     return () => { map.off('resize', fit) }
-  }, [map, leads, overviewToken])
+  }, [map, south, west, north, east, maxZoom, overviewToken])
   useEffect(() => {
     if (target) map.setView([target.latitude, target.longitude], Math.max(map.getZoom(), 12), { animate: false })
   }, [map, target])
@@ -31,7 +34,7 @@ function escapeHtml(text: string) {
 function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGroup; active: boolean; compact: boolean; onSelect: (group: LeadMapGroup) => void }) {
   const map = useMap()
   const label = `${group.label} · ${group.count} 家`
-  const size = compact ? [72, 46] : [96, 56]
+  const size = compact ? [58, 40] : [96, 56]
   const point = map.latLngToContainerPoint([group.latitude, group.longitude])
   const viewport = map.getSize()
   // Keep edge labels readable without moving the group's geographic anchor.
@@ -40,7 +43,7 @@ function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGro
   const icon = useMemo(() => divIcon({
     className: `lead-map-cluster${compact ? ' is-compact' : ''}${active ? ' is-highlighted' : ''}`,
     html: `<span>${escapeHtml(group.label)}</span><strong>${group.count}<small> 家</small></strong>`,
-    iconSize: compact ? [72, 46] : [96, 56], iconAnchor: [anchorX, anchorY],
+    iconSize: compact ? [58, 40] : [96, 56], iconAnchor: [anchorX, anchorY],
   }), [group.label, group.count, active, compact, anchorX, anchorY])
   return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击筛选并展开`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip>{label} · 点击筛选并展开</Tooltip></Marker>
 }
@@ -85,16 +88,17 @@ function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead
   </>
 }
 
-export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken }: {
+export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false }: {
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
-  onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number;
+  onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number; closeUp?: boolean;
 }) {
   const [showDensity, setShowDensity] = useState(false)
-  return <div className="lead-map-frame">
+  const viewport = leadMapViewport(leads, closeUp)
+  return <div className={`lead-map-frame ${viewport.wide ? 'is-world-framing' : 'is-region-framing'}`}>
     <div className="lead-map-controls"><span>点击聚合点筛选客户 · 放大查看公司</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
     <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
       <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <MapFocus target={selectedLead} leads={leads} overviewToken={overviewToken} />
+      <MapFocus target={selectedLead} leads={leads} overviewToken={overviewToken} closeUp={closeUp} />
       <MapLayers leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} showDensity={showDensity} onSelectLead={onSelectLead} onSelectGroup={onSelectGroup} />
     </MapContainer>
     <p className="lead-map-legend">数字为当前筛选内的公司数，彩色点按产品区分。{showDensity && '黄圈表示各国已核验公开线索数量，位置为客户坐标汇总。'}数量不代表市场规模、成交概率或真实需求量。</p>
