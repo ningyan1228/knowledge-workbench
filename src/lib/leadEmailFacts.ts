@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "unipaint-factory-sungai-bakap": "Your portfolio includes micaceous iron oxide coatings for structural steel corrosion protection and two-component zinc-rich primers.",
   "fieldtech-services-tuas": "Your Amourshield portfolio includes AmourGuard ME, a two-pack epoxy coating for industrial and marine steel protection.",
   "resicolor-sideropolis": "Your Epóxi Power range includes a solvent-based anticorrosive primer for ferrous metal surfaces.",
   "brasilux-matao": "Your Linha 03 is a two-component epoxy-polyamide primer for metal and wood surfaces.",

@@ -3886,11 +3886,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "unipaint-factory-sungai-bakap",
+    "company": "Unipaint Factory Sdn. Bhd.",
+    "productId": "elo",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Sungai Bakap, Penang (company-published approximate coordinates)",
+    "latitude": 5.1969,
+    "longitude": 100.4869,
+    "legacyCompanyDescription": "槟城自主制造成品工业防腐涂料的需求侧企业；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前 Unipaint 自身完整首页明确其为马来西亚工业涂料制造商，在槟城制造并测试防腐体系，提供自有生产、OEM及贴牌制造；正文FAQ明确制造MIO、双组分富锌底漆及双组分聚氨酯等成品。当前完整Products目录独立列明其槟城制造的成品工业/防护涂层，MIO用于结构钢防腐，并有2K Zinc-Rich Primer；也有木器/金属漆、墙面漆及OEM配方生产。官网页脚及自身组织数据明示Unipaint Factory Sdn. Bhd.和1224 Jalan Station、Sungai Bakap槟城地址；未冒称工商数据库审计或独立工厂验厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属排除核验实际完整读取当前自身首页7049字符及完整Products4875字符，包含全部四个公开系列及9个具名成品：MIO、2K Zinc-Rich Primer、2K PU Coating、Ultra Performance、8000 High Gloss、Slate & Wood Finish、Crystal Shine、UNITEX Emulsion和PENTEX Undercoat，另有OEM/贴牌/配色服务。所见批发渠道销售自制成品漆，不能把厂家批发成品自动改判为上游原料同行。所查公开经营和成品范围未见ELO、ESBO、环氧化植物油、生物增塑/稳定剂或同功能输入原料销售；结论仅限实际完整可见范围，不代表所有未披露配方或关联业务保证。未下载具体TDS/SDS，也未把on-request标签或SIRIM自述当已阅读的技术表/独立认证。成品锌底漆、聚氨酯或水性墙面乳胶漆不是ELO/ESBO原料销售证据。仅建一个Unipaint制造账户，旗下产品、OEM、经销商和不同地区服务不拆分新增；未发现证据证明与别的已收录制造集团重合。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及电话；未核实具名采购/研发负责人",
+      "email": "unipaint.factory@gmail.com",
+      "phone": "+60 17-4100 831",
+      "contactUrl": "https://unipaintfactory.com/"
+    },
+    "source": {
+      "label": "Current official complete Unipaint Products range: own Penang manufacture, structural-steel MIO anti-corrosive coating and 2K zinc-rich primer",
+      "url": "https://unipaintfactory.com/products"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "unipaint-factory-sungai-bakap": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fieldtech-services-tuas": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "resicolor-sideropolis": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "brasilux-matao": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4119,6 +4148,76 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "unipaint-factory-sungai-bakap": {
+    "website": "https://unipaintfactory.com/",
+    "contactPage": "https://unipaintfactory.com/",
+    "address": "1224 Jalan Station, Kampung Pengkalan, 14200 Sungai Bakap, Pulau Pinang, Malaysia. Own current company footer/legalName identify Unipaint Factory Sdn. Bhd. Coordinates 5.1969,100.4869 are actual company-published organization JSON-LD for this address and approximate mapping, not independently surveyed factory GPS or entrance. One company including its brands and OEM activities.",
+    "generalEmail": "unipaint.factory@gmail.com",
+    "generalPhone": "+60 17-4100 831",
+    "generalEmailEvidence": {
+      "company": "Unipaint Factory Sdn. Bhd.",
+      "value": "unipaint.factory@gmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Unipaint homepage public business Contact footer and own organization metadata",
+          "url": "https://unipaintfactory.com/",
+          "summary": "Exact public Unipaint corporate Email in homepage footer, decoded from actual Cloudflare HTML and independently matched to own organization JSON-LD. A company-operated Gmail business mailbox, not a guessed address, named employee or procurement role."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Unipaint Factory Sdn. Bhd.",
+      "value": "+60 17-4100 831",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Unipaint homepage public business Contact footer and own organization metadata",
+          "url": "https://unipaintfactory.com/",
+          "summary": "Actual homepage Contact footer explicitly prints +60 17-4100 831 and links the same business WhatsApp. Company general business telephone, not a named employee/private number; WhatsApp link was not contacted."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "unipaint.factory@gmail.com",
+        "source": {
+          "label": "Current official Unipaint homepage public business Contact footer and own organization metadata",
+          "url": "https://unipaintfactory.com/"
+        },
+        "emailEvidence": {
+          "company": "Unipaint Factory Sdn. Bhd.",
+          "value": "unipaint.factory@gmail.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official Unipaint homepage public business Contact footer and own organization metadata",
+              "url": "https://unipaintfactory.com/",
+              "summary": "Exact public Unipaint corporate Email in homepage footer, decoded from actual Cloudflare HTML and independently matched to own organization JSON-LD. A company-operated Gmail business mailbox, not a guessed address, named employee or procurement role."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current official complete Unipaint Products range: own Penang manufacture, structural-steel MIO anti-corrosive coating and 2K zinc-rich primer",
+        "url": "https://unipaintfactory.com/products"
+      },
+      {
+        "label": "Current official complete Unipaint homepage: own Penang manufacture/FAQ, public company address, phone and exact mailbox",
+        "url": "https://unipaintfactory.com/"
+      }
+    ]
+  },
   "fieldtech-services-tuas": {
     "website": "https://www.fieldtechsvs.com/",
     "contactPage": "https://www.fieldtechsvs.com/",
@@ -11872,6 +11971,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "unipaint-factory-sungai-bakap",
   "fieldtech-services-tuas",
   "resicolor-sideropolis",
   "brasilux-matao",
