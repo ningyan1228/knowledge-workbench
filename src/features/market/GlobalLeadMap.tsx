@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { divIcon, latLngBounds } from 'leaflet'
 import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip, useMap, useMapEvents } from 'react-leaflet'
 import { leadMapGroups, mapCountryGroups, type LeadMapGroup } from '../../lib/leadMapClusters'
@@ -18,8 +18,13 @@ function MapFocus({ target, leads, overviewToken, closeUp }: { target: PublicLea
       map.fitBounds([[south, west], [north, east]], { paddingTopLeft: [horizontalPadding, narrow ? 40 : 72], paddingBottomRight: [horizontalPadding, narrow ? 48 : 36], maxZoom, animate: false })
     }
     fit()
-    map.on('resize', fit)
-    return () => { map.off('resize', fit) }
+    let frame = 0
+    const observer = new ResizeObserver(() => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(fit)
+    })
+    observer.observe(map.getContainer())
+    return () => { observer.disconnect(); cancelAnimationFrame(frame) }
   }, [map, south, west, north, east, maxZoom, overviewToken])
   useEffect(() => {
     if (target) map.setView([target.latitude, target.longitude], Math.max(map.getZoom(), 12), { animate: false })
@@ -93,8 +98,31 @@ export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, 
   onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number; closeUp?: boolean;
 }) {
   const [showDensity, setShowDensity] = useState(false)
+  const frameRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const element = frameRef.current
+    if (!element) return
+    let pending = 0
+    const measure = () => {
+      const rect = element.getBoundingClientRect()
+      const scale = element.offsetWidth ? rect.width / element.offsetWidth : 1
+      const legend = element.querySelector<HTMLElement>('.lead-map-legend')
+      const documentTop = rect.top + window.scrollY
+      const available = (window.innerHeight - documentTop - 24) / scale - (legend?.offsetHeight ?? 20) - 10
+      const height = `${Math.max(340, Math.floor(available))}px`
+      if (element.style.getPropertyValue('--lead-map-fill-height') !== height) element.style.setProperty('--lead-map-fill-height', height)
+    }
+    const schedule = () => { cancelAnimationFrame(pending); pending = requestAnimationFrame(measure) }
+    const observer = new ResizeObserver(schedule)
+    observer.observe(element)
+    const workspace = element.closest('.market-workspace-page')
+    if (workspace) observer.observe(workspace)
+    window.addEventListener('resize', schedule)
+    measure()
+    return () => { observer.disconnect(); cancelAnimationFrame(pending); window.removeEventListener('resize', schedule) }
+  }, [])
   const viewport = leadMapViewport(leads, closeUp)
-  return <div className={`lead-map-frame ${viewport.wide ? 'is-world-framing' : 'is-region-framing'}`}>
+  return <div ref={frameRef} className={`lead-map-frame ${viewport.wide ? 'is-world-framing' : 'is-region-framing'}`}>
     <div className="lead-map-controls"><span>点击聚合点筛选客户 · 放大查看公司</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
     <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
       <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

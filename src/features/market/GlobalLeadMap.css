@@ -15,3 +15,4 @@
 .lead-map-frame.is-world-framing .global-lead-map { height:auto;aspect-ratio:2 / 1;min-height:180px;max-height:440px }
 .lead-map-frame.is-region-framing .global-lead-map { height:auto;aspect-ratio:1.65 / 1;min-height:320px;max-height:520px }
 @media(max-width:1100px) { .market-workspace-page .lead-map-frame.is-world-framing .lead-map-controls>span { display:none } }
+@media(min-width:861px) { .market-workspace-page .lead-map-frame .global-lead-map { height:var(--lead-map-fill-height,560px);min-height:340px;max-height:none;aspect-ratio:auto } }
