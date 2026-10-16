@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pyrolac-ciudad-mexico": "Your SUBOX E AR epoxy primer is intended for marine installations, tanks, pipelines and industrial maintenance.",
   "globalcolor-suzano": "Your GLOBALDUR 1290 is a water-based acrylic primer for aluminum and wood.",
   "excel-india-protective-paints-badlapur": "Your industrial paint range includes epoxy systems, polyurethane systems and anti-corrosive heat-resistant coatings.",
   "unipaint-factory-sungai-bakap": "Your portfolio includes micaceous iron oxide coatings for structural steel corrosion protection and two-component zinc-rich primers.",

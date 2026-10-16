@@ -3970,11 +3970,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "pyrolac-ciudad-mexico",
+    "company": "Pyrolac S.A. de C.V.",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Ciudad de México (approximate municipality pin; exactfactorylocation unverified)",
+    "latitude": 19.43,
+    "longitude": -99.13,
+    "legacyCompanyDescription": "墨西哥自主设计研发制造成品工业及船舶防腐涂料的需求侧企业；ELO相容性与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Pyrolac自身完整Empresa原文明示设计、开发及制造工业防腐涂层，1951以来墨西哥企业且总部Ciudad de México；当前Contact和自有privacy进一步对应Pyrolac S.A. de C.V.公司路线。具体SUBOX E AR原文明示云母氧化铁环氧底漆，用于船舶设施、罐体外壁、管道及工业维护；实际链接3页技术表也确认。文件名含12032025，但正文实印Review June2025，保留真实印刷修订而不将文件名当日期或声称2026新修订。自身制造声明可信，不强加无关工商验厂门槛；未把标准分类或代理品牌当所有权。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO专属排除核验实际读自身Home/Empresa、全220个目录标题及各条角色/简介开头、所有实际增塑/亚麻油关键词上下文和选定配套角色块，进一步完整读取PUaccelerator、SUBOX E AR、Contact、Privacy和设备Partners原文及3页SUBOX原始TDS。未声称把119661字符目录全部描述或220份单独TDS读完。公开范围为成品工业环氧/PU/醇酸/水性漆、底漆、地坪、清漆、施工用稀释清洗溶剂、脱漆/表面预处理、固化加速配套与道路反光玻璃微珠；真实配套与设备代理业务保留。实际PU加速剂功能为混合固化剂后缩短PU固化时间，不能因additive一词自动变成ELO相同功能增塑/稳定原料；道路反光玻璃微珠不是同功能植物油添加剂。PYROWET原文是施涂后成膜的成品保护层，resinas plastificantes不是单独增塑树脂销售证据；道路漆配方里plastificantes及一款成品的aceite de linaza仅支持所写成品配方，不等于销售ELO/ESBO或确认使用环氧化亚麻油。所查范围未见ELO、ESBO、环氧化植物油、生物增塑/稳定及相似功能输入原料对外销售；限实际公开范围，不担保未披露关联业务。Partners实际为RTT/Binks/DeVilbiss/Carlisle施工设备代理，不能把设备商母集团关系移植为Pyrolac股权或新客户。CFE/PEMEX是其标准产品类别，不是它归属这些机构或当前采购。一个Pyrolac制造账户归并SUBOX/SUBALOX/PERMANOX/GALVANOX/AQUACOAT/THERMOX/IMPERLAC等品牌和各分支；不拆分厂家/代理/国家造新增。"
+    },
+    "contact": {
+      "label": "官网销售部门及公司通用业务邮箱；未核实具名采购/研发负责人",
+      "email": "ventas@pyrolac.com",
+      "phone": "+52 55 5650 5922",
+      "contactUrl": "https://www.pyrolac.com/contacto/"
+    },
+    "source": {
+      "label": "Actual current official SUBOX E AR epoxy primer original: marine facilities,tanks,pipelines andindustrialmaintenance; originalthreepageTDSread",
+      "url": "https://www.pyrolac.com/producto/subox-e-ar/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pyrolac-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "globalcolor-suzano": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
   "excel-india-protective-paints-badlapur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "unipaint-factory-sungai-bakap": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4206,6 +4235,96 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pyrolac-ciudad-mexico": {
+    "website": "https://www.pyrolac.com/",
+    "contactPage": "https://www.pyrolac.com/contacto/",
+    "address": "Head office:Ciudad de México,Mexico,expressly stated on currentownEmpresa/Contact andprivacyResponsabledeltratamiento identifyingPyrolac S.A. de C.V. No exactstreet/factoryaddressorverifiedfactoryGPSisasserted. Map19.43,-99.13deliberatelyrepresentsapproximateCDMXmunicipality,country/cityscaledmappingconsistentwithworkbenchcitypins,notanothercompanylocationorstreetgeocoding. OnePyrolacmanufacturingaccountwithbrands/regionalbranches; equipmentdistributionalliancesnotassumedownedgroup.",
+    "generalEmail": "pyrolac@pyrolac.com",
+    "generalPhone": "+52 55 5650 5922",
+    "generalEmailEvidence": {
+      "company": "Pyrolac S.A. de C.V.",
+      "value": "pyrolac@pyrolac.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Pyrolac Contact information: separately published sales and corporate mailboxes and CDMXbusiness telephones",
+          "url": "https://www.pyrolac.com/contacto/",
+          "summary": "ActualownContactEmail explicitlylistssecondcorporateaddresspyrolac@pyrolac.com besideventas@pyrolac.com. Both exactstringsrecoveredfromactualbody,noconstructedmailbox. Generalcorporateroute,nopersonalidentityorprocurementrole."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "Pyrolac S.A. de C.V.",
+      "value": "+52 55 5650 5922",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Pyrolac Contact information: separately published sales and corporate mailboxes and CDMXbusiness telephones",
+          "url": "https://www.pyrolac.com/contacto/",
+          "summary": "ActualContactTeléfonos/CDMX explicitlyprints+52 55 5650 5922 beside+52 55 5650 5089. SelectedfirstpublicCDMXbusinessline,noprivatenumberorWhatsAppinference; historicalTDStechnicalphonekeptseparate."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas@pyrolac.com",
+        "source": {
+          "label": "Current official Pyrolac Contact information: separately published sales and corporate mailboxes and CDMXbusiness telephones",
+          "url": "https://www.pyrolac.com/contacto/"
+        },
+        "emailEvidence": {
+          "company": "Pyrolac S.A. de C.V.",
+          "value": "ventas@pyrolac.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official Pyrolac Contact information: separately published sales and corporate mailboxes and CDMXbusiness telephones",
+              "url": "https://www.pyrolac.com/contacto/",
+              "summary": "ActualofficialContactEmail lists ventas@pyrolac.com and pyrolac@pyrolac.com as adjacent entries. Exactventas@ addressisalsoindependentlyprinted inownprivacy,butContactcommercialsource isprimary,notprivacyARCOroleassignedasprocurement. Salesdepartmentbusinessroute,no namedemployee,buyer,demandordeliverabilityinference."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual current official SUBOX E AR epoxy primer original: marine facilities,tanks,pipelines andindustrialmaintenance; originalthreepageTDSread",
+        "url": "https://www.pyrolac.com/producto/subox-e-ar/"
+      },
+      {
+        "label": "Actual ownEmpresa explicitdesign/development/manufacturing and CDMXhead office",
+        "url": "https://www.pyrolac.com/empresa/"
+      },
+      {
+        "label": "Current own privacy operatorPyrolac S.A.deC.V.; bodyprintedlastupdateDecember2024,notcurrentprocurementcontactproof",
+        "url": "https://www.pyrolac.com/aviso-de-privacidad/"
+      },
+      {
+        "label": "Current official Pyrolac Contact information: separately published sales and corporate mailboxes and CDMXbusiness telephones",
+        "url": "https://www.pyrolac.com/contacto/"
+      },
+      {
+        "label": "Currentlinked actualoriginal three-pageSUBOX E AR EnglishTDS,bodyReviewJune2025 despitefilename12032025",
+        "url": "https://www.pyrolac.com/docs/TDS_SUBOX_E_AR_12032025.pdf"
+      },
+      {
+        "label": "Actual PUcuringaccelerator original,not functionalELOplasticizer supplier proof",
+        "url": "https://www.pyrolac.com/producto/acelerador-para-poliuretano/"
+      },
+      {
+        "label": "Actual ownPartners applicationequipment distribution,not manufacturerownership",
+        "url": "https://www.pyrolac.com/partners/"
+      }
+    ]
+  },
   "globalcolor-suzano": {
     "generalEmail": "",
     "website": "https://www.globalcolor.com.br/",
@@ -12179,6 +12298,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pyrolac-ciudad-mexico",
   "globalcolor-suzano",
   "excel-india-protective-paints-badlapur",
   "unipaint-factory-sungai-bakap",
