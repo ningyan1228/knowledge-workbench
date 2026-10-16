@@ -4082,11 +4082,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "fauji-fertilizer-rawalpindi",
+    "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
+    "productId": "fertilizer-coating",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Rawalpindi, Punjab (approximate head-office city pin; coating operations evidenced at Goth Machhi)",
+    "latitude": 33.6,
+    "longitude": 73.05,
+    "legacyCompanyDescription": "FaujiFoundation集团旗下自制苦楝油/锌包覆尿素企业；我方聚氨酯体系适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "FFC本公司在PSX正式披露的2025年报完整原件608页、16632058字节，实际读PDF126/实印124页明确2025年已生产交付苦楝油包覆尿素206KMeT、生产发运锌化尿素51.6KMeT；PDF12/13产品组合对应SonaNeem/ZincCoatedUrea。PDF131/实印129页明确GothMachhi第二条锌包覆尿素线已成功投运，2024年7月30日是批准日期，具体投运日未披露，不能冒作2026新投产。PDF180/实印178页另将聚合物包覆尿素列为ProductsunderTrial，仍是合作研发/田间试验，不当作已量产PU/聚合物包膜线。报告期2025全年，PDF7明确发布于2026年2月23日；读取日期2026年10月16日不改写事件年份。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "公司官网Home本轮HTTP403，因此排除结论基于本公司正式提交交易所的完整原始年报，而不是搜索摘要或403页面。实际完整阅读产品组合/农业服务/集团业务（PDF12–17、22–23）、公司与集团经营范围/合并说明（PDF314–316、434等）及制造/新产品章节；保留真实尿素/DAP生产、SOP/MOP等进口贸易、硼/硫酸锌肥、工业尿素用途，以及电力、食品、银行、水泥、工程服务、关联Agritech尿素/GSSP和PMP磷酸业务。硼/锌商品明确为农用营养肥，不单凭有化学品/工业原料销售就认定为PU包衣原料供应商。PMP磷酸供应DAP生产，不偷换成包衣聚醇/PU树脂销售。实际所读公开业务未见向其他肥料厂家销售包衣树脂、聚氨酯原料或同功能包衣剂；全文关键词检索polyol/polyurethane/diisocyanate/coatingresin等无命中只作定位辅助，不单独作为排除已完成的证明。PDF131/180的LIMUS/抑制剂路线按已试验的成品处理尿素与未来上市计划保留，不认定已对外销售原始抑制剂，也不称已投运当前聚合物线。PDF180披露2025年NCU所需苦楝油多数本地采购，只支持该材料/该年份，不推断当前采购我方聚醇/PU或外部进口接受。结论限已读披露范围，未把608页全文提取等同人审全报告，也不保证全部未披露FaujiFoundation关联业务。FFBL于2024年7月1日合并入FFC并解散，FaujiFoundation为最终母实体，Agritech为37.36%关联公司、PMP为37.5%权益法关联公司，均保守标记关系；不把品牌/厂区/合并前FFBL另计新客户，也不把合资方OCP当然说成FFC全资子公司。"
+    },
+    "contact": {
+      "label": "2025年报于2026年披露的注册总部公开通用邮箱/电话；未核实具名采购/研发人员或投递状态",
+      "email": "ffcrwp@ffc.com.pk",
+      "phone": "+92 51 8450001",
+      "contactUrl": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10"
+    },
+    "source": {
+      "label": "Company-authored FFC Annual Integrated Report2025, PSX original, PDFpage126/printed124: actual neem-oil/zinc-coated urea production; published23Feb2026",
+      "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=126"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fauji-fertilizer-rawalpindi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "petropipe-coatzacoalcos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aksu-axu-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "racsa-pinturas-coacalco": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4322,6 +4351,96 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fauji-fertilizer-rawalpindi": {
+    "website": "https://www.ffc.com.pk/",
+    "contactPage": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
+    "address": "Registered/Head Office: Sona Tower,156 The Mall,Rawalpindi Cantt,Punjab,Pakistan (annual reportPDF10/17/314). Approximate city-map33.60,73.05fromGeoNamesRawalpindi33.59733,73.04790; not street/factoryGPS. ActualmanufacturingplantGothMachhi,Sadiqabad,RahimYarKhan; furtherplantsMirpurMathelo/PortQasimpartofsameaccount. UltimateparentFaujiFoundation; exFFBLmergedintoFFCeffective1Jul2024. AgritechLimited37.36%associated,PMP37.5%associatedandnotforeignoperatingsubsidiary; regionaloffices/SONA/FFBLnotseparateleads. Contactentry is actual public RegisteredOffice page of23Feb2026companyreporthostedatPSX, not a live company contact form; ownHome403 during this read.",
+    "generalEmail": "ffcrwp@ffc.com.pk",
+    "generalEmailEvidence": {
+      "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
+      "value": "ffcrwp@ffc.com.pk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
+          "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
+          "summary": "Actual original PDFpage10, visually inspected, lists ffcrwp@ffc.com.pk specifically under Registered Office,156TheMallRawalpindi,besidewww.ffc.com.pk and corporate telephones. This is distinct from CFO,secretary,investor-relations,sustainabilityfeedback andwhistleblowing inboxes; those are not assigned procurement roles. Public general corporate business route,notnamedemployee/procurement/deliverabilityproof. Reportpublished23Feb2026forFY2025,retrieved/read16Oct2026; live company Home403,notclaimed revalidated via liveContact."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhone": "+92 51 8450001",
+    "generalPhoneEvidence": {
+      "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
+      "value": "+92 51 8450001",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
+          "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
+          "summary": "Same actual Registered Office block visually prints +92-51-8450001, separately fromUAN111332111,fax8459925,CFO/secretary/plants/marketing/auditor/registrarphones. General corporate business line normalized only. Reportpublished23Feb2026,read16Oct2026; no namedbuyer/privatephone/WhatsApp assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "ffcrwp@ffc.com.pk",
+        "source": {
+          "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
+          "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10"
+        },
+        "emailEvidence": {
+          "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
+          "value": "ffcrwp@ffc.com.pk",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
+              "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
+              "summary": "Actual original PDFpage10, visually inspected, lists ffcrwp@ffc.com.pk specifically under Registered Office,156TheMallRawalpindi,besidewww.ffc.com.pk and corporate telephones. This is distinct from CFO,secretary,investor-relations,sustainabilityfeedback andwhistleblowing inboxes; those are not assigned procurement roles. Public general corporate business route,notnamedemployee/procurement/deliverabilityproof. Reportpublished23Feb2026forFY2025,retrieved/read16Oct2026; live company Home403,notclaimed revalidated via liveContact."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Company-authored FFC Annual Integrated Report2025, PSX original, PDFpage126/printed124: actual neem-oil/zinc-coated urea production; published23Feb2026",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=126"
+      },
+      {
+        "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10"
+      },
+      {
+        "label": "Actual original2025 product portfolio/brands, PDF12–13/printed10–11",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=12"
+      },
+      {
+        "label": "Actual group/associate roles and ownership, PDF22–23/printed20–21; no raw-coating-input assertion from genericchemicals",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=22"
+      },
+      {
+        "label": "Actual second zinc-coated urea line commissioned; approval30Jul2024 distinguished from undisclosed commissioning date, PDF131",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=131"
+      },
+      {
+        "label": "Actual localneemoilsourcing and polymer-coated-urea trial stage, PDF180/printed178",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=180"
+      },
+      {
+        "label": "Actual legal/plant operation and ultimateparent, PDF314/printed312; exFFBLmergerPDF315",
+        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=314"
+      }
+    ]
+  },
   "petropipe-coatzacoalcos": {
     "website": "https://www.petropipe.com.mx/",
     "contactPage": "https://www.petropipe.com.mx/contacto/",
@@ -12634,6 +12753,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fauji-fertilizer-rawalpindi",
   "petropipe-coatzacoalcos",
   "aksu-axu-antalya",
   "racsa-pinturas-coacalco",
