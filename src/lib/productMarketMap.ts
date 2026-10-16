@@ -3633,11 +3633,98 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "warnatama-cemerlang-gresik",
+    "company": "PT Warnatama Cemerlang",
+    "productId": "elo",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Gresik (approximate city marker)",
+    "latitude": -7.1667,
+    "longitude": 112.65,
+    "legacyCompanyDescription": "自主制造成品工业涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立重新读取当前 Profile 和首页：PT Warnatama Cemerlang 自述制造 cat、thinner 和 tinta，当前 Contact 分别列 Gresik 与 Tangerang 两家工厂。实际 Products 全文列木器漆、建筑漆、防护漆、地坪、船舶漆、胶粘剂、油墨和稀释剂；其中 Epoxy Filler 的完整原文明确为两组分环氧/聚酰胺防锈底漆，保护金属表面。Zinc Chromate 另为单组分醇酸防锈底漆，两者不混称。Marine Paint 页真实显示多个商品名称和图片库；本轮未把图片内未读技术表当作已核验 TDS。Facilities 请求得到空正文，未将其作成功设施核验；制造和工厂证据来自另行读到的 Profile、首页及 Contact。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO 专属核验覆盖当前完整可见 Products 正文及具体 Epoxy Filler、Zinc Chromate、Marine Paint 页面。所列为成品木器/建筑/工业/船舶/地坪涂料、双组分成品胶粘剂、包装油墨、脱漆剂及有机溶剂稀释剂；配方中的 Alkyd/Acrylic Polyol Resin、环氧和聚酰胺是成品组成描述，不自动改写为该公司出售原料树脂。真实销售稀释剂和胶粘剂保留；未在所查商品中发现以 ELO、ESBO、环氧化植物油、生物增塑剂/稳定剂或相似功能添加剂为原料商品销售的项目，不把全部化工商品都称同行，也不保证未披露关联或所有 SKU 不存在此业务。当前公司/网站/两厂一致，不添加未证实控股母公司。与 PT TAM Victory Cemerlang 仅共享 Cemerlang 单词，不凭此认定同一公司；主体全名、站点、工厂地址分别核对。只核验 ELO 涂料方向，不顺带承诺 NL-W1201 或肥料方向同行排除。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱及公开业务电话；未核实具名采购/研发负责人",
+      "email": "holding@cemerlangpaint.com",
+      "phone": "+62 31 897 8555",
+      "contactUrl": "https://www.cemerlangpaint.com/contact"
+    },
+    "source": {
+      "label": "Current own Epoxy Filler product original: two-component epoxy/polyamide anticorrosive metal primer; manufacturing and operating factories verified separately",
+      "url": "https://www.cemerlangpaint.com/epoxy-filler"
+    },
+    "checkedAt": "2026-10-16"
+  },
+  {
+    "id": "tam-victory-cemerlang-cikarang",
+    "company": "PT TAM Victory Cemerlang",
+    "productId": "elo",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Cikarang (approximate city marker)",
+    "latitude": -6.334,
+    "longitude": 107.161,
+    "legacyCompanyDescription": "自主制造成品工业涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立重新读取当前 About Tam、Facilities、R&D 和 Marine 产品正文：PT TAM Victory Cemerlang 自主生产 Marine/Protective Coating，GIIC Cikarang 设工厂/仓库及内部研发。实际取得官方原始 TAM 395 Coaltar Epoxy 五页技术文件，全部提取正文独立读完，并目视核对第 1、5 页：明确用于驳船、拖船和压载舱，第 5 页将 Pabrik PT TAM Victory Cemerlang 与授权经销商 PT Perintis Proteksi Sejahtera (PERPRO) 分开标识。文件印刷 Edisi Mei 2024；不把文件名 rev_13_9_24 当正文修订日期。原文件所写 USA FORMULATED 不等于美国生产或美国原料来源。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "原待核验缺口为 PERPRO 关联业务范围不可读；本轮已恢复并实际读取其官网首页、当前 Products 完整可见类目和 About PERPRO 原文。PERPRO 自称 PERPRO GROUP，现售范围为牺牲阳极/阴极保护、变压整流器、FRP 包覆、TAM/Jotun/International 成品防护漆及施工、HSS/HDPE/Polyken 包覆带、绝缘接头、检验和修补服务。保留真实制造/经销角色和与 TAM 的关联；本条只计 TAM 制造账户一条，PERPRO 不另新增。未独立确认股权比例，不虚构全资母子关系。TAM 完整可见类目及敏感具体 Metal Repair、Cold Welding、Petrolatum Tape 和 3LPE 原文分别读取：TAM101/102 是双组分金属修补/粘接成品；Petrolatum Tape 的 plasticizer 是蜡浸渍合成纤维包带的配方组分，不是出售散装增塑原料的证据；3LPE 是含液态环氧底涂、热熔胶和交联 PE 的成品管道包覆体系，Melt Stick 为包覆修补件。所查范围未见出售 ELO/ESBO/环氧化植物油/生物增塑稳定剂或同类配方添加剂；不把原料进口用于制造等同原料转售，不声称未披露业务绝对不存在。此结论仅适用 ELO 涂料方向，不据此核清 NL-W1201 的聚烯烃/附着原料边界。2004/2006/2008 不同来源沿革年份未强行统一，不当作新投产项目。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱及公开业务电话；未核实具名采购/研发负责人",
+      "email": "sales.tamvictory@gmail.com",
+      "phone": "+62 823 1007 4107",
+      "contactUrl": "https://www.tam-coating.co.id/Page/Contact-Us.html"
+    },
+    "source": {
+      "label": "Actual official original TAM395 Coaltar Epoxy5-page technical document, printed May2024: marine/barges/tugboats/ballast tanks; page5 separates TAM factory and authorized PERPRO distributor",
+      "url": "https://www.tam-coating.co.id/~file/tam_395_marine_coaltar_epoxy_indo_rev_13_9_24-14d21-1800_415.pdf?b159726--="
+    },
+    "checkedAt": "2026-10-16"
+  },
+  {
+    "id": "mella-paint-tangerang",
+    "company": "PT Mella Paint & Chemicals",
+    "productId": "elo",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Tangerang (approximate city marker)",
+    "latitude": -6.1783,
+    "longitude": 106.6319,
+    "legacyCompanyDescription": "自主制造成品工业涂料的需求侧企业；ELO 配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "独立读取当前自身首页、About、Products、MPEX767 和 Contact 全文：PT Mella Paint & Chemicals 在 Tangerang 自有工厂决定树脂/固化剂配方并生产 MPEX767 SL 环氧自流平地坪涂料，同时提供自有施工团队。当前完整产品页明确 MPEX767 SL 自产，而 UV Coating 是外来成品的终涂施工服务，并非其自产，二者不混淆。实际取得官网当前链接的公司介绍原 PDF 共20页，详细读第4、5、10、14、15、20页，第4和14页目视核对，分别支持自身制造、MPEX767 工业/商业地坪用途和业务联系。官网链接标注2026版；原 PDF 所读页未见独立印刷修订日期，不凭文件名宣布新修订。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "ELO 专属核验覆盖当前完整可见产品组合（自制 MPEX767 SL 系统与非自产 UV Coating 施工）、制造/About 原文、实际原 PDF 的产品服务页及当前具体 MPEX767 页。产品为成品环氧底涂、自流平层和面涂，承接 UV 终涂施工；自身配方使用树脂/固化剂的说明不是向其他配方厂销售同类原料的证据。所查实际范围未见 ELO、ESBO、环氧化植物油、生物增塑稳定剂或相似功能添加剂的原料商品，不将普通环氧成品或施工商都认定为同行。保留 UV 非自产边界，不把该 UV 成品制造商、项目客户或施工区域另增为客户；不保证未披露业务及所有未来 SKU。当前主站明确法定经营名称，PDF简称 PT Mella Paint 与品牌 MPEX767 及同一 Green Ville 地址/电话/邮箱对应，不拆成另一个账户。完整股权/未披露母集团未独立确认，不虚构注册号或母公司。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱及公开业务电话；未核实具名采购/研发负责人",
+      "email": "hi@mellapaint.com",
+      "phone": "+62 811-1185-1767",
+      "contactUrl": "https://mellapaint.com/kontak/"
+    },
+    "source": {
+      "label": "Current own MPEX767 SL original: self-levelling epoxy floor coating produced in its own Tangerang factory; separate product page distinguishes non-manufactured UV finishing service",
+      "url": "https://mellapaint.com/produk/mpex767/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mella-paint-tangerang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "tam-victory-cemerlang-cikarang": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "warnatama-cemerlang-gresik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sniezka-brzeznica": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sooin-suncheon": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "the-paint-depot-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -3857,6 +3944,288 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mella-paint-tangerang": {
+    "website": "https://mellapaint.com/",
+    "contactPage": "https://mellapaint.com/kontak/",
+    "address": "Office: Komp. Green Ville Blok AW No.16, Duri Kepa, Kebon Jeruk, Jakarta Barat11510, Indonesia. Own production is expressly identified as Tangerang, Banten; an exact plant street address was not independently published in read sources. Office and factory are distinguished. Coordinates are an approximate Tangerang city marker, not a surveyed factory point.",
+    "generalEmail": "hi@mellapaint.com",
+    "generalPhone": "+62 811-1185-1767",
+    "generalEmailEvidence": {
+      "company": "PT Mella Paint & Chemicals",
+      "value": "hi@mellapaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://mellapaint.com/kontak/",
+          "summary": "Actual current official Contact explicitly publishes hi@mellapaint.com as a company inquiry channel. Generic business mailbox only; no named owner, procurement/R&D responsibility, deliverability or current buying inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "PT Mella Paint & Chemicals",
+      "value": "+62 811-1185-1767",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://mellapaint.com/kontak/",
+          "summary": "Actual current official Contact publishes this company business telephone; normalized to Indonesia +62 without changing the national digits. Not a named person or an SDS emergency number."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "hi@mellapaint.com",
+        "source": {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://mellapaint.com/kontak/"
+        },
+        "emailEvidence": {
+          "company": "PT Mella Paint & Chemicals",
+          "value": "hi@mellapaint.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+              "url": "https://mellapaint.com/kontak/",
+              "summary": "Actual current official Contact explicitly publishes hi@mellapaint.com as a company inquiry channel. Generic business mailbox only; no named owner, procurement/R&D responsibility, deliverability or current buying inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own MPEX767 SL original: self-levelling epoxy floor coating produced in its own Tangerang factory; separate product page distinguishes non-manufactured UV finishing service",
+        "url": "https://mellapaint.com/produk/mpex767/"
+      },
+      {
+        "label": "Current own manufacturer, factory, formulation and batch-traceability statement",
+        "url": "https://mellapaint.com/"
+      },
+      {
+        "label": "Current own identity, own manufacture and separate application services",
+        "url": "https://mellapaint.com/tentang/"
+      },
+      {
+        "label": "Complete visible current product scope: MPEX767 self-manufactured; UV Coating a finishing service, not own manufacture",
+        "url": "https://mellapaint.com/produk/"
+      },
+      {
+        "label": "Actual20-page company brochure currently linked as2026edition; selectedpages4,5,10,14,15,20read, not all20 or independently printed revision date",
+        "url": "https://mellapaint.com/docs/mella-paint-company-profile-2026.pdf"
+      },
+      {
+        "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+        "url": "https://mellapaint.com/kontak/"
+      }
+    ]
+  },
+  "tam-victory-cemerlang-cikarang": {
+    "website": "https://www.tam-coating.co.id/",
+    "contactPage": "https://www.tam-coating.co.id/Page/Contact-Us.html",
+    "address": "Jl. Cempaka Blok CD No. 6A, Kawasan GIIC, Pasir Ranji, Cikarang Pusat, Indonesia. Current own factory/contact address. PERPRO marketing/distribution office in Sunter is a distinct function, not a second new manufacturing customer. Coordinates are an approximate Cikarang city marker.",
+    "generalEmail": "sales.tamvictory@gmail.com",
+    "generalPhone": "+62 823 1007 4107",
+    "generalEmailEvidence": {
+      "company": "PT TAM Victory Cemerlang",
+      "value": "sales.tamvictory@gmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://www.tam-coating.co.id/Page/Contact-Us.html",
+          "summary": "Actual current official Contact explicitly publishes sales.tamvictory@gmail.com as a company inquiry channel. Generic business mailbox only; no named owner, procurement/R&D responsibility, deliverability or current buying inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "PT TAM Victory Cemerlang",
+      "value": "+62 823 1007 4107",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://www.tam-coating.co.id/Page/Contact-Us.html",
+          "summary": "Actual current official Contact publishes this company business telephone; normalized to Indonesia +62 without changing the national digits. Not a named person or an SDS emergency number."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "sales.tamvictory@gmail.com",
+        "source": {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://www.tam-coating.co.id/Page/Contact-Us.html"
+        },
+        "emailEvidence": {
+          "company": "PT TAM Victory Cemerlang",
+          "value": "sales.tamvictory@gmail.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+              "url": "https://www.tam-coating.co.id/Page/Contact-Us.html",
+              "summary": "Actual current official Contact explicitly publishes sales.tamvictory@gmail.com as a company inquiry channel. Generic business mailbox only; no named owner, procurement/R&D responsibility, deliverability or current buying inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official original TAM395 Coaltar Epoxy5-page technical document, printed May2024: marine/barges/tugboats/ballast tanks; page5 separates TAM factory and authorized PERPRO distributor",
+        "url": "https://www.tam-coating.co.id/~file/tam_395_marine_coaltar_epoxy_indo_rev_13_9_24-14d21-1800_415.pdf?b159726--="
+      },
+      {
+        "label": "Current own finished-coating manufacturing statement",
+        "url": "https://www.tam-coating.co.id/About/About-Tam.html"
+      },
+      {
+        "label": "Current own GIIC Cikarang factory/warehouse statement, not an independently verified capacity audit",
+        "url": "https://www.tam-coating.co.id/About/Facilities.html"
+      },
+      {
+        "label": "Current own in-house R&D statement; no named purchasing person inferred",
+        "url": "https://www.tam-coating.co.id/About/Research-and-Development.html"
+      },
+      {
+        "label": "Current complete visible TAM category list, including FRP and protective-coating systems",
+        "url": "https://www.tam-coating.co.id/Our-Product-and-Service.htm"
+      },
+      {
+        "label": "Recovered actual PERPRO Group homepage, finished coatings/engineering/anode scope and TAM association",
+        "url": "https://www.perintis-proteksi.com/"
+      },
+      {
+        "label": "Recovered actual complete visible PERPRO product category list and anode manufacturing",
+        "url": "https://www.perintis-proteksi.com/Products.htm"
+      },
+      {
+        "label": "TAM101 finished two-component metal repair/bonding material, not raw ELO additive",
+        "url": "https://www.tam-coating.co.id/Our-Product-and-Service/METAL-REPAIR-Solusi-untuk-Penipisan-Besi.html"
+      },
+      {
+        "label": "TAM102 finished cold-welding metal adhesive and pipe-repair system",
+        "url": "https://www.tam-coating.co.id/Our-Product-and-Service/TAM-COLD-WELDINGSolusi-Penambalan-dan-Perbaikan-Struktur-Besi-Tanpa-Proses-Pengelasan.html"
+      },
+      {
+        "label": "Actual petrolatum finished tape formulation includes unspecified plasticizer; not proof of raw-additive sales",
+        "url": "https://www.tam-coating.co.id/Our-Product-and-Service/TAM-sebagai-manufacture-PETROLATUM-TAPE-HDPE-JACKET-SPLASH-GUARD-SYSTEMSolusi-perlindungan-di-Area-Pasang-Surut.html"
+      },
+      {
+        "label": "Actual3LPE/HSS finished multilayer pipe-coating system; no ELO chemistry inferred",
+        "url": "https://www.tam-coating.co.id/Our-Product-and-Service/TAM-sebagai-manufacture-3LPE-Coating-untuk-Elbow-dan-Bending-PipaSolusi-perlindungan-anti-karat-untuk-accesories-pipa.html"
+      },
+      {
+        "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+        "url": "https://www.tam-coating.co.id/Page/Contact-Us.html"
+      }
+    ]
+  },
+  "warnatama-cemerlang-gresik": {
+    "website": "https://www.cemerlangpaint.com/",
+    "contactPage": "https://www.cemerlangpaint.com/contact",
+    "address": "Factory 1: Jl. Raya Sumengko Km. 31,6, Wringin Anom, Gresik, Indonesia. Factory 2 separately published: Jl. Industri VII No. 6, Kel. Pasir Jaya, Kec. Jati Uwung, Tangerang. Both are one PT Warnatama Cemerlang account. Map coordinates are an approximate Gresik city marker, not surveyed factory coordinates.",
+    "generalEmail": "holding@cemerlangpaint.com",
+    "generalPhone": "+62 31 897 8555",
+    "generalEmailEvidence": {
+      "company": "PT Warnatama Cemerlang",
+      "value": "holding@cemerlangpaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://www.cemerlangpaint.com/contact",
+          "summary": "Actual current official Contact explicitly publishes holding@cemerlangpaint.com as a company inquiry channel. Generic business mailbox only; no named owner, procurement/R&D responsibility, deliverability or current buying inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "PT Warnatama Cemerlang",
+      "value": "+62 31 897 8555",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://www.cemerlangpaint.com/contact",
+          "summary": "Actual current official Contact publishes this company business telephone; normalized to Indonesia +62 without changing the national digits. Not a named person or an SDS emergency number."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "holding@cemerlangpaint.com",
+        "source": {
+          "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+          "url": "https://www.cemerlangpaint.com/contact"
+        },
+        "emailEvidence": {
+          "company": "PT Warnatama Cemerlang",
+          "value": "holding@cemerlangpaint.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+              "url": "https://www.cemerlangpaint.com/contact",
+              "summary": "Actual current official Contact explicitly publishes holding@cemerlangpaint.com as a company inquiry channel. Generic business mailbox only; no named owner, procurement/R&D responsibility, deliverability or current buying inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current own Epoxy Filler product original: two-component epoxy/polyamide anticorrosive metal primer; manufacturing and operating factories verified separately",
+        "url": "https://www.cemerlangpaint.com/epoxy-filler"
+      },
+      {
+        "label": "Current own manufacturer Profile and operating history; no inferred new commissioning event",
+        "url": "https://www.cemerlangpaint.com/about"
+      },
+      {
+        "label": "Current complete visible product catalogue and actual product-material roles",
+        "url": "https://www.cemerlangpaint.com/products"
+      },
+      {
+        "label": "Separate current one-component alkyd Zinc Chromate primer original; not confused with Epoxy Filler",
+        "url": "https://www.cemerlangpaint.com/zinc-chromate"
+      },
+      {
+        "label": "Current marine product names and gallery; no unread image-only specification asserted",
+        "url": "https://www.cemerlangpaint.com/marine-paint"
+      },
+      {
+        "label": "Current official company business Contact; exact public mailbox and telephone, independently checked",
+        "url": "https://www.cemerlangpaint.com/contact"
+      }
+    ]
+  },
   "sniezka-brzeznica": {
     "website": "https://sniezkagroup.com/",
     "contactPage": "https://www.sniezka.pl/kontakt/",
@@ -10836,6 +11205,9 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mella-paint-tangerang",
+  "tam-victory-cemerlang-cikarang",
+  "warnatama-cemerlang-gresik",
   "sniezka-brzeznica",
   "sooin-suncheon",
   "the-paint-depot-cape-town",

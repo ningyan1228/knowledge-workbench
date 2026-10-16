@@ -3,6 +3,9 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "mella-paint-tangerang": "Your MPEX767 SL is a self-levelling epoxy floor coating manufactured at your Tangerang factory.",
+  "tam-victory-cemerlang-cikarang": "Your TAM 395 Coaltar Epoxy is a marine coating for barges, tugboats and ballast tanks.",
+  "warnatama-cemerlang-gresik": "Your Epoxy Filler is a two-component epoxy-polyamide primer for protecting metal surfaces against corrosion.",
   "sniezka-brzeznica": "Your VIDARON Lakier Akrylowy is a water-based varnish for indoor wooden furniture and panelling.",
   "sooin-suncheon": "Your ALLINONE COTE 14-14-14+1.5MgO is a coated NPK fertilizer for oil palm nurseries.",
   "the-paint-depot-cape-town": "Your UltraFlex Zinc Phosphate Metal Primer is a water-based coating for prepared steel and industrial metalwork.",
