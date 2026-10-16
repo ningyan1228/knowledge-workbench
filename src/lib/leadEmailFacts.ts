@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "aksu-axu-antalya": "Your AXUWOOD AQUA PAINT is a water-based acrylic finish for interior and exterior wood surfaces.",
   "racsa-pinturas-coacalco": "Your RACSAPOXY Altos Sólidos is a high-solids epoxy primer-finish for direct-to-metal applications, with corrosion protection and abrasion resistance.",
   "pyrolac-ciudad-mexico": "Your SUBOX E AR epoxy primer is intended for marine installations, tanks, pipelines and industrial maintenance.",
   "globalcolor-suzano": "Your GLOBALDUR 1290 is a water-based acrylic primer for aluminum and wood.",

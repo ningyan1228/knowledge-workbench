@@ -4026,11 +4026,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "aksu-axu-antalya",
+    "company": "AKSU Polimer Boya Sanayi İnşaat ve Ticaret Ltd. Şti. (AKSU / AXU / Anatolia Paint)",
+    "productId": "nl-w1201",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Döşemealtı, Antalya",
+    "latitude": 37.073654,
+    "longitude": 30.620515,
+    "legacyCompanyDescription": "Antalya自有工厂制造水性丙烯酸木器成品面漆；NL-W1201配方相容性与采购未确认",
+    "fit": "可开发候选",
+    "signal": "AKSU官网公司历史明确1997年开始制造涂料，并记载Antalya Organize Sanayi Bölgesi自有工厂2006年生产迁入、2007年二期完成；公司自述法人为AKSU Polimer Boya Sanayi İnşaat ve Ticaret Limited Şirketi，AKSU、AXU、Anatolia Paint为其品牌。当前原始AXUWOOD AQUA PAINT页面明确水性、丙烯酸乳液基、室内外木器成品面漆和木材应用；联系页以MERKEZ OFİS–FABRİKA列Antalya同一工厂地址。About中的19年历史、过去7年出口等为未署日期旧叙述，不当作2026年新增产线/投产/采购事件。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "NL-W1201专属排除核验实际读取公司About、当前产品索引完整可见家族文本及全部53条单品链接名称、AXUWOOD AQUA PAINT和名称易混的AXUBINDER OUTDOOR完整原文。可见经营为室内外成品涂料/底漆、水性木器漆/清漆/着色/浸渍产品、腻子、液体隔水材料、粘结/底涂产品、装饰效果漆及合成/工业/环氧成品漆和配套稀释剂。AXUBINDER OUTDOOR实际为丙烯酸共聚分散体基透明墙面成品底漆，按说明加水后刷在混凝土/灰泥/墙体、再覆面漆；不是仅凭Binder/乳液/附着力词就认定销售聚烯烃附着促进原料。About谈高质量原材料是自身生产用料叙述，非原料对外销售证据。在已读公开产品家族、全部可见单品名称与上述选定详情范围内，未见水性聚烯烃乳液、CPO/PO分散或同类配方附着力原料对外销售。保留真实配套溶剂/底漆/粘结等业务，不以名称替代功能核验。未读其余51项详情或全部TDS，不保证所有未披露关联业务，AXUBINDER IC/S仅有索引而不冒称详读。AKSU/AXU/Anatolia Paint由公司原文认定为同一账户，不拆成品牌/工厂/地区新增；未做外部工商或全部股权审计。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及工厂/总部电话；未核实具名采购或研发人员",
+      "email": "info@aksuboya.com",
+      "phone": "+90 242 344 04 34",
+      "contactUrl": "https://aksuboya.com/iletisim/"
+    },
+    "source": {
+      "label": "Current official AXUWOOD AQUA PAINT original: water-based acrylic interior/exterior wood finish",
+      "url": "https://aksuboya.com/urun/axuwood-aqua/"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "aksu-axu-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "racsa-pinturas-coacalco": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pyrolac-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "globalcolor-suzano": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
@@ -4264,6 +4293,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "aksu-axu-antalya": {
+    "website": "https://aksuboya.com/",
+    "contactPage": "https://aksuboya.com/iletisim/",
+    "address": "ORGANİZE SANAYİ BÖLGESİ 2. Kısım 25. Cadde No:1 07190 DÖŞEMEALTI / ANTALYA / TURKEY. Own contact page labels MERKEZ OFİS–FABRİKA and publishes map marker center37.073654,30.620515 matching this address; not surveyed factory-entrance GPS. Company legal name follows own About; AKSU/AXU/Anatolia Paint one account, no external registry/shareholding audit asserted.",
+    "generalEmail": "info@aksuboya.com",
+    "generalEmailEvidence": {
+      "company": "AKSU Polimer Boya Sanayi İnşaat ve Ticaret Ltd. Şti. (AKSU / AXU / Anatolia Paint)",
+      "value": "info@aksuboya.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official head office/factory contact footer: exact public general email and business phones",
+          "url": "https://aksuboya.com/iletisim/",
+          "summary": "Actual same-page native HTML publishes the company general mailbox through data-cfemail. Static decoding yields exactly info@aksuboya.com. Public head-office/factory route; not a named employee, buyer, inferred purchasing department or deliverability proof. Initial text extraction masked the address; actual native HTML was separately retrieved and read16Oct2026."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhone": "+90 242 344 04 34",
+    "generalPhoneEvidence": {
+      "company": "AKSU Polimer Boya Sanayi İnşaat ve Ticaret Ltd. Şti. (AKSU / AXU / Anatolia Paint)",
+      "value": "+90 242 344 04 34",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official head office/factory contact footer: exact public general email and business phones",
+          "url": "https://aksuboya.com/iletisim/",
+          "summary": "Actual MERKEZ OFİS–FABRİKA footer prints 0242 344 04 34 at the Döşemealtı/Antalya/Turkey factory address. Normalized to +90 242 344 04 34. General company business phone, not private/mobile/WhatsApp or a named procurement line. Fax and other published lines not relabeled."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@aksuboya.com",
+        "source": {
+          "label": "Current official head office/factory contact footer: exact public general email and business phones",
+          "url": "https://aksuboya.com/iletisim/"
+        },
+        "emailEvidence": {
+          "company": "AKSU Polimer Boya Sanayi İnşaat ve Ticaret Ltd. Şti. (AKSU / AXU / Anatolia Paint)",
+          "value": "info@aksuboya.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current official head office/factory contact footer: exact public general email and business phones",
+              "url": "https://aksuboya.com/iletisim/",
+              "summary": "Actual same-page native HTML publishes the company general mailbox through data-cfemail. Static decoding yields exactly info@aksuboya.com. Public head-office/factory route; not a named employee, buyer, inferred purchasing department or deliverability proof. Initial text extraction masked the address; actual native HTML was separately retrieved and read16Oct2026."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current official AXUWOOD AQUA PAINT original: water-based acrylic interior/exterior wood finish",
+        "url": "https://aksuboya.com/urun/axuwood-aqua/"
+      },
+      {
+        "label": "Actual official own manufacturing history, Antalya factory, legal company and AKSU/AXU/Anatolia Paint brands; historical dates retained",
+        "url": "https://aksuboya.com/hakkimizda/"
+      },
+      {
+        "label": "Actual complete visible product-family index and53 individual product links; remaining detail pages not read",
+        "url": "https://aksuboya.com/urunler/"
+      },
+      {
+        "label": "Actual AXUBINDER OUTDOOR original: finished acrylic wall primer, applied before topcoat",
+        "url": "https://aksuboya.com/urun/axubinder-outdoor/"
+      },
+      {
+        "label": "Current official head office/factory contact footer: exact public general email and business phones",
+        "url": "https://aksuboya.com/iletisim/"
+      }
+    ]
+  },
   "racsa-pinturas-coacalco": {
     "website": "https://racsapinturas.com.mx/",
     "contactPage": "https://racsapinturas.com.mx/contacto/",
@@ -12399,6 +12510,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "aksu-axu-antalya",
   "racsa-pinturas-coacalco",
   "pyrolac-ciudad-mexico",
   "globalcolor-suzano",
