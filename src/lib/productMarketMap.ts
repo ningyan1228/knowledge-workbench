@@ -3578,11 +3578,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-15"
   },
+  {
+    "id": "sooin-suncheon",
+    "company": "SOOIN Co., Ltd. (ALLINONE COTE)",
+    "productId": "fertilizer-coating",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Suncheon, Jeollanam-do (approximate city marker)",
+    "latitude": 34.95,
+    "longitude": 127.49,
+    "legacyCompanyDescription": "自有聚合物包衣NPK/控释肥制造企业；未确认PU化学体系、我方原料适配或采购",
+    "fit": "可开发候选",
+    "signal": "独立读取当前About：SOOIN在自己的顺天肥料工厂生产ALLINONECOTE控释肥，制造、质量及包装由本企业设施完成，并明确采用聚合物包衣和自有NRM技术。当前两页目录有13个独立成品产品链接，具体14-14-14+1.5MgO产品正文与实际链接的原始两页资料说明全包覆NPK用于油棕苗圃。另实际读取4页SDS：2024-06-21签发，Maker为sooin，制造地址82-101HaeryongIndustrialComplex1-ro与当前Contact/原始目录一致。不是仅凭经销商、散装混配或第三方新闻把包衣制造归给该企业。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-16",
+      "conclusion": "独立审读当前About/Contact、完整两页成品目录与具体产品正文、经销关系及官网实际链接的16页产品目录可见范围：聚合物包衣复合肥、包衣尿素/磷钾镁肥和Silica/Sulfate/Sulphur等Soilplus土壤营养品。目录第15页逐项原图核验；这些成品肥料/矿质土壤产品不是独立PU反应原料或包衣树脂/包衣剂商品。所查范围未发现向肥料工厂销售同类包衣树脂、PU原料或独立包衣剂，不声称未披露集团所有SKU永久无此业务。原sooin.kr站HTTP仅域名占位、HTTPS证书不匹配，未关闭证书验证或假装读取全站；已由可用自有品牌站、原始maker标识SDS和同址目录交叉核实制造经营链。SDS未披露完整包衣化学组成，不据此认定PU或完整配方；其第12节明确包衣不生物降解，未重复泛环保宣传。ALLINONECOTE及Sooin/SOOINCorporation视同一经营账户；海外销售地点/经销商不当作子公司或新制造企业。研究队列Suin/수인顺天肥料线索留作同主体查重关联，未将其另作一家公司入库。"
+    },
+    "contact": {
+      "label": "官方总部通用业务邮箱与电话；未核实具名采购/研发负责人",
+      "email": "sooin@sooin.kr",
+      "phone": "+82 61 921 3801",
+      "contactUrl": "https://www.allinonecote.com/contact"
+    },
+    "source": {
+      "label": "Actual original current-linked two-page ALLINONE COTE14-14-14+1.5MgO product sheet: fully coated controlled-release NPK for oil-palm nursery; current own production and original SDS maker verified separately",
+      "url": "https://cdn.prod.website-files.com/672aae5e3eb53addbe3cf444/684945a024cd7c19ba45e06e_90%2014-14-14.pdf"
+    },
+    "checkedAt": "2026-10-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sooin-suncheon": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "the-paint-depot-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "agrotolia-gubre-kozan": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "unaldi-gubre-menderes": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
@@ -3800,6 +3829,104 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sooin-suncheon": {
+    "website": "https://www.allinonecote.com/",
+    "contactPage": "https://www.allinonecote.com/contact",
+    "address": "82-101, Haeryongsandan 1-ro, Haeryong-myeon, Suncheon-si, Jeollanam-do, Republic of Korea. Current own footer/Headquarters and original product catalogue/SDS maker address. Coordinates are an approximate Suncheon city marker; stray PULIP/Seoul template addresses and inconsistent distributor-map pins were not assigned to this plant.",
+    "generalEmail": "sooin@sooin.kr",
+    "generalPhone": "+82 61 921 3801",
+    "generalEmailEvidence": {
+      "company": "SOOIN Co., Ltd. (ALLINONE COTE)",
+      "value": "sooin@sooin.kr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own SOOIN Headquarters business contact, separately from SDS emergency section",
+          "url": "https://www.allinonecote.com/contact",
+          "summary": "Current official Contact explicitly labels SOOIN Company Headquarters and publishes sooin@sooin.kr. Same company/brand and Suncheon address supported separately by current About and original maker-identified product/SDS. Corporate inquiry only; not a named purchasing/technical mailbox. SDS emergency listing alone is not used as outreach authorization."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "generalPhoneEvidence": {
+      "company": "SOOIN Co., Ltd. (ALLINONE COTE)",
+      "value": "+82 61 921 3801",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own SOOIN Headquarters business contact, separately from SDS emergency section",
+          "url": "https://www.allinonecote.com/contact",
+          "summary": "Current official Contact independently publishes+82-61-921-3801 for SOOIN Company Headquarters. Formatting normalized without changing digits. General business channel, no named owner or purchasing role inferred; the source is not the SDS emergency listing."
+        }
+      ],
+      "verifiedAt": "2026-10-16"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "sooin@sooin.kr",
+        "source": {
+          "label": "Current own SOOIN Headquarters business contact, separately from SDS emergency section",
+          "url": "https://www.allinonecote.com/contact"
+        },
+        "emailEvidence": {
+          "company": "SOOIN Co., Ltd. (ALLINONE COTE)",
+          "value": "sooin@sooin.kr",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Current own SOOIN Headquarters business contact, separately from SDS emergency section",
+              "url": "https://www.allinonecote.com/contact",
+              "summary": "Current official Contact explicitly labels SOOIN Company Headquarters and publishes sooin@sooin.kr. Same company/brand and Suncheon address supported separately by current About and original maker-identified product/SDS. Corporate inquiry only; not a named purchasing/technical mailbox. SDS emergency listing alone is not used as outreach authorization."
+            }
+          ],
+          "verifiedAt": "2026-10-16"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual original current-linked two-page ALLINONE COTE14-14-14+1.5MgO product sheet: fully coated controlled-release NPK for oil-palm nursery; current own production and original SDS maker verified separately",
+        "url": "https://cdn.prod.website-files.com/672aae5e3eb53addbe3cf444/684945a024cd7c19ba45e06e_90%2014-14-14.pdf"
+      },
+      {
+        "label": "Current own About explicitly names SOOIN plant producing CRF and polymer coating/NRM",
+        "url": "https://www.allinonecote.com/about"
+      },
+      {
+        "label": "Current product body: fully coated NPK and specific crop uses; source of the actual original links",
+        "url": "https://www.allinonecote.com/products/14-14-14-1-5-mgo-te-fulvic-acid"
+      },
+      {
+        "label": "Current product catalogue page1; distinct fertilizer grades, not separate companies",
+        "url": "https://www.allinonecote.com/products"
+      },
+      {
+        "label": "Current catalogue page2;13unique product URLs across both pages, shared category repeats deduplicated",
+        "url": "https://www.allinonecote.com/products?999d838b_page=2"
+      },
+      {
+        "label": "Actual currently linked16-page leaflet: detailed visual reading pages2,3,15,16; polymer membrane, finished-fertilizer/Soilplus scope, SOOINCorporation/address; no edition established",
+        "url": "https://cdn.prod.website-files.com/672aae5e3eb53addbe3cf41f/674427aebd1b962b165e3fc6_47e6c687f8c27c2b041c0ba9df6ebacf_Sooin%20leaflet.pdf"
+      },
+      {
+        "label": "Actual original4-page SDS, issue21-Jun-24, maker sooin and same Suncheon plant; coating persistent/nonbiodegradable insection12; not current regulatory certification or full formulation proof",
+        "url": "https://cdn.prod.website-files.com/672aae5e3eb53addbe3cf444/672aae5e3eb53addbe3cf6ec_allinone%20cote_14-14-14%2B1.5Mgo%203M_MSDS.pdf"
+      },
+      {
+        "label": "Current own global sales/distributor list: headquarters, foreign sales locations and branches distinguished; template PULIP contacts excluded",
+        "url": "https://www.allinonecote.com/distributor"
+      },
+      {
+        "label": "Current own SOOIN Headquarters business contact, separately from SDS emergency section",
+        "url": "https://www.allinonecote.com/contact"
+      }
+    ]
+  },
   "the-paint-depot-cape-town": {
     "website": "https://thepaintdepot.co.za/",
     "contactPage": "https://thepaintdepot.co.za/contact-us/",
@@ -10608,6 +10735,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sooin-suncheon",
   "the-paint-depot-cape-town",
   "agrotolia-gubre-kozan",
   "unaldi-gubre-menderes",
