@@ -4360,11 +4360,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "erlac-polydendri",
+    "company": "ER-LAC G.D. Koutlis A.B.E.E.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Polydendri, Attica (coarse approximate town marker; factory entrance not geocoded)",
+    "latitude": 38.2,
+    "longitude": 23.9,
+    "legacyCompanyDescription": "希腊ER-LAC自产防腐涂料及主要自用合成树脂；METAL CARE醇酸成品漆用于金属构件、机械及车体；ELO适配和采购待确认",
+    "fit": "可开发候选",
+    "signal": "ER-LAC自有About原文明示涂料与清漆生产、1974工厂迁至雅典—拉米亚公路34公里处，1976同址建立合成树脂生产，树脂主要供自家漆和清漆使用；1982进入工业及建筑漆生产，当前仍描述自动化制造。当前METAL CARE实际详情是改性防锈醇酸树脂成品漆，用于金属构件、门、栏杆、机械和车体；联系原文以ER-LAC Γ.Δ.ΚΟΥΤΛΗΣ Α.Β.Ε.Ε.明确标注工厂及Polydendri地址。历史1965/1974/1976/1982不是2026投产，官网55年营销语不用于推算当前公司年龄。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "完整实际读取ER-LAC Home、About、METAL CARE、Contact四份原文。自有生产与合成树脂主要自用的业务事实保留，不笼统称其无原料/树脂业务，也不将任何合成树脂自动认定ELO同行。可见完整专业四分区为建筑/施工、家具、汽车修补、Yacht-line，产品搜索分类另列工业和特殊应用；首页完整可见建筑涂料、金属防腐、木器清漆、屋面防水、泳池涂层、木材油等成品及相关名称。实际MetalCare为可直接涂金属的改性醇酸成品漆；页内WS-100/X-22为指定稀释配套，VELATURA/RUST PRIMER为表面底漆，不因oil/resin/primer词推断环氧化植物油、生物基增塑/稳定原料外售。About明确合成树脂产量主要自用而非保证全部自用；其他工业着色业务Search-only不被抹掉或转成完整成分审计。实际已读公开制造业务、可见完整分类和指定成品角色中未见ELO/ESBO/环氧化植物油或同功能生物基增塑稳定输入销售证据。未穷尽全部SKU、树脂成分、集团未披露业务或下载TDS/SDS，不声称全球原料业务全已清查。所见独立公司制造主体与当前工厂业务名一致，ERLACPRO/MetalCare/地区店点作为一个账户，不将名称近似water-lac/Interlac/ADLER商品词当同公司。最新main244、本地258、队列和frontier按精确ER-LAC域名、品牌及Koutlis/ΚΟΥΤΛΗΣ主体核对无同账户；ACCI公司注册日期Search-only未原读，不与1965品牌历史编造对齐。未发现相关ELO原料销售或需要套用的外购例外，不伪造当前采购/实际使用。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱及工厂电话；未核实具名采购或技术负责人",
+      "email": "info@erlac.gr",
+      "phone": "+30 22950 22146",
+      "contactUrl": "https://erlac.gr/epikoinonia/"
+    },
+    "source": {
+      "label": "Actual ER-LAC METAL CARE: anticorrosive alkyd enamel for metal structures, machinery and vehicle bodies",
+      "url": "https://erlac.gr/product/metal-care/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "erlac-polydendri": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "coloria-nokia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "endura-manufacturing-edmonton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "renovo-cookeville": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -4610,6 +4639,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "erlac-polydendri": {
+    "website": "https://erlac.gr/",
+    "contactPage": "https://erlac.gr/epikoinonia/",
+    "address": "Factory:34th km Athens–Lamia National Road (Oropos/Markopoulo junction),19011 Polydendri,Attica,Greece. Actual own Contact explicitly labels factory; About independently places own manufacturing activities at this34km site. Map38.2,23.9 is a coarse approximate town-area marker,not address-geocoded/surveyed factory entrance. Current ultimate beneficial ownership/registry not independently audited; one disclosed ER-LAC/Koutlis manufacturing account,not four professional segments or stores. Telephone range2295022146–149,only linkedfirstvoice selected;fax2295022124 separate.",
+    "generalEmail": "info@erlac.gr",
+    "generalEmailEvidence": {
+      "company": "ER-LAC G.D. Koutlis A.B.E.E.",
+      "value": "info@erlac.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual ER-LAC official factory Contact: explicit general company mailbox and voice telephone, separate fax",
+          "url": "https://erlac.gr/epikoinonia/",
+          "summary": "Official current Contact explicitly identifies ER-LAC Γ.Δ.ΚΟΥΤΛΗΣ Α.Β.Ε.Ε. varnish/paint factory and Email:info@erlac.gr with exact matching mailto. General company business route only, not a named buyer/technical role or deliverability proof. Retailer-hosted old brochure sales@erlac.gr Search-only is not independently promoted."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+30 22950 22146",
+    "generalPhoneEvidence": {
+      "company": "ER-LAC G.D. Koutlis A.B.E.E.",
+      "value": "+30 22950 22146",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual ER-LAC official factory Contact: explicit general company mailbox and voice telephone, separate fax",
+          "url": "https://erlac.gr/epikoinonia/",
+          "summary": "Official Contact labels telephone2295022146–149 with actual tel:+302295022146. Select only exact first linked voice +302295022146, formatted+30 2295022146, not invented expansion of extension/range. Separate Fax2295022124 excluded from voice; dynamic empty tel: placeholder links not treated as contacts. No named/WhatsApp/emergency ownership or call-tested assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@erlac.gr",
+        "source": {
+          "label": "Actual ER-LAC official factory Contact: explicit general company mailbox and voice telephone, separate fax",
+          "url": "https://erlac.gr/epikoinonia/"
+        },
+        "emailEvidence": {
+          "company": "ER-LAC G.D. Koutlis A.B.E.E.",
+          "value": "info@erlac.gr",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual ER-LAC official factory Contact: explicit general company mailbox and voice telephone, separate fax",
+              "url": "https://erlac.gr/epikoinonia/",
+              "summary": "Official current Contact explicitly identifies ER-LAC Γ.Δ.ΚΟΥΤΛΗΣ Α.Β.Ε.Ε. varnish/paint factory and Email:info@erlac.gr with exact matching mailto. General company business route only, not a named buyer/technical role or deliverability proof. Retailer-hosted old brochure sales@erlac.gr Search-only is not independently promoted."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual ER-LAC METAL CARE: anticorrosive alkyd enamel for metal structures, machinery and vehicle bodies",
+        "url": "https://erlac.gr/product/metal-care/"
+      },
+      {
+        "label": "Actual ER-LAC company: own paint manufacture and synthetic-resin plant primarily for own coatings",
+        "url": "https://erlac.gr/schetika-me-emas/"
+      },
+      {
+        "label": "Actual ER-LAC Home: complete visible professional/product families and own anticorrosive finished systems",
+        "url": "https://erlac.gr/"
+      },
+      {
+        "label": "Actual ER-LAC official factory Contact: explicit general company mailbox and voice telephone, separate fax",
+        "url": "https://erlac.gr/epikoinonia/"
+      }
+    ]
+  },
   "coloria-nokia": {
     "website": "https://www.coloria.fi/",
     "contactPage": "https://www.coloria.fi/yhteystiedot/",
@@ -13633,6 +13740,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "erlac-polydendri",
   "coloria-nokia",
   "endura-manufacturing-edmonton",
   "renovo-cookeville",
