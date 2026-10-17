@@ -4222,11 +4222,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "halton-chemical-burlington",
+    "company": "Halton Chemical Inc. (Katilac Coatings)",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Burlington, Ontario (approximate own business-map point; factory entrance unverified)",
+    "latitude": 43.38,
+    "longitude": -79.77,
+    "legacyCompanyDescription": "加拿大Halton自制Katilac水性木器漆；AQUASURF ULTRA丙烯酸底漆用于MDF及硬木；NL-W1201适配与采购待确认",
+    "fit": "可开发候选",
+    "signal": "Halton Chemical官网木器原文明确自己是Katilac Coatings唯一制造商，南安大略工厂制造工业木器漆，包含水性体系；产品原文把Katilac的Burlington与Toronto称为自有分销地点。Katilac公司原文说明其加拿大工业木器品牌及生产历史，当前Waterborne原文明示AQUASURF ULTRA为自交联丙烯酸水性木器底漆，专门用于MDF与硬木；B7725 VISTA为可喷涂或擦涂的水性木器着色成品。Halton联系原文提供Burlington公司地址和独立业务入口。1962制造历史、2007品牌推出均为公司自述历史，不作2026投产或外部工商审计。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取Halton Wood Coatings、Products、Adhesives、Contact及Katilac About、Waterborne六页。Halton完整可见四类为木器涂料/漆、胶黏剂、溶剂、稀释剂；木器品牌完整导航列抗菌涂层、底漆/封闭、预催化面漆、后催化面漆、无甲醛体系、水性体系、着色/擦色，属于成品木器涂层类别。已读水性详情AQUASURF ULTRA是直接涂木材的丙烯酸底漆，B7725是可喷擦并调色的着色成品，不把primer/base词直接等同向涂料厂外售附着促进原料。胶黏剂原文明示contact adhesives用于材料粘接，HC7382是用于聚氨酯泡棉粘接的合成弹性体成品胶；聚氨酯在此是被粘基材，不是已证PU/PO原料销售。溶剂/稀释剂业务是实际保留的其他化工投入业务，但不因销售任何原料就认定其销售水性PO/CPO或同功能附着促进输入。在实际六页完整公开品类及两项水性/一项胶黏剂角色范围内，未见水性聚烯烃乳液、CPO/PO分散或同功能配方附着促进原料外售。三条当前Search亦用于查潜在相反线索，不把无搜索命中当排除证据；Search返回的完整溶剂清单、Stains/Glazes、FIBRESET技术PDF和troubleshooting均未作原文阅读，flow additive建议不等于外售PO输入，不夸称审核全部TDS/化学成分/未披露关联业务。Halton明确制造并拥有Katilac渠道，品牌及两城市按同一账户；名称相近的芬兰HVAC Halton Group域名halton.com并非已证关联，不能继承其集团/收购关系。没有已证相关输入销售或独立外购例外需要凭空补写；结论仅限实际已读公开范围。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱与北美免费业务电话；未核实具名采购或研发",
+      "email": "haltonchemical@haltonchemical.com",
+      "phone": "+1 877 231 8954",
+      "contactUrl": "https://haltonchemical.com/contact-us/"
+    },
+    "source": {
+      "label": "Actual Katilac Waterborne Coatings: AQUASURF ULTRA waterborne acrylic primer for MDF and hardwoods; finished wood-coating system",
+      "url": "https://katilaccoatings.com/water-based-products.htm"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "halton-chemical-burlington": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "unicoat-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "isma-de-mexico-puebla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cbr-products-port-coquitlam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4467,6 +4496,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "halton-chemical-burlington": {
+    "website": "https://haltonchemical.com/",
+    "contactPage": "https://haltonchemical.com/contact-us/",
+    "address": "840 Appleby Line, Burlington, ON L7L 2Y7, Canada. Exact own Contact business address; own Google embed is named Halton Chemical Inc and its viewport center is43.376506,-79.767083. Rounded43.38,-79.77 is approximate business-map location, not surveyed factory-entrance GPS or a separate verified production site. Halton own manufacturing statement independently establishes southern-Ontario wood-coating production. Katilac brand/Toronto/Burlington distribution locations one maker account; no external registry or ultimate shareholding audit. Phone905-637-8918 has explicit fax icon, not selected as voice.",
+    "generalEmail": "haltonchemical@haltonchemical.com",
+    "generalEmailEvidence": {
+      "company": "Halton Chemical Inc. (Katilac Coatings)",
+      "value": "haltonchemical@haltonchemical.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Halton Contact: explicit general business email, toll-free telephone, Burlington address; separate fax icon",
+          "url": "https://haltonchemical.com/contact-us/",
+          "summary": "Actual official Contact prints exact haltonchemical@haltonchemical.com with matching mailto and Halton Chemical business name/address. General company mailbox, not a named procurement/R&D person or deliverability confirmation. Katilac Search-only info/orders/sales mailboxes not substituted or independently verified in this batch."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+1 877 231 8954",
+    "generalPhoneEvidence": {
+      "company": "Halton Chemical Inc. (Katilac Coatings)",
+      "value": "+1 877 231 8954",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Halton Contact: explicit general business email, toll-free telephone, Burlington address; separate fax icon",
+          "url": "https://haltonchemical.com/contact-us/",
+          "summary": "Actual official Contact independently prints 1-877-231-8954 with matching tel hyperlink, repeated own wood/products/adhesives pages. North American toll-free business route normalized+1 8772318954, not a direct local/mobile/WhatsApp number or proof reachable from every overseas location. Nearby905-637-8918 explicitly has fa-fax icon and is not selected as voice."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "haltonchemical@haltonchemical.com",
+        "source": {
+          "label": "Actual Halton Contact: explicit general business email, toll-free telephone, Burlington address; separate fax icon",
+          "url": "https://haltonchemical.com/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Halton Chemical Inc. (Katilac Coatings)",
+          "value": "haltonchemical@haltonchemical.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual Halton Contact: explicit general business email, toll-free telephone, Burlington address; separate fax icon",
+              "url": "https://haltonchemical.com/contact-us/",
+              "summary": "Actual official Contact prints exact haltonchemical@haltonchemical.com with matching mailto and Halton Chemical business name/address. General company mailbox, not a named procurement/R&D person or deliverability confirmation. Katilac Search-only info/orders/sales mailboxes not substituted or independently verified in this batch."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual Katilac Waterborne Coatings: AQUASURF ULTRA waterborne acrylic primer for MDF and hardwoods; finished wood-coating system",
+        "url": "https://katilaccoatings.com/water-based-products.htm"
+      },
+      {
+        "label": "Actual Halton industrial wood-coating page: sole manufacturer of Katilac and own waterborne industrial wood systems",
+        "url": "https://haltonchemical.com/wood-coatings-lacquers/"
+      },
+      {
+        "label": "Actual Halton full visible four-family products and own Katilac distribution locations",
+        "url": "https://haltonchemical.com/products/"
+      },
+      {
+        "label": "Actual Katilac About: Canadian wood-coating brand and southern-Ontario manufacture history",
+        "url": "https://katilaccoatings.com/about-us.htm"
+      },
+      {
+        "label": "Actual Halton Adhesives: finished contact adhesives and HC7382 foam-bonding role, not unproven raw PO",
+        "url": "https://haltonchemical.com/adhesives/"
+      },
+      {
+        "label": "Actual Halton Contact: explicit general business email, toll-free telephone, Burlington address; separate fax icon",
+        "url": "https://haltonchemical.com/contact-us/"
+      }
+    ]
+  },
   "unicoat-monterrey": {
     "website": "https://www.unicoat.mx/",
     "contactPage": "https://www.unicoat.mx/contact-6",
@@ -13169,6 +13284,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "halton-chemical-burlington",
   "unicoat-monterrey",
   "isma-de-mexico-puebla",
   "cbr-products-port-coquitlam",
