@@ -4194,11 +4194,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "unicoat-monterrey",
+    "company": "Pinturas y Recubrimientos UNICOAT, S.A. de C.V.",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Monterrey, Nuevo León",
+    "latitude": 25.7116185,
+    "longitude": -100.3609011,
+    "legacyCompanyDescription": "墨西哥自有实验室开发制造工业环氧及防腐涂料；ELO配方相容性和采购待确认",
+    "fit": "可开发候选",
+    "signal": "UNICOAT官网完整Home明确其为墨西哥工业涂料制造商，自有配方实验室，主营开发和制造表面保护/涂装产品；自身介绍及联系页均使用Pinturas y Recubrimientos UNICOAT,S.A.deC.V.法人自称。实际Industrial原文明确自主开发工业涂层，配方实验室可定制，工业环氧用于地坪、机械和金属表面，防腐涂层用于重工业腐蚀环境及金属结构保护。完整产品目录三页覆盖全部60个公开条目，含环氧/聚氨酯、防腐/高温/工业防水与成品涂装体系，不以普通装饰墙漆或施工承包商身份推断资格。2009年为公司自述历史，未独立工商审计，也不是2026年新投产证明；现经营地址和自有实验室不冒称实测工厂入口或现产能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取Home/Industrial/Contact及AllProducts三页，核对24+24+12=60个唯一产品链接及全部可见家族分类，未只看首屏。所见为环氧封闭/修补/砂浆/成品面漆，工业聚氨酯，防腐/高温/标线/防滑、建筑乳胶/丙烯酸/防水和封闭等成品体系；销售成套Base+Cat.及部分填料的施工材料，不因环氧、聚氨酯、Catalizador或树脂相关字样自动判作ELO同类原料。Home原材料环保表述是自身配方投入，不是对外销售环氧化油的证据。在完整已读公开产品家族、60项名称/规格形式、公司制造及工业用途范围内，未见ELO、ESBO、环氧化植物油、生物基增塑剂或同功能配方添加原料对外销售。未读60份单品详情、全部SDS/TDS或未披露关联业务，结论限上述实际公开范围，不声称审计全部化学成分或所有股权。UNICOAT/MX域名、官网自述法人和同址品牌/各系列/颜色/规格按一家公司，不把60产品或其应用行业拆为新客户。没有将其他国家同名企业并入该公司，也不臆造母公司。"
+    },
+    "contact": {
+      "label": "官网公开Sales部门邮箱和公司电话；未核实具名采购或技术人员",
+      "email": "Ventas@unicoat.mx",
+      "phone": "+52 81 8371 6729",
+      "contactUrl": "https://www.unicoat.mx/contact-6"
+    },
+    "source": {
+      "label": "Actual official Industrial original: own formulation laboratory, industrial epoxy and anticorrosion protective coatings",
+      "url": "https://www.unicoat.mx/industrial"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "unicoat-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "isma-de-mexico-puebla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cbr-products-port-coquitlam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "br-safra-rolandia": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
@@ -4438,6 +4467,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "unicoat-monterrey": {
+    "website": "https://www.unicoat.mx/",
+    "contactPage": "https://www.unicoat.mx/contact-6",
+    "address": "Adolfo Ruiz Cortines No.4123 Pte.,Abraham Lincoln2°Sec,Monterrey,Nuevo León,México,C.P.64310. Own Contact runtime public businessName is Pinturas y Recubrimientos Unicoat SA de CV and businessLocationCoordinates25.7116185,-100.3609011. Published business-location point matching own address, not independently surveyed factory entrance. Self-disclosed legal name/2009history not external registry or complete shareholding audit. One company for all60product entries/brands/colours/kit sizes. Footer Sales mailbox exact Ventas@unicoat.mx used; central clickable-mail placeholder info@misitio.com rejected. Second central phone is footer fax, not selected.",
+    "generalEmail": "",
+    "generalPhone": "+52 81 8371 6729",
+    "generalPhoneEvidence": {
+      "company": "Pinturas y Recubrimientos UNICOAT, S.A. de C.V.",
+      "value": "+52 81 8371 6729",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official Contact footer and Home corroboration: exact Sales mailbox, business phone and Monterrey address",
+          "url": "https://www.unicoat.mx/contact-6",
+          "summary": "Actual Contact central text and footer/Home independently print (81)8371-6729 for the Monterrey/Mexico business. Normalized +52 81 8371 6729. Contact central text also lists8171-6782 as telephone, but every footer identifies it Fax, so not selected as business voice line. Published WhatsApp+528120700541 is a separate route, not merged into the voice number or contacted. No private employee or named buyer inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "Ventas@unicoat.mx",
+        "source": {
+          "label": "Actual official Contact footer and Home corroboration: exact Sales mailbox, business phone and Monterrey address",
+          "url": "https://www.unicoat.mx/contact-6"
+        },
+        "emailEvidence": {
+          "company": "Pinturas y Recubrimientos UNICOAT, S.A. de C.V.",
+          "value": "Ventas@unicoat.mx",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual official Contact footer and Home corroboration: exact Sales mailbox, business phone and Monterrey address",
+              "url": "https://www.unicoat.mx/contact-6",
+              "summary": "Actual Contact footer explicitly prints Ventas@unicoat.mx with matching mailto:Ventas@unicoat.mx; Home and Industrial repeat the same exact uppercase-local-part business mailbox and company/address. Contact central text prints lowercase ventas@unicoat.mx but its hyperlink incorrectly targets info@misitio.com; this placeholder is not a valid company recipient and is not used. Exact footer spelling retained. Public Sales department, not named purchasing/technical person or deliverability proof."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official Industrial original: own formulation laboratory, industrial epoxy and anticorrosion protective coatings",
+        "url": "https://www.unicoat.mx/industrial"
+      },
+      {
+        "label": "Actual Home: self-disclosed legal operator, own laboratory and manufacturer role, whole visible business family scope",
+        "url": "https://www.unicoat.mx/"
+      },
+      {
+        "label": "Actual catalogue page1:24of60 finished-coating entries and complete category navigation",
+        "url": "https://www.unicoat.mx/category/all-products"
+      },
+      {
+        "label": "Actual catalogue page2:next24finished-coating entries",
+        "url": "https://www.unicoat.mx/category/all-products?page=2"
+      },
+      {
+        "label": "Actual catalogue page3:last12entries, verified end of60-item collection",
+        "url": "https://www.unicoat.mx/category/all-products?page=3"
+      },
+      {
+        "label": "Actual official Contact footer and Home corroboration: exact Sales mailbox, business phone and Monterrey address",
+        "url": "https://www.unicoat.mx/contact-6"
+      }
+    ]
+  },
   "isma-de-mexico-puebla": {
     "website": "https://ismademexico.com.mx/",
     "contactPage": "https://ismademexico.com.mx/contacto",
@@ -13068,6 +13169,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "unicoat-monterrey",
   "isma-de-mexico-puebla",
   "cbr-products-port-coquitlam",
   "br-safra-rolandia",
