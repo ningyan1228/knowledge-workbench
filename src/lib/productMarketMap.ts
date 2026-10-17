@@ -4444,11 +4444,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "van-wijhe-verf-zwolle",
+    "company": "Koninklijke Van Wijhe Verf B.V. (Ralston / Wijzonol)",
+    "productId": "nl-w1201",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Zwolle (approximate town marker; factory entrances not geocoded)",
+    "latitude": 52.5,
+    "longitude": 6.1,
+    "legacyCompanyDescription": "荷兰VanWijhe自产Ralston/Wijzonol涂料；AquaAllPrimerBIO为室内外木材水性底漆；NL-W1201配方适配和采购待确认",
+    "fit": "可开发候选",
+    "signal": "当前集团OurBrands原文明示在Zwolle自有工厂制造和供应涂料，并列Wijzonol、Ralston、TintingSystems、Rebel和Solidlux。实际Ralston Aqua All-Primer BIO原文明确该底漆为室内外水性产品、适用基材含木材，使用刷/辊；同页明确Ralston涂料均由Koninklijke Van Wijhe Verf在Zwolle自产。公司自述为独立家族企业；Mooij为批发网络、Wydo为创新业务。非将普通墙面漆或经销商推成水性木器配方厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取五份成功原文：VanWijheHome/About/OurBrands、RalstonCoatings与具体AquaAllPrimerBIO；另一次AnkerStuy403未读且计入上限。集团公开可见品牌保留Wijzonol专业/木作工业配套、Ralston成品漆、RalstonTintingSystems对外色浆、Rebel内外墙/木器成品、SolidluxUV地坪、Mooij涂料批发和Wydo创新业务，不称公司无化学原料/无B2B输入业务。Ralston当前四类产品导航为墙漆、清漆/油漆、底漆、色浆；基材筛选木材/石材/金属/塑料不是所有产品都适用，更不将泛塑料扩成PP/PE。实际AquaAllPrimer为刷辊施工的填充型水性底漆/重涂底层；adhesive primer指该成品角色，未见作为其他涂料配方的附着促进原料出售。已读成品配方研发及公开分类/色浆功能中未见水性聚烯烃乳液、CPO/PO分散或同功能附着促进输入外售证据；公开植物油基生物丙烯酸酯/结合剂研发不是其外售聚烯烃原料证明。未穷尽Wydo/Mooij及其他全球关联每个SKU/TDS/SDS或所有结合剂化学组成，不给全世界原料业务清白保证。当前无相关输入销售证据，不虚构外购例外；未确认NL-W1201相容/采购。公司与Ralston/Wijzonol等关联品牌只一个荷兰账户，原文两个KVK05057080(公司页)/05063230(Ralston页)如实保留，未原读商事登记以归一其法律主体或持股比例。最新main247/本地261/私有队列/frontier按全部品牌、域名、地址和KVK去重无匹配，16个Mooij分店和1000多个销售点不计作工厂或新增。"
+    },
+    "contact": {
+      "label": "公司官网页脚公开通用业务邮箱与品牌共用电话；未核实采购/研发个人",
+      "email": "info@vanwijheverf.com",
+      "phone": "+31 38 4291100",
+      "contactUrl": "https://vanwijheverf.nl/en/contact-2/"
+    },
+    "source": {
+      "label": "Ralston Aqua All-Primer BIO: waterborne interior/exterior primer for wood; all Ralston paints made in Zwolle by Koninklijke Van Wijhe Verf",
+      "url": "https://www.ralstoncolour.com/en/aqua-all-primer-bio/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "van-wijhe-verf-zwolle": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "nowocoat-kolding": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "flugger-group-roedovre": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "erlac-polydendri": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4697,6 +4726,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "van-wijhe-verf-zwolle": {
+    "website": "https://vanwijheverf.nl/en/home-english/",
+    "contactPage": "https://vanwijheverf.nl/en/contact-2/",
+    "address": "Russenweg14,8041ALZwolle,Netherlands:actualcorporatefooteraddress. OwnbrandsandRalstonproductindependentlyattributeproductiontoZwolle;notproofeachfactoryisthisexactstreetaddress. Marker52.5,6.1approximatecityonly,notfactoryentranceGPS. CorporatepagesKVK05057080 andRalstonfooterKVK05063230 keptasdistinctpublishednumberswithoutinventedlegalreconciliation/percentages. One disclosedmanufacturingbrandgroupaccount;not16wholesalebranchesor1000dealers.",
+    "generalEmail": "info@vanwijheverf.com",
+    "generalEmailEvidence": {
+      "company": "Koninklijke Van Wijhe Verf B.V. (Ralston / Wijzonol)",
+      "value": "info@vanwijheverf.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Van Wijhe official About footer: general business mailbox and company phone; contact-page URL from actual navigation",
+          "url": "https://vanwijheverf.nl/en/about-us/",
+          "summary": "Actual corporate About footer explicitly lists Royal Van Wijhe Verf BV,Russenweg14,Zwolle,info@vanwijheverf.com and exact mailto. General company mailbox only. CurrentcorporateHome andOurBrands independentlyrepeat sameemail. Contact-pagebody not fetched;proofcomesfromtheseactualcompanyfooters,notguessedcontactcontent. No named purchasing/technical identity or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+31 38 4291100",
+    "generalPhoneEvidence": {
+      "company": "Koninklijke Van Wijhe Verf B.V. (Ralston / Wijzonol)",
+      "value": "+31 38 4291100",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Ralston Aqua All-Primer BIO: waterborne interior/exterior primer for wood; all Ralston paints made in Zwolle by Koninklijke Van Wijhe Verf",
+          "url": "https://www.ralstoncolour.com/en/aqua-all-primer-bio/",
+          "summary": "Actual Ralston Aqua All-Primer original footer explicitly says Question?Contact us Or call+31384291100; samebodyattributesallRalstonproductiontoVanWijheZwolle. CorporateAbout independentlyprints+31(0)384291100. Store exact international+31384291100 printedinproductpage,notguessedphone/emailpattern,personal/mobile/WhatsApporcall-testedroute."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@vanwijheverf.com",
+        "source": {
+          "label": "Van Wijhe official About footer: general business mailbox and company phone; contact-page URL from actual navigation",
+          "url": "https://vanwijheverf.nl/en/about-us/"
+        },
+        "emailEvidence": {
+          "company": "Koninklijke Van Wijhe Verf B.V. (Ralston / Wijzonol)",
+          "value": "info@vanwijheverf.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Van Wijhe official About footer: general business mailbox and company phone; contact-page URL from actual navigation",
+              "url": "https://vanwijheverf.nl/en/about-us/",
+              "summary": "Actual corporate About footer explicitly lists Royal Van Wijhe Verf BV,Russenweg14,Zwolle,info@vanwijheverf.com and exact mailto. General company mailbox only. CurrentcorporateHome andOurBrands independentlyrepeat sameemail. Contact-pagebody not fetched;proofcomesfromtheseactualcompanyfooters,notguessedcontactcontent. No named purchasing/technical identity or deliverability assertion."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ralston Aqua All-Primer BIO: waterborne interior/exterior primer for wood; all Ralston paints made in Zwolle by Koninklijke Van Wijhe Verf",
+        "url": "https://www.ralstoncolour.com/en/aqua-all-primer-bio/"
+      },
+      {
+        "label": "Actual Van Wijhe Our Brands: own Zwolle factories and complete disclosed visible group brands/input colour-paste role",
+        "url": "https://vanwijheverf.nl/en/our-brands/"
+      },
+      {
+        "label": "Actual Ralston Coatings: visible product families and substrate filters, not all-SKU substrate claims",
+        "url": "https://www.ralstoncolour.com/en/coatings"
+      },
+      {
+        "label": "Current corporate Home: independent family manufacturer/wholesale and innovation branches",
+        "url": "https://vanwijheverf.nl/en/home-english/"
+      },
+      {
+        "label": "Van Wijhe official About footer: general business mailbox and company phone; contact-page URL from actual navigation",
+        "url": "https://vanwijheverf.nl/en/about-us/"
+      }
+    ]
+  },
   "nowocoat-kolding": {
     "website": "https://nowocoat.com/en/",
     "contactPage": "https://nowocoat.com/en/contact-us/",
@@ -14020,6 +14131,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "van-wijhe-verf-zwolle",
   "nowocoat-kolding",
   "flugger-group-roedovre",
   "erlac-polydendri",
