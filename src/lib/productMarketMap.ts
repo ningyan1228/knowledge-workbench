@@ -4500,11 +4500,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "jansen-ahrweiler",
+    "company": "P. A. Jansen GmbH u. Co., KG",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Ahrweiler (approximate town marker; factory entrance not geocoded)",
+    "latitude": 50.5,
+    "longitude": 7.1,
+    "legacyCompanyDescription": "德国 Jansen 自有涂料研发制造；Aqua Isolier- und Haftgrund 为适用木材的水性底漆；原料配方适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Jansen 当前官方首页说明自产清漆、木器涂料和专用涂层；Wir sind Jansen 原文明确在自有实验室研发并将新原材料配成可上市涂料。实际 Aqua Isolier- und Haftgrund 产品页明确为水性底漆，吸收性适用基材包括木材，刷/辊/喷施工，结合剂为阳离子分散体系。公司当前资料称 Ahrweiler 家族涂料企业；不是把销售商或通用产品导航当作自有木器配方证据。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取 Jansen 官方首页、研发介绍、全部可见九类产品导航、具体水性木材底漆、公司联系页和公司资料六页。可见九类为腻子、隔离底漆/附着底漆、金属效果/防护、标线、地坪、木器清漆、白色/彩色漆、Office 漆及创意涂层；具体底漆页可见该类多项成品清单。Aqua Isolier- und Haftgrund 按包装及刷辊喷用途为施工成品底漆，不能因 Haftgrund 字样把它当作出售给涂料配方商的原料附着促进剂；其阳离子结合剂也不被猜作 PO/CPO。Search 发现的 Additiv R 防滑配套和 Jansen MIX 调色业务如实保留，不称企业只卖成品、不卖任何添加品；Search 中防滑剂原页/PDF并未读取，未据未读成分作相容保证。已读制造研发及公开九类业务/具体底漆范围内，未见水性聚烯烃乳液、CPO/PO 分散或同功能附着促进原料外售证据；防滑功能本身不同于所选附着促进输入。未穷尽所有 SKU、关联站、TDS/SDS、法律登记与未披露业务，不给全球原料业务保证；亦不推断已外购或使用我方材料。德国 P.A.Jansen/Ahrweiler/JansenLacke/Ahrweilit 及公开公司域名按一个账户核对最新 main249、本地263、私有队列/frontier 无同一主体匹配；瑞士 Oberriet 的 JansenAG 金属系统公司只是同名，不因 Wikipedia Search 结果误合并。当前家族企业自述不被扩成已审计持股比例；2021 洪灾旧照片不被当成2026新投产或工厂停产证明。"
+    },
+    "contact": {
+      "label": "官网公开公司联系页面和总机；未核实可发邮件收件人或采购/研发个人",
+      "email": "",
+      "phone": "+49 2641-3897-0",
+      "contactUrl": "https://www.jansen.de/der-weg-zu-uns/"
+    },
+    "source": {
+      "label": "Jansen official Aqua Isolier- und Haftgrund: water-based finished primer for absorbent substrates including wood",
+      "url": "https://www.jansen.de/produkte/isolierfarben-haftgruende/aqua-isolier-und-haftgrund/print/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "jansen-ahrweiler": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "malchem-sulkowice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "van-wijhe-verf-zwolle": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "nowocoat-kolding": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4755,6 +4784,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "jansen-ahrweiler": {
+    "website": "https://www.jansen.de/",
+    "contactPage": "https://www.jansen.de/der-weg-zu-uns/",
+    "address": "Hochstadenstraße 22, D-53474 Ahrweiler, Germany: exact current corporate contact block; approximate town marker50.5,7.1,not independently geocoded plant entrance. Historic flood/factory photograph2021 not current commissioning or closure. No current registration number or ownership percentage inferred from search-only SDS/Wikipedia.",
+    "generalEmail": "",
+    "generalPhone": "+49 2641-3897-0",
+    "generalPhoneEvidence": {
+      "company": "P. A. Jansen GmbH u. Co., KG",
+      "value": "+49 2641-3897-0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Jansen actual company contact page: legal name, Ahrweiler business address and general switchboard",
+          "url": "https://www.jansen.de/der-weg-zu-uns/",
+          "summary": "Actual main contact block explicitly prints P.A.Jansen GmbH u.Co.,KG,Hochstadenstraße22,D-53474Ahrweiler,Tel.+492641-3897-0. General switchboard only; separately repeated as JansenZentrale+4926413897-0. Not personal/mobile/WhatsApp, procurement extension or call-tested route. The contact form is public business entry, viewed only, never submitted."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Jansen official Aqua Isolier- und Haftgrund: water-based finished primer for absorbent substrates including wood",
+        "url": "https://www.jansen.de/produkte/isolierfarben-haftgruende/aqua-isolier-und-haftgrund/print/"
+      },
+      {
+        "label": "Jansen actual own development laboratory/formulation and raw-material-partner activity",
+        "url": "https://www.jansen.de/willkommen-bei-jansen/"
+      },
+      {
+        "label": "Jansen actual nine visible product families",
+        "url": "https://www.jansen.de/produkte/"
+      },
+      {
+        "label": "Jansen actual current company profile and Ahrweiler family-business description",
+        "url": "https://www.jansen.de/unternehmen/daten-fakten/"
+      },
+      {
+        "label": "Jansen actual company contact page: legal name, Ahrweiler business address and general switchboard",
+        "url": "https://www.jansen.de/der-weg-zu-uns/"
+      }
+    ]
+  },
   "malchem-sulkowice": {
     "website": "https://malchem.pl/",
     "contactPage": "https://malchem.pl/#mapa",
@@ -14232,6 +14306,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "jansen-ahrweiler",
   "malchem-sulkowice",
   "van-wijhe-verf-zwolle",
   "nowocoat-kolding",
