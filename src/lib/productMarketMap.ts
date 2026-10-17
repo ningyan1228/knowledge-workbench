@@ -4166,11 +4166,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "isma-de-mexico-puebla",
+    "company": "ISMA de México",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Sanctorum, Puebla",
+    "latitude": 19.1122359,
+    "longitude": -98.2572278,
+    "legacyCompanyDescription": "Puebla自有配方制造工业防护涂料；Epoxil21环氧成品漆，ELO相容性和采购未确认",
+    "fit": "可开发候选",
+    "signal": "ISMA de México当前完整Home原文明确Planta propia、自1994年起在Sanctorum/Puebla自行配制与生产，并在FAQ确认自有制造身份；同时提供施工服务和经销网络，但本轮依据为其自有配方制造。工业线原文说明环氧/聚氨酯用于工厂维护、地坪、结构及设备，针对化学/机械磨耗条件；Epoxil21具体原文是面向严苛工业条件配制的环氧成品漆。完整官方产品目录将该线列工业防护涂层，而不是从普通装饰墙漆或施工商身份推定制造。1994年为公司自述生产历史，不冒充外部工商日期或2026新投产；未证明特定海工/浸没等级。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取当前Home、全部12个产品家族目录和功能说明、环氧/聚氨酯整页及Epoxil21具体详情、Contact。可见对外组合为成品建筑/工业漆、木器Wood Lack's体系、防水、腻子/封闭、汽车涂层、特殊用途涂层、表面除油、稀释/预处理/清洗溶剂及Complementos施工工具；目录明确Complementos是施工工具，不因补充品字样猜成生物基增塑添加剂。Epoxil21是分装成套环氧成品漆；套装4+2L等不是已读成分表或基础环氧原料销售证明，不转成我方ELO添加量。稀释/清洗溶剂等真实业务保留，不因原料相关词自动当ELO/ESBO同类输入供应商。在已读完整公开家族、Home业务、两项工业产品名称及Epoxil21选定详情范围内，未见ELO、ESBO、环氧化植物油、生物基增塑剂或同功能添加剂对外销售。未读其余所有单品详情、配方化学/安全表或未披露集团业务，不宣称全面股权或化学审计。ISMA de México是实际官网自称；法律全称/税号和母公司未披露于所读页，不虚构S.A.deC.V.等后缀或所有权。Wood Lack's为同站木器体系/品牌处理，不拆为新公司；Puebla工厂、同址Contact标签CEDIS、施工队和各经销点一账户。"
+    },
+    "contact": {
+      "label": "官网公开Sales部门邮箱和公司电话；未核实具名采购或研发人员，WhatsApp链接号码有差异",
+      "email": "ventas@ismademexico.com.mx",
+      "phone": "+52 222 210 5505",
+      "contactUrl": "https://ismademexico.com.mx/contacto"
+    },
+    "source": {
+      "label": "Actual official Epoxil 21 original: epoxy enamel formulated for demanding industrial conditions",
+      "url": "https://ismademexico.com.mx/productos/epoxicos-y-poliuretanos/epoxil-21"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "isma-de-mexico-puebla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cbr-products-port-coquitlam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "br-safra-rolandia": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "fauji-fertilizer-rawalpindi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -4409,6 +4438,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "isma-de-mexico-puebla": {
+    "website": "https://ismademexico.com.mx/",
+    "contactPage": "https://ismademexico.com.mx/contacto",
+    "address": "C. Cam. a San Lorenzo806,Sanctorum,72730 Heroica Puebla de Zaragoza,Puebla,Mexico. Home calls this plant purchase location; actual Contact labels same address CEDIS/centro de distribución. Coordinates19.1122359,-98.2572278 are its own published Maps destination, not independently surveyed factory-entrance GPS. Public display name ISMA de México; registered legal suffix/ultimate owner not established. Wood Lack's same-site brand/system not separate new company. Published phone+522222105505 differs from WhatsApp URL522212105505; no WhatsApp ownership asserted.",
+    "generalPhone": "+52 222 210 5505",
+    "generalPhoneEvidence": {
+      "company": "ISMA de México",
+      "value": "+52 222 210 5505",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official Contact: exact commercial mailbox, company telephone and Puebla business address",
+          "url": "https://ismademexico.com.mx/contacto",
+          "summary": "Actual Contact prints Teléfono:222 210 5505 with tel:2222105505; Home separately links tel:+522222105505. Normalized to +52 222 210 5505 from Mexico disclosure. Separate email evidence. Current wa.me522212105505 differs from this phone and was not normalized into it, contacted or marked verified WhatsApp. Second telephone2222105467 remains an alternative; no private person or named buyer inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas@ismademexico.com.mx",
+        "source": {
+          "label": "Actual official Contact: exact commercial mailbox, company telephone and Puebla business address",
+          "url": "https://ismademexico.com.mx/contacto"
+        },
+        "emailEvidence": {
+          "company": "ISMA de México",
+          "value": "ventas@ismademexico.com.mx",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual official Contact: exact commercial mailbox, company telephone and Puebla business address",
+              "url": "https://ismademexico.com.mx/contacto",
+              "summary": "Actual Contact explicitly prints Correo: ventas@ismademexico.com.mx and a matching mailto link, repeated on Home. Public ventas/commercial department route, not named purchasing or R&D ownership. ventas01@ismademexico.com.mx is a separately printed alternative, not silently merged. No personal identity or deliverability inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official Epoxil 21 original: epoxy enamel formulated for demanding industrial conditions",
+        "url": "https://ismademexico.com.mx/productos/epoxicos-y-poliuretanos/epoxil-21"
+      },
+      {
+        "label": "Actual Home: own Sanctorum/Puebla formulation/manufacture, industrial protective coating uses and plant address",
+        "url": "https://ismademexico.com.mx/"
+      },
+      {
+        "label": "Actual complete twelve-family catalogue: finished coatings, application tools, preparation/cleaning solvents",
+        "url": "https://ismademexico.com.mx/productos"
+      },
+      {
+        "label": "Actual complete industrial epoxy/polyurethane page with Epoxil21 and polyurethane finished kits",
+        "url": "https://ismademexico.com.mx/productos/epoxicos-y-poliuretanos"
+      },
+      {
+        "label": "Actual official Contact: exact commercial mailbox, company telephone and Puebla business address",
+        "url": "https://ismademexico.com.mx/contacto"
+      }
+    ],
+    "generalEmail": ""
+  },
   "cbr-products-port-coquitlam": {
     "website": "https://cbrproducts.com/",
     "contactPage": "https://cbrproducts.com/contact-us/",
@@ -12971,6 +13068,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "isma-de-mexico-puebla",
   "cbr-products-port-coquitlam",
   "br-safra-rolandia",
   "fauji-fertilizer-rawalpindi",
