@@ -4416,11 +4416,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "nowocoat-kolding",
+    "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+    "productId": "elo",
+    "country": "Denmark",
+    "countryZh": "丹麦",
+    "city": "Kolding (coarse approximate town marker; manufacturing entrance not geocoded)",
+    "latitude": 55.5,
+    "longitude": 9.5,
+    "legacyCompanyDescription": "丹麦Nowocoat集团自有Kolding实验室和涂料制造，工业体系用于技术钢结构及OEM防腐；ELO适配和采购待确认",
+    "fit": "可开发候选",
+    "signal": "Nowocoat自有Home明确开发并制造矿物、木材和金属表面涂料；About明确Kolding自有实验室及现代生产设备，按客户要求调色和配制涂料。实际Industry原文明示技术钢结构及OEM生产用工业涂层，溶剂、水性和粉末三类平台，可按要求定制防腐体系。当前About自述Waterland Private Equity为所有者、属于Nowocoat Group并在丹麦和瑞典生产；未把1861历史根源当当前法律设立日期，也未将任何基金投资组合公司自动合并。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取Home、About、Industry、Contact、Professional All Products及Pearl Wax六份原文。完整可见Professional十分类为屋面漆、金属漆、浸渍、防藻、清洁剂、外墙漆、地坪漆、辅件、防涂鸦和NowoColor；另有水性/溶剂/粉末工业体系及室内外Private Label成品。实际目录也公开外售Stay Clean、Pearl Wax、Accelerator及Summer四种添加剂，不能称其只售成品或无添加剂业务。目录把Accelerator描述为水性漆干燥加速、Summer为减慢水性漆干燥的慢挥发溶剂；Pearl Wax实际详情明确仅作NowoCoat屋面漆最后一道的水珠效果配套，未披露ELO/ESBO/生物增塑或聚合物稳定功能；Stay Clean原文combat roof coverings含义有限，不自行扩展为成分/法规结论。聚醇2KPU成品漆、单组份底漆、防腐颜料、浸渍剂、清洗化学品等业务如实保留，不因polyol/epoxy/wax/additive词自动认定同功能ELO原料供应商。实际已读业务、完整可见分类及指定添加剂公开功能中未见ELO、ESBO、环氧化植物油、生物基增塑或同功能稳定输入外售证据；非全部SKU/SDS/TDS/未披露全球关联业务和所有添加剂成分的穷尽审计，不把未读成分标为已核实。当前自有制造和防腐配方角色支持潜在需求侧判断；未有同类原料销售证据，不虚构外购例外。现在官网所述Nowocoat Group/Waterland关系已注明；Lurrell、Rötmotaverken、ISO Paint、Neutralon、PROFFWOODCARE、Sustainable Coatings Holding为保守去重别名，2021收购新闻和第三方法律持股Search-only，未原读为2026确切子公司清单/持股比例。最新main246、本地260、队列及frontier按这些品牌/域名/主体/CVR核对无匹配。Nowocoat及其集团区域、品牌、生产点仅一个丹麦账户；旧新闻中国/越南人员不另建客户、不补联系人。"
+    },
+    "contact": {
+      "label": "官网COO具名业务邮箱及直线；其公开Supply Chain职责明确包含采购，另有独立公司通用邮箱电话",
+      "email": "mail@nowocoat.dk",
+      "phone": "+45 75 50 11 11",
+      "contactUrl": "https://nowocoat.com/en/contact-us/"
+    },
+    "source": {
+      "label": "Nowocoat own Industry: industrial coating systems for technical steel structures and OEM production, tailored corrosion protection",
+      "url": "https://nowocoat.com/en/industry/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "nowocoat-kolding": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "flugger-group-roedovre": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "erlac-polydendri": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "coloria-nokia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4668,6 +4697,146 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "nowocoat-kolding": {
+    "website": "https://nowocoat.com/en/",
+    "contactPage": "https://nowocoat.com/en/contact-us/",
+    "address": "Staalvej3,DK-6000Kolding,Denmark; actual company Contact address and CVR25067282. Own About independently attributes laboratory and modern production facilities to Kolding. Marker55.5,9.5 is approximate town-level only,not verified factory entrance/street geocoding. One Nowocoat Group associated account; current About self-reports Waterlandownership and Denmark/Swedenproduction,not externally audited current percentages/complete affiliate register.1861 is historic roots,not current legal-incorporation proof.",
+    "generalEmail": "mail@nowocoat.dk",
+    "generalEmailEvidence": {
+      "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+      "value": "mail@nowocoat.dk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+          "url": "https://nowocoat.com/en/contact-us/",
+          "summary": "Official How can we help company block prints Nowocoat Industrial A/S, CVR25067282, mail@nowocoat.dk with matching mailto. General company business route only; personal COO address separately attributed. No deliverability or current purchasing assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+45 75 50 11 11",
+    "generalPhoneEvidence": {
+      "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+      "value": "+45 75 50 11 11",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+          "url": "https://nowocoat.com/en/contact-us/",
+          "summary": "Actual company contact block publishes +4575501111 with matching tel:+4575501111. Shared company voice also appears beside customer-service,finance and facility staff; not assigned as their exclusive personal telephone. Separate COO direct public voice +4542280000 attributed only to his own card. No call-tested or WhatsApp claim."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [
+      {
+        "name": "Jakob Hindkjær",
+        "title": "COO",
+        "department": "Procurement",
+        "email": "jh@nowocoat.dk",
+        "phone": "+45 42 28 00 00",
+        "identityEvidence": {
+          "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+          "name": "Jakob Hindkjær",
+          "title": "COO",
+          "responsibilities": "Official Supply Chain section: Contact for all Operational topics, Purchase, Production and Logistics. Procurement category maps this explicitly published purchasing duty; title remains the actual COO, not invented Procurement Director. No sole buying/sign-off authority, ELO responsibility or current buying project asserted.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+              "url": "https://nowocoat.com/en/contact-us/",
+              "summary": "Current official Contact team card explicitly names Jakob Hindkjær, titleCOO, in Supply Chain and states Contact for all Operational topics, Purchase, Production and Logistics. Same card includes business channels. Identity and employer/role proof stored separately from exact email and telephone ownership evidence. No historical2021 staff names or Search-only directory identity promoted."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        },
+        "emailEvidence": {
+          "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+          "value": "jh@nowocoat.dk",
+          "kind": "named-business",
+          "personName": "Jakob Hindkjær",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+              "url": "https://nowocoat.com/en/contact-us/",
+              "summary": "Exact current Jakob Hindkjær COO card displays jh@nowocoat.dk and raw HTML mailto:jh@nowocoat.dk. Nested anchor markup causes generic link extractor to miss this inner mailto; raw original card inspected directly, no address inferred from initials/domain or other employees. Ownership attributed to this named card only. Public business address, not mail-tested."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        },
+        "phoneEvidence": {
+          "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+          "value": "+45 42 28 00 00",
+          "kind": "named-business",
+          "personName": "Jakob Hindkjær",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+              "url": "https://nowocoat.com/en/contact-us/",
+              "summary": "Exact Jakob Hindkjær COO card displays +4542280000 and raw tel:+4542280000; formatted as +45 42 28 00 00. Separate from shared +4575501111 and other staff/mobile/WhatsApp numbers. Named public business voice only, not call-tested."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        },
+        "verifiedAt": "2026-10-17"
+      }
+    ],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "mail@nowocoat.dk",
+        "source": {
+          "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+          "url": "https://nowocoat.com/en/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Nowocoat Industrial A/S (Nowocoat Group)",
+          "value": "mail@nowocoat.dk",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+              "url": "https://nowocoat.com/en/contact-us/",
+              "summary": "Official How can we help company block prints Nowocoat Industrial A/S, CVR25067282, mail@nowocoat.dk with matching mailto. General company business route only; personal COO address separately attributed. No deliverability or current purchasing assertion."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nowocoat own Industry: industrial coating systems for technical steel structures and OEM production, tailored corrosion protection",
+        "url": "https://nowocoat.com/en/industry/"
+      },
+      {
+        "label": "Nowocoat own About: Kolding self-owned laboratory/production, current disclosed group/Waterland relationship",
+        "url": "https://nowocoat.com/en/about-us/"
+      },
+      {
+        "label": "Nowocoat actual professional product index: complete visible finished-product and additive categories",
+        "url": "https://nowocoat.com/en/professional/all-products/"
+      },
+      {
+        "label": "Nowocoat Pearl Wax: final-coat water-beading additive for own waterborne roof paint; chemistry not disclosed",
+        "url": "https://nowocoat.com/en/product/nowocoat-pearl-wax-additive/"
+      },
+      {
+        "label": "Nowocoat own Home: develops and manufactures mineral,wood and metal coatings",
+        "url": "https://nowocoat.com/en/"
+      },
+      {
+        "label": "Nowocoat own Contact: current Supply Chain COO card with explicit purchasing duties and exact named business channels; separate general company route",
+        "url": "https://nowocoat.com/en/contact-us/"
+      }
+    ]
+  },
   "flugger-group-roedovre": {
     "website": "https://www.flugger.com/",
     "contactPage": "https://www.flugger.com/en/contact/",
@@ -13851,6 +14020,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "nowocoat-kolding",
   "flugger-group-roedovre",
   "erlac-polydendri",
   "coloria-nokia",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "nowocoat-kolding": "Your industrial coating systems cover technical steel structures and OEM production with tailored corrosion protection.",
   "flugger-group-roedovre": "Your 06 Wood Tex is a water-based protective coating for exterior timber surfaces.",
   "erlac-polydendri": "Your METAL CARE is an anticorrosive alkyd enamel for metal structures, machinery and vehicle bodies.",
   "coloria-nokia": "Your Deco Akva Puulakka is a waterborne varnish for wooden furniture, doors, stairs and floors.",
