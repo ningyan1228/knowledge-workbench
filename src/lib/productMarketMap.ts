@@ -4138,11 +4138,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-16"
   },
+  {
+    "id": "cbr-products-port-coquitlam",
+    "company": "CBR Products Ltd. (BRODA)",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Port Coquitlam, British Columbia (approximate city pin; factory coordinates unverified)",
+    "latitude": 49.26,
+    "longitude": -122.78,
+    "legacyCompanyDescription": "加拿大自配并制造BRODA水性木器涂料；Clarity丙烯酸木器面漆，NL-W1201适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "CBR Products官网About原文明确在加拿大British Columbia的Port Coquitlam自行配制、制造和发运BRODA涂料，说明自有小批次生产、不是海外制造或重新分装。当前Clarity完整原文明确水性纯丙烯酸成膜木器成品涂层，用于室内外木材、墙板、天花、木作、mass timber、檐底与外墙木饰面，且明确不用于deck。独立联系原文提供同城业务地址和公司渠道。1993年为公司自述BRODA历史，不作外部工商注册或2026新增投产证明。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整阅读CBR About、Home全品类及12项可见产品名称、Clarity和名称易混Wood Tech完整详情、Contact。当前可见产品线为3项木器面漆、1项木材底涂、2项端纹封闭、2项混凝土封闭及4项清洁/预处理成品。Clarity是直接涂在木材的水性丙烯酸成膜成品；Wood Tech原文是对木材/CLT/Glulam/工程木直接施用的渗透保护底涂，不因undercoat/保护/配方等词就认定为对其他涂料厂销售的附着促进原料。Wood Bright原文相关产品描述为草酸木材亮化清洁剂，保留其真实业务而非自动排除为PO原料供应商。About中高等级原材料表述是自用生产投入，不是对外销售同类原料证据。所读完整公开12项名称、Home用途、About业务及选定两项详情范围内，未见水性聚烯烃乳液、CPO/PO分散或同功能配方附着促进原料对外销售。其余10项详情及所有PDF/TDS/SDS未读取，不夸称审核全部化学成分或未披露关联业务。BRODA是CBR Products Ltd.自有成品品牌，工厂、品牌、dealer渠道、项目与地区按同一账户；Contact链接Crisp Wood Co社媒，但未读社媒内容且没有确立其独立法人或持股关系，不拆成新增。About的family first字样不当作家族持股证明。协会页兼有制造商、原料供应商、设备和关联成员，提取正文没有CBR会员证据，不宣称其已核实协会会员身份。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及直线电话；未核实具名采购或研发人员",
+      "email": "broda@cbrproducts.com",
+      "phone": "+1 604 254 3325",
+      "contactUrl": "https://cbrproducts.com/contact-us/"
+    },
+    "source": {
+      "label": "Actual official Clarity original: waterborne acrylic film finish for interior and exterior wood",
+      "url": "https://cbrproducts.com/product/clarity/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "cbr-products-port-coquitlam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "br-safra-rolandia": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "fauji-fertilizer-rawalpindi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "petropipe-coatzacoalcos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4380,6 +4409,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "cbr-products-port-coquitlam": {
+    "website": "https://cbrproducts.com/",
+    "contactPage": "https://cbrproducts.com/contact-us/",
+    "address": "#2110–1840 Broadway St., Port Coquitlam, BC V3C 2M8, Canada (shipping and receiving; enter off Langan Ave). Own About explicitly formulates/manufactures in Port Coquitlam; this Contact address is not independent factory-entrance GPS verification. Rounded city pin49.26,-122.78 from Canadian official CGNDB city record JBFQD49.261944,-122.780278. Legal name follows actual BRODA by CBR Products Ltd. footer; BRODA brand/CBR maker one account. Linked Crisp Wood Co social page not read, no ultimate ownership or external registry audit claimed.",
+    "generalEmail": "broda@cbrproducts.com",
+    "generalEmailEvidence": {
+      "company": "CBR Products Ltd. (BRODA)",
+      "value": "broda@cbrproducts.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official Contact: public general company email, direct telephone and shipping/receiving address",
+          "url": "https://cbrproducts.com/contact-us/",
+          "summary": "Actual Contact publishes Email broda@cbrproducts.com for orders, invoices and accounts, and actual About/Home legal footer repeats it for BRODA by CBR Products Ltd. Public company business route; no named purchasing or R&D employee, procurement responsibility or deliverability inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+1 604 254 3325",
+    "generalPhoneEvidence": {
+      "company": "CBR Products Ltd. (BRODA)",
+      "value": "+1 604 254 3325",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official Contact: public general company email, direct telephone and shipping/receiving address",
+          "url": "https://cbrproducts.com/contact-us/",
+          "summary": "Actual Contact prints Call or text 604-254-3325 at the Port Coquitlam, British Columbia, Canada shipping/receiving address. Normalized with +1; independent evidence from email. Toll-free 1-877-671-1405 separately published for Canada/USA but not substituted for direct business line. No private employee, WhatsApp account or named buyer inferred; no call/text sent."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "broda@cbrproducts.com",
+        "source": {
+          "label": "Actual official Contact: public general company email, direct telephone and shipping/receiving address",
+          "url": "https://cbrproducts.com/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "CBR Products Ltd. (BRODA)",
+          "value": "broda@cbrproducts.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual official Contact: public general company email, direct telephone and shipping/receiving address",
+              "url": "https://cbrproducts.com/contact-us/",
+              "summary": "Actual Contact publishes Email broda@cbrproducts.com for orders, invoices and accounts, and actual About/Home legal footer repeats it for BRODA by CBR Products Ltd. Public company business route; no named purchasing or R&D employee, procurement responsibility or deliverability inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual official Clarity original: waterborne acrylic film finish for interior and exterior wood",
+        "url": "https://cbrproducts.com/product/clarity/"
+      },
+      {
+        "label": "Actual official About: own waterborne coating formulation/manufacture in Port Coquitlam and BRODA/CBR legal footer",
+        "url": "https://cbrproducts.com/about-us/"
+      },
+      {
+        "label": "Actual Home: complete twelve-product range and wood-finish/undercoat/end-seal/cleaning/concrete roles",
+        "url": "https://cbrproducts.com/"
+      },
+      {
+        "label": "Actual Wood Tech detail: directly applied finished protective timber undercoat; not a raw PO input based on name",
+        "url": "https://cbrproducts.com/product/wood-tech/"
+      },
+      {
+        "label": "Actual official Contact: public general company email, direct telephone and shipping/receiving address",
+        "url": "https://cbrproducts.com/contact-us/"
+      }
+    ]
+  },
   "br-safra-rolandia": {
     "website": "https://brsafra.com.br/",
     "contactPage": "https://brsafra.com.br/#contato",
@@ -12860,6 +12971,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "cbr-products-port-coquitlam",
   "br-safra-rolandia",
   "fauji-fertilizer-rawalpindi",
   "petropipe-coatzacoalcos",
