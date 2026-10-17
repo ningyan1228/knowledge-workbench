@@ -4305,11 +4305,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "endura-manufacturing-edmonton",
+    "company": "Endura Manufacturing Co. Ltd. (Endura Paint)",
+    "productId": "elo",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Edmonton, Alberta (approximate city-centre marker; headquarters/factory entrance not geocoded)",
+    "latitude": 53.55,
+    "longitude": -113.49,
+    "legacyCompanyDescription": "加拿大Endura工业防护涂料制造；漆及底漆用于腐蚀性油田/矿业环境；ELO具体适配与采购待确认",
+    "fit": "可开发候选",
+    "signal": "Endura自有About原文明示工业涂料制造、自主开发/营销特种漆及涂层，并说明工业漆和底漆应用于侵蚀、腐蚀及磨蚀条件，列出油田、矿业设备、OEM、船舶等实际下游场景。当前Additives and Thinners完整可见目录列九项配套材料；实际Crater Eliminator原文为用于自家聚氨酯面漆的缩孔/鱼眼及浮色辅助剂。公开Where To Buy明确加拿大总部法人名、Edmonton地址和独立业务电话。About关联Polyglass、Endura Aviation、Phoenix Paints及美国Crown Paint作为同一开发账户保留，不按国家、品牌和门店拆户。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "独立读到Endura本体四份官方原文：About完整104行、Additives and Thinners完整108行、Crater Eliminator完整185行、WhereToBuy本次返回634行。原生Home/About HTTP403均保留；公开阅读器成功正文的抓取/缓存日期如实保留，不冒称原生403已恢复。可见全八类产品导航包括Topcoats/Primers/Additives&Thinners/Pretreatments&Cleaners/SpecialtyCoatings/Non-slip/VOCCompliant/Gameline，九项添加/稀释品按原名完整读取。保留公司出售缩孔辅助剂、消光/抗滑材料、催化剂、缓干剂及稀释剂的事实，不笼统称其无添加剂或无原料业务。关键Crater Eliminator实际用于减少自家PU面漆缩孔、鱼眼和浮色，不因其是液体配方添加品就认定为ELO/ESBO或同类生物基增塑/稳定输入；未推断硅酮/油类等未公开成分。其他商品名不被当作完整成分清单；本轮没有下载其TDS/SDS，也不以未列危险组分证明不存在ELO。所查Endura本体公开业务、完整可见八类导航和九项配套类别及关键缩孔剂功能范围内未见ELO、ESBO、环氧化植物油或同功能生物基增塑/稳定输入外售，结论仅限实际已读范围。Crater页适用列表含个别primer/sealer但末尾明确不得用primer/sealer，差异保留，未给出混用施工建议。关联Crown/Phoenix/航空/Marine个别站点及所有SKU未穷尽审读，不声称全集团全球配方/未披露业务保证。About已证关联及Polyglass在美调色/混配/经销用途保留；品牌/地区厂店计同一账户。按加拿大EnduraManufacturing/EnduraPaint/旧endura.ca、主站与Marine/Aviation域、Polyglass/Phoenix、crownpaintok.com美国Oklahoma公司及Edmonton地址核对最新main242、本地256和队列，无已收录同一账户。美国SterlingHeights的enduracoatings.com镀层服务、TnemecEnduraShield商品名及其他Crown同名主体不凭名称合并；不推断与既有Cloverdale股权关系。无需捏造外购同行原料例外，现有外部采购/具体ELO用途仍未确认。"
+    },
+    "contact": {
+      "label": "加拿大总部公开业务电话及官方联系目录；未核实公司邮箱或具名采购/技术邮箱",
+      "phone": "+1 780 451 4242",
+      "contactUrl": "https://www.endurapaint.com/where-to-buy/"
+    },
+    "source": {
+      "label": "Actual Endura About: own industrial coating manufacture and corrosive oilfield/mining applications",
+      "url": "https://www.endurapaint.com/about-us/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "endura-manufacturing-edmonton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "renovo-cookeville": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "royal-coatings-new-orleans": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "halton-chemical-burlington": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4553,6 +4581,47 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "endura-manufacturing-edmonton": {
+    "website": "https://www.endurapaint.com/",
+    "contactPage": "https://www.endurapaint.com/where-to-buy/",
+    "address": "12425 149 Street NW, Edmonton, Alberta T5L2J6, Canada. Exact own Canadian headquarters address,not separately verified factory entrance.53.55,-113.49 is an approximate Edmonton city-centre marker,not a surveyed/address-geocoded factory pin. PolyglassCoatingsLLC/Pearland,EnduraAviation,EnduraPaintPtyLtd/PhoenixPaints andCrownPaintCoOklahoma remain one disclosed associated account. Currentdirectory returned1–60of67 locations,notallpages/eachsupplier audited; dealers are not all asserted owned.1966incorporation/2007/2016/2017/2018 history not2026commissioning or external currentultimateownershipaudit.",
+    "generalEmail": "",
+    "generalPhone": "+1 780 451 4242",
+    "generalPhoneEvidence": {
+      "company": "Endura Manufacturing Co. Ltd. (Endura Paint)",
+      "value": "+1 780 451 4242",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Endura headquarters business directory: Canadian voice phone, separate fax and Edmonton address",
+          "url": "https://www.endurapaint.com/where-to-buy/",
+          "summary": "Actual own WhereToBuy CanadianHeadquarters block EnduraManufacturingCoLtd at12425 149StreetNW,EdmontonAlbertaT5L2J6 explicitlylabels Phone+1-780-451-4242 separatelyfromFax+1-780-452-5079 andNorthAmericanTollFree18006619930. Canadianbusinessvoiceonly,notperson/mobile/WhatsApp ortestedcall. Distributorphone/email andUS/Australianbranch routes not assignedtoCanadianbuyer."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual Endura About: own industrial coating manufacture and corrosive oilfield/mining applications",
+        "url": "https://www.endurapaint.com/about-us/"
+      },
+      {
+        "label": "Actual complete visible nine-item Additives and Thinners category and eight product-family navigation",
+        "url": "https://www.endurapaint.com/products/additives/"
+      },
+      {
+        "label": "Actual Crater Eliminator: crater/fish-eye/colour-floating aid for own finished coatings; ingredient formula not inferred",
+        "url": "https://www.endurapaint.com/product/crater-eliminator/"
+      },
+      {
+        "label": "Actual Endura headquarters business directory: Canadian voice phone, separate fax and Edmonton address",
+        "url": "https://www.endurapaint.com/where-to-buy/"
+      }
+    ]
+  },
   "renovo-cookeville": {
     "website": "https://renovo.eco/",
     "contactPage": "https://renovo.eco/contact",
@@ -13471,6 +13540,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "endura-manufacturing-edmonton",
   "renovo-cookeville",
   "royal-coatings-new-orleans",
   "halton-chemical-burlington",
