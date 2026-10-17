@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "coloria-nokia": "Your Deco Akva Puulakka is a waterborne varnish for wooden furniture, doors, stairs and floors.",
   "endura-manufacturing-edmonton": "Your industrial paints and primers are designed for corrosive conditions in oilfield and mining applications.",
   "renovo-cookeville": "Your TERRACOTE is a biochar-cored urea granule with a biodegradable polymer coating.",
   "royal-coatings-new-orleans": "Your 200 Series solvent-free epoxy system is designed for pipes affected by corrosion under insulation.",

@@ -4332,11 +4332,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "coloria-nokia",
+    "company": "Coloria Oy",
+    "productId": "nl-w1201",
+    "country": "Finland",
+    "countryZh": "芬兰",
+    "city": "Nokia (approximate city-centre marker; factory-entrance coordinates unverified)",
+    "latitude": 61.5,
+    "longitude": 23.5,
+    "legacyCompanyDescription": "芬兰Coloria在Nokia自有工厂研发制造水性涂料；Deco Akva Puulakka木器清漆用于家具、门、楼梯及地板；NL-W1201适配与采购待确认",
+    "fit": "可开发候选",
+    "signal": "Coloria自有公司及首页原文说明芬兰家族涂料公司在Nokia自有工厂研发并制造，覆盖从创新到包装；其产品原文明示Deco Akva Puulakka为水性木器清漆，用于木家具、门、楼梯、木板和拼木地板等，并可在室内外木表面使用。Wood为用户NL-W1201 TDS已核实基材。公司成立2003为历史自述，非2026新投产；Kaakkurintie8为当前公司联系地址。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "完整实际读取Coloria首页、公司介绍、Deco Akva Puulakka详情和联系页四份原文，以及另两份Uula对照来源。Coloria完整可见六类导航为室内漆、室外漆、专业建筑漆、清漆/油、填缝腻子、经销网络；细分列出Coloria/Greenline/DecoAkva/PaneeliPro/Forte/Linnea/PihlaPro/Renki/HydroCoat等成品系列和Dalapro填缝产品。公司原文清楚将Greenline和油蜡称为另有的无塑料选项，不推广为全公司无聚合物政策。实际水性木器详情为直接涂家具、门、楼梯、地板的可调色成品清漆，并以water为稀释剂，不把varnish/primer/akrylaatti/水性词等同外售PO/CPO分散或涂料配方用附着促进原料。可见建筑类dust-binding原料名称未逐项打开，不推断化学成分或原料销售；Dalapro外部填缝品牌不据泛称全部自制就推定自有制造/集团控制，也不另计客户。在实际完整公开品类和选定木器成品用途及自有制造范围内，未发现其外售水性聚烯烃乳液、CPO/PO分散或同功能配方附着促进原料的证据。未下载其PDF/TDS/SDS、未穷尽全部SKU/未披露关联业务，不宣称全球原料业务已审尽或已化学适配。当前官网自述芬兰家族企业，无公开当前外购我方原料/采购RFQ证据；没有把缺少采购公告变成正在采购。Coloria品牌/工厂/六类产品按一个制造账户。"
+    },
+    "contact": {
+      "label": "官网公开Sales销售部门邮箱与公司业务电话；未核实采购或技术负责人",
+      "email": "myynti@coloria.fi",
+      "phone": "010-289 9500",
+      "contactUrl": "https://www.coloria.fi/yhteystiedot/"
+    },
+    "source": {
+      "label": "Actual Coloria Deco Akva Puulakka: waterborne wood varnish for furniture, doors, stairs and floors",
+      "url": "https://www.coloria.fi/sisamaalit/coloria-deco-akva-puulakka/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "coloria-nokia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "endura-manufacturing-edmonton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "renovo-cookeville": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "royal-coatings-new-orleans": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4581,6 +4610,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "coloria-nokia": {
+    "website": "https://www.coloria.fi/",
+    "contactPage": "https://www.coloria.fi/yhteystiedot/",
+    "address": "Kaakkurintie 8, 37150 Nokia, Finland. Actual own Contact business address; own company/home separately confirm development and manufacture in its Nokia factory. Map marker61.5,23.5 is a coarse approximate Nokia city location, not geocoded/surveyed factory entrance. Website says no factory shop; this is not a factory closure. One Finnish family-company manufacturer account; current ultimate beneficial shareholding independently unaudited.",
+    "generalEmail": "",
+    "generalPhone": "010-289 9500",
+    "generalPhoneEvidence": {
+      "company": "Coloria Oy",
+      "value": "010-289 9500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Coloria official contact: explicitly published Sales department mailbox, company voice phone and Nokia address",
+          "url": "https://www.coloria.fi/yhteystiedot/",
+          "summary": "Official Contact labels Puhelin:010-2899500 weekdays08–16 for ColoriaOy. Preserve national published010-2899500 exactly; no invented international dialing prefix, toll-free/mobile/WhatsApp or named purchaser ownership. Not a fax number."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "myynti@coloria.fi",
+        "source": {
+          "label": "Actual Coloria official contact: explicitly published Sales department mailbox, company voice phone and Nokia address",
+          "url": "https://www.coloria.fi/yhteystiedot/"
+        },
+        "emailEvidence": {
+          "company": "Coloria Oy",
+          "value": "myynti@coloria.fi",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual Coloria official contact: explicitly published Sales department mailbox, company voice phone and Nokia address",
+              "url": "https://www.coloria.fi/yhteystiedot/",
+              "summary": "Official Contact explicitly prints myynti[at]coloria.fi twice, including reseller/business enquiries. myynti means Sales; only the explicitly published [at] is normalized to @. Not a guessed individual pattern/general inbox, procurement/technical role or proof of delivery. Adjacent etunimi.sukunimi[at]coloria.fi is a generic firstname.lastname pattern and is not turned into any person email."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual Coloria Deco Akva Puulakka: waterborne wood varnish for furniture, doors, stairs and floors",
+        "url": "https://www.coloria.fi/sisamaalit/coloria-deco-akva-puulakka/"
+      },
+      {
+        "label": "Actual Coloria company: Finnish family business; own development and manufacturing in Nokia",
+        "url": "https://www.coloria.fi/yritys/"
+      },
+      {
+        "label": "Actual Coloria home: complete visible finished coating/product families and distinct plastic-free options",
+        "url": "https://coloria.fi/"
+      },
+      {
+        "label": "Actual Coloria official contact: explicitly published Sales department mailbox, company voice phone and Nokia address",
+        "url": "https://www.coloria.fi/yhteystiedot/"
+      }
+    ]
+  },
   "endura-manufacturing-edmonton": {
     "website": "https://www.endurapaint.com/",
     "contactPage": "https://www.endurapaint.com/where-to-buy/",
@@ -13540,6 +13633,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "coloria-nokia",
   "endura-manufacturing-edmonton",
   "renovo-cookeville",
   "royal-coatings-new-orleans",
