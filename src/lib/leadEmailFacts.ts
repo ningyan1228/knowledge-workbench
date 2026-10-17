@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "malchem-sulkowice": "Your MALKOR A is a modified alkyd primer intended for steel surfaces.",
   "van-wijhe-verf-zwolle": "Your Ralston Aqua All-Primer BIO is a waterborne primer for interior and exterior wood surfaces.",
   "nowocoat-kolding": "Your industrial coating systems cover technical steel structures and OEM production with tailored corrosion protection.",
   "flugger-group-roedovre": "Your 06 Wood Tex is a water-based protective coating for exterior timber surfaces.",

@@ -4472,11 +4472,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "malchem-sulkowice",
+    "company": "Malchem Sp. z o.o.",
+    "productId": "elo",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Sułkowice, Chynów (coarse approximate town marker; factory entrance not geocoded)",
+    "latitude": 51.9,
+    "longitude": 21,
+    "legacyCompanyDescription": "波兰Malchem自产工业防腐涂料；MALKOR A为钢材用改性醇酸底漆；ELO配方适配和采购待确认",
+    "fit": "可开发候选",
+    "signal": "Malchem当前Home明示设计并生产钢结构、能源、运输和农业用工业防腐漆，具备研发与制造。实际完整液体目录列醇酸、环氧、聚氨酯、耐热、聚乙烯基和配套稀释剂；MALKOR A为改性醇酸树脂成品底漆，用于钢材。现有目录直接链接的原始四页MALKOR A TDS再次写明制造商Malchem、钢材及机械/建筑防腐用途和刷辊喷浸施工；资料印刷更新为2026 I，PDF生成元数据2026-10-09不是产品修订月或新投产日。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整审读MalchemHome、17864字液体产品目录、粉末目录页及文件索引四份原文，并读取MALKOR A原始TDS四页、视觉核对第1和2页。两大体系液体与粉末；粉末索引明确还在编制，没有假称完整SKU可见。液体六分组为醇酸、环氧、聚氨酯、耐热、聚乙烯基及THINNER AK/EP/PUR配套稀释剂；清楚保留对外稀释剂和双组份HARDENER等配套输入业务。耐热TERMAL原文说成品漆配方含增塑剂/辅助剂，不等于对外销售这些原始增塑剂，也不证明它是ELO/ESBO。原始MALKOR A明示THINNER AK和CLEANMAL TOP为自家施工稀释/清洁配套，不能笼统说不卖任何化学品或添加剂；环氧硬化组份、脂肪族异氰酸酯固化/FEVE树脂用于成品也不单凭化学名称认定ELO同功能输入销售。实际已读完整可见液体类目、具体成品/配套角色和公司业务范围中未见ELO、ESBO、环氧化植物油、生物增塑剂或同功能生物基稳定输入外售证据。未逐个打开所有硬化组份SDS/TDS、粉末未发布SKU或未披露关联业务，不声称所有全球原料/增塑剂成分已穷尽核查。没有相关同类输入销售证据，不编造外购例外。当前官网主体MalchemSp.zoo/NIP7970000688/REGON670528185，同址MalchemCoatings/Inmal搜索名仅保守关联去重，未原读法律股权不编造控制/持股比例。当前main248/本地262/队列/frontier按域名、主体、别名、NIP/REGON和Ogrodowa2核对无同账户；地区销售/仓库/产品不另建公司。"
+    },
+    "contact": {
+      "label": "官网公开Sales部门邮箱和公司通用业务电话；未核实采购/技术个人",
+      "email": "malchem@malchem.pl",
+      "phone": "+48 48 661 43 30",
+      "contactUrl": "https://malchem.pl/#mapa"
+    },
+    "source": {
+      "label": "Malchem current liquid coating catalogue: MALKOR A modified-alkyd primer for steel, with direct original TDS link",
+      "url": "https://malchem.pl/farby-ciekle/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "malchem-sulkowice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "van-wijhe-verf-zwolle": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "nowocoat-kolding": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "flugger-group-roedovre": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4726,6 +4755,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "malchem-sulkowice": {
+    "website": "https://malchem.pl/",
+    "contactPage": "https://malchem.pl/#mapa",
+    "address": "Sułkowice,ul.Ogrodowa2,05-650Chynów,Poland:actualcompanyandTDSmanufactureraddress,NIP7970000688,REGON670528185,BDO000081520. CurrentownHome statesmanufacture;notindependentlysurveyedexactfactoryentrance. Marker51.9,21.0coarseapproximatetownonly. Search-onlysame-addressMalchemCoatings/Inmallegalrelationshipsconservativelycheckedbutnotverifiedcurrentcontrol/percentages. Oneassociatedoperatingaccount,notregionalstaff/warehouses/products.",
+    "generalEmail": "",
+    "generalPhone": "+48 48 661 43 30",
+    "generalPhoneEvidence": {
+      "company": "Malchem Sp. z o.o.",
+      "value": "+48 48 661 43 30",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Malchem own powder-catalogue page: explicit company header international voice number",
+          "url": "https://malchem.pl/farby-proszkowe/",
+          "summary": "Actual header prints +48 48 661 43 30. Actual MALKOR A TDS p1/p3 separately repeats +48 48 66143 30 /32/33; select exactly printedfirstnumber,do not expandrange into additionalphones. Differentfooter48 3334127 retainedbutnotnormalized/assignedtocountrycodebyguess. General business voice,not personal/WhatsApporcall-tested."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "malchem@malchem.pl",
+        "source": {
+          "label": "Malchem own Home contact block: explicit Sales department mailbox, separate Orders and Recruitment routes",
+          "url": "https://malchem.pl/"
+        },
+        "emailEvidence": {
+          "company": "Malchem Sp. z o.o.",
+          "value": "malchem@malchem.pl",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Malchem own Home contact block: explicit Sales department mailbox, separate Orders and Recruitment routes",
+              "url": "https://malchem.pl/",
+              "summary": "Actual current Home contact block labels DZIAŁ HANDLOWY and explicitly publishes malchem@malchem.pl with exact mailto. Store as Sales department, not General/Procurement/R&D or named person. Separate zamowienia@ is customer orders,praca@ recruitment; neither promoted to raw material purchasing. Public staff regional sales names are not collected as buyers. No deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Malchem current liquid coating catalogue: MALKOR A modified-alkyd primer for steel, with direct original TDS link",
+        "url": "https://malchem.pl/farby-ciekle/"
+      },
+      {
+        "label": "Malchem original MALKOR A TDS: four actual pages,printed revision2026 I,own manufacturer attribution and steel anticorrosive primer role",
+        "url": "https://webtds.malchem.pl/pdf?produkt_idm=MALKOR+A"
+      },
+      {
+        "label": "Malchem own Home: designs and manufactures anticorrosive paints,current company legal identifiers and research project disclosure",
+        "url": "https://malchem.pl/"
+      },
+      {
+        "label": "Malchem powder catalogue: under preparation,not complete product-level chemistry proof",
+        "url": "https://malchem.pl/farby-proszkowe/"
+      },
+      {
+        "label": "Malchem current document index: visible certificates/isocyanate guidance and research project,linked documents not all read",
+        "url": "https://malchem.pl/dokumenty/"
+      },
+      {
+        "label": "Malchem own Home contact block: explicit Sales department mailbox, separate Orders and Recruitment routes",
+        "url": "https://malchem.pl/"
+      }
+    ]
+  },
   "van-wijhe-verf-zwolle": {
     "website": "https://vanwijheverf.nl/en/home-english/",
     "contactPage": "https://vanwijheverf.nl/en/contact-2/",
@@ -14131,6 +14232,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "malchem-sulkowice",
   "van-wijhe-verf-zwolle",
   "nowocoat-kolding",
   "flugger-group-roedovre",
