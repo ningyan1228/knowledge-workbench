@@ -4584,11 +4584,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "oli-lacke-lichtenau",
+    "company": "Oli Lacke GmbH",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Lichtenau (approximate town marker)",
+    "latitude": 50.9,
+    "longitude": 13,
+    "legacyCompanyDescription": "德国OLI自有木器涂料配方制造；NORDIC18.40为室内木材水性涂料；材料适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "OLI 当前公司介绍明确在 Lichtenau 自行研发、生产木材表面产品，涵盖自有 OLI LACKE 和 OLI NATURA 品牌，水性1K/2K木器漆为一项主营。实际当前 NORDIC18.40 原页明确该品为室内木材用水性1K/2K涂料，适用家具、门、橱柜及楼梯，刷/辊/喷施工；硬化剂13.2为可选配套。制造归属由当前企业自有原文支持，不采用已404的旧委托制造页面或旧联系人搜索摘要代替。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "当前完整读取公司介绍、15017字NORDIC产品页和公司联系页三份原文；旧公司/木器总目录/委托制造三个路径均404并计入上限，不冒称已读。当前完整可见导航包括木油/蜡的前处理、家具楼梯/地板/彩色/外用油、木器漆/着色剂前处理/家具漆/地板漆/彩色及原木效果漆、硬化稀释剂、护理清洁、工具施工配套；公司自述两品牌及自有油蜡/木器漆配方制造。保留对外硬化剂13.2、H2OHardener木油B组份及稀释清洁配套，不称公司无任何化学输入或只卖单组份涂料。当前NORDIC明确硬化剂用于成品的2K固化/耐受配套，未从Hardener名称猜测成分、PO/CPO或我方相容；前处理/底涂类别并非自动视为涂料工厂原料附着促进剂。已读公司主营、完整可见类别和具体施工成品/固化配套功能范围中未见水性聚烯烃乳液、CPO/PO分散或同功能附着促进输入外售证据。站点提示97件产品，未逐一审读97SKU/TDS/SDS或未披露关联业务，不给全世界原料业务保证，也不编造外购例外。OLI-NATURA油蜡的亚麻油/桐油/蜡原料与该品牌关系如实保留，不用生物来源推断NL-W1201原料销售。实际B2B请求重定向至oli-lacke.de同公司现行页面；OLILacke/OLINATURA/OLIAQUA、主域和B2B域、09244Lichtenau、Bahnhofstraße22及Schubert-Temmen按一个德国账户核对最新main252/本地266/私有队列/frontier无同一主体。Brannenburg服务点只为Search旧资料，未独立确认当前运营，不另计客户。当前自述家族企业不是已审计持股比例，未从品牌近似推断Hesse/DAW等控股。"
+    },
+    "contact": {
+      "label": "官网当前产品/应用技术咨询部门邮箱与电话；未核实具名采购/研发联系人",
+      "email": "faq@oli-lacke.de",
+      "phone": "+49 37208 84 488",
+      "contactUrl": "https://oli-lacke.de/pages/support-contact"
+    },
+    "source": {
+      "label": "OLI official current NORDIC18.40:water-based1K/2Kcoating for indoorwood,furniture andstairs",
+      "url": "https://oli-lacke.de/collections/alle-produkte-1/products/oli-aqua-nordic-rohholzeffektlack"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "oli-lacke-lichtenau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "paul-jaeger-moeglingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "norglass-punchbowl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "jansen-ahrweiler": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4842,6 +4871,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "oli-lacke-lichtenau": {
+    "website": "https://oli-lacke.de/",
+    "contactPage": "https://oli-lacke.de/pages/support-contact",
+    "address": "Bahnhofstraße 22, D-09244 Lichtenau, Germany（官网公司地址；Lichtenau自有研发制造由公司介绍支持，地图为城市近似位置）",
+    "generalEmail": "",
+    "generalPhone": "+49 37208 84 488",
+    "generalPhoneEvidence": {
+      "company": "Oli Lacke GmbH",
+      "value": "+49 37208 84 488",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "OLI current company-business support:Produktberatung & Anwendung mailbox and matching technical-advice voice number",
+          "url": "https://oli-lacke.de/pages/support-contact",
+          "summary": "Same actual technical-advice block explicitly prints+493720884488 andmatching tel:+493720884488;separately repeated infofooterwith(0)format. Department businessvoice,not management/personal/WhatsApporcall-tested. Other managementblockhasdisplay210 versustel219 mismatch,notborrowed/normalizedinto thisentry."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "faq@oli-lacke.de",
+        "source": {
+          "label": "OLI current company-business support:Produktberatung & Anwendung mailbox and matching technical-advice voice number",
+          "url": "https://oli-lacke.de/pages/support-contact"
+        },
+        "emailEvidence": {
+          "company": "Oli Lacke GmbH",
+          "value": "faq@oli-lacke.de",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "OLI current company-business support:Produktberatung & Anwendung mailbox and matching technical-advice voice number",
+              "url": "https://oli-lacke.de/pages/support-contact",
+              "summary": "Actual current Produktberatung & Anwendung block statesquestionsaboutselection,processingandtechnicalproperties;exactfaq@oli-lacke.de with mailto. Technicalproduct/applicationadvice department,not namedR&Dscientist or raw-materialpurchasing. Search-onlyolderMarcelMühlmann/personcontactsfrom404legacyrouteareunverifiedandnotcurated. No deliverabilityclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "OLI official current NORDIC18.40:water-based1K/2Kcoating for indoorwood,furniture andstairs",
+        "url": "https://oli-lacke.de/collections/alle-produkte-1/products/oli-aqua-nordic-rohholzeffektlack"
+      },
+      {
+        "label": "OLI current company About:ownLichtenau R&D/manufacturing,woodcoating/oilbrands and visibleproductfamilies",
+        "url": "https://oli-lacke.de/pages/uber-uns"
+      },
+      {
+        "label": "OLI current company-business support:Produktberatung & Anwendung mailbox and matching technical-advice voice number",
+        "url": "https://oli-lacke.de/pages/support-contact"
+      }
+    ]
+  },
   "paul-jaeger-moeglingen": {
     "website": "https://www.jaegerlacke.de/",
     "contactPage": "https://www.jaegerlacke.de/kontakt",
@@ -14518,6 +14607,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "oli-lacke-lichtenau",
   "paul-jaeger-moeglingen",
   "norglass-punchbowl",
   "jansen-ahrweiler",
