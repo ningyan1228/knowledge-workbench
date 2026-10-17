@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "norglass-punchbowl": "Your Northane Gloss is a two-pack aliphatic polyurethane coating for commercial and industrial use.",
   "jansen-ahrweiler": "Your Aqua Isolier- und Haftgrund is a water-based primer for absorbent substrates, including wood surfaces.",
   "malchem-sulkowice": "Your MALKOR A is a modified alkyd primer intended for steel surfaces.",
   "van-wijhe-verf-zwolle": "Your Ralston Aqua All-Primer BIO is a waterborne primer for interior and exterior wood surfaces.",

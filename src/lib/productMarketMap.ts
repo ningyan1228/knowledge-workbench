@@ -4528,11 +4528,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "norglass-punchbowl",
+    "company": "Norglass Laboratories Pty Ltd",
+    "productId": "elo",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Punchbowl, Sydney (approximate city marker; factory entrance not geocoded)",
+    "latitude": -33.9,
+    "longitude": 151.1,
+    "legacyCompanyDescription": "澳大利亚 Norglass 自产船舶和工业涂料；NorthaneGloss 为双组分脂肪族聚氨酯成品；ELO配方评估与采购待确认",
+    "fit": "可开发候选",
+    "signal": "Norglass 当前官方 About 明示全部 Norglass 产品在悉尼自有工厂制造，并说明原料评估与涂料/表面处理产品研发；网站页脚明确在澳大利亚配方及制造船舶和工业涂料。实际 Northane Gloss 页明确双组分脂肪族线性聚氨酯涂料、商业及工业用途，刷/辊/喷施工。全产品目录同时有 Norshield 防腐环氧底漆和 Shipshape 底漆；不是把经销门店、普通建材店或树脂名称当成独立涂料工厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整审读 About、12355字全部可见 A–Z 产品目录、NorthaneGloss、八项添加品分类、具体 Norsystem 船用环氧树脂和 Contact 六份原文。保留十二类业务及外售溶剂/稀释剂、胶、填料、玻纤、四类树脂体系及八项添加品，不说公司只卖成品或没有原料。八项为 FlatteningAgent 硅粉消光、GluePromoter 轻质环氧填充扩展、LiquidGlassColourant 调色、LiquidGlassMetallics 金属粉效果、Microtalc 粉体、Norcells 轻质填平、PolyesterCatalyst 固化及 SlipResistantAgent 塑性防滑颗粒；公开功能均不等于 ELO/ESBO 或同功能生物增塑/稳定输入，未猜未公开成分。四类树脂列深浇/玻璃效果环氧、Norsystem 船用双组分体系、玻纤聚酯；实际 Norsystem 明示基料配快/慢硬化组份和刷辊施工，不因含 epoxy 就等同环氧化植物油，也不把 flexibility 字样当生物增塑剂外售证明。木器油和 Microshield 成品含稳定组份的描述是成品用途，不证明把这些原始稳定剂外售；未穷尽所有 SKU/TDS/SDS或未披露配方。实际已读公司业务、完整可见目录、八项添加品功能和关键环氧体系范围未见 ELO、ESBO、环氧化植物油、生物基增塑剂或同功能生物稳定输入外售。结论仅限已读范围，不是全球所有化学业务保证，不编造外购例外或 ELO 使用。当前 NorglassLaboratoriesPtyLtd、norglass.com.au、Northane/Norsystem/Norcells、MoxonRoad及 Search旧ABN92001807245 保守关联去重，最新 main250/本地264/私有队列/frontier 无同一账户。ABN来自未读旧PDF/Search，不当作当前登记核验，未上传登记号码；原料/产品/家族成员/经销商/工厂只计一个澳大利亚账户。"
+    },
+    "contact": {
+      "label": "官网公开Technical部门邮箱及共享技术咨询/销售电话；非具名采购负责人",
+      "email": "techinfo@norglass.com.au",
+      "phone": "+61297082200",
+      "contactUrl": "https://norglass.com.au/contact"
+    },
+    "source": {
+      "label": "Norglass official Northane Gloss: two-pack aliphatic polyurethane finish for commercial and industrial use",
+      "url": "https://norglass.com.au/products/finish-coats/northane-gloss"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "norglass-punchbowl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "jansen-ahrweiler": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "malchem-sulkowice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "van-wijhe-verf-zwolle": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4784,6 +4813,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "norglass-punchbowl": {
+    "website": "https://norglass.com.au/",
+    "contactPage": "https://norglass.com.au/contact",
+    "address": "Units 1 & 2, 59 Moxon Road, Punchbowl NSW2196, Australia: exact current official factory address. Postal P.O.Box312,NeutralBayNSW2089 is separate mailbox,not factory. Coarse Sydney/Punchbowl marker-33.9,151.1,not factory entrance GPS. Current own About says Sydney manufacture/family business, not independently audited ownership percentages. Search-only old ABN/PDF contacts not current registry proof.",
+    "generalEmail": "",
+    "generalPhone": "+61297082200",
+    "generalPhoneEvidence": {
+      "company": "Norglass Laboratories Pty Ltd",
+      "value": "+61297082200",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Norglass actual official contact page: Technical email for product/application advice and shared technical-information/sales voice number",
+          "url": "https://norglass.com.au/contact",
+          "summary": "Actual page prints02 9708 2200 with explicit Technical information and sales label, and literal tel:+61297082200. Store exact public international href, not add country code by guess. Shared technical/sales business phone, not exclusively R&D or Procurement and not personal/WhatsApp/call-tested."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "techinfo@norglass.com.au",
+        "source": {
+          "label": "Norglass actual official contact page: Technical email for product/application advice and shared technical-information/sales voice number",
+          "url": "https://norglass.com.au/contact"
+        },
+        "emailEvidence": {
+          "company": "Norglass Laboratories Pty Ltd",
+          "value": "techinfo@norglass.com.au",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Norglass actual official contact page: Technical email for product/application advice and shared technical-information/sales voice number",
+              "url": "https://norglass.com.au/contact",
+              "summary": "Actual Details block explicitly labels Technical email and Product and application advice. Exact address techinfo@norglass.com.au recovered locally from its public Cloudflare email-protection href/span encoding in the already-retrieved HTML, not inferred from names/domain/pattern. Separate reception@norglass.com.au is General and sales enquiries, not procurement, and not selected over Technical. No named individual/current material buying authority or deliverability asserted."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Norglass official Northane Gloss: two-pack aliphatic polyurethane finish for commercial and industrial use",
+        "url": "https://norglass.com.au/products/finish-coats/northane-gloss"
+      },
+      {
+        "label": "Norglass actual own About: Sydney factory, manufacturing/formulation and family-business identity",
+        "url": "https://norglass.com.au/about"
+      },
+      {
+        "label": "Norglass actual full visible A–Z product list:12categories,4resin systems,8additive functions and support inputs",
+        "url": "https://norglass.com.au/products/"
+      },
+      {
+        "label": "Norglass actual Additives: all8visible functional products,not ELO/ESBO classification by generic additive label",
+        "url": "https://norglass.com.au/products/additives"
+      },
+      {
+        "label": "Norglass actual Norsystem:boat epoxy2packbase/fast-slowhardenerconstruction system,not epoxidized vegetable oil",
+        "url": "https://norglass.com.au/products/resins/norsystem-boat-epoxy-resin"
+      },
+      {
+        "label": "Norglass actual official contact page: Technical email for product/application advice and shared technical-information/sales voice number",
+        "url": "https://norglass.com.au/contact"
+      }
+    ]
+  },
   "jansen-ahrweiler": {
     "website": "https://www.jansen.de/",
     "contactPage": "https://www.jansen.de/der-weg-zu-uns/",
@@ -14306,6 +14407,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "norglass-punchbowl",
   "jansen-ahrweiler",
   "malchem-sulkowice",
   "van-wijhe-verf-zwolle",
