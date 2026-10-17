@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "royal-coatings-new-orleans": "Your 200 Series solvent-free epoxy system is designed for pipes affected by corrosion under insulation.",
   "halton-chemical-burlington": "Your AQUASURF ULTRA is a waterborne acrylic primer designed for MDF and hardwoods.",
   "unicoat-monterrey": "Your industrial epoxy coatings are designed for floors, machinery and metal surfaces in demanding environments.",
   "isma-de-mexico-puebla": "Your Epoxil 21 is an epoxy enamel in your specialty coatings range, formulated for demanding industrial conditions.",

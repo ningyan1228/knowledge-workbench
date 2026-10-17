@@ -4250,11 +4250,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "royal-coatings-new-orleans",
+    "company": "Royal Coatings, Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "New Orleans, Louisiana (approximate own business-map point; manufacturing-site entrance unverified)",
+    "latitude": 29.96,
+    "longitude": -90.05,
+    "legacyCompanyDescription": "美国自有工业及船舶防腐涂料制造；200Series环氧体系用于管道保温层下腐蚀防护；ELO适配及采购待确认",
+    "fit": "可开发候选",
+    "signal": "Royal Coatings官网自有About明确工业及船舶防护涂料制造、美国五处制造地点、自有配方技术和研发试验设施；Home明示200 Series为无溶剂环氧体系，用于油气及工业管道保温层下腐蚀防护。当前成品目录包含防护底漆、水性丙烯酸、环氧及沥青类防腐体系；RoyalCoat111实际是地板用氧化铝抗滑骨料。官方Contact提供New Orleans公司地址和业务电话；未读取到可独立核实的业务邮箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "独立完整阅读当前Home、About、Search Products、RoyalCoat111详情和Contact五页。全部可见七个行业导航为Infrastructure、Marine、Oil&Gas、UnderwaterApplication、Transportation、Containers、OEM；产品导航含各行业的成品防腐涂层、底漆、腻子、screed及抗滑材料。当前Search Products静态HTML内实际FacetWP数据为page1/per_page-1/total_rows15/total_rows_unfiltered15/total_pages1，完整读取此实际15项列表，不声称它覆盖导航中全部其他型号的所有成分。目录明确水性丙烯酸底/面漆、溶剂无添加描述的成品环氧、water-based bituminous、hot-melt asphalt35LBblocks及cutback asphalt；保留沥青商品/涂装配套投入销售，不笼统称仅成品或无任何原料。实际RoyalCoat111原文为gray dual-mesh aluminum oxide aggregate用于non-slip flooring；它是抗滑骨料，不因URL名anti-slip-additive而变成ELO/ESBO、环氧化植物油、生物基增塑/稳定同功能原料。Home/About的Flash Dry是自有成品配方技术，不是已证对外出售的增塑剂。实际所读业务、15项列表和完整可见导航及该添加材料详情范围内未见上述ELO同类输入对外供应，结论限公开已读范围；未下载任何TDS/SDS/认证，也不保证未披露业务/全球全部SKU或配方完整成分。按RoyalCoatingsInc/royalcoatings.net、NewOrleans地址、创始名、VoidKote/RoyalCoat品牌与最新main240、本地254及私有队列全量核对，无既有同一主体；五厂/经销网络/产品牌号只保留一个制造账户。当前已读来源未披露控股母公司，不据此声称外部股权登记审计或与其他名称Royal企业存在关联。无需捏造外购同类输入例外。"
+    },
+    "contact": {
+      "label": "官网公开业务联系页与公司通用电话；尚无独立核实业务邮箱或具名采购",
+      "phone": "+1 504 392 8811",
+      "contactUrl": "https://royalcoatings.net/contact/"
+    },
+    "source": {
+      "label": "Actual own Royal Coatings: 200 Series solvent-free epoxy for corrosion under insulation on pipes; own US industrial/marine manufacture",
+      "url": "https://royalcoatings.net/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "royal-coatings-new-orleans": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "halton-chemical-burlington": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "unicoat-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "isma-de-mexico-puebla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4496,6 +4524,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "royal-coatings-new-orleans": {
+    "website": "https://royalcoatings.net/",
+    "contactPage": "https://royalcoatings.net/contact/",
+    "address": "3014 Dauphine St, Ste A, New Orleans, LA70117, United States. Actual own corporate business address; own static Google Maps link embeds place29.9646051,-90.0464735. Rounded29.96,-90.05 is approximate company map marker, not surveyed factory entrance. Do not use link viewport longitude-90.0490538 as place coordinate. Five US manufacturing locations and distributors remain one Royal Coatings account; no new affiliate/site accounts or external ultimate ownership audit. General fax5043922173 not voice.",
+    "generalEmail": "",
+    "generalPhone": "+1 504 392 8811",
+    "generalPhoneEvidence": {
+      "company": "Royal Coatings, Inc.",
+      "value": "+1 504 392 8811",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Royal Coatings business contact page: general voice telephone, separate fax and corporate address",
+          "url": "https://royalcoatings.net/contact/",
+          "summary": "Actual official company Contact separately labels Phone(504)392-8811 and Fax(504)392-2173 beside3014DauphineStSteA,NewOrleansLA70117. About explicitly invites business representative calls at+15043928811. General voice route,not named procurement/R&D/mobile/WhatsApp; fax not selected as voice."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own Royal Coatings: 200 Series solvent-free epoxy for corrosion under insulation on pipes; own US industrial/marine manufacture",
+        "url": "https://royalcoatings.net/"
+      },
+      {
+        "label": "Actual Royal About: own industrial/marine formulation, five US manufacturing locations and laboratory",
+        "url": "https://royalcoatings.net/about/"
+      },
+      {
+        "label": "Actual own current15-item catalogue plus visible seven industry/full product navigation",
+        "url": "https://royalcoatings.net/search"
+      },
+      {
+        "label": "Actual RoyalCoat111: non-slip flooring dual-mesh aluminum oxide aggregate, not inferred epoxidized oil",
+        "url": "https://royalcoatings.net/products/anti-slip-additive-111/"
+      },
+      {
+        "label": "Actual Royal Coatings business contact page: general voice telephone, separate fax and corporate address",
+        "url": "https://royalcoatings.net/contact/"
+      }
+    ]
+  },
   "halton-chemical-burlington": {
     "website": "https://haltonchemical.com/",
     "contactPage": "https://haltonchemical.com/contact-us/",
@@ -13284,6 +13357,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "royal-coatings-new-orleans",
   "halton-chemical-burlington",
   "unicoat-monterrey",
   "isma-de-mexico-puebla",
