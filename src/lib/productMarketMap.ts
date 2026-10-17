@@ -4388,11 +4388,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "flugger-group-roedovre",
+    "company": "Flügger group A/S (Flügger Denmark A/S)",
+    "productId": "nl-w1201",
+    "country": "Denmark",
+    "countryZh": "丹麦",
+    "city": "Rødovre (headquarters and formulation laboratory; approximate town marker, production in Kolding)",
+    "latitude": 55.7,
+    "longitude": 12.45,
+    "legacyCompanyDescription": "丹麦Flügger集团自有研发及Kolding水性涂料制造；06WoodTex为室外木器水性保护成品；NL-W1201适配与采购待确认",
+    "fit": "可开发候选",
+    "signal": "Flügger集团自有FAQ原文明示中央研发、Rødovre自有实验室及自有工厂制造；2025-05-19实际工厂新闻说明Kolding生产水性涂料、木材保护和壁纸胶。当前06 Wood Tex具体产品原文明示Vandig Træbeskyttelse，表面为木材、稀释剂为水，系室外木器保护成品。总部Contact将集团A/S与丹麦运营A/S列为关联主体，分别为CVR32788718和45240118，并明确Rødovre旧厂房现作总部职能；FAQ明示此处已不生产。自有制造证据归属Kolding等实际工厂，非把总部接待地址当生产线。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "实际完整读取五份原文：丹麦零售Home、集团FAQ、2025-05-19自有生产新闻、06 Wood Tex详情、集团Contact。零售完整可见室内/室外/腻子/辅材和按基材用途导航，列墙顶、木器/金属漆、地板/清漆、木材油蜡、壁纸胶/底涂、密封胶/胶、清洗化学品、工具包装等，集团FAQ补充中央开发及涂料/木材保护/壁纸胶/填缝/工具包装制造。保留linseed oil、油蜡、清洗化学品和配套底涂/胶等其他产品业务，不笼统称无原料或所有化学品无关。PP–professional paint是FAQ明示的品牌名称，不因PP字母当聚丙烯原料；06WoodTex是按施工说明直接涂木材的成品，油漆外观不推断醇酸/聚氨酯/PO化学组成。所读完整可见品类及实际木器成品、自有研发制造和总部关联范围内未见水性聚烯烃乳液、CPO/PO分散或同功能配方附着促进原料外售证据。其他成品primer/胶未逐项读配方，不把名称直接当原料供应，也不声称全部SKU/SDS/TDS/未披露关联全球业务已穷尽。集团Flügger/PP/Yunik/Stiwex/Unicell/Primacol/LuxDecor/DETALE/Eskaro及各国子公司按一个丹麦账户；中国大陆公司及门店不收录不补联系人，不将七厂或227门店计作新客户。丹麦上市集团与丹麦运营公司法律身份分别保留；FAQ家族主要股东措辞与45.1%股本数字不编造一致的控股/投票权解释，也未原读股权文件。总部Contact明确全集团及分区经营，未发现相关同功能原料销售或凭空要用的外购例外；原料实际采购、相容性和进口接受度仍待确认。"
+    },
+    "contact": {
+      "label": "丹麦总部接待及一般业务问询邮箱、通用业务电话；未核实采购/研发负责人",
+      "email": "flugger@flugger.com",
+      "phone": "+45 70 15 15 05",
+      "contactUrl": "https://www.flugger.com/en/contact/"
+    },
+    "source": {
+      "label": "Actual Flügger 06 Wood Tex: water-based wood protection coating for exterior timber; water dilution and wood substrate explicit",
+      "url": "https://www.flugger.dk/udendoers/traemaling/06-wood-tex/p-FL%2006%20WT/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "flugger-group-roedovre": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "erlac-polydendri": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "coloria-nokia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "endura-manufacturing-edmonton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4639,6 +4668,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "flugger-group-roedovre": {
+    "website": "https://www.flugger.com/",
+    "contactPage": "https://www.flugger.com/en/contact/",
+    "address": "Islevdalvej151,DK-2610 Rødovre,Denmark: actual corporate headquarters/reception/laboratory address; ownFAQ explicitly says no current production in this former factory building. Manufacturing separately established at own Kolding factory. Marker55.7,12.45 is a coarse approximate Rødovre town location,not street/factory-entrance geocoding. GroupCVR32788718 distinctfromDanishoperatingcompanyCVR45240118;oneassociatedDanishaccount acrossbrands/locations. GovernmentSearchfactoryVejlevej150address notoriginal-read/notassertedverified. Chineseentities/stores notadmitted orcontact-enriched.",
+    "generalEmail": "flugger@flugger.com",
+    "generalEmailEvidence": {
+      "company": "Flügger group A/S (Flügger Denmark A/S)",
+      "value": "flugger@flugger.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Flügger headquarters Contact: reception/general enquiries mailbox and general voice, with separate press/export/IR/whistleblower roles",
+          "url": "https://www.flugger.com/en/contact/",
+          "summary": "Official Contact reception/visits/general-inquiries block explicitly lists flugger@flugger.com and matching mailto for Danish Flüggergroup headquarters. General business/reception route, not procurement/technical or a named person. FAQ also uses same mailbox for sponsorship/internship, but this independent Contact explicitly establishes broader general-inquiry role. Press communication@,export@,IR irl@ and personally mismatched nicgj@label/cafel@mailto not chosen or corrected into buyers. No deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+45 70 15 15 05",
+    "generalPhoneEvidence": {
+      "company": "Flügger group A/S (Flügger Denmark A/S)",
+      "value": "+45 70 15 15 05",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Flügger headquarters Contact: reception/general enquiries mailbox and general voice, with separate press/export/IR/whistleblower roles",
+          "url": "https://www.flugger.com/en/contact/",
+          "summary": "Official reception/general-inquiry block publishes +4570151505 with exact tel:+4570151505 at Islevdalvej151,Rødovre. General Danish business voice, not a named individual/mobile/WhatsApp or call-tested channel. Press direct +4527532899 and international whistleblower hotlines not selected as purchasing/company voice."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "flugger@flugger.com",
+        "source": {
+          "label": "Actual Flügger headquarters Contact: reception/general enquiries mailbox and general voice, with separate press/export/IR/whistleblower roles",
+          "url": "https://www.flugger.com/en/contact/"
+        },
+        "emailEvidence": {
+          "company": "Flügger group A/S (Flügger Denmark A/S)",
+          "value": "flugger@flugger.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual Flügger headquarters Contact: reception/general enquiries mailbox and general voice, with separate press/export/IR/whistleblower roles",
+              "url": "https://www.flugger.com/en/contact/",
+              "summary": "Official Contact reception/visits/general-inquiries block explicitly lists flugger@flugger.com and matching mailto for Danish Flüggergroup headquarters. General business/reception route, not procurement/technical or a named person. FAQ also uses same mailbox for sponsorship/internship, but this independent Contact explicitly establishes broader general-inquiry role. Press communication@,export@,IR irl@ and personally mismatched nicgj@label/cafel@mailto not chosen or corrected into buyers. No deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual Flügger 06 Wood Tex: water-based wood protection coating for exterior timber; water dilution and wood substrate explicit",
+        "url": "https://www.flugger.dk/udendoers/traemaling/06-wood-tex/p-FL%2006%20WT/"
+      },
+      {
+        "label": "Actual Flügger group FAQ: own central development/laboratory, own factories, brands and current headquarters role",
+        "url": "https://www.flugger.com/da/om-flugger/ofte-stillede-spoergsmaal/"
+      },
+      {
+        "label": "Actual 19 May2025 company news: Kolding own manufacture of water-based paint, wood protection and wallpaper adhesive",
+        "url": "https://www.flugger.com/en/flugger-invests-in-local-production/"
+      },
+      {
+        "label": "Actual Danish retail Home: complete visible finished coating/chemical/tool categories and Danish operating-company identity",
+        "url": "https://www.flugger.dk/"
+      },
+      {
+        "label": "Actual Flügger headquarters Contact: reception/general enquiries mailbox and general voice, with separate press/export/IR/whistleblower roles",
+        "url": "https://www.flugger.com/en/contact/"
+      }
+    ]
+  },
   "erlac-polydendri": {
     "website": "https://erlac.gr/",
     "contactPage": "https://erlac.gr/epikoinonia/",
@@ -13740,6 +13851,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "flugger-group-roedovre",
   "erlac-polydendri",
   "coloria-nokia",
   "endura-manufacturing-edmonton",
