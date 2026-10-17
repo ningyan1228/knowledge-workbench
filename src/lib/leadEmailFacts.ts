@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "paul-jaeger-moeglingen": "Your 329 Kronen Aqua Iso Treppen- und Parkettlack is water-based and suitable for wooden stairs and floors.",
   "norglass-punchbowl": "Your Northane Gloss is a two-pack aliphatic polyurethane coating for commercial and industrial use.",
   "jansen-ahrweiler": "Your Aqua Isolier- und Haftgrund is a water-based primer for absorbent substrates, including wood surfaces.",
   "malchem-sulkowice": "Your MALKOR A is a modified alkyd primer intended for steel surfaces.",

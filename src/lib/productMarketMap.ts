@@ -4556,11 +4556,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "paul-jaeger-moeglingen",
+    "company": "Paul Jaeger GmbH & Co. KG",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Möglingen (approximate town marker; factory entrance not geocoded)",
+    "latitude": 48.9,
+    "longitude": 9.1,
+    "legacyCompanyDescription": "德国PaulJaeger自产涂料；329KronenAquaIso为水性木楼梯/地板涂料；材料适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Jaeger 当前官方招聘介绍独立明示 Paul Jaeger GmbH & Co.KG 在 Möglingen 自产专业建筑涂料，涂料实验室和生产培训属于自有业务。实际原始产品公告（2025年10月）明确329KronenAquaIsoTreppen- undParkettlack为水性涂料，用于木楼梯、木地板和木扶手，喷涂施工。当前主站产品目录保留木器漆/封闭漆与隔离底漆等类别，不是把招聘职位、通用木材标签或经销商当作该产品的制造证据。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "完整读取当前Home、公司自产介绍（招聘站原文）、2025年10月自有产品原文、全部22类可见业务导航、联系页和Impressum六页。公开类别包括建筑/翻新/地坪/木器/隔离底漆/金属防护/标线/防滑/防霉/装饰/清洁稀释剂/工具；清楚保留外售稀释清洁及其他施工配套。当前Search另见2026新品中标线干燥促进配套，其原产品/SDS未读，不能声称公司无任何添加剂；干燥促进也不自动是NL-W1201同功能附着促进原料。已读329为结合底涂、隔离、面涂的建筑木器施工成品，不因Haftvermögen或底漆字样改称出售给其他涂料制造商的原料附着促进剂。实际已读公开业务和成品角色中未见水性聚烯烃乳液、CPO/PO分散或同功能附着促进原料外售证据；未穷尽所有SKU、TDS/SDS、关联全球业务和未披露配方，不给全球原料业务保证、不编造外购例外。保留PaulJaeger运营主体HRA201951、普通合伙人JaegerGmbH的HRB202106及同址关系，两者按一个关联账户，未审计持股比例。已按jaegerlacke主域/jobs/presse、Kronen/Kronalux/Kronisol、法人、登记号和Siemensstraße6核对最新main251、本地265及私有队列/frontier，无同账户；名称相近的JaegerCospharm/Jäger工业密封/乳业公司只出现在Search，不自动合并、也未新增。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与电话；联系表单含采购/供应商咨询选项，未核实具名买方",
+      "email": "info@jaegerlacke.de",
+      "phone": "+49 7141 2444 0",
+      "contactUrl": "https://www.jaegerlacke.de/kontakt"
+    },
+    "source": {
+      "label": "Jaeger official October2025 product announcement:329KronenAquaIso water-based coating for wood stairs/floors/handrails",
+      "url": "https://www.presse.jaegerlacke.de/2025-aqua-iso-lacke"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "paul-jaeger-moeglingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "norglass-punchbowl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "jansen-ahrweiler": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "malchem-sulkowice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4813,6 +4842,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "paul-jaeger-moeglingen": {
+    "website": "https://www.jaegerlacke.de/",
+    "contactPage": "https://www.jaegerlacke.de/kontakt",
+    "address": "Siemensstraße6,71696Möglingen,Germany:actual corporateImpressum;own currentmanufacturing statementindependently namesMöglingen. HRA201951operatingcompany,HRB202106generalpartnerJaegerGmbH,not independentregistryorownershippercentageaudit. Marker48.9,9.1approximatecity,notplantentranceGPS.",
+    "generalEmail": "info@jaegerlacke.de",
+    "generalEmailEvidence": {
+      "company": "Paul Jaeger GmbH & Co. KG",
+      "value": "info@jaegerlacke.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Jaeger actual corporate Impressum:legal operating company and general business email",
+          "url": "https://www.jaegerlacke.de/impressum",
+          "summary": "Actual legal company Kontakt block and common corporate footer publish info@jaegerlacke.de,locally decoded from public email-protection HTML/href. Exact published address,not guessed pattern/name. General mailbox,not named purchasing/R&D/production. Separate website-development agency contact excluded;no deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+49 7141 2444 0",
+    "generalPhoneEvidence": {
+      "company": "Paul Jaeger GmbH & Co. KG",
+      "value": "+49 7141 2444 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Jaeger actual contact-page corporate footer general voice",
+          "url": "https://www.jaegerlacke.de/kontakt",
+          "summary": "Actual KONTAKT footer explicitly prints+49 7141 2444 0 and tel:+49714124440,independently legalKontakt+49(0)714124440. Store exact generalbusinessvoice;regionalmobiles/fax/technical0800line not substituted into named buyer contact andnotcall-tested."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@jaegerlacke.de",
+        "source": {
+          "label": "Jaeger actual corporate Impressum:legal operating company and general business email",
+          "url": "https://www.jaegerlacke.de/impressum"
+        },
+        "emailEvidence": {
+          "company": "Paul Jaeger GmbH & Co. KG",
+          "value": "info@jaegerlacke.de",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Jaeger actual corporate Impressum:legal operating company and general business email",
+              "url": "https://www.jaegerlacke.de/impressum",
+              "summary": "Actual legal company Kontakt block and common corporate footer publish info@jaegerlacke.de,locally decoded from public email-protection HTML/href. Exact published address,not guessed pattern/name. General mailbox,not named purchasing/R&D/production. Separate website-development agency contact excluded;no deliverability assertion."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Jaeger official October2025 product announcement:329KronenAquaIso water-based coating for wood stairs/floors/handrails",
+        "url": "https://www.presse.jaegerlacke.de/2025-aqua-iso-lacke"
+      },
+      {
+        "label": "Jaeger own current production statement in Möglingen;recruitmentpage used only for manufacturing evidence",
+        "url": "https://www.jobs.jaegerlacke.de/ausbildung"
+      },
+      {
+        "label": "Jaeger actual22visible productcategories and support cleaner/thinner role",
+        "url": "https://www.jaegerlacke.de/produkte-loesungen"
+      },
+      {
+        "label": "Jaeger actual business contact page and purchasing/supplier-inquiry form option,not submitted",
+        "url": "https://www.jaegerlacke.de/kontakt"
+      },
+      {
+        "label": "Jaeger actual corporate Impressum:legal operating company and general business email",
+        "url": "https://www.jaegerlacke.de/impressum"
+      }
+    ]
+  },
   "norglass-punchbowl": {
     "website": "https://norglass.com.au/",
     "contactPage": "https://norglass.com.au/contact",
@@ -14407,6 +14518,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "paul-jaeger-moeglingen",
   "norglass-punchbowl",
   "jansen-ahrweiler",
   "malchem-sulkowice",
