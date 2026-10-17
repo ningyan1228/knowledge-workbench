@@ -4277,11 +4277,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "renovo-cookeville",
+    "company": "Renovo LLC (Renovo Sustainable Products)",
+    "productId": "fertilizer-coating",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Cookeville, Tennessee (approximate city marker from own structured business metadata; exact factory coordinates unverified)",
+    "latitude": 36.16,
+    "longitude": -85.5,
+    "legacyCompanyDescription": "美国Cookeville实际包衣代工/合同制造及自有TERRACOTE聚合物包膜尿素；具体原料采购、反应体系与我方适配待确认",
+    "fit": "可开发候选",
+    "signal": "Renovo官网Home明示自有TERRACOTE为生物炭芯尿素颗粒加聚合物包膜，展示自有NATRiX及四类制造业务；About明确在Cookeville运营造粒、包衣及分析设备，可由客户提供原料或由Renovo采购投入料。Facility当前设备清单EQ-05为共用Coating Drum，执行聚合物/硫/油包衣，并明示造粒、干燥、包衣、混合、检测、包装均在1410 Imperial Dr同一厂内完成。Legal页脚名RENOVO LLC，品牌Renovo Sustainable Products；不是仅经销他方控释成品。Matt Martin公开职位为VP Product Development、负责可行性及农业/工业材料研发，未核实其个人邮箱或采购职责。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-17",
+      "conclusion": "独立完整阅读Renovo Home、About、Facility、Contact四份当前原文及公开可见全部业务/能力矩阵。四类经营为农业肥料/生物炭/控释包衣/生物载体，过滤活性炭/氧化铝/沸石等介质，建筑沥青改性及修复颗粒，工业干润滑载体/特殊化学加工助剂及代灌装；保留其他工业添加剂、沥青改性成品及客户材料加工业务，不称无任何原料或添加剂业务。Home实际PU/PA/可降解polymer是Coating能力的用料类型，PVA/lignin/starch列为造粒粘结投入；不能单凭这些词当作对外售肥料包衣树脂/PU反应原料。实际自有可公开样品TERRACOTE是尿素包膜成品、NATRiX是含氮营养颗粒矩阵，并非已证液体包衣树脂或原料包衣剂商品。About和Facility把coating定义为本厂转化服务，未显示向其他肥料厂出售可替代我方的包衣树脂、PU聚醇/异氰酸酯或独立肥料包衣原料剂。在实际四页完整公开业务/能力范围内未发现相同功能包衣输入外售，结论限所查范围，不保证全部未披露客户项目/全球完整配方；各Services/Industries叶页、文章及所有技术数据表未另抓取，NDA项目无内容可臆测。Toll/contract可由客户来料或Renovo采购的明确区别保留，不能把来料加工全认定自购，也不凭设备存在声称当前我方原料采购；无须凭空写外购同行输入例外。公司页未披露控股集团，按RenovoLLC/SustainableProducts、renovo.eco、NATRiX/TERRACOTE、1410Imperial、公开业务邮箱电话及负责人姓名核对最新main241、本地255/队列全量，无同一账户；一厂两造粒线/多牌号均计一个客户。不与同名医疗/建筑Renovo或SpringValley/Nousbo/其他coating公司混合，不把合作代工客户当同股权集团。"
+    },
+    "contact": {
+      "label": "官网公司结构化资料公开通用邮箱及独立可见业务电话；技术角色仅身份核实，无个人邮箱或采购职责",
+      "email": "info@renovo.eco",
+      "phone": "+1 731 207 0604",
+      "contactUrl": "https://renovo.eco/contact"
+    },
+    "source": {
+      "label": "Actual Renovo own TERRACOTE biochar-cored polymer-coated urea and controlled-release coating capability",
+      "url": "https://renovo.eco/"
+    },
+    "checkedAt": "2026-10-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "renovo-cookeville": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "royal-coatings-new-orleans": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "halton-chemical-burlington": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "unicoat-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4524,6 +4553,91 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "renovo-cookeville": {
+    "website": "https://renovo.eco/",
+    "contactPage": "https://renovo.eco/contact",
+    "address": "1410 Imperial Dr, Cookeville, TN38506, United States. Actual Facility and Contact name own manufacturing location. Own public LocalBusiness metadata gives36.1628,-85.5016; rounded36.16,-85.50 is an approximate city/business marker,not independently geocoded/surveyed factory entrance. Renovo LLC and Renovo Sustainable Products/NATRiX/TERRACOTE are one development account,not separate legal entities. No external ultimate ownership/registry audit.",
+    "generalEmail": "info@renovo.eco",
+    "generalEmailEvidence": {
+      "company": "Renovo LLC (Renovo Sustainable Products)",
+      "value": "info@renovo.eco",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public LocalBusiness structured company email, matching branded name, street address and phone",
+          "url": "https://renovo.eco/",
+          "summary": "Own public HTML application/ld+json LocalBusiness explicitly names Renovo Sustainable Products, emailinfo@renovo.eco,1410ImperialDrCookevilleTN38506 andsame businessphone. Exact published company metadata,not email-pattern inference or private data. This address is absent from visible Contact block/mailto; provenance is structured public company declaration,not independently confirmed deliverability or named role. Contact input placeholder is a fictional example and not used."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "generalPhone": "+1 731 207 0604",
+    "generalPhoneEvidence": {
+      "company": "Renovo LLC (Renovo Sustainable Products)",
+      "value": "+1 731 207 0604",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual Renovo project/business contact: explicit general voice telephone and Cookeville address",
+          "url": "https://renovo.eco/contact",
+          "summary": "Actual visible own Contact says Prefer to talk731.207.0604 and businesshours,address1410ImperialDrCookevilleTN38506,matching tel link and Facility/About/Home. General businessvoice route,not namedtechnical/procurement/mobile/WhatsApp or testedcall.731areacode not used to infer different address."
+        }
+      ],
+      "verifiedAt": "2026-10-17"
+    },
+    "contacts": [
+      {
+        "name": "Matt Martin",
+        "title": "VP Product Development",
+        "department": "Product",
+        "source": {
+          "label": "Actual Renovo About: own coating/manufacturing, contract input sourcing and current Product Development role",
+          "url": "https://renovo.eco/about"
+        },
+        "verifiedAt": "2026-10-17",
+        "identityEvidence": {
+          "company": "Renovo LLC (Renovo Sustainable Products)",
+          "name": "Matt Martin",
+          "title": "VP Product Development",
+          "responsibilities": "Technical architect of the granulation platform; leads feasibility studies and R&D for agricultural and industrial materials.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Actual Renovo About: own coating/manufacturing, contract input sourcing and current Product Development role",
+              "url": "https://renovo.eco/about",
+              "summary": "Current actual About Leadership and FAQ explicitly MattMartin VPProductDevelopment,technicalarchitect ofgranulationplatform,leadsfeasibilitystudies andR&D foragricultural/industrialmaterials. Ownpresent-tensecompanydisclosure,not externalemploymentregistry/LinkedIn audit. Noindividual email/phone orpurchasingresponsibility disclosed."
+            }
+          ],
+          "verifiedAt": "2026-10-17"
+        }
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual Renovo own TERRACOTE biochar-cored polymer-coated urea and controlled-release coating capability",
+        "url": "https://renovo.eco/"
+      },
+      {
+        "label": "Actual Renovo About: own coating/manufacturing, contract input sourcing and current Product Development role",
+        "url": "https://renovo.eco/about"
+      },
+      {
+        "label": "Actual Renovo operating facility/equipment inventory: EQ-05CoatingDrum and single-floor manufacture",
+        "url": "https://renovo.eco/facility"
+      },
+      {
+        "label": "Actual own public LocalBusiness structured company email, matching branded name, street address and phone",
+        "url": "https://renovo.eco/"
+      },
+      {
+        "label": "Actual Renovo project/business contact: explicit general voice telephone and Cookeville address",
+        "url": "https://renovo.eco/contact"
+      }
+    ]
+  },
   "royal-coatings-new-orleans": {
     "website": "https://royalcoatings.net/",
     "contactPage": "https://royalcoatings.net/contact/",
@@ -13357,6 +13471,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "renovo-cookeville",
   "royal-coatings-new-orleans",
   "halton-chemical-burlington",
   "unicoat-monterrey",
