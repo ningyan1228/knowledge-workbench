@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "invebi-orago": "Your water-based interior wood coatings include primers and finishes for parquet floors and stairs.",
   "freilacke-doeggingen": "Your FREOPOX-UHS ER1936H is an epoxy primer for industrial corrosion protection.",
   "vermeister-mornico": "Your Idro 2K is a two-component water-based polyurethane finish for wooden floors, including floors in high-traffic shops.",
   "dacrylate-kirkby": "Your Dacprime 98 is a high-build primer with rust-inhibitive properties for protecting steel.",

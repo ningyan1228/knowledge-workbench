@@ -5031,11 +5031,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "invebi-orago",
+    "company": "Invebi s.r.l. (Invebi Industrie Vernici)",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Orago, Jerago con Orago (approximate locality marker; factory entrance not surveyed)",
+    "latitude": 45.7,
+    "longitude": 8.8,
+    "legacyCompanyDescription": "意大利Invebi自产水性木器底/面漆，用于拼花地板与楼梯；W1201适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Invebi当前Azienda明确Jerago con Orago公司含工厂/实验室/办公室，并说明自产涂料、原料检验及水性配方研发。InteriorWaterCoatings原文直接列单/双组分水性木器底漆、面漆，以及拼花地板和楼梯用途；PlasticCoatings与Tintometric原文另核清成品涂饰/调色配套角色。自主制造/配方及具体水性木材用途均有直接原文，未从搜索目录或Finbi相似产品页复制结论。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Azienda、InteriorWaterCoatings、完整返回Products十六类、Contact、PlasticCoatings和Tintometric六份原始HTML。可见木器水性/溶剂型/硝基/聚酯/丙烯酸涂饰、工业/地坪/玻璃/塑料成品漆、染色及装饰/自流平环氧树脂和调色配套；未遍历全部叶子TDS/SDS、商店SKU或独立法人股权。真实外售通用色浆、PU/硝基/环氧/丙烯酸/醇酸等Converter基料、水性7228/7227/7222SA等底/面漆调色基料及催化固化剂保留，不宣称无原料/树脂/添加配套。Tintometric实际说明将色浆加入其自产Converter形成指定底漆或面漆；塑料线原文为表面施工用底/面漆，不能仅凭最高附着/聚合物/基料字样改写成PO/CPO乳液或原料级附着促进剂。Converter未读化学组成，不断言其不含任何PO。按已读自主木器成品、完整可见类别、塑料成品角色和完整返回调色输入范围，未见W1201同类水性聚烯烃乳液/CPO或PO分散体/同功能原料级附着输入外售；结论仅限该范围，不为未读SKU/全球关联业务给无供应保证，不编造外购例外。ContactInvebisrl及页脚InvebiInternational同一VAT00274680123按一账户；历史sas/Srl/创始人Buzzetti/地区网站不拆新增。Finbi相似搜索网站未核实关联，不复制制造/联系人也不另计。1969沿革/每年生产数字为公司自述非2026新扩产；不把旧目录法律名当外部注册审计。最新main268、本地282、全队列/frontier公司/域名/旧称/VAT/品牌查重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开采购部门邮箱；另有技术实验室与一般业务入口，电话为公司总机",
+      "email": "uff.acquisti@invebi.it",
+      "phone": "+39 0331 218018",
+      "contactUrl": "https://www.invebi.it/contatti/"
+    },
+    "source": {
+      "label": "Invebi own interior water-based wood coatings:primers/finishes for parquet and stairs",
+      "url": "https://www.invebi.it/prodotti-per-la-verniciatura/vernici-allacqua-per-interni/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "invebi-orago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "freilacke-doeggingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vermeister-mornico": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "dacrylate-kirkby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5305,6 +5334,136 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "invebi-orago": {
+    "website": "https://www.invebi.it/",
+    "contactPage": "https://www.invebi.it/contatti/",
+    "address": "Via Varesina 78, 21040 Orago (VA), Italy:actualcurrentownContact;AziendaseparatelydescribesJeragoconOragofactory/labs/offices. Marker45.7,8.8coarselocality,notfactorygateGPS/independentregistry.",
+    "generalEmail": "info@invebi.it",
+    "generalEmailEvidence": {
+      "company": "Invebi s.r.l. (Invebi Industrie Vernici)",
+      "value": "info@invebi.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+          "url": "https://www.invebi.it/contatti/",
+          "summary": "ActualContactInformazioni/info@invebi.itpluslegalcompanyInvebisrl/VAT00274680123. Corporatebusinessentry,noindividualownership/deliverabilityclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+39 0331 218018",
+    "generalPhoneEvidence": {
+      "company": "Invebi s.r.l. (Invebi Industrie Vernici)",
+      "value": "+39 0331 218018",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+          "url": "https://www.invebi.it/contatti/",
+          "summary": "ActualContactTel0331218018and0331217004;storefirstsharedvoiceonly,Italy0331zeroafter+39retained. Noassignmentasprocurementdirectline/noactualdialclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "uff.acquisti@invebi.it",
+        "source": {
+          "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+          "url": "https://www.invebi.it/contatti/"
+        },
+        "emailEvidence": {
+          "company": "Invebi s.r.l. (Invebi Industrie Vernici)",
+          "value": "uff.acquisti@invebi.it",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+              "url": "https://www.invebi.it/contatti/",
+              "summary": "ActualContactexplicitUfficioacquisti:uff.acquisti@invebi.it. Verifiedcurrentpublicpurchasingdepartmentroute,nonamedperson/currentRFQ/buyingneedasserted."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      },
+      {
+        "department": "Technical",
+        "email": "lab@invebi.it",
+        "source": {
+          "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+          "url": "https://www.invebi.it/contatti/"
+        },
+        "emailEvidence": {
+          "company": "Invebi s.r.l. (Invebi Industrie Vernici)",
+          "value": "lab@invebi.it",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+              "url": "https://www.invebi.it/contatti/",
+              "summary": "ActualContactexplicitLaboratoriotecnico:lab@invebi.it. Departmentbusinessmailnotnamedlabmanager/noresponsibilitiesinvented."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      },
+      {
+        "department": "General",
+        "email": "info@invebi.it",
+        "source": {
+          "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+          "url": "https://www.invebi.it/contatti/"
+        },
+        "emailEvidence": {
+          "company": "Invebi s.r.l. (Invebi Industrie Vernici)",
+          "value": "info@invebi.it",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+              "url": "https://www.invebi.it/contatti/",
+              "summary": "ActualContactInformazioni/info@invebi.itpluslegalcompanyInvebisrl/VAT00274680123. Corporatebusinessentry,noindividualownership/deliverabilityclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Invebi own interior water-based wood coatings:primers/finishes for parquet and stairs",
+        "url": "https://www.invebi.it/prodotti-per-la-verniciatura/vernici-allacqua-per-interni/"
+      },
+      {
+        "label": "Invebi ownAzienda:JeragoconOragofactory/labs/ownwaterproductR&D/actualrawmaterialQC",
+        "url": "https://www.invebi.it/azienda/"
+      },
+      {
+        "label": "Invebi completevisible16productcategories,notallleafSKU",
+        "url": "https://www.invebi.it/prodotti-per-la-verniciatura/"
+      },
+      {
+        "label": "Invebi ownPlasticCoatings:actualfinishedsurfaceprimers/topcoats,notrawPOclaim",
+        "url": "https://www.invebi.it/prodotti-per-la-verniciatura/vernici-per-materie-plastiche/"
+      },
+      {
+        "label": "Invebi fullreturnedTintometric:realuniversalpastes/Converterbases/catalystsroles",
+        "url": "https://www.invebi.it/sistema-tintometrico-ad-acqua-e-solvente/"
+      },
+      {
+        "label": "Invebi ownContact:exactPurchasing/Technical/generaldepartmentemails,corporatevoice/address",
+        "url": "https://www.invebi.it/contatti/"
+      }
+    ]
+  },
   "freilacke-doeggingen": {
     "website": "https://www.freilacke.com/",
     "contactPage": "https://www.freilacke.com/contact",
@@ -16233,6 +16392,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "invebi-orago",
   "freilacke-doeggingen",
   "vermeister-mornico",
   "dacrylate-kirkby",
