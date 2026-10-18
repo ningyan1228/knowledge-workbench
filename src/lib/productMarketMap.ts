@@ -4864,11 +4864,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "irsa-deisenhausen",
+    "company": "IRSA Lackfabrik Irmgard Sallinger GmbH",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Deisenhausen (approximate city marker; factory entrance not surveyed)",
+    "latitude": 48.3,
+    "longitude": 10.3,
+    "legacyCompanyDescription": "德国IRSA自产水性木器清漆，Platinum3000用于木地板与楼梯；W1201适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "IRSA当前Home和About明确自行开发和生产木材/地板表面保护体系、1K/2K水性清漆、油蜡及护理材料；About说明Deisenhausen家族漆厂沿革。具体Platinum3000 1K-Parkettwasserlack原始HTML明确即用聚氨酯水性清漆，适用于木地板、实木拼花和楼梯等。自产活动与具体水性木材用途有直接原文，不依赖搜索摘要、旧PDF版本或仅经销标签。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、Platinum3000原始产品HTML、完整可见Products分类、完整Spezialprodukte、Contact和About六份原文。可见范围包括木器水性/溶剂型漆、油蜡、地板维护/清洗、修补/填缝、舞台/航空/混凝土等特种成品及工具。真实外售色浆/油硬化剂/ISO硬化剂/底漆/UVBlocker/ElastoFill/碱液与施工配套保留，不虚称无添加剂业务。UVBlocker实际为即用滚涂/刷涂/喷涂木表面底层，干后覆木器油或清漆；ElastoFill为可覆涂的成品填缝/踢脚线粘接材料，丙烯酸酯共聚物基材及披露的胺硅烷等组分不等于这些原料被单独外售。Platinum油底层和硬化剂为自有木器涂饰组合，普通木器油不自动变成环氧化油。按所读自产成品业务、完整可见类别、特殊配套实际角色和具体Platinum3000范围，未见W1201同类聚烯烃乳液、CPO/PO分散体或原料级附着促进输入外售。结论限实际阅读，不对所有全球SKU/未读叶子TDS/SDS/私有配方给无原料供应保证，不编造外购例外。Platinum/IRSAFIX/irsashop/parkettlack/parkettoel与国内外经销按一个相关账户，不拆品牌计数；About自述家族沿革不是外部股权登记核验，Contact的HRB与管理人也不直接变成已核名采购。历史1975/1980/2000/2020–2023产品事件不改为2026扩产/RFQ。全量最新main262、本地276、私有队列/frontier公司/域名/地址/品牌去重，无已知同一账户。"
+    },
+    "contact": {
+      "label": "官网公开一般业务邮箱及公司总机；非具名采购",
+      "email": "info@irsa.de",
+      "phone": "+49 8282 8944 0",
+      "contactUrl": "https://irsa.de/de/kontakt.html"
+    },
+    "source": {
+      "label": "IRSA own Platinum3000 1K-Parkettwasserlack:ready-use polyurethane water varnish for parquet/wood floors/stairs",
+      "url": "https://irsa.de/de/produkte.html/irsa-platinum-3000-1k-parkettwasserlack/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "irsa-deisenhausen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "saicos-sassenberg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "trimite-global-redditch": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "junckers-koge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5132,6 +5161,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "irsa-deisenhausen": {
+    "website": "https://irsa.de/",
+    "contactPage": "https://irsa.de/de/kontakt.html",
+    "address": "An der Günz 15, D-86489 Deisenhausen, Germany:currentownContactaddress;ownAboutindependentlydescribesDeisenhausenpaintfactoryandmanufacturing. Marker48.3,10.3coarsecity,notfactorygateGPS/independentregistry.",
+    "generalEmail": "info@irsa.de",
+    "generalEmailEvidence": {
+      "company": "IRSA Lackfabrik Irmgard Sallinger GmbH",
+      "value": "info@irsa.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "IRSA own current Contact:corporate business email,voice,address and legal name",
+          "url": "https://irsa.de/de/kontakt.html",
+          "summary": "ActualContactexplicitEmailinfo@irsa.deandmailtoexact. Generalcompanyentry,notLiloSallingernamedemail/currentpurchasingrole. No constructedaddress/deliverability/sendclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+49 8282 8944 0",
+    "generalPhoneEvidence": {
+      "company": "IRSA Lackfabrik Irmgard Sallinger GmbH",
+      "value": "+49 8282 8944 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "IRSA own current Contact:corporate business email,voice,address and legal name",
+          "url": "https://irsa.de/de/kontakt.html",
+          "summary": "Actualfon0049-(0)8282.8944.0normalizedGerman+49/dropdomestic0. Generalcompanyvoice;faxending8944.44separateandnotstoredasvoice,noperson/dialclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@irsa.de",
+        "source": {
+          "label": "IRSA own current Contact:corporate business email,voice,address and legal name",
+          "url": "https://irsa.de/de/kontakt.html"
+        },
+        "emailEvidence": {
+          "company": "IRSA Lackfabrik Irmgard Sallinger GmbH",
+          "value": "info@irsa.de",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "IRSA own current Contact:corporate business email,voice,address and legal name",
+              "url": "https://irsa.de/de/kontakt.html",
+              "summary": "ActualContactexplicitEmailinfo@irsa.deandmailtoexact. Generalcompanyentry,notLiloSallingernamedemail/currentpurchasingrole. No constructedaddress/deliverability/sendclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "IRSA own Platinum3000 1K-Parkettwasserlack:ready-use polyurethane water varnish for parquet/wood floors/stairs",
+        "url": "https://irsa.de/de/produkte.html/irsa-platinum-3000-1k-parkettwasserlack/"
+      },
+      {
+        "label": "IRSA ownAbout:develop/manufacture1K/2Kwaterlacquers/Deisenhausenfamilyfactory;historicaldatesretained",
+        "url": "https://irsa.de/de/wir-ueber-uns.html"
+      },
+      {
+        "label": "IRSA fullvisibleproductcategories,notallgloballeafSKU",
+        "url": "https://irsa.de/de/produkte.html"
+      },
+      {
+        "label": "IRSA fullSpecialproducts:actualUVBlockerready-useprimer/hardeners/fillers/jointsealantroles",
+        "url": "https://irsa.de/de/produkte/spezialprodukte.html"
+      },
+      {
+        "label": "IRSA own current Contact:corporate business email,voice,address and legal name",
+        "url": "https://irsa.de/de/kontakt.html"
+      }
+    ]
+  },
   "saicos-sassenberg": {
     "website": "https://www.saicos.de/",
     "contactPage": "https://www.saicos.de/kontakt/",
@@ -15597,6 +15708,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "irsa-deisenhausen",
   "saicos-sassenberg",
   "trimite-global-redditch",
   "junckers-koge",
