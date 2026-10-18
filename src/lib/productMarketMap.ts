@@ -4780,11 +4780,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "junckers-koge",
+    "company": "Junckers Industrier A/S",
+    "productId": "nl-w1201",
+    "country": "Denmark",
+    "countryZh": "丹麦",
+    "city": "Køge (approximate city marker; factory entrance not surveyed)",
+    "latitude": 55.5,
+    "longitude": 12.2,
+    "legacyCompanyDescription": "丹麦Junckers自产木器清漆，Gulvlak为水性木地板清漆；W1201配方适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Junckers当前丹麦产品总览明确自行生产木器漆/油，英国官方Woodcare页直接说明清漆至今在丹麦主工厂制造，由自有技术研发团队开发。原始丹麦GulvlakF4.1HTML技术资料明确水性单组分丙烯酸/聚氨酯共聚物地板清漆，用于未处理或机器砂磨木地板，也可维护旧漆面。丹麦主厂制造与具体水性木器应用有直接独立页面支持，不凭自产地板就推断自产清漆，不把页面自动PDFcreated日期当技术版本或新产线日期。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取当前GlobalAbout、丹麦完整可见木器产品总览、GulvlakF4.1技术HTML、英国Woodcare制造说明、GlobalContact五份原文；不是实际下载或阅读PDF/SDS。实际业务为木地板与木器涂饰/护理，产品总览含水性和溶剂型清漆/底漆、木器油/硬蜡油、填料、表面护理和清洗、PUR地板翻新涂层、工具等；导航亦列施工胶、接缝胶和液体防潮层。保留这些真实辅助材料/输入业务，不说全公司只卖清漆。PURPrimer明确一组分水性亚麻地板表面底漆，PURSealer/Colour为地板翻新表面成品；不凭PU/PUR或胶字样推断外售聚烯烃/CPO/PO乳液、原料级附着促进剂或替代W1201输入。Neutralizer用于重涂前除皂、ResinRemover除球场手球树脂、清洗及表面护理角色不是配方聚烯烃原料。Gulvlak实际丙烯酸/PU共聚物成品不等同上游共聚乳液外售。所读完整可见产品总览/施工配套导航及具体木器清漆/自身制造业务范围内，未见W1201同类聚烯烃乳液/CPO/PO分散体或原料级附着促进输入外售。没有逐叶读取全部产品/全球SKU/私有配方或JFK投资组合，不作全球全部业务保证、不编造外购例外。About自述JunckersIndustrier由JunckersHolding持有且Holding属JFK，真实链接jf-kapital.dk记录为关联集团，不冒称独立审计股权比例；JunckersA/S/Industrier/英国销售公司/国家域名和品牌按一个账户。董事/CEO及销售人员虽出现在页面但不做未经当前身份和通道核实的具名买方记录。最新main259/本地273、全队列/frontier的Junckers/Holding/JFK链接域名/地址/国家站去重无已知关联账户。"
+    },
+    "contact": {
+      "label": "官网Technical Service公开部门邮箱及共享总部总机；未核实名采购",
+      "email": "junckers@junckers.com",
+      "phone": "+45 70 80 30 00",
+      "contactUrl": "https://www.junckers.com/contact"
+    },
+    "source": {
+      "label": "Junckers own Gulvlak F4.1 HTML product information:one-component water-based acrylic/polyurethane lacquer for untreated/machine-sanded wood floors",
+      "url": "https://www.junckers.dk/traegulve/guides/teknisk-vejledning/produktdatablade/f-traepleje/gulvlak-f-4-1"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "junckers-koge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rigo-verffabriek-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pronto-paints-holmewood": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "saman-victoriaville": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5045,6 +5074,110 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "junckers-koge": {
+    "website": "https://www.junckers.com/",
+    "contactPage": "https://www.junckers.com/contact",
+    "address": "Værftsvej 4, DK-4600 Køge, Denmark: currentofficialContactJunckersA/Sheadquarters;ownWoodcarepageindependentlyconfirmslacquermanufactureatDanishmainplant. Marker55.5,12.2coarseKøgecity,notfactorygateGPS/independentregistry.",
+    "generalEmail": "info-exp@junckers.com",
+    "generalEmailEvidence": {
+      "company": "Junckers Industrier A/S",
+      "value": "info-exp@junckers.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+          "url": "https://www.junckers.com/contact",
+          "summary": "ActualcorporateCONTACTUSheaderpublishesMailinfo-exp@junckers.com nexttoHQphoneandDanishaddress. Generalexportbusinessentry,notpersonalemailinferredfromadjacentstaff. TechnicalServicedepartmentchosenfirstforrelevance."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+45 70 80 30 00",
+    "generalPhoneEvidence": {
+      "company": "Junckers Industrier A/S",
+      "value": "+45 70 80 30 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+          "url": "https://www.junckers.com/contact",
+          "summary": "ActualcorporateCONTACTUSheaderexplicitPhone+4570803000;TechnicalServicealsoprintssamebusinessline. SharedHQgeneralvoicecorrectlyretained,named/privatephone notstored."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "junckers@junckers.com",
+        "source": {
+          "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+          "url": "https://www.junckers.com/contact"
+        },
+        "emailEvidence": {
+          "company": "Junckers Industrier A/S",
+          "value": "junckers@junckers.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+              "url": "https://www.junckers.com/contact",
+              "summary": "OriginalHTMLTechnicalServiceblockexplicitlylinksJUNCKERSTECHNICALSERVICEto mailto:junckers@junckers.com andphone+4570803000. Notagenericinboxassumedfromspelling/notaperson;departmentrolefromactualblock. No buyer/purchasing/currentprocurementor deliverabilityclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      },
+      {
+        "department": "General",
+        "email": "info-exp@junckers.com",
+        "source": {
+          "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+          "url": "https://www.junckers.com/contact"
+        },
+        "emailEvidence": {
+          "company": "Junckers Industrier A/S",
+          "value": "info-exp@junckers.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+              "url": "https://www.junckers.com/contact",
+              "summary": "ActualcorporateCONTACTUSheaderpublishesMailinfo-exp@junckers.com nexttoHQphoneandDanishaddress. Generalexportbusinessentry,notpersonalemailinferredfromadjacentstaff. TechnicalServicedepartmentchosenfirstforrelevance."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Junckers own Gulvlak F4.1 HTML product information:one-component water-based acrylic/polyurethane lacquer for untreated/machine-sanded wood floors",
+        "url": "https://www.junckers.dk/traegulve/guides/teknisk-vejledning/produktdatablade/f-traepleje/gulvlak-f-4-1"
+      },
+      {
+        "label": "Junckers ownUKWoodcare:currentlacquerproductionatDanishmainplant/owntechnicalresearchteams",
+        "url": "https://www.junckers.co.uk/woodcare/eco-2k-floor-oil"
+      },
+      {
+        "label": "Junckers owncompletevisibleDanishwoodcarelist:finishedcoatings/oils/cleaners/PURsurfaceproducts/tools",
+        "url": "https://www.junckers.dk/traepleje/produktsortiment"
+      },
+      {
+        "label": "Junckers ownAbout:KøgeandHolding/JFKrelationship,selfreportednotregisteraudit",
+        "url": "https://www.junckers.com/about/about-junckers"
+      },
+      {
+        "label": "Junckers own current global Contact:Technical Service exact mailto and sharedHQphone;generalexportinbox/headquartersaddress",
+        "url": "https://www.junckers.com/contact"
+      }
+    ]
+  },
   "rigo-verffabriek-ijmuiden": {
     "website": "https://rigoverffabriek.nl/",
     "contactPage": "https://rigoverffabriek.nl/contact",
@@ -15216,6 +15349,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "junckers-koge",
   "rigo-verffabriek-ijmuiden",
   "pronto-paints-holmewood",
   "saman-victoriaville",
