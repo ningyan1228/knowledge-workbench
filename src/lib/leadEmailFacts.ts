@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "monopol-colors-fislisbach": "Your DUOPOL Steelguard C80 is a high-solids epoxy primer in your range of industrial corrosion-protection coatings.",
   "hydron-protective-wolverhampton": "Your Nu-Steel T.P. Primer/Undercoat is an epoxy-based coating for prepared steelwork in your protective metal paint range.",
   "votteler-korntal-muenchingen": "Your woodworking range includes water-based coatings and stains, with custom samples prepared by your in-house color lab.",
   "zuelch-osterode-lerbach": "You offer two-component epoxy and polyurethane primers for corrosion protection on iron and steel in machinery and pipeline applications.",

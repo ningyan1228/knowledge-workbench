@@ -5198,11 +5198,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "monopol-colors-fislisbach",
+    "company": "Monopol AG (Monopol Colors)",
+    "productId": "elo",
+    "country": "Switzerland",
+    "countryZh": "瑞士",
+    "city": "Fislisbach (city marker)",
+    "latitude": 47.44,
+    "longitude": 8.29,
+    "legacyCompanyDescription": "自有工业/钢结构防腐成品涂料研发制造及成品漆经销企业；ELO适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Monopol官网企业原文明确在自身工厂制造金属幕墙、工业及防腐涂料；当前完整产品页列DUOPOL Steelguard C80为高固体环氧底漆，并列锌粉/环氧/PUR等成品防护体系。独立的Korrosionsschutz页面确认钢结构防腐经营，同时明确其Hempel成品漆代理角色，未把Hempel制造或更重防腐等级借作本公司自有产品证据。ELO TDS确认涂料应用，可提出配方原料评估；实际ELO使用、相容、需求或采购均未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读当前Home、企业制造原文、完整返回ProductList、SwissContact、Korrosionsschutz及当前链接MONOWAX X405技术表文字。自身成品制造与Hempel成品代理双角色均保留，不称纯制造无经销。实际完整本页产品含底面漆、固化剂、稀释剂、清洁剂及蜡乳液，未因有任何化学输入便整体排除，也不隐去这些经营事实。MONOWAX X405原始链接PDF返回文字明确由合成/巴西棕榈蜡组成，用于清洁后的金属幕墙封护/抛光，并要求后续重涂先去除；为具体表面养护制品，不按Wax/植物来源字样归作ELO/ESBO生物增塑稳定输入。06.23/替代07.15修订标识保留，未称2026新修订、未读取所有配套SDS或转移GRM/ISO等认证性能。固化剂/普通epoxy及PU成品体系、稀释剂用途类别不自动等同环氧化植物油。在实际读到的当前自述经营、完整本页列出的商品及具体蜡表中，未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定原料外售；限定已读范围，不保证全部32000调色配方/全球SKU/SDS/关联公司或虚构外购例外。当前Contact法定MonopolAG/Swiss地址以及自身family/company描述一致；IndiaPvtLtd与EastAfricaLtd为其公开Werk关联一并按同一账户，不拆Nairobi/Mumbai/网站新计。与Hempel为公开成品代理，不从合作关系推定股权；同名CINMonopol仅Search线索，未借用法国业务/联系人或断言集团关联，不另计第二账户。按Monopol/Schlessinger/全部已知域、核心品牌DUOPOL/BILADUR/BILACRYL/VERNIDUR/MONOWAX及CIN相关域作全main274/root288/队列/frontier去重，无同一已知公司/集团；未声称所有海外工商审计。联系页明确两位技术人员姓名、职责及办公电话，但个人Email只显示E-Mail标签，精确值未返回，故只存身份/电话，不构造姓名邮箱或用info@冒充个人。通用info@/总机分别来源，首封公司团队称呼。旧故事的逝者/退休人员/2018印度投产与客户案例不当当前人员/2026扩产或采购需求，不转移任一产品寿命/ISO等级到我方材料。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总机；另存两位具名技术人员办公电话，无已核实个人邮箱",
+      "email": "info@monopol-colors.ch",
+      "phone": "+41 56 484 77 77",
+      "contactUrl": "https://www.monopol-colors.ch/de/kontakt/"
+    },
+    "source": {
+      "label": "Monopol own current product list: DUOPOL Steelguard C80 high-solid epoxy primer",
+      "url": "https://www.monopol-colors.ch/en/product-list/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "monopol-colors-fislisbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hydron-protective-wolverhampton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "votteler-korntal-muenchingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zuelch-osterode-lerbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5478,6 +5507,152 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "monopol-colors-fislisbach": {
+    "website": "https://www.monopol-colors.ch/de/",
+    "contactPage": "https://www.monopol-colors.ch/de/kontakt/",
+    "address": "Monopol AG, Oberrohrdorferstrasse 51, 5442 Fislisbach, Switzerland. Exact own current Swiss corporate address; city-only marker47.44,8.29, not surveyed factory coordinates.",
+    "generalEmail": "info@monopol-colors.ch",
+    "generalEmailEvidence": {
+      "company": "Monopol AG (Monopol Colors)",
+      "value": "info@monopol-colors.ch",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Monopol own Swiss legal company contact: public general email/telephone",
+          "url": "https://www.monopol-colors.ch/de/kontakt/",
+          "summary": "Own Swiss Monopol AG contact header prints info@monopol-colors.ch as general corporate email. Not a named technical/CEO mailbox or Indian/African route; no deliverability/purchase claim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+41 56 484 77 77",
+    "generalPhoneEvidence": {
+      "company": "Monopol AG (Monopol Colors)",
+      "value": "+41 56 484 77 77",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Monopol own Swiss legal company contact: public general email/telephone",
+          "url": "https://www.monopol-colors.ch/de/kontakt/",
+          "summary": "Own Swiss contact header explicitly prints Telefon +41 56 484 77 77 and separately Fax...7799. Store general voice only; not borrowed as individual technical office number."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [
+      {
+        "name": "Simone Raineri",
+        "title": "Technische Leitung",
+        "department": "Technical",
+        "phone": "+41 56 484 77 53",
+        "identityEvidence": {
+          "company": "Monopol AG (Monopol Colors)",
+          "name": "Simone Raineri",
+          "title": "Technische Leitung",
+          "responsibilities": "Technical leadership as expressly published under current Fislisbach contacts; no ELO-specific purchasing/approval authority or additional hierarchy inferred.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Monopol own current Fislisbach contact directory: exact name, employer and role",
+              "url": "https://www.monopol-colors.ch/de/kontakt/",
+              "summary": "Own Monopol AG Contact under Ihre Ansprechpartner in Fislisbach explicitly lists Simone Raineri, Technische Leitung. Current public directory evidence, not LinkedIn/independent employment audit or selected-material demand."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        },
+        "phoneEvidence": {
+          "company": "Monopol AG (Monopol Colors)",
+          "value": "+41 56 484 77 53",
+          "kind": "named-business",
+          "personName": "Simone Raineri",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Monopol own current named technical office telephone",
+              "url": "https://www.monopol-colors.ch/de/kontakt/",
+              "summary": "The Simone Raineri / Technische Leitung entry prints exact office number +41 56 484 77 53. No private/mobile number, fax or generic inbox assigned to the person."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        },
+        "source": {
+          "label": "Monopol own named role and office phone; business email not returned",
+          "url": "https://www.monopol-colors.ch/de/kontakt/"
+        },
+        "verifiedAt": "2026-10-18"
+      },
+      {
+        "name": "Sebastian Münkel",
+        "title": "Entwicklungslabor",
+        "department": "Technical",
+        "phone": "+41 56 484 77 38",
+        "identityEvidence": {
+          "company": "Monopol AG (Monopol Colors)",
+          "name": "Sebastian Münkel",
+          "title": "Entwicklungslabor",
+          "responsibilities": "Development laboratory as expressly published in current Fislisbach directory; no invented laboratory-head title or purchasing remit.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Monopol own current Fislisbach contact directory: exact name, employer and role",
+              "url": "https://www.monopol-colors.ch/de/kontakt/",
+              "summary": "Own Monopol AG Contact under Ihre Ansprechpartner in Fislisbach explicitly lists Sebastian Münkel, Entwicklungslabor. Current public directory evidence, not LinkedIn/independent employment audit or selected-material demand."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        },
+        "phoneEvidence": {
+          "company": "Monopol AG (Monopol Colors)",
+          "value": "+41 56 484 77 38",
+          "kind": "named-business",
+          "personName": "Sebastian Münkel",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Monopol own current named technical office telephone",
+              "url": "https://www.monopol-colors.ch/de/kontakt/",
+              "summary": "The Sebastian Münkel / Entwicklungslabor entry prints exact office number +41 56 484 77 38. No private/mobile number, fax or generic inbox assigned to the person."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        },
+        "source": {
+          "label": "Monopol own named role and office phone; business email not returned",
+          "url": "https://www.monopol-colors.ch/de/kontakt/"
+        },
+        "verifiedAt": "2026-10-18"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Monopol explicit own industrial/protective paint manufacture",
+        "url": "https://www.monopol-colors.ch/de/erleben-sie-unsere-welt-der-farben/"
+      },
+      {
+        "label": "Monopol current complete returned product list and named C80 epoxy primer",
+        "url": "https://www.monopol-colors.ch/en/product-list/"
+      },
+      {
+        "label": "Monopol Swiss legal/general and named technical office contacts",
+        "url": "https://www.monopol-colors.ch/de/kontakt/"
+      },
+      {
+        "label": "Monopol own corrosion range and explicit Hempel finished-coating distribution",
+        "url": "https://www.monopol-colors.ch/de/kompetenz/korrosionsschutz-iso-12944/"
+      },
+      {
+        "label": "MONOWAX X405 currently linked English TDS06.23: surface-sealing purpose; provider-extracted PDF text only",
+        "url": "https://www.monopol-colors.ch/wp-content/uploads/E_TM_Monowax_X405_06.23.pdf"
+      },
+      {
+        "label": "Monopol current overview and India/Kenya group context, historical stories distinguished",
+        "url": "https://www.monopol-colors.ch/de/"
+      }
+    ]
+  },
   "hydron-protective-wolverhampton": {
     "website": "https://hydronpc.com/",
     "contactPage": "https://hydronpc.com/contact/",
@@ -16898,6 +17073,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "monopol-colors-fislisbach",
   "hydron-protective-wolverhampton",
   "votteler-korntal-muenchingen",
   "zuelch-osterode-lerbach",
