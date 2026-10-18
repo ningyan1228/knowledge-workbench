@@ -5338,11 +5338,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "estalia-damiani-montecchio-emilia",
+    "company": "Estalia Performance Coatings (Damiani / Franchi&Kim)",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Montecchio Emilia (city marker)",
+    "latitude": 44.7,
+    "longitude": 10.45,
+    "legacyCompanyDescription": "Estalia集团自研制造工业防护涂料及着色配套体系；品牌/工厂合并一个账户，原料相容和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Damiani当前工业系列明确用于黑色/有色金属的单/双组分水性及溶剂型涂料，并列双组分DTM聚丙烯酸直接金属面漆、防腐底漆、环氧面漆等实际成品。独立Estalia当前官网说明Damiani于EmiliaRomagna制造及集团涂料研发生产，实际Contact明确MontecchioEmilia工厂。ELO TDS确认涂料应用；潜在配方评估不代表已使用ELO、配方相容、当前采购或性能达成。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读6个当前自有HTML正文：Damiani首页、Estalia制造地区页、Damiani集团页、Contact、完整工业系列介绍及配套催化剂/稀释剂/添加剂类别返回第一页。集团页明确Estalia2020成立及Franchi&Kim/Damiani业务，Estalia当前地域页明确总部Castenedolo与EmiliaRomagna的Damiani制造；Contact明确MontecchioEmilia工厂，两者合为一个Estalia账户，不拆Franchi&Kim/AlfaPaint/QuiCentrodelColore/厂址/品牌为新客户。没有捏造S.p.A./S.r.l.法律形式或最终股权。当前生产/R&D与金属工业成品链成立。保留真实自产色浆、tintingconverter及成品配套硬化剂、稀释剂、锌粉、附着/加速/消白/纹理添加品业务；第六页实际返回56项中的12项，有5页分页，未称全部产品逐项审读。普通环氧/PU硬化剂、清洗稀释剂、色浆载体或附着用途不等同ELO/ESBO/环氧化植物油或同类生物基增塑稳定原料。已读当前经营、工业系列及配套用途未见这类所选同类原料外售证据；结论限已读范围，非所有SKU/配方/组分/每份TDS/SDS/全集团全球审计，无虚构外购例外。未把未读0400详细页、产品子页或PDF称已读。实际Contact工厂与总部均明确通用info@estalia.it；页脚info@color-damiani.it保留但不与个人挂钩，contacts.address/phone/email是无效模板占位，绝不入库。通过准确集团/品牌/域/厂址与最新main279/root293、全队列/frontier同一主体检查，无同一账户匹配；Mader宽泛命中西语madera为其他客户上下文，不借同城或名称相似推股权。DTM双组分聚丙烯酸直接金属应用仅是公司事实，不推出ELO已兼容、现用或采购；不转移成品防腐/认证/环保/降本性能。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总机，未核实具名采购/技术收件人",
+      "email": "info@estalia.it",
+      "phone": "+39 0522 11709",
+      "contactUrl": "https://www.color-damiani.com/it/contatti"
+    },
+    "source": {
+      "label": "Damiani industrial range: two-component polyacrylic direct-to-metal coatings",
+      "url": "https://www.color-damiani.com/it/prodotti/industria"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "estalia-damiani-montecchio-emilia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sivam-coatings-bareggio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "de-ijssel-moordrecht": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "industrias-proa-porrino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5623,6 +5652,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "estalia-damiani-montecchio-emilia": {
+    "website": "https://www.color-damiani.com/it",
+    "contactPage": "https://www.color-damiani.com/it/contatti",
+    "address": "Damiani plant (Estalia group), Via San Rocco 10/1/A, 42027 Montecchio Emilia (RE), Italy. Group headquarters: Via Matteotti 160, 25014 Castenedolo (BS), Italy. Both explicitly labelled on own Contact; one associated account. City-only plant-town marker44.70,10.45, not surveyed factory coordinates.",
+    "generalEmail": "info@estalia.it",
+    "generalEmailEvidence": {
+      "company": "Estalia Performance Coatings (Damiani / Franchi&Kim)",
+      "value": "info@estalia.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://www.color-damiani.com/it/contatti",
+          "summary": "Own Contact explicitly gives info@estalia.it for both labelled Damiani plant and Estalia headquarters. General group business inbox, not named buyer/R&D mailbox; contacts.email placeholder excluded."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+39 0522 11709",
+    "generalPhoneEvidence": {
+      "company": "Estalia Performance Coatings (Damiani / Franchi&Kim)",
+      "value": "+39 0522 11709",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://www.color-damiani.com/it/contatti",
+          "summary": "Own Contact explicitly prints+39052211709 for labelled MontecchioEmilia plant; Castenedolo HQ has separate+39030213555, not merged. General plant business voice."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing and group identity",
+        "url": "https://www.color-damiani.com/it/azienda/about_us/il_gruppo_estalia"
+      },
+      {
+        "label": "Own exact selected-application finished-coating range",
+        "url": "https://www.color-damiani.com/it/prodotti/industria"
+      },
+      {
+        "label": "Own current published business contact and address",
+        "url": "https://www.color-damiani.com/it/contatti"
+      },
+      {
+        "label": "Own actual auxiliary/tinting-product purposes, bounded returned scope",
+        "url": "https://www.color-damiani.com/it/prodotti/industria/vernici-industriali-a-solvente/catalizzatori-diluenti-e-additivi"
+      },
+      {
+        "label": "Estalia own current manufacturing districts and Damiani plant region",
+        "url": "https://www.estaliacoatings.com/it/about_us_main/chi_siamo/metallo_agricoltura"
+      }
+    ]
+  },
   "sivam-coatings-bareggio": {
     "website": "https://www.sivam.it/",
     "contactPage": "https://www.sivam.it/contatti/",
@@ -17437,6 +17525,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "estalia-damiani-montecchio-emilia",
   "sivam-coatings-bareggio",
   "de-ijssel-moordrecht",
   "industrias-proa-porrino",
