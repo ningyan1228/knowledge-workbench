@@ -5310,11 +5310,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "sivam-coatings-bareggio",
+    "company": "SIVAM Coatings S.r.l.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Bareggio (city marker)",
+    "latitude": 45.48,
+    "longitude": 8.99,
+    "legacyCompanyDescription": "自主制造水性木器涂料及着色配套体系；原料相容和采购未确认",
+    "fit": "可开发候选",
+    "signal": "SIVAM当前自有公司页明确从原料选择到最终产品全流程内部制造；独立Environment系列原文明确PRODOTTI1K/2KADACQUAPERLEGNO，列出IDROPRIMER/IDROLACK/IDROFIX/IDROPAC等木器水性成品系列。NL-W1201 TDS确认木材基材，可讨论木器配方的原料评估；没有证明已经使用我方材料、实际相容、当前需求或采购。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读6个当前自有HTML正文：Home、ChiSiamo、Environment、Contatti、Kingfisher及TintingSystem。当前SIVAMCoatingsS.r.l.法律页脚、内部原料至成品全流程制造、具体水性木器1K/2K系列及一般业务入口形成独立链；不借旧SearchS.p.A.名称构造转制日期。保留真实Kingfisher配套着色业务，包含通用/水性/丙烯酸色浆、converter、stain/patina及软硬件；普通颜料载体/树脂/converter不是已识别的PO/CPO或水性聚烯烃附着原料。当前实际审读的公司、木器水性系列及着色体系用途没有同类水性聚烯烃乳液、CPO/PO分散体或作为原料的同类附着促进剂外售证据；结论限已读范围，非全SKU/全部组成/TDS/SDS/全球股权审计，无虚构外购例外。各页0动态计数及LoremIpsum占位保留但不采用为实验室/产量/排放/研究数据，也不把成品性能转移我方。Contact五位具名区域经理虽有姓名和职务，未返回可归属个人的业务邮箱/直线，不以通用info@构造个人收件人。OdoardoReggiani为当前自有About管理职务陈述而非已核实采购/技术联系人。仅以自有Contact的一般info@/公司总机入库。三代家族叙述不等于完整最终受益人调查；NuovaSivam/GenverIndia仅Search线索不额外入库或断言股权，SiVAC/Sivit为不同域主体不混同。Sivam/域/真实自有品牌与最新main278/root292/全队列/frontier检查同一主体无匹配；Kingfisher及多个产品/仓库不拆客户，Bareggio同城不推为IVM/Milesi关联。NLW仅木材TDS应用，不扩大所有金属/塑料市场，也无当前需求或兼容性保证。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总机，未核实具名采购/技术收件人",
+      "email": "info@sivam.it",
+      "phone": "+39 02 903041",
+      "contactUrl": "https://www.sivam.it/contatti/"
+    },
+    "source": {
+      "label": "SIVAM Environment: explicit one- and two-component water-based coatings for wood",
+      "url": "https://www.sivam.it/legno-da-interno/environment/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sivam-coatings-bareggio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "de-ijssel-moordrecht": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "industrias-proa-porrino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "hagmans-nordic-fritsla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5594,6 +5623,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sivam-coatings-bareggio": {
+    "website": "https://www.sivam.it/",
+    "contactPage": "https://www.sivam.it/contatti/",
+    "address": "SIVAM Coatings S.r.l., Via Monviso 10, 20008 Bareggio (MI), Italy. Own legal/corporate contact address; city-only marker45.48,8.99, not surveyed plant coordinates.",
+    "generalEmail": "info@sivam.it",
+    "generalEmailEvidence": {
+      "company": "SIVAM Coatings S.r.l.",
+      "value": "info@sivam.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://www.sivam.it/contatti/",
+          "summary": "Own Contact explicitly gives info@sivam.it as all-rest-of-world general business route. Named area managers have no independently attributable direct email in returned text; no personal ownership/deliverability inference."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+39 02 903041",
+    "generalPhoneEvidence": {
+      "company": "SIVAM Coatings S.r.l.",
+      "value": "+39 02 903041",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://www.sivam.it/contatti/",
+          "summary": "Own Contact explicitly prints+39 02903041 as corporate voice; fax+39029014289 excluded. General company telephone, not personal direct line."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing and group identity",
+        "url": "https://www.sivam.it/azienda/chi-siamo/"
+      },
+      {
+        "label": "Own exact selected-application finished-coating range",
+        "url": "https://www.sivam.it/legno-da-interno/environment/"
+      },
+      {
+        "label": "Own current published business contact and address",
+        "url": "https://www.sivam.it/contatti/"
+      },
+      {
+        "label": "Own actual auxiliary/tinting-product purposes, bounded returned scope",
+        "url": "https://www.sivam.it/kingfisher/tinting-system/"
+      },
+      {
+        "label": "Own Kingfisher pigment/converter/colour-system business",
+        "url": "https://www.sivam.it/kingfisher/"
+      }
+    ]
+  },
   "de-ijssel-moordrecht": {
     "website": "https://www.de-ijssel-coatings.nl/nl",
     "contactPage": "https://www.de-ijssel-coatings.nl/nl/contact",
@@ -17349,6 +17437,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sivam-coatings-bareggio",
   "de-ijssel-moordrecht",
   "industrias-proa-porrino",
   "hagmans-nordic-fritsla",
