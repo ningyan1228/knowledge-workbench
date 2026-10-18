@@ -4836,11 +4836,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "saicos-sassenberg",
+    "company": "SAICOS COLOUR GmbH",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Sassenberg (approximate city marker; factory entrance not surveyed)",
+    "latitude": 52,
+    "longitude": 8,
+    "legacyCompanyDescription": "德国SAICOS自产水性木器涂料，BelAirH2O用于室内外木材和家具；W1201适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "SAICOS当前About明确在德国Sassenberg自有工厂制造木材涂饰体系并进行配方优化；自有产品总览和Home亦明确制造角色。具体BelAirH2O原始产品页直接说明水性木器涂料，用于室内外木材、木外墙、园艺木构和家具，基料为油改性聚合物分散体。自主制造、实际水性体系和木材基材均有直接原文支持；不从自然油蜡或低溶剂标签推定所有产品水性，不扩大为全部塑料/金属用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取SAICOSAbout、Home、全部返回Products总览、BelAirH2O、Contact、EcolineMultiTop体系六份HTML。当前可见完整业务类别为室内外木器涂饰、H2O/Ecoline油/漆/清洁护理、工具及工业木器涂饰体系；没有逐叶读取全部工业/OEM配方、所有TDS/SDS或未公开关联业务。真实外售硬化剂、七种MultiTop添加组分、UV保护/防滑/色调/干燥延缓、填缝和清洁等材料均保留，不虚称公司不卖输入或添加剂。MultiTop实际说明七组分为Härter2K、UVSchutz、ExtraWeiß、AntiSlipR10、VerzögererSlowDown、Pur、ExtraSchwarz，配入自家地板漆以调节固化、耐磨防滑、颜色/外观或操作时间；已读总览分别给出功能。它们的真实施工配套角色不自动等同向配方厂供应聚烯烃乳液/CPO/PO分散体/原料级附着促进剂；未读其叶子TDS/SDS，不推断成分或全部用途。BelAir油改性分散体作为已配制水性木器成品基料披露，不等于原料分散体外售。普通天然油/蜡木器成品不自动视为环氧化油或W1201输入。按已读自主木器成品制造、完整可见产品总览、具体水性木器产品及七添加组分披露功能范围，未见W1201同类聚烯烃乳液/CPO/PO或原料级附着促进输入外售；结论限真实范围，不对全部未读工业配方/全球SKU或资本关联业务作保证，不编造外购例外。SAICOS/Ecoline/H2O/SingleTop等均按同一账户，不把品牌、德国生产和全球经销网络拆成新增。公司About自述inhabergeführt不是外部股权审计，不添加未核实控股比例或法人登记号。2002创立/2025BAU新闻不是2026扩产/原料招标。最终核对最新main261/本地275、全队列/frontier与保守关联名称/域名/地址，无已知同一账户。"
+    },
+    "contact": {
+      "label": "官网公开一般业务邮箱及公司总机；非具名采购/技术负责人",
+      "email": "info@saicos.de",
+      "phone": "+49 2583 3037 0",
+      "contactUrl": "https://www.saicos.de/kontakt/"
+    },
+    "source": {
+      "label": "SAICOS own Bel Air H2O:water-based coating for interior/exterior wood,facades and furniture",
+      "url": "https://www.saicos.de/produkt/bel-air/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "saicos-sassenberg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "trimite-global-redditch": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "junckers-koge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rigo-verffabriek-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5103,6 +5132,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "saicos-sassenberg": {
+    "website": "https://www.saicos.de/",
+    "contactPage": "https://www.saicos.de/kontakt/",
+    "address": "Carl-Zeiss-Straße 3, 48336 Sassenberg, Germany:currentofficialContactaddress;ownAboutindependentlyconfirmsownedproductioninSassenberg. Marker52,8coarsecityonly,notfactorygateGPS/externalregistry.",
+    "generalEmail": "info@saicos.de",
+    "generalEmailEvidence": {
+      "company": "SAICOS COLOUR GmbH",
+      "value": "info@saicos.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "SAICOS official Contact:exact publicly labelled corporate E-Mail and generaltelephone/Sassenbergaddress",
+          "url": "https://www.saicos.de/kontakt/",
+          "summary": "ActualContactE-Mailandmailtolinkbothrenderinfo@saicos.de. Originalusesordinaryhex/decimalHTMLcharacterentities,renderedlocallyandmatchingexactly;notconstructedfromdomainorprivate/protectedcipher. Generalcompanyentry,noperson/departmentinferred. No deliverability/sendclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+49 2583 3037 0",
+    "generalPhoneEvidence": {
+      "company": "SAICOS COLOUR GmbH",
+      "value": "+49 2583 3037 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "SAICOS official Contact:exact publicly labelled corporate E-Mail and generaltelephone/Sassenbergaddress",
+          "url": "https://www.saicos.de/kontakt/",
+          "summary": "ContactexplicitTel+49258330370matchesactualtelhref+49258330370. Generalbusinessvoice;Fax+492583303710keptseparate/notstoredasvoice. Noprivate/namedbuyer/dialclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@saicos.de",
+        "source": {
+          "label": "SAICOS official Contact:exact publicly labelled corporate E-Mail and generaltelephone/Sassenbergaddress",
+          "url": "https://www.saicos.de/kontakt/"
+        },
+        "emailEvidence": {
+          "company": "SAICOS COLOUR GmbH",
+          "value": "info@saicos.de",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "SAICOS official Contact:exact publicly labelled corporate E-Mail and generaltelephone/Sassenbergaddress",
+              "url": "https://www.saicos.de/kontakt/",
+              "summary": "ActualContactE-Mailandmailtolinkbothrenderinfo@saicos.de. Originalusesordinaryhex/decimalHTMLcharacterentities,renderedlocallyandmatchingexactly;notconstructedfromdomainorprivate/protectedcipher. Generalcompanyentry,noperson/departmentinferred. No deliverability/sendclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "SAICOS own Bel Air H2O:water-based coating for interior/exterior wood,facades and furniture",
+        "url": "https://www.saicos.de/produkt/bel-air/"
+      },
+      {
+        "label": "SAICOS ownAbout:ownedSassenbergproduction/woodcoatingformulation",
+        "url": "https://www.saicos.de/ueber-uns/"
+      },
+      {
+        "label": "SAICOS fullreturnedProducts:finishedwoodcoatings/oils/cleaners/accessoriesandfunctionaladditives",
+        "url": "https://www.saicos.de/produkte/"
+      },
+      {
+        "label": "SAICOS originalMultiTop:sevenactualcoating-additionfunctions,notPOrawinputcompositioninferred",
+        "url": "https://www.saicos.de/produkt/ecoline-multitopplus-system/"
+      },
+      {
+        "label": "SAICOS official Contact:exact publicly labelled corporate E-Mail and generaltelephone/Sassenbergaddress",
+        "url": "https://www.saicos.de/kontakt/"
+      }
+    ]
+  },
   "trimite-global-redditch": {
     "website": "https://www.trimite.com/",
     "contactPage": "https://www.trimite.com/contact/",
@@ -15486,6 +15597,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "saicos-sassenberg",
   "trimite-global-redditch",
   "junckers-koge",
   "rigo-verffabriek-ijmuiden",

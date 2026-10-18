@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "saicos-sassenberg": "Your Bel Air H2O is a water-based coating for interior and exterior wood, including facades and furniture.",
   "trimite-global-redditch": "Your TrimaKote AP45 is a two-pack epoxy primer in your industrial coatings range.",
   "junckers-koge": "Your Gulvlak is a one-component water-based acrylic/polyurethane lacquer for untreated or machine-sanded wooden floors.",
   "rigo-verffabriek-ijmuiden": "Your SKYLT Original is a two-component parquet lacquer for bare-sanded oak and other light-coloured wood.",
