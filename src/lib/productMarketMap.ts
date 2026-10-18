@@ -4640,11 +4640,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "krylic-paints-cape-town",
+    "company": "Krylic Paints (Pty) Ltd",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town (approximate city marker; not surveyed factory entrance)",
+    "latitude": -33.9,
+    "longitude": 18.5,
+    "legacyCompanyDescription": "南非Krylic自产水性丙烯酸涂料；WBEnamel支持底涂木材；材料适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Krylic 当前官网 About 明确披露 Krylic Paints (Pty) Ltd 为开普敦水性丙烯酸涂料生产商，配方由化学师制定，并列出木器、金属和灰泥底漆等自产体系。具体10-YearEXT-INTWBEnamel原始产品页明确为水性100%丙烯酸涂料，实际施工用途包括经过底涂的木材表面；产品树脂基料为丙烯酸树脂乳液。自有制造/配方和具体木材应用分别由两页支持，并非仅经销商、通用水性标签或木材词命中。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "实际完整读取公司About、Home、Interior、Exterior、Contact及一项具体磁漆六份原文。Interior列六项施工成品，Exterior列九项并与Interior部分重叠；不把重复上架当不同产品，不声称另行抓取/shop或全部叶页/TDS/SDS。已读公开业务为建筑内外墙/顶棚/屋面/木器等施工涂料、灰泥底漆、防水及纤维封装体系、调色服务。About明确提到丙烯酸粘结料、颜料、流变助剂、防霉剂、分散剂与防腐剂的配方使用；保留这些真实输入角色，不能改称公司无添加剂或不使用原料。文本描述其为自有成品的组成，不是对涂料厂销售PO/CPO乳液/分散或同功能附着促进原料。具体磁漆的excellentadhesion和木器底漆属于施工成品作用，不自动命中原料同行排除。在实际已读自有业务及两类可见产品角色范围未见水性聚烯烃乳液、CPO/PO分散或同功能附着促进原料对外销售，不给全部SKU、未披露配方或全球股权业务的保证、不编造外购例外。未从Proudmemberof无文字图标推断协会资格，也未借用建筑磁漆SABS/ASTM和10年预期为我方材料性能背书。KrylicQualityPaints网站品牌与KrylicPaints(Pty)Ltd自述主体、同主域、MontagueGardens地址和电话按一个南非账户；未见已读原文披露其他母公司，非独立登记/完整股权审计。已按主体、品牌、域名、电话与地址核对最新main254、本地268、全私有队列/frontier，无同一账户；其他Search厂家未抓取，不额外计入。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱、总机及联系页；未核实具名采购或技术人员",
+      "email": "admin@krylicpaints.co.za",
+      "phone": "+27 21 551 2599",
+      "contactUrl": "https://krylicpaints.co.za/contact-us/"
+    },
+    "source": {
+      "label": "Krylic official 10-Year EXT-INT WB Enamel:water-based acrylic coating and primed wooden substrate application",
+      "url": "https://krylicpaints.co.za/product/10-year-ext-int-wb-enamel/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "krylic-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "belzona-harrogate": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "oli-lacke-lichtenau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "paul-jaeger-moeglingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4900,6 +4929,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "krylic-paints-cape-town": {
+    "website": "https://krylicpaints.co.za/",
+    "contactPage": "https://krylicpaints.co.za/contact-us/",
+    "address": "Unit 16 – East End, Prime Park, Printers Way, Montague Gardens 7441, Cape Town, South Africa. Official business contact address;company independently statesCapeTownmanufacturing. Marker-33.9,18.5 approximate city,not verifiedfactorygateGPS/registry.",
+    "generalEmail": "admin@krylicpaints.co.za",
+    "generalEmailEvidence": {
+      "company": "Krylic Paints (Pty) Ltd",
+      "value": "admin@krylicpaints.co.za",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Krylic official company contact details:exact general business inbox and switchboard",
+          "url": "https://krylicpaints.co.za/contact-us/",
+          "summary": "Actual Contact Details block publicly prints admin@krylicpaints.co.za. Exact general company administration/business inbox,not a named purchasing or R&D person. Also repeated in own footer/product enquiry mailto. No guessed pattern or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+27 21 551 2599",
+    "generalPhoneEvidence": {
+      "company": "Krylic Paints (Pty) Ltd",
+      "value": "+27 21 551 2599",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Krylic official company contact details:exact general business inbox and switchboard",
+          "url": "https://krylicpaints.co.za/contact-us/",
+          "summary": "Actual corporate Contact Details prints0215512599 at MontagueGardens CapeTown,SouthAfrica. Normalized country code+27 and omitted domestic0;general business voice only,not private mobile/named buyer or call-tested number."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "admin@krylicpaints.co.za",
+        "source": {
+          "label": "Krylic official company contact details:exact general business inbox and switchboard",
+          "url": "https://krylicpaints.co.za/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Krylic Paints (Pty) Ltd",
+          "value": "admin@krylicpaints.co.za",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Krylic official company contact details:exact general business inbox and switchboard",
+              "url": "https://krylicpaints.co.za/contact-us/",
+              "summary": "Actual Contact Details block publicly prints admin@krylicpaints.co.za. Exact general company administration/business inbox,not a named purchasing or R&D person. Also repeated in own footer/product enquiry mailto. No guessed pattern or deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Krylic official 10-Year EXT-INT WB Enamel:water-based acrylic coating and primed wooden substrate application",
+        "url": "https://krylicpaints.co.za/product/10-year-ext-int-wb-enamel/"
+      },
+      {
+        "label": "Krylic own CapeTown manufacturing/formulation and water-based wood-primer range",
+        "url": "https://krylicpaints.co.za/about-krylic-paints/"
+      },
+      {
+        "label": "Krylic complete visible Interior product page",
+        "url": "https://krylicpaints.co.za/interior-paints/"
+      },
+      {
+        "label": "Krylic complete visible Exterior product page",
+        "url": "https://krylicpaints.co.za/exterior-paints/"
+      },
+      {
+        "label": "Krylic official company contact details:exact general business inbox and switchboard",
+        "url": "https://krylicpaints.co.za/contact-us/"
+      }
+    ]
+  },
   "belzona-harrogate": {
     "website": "https://belzona.com/",
     "contactPage": "https://belzona.com/en/contact.aspx",
@@ -14685,6 +14796,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "krylic-paints-cape-town",
   "belzona-harrogate",
   "oli-lacke-lichtenau",
   "paul-jaeger-moeglingen",

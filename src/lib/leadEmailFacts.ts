@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "krylic-paints-cape-town": "Your 10-Year EXT-INT WB Enamel is a water-based acrylic coating suitable for primed wooden substrates.",
   "belzona-harrogate": "Your Belzona 5811 is a two-part epoxy coating for corrosion and chemical protection of equipment operating under immersion.",
   "oli-lacke-lichtenau": "Your OLI-AQUA NORDIC 18.40 is a water-based coating for interior wood surfaces, including furniture and stairs.",
   "paul-jaeger-moeglingen": "Your 329 Kronen Aqua Iso Treppen- und Parkettlack is water-based and suitable for wooden stairs and floors.",
