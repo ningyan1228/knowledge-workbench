@@ -5366,11 +5366,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "irurena-group-azpeitia",
+    "company": "Irurena Group",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Azpeitia (city marker)",
+    "latitude": 43.18,
+    "longitude": -2.27,
+    "legacyCompanyDescription": "自研制造水性木器涂料集团；全部自有品牌合并一个账户，原料相容和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Irurena当前集团页明确自主开发、制造和销售涂料及自有研发，IRURENA为工业木器品牌；实际Products原文明确水性木器单组分、双组分PUR、水性UV及室外木器系列。独立补读官网当前链接的4页目录PDF文字，列明水性透明/着色底面漆及多种成品涂层/着色体系。NL-W1201 TDS确认木材基材，可询问木器配方原料评估是否相关；没有已使用我方材料、相容、采购或性能达成证明。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读5个当前自有HTML正文：Irurena品牌Home、集团Home、品牌Products、GrupoMarcas、集团Contact；另一次GET取得实际链接目录PDF原件并离线提取阅读全部4页返回文字。当前集团自主研发/制造、明确水性木器成品、通用公开联系入口形成独立链。IRURENA/Otaduy/IKIParquet/IKIDecor/Oropal/IKIcoatings/KOLORE及西班牙/葡萄牙历史生产和仓库按一个集团账户，不按品牌/店铺/地域制造新增。1990历史中的IndustriasQuímicasIrurenaSA及2022品牌更新不冒充2026法律转制/当前完整股权审计；未用Search第三方2017Badix吸收叙述代替当前集团原文。当前HTML25国与无印刷日期目录30多国/50多年文字保留各自语境，不转为已核验规模/当年扩产。保留真实着色浓缩基料、色浆、converter及Aditivos/Disolventes配套类别，未声称只有成品漆。4页目录文字列出木器底面漆、聚氨酯/聚酯/硝基及UV成品、水性色漆和着色体系，也明确IRUPLAST/IMPRIMACIÓN为单组分物理干燥的基材涂装产品，EPOXICRISTAL为双组分透明厚填充环氧树脂用途。普通色浆/着色基料、成品底漆及环氧填充树脂不是已识别的水性PO/CPO原料外售证据；当前实际审读业务/用途未见水性聚烯烃乳液、PO/CPO分散体或作为原料的同类附着促进剂外售。结论限这些已读来源，未审计每个助剂/TDS/SDS/完整化学组成/全球SKU，也没有虚构外购例外；Aditivos未逐项列全，不称全原料目录。PDF为当前官网明确链接但无印刷届次，未称2026TDS；只读全页文字，图形/空白封面未作视觉核验，多栏文字不用于虚构性能对应关系。缺Canvas仅影响渲染，没有声称渲染成功；原PDF/text/hash均留私有。当前集团Contact明确info@和总机，仓库电话不改作个人/采购热线； malformed坐标文字不采用，地图仅城市标记。按集团/品牌/域/历史主体与最新main280/root294/全队列/frontier检查无同一主体；未以某个底漆名称推材料配方或我方相容/需求。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总机，无核实具名采购/技术收件人",
+      "email": "info@irurenagroup.com",
+      "phone": "+34 943 157 099",
+      "contactUrl": "https://www.irurenagroup.com/contacto/"
+    },
+    "source": {
+      "label": "IRURENA own water-based industrial wood varnish range",
+      "url": "https://www.irurena.com/productos/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "irurena-group-azpeitia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "estalia-damiani-montecchio-emilia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sivam-coatings-bareggio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "de-ijssel-moordrecht": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5652,6 +5681,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "irurena-group-azpeitia": {
+    "website": "https://www.irurenagroup.com/",
+    "contactPage": "https://www.irurenagroup.com/contacto/",
+    "address": "Ctra. de Tolosa s/n, Apartado30,20730 Azpeitia,Gipuzkoa,Spain. Exact own group business address; city-only marker43.18,-2.27, not surveyed factory coordinates.",
+    "generalPhone": "+34 943 157 099",
+    "generalPhoneEvidence": {
+      "company": "Irurena Group",
+      "value": "+34 943 157 099",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Irurena own current corporate contact",
+          "url": "https://www.irurenagroup.com/contacto/",
+          "summary": "Own group Contact explicitly gives+34943157099 as main corporate voice, separate from named-store warehouse numbers. Not a personal/purchasing direct line."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing and product/group roles",
+        "url": "https://www.irurenagroup.com/grupo-marcas/"
+      },
+      {
+        "label": "Own specific permitted downstream application range",
+        "url": "https://www.irurena.com/productos/"
+      },
+      {
+        "label": "Own actual auxiliary/finished-system business scope",
+        "url": "https://www.irurena.com/doc/IRURENA/catalogos/catalogo-barnices-irurena.pdf"
+      },
+      {
+        "label": "Own current independently sourced contact channel",
+        "url": "https://www.irurenagroup.com/contacto/"
+      },
+      {
+        "label": "Own group manufacturing overview",
+        "url": "https://www.irurenagroup.com/"
+      },
+      {
+        "label": "Current IRURENA brand and catalogue link",
+        "url": "https://www.irurena.com/"
+      }
+    ],
+    "generalEmail": "info@irurenagroup.com",
+    "generalEmailEvidence": {
+      "company": "Irurena Group",
+      "value": "info@irurenagroup.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Irurena own current corporate contact",
+          "url": "https://www.irurenagroup.com/contacto/",
+          "summary": "Own group Contact explicitly prints info@irurenagroup.com as general business email beside actual corporate address/main telephone. No named buyer or lab mailbox ownership/deliverability inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    }
+  },
   "estalia-damiani-montecchio-emilia": {
     "website": "https://www.color-damiani.com/it",
     "contactPage": "https://www.color-damiani.com/it/contatti",
@@ -17525,6 +17617,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "irurena-group-azpeitia",
   "estalia-damiani-montecchio-emilia",
   "sivam-coatings-bareggio",
   "de-ijssel-moordrecht",

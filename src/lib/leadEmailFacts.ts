@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "irurena-group-azpeitia": "Your IRURENA industrial wood range includes one- and two-component water-based varnishes, as well as water-based finishes for exterior timber.",
   "estalia-damiani-montecchio-emilia": "Your DTM range includes two-component polyacrylic enamels designed for direct application to metal.",
   "sivam-coatings-bareggio": "Your Environment range includes one- and two-component water-based coatings for wood.",
   "de-ijssel-moordrecht": "Your IJmopox ZF Primer is a two-component anticorrosive epoxy primer for steel and aluminium.",
