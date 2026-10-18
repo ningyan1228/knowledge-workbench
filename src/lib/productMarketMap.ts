@@ -5170,11 +5170,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "hydron-protective-wolverhampton",
+    "company": "Hydron Protective Coatings Ltd",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Wolverhampton (city marker)",
+    "latitude": 52.59,
+    "longitude": -2.13,
+    "legacyCompanyDescription": "自有防护成品涂料制造企业，公开Nu-Steel钢结构/金属防护系列；ELO配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "Hydron当前官网Home明确说明自身制造并供应anti-graffiti成品涂料，MetalPaint页作为自有公开产品范围列Nu-Steel系列工业金属防护系统，具体Nu-Steel T.P. Primer/Undercoat为适用prepared steelwork的环氧基底漆。官网另明确自主生产清洁预处理产品，自有制造与对外供货双重经营角色均保留，不因PaintSuppliers标题误判纯经销。ELO TDS确认涂料用途，可询问原料配方评估；没有证据表明该底漆用ELO、已相容或有采购需求。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读Home、完整MetalPaint实际成品列表、Contact、Export&Distribution、完整CleaningProducts及Datasheets索引引言/全部返回公开链接。自主业务为anti-graffiti、防水/防火/建筑/地坪/金属防护涂层、石材封闭及清洁/除漆/去油等化学制品，不掩盖成品以外的化学品经营。清洁页真实OD1 Oil Dispersant为清洁用途分散/乳化产品，MC1/WD1为去油，SN1为盐中和；不是因Oil/emulsifier字样便认作ELO/ESBO或生物增塑稳定原料。索引出现NU-GUARD AG ADHESION PROMOTER、primers/epoxy/PU/chlorinated-rubber等商品链接名，未读任何PDF/TDS/SDS正文，不由名称假定化学组成、原料身份或PO/植物油销售。当前实际读到的自述经营、完整金属系列/清洁产品及返回索引可见范围未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入外售；结论限已读公开范围，不保证所有叶子PDF/SDS/全球关联业务或虚构外购例外。所有Nu-Steel/Nu-Guard/Nu-Cryl/Nu-Base/Nu-Flame系列及hydronpc.com/.co.uk联络域别名保守按同一账户，不拆城市SEO着陆页、经销商或产品线。Rawlins独立stockist只是搜索发现来源，不借用其邮箱/制造或认作Hydron子公司。核对最新main273、本地287、全队列/frontier及上述名称/域名品牌无同一账户，未作外部注册/最终股权审计。官网Contact公开enquiries@hydronpc.co.uk与01902 450950；业务主站.com与邮箱.co.uk以同一原文确值为准，不构造地址或认作个人采购邮箱。当前原文仅证实Wolverhampton城市，未返回街道，保留市级地址/城市点，不编造厂门定位。30年历史、全球送货和英标/5-15年寿命/700度等本公司产品自述不冒充我方性能、认证或当期ELO采购。"
+    },
+    "contact": {
+      "label": "官网公开的一般业务询盘邮箱及公司电话；非具名采购",
+      "email": "enquiries@hydronpc.co.uk",
+      "phone": "+44 1902 450950",
+      "contactUrl": "https://hydronpc.com/contact/"
+    },
+    "source": {
+      "label": "Hydron own Nu-Steel metal paint range: T.P.Primer/Undercoat epoxy coating for prepared steelwork",
+      "url": "https://hydronpc.com/metal-paint/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "hydron-protective-wolverhampton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "votteler-korntal-muenchingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zuelch-osterode-lerbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "diquimtex-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5449,6 +5478,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "hydron-protective-wolverhampton": {
+    "website": "https://hydronpc.com/",
+    "contactPage": "https://hydronpc.com/contact/",
+    "address": "Wolverhampton, United Kingdom. Current own Home/CleaningProducts explicitly locate the business in Wolverhampton; no street address returned. City-only marker52.59,-2.13, not factory-gate geolocation.",
+    "generalEmail": "enquiries@hydronpc.co.uk",
+    "generalEmailEvidence": {
+      "company": "Hydron Protective Coatings Ltd",
+      "value": "enquiries@hydronpc.co.uk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Hydron own current corporate Contact: exact general business mailbox and telephone",
+          "url": "https://hydronpc.com/contact/",
+          "summary": "Own current Contact explicitly prints enquiries@hydronpc.co.uk. Exact public general corporate mailbox on .com website, no name/constructed .com equivalent/deliverability/currentpurchaser claim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+44 1902 450950",
+    "generalPhoneEvidence": {
+      "company": "Hydron Protective Coatings Ltd",
+      "value": "+44 1902 450950",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Hydron own current corporate Contact: exact general business mailbox and telephone",
+          "url": "https://hydronpc.com/contact/",
+          "summary": "Own current Contact prints 01902 450 950. Normalize UK domestic initial0 to+44 for Wolverhampton general company number, no fax/private/named ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Hydron own specific metal protection products: Nu-Steel TP epoxy primer",
+        "url": "https://hydronpc.com/metal-paint/"
+      },
+      {
+        "label": "Hydron own currentHome: explicit protective coating manufacture and own business scope",
+        "url": "https://hydronpc.com/"
+      },
+      {
+        "label": "Hydron own Contact: exact public enquiry inbox/voice",
+        "url": "https://hydronpc.com/contact/"
+      },
+      {
+        "label": "Hydron own full cleaning range: actual degreaser/oil-dispersant and manufacture roles",
+        "url": "https://hydronpc.com/cleaning-products/"
+      },
+      {
+        "label": "Hydron actual source index and visible document links only; PDF bodies not read",
+        "url": "https://hydronpc.com/datasheets-brochures/"
+      },
+      {
+        "label": "Hydron own distribution of finished coating/cleaning ranges",
+        "url": "https://hydronpc.com/export-distribution/"
+      }
+    ]
+  },
   "votteler-korntal-muenchingen": {
     "website": "https://www.votteler.com/en/",
     "contactPage": "https://www.votteler.com/en/masthead/",
@@ -16806,6 +16898,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "hydron-protective-wolverhampton",
   "votteler-korntal-muenchingen",
   "zuelch-osterode-lerbach",
   "diquimtex-ciudad-mexico",
