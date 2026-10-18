@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "zuelch-osterode-lerbach": "You offer two-component epoxy and polyurethane primers for corrosion protection on iron and steel in machinery and pipeline applications.",
   "diquimtex-ciudad-mexico": "Your Pripox RP-6 is a catalyzed epoxy primer in your industrial anti-corrosion coating systems.",
   "aemme-colori-ranica": "Your Primer LBE 100 is a one-component epoxy primer for three-layer external protection of steel pipelines.",
   "invebi-orago": "Your water-based interior wood coatings include primers and finishes for parquet floors and stairs.",

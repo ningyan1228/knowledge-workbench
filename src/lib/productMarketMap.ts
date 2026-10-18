@@ -5114,11 +5114,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "zuelch-osterode-lerbach",
+    "company": "Zuelch Industrial Coatings GmbH",
+    "productId": "elo",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Osterode-Lerbach (city marker)",
+    "latitude": 51.73,
+    "longitude": 10.25,
+    "fit": "可开发候选",
+    "signal": "当前Zuelch官网Home直接说明自身开发、生产、销售涂料与色漆，Products正文再次说明工业功能涂层自主开发制造。具体1K/2K底漆页列双组分环氧/聚氨酯、锌磷酸盐及富锌底漆，并明确钢铁防腐、机械设备、钻杆/管线用途，构成具体工业防护成品配方与制造链。ELO TDS确认涂料大类，可提出原料配方评估；未证实其已经使用、购买或与该底漆相容。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读当前Home、Products实际正文及完整返回链接目录、具体1K/2K底漆、Contact/人员页；Unternehmen实际仅视频/验证码占位，未当公司/制造证据。自主工业成品/配套类别包括可剥保护漆、标记漆、粘尘漆、底漆面漆、浸涂/喷涂/滚筒涂料、色精/着色浓缩物，保留后两类真实中间品角色，不称只有成品或绝无原料业务。色精浓缩物用于着色，普通环氧/聚氨酯成品体系及锌磷酸盐/富锌底漆不等于ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入。所查当前自述经营范围/全部可见类别及具体防护产品中未见对外销售上述所选同类输入；结论仅限实际读到范围，不宣称所有叶子SKU、组分/SDS、合同代工页面或全球关联已审计，不编造外购ELO例外。按Zuelch/Zülch、IndustrialCoatingsGmbH、zuelch.de/zuelch.com历史搜索域别名、TrueColours品牌及Osterode-Lerbach公司地址，核对最新main271、本地285、全私有队列/frontier，无同一主体/集团账户。仅以当前官网自述owner-managed为自述，不作外部工商注册/全部股权保证；不拆品牌/部门/厂址造新增。官网人员页明确Hanns-E.Zülch于03/25去世，不沿用为当前负责人；现役采购AndreasKratsch身份与邮箱/办公电话各留分项证据，不把技术原料数据LarsKesten或销售负责人改标采购。60年历史/EcoVadis自述与联系人存在不代表当期采购或已认可ELO。"
+    },
+    "contact": {
+      "label": "官网公开采购联系人 Andreas Kratsch（Einkauf）；身份、业务邮箱及办公电话分项核验",
+      "email": "kratsch@zuelch.de",
+      "phone": "+49 5522 9015-0",
+      "contactUrl": "https://www.zuelch.de/kontakt/"
+    },
+    "source": {
+      "label": "Zuelch own1K/2K primers: two-component epoxy/PUR steel corrosion protection and pipe applications",
+      "url": "https://www.zuelch.de/produkte/1k-2k-grundierungen/"
+    },
+    "checkedAt": "2026-10-18",
+    "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zuelch-osterode-lerbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "diquimtex-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aemme-colori-ranica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "invebi-orago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5391,6 +5420,123 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zuelch-osterode-lerbach": {
+    "website": "https://www.zuelch.de/",
+    "contactPage": "https://www.zuelch.de/kontakt/",
+    "address": "Zuelch Industrial Coatings GmbH, Friedrich-Ebert-Str. 204–206, D-37520 Osterode-Lerbach, Germany. Exact current own contact address; city-only marker51.73,10.25, not surveyed factory coordinates.",
+    "generalEmail": "service@zuelch.de",
+    "generalEmailEvidence": {
+      "company": "Zuelch Industrial Coatings GmbH",
+      "value": "service@zuelch.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Zuelch own Kontakt: exact general business mailbox",
+          "url": "https://www.zuelch.de/kontakt/",
+          "summary": "Own corporate contact explicitly prints service@zuelch.de beside Zuelch Industrial Coatings GmbH; source overrides unrelated search directories using .com, no synthesized domain."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+49 5522 9015-0",
+    "generalPhoneEvidence": {
+      "company": "Zuelch Industrial Coatings GmbH",
+      "value": "+49 5522 9015-0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Zuelch own Kontakt: company general telephone",
+          "url": "https://www.zuelch.de/kontakt/",
+          "summary": "Own Kontakt explicitly prints Telefon +49 5522 / 9015-0. Normalized separators only; not a purchasing personal line or fax."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [
+      {
+        "name": "Andreas Kratsch",
+        "title": "Purchasing (Einkauf)",
+        "department": "Procurement",
+        "email": "kratsch@zuelch.de",
+        "phone": "+49 5522 9015-15",
+        "identityEvidence": {
+          "company": "Zuelch Industrial Coatings GmbH",
+          "name": "Andreas Kratsch",
+          "title": "Purchasing (Einkauf)",
+          "responsibilities": "Purchasing; current own directory lists Einkauf under Vertrieb & Einkauf. Specific ELO remit, current buying, budgets and project timing unconfirmed.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Zuelch own current Ansprechpartner: named purchasing role under Vertrieb & Einkauf",
+              "url": "https://www.zuelch.de/ansprechpartner/",
+              "summary": "Current own directory explicitly lists Andreas Kratsch with role Einkauf. Translate as Purchasing only; no head/chief/selected-ELO procurement remit or LinkedIn cross-check asserted."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        },
+        "emailEvidence": {
+          "company": "Zuelch Industrial Coatings GmbH",
+          "value": "kratsch@zuelch.de",
+          "kind": "named-business",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Zuelch own current Ansprechpartner: exact public purchasing business email",
+              "url": "https://www.zuelch.de/ansprechpartner/",
+              "summary": "The Andreas Kratsch entry explicitly prints kratsch@zuelch.de below Einkauf. Same page establishes identity and exact channel separately; not a guessed mailbox or deliverability/current-demand claim."
+            }
+          ],
+          "verifiedAt": "2026-10-18",
+          "personName": "Andreas Kratsch"
+        },
+        "phoneEvidence": {
+          "company": "Zuelch Industrial Coatings GmbH",
+          "value": "+49 5522 9015-15",
+          "kind": "named-business",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Zuelch own current Ansprechpartner: exact purchasing office telephone",
+              "url": "https://www.zuelch.de/ansprechpartner/",
+              "summary": "Andreas Kratsch entry explicitly prints +49 5522 9015-15; retain company office number only, not mobile/private phone."
+            }
+          ],
+          "verifiedAt": "2026-10-18",
+          "personName": "Andreas Kratsch"
+        },
+        "source": {
+          "label": "Zuelch own current Ansprechpartner: named purchasing role under Vertrieb & Einkauf",
+          "url": "https://www.zuelch.de/ansprechpartner/"
+        },
+        "verifiedAt": "2026-10-18"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Zuelch own industrial primer range: exact steel corrosion/pipeline application",
+        "url": "https://www.zuelch.de/produkte/1k-2k-grundierungen/"
+      },
+      {
+        "label": "Zuelch ownHome: develops, produces, sells coatings; current own company identity",
+        "url": "https://www.zuelch.de/"
+      },
+      {
+        "label": "Zuelch ownProducts: actual functional industrial coatings manufacture and visible category links",
+        "url": "https://www.zuelch.de/produkte/"
+      },
+      {
+        "label": "Zuelch own current Ansprechpartner: named purchasing role under Vertrieb & Einkauf",
+        "url": "https://www.zuelch.de/ansprechpartner/"
+      },
+      {
+        "label": "Zuelch current corporate contact: general business email/voice and exact address",
+        "url": "https://www.zuelch.de/kontakt/"
+      }
+    ]
+  },
   "diquimtex-ciudad-mexico": {
     "website": "https://www.diquimtex.com/",
     "contactPage": "https://www.diquimtex.com/ubicación",
@@ -16576,6 +16722,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zuelch-osterode-lerbach",
   "diquimtex-ciudad-mexico",
   "aemme-colori-ranica",
   "invebi-orago",
