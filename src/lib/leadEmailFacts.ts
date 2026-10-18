@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "manor-coating-shipley": "Your MIO Primer is a micaceous iron oxide anti-corrosive primer/intercoat for industrial metal coating systems.",
   "irsa-deisenhausen": "Your Platinum 3000 is a ready-to-use, one-component water-based polyurethane varnish for parquet, wooden floors and stairs.",
   "saicos-sassenberg": "Your Bel Air H2O is a water-based coating for interior and exterior wood, including facades and furniture.",
   "trimite-global-redditch": "Your TrimaKote AP45 is a two-pack epoxy primer in your industrial coatings range.",

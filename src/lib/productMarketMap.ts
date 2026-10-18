@@ -4892,11 +4892,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "manor-coating-shipley",
+    "company": "Manor Coating Systems Ltd",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Shipley (approximate city marker; factory entrance not surveyed)",
+    "latitude": 53.8,
+    "longitude": -1.8,
+    "legacyCompanyDescription": "英国Manor自产工业防腐涂料，MIOPrimer为防腐底/中间漆；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Manor当前Home明确为英国独立工业涂料制造商并自行配方，Home/Contact共同披露Shipley的HeadOffice&Factory。SinglePackPrimers原文直接列MIOPrimer为云母氧化铁颜料防腐底漆/中间漆，并说明自产产品覆盖钢结构、工程机械等行业。自主制造、工厂业务入口及具体工业防腐成品分别有原文支持，不把1995火灾后的历史代工说明当成当前无工厂，也不从BCF搜索标签代替原文核验。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、SinglePackPrimers、Heritage、ProductInformation全部返回代表性产品表、Contact五份原文；第六次BCF记录请求403，未读其正文、不将搜索摘要当原始来源。Products明确仅为完整系列的selectedrepresentativeproducts，不冒称审读全部SKU、叶子TDS/SDS或代工配方。可见八个产品分区为单/双组分自底漆面漆、底漆、面漆，水性体系和地坪涂料。真实历史universalcolourants/tinters、底漆/涂饰及修补配套角色保留，不断言从未外售输入。1KEtchPrimer实际为工业金属表面喷/刷/辊涂附着底漆，水性Akwaprime和所有显示的epoxy/alkyd/PU是施工成品类别，不凭AdhesionPromoting/PU名字就改成ELO/ESBO或原料聚烯烃销售。历史调色浆是色彩调配材料，不等同生物增塑稳定油；未读配方/组分，不推断其实际化学组成。按已读当前自主工业防护成品、完整可见分类及所有返回代表品角色，未见ELO/ESBO/环氧化植物油或同功能生物增塑稳定输入外售；结论仅限该范围，不对未列SKU/所有全球关联业务给无原料供应保证，不编造外购例外。Manor/旧ShipleyPaintandVarnish/相关商店和品牌按一个账户，不从旧名或地址产生新增。1972迁址、1979实验室、1980年代调色和1995火灾/代工历史不改写为2026扩产/RFQ；About历史人物/Contact相邻字段不作未经核验具名采购。最新main263、本地277、全队列/frontier名称/旧名/域名/地址去重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开业务联系页及总部总机；无已核实业务邮箱或具名采购",
+      "phone": "+44 1274 587351",
+      "contactUrl": "https://manorcoatingsystems.co.uk/contact/"
+    },
+    "source": {
+      "label": "Manor own SinglePackPrimers:MIOPrimer micaceousironoxide anti-corrosive primer/intercoat inindustrialcoatingrange",
+      "url": "https://manorcoatingsystems.co.uk/product-info/primers-single-pack/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "manor-coating-shipley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "irsa-deisenhausen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "saicos-sassenberg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "trimite-global-redditch": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5161,6 +5189,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "manor-coating-shipley": {
+    "website": "https://manorcoatingsystems.co.uk/",
+    "contactPage": "https://manorcoatingsystems.co.uk/contact/",
+    "address": "Head Office & Factory, Otley Road, Shipley, West Yorkshire BD17 7DP, United Kingdom:actualcurrentownContact/Home. Marker53.8,-1.8coarseShipleycity,notfactorygateGPS/independentregistry.",
+    "generalEmail": "",
+    "generalPhone": "+44 1274 587351",
+    "generalPhoneEvidence": {
+      "company": "Manor Coating Systems Ltd",
+      "value": "+44 1274 587351",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Manor current officialContact:HeadOffice&Factory OtleyRoad/Shipley and printedgeneralbusinessvoice",
+          "url": "https://manorcoatingsystems.co.uk/contact/",
+          "summary": "Printed01274587351oncurrentHeadOffice&FactoryContact/Home,normalizeUK+44/dropdomestic0. Sourcehrefis malformedtel:http://01274%20587351;number comesfromexplicitprintedbusinesslabel,notlink-dialverification. SharedHQvoice,noprivate/namedcontact."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Manor own SinglePackPrimers:MIOPrimer micaceousironoxide anti-corrosive primer/intercoat inindustrialcoatingrange",
+        "url": "https://manorcoatingsystems.co.uk/product-info/primers-single-pack/"
+      },
+      {
+        "label": "Manor ownHome:currentUKmanufacture/formulation/HeadOffice&Factory",
+        "url": "https://manorcoatingsystems.co.uk/"
+      },
+      {
+        "label": "Manor completevisibleeightcategories andrepresentativefinished-productlist,notallSKU",
+        "url": "https://manorcoatingsystems.co.uk/product-info/"
+      },
+      {
+        "label": "Manor ownHeritage:ShipleyPaintandVarnishalias/historicalfactoryandformulationevents",
+        "url": "https://manorcoatingsystems.co.uk/about/heritage/"
+      },
+      {
+        "label": "Manor current officialContact:HeadOffice&Factory OtleyRoad/Shipley and printedgeneralbusinessvoice",
+        "url": "https://manorcoatingsystems.co.uk/contact/"
+      }
+    ]
+  },
   "irsa-deisenhausen": {
     "website": "https://irsa.de/",
     "contactPage": "https://irsa.de/de/kontakt.html",
@@ -15708,6 +15781,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "manor-coating-shipley",
   "irsa-deisenhausen",
   "saicos-sassenberg",
   "trimite-global-redditch",
