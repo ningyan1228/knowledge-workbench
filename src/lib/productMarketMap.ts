@@ -4947,11 +4947,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "dacrylate-kirkby",
+    "company": "Dacrylate Paints Ltd",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Kirkby-in-Ashfield (approximate town marker; factory entrance not surveyed)",
+    "latitude": 53.1,
+    "longitude": -1.3,
+    "legacyCompanyDescription": "英国Dacrylate自产工业涂料，Dacprime98为钢材防锈底漆；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Dacrylate当前Home与Products明确为英国工业/装饰涂料制造商，自有实验室研发配方并制造成品涂料；当前Dacprime完整系列页直接说明Dacprime98为高膜厚底漆，具防锈抑制性能、用于保护钢材。About将MortonPaints至DacrylatePaints的历史关联和自述家族经营单列。自主制造/配方、具体工业金属防护成品与当前公开业务入口分别有原文支持，不从行业协会搜索摘要推断工厂或具名买方。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、About、Products所有返回系列分类、IndustrialFinishes全部返回代表品、Dacprime全部七个返回品及Contact六份原始HTML。Products可见Dacfast/Dacfree/Dacprime/Dacquacote/Dacsil/Dacthane/Dactherm/Epidac/Implamel/Margard/Rapidac/Vinadac十二系列，应用为公路/工业/地坪/砖石/木器/装饰；未遍历所有系列叶子TDS/SDS或隐私配方，不能称全SKU排查。About确实出现acrylicresins和引入/开发丙烯酸树脂技术表述，不隐去、不宣称从未做树脂或其他原料；具体是否独立外售丙烯酸树脂未单独核实，该泛称也不等同ELO/ESBO/环氧化植物油供应。IndustrialFinishes实际调色体系、Bitumen和临时喷房保护层、金属底漆/涂饰等成品角色保留。Dacprime78C/78E是金属表面蚀刻/附着底漆，当前98明确为钢材施工高膜厚防锈底漆；普通epoxy/alkyd/PU/树脂技术不据名字改作环氧化油销量。按已读当前自主工业成品、完整可见分类、IndustrialFinishes代表品和Dacprime具体施工角色，未见ELO/ESBO/环氧化植物油或同功能生物增塑稳定油外售；结论限实际阅读范围，不保证未读SKU/所有全球关联业务无原料供应，不编造外购例外。MortonPaints1958改名Dacrylate及自有品牌按一个相关账户，不拆历史名/系列；About家族持有自述不是外部股权登记审计。历史RoyalWarrant与实验室/经营年限不是2026扩产或采购。BCF搜索中历任主席不当成当前身份或联系人，不读Search注册号当法定登记已核实。最新main265、本地279、全队列/frontier公司/旧名/域名/地址关联去重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开一般业务询盘邮箱及公司总机；非具名采购",
+      "email": "enquiries@dacrylate.co.uk",
+      "phone": "+44 1623 753845",
+      "contactUrl": "https://dacrylate.co.uk/contact/"
+    },
+    "source": {
+      "label": "Dacrylate own Dacprime range:Dacprime98 high-build steel primer with rust-inhibitive properties",
+      "url": "https://dacrylate.co.uk/product-ranges/dacprime/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "dacrylate-kirkby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tover-collegno": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "manor-coating-shipley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "irsa-deisenhausen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5218,6 +5247,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "dacrylate-kirkby": {
+    "website": "https://dacrylate.co.uk/",
+    "contactPage": "https://dacrylate.co.uk/contact/",
+    "address": "Lindley's Lane, Kirkby-in-Ashfield, Nottinghamshire NG17 8AL, United Kingdom:currentownContactcorporateaddress;ownHome/ProductsseparatelysupportBritishmanufacture. Marker53.1,-1.3coarsetown,notfactorygateGPS/independentregistry.",
+    "generalEmail": "enquiries@dacrylate.co.uk",
+    "generalEmailEvidence": {
+      "company": "Dacrylate Paints Ltd",
+      "value": "enquiries@dacrylate.co.uk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Dacrylate own Contact:public enquiries email/corporate voice/Kirkby-in-Ashfield address",
+          "url": "https://dacrylate.co.uk/contact/",
+          "summary": "CurrentownContactexplicitforinformationemailenquiries@dacrylate.co.uk. Generalcorporateenquiryentry;notnamedSharonHarte/DiannaRowlandbuyeremail/deliverability/sendproof."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+44 1623 753845",
+    "generalPhoneEvidence": {
+      "company": "Dacrylate Paints Ltd",
+      "value": "+44 1623 753845",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Dacrylate own Contact:public enquiries email/corporate voice/Kirkby-in-Ashfield address",
+          "url": "https://dacrylate.co.uk/contact/",
+          "summary": "CurrentownContactTO MAKE AN ENQUIRY OR TO PLACE AN ORDER CALL US ON+44(0)1623753845;normalizeUK+44dropdomestic0. Sharedgeneralbusinessvoice,notnamedperson/directdialverification."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "enquiries@dacrylate.co.uk",
+        "source": {
+          "label": "Dacrylate own Contact:public enquiries email/corporate voice/Kirkby-in-Ashfield address",
+          "url": "https://dacrylate.co.uk/contact/"
+        },
+        "emailEvidence": {
+          "company": "Dacrylate Paints Ltd",
+          "value": "enquiries@dacrylate.co.uk",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Dacrylate own Contact:public enquiries email/corporate voice/Kirkby-in-Ashfield address",
+              "url": "https://dacrylate.co.uk/contact/",
+              "summary": "CurrentownContactexplicitforinformationemailenquiries@dacrylate.co.uk. Generalcorporateenquiryentry;notnamedSharonHarte/DiannaRowlandbuyeremail/deliverability/sendproof."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Dacrylate own Dacprime range:Dacprime98 high-build steel primer with rust-inhibitive properties",
+        "url": "https://dacrylate.co.uk/product-ranges/dacprime/"
+      },
+      {
+        "label": "Dacrylate ownHome:Britishindustrialcoatingmanufacture/formulationlaboratory",
+        "url": "https://dacrylate.co.uk/"
+      },
+      {
+        "label": "Dacrylate ownAbout:MortonPaintshistoricalalias/familyselfreport/acrylicresinwordingretained",
+        "url": "https://dacrylate.co.uk/about/"
+      },
+      {
+        "label": "Dacrylate fullreturned12productranges/categoryscope,notallleafSKU",
+        "url": "https://dacrylate.co.uk/product-ranges/"
+      },
+      {
+        "label": "Dacrylate IndustrialFinishes:actualreturnedindustrialfinishedcoatings/tintingroles",
+        "url": "https://dacrylate.co.uk/applications/industrial/"
+      },
+      {
+        "label": "Dacrylate own Contact:public enquiries email/corporate voice/Kirkby-in-Ashfield address",
+        "url": "https://dacrylate.co.uk/contact/"
+      }
+    ]
+  },
   "tover-collegno": {
     "website": "https://tover.com/",
     "contactPage": "https://tover.com/contacts/?lang=en",
@@ -15892,6 +16007,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "dacrylate-kirkby",
   "tover-collegno",
   "manor-coating-shipley",
   "irsa-deisenhausen",
