@@ -5086,11 +5086,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "diquimtex-ciudad-mexico",
+    "company": "Distribuidora Química Textil S.A. de C.V. (Diquimtex)",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Ciudad de México (official location-page city only; street and factory gate not returned)",
+    "latitude": 19.4,
+    "longitude": -99.1,
+    "legacyCompanyDescription": "墨西哥Diquimtex自产DI工业涂料，PripoxRP6为工业防腐环氧底漆；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Diquimtex当前Home正文直接说明DistribuidoraQuímicaTextil自主制造专用产品，DI为工业/建筑涂料系列；原始页面元数据同样自述墨西哥工厂。IndustrialPaints原文列自主开发的工业环氧/水性溶剂型防腐底漆和内部实验室测试；AntiCorrosivosParaPemex具体页面直接列PripoxRP-6为催化型环氧底漆及多层工业防腐体系。自有制造/配方、具体工业防腐产品与当前公开业务联系入口分别有原文，不从企业名称Distribuidora推定纯经销，也不从PEMEX标题推定已有供货合同。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取DiquimtexHome、IndustrialPaints、PorTipoDeProducto全部返回分类、Ubicación与具体AnticorrosivosParaPemex五份提供者提取的原文；同范围另一次RIAHome是独立施工商筛查，不能算Diquimtex第六份公司来源。合计6URL请求上限已用完，不重置。Diquimtex当前五条自述品牌线为FlamOut/DI/Lumins/Bioguard/Lustre；实际返回业务涵盖工业/建筑防护成品漆、阻燃/防火涂饰和添加品、光致发光/荧光颜料及成品、消毒/防生物和清洗剂等。Home确实出现外售Resinaepóxica、醋酸乙烯/PVA胶、环氧胶/膏/砂浆、阻燃添加品、颜料、憎水拒油及助剂类角色，不宣称纯成品商或无化学原料业务。PorTipo完整返回产品类型，未读各品牌全部叶子、关联站点、TDS/SDS/组分；没有假定独立卖ELO/ESBO或具体油类化学组成。实际阻燃添加品/清洗剂/荧光颜料/成品环氧体系作用不同于所选生物基增塑稳定油，普通epoxy/resin字样不能等同环氧化植物油。PripoxRP-6等为防护施工底漆，实际18L pintura+catalizador套装属于自有涂料配套，不自动变成ELO销售。按已读当前自主工业成品、完整可见品牌/全部返回类型及具体防腐成品范围，未见ELO/ESBO/环氧化植物油或同功能生物增塑稳定输入外售；结论仅限已读范围，不替未读SKU/全部关联站点/全球业务给无原料供应保证，不编造外购例外。Diquimtex法律名及DI/FlamOut/Lumins/Bioguard/Lustre、Pripox/Acapox/Poliuresol和链接相关站点保守按一个账户，不拆品牌/网站；关联域法律归属未外部登记审计。Home40年历史/证书自述/PEMEX系统标题非2026扩产、已有供货或采购RFQ。Ubicación当前仅标题/元数据描述CiudaddeMéxico，未返回街道/地图；明确保留市级地址，不补工厂门址或以城市坐标冒充定位。最新main270、本地284、全队列/frontier公司/域名/品牌关联去重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开一般业务询盘邮箱及公司总机；非具名采购",
+      "email": "auxiliar1@diquimtex.com.mx",
+      "phone": "+52 55 5845 6777",
+      "contactUrl": "https://www.diquimtex.com/ubicación"
+    },
+    "source": {
+      "label": "Diquimtex own industrial anticorrosive systems:PripoxRP-6 catalyzed epoxy primer",
+      "url": "https://www.diquimtex.com/anticorrosivos-para-pemex-di-pinturas-ind"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "diquimtex-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aemme-colori-ranica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "invebi-orago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "freilacke-doeggingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5362,6 +5391,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "diquimtex-ciudad-mexico": {
+    "website": "https://www.diquimtex.com/",
+    "contactPage": "https://www.diquimtex.com/ubicación",
+    "address": "Ciudad de México, Mexico:official ownLocationpage title/description identifies city;no streetaddress/map returned,notinferred orsurveyedfactorygate. City-onlymarker19.4,-99.1.",
+    "generalEmail": "auxiliar1@diquimtex.com.mx",
+    "generalEmailEvidence": {
+      "company": "Distribuidora Química Textil S.A. de C.V. (Diquimtex)",
+      "value": "auxiliar1@diquimtex.com.mx",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Diquimtex ownHome:explicit public enquiry mailbox/general voice;ownLocationcityonly",
+          "url": "https://www.diquimtex.com/",
+          "summary": "ActualHomecontactsectionEnvíanostuconsulta explicitlyauxiliar1@diquimtex.com.mx. Exactpubliccompanybusinessrouteonown.comsiteeventhoughmaildomain.com.mx;notconstructedfromwebsite/namedperson/currentpurchaser/deliverabilityclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+52 55 5845 6777",
+    "generalPhoneEvidence": {
+      "company": "Distribuidora Química Textil S.A. de C.V. (Diquimtex)",
+      "value": "+52 55 5845 6777",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Diquimtex ownHome:explicit public enquiry mailbox/general voice;ownLocationcityonly",
+          "url": "https://www.diquimtex.com/",
+          "summary": "ActualHomecontactsection55 5845 6777 y6778andLocationheader55-5845-6777/6778. Storefirstshared10digitMexicovoicewith+52,nosuffixguessed/privatepersonclaim. Explicitseparatechat5528087802notassignedasgeneralvoice."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "auxiliar1@diquimtex.com.mx",
+        "source": {
+          "label": "Diquimtex ownHome:explicit public enquiry mailbox/general voice;ownLocationcityonly",
+          "url": "https://www.diquimtex.com/"
+        },
+        "emailEvidence": {
+          "company": "Distribuidora Química Textil S.A. de C.V. (Diquimtex)",
+          "value": "auxiliar1@diquimtex.com.mx",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Diquimtex ownHome:explicit public enquiry mailbox/general voice;ownLocationcityonly",
+              "url": "https://www.diquimtex.com/",
+              "summary": "ActualHomecontactsectionEnvíanostuconsulta explicitlyauxiliar1@diquimtex.com.mx. Exactpubliccompanybusinessrouteonown.comsiteeventhoughmaildomain.com.mx;notconstructedfromwebsite/namedperson/currentpurchaser/deliverabilityclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Diquimtex own industrial anticorrosive systems:PripoxRP-6 catalyzed epoxy primer",
+        "url": "https://www.diquimtex.com/anticorrosivos-para-pemex-di-pinturas-ind"
+      },
+      {
+        "label": "Diquimtex ownHome:legalname/Mexicanmanufacture/fivebrands/currentbusinessmailandvoice",
+        "url": "https://www.diquimtex.com/"
+      },
+      {
+        "label": "Diquimtex ownIndustrialPaints:industrialcorrosionproductdevelopment/internallabs",
+        "url": "https://www.diquimtex.com/pinturas-industriales"
+      },
+      {
+        "label": "Diquimtex fullreturnedproducttypes;rawresin/chemicalinputsretained,notallgloballeafSKU",
+        "url": "https://www.diquimtex.com/por-tipo-de-producto"
+      },
+      {
+        "label": "Diquimtex currentLocation:city-title/descriptionandgeneralphone;nostreetreturned",
+        "url": "https://www.diquimtex.com/ubicación"
+      }
+    ]
+  },
   "aemme-colori-ranica": {
     "website": "https://www.aemmecolori.it/",
     "contactPage": "https://www.aemmecolori.it/it/contatti",
@@ -16465,6 +16576,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "diquimtex-ciudad-mexico",
   "aemme-colori-ranica",
   "invebi-orago",
   "freilacke-doeggingen",
