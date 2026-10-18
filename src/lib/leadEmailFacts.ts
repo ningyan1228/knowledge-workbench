@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "industrias-proa-porrino": "Your BH wood protector is water-based and designed for interior and exterior timber, with the colourless version recommended indoors.",
   "hagmans-nordic-fritsla": "Your Carosol CA Primer is a two-component epoxy primer for metal surfaces that will receive spray filler.",
   "monopol-colors-fislisbach": "Your DUOPOL Steelguard C80 is a high-solids epoxy primer in your range of industrial corrosion-protection coatings.",
   "hydron-protective-wolverhampton": "Your Nu-Steel T.P. Primer/Undercoat is an epoxy-based coating for prepared steelwork in your protective metal paint range.",

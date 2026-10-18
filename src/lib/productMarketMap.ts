@@ -5254,11 +5254,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "industrias-proa-porrino",
+    "company": "Industrias Proa, S.A. (Pinturas PROA)",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "O Porriño (city marker)",
+    "latitude": 42.16,
+    "longitude": -8.62,
+    "legacyCompanyDescription": "自有水性木器成品涂料研发制造企业；具体原料适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前PROA官网首页明确自身研究、开发、测试和制造涂料，并有自有I+D+i部门；独立的具体BH木材保护涂料产品页明确base agua、室内/室外木材装饰保护和AGUA稀释，引用PROAQUA技术文件名但本轮没有读取PDF。色彩版本和无色限制分别保留：无色建议仅室内，室外仅用于调浅深色。NL-W1201 TDS确认木材基材，可讨论水性木器配方原料评估，不能推断已使用我方乳液、实际相容、当前需求或采购。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读当前Home、Madera列表、Contact、Colorantes/Diluyentes/Varios类别、具体BH水性木材保护制品和ProductosVarios子类，另离线复看本轮实际保存的原HTML及产品锚点。当前经营以自研制造成品涂料为主，保留实际颜料浓缩/通用色浆、稀释剂、漆膜防护制品、除锈清洁/除漆和木材养护油等辅助品销售，不因其销售任一化学品或名称含Concentrado便整体排除，也不谎称仅有成品漆。实际ProductosVarios返回5种具名产品：漆膜conservante、水性rustconverter、ProadexE除锈清洁、Proalimp和stripper，未从用途标签推断未知化学组成或PO/CPO原料身份。当前实际读到的自述经营、木器品及上述辅助类别/具体子类没有水性聚烯烃乳液、CPO/PO分散体或作为原料的同类附着促进剂外售证据；结论限定当前已读范围，未声称全网站所有SKU/配套TDS/SDS/汽车primer化学组成或全集团全球审计。木材、辅助类别及子类原HTML含真实嵌入The requested URL returned error:500提示；所有返回文本和原HTML均保存，不能将本页有用具名内容称整体失败，也不能将缺失字段/其他分页当已经补齐、隐藏错误或承诺原料绝对不存在。上游附着促进剂与普通成品底漆/清洁制品不混同，第三方目录的anclajes字样仅搜索线索，未当已读具体原料配方或采购证据。BH原文说明室内/外、verticalwood及waterthinner；不将太阳/UV/防水/微孔/抗滴/重涂时间/性能转移我方，未从BH/BH08文件名推定本轮读取技术表正文。当前Contact明确IndustriasProaSA、Porriño地址、oficina@和总机；一般业务邮箱不归属某个人。按IndustriasProa/PinturasPROA/pinturasproa/PROAQUA/Proadyx/Proadex/Decoraproa与最新main276/root290/全队列/frontier检查无实际同一主体，多个产品/销售店/西葡语言不是新公司。没有臆测未公开股权或借用其他同名企业/关联品牌工厂。原料适配、配方需求、采购量和时机仍未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总机，无核实具名采购/技术收件人",
+      "email": "oficina@pinturasproa.com",
+      "phone": "+34 986 346 525",
+      "contactUrl": "https://www.pinturasproa.com/es/contacto"
+    },
+    "source": {
+      "label": "Pinturas PROA own BH water-based wood protector product and colourless-use limit",
+      "url": "https://www.pinturasproa.com/es/p/protector-madera-al-agua"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "industrias-proa-porrino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "hagmans-nordic-fritsla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "monopol-colors-fislisbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hydron-protective-wolverhampton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5536,6 +5565,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "industrias-proa-porrino": {
+    "website": "https://www.pinturasproa.com/es",
+    "contactPage": "https://www.pinturasproa.com/es/contacto",
+    "address": "Industrias Proa SA, San Salvador de Budiño, Gándaras de Prado S/N, 36475 Porriño, Pontevedra, Spain. Exact own published business address; city-only marker42.16,-8.62, not surveyed factory coordinates.",
+    "generalEmail": "oficina@pinturasproa.com",
+    "generalEmailEvidence": {
+      "company": "Industrias Proa, S.A. (Pinturas PROA)",
+      "value": "oficina@pinturasproa.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Industrias Proa own current legal/corporate contact",
+          "url": "https://www.pinturasproa.com/es/contacto",
+          "summary": "Own Contact explicitly prints Email:oficina@pinturasproa.com alongside legal company/address. General business inbox, not a named purchasing or laboratory mailbox; no deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+34 986 346 525",
+    "generalPhoneEvidence": {
+      "company": "Industrias Proa, S.A. (Pinturas PROA)",
+      "value": "+34 986 346 525",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Industrias Proa own current legal/corporate contact",
+          "url": "https://www.pinturasproa.com/es/contacto",
+          "summary": "Own Contact explicitly prints Teléfono:+34 986346525. General corporate voice, not personal/department-specific; header986346525 is the same normalized published number."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "PROA own paint manufacture and internal R&D",
+        "url": "https://www.pinturasproa.com/es"
+      },
+      {
+        "label": "BH specific waterborne wood protector; no technical PDF read",
+        "url": "https://www.pinturasproa.com/es/p/protector-madera-al-agua"
+      },
+      {
+        "label": "Current wood-finish range and surface-care oils",
+        "url": "https://www.pinturasproa.com/es/c/madera"
+      },
+      {
+        "label": "Actual auxiliary product categories; embedded errors retained",
+        "url": "https://www.pinturasproa.com/es/c/colorantes-diluyentes-y-varios"
+      },
+      {
+        "label": "Actual ProductosVarios returned five named items; embedded errors retained",
+        "url": "https://www.pinturasproa.com/es/c/colorantes-diluyentes-y-varios/productos-varios"
+      },
+      {
+        "label": "PROA legal company and public business contact",
+        "url": "https://www.pinturasproa.com/es/contacto"
+      }
+    ]
+  },
   "hagmans-nordic-fritsla": {
     "website": "https://hagmansnordic.com/en/",
     "contactPage": "https://hagmansnordic.com/en/contact/",
@@ -17165,6 +17257,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "industrias-proa-porrino",
   "hagmans-nordic-fritsla",
   "monopol-colors-fislisbach",
   "hydron-protective-wolverhampton",
