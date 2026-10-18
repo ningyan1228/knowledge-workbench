@@ -4612,11 +4612,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-17"
   },
+  {
+    "id": "belzona-harrogate",
+    "company": "Belzona Limited (Belzona Group)",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Harrogate (coarse approximate town marker)",
+    "latitude": 54,
+    "longitude": -1.5,
+    "legacyCompanyDescription": "英国Belzona集团自有工业防护涂料设计制造；5811为浸没防腐工况环氧涂料；ELO配方适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "Belzona 当前官网公司介绍明确为维修复合材料和工业防护涂料的设计、制造企业；当前 Locations 原文明确英国 Harrogate 技术中心包含自有制造和技术支持。5811 原产品页明确为两组份环氧防腐涂料，用于浸没工况设备的防腐蚀及化学防护，应用包括储罐、泵、管道和换热器。不是凭分销目录、商标、行业标签或旧证书推断制造。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取当前公司介绍、5811具体产品、工厂/办公室地点、产品总览、企业联系和OtherProducts六份原文。可见产品总览八分区为1000金属维修复合材料、2000弹性体维修、3000防水膜、4000混凝土修复、5000防护涂层、其他产品、SuperWrap及设备垫固材料，另有各用途和全可见牌号导航。OtherProducts实际九项包括6111防腐涂层、7111船用垫固、7211灌浆、7311结构胶、8211防卡剂、8311渗透润滑脱水及防腐维护体系、9611堵漏腻子、9631预浸包带、法兰维修套件。这些实际化学品和辅助体系如实保留，不称企业只卖涂料或没有添加化学品。8211/8311明确为部件维护防卡/润滑体系，所读用途不是向聚合物/涂料配方厂出售生物基增塑、稳定原料；Magma/Metallic/EnvironmentalPolymers等分区名称也不自动证明环氧化植物油原料业务。在实际已读自有制造业务、全可见分区用途及OtherProducts明确角色中，未见ELO、ESBO、环氧化植物油或同功能生物基增塑稳定输入外售。未逐项审计全部牌号TDS/SDS、各分区叶页、配方成分和未披露全球业务，不给全集团原料业务永久保证，不编造外购例外。当前同站BelzonaLimited英国联系方式、BelzonaInternationalLtd版权及英美加泰中相关办公室均按一个英国集团研究账户；不把Nanjing中国办公室或地区经销商加入客户。未从2022年R&D访谈断言当前具名负责人，也不从Search旧PolymericsLtd/2021-2024已过期证书给当前法律主体或认证有效性背书。"
+    },
+    "contact": {
+      "label": "官网公开企业业务询问页面和英国总机；无已核实业务邮箱或具名采购/技术收件人",
+      "email": "",
+      "phone": "+44 1423 567641",
+      "contactUrl": "https://belzona.com/en/contact.aspx"
+    },
+    "source": {
+      "label": "Belzona official 5811:two-part epoxy coating for corrosion and chemical protection under immersion",
+      "url": "https://www.belzona.com/en/products/5000/5811.aspx"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "belzona-harrogate": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "oli-lacke-lichtenau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "paul-jaeger-moeglingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "norglass-punchbowl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4871,6 +4900,55 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "belzona-harrogate": {
+    "website": "https://belzona.com/",
+    "contactPage": "https://belzona.com/en/contact.aspx",
+    "address": "Claro Road, Harrogate, HG1 4DS, United Kingdom（当前官网英国公司地址；Locations明确Harrogate技术中心自有制造。地图54.0,-1.5为城市粗略位置，非工厂入口实测。英国账户统记相关全球办公室，不收录中国或台湾地区主体。）",
+    "generalEmail": "",
+    "generalPhone": "+44 1423 567641",
+    "generalPhoneEvidence": {
+      "company": "Belzona Limited (Belzona Group)",
+      "value": "+44 1423 567641",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Belzona current official business enquiry page and UK BelzonaLimited corporate switchboard",
+          "url": "https://belzona.com/en/contact.aspx",
+          "summary": "Actual current UK contact block explicitly namesBelzonaLimited,ClaroRoad,Harrogate,HG14DS,UnitedKingdom andTelephone+441423567641. Independently repeated inactualLocationsUKblock. General corporate businessswitchboard,not personal,WhatsApp,technicalextension or call-tested. No publicly disclosedemail recipient or current namedprocurement/R&Dperson verified inread originals; form isviewed only,not submitted."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Belzona official 5811:two-part epoxy coating for corrosion and chemical protection under immersion",
+        "url": "https://www.belzona.com/en/products/5000/5811.aspx"
+      },
+      {
+        "label": "Belzona current own company:designer/manufacturer of industrial protective coatings",
+        "url": "https://belzona.com/en/about.aspx"
+      },
+      {
+        "label": "Belzona current Locations:own Harrogate manufacturing and associated offices",
+        "url": "https://www.belzona.com/en/about/locations.aspx"
+      },
+      {
+        "label": "Belzona current complete visible product families and purpose navigation",
+        "url": "https://belzona.com/en/products.aspx"
+      },
+      {
+        "label": "Belzona current OtherProducts:actual maintenance/repair/lubrication/anti-seize roles",
+        "url": "https://belzona.com/en/products/other.aspx"
+      },
+      {
+        "label": "Belzona current official business enquiry page and UK BelzonaLimited corporate switchboard",
+        "url": "https://belzona.com/en/contact.aspx"
+      }
+    ]
+  },
   "oli-lacke-lichtenau": {
     "website": "https://oli-lacke.de/",
     "contactPage": "https://oli-lacke.de/pages/support-contact",
@@ -14607,6 +14685,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "belzona-harrogate",
   "oli-lacke-lichtenau",
   "paul-jaeger-moeglingen",
   "norglass-punchbowl",
