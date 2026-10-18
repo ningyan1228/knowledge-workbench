@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "aemme-colori-ranica": "Your Primer LBE 100 is a one-component epoxy primer for three-layer external protection of steel pipelines.",
   "invebi-orago": "Your water-based interior wood coatings include primers and finishes for parquet floors and stairs.",
   "freilacke-doeggingen": "Your FREOPOX-UHS ER1936H is an epoxy primer for industrial corrosion protection.",
   "vermeister-mornico": "Your Idro 2K is a two-component water-based polyurethane finish for wooden floors, including floors in high-traffic shops.",

@@ -5059,11 +5059,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "aemme-colori-ranica",
+    "company": "Aemme Colori S.r.l.",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Ranica (approximate town marker; factory entrance not surveyed)",
+    "latitude": 45.7,
+    "longitude": 9.7,
+    "legacyCompanyDescription": "意大利Aemme自产工业防护涂料，PrimerLBE100用于钢管外部三层保护；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Aemme官网Azienda直接说明在Ranica制造工业、防腐及船舶等涂料并有技术实验室；Produzione原文详细列原料入厂检验、批次生产指令、内部半成品、成品测试与技术管理。具体PrimerLBE100原始HTML明确单组分环氧/胺烘烤型底漆，用于已喷砂钢管的外部三层保护体系。自主生产/配方、具体工业防护用途和公开联系页/总机有分别的原文支持，未从经销SDS搜索片段取代核验。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Azienda、Produzione、Catalogo全部返回四条业务线和代表品、Contact、具体PrimerLBE100五份原始HTML。第六次LineaIndustria目录返回HTTP522，计入六次上限，正文未读、不换标签重试。可见四条线为Nautica/Edilizia/Industria/Speciali；返回代表品包括船舶底漆/面漆/填料/防污及钢管LBE100；LBE100自身页完整返回Speciali导航还列BikeCoating/Acrilzip/PolypropyleneCoatingSystem/Epozipp/Automotive/Helmets等涂饰体系。未遍历这些所有产品/工业目录页或叶子TDS/SDS，不称全SKU。Produzione实际70%内部半成品路线是投入本公司生产的受检中间体，不由此声称外售70%原料或编造外购ELO证据。真实树脂、固化/稀释等配套可能性与搜索旧SDS中的环氧组分保持未读，不推定组成或外售输入量；普通epoxy/PPcoating或epoxyprimer名称不等于ELO/ESBO或环氧化油销售。具体LBE100为已喷砂钢管表面即用施工底漆，而非标签名暗示的原料级附着输入。按已读当前自主防护成品、完整返回类别/代表品及具体LBE100范围，未见ELO/ESBO/环氧化植物油或同功能生物增塑稳定输入外售；结论限实际阅读，不为未读工业目录/全部SKU/所有关联业务给无供应保证，不编造外购例外。PolypropyleneCoatingSystem仅作为实际导航记录，不扩成已核实PP原料供应角色或W1201第二客户。Aemme/Skipper's/Baseggio/旧ColorificioLombardo按一个相关账户，不拆品牌/地区。About混用76年/60年经营年限、1947历史及旧ISO9001/2000文字不改成2026扩产/认证现行有效/当前RFQ；页脚法人/VAT是公司自述非外部登记审计。最新main269、本地283、全队列/frontier公司/域名/旧名/品牌/VAT去重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开业务联系页及公司总机；当前无已核实业务邮箱或具名采购",
+      "phone": "+39 035 513373",
+      "contactUrl": "https://www.aemmecolori.it/it/contatti"
+    },
+    "source": {
+      "label": "Aemme own PrimerLBE100:one-component epoxy primer for three-layer external steel-pipeline protection",
+      "url": "https://www.aemmecolori.it/it/catalogo/linee-speciali/linea-anticorrosione/primer-lbe-100"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "aemme-colori-ranica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "invebi-orago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "freilacke-doeggingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vermeister-mornico": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5334,6 +5362,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "aemme-colori-ranica": {
+    "website": "https://www.aemmecolori.it/",
+    "contactPage": "https://www.aemmecolori.it/it/contatti",
+    "address": "Via Patta 12, 24020 Ranica, Italy:actualownContactcompanyaddress;ownAzienda/ProduzioneseparatelydescribeRanicapaintmanufacture. Marker45.7,9.7coarsetown,notfactorygateGPS/independentregistry.",
+    "generalEmail": "",
+    "generalPhone": "+39 035 513373",
+    "generalPhoneEvidence": {
+      "company": "Aemme Colori S.r.l.",
+      "value": "+39 035 513373",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Aemme own Contact:Centralino voice/Ranica address;protectedmailnotdecoded",
+          "url": "https://www.aemmecolori.it/it/contatti",
+          "summary": "ActualownContactCentralinoTelefono+39035.513373,normalizepunctuation/preserveItaly035leadingzeroafter+39. Telefax513211separate;Technicalarea0444981notgeneral/namedpersonphone. Noactualdial/deliverabilityclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Aemme own PrimerLBE100:one-component epoxy primer for three-layer external steel-pipeline protection",
+        "url": "https://www.aemmecolori.it/it/catalogo/linee-speciali/linea-anticorrosione/primer-lbe-100"
+      },
+      {
+        "label": "Aemme ownAzienda:Ranicaindustrial/anticorrosion/marinepaintmanufacture/lab/brands",
+        "url": "https://www.aemmecolori.it/it/azienda"
+      },
+      {
+        "label": "Aemme ownProduzione:rawmaterialQC/batchinstructions/internalintermediates/finaltesting",
+        "url": "https://aemmecolori.it/it/azienda/produzione"
+      },
+      {
+        "label": "Aemme fullreturnedCatalogo:fourcategoriesandrepresentativefinishedcoatings,notallSKU",
+        "url": "https://www.aemmecolori.it/it/catalogo"
+      },
+      {
+        "label": "Aemme own Contact:Centralino voice/Ranica address;protectedmailnotdecoded",
+        "url": "https://www.aemmecolori.it/it/contatti"
+      }
+    ]
+  },
   "invebi-orago": {
     "website": "https://www.invebi.it/",
     "contactPage": "https://www.invebi.it/contatti/",
@@ -16392,6 +16465,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "aemme-colori-ranica",
   "invebi-orago",
   "freilacke-doeggingen",
   "vermeister-mornico",
