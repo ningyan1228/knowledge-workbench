@@ -5394,11 +5394,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "indecolor-ecatepec",
+    "company": "Indecolor S.A. de C.V.",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Ecatepec de Morelos (city marker)",
+    "latitude": 19.6,
+    "longitude": -99.05,
+    "legacyCompanyDescription": "自有配方制造工业金属防护涂料；公开订单业务部门入口，原料相容和采购未确认",
+    "fit": "可开发候选",
+    "signal": "Indecolor当前Nosotros明确自有工厂、实验室、配方和生产分散设备；独立Industrial原文将INDEGUARD明确为金属结构用高固含环氧防腐体系，并列其他金属/海事/工业涂层。Contact为Ecatepec及Sinaloa工厂和业务渠道提供独立当前原文。ELO TDS确认涂料应用，可以温和讨论原料评估相关性；不是使用我方材料、相容性或当前采购证明。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读6个当前HTML：ANAFAPYT制造商目录、IndecolorHome、Nosotros、Industrial、Contact、Arquitectónica。协会目录未列Indecolor，保留为本轮发现渠道原文，不声称协会会员/旧2021-23展商就是当前工厂。Indecolor自身明确当前工厂、自有实验室/分散配方、生产及金属防护体系，满足下游制造证据；其INDETECH/INDEGUARD/INDELUX/INDEMAR/INDEFIRE及建筑/vial/Bioesmalte/ViniPremium/Llanticolor/Elasticolor按一个Indecolor账户，Sinaloa与Ecatepec工厂不拆公司。ActualContact仅发布厂址城市/州，未补猜街道或将地图点称精确厂坐标。当前主体S.A.deC.V.来自官网页脚，不虚构股权或Search的不同名Alvaco/Alvamex关联；Alvamex既有私有项未重开。当前经营和工业/建筑原文显示实际成品环氧防腐、聚氨酯金属漆、道路/墙面/防水体系及自产按需配方。About回收聚合物重新用于自身配方，Architectural在厂内调整树脂/颜料并生产客户批次，不等于对外销售ELO/ESBO或同类生物增塑稳定原料。当前已读业务/用途未见所选同类原料外售证据，结论限定实际读到范围，非全部SKU/未知组成/TDS/MSDS/全集团全球股权审计，无虚构外购例外。各页面VOC200gL/对比450gL、火灾小时/膜厚、销量员工回收量、ISO/SCT/Forbes奖项/耐久和客户项目仅自有营销陈述，未独立认证核验，不转为我方性能/需求/市场回复率或采购量。Contact明确pedidos@用于正式报价及文档，是Sales订单/商业部门入口，严格存department而非通用info邮箱、采购/研发或某个人；同源WhatsApp/电话为公司一般业务号码，不推个人身份。按Indecolor/Indetech/真实品牌/域/公司与最新main281/root295、全队列/frontier独立去重无同一账户。ELO配方相容/现用/采购/时机仍未确认，公开成品事实不构造客户需求。"
+    },
+    "contact": {
+      "label": "官网公开Sales订单/报价文档邮箱及公司业务电话，无具名采购/技术收件人",
+      "email": "pedidos@indecolor.com.mx",
+      "phone": "+52 55 6915 0932",
+      "contactUrl": "https://indecolor.com.mx/contacto/"
+    },
+    "source": {
+      "label": "Indecolor own INDEGUARD epoxy protection system for industrial metal structures",
+      "url": "https://indecolor.com.mx/linea-industrial/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "indecolor-ecatepec": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "irurena-group-azpeitia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "estalia-damiani-montecchio-emilia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sivam-coatings-bareggio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5681,6 +5710,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "indecolor-ecatepec": {
+    "website": "https://indecolor.com.mx/",
+    "contactPage": "https://indecolor.com.mx/contacto/",
+    "generalEmail": "",
+    "address": "Ecatepec de Morelos, Estado de México, Mexico; own Contact labels plant and offices in Ecatepec and a second plant in Sinaloa. No street address returned, none invented. One company account; city-only marker19.60,-99.05, not surveyed plant coordinates.",
+    "generalPhone": "+52 55 6915 0932",
+    "generalPhoneEvidence": {
+      "company": "Indecolor S.A. de C.V.",
+      "value": "+52 55 6915 0932",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Indecolor own current sales-order contact",
+          "url": "https://indecolor.com.mx/contacto/",
+          "summary": "Own Contact explicitly labels+525569150932 WhatsApp y Teléfono for general business/technical enquiries. No individual identity, purchasing responsibility or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "pedidos@indecolor.com.mx",
+        "emailEvidence": {
+          "company": "Indecolor S.A. de C.V.",
+          "value": "pedidos@indecolor.com.mx",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Indecolor own current sales-order contact",
+              "url": "https://indecolor.com.mx/contacto/",
+              "summary": "Own Contact explicitly publishes pedidos@indecolor.com.mx with Para cotizaciones formales y documentación. Sales/order business department channel only; no guessed personal name, procurement identity or invented general mailbox."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own current manufacturing and product/group roles",
+        "url": "https://indecolor.com.mx/nosotros/"
+      },
+      {
+        "label": "Own specific permitted downstream application range",
+        "url": "https://indecolor.com.mx/linea-industrial/"
+      },
+      {
+        "label": "Own actual auxiliary/finished-system business scope",
+        "url": "https://indecolor.com.mx/linea-arquitectonica/"
+      },
+      {
+        "label": "Own current independently sourced contact channel",
+        "url": "https://indecolor.com.mx/contacto/"
+      },
+      {
+        "label": "ANAFAPYT current manufacturers list; discovery only, Indecolor not listed",
+        "url": "https://anafapyt.com/fabricantes/"
+      },
+      {
+        "label": "Own current finished-coating overview",
+        "url": "https://indecolor.com.mx/"
+      }
+    ]
+  },
   "irurena-group-azpeitia": {
     "website": "https://www.irurenagroup.com/",
     "contactPage": "https://www.irurenagroup.com/contacto/",
@@ -17617,6 +17714,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "indecolor-ecatepec",
   "irurena-group-azpeitia",
   "estalia-damiani-montecchio-emilia",
   "sivam-coatings-bareggio",
