@@ -5226,11 +5226,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "hagmans-nordic-fritsla",
+    "company": "Hagmans Nordic AB",
+    "productId": "elo",
+    "country": "Sweden",
+    "countryZh": "瑞典",
+    "city": "Fritsla (city marker)",
+    "latitude": 57.56,
+    "longitude": 12.78,
+    "legacyCompanyDescription": "自有成品防锈/工业表面涂料研发制造及成品化学品品牌业务；ELO适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Hagmans Nordic官网明确自主开发制造表面处理制品；Fritsla为总部、自有生产和研发实验室，经营工业客户和自有/客户品牌。当前Hagmans Carosol防锈成品页明确CA Primer为双组分环氧底漆，适用于后续涂装的金属板表面，并列车身防腐制品。ELO TDS确认涂料应用，可讨论成品防护配方原料评估；不是已确认使用ELO、相容、正在采购或重防腐认证证明。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读Hagmans当前Home、Nordic About完整返回原文、Carosol防锈成品列表、Nordic Products全部类别、公开Contact及Lubricants类别。自身制造与广泛成品/品牌经销业务并存：地坪/屋面/防锈/腻子/清洁/喷漆、车用化学品、燃料、冷却液、润滑品、胶粘密封和木材养护，未将任何化学品销售整体等同同行。实际Lubricants类别明确二冲程油、刹车液、链锯油、发动机油、润滑脂、液压油、传动油及其他润滑品；用途属于成品机械/车用润滑护理，不能凭Oil/grease或汽车用途推断为ELO/ESBO/植物油增塑稳定输入。当前实际读到的自述经营、成品防锈列表和整体类别/润滑用途未出现ELO、ESBO、环氧化植物油或同类生物增塑稳定原料外售。结论限定实际已读范围；未读每一Other/润滑叶子/SDS、未审计所有集团全球SKU/化学组成、不虚构外购例外。Carosol CA Primer是涂装用双组分环氧成品底漆，不是ELO原料；未由epoxy词推断使用我方产品。当前Nordic自有生产涉及瑞典多个厂、Riga和Pargas/Virtasen，按一个关联账户，不拆工厂、国家、品牌、经销商为新增。返回Brands包括Hagmans/Starta/Landora/Colorex/Virtasen及其他品牌/代理，不能把全部品牌经销关系当最终股权。Limhamnshus关联仅Search发现，没有将未读新闻稿作为已审股权来源；集团疑似名和域名仍加入全数据去重检查。PRISA的同名COLOREX是另一墨西哥产品命名，未从字符串同名认作瑞典集团，未复制其证据/联系人。最新main275/root289/全队列/frontier的Hagmans、Limhamn、Virtasen、核心域名及品牌域检查无实际同一账户；没有股权审计完整性声明。公开Contact的info@为通用业务邮箱，Phone及TechnicalSupport是同一总机；+46后去国内前导0规范化，不作为具名技术或采购电话。Search里的产品经理和其他HagmansTak承包商联系人未读原文，不录入、不猜邮箱/岗位或个人称呼。自述ISO/出口20国/历史生产变化不转移我方性能、认证或当期采购需求。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱与总机；无独立核实的具名采购/技术收件人",
+      "email": "info@hagmansnordic.com",
+      "phone": "+46 320 189 00",
+      "contactUrl": "https://hagmansnordic.com/en/contact/"
+    },
+    "source": {
+      "label": "Hagmans current Carosol rust-protection range: CA Primer two-component epoxy primer for sheet metal",
+      "url": "https://www.hagmans.se/sv/rostskydd/carosol-rostskydd/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "hagmans-nordic-fritsla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "monopol-colors-fislisbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hydron-protective-wolverhampton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "votteler-korntal-muenchingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5507,6 +5536,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "hagmans-nordic-fritsla": {
+    "website": "https://hagmansnordic.com/en/",
+    "contactPage": "https://hagmansnordic.com/en/contact/",
+    "address": "Hagmans Nordic AB, Förläggarevägen 2, 511 72 Fritsla, Sweden. Exact current own corporate visiting address; city-only map marker57.56,12.78, not surveyed factory coordinates.",
+    "generalEmail": "info@hagmansnordic.com",
+    "generalEmailEvidence": {
+      "company": "Hagmans Nordic AB",
+      "value": "info@hagmansnordic.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Hagmans Nordic own current corporate contact",
+          "url": "https://hagmansnordic.com/en/contact/",
+          "summary": "Own Contact explicitly prints this corporate Email; general business route, not a named product manager or procurement mailbox. No deliverability or demand claim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+46 320 189 00",
+    "generalPhoneEvidence": {
+      "company": "Hagmans Nordic AB",
+      "value": "+46 320 189 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Hagmans Nordic own current corporate contact",
+          "url": "https://hagmansnordic.com/en/contact/",
+          "summary": "Own Contact lists Phone and TechnicalSupport as (+46)0320 18900. Normalize international number by removing Swedish domestic0; retain general switchboard ownership, not a personal line."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Hagmans Nordic own manufacture, R&D and associated factories",
+        "url": "https://hagmansnordic.com/en/about-us/"
+      },
+      {
+        "label": "Hagmans Carosol actual rust-protection products and CA Primer",
+        "url": "https://www.hagmans.se/sv/rostskydd/carosol-rostskydd/"
+      },
+      {
+        "label": "Hagmans Nordic actual product categories including chemical/brand roles",
+        "url": "https://hagmansnordic.com/en/products/"
+      },
+      {
+        "label": "Hagmans Nordic lubricant product-use categories",
+        "url": "https://hagmansnordic.com/en/produkt-kategori/lubricants/"
+      },
+      {
+        "label": "Hagmans Nordic own business contact and legal address",
+        "url": "https://hagmansnordic.com/en/contact/"
+      },
+      {
+        "label": "Hagmans current own surface-coating manufacture overview",
+        "url": "https://www.hagmans.se/"
+      }
+    ]
+  },
   "monopol-colors-fislisbach": {
     "website": "https://www.monopol-colors.ch/de/",
     "contactPage": "https://www.monopol-colors.ch/de/kontakt/",
@@ -17073,6 +17165,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "hagmans-nordic-fritsla",
   "monopol-colors-fislisbach",
   "hydron-protective-wolverhampton",
   "votteler-korntal-muenchingen",
