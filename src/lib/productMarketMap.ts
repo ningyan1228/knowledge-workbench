@@ -4919,11 +4919,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "tover-collegno",
+    "company": "Tover srl",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Collegno (approximate city marker; factory entrance not surveyed)",
+    "latitude": 45.1,
+    "longitude": 7.6,
+    "legacyCompanyDescription": "意大利Tover自产水性木地板涂饰，Grip&Go用于覆涂翻新；W1201适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Tover当前Home/自有About直接说明自有实验室配方、生产设备与生产工厂，About保留TorinoVernici至Tover沿革及水性清漆开发。当前Finishes列水性木地板漆；具体Grip&Go原文说明双组分水性施工底漆，用于既有涂漆地板翻新，辊涂或刷涂后再覆Tover双组分水性清漆。自有配方/生产与具体水性木表面用途分别有直接原文支持，不从搜索标签或旧目录摘要代替原始核验。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、About、WoodenFloors、Finishes、Grip&Go、Contacts六份原始HTML。读取完整返回导航与产品分类/高亮代表品，WoodenFloors和Finishes均存在LoadMore，未声称读完全部SKU/旧PDF目录/叶子TDS/SDS。可见业务为水性/溶剂型木地板漆、底层/填料、油蜡、染色、稀释剂/添加配套、地板胶/密封、基层施工、运动地板/甲板WPC/弹性地材、维护剂/工具。真实MSPolymer/silane-modified/PU/环氧聚氨酯地板胶、colourmodulator、thinners/additives及成品底漆配套保留，不虚称绝无外售添加剂或树脂。具体Grip&Go为双组分水性施工底漆，在已涂地板上辊/刷，之后覆水性清漆；其adhesionpromoter称谓对应已核实表面施工角色，不等于配方中外售的PO/CPO乳液附着原料。About所述MSPolymer是地板胶业务，不能仅从Polymer字样认定为聚烯烃乳液。旧Search目录中的P.E.P.P./Toverfix/SportfloorGrip未读叶子文档，保持未核实角色，不用它们作无同类输入保证。按已读当前自主木器涂饰、完整可见类别和具体Grip&Go实际角色，未见W1201同类聚烯烃/CPO/PO分散体或原料级附着促进输入外售；结论仅限该范围，不替未展示SKU/全球关联业务给保证，不编造外购例外。TorinoVernici/Tover与Uniqua/Idrolak/各经销按一个相关账户，不拆品牌/地区。1988–2022研发事件与2010光伏表述不改写为2026扩产/现有采购；About自有沿革不是外部股权登记审计。最新main264、本地278、完整队列/frontier精确公司/域名/旧名/VAT去重无同一已知账户；广义Tover子串曾命中leftover，已检查为非本企业。"
+    },
+    "contact": {
+      "label": "官网公开一般业务邮箱与公司总机；非具名采购",
+      "email": "info@tover.com",
+      "phone": "+39 011 779 28 23",
+      "contactUrl": "https://tover.com/contacts/?lang=en"
+    },
+    "source": {
+      "label": "Tover own Grip&Go:two-part water-based surface primer followed by floor lacquer",
+      "url": "https://tover.com/portfolio/gripgo/?lang=en"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "tover-collegno": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "manor-coating-shipley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "irsa-deisenhausen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "saicos-sassenberg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5189,6 +5218,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "tover-collegno": {
+    "website": "https://tover.com/",
+    "contactPage": "https://tover.com/contacts/?lang=en",
+    "address": "Via Rosa Luxemburg, 2/A, 10093 Collegno (TO), Italy:current ownContacts corporateaddress;ownAboutseparatelydescribesproductionplant. Marker45.1,7.6coarseCollegno,notfactorygateGPS/independentregister.",
+    "generalEmail": "info@tover.com",
+    "generalEmailEvidence": {
+      "company": "Tover srl",
+      "value": "info@tover.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Tover official Contacts:Collegno corporate email/voice/address",
+          "url": "https://tover.com/contacts/?lang=en",
+          "summary": "ActualownContactsfooterexplicitEmailinfo@tover.com;generalcompanybusinessentry,notnamedbuyer/deliverability/sendproof."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+39 011 779 28 23",
+    "generalPhoneEvidence": {
+      "company": "Tover srl",
+      "value": "+39 011 779 28 23",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Tover official Contacts:Collegno corporate email/voice/address",
+          "url": "https://tover.com/contacts/?lang=en",
+          "summary": "ActualownContactsTel+390117792823;retainItaly011geographicalleadingzeroafter+39. Fax+390117792749separate/notvoice;nodialclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@tover.com",
+        "source": {
+          "label": "Tover official Contacts:Collegno corporate email/voice/address",
+          "url": "https://tover.com/contacts/?lang=en"
+        },
+        "emailEvidence": {
+          "company": "Tover srl",
+          "value": "info@tover.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Tover official Contacts:Collegno corporate email/voice/address",
+              "url": "https://tover.com/contacts/?lang=en",
+              "summary": "ActualownContactsfooterexplicitEmailinfo@tover.com;generalcompanybusinessentry,notnamedbuyer/deliverability/sendproof."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Tover own Grip&Go:two-part water-based surface primer followed by floor lacquer",
+        "url": "https://tover.com/portfolio/gripgo/?lang=en"
+      },
+      {
+        "label": "Tover ownAbout:formulation/lab/productionplant/historicalTorinoVernici",
+        "url": "https://tover.com/about-us/?lang=en"
+      },
+      {
+        "label": "Tover fullreturnedFinishes taxonomy/highlightproducts;LoadMorepartialSKUboundary",
+        "url": "https://tover.com/finishes/?lang=en"
+      },
+      {
+        "label": "Tover fullreturnedwoodfloorcategories/currentGRIPGOandotherfinishedsystems",
+        "url": "https://tover.com/wooden-floors/?lang=en"
+      },
+      {
+        "label": "Tover official Contacts:Collegno corporate email/voice/address",
+        "url": "https://tover.com/contacts/?lang=en"
+      }
+    ]
+  },
   "manor-coating-shipley": {
     "website": "https://manorcoatingsystems.co.uk/",
     "contactPage": "https://manorcoatingsystems.co.uk/contact/",
@@ -15781,6 +15892,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "tover-collegno",
   "manor-coating-shipley",
   "irsa-deisenhausen",
   "saicos-sassenberg",
