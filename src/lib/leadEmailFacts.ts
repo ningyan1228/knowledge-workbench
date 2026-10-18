@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "saman-victoriaville": "Your Water Based Stain is a water-based wood stain for furniture, cabinets and interior woodwork.",
   "teal-mackrill-hull": "Your Teamac High Performance Marine Primer is a two-pack epoxy zinc phosphate coating for marine corrosion protection.",
   "krylic-paints-cape-town": "Your 10-Year EXT-INT WB Enamel is a water-based acrylic coating suitable for primed wooden substrates.",
   "belzona-harrogate": "Your Belzona 5811 is a two-part epoxy coating for corrosion and chemical protection of equipment operating under immersion.",

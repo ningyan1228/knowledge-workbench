@@ -4696,11 +4696,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "saman-victoriaville",
+    "company": "SamaN",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Victoriaville, Québec (approximate city marker; factory gate not surveyed)",
+    "latitude": 46.1,
+    "longitude": -72,
+    "legacyCompanyDescription": "加拿大SamaN自主制造水性木器着色剂、清漆；我方材料适配与采购待确认",
+    "fit": "可开发候选",
+    "signal": "SamaN当前官网优势页明确自行设计和制造木器涂饰产品，全部在魁北克制造；原始WaterBasedStain页面披露TEW-XXX水性木器着色剂，用于家具、橱柜、木线条、门和室内木作。具体产品的用途与公司制造活动分别由两页直接支持。2025-08-28原始资产收购新闻同时披露SamaN的Victoriaville工厂，说明Finitec涂饰/维护业务资产并入计划；不把经销网点或旧2016火灾后的临时地址当当前工厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取六页可见业务文字：Home、公司优势、Finitec资产收购新闻、TEW-XXX水性木器产品、Shop可见分类、Contact。Home及收购页各含一个约百万字符的公开编码经销商地图块，原始HTML/文本私有存档，仅在本地阅读副本省略这些块，未解码或采集经销商联系人；不声称读完所有原始编码数据。Shop明确列Epoxys、ExteriorProducts、Finishes、Maintenance&Repair、Stains五个业务主类及Featured分组，子类含保护油/蜡、面涂、清洁、修补和表面准备；显示数量为可交叉分类计数，不是已审读每一SKU。保留外售环氧浇注、木器油蜡、维修/表面准备及产品关联DryTimeExtender名称，不说公司无化学配套/无添加品。DryTimeExtender具体叶页及成分未读，不根据名称猜PO/CPO/ELO等化学成分；木材成品的原料成分也不当作外售原料。实际已读自主木器制造业务、完整可见分类与该具体着色成品角色中未见水性聚烯烃乳液、CPO/PO分散或同功能附着促进原料外售。结论限实际读到的范围，未穷尽每个维修/准备SKU、全部TDS/SDS、Premium独立站或未披露全球业务，不给所有配方/股权的保证、不编造外购例外。2025-08-28原文（HTML元数据日期，PDF未读）公告收购Finitec涂饰维护资产，生效日期写September2，生产活动将迁到Victoriaville；不改写成2026投产/采购，也不据旧公告保证转产已全部完成。只关联SamaN与该Finitec资产，不把出售方整个GroupeFinitec/AcoustiTECH都说成已收购或另建客户。公司自述100%Quebec-owned不是独立股权登记，当前官网未核实完整注册法人后缀，故保存原文企业名SamaN，不添加猜测Inc/法人编号。按主域/Premium、SamaN/Finitec、Canlak保守排查词、地址和总部电话核对最新main256、本地270及全队列/frontier，无同账户；未从Canlak排查词推断关联。"
+    },
+    "contact": {
+      "label": "官网Customer Service业务邮箱（General类别）及总部电话；未核实具名买方",
+      "email": "customerservice@saman.ca",
+      "phone": "+1 819 751 2350",
+      "contactUrl": "https://saman.ca/en/contact-us/"
+    },
+    "source": {
+      "label": "SamaN official Water Based Stain TEW-XXX:water-based wood stain for furniture,cabinets and interior woodwork",
+      "url": "https://saman.ca/en/produit/water-based-stain/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "saman-victoriaville": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "teal-mackrill-hull": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "krylic-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "belzona-harrogate": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -4958,6 +4987,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "saman-victoriaville": {
+    "website": "https://saman.ca/en/",
+    "contactPage": "https://saman.ca/en/contact-us/",
+    "address": "660, Filtre street, Victoriaville, Québec G6T 0T6, Canada: actual current ownHeadquarteraddress;ownAdvantagesindependentlystatesQuebecmanufactureand2025acquisitionnewsnamesVictoriavilleplant. Marker46.1,-72.0approximatecity,notfactorygateGPS/independentregistry. 2016temporary241LabbeNordnotreused.",
+    "generalEmail": "",
+    "generalPhone": "+1 819 751 2350",
+    "generalPhoneEvidence": {
+      "company": "SamaN",
+      "value": "+1 819 751 2350",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "SamaN official current contact:Customer Service business inbox and headquarters voice/address",
+          "url": "https://saman.ca/en/contact-us/",
+          "summary": "ActualHeadquarterblockat660FiltreStreetVictoriavilleQuebecG6T0T6prints819751-2350. Country+1normalizedforCanada;generalheadquarterbusinessvoice,notprivate/namednumber. Separate8006923662isCustomerService800line,notcombinedintothisnumber. Notcall-tested."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "customerservice@saman.ca",
+        "source": {
+          "label": "SamaN official current contact:Customer Service business inbox and headquarters voice/address",
+          "url": "https://saman.ca/en/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "SamaN",
+          "value": "customerservice@saman.ca",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "SamaN official current contact:Customer Service business inbox and headquarters voice/address",
+              "url": "https://saman.ca/en/contact-us/",
+              "summary": "Actual Customer service block explicitlyprints customerservice@saman.ca. Exact published customer-servicecompanybusinessroute;databaseGeneraldepartmentisfallbackcategory,notSales/Procurement/R&Dornamedperson. NewsMarketingDirectorandhistorical2016recruitmentinboxnotselectedascurrentbuyer. No guessedaddress/deliverabilityclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "SamaN official Water Based Stain TEW-XXX:water-based wood stain for furniture,cabinets and interior woodwork",
+        "url": "https://saman.ca/en/produit/water-based-stain/"
+      },
+      {
+        "label": "SamaN ownAdvantages:design/manufacture wood finishes,allproductsmanufacturedQuebec",
+        "url": "https://saman.ca/en/les-avantages-saman/"
+      },
+      {
+        "label": "SamaN original2025-08-28 Finitec finishing-assets acquisition and Victoriavilleplant,not2026commissioning",
+        "url": "https://saman.ca/en/saman-acquires-finitec-a-division-of-groupe-finitec/"
+      },
+      {
+        "label": "SamaN actual fullvisibleShopcategorytaxonomy,notallSKUleaves",
+        "url": "https://saman.ca/en/shop/"
+      },
+      {
+        "label": "SamaN official current contact:Customer Service business inbox and headquarters voice/address",
+        "url": "https://saman.ca/en/contact-us/"
+      }
+    ]
+  },
   "teal-mackrill-hull": {
     "website": "https://teamac.co.uk/",
     "contactPage": "https://teamac.co.uk/pages/contact",
@@ -14897,6 +14994,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "saman-victoriaville",
   "teal-mackrill-hull",
   "krylic-paints-cape-town",
   "belzona-harrogate",
