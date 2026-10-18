@@ -4724,11 +4724,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "pronto-paints-holmewood",
+    "company": "Pronto Industrial Paints Limited",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Holmewood / Chesterfield (approximate city marker; factory entrance not surveyed)",
+    "latitude": 53.2,
+    "longitude": -1.4,
+    "legacyCompanyDescription": "英国Pronto自产工业防腐涂料，100:006为双组分环氧底漆；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Pronto 当前官方About直接自述ProntoIndustrialPaintsLimited为工业表面涂料制造商，保留Chesterfield历史及当前Holmewood总部；当前Home/Products也明确自产涂料。完整Primers页直接列100:006双组分工业环氧底漆及防腐用途，并说明可覆涂双组分环氧/聚氨酯成品。公开FullProductList再次列同一产品，实际为已配制施工涂料，不是经销商标签或仅凭名称含epoxy就推定自主制造。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、About、Primers、FullProductList、Products、Contact六份当前HTML原文。Products实际18个可见分区含集装箱/模块建筑/金属加工/结构钢/设施维护/标线/机械/农业工程机械/商用车重涂/底漆/工业/特种/塔架/BlackOps/稀释剂/气雾剂/产品数据/杂件。22378字FullProductList全返回正文已读，但其首段明确只是在线热门产品并有未列出的代工涂料，不等同审读全部300余产品、OEM配方或所有TDS/SDS。保留外售QD/PU/环氧/低味/慢干稀释配套、Gunwash设备清洗、PanelWipe脱脂、T-Wash磷酸/铜盐镀锌表面前处理、防滑Aggregate及空罐。095:200实际描述为即用、快干、可由1K/2K面漆覆涂、用于难准备基材附着的表面涂层；这是实际已读施工角色，不因AdhesionPromoter名字就改称向涂料配方厂供应ELO或聚烯烃原料。未读其TDS/SDS，不推断PO/CPO或环氧化油成分，也不把readyforuse当成全部使用方式保证。T-Wash实际前处理和Aggregate实际防滑功能同样不是ELO/ESBO生物增塑稳定原料外售证明，PUThinners不因PU缩写被说成异氰酸酯或聚氨酯反应树脂原料。所查当前自主工业涂料业务、完整可见分区、全部在线热门品功能及具体防腐底漆范围未见ELO、ESBO、环氧化植物油或同功能生物基增塑稳定输入外售。结论仅限实际范围，不给全部SKU/代工秘方/未披露全球业务保证，不编造外购例外。公司自述familyownedrun不是股权比例独立审计；Pronto品牌、Limited/Ltd、主站.co.uk和公开邮箱.com、注册02978626同一账户。旧MISTWALK名称只用Search结果作保守去重词，未独立读CompaniesHouse、不公开冒称已核实历史更名。原文历史1989创业/1998工厂/2002扩建/2014罐库均不改成2026扩产/RFQ；当前David/CEPE描述未另核任职/业务邮箱，不收具名买方。最终按主体、域名、登记号、地址、旧名保守词核对最新main257、本地271、全私有队列/frontier，无同一账户。"
+    },
+    "contact": {
+      "label": "官网General Enquiries公开业务邮箱及公司总机；非具名采购/技术联系人",
+      "email": "info@prontopaints.com",
+      "phone": "+44 1246 857777",
+      "contactUrl": "https://prontopaints.co.uk/contact-us/"
+    },
+    "source": {
+      "label": "Pronto own fullPrimers category:100:006 two-pack industrial epoxy primer with anti-corrosive properties",
+      "url": "https://prontopaints.co.uk/product-category/primers/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pronto-paints-holmewood": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "saman-victoriaville": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "teal-mackrill-hull": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "krylic-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4987,6 +5016,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pronto-paints-holmewood": {
+    "website": "https://prontopaints.co.uk/",
+    "contactPage": "https://prontopaints.co.uk/contact-us/",
+    "address": "Stainsby Close, Holmewood Industrial Estate, Chesterfield, Derbyshire S42 5UG, United Kingdom: actual current officialContactaddress. OwnAboutindependentlystatesmanufacture/currentHolmewoodheadquarters;companyNo02978626inownfooter. Marker53.2,-1.4approximateChesterfieldarea,notfactorygateGPS/independentlyreadCompaniesHouse.",
+    "generalEmail": "info@prontopaints.com",
+    "generalEmailEvidence": {
+      "company": "Pronto Industrial Paints Limited",
+      "value": "info@prontopaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Pronto current official Contact Us:General Enquiries exact .com email,company voice/address",
+          "url": "https://prontopaints.co.uk/contact-us/",
+          "summary": "ActualGeneralEnquiriesblockexplicitlypublishesinfo@prontopaints.com. Websiteisprontopaints.co.ukbutemailuses.comexactlyasprinted;do notconstruct.co.ukalias. Generalcompanybusinessinbox,notDavid/Terry/namedProcurement/R&D. No deliverabilityclaim/shopregistrationemail/formsubmission."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+44 1246 857777",
+    "generalPhoneEvidence": {
+      "company": "Pronto Industrial Paints Limited",
+      "value": "+44 1246 857777",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Pronto current official Contact Us:General Enquiries exact .com email,company voice/address",
+          "url": "https://prontopaints.co.uk/contact-us/",
+          "summary": "ActualcorporateTelblockandfooterprint01246857777. NormalizeUK+44anddropdomestic0. Sharedbusinessvoice,notprivate/namedprocurement. Fax01246857978separateandnotstoredasvoice;notcalltested."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@prontopaints.com",
+        "source": {
+          "label": "Pronto current official Contact Us:General Enquiries exact .com email,company voice/address",
+          "url": "https://prontopaints.co.uk/contact-us/"
+        },
+        "emailEvidence": {
+          "company": "Pronto Industrial Paints Limited",
+          "value": "info@prontopaints.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Pronto current official Contact Us:General Enquiries exact .com email,company voice/address",
+              "url": "https://prontopaints.co.uk/contact-us/",
+              "summary": "ActualGeneralEnquiriesblockexplicitlypublishesinfo@prontopaints.com. Websiteisprontopaints.co.ukbutemailuses.comexactlyasprinted;do notconstruct.co.ukalias. Generalcompanybusinessinbox,notDavid/Terry/namedProcurement/R&D. No deliverabilityclaim/shopregistrationemail/formsubmission."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Pronto own fullPrimers category:100:006 two-pack industrial epoxy primer with anti-corrosive properties",
+        "url": "https://prontopaints.co.uk/product-category/primers/"
+      },
+      {
+        "label": "Pronto owncurrentAbout:industrialcoatingmanufacture/Holmewoodbusiness;historicalplantdatesretained",
+        "url": "https://prontopaints.co.uk/about-us/about-our-business/"
+      },
+      {
+        "label": "Pronto ownfullreturnedpopularonlineproductlist:actualthinner/preparation/ready-use095:200roles,notall300/OEMformulae",
+        "url": "https://prontopaints.co.uk/full-product-list/"
+      },
+      {
+        "label": "Pronto actual18visiblebusiness/productpartitions",
+        "url": "https://prontopaints.co.uk/products/"
+      },
+      {
+        "label": "Pronto current official Contact Us:General Enquiries exact .com email,company voice/address",
+        "url": "https://prontopaints.co.uk/contact-us/"
+      }
+    ]
+  },
   "saman-victoriaville": {
     "website": "https://saman.ca/en/",
     "contactPage": "https://saman.ca/en/contact-us/",
@@ -14994,6 +15105,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pronto-paints-holmewood",
   "saman-victoriaville",
   "teal-mackrill-hull",
   "krylic-paints-cape-town",
