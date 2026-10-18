@@ -5282,11 +5282,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "de-ijssel-moordrecht",
+    "company": "De IJssel Coatings BV",
+    "productId": "elo",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Moordrecht (city marker)",
+    "latitude": 51.99,
+    "longitude": 4.67,
+    "legacyCompanyDescription": "自有船艇/工业防护涂料及配套胶粘填充色浆研发制造企业；ELO适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前De IJssel官网生产页明确自身以模块化半成品配方、自动配料系统生产涂层，并按客户颜色制造Double Coat及IJmopox HB；完整返回的供货范围说明船艇防护、复合材料、预制混凝土模具和地坪制品。独立的具体IJmopox系列页明确ZF Primer为钢、铝用双组分防腐环氧底漆，HB为高固含环氧成品涂层，并列实际配套稀释剂和工具。ELO TDS确认涂料应用，可讨论成品配方原料评估；并未证明使用ELO、实际相容或当前采购需求。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读当前History、Production&Storage、Contact、WatersportProducts、完整返回Leveringsprogramma和IJmopox具体系列共6个自有HTML原文。自有制造、客户定色和实际成品钢/铝防腐环氧底漆完整链成立，未仅靠1930历史或经销商描述。供货范围实际包括涂料、gelcoat/topcoat、环氧胶粘填充、聚酯色浆以及地坪用反应性色浆；保留这些原料/配套制品角色，不谎称只有油漆成品，也不因供应任何化学输入便整体排除。原文明确地坪色浆的颜料载体参与固化反应、非通用色浆；这是具体着色系统用途，不能凭reactive/carrier/epoxy或树脂字样认定ELO/ESBO或同类生物增塑稳定输入。实际IJmopox系列明确ZF环氧底漆、HB环氧涂层、针对这些成品的专用稀释剂及滚筒；这些类别本身不等于环氧化植物油外售。当前已读的公司制造自述、完整本页四类供货范围及具体环氧系列中未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定原料外售证据；结论限定实际读取范围，非全部配方/全球SKU/每份TDS/SDS/最终股权审计，也没有虚构外购例外。WatersportProducts索引只给分类和一段T5填充成品介绍，未将其称为所有产品逐项目录；IJmopox子类则有4种具名商品及用途正文，不能混为无内容。History的1930亚麻油/standoil调漆、2006购地/2008建设/2009开业及86年叙述保留原历史语境，非2026新投产、当期原油外售或我方ELO使用证明。当前Production原文为现有生产活动，不把其80%订单生产自述转为采购量或RFQ。主体现名BV及Centrumbaan地址/通用info邮箱/总机来自实际Contact；safety@只在Search SDS片段出现，未采集为采购/技术收件人。瑞典站、第三方NONPAINTSTORE和旧S3文档仅Search发现，不借其渠道、工厂、组分或断言子公司归属。按DeIJssel/de-ijssel域/IJmopox/Variopox/Variobond/Poltix/DoubleCoat/现址与最新main277/root291及全队列/frontier去重无同一账户；不拆产品线/地区经销商为新客户。Polaron队列中的DeBeer经销与此公司不相同，未由名称相似借用SherwinWilliams股权。潜在配方评估逻辑不等于材料适配、现用材料、需求或采购时机已确认。"
+    },
+    "contact": {
+      "label": "官网公开一般业务邮箱及总机，无核实具名采购/技术收件人",
+      "email": "info@de-ijssel-coatings.nl",
+      "phone": "+31 182 372177",
+      "contactUrl": "https://www.de-ijssel-coatings.nl/nl/contact"
+    },
+    "source": {
+      "label": "De IJssel own IJmopox range: ZF Primer two-component anticorrosive epoxy primer for steel/aluminium",
+      "url": "https://www.de-ijssel-coatings.nl/nl/watersport/producten/categorie/ijmopox"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "de-ijssel-moordrecht": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "industrias-proa-porrino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "hagmans-nordic-fritsla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "monopol-colors-fislisbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5565,6 +5594,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "de-ijssel-moordrecht": {
+    "website": "https://www.de-ijssel-coatings.nl/nl",
+    "contactPage": "https://www.de-ijssel-coatings.nl/nl/contact",
+    "address": "De IJssel Coatings BV, Centrumbaan 960, 2841 MH Moordrecht, Netherlands. Exact own current contact address; city-only marker51.99,4.67, not surveyed factory coordinates.",
+    "generalEmail": "info@de-ijssel-coatings.nl",
+    "generalEmailEvidence": {
+      "company": "De IJssel Coatings BV",
+      "value": "info@de-ijssel-coatings.nl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "De IJssel own current corporate contact",
+          "url": "https://www.de-ijssel-coatings.nl/nl/contact",
+          "summary": "Own current Contact footer names this general corporate inbox with legal company/address. Not a named procurement/technical mailbox or Search-only SDS safety address; no deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+31 182 372177",
+    "generalPhoneEvidence": {
+      "company": "De IJssel Coatings BV",
+      "value": "+31 182 372177",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "De IJssel own current corporate contact",
+          "url": "https://www.de-ijssel-coatings.nl/nl/contact",
+          "summary": "Own Contact gives domestic0182-372177 and international+31 182372177. Normalize spacing and omit domestic0 aftercountrycode; general company voice, not personal office line."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "De IJssel current self-manufacturing/modular production and colour customisation",
+        "url": "https://www.de-ijssel-coatings.nl/nl/over-ons/productie-en-opslag"
+      },
+      {
+        "label": "De IJssel exact IJmopox epoxy primer/coating/auxiliary products",
+        "url": "https://www.de-ijssel-coatings.nl/nl/watersport/producten/categorie/ijmopox"
+      },
+      {
+        "label": "De IJssel four supply programs and reactive pigment-paste purposes",
+        "url": "https://www.de-ijssel-coatings.nl/nl/leveringsprogramma"
+      },
+      {
+        "label": "De IJssel general contact and current legal business address",
+        "url": "https://www.de-ijssel-coatings.nl/nl/contact"
+      },
+      {
+        "label": "De IJssel historical events kept with original dates",
+        "url": "https://www.de-ijssel-coatings.nl/nl/over-ons/historie"
+      },
+      {
+        "label": "Current water-sport product index; taxonomy distinct from specific product descriptions",
+        "url": "https://www.de-ijssel-coatings.nl/nl/watersport/producten"
+      }
+    ]
+  },
   "industrias-proa-porrino": {
     "website": "https://www.pinturasproa.com/es",
     "contactPage": "https://www.pinturasproa.com/es/contacto",
@@ -17257,6 +17349,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "de-ijssel-moordrecht",
   "industrias-proa-porrino",
   "hagmans-nordic-fritsla",
   "monopol-colors-fislisbach",
