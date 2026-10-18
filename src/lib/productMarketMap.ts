@@ -4975,11 +4975,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "vermeister-mornico",
+    "company": "Vermeister S.p.A.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Mornico al Serio (approximate town marker; premises entrance not surveyed)",
+    "latitude": 45.6,
+    "longitude": 9.8,
+    "legacyCompanyDescription": "意大利Vermeister自主研发水性木地板涂饰，Idro2K为聚氨酯面漆；W1201适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Vermeister当前Home明确自行研究原料并配方，About与Innovation说明木地板化学品研发活动和水性涂饰体系；Innovation完整返回其水性木地板成品系列。具体Idro2K原始HTML明确为双组分聚氨酯水性木地板面漆，也列商店等高流量场所。原文支持自主研发配方与具体水性木材表面用途；本轮不把Mornico公司地址额外说成已独立审厂的生产线，不用1988研发沿革冒充2026投产。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、About、Innovation完整返回水性成品系列、Experience完整返回溶剂型/辅助系列、Contact与具体Idro2K六份原始HTML；Home模型种子实读后由法律页脚/产品/Contact确认Vermeister身份，未从搜索纠错的VERIMASTER/HPC或其他厂家移植事实。完整可见导航还包括ZeroConcept/WOil/Chromotherapy/Underwood/SportFirefighting/Maintenance/工具，未遍历这些全部叶子、旧目录PDF或TDS/SDS，不保证全球SKU。真实LegaStucco木地板填缝用结合料、AD91防滑添加剂、Soluzione水性体系溶剂混合稀释配套、UpGrade调色、溶剂清洗剂/稀释剂及PU/环氧PU地板胶业务均保留，不虚称无外售原料或添加剂。Innovation中的AquaTenax/AquaFirst/One为标注的水性底层，Experience的底漆和面漆为木地板涂饰成品；仅从legante/PU/primer/原料研发字样不能改写成W1201同类PO/CPO附着原料外售。所读类别/完整返回系列及具体Idro2K范围内，未见水性聚烯烃乳液、CPO/PO分散体或原料级同功能附着促进输入外售；结论限实际阅读，不替未读SKU/关联全球业务给无供应保证，不编造外购例外。Marco/SilvanoArzuffi为About自述管理层，未核实其采购职责或私人邮箱；各国家网站/Idro/Aqua等品牌按一个相关账户，不拆经销。1975/1988沿革、50周年页面与日期无年份的夏休公告不推定2026工厂事件/当前采购；不从页脚2026补事件日期。最新main266、本地280、全队列/frontier公司/域名/管理关联/VAT去重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开一般业务邮箱及公司总机；非具名采购",
+      "email": "info@vermeister.com",
+      "phone": "+39 035 4428190",
+      "contactUrl": "https://www.vermeister.com/contatti/"
+    },
+    "source": {
+      "label": "Vermeister own Idro2K:two-component water-based polyurethane finish for wooden floors",
+      "url": "https://www.vermeister.com/professionisti/innovation/idro-2k/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vermeister-mornico": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "dacrylate-kirkby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tover-collegno": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "manor-coating-shipley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5247,6 +5276,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vermeister-mornico": {
+    "website": "https://www.vermeister.com/",
+    "contactPage": "https://www.vermeister.com/contatti/",
+    "address": "Via Fornace, 24050 Mornico al Serio (BG), Italy:actualownContactcompanyaddress,no streetnumberinvented;no independentfactorygate/productionlineaudit. Marker45.6,9.8coarsetown.",
+    "generalEmail": "info@vermeister.com",
+    "generalEmailEvidence": {
+      "company": "Vermeister S.p.A.",
+      "value": "info@vermeister.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Vermeister own Contacts:public company email/general business voice/address",
+          "url": "https://www.vermeister.com/contatti/",
+          "summary": "ExactownContactfooterinfo@vermeister.com;generalcorporatebusinessentry,nopersonalemail/deliverabilityclaim. ContactNomeCognomeplaceholdersnotrealpeople."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+39 035 4428190",
+    "generalPhoneEvidence": {
+      "company": "Vermeister S.p.A.",
+      "value": "+39 035 4428190",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Vermeister own Contacts:public company email/general business voice/address",
+          "url": "https://www.vermeister.com/contatti/",
+          "summary": "ExactcurrentContactcompanytelephone+390354428190,alsofooter r.a.;Italy035leadingzeroretainedafter+39. Separate4428075footerunlabelledchannelnotcuratedasvoice/fax/personalcontact."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@vermeister.com",
+        "source": {
+          "label": "Vermeister own Contacts:public company email/general business voice/address",
+          "url": "https://www.vermeister.com/contatti/"
+        },
+        "emailEvidence": {
+          "company": "Vermeister S.p.A.",
+          "value": "info@vermeister.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Vermeister own Contacts:public company email/general business voice/address",
+              "url": "https://www.vermeister.com/contatti/",
+              "summary": "ExactownContactfooterinfo@vermeister.com;generalcorporatebusinessentry,nopersonalemail/deliverabilityclaim. ContactNomeCognomeplaceholdersnotrealpeople."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Vermeister own Idro2K:two-component water-based polyurethane finish for wooden floors",
+        "url": "https://www.vermeister.com/professionisti/innovation/idro-2k/"
+      },
+      {
+        "label": "Vermeister ownHome:currentrawmaterialresearch/formulation/woodfloorfocus",
+        "url": "https://www.vermeister.com/"
+      },
+      {
+        "label": "Vermeister ownAbout:currentwoodfloorR&D/Mornico/history,requestredirectobserved",
+        "url": "https://www.vermeister.com/chi-siamo/"
+      },
+      {
+        "label": "Vermeister fullreturnedInnovation waterwoodfinishes/primers/colourmodulator/diluents",
+        "url": "https://www.vermeister.com/professionisti/innovation/"
+      },
+      {
+        "label": "Vermeister fullreturnedExperience solventfinishes/fillerbinders/antislipadditive/thinners",
+        "url": "https://www.vermeister.com/professionisti/experience/"
+      },
+      {
+        "label": "Vermeister own Contacts:public company email/general business voice/address",
+        "url": "https://www.vermeister.com/contatti/"
+      }
+    ]
+  },
   "dacrylate-kirkby": {
     "website": "https://dacrylate.co.uk/",
     "contactPage": "https://dacrylate.co.uk/contact/",
@@ -16007,6 +16122,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vermeister-mornico",
   "dacrylate-kirkby",
   "tover-collegno",
   "manor-coating-shipley",
