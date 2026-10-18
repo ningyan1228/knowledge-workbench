@@ -5003,11 +5003,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "freilacke-doeggingen",
+    "company": "Emil Frei GmbH & Co. KG (FreiLacke)",
+    "productId": "elo",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Bräunlingen-Döggingen (approximate locality marker; factory entrance not surveyed)",
+    "latitude": 47.9,
+    "longitude": 8.4,
+    "legacyCompanyDescription": "德国FreiLacke自产工业防护涂料，FREOPOXUHS ER1936H为防腐环氧底漆；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "FreiLacke当前Home明确在德国Döggingen自行开发和生产涂料，Development&Production原文再次说明内部研发实验室及液体/粉末涂料自主生产。IndustrialPaints完整返回工业液体防护漆等分类及具体FREOPOX-UHS ER1936H环氧高固体底漆，明确用于防腐保护；另有已读自有双层粉末防腐体系。当前自主制造/研发、具体工业防腐成品和公开业务入口分别有原文，不从搜索摘要、商标分类或采购条款推断当前买方需求。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取Home、PowderCorrosionProtection、IndustrialPaints全部返回产品分类/代表品、DevelopmentProduction与Contact五份原文；第六次官方导航Composites-2返回404，计入上限，不将其正文称已读，不另开预算重试。IndustrialPaints原文实际列工业液体/粉末/电泳涂料与复材，并给出液体UV/UHS/单涂层具体产品及成品底漆/面漆角色；复材部分明确外售用于部件生产的components，包括PIMC粉末模内涂料、Gelcoats/pigmentpastes和CM-Powder复材纤维用粉末树脂系统。真实复材树脂/颜料浆等输入业务保留，不宣称纯成品商或从未卖原料。该原文中复材结构树脂/胶衣/调色浆角色与所选ELO/ESBO/生物增塑稳定油不同，不凭epoxy/resin/composite字样推定环氧化油销售；未读叶子配方、商标或所有关联产品，不断言其具体化学组成。按已读当前自主工业防护成品、完整可见导航、IndustrialPaints所有返回代表品/明确复材输入角色及具体FREOPOX ER1936H范围，未见ELO/ESBO/环氧化植物油或同功能生物增塑稳定输入外售；结论仅限该范围，不为未读Composites页/叶子TDS/SDS/全球SKU给无原料供应保证，不编造外购例外。FreiLacke/EmilFrei与Durelastic/FREOPOX/FREODUR/EFDEDUR/FREOTHERM、海外分支及品牌保守按一个相关账户，不拆网站/品牌/产地。自述家族管理非外部股权审计；1926成立、2026PaintExpo/InnoTrans或奖项不是当前原料采购。Search商标rawnaturalresins/AVK原料商目录标签仅发现未读，既不据此认定ELO同行，也不称已原文排除所有树脂。最新main267、本地281、全队列/frontier公司/品牌/域名关联去重无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网公开一般业务邮箱及德国总部总机；非具名采购",
+      "email": "info@freilacke.de",
+      "phone": "+49 7707 151 0",
+      "contactUrl": "https://www.freilacke.com/contact"
+    },
+    "source": {
+      "label": "FreiLacke own IndustrialPaints:FREOPOX-UHS ER1936H epoxy high-solids corrosion-protection primer",
+      "url": "https://www.freilacke.com/industrial-paints/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "freilacke-doeggingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vermeister-mornico": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "dacrylate-kirkby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tover-collegno": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5276,6 +5305,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "freilacke-doeggingen": {
+    "website": "https://www.freilacke.com/",
+    "contactPage": "https://www.freilacke.com/contact",
+    "address": "Am Bahnhof 6, 78199 Bräunlingen-Döggingen, Germany:actualcurrentownContactcorporateaddress;ownHomeandDevelopmentProductionseparatelysupportDöggingenmanufacture. Marker47.9,8.4coarselocality,notfactorygateGPS/independentregistry.",
+    "generalEmail": "info@freilacke.de",
+    "generalEmailEvidence": {
+      "company": "Emil Frei GmbH & Co. KG (FreiLacke)",
+      "value": "info@freilacke.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "FreiLacke own Contact:EmilFrei legalcompany/address/general email/voice",
+          "url": "https://www.freilacke.com/contact",
+          "summary": "ExactcurrentofficialContactexplicitgeneralinfo@freilacke.deandcompanyname. Purchasing/Applicationtechnologytabsareforms,notnamedemailaddresses. IndustrialPaintsreceptionnameManuelaSchmidt adjacentsharedinboxnotpersonalownership."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+49 7707 151 0",
+    "generalPhoneEvidence": {
+      "company": "Emil Frei GmbH & Co. KG (FreiLacke)",
+      "value": "+49 7707 151 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "FreiLacke own Contact:EmilFrei legalcompany/address/general email/voice",
+          "url": "https://www.freilacke.com/contact",
+          "summary": "ExactownContactgeneral+497707151-0normalizedspacing;notnamedbuyerphone. Footeradditional151-238unlabellednotcuratedasvoice/fax/personaldirectline."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@freilacke.de",
+        "source": {
+          "label": "FreiLacke own Contact:EmilFrei legalcompany/address/general email/voice",
+          "url": "https://www.freilacke.com/contact"
+        },
+        "emailEvidence": {
+          "company": "Emil Frei GmbH & Co. KG (FreiLacke)",
+          "value": "info@freilacke.de",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "FreiLacke own Contact:EmilFrei legalcompany/address/general email/voice",
+              "url": "https://www.freilacke.com/contact",
+              "summary": "ExactcurrentofficialContactexplicitgeneralinfo@freilacke.deandcompanyname. Purchasing/Applicationtechnologytabsareforms,notnamedemailaddresses. IndustrialPaintsreceptionnameManuelaSchmidt adjacentsharedinboxnotpersonalownership."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "FreiLacke own IndustrialPaints:FREOPOX-UHS ER1936H epoxy high-solids corrosion-protection primer",
+        "url": "https://www.freilacke.com/industrial-paints/"
+      },
+      {
+        "label": "FreiLacke ownHome:Döggingenmanufacture/fullvisiblecoatingcategorynavigation",
+        "url": "https://www.freilacke.com/"
+      },
+      {
+        "label": "FreiLacke ownDevelopmentProduction:in-houselabs/liquidandpowdermanufacture;de-to-comredirectobserved",
+        "url": "https://www.freilacke.de/development-production/"
+      },
+      {
+        "label": "FreiLacke ownpowdercorrosionprotection:actualepoxyprimer-plus-powdertopcoatapplication",
+        "url": "https://www.freilacke.com/coating-knowledge/corrosion-protection-with-powder-coatings/"
+      },
+      {
+        "label": "FreiLacke own Contact:EmilFrei legalcompany/address/general email/voice",
+        "url": "https://www.freilacke.com/contact"
+      }
+    ]
+  },
   "vermeister-mornico": {
     "website": "https://www.vermeister.com/",
     "contactPage": "https://www.vermeister.com/contatti/",
@@ -16122,6 +16233,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "freilacke-doeggingen",
   "vermeister-mornico",
   "dacrylate-kirkby",
   "tover-collegno",

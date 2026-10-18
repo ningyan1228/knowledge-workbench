@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "freilacke-doeggingen": "Your FREOPOX-UHS ER1936H is an epoxy primer for industrial corrosion protection.",
   "vermeister-mornico": "Your Idro 2K is a two-component water-based polyurethane finish for wooden floors, including floors in high-traffic shops.",
   "dacrylate-kirkby": "Your Dacprime 98 is a high-build primer with rust-inhibitive properties for protecting steel.",
   "tover-collegno": "Your Grip&Go is a two-part water-based primer for recoating previously lacquered wooden floors.",
