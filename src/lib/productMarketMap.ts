@@ -5142,11 +5142,40 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-18",
     "legacyCompanyDescription": "成品工业/船舶涂料研发制造企业；ELO 配方适配及采购未确认"
   },
+  {
+    "id": "votteler-korntal-muenchingen",
+    "company": "Votteler Lackfabrik GmbH & Co. KG",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Korntal-Münchingen (city marker)",
+    "latitude": 48.83,
+    "longitude": 9.12,
+    "legacyCompanyDescription": "自有水性木器成品涂料及色漆研发制造企业；NL-W1201适配、使用和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Votteler官网Home与Company明确自身开发制造涂料及色漆；WoodworkingIndustry原文明确水性及溶剂型木器涂料、色漆、底漆等，并说明自有技术中心、color lab为客户制备涂料/色漆样品。制造及具体水性木器配方证据来自不同原文；法律声明确认德国经营主体及公开业务邮箱/电话。NL-W1201 TDS支持木材基材，允许提出水性木器配方评估；并未证实使用我方乳液、已兼容、当前需求或采购。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "独立审读Home、Company、具体WoodworkingIndustry完整原文、Technologies实际仅导航/应用工艺标题及Masthead。可见经营与木器范围为涂料、色漆、油、activators、底漆及粘接/喷涂/滚涂技术；保留真实油类/activator/primer角色，不称绝无输入材料或把任何primer自动判原料同行。当前已读业务与公开木器系列未见对外销售水性PO乳液、CPO/PO原料分散体或同类原料附着力促进剂；结论限实际读到的范围，不宣称全部SKU/TDS/SDS/未读粘接专页或海外公司目录已审计，不虚构外购例外。Technologies只有导航及基材标题，不能作为完整原料目录。英文Contact真实404，计入第5个请求，不发布失效联系页；第6个Masthead明确当前德国主体、d.info@votteler.com及+49 711 9804 5，可作为独立公开业务入口。Masthead明确瑞士Votteler AG Lackfabrik与奥地利VottelerLacktechnik为海外关联、各自有法律人格，仍保守按同一集团账户，不拆国别/公司/管理公司新增。按Votteler及德国KG/Verwaltungsgesellschaft、votteler.com/.at/.ch、Korntal-Münchingen地址核对最新main272、本地286、全队列/frontier无同一账户。现任法定管理公司经理RolandFlüge仅身份信息，未找到个人业务邮箱，不转借一般邮箱/Swissinfo个人化；2018媒体MarkusAlbrecht不当当前负责人。110年历史与采购条款链接不等于当前原料采购。"
+    },
+    "contact": {
+      "label": "官网法律声明公开的一般业务邮箱及公司电话；非具名采购",
+      "email": "d.info@votteler.com",
+      "phone": "+49 711 9804-5",
+      "contactUrl": "https://www.votteler.com/en/masthead/"
+    },
+    "source": {
+      "label": "Votteler own Woodworking Industry: water-based coatings/stains and in-house color-lab sample formulation",
+      "url": "https://www.votteler.com/en/industries/woodworking-industry/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "votteler-korntal-muenchingen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zuelch-osterode-lerbach": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "diquimtex-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aemme-colori-ranica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5420,6 +5449,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "votteler-korntal-muenchingen": {
+    "website": "https://www.votteler.com/en/",
+    "contactPage": "https://www.votteler.com/en/masthead/",
+    "address": "Votteler Lackfabrik GmbH & Co. KG, Schwieberdinger Str. 97/102, D-70825 Korntal-Münchingen, Germany. Exact own legal-operator address; city marker48.83,9.12, not surveyed factory GPS.",
+    "generalEmail": "d.info@votteler.com",
+    "generalEmailEvidence": {
+      "company": "Votteler Lackfabrik GmbH & Co. KG",
+      "value": "d.info@votteler.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Votteler own current Masthead: German legal operator and exact general business channel",
+          "url": "https://www.votteler.com/en/masthead/",
+          "summary": "Own German operator entry explicitly prints E-Mail d.info@votteler.com. Exact general corporate value, not Swiss info@ or named director inbox; no deliverability/currentbuyer inference."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+49 711 9804-5",
+    "generalPhoneEvidence": {
+      "company": "Votteler Lackfabrik GmbH & Co. KG",
+      "value": "+49 711 9804-5",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Votteler own current Masthead: German legal operator and exact general business channel",
+          "url": "https://www.votteler.com/en/masthead/",
+          "summary": "Own German entry prints Phone nummer +49 711 9804 5; normalize spaces/hyphen only, not a private/purchasing number or Swissfax."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Votteler specific own woodworking waterborne range and in-house laboratory",
+        "url": "https://www.votteler.com/en/industries/woodworking-industry/"
+      },
+      {
+        "label": "Votteler current own development/manufacture business",
+        "url": "https://www.votteler.com/en/company/"
+      },
+      {
+        "label": "Votteler current overall business and linked industry/technology scope",
+        "url": "https://www.votteler.com/en/"
+      },
+      {
+        "label": "Votteler own German legal operator, exact channels and associated foreign legal companies",
+        "url": "https://www.votteler.com/en/masthead/"
+      }
+    ]
+  },
   "zuelch-osterode-lerbach": {
     "website": "https://www.zuelch.de/",
     "contactPage": "https://www.zuelch.de/kontakt/",
@@ -16722,6 +16806,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "votteler-korntal-muenchingen",
   "zuelch-osterode-lerbach",
   "diquimtex-ciudad-mexico",
   "aemme-colori-ranica",
