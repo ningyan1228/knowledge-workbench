@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "trimite-global-redditch": "Your TrimaKote AP45 is a two-pack epoxy primer in your industrial coatings range.",
   "junckers-koge": "Your Gulvlak is a one-component water-based acrylic/polyurethane lacquer for untreated or machine-sanded wooden floors.",
   "rigo-verffabriek-ijmuiden": "Your SKYLT Original is a two-component parquet lacquer for bare-sanded oak and other light-coloured wood.",
   "pronto-paints-holmewood": "Your 100:006 2 Pack Epoxy Primer is an industrial epoxy primer with anti-corrosive properties.",

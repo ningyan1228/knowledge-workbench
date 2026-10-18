@@ -4808,11 +4808,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "trimite-global-redditch",
+    "company": "Trimite Global Coatings Ltd.",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Redditch (approximate city marker; factory entrance not surveyed)",
+    "latitude": 52.3,
+    "longitude": -1.9,
+    "legacyCompanyDescription": "英国Trimite自产工业防护涂料，TrimaKoteAP45为双组分环氧底漆；ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Trimite当前官网明确在英国自行制造工业漆及涂层，About披露自有品牌与代工制造活动、Redditch制造业务及Firwood制造转移历史。GeneralIndustrial页说明实际工业保护/防腐系统用于结构钢、工程机械、车辆底盘及设备等。完整可见core产品表直接列TrimaKoteAP45双组分环氧底漆等成品工业涂料。UK制造、防护应用及具体产品分别有原文支持，不把预处理代理材料的销售当作自产原料证据，也不从第三方展会标签推断工厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取当前Home、About、GeneralIndustrial、Products核心产品表、Contact、Pretreatment六份原文。17951字Products全部返回正文和表格已读；首段明确core之外还有大量客户专用配方，未逐叶读取所有TDS/SDS、代工秘方或全世界SKU。实际Home/导航覆盖工业/防务/航空/塑料/玻璃/铁路/桶/活动建筑/地坪/Glixtone及预处理。保留外售Henkel/SurTec表面工艺化学品，不说公司只卖涂料或从未卖添加剂。原始Pretreatment明确金属清洗和转化膜、磷化/钝化等上漆前处理，属于真实已读角色；表内SurTec650A确为SurTec650钝化体系添加剂，Alkaline/Acidcleaner/Desmutting/etch/Testkit等如实保留。它们已披露的金属工艺用途不等同ELO/ESBO/环氧化植物油或同功能生物增塑稳定输入，不能因Additive或enhanceadhesion字样就认定油基配方同行。TrimaPlasAP201是聚丙烯成品表面底漆，不凭名称推断PO/CPO原料成分或为W1201另行入库；Polyurethane/epoxy/alkyd作为已配制底/面漆/填料/粉末材料角色，不自动变成上游树脂/增塑剂外售。按所查自主工业防护成品、完整可见业务类别、完整core产品表及真实预处理材料角色，未见相关ELO/ESBO/环氧化植物油/同功能生物增塑稳定原料外售。结论限实际读取范围，不对全部未列明OEM/全球业务作无供应商保证、不编造外购例外。TrimiteTechnologies/CarrsCoatings/Firwood/Glixtone/AsburyBrodie统一品牌集团按一个账户；Contact明确2024-08-01Technologies更名GlobalCoatings、06736940沿用，Belfast01564257另法人仍不拆新客户。2023Bolton制造移至Redditch是历史事件，不当2026投产/RFQ。Weilburger全球合作/代理条目不证明股权归属、Henkel/SurTec代理不变成被持有集团；本轮没有独立读取其外部股权登记或合作公司网站。中国供货联系人不作为大陆客户/不收其个人手机。最终按最新main260/本地274、全私有队列/frontier核对名称/域名/旧品牌/登记号/地址，无已知同一账户。"
+    },
+    "contact": {
+      "label": "官网RedditchHeadOffice公开Sales部门邮箱及总部总机，非具名采购联系人",
+      "email": "sales@trimite.com",
+      "phone": "+44 1527 599460",
+      "contactUrl": "https://www.trimite.com/contact/"
+    },
+    "source": {
+      "label": "Trimite own complete returned core-product table:TrimaKote AP45 Two Pack Epoxy Primer;industrialprotectivecoatingmanufacturer",
+      "url": "https://www.trimite.com/products-2/"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "trimite-global-redditch": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "junckers-koge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rigo-verffabriek-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pronto-paints-holmewood": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5074,6 +5103,114 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "trimite-global-redditch": {
+    "website": "https://www.trimite.com/",
+    "contactPage": "https://www.trimite.com/contact/",
+    "address": "Unit 1 Colemeadow Road, Moons Moat North Industrial Estate, Redditch B98 9PB, United Kingdom:currentofficialUKHeadOfficeaddress;ownAboutmanufacture/historyseparate. Company06736940and2024-08-01renameownContactstatement,notindependentregistry. Marker52.3,-1.9approximateRedditch,notfactorygateGPS.",
+    "generalEmail": "groupinfo@trimite.com",
+    "generalEmailEvidence": {
+      "company": "Trimite Global Coatings Ltd.",
+      "value": "groupinfo@trimite.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Trimite own current Home footer:group corporate business mailbox",
+          "url": "https://www.trimite.com/",
+          "summary": "Actualownsitefooterpublishesgroupinfo@trimite.comascompanycontactrouteacrossreadpages. Notpersonalnamedbuyer/privateorHRmail. PublicSalesdepartmentchosenfirst."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+44 1527 599460",
+    "generalPhoneEvidence": {
+      "company": "Trimite Global Coatings Ltd.",
+      "value": "+44 1527 599460",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Trimite official current Contact:RedditchUKheadOffice exactSalesemail/voice/address/legalrenameentry",
+          "url": "https://www.trimite.com/contact/",
+          "summary": "RedditchUKHeadOfficeexplicitT+44(0)1527599460. Normalizecountry+44/dropdomestic0;sharedbusinessvoice,notBelfast/regionalpartner/Chinaindividualphoneorfax. No dialverification."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@trimite.com",
+        "source": {
+          "label": "Trimite official current Contact:RedditchUKheadOffice exactSalesemail/voice/address/legalrenameentry",
+          "url": "https://www.trimite.com/contact/"
+        },
+        "emailEvidence": {
+          "company": "Trimite Global Coatings Ltd.",
+          "value": "sales@trimite.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Trimite official current Contact:RedditchUKheadOffice exactSalesemail/voice/address/legalrenameentry",
+              "url": "https://www.trimite.com/contact/",
+              "summary": "ActualRedditchUKHeadOfficepublishesEsales@trimite.com;departmentrolefromexplicitSalesmailboxandcompanyHeadOfficecontext. Nonamedperson/ChinaareaSalesmobile/overseaspartnerassigned. No deliverabilityorcurrentrawbuyingclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      },
+      {
+        "department": "General",
+        "email": "groupinfo@trimite.com",
+        "source": {
+          "label": "Trimite currentcompanyfooter",
+          "url": "https://www.trimite.com/"
+        },
+        "emailEvidence": {
+          "company": "Trimite Global Coatings Ltd.",
+          "value": "groupinfo@trimite.com",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Trimite own current Home footer:group corporate business mailbox",
+              "url": "https://www.trimite.com/",
+              "summary": "Actualownsitefooterpublishesgroupinfo@trimite.comascompanycontactrouteacrossreadpages. Notpersonalnamedbuyer/privateorHRmail. PublicSalesdepartmentchosenfirst."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Trimite own complete returned core-product table:TrimaKote AP45 Two Pack Epoxy Primer;industrialprotectivecoatingmanufacturer",
+        "url": "https://www.trimite.com/products-2/"
+      },
+      {
+        "label": "Trimite ownHomeUKmanufactureandfinished-coatingmarketoverview",
+        "url": "https://www.trimite.com/"
+      },
+      {
+        "label": "Trimite ownAboutbrandgroupanddatedRedditch/Firwoodmanufacturinghistory",
+        "url": "https://www.trimite.com/about/"
+      },
+      {
+        "label": "Trimite ownGeneralIndustrialprotective/anticorrosivesystemsforsteel/equipment",
+        "url": "https://www.trimite.com/general-industrial/"
+      },
+      {
+        "label": "Trimite actualPretreatmentmetalcleaning/conversion-processmaterials,notELOrawinputclaim",
+        "url": "https://www.trimite.com/pretreatment/"
+      },
+      {
+        "label": "Trimite official current Contact:RedditchUKheadOffice exactSalesemail/voice/address/legalrenameentry",
+        "url": "https://www.trimite.com/contact/"
+      }
+    ]
+  },
   "junckers-koge": {
     "website": "https://www.junckers.com/",
     "contactPage": "https://www.junckers.com/contact",
@@ -15349,6 +15486,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "trimite-global-redditch",
   "junckers-koge",
   "rigo-verffabriek-ijmuiden",
   "pronto-paints-holmewood",
