@@ -4668,11 +4668,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "teal-mackrill-hull",
+    "company": "Teal & Mackrill Ltd (Teamac / Coo-Var)",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Hull (approximate city marker; business premises not surveyed factory entrance)",
+    "latitude": 53.8,
+    "longitude": -0.3,
+    "legacyCompanyDescription": "英国Teal&Mackrill自产Teamac船用防腐涂料；ELO配方适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "Teamac 当前首页明示全部产品由独立英国企业在 Yorkshire 制造；About 明确自有船用/农业漆与清漆生产，并解释 Teamac 为 Teal & Mackrill 的注册品牌。具体 HighPerformanceMarinePrimer 原文明确为双组分环氧磷酸锌涂层，用于船舶腐蚀防护、水线上下环境；基料与硬化剂整套供应。Coo-Var 当前首页也明确 Teal & Mackrill 自1908年制造涂料，保留同公司另一施工涂料品牌。不是把经销商售卖环氧漆或一份旧协会奖项当作自产证据。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取当前TeamacHome、具体船用底漆、About、Contact、同公司Coo-VarHome和现行Terms六份HTML原文。Teamac可见12个海事/农业分类包含面漆、甲板、舱底、清漆/油、抗污、底漆、前处理和稀释配套；Coo-Var可见9类为地坪/体育标线、安全、泳池、清漆/油、专用底漆、清洁前处理修补及稀释、特种涂料、金属涂料、Lacq/Fluxaf木材护理。后两外部品牌只作为其销售的木材护理范围，不推断其为Teal集团自有制造或掌握上游化学业务。明确保留公司外售油类、清洁/修补和稀释配套，不说公司只卖单一涂料或没有化学配套。具体底漆为已配制的基料/硬化剂施工套装；containszincphosphate或epoxy不等于环氧化植物油，corrosioninhibitor指施工底漆防腐作用，不是聚合物稳定剂原料外售证明。在实际已读自有制造业务、两品牌全可见分类/应用角色和具体防腐配方范围内未见ELO、ESBO、环氧化植物油或同功能生物基增塑/稳定原料外售证据。结论限上述实际范围；未逐一审计每个分类叶页、每种油/稀释剂成分、全部TDS/SDS及未披露全球关联，不给全部SKU或全球化学业务保证、不把未公开成分说成不存在，也不编造外购例外。当前About自行描述Mackrill家族第四代所有，未独立审计股权比例；Teamac/Coo-Var同一Teal&Mackrill账户，不把品牌、经销商、农业/海事门类拆为新增。现行Terms明确Supplier为Teal&MackrillLtd、company126674及KirbyStreetHullHU20HE提货业务场所。条款保留若干OR/方括号模板文字，不能视为每项商业条款独立法律审核或当前工厂入口/注册办公室核验。旧2020宣传册LockwoodStreet地址、2023Geoff奖项、2020Frances技术身份均仅Search，未当作当前人员/工厂/有效证书或采购证明。按完整主体、品牌、主域、登记号与地址核对最新main255、本地269、全私有队列/frontier，无同账户。"
+    },
+    "contact": {
+      "label": "官网Sales部门邮箱及共享公司/技术支持电话；非具名采购联系人",
+      "email": "sales@teamac.co.uk",
+      "phone": "+44 1482 320194",
+      "contactUrl": "https://teamac.co.uk/pages/contact"
+    },
+    "source": {
+      "label": "Teamac official High Performance Marine Primer:two-pack epoxy zinc phosphate marine corrosion-protection coating",
+      "url": "https://teamac.co.uk/products/teamac-high-performance-2-pack-zinc-phosphate-primer-5l"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "teal-mackrill-hull": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "krylic-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "belzona-harrogate": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "oli-lacke-lichtenau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -4929,6 +4958,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "teal-mackrill-hull": {
+    "website": "https://teamac.co.uk/",
+    "contactPage": "https://teamac.co.uk/pages/contact",
+    "address": "Teal & Mackrill Ltd, Kirby Street, Hull HU2 0HE, United Kingdom: current own Terms clause4.2 business/collection premises,not independently verified factory-gate/registered-office location. CompanyNo126674 as printed (00126674 padded form used onlyfor conservative dedup). OwnHome statesYorkshiremanufacturing. Marker53.8,-0.3approximateHullcity. Old2020LockwoodStreet addressnotreused ascurrentplantproof.",
+    "generalEmail": "",
+    "generalPhone": "+44 1482 320194",
+    "generalPhoneEvidence": {
+      "company": "Teal & Mackrill Ltd (Teamac / Coo-Var)",
+      "value": "+44 1482 320194",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Teamac official current business contact:published sales mailbox and shared telephone",
+          "url": "https://teamac.co.uk/pages/contact",
+          "summary": "Actual contactbody andfooterprint01482320194;headerlabels samevoice technicalsupport. NormalizeUKcountry+44removingdomestic0. Sharedcompanybusiness/technicalsupportvoice,notnamedpersonalorprivatephone;nocalltest."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@teamac.co.uk",
+        "source": {
+          "label": "Teamac official current business contact:published sales mailbox and shared telephone",
+          "url": "https://teamac.co.uk/pages/contact"
+        },
+        "emailEvidence": {
+          "company": "Teal & Mackrill Ltd (Teamac / Coo-Var)",
+          "value": "sales@teamac.co.uk",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Teamac official current business contact:published sales mailbox and shared telephone",
+              "url": "https://teamac.co.uk/pages/contact",
+              "summary": "Actual contact body says sendusemailatsales@teamac.co.uk. Exact published Sales business route,not named purchasing/technicalperson. Higher-prioritynamedprocurement/R&D emailnotverified;headertechnicalvoiceisnotpersonalemailownership. No pattern construction or deliverability assertion."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Teamac official High Performance Marine Primer:two-pack epoxy zinc phosphate marine corrosion-protection coating",
+        "url": "https://teamac.co.uk/products/teamac-high-performance-2-pack-zinc-phosphate-primer-5l"
+      },
+      {
+        "label": "Teamac own UK/Yorkshire manufacturing and complete visible12marine/agriculture category navigation",
+        "url": "https://teamac.co.uk/"
+      },
+      {
+        "label": "Teamac own About:Teal&Mackrill manufacturing/brand/family relationship",
+        "url": "https://teamac.co.uk/pages/about-us"
+      },
+      {
+        "label": "Coo-Var current ownHome:sameTeal&Mackrill manufacturer and complete visible9category scope",
+        "url": "https://coo-var.co.uk/"
+      },
+      {
+        "label": "Teamac current ownTerms:Teal&MackrillLtd company126674 and KirbyStreetHullcollectionbusinesspremises",
+        "url": "https://teamac.co.uk/pages/terms-conditions"
+      },
+      {
+        "label": "Teamac official current business contact:published sales mailbox and shared telephone",
+        "url": "https://teamac.co.uk/pages/contact"
+      }
+    ]
+  },
   "krylic-paints-cape-town": {
     "website": "https://krylicpaints.co.za/",
     "contactPage": "https://krylicpaints.co.za/contact-us/",
@@ -14796,6 +14897,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "teal-mackrill-hull",
   "krylic-paints-cape-town",
   "belzona-harrogate",
   "oli-lacke-lichtenau",
