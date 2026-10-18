@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "rigo-verffabriek-ijmuiden": "Your SKYLT Original is a two-component parquet lacquer for bare-sanded oak and other light-coloured wood.",
   "pronto-paints-holmewood": "Your 100:006 2 Pack Epoxy Primer is an industrial epoxy primer with anti-corrosive properties.",
   "saman-victoriaville": "Your Water Based Stain is a water-based wood stain for furniture, cabinets and interior woodwork.",
   "teal-mackrill-hull": "Your Teamac High Performance Marine Primer is a two-pack epoxy zinc phosphate coating for marine corrosion protection.",

@@ -4752,11 +4752,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "rigo-verffabriek-ijmuiden",
+    "company": "RIGO Verffabriek",
+    "productId": "nl-w1201",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "IJmuiden (approximate city marker; factory entrance not surveyed)",
+    "latitude": 52.5,
+    "longitude": 4.6,
+    "legacyCompanyDescription": "荷兰RIGO自产水性木器/地板清漆，SKYLTOriginal用于裸橡木等浅色木材；NL-W1201适配和采购未确认",
+    "fit": "可开发候选",
+    "signal": "RIGO当前官方About明确自行制漆、有内部实验室和生产团队，所有漆从创立起均在荷兰IJmuiden制造；当前Home亦说明荷兰家族企业自产漆/油/清漆。其自有产品分类将SKYLT和STEP列为用于木/软木、地板和家具的水性透明清漆。具体SKYLTOriginal#5510原始产品页明确双组分聚氨酯地板清漆，可直接用于砂磨裸橡木等浅色木材，并在FAQ确认家具/桌面用途。自主制造、水性类别和具体木材产品分别有直接原文支持，不凭经销商说法、泛指水性墙漆或全部塑料适配。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-18",
+      "conclusion": "完整读取About英文、当前Home、完整Products可见总览、SKYLT分区、Contact和SKYLTOriginal#5510六份HTML。实际总览为Toplin/Ekodur/Rexo成品漆、Skylt/Step地板清漆、Royl木器油、Skyn墙面涂饰七品牌分区；并非逐一审读七品牌全部叶子SKU或所有TDS/SDS。保留亚麻油/木器油及植物油成品业务，不把普通亚麻油改称环氧化亚麻油或NL聚烯烃原料。实际SKYLT可见范围含清漆/底漆/色油/木器着色剂/填缝剂/矿物表面封闭剂/清洁和维护剂；标题标10但正文可见更多条目和两个Additief，未把计数当全部产品审读证明。OpenTijdVerlenger#0090明确延缓干燥改善流平/减少搭接，IJzersmetBlokker#0091明确中和富单宁木材铁污，用于水性清漆或反应型着色剂。这两项真实外售功能输入已记录，不作全站无添加剂保证；这些已读功能不是向配方厂外售聚烯烃/CPO/PO乳液或附着促进原料的证据。未读取其叶子TDS/SDS，不推断化学组成或全部用法。SKYLTOriginal双组分固化剂/施工配套不是仅凭PU字样就视作通售聚氨酯/聚烯烃反应原料。按所查自主成品木器涂料业务、七品牌可见总览、SKYLT实际全部返回条目及两添加剂已披露功能，未见与NL-W1201同类聚烯烃乳液/CPO/PO分散体/原料级附着促进剂外售；结论限真实读取范围，不宣称全球全部未披露业务清白、不编造外购例外。RIGO/RigoStep/Aquamarijn及七品牌按一个相关账户处理，About家族三代历史不是外部股权审计；不添加未在已读页面确认的BV法定后缀/登记号。历史2010接班和Search旧建筑改造不是2026扩产/RFQ；英文About导航保留旧Corona文字不当作当前封厂或当前任职证据。最终核对最新main258/本地272、全私有队列/frontier公司/域名/地址/品牌，无同一已知账户。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱及公司总机；未核实名采购/技术负责人",
+      "email": "info@rigoverffabriek.nl",
+      "phone": "+31 255 54 84 48",
+      "contactUrl": "https://rigoverffabriek.nl/contact"
+    },
+    "source": {
+      "label": "RIGO own SKYLT Original #5510:two-component parquet lacquer for bare-sanded oak/light wood;own SKYLT water-based wood-lacquer category",
+      "url": "https://rigoverffabriek.nl/producten/skylt/skylt-original-5510"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rigo-verffabriek-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pronto-paints-holmewood": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "saman-victoriaville": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "teal-mackrill-hull": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5016,6 +5045,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rigo-verffabriek-ijmuiden": {
+    "website": "https://rigoverffabriek.nl/",
+    "contactPage": "https://rigoverffabriek.nl/contact",
+    "address": "Dokweg 40, 1976 CA IJmuiden, Netherlands: current officialContact/Addressfactoryentry;ownAboutseparatelyconfirmsallpaintmanufacturedinIJmuiden. Marker52.5,4.6approximatecityonly,notfactoryGPS/independentregister.",
+    "generalEmail": "info@rigoverffabriek.nl",
+    "generalEmailEvidence": {
+      "company": "RIGO Verffabriek",
+      "value": "info@rigoverffabriek.nl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "RIGO official Contact:exact general company email,telephone and Dokweg40factory-address entry",
+          "url": "https://rigoverffabriek.nl/contact",
+          "summary": "CurrentactualContactexplicitlypublishesE-mailinfo@rigoverffabriek.nl. Generalcompanyinbox,notpersonalmailorprocurement/technicaldepartment. No guessedaddress/deliverability/sendclaim."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+31 255 54 84 48",
+    "generalPhoneEvidence": {
+      "company": "RIGO Verffabriek",
+      "value": "+31 255 54 84 48",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "RIGO official Contact:exact general company email,telephone and Dokweg40factory-address entry",
+          "url": "https://rigoverffabriek.nl/contact",
+          "summary": "ActualcompanyContactprints0255548448andEnglishAboutprints+31255548448. NormalizeDutch+31/dropdomestic0. Generalbusinessvoice,notnamedprivatebuyer. Productapplicationfloor-supportmobileincidentalnotstored."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "info@rigoverffabriek.nl",
+        "source": {
+          "label": "RIGO official Contact:exact general company email,telephone and Dokweg40factory-address entry",
+          "url": "https://rigoverffabriek.nl/contact"
+        },
+        "emailEvidence": {
+          "company": "RIGO Verffabriek",
+          "value": "info@rigoverffabriek.nl",
+          "kind": "general",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "RIGO official Contact:exact general company email,telephone and Dokweg40factory-address entry",
+              "url": "https://rigoverffabriek.nl/contact",
+              "summary": "CurrentactualContactexplicitlypublishesE-mailinfo@rigoverffabriek.nl. Generalcompanyinbox,notpersonalmailorprocurement/technicaldepartment. No guessedaddress/deliverability/sendclaim."
+            }
+          ],
+          "verifiedAt": "2026-10-18"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "RIGO own SKYLT Original #5510:two-component parquet lacquer for bare-sanded oak/light wood;own SKYLT water-based wood-lacquer category",
+        "url": "https://rigoverffabriek.nl/producten/skylt/skylt-original-5510"
+      },
+      {
+        "label": "RIGO official About:own paint laboratory/production and IJmuiden manufacture,water-based wood/cork lacquers category",
+        "url": "https://rigoverffabriek.nl/over-ons?lang=1"
+      },
+      {
+        "label": "RIGO current fullvisible Products overview:seven finished-paint/lacquer/oil/wall brands,notallleafSKUs",
+        "url": "https://rigoverffabriek.nl/producten"
+      },
+      {
+        "label": "RIGO actual SKYLT range:woodcoatings/cleaners/maintenance plus0090retarder/0091iron-stainblocker functions",
+        "url": "https://rigoverffabriek.nl/producten/skylt"
+      },
+      {
+        "label": "RIGO official Contact:exact general company email,telephone and Dokweg40factory-address entry",
+        "url": "https://rigoverffabriek.nl/contact"
+      }
+    ]
+  },
   "pronto-paints-holmewood": {
     "website": "https://prontopaints.co.uk/",
     "contactPage": "https://prontopaints.co.uk/contact-us/",
@@ -15105,6 +15216,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rigo-verffabriek-ijmuiden",
   "pronto-paints-holmewood",
   "saman-victoriaville",
   "teal-mackrill-hull",
