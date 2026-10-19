@@ -5924,11 +5924,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "protek-paint-toronto",
+    "company": "Protek Paint & Varnish Company",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Toronto, Ontario",
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "legacyCompanyDescription": "加拿大自有水性木器/地板涂料、配方实验室及成品制造和品牌分销；关联品牌与工厂合计一个账户",
+    "fit": "可开发候选",
+    "signal": "当前Wood页明确Protek自身制造地板涂料线，Water-Based Urethane Varnishes段列自身聚氨酯清漆用于硬木地板及家具翻新；Home/About/Toll说明当前工厂、化学师/实验室及配方与成品制造，第三方ICA等代理产品与自产系列分别标明。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读5份TinyFish返回markdown正文：Wood19887chars按[0,4200)/[4200,10000)/[10000,16000)/[16000,end)读完；About12128与Home15050按[0,4200)/[4200,10000)/[10000,end)读完；Contact496、Toll1110全部读完。6个具体URL中单独水性产品leaf404，未重试/第7页；不宣称该SKU现货/今日投产，事实只按当前可读完整木器页列出的自身水性聚氨酯地板/家具清漆范围。Wood明确自身制造地板线并将自身水性清漆与ICA/TimberPro/Goudey/OldMasters/InternationalMarine等代理成品分开；Home/About/Toll独立证实工厂、化学师、配方实验室及制造，不能借代理ICA或DiamondVogel/PPG品牌制造当自己的证据。真实混合经营：自产工业/建筑/防火/反涂鸦/木器/地板成品、2K/潮气固化/丙烯酸/PU/环氧、色浆和染料分散、塑化剂/聚氨酯/环氧用颜料分散定制、溶剂/化学混配、蜡/普通木材油/虫胶及第三方产品/工具分销。历史1950原料醇酸树脂制造后1960年代转涂料，不能推定当前外售所选PO；Microcolor等当前颜料/色浆分散并非自动等同PO/CPO。Pro-Stick-Tek在当前成品Primers&Converters栏目，普通成品底漆不凭名称认作原料型附着促进剂；在已读当前自述经营/制造及配套类别中未见水性PO乳液、CPO/PO原料分散体或同类原料型附着促进剂外售，按NLW所选输入有限范围通过，不保证全部批发SKU/叶页/TDS/SDS/配方或全球股权。普通linseed/woodoil不等于环氧化油，但本记录仅匹配NLW木器应用，不切换产品绕过同行门槛。About明确Pyrologistix/Texturline/Aquarius关联与CottagePaint/UrbanPaint自有品牌；Microcolor/线上商店作为当前展示关联一起查重，不虚构法律股比。全latestmain/root/队列/frontier按公司域名和已知关联去重，无同一账户，不拆家族人员/门店。当前Contact/About同为335HornerToronto和4162510051本地公司电话，免费号码两页冲突未采纳；五份原正文及返回links无邮箱，不猜info@，不采代理邮箱或当前家族高管作具名收件人。原站ISO/消防/毒性/食品用途/施工安全/成本/性能声明仅保留源文，不做医疗法律/安全指导、不转我方NLW。当前需求/适配/采购时机未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司联系表单及一致的本地业务电话；未披露可核验业务邮箱或具名收件人",
+      "phone": "+1 416 251 0051",
+      "contactUrl": "https://www.protekpaint.com/contact-us/"
+    },
+    "source": {
+      "label": "Protek own wood coatings page: own-manufactured line and water-based polyurethane varnishes for hardwood floors/furniture",
+      "url": "https://www.protekpaint.com/wood-coating-paint/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "protek-paint-toronto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "his-paint-oklahoma-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "williams-hayward-summit": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colorificio-feroni-oppeano": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6230,6 +6258,28 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "protek-paint-toronto": {
+    "website": "https://www.protekpaint.com/",
+    "contactPage": "https://www.protekpaint.com/contact-us/",
+    "address": "335 Horner Avenue, Toronto, ON M8W 1Z6, Canada. City-only Toronto marker; not surveyed factory coordinates.",
+    "generalPhone": "+1 416 251 0051",
+    "generalPhoneEvidence": {
+      "company": "Protek Paint & Varnish Company",
+      "value": "+1 416 251 0051",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.protekpaint.com/contact-us/",
+          "summary": "Own current Contact and About consistently disclose local4162510051 beside335HornerAve Toronto address; general local business voice only. Toll-free8887776835 Contact versus8886776835 About is inconsistent and is not stored as verified phone."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": []
+  },
   "his-paint-oklahoma-city": {
     "website": "https://hispaint.com/",
     "contactPage": "https://hispaint.com/contact-us/",
@@ -19457,6 +19507,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "protek-paint-toronto",
   "his-paint-oklahoma-city",
   "williams-hayward-summit",
   "colorificio-feroni-oppeano",

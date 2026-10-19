@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "protek-paint-toronto": "Your water-based polyurethane varnishes are listed for hardwood floors and furniture refinishing in your wood-coatings range.",
   "his-paint-oklahoma-city": "Your Life-Kote industrial coatings are formulated and produced in the Oklahoma City region for equipment, machinery and structural components.",
   "williams-hayward-summit": "Your Aqua-Epoxy waterborne two-component coating is offered as a primer, topcoat or direct-to-metal paint in your range of industrial protective coatings.",
   "colorificio-feroni-oppeano": "Your W1500 series is a water-based acrylic wood stain offered for interior and exterior wood staining and finishing.",
