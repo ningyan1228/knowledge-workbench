@@ -10,7 +10,7 @@ import { LeadEvidenceSummary, LeadPrivatePanel } from './LeadWorkbench'
 import { CompanyBusinessContact, ContactEvidencePanel } from './ContactEvidencePanel'
 import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
-import { CompanyDetailSections } from './CompanyDetailSections'
+import { CompanyDetailSections, type CompanyDetailSectionId } from './CompanyDetailSections'
 import './CompanyDetailDrawer.css'
 
 function productOf(id: MarketProduct['id']) { return marketProducts.find((product) => product.id === id)! }
@@ -83,6 +83,7 @@ function OutreachSendPanel({ lead, ledger }: { lead: PublicLead; ledger: Outreac
 
 export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }: { lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger; work: LeadWork; leads: PublicLead[]; onNavigate: (lead: PublicLead) => void }) {
   const [dirty, setDirty] = useState(false)
+  const [activeSection, setActiveSection] = useState<CompanyDetailSectionId>('overview')
   const bodyRef = useRef<HTMLDivElement>(null)
   const canLeave = () => !work.busy && (!dirty || window.confirm('当前客户有未保存的私人进度或备注，确认放弃修改？'))
   const requestClose = () => { if (canLeave()) onClose() }
@@ -91,6 +92,7 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }
   closeRef.current = requestClose
   const opened = Boolean(lead)
   useEffect(() => { setDirty(false); bodyRef.current?.scrollTo({ top: 0 }) }, [lead?.id])
+  useEffect(() => { if (!opened) setActiveSection('overview') }, [opened])
   useEffect(() => {
     if (!opened) return
     const previous = document.activeElement as HTMLElement | null
@@ -127,7 +129,7 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }
     <section className="company-detail company-detail-drawer" role="dialog" aria-modal="true" aria-labelledby="company-detail-title" onMouseDown={(event) => event.stopPropagation()}>
       <header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p></div><button className="detail-close" disabled={work.busy} onClick={requestClose} aria-label="关闭公司详情"><X size={19} /></button></header>
       <nav className="company-detail-navigation" aria-label="切换当前筛选客户"><button type="button" disabled={!previousLead || work.busy} onClick={() => navigate(previousLead)}>上一家</button><span role="status">{index >= 0 ? `当前结果 ${index + 1} / ${leads.length}` : `已移出当前结果 · 剩余 ${leads.length} 条`}</span><button type="button" disabled={!nextLead || work.busy} onClick={() => navigate(nextLead)}>下一家</button></nav>
-      <CompanyDetailSections key={lead.id} bodyRef={bodyRef} dirty={dirty} note={note}
+      <CompanyDetailSections key={lead.id} bodyRef={bodyRef} dirty={dirty} note={note} active={activeSection} onSectionChange={setActiveSection}
         overview={<>
           <div className="company-detail-status"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span><CalendarCheck size={14} />最后核验：{lead.checkedAt}</span><span><CalendarCheck size={14} />首次收录：{recordedTimeLabel(lead)}（北京时间）</span></div>
           <section className="company-overview-summary" aria-label="公司业务概览"><div className="company-overview-heading"><strong>{product.name} → {application.name}</strong><span>{sendLabel}</span></div><p>{lead.companyEvidence.statement}</p><small>潜在需求侧客户 · 尚未确认采购或使用我方产品</small></section>

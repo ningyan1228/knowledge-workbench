@@ -36,11 +36,11 @@ describe('customer detail sections preserve research and actions', () => {
   })
   it('retains sending, draft copying, private follow-up, and next-step controls', () => {
     const html = render()
-    for (const label of ['复制简洁开发信', '实际收件邮箱', '实际发送日期', '确认已发送', '开发备注', '下次跟进日期', '保存私人进度', '找采购 / 供应链负责人', '找技术 / 研发 / 生产负责人']) expect(html).toContain(label)
+    for (const label of ['复制主题', '复制正文', '复制整封', '实际收件邮箱', '实际发送日期', '确认已发送', '开发备注', '下次跟进日期', '保存私人进度', '找采购 / 供应链负责人', '找技术 / 研发 / 生产负责人']) expect(html).toContain(label)
     expect(html).toContain('完整邮箱、联系人及其来源见“概览与联系”页签。')
   })
   it('does not treat an unreadable sending ledger as unsent', () => {
     expect(render('error')).toContain('发送状态未确认')
-    expect(render('error')).not.toContain('复制简洁开发信')
+    expect(render('error').match(/outreach-copy-button[^>]*disabled/g)).toHaveLength(3)
   })
 })

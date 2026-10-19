@@ -1,5 +1,8 @@
 .outreach-copy-feedback { grid-column:1/-1;color:var(--muted);font-size:.78rem;line-height:1.6 }
 .outreach-copy-feedback:empty { display:none }
+.outreach-prompt .outreach-actions { grid-column:1/-1;flex-direction:row;flex-wrap:wrap;justify-content:space-between }
+.outreach-copy-options { display:flex;flex-wrap:wrap;gap:.45rem }
+.outreach-copy-options .outreach-copy-button { width:auto;min-width:100px;justify-content:center }
 .outreach-manual-copy { grid-column:1/-1;min-width:0 }
 .outreach-manual-copy label { display:grid;gap:.5rem;font-size:.8rem }
 .outreach-manual-copy textarea { width:100%;box-sizing:border-box;resize:vertical;padding:.8rem;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace }
@@ -7,3 +10,4 @@
 .outreach-copy-spinner { animation:outreach-copy-spin 1s linear infinite }
 @keyframes outreach-copy-spin { to { transform:rotate(360deg) } }
 @media (prefers-reduced-motion:reduce) { .outreach-copy-spinner { animation:none } }
+@media (max-width:620px) { .outreach-copy-options { width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) }.outreach-copy-options .outreach-copy-button { min-width:0;padding-left:6px;padding-right:6px;font-size:12px } }

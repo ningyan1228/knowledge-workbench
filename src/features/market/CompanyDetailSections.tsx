@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
+import { useLayoutEffect, useRef, type ReactNode, type RefObject } from 'react'
 import './CompanyDetailSections.css'
 
 const sections = [
@@ -6,19 +6,19 @@ const sections = [
   { id: 'outreach', label: '开发信与跟进' },
   { id: 'evidence', label: '核验资料' },
 ] as const
-type SectionId = typeof sections[number]['id']
+export type CompanyDetailSectionId = typeof sections[number]['id']
 
-export function CompanyDetailSections({ overview, outreach, evidence, bodyRef, note, dirty }: {
+export function CompanyDetailSections({ overview, outreach, evidence, bodyRef, note, dirty, active, onSectionChange }: {
   overview: ReactNode; outreach: ReactNode; evidence: ReactNode;
   bodyRef: RefObject<HTMLDivElement | null>; note: ReactNode; dirty: boolean;
+  active: CompanyDetailSectionId; onSectionChange: (section: CompanyDetailSectionId) => void;
 }) {
-  const [active, setActive] = useState<SectionId>('overview')
-  const positions = useRef<Record<SectionId, number>>({ overview: 0, outreach: 0, evidence: 0 })
+  const positions = useRef<Record<CompanyDetailSectionId, number>>({ overview: 0, outreach: 0, evidence: 0 })
   const tabs = useRef<HTMLDivElement>(null)
-  const select = (next: SectionId) => {
+  const select = (next: CompanyDetailSectionId) => {
     if (next === active) return
     positions.current[active] = bodyRef.current?.scrollTop ?? 0
-    setActive(next)
+    onSectionChange(next)
   }
   useLayoutEffect(() => { bodyRef.current?.scrollTo({ top: positions.current[active], behavior: 'instant' }) }, [active, bodyRef])
   const disclose = (open: boolean) => {

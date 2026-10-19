@@ -24,6 +24,8 @@ describe('email preview follows sending status', () => {
     expect(unknown).toContain('发送状态未确认')
     expect(unknown).toMatch(/outreach-copy-button[^>]*disabled/)
     expect(unsent).not.toMatch(/outreach-copy-button[^>]*disabled/)
+    for (const label of ['复制主题', '复制正文', '复制整封']) expect(unsent).toContain(label)
+    expect(unknown.match(/outreach-copy-button[^>]*disabled/g)).toHaveLength(3)
     if (process.env.CONCISE_EMAIL_PREVIEW === '1') {
       const folder = 'research/private/concise-email-20261014'
       mkdirSync(folder, { recursive: true })
