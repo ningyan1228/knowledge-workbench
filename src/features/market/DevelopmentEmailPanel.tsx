@@ -4,6 +4,7 @@ import { marketProducts, targetCompanyTypes, tdsVerifiedApplications, marketExte
 import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { developmentEmailVersion } from '../../lib/developmentEmailVersion'
 import { copyPlainText } from '../../lib/clipboard'
+import { DevelopmentEmailRecipient } from './DevelopmentEmailRecipient'
 import type { OutreachLedger } from './useOutreachLedger'
 import './DevelopmentEmailPanel.css'
 
@@ -101,6 +102,7 @@ export function DevelopmentEmailPanel({ lead, ledger }: { lead: PublicLead; ledg
   const manualLabel = copyPart === 'subject' ? '手动复制主题' : copyPart === 'body' ? '手动复制正文' : '手动复制整封开发信'
   return <section className="outreach-prompt">
     <div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />{version.label}</h3>{qualified ? <p>{version.note}</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div>
+    <DevelopmentEmailRecipient key={lead.id} lead={lead} />
     <div className="outreach-actions">
       <div className="outreach-copy-options" role="group" aria-label="复制开发信内容">{copyParts.map((part) => {
         const current = copyPart === part.id
