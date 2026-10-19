@@ -6,7 +6,10 @@ import { copyPlainText } from '../../lib/clipboard'
 
 export function DevelopmentEmailRecipient({ lead }: { lead: PublicLead }) {
   const recipient = selectBusinessRecipient(lead)
-  const addressLabel = recipient?.provenance === 'separate-evidence' ? '建议收件邮箱' : '公开邮箱（待分项核验）'
+  const addressLabel = recipient?.provenance !== 'separate-evidence' ? '公开邮箱（待分项核验）'
+    : recipient.name ? '已核验负责人邮箱'
+      : recipient.kind === 'department' ? '已核验部门邮箱'
+        : recipient.kind === 'general' ? '已核验公司邮箱' : '已核验业务邮箱'
   const [state, setState] = useState<'idle' | 'copying' | 'copied'>('idle')
   const [message, setMessage] = useState('')
   const field = useRef<HTMLInputElement>(null)

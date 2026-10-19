@@ -14,7 +14,7 @@ const render = (customer: PublicLead) => renderToStaticMarkup(createElement(Deve
 describe('development email recipient matches verified contact selection', () => {
   it('shows the sourced public company email beside the development draft', () => {
     const html = render(lead)
-    expect(html).toContain('建议收件邮箱')
+    expect(html).toContain('已核验公司邮箱')
     expect(html).toContain('info@feroni.it')
     expect(html).toContain('非具名负责人邮箱')
     expect(html).toContain(lead.profile.generalEmailEvidence!.sources[0].url)
@@ -26,10 +26,15 @@ describe('development email recipient matches verified contact selection', () =>
     const html = render(named)
     expect(html).toContain('buyer@example.org')
     expect(html).toContain('Fixture Buyer · Procurement Manager')
+    expect(html).toContain('已核验负责人邮箱')
     expect(html).not.toContain('非具名负责人邮箱')
     const unproved = { ...named, profile: { ...named.profile, contacts: [provedContact(lead.company, { emailEvidence: undefined })] } }
     expect(render(unproved)).not.toContain('buyer@example.org')
     expect(render(unproved)).toContain('info@feroni.it')
+    const contact = provedContact(lead.company, { email: 'purchasing@example.org' })
+    const department = { ...lead, profile: { ...lead.profile, contacts: [{ ...contact, emailEvidence: { ...contact.emailEvidence!, kind: 'department' as const } }] } }
+    expect(render(department)).toContain('已核验部门邮箱')
+    expect(render(department)).not.toContain('已核验负责人邮箱')
   })
   it('keeps missing or unqualified recipient states explicit without guessing an email', () => {
     const noEmail = { ...lead, profile: { ...lead.profile, generalEmail: undefined, contacts: [], departmentEmails: [] } }
@@ -41,6 +46,7 @@ describe('development email recipient matches verified contact selection', () =>
     expect(render(legacy)).toContain('公开邮箱（待分项核验）')
     expect(render(legacy)).not.toContain('建议收件邮箱')
     expect(render(legacy)).not.toContain('邮箱来源已核验')
+    expect(render(legacy)).not.toContain('已核验公司邮箱')
     const otherCompanyProof = { ...lead, profile: { ...lead.profile, contacts: [], departmentEmails: [], generalEmailEvidence: { ...lead.profile.generalEmailEvidence!, company: 'Another Company' } } }
     expect(render(otherCompanyProof)).toContain('暂无可推荐的公开业务邮箱')
     expect(render(otherCompanyProof)).not.toContain('info@feroni.it')
@@ -50,6 +56,7 @@ describe('development email recipient matches verified contact selection', () =>
     for (const customer of publicLeads) {
       const recipient = selectBusinessRecipient(customer)
       const html = render(customer)
+      expect(html, customer.id).not.toContain('建议收件邮箱')
       const draft = developmentEmailVersion(customer, []).email
       if (!recipient) {
         expect(html, customer.id).toContain('暂无可推荐的公开业务邮箱')

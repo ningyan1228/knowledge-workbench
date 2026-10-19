@@ -72,7 +72,7 @@ export function contactAssessment(company: string, contact: CompanyContact) {
   return { identity, email, namedEmail, phone, linkedIn, missing, labels }
 }
 
-export type BusinessRecipient = { email: string; name?: string; label: string; sourceUrl: string; priority: number; identitySources?: ContactSource[]; emailSources: Array<{ label: string; url: string; summary?: string }>; verifiedAt?: string; provenance: 'separate-evidence' | 'legacy-company-source' }
+export type BusinessRecipient = { email: string; name?: string; kind: EmailEvidence['kind']; label: string; sourceUrl: string; priority: number; identitySources?: ContactSource[]; emailSources: Array<{ label: string; url: string; summary?: string }>; verifiedAt?: string; provenance: 'separate-evidence' | 'legacy-company-source' }
 export function qualifiedContactCompany(lead: PublicLead) {
   const evidence = lead.companyEvidence
   const target = targetCompanyTypes.find((item) => item.id === lead.targetCompanyTypeId)
@@ -91,18 +91,18 @@ export function selectBusinessRecipient(lead: PublicLead): BusinessRecipient | n
     // A claimed personal inbox with missing identity must not be relabelled as a company inbox.
     if (contact.emailEvidence!.kind === 'named-business' && !isGenericInbox(contact.email!) && !named) continue
     const proof = contact.emailEvidence!
-    choices.push({ email: contact.email!, name: named ? contact.name : undefined, label: named ? contact.title! : '公司／部门业务邮箱', sourceUrl: proof.sources[0].url, priority: named ? contactRolePriority(`${contact.department ?? ''} ${contact.title}`) : 6, identitySources: named ? contact.identityEvidence!.sources : undefined, emailSources: proof.sources, verifiedAt: proof.verifiedAt, provenance: 'separate-evidence' })
+    choices.push({ email: contact.email!, name: named ? contact.name : undefined, kind: proof.kind, label: named ? contact.title! : '公司／部门业务邮箱', sourceUrl: proof.sources[0].url, priority: named ? contactRolePriority(`${contact.department ?? ''} ${contact.title}`) : 6, identitySources: named ? contact.identityEvidence!.sources : undefined, emailSources: proof.sources, verifiedAt: proof.verifiedAt, provenance: 'separate-evidence' })
   }
   for (const item of lead.profile.departmentEmails) {
     if (!validBusinessEmail(item.email)) continue
     if (item.emailEvidence ? !contactEmailVerified(lead.company, item.email, item.emailEvidence) || item.emailEvidence.kind === 'named-business' : !item.source?.label || !publicContactUrl(item.source.url)) continue
     const sources = item.emailEvidence?.sources ?? [item.source!]
-    choices.push({ email: item.email, label: `${item.department} 部门邮箱`, sourceUrl: sources[0].url, priority: contactRolePriority(item.department), emailSources: sources, verifiedAt: item.emailEvidence?.verifiedAt, provenance: item.emailEvidence ? 'separate-evidence' : 'legacy-company-source' })
+    choices.push({ email: item.email, kind: item.emailEvidence?.kind ?? 'department', label: `${item.department} 部门邮箱`, sourceUrl: sources[0].url, priority: contactRolePriority(item.department), emailSources: sources, verifiedAt: item.emailEvidence?.verifiedAt, provenance: item.emailEvidence ? 'separate-evidence' : 'legacy-company-source' })
   }
   const profile = lead.profile, sourceUrl = profile.contactPage ?? profile.website
   if (validBusinessEmail(profile.generalEmail) && (profile.generalEmailEvidence ? contactEmailVerified(lead.company, profile.generalEmail, profile.generalEmailEvidence) && profile.generalEmailEvidence.kind !== 'named-business' : publicContactUrl(sourceUrl))) {
     const sources = profile.generalEmailEvidence?.sources ?? [{ label: '公司公开业务入口（旧记录）', url: sourceUrl! }]
-    choices.push({ email: profile.generalEmail!, label: 'General 公司邮箱', sourceUrl: sources[0].url, priority: 6, emailSources: sources, verifiedAt: profile.generalEmailEvidence?.verifiedAt, provenance: profile.generalEmailEvidence ? 'separate-evidence' : 'legacy-company-source' })
+    choices.push({ email: profile.generalEmail!, kind: profile.generalEmailEvidence?.kind ?? 'general', label: 'General 公司邮箱', sourceUrl: sources[0].url, priority: 6, emailSources: sources, verifiedAt: profile.generalEmailEvidence?.verifiedAt, provenance: profile.generalEmailEvidence ? 'separate-evidence' : 'legacy-company-source' })
   }
   return choices.sort((a, b) => a.priority - b.priority)[0] ?? null
 }
