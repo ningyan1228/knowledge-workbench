@@ -5757,11 +5757,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "colorlak-stare-mesto",
+    "company": "COLORLAK, a.s.",
+    "productId": "nl-w1201",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Staré Město",
+    "latitude": 49.0752,
+    "longitude": 17.4334,
+    "legacyCompanyDescription": "捷克自有木器及工业涂料制造企业，兼具零售批发业务；COLORLAK及已披露关联网络按一个账户",
+    "fit": "可开发候选",
+    "signal": "当前公司原文披露COLORLAK持续涂料制造、生产能力现代化和实验室；具体AQUALAKV1419明确水性木器面漆用于室内家具、护墙板和椅子，PROFIPARKETV1509为水性单组分PU木器漆。Contact另明确负责木器涂装系统及一般工业的当前销售代表及个人业务渠道。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读6份当前自有HTML：About11302chars、Contact11083、Home9426、木器清漆目录10228、AQUALAK12337、PROFIPARKET11838。AQUALAKV1419明确为水性木材面漆用于室内家具/护墙板/椅子，PROFIPARKETV1509明确为水性单组分PU木器漆；About/Home披露持续涂料制造、制造能力现代化和实验室，非只凭代理目录。保留真实混合经营：自产涂料及零售/批发、薄木/金属/矿物基材成品、喷雾、稀释剂、固化剂、清洁剂、调色体系。历史1930年代自制原料釜房为历史内部投入生产说明，不能推定当前对外售所选输入；普通木器面漆、底漆、喷雾附着品/配套硬化剂不直接等同水性PO乳液或CPO/PO分散体。在实际审读当前经营、类别及具体产品中未见水性聚烯烃乳液、氯化聚烯烃/PO分散体或同类原料型附着促进剂对外销售，按所选输入和所查范围通过排除；未读取全部SKU/TDS/SDS/配方、全部批发品牌或全球股权，不保证未披露产品、不发明外购例外。About明确历史PANTERCOLOR/EKOLAK/AAA/TECHNICOLOR及COLORLAKSK/Polska关联，2026拟合并捷克子公司的说法仍按计划而非已完成法律合并；集团/品牌/多国网点按一个关联账户检查main/root/全队列/frontier，无同一已知主体，不拆零售/工厂。Contact当前法定COLORLAKa.s.、StaréMěsto地址及一般info@/总机分别核实；TomášMikulička当前木器涂装及一般工业销售职责、本人公开业务邮箱和业务手机号分别记录，同一原文明示两类事实可分项引用。不是采购/研发负责人，不推定原料决策权；其他高管/HR/营销/容器技术人员不冒称木器采购人。原文标准HTML实体仅作文字释读，不执行站点脚本、不破译受保护内容；Calculator及重复模板文字不是已提交或实测结果。产品认证、玩具/食品接触、耐久/干燥等仅源站成品声明，不转移到NLW。城市坐标仅StaréMěsto代表位置。"
+    },
+    "contact": {
+      "label": "官网明确木器涂装业务代表及本人公开业务邮箱/电话；不是已核实采购负责人",
+      "email": "mikulicka@colorlak.cz",
+      "phone": "+420 724 144 451",
+      "contactUrl": "https://colorlak.cz/kontakty"
+    },
+    "source": {
+      "label": "COLORLAK own AQUALAK V1419 water-based wood varnish, current coating manufacture and named wood-coatings business contact",
+      "url": "https://colorlak.cz/aqualak-v1419"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "colorlak-stare-mesto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "brillux-muenster": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "steelpaint-kitzingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zingametall-eke": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6057,6 +6086,127 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "colorlak-stare-mesto": {
+    "website": "https://colorlak.cz/",
+    "contactPage": "https://colorlak.cz/kontakty",
+    "address": "Tovární 1076, 686 03 Staré Město, Czech Republic",
+    "generalEmail": "info@colorlak.cz",
+    "generalEmailEvidence": {
+      "company": "COLORLAK, a.s.",
+      "value": "info@colorlak.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://colorlak.cz/kontakty",
+          "summary": "OwnContact explicitly lists Email info@colorlak.cz as company general business inbox; separate from every named staff entry."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+420 572 527 111",
+    "generalPhoneEvidence": {
+      "company": "COLORLAK, a.s.",
+      "value": "+420 572 527 111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://colorlak.cz/kontakty",
+          "summary": "OwnContact explicitly lists Telefon +420572527111 and separately Fax+420572541215 andInfolinka800145555. Corporate voice not assigned to namedwood representative."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [
+      {
+        "name": "Tomáš Mikulička",
+        "title": "Industrial sales representative — wood coating systems and general industry",
+        "department": "Sales",
+        "email": "mikulicka@colorlak.cz",
+        "phone": "+420 724 144 451",
+        "identityEvidence": {
+          "company": "COLORLAK, a.s.",
+          "name": "Tomáš Mikulička",
+          "title": "Industrial sales representative — wood coating systems and general industry",
+          "responsibilities": "Current own Contact under industrial-market/export business department explicitly lists Tomáš MIKULIČKA, obchodní zástupce pro průmyslový trh - specializace na nátěrové systémy na dřevo, všeobecný průmysl. Title translated faithfully: industrial sales representative specializing in wood coating systems/general industry. No procurement/technical decision authority inferred.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current industrial wood-system business role",
+              "url": "https://colorlak.cz/kontakty",
+              "summary": "Current own Contact under industrial-market/export business department explicitly lists Tomáš MIKULIČKA, obchodní zástupce pro průmyslový trh - specializace na nátěrové systémy na dřevo, všeobecný průmysl. Title translated faithfully: industrial sales representative specializing in wood coating systems/general industry. No procurement/technical decision authority inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "emailEvidence": {
+          "company": "COLORLAK, a.s.",
+          "value": "mikulicka@colorlak.cz",
+          "kind": "named-business",
+          "personName": "Tomáš Mikulička",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current named wood-coatings business channel",
+              "url": "https://colorlak.cz/kontakty",
+              "summary": "Exact mikulicka@colorlak.cz printed within Tomáš MIKULIČKA wood-system business entry. Ordinary public text/mailto, no guessedaddress, genericinbox assignment, protecteddecode or privatechannel."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "phoneEvidence": {
+          "company": "COLORLAK, a.s.",
+          "value": "+420 724 144 451",
+          "kind": "named-business",
+          "personName": "Tomáš Mikulička",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current named wood-coatings business channel",
+              "url": "https://colorlak.cz/kontakty",
+              "summary": "Exact +420724144451 printed in the same namedwood-business entry. Public company-published businessmobile, not independently proven office landline or private phone. Separate from companygeneral/fax/infolinka."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "source": {
+          "label": "COLORLAK own current wood-coatings business representative",
+          "url": "https://colorlak.cz/kontakty"
+        },
+        "verifiedAt": "2026-10-19"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company, current production history and group relations",
+        "url": "https://colorlak.cz/o-spolecnosti"
+      },
+      {
+        "label": "Own current legal company and separate named/general business contacts",
+        "url": "https://colorlak.cz/kontakty"
+      },
+      {
+        "label": "Own current finished-product families and ongoing coating manufacture",
+        "url": "https://colorlak.cz/"
+      },
+      {
+        "label": "Own wood varnish category",
+        "url": "https://colorlak.cz/sortiment/drevo?filters=%7B%22tcategory_ids%22%3A%5B120101%5D%7D"
+      },
+      {
+        "label": "Own AQUALAK V1419: water-based interior wood finishing varnish",
+        "url": "https://colorlak.cz/aqualak-v1419"
+      },
+      {
+        "label": "Own PROFI PARKET V1509: water-based one-component polyurethane wood varnish",
+        "url": "https://colorlak.cz/profi-parket-v1509"
+      }
+    ]
+  },
   "brillux-muenster": {
     "website": "https://www.brillux.de/",
     "contactPage": "https://www.brillux.de/impressum/",
@@ -18913,6 +19063,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "colorlak-stare-mesto",
   "brillux-muenster",
   "steelpaint-kitzingen",
   "zingametall-eke",
