@@ -5897,11 +5897,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "his-paint-oklahoma-city",
+    "company": "HIS Paint Manufacturing Company (HIS Coatings)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Oklahoma City, Oklahoma",
+    "latitude": 35.4676,
+    "longitude": -97.5164,
+    "legacyCompanyDescription": "美国自有工业防护成品涂料制造及研发实验室；仅已核验公开联系页/工业销售业务电话，邮箱未披露",
+    "fit": "可开发候选",
+    "signal": "当前About明确在OklahomaCity两处自身工厂制造涂料，Sheridan工厂有工业制造及R&D技术实验室；Life-Kote明确在本地配方及生产，用于工业设备、机械和结构部件，IndustrialSales列防腐防护涂料成品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读TinyFish返回6个自有markdown正文：Home1107、LifeKote2593、About5657、Industrial9150、Sales5571、Contact1393chars，长页分[0,5000)/[5000,end)连读。About明确OklahomaCity自身两处工厂、Sheridan工业制造及研发实验室；LifeKote明确当地配方生产及设备/机械/结构部件应用，Sales实际列防腐防护成品/定制工业漆和工具。Industrial长页部分为通用行业科普，不冒称每一种航空/船用/防火类别都为其实际生产认证或全SKU。真实经营含建筑漆、乳胶与醇酸/工业成品、OEM/能源/废弃物/线缆涂层、定制色/特殊漆及喷涂工具、门店分销，不能说纯制造或把所有paint supplies当原料。在实际读到自身经营、具体LifeKote及当前工业销售成品范围未见ELO、ESBO、环氧化植物油或同类生物增塑稳定原料外售；按所选ELO输入有限已读范围通过，不声称全目录PDF/SDS/全部SKU/配方或全球股权审计。历史GeminiLacquers为创始人的旧雇主，不推定为现有母子公司；自身自述Cox家族多代经营、两厂/门店/品牌按一个账户，全latestmain/root/队列/frontier按HIS及域名去重，无同一已知账户，未发明LLC后缀。About个人生活/宗教故事不作采购偏好、评分或开发信个性化。6份正文和原返回links均没有公开邮箱或mailto；不构造邮箱、不将历史/现任高管等同具名收件人。Contact明确工业销售共享电话4052354298，与FactoryStore4052322077、传真、免费热线分开；只存部门业务电话及公开contact页面，不提交表单、不查私人渠道。原文ISO/VOC/HAPS/法规安全/长效防护/价格和性能宣传不作为独立认证、不转移到ELO。原料需求/相容/采购时机未确认。"
+    },
+    "contact": {
+      "label": "官网工业销售部门电话及公开联系表单；未披露可验证业务邮箱或具名收件人",
+      "phone": "+1 405 235 4298",
+      "contactUrl": "https://hispaint.com/contact-us/"
+    },
+    "source": {
+      "label": "Own Life-Kote industrial coating formulation/production and own Oklahoma City manufacturing/R&D evidence",
+      "url": "https://hispaint.com/industrial-coatings/life-kote-industrial-coatings/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "his-paint-oklahoma-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "williams-hayward-summit": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colorificio-feroni-oppeano": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ot-dynamics-flat-rock": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6202,6 +6230,28 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "his-paint-oklahoma-city": {
+    "website": "https://hispaint.com/",
+    "contactPage": "https://hispaint.com/contact-us/",
+    "address": "Industrial manufacturing and sales: 1700 West Sheridan, Oklahoma City, OK 73106, United States. Corporate/latex facility: 1801 West Reno, Oklahoma City, OK 73106. City-only marker, not surveyed factory location.",
+    "generalPhone": "+1 405 235 4298",
+    "generalPhoneEvidence": {
+      "company": "HIS Paint Manufacturing Company (HIS Coatings)",
+      "value": "+1 405 235 4298",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://hispaint.com/contact-us/",
+          "summary": "Own current Contact INDUSTRIAL SALES expressly lists1700WestSheridan andPhone(405)235-4298, separateFax4052354659/tollfree8005532077 andFactoryStore4052322077. Published shared departmental business voice only, not a named person or general factory-store line."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": []
+  },
   "williams-hayward-summit": {
     "website": "https://www.williams-hayward.com/",
     "contactPage": "https://www.williams-hayward.com/contact",
@@ -19407,6 +19457,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "his-paint-oklahoma-city",
   "williams-hayward-summit",
   "colorificio-feroni-oppeano",
   "ot-dynamics-flat-rock",
