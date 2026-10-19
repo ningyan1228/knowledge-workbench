@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "mankiewicz-hamburg": "Your corrosion-protection coating systems cover industrial machinery, agricultural equipment and energy applications, with tailored solvent-based and water-based formulations.",
   "rubio-monocoat-izegem": "Your DuroGrit is a water-based wood oil for exterior decking and garden furniture.",
   "aexcel-mentor": "Your team formulates industrial protective coatings for steel, concrete and equipment, including epoxy, urethane, acrylic and alkyd systems.",
   "richards-paint-rockledge": "Your Python range includes a polyamide epoxy gloss coating and an epoxy mastic for industrial protective coating applications.",

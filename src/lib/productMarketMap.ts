@@ -5645,11 +5645,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "mankiewicz-hamburg",
+    "company": "Mankiewicz Gebr. & Co. (GmbH & Co. KG)",
+    "productId": "elo",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Hamburg",
+    "latitude": 53.5511,
+    "longitude": 9.9937,
+    "legacyCompanyDescription": "工业防护及防腐涂料研发和制造企业，Mankiewicz关联集团只计一个账户",
+    "fit": "可开发候选",
+    "signal": "官网首页明确独立企业开发并制造工业批量生产用涂料；防腐页列出工业机械、农业机械、能源等腐蚀保护应用；Solutions 页列出溶剂及水性定制体系和原料性能研发，Locations 与 Impressum 核实德国 Hamburg 主体及关联网络。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文读6份当前官网原文，并只按原始HTML的静态图像alt读取Solutions实际产品家族logo：ALEXIT BladeRep/Alexseal/CYCON/CYCONJET/NEXTEL/SEEVENAX。主业务为工业/汽车/航空/机械/能源/船艇等成品涂料及定制研发、技术与过程服务；可见水性和溶剂型体系。所查未发现ELO、ESBO、环氧化植物油或生物增塑/稳定原料对外销售。保留真实不同成品与原料性能研发，不把涂料原料知识当添加剂销售；此为实际所查当前首页/应用/解决方案/法律/地点范围结论，不宣称读取所有SKU/配方/SDS/全球子公司叶页。首页当前独立企业陈述与Impressum法定主体/GP Grau Gebr. Beteiligungs-GmbH、Locations的NORIX/Rüdt及各国Mankiewicz/Aerotechnic联系网络按一个关联账户检查最新main/root/队列/frontier，无同一账户；ALEXSEAL等系列不另计新公司。中国地点保留为集团关系事实但不纳入新客户；不扩大成每个地点均自有独立工厂或最终受益所有权核验。Contact仅返回导航，不冒称JS联系表单已读取；有效公开业务入口来自Impressum的明确邮箱记法与总机，传真单列，Michael O.Grau管理身份不冒充采购/个人邮箱。坐标仅Hamburg城市点。"
+    },
+    "contact": {
+      "label": "官网Impressum公开公司一般业务邮箱、电话；传真与具名管理者分开",
+      "email": "info@mankiewicz.com",
+      "phone": "+49 40 751030",
+      "contactUrl": "https://www.mankiewicz.com/de/impressum"
+    },
+    "source": {
+      "label": "Own corrosion-protection systems, manufacturing homepage and solvent/waterborne solution portfolio",
+      "url": "https://www.mankiewicz.com/de/loesungen/korrosionsschutz"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mankiewicz-hamburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rubio-monocoat-izegem": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "aexcel-mentor": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "richards-paint-rockledge": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5941,6 +5970,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mankiewicz-hamburg": {
+    "website": "https://www.mankiewicz.com/",
+    "contactPage": "https://www.mankiewicz.com/de/impressum",
+    "address": "Georg-Wilhelm-Straße 189, 21107 Hamburg, Germany",
+    "generalEmail": "info@mankiewicz.com",
+    "generalEmailEvidence": {
+      "company": "Mankiewicz Gebr. & Co. (GmbH & Co. KG)",
+      "value": "info@mankiewicz.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.mankiewicz.com/de/impressum",
+          "summary": "Own Imprint explicitly displays E-Mail: info (at) mankiewicz (dot) com beside legal entity/address. Normalize the publicly written at/dot notation only; no guessed address pattern, protected data decoding, personal ownership or delivery claim."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+49 40 751030",
+    "generalPhoneEvidence": {
+      "company": "Mankiewicz Gebr. & Co. (GmbH & Co. KG)",
+      "value": "+49 40 751030",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.mankiewicz.com/de/impressum",
+          "summary": "Own Imprint labels Telefon: + 49 40 751030 and separately Telefax: + 49 40 75103510; Locations independently lists same Hamburg entity/phone. General company voice line, not fax or Michael O. Grau personal number."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing and independent status",
+        "url": "https://www.mankiewicz.com/de/"
+      },
+      {
+        "label": "Own industrial corrosion protection",
+        "url": "https://www.mankiewicz.com/de/loesungen/korrosionsschutz"
+      },
+      {
+        "label": "Own solvent/waterborne solutions and actual product-family logos",
+        "url": "https://www.mankiewicz.com/de/loesungen"
+      },
+      {
+        "label": "Own Contact page returned navigation only; no form submitted or hidden content asserted",
+        "url": "https://www.mankiewicz.com/de/kontakt"
+      },
+      {
+        "label": "Own Hamburg legal entity, GP, general mailbox notation and voice/fax separation",
+        "url": "https://www.mankiewicz.com/de/impressum"
+      },
+      {
+        "label": "Own related locations and legal entity names",
+        "url": "https://www.mankiewicz.com/de/unternehmen/standorte"
+      }
+    ]
+  },
   "rubio-monocoat-izegem": {
     "website": "https://www.rubiomonocoat.com/",
     "contactPage": "https://www.rubiomonocoat.com/nl-BE/over-ons/contact",
@@ -18549,6 +18641,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mankiewicz-hamburg",
   "rubio-monocoat-izegem",
   "aexcel-mentor",
   "richards-paint-rockledge",
