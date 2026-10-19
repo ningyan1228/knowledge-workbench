@@ -5701,11 +5701,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "steelpaint-kitzingen",
+    "company": "Steelpaint GmbH (Emil Harrasser subsidiary)",
+    "productId": "elo",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Kitzingen",
+    "latitude": 49.7383,
+    "longitude": 10.1614,
+    "legacyCompanyDescription": "工业及海工防腐涂料制造企业；Steelpaint与母公司Emil Harrasser按一个关联账户处理",
+    "fit": "可开发候选",
+    "signal": "官网 Company 原文说明 Steelpaint 为 Emil Harrasser 涂料公司子公司，自有生产并出口工业及海工用涂料，应用于港口、储罐、桥梁和船舶；当前产品和下载目录交叉列出湿气固化 PU、防腐底中面漆及 Stelcatec-L 成品体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文读6份当前原文：Company自有制造/母公司、全部可见下载目录、产品说明、Contact、法律声明、Stelcatec-L。实际销售为工业/海工防腐底中面漆、PU系列及其修补/稀释配套和Stelcatec-L成品。保留当前目录真实2K-PU及其他体系，不把旧英文页only1K叙述扩为全部当前SKU；溶剂稀释/修补涂层不自动等于ELO/ESBO功能原料。在所查当前公开范围未见ELO、ESBO、环氧化植物油或生物增塑/稳定剂原料销售；结论限6页/可见目录，不声称母公司全部未披露配方/全球SKU/TDS/SDS均已核验。Company明确Emil Harrasser子公司关联，Steelpaint/Harrasser-Harresser拼写/Steelpaint.com/.de/Stelpant/Stelcatec作为一个关联账户，对最新main/root/私有queue/frontier全量去重无同一账户；未把上海地点或外国代理商另外新增，不从联系人名或经销关系虚构集团所有权。当前法定地址97318与Contact一致，旧footer97305保持为旧来源差异；坐标仅Kitzingen城市点。一般业务邮箱来自同一公开HTML的静态mailto且aria-label明确Email to Steelpaint，.com与网站.de差异按真实地址保留，未解析受保护正文邮箱或执行JS；总机、传真、管理人员和中国/代理联系保持分开，未发邮件/提交表单。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "mail@steelpaint.com",
+      "phone": "+49 9321 37040",
+      "contactUrl": "https://www.steelpaint.de/de/kontakt"
+    },
+    "source": {
+      "label": "Own manufacture and Emil Harrasser relationship, cross-checked against current product portfolio and Stelcatec-L page",
+      "url": "https://www.steelpaint.de/en/company"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "steelpaint-kitzingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zingametall-eke": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mankiewicz-hamburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rubio-monocoat-izegem": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5999,6 +6028,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "steelpaint-kitzingen": {
+    "website": "https://www.steelpaint.de/",
+    "contactPage": "https://www.steelpaint.de/de/kontakt",
+    "address": "Am Dreistock 9, 97318 Kitzingen, Germany",
+    "generalEmail": "mail@steelpaint.com",
+    "generalEmailEvidence": {
+      "company": "Steelpaint GmbH (Emil Harrasser subsidiary)",
+      "value": "mail@steelpaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.steelpaint.de/de/kontakt",
+          "summary": "Same retrieved current official HTML contains a direct static href mailto:mail@steelpaint.com with aria-label Email to Steelpaint, a general company email icon. Exact address deliberately public in the ordinary link; protected inline email fields remain unparsed. No JavaScript/protected-payload decoding, address-pattern inference, company-domain suffix guess or delivery claim."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+49 9321 37040",
+    "generalPhoneEvidence": {
+      "company": "Steelpaint GmbH (Emil Harrasser subsidiary)",
+      "value": "+49 9321 37040",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.steelpaint.de/de/kontakt",
+          "summary": "Own current Germany contact block gives Tel. +49 (0) 9321 370 40, separate Fax +49 (0) 9321 370 440. Legal notice confirms Telefon +49 (0) 9321 37040 and Am Dreistock9/97318 address. Generalcompanyline, not directors'/China/distributors'phone."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacture, industrial/marine applications and Emil Harrasser relationship",
+        "url": "https://www.steelpaint.de/en/company"
+      },
+      {
+        "label": "Current full visible download/product families; linked documents not read",
+        "url": "https://www.steelpaint.de/de/produkte/all-downloads"
+      },
+      {
+        "label": "Own moisture-curing PU finished coating systems",
+        "url": "https://www.steelpaint.de/de/produkte"
+      },
+      {
+        "label": "Own current Germany corporate contact and public static company email icon",
+        "url": "https://www.steelpaint.de/de/kontakt"
+      },
+      {
+        "label": "Own current legal operator, Germany phone/fax and same static company email icon",
+        "url": "https://www.steelpaint.de/de/kontakt/impressum"
+      },
+      {
+        "label": "Own Stelcatec-L finished corrosion-protection line",
+        "url": "https://www.steelpaint.de/de/produkte/stelcatec-l-de"
+      }
+    ]
+  },
   "zingametall-eke": {
     "website": "https://zinga.eu/",
     "contactPage": "https://zinga.eu/contact",
@@ -18733,6 +18825,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "steelpaint-kitzingen",
   "zingametall-eke",
   "mankiewicz-hamburg",
   "rubio-monocoat-izegem",
