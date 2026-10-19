@@ -5,10 +5,13 @@ import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip, useMa
 import { leadMapGroups, mapCountryGroups, type LeadMapGroup } from '../../lib/leadMapClusters'
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
 import { leadMapViewport } from '../../lib/leadMapViewport'
+import type { LeadMapBounds } from '../../lib/leadMapBounds'
 import './GlobalLeadMap.css'
 
 function MapFocus({ target, leads, overviewToken, closeUp }: { target: PublicLead | null; leads: PublicLead[]; overviewToken: number; closeUp: boolean }) {
   const map = useMap()
+  const targetRef = useRef(target)
+  targetRef.current = target && leads.some((lead) => lead.id === target.id) ? target : null
   const { bounds: [[south, west], [north, east]], maxZoom } = leadMapViewport(leads, closeUp)
   useEffect(() => {
     const fit = () => {
@@ -16,20 +19,40 @@ function MapFocus({ target, leads, overviewToken, closeUp }: { target: PublicLea
       map.setMinZoom(Math.max(0, Math.log2(map.getSize().x / 256)))
       const narrow = map.getSize().x < 500
       const horizontalPadding = narrow ? 38 : 56
-      map.fitBounds([[south, west], [north, east]], { paddingTopLeft: [horizontalPadding, narrow ? 40 : 72], paddingBottomRight: [horizontalPadding, narrow ? 48 : 36], maxZoom, animate: false })
+      if (targetRef.current) map.setView([targetRef.current.latitude, targetRef.current.longitude], Math.max(map.getZoom(), 12), { animate: false })
+      else map.fitBounds([[south, west], [north, east]], { paddingTopLeft: [horizontalPadding, narrow ? 40 : 72], paddingBottomRight: [horizontalPadding, narrow ? 48 : 36], maxZoom, animate: false })
     }
     fit()
     let frame = 0
+    const container = map.getContainer()
+    let width = container.clientWidth, height = container.clientHeight
     const observer = new ResizeObserver(() => {
+      if (container.clientWidth === width && container.clientHeight === height) return
+      width = container.clientWidth
+      height = container.clientHeight
       cancelAnimationFrame(frame)
       frame = requestAnimationFrame(fit)
     })
-    observer.observe(map.getContainer())
+    observer.observe(container)
     return () => { observer.disconnect(); cancelAnimationFrame(frame) }
   }, [map, south, west, north, east, maxZoom, overviewToken])
   useEffect(() => {
     if (target) map.setView([target.latitude, target.longitude], Math.max(map.getZoom(), 12), { animate: false })
   }, [map, target])
+  return null
+}
+
+function MapBoundsObserver({ onChange }: { onChange?: (bounds: LeadMapBounds) => void }) {
+  const map = useMap()
+  useEffect(() => {
+    const report = () => {
+      const bounds = map.getBounds()
+      onChange?.({ south: bounds.getSouth(), west: bounds.getWest(), north: bounds.getNorth(), east: bounds.getEast() })
+    }
+    report()
+    map.on('moveend resize', report)
+    return () => { map.off('moveend resize', report) }
+  }, [map, onChange])
   return null
 }
 
@@ -51,7 +74,7 @@ function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGro
     html: `<span>${escapeHtml(group.label)}</span><strong>${group.count}<small> 家</small></strong>`,
     iconSize: compact ? [62, 44] : [112, 44], iconAnchor: [anchorX, anchorY],
   }), [group.label, group.count, active, compact, anchorX, anchorY])
-  return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击筛选并展开`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip>{label} · 点击筛选并展开</Tooltip></Marker>
+  return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击展开区域`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip>{label} · 点击展开区域</Tooltip></Marker>
 }
 
 function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead, onSelectGroup }: {
@@ -87,16 +110,17 @@ function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead
         const position = spread ? map.unproject([center.x + Math.cos(angle) * radius, center.y + Math.sin(angle) * radius], zoom) : [lead.latitude, lead.longitude] as [number, number]
         const color = marketProducts.find((product) => product.id === lead.productId)!.color
         const highlighted = activeLead?.id === lead.id
-        const icon = divIcon({ className: `lead-map-company${highlighted ? ' is-highlighted' : ''}`, html: `<span style="background:${color}"></span>`, iconSize: [28, 28], iconAnchor: [14, 14] })
+        const icon = divIcon({ className: `lead-map-company${highlighted ? ' is-highlighted' : ''}`, html: `<span data-lead-id="${escapeHtml(lead.id)}" style="background:${color}"></span>`, iconSize: [28, 28], iconAnchor: [14, 14] })
         return <Fragment key={lead.id}>{spread && <Polyline positions={[[lead.latitude, lead.longitude], position]} pathOptions={{ color: '#64748b', opacity: .6, weight: 1, interactive: false }} />}<Marker position={position} icon={icon} zIndexOffset={highlighted ? 1000 : 0} title={lead.company} alt={lead.company} eventHandlers={{ click: () => onSelectLead(lead) }}><Tooltip key={highlighted ? 'active' : 'idle'} permanent={highlighted} direction="top">{lead.company} · {lead.countryZh}{spread ? '（同城位置展开）' : ''}</Tooltip></Marker></Fragment>
       })}</Fragment>
     })}
   </>
 }
 
-export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false, onReturnRegions }: {
+export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false, onReturnRegions, onBoundsChange }: {
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
   onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number; closeUp?: boolean; onReturnRegions?: () => void;
+  onBoundsChange?: (bounds: LeadMapBounds) => void;
 }) {
   const [showDensity, setShowDensity] = useState(false)
   const frameRef = useRef<HTMLDivElement>(null)
@@ -125,10 +149,11 @@ export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, 
   const viewport = leadMapViewport(leads, closeUp)
   return <div ref={frameRef} className={`lead-map-frame ${viewport.wide ? 'is-world-framing' : 'is-region-framing'}`}>
     {onReturnRegions && <button className="map-return-regions" type="button" onClick={onReturnRegions}><ArrowLeft size={13} />返回全部地区</button>}
-    <div className="lead-map-controls"><span>点击聚合点筛选客户 · 放大查看公司</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
+    <div className="lead-map-controls"><span>点击聚合点展开 · 点击公司联动客户卡片</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
     <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
       <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <MapFocus target={selectedLead} leads={leads} overviewToken={overviewToken} closeUp={closeUp} />
+      <MapBoundsObserver onChange={onBoundsChange} />
       <MapLayers leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} showDensity={showDensity} onSelectLead={onSelectLead} onSelectGroup={onSelectGroup} />
     </MapContainer>
     <p className="lead-map-legend">数字为当前筛选内的公司数，彩色点按产品区分。{showDensity && '黄圈表示各国已核验公开线索数量，位置为客户坐标汇总。'}数量不代表市场规模、成交概率或真实需求量。</p>

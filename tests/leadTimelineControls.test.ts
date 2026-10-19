@@ -19,6 +19,13 @@ const today = '2026-10-15'
 afterEach(() => vi.useRealTimers())
 
 describe('compact first-recorded controls', () => {
+  it('exposes date controls directly when embedded in the advanced filter panel', () => {
+    const html = renderToStaticMarkup(createElement(LeadTimelineControls, { leads, order: 'newest', day: 'all', onDay: () => {}, onOrder: () => {}, embedded: true }))
+    expect(html).not.toContain('class="timeline-expand"')
+    expect(html).not.toMatch(/id="timeline-expanded-controls"[^>]*hidden/)
+    expect(html).toContain('aria-label="收录日期"')
+    expect(html).toContain('今日新增')
+  })
   it('filters today and an inclusive seven-day window using Beijing dates', () => {
     expect(timelineLeads(leads, 'newest', 'today', today).map((lead) => lead.id)).toEqual(['today'])
     expect(timelineLeads(leads, 'newest', 'last7', today).map((lead) => lead.id)).toEqual(['today', 'edge'])

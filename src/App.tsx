@@ -14,6 +14,8 @@ import { addCatalogSource, ensureInitialProducts, enqueueIngestion, enqueueSourc
 import type { ProductSummary } from './lib/types'
 import { MarketIntelligence } from './features/market/MarketIntelligence'
 import { LearningWorkspace } from './features/learning/Learning'
+import { AccountStatusCard } from './features/account/AccountStatusCard'
+import { useAccountSession, type AccountSessionState } from './lib/accountSession'
 
 type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
 type Draft = { title: string; body: string; translation: string; productName: string; savedAt: string }
@@ -45,6 +47,7 @@ function EmptyState({ title, description, action }: { title: string; description
 }
 
 export function App() {
+  const account = useAccountSession()
   const [page, setPage] = useState<Page>(getPage)
   const [dark, setDark] = useState(() => localStorage.getItem('nl-theme') === 'dark')
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -72,7 +75,7 @@ export function App() {
     <aside className={`sidebar ${sidebarOpen ? 'is-open' : ''}`} aria-label="主导航">
       <div className="brand"><div className="brand-mark">NL</div><div><strong>阳光心材料</strong><span>知识工作台</span></div><button className="icon-button mobile-only" onClick={() => setSidebarOpen(false)} aria-label="关闭导航"><X size={18} /></button></div>
       <nav>{navigation.filter((item) => item.id !== 'market-intelligence' || marketIntelligenceEnabled).map(({ id, label, icon: Icon }) => <button key={id} className={page === id ? 'nav-item active' : 'nav-item'} onClick={() => navigate(id)}><Icon size={18} />{label}</button>)}</nav>
-      <div className="sidebar-footer"><div className="setup-card"><span>当前模式</span><strong>{hasSupabaseConfig ? '已连接 Supabase' : '本地预览'}</strong><p>{hasSupabaseConfig ? '请先登录以读取你的私人数据。' : '尚未连接数据库；示例资料不会上传。'}</p><button onClick={() => navigate('settings')}>查看配置 <ChevronRight size={14} /></button></div><button className="nav-item" onClick={() => navigate('settings')}><Settings size={18} />资料与设置</button></div>
+      <div className="sidebar-footer"><AccountStatusCard account={account} onSettings={() => navigate('settings')} /><button className="nav-item" onClick={() => navigate('settings')}><Settings size={18} />资料与设置</button></div>
     </aside>
     {sidebarOpen && <button className="scrim" aria-label="关闭导航遮罩" onClick={() => setSidebarOpen(false)} />}
 
@@ -87,7 +90,7 @@ export function App() {
         {page === 'practice' && <LearningWorkspace />}
         {page === 'assistant' && <Assistant product={selectedProduct} />}
         {page === 'studio' && <Studio product={selectedProduct} />}
-        {page === 'settings' && <SettingsPage onNotice={setNotice} />}
+        {page === 'settings' && <SettingsPage account={account} onNotice={setNotice} />}
       </section>
     </main>
     {searchOpen && <SearchDialog value={search} results={results} onChange={setSearch} onClose={() => setSearchOpen(false)} onSelect={(id) => { setSelectedProductId(id); setSearchOpen(false); navigate('products') }} />}
@@ -155,25 +158,21 @@ function Studio({ product }: { product: ProductSummary }) {
   const save = async () => { if (!created || !supabase) return; try { const { data } = await supabase.auth.getUser(); const databaseProduct = (await listProducts()).find((item) => item.import_key === product.id); if (!data.user || !databaseProduct) throw new Error('请重新登录并初始化产品目录。'); const { error } = await supabase.from('drafts').insert({ owner_id: data.user.id, product_id: databaseProduct.id, title: created.title, body: created.body, translation_zh: created.translation, citations: [], status: 'needs_review' }); if (error) throw error; setMessage('草稿已保存到你的私人资料库，状态为“待复核”，不会自动发布。') } catch (error) { setMessage(`保存未完成：${error instanceof Error ? error.message : '未知错误'}`) } }
   return <><div className="page-heading"><div><p className="eyebrow">内容工作室</p><h1>先有依据，再写得漂亮。</h1><p>只有已批准、可对外使用且带引用的产品声明才能生成正式草稿。</p></div></div><div className="studio-layout"><section className="ask-card"><label htmlFor="topic">主题 / 客户应用</label><input id="topic" value={topic} onChange={(event) => setTopic(event.target.value)} placeholder="例如：PP 水性涂层前的表面处理沟通" /><label>内容类型<select><option>英文产品介绍</option><option>客户 FAQ</option><option>英文行业新闻</option><option>中文公众号内容</option></select></label><label>目标客户<select><option>技术采购人员</option><option>配方工程师</option><option>经销商</option></select></label><button className="primary-button" onClick={() => void generate()}><Sparkles size={17} />基于已批准声明生成</button>{message && <p className="form-message">{message}</p>}</section><section className="answer-card">{created ? <><div className="card-heading"><div><p className="eyebrow">草稿预览</p><h2>{created.title}</h2></div><button className="text-button" onClick={() => navigator.clipboard.writeText(`${created.title}\n\n${created.body}`)}>复制纯文本</button></div><p className="draft-body">{created.body}</p><div className="translation"><strong>中文对照</strong><p>{created.translation}</p></div><div className="draft-actions"><button className="primary-button" onClick={() => void save()}>保存为待复核草稿</button><span>保存不会自动发布。</span></div></> : <EmptyState title="填好主题后生成草稿" description="需要 AI 代理和至少一条已批准声明；无证据时系统会拒绝生成，而不是补写内容。" />}</section></div></> }
 
-function SettingsPage({ onNotice }: { onNotice: (message: string) => void }) {
+function SettingsPage({ onNotice, account }: { onNotice: (message: string) => void; account: AccountSessionState }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [user, setUser] = useState<User | null>(null)
+  const user = account.status === 'authenticated' ? account.user : null
   const [workspaceProducts, setWorkspaceProducts] = useState<WorkspaceProduct[]>([])
-  useEffect(() => {
-    const db = supabase
-    if (!db) return
-    const load = async () => { const { data } = await db.auth.getUser(); setUser(data.user) }
-    void load()
-    const { data: listener } = db.auth.onAuthStateChange((_event, session) => setUser(session?.user ?? null))
-    return () => listener.subscription.unsubscribe()
-  }, [])
   useEffect(() => {
     if (!user) { setWorkspaceProducts([]); return }
     void ensureInitialProducts(user).then(setWorkspaceProducts).catch((error: Error) => onNotice(`无法初始化产品目录：${error.message}`))
   }, [user, onNotice])
+  const accountTitle = user ? '已登录私人资料库' : account.status === 'loading' ? '正在确认登录状态…' : account.status === 'error' ? '登录状态待确认' : account.status === 'anonymous' ? '尚未登录私人资料库' : '等待连接 Supabase'
+  const accountPill = user ? '已确认' : account.status === 'loading' ? '读取中' : account.status === 'error' ? '待重试' : account.status === 'anonymous' ? '待登录' : '待配置'
+  const accountSummary = user ? `${user.email || user.phone || `账号 ${user.id.slice(0, 8)}`} · 私人资料按当前账号访问。` : account.status === 'loading' ? '正在读取当前账号，请稍候。' : account.status === 'error' ? '暂时无法读取登录状态，请重新读取。' : hasSupabaseConfig ? '登录后访问你的私人资料库。' : '复制 .env.example 为 .env，填写公开 URL 与 publishable key；再按 README 应用迁移。'
   const signIn = async () => { if (!supabase) return onNotice('请先在 .env 中填写 Supabase URL 与 publishable key，然后重启前端。'); const { error } = await supabase.auth.signInWithPassword({ email, password }); onNotice(error ? `登录未完成：${error.message}` : '登录成功，正在加载你的私人数据。') }
-  return <><div className="page-heading"><div><p className="eyebrow">资料与设置</p><h1>先连接，再把资料放进来。</h1><p>密钥不在浏览器中编辑或显示；这里只显示连接是否完成。</p></div></div><div className="settings-grid"><section className="card"><div className="card-heading"><div><p className="eyebrow">1 · 身份与数据库</p><h2>{hasSupabaseConfig ? (user ? '已登录私人资料库' : 'Supabase 已配置，等待登录') : '等待连接 Supabase'}</h2></div><StatusPill status={user ? '已确认' : '待配置'} /></div><p className="muted">{hasSupabaseConfig ? '使用你的登录账户访问 RLS 保护的数据。' : '复制 .env.example 为 .env，填写公开 URL 与 publishable key；再按 README 应用迁移。'}</p>{hasSupabaseConfig && !user && <div className="login-form"><input value={email} onChange={(event) => setEmail(event.target.value)} type="email" placeholder="登录邮箱" /><input value={password} onChange={(event) => setPassword(event.target.value)} type="password" placeholder="密码" /><button className="primary-button" onClick={signIn}>登录</button></div>}{user && <button className="secondary-button" onClick={() => supabase?.auth.signOut()}>退出当前账户</button>}</section>{user ? <DocumentImporter user={user} products={workspaceProducts} onNotice={onNotice} /> : <section className="card"><div className="card-heading"><div><p className="eyebrow">2 · 私有文件</p><h2>登录后上传三份原始资料</h2></div><FileUp size={19} /></div><p className="muted">登录后，文件会直接上传到你的私有 Storage，系统才会创建版本和解析任务。</p></section>}{user ? <SourceManager user={user} onNotice={onNotice} /> : <section className="card"><div className="card-heading"><div><p className="eyebrow">3 · 来源与采集</p><h2>登录后管理来源</h2></div><Globe2 size={19} /></div><p className="muted">来源验证和采集任务均绑定当前账户，未登录时不能创建。</p></section>}<section className="card"><div className="card-heading"><div><p className="eyebrow">安全状态</p><h2>公开构建不含私有资料</h2></div><CheckCircle2 size={19} /></div><p className="muted">原始附件走 Supabase 私有 Storage；服务密钥、AI key 和搜索 key 仅放服务器或 Actions Secrets。</p><a className="text-button" href="https://supabase.com/docs/guides/database/postgres/row-level-security" target="_blank" rel="noreferrer">了解 RLS <ArrowUpRight size={15} /></a></section></div></> }
+  const signOut = async () => { const result = await supabase?.auth.signOut(); if (result?.error) onNotice(`退出未完成：${result.error.message}`) }
+  return <><div className="page-heading"><div><p className="eyebrow">资料与设置</p><h1>先连接，再把资料放进来。</h1><p>密钥不在浏览器中编辑或显示；这里只显示连接是否完成。</p></div></div><div className="settings-grid"><section className="card"><div className="card-heading"><div><p className="eyebrow">1 · 身份与数据库</p><h2>{accountTitle}</h2></div><StatusPill status={accountPill} /></div><p className="muted">{accountSummary}</p>{account.status === 'error' && <button className="secondary-button" onClick={() => void account.refresh()}>重新读取登录状态</button>}{account.status === 'anonymous' && <div className="login-form"><input value={email} onChange={(event) => setEmail(event.target.value)} type="email" placeholder="登录邮箱" /><input value={password} onChange={(event) => setPassword(event.target.value)} type="password" placeholder="密码" /><button className="primary-button" onClick={signIn}>登录</button></div>}{user && <button className="secondary-button" onClick={() => void signOut()}>退出当前账户</button>}</section>{user ? <DocumentImporter user={user} products={workspaceProducts} onNotice={onNotice} /> : <section className="card"><div className="card-heading"><div><p className="eyebrow">2 · 私有文件</p><h2>登录后上传三份原始资料</h2></div><FileUp size={19} /></div><p className="muted">登录后，文件会直接上传到你的私有 Storage，系统才会创建版本和解析任务。</p></section>}{user ? <SourceManager user={user} onNotice={onNotice} /> : <section className="card"><div className="card-heading"><div><p className="eyebrow">3 · 来源与采集</p><h2>登录后管理来源</h2></div><Globe2 size={19} /></div><p className="muted">来源验证和采集任务均绑定当前账户，未登录时不能创建。</p></section>}<section className="card"><div className="card-heading"><div><p className="eyebrow">安全状态</p><h2>公开构建不含私有资料</h2></div><CheckCircle2 size={19} /></div><p className="muted">原始附件走 Supabase 私有 Storage；服务密钥、AI key 和搜索 key 仅放服务器或 Actions Secrets。</p><a className="text-button" href="https://supabase.com/docs/guides/database/postgres/row-level-security" target="_blank" rel="noreferrer">了解 RLS <ArrowUpRight size={15} /></a></section></div></> }
 
 function DocumentImporter({ user, products, onNotice }: { user: User; products: WorkspaceProduct[]; onNotice: (message: string) => void }) {
   const [productId, setProductId] = useState('')
