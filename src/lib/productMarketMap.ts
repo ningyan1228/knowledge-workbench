@@ -5590,11 +5590,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "aexcel-mentor",
+    "company": "Aexcel Corporation",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Mentor",
+    "latitude": 41.6662,
+    "longitude": -81.3396,
+    "legacyCompanyDescription": "工业防护涂料和交通标线漆配方及制造企业",
+    "fit": "可开发候选",
+    "signal": "官网工业涂料页与配方服务页说明为工业设备、钢结构和混凝土等配制防护涂料，列出环氧、聚氨酯、丙烯酸及醇酸体系；About 明确其在美国 Mentor 的自有涂料生产设施及从开发批到规模生产的流程。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立重读6份当前官网原文：历史/工厂、产品总目录、工业防护应用、定制配方、团队和联系页。销售范围为交通标线成品漆、工业防护涂层及定制配方/生产/贴牌/代工服务。明确保留其 epoxy/urethane/acrylic/alkyd、soy-based alkyd 等成品配方体系和原料选择活动；不把环氧体系、大豆基醇酸或 Pigments/Binders/Resins/Solvents/Additives 的配方原料说明自动等同为 ELO/ESBO 原料销售。在实际所查当前公开范围未见 ELO、ESBO、环氧化植物油或生物增塑/稳定剂原料对外销售；这是有边界的所查范围结论，未宣称全部未披露配方、SDS、关联公司或全球SKU均已核验。当前 About 明确保持独立，DeSantis 历史名、Aexcel、BioStripe、AquaTough、Milgram 身份与 aexcelcorp.com 按一个关联账户检查最新 main288、root302、队列与frontier，无同一正式或私有账户；印度 Excel 与中国 AEX 不是本公司。城市坐标仅为 Mentor 标记。采购经理身份/职责有当前官方证据，但无对应业务邮箱或个人电话，不猜地址、不将总机归个人。"
+    },
+    "contact": {
+      "label": "官网公开公司业务联系页及总机；采购经理身份已核实，未取得具名业务邮箱",
+      "phone": "+1 800 854 0782",
+      "contactUrl": "https://www.aexcelcorp.com/contact-us/"
+    },
+    "source": {
+      "label": "Aexcel own custom industrial coatings, formulation and factory pages",
+      "url": "https://www.aexcelcorp.com/coating-products/custom-industrial-coatings/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "aexcel-mentor": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "richards-paint-rockledge": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bps-borma-san-stino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sheboygan-paint-wisconsin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5884,6 +5912,55 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "aexcel-mentor": {
+    "website": "https://www.aexcelcorp.com/",
+    "contactPage": "https://www.aexcelcorp.com/contact-us/",
+    "address": "7373 Production Drive, Mentor, OH 44060, United States",
+    "generalEmail": "",
+    "generalPhone": "+1 800 854 0782",
+    "generalPhoneEvidence": {
+      "company": "Aexcel Corporation",
+      "value": "+1 800 854 0782",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.aexcelcorp.com/contact-us/",
+          "summary": "Own Contact Us page labels Call: 800-854-0782 beside Aexcel Mentor address; this is the general company business line, not a named procurement phone."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current factory/history and identity",
+        "url": "https://www.aexcelcorp.com/about-aexcel/"
+      },
+      {
+        "label": "Own finished traffic and industrial product families",
+        "url": "https://www.aexcelcorp.com/coating-products/"
+      },
+      {
+        "label": "Own custom industrial protective coating applications",
+        "url": "https://www.aexcelcorp.com/coating-products/custom-industrial-coatings/"
+      },
+      {
+        "label": "Own custom formulation, input selection and chemistries",
+        "url": "https://www.aexcelcorp.com/custom-coating-formulation/custom-formulation/"
+      },
+      {
+        "label": "Own current procurement and lab team identities; no named business inbox disclosed",
+        "url": "https://www.aexcelcorp.com/about-aexcel/our-team/"
+      },
+      {
+        "label": "Own company business contact page and general phone",
+        "url": "https://www.aexcelcorp.com/contact-us/"
+      }
+    ]
+  },
   "richards-paint-rockledge": {
     "website": "https://www.richardspaint.com/",
     "contactPage": "https://www.richardspaint.com/contact/",
@@ -18361,6 +18438,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "aexcel-mentor",
   "richards-paint-rockledge",
   "bps-borma-san-stino",
   "sheboygan-paint-wisconsin",
