@@ -86,6 +86,15 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }
   const [dirty, setDirty] = useState(false)
   const [activeSection, setActiveSection] = useState<CompanyDetailSectionId>('overview')
   const bodyRef = useRef<HTMLDivElement>(null)
+  const sendRecordRef = useRef<HTMLDetailsElement>(null)
+  const openSendRecord = () => {
+    const record = sendRecordRef.current
+    if (!record) return
+    record.open = true
+    record.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+    const target = record.querySelector<HTMLElement>('input[type="email"]') ?? record.querySelector<HTMLElement>('summary')
+    target?.focus({ preventScroll: true })
+  }
   const canLeave = () => !work.busy && (!dirty || window.confirm('当前客户有未保存的私人进度或备注，确认放弃修改？'))
   const requestClose = () => { if (canLeave()) onClose() }
   const navigate = (next: PublicLead | undefined) => { if (next && canLeave()) onNavigate(next) }
@@ -139,8 +148,8 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }
           <ContactEvidencePanel lead={lead} onEmail={onEmail} compactEvidence />
         </>}
         outreach={<>
-          <DevelopmentEmailPanel lead={lead} ledger={ledger} />
-          <details className="company-disclosure"><summary>开发信发送记录<OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} /></summary><OutreachSendPanel key={lead.id} lead={lead} ledger={ledger} /></details>
+          <DevelopmentEmailPanel lead={lead} ledger={ledger} onOpenSendRecord={openSendRecord} />
+          <details ref={sendRecordRef} id={`company-send-record-${lead.id}`} className="company-disclosure"><summary>开发信发送记录<OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} /></summary><OutreachSendPanel key={lead.id} lead={lead} ledger={ledger} /></details>
           <details className="company-disclosure"><summary>我的开发进度与跟进{dirty && <span>有未保存修改</span>}</summary><LeadPrivatePanel key={work.ownerId ?? work.status} lead={lead} work={work} ledger={ledger} onDirtyChange={setDirty} /></details>
           <details className="company-disclosure"><summary>下一步动作与建议</summary><NextActions lead={lead} ledger={ledger} /></details>
         </>}

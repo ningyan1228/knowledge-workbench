@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Check, Copy, FileText, LoaderCircle, Mail, TriangleAlert } from 'lucide-react'
+import { CalendarCheck, Check, Copy, FileText, LoaderCircle, Mail, TriangleAlert } from 'lucide-react'
 import { marketProducts, targetCompanyTypes, tdsVerifiedApplications, marketExtendedApplications, type PublicLead } from '../../lib/productMarketMap'
 import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { developmentEmailVersion } from '../../lib/developmentEmailVersion'
@@ -16,7 +16,7 @@ const copyParts = [
 ] as const
 type CopyPart = typeof copyParts[number]['id']
 
-export function DevelopmentEmailPanel({ lead, ledger }: { lead: PublicLead; ledger: OutreachLedger }) {
+export function DevelopmentEmailPanel({ lead, ledger, onOpenSendRecord }: { lead: PublicLead; ledger: OutreachLedger; onOpenSendRecord?: () => void }) {
   const [copyState, setCopyState] = useState<'idle' | 'checking' | 'copying' | 'copied'>('idle')
   const [copyPart, setCopyPart] = useState<CopyPart>('full')
   const [message, setMessage] = useState('')
@@ -113,6 +113,7 @@ export function DevelopmentEmailPanel({ lead, ledger }: { lead: PublicLead; ledg
         const label = current && copyState === 'checking' ? '核对中…' : current && copyState === 'copying' ? '复制中…' : copied ? part.copied : part.label
         return <button key={part.id} type="button" className="secondary-button outreach-copy-button" data-copy-part={part.id} disabled={!qualified || ledger.status !== 'ready' || pending} aria-busy={busy} onClick={() => void copyEmail(part.id)}>{busy ? <LoaderCircle className="outreach-copy-spinner" size={15} /> : copied ? <Check size={15} /> : <Copy size={15} />}{label}</button>
       })}</div>
+      {onOpenSendRecord && <button type="button" className="primary-button outreach-record-button" disabled={ledger.busy} aria-controls={`company-send-record-${lead.id}`} onClick={onOpenSendRecord}><CalendarCheck size={15} />{version.state === 'unsent' ? '记录已发送' : '查看发送记录'}</button>}
       <button type="button" className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>
     </div>
     <div className="outreach-copy-feedback" role="status" aria-live="polite">{message}</div>
