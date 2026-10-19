@@ -5869,11 +5869,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "williams-hayward-summit",
+    "company": "Williams Hayward Protective Coatings, Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Summit, Illinois",
+    "latitude": 41.7881,
+    "longitude": -87.81,
+    "legacyCompanyDescription": "美国自有实验室研发的工业防护涂料配方企业；多工厂和公开海外分销入口按一个账户",
+    "fit": "可开发候选",
+    "signal": "当前About明确自身实验室研发防护涂料，技术类别有具体水性及溶剂型成品配方；Aqua-Epoxy明示为双组分水性环氧底漆、面漆或直接涂金属漆并列防腐性能，Contact列自身工厂管理和采购入口。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读6个当前原文：Home1766、About2887、Coatings2199、Contact3019、水性5019、溶剂型4297chars。About与技术类别明确自有实验室研发及自身工业防护成品配方，Contact列BedfordPark/Summit/FortWorth厂管理；以具体AquaEpoxy双组分水性环氧防腐底/面/DTM成品为应用事实，不把仅有公司名当工厂证据，不推定实际产能/原料自制。真实经营包括水性丙烯酸/乙烯基/橡胶、环氧/醇酸、PU成品、溶剂型底面漆、内衬、配套稀释剂及AquaSlip含PE/Teflon填料的料斗脱模/隔离成品。AquaSlip明示使用于塑料粒料斗/煤车/飞灰料斗等成品表面隔离，不被隐去也不按PE字样冒称ELO/ESBO原料。所查实际当前经营与完整返回两类技术目录未见ELO、ESBO、环氧化植物油或同类生物增塑稳定输入外售；按ELO所选输入和已读范围通过，不声称全部SKU/SDS/未披露配方或全球股权审计，不切换NLW绕过PO输入问题。当前自述家族三代经营，多个厂按一个账户；P.H.U.STEP和WHPCConsultores在Contact明确为欧洲/墨西哥分销路线，不推定股权控制或拆为新增。全main/root/队列/frontier按公司/域名/WHPC关联查重。Contact当前Purchasing独立HTML手风琴条目明确ASSISTANT TO THE CFO、ColleenEannace及精确业务邮箱，职责仅按公开采购联系入口，未改写成采购经理/CFO、未确认具体ELO权限。身份和邮箱归属分别引用相同实际条目；没有本人电话，不把总机/销售手机赋给她。orders@明确为订单部门邮箱，通用电话另存；未收集其他无关人员私有渠道。原文AAR/ISO/VOC/性能优于等声明未独立证书验证且不转移我方，不提降本/订单/采购意向。城市坐标只Summit点。"
+    },
+    "contact": {
+      "label": "官网Purchasing栏具名业务邮箱；实际职位Assistant to the CFO，未确认所选原料采购权限；电话为公司总机",
+      "email": "colleeneannace@whpc.net",
+      "phone": "+1 708 458 0015",
+      "contactUrl": "https://www.williams-hayward.com/contact"
+    },
+    "source": {
+      "label": "Own Aqua-Epoxy waterborne protective coating range, current laboratory development and corporate plant/purchasing contacts",
+      "url": "https://www.williams-hayward.com/waterborne-coatings"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "williams-hayward-summit": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colorificio-feroni-oppeano": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ot-dynamics-flat-rock": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "u-c-coatings-buffalo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6173,6 +6202,71 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "williams-hayward-summit": {
+    "website": "https://www.williams-hayward.com/",
+    "contactPage": "https://www.williams-hayward.com/contact",
+    "address": "7425 West 59th Street, Summit, IL 60501, United States",
+    "generalPhone": "+1 708 458 0015",
+    "generalPhoneEvidence": {
+      "company": "Williams Hayward Protective Coatings, Inc.",
+      "value": "+1 708 458 0015",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.williams-hayward.com/contact",
+          "summary": "Own Contact separately publishes Phone(708)458-0015 and Fax(708)563-6266; general corporate voice only, no number assigned to Purchasing Colleen."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [
+      {
+        "name": "Colleen Eannace",
+        "title": "Assistant to the CFO",
+        "department": "Procurement",
+        "email": "colleeneannace@whpc.net",
+        "identityEvidence": {
+          "company": "Williams Hayward Protective Coatings, Inc.",
+          "name": "Colleen Eannace",
+          "title": "Assistant to the CFO",
+          "responsibilities": "Current own Contact explicitly places Colleen Eannace, ASSISTANT TO THE CFO, in the Purchasing section. Published company purchasing route; job title retained faithfully. Not asserted as purchasing manager, CFO or confirmed ELO decision maker.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current Purchasing entry: identity and actual Assistant to CFO role",
+              "url": "https://www.williams-hayward.com/contact",
+              "summary": "Current own Contact explicitly places Colleen Eannace, ASSISTANT TO THE CFO, in the Purchasing section. Published company purchasing route; job title retained faithfully. Not asserted as purchasing manager, CFO or confirmed ELO decision maker."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "emailEvidence": {
+          "company": "Williams Hayward Protective Coatings, Inc.",
+          "value": "colleeneannace@whpc.net",
+          "kind": "named-business",
+          "personName": "Colleen Eannace",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Purchasing entry: exact named business email",
+              "url": "https://www.williams-hayward.com/contact",
+              "summary": "The same current Purchasing entry explicitly prints colleeneannace@whpc.net directly beneath Colleen Eannace and her title. Exact publicly disclosed named business email; not synthesized or inferred from another staff address."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "source": {
+          "label": "Own current Purchasing contact entry; no named phone published",
+          "url": "https://www.williams-hayward.com/contact"
+        },
+        "verifiedAt": "2026-10-19"
+      }
+    ],
+    "departmentEmails": [],
+    "generalEmail": ""
+  },
   "colorificio-feroni-oppeano": {
     "website": "https://www.feroni.it/",
     "contactPage": "https://www.feroni.it/contatti.html",
@@ -19313,6 +19407,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "williams-hayward-summit",
   "colorificio-feroni-oppeano",
   "ot-dynamics-flat-rock",
   "u-c-coatings-buffalo",
