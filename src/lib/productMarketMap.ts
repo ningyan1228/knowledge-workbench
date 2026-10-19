@@ -5673,11 +5673,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "zingametall-eke",
+    "company": "Zingametall BV (ZINGA)",
+    "productId": "elo",
+    "country": "Belgium",
+    "countryZh": "比利时",
+    "city": "Eke-Nazareth",
+    "latitude": 50.9575,
+    "longitude": 3.6524,
+    "legacyCompanyDescription": "ZINGA 富锌工业防腐涂料及配套防护涂层研发和制造企业",
+    "fit": "可开发候选",
+    "signal": "Infosteel 企业会员原文明确 Zingametall 开发、生产和销售 ZINGA 富锌防腐涂料，用于新建、既有及已镀锌钢结构；官网当前产品、Business、About 和 Film Galvanising 原文交叉确认该品牌、工业防腐产品组合、比利时主体及业务联系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文读6份当前原文，含公司About/完整可见产品四分类/Business/Contact/Film Galvanising分类及Infosteel会员制造记录。实际产品为富锌薄膜镀锌防腐成品、封闭/面漆和清洗溶剂；系列ZINGA/AQUAZINGA/ZINGA420/ZINGASPRAY/ZINGALU/ZINGACERAM/ZINGALUFER/ZINGATARFREE等按所见保留，不把富锌涂料、树脂成分或溶剂清洗剂自动当ELO/ESBO原料。在实际所查当前范围未见ELO、ESBO、环氧化植物油或生物增塑/稳定剂原料对外销售；限定实际6页及可见分类文字，不宣称全部叶页/TDS/SDS/配方/全球关联SKU已核查，也不推测涂料使用ELO。Zingametall BV当前主体/比利时Eke地址/zinga.eu及ZINGA各品牌全量main/root/queue/frontier去重无同一账户；乌克兰zingametall.ua与德国经销商QQ Qualified Quality不借作比利时制造原文，也不另增经销商账户。Infosteel称私营企业不被扩大成最终集团/所有权核查完成。一般info@及总机来自ownContact，分别独立于协会不同电话尾号、传真和表单Technical/Commercial选项，未虚构具名采购或邮箱。坐标仅Eke城市标记。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@zinga.eu",
+      "phone": "+32 9 385 68 81",
+      "contactUrl": "https://zinga.eu/contact"
+    },
+    "source": {
+      "label": "Infosteel own enterprise member record for Zingametall manufacturing, cross-checked with own current anti-corrosion products",
+      "url": "https://www.infosteel.be/fr/membre/3385-zinga"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zingametall-eke": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mankiewicz-hamburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rubio-monocoat-izegem": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "aexcel-mentor": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5970,6 +5999,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zingametall-eke": {
+    "website": "https://zinga.eu/",
+    "contactPage": "https://zinga.eu/contact",
+    "address": "Industriepark - Rozenstraat 4, 9810 Eke, Belgium",
+    "generalEmail": "info@zinga.eu",
+    "generalEmailEvidence": {
+      "company": "Zingametall BV (ZINGA)",
+      "value": "info@zinga.eu",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://zinga.eu/contact",
+          "summary": "Own current Contact page explicitly lists Email: info@zinga.eu beside ZINGAMETALL BV Eke office; general business mailbox, not named procurement/technical ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+32 9 385 68 81",
+    "generalPhoneEvidence": {
+      "company": "Zingametall BV (ZINGA)",
+      "value": "+32 9 385 68 81",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://zinga.eu/contact",
+          "summary": "Own current Contact labels Phone +32(0)9/385.68.81 and separate Fax +32(0)9/385.58.69. Store the own general voice line; Infosteel directory's different ending68 82 is not silently substituted or curated as the current company line."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current corrosion-protection business and identity",
+        "url": "https://zinga.eu/about"
+      },
+      {
+        "label": "Own full visible four product families",
+        "url": "https://zinga.eu/products"
+      },
+      {
+        "label": "Own professional business, four families and corporate contact",
+        "url": "https://zinga.eu/business"
+      },
+      {
+        "label": "Own current Eke corporate general email and voice/fax",
+        "url": "https://zinga.eu/contact"
+      },
+      {
+        "label": "Infosteel own member manufacturer record; directory phone differs from current corporate phone",
+        "url": "https://www.infosteel.be/fr/membre/3385-zinga"
+      },
+      {
+        "label": "Own film galvanising category and actual branded products",
+        "url": "https://zinga.eu/products/film-galvanising-systems"
+      }
+    ]
+  },
   "mankiewicz-hamburg": {
     "website": "https://www.mankiewicz.com/",
     "contactPage": "https://www.mankiewicz.com/de/impressum",
@@ -18641,6 +18733,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zingametall-eke",
   "mankiewicz-hamburg",
   "rubio-monocoat-izegem",
   "aexcel-mentor",
