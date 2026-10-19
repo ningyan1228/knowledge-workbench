@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "brillux-muenster": "Your 2K-Aqua Durakett 2394 is a water-based two-component sealant for parquet, wood floors and wooden stairs.",
   "steelpaint-kitzingen": "Your range includes moisture-curing polyurethane coatings for protecting port structures, tanks, bridges and ships against corrosion.",
   "zingametall-eke": "Your ZINGA coating is developed and manufactured to protect new, existing and galvanised steel structures against corrosion.",
   "mankiewicz-hamburg": "Your corrosion-protection coating systems cover industrial machinery, agricultural equipment and energy applications, with tailored solvent-based and water-based formulations.",

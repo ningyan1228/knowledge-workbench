@@ -5729,11 +5729,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "brillux-muenster",
+    "company": "Brillux GmbH & Co. KG",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Münster",
+    "latitude": 51.9607,
+    "longitude": 7.6261,
+    "legacyCompanyDescription": "德国水性木器及建筑涂料制造与配方研发企业；Brillux品牌及四座披露生产基地作为一个关联账户",
+    "fit": "可开发候选",
+    "signal": "官网具体2K-AquaDurakett2394明确水性双组分PUR丙烯酸封闭涂料，用于高频使用的实木地板、木板和木楼梯；公司原文披露配方改进、自有研发生产及德国四座生产基地。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读5份当前官网原文：2K-Aqua应用、具体Durakett2394、WirSindBrillux、生产及配方可持续发展、Impressum。具体水性双组分PUR丙烯酸木地板封闭涂料，与公司自有研发/生产及Münster、Unna、Herford、Malsch四厂披露相互印证。实际经营还含内外墙漆、涂料、抹灰、壁纸、地板材料、工具、保温和混凝土保护体系及直销服务；普通成品底漆/硬化配套或聚合物涂料不直接等同PO/CPO原料外售。实际审读当前范围未见水性聚烯烃乳液、CPO/PO分散体或同类原料型附着促进剂对外供应，按所选输入通过排除；未审读全部12000SKU、全部配方/SDS或全球股权，不保证未披露产品。Impressum明确BrilluxGmbH&Co.KG及GPBrilluxGmbH、HRA3194/HRB4272、VATDE126045803；Brillux/工业漆共同品牌、Durakett/Lacryl/Impredur等系列和多国网点按一个关联账户，不拆工厂/经销渠道。公开一般邮箱和总机独立核对，不把管理层姓名或一般技术咨询冒称具名采购；坐标仅Münster城市点。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@brillux.de",
+      "phone": "+49 251 7188-0",
+      "contactUrl": "https://www.brillux.de/impressum/"
+    },
+    "source": {
+      "label": "Brillux own specific water-based 2K-Aqua Durakett2394 wood-floor sealant; own current formulation and production disclosures",
+      "url": "https://www.brillux.de/produkte/lacke-und-holzbeschichtungen/lacke/400322/2k-aqua-durakett-2394/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "brillux-muenster": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "steelpaint-kitzingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zingametall-eke": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mankiewicz-hamburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6028,6 +6057,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "brillux-muenster": {
+    "website": "https://www.brillux.de/",
+    "contactPage": "https://www.brillux.de/impressum/",
+    "address": "Weseler Straße 401, 48163 Münster, Germany",
+    "generalEmail": "info@brillux.de",
+    "generalEmailEvidence": {
+      "company": "Brillux GmbH & Co. KG",
+      "value": "info@brillux.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.brillux.de/impressum/",
+          "summary": "Own current Impressum explicitly lists Mail:info@brillux.de for BrilluxGmbH&Co.KG; same exact general inbox also in application/product/company footers. No personal attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+49 251 7188-0",
+    "generalPhoneEvidence": {
+      "company": "Brillux GmbH & Co. KG",
+      "value": "+49 251 7188-0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.brillux.de/impressum/",
+          "summary": "Own Impressum explicitly lists Telefon:+492517188-0; corporate general business switchboard, not named procurement or technical direct line."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own2K-Aqua wood application",
+        "url": "https://www.brillux.de/anwendungen/innenbereich/lacke-fuer-den-innenbereich/2k-aqua/"
+      },
+      {
+        "label": "Own company and full finished-business scope",
+        "url": "https://www.brillux.de/ueber-uns/wir-sind-brillux/"
+      },
+      {
+        "label": "Own legal operator and corporate contact",
+        "url": "https://www.brillux.de/impressum/"
+      },
+      {
+        "label": "Own four plants and formula development",
+        "url": "https://www.brillux.de/ueber-uns/nachhaltigkeit/mensch-und-natur-schuetzen/"
+      },
+      {
+        "label": "Own specific water-based wood-floor sealant",
+        "url": "https://www.brillux.de/produkte/lacke-und-holzbeschichtungen/lacke/400322/2k-aqua-durakett-2394/"
+      }
+    ]
+  },
   "steelpaint-kitzingen": {
     "website": "https://www.steelpaint.de/",
     "contactPage": "https://www.steelpaint.de/de/kontakt",
@@ -18825,6 +18913,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "brillux-muenster",
   "steelpaint-kitzingen",
   "zingametall-eke",
   "mankiewicz-hamburg",
