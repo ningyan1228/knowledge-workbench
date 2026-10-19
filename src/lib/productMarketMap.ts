@@ -5785,11 +5785,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "u-c-coatings-buffalo",
+    "company": "U-C Coatings (SEAL-ONCE / Eco Chemical / Abatron group)",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Buffalo, New York",
+    "latitude": 42.8864,
+    "longitude": -78.8784,
+    "legacyCompanyDescription": "美国木材保护成品制造及配方研发企业；SEAL-ONCE、EcoChemical、Abatron等已披露品牌合计一个账户",
+    "fit": "可开发候选",
+    "signal": "当前About明确U-C是木材保护产品制造商，EcoChemical自有研发实验室与定制配方服务；History明确SEAL-ONCE及相关水性木器品牌关联。当前FAQ直接说明SEAL-ONCENANO为水性、非成膜、深入渗透木材的配方，且SEAL-ONCE产品用于户外木材表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读6个当前官网原文：About5542chars、FAQ28289（三段连续0–10500、10500–20500、20500至末尾读完）、Contact5905、History6332、EcoChemicalLab5960、SealOnce完整返回15品类目录10944（两段0–6000、6000至末尾）。About明确自身木材保护产品制造商，EcoChemical自有实验室/R&D和配方定制，History披露2016SealOnce/2018Contechem/2019EcoChemical/2021Abatron/2023ColorPutty收购及水性成品业务；FAQ直接明确SEAL-ONCENANO为水性、非成膜、深入渗透木材配方，非凭Nano或聚氨酯名字猜水性。保持实际混合经营：木材封闭/保护漆、胶脱模隔离剂、蜡乳液端封、sapstain去渍控制、预涂着色/底漆、颜料浓缩物、环氧修复材料、胶/密封、油性和水性腻子及定制配方制造。普通Abatron环氧树脂/硬化配套与ANCHORSEAL成品木材端封蜡乳液不直接等同所选PO/CPO原料商品；实际所查当前成品类别及用途未见水性聚烯烃乳液、CPO/PO原料分散体或同类原料型附着促进剂外售，按NLW所选输入限定通过，不声称全部SKU/SDS/配方/未披露组分/全球最终股权审计。SEAL-ONCENANO等目录Soldout与0美元占位只记录库存/商品元数据不明，不推定当前停产/在产数量/现货或采购需求；事实句只说FAQ如何描述，不称已确认NANO今日投产。U-C/UpsonChemical与所有已披露品牌及域名按一关联账户检查最新main/本地/全队列/frontier，无同一已知账户；不拆SEAL/Eco/Abatron/ColorPutty为新客户，不虚构更上层PE控制。Contact明确sales@同时为SealOnce/Anchorseal/Eco咨询及一般公司业务邮箱，作为公司路线；+17168339366为一般业务电话，888和Abatron800分别保存为来源背景，传真不当电话。历史创始人不是现任采购人，无个人称呼。原FAQ生态/安全/PPE/DIY施工/溶剂清洁/耐久认证价格与材料混用建议仅作未采纳源文，不作为医疗法律操作指导、不转移至NLW；实际原料适配/需求/采购未确认。坐标仅Buffalo城市点。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "sales@uccoatings.com",
+      "phone": "+1 716 833 9366",
+      "contactUrl": "https://uccoatings.com/pages/contact"
+    },
+    "source": {
+      "label": "U-C Coatings own current FAQ explicitly identifies water-based SEAL-ONCE NANO for exterior wood; own manufacture and formulation evidence",
+      "url": "https://uccoatings.com/pages/faq-uc-coatings"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "u-c-coatings-buffalo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorlak-stare-mesto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "brillux-muenster": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "steelpaint-kitzingen": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6086,6 +6115,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "u-c-coatings-buffalo": {
+    "website": "https://uccoatings.com/",
+    "contactPage": "https://uccoatings.com/pages/contact",
+    "address": "2250 Fillmore Avenue, Buffalo, NY 14214, United States",
+    "generalEmail": "sales@uccoatings.com",
+    "generalEmailEvidence": {
+      "company": "U-C Coatings (SEAL-ONCE / Eco Chemical / Abatron group)",
+      "value": "sales@uccoatings.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://uccoatings.com/pages/contact",
+          "summary": "OwnContact explicitly publishes sales@uccoatings.com for SealOnce/Anchorseal/EcoChemical inquiries and also under GeneralBusinessInquiries for partnerships/bulkorders/corporatematters. Company business inbox, not a person or proven active procurement request."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 716 833 9366",
+    "generalPhoneEvidence": {
+      "company": "U-C Coatings (SEAL-ONCE / Eco Chemical / Abatron group)",
+      "value": "+1 716 833 9366",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://uccoatings.com/pages/contact",
+          "summary": "OwnContact GeneralBusinessInquiries explicitly publishes(716)833-9366, distinct frombrand8883632628,Abatron8004451754 andFax7168330120. Only normalizeUS+1/spacing."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current wood-protection manufacturer",
+        "url": "https://uccoatings.com/pages/about"
+      },
+      {
+        "label": "Own complete current waterborne wood FAQ",
+        "url": "https://uccoatings.com/pages/faq-uc-coatings"
+      },
+      {
+        "label": "Own separate brand and corporate business contacts",
+        "url": "https://uccoatings.com/pages/contact"
+      },
+      {
+        "label": "Own disclosed company/brand acquisition history",
+        "url": "https://uccoatings.com/pages/company-history"
+      },
+      {
+        "label": "Own EcoChemical laboratory and formulation",
+        "url": "https://uccoatings.com/pages/industrial-coatings-lab-capabilities-eco-chemical-wood-coatings-manufacturers-wood-stain-paint-manufacturers"
+      },
+      {
+        "label": "Own complete returned SealOnce fifteen-product collection",
+        "url": "https://uccoatings.com/collections/so-wood-stains-sealers"
+      }
+    ]
+  },
   "colorlak-stare-mesto": {
     "website": "https://colorlak.cz/",
     "contactPage": "https://colorlak.cz/kontakty",
@@ -19063,6 +19155,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "u-c-coatings-buffalo",
   "colorlak-stare-mesto",
   "brillux-muenster",
   "steelpaint-kitzingen",
