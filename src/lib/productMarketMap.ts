@@ -5813,11 +5813,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "ot-dynamics-flat-rock",
+    "company": "OT Dynamics (Davis Frost brand)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Flat Rock, Michigan",
+    "latitude": 42.0964,
+    "longitude": -83.2919,
+    "legacyCompanyDescription": "美国自有工业防护涂料研发制造集团；DavisFrost车厢防腐系列及集团展示品牌作为一个账户",
+    "fit": "可开发候选",
+    "signal": "DavisFrost当前About明确归属OTDynamics并直链集团站，Railcar页明确车厢防腐、防候的成套底漆/面漆/特殊涂料；OT当前Home与Technologies确认FlatRock内部研发、测试及自有成品涂料制造。集团Contact提供公开业务邮箱与电话。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文读6个当前自有/自身直链集团HTML：DavisFrostAbout3145、Home2051、OTDynamicsHome2815、Railcar4440、OTTechnologies1659、OTContact3146。Davis当前明确归属OTDynamics家族且直接链接其站；OTHome和Technologies明确FlatRock自有制造、内部研发/测试以及水性/溶剂型、2K底面、UV、1Kurethane、lacquer/enamel/wood和specialty成品体系。DavisRailcar明确列铁路车厢防腐防候成品底漆/面漆/特殊饰面，不把品牌旧1967Lynchburg厂当现有独立工厂或新账户；也不凭旧FrostPaintandOil名称断言当前对外售原料油。实际完整返回的当前经营/技术范围未见ELO、ESBO、环氧化植物油或同类生物增塑稳定/柔性原料对外供应，限定所选输入及已读当前范围通过排除；未读取全部SKU/配方/SDS/TDS/CP叶页或全球所有工商资料，不保证未披露品类/成分、不发明外购例外。Railcar原文明确正在更新目录且未张贴SDS/TDS，未请求技术资料，不冒称已读技术参数或认证。当前OTHome品牌介绍下静态图片alt实际读到DavisFrost/SportCoat/MotorCityRefinish/DynamicsCoatings/cp/QuantusCoatings，CP导航写CPCoatings；只作为现有展示品牌，未从图像URL猜别名或宣称每个独立法人。OTDynamics/DavisFrost/JamesTDavis/旧Frost及这些已知展示品牌按一集团账户去重，无同一main/root/队列/frontier记录；ColorGuild是自述合作组织，不将55家公司并为本集团。集团通用info@/7349847022来自当前OTContact，明确为FlatRock集团入口，不称Davis分厂直线或具名采购。原站所有年限/面积/全球客户/性能/寿命和降本声称不转移我方；真实ELO使用/相容/需求/采购时机均未确认。坐标仅FlatRock城市点，未虚构法律后缀或最终股权。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@otdynamics.com",
+      "phone": "+1 734 984 7022",
+      "contactUrl": "https://otdynamics.com/contact/"
+    },
+    "source": {
+      "label": "Own Davis Frost railcar anticorrosion coating systems and explicitly linked OT Dynamics in-house manufacture/technology and corporate contact",
+      "url": "https://www.davisfrost.com/railcar-coatings/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ot-dynamics-flat-rock": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "u-c-coatings-buffalo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorlak-stare-mesto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "brillux-muenster": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6115,6 +6144,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ot-dynamics-flat-rock": {
+    "website": "https://otdynamics.com/",
+    "contactPage": "https://otdynamics.com/contact/",
+    "address": "27100 Hall Rd, Flat Rock, MI 48134, United States",
+    "generalEmail": "info@otdynamics.com",
+    "generalEmailEvidence": {
+      "company": "OT Dynamics (Davis Frost brand)",
+      "value": "info@otdynamics.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://otdynamics.com/contact/",
+          "summary": "OwnOTContact explicitly publishes info@otdynamics.com twice for OT Dynamics/FlatRock business. This is a group general business inbox, not a DavisFrost branch/personal procurement mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 734 984 7022",
+    "generalPhoneEvidence": {
+      "company": "OT Dynamics (Davis Frost brand)",
+      "value": "+1 734 984 7022",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://otdynamics.com/contact/",
+          "summary": "OwnOTContact explicitly publishes(734)984-7022 forOTDynamicsHeadquarters/FlatRock and businesshours. Group corporate phone only, not a named or Lynchburg manufacturing line."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own DavisFrost manufacturing history and currentOTparent",
+        "url": "https://www.davisfrost.com/about-us/"
+      },
+      {
+        "label": "Own DavisFrost current protective portfolio",
+        "url": "https://www.davisfrost.com/"
+      },
+      {
+        "label": "OwnOTDynamics in-house manufacturing",
+        "url": "https://otdynamics.com/"
+      },
+      {
+        "label": "OwnDavisFrost railcar anticorrosion coating systems",
+        "url": "https://www.davisfrost.com/railcar-coatings/"
+      },
+      {
+        "label": "OwnOTDynamics complete returned technologies",
+        "url": "https://otdynamics.com/what-we-offer/"
+      },
+      {
+        "label": "OwnOTDynamics current corporate contact",
+        "url": "https://otdynamics.com/contact/"
+      }
+    ]
+  },
   "u-c-coatings-buffalo": {
     "website": "https://uccoatings.com/",
     "contactPage": "https://uccoatings.com/pages/contact",
@@ -19155,6 +19247,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ot-dynamics-flat-rock",
   "u-c-coatings-buffalo",
   "colorlak-stare-mesto",
   "brillux-muenster",
