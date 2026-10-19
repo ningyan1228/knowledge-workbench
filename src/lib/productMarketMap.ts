@@ -5422,11 +5422,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "warren-paint-nashville",
+    "company": "Warren Paint & Color Co.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Nashville (city marker)",
+    "latitude": 36.16,
+    "longitude": -86.78,
+    "legacyCompanyDescription": "自有工业防护涂料配方制造、委托加工及private-label企业；ELO相容和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Warren自有Home和About明确自主定制配方、生产、委托加工及private-label涂料制造；独立工业系列和具体NE4085/E4005商品页明确双组分聚酰胺环氧涂料，用于钢、混凝土并列海事环境，另明确不作为室外面漆。ELO TDS确认涂料应用，可温和询问配方原料评估是否相关；实际使用我方ELO、相容、采购与性能均未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立复核6个18Oct捕获的当前自有HTML：Home、Contact、Industrial、About、AllCategories和具体NE4085/E4005商品，19Oct保存复核。公司自有配方、制造及具体工业防护产品链成立。保留真实private-label/toll/custom业务，About另有对relabel客户销售涂料浓缩品以及用于金属粉施涂的悬浮载体，不谎称只卖普通桶装面漆。这些实际用途未将其识别为ELO/ESBO/环氧化植物油或同类生物基增塑稳定原料外售；不因concentrate/vehicle/epoxy字样 blanket排除。当前已读经营/工业用途未见所选同类原料商业供应证据；结论限实际审读范围，非所有SKU/配方/TDS/SDS/全球股权审计，未虚构外购例外或从未列组分推定绝不含ELO。AllCategories仅三类制品/三类服务导航，未称完整每款目录。具体商品页Composition/Vehicle及使用说明不转移为我方参数；保留Notdesignedasanexteriorfinishcoat限制，不推出全部海事/室外适配。About自述Smythe家族所有及PresidentJeffSmythe参与配方，未有归属他的个人业务邮箱/直线，不挂到Ask或Askme，不称已核实采购人。历史BrooklynBridge/大学/能源项目及50至1000加仑批次/百年/产能等不作为当前采购时机或数量。Contact主栏Email:Ask@与页脚Askme@不同，选择主栏及对应mailto明确的一般业务Ask@，保留来源差异，不猜测二者转发或投递状态。主栏Phone6152926655规范化+1，不误取Emergency8005355053或Fax6152926654；表单Sales/CustomerService/Technical选项不证明邮箱部门/个人归属。按WarrenPaint&Color/warrenpaint.com/当前Smythe身份与最新main282/root296及全队列/frontier无同一主体；catalog子域和private-label品牌不拆账户。Search同名WarrenEnvironmental/WarrenCoatings/TFWarren等未原文核验关联，未借其工厂/专利/联系人或据同名推股权。潜在涂料配方相关性不是已使用、相容或实际需求。"
+    },
+    "contact": {
+      "label": "官网联系主栏一般业务邮箱及公司电话；无核实具名采购/技术收件人",
+      "email": "ask@warrenpaint.com",
+      "phone": "+1 615 292 6655",
+      "contactUrl": "https://www.warrenpaint.com/contact-us/"
+    },
+    "source": {
+      "label": "Own NE4085/E4005 two-component White Polyamide High Gloss Epoxy for steel/concrete, with exterior finish limitation",
+      "url": "https://catalog.warrenpaint.com/item/industrial-coatings-2/industrial-epoxy-coatings/ne-4085-e-4005"
+    },
+    "checkedAt": "2026-10-18"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "warren-paint-nashville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indecolor-ecatepec": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "irurena-group-azpeitia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "estalia-damiani-montecchio-emilia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5710,6 +5739,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "warren-paint-nashville": {
+    "website": "https://www.warrenpaint.com/",
+    "contactPage": "https://www.warrenpaint.com/contact-us/",
+    "address": "Warren Paint & Color Co.,700 Wedgewood Ave.(at I-65),Nashville,TN37203,United States. Exact own main business address; city-only marker36.16,-86.78,not surveyed factory coordinates.",
+    "generalEmail": "ask@warrenpaint.com",
+    "generalEmailEvidence": {
+      "company": "Warren Paint & Color Co.",
+      "value": "ask@warrenpaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Warren own Contact main corporate block",
+          "url": "https://www.warrenpaint.com/contact-us/",
+          "summary": "Actual Contact main block explicitly prints Email:Ask@warrenpaint.com and a matching mailto:ask@warrenpaint.com. Lowercase normalization only. Footer/home separately print Askme@; do not conflate aliases or infer personal/department ownership or delivery."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "generalPhone": "+1 615 292 6655",
+    "generalPhoneEvidence": {
+      "company": "Warren Paint & Color Co.",
+      "value": "+1 615 292 6655",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Warren own Contact main corporate block",
+          "url": "https://www.warrenpaint.com/contact-us/",
+          "summary": "Actual Contact main block explicitly labels Phone:615.292.6655 for NashvilleUSA, normalized+1. Not the emergency8005355053,fax6152926654 or a personal direct line; header/footer toll labels not used to reverse main-block designation."
+        }
+      ],
+      "verifiedAt": "2026-10-18"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current self-formulation/manufacture and three finished-coating programs",
+        "url": "https://www.warrenpaint.com/"
+      },
+      {
+        "label": "Own exact two-component polyamide epoxy application and exterior limitation",
+        "url": "https://catalog.warrenpaint.com/item/industrial-coatings-2/industrial-epoxy-coatings/ne-4085-e-4005"
+      },
+      {
+        "label": "Own industrial range including primers,alkyds and epoxy protection",
+        "url": "https://catalog.warrenpaint.com/category/industrial-coatings-2"
+      },
+      {
+        "label": "Own current Smythe family/President identity and concentrate/metal-powder vehicle business",
+        "url": "https://www.warrenpaint.com/about-us/"
+      },
+      {
+        "label": "Catalogue taxonomy only, not a full all-SKU audit",
+        "url": "https://catalog.warrenpaint.com/category/all-categories"
+      },
+      {
+        "label": "Own primary corporate contact block and footer-alias discrepancy",
+        "url": "https://www.warrenpaint.com/contact-us/"
+      }
+    ]
+  },
   "indecolor-ecatepec": {
     "website": "https://indecolor.com.mx/",
     "contactPage": "https://indecolor.com.mx/contacto/",
@@ -17714,6 +17806,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "warren-paint-nashville",
   "indecolor-ecatepec",
   "irurena-group-azpeitia",
   "estalia-damiani-montecchio-emilia",
