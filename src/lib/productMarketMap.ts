@@ -5841,11 +5841,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "colorificio-feroni-oppeano",
+    "company": "Colorificio Feroni Srl",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Oppeano, Verona",
+    "latitude": 45.305,
+    "longitude": 11.18,
+    "legacyCompanyDescription": "意大利自有水性木器着色剂、木器漆及配套成品制造企业；实际原料使用及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前官网企业简介明确自有木器漆、着色剂和稀释剂生产；W1500系列原文明示为水性丙烯酸木材着色剂，用于室内外木材着色和饰面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读6个当前原文：W1500英文产品2105chars、意文Home10657、Contact1570、Varie1461、Converter2708、Catalizzatori1728。Home明确自身稀释剂、木器漆和着色剂生产以及家族第二代历史；W1500明确水性丙烯酸、室内外木材，不凭PU/品牌词猜水性。真实经营包含木器/建筑/金属/船用成品、溶剂和稀释剂、调色中性基料及配套催化固化剂、道路漆和工具。Converter原文明确为着色用成品漆中性基料，不把它冒称原料树脂或CPO；具体催化剂配套PU/环氧/丙烯酸成品固化，不自动等同PO/CPO输入。在实际当前自述经营及所读类别/具体产品中未见水性聚烯烃乳液、PO/CPO原料分散体或同类原料型附着促进剂外售；按NLW所选输入有限范围排除通过，不声称全部SKU/TDS/SDS/未披露配方/全球股权审计。主页法规、环保、安全、Biosafe/室内排放、涂刷性能和运输时段仅保留原文，不转移到我方产品也不提供法规结论。联系页form的Messaggio inviato是静态模板不是已发送；info@为通用业务邮箱，PEC法律邮箱不用于开发信，总机与联系人分离，未发明具名采购人。公司法定名、Oppeano地址/VAT一致；Feroni及域名/法定号全main/root/队列/frontier去重，不虚构未披露母公司或按产品多计。坐标只是Oppeano城市点；所选原料需求、相容、采购时机未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@feroni.it",
+      "phone": "+39 045 6970100",
+      "contactUrl": "https://www.feroni.it/contatti.html"
+    },
+    "source": {
+      "label": "Feroni own W1500 water-based acrylic wood stain and own production overview",
+      "url": "https://www.feroni.it/en/wood/stains/water-based/wood-stains-w-1500-series-water-based-p-3/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "colorificio-feroni-oppeano": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ot-dynamics-flat-rock": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "u-c-coatings-buffalo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorlak-stare-mesto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6144,6 +6173,43 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "colorificio-feroni-oppeano": {
+    "website": "https://www.feroni.it/",
+    "contactPage": "https://www.feroni.it/contatti.html",
+    "address": "Via Quaiotto 18, 37050 Oppeano (Verona), Italy",
+    "generalEmail": "info@feroni.it",
+    "generalEmailEvidence": {
+      "company": "Colorificio Feroni Srl",
+      "value": "info@feroni.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.feroni.it/contatti.html",
+          "summary": "Own current Contact explicitly labels E-mail: info@feroni.it as company contact, separate from PEC legalmail address and blank customer-entered form email. Not a personal inbox or procurement request."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+39 045 6970100",
+    "generalPhoneEvidence": {
+      "company": "Colorificio Feroni Srl",
+      "value": "+39 045 6970100",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.feroni.it/contatti.html",
+          "summary": "Own current Contact explicitly publishes Telefono:+390456970100 r.a.; company general voice, not a named staff number. Address and VAT02997990235 on same own source."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": []
+  },
   "ot-dynamics-flat-rock": {
     "website": "https://otdynamics.com/",
     "contactPage": "https://otdynamics.com/contact/",
@@ -19247,6 +19313,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "colorificio-feroni-oppeano",
   "ot-dynamics-flat-rock",
   "u-c-coatings-buffalo",
   "colorlak-stare-mesto",

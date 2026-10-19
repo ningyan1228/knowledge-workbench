@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "colorificio-feroni-oppeano": "Your W1500 series is a water-based acrylic wood stain offered for interior and exterior wood staining and finishing.",
   "ot-dynamics-flat-rock": "Your Davis Frost railcar coating range includes primers, topcoats and specialty finishes for protection against corrosion and harsh weather.",
   "u-c-coatings-buffalo": "Your FAQ describes SEAL-ONCE NANO as a water-based, non-film-forming formula that penetrates exterior wood surfaces rather than forming a surface film.",
   "colorlak-stare-mesto": "Your AQUALAK V1419 is a water-based finishing varnish offered in gloss, semi-matt and matt for interior wooden furniture, panels and chairs.",
