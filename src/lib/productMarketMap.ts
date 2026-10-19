@@ -5951,11 +5951,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "aervoe-gardnerville",
+    "company": "Aervoe LLC (Crown / Zynolyte / Athena brands)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Gardnerville, Nevada",
+    "latitude": 38.9413,
+    "longitude": -119.7496,
+    "legacyCompanyDescription": "美国自有工厂与配方团队的工业防护成品漆制造企业；Crown/Zynolyte/Athena按一个账户，Seymour业务关联留有来源说明",
+    "fit": "可开发候选",
+    "signal": "当前About明确Gardnerville工厂制造及自身配方化学团队、混配/质检流程；MROColdGalvanize当前产品页列金属锌喷涂成品用于铁钢及焊缝的临时底漆防护，当前公司经营包含工业级漆及特殊防护涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文审读5份实际TinyFish可用正文：AervoeAbout2840/MRO产品2297/Contact877/Home1999/SeymourHome2586chars。另一次润滑剂分类仅206chars标题及导航壳，明确标unusable_category_shell，不冒称读到完整润滑剂SKU/组成、不用该壳做额外同行清白证明。About明确自身Gardnerville制造和配方化学团队、混配制造品控，95%是公司总体自述，未推定每个具体SKU都产于Nevada或独立核实工厂占比。具体MROColdGalvanize为铁钢焊缝临时锌底漆/防护成品，未借用另一个Crown93%PDS或SDS、未声称读PDF/ASTM/MIL/食品接触认证，未把价格和库存元数据当采购/产能。保留实际混合经营：工业级漆、特殊涂层、清洁剂、润滑维护成品、安全/交通控制及部分外部产品；不称只经营涂料，也不把所有润滑油或锌漆普通原料当同类ELO输入。当前自述制造/配方及明确工业成品经营未显示ELO、ESBO、环氧化植物油或同类生物增塑稳定输入原料外售，按所选ELO输入和实际已读范围有限通过；不保证全部润滑剂/批发SKU/配方/SDS/TDS/未披露原料或全球股权审计，不用未返回分类补证。About明确Crown/Zynolyte2002收购及Athena2008关联同一Gardnerville设施；当前Home直接将店内/工业MRO方案导向Seymour，其自身Home确为成品喷漆品牌，当前业务关联保留，不能凭网站链接或历史并购推定具体当前股权/收购日期，也不把Seymour单列新客户。按Aervoe各品牌/已知Seymour业务关联全main/root/队列/frontier去重均无已知账户。当前站点标题/站名AervoeLLC与旧meta描述IndustriesInc并存，使用当前自有LLC名称，不声称工商法律审核。Contact总部1100MarkCircle、出货1161、收货1191分清，7757833100既为公司电话也用于ProductManagement技术入口，不冒称具名采购/技术直线；五份正文及返回links均无邮箱/mailto，不构造收件邮箱或借Seymour邮箱。原文法规/环保/无毒/化学品/施工等声明不转为我方技术或法律安全指导。ELO实际使用/相容/需求/时机未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司联系页/总部业务电话（兼Product Management技术入口）；未披露可核验业务邮箱或具名人",
+      "phone": "+1 775 783 3100",
+      "contactUrl": "https://www.aervoe.com/contact-us/"
+    },
+    "source": {
+      "label": "Aervoe own MRO Cold Galvanize metallic primer and current in-house manufacturing/formulation evidence",
+      "url": "https://www.aervoe.com/product/mro-cold-galvanize-coating/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "aervoe-gardnerville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "protek-paint-toronto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "his-paint-oklahoma-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "williams-hayward-summit": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6258,6 +6286,28 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "aervoe-gardnerville": {
+    "website": "https://www.aervoe.com/",
+    "contactPage": "https://www.aervoe.com/contact-us/",
+    "address": "Corporate headquarters: 1100 Mark Circle, Gardnerville, NV 89410, United States. Shipping/will-call1161 andreceiving1191MarkCircle are separate published functions; city-only map marker.",
+    "generalPhone": "+1 775 783 3100",
+    "generalPhoneEvidence": {
+      "company": "Aervoe LLC (Crown / Zynolyte / Athena brands)",
+      "value": "+1 775 783 3100",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.aervoe.com/contact-us/",
+          "summary": "Own current Contact CorporateHeadquarters publishesPhone7757833100 andTechnicalSupport also routesProductManagementDepartment to same7757833100. General corporate/shared business voice, not a named direct line. Tollfree8002270196 separate; shipping/receiving streetnumbers notcorporateaddress."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": []
+  },
   "protek-paint-toronto": {
     "website": "https://www.protekpaint.com/",
     "contactPage": "https://www.protekpaint.com/contact-us/",
@@ -19507,6 +19557,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "aervoe-gardnerville",
   "protek-paint-toronto",
   "his-paint-oklahoma-city",
   "williams-hayward-summit",

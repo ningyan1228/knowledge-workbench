@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "aervoe-gardnerville": "Your MRO Cold Galvanize Coating provides temporary zinc protection for iron, steel and welds during fabrication, maintenance and repair.",
   "protek-paint-toronto": "Your water-based polyurethane varnishes are listed for hardwood floors and furniture refinishing in your wood-coatings range.",
   "his-paint-oklahoma-city": "Your Life-Kote industrial coatings are formulated and produced in the Oklahoma City region for equipment, machinery and structural components.",
   "williams-hayward-summit": "Your Aqua-Epoxy waterborne two-component coating is offered as a primer, topcoat or direct-to-metal paint in your range of industrial protective coatings.",
