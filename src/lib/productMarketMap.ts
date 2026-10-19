@@ -5506,11 +5506,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "sheboygan-paint-wisconsin",
+    "company": "Sheboygan Paint Company",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Sheboygan (city marker)",
+    "latitude": 43.75,
+    "longitude": -87.71,
+    "legacyCompanyDescription": "自有工业防护成品涂料配方制造企业；ELO相容及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Sheboygan自有服务页确认Wisconsin/Georgia制造设施、内部配方研发和生产；具体WasteContainer页明确用于钢制废物/回收容器的water-reducible保护性醇酸磁漆，可在底漆上或直接对金属施涂。ELO TDS确认涂料应用，可提出配方原料评估相关性；实际使用、相容、需求和采购时机均未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立完整审读6个当前自有HTML：Home17039chars、Services17844、Contact16342、About15429、WasteContainer16262、Leadership27174。Home/Services全返回文字已读；其余各独有段落已读，并逐一核对与已读Home完全相同的9801char历史招聘/体系尾文，保存SHA及分段阅读依据，未漏读差异或假称重新读取旧招聘。自身Wisconsin/Georgia配方制造、具体钢容器防护性成品醇酸磁漆及工业成品体系成立。实际返回水性/溶剂型体系含醇酸、丙烯酸乳液、urethane、epoxyesters/底漆等，服务页原料QC为内部使用，未把普通epoxy/acrylicemulsion/原料检验字样等同ELO/ESBO外售。已读具体制造/经营/体系未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入商业供应，所选排除按实际已读范围通过，不保证全SKU/全部SDS/全球股权/未披露组分、未发明外购例外。About当前独立私有family-owned与Leadership第五代Jay/Marcus治理描述一致，Wisconsin/Georgia/分销网同一账户；Cynthia/Ian前雇主Dow/Valspar/Sherwin不是本公司当前集团归属。Contact表单BradleyCoatingsGroupCustomer只是实际字段，没有推断并购/股权或额外Bradley客户，也未借其工厂/产品/联系人；已对Bradley相关名字和域在整库去重无同一已知账户。当前Leadership精确MarcusHale采购职责与namedbusiness邮箱marcush/电话9209187626、CynthiaBaricos技术研发身份及cbaricos/9208890567分别逐项有来源；info@/HQ9204582157与fax9204585620保持一般公司路线，绝不附给个人。当前HollyCEO/Cynthia标题保留实际自述，不用旧CEO或把family所有人历史采购职位当现任采购人。2022招聘/2025设备新闻/2026新闻不推定现有原料RFQ或采购ELO，公开named渠道不代表投递/兴趣已确认。保持源产品成品性能/干燥/使用和法规营销边界，不转移到ELO。"
+    },
+    "contact": {
+      "label": "官网明确采购负责人MarcusHale的业务邮箱及办公电话；另存技术负责人和公司一般路线",
+      "email": "marcush@shebpaint.com",
+      "phone": "+1 920 918 7626",
+      "contactUrl": "https://shebpaint.com/contact/"
+    },
+    "source": {
+      "label": "Own current water-reducible alkyd protective enamel for steel waste/recycling containers",
+      "url": "https://shebpaint.com/industry/waste-container/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sheboygan-paint-wisconsin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "alcea-senago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anchor-paint-tulsa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "warren-paint-nashville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5797,6 +5826,176 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sheboygan-paint-wisconsin": {
+    "website": "https://shebpaint.com/",
+    "contactPage": "https://shebpaint.com/contact/",
+    "address": "Sheboygan Paint Company,1439North25thStreet,Sheboygan,WI53081,UnitedStates; ownWisconsinfacility/HQ. Georgia608CanalStreet,CedartownGA30125 samecompany. City-only marker43.75,-87.71,not surveyed factory coordinates.",
+    "generalEmail": "info@shebpaint.com",
+    "generalEmailEvidence": {
+      "company": "Sheboygan Paint Company",
+      "value": "info@shebpaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company corporate contact",
+          "url": "https://shebpaint.com/contact/",
+          "summary": "CurrentContact independently prints info@shebpaint.com forbothfacilities/generalcompany; not Marcus/Cynthia personalmail or dept."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 920 458 2157",
+    "generalPhoneEvidence": {
+      "company": "Sheboygan Paint Company",
+      "value": "+1 920 458 2157",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company corporate contact",
+          "url": "https://shebpaint.com/contact/",
+          "summary": "CurrentContact Wisconsin P9204582157 distinct F9204585620; normalizeUS+1 only. HQvoice not Marcus/Cynthia personalphone."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [
+      {
+        "name": "Marcus Hale",
+        "title": "Director of Procurement",
+        "department": "Procurement",
+        "email": "marcush@shebpaint.com",
+        "phone": "+1 920 918 7626",
+        "identityEvidence": {
+          "company": "Sheboygan Paint Company",
+          "name": "Marcus Hale",
+          "title": "Director of Procurement",
+          "responsibilities": "Current procurement director responsible for material management, strategic sourcing, spend analysis and purchasing processes; no specific ELO purchase need stated.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current leadership roster and full named biography",
+              "url": "https://shebpaint.com/leadership/",
+              "summary": "Same currentleadership roster and fullbiography explicitly identify Marcus Hale in thisrole atSheboygan, with these currentresponsibilities; not titleinference fromfamilyownership or prior employer."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "emailEvidence": {
+          "company": "Sheboygan Paint Company",
+          "value": "marcush@shebpaint.com",
+          "kind": "named-business",
+          "personName": "Marcus Hale",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current leadership biography exact named business channel",
+              "url": "https://shebpaint.com/leadership/",
+              "summary": "Exact E address printed under the Marcus Hale biography, separately associated with name/title. No patternconstructed address or generalinfo@ substitution; delivery/interest unconfirmed."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "phoneEvidence": {
+          "company": "Sheboygan Paint Company",
+          "value": "+1 920 918 7626",
+          "kind": "named-business",
+          "personName": "Marcus Hale",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current leadership biography exact named business channel",
+              "url": "https://shebpaint.com/leadership/",
+              "summary": "Exact P office/businessphone printed under Marcus Hale biography, normalizedUS+1. It differs from companygeneral9204582157/fax9204585620; no privatecell inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "verifiedAt": "2026-10-19"
+      },
+      {
+        "name": "Cynthia Baricos",
+        "title": "VP of Technology and Research Operations",
+        "department": "Technical",
+        "email": "cbaricos@shebpaint.com",
+        "phone": "+1 920 889 0567",
+        "identityEvidence": {
+          "company": "Sheboygan Paint Company",
+          "name": "Cynthia Baricos",
+          "title": "VP of Technology and Research Operations",
+          "responsibilities": "Current technology/research executive leads Research & Development and Quality Laboratories at Wisconsin and Georgia; no specific ELO formulation compatibility or material need stated.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current leadership roster and full named biography",
+              "url": "https://shebpaint.com/leadership/",
+              "summary": "Same currentleadership roster and fullbiography explicitly identify Cynthia Baricos in thisrole atSheboygan, with these currentresponsibilities; not titleinference fromfamilyownership or prior employer."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "emailEvidence": {
+          "company": "Sheboygan Paint Company",
+          "value": "cbaricos@shebpaint.com",
+          "kind": "named-business",
+          "personName": "Cynthia Baricos",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current leadership biography exact named business channel",
+              "url": "https://shebpaint.com/leadership/",
+              "summary": "Exact E address printed under the Cynthia Baricos biography, separately associated with name/title. No patternconstructed address or generalinfo@ substitution; delivery/interest unconfirmed."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "phoneEvidence": {
+          "company": "Sheboygan Paint Company",
+          "value": "+1 920 889 0567",
+          "kind": "named-business",
+          "personName": "Cynthia Baricos",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current leadership biography exact named business channel",
+              "url": "https://shebpaint.com/leadership/",
+              "summary": "Exact P office/businessphone printed under Cynthia Baricos biography, normalizedUS+1. It differs from companygeneral9204582157/fax9204585620; no privatecell inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "verifiedAt": "2026-10-19"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current corporate/manufacturing history and governance",
+        "url": "https://shebpaint.com/about-us/"
+      },
+      {
+        "label": "Own current precise downstream product/application",
+        "url": "https://shebpaint.com/industry/waste-container/"
+      },
+      {
+        "label": "Own current corporate business contact and facility identities",
+        "url": "https://shebpaint.com/contact/"
+      },
+      {
+        "label": "Own current manufacturing/lab/formulation/internal rawinput QC",
+        "url": "https://shebpaint.com/services/"
+      },
+      {
+        "label": "Own current named identity, responsibilities and separately exact business channels",
+        "url": "https://shebpaint.com/leadership/"
+      },
+      {
+        "label": "Own current full company offering; historical2022job not currentdemand",
+        "url": "https://shebpaint.com/"
+      }
+    ]
+  },
   "alcea-senago": {
     "website": "https://www.alcea.com/",
     "contactPage": "https://www.alcea.com/contatti/",
@@ -17982,6 +18181,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sheboygan-paint-wisconsin",
   "alcea-senago",
   "anchor-paint-tulsa",
   "warren-paint-nashville",

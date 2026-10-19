@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "sheboygan-paint-wisconsin": "Your water-reducible alkyd enamels are formulated for steel waste and recycling containers and can be applied over primer or directly to metal.",
   "alcea-senago": "Your Geowood NATURAL extra-matt finish is included in your water-based range for protecting wood.",
   "anchor-paint-tulsa": "Your Saf-T-Gard II industrial enamels are designed to protect metal against rust, corrosion and deterioration.",
   "warren-paint-nashville": "Your White Polyamide High Gloss Epoxy is a two-component coating for steel and concrete, with marine applications listed.",
