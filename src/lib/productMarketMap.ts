@@ -5617,11 +5617,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "rubio-monocoat-izegem",
+    "company": "Rubio Monocoat",
+    "productId": "nl-w1201",
+    "country": "Belgium",
+    "countryZh": "比利时",
+    "city": "Izegem",
+    "latitude": 50.9139,
+    "longitude": 3.2138,
+    "legacyCompanyDescription": "比利时木器保护产品制造商；Muylle Facon为历史来源，Rubio Monocoat Belgium为官网披露的销售主体",
+    "fit": "可开发候选",
+    "signal": "官网 About 明确比利时木器产品制造商、当地工厂及自有研发，Industrial 页说明定制工业木器保护体系；公司官网链接的比利时店铺 WoodCream 产品页 FAQ 明确 DuroGrit 是水性木油，用于露台和花园家具等木表面。Muylle Facon 为已披露历史来源，Rubio Monocoat Belgium 为条款所列销售主体，均只计一个关联账户。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立全文读6份当前原文：公司成品分类、公司直链比利时店铺WoodCream、制造/研发/历史、总部Contact、Industrial和销售条款。所查为木器保护油/水性DuroGrit、油蜡/预着色/清洁维护、工业UV油、FR成品预处理与双组分保护系统、WoodCream及Softener配套稀释维护。保留实际工业定制及配套组分业务，不把乳液、蜡、木油稀释剂或成品FR/UV体系泛称同类PO/CPO原料；所查当前范围未见聚烯烃/CPO分散体或同类附着力促进原料对外销售。结论限实际所查类别与文字，未读取全部SKU/TDS/SDS/PDF或配方，不保证未披露产品。官网About明确比利时工厂/R&D和Muylle Facon历史，Contact直接链接rubiomonocoat.be，条款销售主体Rubio Monocoat Belgium号0782.268.772与页脚VAT0742 901 125不同，分别保留而不虚构同一法人或法律形式/最终母公司；以Rubio Monocoat品牌制造业务及这些关联主体为单一账户。历史Muylle Facon、Rubio、DuroGrit/FibreGrit/WoodCream/工业系列和两域名全库去重；FCP Cerea地址Morubio仅包含rubio字符串，不是Rubio品牌，用词边界核实。未纳入大陆/台湾渠道和外国经销商为新客户；坐标仅Izegem城市点。"
+    },
+    "contact": {
+      "label": "官网工业配方应用服务部门邮箱；另保留总部一般邮箱和业务总机",
+      "email": "service@rubiomonocoat.com",
+      "phone": "+32 51 30 80 54",
+      "contactUrl": "https://www.rubiomonocoat.com/nl-BE/over-ons/contact"
+    },
+    "source": {
+      "label": "Own linked Belgian shop FAQ identifies water-based DuroGrit wood oil; own corporate About and Industrial pages verify manufacture/R&D",
+      "url": "https://rubiomonocoat.be/products/woodcream"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rubio-monocoat-izegem": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "aexcel-mentor": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "richards-paint-rockledge": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bps-borma-san-stino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5912,6 +5941,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rubio-monocoat-izegem": {
+    "website": "https://www.rubiomonocoat.com/",
+    "contactPage": "https://www.rubiomonocoat.com/nl-BE/over-ons/contact",
+    "address": "Roeselaarsestraat 535, 8870 Izegem, Belgium",
+    "generalEmail": "info@rubiomonocoat.com",
+    "generalEmailEvidence": {
+      "company": "Rubio Monocoat",
+      "value": "info@rubiomonocoat.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate Contact HQ",
+          "url": "https://www.rubiomonocoat.com/nl-BE/over-ons/contact",
+          "summary": "Explicit HQ E-mail info@rubiomonocoat.com beside Izegem address andphone; general business channel, not named ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+32 51 30 80 54",
+    "generalPhoneEvidence": {
+      "company": "Rubio Monocoat",
+      "value": "+32 51 30 80 54",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.rubiomonocoat.com/nl-BE/over-ons/contact",
+          "summary": "Own corporate Contact lists headquarters phone +32 (0) 51 30 80 54 alongside Izegem address; corporate business line, not shop line +32 51 335 335 or a named specialist phone."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "service@rubiomonocoat.com",
+        "emailEvidence": {
+          "company": "Rubio Monocoat",
+          "value": "service@rubiomonocoat.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own Industrial page: application and custom industrial solutions service team",
+              "url": "https://www.rubiomonocoat.com/nl-BE/producten/industrieel",
+              "summary": "Own Industrial page explicitly invites industrial-solution enquiries to service@rubiomonocoat.com and describes experienced wood-industry professionals providing application and tailored industrial-solution support. Department route, not a person's mailbox. Technical is the functional classification from the disclosed application/custom-solution responsibilities; no person or formal title invented."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own corporate finished-product families",
+        "url": "https://www.rubiomonocoat.com/nl-BE/producten/producten"
+      },
+      {
+        "label": "Own linked Belgian shop WoodCream FAQ explicitly identifying water-based DuroGrit",
+        "url": "https://rubiomonocoat.be/products/woodcream"
+      },
+      {
+        "label": "Own Belgian manufacturing, R&D and Muylle Facon history",
+        "url": "https://www.rubiomonocoat.com/nl-BE/over-ons/over-rubio-monocoat"
+      },
+      {
+        "label": "Own corporate HQ contact and linked Belgian shop",
+        "url": "https://www.rubiomonocoat.com/nl-BE/over-ons/contact"
+      },
+      {
+        "label": "Own industrial solutions and technical service department email",
+        "url": "https://www.rubiomonocoat.com/nl-BE/producten/industrieel"
+      },
+      {
+        "label": "Own seller terms distinguishing Rubio Monocoat Belgium registry number from corporate footer VAT",
+        "url": "https://www.rubiomonocoat.com/nl-BE/general-terms-conditions"
+      }
+    ]
+  },
   "aexcel-mentor": {
     "website": "https://www.aexcelcorp.com/",
     "contactPage": "https://www.aexcelcorp.com/contact-us/",
@@ -18438,6 +18549,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rubio-monocoat-izegem",
   "aexcel-mentor",
   "richards-paint-rockledge",
   "bps-borma-san-stino",
