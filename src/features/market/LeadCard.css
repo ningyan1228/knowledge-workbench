@@ -1,4 +1,6 @@
 .customer-lead-card { min-width:0 }
+.customer-card-send-status { padding:0 16px 10px }
+.customer-row-send-status { margin-top:6px }
 .customer-card-heading { display:flex;align-items:flex-start;gap:9px;width:100%;padding:16px 16px 10px;border:0;background:transparent;color:var(--text);text-align:left;cursor:pointer }
 .customer-card-identity { flex:1;min-width:0 }.customer-card-company { display:flex;align-items:baseline;flex-wrap:wrap;gap:5px 10px }
 .customer-card-company h3 { margin:0;font-size:15px;line-height:1.5;overflow-wrap:anywhere }.customer-card-company small { flex-shrink:0;color:var(--muted);font-size:12px }

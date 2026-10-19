@@ -1,0 +1,11 @@
+.outreach-status-badge { display:inline-flex;align-items:center;gap:5px;width:fit-content;max-width:100%;box-sizing:border-box;padding:5px 9px;border:1px solid;border-radius:7px;font-size:12px;font-weight:750;line-height:1.5;white-space:nowrap;vertical-align:middle }
+.outreach-status-badge svg { flex-shrink:0 }
+.outreach-status-badge.outreach-status-sent { color:#166534;background:#dcfce7;border-color:#86efac }
+.outreach-status-badge.outreach-status-unsent { color:#9a3412;background:#fff7ed;border-color:#fdba74 }
+.outreach-status-badge.outreach-status-unknown { color:#475569;background:#f1f5f9;border-color:#cbd5e1 }
+:root[data-theme="dark"] .outreach-status-badge.outreach-status-sent { color:#86efac;background:#143528;border-color:#2f6a47 }
+:root[data-theme="dark"] .outreach-status-badge.outreach-status-unsent { color:#fdba74;background:#422514;border-color:#9a4f21 }
+:root[data-theme="dark"] .outreach-status-badge.outreach-status-unknown { color:#cbd5e1;background:#293444;border-color:#59677c }
+.company-header-send-status { margin-top:9px }
+.company-detail .outreach-send-panel .outreach-send-confirmed { color:#166534 }
+:root[data-theme="dark"] .company-detail .outreach-send-panel .outreach-send-confirmed { color:#86efac }

@@ -8,6 +8,7 @@ import { publicContactUrl } from '../../lib/contactEvidence'
 import { businessRecipient } from '../../lib/customerDevelopment'
 import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
+import { OutreachStatusBadge } from './OutreachStatusBadge'
 import './LeadCard.css'
 
 export type LeadCardProps = {
@@ -24,6 +25,7 @@ export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, 
   const compactDate = (day: string) => day.startsWith(today.slice(0, 4)) ? `${Number(day.slice(5, 7))}月${Number(day.slice(8, 10))}日` : day
   const record = work.status === 'ready' ? work.records[outreachCompanyKey(lead)] : undefined
   const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
+  const sendState = ledger.status !== 'ready' ? 'unknown' : sent ? 'sent' : 'unsent'
   const stage = effectiveStage(lead, work.status === 'ready' ? work.records : null, ledger.status === 'ready' ? ledger.sends : null)
   const showProgress = Boolean(sent) || (stage !== 'todo' && stage !== 'unknown') || Boolean(record?.followUpOn)
   const firstDay = recordedDay(lead)
@@ -34,7 +36,7 @@ export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, 
     catch (error) { setError(error instanceof Error ? error.message : '收藏失败') }
   }
   if (variant === 'row') return <tr data-lead-id={lead.id} className={`customer-lead-row${selected ? ' selected' : ''}`}>
-    <td><button type="button" className="customer-row-company" onClick={() => onSelect(lead)} title={lead.company}><span className="lead-dot" style={{ background: product.color }} /><span><strong>{lead.company}</strong><small>{leadIndustry(lead)}</small></span></button>{showProgress && <span className="customer-row-status">{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn ? ` · 跟进 ${record.followUpOn}` : ''}</span>}</td>
+    <td><button type="button" className="customer-row-company" onClick={() => onSelect(lead)} title={lead.company}><span className="lead-dot" style={{ background: product.color }} /><span><strong>{lead.company}</strong><small>{leadIndustry(lead)}</small></span></button><div className="customer-row-send-status"><OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} compact /></div>{showProgress && <span className="customer-row-status">{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn ? ` · 跟进 ${record.followUpOn}` : ''}</span>}</td>
     <td className="customer-row-country">{lead.countryZh}</td>
     <td className="customer-row-application" title={lead.companyEvidence.statement}><strong>{application?.name ?? leadIndustry(lead)}</strong><small>{product.name}</small></td>
     <td className="customer-row-dates" title={`首次收录：${recordedTimeLabel(lead)}（北京时间）`}><span>核验 <time dateTime={lead.checkedAt}>{compactDate(lead.checkedAt)}</time></span><span>收录 {firstDay ? <time dateTime={firstDay}>{compactDate(firstDay)}</time> : '时间未记录'}</span></td>
@@ -47,6 +49,7 @@ export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, 
     <button type="button" className="customer-card-heading" onClick={() => onSelect(lead)} title="在地图中定位客户">
       <span className="lead-dot" style={{ background: product.color }} /><span className="customer-card-identity"><span className="customer-card-company"><h3>{lead.company}</h3><small>{lead.countryZh}</small></span><p>{leadIndustry(lead)}</p></span><ChevronRight size={16} />
     </button>
+    <div className="customer-card-send-status"><OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} compact /></div>
     <div className="customer-card-evidence"><p className="customer-card-reason" title={lead.companyEvidence.statement}><strong>匹配理由：</strong>{application?.name ?? leadIndustry(lead)} · {product.name} 原料评估</p><small>潜在应用匹配 · 采购与使用待确认</small></div>
     <div className="customer-card-dates" title={`最近核验：${lead.checkedAt}；首次收录：${recordedTimeLabel(lead)}（北京时间）`}><CalendarCheck size={13} /><span>最近核验：<time dateTime={lead.checkedAt}>{compactDate(lead.checkedAt)}</time><span className="customer-card-date-divider"> · </span>首次收录：{firstDay ? <time dateTime={firstDay}>{compactDate(firstDay)}</time> : '时间未记录'}</span></div>
     {showProgress && <button type="button" className="customer-card-progress" onClick={() => onOpenDetail(lead)}>{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn && <span className={followUpDue(record, shanghaiDay(new Date().toISOString())) ? 'work-due' : ''}> · {record.stage === 'paused' ? '暂缓的计划' : '跟进'} {record.followUpOn}</span>}</button>}

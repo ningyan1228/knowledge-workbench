@@ -29,11 +29,18 @@ describe('evidence-first customer cards', () => {
     expect(markup).not.toContain('100 分')
     expect(markup).not.toContain('待开发')
     expect(markup).not.toContain('mailto:')
+    expect(markup).toContain('outreach-status-unknown')
+    expect(markup).not.toContain('outreach-status-unsent')
   })
 
   it('keeps a real sending milestone visible even before private work records connect', () => {
     const sendingLedger = { status: 'ready', sends: [{ company_key: outreachCompanyKey(lead), voided_at: null }], activeSend: () => ({ sent_on: '2026-10-15' }) } as unknown as OutreachLedger
     expect(render({ ledger: sendingLedger })).toContain('已发送开发信')
+    expect(render({ ledger: sendingLedger })).toContain('outreach-status-sent')
+    expect(render({ ledger: sendingLedger, variant: 'row' })).toContain('outreach-status-sent')
+    const ready = { status: 'ready', sends: [], activeSend: () => null } as unknown as OutreachLedger
+    expect(render({ ledger: ready })).toContain('未发送（无记录）')
+    expect(render({ ledger: ready, variant: 'row' })).toContain('outreach-status-unsent')
   })
 
   it('does not turn an unverified or missing contact URL into an external action', () => {

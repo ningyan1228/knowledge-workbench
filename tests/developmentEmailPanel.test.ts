@@ -26,6 +26,13 @@ describe('email preview follows sending status', () => {
     expect(unsent).not.toMatch(/outreach-copy-button[^>]*disabled/)
     for (const label of ['复制主题', '复制正文', '复制整封']) expect(unsent).toContain(label)
     expect(unknown.match(/outreach-copy-button[^>]*disabled/g)).toHaveLength(3)
+    expect(sent).toContain('outreach-send-banner-sent')
+    expect(sent).toContain('outreach-status-sent')
+    expect(sent).toContain('已记录收件邮箱：fixture@example.org')
+    expect(unsent).toContain('outreach-send-banner-unsent')
+    expect(unsent).toContain('未发送（无记录）')
+    expect(unknown).toContain('outreach-status-unknown')
+    expect(unknown).not.toContain('outreach-status-unsent')
     if (process.env.CONCISE_EMAIL_PREVIEW === '1') {
       const folder = 'research/private/concise-email-20261014'
       mkdirSync(folder, { recursive: true })
