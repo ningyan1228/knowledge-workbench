@@ -5478,11 +5478,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "alcea-senago",
+    "company": "ALCEA S.p.A.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Senago (city marker)",
+    "latitude": 45.57,
+    "longitude": 9.13,
+    "legacyCompanyDescription": "自有水性木器漆、木材浸渍及面漆研发制造企业；NL-W1201适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前ALCEA自有木器产品页与公司制造原文共同确认Senago工厂及内部配方生产，公开Geovit水性木器浸渍剂、GeowoodNATURAL额外哑光水性木器面漆等具体成品。NL-W1201 TDS确认木材及水性涂料应用，可温和询问木器涂料原料评估是否相关；具体配方相容、使用及采购未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立完整审读5个当前ALCEA自有HTML：About9201chars、Home5946、Wood6107、Contact3863、CPS5789，包括已返回popup中的具体产品与用途。自身Senago生产工厂/配方及具体水性木器成品链成立，不从emulsion/水清字样推定水性。真实业务另含工业/coil/CPS施工涂装、色浆/调色/经销支持等，不伪称只卖纯桶装木器漆。Wood实际说明GeowoodALL4857/H converter属于ready-to-use木材防护产品，与DECK成品木油列同类；当前文字未标作外售PO/CPO分散原料，不从converter名称自动排除。CPS明确100percent无溶剂多用途树脂用于现场primer或加石英作地坪修复砂浆，保留实际配方/施工用途，不把任意resine/leganti自动当所选水性聚烯烃或氯化聚烯烃附着原料。当前已读经营和具体本页返回品类未见同类PO/CPO水分散原料/附着力促进原料商业供应，所选同行排除按实际已读范围通过；非全全球SKU/配方/SDS/原料组分或所有股权审计，未虚构外购例外。当前Parodi家族/ALCEA身份、Senago/Meduna/Polska/Canada/D&D同集团关联去重只记一个账户；历史CITVER1999售给Milesi和2010从Akzo/BASF收购技术/业务不是当前归属于Milesi/Akzo/BASF，也不借用其工厂/联系人。WIP/ROVEA/ICSAM/Tovaglieri/MPM/Italchimica等历史关联字样均实际全库预查；无同一已知正式账户。宽匹配ROVEA命中SriLanka私有文字provearelevant并非公司关联，已按边界词重新检查。总部info@与公开总机按来源分别保存，Contact采购/技术表单选项不是部门邮箱；静态ThankYou文案不是已提交表单。Canada法律careofHamilton地址不谎称生产工厂，旧AboutGuelph描述与Contact不同保留原文不拆客户。产品环境/真菌/耐候/施工/认证性能未转移到NLW，实际采购/相容/需求未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总部电话",
+      "email": "info@alcea.com",
+      "phone": "+39 02 990141",
+      "contactUrl": "https://www.alcea.com/contatti/"
+    },
+    "source": {
+      "label": "Own current named GEOWOOD NATURAL water-based wood finish",
+      "url": "https://www.alcea.com/settori/vernici-legno/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "alcea-senago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anchor-paint-tulsa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "warren-paint-nashville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indecolor-ecatepec": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5768,6 +5797,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "alcea-senago": {
+    "website": "https://www.alcea.com/",
+    "contactPage": "https://www.alcea.com/contatti/",
+    "address": "ALCEA S.p.A., Via Piemonte18,20030Senago(MI),Italy. Own headquarters/plant, warehouse ViaTogliatti27 separate. City-only marker45.57,9.13,not surveyed factory coordinates.",
+    "generalEmail": "info@alcea.com",
+    "generalEmailEvidence": {
+      "company": "ALCEA S.p.A.",
+      "value": "info@alcea.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company corporate contact",
+          "url": "https://www.alcea.com/contatti/",
+          "summary": "CurrentContact footer explicitly publishes info@alcea.com. Generalcompanybox, not procurement/technicaldepartment or CarloParodi personaladdress; actual formdepartmentselect not emailownership."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+39 02 990141",
+    "generalPhoneEvidence": {
+      "company": "ALCEA S.p.A.",
+      "value": "+39 02 990141",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company corporate contact",
+          "url": "https://www.alcea.com/contatti/",
+          "summary": "CurrentContact labels headquartersphone+390299014.1, footer+3902990141; punctuationnormalized, no inventedextension orCanada/MEDUNA number."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current corporate/manufacturing history and governance",
+        "url": "https://www.alcea.com/azienda/chi-siamo-alcea/"
+      },
+      {
+        "label": "Own current precise downstream product/application",
+        "url": "https://www.alcea.com/settori/vernici-legno/"
+      },
+      {
+        "label": "Own current corporate business contact and facility identities",
+        "url": "https://www.alcea.com/contatti/"
+      },
+      {
+        "label": "Own CPS resin/primer/site-applied formulation boundary",
+        "url": "https://www.alcea.com/settori/cps-vernici-specialistiche-edilizia/"
+      },
+      {
+        "label": "Own current manufacturer home and legal identity",
+        "url": "https://www.alcea.com/"
+      }
+    ]
+  },
   "anchor-paint-tulsa": {
     "website": "https://anchorpaint.com/",
     "contactPage": "https://anchorpaint.com/contact-us/",
@@ -17894,6 +17982,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "alcea-senago",
   "anchor-paint-tulsa",
   "warren-paint-nashville",
   "indecolor-ecatepec",
