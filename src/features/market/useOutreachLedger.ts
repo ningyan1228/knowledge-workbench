@@ -3,7 +3,7 @@ import type { PublicLead } from '../../lib/productMarketMap'
 import { supabase } from '../../lib/supabase'
 import {
   activeOutreachSend, findCurrentOutreachSend, loadOutreachSends, localDateToday,
-  recordOutreachSend, validOutreachEmail, voidOutreachSend, type OutreachSend,
+  outreachCompanyKey, recordOutreachSend, validOutreachEmail, voidOutreachSend, type OutreachSend,
 } from '../../lib/outreachLedger'
 
 type LedgerStatus = 'loading' | 'unconfigured' | 'login_required' | 'ready' | 'error'
@@ -75,10 +75,15 @@ export function useOutreachLedger() {
     setBusy(true)
     try { await voidOutreachSend(sendId, reason); await refresh() } finally { setBusy(false) }
   }
-  const checkBeforeOutreach = async (lead: PublicLead) => {
+  const checkBeforeOutreach = async (lead: PublicLead, signal?: AbortSignal) => {
     if (state.status !== 'ready') throw new Error('共享发送记录尚未连接，不能确认是否重复')
-    const current = await findCurrentOutreachSend(lead)
-    if (current) void refresh()
+    const current = await findCurrentOutreachSend(lead, signal)
+    if (signal?.aborted) throw new Error('发送记录核对已取消')
+    const key = outreachCompanyKey(lead)
+    setState((previous) => previous.status !== 'ready' ? previous : {
+      ...previous,
+      sends: [...previous.sends.filter((send) => send.company_key !== key), ...(current ? [current] : [])],
+    })
     return current
   }
 

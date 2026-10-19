@@ -50,10 +50,11 @@ export async function loadOutreachSends(): Promise<OutreachSend[]> {
   }
 }
 
-export async function findCurrentOutreachSend(lead: Pick<PublicLead, 'company' | 'country'>): Promise<OutreachSend | null> {
-  const { data, error } = await database().from('market_intel_outreach_sends')
+export async function findCurrentOutreachSend(lead: Pick<PublicLead, 'company' | 'country'>, signal?: AbortSignal): Promise<OutreachSend | null> {
+  const query = database().from('market_intel_outreach_sends')
     .select('id,company_key,company_name,lead_id,product_id,recipient_email,sent_on,sent_by,created_at,voided_at')
-    .eq('company_key', outreachCompanyKey(lead)).is('voided_at', null).maybeSingle()
+    .eq('company_key', outreachCompanyKey(lead)).is('voided_at', null)
+  const { data, error } = await (signal ? query.abortSignal(signal) : query).maybeSingle()
   if (error) throw error
   return data as OutreachSend | null
 }
