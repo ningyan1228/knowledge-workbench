@@ -5450,11 +5450,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-18"
   },
+  {
+    "id": "anchor-paint-tulsa",
+    "company": "Anchor Paint Manufacturing",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Tulsa (city marker)",
+    "latitude": 36.15,
+    "longitude": -95.99,
+    "legacyCompanyDescription": "自有工业防腐成品涂料配方制造及贴牌/委托加工企业；ELO相容和采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Anchor官网商业介绍明确Tulsa自有工厂、配方实验室和工业成品漆制造；工业页明确Saf-T-GardII防锈防腐工业磁漆及钢用PR底漆，产品类别页另列工业环氧屏障、防护底漆和水性工业漆。ELO的TDS确认涂料应用，可提出原料评估相关性问题；实际ELO使用、配方相容、采购和时机均未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立完整审读当前5个自有原文：Commercial4522chars、Industrial2547、Contact532、IndustrialCategories4258、PrivateLabelToll1852。自有Tulsa工厂、技术实验室/配方研发和具体Saf-T-GardII防腐磁漆制造链成立。真实业务包括建筑漆、工业漆、应用工具、定制/贴牌/委托制造，未伪称只有纯制造或把全部Toll客户原料当本公司采购。Toll页明确可用客户自有配方/原料，此不是Anchor外购ELO或其他输入的证明；一般自有制品配方制造构成潜在评估理由而非现有采购。当前完整返回工业类别段包括磁漆、聚氨酯、底漆、硅酮/硅醇酸、高温涂料、环氧、丙烯酸、抽油杆沥青屏障和水性工业漆；分类的丙烯酸/硅酮/醇酸树脂解释不是独立原料商品销售证据，不把普通epoxy或任何resin字样自动当ELO/ESBO。实际已读经营及本页类目未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定原料外售，按已读具体范围通过所选同行排除，不宣称所有SKU/SDS/组分/全球股权已审计或产品绝不含这些物质；未虚构外购例外。当前Commercial的Fowler/Meade家族历史和JustinCEO描述作为身份去重线索，不把历史创始人当现任采购；人物没有归属的业务邮箱/直线，故不建具名收件人。当前Contact及Toll页明确customerservice邮箱，主页/工业页统一公开tollfree8009994626，均为公司一般业务入口，未附给CEO/采购或解释为部门专线。未读Search同名IndiaAnchorPaints/AnchorBondIPC/AnchorLubricants/AnchorAllied/Anchorax的原文关联，未借其工厂/环氧产品/联系人或推定合并；已知名字域与Fowler/Meade全最新main283/root297/私有队列及frontier去重，无同一已知主体。Anchorax尚未独立核实，未作为另一新增。原厂产品防腐/盐雾/干燥/温度/寿命/设备用途参数不转移到我方材料，所有现有ELO使用/需求/相容和采购时机待确认。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱与toll-free电话；无已核实具名采购/技术收件人",
+      "email": "customerservice@anchorpaint.com",
+      "phone": "+1 800 999 4626",
+      "contactUrl": "https://anchorpaint.com/contact-us/"
+    },
+    "source": {
+      "label": "Own current Saf-T-Gard II industrial enamel and steel-protective PR primer range",
+      "url": "https://anchorpaint.com/industrial/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "anchor-paint-tulsa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "warren-paint-nashville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indecolor-ecatepec": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "irurena-group-azpeitia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5739,6 +5768,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "anchor-paint-tulsa": {
+    "website": "https://anchorpaint.com/",
+    "contactPage": "https://anchorpaint.com/contact-us/",
+    "address": "Anchor Paint Manufacturing, 6707 E.14th St., Tulsa, Oklahoma, United States. Own current headquarters/manufacturing location fromCommercial; city-only marker36.15,-95.99, not surveyed factory coordinates.",
+    "generalEmail": "customerservice@anchorpaint.com",
+    "generalEmailEvidence": {
+      "company": "Anchor Paint Manufacturing",
+      "value": "customerservice@anchorpaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Anchor published corporate business contact",
+          "url": "https://anchorpaint.com/contact-us/",
+          "summary": "Actual Contact explicitly says Contact customerservice@anchorpaint.com; currentToll page independently repeats exactaddress. Generalcompanybusinessroute, no verifiednamedperson ownership/procurement role/delivery claim."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 800 999 4626",
+    "generalPhoneEvidence": {
+      "company": "Anchor Paint Manufacturing",
+      "value": "+1 800 999 4626",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Anchor published corporate business contact",
+          "url": "https://anchorpaint.com/industrial/",
+          "summary": "Actual own pages explicitly label CallTollFree:1-800-999-4626. NormalizeUS+1 only. Companytollfreevoice, not a namedCEO/purchasingperson/directdepartment or fax."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current Tulsa manufacturing/laboratory and family-history identity",
+        "url": "https://anchorpaint.com/commercial/"
+      },
+      {
+        "label": "Own actual named Saf-T-GardII industrial protective coatings",
+        "url": "https://anchorpaint.com/industrial/"
+      },
+      {
+        "label": "Own industrial category descriptions; not all globalSKU/leafSDS read",
+        "url": "https://anchorpaint.com/product-category/industrial-cat/"
+      },
+      {
+        "label": "Own actual private-label/toll roles including customer-owned inputs",
+        "url": "https://anchorpaint.com/private-label-toll-manufacturing/"
+      },
+      {
+        "label": "Own exact public general company email/voice route",
+        "url": "https://anchorpaint.com/contact-us/"
+      }
+    ]
+  },
   "warren-paint-nashville": {
     "website": "https://www.warrenpaint.com/",
     "contactPage": "https://www.warrenpaint.com/contact-us/",
@@ -17806,6 +17894,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "anchor-paint-tulsa",
   "warren-paint-nashville",
   "indecolor-ecatepec",
   "irurena-group-azpeitia",

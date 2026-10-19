@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "anchor-paint-tulsa": "Your Saf-T-Gard II industrial enamels are designed to protect metal against rust, corrosion and deterioration.",
   "warren-paint-nashville": "Your White Polyamide High Gloss Epoxy is a two-component coating for steel and concrete, with marine applications listed.",
   "indecolor-ecatepec": "Your INDEGUARD system is a high-solids epoxy protective coating for metal structures exposed to aggressive industrial environments.",
   "irurena-group-azpeitia": "Your IRURENA industrial wood range includes one- and two-component water-based varnishes, as well as water-based finishes for exterior timber.",
