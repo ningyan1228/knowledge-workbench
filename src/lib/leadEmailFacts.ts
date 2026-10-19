@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "richards-paint-rockledge": "Your Python range includes a polyamide epoxy gloss coating and an epoxy mastic for industrial protective coating applications.",
   "bps-borma-san-stino": "Your Naturaqua Holzwachs Lasur 3in1 is a water-based primer and finish for protecting interior and exterior wood.",
   "sheboygan-paint-wisconsin": "Your water-reducible alkyd enamels are formulated for steel waste and recycling containers and can be applied over primer or directly to metal.",
   "alcea-senago": "Your Geowood NATURAL extra-matt finish is included in your water-based range for protecting wood.",

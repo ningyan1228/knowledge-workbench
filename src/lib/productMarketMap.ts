@@ -5562,11 +5562,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "richards-paint-rockledge",
+    "company": "Richard's Paint Company, Inc. (Star Step Performance Coatings Group)",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Rockledge (city marker)",
+    "latitude": 28.35,
+    "longitude": -80.73,
+    "legacyCompanyDescription": "自有工业防护及建筑成品涂料配方制造企业；StarStep集团关联，ELO适配与采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前Richard's自有About明确自身配方研发、定制及制造，当前Epoxy页列2000PythonWBAmineAdductEpoxyGloss、2200PythonPolyamideEpoxyGlossCoating和2900PythonEpoxyMastic，工业页明确工业防护涂料/防腐底漆经营。ELO TDS确认涂料应用，可提出配方原料评估相关性；具体ELO使用、相容、需求和采购未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立完整审读当前5个可获取自有HTML：About3015chars、Industrial2953、Contact1384、Epoxy2828、Specialty3135；StarStep集团Home403未获取，不假称看过或继续追加。About当前精确列Richard's/ALTA/DesertPolymerFlooring/Trinkote/RoyalPowder/DAAS六家公司及共同技术/制造资源，当前官网本身足以证明平台关联；保留1954EdRichard旧创业故事，未称今仍独立家族所有。按当前集团全部名字/已知域/拼写全main/root/queue/frontier去重，无同一已知账户，只计一个Rockledge关联账户，不拆六品牌或城市。英国HSRichards/WCRichardsAlsip和经销站工业卡Search仅发现，未借其工厂/联系人/涂料应用。About自身customformulation/制造和当前具名Python成品类别链成立；2000WB的WB保持原卡名称，不从缩写猜waterborne。未读取三个具体Python详情或TDS/SDS，故不借第三方Alignable的海事/钢/铝用途、双组分或未读PDF的参数；事实句仅采用确证polyamideepoxygloss及epoxymastic工业漆系列。真实业务含建筑/工业/屋面/地坪/防水、溶剂、caulk、SG60防滑漆添加剂、表面清洁/准备和floorchips，未伪称所有商品都是纯成品桶漆，也不将任何additive/epoxy/solvent自动等同ELO/ESBO或生物增塑稳定输入。已读当前公司经营/工业/环氧/具体Specialty完整本页未见所选同类ELO/ESBO/环氧化植物油/生物基增塑稳定原料外售，按实际读到的经营范围通过排除；不保证全部集团SKU/所有SDS/配方/未披露组分/全球股权已审计，DAAS的Chemicals字样不是同类原料供应证据，未虚构外购例外。Contact主栏一般info邮箱与主Phone8004320983按来源分存，传真和footer本地3216366200不挂给历史EdRichard，不建立具名收件人或虚假采购职位。旧页Support更新时间/2025copyright和2026集团新About字段保留，不视为采购时机。源站安全/防滑/抗菌/USDA等营销不向ELO转移，具体性能/相容/当前使用与采购均未确认。六次URL含集团403全部计数，未第7页详情/PDF/集团原文重试或换名重置。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@richardspaint.com",
+      "phone": "+1 800 432 0983",
+      "contactUrl": "https://www.richardspaint.com/contact/"
+    },
+    "source": {
+      "label": "Own current Python polyamide epoxy gloss and epoxy mastic industrial coating range",
+      "url": "https://www.richardspaint.com/product/epoxy/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "richards-paint-rockledge": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bps-borma-san-stino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sheboygan-paint-wisconsin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "alcea-senago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -5855,6 +5884,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "richards-paint-rockledge": {
+    "website": "https://www.richardspaint.com/",
+    "contactPage": "https://www.richardspaint.com/contact/",
+    "address": "Richard's Paint Company,Inc.,200PaintStreet,Rockledge,FL32955,UnitedStates. Exact own current contactbusinessaddress; city-only marker28.35,-80.73,not surveyed plant coordinates.",
+    "generalEmail": "info@richardspaint.com",
+    "generalEmailEvidence": {
+      "company": "Richard's Paint Company, Inc. (Star Step Performance Coatings Group)",
+      "value": "info@richardspaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.richardspaint.com/contact/",
+          "summary": "Actual Contact main block explicitly prints info@richardspaint.com as company general business mailbox, not EdRichard or a named procurement/technical address. No guessed delivery or personownership."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 800 432 0983",
+    "generalPhoneEvidence": {
+      "company": "Richard's Paint Company, Inc. (Star Step Performance Coatings Group)",
+      "value": "+1 800 432 0983",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.richardspaint.com/contact/",
+          "summary": "Actual Contact main block labels Phone:800-432-0983 separately from Fax:321-633-0866 and footerlocal3216366200. NormalizeUS+1; companygeneralbusinessvoice, no namedpersonal/department attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing/formulation and exact six-company StarStep platform identity",
+        "url": "https://www.richardspaint.com/about/"
+      },
+      {
+        "label": "Own current industrial protective offering and corrosion-resistant primers",
+        "url": "https://www.richardspaint.com/product/industrial-coatings/"
+      },
+      {
+        "label": "Own exact named Python industrial epoxy range; individual leafTDS not read",
+        "url": "https://www.richardspaint.com/product/epoxy/"
+      },
+      {
+        "label": "Own specialtypaint/additive/surfaceprep offering for selectedinput differentiation",
+        "url": "https://www.richardspaint.com/product/specialty-products/"
+      },
+      {
+        "label": "Own exact companylegalname, publicgeneralmail andphone",
+        "url": "https://www.richardspaint.com/contact/"
+      }
+    ]
+  },
   "bps-borma-san-stino": {
     "website": "https://bormawachs.com/",
     "contactPage": "https://bormawachs.com/contatti.php",
@@ -18273,6 +18361,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "richards-paint-rockledge",
   "bps-borma-san-stino",
   "sheboygan-paint-wisconsin",
   "alcea-senago",
