@@ -5534,11 +5534,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "bps-borma-san-stino",
+    "company": "B.P.S. srl (Borma Wachs; San Marco Group)",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "San Stino di Livenza (city marker)",
+    "latitude": 45.73,
+    "longitude": 12.68,
+    "legacyCompanyDescription": "自有水性木器底面漆、木材护理及定制涂料研发制造企业；SanMarco集团关联，NLW适配及采购未确认",
+    "fit": "可开发候选",
+    "signal": "当前B.P.S.公司原文确认产品研发、定制木器漆及生产能力；其同一法定B.P.S.官网商城具体NaturaquaHolzwachsLasur3in1页面明确水性树脂/蜡底面漆，用于室内外木材。NL-W1201 TDS确认木材及水性体系，可温和讨论涂料原料评估；实际使用、相容与采购未确认。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "独立完整审读6个当前原文：Home11027chars、History9614（Czech导航/English正文，非全英文）、Company10103、Contact11262、OwnShop8394、具体Product10105。Company的研发/定制木器漆/家具用油及生产能力与同VAT03067590277的BPS自有商城实际水性树脂/蜡木器底面漆相互印证，非从Naturaqua品牌或清澈外观猜水性。保留木油/木蜡/修补/贴金/颜料/清洁/助剂/工业/Bormapro以及定制供化学/家具企业的真实混合经营；linseedoil和syntheticresin是公司说明投入例，不自动断言为所选PO/CPO原料外售。当前完整返回经营/品类及具体成品未见水性聚烯烃或氯化聚烯烃分散/附着原料商品供应，按所选原料及实际已读范围通过排除；不宣称所有SKU/SDS/配方/所有SanMarco集团经营已审计，未虚构外购例外。当前History和Home/Contact法定footer明确2026加入SanMarco，保留历史家族第四代故事但不称现今独立家族所有；BPS/Borma/Bormapro/商城及SanMarco已知品牌作为同一关联账户，不拆国家经销JAT或同名Romania/UK店铺新增。准确法律BPS和VAT/域/当前SanMarco及Novacolor等已知关联整库预查无同一已知账户。邮箱保留明确.it而非猜.com；Contact普通文本与标准HTML实体footer双处同值，不破译受保护编码、不挂给历史Bortoluzzi/AntonBrand个人。Tel与Fax分开，商业/技术表单选项不造部门邮箱，静态Mailinviataconsuccesso文案不是实际提交。原站EN71/IBR/EMICODE/APEO/HACCP/生物杀灭/安全/UV/防虫/施工价格等营销及认证不转移到NLW；具体产品technicalsheet位于订单后私有区未读取，未下单/登录/称已看TDS。六URL已用尽，未追加第7页集团/Staff/Bormapro/PDF或用语言换标重置额度。实际相容、原料使用、采购和时机仍未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@bormawachs.it",
+      "phone": "+39 0421 951900",
+      "contactUrl": "https://bormawachs.com/contatti.php"
+    },
+    "source": {
+      "label": "Own B.P.S. official shop exact Naturaqua Holzwachs Lasur3in1 water-based wood primer/finish",
+      "url": "https://bormashop.com/it/esterni/275-5415-naturaqua-holzwachs-lasur-3in1-fondo-finitura-cerato-all-acqua-per-esterni.html"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bps-borma-san-stino": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sheboygan-paint-wisconsin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "alcea-senago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anchor-paint-tulsa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -5826,6 +5855,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bps-borma-san-stino": {
+    "website": "https://bormawachs.com/",
+    "contactPage": "https://bormawachs.com/contatti.php",
+    "address": "B.P.S. srl,Via Industria4,30029SanStino di Livenza(VE),Italy. Exact ownbusiness/legal address, not an independently inspected factory. City-only marker45.73,12.68,not surveyed plant coordinates.",
+    "generalEmail": "info@bormawachs.it",
+    "generalEmailEvidence": {
+      "company": "B.P.S. srl (Borma Wachs; San Marco Group)",
+      "value": "info@bormawachs.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://bormawachs.com/contatti.php",
+          "summary": "Actual Contact publishes plain info@bormawachs.it in formprivacy text; corporate footer independently displays the same general company address as standard HTML entities info&commat;bormawachs&period;it. Preserve .it distinctfromwebsite .com andshopsales shop@bormashop.com; not guessed, Cloudflaredecoded, namedperson or department."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+39 0421 951900",
+    "generalPhoneEvidence": {
+      "company": "B.P.S. srl (Borma Wachs; San Marco Group)",
+      "value": "+39 0421 951900",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://bormawachs.com/contatti.php",
+          "summary": "Actual Contact footer labels Tel.+390421951900, separately Fax.+390421951902. Storegeneralcompanyvoice, not fax or a namedperson directnumber."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current product development/custom manufacture",
+        "url": "https://bormawachs.com/azienda.php"
+      },
+      {
+        "label": "Own current2026SanMarcoGroup affiliation versus historical family story",
+        "url": "https://bormawachs.com/storia.php?lang=7"
+      },
+      {
+        "label": "Own complete returned business/category home",
+        "url": "https://bormawachs.com/"
+      },
+      {
+        "label": "Same BPS legal entity/VAT ownshop and businessrange",
+        "url": "https://bormashop.com/it/"
+      },
+      {
+        "label": "Own exact water-based wood primer/finish",
+        "url": "https://bormashop.com/it/esterni/275-5415-naturaqua-holzwachs-lasur-3in1-fondo-finitura-cerato-all-acqua-per-esterni.html"
+      },
+      {
+        "label": "Own companygeneralemail/voice andlegalidentity",
+        "url": "https://bormawachs.com/contatti.php"
+      }
+    ]
+  },
   "sheboygan-paint-wisconsin": {
     "website": "https://shebpaint.com/",
     "contactPage": "https://shebpaint.com/contact/",
@@ -18181,6 +18273,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bps-borma-san-stino",
   "sheboygan-paint-wisconsin",
   "alcea-senago",
   "anchor-paint-tulsa",
