@@ -2,11 +2,22 @@ import { describe, expect, it } from 'vitest'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { ContactEvidencePanel } from '../src/features/market/ContactEvidencePanel'
+import { CompanyBusinessContact, ContactEvidencePanel } from '../src/features/market/ContactEvidencePanel'
 import { publicLeads } from '../src/lib/productMarketMap'
 import { provedContact } from './fixtures/contactEvidence'
 
 describe('contact evidence presentation', () => {
+  it('retains complete source text and verified channels inside compact disclosures', () => {
+    const lead = publicLeads.find((lead) => lead.id === 'colorificio-feroni-oppeano')!
+    const markup = renderToStaticMarkup(createElement(CompanyBusinessContact, { lead, compactEvidence: true, onEmail: () => {} }))
+    expect(markup).toContain('<details class="contact-evidence-row">')
+    expect(markup).not.toContain('<details open')
+    expect(markup).toContain('mailto:info@feroni.it')
+    expect(markup).toContain('公共邮箱来源')
+    expect(markup).toContain('公共电话来源')
+    expect(markup).toContain('Own current Contact explicitly labels E-mail:')
+    expect(markup).toContain(lead.profile.generalEmailEvidence!.verifiedAt)
+  })
   it('renders independent identity/channel provenance and keeps unproved mailboxes out of mail links', () => {
     const base = publicLeads.find((lead) => lead.id === 'teknos-helsinki')!
     const lead = { ...base, company: 'Fixture Coatings', profile: { ...base.profile, contacts: [

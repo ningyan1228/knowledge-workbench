@@ -131,7 +131,7 @@ export function LeadPrivatePanel({ lead, work, ledger, onDirtyChange }: { lead: 
   </section>
 }
 
-export function LeadEvidenceSummary({ lead }: { lead: PublicLead }) {
+export function LeadEvidenceSummary({ lead, contactLocation = '完整邮箱、联系人及其来源见下方联络信息。' }: { lead: PublicLead; contactLocation?: string }) {
   const priority = developmentPriority(lead), application = leadApplication(lead), associations = companyAssociations(lead)
   return <section className="work-evidence-summary" aria-label="客户证据摘要"><div className="work-evidence-heading"><h3><CheckCircle2 size={18} />客户证据摘要</h3><span className="work-priority">{priority.label} · {priority.score} / 100</span></div>
     <p className="work-evidence-boundary">潜在需求侧客户 · 尚未确认采购或使用我方产品</p>
@@ -139,7 +139,7 @@ export function LeadEvidenceSummary({ lead }: { lead: PublicLead }) {
       <div><dt>下游制造／配方依据</dt><dd>{lead.companyEvidence.statement}<a href={lead.companyEvidence.sourceUrl} target="_blank" rel="noreferrer">{lead.companyEvidence.sourceName} <ExternalLink size={13} /></a><small>业务证据核验：{lead.companyEvidence.verifiedAt}</small></dd></div>
       <div><dt>需求侧理由</dt><dd>{lead.demandSideReason}</dd></div>
       <div><dt>同行排除结论</dt><dd>{lead.supplierCompetitorCheck?.conclusion ?? '当前公开记录未单独提供排除说明，请核对来源。'}{lead.supplierCompetitorCheck && <small>排除核验：{lead.supplierCompetitorCheck.checkedAt}</small>}</dd></div>
-      <div><dt>公开业务联系入口</dt><dd>{lead.profile.generalEmail && <span>{lead.profile.generalEmail} · </span>}{lead.profile.generalPhone && <span>{lead.profile.generalPhone} · </span>}{lead.profile.contactPage || lead.profile.website ? <a href={lead.profile.contactPage ?? lead.profile.website} target="_blank" rel="noreferrer">打开官网联系入口 <ExternalLink size={13} /></a> : '请查看下方具名联系人及部门邮箱来源'}<small>完整邮箱、联系人及其来源见下方联络信息。</small></dd></div>
+      <div><dt>公开业务联系入口</dt><dd>{lead.profile.generalEmail && <span>{lead.profile.generalEmail} · </span>}{lead.profile.generalPhone && <span>{lead.profile.generalPhone} · </span>}{lead.profile.contactPage || lead.profile.website ? <a href={lead.profile.contactPage ?? lead.profile.website} target="_blank" rel="noreferrer">打开官网联系入口 <ExternalLink size={13} /></a> : '请查看下方具名联系人及部门邮箱来源'}<small>{contactLocation}</small></dd></div>
       <div><dt>公司关联与去重</dt><dd>{associations.attribution ? `公开公司名称关联说明：${associations.attribution}。具体集团关系请核对官网。` : '当前公开公司名称没有单独注明集团关系。'}<small>{associations.related.length ? `同一公司另有 ${associations.related.length} 条产品记录，共用收藏、私人进度和发送查重。` : '当前公开库未检出同国家、同规范化名称的其他记录。'}集团内不同公司需另行核对，未据此合并。</small></dd></div>
     </dl>
     <details><summary><Target size={15} />查看开发优先级依据与分值</summary><p>应用 {priority.parts.application}/35 · 证据 {priority.parts.evidence}/25 · 联系入口 {priority.parts.contact}/25 · 需求侧角色 {priority.parts.role}/10 · 同行排除 {priority.parts.exclusion}/5</p><ul>{priority.reasons.map((reason) => <li key={reason}>{reason}</li>)}</ul><small>80 分起优先开发，60 分起常规开发。分数只帮助安排顺序，联系页不等于采购专用入口。</small></details>
