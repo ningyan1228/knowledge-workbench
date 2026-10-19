@@ -9,10 +9,10 @@ import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
 import './CustomerMapWorkspace.css'
 
-export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelectLead, onHighlight, onOpenDetail, overviewToken, onOverview, onReturnRegions, ledger, work }: {
+export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelectLead, onHighlight, onOpenDetail, detailOpen = false, overviewToken, onOverview, onReturnRegions, ledger, work }: {
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
   onSelectLead: (lead: PublicLead | null) => void; onHighlight: (lead: PublicLead | null) => void;
-  onOpenDetail: (lead: PublicLead) => void; overviewToken: number; onOverview: () => void;
+  onOpenDetail: (lead: PublicLead) => void; detailOpen?: boolean; overviewToken: number; onOverview: () => void;
   onReturnRegions?: () => void; ledger: OutreachLedger; work: LeadWork;
 }) {
   const [scope, setScope] = useState<'all' | 'viewport'>('viewport')
@@ -55,7 +55,7 @@ export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelec
       <span className="map-list-context" role="status">{scope === 'viewport' ? `列表随地图移动和缩放更新 · ${visibleCount} / ${allCount} 家` : `列表显示全部筛选结果 · 地图内 ${visibleCount} / ${allCount} 家`}</span>
     </div>
     <div className="market-map-layout lead-map-layout mac-customer-map">
-      <div><GlobalLeadMap leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} overviewToken={overviewToken} onBoundsChange={onBoundsChange} onReturnRegions={onReturnRegions}
+      <div><GlobalLeadMap leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} detailOpen={detailOpen} overviewToken={overviewToken} onBoundsChange={onBoundsChange} onReturnRegions={onReturnRegions}
         onSelectLead={(lead) => { onHighlight(null); onSelectLead(lead) }}
         onSelectGroup={() => { setScope('viewport'); onHighlight(null); onSelectLead(null) }} /></div>
       <div ref={sidebar} className="lead-map-sidebar" aria-label="地图客户列表">
