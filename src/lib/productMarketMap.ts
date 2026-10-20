@@ -6313,11 +6313,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "rogneda-staraya-kupavna",
+    "company": "NPP Rogneda LLC (ООО «НПП Рогнеда»; Rogneda Group)",
+    "productId": "nl-w1201",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Staraya Kupavna",
+    "latitude": 55.809,
+    "longitude": 38.18,
+    "legacyCompanyDescription": "俄罗斯自有水性木器成品涂料配方研发制造；Moscow公司办公室与StarayaKupavna生产地址分开，地图为生产城市代表位置。",
+    "fit": "可开发候选",
+    "signal": "官网列明Старая Купавна自有生产及配方研发；EUROTEX АКВАЛАЗУРЬ为丙烯酸分散体木器保护装饰涂层，技术表明确水稀释及室内外使用。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6次请求包含2次curl失败和4份官网提取原文，另3次缓存find读取同一产品技术表，不新增URL；未执行脚本或提交表单。当前Company明确全周期配方开发及StarayaKupavna自有生产、法律名称ООО «НПП Рогнеда»；产品技术表明确丙烯酸分散体、水稀释及内外木材用途。目录119项中只审读当前返回首批木器产品和完整可见品类筛选，含木器防护、底漆、胶、室内外漆、清漆、腻子、密封等成品；丙烯酸分散体是成品组成，不能据此推断外售原料。已读经营/品类/产品未见水性PO/CPO乳液或同类原料级附着促进剂外售，结论限已读范围，不称119SKU逐项、全集团全球化学品或链接PDF全部已读。Rogneda/Акватекс/Eurotex/Dali/Woodmaster等品牌及莫斯科办公室、生产厂、圣彼得堡分支一个集团账户，VGT和日化ЕвроТек搜索命中不合并。本公司泛用邮箱info和生产部门industry为公开业务入口，不归属具名采购；8(495)为国内格式，规范为+7 495公司电话，不当WhatsApp。木器生物防护/UV/环保/寿命和认证是客户成品说明，不转成NLW性能；未确认NLW适配、采购或改配方时机。"
+    },
+    "contact": {
+      "label": "官网公开公司邮箱及电话；另有生产部门入口，未核实具名采购",
+      "email": "info@rogneda.ru",
+      "phone": "+7 495 7300299",
+      "contactUrl": "https://www.rogneda.ru/contacts/"
+    },
+    "source": {
+      "label": "Own EUROTEX acrylic water-dilutable wood coating and company manufacturing originals",
+      "url": "https://www.rogneda.ru/catalog/eurotex-aqualak/"
+    },
+    "checkedAt": "2026-10-20"
+  },
+  {
+    "id": "vernisol-codogno",
+    "company": "Vernisol S.r.l. (Prismo Group)",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Codogno",
+    "latitude": 45.156233,
+    "longitude": 9.677398,
+    "legacyCompanyDescription": "Prismo独立集团旗下意大利工业/防护底漆与道路涂料制造研发；2023年集团已脱离PPG，Codogno官网给定GPS。",
+    "fit": "可开发候选",
+    "signal": "官网制造/R&D页及Prismo集团页明确意大利Vernisol自有涂料生产；工业底漆系列含水性环氧底漆及磷酸锌防锈底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6份原始HTML与前轮6次请求分别保留，未重置旧预算或按品牌拆客户。官方Prismo时间线及OurCompany明确2023年12月管理层收购PPG的EMEATrafficSolutions，恢复独立所有权，Vernisol仍为Prismo旗下；2020年曾归PPG不代表当前仍与既有PPG账户同组，不称2026新收购。VernisolCompany明确自有开发实验室及Codogno/Leini制造，Verital2005收购2008整合为历史；集团当前确述UK/Italy/SouthAfrica生产。工业原页具体含磷酸锌防锈、环氧/水性环氧、丙烯酸等成品底漆，ELO仅涂料配方柔韧/树脂改性评估，不把客户环氧底漆或防腐性能转成ELO已兼容/固化/防腐保证。Auxiliaries原页为反光玻璃珠、石英填料及调节道路漆干燥的稀释剂/添加品；普通成品配套添加品不自动等于ELO/ESBO/环氧化植物油或生物基增塑原料。已读当前公司、可见产品导航、工业底漆及全部短辅助页未见所选同类原料外售，结论限已读范围，未读集团每款底涂添加剂/SDS/TDS或全部全球SKU，不虚构外购例外。Vernisol/Prismo/Verital/Stimsonite及地区厂址作为一个关联集团账户，完整正式库/队列按公司/品牌/域去重。vernisolinfo为公开Codogno公司邮箱，不绑定具名采购；UK集团共同所有者名字不当本地收件人。"
+    },
+    "contact": {
+      "label": "官网Codogno公司邮箱及电话；无已核实具名采购/技术收件人",
+      "email": "vernisolinfo@prismoglobal.com",
+      "phone": "+39 0377 621250",
+      "contactUrl": "https://www.vernisol.it/contatti.html"
+    },
+    "source": {
+      "label": "Own industrial anticorrosive/epoxy primer range and current Prismo manufacturing/ownership evidence",
+      "url": "https://www.vernisol.it/catalogo/vernici-industriali/antiruggini-fondi-zincanti.html"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vernisol-codogno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "rogneda-staraya-kupavna": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "multilac-panadura": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chrotex-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "peter-kwasny-gundelsheim": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6633,6 +6691,147 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vernisol-codogno": {
+    "website": "https://www.vernisol.it/",
+    "contactPage": "https://www.vernisol.it/contatti.html",
+    "address": "Via Sante Giuseppe Bertini 1, 26845 Codogno, LO, Italy. Official contact publishes GPS45.156233,9.677398. Leini is another site of the same associated group.",
+    "generalEmail": "vernisolinfo@prismoglobal.com",
+    "generalEmailEvidence": {
+      "company": "Vernisol S.r.l. (Prismo Group)",
+      "value": "vernisolinfo@prismoglobal.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public company business contact",
+          "url": "https://www.vernisol.it/contatti.html",
+          "summary": "Own Contact footer explicitly lists vernisolinfo@prismoglobal.com under Codogno, with current Prismo domain; no personal ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+39 0377 621250",
+    "generalPhoneEvidence": {
+      "company": "Vernisol S.r.l. (Prismo Group)",
+      "value": "+39 0377 621250",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public company business contact",
+          "url": "https://www.vernisol.it/contatti.html",
+          "summary": "Own contact publishes+39 0377621250 for Codogno; corporate voice line, no WhatsApp or named purchasing ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial/manufacturing/ownership/input-scope/business-contact original",
+        "url": "https://www.vernisol.it/catalogo/vernici-industriali/antiruggini-fondi-zincanti.html"
+      },
+      {
+        "label": "Own industrial/manufacturing/ownership/input-scope/business-contact original",
+        "url": "https://prismoglobal.com/our-timeline/"
+      },
+      {
+        "label": "Own industrial/manufacturing/ownership/input-scope/business-contact original",
+        "url": "https://www.vernisol.it/catalogo/prodotti-ausiliari.html"
+      },
+      {
+        "label": "Own industrial/manufacturing/ownership/input-scope/business-contact original",
+        "url": "https://prismoglobal.com/our-company/"
+      },
+      {
+        "label": "Own industrial/manufacturing/ownership/input-scope/business-contact original",
+        "url": "https://www.vernisol.it/contatti.html"
+      },
+      {
+        "label": "Own industrial/manufacturing/ownership/input-scope/business-contact original",
+        "url": "https://www.vernisol.it/il-gruppo.html"
+      }
+    ]
+  },
+  "rogneda-staraya-kupavna": {
+    "website": "https://www.rogneda.ru/",
+    "contactPage": "https://www.rogneda.ru/contacts/",
+    "address": "Production: Dorozhnaya Street 4B, Staraya Kupavna, Russia. Central office: Elektrodnaya Street 10, Moscow. Map is a production-city representative position, not a surveyed factory coordinate.",
+    "generalEmail": "info@rogneda.ru",
+    "generalEmailEvidence": {
+      "company": "NPP Rogneda LLC (ООО «НПП Рогнеда»; Rogneda Group)",
+      "value": "info@rogneda.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public company business contact",
+          "url": "https://www.rogneda.ru/contacts/",
+          "summary": "Current Contact lists info@rogneda.ru and 8(495)730-02-99 under central office; corporate mailbox, no named buyer inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+7 495 7300299",
+    "generalPhoneEvidence": {
+      "company": "NPP Rogneda LLC (ООО «НПП Рогнеда»; Rogneda Group)",
+      "value": "+7 495 7300299",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public company business contact",
+          "url": "https://www.rogneda.ru/contacts/",
+          "summary": "Exact published domestic business line8(495)730-02-99, normalized to international+7 4957300299; not WhatsApp or a named person."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Production",
+        "email": "industry@rogneda.ru",
+        "source": {
+          "label": "Own production contact section, Staraya Kupavna",
+          "url": "https://www.rogneda.ru/contacts/"
+        },
+        "emailEvidence": {
+          "company": "NPP Rogneda LLC (ООО «НПП Рогнеда»; Rogneda Group)",
+          "value": "industry@rogneda.ru",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current public company business contact",
+              "url": "https://www.rogneda.ru/contacts/",
+              "summary": "Current official Contact publishes industry@rogneda.ru beneath production at Dorozhnaya4B; no purchasing role or individual invented."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own company/application/product-scope/public-contact original",
+        "url": "https://www.rogneda.ru/company/"
+      },
+      {
+        "label": "Own company/application/product-scope/public-contact original",
+        "url": "https://www.rogneda.ru/catalog/eurotex-aqualak/"
+      },
+      {
+        "label": "Own company/application/product-scope/public-contact original",
+        "url": "https://www.rogneda.ru/contacts/"
+      },
+      {
+        "label": "Own company/application/product-scope/public-contact original",
+        "url": "https://www.rogneda.ru/catalog/"
+      }
+    ]
+  },
   "multilac-panadura": {
     "website": "https://multilac.com/",
     "contactPage": "https://multilac.com/contact-us/",
@@ -20780,6 +20979,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vernisol-codogno",
+  "rogneda-staraya-kupavna",
   "multilac-panadura",
   "chrotex-athens",
   "peter-kwasny-gundelsheim",
