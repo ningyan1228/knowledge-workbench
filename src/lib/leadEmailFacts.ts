@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "emlak-saint-petersburg": "Your EMLAK PRIMER 263 is a two-component epoxy primer for inter-operation protection of steel structures and rolled steel.",
+  "zip-kamianske": "Your TRIORA acrylic varnish is water-thinnable and intended for decorative treatment of wood indoors and outdoors.",
   "polysan-sumy": "Your Farbex panel acrylic varnish is water-based and intended for decorative protection of interior wood panels.",
   "vmp-yekaterinburg": "Your ИЗОЛЭП-mastic is a two-pack epoxy primer-enamel for protecting metal and concrete structures.",
   "vernisol-codogno": "Your industrial range includes water-based epoxy primers and zinc-phosphate anticorrosive primers.",

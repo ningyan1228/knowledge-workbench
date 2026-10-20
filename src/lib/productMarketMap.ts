@@ -6425,11 +6425,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "zip-kamianske",
+    "company": "ZIP Industrial Enterprise LLC (ТОВ ПП «ЗІП»; TRIORA)",
+    "productId": "nl-w1201",
+    "country": "Ukraine",
+    "countryZh": "乌克兰",
+    "city": "Kamianske",
+    "latitude": 48.523,
+    "longitude": 34.607,
+    "legacyCompanyDescription": "ZIP自有涂料制造企业，TRIORA等为旗下品牌，一个账户；地图为Kamianske城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有涂料、胶黏剂与化学材料制造；当前TRIORA丙烯酸清漆列明水为稀释剂，用于室内外木材及矿物表面装饰。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6次官网HTML请求，其中旧www/shop清漆地址失败，未当作成功原文；改由当前Home实际链接TRIORA品牌页，再由清漆目录实际链接当前/product/lak-akrylovyj-triora/，已读取本体木材用途与水稀释事实。Home当前明确ТОВППЗІП自有成品制造及TRIORA/Zebra/Grizzly/Magnex/Malva/Ruta/Car-Tex/Holms/Kvant/Magnum品牌；品牌与目录可见水性/有机涂料、成品底涂、木材保护、色料、辅助、车用及安装材料，不以泛称化学材料推断同行。可见原文未见作为外售原料的水性聚烯烃乳液、PO/CPO分散体或原料级同类附着促进剂；结论仅限已读Home/品牌/清漆与具体成品/Contact范围，未穷尽所有SKU、其他品牌、TDS/SDS/PDF和全球业务。品牌列表的BetonKontakt与MegaGrunt属成品底涂名称，不因adhesion字样认定为原料级聚烯烃分散体，也不臆测成分。当前木器清漆自身UV/抗粘连/不黄变宣传不转移我方NL-W1201；木材用途仅支持资料列明底涂/附着促进评估，配方相容、现用、采购和时机未确认。统一作为ZIP及旗下品牌一个账户，不拆品牌或地区办事处；ArdorTrade仅旧Search中的历史分销线索，本轮未读取其历史原文，不能断言目前股权或另造新账户。宽泛Ardor正则命中SIVAM记录中OdoardoReggiani姓名的内部字串，核对为其他意大利企业管理姓名、不同域，无ZIP关联；以词界限修正私有去重查询，不改动任何已有客户。当前main318/root334/全队列/frontier526按公司、域及品牌去重，无同主体。官网office@zip.ua及中央公司电话可用；具名式邮箱和采购部门的个人身份未独立核清，不借姓名或声称已确认采购收件人；电话非WhatsApp。"
+    },
+    "contact": {
+      "label": "官网公司办公室邮箱、中央总机与联系页；无独立确认的具名采购收件人",
+      "email": "office@zip.ua",
+      "phone": "+380 569 535916",
+      "contactUrl": "https://zip.ua/kontakty/"
+    },
+    "source": {
+      "label": "Current own TRIORA acrylic varnish, ZIP manufacturer and business-contact originals",
+      "url": "https://zip.ua/product/lak-akrylovyj-triora/"
+    },
+    "checkedAt": "2026-10-20"
+  },
+  {
+    "id": "emlak-saint-petersburg",
+    "company": "EMLAK Paint and Coatings Plant (ЗАО «Эмлак»)",
+    "productId": "elo",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Saint Petersburg",
+    "latitude": 59.934,
+    "longitude": 30.335,
+    "legacyCompanyDescription": "EMLAK自有工业成品涂料研发制造；地图为SaintPetersburg城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有工业涂料生产与配方研发；EMLAK PRIMER 263为双组分环氧树脂底漆，用于钢结构及轧制钢材的工序间保护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮4份实际官网HTML：About自有生产与配方研发、Contacts中央厂商与地区渠道、金属防护目录和船舶修造目录；全部成功，保留2次未用预算。当前金属目录明确EMLAKPRIMER263双组分环氧树脂成品，用于钢构/钢材工序间保护，不从目录排版相邻的262或288复制别的组成或适用限制。已读目录可见成品环氧/醇酸/丙烯酸/聚氨酯底漆、面漆、清漆、腻子，235B/235L为芳烃稀释剂、121为脂肪及芳烃稀释剂加添加剂；通用添加剂、配方内增塑剂或环氧树脂组成不等于外售ELO/ESBO/环氧化植物油或同类生物基增塑原料。已读范围未见所选同类原料销售，结论限上述公司与两目录当前可见文字，未遍读PDF、所有SKU/SDS、其他用途目录或全球原料组成，未虚构外购例外。官网Contact明确ЗАОЭмлак中央地址和销售邮箱，名称按官网自称保留，不以2019页脚推断新注册或新工厂；不是公司注册机构的独立法律尽调。旧2019采访的Narva生产基地仅Search发现，本轮未读原文，不当2026工厂事实，不拆海外厂/EmLakRegion或代表经销商新增。EMLAK/Эмлак/Эмакор/Эмакоут/Прaймер系列与当前main318/root334、全队列、frontier526按公司/域/品牌去重无同主体。仅用厂商sale@emlak.ru与圣彼得堡公司电话，地区其他公司邮箱不转给厂商，不借采购/技术部门公开电话编造邮箱、具名买手或WhatsApp。ELO只按资料的环氧功能、配方柔韧/树脂改性方向温和评估，不承诺现有固化体系相容、防腐、浸水、海事认证、耐候或客户现有采购。"
+    },
+    "contact": {
+      "label": "官网厂商公司销售邮箱、公司电话与联系页；无具名采购收件人",
+      "email": "sale@emlak.ru",
+      "phone": "+7 812 7860520",
+      "contactUrl": "https://emlak.ru/contacts/"
+    },
+    "source": {
+      "label": "Own EMLAK PRIMER263 epoxy coating catalogue, manufacturing and corporate contacts",
+      "url": "https://emlak.ru/zashhita-metalla/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "emlak-saint-petersburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "zip-kamianske": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "polysan-sumy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vmp-yekaterinburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vernisol-codogno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6749,6 +6807,120 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "emlak-saint-petersburg": {
+    "website": "https://emlak.ru/",
+    "contactPage": "https://emlak.ru/contacts/",
+    "address": "57AB Karavaevskaya Street, Saint Petersburg 192177, Russia (own site header; company Contacts writes number57). City representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "sale@emlak.ru",
+    "generalEmailEvidence": {
+      "company": "EMLAK Paint and Coatings Plant (ЗАО «Эмлак»)",
+      "value": "sale@emlak.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://emlak.ru/contacts/",
+          "summary": "Own Contacts central SaintPetersburg EMLAK block and corporate header/footer publish sale@emlak.ru. Corporate commercial route; no named procurement identity asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+7 812 7860520",
+    "generalPhoneEvidence": {
+      "company": "EMLAK Paint and Coatings Plant (ЗАО «Эмлак»)",
+      "value": "+7 812 7860520",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://emlak.ru/contacts/",
+          "summary": "Own central manufacturer contact lists +7(812)786-05-20 under sales and company header; company voice business line, not a named/private/WhatsApp route."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing, industrial finished coating/input-scope or corporate contact original",
+        "url": "https://emlak.ru/about/"
+      },
+      {
+        "label": "Own current manufacturing, industrial finished coating/input-scope or corporate contact original",
+        "url": "https://emlak.ru/contacts/"
+      },
+      {
+        "label": "Own current manufacturing, industrial finished coating/input-scope or corporate contact original",
+        "url": "https://emlak.ru/zashhita-metalla/"
+      },
+      {
+        "label": "Own current manufacturing, industrial finished coating/input-scope or corporate contact original",
+        "url": "https://emlak.ru/sudostroenie-i-sudoremont/"
+      }
+    ]
+  },
+  "zip-kamianske": {
+    "website": "https://zip.ua/",
+    "contactPage": "https://zip.ua/kontakty/",
+    "address": "107-A Shyroka Street, Kamianske, Dnipropetrovsk Oblast 51901, Ukraine. Public company business address; map is a city representative location, not a surveyed factory coordinate.",
+    "generalEmail": "office@zip.ua",
+    "generalEmailEvidence": {
+      "company": "ZIP Industrial Enterprise LLC (ТОВ ПП «ЗІП»; TRIORA)",
+      "value": "office@zip.ua",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://zip.ua/kontakty/",
+          "summary": "Own Contacts publishes office@zip.ua under company E-Mail at ZIP Shyroka107A. General company mailbox; no named purchasing role inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+380 569 535916",
+    "generalPhoneEvidence": {
+      "company": "ZIP Industrial Enterprise LLC (ТОВ ПП «ЗІП»; TRIORA)",
+      "value": "+380 569 535916",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://zip.ua/kontakty/",
+          "summary": "Own Contacts publishes +38(0569)53-59-16 as the company telephone. International-format company business voice line, not WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturer, brand/product scope, exact wood coating or business contact original",
+        "url": "https://zip.ua/holovna/"
+      },
+      {
+        "label": "Own current manufacturer, brand/product scope, exact wood coating or business contact original",
+        "url": "https://zip.ua/product-brand/triora-uk/"
+      },
+      {
+        "label": "Own current manufacturer, brand/product scope, exact wood coating or business contact original",
+        "url": "https://zip.ua/kontakty/"
+      },
+      {
+        "label": "Own current manufacturer, brand/product scope, exact wood coating or business contact original",
+        "url": "https://zip.ua/product-category/lakofarbova-produktsiia/laky/?brands=239&category=102"
+      },
+      {
+        "label": "Own current manufacturer, brand/product scope, exact wood coating or business contact original",
+        "url": "https://zip.ua/product/lak-akrylovyj-triora/"
+      }
+    ]
+  },
   "polysan-sumy": {
     "website": "https://farbex.ua/",
     "contactPage": "https://farbex.ua/ru/contacts/",
@@ -21182,6 +21354,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "emlak-saint-petersburg",
+  "zip-kamianske",
   "polysan-sumy",
   "vmp-yekaterinburg",
   "vernisol-codogno",
