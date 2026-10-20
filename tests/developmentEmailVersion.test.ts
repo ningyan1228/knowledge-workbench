@@ -8,6 +8,12 @@ import { outreachCompanyKey, type OutreachSend } from '../src/lib/outreachLedger
 const lead = publicLeads.find((item) => item.id === 'polyvine-cheddar')!
 const sent: OutreachSend = { id: 'fixture', company_key: outreachCompanyKey(lead), company_name: lead.company, lead_id: lead.id, product_id: lead.productId, recipient_email: 'fixture@example.org', sent_on: '2026-10-13', sent_by: null, created_at: '2026-10-13T01:00:00Z', voided_at: null }
 describe('concise rewrite scope follows the shared sent badge', () => {
+  it('withholds unsent and unknown drafts without an inbox while preserving an existing sent reference', () => {
+    const noEmail = { ...lead, profile: { ...lead.profile, generalEmail: undefined, contacts: [], departmentEmails: [] } }
+    expect(developmentEmailVersion(noEmail, [])).toMatchObject({ missingRecipient: true, email: null, label: '待补邮箱 · 暂不生成开发信' })
+    expect(developmentEmailVersion(noEmail, null).email).toBeNull()
+    expect(developmentEmailVersion(noEmail, [sent]).email?.text).toBe(createShortDevelopmentEmail(noEmail, undefined, 'legacy')?.text)
+  })
   it('uses the new version only for a company without an active sent record', () => {
     const version = developmentEmailVersion(lead, [])
     expect(version).toMatchObject({ state: 'unsent', style: 'concise' })

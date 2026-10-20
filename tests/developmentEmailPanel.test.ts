@@ -11,6 +11,16 @@ const lead = publicLeads.find((item) => item.id === 'polyvine-cheddar')!
 const send: OutreachSend = { id: 'fixture', company_key: outreachCompanyKey(lead), company_name: lead.company, lead_id: lead.id, product_id: lead.productId, recipient_email: 'fixture@example.org', sent_on: '2026-10-13', sent_by: null, created_at: '2026-10-13T01:00:00Z', voided_at: null }
 const render = (status: OutreachLedger['status'], sends: OutreachSend[]) => renderToStaticMarkup(createElement(DevelopmentEmailPanel, { lead, ledger: { status, sends } as OutreachLedger }))
 describe('email preview follows sending status', () => {
+  it('shows an email-research task instead of a copyable first contact for Aexcel', () => {
+    const aexcel=publicLeads.find(item=>item.id==='aexcel-mentor')!
+    const html=renderToStaticMarkup(createElement(DevelopmentEmailPanel,{lead:aexcel,ledger:{status:'ready',sends:[]} as unknown as OutreachLedger}))
+    expect(html).toContain('待补邮箱 · 暂不生成开发信')
+    expect(html).toContain('查看官网联系入口')
+    expect(html).not.toContain('outreach-email-preview')
+    expect(html).not.toContain('data-copy-part')
+    expect(html).not.toContain('Your team formulates industrial protective coatings')
+    expect(html).not.toContain('查看原 Prompt')
+  })
   it('shows a concise draft for unrecorded sending and retains the old reference for sent or unreadable states', () => {
     const unsent = render('ready', [])
     const sent = render('ready', [send])

@@ -140,7 +140,7 @@ export function createDevelopmentEmailPrompt({
   targetType: TargetCompanyType
   style?: 'concise' | 'legacy'
 }) {
-  if (!createShortDevelopmentEmail(lead) || product.id !== lead.productId || application.id !== lead.companyEvidence.applicationId || application.productId !== lead.productId || targetType.id !== lead.targetCompanyTypeId || targetType.productId !== lead.productId) return 'Not qualified for outreach\n\nReason:\nThe verified product, application, demand-side evidence, supplier exclusion or contact chain is incomplete or inconsistent.'
+  if (!createShortDevelopmentEmail(lead, undefined, style) || product.id !== lead.productId || application.id !== lead.companyEvidence.applicationId || application.productId !== lead.productId || targetType.id !== lead.targetCompanyTypeId || targetType.productId !== lead.productId) return 'Not qualified for outreach\n\nReason:\nThe verified product, application, demand-side evidence, supplier exclusion or recipient-email chain is incomplete or inconsistent.'
   const recipient = recipientFor(lead)
   const reference = productReferences[product.id]
   const strategy = firstContactStrategy(lead)
