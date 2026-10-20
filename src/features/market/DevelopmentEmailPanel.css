@@ -1,5 +1,21 @@
 .outreach-copy-feedback { grid-column:1/-1;color:var(--muted);font-size:.78rem;line-height:1.6 }
 .outreach-copy-feedback:empty { display:none }
+.outreach-contact-routes { grid-column:1/-1;min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface) }
+.outreach-contact-routes>strong { font-size:12px }
+.outreach-route-links { display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin-top:7px }
+.outreach-route-links a { display:inline-flex;align-items:center;gap:4px;color:var(--blue);font-size:12px }
+.outreach-prompt .outreach-contact-routes p { max-width:none;margin:7px 0;font-size:11px;line-height:1.65 }
+.outreach-route-record { margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:12px }
+.outreach-route-record summary { color:var(--blue);cursor:pointer }
+.outreach-route-record fieldset { min-width:0;margin:10px 0;padding:0;border:0 }
+.outreach-route-record label { display:grid;gap:5px;min-width:0;margin:7px 0;color:var(--muted);font-size:11px }
+.outreach-route-fields { display:grid;grid-template-columns:1fr 1fr;gap:10px }
+.outreach-route-record input,.outreach-route-record select { width:100%;min-width:0;padding:7px 8px;border:1px solid var(--line);border-radius:7px;color:var(--text);background:var(--surface) }
+.outreach-route-record ul { margin:8px 0;padding:0;list-style:none }
+.outreach-route-record li { display:flex;align-items:start;gap:8px;margin-top:5px;overflow-wrap:anywhere;font-size:11px }
+.outreach-route-record li span { flex:1;min-width:0 }
+.outreach-route-record li button { flex-shrink:0;border:0;background:transparent;color:var(--blue);font-size:11px }
+.outreach-route-record :is(summary,button,input,select):focus-visible { outline:2px solid var(--blue);outline-offset:2px }
 .outreach-send-banner { grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface) }
 .outreach-send-banner>span:not(.outreach-status-badge) { min-width:0;overflow-wrap:anywhere;font-size:12px;color:var(--muted);line-height:1.6 }
 .outreach-send-banner-sent { border-color:#4ade80;box-shadow:inset 4px 0 #22c55e }

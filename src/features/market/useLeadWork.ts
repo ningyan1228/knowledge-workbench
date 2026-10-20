@@ -70,6 +70,13 @@ export function useLeadWork() {
   }
   return {
     ...state, busy, refresh,
+    fetchCurrentRecords: async () => {
+      if (state.status !== 'ready' || !state.ownerId || !supabase) throw new Error('私人联系记录尚未连接。')
+      const auth = await supabase.auth.getUser()
+      if (auth.error) throw auth.error
+      if (auth.data.user?.id !== state.ownerId) throw new Error('登录账户已变更，请重新打开客户详情。')
+      return (await loadLeadWork(state.ownerId)).records
+    },
     save: async (lead: PublicLead, patch: Partial<Omit<LeadWorkRecord, 'companyKey'>>) => {
       if (patch.followUpOn && !validWorkDate(patch.followUpOn)) throw new Error('请选择有效的跟进日期。')
       if (patch.note && patch.note.length > 4000) throw new Error('备注最多 4000 个字。')

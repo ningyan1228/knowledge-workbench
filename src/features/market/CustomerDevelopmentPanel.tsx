@@ -4,19 +4,21 @@ import { developmentSnapshot, firstContactExport, firstContactPlan } from '../..
 import { shanghaiDay } from '../../lib/leadTimeline'
 import { verifiedProjectSignals } from '../../lib/verifiedProjectSignals'
 import type { OutreachLedger } from './useOutreachLedger'
+import type { LeadWork } from './useLeadWork'
 import './customerDevelopment.css'
 
-export function CustomerDevelopmentPanel({ ledger }: { ledger: OutreachLedger }) {
+export function CustomerDevelopmentPanel({ ledger, work }: { ledger: OutreachLedger; work: LeadWork }) {
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
   const coating = publicLeads.filter((lead) => lead.productId === 'fertilizer-coating')
   const snapshot = developmentSnapshot(coating)
   const projects = verifiedProjectSignals.filter((item) => coating.some((lead) => lead.id === item.leadId))
-  const plan = firstContactPlan(coating, ledger.status === 'ready' ? ledger.sends : null)
+  const plan = firstContactPlan(coating, ledger.status === 'ready' ? ledger.sends : null,20,undefined,true,work.status==='ready'?work.records:null)
   const download = async () => {
     setBusy(true); setMessage('')
     try {
-      const fresh = firstContactPlan(coating, await ledger.fetchCurrentSends())
+      const [sends,records] = await Promise.all([ledger.fetchCurrentSends(),work.fetchCurrentRecords()])
+      const fresh = firstContactPlan(coating, sends,20,undefined,true,records)
       await ledger.refresh()
       if (!fresh.batch.length) { setMessage(fresh.remaining === 0 ? '今天已达到 20 家首次开发目标。' : '当前没有可导出的未发送邮箱客户。'); return }
       const url = URL.createObjectURL(new Blob([firstContactExport(fresh.batch)], { type: 'text/plain;charset=utf-8' }))
@@ -35,7 +37,7 @@ export function CustomerDevelopmentPanel({ ledger }: { ledger: OutreachLedger })
     </div>
     <div className="development-daily"><div><h3>今天的首封候选池</h3><p>已标记发送 {plan.completed ?? '—'} / 20 家 · 本次候选 {plan.batch.length} 家 · 可用未发送邮箱公司 {plan.available ?? '—'} 家</p>
       {plan.remaining === null ? <p>登录并读取网站发送记录后，才能确认首次开发名单。</p> : plan.shortfall ? <p>距离今日目标还缺 {plan.shortfall} 家；另有 {plan.missingEmails} 家包衣客户待补公开邮箱。</p> : <p>{plan.remaining === 0 ? '今日目标已完成。' : '已按东南亚优先排好本次候选。'}</p>}
-      <small>同公司跨产品去重；只选有公开业务邮箱的正式客户。跟进信单独安排。</small></div>
+      <small>同公司跨产品去重；只选有公开业务邮箱的正式客户，排除当前账号已记录其他渠道联系的公司。需连接共享邮件台账和私人联系记录；跟进信单独安排。</small></div>
       <button type="button" className="secondary-button" disabled={busy || ledger.status !== 'ready' || !plan.batch.length} onClick={() => void download()}>{busy ? '核对发送记录…' : '下载今日首封草稿（最多 20 家）'}</button></div>
     {message && <p className="development-message" role="status">{message}</p>}
     {!!plan.batch.length && <details><summary>查看本次 {plan.batch.length} 家候选及收件邮箱</summary><ol className="development-batch">{plan.batch.map(({ lead, recipient, southeastAsia }) => <li key={lead.id}><strong>{lead.company}</strong><span>{lead.countryZh} · {southeastAsia ? '东南亚优先' : '其他地区补足'}</span><a href={recipient.sourceUrl} target="_blank" rel="noreferrer">{recipient.email} · 公开来源</a></li>)}</ol></details>}

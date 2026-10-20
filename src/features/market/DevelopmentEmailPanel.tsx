@@ -6,6 +6,10 @@ import { developmentEmailVersion } from '../../lib/developmentEmailVersion'
 import { copyPlainText } from '../../lib/clipboard'
 import { DevelopmentEmailRecipient } from './DevelopmentEmailRecipient'
 import { OutreachStatusBadge } from './OutreachStatusBadge'
+import { ContactRoutePanel } from './ContactRoutePanel'
+import { contactChannelLabels, latestContact } from '../../lib/contactRoutes'
+import { outreachCompanyKey } from '../../lib/outreachLedger'
+import type { LeadWork } from './useLeadWork'
 import type { OutreachLedger } from './useOutreachLedger'
 import './DevelopmentEmailPanel.css'
 
@@ -16,7 +20,7 @@ const copyParts = [
 ] as const
 type CopyPart = typeof copyParts[number]['id']
 
-export function DevelopmentEmailPanel({ lead, ledger, onOpenSendRecord }: { lead: PublicLead; ledger: OutreachLedger; onOpenSendRecord?: () => void }) {
+export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: { lead: PublicLead; ledger: OutreachLedger; work?: LeadWork; onOpenSendRecord?: () => void }) {
   const [copyState, setCopyState] = useState<'idle' | 'checking' | 'copying' | 'copied'>('idle')
   const [copyPart, setCopyPart] = useState<CopyPart>('full')
   const [message, setMessage] = useState('')
@@ -31,7 +35,7 @@ export function DevelopmentEmailPanel({ lead, ledger, onOpenSendRecord }: { lead
   const email = version.email
   const qualified = Boolean(email)
   const pending = copyState === 'checking' || copyState === 'copying'
-  const prompt = createDevelopmentEmailPrompt({ lead, product, application, targetType, style: version.style })
+  const prompt = qualified ? createDevelopmentEmailPrompt({ lead, product, application, targetType, style: version.style }) : ''
   useEffect(() => {
     setCopyState('idle')
     setCopyPart('full')
@@ -65,13 +69,21 @@ export function DevelopmentEmailPanel({ lead, ledger, onOpenSendRecord }: { lead
       const cancelled = new Promise<never>((_, reject) => { rejectCheck = reject })
       controller.signal.addEventListener('abort', onAbort, { once: true })
       timer = window.setTimeout(() => { timedOut = true; controller.abort() }, 8000)
-      const sent = await Promise.race([ledger.checkBeforeOutreach(lead, controller.signal), cancelled])
+      const [sent, records] = await Promise.race([Promise.all([
+        ledger.checkBeforeOutreach(lead, controller.signal),
+        work?.status === 'ready' ? work.fetchCurrentRecords ? work.fetchCurrentRecords() : Promise.resolve(work.records) : Promise.resolve(null),
+      ]), cancelled])
       window.clearTimeout(timer)
       controller.signal.removeEventListener('abort', onAbort)
       if (controller.signal.aborted) return
       const freshVersion = developmentEmailVersion(lead, sent ? [sent] : [])
       if (sent && !window.confirm(`该公司已于 ${sent.sent_on} 发往 ${sent.recipient_email}。确认仍要复制原版首封参考吗？`)) {
         setMessage('已取消复制。')
+        return
+      }
+      const contacted = latestContact(records?.[outreachCompanyKey(lead)]?.contactLog)
+      if (!sent && contacted && !window.confirm(`你的记录显示已于 ${contacted.contactedOn} 通过${contactChannelLabels[contacted.channel]}联系该公司。请确认是否需要跟进，仍要复制首封吗？`)) {
+        setMessage('已取消复制，请先核对渠道联系记录。')
         return
       }
       if (!freshVersion.email) throw new Error('当前记录暂不能生成开发信。')
@@ -103,18 +115,19 @@ export function DevelopmentEmailPanel({ lead, ledger, onOpenSendRecord }: { lead
   const manualLabel = copyPart === 'subject' ? '手动复制主题' : copyPart === 'body' ? '手动复制正文' : '手动复制整封开发信'
   return <section className="outreach-prompt">
     <div className={`outreach-send-banner outreach-send-banner-${version.state}`}><OutreachStatusBadge state={version.state} sentOn={version.sent?.sent_on} /><span>{version.state === 'sent' ? `已记录收件邮箱：${version.sent!.recipient_email}` : version.state === 'unsent' ? '实际发送后请标记；复制草稿不算发送。' : '请先读取共享发送记录，再确认是否已发送。'}</span></div>
-    <div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />{version.label}</h3>{qualified ? <p>{version.note}</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />{version.missingRecipient ? '先补齐并核验收件邮箱，再生成与该公司业务对应的开发信；官网表单或电话不算收件邮箱。' : 'Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。'}</p>}</div>
+    <div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />{version.label}</h3>{qualified ? <p>{version.note}</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div>
     <DevelopmentEmailRecipient key={lead.id} lead={lead} />
+    <ContactRoutePanel key={lead.id} lead={lead} work={work} />
     <div className="outreach-actions">
-      {qualified && <div className="outreach-copy-options" role="group" aria-label="复制开发信内容">{copyParts.map((part) => {
+      <div className="outreach-copy-options" role="group" aria-label="复制开发信内容">{copyParts.map((part) => {
         const current = copyPart === part.id
         const busy = current && pending
         const copied = current && copyState === 'copied'
         const label = current && copyState === 'checking' ? '核对中…' : current && copyState === 'copying' ? '复制中…' : copied ? part.copied : part.label
         return <button key={part.id} type="button" className="secondary-button outreach-copy-button" data-copy-part={part.id} disabled={!qualified || ledger.status !== 'ready' || pending} aria-busy={busy} onClick={() => void copyEmail(part.id)}>{busy ? <LoaderCircle className="outreach-copy-spinner" size={15} /> : copied ? <Check size={15} /> : <Copy size={15} />}{label}</button>
-      })}</div>}
+      })}</div>
       {onOpenSendRecord && <button type="button" className="primary-button outreach-record-button" disabled={ledger.busy} aria-controls={`company-send-record-${lead.id}`} onClick={onOpenSendRecord}><CalendarCheck size={15} />{version.state === 'unsent' ? '记录已发送' : '查看发送记录'}</button>}
-      {qualified && <button type="button" className="secondary-button outreach-preview-button" aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>}
+      <button type="button" className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>
     </div>
     <div className="outreach-copy-feedback" role="status" aria-live="polite">{message}</div>
     {manualText && <div className="outreach-manual-copy"><label>{manualLabel}<textarea ref={manualField} aria-label={manualLabel} readOnly value={manualText} rows={copyPart === 'subject' ? 2 : 12} onFocus={(event) => event.currentTarget.select()} /></label><button type="button" className="secondary-button" onClick={() => { manualField.current?.focus(); manualField.current?.select() }}>全选内容</button></div>}

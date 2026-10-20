@@ -3,6 +3,7 @@ import { businessRecipient } from './customerDevelopment'
 import { contactAssessment, contactPhoneVerified } from './contactEvidence'
 import { activeOutreachSend, outreachCompanyKey, type OutreachSend } from './outreachLedger'
 import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
+import { latestContact, normalizeContactLog, type ContactLogEntry } from './contactRoutes'
 
 export const developmentStages = { todo: '待开发', waiting: '待回复', replied: '已回复', sample: '样品沟通', paused: '暂缓' } as const
 export type DevelopmentStage = keyof typeof developmentStages
@@ -11,7 +12,7 @@ export type EffectiveDevelopmentStage = keyof typeof developmentProgressLabels
 export function developmentProgressLabel(stage: EffectiveDevelopmentStage, hasSent: boolean) {
   return hasSent && stage !== 'sent' && stage !== 'unknown' ? `已发送开发信 · ${developmentProgressLabels[stage]}` : developmentProgressLabels[stage]
 }
-export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | null; followUpOn: string; note: string; favorite: boolean; listIds: string[] }
+export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | null; followUpOn: string; note: string; favorite: boolean; listIds: string[]; contactLog?: ContactLogEntry[] }
 export type LeadWorkList = { id: string; name: string }
 export type WorkRecords = Record<string, LeadWorkRecord>
 export type WorkQueue = 'all' | 'priority' | 'followup' | 'recent'
@@ -62,6 +63,7 @@ export function effectiveStage(lead: PublicLead, records: WorkRecords | null, se
   const manual = records?.[outreachCompanyKey(lead)]?.stage
   if (manual && manual !== 'todo') return manual
   if (sends !== null && activeOutreachSend(sends, lead)) return 'sent'
+  if (latestContact(records?.[outreachCompanyKey(lead)]?.contactLog)) return 'waiting'
   if (records === null) return 'unknown'
   return manual ?? (sends === null ? 'unknown' : 'todo')
 }
@@ -103,7 +105,7 @@ export function normalizeWorkRecord(value: unknown, companyKey: string): LeadWor
   const base = emptyWorkRecord(companyKey)
   if (!value || typeof value !== 'object') return base
   const raw = value as Record<string, unknown>
-  return { companyKey, stage: typeof raw.stage === 'string' && Object.hasOwn(developmentStages, raw.stage) ? raw.stage as DevelopmentStage : null, followUpOn: typeof raw.followUpOn === 'string' && validWorkDate(raw.followUpOn) ? raw.followUpOn : '', note: typeof raw.note === 'string' ? raw.note.slice(0, 4000) : '', favorite: raw.favorite === true, listIds: Array.isArray(raw.listIds) ? [...new Set(raw.listIds.filter((id): id is string => typeof id === 'string'))] : [] }
+  return { companyKey, stage: typeof raw.stage === 'string' && Object.hasOwn(developmentStages, raw.stage) ? raw.stage as DevelopmentStage : null, followUpOn: typeof raw.followUpOn === 'string' && validWorkDate(raw.followUpOn) ? raw.followUpOn : '', note: typeof raw.note === 'string' ? raw.note.slice(0, 4000) : '', favorite: raw.favorite === true, listIds: Array.isArray(raw.listIds) ? [...new Set(raw.listIds.filter((id): id is string => typeof id === 'string'))] : [], contactLog: normalizeContactLog(raw.contactLog) }
 }
 
 export function companyAssociations(lead: PublicLead) {

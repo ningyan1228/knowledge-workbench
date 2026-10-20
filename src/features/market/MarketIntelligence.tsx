@@ -86,7 +86,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const companyCount = new Set(matching.map(outreachCompanyKey)).size
   const hasActiveFilters = productId !== 'all' || continent !== 'all' || country !== 'all' || day !== 'all' || order !== 'newest' || (Object.keys(emptyBusinessFilters) as Array<keyof BusinessFilters>).some((key) => filters[key] !== emptyBusinessFilters[key])
   const firstContactLeads = matching.filter((lead) => { const stage = records?.[outreachCompanyKey(lead)]?.stage; return !stage || stage === 'todo' })
-  const unsentEmails = firstContactPlan(firstContactLeads, sends, Number.MAX_SAFE_INTEGER, undefined, false).batch
+  const unsentEmails = firstContactPlan(firstContactLeads, sends, Number.MAX_SAFE_INTEGER, undefined, false, records).batch
   const downloadEmails = async () => {
     if (ledger.status !== 'ready') return
     setDownloading(true)
@@ -96,7 +96,8 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
         const stage = work.status === 'ready' ? work.records[outreachCompanyKey(lead)]?.stage : null
         return stage !== 'paused' && stage !== 'replied' && stage !== 'sample' && stage !== 'waiting'
       })
-      const freshUnsent = firstContactPlan(eligible, currentSends, Number.MAX_SAFE_INTEGER, undefined, false).batch
+      const freshRecords = await work.fetchCurrentRecords()
+      const freshUnsent = firstContactPlan(eligible, currentSends, Number.MAX_SAFE_INTEGER, undefined, false, freshRecords).batch
       if (!freshUnsent.length) { window.alert('当前筛选中没有未记录发送的合格首封开发信。'); return }
       const url = URL.createObjectURL(new Blob([firstContactExport(freshUnsent)], { type: 'text/plain;charset=utf-8' }))
       const link = document.createElement('a'); link.href = url; link.download = 'demand-side-first-emails-' + productId + '-' + today + '.txt'; link.click()
@@ -140,7 +141,7 @@ export function MarketIntelligence() {
   return <div className="market-workspace-page">
     <header className="page-heading market-heading"><h1>客户开发工作台</h1><nav className="market-tabs" aria-label="市场情报导航">{tabs.map((item) => { const active = item.id === 'customers' ? customerView : tab === item.id; return <button key={item.id} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={() => openTab(item.id === 'customers' ? preferredView : item.id)}>{item.label}</button> })}</nav><MarketConnectionStatus ledger={ledger} work={work} /></header>
     {customerView && <div className="market-connection-notices">{ledger.status !== 'ready' && <OutreachLedgerNotice ledger={ledger} />}{work.status !== 'ready' && <PrivateWorkNotice work={work} />}</div>}
-    {tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} />}
+    {tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} work={work} />}
     {tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}
     {customerView && <LeadsWorkspace productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} work={work} view={tab as 'map' | 'leads'} onView={openTab} />}
     {tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}

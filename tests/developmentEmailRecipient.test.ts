@@ -39,8 +39,7 @@ describe('development email recipient matches verified contact selection', () =>
   it('keeps missing or unqualified recipient states explicit without guessing an email', () => {
     const noEmail = { ...lead, profile: { ...lead.profile, generalEmail: undefined, contacts: [], departmentEmails: [] } }
     expect(render(noEmail)).toContain('尚未取得已核验的收件邮箱')
-    expect(render(noEmail)).toContain('查看官网联系入口')
-    expect(render(noEmail)).toContain(`href="${lead.profile.contactPage}"`)
+    expect(render(noEmail)).toContain('仍可复制开发信正文到官网联系表单')
     expect(render(noEmail)).not.toContain('复制邮箱')
     expect(render({ ...lead, commercialRole: 'peer_supplier' })).not.toContain('info@feroni.it')
     const legacy = { ...lead, profile: { ...lead.profile, generalEmailEvidence: undefined } }
@@ -75,7 +74,7 @@ describe('development email recipient matches verified contact selection', () =>
       expect(html, customer.id).not.toContain('建议收件邮箱')
       const draft = developmentEmailVersion(customer, []).email
       if (!recipient) {
-        expect(html, customer.id).toMatch(/发信资格尚待核验|已有邮箱记录，来源或归属尚待核验|尚未取得已核验的收件邮箱/)
+        expect(html, customer.id).toMatch(/公司资格尚待核验|已有邮箱记录，来源或归属尚待核验|尚未取得已核验的收件邮箱/)
         expect(html, customer.id).not.toContain('复制邮箱')
         continue
       }
