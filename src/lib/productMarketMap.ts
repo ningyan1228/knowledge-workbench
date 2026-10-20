@@ -6006,11 +6006,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "simiron-rochester-hills",
+    "company": "Simiron Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Rochester Hills, Michigan",
+    "latitude": 42.6584,
+    "longitude": -83.1499,
+    "legacyCompanyDescription": "美国自有工业防护涂料配方制造企业；总部地址按当前官网链接的2026年技术文件核验",
+    "fit": "可开发候选",
+    "signal": "当前About明确自身保护涂料配方与美国制造商身份，当前971EPS产品页为环氧硅氧烷地坪防护成品；该页面现有链接的三页技术文件标明Simiron Inc总部及2026-07-17修订日期。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "本次独立重读5份既有原文Home6338/About1108/971EPS1148/Contact464/Additives574chars，并全文审读新增PDF返回10270chars，含PAGE1/2/3OF3。当前只发起1个实际官网链接的PDF请求，此前5自有URL继续累计，总6、剩余0；不重置来源预算。TinyFish返回PDF文字而非二进制或视觉页图，未声称下载原PDF/渲染/核对布局。请求URL保留simiron.com官网，provider报告finalUrl为192.124.249.9同路径，完整原始响应保留；不隐去此技术元数据差异，不据此断言托管所有权。文件页3CORPORATEOFFICE明确SimironInc,3000ResearchDrive,RochesterHillsMI48309-3580；印刷PRODUCTDATASHEET:07/17/2026，日期按正文2026-07-17而非URL目录2020/09冒充文件年。公司About明确自身美国制造和配方角色，具体971EPS为环氧硅氧烷地坪保护涂料；不把现有环氧聚合物/固化剂等同环氧化植物油或实际ELO使用。实际同时销售金属颜料、聚脲色包、纹理防滑添加剂、浇注/桌面环氧成品及多类封闭底面体系，未隐去这些经营；当前完整返回业务与添加剂类别未见ELO/ESBO/环氧化油/同类生物增塑稳定输入外售，普通颜料/纹理配套和成品环氧树脂不自动当选定ELO输入；有限通过而非全SKU/SDS/股权审计。Simiron/Smark/RokRez现有品牌/域名全库查重，仅有本条已知私有项；搜索空结果不是集团独立证明。Contact明示info@为总部、sales@及其Sales电话另列，R&D仅标题未公布邮箱，未凭标题造收件人。当前优先保存Sales部门业务邮箱加一般邮箱后备，不收集HR/会计或猜采购/技术人名。PDF的技术援助为同公司号码，不冒充个人直线。原成品VOC/安全/性能/施工/化学耐性/保修只为源文，不转为ELO声明或指导，适配、采购需求、时机均待确认。"
+    },
+    "contact": {
+      "label": "官网Sales部门业务邮箱；公司总机另存，采购/研发邮箱未披露",
+      "email": "sales@simiron.com",
+      "phone": "+1 248 686 3600",
+      "contactUrl": "https://simiron.com/contact/"
+    },
+    "source": {
+      "label": "SIMIRON own 971EPS epoxy siloxane protective floor coating",
+      "url": "https://simiron.com/products/971eps/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "simiron-rochester-hills": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "van-technologies-duluth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "aervoe-gardnerville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "protek-paint-toronto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6315,6 +6344,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "simiron-rochester-hills": {
+    "website": "https://simiron.com/",
+    "contactPage": "https://simiron.com/contact/",
+    "address": "Corporate office: 3000 Research Drive, Rochester Hills, MI 48309-3580, United States; current-linked 971EPS product data sheet dated 2026-07-17. City-only map marker.",
+    "generalEmail": "info@simiron.com",
+    "generalEmailEvidence": {
+      "company": "Simiron Inc.",
+      "value": "info@simiron.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://simiron.com/contact/",
+          "summary": "Contact Corporate Headquarters explicitly publishes info@simiron.com; general company mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 248 686 3600",
+    "generalPhoneEvidence": {
+      "company": "Simiron Inc.",
+      "value": "+1 248 686 3600",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://simiron.com/contact/",
+          "summary": "Contact Corporate Headquarters publishes (248)686-3600; the current-linked technical PDF also gives it as corporate/technical-assistance number."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@simiron.com",
+        "emailEvidence": {
+          "company": "Simiron Inc.",
+          "value": "sales@simiron.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current corporate contact page",
+              "url": "https://simiron.com/contact/",
+              "summary": "Own Contact explicitly lists sales@simiron.com under Sales; not a personal or procurement/R&D mailbox."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Simiron.com - Innovative Protective Coatings",
+        "url": "https://simiron.com/"
+      },
+      {
+        "label": "About Us - Simiron.com",
+        "url": "https://simiron.com/about-us/"
+      },
+      {
+        "label": "971EPS High Solids Epoxy Siloxane - Simiron.com",
+        "url": "https://simiron.com/products/971eps/"
+      },
+      {
+        "label": "Contact - Simiron.com",
+        "url": "https://simiron.com/contact/"
+      },
+      {
+        "label": "Coating Additives Archives - Simiron.com",
+        "url": "https://simiron.com/products_categories/coating-additives/"
+      },
+      {
+        "label": "Own currently linked 971EPS technical PDF",
+        "url": "https://simiron.com/wp-content/uploads/2020/09/SIM_971EPS_ProductDataSheet_8.pdf"
+      }
+    ]
+  },
   "van-technologies-duluth": {
     "website": "https://vantechnologies.com/",
     "contactPage": "https://vantechnologies.com/contact/",
@@ -19682,6 +19793,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "simiron-rochester-hills",
   "van-technologies-duluth",
   "aervoe-gardnerville",
   "protek-paint-toronto",

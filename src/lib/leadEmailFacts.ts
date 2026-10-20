@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "simiron-rochester-hills": "Your 971EPS epoxy siloxane floor coating is offered for automotive service areas, aircraft hangars and other floors.",
   "van-technologies-duluth": "Your GreenLight waterborne wood coatings include sealers, primers, stains, paints and topcoats developed for industrial wood finishing.",
   "aervoe-gardnerville": "Your MRO Cold Galvanize Coating provides temporary zinc protection for iron, steel and welds during fabrication, maintenance and repair.",
   "protek-paint-toronto": "Your water-based polyurethane varnishes are listed for hardwood floors and furniture refinishing in your wood-coatings range.",
