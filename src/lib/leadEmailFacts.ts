@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "woodoc-gqeberha": "Your Woodoc Water-Borne INTERIOR is a clear sealer for interior wooden furniture, doors, window frames and countertops.",
   "paintcor-johannesburg": "Your Enviroprime is a water-based modified acrylic primer formulated to protect structural mild steel and galvanised iron from corrosion.",
   "woca-denmark-lunderskov": "Your Master Optima Lacquer is a water-based wood floor lacquer offered for offices and other medium-traffic commercial spaces.",
   "simiron-rochester-hills": "Your 971EPS epoxy siloxane floor coating is offered for automotive service areas, aircraft hangars and other floors.",

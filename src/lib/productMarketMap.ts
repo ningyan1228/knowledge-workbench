@@ -6090,11 +6090,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "woodoc-gqeberha",
+    "company": "The House of Woodoc",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Gqeberha (Port Elizabeth), Eastern Cape",
+    "latitude": -33.9608,
+    "longitude": 25.6022,
+    "legacyCompanyDescription": "南非自有透明木材保护与水性木器成品制造；FortBeaufort工厂和Gqeberha行政总部按同一账户",
+    "fit": "可开发候选",
+    "signal": "当前About明确自身木材表面保护成品制造、FortBeaufort工厂和技术团队；WaterBorneINTERIOR为家具、门、框和台面的水性室内透明木器封闭涂层，不用于地板楼梯。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "全文独立审读4份可用自身原文：About4237、WaterBorneINTERIOR3299、Contact4183、PlusLifePRIMER3076chars；Home1902及Products2187只有分类导航/概览/重复帮助渠道，明确标unusable_navigation_overview_only并保存完整HTML/text/metadata，不冒充完整产品目录。About明示TheHouseofWoodoc自身制造透明木材保护和维护成品，FortBeaufort工厂与技术团队、Gqeberha行政总部；当前WaterBorneINTERIOR为室内木器透明封闭涂层，用于家具、门/窗框和台面，明示不适用于木地板/楼梯，不误写成地板客户。PlusLifePrimer为上木表面后须覆涂该牌ExteriorSealer的成品底漆，不能因primer字样当选定PO/CPO原料。实际About范围还包括溶剂型封闭漆、木器地板/户外/甲板系列、着色浓缩物与色浆、胶状木材着色、维护蜡、石/砖/混凝土表面封闭、工具、WoodReviver和TransitStabilizer，未隐去混合经营；所读范围未识别水性聚烯烃乳液、PO/CPO分散体或原料级附着促进剂对外供应，有限通过，不声称全部SKU/SDS/配方成分或股权审计。现站自称TheHouseofWoodoc，历史RekaraMills名字只作为已知去重别名，不冒称当前工商登记法律结论。官网明示业主兼MD FrikkieGreeff但未披露个人业务邮箱，本轮不猜其收件地址或个人称呼。Contact南非公司通用information@woodoc.com和总部+27415550007明确；242MainRoadWalmerPortElizabeth/Gqeberha是行政总部，不能移给FortBeaufort工厂。官方列各国代理/门店/地区销售路线，不当集团控股证据或新增制造客户、不借代理手机号邮箱当工厂联系。全main/root/全队列/frontier按Woodoc/House/Rekara及域名去重无已有对应主体，研发/采购职责及NLW实际使用、相容、需求、采购时机未确认。原文NonToxic/耐水/耐热/寿命/覆盖率及施工安全不转为NLW数据或保证。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "information@woodoc.com",
+      "phone": "+27 41 555 0007",
+      "contactUrl": "https://www.woodoc.com/contact-us"
+    },
+    "source": {
+      "label": "Woodoc own water-borne interior wood sealer and current own factory/technical team evidence",
+      "url": "https://www.woodoc.com/woodoc-water-borne-interior/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "woodoc-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "paintcor-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "woca-denmark-lunderskov": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "simiron-rochester-hills": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6402,6 +6431,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "woodoc-gqeberha": {
+    "website": "https://www.woodoc.com/",
+    "contactPage": "https://www.woodoc.com/contact-us",
+    "address": "Administrative head office: 242 Main Road, Walmer, Port Elizabeth (Gqeberha), South Africa; own factory/technical team in Fort Beaufort, street not assigned from head office. City-only map marker.",
+    "generalEmail": "information@woodoc.com",
+    "generalEmailEvidence": {
+      "company": "The House of Woodoc",
+      "value": "information@woodoc.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.woodoc.com/contact-us",
+          "summary": "Own current Contact Woodoc South Africa explicitly publishes information@woodoc.com for company Customer Care; general company business route, not a personal mailbox or procurement/technical role."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+27 41 555 0007",
+    "generalPhoneEvidence": {
+      "company": "The House of Woodoc",
+      "value": "+27 41 555 0007",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.woodoc.com/contact-us",
+          "summary": "Own Contact Head Office explicitly lists +27415550007 beside 242MainRoadWalmer; separate from SA-only0800411200/WhatsApp customerhelp and overseasdistributors."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer, product and selected-input scope evidence",
+        "url": "https://www.woodoc.com/about-woodoc/"
+      },
+      {
+        "label": "Own specific finished coating application",
+        "url": "https://www.woodoc.com/woodoc-water-borne-interior/"
+      },
+      {
+        "label": "Own public corporate contact and address",
+        "url": "https://www.woodoc.com/contact-us"
+      },
+      {
+        "label": "Own manufacturer, product and selected-input scope evidence",
+        "url": "https://www.woodoc.com/woodoc-water-borne-plus-life-primer/"
+      }
+    ]
+  },
   "paintcor-johannesburg": {
     "website": "https://paintcorsa.co.za/",
     "contactPage": "https://paintcorsa.co.za/find-a-branch/",
@@ -20022,6 +20106,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "woodoc-gqeberha",
   "paintcor-johannesburg",
   "woca-denmark-lunderskov",
   "simiron-rochester-hills",
