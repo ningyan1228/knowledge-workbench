@@ -6481,11 +6481,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "litum-saint-petersburg",
+    "company": "Litum Group (Группа компаний «Литум»)",
+    "productId": "elo",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Saint Petersburg",
+    "latitude": 59.934,
+    "longitude": 30.335,
+    "legacyCompanyDescription": "Litum自有工业及船舶成品涂料生产和实验室，一个集团账户；总部在SaintPetersburg，生产地点含Leningrad地区、Ulyanovsk、Lipetsk及Kolomna。地图为总部城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有涂料工厂及原料、成品检验和新材料研发实验室；Литамастик170为双组分环氧成品涂层，用于船舶及其他工业结构保护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6份官网原文：Home、Litamastik成品系列、About、Manufacturing、Products目录第一页及Contact，均成功。About现有集团自述：2022年收购Jotun俄罗斯业务，2023年纳入Hempel和PPG俄罗斯业务；按该来源记录历史资产关系，不把现集团仍说成这三家外资母公司子公司。与当前正式库和私有队列按Litum/Литум、域、Литамастик/Литавуд及当前品牌主体去重无匹配；历史Jotun/PPG/Hempel海外既有公司不是本次被改名，本轮只新增一个真实现有Litum集团账户，不拆四个工厂、Kazakhstan办事处或Trinity域。生产原文明确自有生产设备及原料/成品检验、新材料研发实验室；不以视频文件名当现场看厂或独立产能审计。Litamastik170明确双组分环氧及船舶/工业结构用途，不能移植其他170/190/270/280配方、低温固化、耐蚀或海事认证到ELO。可见公司范围为船舶、工业、粉末、汽车、卷材与木器成品，目录过滤器含稀释剂、防滑添加剂、连接层等成品/辅助角色，第一页实际为木器等成品；这些不自动等于外售ELO/ESBO/环氧化植物油或同类生物基增塑原料。已读范围未见所选同类原料销售，结论限六原文可见业务和产品，不声称读完10页目录、全部SKU/SDS/PDF、全球股权/供应链或所有原料成分，未虚构外购例外。Contact一般公司邮箱和phone/fax明确区分；具名管理者不当买手，通用Procurement导航不当ELO采购公告。潜在配方评估，不保证相容、现有采购或我方防腐/固化/寿命性能。"
+    },
+    "contact": {
+      "label": "官网公司邮箱、公司业务电话及联系页；无具名采购收件人",
+      "email": "info@litum.org",
+      "phone": "+7 812 6400080",
+      "contactUrl": "https://litum.org/kontakty"
+    },
+    "source": {
+      "label": "Own exact finished product, manufacturing, selected-input scope and corporate contact originals",
+      "url": "https://litum.org/products/litamastik/"
+    },
+    "checkedAt": "2026-10-20"
+  },
+  {
+    "id": "mav-dzerzhinsk",
+    "company": "MAV LLC (ООО «МАВ»)",
+    "productId": "nl-w1201",
+    "country": "Belarus",
+    "countryZh": "白俄罗斯",
+    "city": "Dzerzhinsk",
+    "latitude": 53.683,
+    "longitude": 27.137,
+    "legacyCompanyDescription": "MAV自有水分散、溶剂型、粉末及气雾成品涂料生产；BRAVA、FLAGMAN、AMIKA等合并一个公司账户。地图为Dzerzhinsk城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确Dzerzhinsk自有水分散涂料车间；BRAVAACRYL43清漆注明水性、木材，用于木门窗等室内外木制品，明确排除地板等用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6次具体原文请求：Home成功、商会来源失败、木器清漆目录成功、官方Contact成功、自有生产页成功及目录实际链接BRAVAACRYL43成功，共5份可读原文；不使用失败商会或第三方手册/经销商资料作已读证明。自有生产页明确Dzerzhinsk水分散成品涂料车间DROMONT线，并列有机溶剂成品、AMIKA粉末涂料和气雾业务；这些不是原料级聚烯烃/CPO外售事实。Home与清漆可见目录为成品涂料、底涂、木器保护、稀释/清洗辅助等，已读范围未见销售水性聚烯烃乳液、PO/CPO分散体或原料级同类附着促进剂；结论只限本轮当前可见业务、木器目录与具体产品，未穷尽全部工业SKU、SDS/PDF或全球业务，不虚构外购例外。BRAVAACRYL43原文水性木材、门窗用途，限制地板、木外墙、不稳定户外木构/园林家具和受机械负荷表面；不泛化到任意户外木材，不将UV、耐候、干燥或保护性能移植我方。原文成品使用要求不稀释，NLW评估只针对制造商配方研发，不指示终端现场往成品加料。MAV/ОООМАВ、mav.by、BRAVA/FLAGMAN/AMIKA等一个账户，当前main320/root336、全队列和frontier528按公司/域/实际品牌去重无同主体。地图是城市代表点，地址按当前官网乡镇19近Dzerzhinsk，不借旧目录Builders6虚构新厂址。官网info@mav.by及公司电话/传真来源分别保留，不冒称具名采购或WhatsApp。NL-W1201木材底涂/附着促进用途仅潜在原料评估，现有相容/使用/采购/改进幅度未证实。"
+    },
+    "contact": {
+      "label": "官网公司邮箱、公司业务电话及联系页；无具名采购收件人",
+      "email": "info@mav.by",
+      "phone": "+375 1716 61320",
+      "contactUrl": "https://mav.by/contact_information/"
+    },
+    "source": {
+      "label": "Own exact finished product, manufacturing, selected-input scope and corporate contact originals",
+      "url": "https://mav.by/production/lak/lak-brava-acryl-43-dlya-okon-i-dverey-/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mav-dzerzhinsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "litum-saint-petersburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "emlak-saint-petersburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zip-kamianske": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "polysan-sumy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6807,6 +6865,128 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mav-dzerzhinsk": {
+    "website": "https://mav.by/",
+    "contactPage": "https://mav.by/contact_information/",
+    "address": "19,Dzerzhinsk Rural Council, near Dzerzhinsk, Dzerzhinsk District, Minsk Region222711,Belarus (own current company business address). City representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "info@mav.by",
+    "generalEmailEvidence": {
+      "company": "MAV LLC (ООО «МАВ»)",
+      "value": "info@mav.by",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://mav.by/contact_information/",
+          "summary": "Own Contacts general block names ОООМАВ and publishes info@mav.by. General company mailbox, not a named buyer; no names borrowed from external directories."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+375 1716 61320",
+    "generalPhoneEvidence": {
+      "company": "MAV LLC (ООО «МАВ»)",
+      "value": "+375 1716 61320",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://mav.by/contact_information/",
+          "summary": "Own Contacts general block publishes +375(1716)6-13-20, labelled telephone/fax. Retain the public corporate business line; no private person or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://mav.by/"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://mav.by/production/lak/"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://mav.by/contact_information/"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://mav.by/about_company/proizvodstvo/"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://mav.by/production/lak/lak-brava-acryl-43-dlya-okon-i-dverey-/"
+      }
+    ]
+  },
+  "litum-saint-petersburg": {
+    "website": "https://litum.org/",
+    "contactPage": "https://litum.org/kontakty",
+    "address": "Headquarters: 28A Pulkovskoye Highway, premises26-N, Saint Petersburg196246, Russia. Own factories in Leningrad region, Ulyanovsk, Lipetsk and Kolomna; map uses headquarters city representative position, not a surveyed plant coordinate.",
+    "generalEmail": "info@litum.org",
+    "generalEmailEvidence": {
+      "company": "Litum Group (Группа компаний «Литум»)",
+      "value": "info@litum.org",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://litum.org/kontakty",
+          "summary": "Own Contacts and company header explicitly publish info@litum.org as the Litum general corporate route. No named employee or procurement ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+7 812 6400080",
+    "generalPhoneEvidence": {
+      "company": "Litum Group (Группа компаний «Литум»)",
+      "value": "+7 812 6400080",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate business contact",
+          "url": "https://litum.org/kontakty",
+          "summary": "Own Contacts separately labels company phone8(812)640-00-80 and fax640-00-81; store the actual phone as+7 8126400080, not fax, personal number or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://litum.org/"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://litum.org/products/litamastik/"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://litum.org/about"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://litum.org/proizvodstvo"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://litum.org/products"
+      },
+      {
+        "label": "Own current manufacturing, exact product, selected-input scope or corporate business original",
+        "url": "https://litum.org/kontakty"
+      }
+    ]
+  },
   "emlak-saint-petersburg": {
     "website": "https://emlak.ru/",
     "contactPage": "https://emlak.ru/contacts/",
@@ -21354,6 +21534,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mav-dzerzhinsk",
+  "litum-saint-petersburg",
   "emlak-saint-petersburg",
   "zip-kamianske",
   "polysan-sumy",
