@@ -6257,11 +6257,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "chrotex-athens",
+    "company": "CHROTEX S.A.",
+    "productId": "nl-w1201",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Athens",
+    "latitude": 37.984,
+    "longitude": 23.728,
+    "legacyCompanyDescription": "希腊自有水性木器及建筑涂料研发制造；Athens公开业务地址，生产设施在Aspropyrgos",
+    "fit": "可开发候选",
+    "signal": "官网明确Aspropyrgos自有生产及研发团队；ULTRAXYL AQUA VARNISH为丙烯酸水性清漆，用于室内外木材保护装饰。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立全文审读5份官网当前提取原文：OurStory、自有木器清漆分类第1页、Contact、Terms及ULTRAXYLAQUAVARNISH产品页；另一次本地HTTP读取失败计入6次上限。官网当前明确全部生产位于AspropyrgosAttica自有设施，有科学技术团队及研发；Terms2026年3月披露运营法人HELLENICINDUSTRYOFPAINTSANDVARNISHES–V.NIKOLOGIANNIS&G.TSIMBOUKIS–CHROTEXS.A.。ULTRAXYLAQUAVARNISH为丙烯酸树脂水性木器成品，明确室内外木材保护/装饰，并非原料级聚烯烃分散体。已读官网完整主导航与当前木器第1页包括内外墙成品漆、木材/金属漆、木器/石材清漆、特殊应用及金属包装入口；木器已读条目含水性/溶剂型木器清漆、防护、地板漆/底漆。按所选NLW输入及实际已读范围未发现对外销售水性PO/CPO乳液或原料级附着促进剂；丙烯酸树脂作为该成品组成不等于原料外售。未读木器第2页/其他分类全部叶页及链接PDF，不能宣称全SKU/全球所有权穷尽。AthensMarni39为官网公开业务地址，生产在Aspropyrgos，地图仅Athens城市代表位置；info@chrotex.gr及2105230116–9为公司共用业务联系，不冒称个人采购或WhatsApp。CHROTEX/ULTRAXYL/ARTEX/CHROMASYSTEM及Athens/Thessaloniki分支一个关联账户，创始人历史名称不赋予当前收件人职务。main312/root326/全私有队列及frontier按公司/域名/独特品牌完整查重无匹配；无已确认采购、适配、用量或项目时机，不把生态/UV/耐磨/认证和客户成品性能套用我方材料。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "info@chrotex.gr",
+      "phone": "+30 210 523 0116",
+      "contactUrl": "https://www.chrotex.gr/en/contact/"
+    },
+    "source": {
+      "label": "CHROTEX own ULTRAXYL AQUA VARNISH and own current manufacturing/legal evidence",
+      "url": "https://www.chrotex.gr/en/product/ultraxyl-aqua-verniki/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chrotex-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "peter-kwasny-gundelsheim": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "perma-chink-systems-redmond": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zandleven-leeuwarden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6575,6 +6604,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chrotex-athens": {
+    "website": "https://www.chrotex.gr/en/",
+    "contactPage": "https://www.chrotex.gr/en/contact/",
+    "address": "Marni 39, 10432 Athens, Greece; official public business address. Own production is in Aspropyrgos, Attica; map is an Athens city representative location, not a factory coordinate.",
+    "generalEmail": "info@chrotex.gr",
+    "generalEmailEvidence": {
+      "company": "CHROTEX S.A.",
+      "value": "info@chrotex.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company contact",
+          "url": "https://www.chrotex.gr/en/contact/",
+          "summary": "Own Contact explicitly publishes info@chrotex.gr for the company; no named-person or procurement ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+30 210 523 0116",
+    "generalPhoneEvidence": {
+      "company": "CHROTEX S.A.",
+      "value": "+30 210 523 0116",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company contact",
+          "url": "https://www.chrotex.gr/en/contact/",
+          "summary": "Own Contact publishes (+30)2105230116–9. Store first explicit line2105230116; not WhatsApp, fax or a named person."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own legal/manufacturing/application/product-scope original",
+        "url": "https://www.chrotex.gr/en/our-story/"
+      },
+      {
+        "label": "Own legal/manufacturing/application/product-scope original",
+        "url": "https://www.chrotex.gr/en/product-category/vernikia-xylou-petras/"
+      },
+      {
+        "label": "Own public company contact/address",
+        "url": "https://www.chrotex.gr/en/contact/"
+      },
+      {
+        "label": "Own legal/manufacturing/application/product-scope original",
+        "url": "https://www.chrotex.gr/en/terms-conditions/"
+      },
+      {
+        "label": "Own legal/manufacturing/application/product-scope original",
+        "url": "https://www.chrotex.gr/en/product/ultraxyl-aqua-verniki/"
+      }
+    ]
+  },
   "peter-kwasny-gundelsheim": {
     "website": "https://www.kwasny.com/",
     "contactPage": "https://www.kwasny.com/kontakt",
@@ -20599,6 +20687,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chrotex-athens",
   "peter-kwasny-gundelsheim",
   "perma-chink-systems-redmond",
   "zandleven-leeuwarden",
