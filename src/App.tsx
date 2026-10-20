@@ -2,8 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { User } from '@supabase/supabase-js'
 import {
   Archive, ArrowUpRight, BookOpen, CheckCircle2, ChevronRight, CircleAlert, Clipboard,
-  FileUp, Globe2, GraduationCap, LayoutDashboard, Menu, Moon, PanelLeftClose, Plus,
-  Search, Send, Settings, Sparkles, Sun, X,
+  FileUp, Globe2, GraduationCap, LayoutDashboard, Menu, Moon, PanelLeftClose, PanelLeftOpen, Plus,
+  Search, Send, Settings, Sparkles, Sun, UserRound, X,
 } from 'lucide-react'
 import { articles, products } from './lib/demoData'
 import { ProductHandbook } from './features/products/ProductHandbook'
@@ -16,6 +16,7 @@ import { MarketIntelligence } from './features/market/MarketIntelligence'
 import { LearningWorkspace } from './features/learning/Learning'
 import { AccountStatusCard } from './features/account/AccountStatusCard'
 import { useAccountSession, type AccountSessionState } from './lib/accountSession'
+import './SidebarLayout.css'
 
 type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
 type Draft = { title: string; body: string; translation: string; productName: string; savedAt: string }
@@ -51,6 +52,7 @@ export function App() {
   const [page, setPage] = useState<Page>(getPage)
   const [dark, setDark] = useState(() => localStorage.getItem('nl-theme') === 'dark')
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => { try { return localStorage.getItem('nl-sidebar-collapsed') === '1' } catch { return false } })
   const [selectedProductId, setSelectedProductId] = useState(products[0].id)
   const [search, setSearch] = useState('')
   const [searchOpen, setSearchOpen] = useState(false)
@@ -62,6 +64,7 @@ export function App() {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
   useEffect(() => { document.documentElement.dataset.theme = dark ? 'dark' : 'light'; localStorage.setItem('nl-theme', dark ? 'dark' : 'light') }, [dark])
+  useEffect(() => { try { localStorage.setItem('nl-sidebar-collapsed', sidebarCollapsed ? '1' : '0') } catch { /* Keep navigation usable when storage is unavailable. */ } }, [sidebarCollapsed])
 
   const navigate = (target: Page) => { window.location.hash = target; setSidebarOpen(false) }
   const selectedProduct = products.find((item) => item.id === selectedProductId) ?? products[0]
@@ -71,16 +74,17 @@ export function App() {
     return products.filter((product) => [product.name, product.englishName, product.grade, product.category, ...product.keywords].filter(Boolean).join(' ').toLowerCase().includes(q))
   }, [search])
 
-  return <div className="app-shell">
+  const compactAccountTitle = account.status === 'authenticated' ? `已登录：${account.user.email || account.user.phone || account.user.id}` : account.status === 'anonymous' ? '未登录 · 打开账户设置' : account.status === 'loading' ? '正在确认登录…' : account.status === 'error' ? '登录状态待确认 · 打开账户设置' : '本地预览 · 打开设置'
+  return <div className={`app-shell${sidebarCollapsed ? ' sidebar-collapsed' : ''}`}>
     <aside className={`sidebar ${sidebarOpen ? 'is-open' : ''}`} aria-label="主导航">
-      <div className="brand"><div className="brand-mark">NL</div><div><strong>阳光心材料</strong><span>知识工作台</span></div><button className="icon-button mobile-only" onClick={() => setSidebarOpen(false)} aria-label="关闭导航"><X size={18} /></button></div>
-      <nav>{navigation.filter((item) => item.id !== 'market-intelligence' || marketIntelligenceEnabled).map(({ id, label, icon: Icon }) => <button key={id} className={page === id ? 'nav-item active' : 'nav-item'} onClick={() => navigate(id)}><Icon size={18} />{label}</button>)}</nav>
-      <div className="sidebar-footer"><AccountStatusCard account={account} onSettings={() => navigate('settings')} /><button className="nav-item" onClick={() => navigate('settings')}><Settings size={18} />资料与设置</button></div>
+      <div className="brand"><div className="brand-mark" title="阳光心材料 · 知识工作台">NL</div><div className="brand-copy"><strong>阳光心材料</strong><span>知识工作台</span></div><button className="icon-button mobile-only" onClick={() => setSidebarOpen(false)} aria-label="关闭导航"><X size={18} /></button></div>
+      <nav id="app-navigation" aria-label="工作台导航">{navigation.filter((item) => item.id !== 'market-intelligence' || marketIntelligenceEnabled).map(({ id, label, icon: Icon }) => <button key={id} className={page === id ? 'nav-item active' : 'nav-item'} title={label} aria-label={label} aria-current={page === id ? 'page' : undefined} onClick={() => navigate(id)}><Icon size={18} aria-hidden="true" /><span className="nav-label">{label}</span></button>)}</nav>
+      <div className="sidebar-footer"><div className="sidebar-expanded-account"><AccountStatusCard account={account} onSettings={() => navigate('settings')} /></div><button type="button" className="icon-button sidebar-compact-account" title={compactAccountTitle} aria-label={compactAccountTitle} onClick={() => navigate('settings')}><UserRound size={18} aria-hidden="true" /><span className={`sidebar-account-dot account-${account.status}`} /></button><button className={page === 'settings' ? 'nav-item active' : 'nav-item'} title="资料与设置" aria-label="资料与设置" aria-current={page === 'settings' ? 'page' : undefined} onClick={() => navigate('settings')}><Settings size={18} aria-hidden="true" /><span className="nav-label">资料与设置</span></button></div>
     </aside>
     {sidebarOpen && <button className="scrim" aria-label="关闭导航遮罩" onClick={() => setSidebarOpen(false)} />}
 
     <main className="main-area">
-      <header className="topbar"><div className="topbar-left"><button className="icon-button mobile-menu" onClick={() => setSidebarOpen(true)} aria-label="打开导航"><Menu size={20} /></button><button className="search-box" onClick={() => setSearchOpen(true)}><Search size={17} /><span>搜索产品、参数、CAS 或术语</span><kbd>⌘ K</kbd></button></div><div className="topbar-actions"><button className="icon-button" onClick={() => setDark(!dark)} aria-label="切换深色模式">{dark ? <Sun size={18} /> : <Moon size={18} />}</button><button className="avatar" onClick={() => navigate('settings')} aria-label="打开设置">NL</button></div></header>
+      <header className="topbar"><div className="topbar-left"><button type="button" className="icon-button sidebar-collapse-toggle" onClick={() => setSidebarCollapsed(value => !value)} aria-label={sidebarCollapsed ? '展开侧边导航' : '收起侧边导航'} title={sidebarCollapsed ? '展开侧边导航' : '收起侧边导航'} aria-expanded={!sidebarCollapsed} aria-controls="app-navigation">{sidebarCollapsed ? <PanelLeftOpen size={19} /> : <PanelLeftClose size={19} />}</button><button className="icon-button mobile-menu" onClick={() => setSidebarOpen(true)} aria-label="打开导航"><Menu size={20} /></button><button className="search-box" onClick={() => setSearchOpen(true)}><Search size={17} /><span>搜索产品、参数、CAS 或术语</span><kbd>⌘ K</kbd></button></div><div className="topbar-actions"><button className="icon-button" onClick={() => setDark(!dark)} aria-label="切换深色模式">{dark ? <Sun size={18} /> : <Moon size={18} />}</button><button className="avatar" onClick={() => navigate('settings')} aria-label="打开设置">NL</button></div></header>
       {!hasSupabaseConfig && <div className="preview-banner"><CircleAlert size={17} /><span><strong>本地预览模式：</strong>三款产品学习资料已更新；原始附件与参数审批记录需登录私人资料库核对。</span><button onClick={() => navigate('settings')}>完成连接</button></div>}
       <section className="page-content">
         {page === 'dashboard' && <Dashboard onNavigate={navigate} onSelectProduct={(id) => { setSelectedProductId(id); navigate('products') }} />}
