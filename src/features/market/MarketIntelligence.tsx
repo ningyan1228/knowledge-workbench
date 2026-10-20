@@ -21,6 +21,7 @@ import { marketTabForRoute, readLeadView, rememberLeadView, type MarketTab } fro
 import './MarketWorkspace.css'
 import './MacCustomerMap.css'
 import './CompactMarketHeader.css'
+import './CompactCustomerCards.css'
 
 const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
