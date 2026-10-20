@@ -6034,11 +6034,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "woca-denmark-lunderskov",
+    "company": "WOCA Denmark A/S",
+    "productId": "nl-w1201",
+    "country": "Denmark",
+    "countryZh": "丹麦",
+    "city": "Lunderskov",
+    "latitude": 55.4833,
+    "longitude": 9.3,
+    "legacyCompanyDescription": "丹麦Lunderskov自有水性木器漆及木材护理配方制造；美国渠道合计同一公司账户",
+    "fit": "可开发候选",
+    "signal": "当前自身About明确丹麦Lunderskov生产、美国负责分销；MasterOptima是用于木材地板、办公室及中等人流商业区域的水性地板漆，自有研发经理联系方式明示。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立全文审读5份可用自身正文：USAbout2576、MasterOptima8046、全球Home6331、Products6250、Contact3535chars。About明示美国仅分销、生产位于丹麦Lunderskov，不能把Georgia或Duluth美国渠道另当制造客户；当前水性木地板漆MasterOptima及自有研发联系人构成实际水性木材配方制造链。完整返回Products目录也包含油、皂、碱处理、水性着色剂、填缝、1K/2K漆、硬化剂、抗滑/调色/缓干配套、工具及硬地板PU成品；不隐去这些经营，不把所有硬化剂/抗滑添加剂或成品附着底漆当NLW同类原料。所读实际产品功能和公司经营未识别水性聚烯烃乳液、PO/CPO分散体或原料级附着促进剂对外供应；按已读范围有限通过，不宣称全部SKU/组成/SDS审计。第6个关联投资公司原文请求失败，计入6上限，未换provider重试或补第7页；搜索索引对持股比例有不同数字，不把它们写成核实股权。已知WOCA/美国分销/TripTrap或TTWoodcare及索引关联名称均纳入最新main/root/队列/frontier全量去重，未发现已有对应账户；不声称全球持股审计或拆分关联品牌。实际公司名称、丹麦制造地址和CVR27599028以自身原文为准。Contact与Home现任R&DManager JørgenMøllerJørgensen、jmj@wocadenmark.com及该人条目+4599585655分别保存身份和精确业务邮箱/电话归属；无采购角色已核实，不猜采购邮箱或把CEO/一般邮箱赋给他。一般info@和+4599585600另存。原文认证/法规/VOC/盐雾/健康/施工化学品或性能不转为NLW功能保证，使用/相容/需求/采购时机待确认。"
+    },
+    "contact": {
+      "label": "官网现任研发经理具名业务邮箱及电话；公司通用邮箱和总机另存",
+      "email": "jmj@wocadenmark.com",
+      "phone": "+45 99 58 56 00",
+      "contactUrl": "https://wocadenmark.com/contact"
+    },
+    "source": {
+      "label": "WOCA own Master Optima water-based wood floor lacquer and own Danish production evidence",
+      "url": "https://wocadenmark.com/da/master-optima-lacquer"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "woca-denmark-lunderskov": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "simiron-rochester-hills": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "van-technologies-duluth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "aervoe-gardnerville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6344,6 +6373,118 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "woca-denmark-lunderskov": {
+    "website": "https://wocadenmark.com/",
+    "contactPage": "https://wocadenmark.com/contact",
+    "address": "Tværvej 6, DK-6640 Lunderskov, Denmark; city-only map marker.",
+    "generalEmail": "info@wocadenmark.com",
+    "generalEmailEvidence": {
+      "company": "WOCA Denmark A/S",
+      "value": "info@wocadenmark.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://wocadenmark.com/contact",
+          "summary": "Own Contact footer explicitly publishes info@wocadenmark.com as general company route; not assigned to the R&D manager."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+45 99 58 56 00",
+    "generalPhoneEvidence": {
+      "company": "WOCA Denmark A/S",
+      "value": "+45 99 58 56 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://wocadenmark.com/contact",
+          "summary": "Own current Contact corporate line +4599585600, separate from R&D person5655."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [
+      {
+        "name": "Jørgen Møller Jørgensen",
+        "title": "R&D Manager",
+        "department": "Technical",
+        "email": "jmj@wocadenmark.com",
+        "phone": "+45 9958 5655",
+        "identityEvidence": {
+          "company": "WOCA Denmark A/S",
+          "name": "Jørgen Møller Jørgensen",
+          "title": "R&D Manager",
+          "responsibilities": "Publicly listed R&D Manager; selected-material procurement authority, projects and requirements unconfirmed.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current Contact identity and role",
+              "url": "https://wocadenmark.com/contact",
+              "summary": "Current Contact lists Jørgen Møller Jørgensen as R&D Manager; Home independently repeats the same current team entry."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        },
+        "emailEvidence": {
+          "company": "WOCA Denmark A/S",
+          "value": "jmj@wocadenmark.com",
+          "kind": "named-business",
+          "personName": "Jørgen Møller Jørgensen",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Contact staff entry",
+              "url": "https://wocadenmark.com/contact",
+              "summary": "Exact jmj@wocadenmark.com is published in the Jørgen Møller Jørgensen R&D Manager entry, with matching mailto link."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        },
+        "phoneEvidence": {
+          "company": "WOCA Denmark A/S",
+          "value": "+45 9958 5655",
+          "kind": "named-business",
+          "personName": "Jørgen Møller Jørgensen",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Contact staff entry",
+              "url": "https://wocadenmark.com/contact",
+              "summary": "Exact +4599585655 is displayed in the same named R&D Manager workplace contact entry; distinct from corporate5600."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        }
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company manufacture/product-range evidence",
+        "url": "https://us.wocadenmark.com/pages/about-us"
+      },
+      {
+        "label": "Own specific finished-coating product",
+        "url": "https://wocadenmark.com/da/master-optima-lacquer"
+      },
+      {
+        "label": "Own company manufacture/product-range evidence",
+        "url": "https://wocadenmark.com/"
+      },
+      {
+        "label": "Own company manufacture/product-range evidence",
+        "url": "https://wocadenmark.com/wocaproducts"
+      },
+      {
+        "label": "Own public corporate contact and role/channel evidence",
+        "url": "https://wocadenmark.com/contact"
+      }
+    ]
+  },
   "simiron-rochester-hills": {
     "website": "https://simiron.com/",
     "contactPage": "https://simiron.com/contact/",
@@ -19793,6 +19934,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "woca-denmark-lunderskov",
   "simiron-rochester-hills",
   "van-technologies-duluth",
   "aervoe-gardnerville",
