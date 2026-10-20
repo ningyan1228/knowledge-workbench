@@ -17,7 +17,7 @@ export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | nul
 export type LeadWorkList = { id: string; name: string }
 export type WorkRecords = Record<string, LeadWorkRecord>
 export type WorkQueue = 'all' | 'priority' | 'followup' | 'recent'
-export type BusinessFilters = { query: string; industry: string; application: string; contact: string; sendStatus: 'all' | 'sent' | 'unsent'; preparation: PreparationFilter; stage: string; list: string; sort: 'time' | 'priority'; queue: WorkQueue }
+export type BusinessFilters = { query: string; industry: string; application: string; contact: string; sendStatus: 'all' | 'sent' | 'unsent' | 'needs-email'; preparation: PreparationFilter; stage: string; list: string; sort: 'time' | 'priority'; queue: WorkQueue }
 export const emptyBusinessFilters: BusinessFilters = { query: '', industry: 'all', application: 'all', contact: 'all', sendStatus: 'all', preparation: 'all', stage: 'all', list: 'all', sort: 'time', queue: 'all' }
 export const emptyWorkRecord = (companyKey: string): LeadWorkRecord => ({ companyKey, stage: null, followUpOn: '', note: '', favorite: false, listIds: [] })
 export const applicationKey = (lead: PublicLead) => `${lead.companyEvidence.applicationLayer}:${lead.companyEvidence.applicationId}`
@@ -83,8 +83,15 @@ export function filterWorkbenchLeads(leads: PublicLead[], filters: BusinessFilte
     if (filters.industry !== 'all' && lead.targetCompanyTypeId !== filters.industry) return false
     if (filters.application !== 'all' && applicationKey(lead) !== filters.application) return false
     if (filters.contact !== 'all' && !channels[filters.contact as keyof typeof channels]) return false
-    // Missing shared history is unknown, never proof that a company is unsent.
-    if (filters.sendStatus !== 'all' && (sends === null || Boolean(activeOutreachSend(sends, lead)) !== (filters.sendStatus === 'sent'))) return false
+    // No shared history means unknown. Unsent email-ready customers and missing
+    // verified inboxes are separate groups; active sends take precedence over both.
+    if (filters.sendStatus !== 'all') {
+      if (sends === null) return false
+      const sent = Boolean(activeOutreachSend(sends, lead))
+      if (filters.sendStatus === 'sent' ? !sent : sent) return false
+      if (filters.sendStatus === 'unsent' && !channels.email) return false
+      if (filters.sendStatus === 'needs-email' && channels.email) return false
+    }
     if (!matchesPreparation(lead, filters.preparation, sends, records)) return false
     // Sent is a completed milestone, including companies already at a later stage.
     if (filters.stage === 'sent' && (sends === null || !activeOutreachSend(sends, lead))) return false

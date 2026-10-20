@@ -64,7 +64,11 @@ describe('customer development workspace', () => {
     }
     const voided = { ...send, voided_at: '2026-10-12T01:00:00Z' }
     expect(filterWorkbenchLeads(leads, sentFilter, {}, [voided], '2026-10-12')).toEqual([])
-    expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toHaveLength(3)
+    expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toEqual(expect.arrayContaining([lead, other]))
+    expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toHaveLength(2)
+    // This synthetic cross-product record no longer has a matching qualified
+    // recipient; missing or inconsistent recipient evidence belongs separately.
+    expect(filterWorkbenchLeads(leads, { ...emptyBusinessFilters, sendStatus: 'needs-email' }, {}, [voided], '2026-10-12')).toEqual([second])
     expect(filterWorkbenchLeads(leads, { ...unsentFilter, query: 'Unsent fixture' }, {}, [send], '2026-10-12')).toEqual([other])
   })
   it('never counts unavailable sending history as unsent', () => {
