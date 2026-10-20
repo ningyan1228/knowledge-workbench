@@ -5,7 +5,7 @@ import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { developmentEmailVersion } from '../../lib/developmentEmailVersion'
 import { copyPlainText } from '../../lib/clipboard'
 import { DevelopmentEmailRecipient } from './DevelopmentEmailRecipient'
-import { OutreachStatusBadge } from './OutreachStatusBadge'
+import { CustomerContactStatus } from './CustomerContactStatus'
 import { ContactRoutePanel } from './ContactRoutePanel'
 import { contactChannelLabels, latestContact } from '../../lib/contactRoutes'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
@@ -33,6 +33,8 @@ export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: 
   const application = (lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications).find((item) => item.id === lead.companyEvidence.applicationId)!
   const version = developmentEmailVersion(lead, ledger.status === 'ready' ? ledger.sends : null)
   const email = version.email
+  const contactLog = work?.status === 'ready' ? work.records[outreachCompanyKey(lead)]?.contactLog : undefined
+  const contacted = latestContact(contactLog)
   const qualified = Boolean(email)
   const pending = copyState === 'checking' || copyState === 'copying'
   const prompt = qualified ? createDevelopmentEmailPrompt({ lead, product, application, targetType, style: version.style }) : ''
@@ -114,8 +116,8 @@ export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: 
   }
   const manualLabel = copyPart === 'subject' ? '手动复制主题' : copyPart === 'body' ? '手动复制正文' : '手动复制整封开发信'
   return <section className="outreach-prompt">
-    <div className={`outreach-send-banner outreach-send-banner-${version.state}`}><OutreachStatusBadge state={version.state} sentOn={version.sent?.sent_on} /><span>{version.state === 'sent' ? `已记录收件邮箱：${version.sent!.recipient_email}` : version.state === 'unsent' ? '实际发送后请标记；复制草稿不算发送。' : '请先读取共享发送记录，再确认是否已发送。'}</span></div>
-    <div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />{version.label}</h3>{qualified ? <p>{version.note}</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div>
+    <div className={`outreach-send-banner outreach-send-banner-${version.state}${contacted ? ' outreach-send-banner-contacted' : ''}`}><CustomerContactStatus contactLog={contactLog} emailState={version.state} sentOn={version.sent?.sent_on} /><span>{version.state === 'sent' ? `已记录收件邮箱：${version.sent!.recipient_email}` : version.state === 'unsent' ? contacted ? '已有其他渠道联系记录，请先核对再决定是否发送邮件。' : '实际发送后请标记；复制草稿不算发送。' : '请先读取共享发送记录，再确认是否已发送邮件。'}</span></div>
+    <div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />{contacted && version.state !== 'sent' ? '首封参考 · 已有其他渠道联系记录' : version.label}</h3>{qualified ? <p>{contacted && version.state !== 'sent' ? '已通过其他渠道联系；此处保留首封参考，后续联系前请核对历史，避免重复发送。' : version.note}</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div>
     <DevelopmentEmailRecipient key={lead.id} lead={lead} />
     <ContactRoutePanel key={lead.id} lead={lead} work={work} />
     <div className="outreach-actions">

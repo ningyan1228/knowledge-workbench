@@ -1,0 +1,14 @@
+.customer-contact-status { display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;min-width:0;max-width:100%;vertical-align:middle }
+.customer-channel-status { display:inline-flex;align-items:center;gap:5px;min-width:0;max-width:100%;box-sizing:border-box;padding:5px 9px;border:1px solid #5eead4;border-radius:7px;background:#f0fdfa;color:#115e59;font-size:12px;font-weight:750;line-height:1.5;overflow-wrap:anywhere }
+.customer-channel-status>svg { flex-shrink:0 }
+.customer-channel-status time { white-space:nowrap }
+.customer-channel-status small { font-size:10px;font-weight:500 }
+.customer-card-send-status .customer-contact-status { justify-content:flex-end }
+.market-workspace-page .mac-customer-map .customer-card-send-status:has(.customer-channel-status) { grid-column:1/-1;justify-self:start }
+.customer-card-meta .customer-channel-status { padding:3px 7px;font-size:11px;gap:4px }
+.customer-card-meta .customer-channel-status>svg { width:12px;height:12px }
+.customer-card-send-status:has(.customer-channel-status) .customer-contact-status { justify-content:flex-start }
+.customer-row-send-status .customer-contact-status { align-items:flex-start;flex-direction:column }
+:root[data-theme="dark"] .customer-channel-status { color:#99f6e4;background:#123631;border-color:#2f7a6d }
+.outreach-prompt .outreach-send-banner-contacted { border-color:#5eead4;box-shadow:inset 4px 0 #14b8a6 }
+:root[data-theme="dark"] .outreach-prompt .outreach-send-banner-contacted { border-color:#2f7a6d;box-shadow:inset 4px 0 #2dd4bf }

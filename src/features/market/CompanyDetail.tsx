@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { CalendarCheck, ExternalLink, FileText, Globe2, Linkedin, Mail, MapPin, MessageCircle, Target, X } from 'lucide-react'
 import { marketProducts, targetCompanyTypes, tdsVerifiedApplications, marketExtendedApplications, type PublicLead, type MarketProduct } from '../../lib/productMarketMap'
 import { recordedTimeLabel } from '../../lib/leadTimeline'
-import { localDateToday } from '../../lib/outreachLedger'
+import { localDateToday, outreachCompanyKey } from '../../lib/outreachLedger'
 import { businessRecipient } from '../../lib/customerDevelopment'
 import { contactAssessment } from '../../lib/contactEvidence'
 import { DevelopmentEmailPanel } from './DevelopmentEmailPanel'
@@ -12,6 +12,7 @@ import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
 import { CompanyDetailSections, type CompanyDetailSectionId } from './CompanyDetailSections'
 import { OutreachStatusBadge } from './OutreachStatusBadge'
+import { CustomerContactStatus } from './CustomerContactStatus'
 import './CompanyDetailDrawer.css'
 
 function productOf(id: MarketProduct['id']) { return marketProducts.find((product) => product.id === id)! }
@@ -133,11 +134,12 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, 
   const sources = [...new Map([...profile.sources, ...(extendedSource ? [{ label: extendedSource.sourceName, url: extendedSource.sourceUrl }] : [])].map((source) => [source.url, source])).values()]
   const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
   const sendState = ledger.status !== 'ready' ? 'unknown' : sent ? 'sent' : 'unsent'
+  const contactLog = work.status === 'ready' ? work.records[outreachCompanyKey(lead)]?.contactLog : undefined
   const onEmail = (event: MouseEvent<HTMLAnchorElement>, email: string) => void openEmailWithDuplicateCheck(event, lead, ledger, email)
   const note = '仅展示官网或官方资料中公开的业务联系方式。它们证明的是业务相关性和信息可追溯性，不代表该公司已经采购或确认需求。'
   return <div className="company-detail-backdrop company-detail-drawer-backdrop" role="presentation" onMouseDown={requestClose}>
     <section className="company-detail company-detail-drawer" role="dialog" aria-modal="true" aria-labelledby="company-detail-title" onMouseDown={(event) => event.stopPropagation()}>
-      <header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p><div className="company-header-send-status" aria-live="polite"><OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} /></div></div><button className="detail-close" disabled={work.busy} onClick={requestClose} aria-label="关闭公司详情"><X size={19} /></button></header>
+      <header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p><div className="company-header-send-status" aria-live="polite"><CustomerContactStatus contactLog={contactLog} emailState={sendState} sentOn={sent?.sent_on} /></div></div><button className="detail-close" disabled={work.busy} onClick={requestClose} aria-label="关闭公司详情"><X size={19} /></button></header>
       <nav className="company-detail-navigation" aria-label="切换当前筛选客户"><button type="button" disabled={!previousLead || work.busy} onClick={() => navigate(previousLead)}>上一家</button><span role="status">{index >= 0 ? `当前结果 ${index + 1} / ${leads.length}` : `已移出当前结果 · 剩余 ${leads.length} 条`}</span><button type="button" disabled={!nextLead || work.busy} onClick={() => navigate(nextLead)}>下一家</button></nav>
       <CompanyDetailSections key={lead.id} bodyRef={bodyRef} dirty={dirty} note={note} active={activeSection} onSectionChange={setActiveSection}
         overview={<>
