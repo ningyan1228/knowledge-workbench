@@ -38,7 +38,9 @@ describe('development email recipient matches verified contact selection', () =>
   })
   it('keeps missing or unqualified recipient states explicit without guessing an email', () => {
     const noEmail = { ...lead, profile: { ...lead.profile, generalEmail: undefined, contacts: [], departmentEmails: [] } }
-    expect(render(noEmail)).toContain('暂无可推荐的公开业务邮箱')
+    expect(render(noEmail)).toContain('尚未取得已核验的收件邮箱')
+    expect(render(noEmail)).toContain('查看官网联系入口')
+    expect(render(noEmail)).toContain(`href="${lead.profile.contactPage}"`)
     expect(render(noEmail)).not.toContain('复制邮箱')
     expect(render({ ...lead, commercialRole: 'peer_supplier' })).not.toContain('info@feroni.it')
     const legacy = { ...lead, profile: { ...lead.profile, generalEmailEvidence: undefined } }
@@ -48,8 +50,22 @@ describe('development email recipient matches verified contact selection', () =>
     expect(render(legacy)).not.toContain('邮箱来源已核验')
     expect(render(legacy)).not.toContain('已核验公司邮箱')
     const otherCompanyProof = { ...lead, profile: { ...lead.profile, contacts: [], departmentEmails: [], generalEmailEvidence: { ...lead.profile.generalEmailEvidence!, company: 'Another Company' } } }
-    expect(render(otherCompanyProof)).toContain('暂无可推荐的公开业务邮箱')
+    expect(render(otherCompanyProof)).toContain('已有邮箱记录，来源或归属尚待核验')
     expect(render(otherCompanyProof)).not.toContain('info@feroni.it')
+  })
+  it('keeps Kubilay’s sourced corporate inbox attached to the same record with its brand annotation', () => {
+    const kubilay = publicLeads.find(customer => customer.id === 'kubilay-boya-aliaga')!
+    expect(selectBusinessRecipient(kubilay)?.email).toBe('info@kubilayboya.com')
+    expect(render(kubilay)).toContain('已核验公司邮箱')
+    expect(render(kubilay)).toContain('info@kubilayboya.com')
+    expect(render(kubilay)).not.toContain('尚未取得已核验的收件邮箱')
+  })
+  it('distinguishes an email awaiting ownership evidence from a genuinely absent email', () => {
+    const invalidProof = { ...lead, profile: { ...lead.profile, generalEmailEvidence: { ...lead.profile.generalEmailEvidence!, company: 'Another company' } } }
+    expect(render(invalidProof)).toContain('已有邮箱记录，来源或归属尚待核验')
+    expect(render(invalidProof)).not.toContain('复制邮箱')
+    const unsafe = { ...lead, profile: { ...lead.profile, generalEmail: undefined, contacts: [], departmentEmails: [], contactPage: 'javascript:alert(1)', website: undefined } }
+    expect(render(unsafe)).not.toContain('href="javascript:')
   })
   it('keeps every saved customer, company-specific draft and recipient in the same company record', () => {
     const escaped = (text: string) => renderToStaticMarkup(createElement('span', null, text)).slice(6, -7)
@@ -59,7 +75,8 @@ describe('development email recipient matches verified contact selection', () =>
       expect(html, customer.id).not.toContain('建议收件邮箱')
       const draft = developmentEmailVersion(customer, []).email
       if (!recipient) {
-        expect(html, customer.id).toContain('暂无可推荐的公开业务邮箱')
+        expect(html, customer.id).toMatch(/发信资格尚待核验|已有邮箱记录，来源或归属尚待核验|尚未取得已核验的收件邮箱/)
+        expect(html, customer.id).not.toContain('复制邮箱')
         continue
       }
       expect(html, customer.id).toContain(escaped(`收件公司：${customer.company}`))

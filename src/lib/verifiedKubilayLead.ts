@@ -44,7 +44,7 @@ export const verifiedKubilayLeads: PublicLead[] = [
       "contactPage": "https://kubilayboya.com/iletisim/",
       "generalEmail": "info@kubilayboya.com",
       "generalEmailEvidence": {
-        "company": "Kubilay Kimya ve Boya Sanayi Ticaret Limited Şirketi",
+        "company": "Kubilay Kimya ve Boya Sanayi Ticaret Limited Şirketi (KUBILAY brand)",
         "value": "info@kubilayboya.com",
         "kind": "general",
         "publicBusiness": true,
@@ -52,10 +52,10 @@ export const verifiedKubilayLeads: PublicLead[] = [
           {
             "label": "Official factory contact",
             "url": "https://kubilayboya.com/iletisim/",
-            "summary": "Explicit factory corporate inbox; only layout whitespace normalized. Not a named buyer."
+            "summary": "Official Contact page explicitly lists info@kubilayboya.com under Fabrika at Çoraklar Mah. 5024 Sk. No:6/1, Aliağa / İzmir. The KVKK page names Kubilay Kimya ve Boya Sanayi Ticaret Limited Şirketi at the same factory address. KUBILAY brand is a display annotation on this same company record, not a different email owner; this is a corporate inbox, not a named buyer."
           }
         ],
-        "verifiedAt": "2026-10-15"
+        "verifiedAt": "2026-10-20"
       },
       "contacts": [],
       "departmentEmails": [],
