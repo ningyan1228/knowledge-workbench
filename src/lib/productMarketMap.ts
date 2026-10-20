@@ -6145,11 +6145,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "seagrave-coatings-kenilworth",
+    "company": "Seagrave Coatings Corp.",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Kenilworth, New Jersey",
+    "latitude": 40.6765,
+    "longitude": -74.2907,
+    "legacyCompanyDescription": "美国Kenilworth水性木器及工业成品配方制造；品牌按同一公司账户",
+    "fit": "可开发候选",
+    "signal": "自身当前WoodFinish列AQUANAMEL水性预催化木器清漆用于厨房柜和办公、学校、酒店家具；研发页明确自有配方研究人员参与工厂生产，当前公司地址和业务邮箱明确。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立全文审读六份自身正文：Home1544/About3205/WoodFinish11655/Products8402/Contact670/R&D1728字符。自有水性AQUANAMEL预催化清漆与AquaPolytane木器成品、内部配方研发和工厂生产明确；不是根据公司名或第三方工厂名录推定制造。实际经营还有硝基/酸固化/PU/聚酯/UV木器、玻璃塑料成品、特殊效果、工业维护、军工及吉他涂料；高技术聚酯/聚氨酯内部制造和成品barriercoat/primer不自动等于PO/CPO原料业务。第三方搜索提到specialtyresin制造已保留此范围疑点并与自身完整返回产品/研发范围核对；实际自身已读经营未识别水性聚烯烃乳液、PO/CPO分散体或原料级附着促进剂外售，按所读所选输入有限通过，不称全部SKU/SDS/组成/全球股权审计。搜索别名Lawrence-McFadden/Chemray/Titanine及自身Plextone/Armorguard/AQUANAMEL/AquaPolytane/Ceraglaze/Miraglaze纳入查重，不从历史搜索材料另编当前收购年份/股比，也不拆品牌。公司Contact当前209NMichiganAveKenilworthNJ07033、sales@seagravecoatings.com和2019331000明确；sales邮箱是公司共享销售入口，不赋予NJMEP目录人物、研发经理或采购负责人。自身页面关于zeroVOC/nohazard/noPPE/认证、法规、性能及客户案例只作原文，不复制为NLW保证、安全建议或客户采购需求。完整当前main/root/全私有队列/frontier按公司域名和已知品牌查重；实际材料使用、采购及时间未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司共享销售业务邮箱及总机；未核实具名采购/技术收件人",
+      "email": "sales@seagravecoatings.com",
+      "phone": "+1 201 933 1000",
+      "contactUrl": "https://seagravecoatings.com/contact/"
+    },
+    "source": {
+      "label": "Seagrave own AQUANAMEL water-based wood varnish and in-house formulation/factory production",
+      "url": "https://seagravecoatings.com/wood-finish/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "seagrave-coatings-kenilworth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "advanced-polymer-coatings-avon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "woodoc-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "paintcor-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6459,6 +6488,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "seagrave-coatings-kenilworth": {
+    "website": "https://seagravecoatings.com/",
+    "contactPage": "https://seagravecoatings.com/contact/",
+    "address": "209 N Michigan Ave, Kenilworth, NJ 07033, United States; city-only map marker, no precise factory geocode claimed.",
+    "generalEmail": "sales@seagravecoatings.com",
+    "generalEmailEvidence": {
+      "company": "Seagrave Coatings Corp.",
+      "value": "sales@seagravecoatings.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://seagravecoatings.com/contact/",
+          "summary": "Own Contact explicitly publishes sales@seagravecoatings.com as a shared company sales route; no personal ownership or procurement/technical title inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+1 201 933 1000",
+    "generalPhoneEvidence": {
+      "company": "Seagrave Coatings Corp.",
+      "value": "+1 201 933 1000",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://seagravecoatings.com/contact/",
+          "summary": "Own Contact explicitly publishes (201)933-1000 as corporate voice, not fax or a named personal number."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://seagravecoatings.com/"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://seagravecoatings.com/about/"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://seagravecoatings.com/wood-finish/"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://seagravecoatings.com/products/"
+      },
+      {
+        "label": "Own current public contact and separate channel/role evidence",
+        "url": "https://seagravecoatings.com/contact/"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://seagravecoatings.com/research-development/"
+      }
+    ]
+  },
   "advanced-polymer-coatings-avon": {
     "website": "https://www.adv-polymer.com/",
     "contactPage": "https://www.adv-polymer.com/contact",
@@ -20182,6 +20274,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "seagrave-coatings-kenilworth",
   "advanced-polymer-coatings-avon",
   "woodoc-gqeberha",
   "paintcor-johannesburg",
