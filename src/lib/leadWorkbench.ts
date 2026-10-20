@@ -4,6 +4,7 @@ import { contactAssessment, contactPhoneVerified } from './contactEvidence'
 import { activeOutreachSend, outreachCompanyKey, type OutreachSend } from './outreachLedger'
 import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
 import { latestContact, normalizeContactLog, type ContactLogEntry } from './contactRoutes'
+import { leadPreparation, type PreparationFilter } from './leadPreparation'
 
 export const developmentStages = { todo: '待开发', waiting: '待回复', replied: '已回复', sample: '样品沟通', paused: '暂缓' } as const
 export type DevelopmentStage = keyof typeof developmentStages
@@ -16,8 +17,8 @@ export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | nul
 export type LeadWorkList = { id: string; name: string }
 export type WorkRecords = Record<string, LeadWorkRecord>
 export type WorkQueue = 'all' | 'priority' | 'followup' | 'recent'
-export type BusinessFilters = { query: string; industry: string; application: string; contact: string; sendStatus: 'all' | 'sent' | 'unsent'; stage: string; list: string; sort: 'time' | 'priority'; queue: WorkQueue }
-export const emptyBusinessFilters: BusinessFilters = { query: '', industry: 'all', application: 'all', contact: 'all', sendStatus: 'all', stage: 'all', list: 'all', sort: 'time', queue: 'all' }
+export type BusinessFilters = { query: string; industry: string; application: string; contact: string; sendStatus: 'all' | 'sent' | 'unsent'; preparation: PreparationFilter; stage: string; list: string; sort: 'time' | 'priority'; queue: WorkQueue }
+export const emptyBusinessFilters: BusinessFilters = { query: '', industry: 'all', application: 'all', contact: 'all', sendStatus: 'all', preparation: 'all', stage: 'all', list: 'all', sort: 'time', queue: 'all' }
 export const emptyWorkRecord = (companyKey: string): LeadWorkRecord => ({ companyKey, stage: null, followUpOn: '', note: '', favorite: false, listIds: [] })
 export const applicationKey = (lead: PublicLead) => `${lead.companyEvidence.applicationLayer}:${lead.companyEvidence.applicationId}`
 export const leadApplication = (lead: PublicLead) => (lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications).find((item) => item.id === lead.companyEvidence.applicationId)
@@ -84,6 +85,7 @@ export function filterWorkbenchLeads(leads: PublicLead[], filters: BusinessFilte
     if (filters.contact !== 'all' && !channels[filters.contact as keyof typeof channels]) return false
     // Missing shared history is unknown, never proof that a company is unsent.
     if (filters.sendStatus !== 'all' && (sends === null || Boolean(activeOutreachSend(sends, lead)) !== (filters.sendStatus === 'sent'))) return false
+    if (filters.preparation !== 'all' && leadPreparation(lead, sends, records) !== filters.preparation) return false
     // Sent is a completed milestone, including companies already at a later stage.
     if (filters.stage === 'sent' && (sends === null || !activeOutreachSend(sends, lead))) return false
     if (filters.stage === 'waiting' && stage !== 'waiting' && stage !== 'sent') return false

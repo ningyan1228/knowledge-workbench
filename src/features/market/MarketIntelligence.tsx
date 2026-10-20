@@ -60,6 +60,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const [overviewToken, setOverviewToken] = useState(0), [downloading, setDownloading] = useState(false)
   const options = useMemo(() => geographyOptions(leads, continent), [leads, continent])
   const regionalLeads = useMemo(() => filterLeadGeography(leads, continent, country), [leads, continent, country])
+  const preparationLeads = useMemo(() => timelineLeads(regionalLeads, order, day), [regionalLeads, order, day])
   const records = work.status === 'ready' ? work.records : null, sends = ledger.status === 'ready' ? ledger.sends : null
   const today = shanghaiDay(new Date().toISOString())
   const businessLeads = useMemo(() => filterWorkbenchLeads(regionalLeads, filters, records, sends, today, order), [regionalLeads, filters, records, sends, today, order])
@@ -70,10 +71,10 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   useEffect(() => {
     setFilters((current) => {
       const listMissing = current.list !== 'all' && current.list !== 'favorites' && !work.lists.some((list) => list.id === current.list)
-      return work.status !== 'ready' ? { ...current, stage: 'all', list: 'all', queue: 'all' } : listMissing ? { ...current, list: 'all' } : current
+      return work.status !== 'ready' ? { ...current, preparation: current.preparation === 'ready' ? 'all' : current.preparation, stage: 'all', list: 'all', queue: 'all' } : listMissing ? { ...current, list: 'all' } : current
     })
   }, [work.status, work.lists])
-  useEffect(() => { if (ledger.status !== 'ready') setFilters((current) => ({ ...current, sendStatus: 'all', queue: current.queue === 'priority' || current.queue === 'recent' ? 'all' : current.queue })) }, [ledger.status])
+  useEffect(() => { if (ledger.status !== 'ready') setFilters((current) => ({ ...current, sendStatus: 'all', preparation: 'all', queue: current.queue === 'priority' || current.queue === 'recent' ? 'all' : current.queue })) }, [ledger.status])
   useEffect(() => { if (country !== 'all' && !options.countries.some((item) => item.value === country)) setCountry('all') }, [options, country])
   useEffect(() => {
     if (selectedLead && !matching.some((lead) => lead.id === selectedLead.id)) setSelectedLead(null)
@@ -106,7 +107,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     finally { setDownloading(false) }
   }
   return <section className="market-map-workspace">
-    <LeadBusinessControls allCustomerCount={new Set(publicLeads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} filters={filters} onChange={(value) => { setFilters(value); resetFocus() }} work={work} ledger={ledger}
+    <LeadBusinessControls allCustomerCount={new Set(publicLeads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { setFilters(value); resetFocus() }} work={work} ledger={ledger}
       primaryFilters={<div className="market-scope-controls"><div className="market-product-row"><span>产品</span><ProductPicker value={productId} onChange={onProduct} /></div>
     <div className="lead-geography-filters" role="group" aria-label="按地区筛选"><label>大洲<select aria-label="大洲" value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label><label>国家／地区<select aria-label="国家／地区" value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label></div>
     </div>}
@@ -118,7 +119,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     <div className={view === 'map' ? 'customer-map-view' : 'work-list-view'}>
       {view === 'map' ? <CustomerMapWorkspace leads={matching} selectedLead={selectedLead} hoveredLead={hoveredLead} onSelectLead={setSelectedLead} onHighlight={setHoveredLead} onOpenDetail={openLeadDetail} detailOpen={Boolean(detailLead)} overviewToken={overviewToken} onOverview={resetFocus} onReturnRegions={continent !== 'all' || country !== 'all' ? returnAllRegions : undefined} ledger={ledger} work={work} /> : matching.length > 0 && <LeadList leads={matching} selectedLead={selectedLead} onHighlight={setHoveredLead} onSelect={openLeadDetail} onOpenDetail={openLeadDetail} ledger={ledger} work={work} />}
       {!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选没有符合条件的客户</strong><span>可调整业务条件、日期或地区，或点击“清除筛选”。</span></div>}
-    </div><CompanyDetail key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={openLeadDetail} />
+    </div><CompanyDetail initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={openLeadDetail} />
   </section>
 }
 

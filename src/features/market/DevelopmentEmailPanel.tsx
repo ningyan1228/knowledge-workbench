@@ -119,15 +119,15 @@ export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: 
     <DevelopmentEmailRecipient key={lead.id} lead={lead} />
     <ContactRoutePanel key={lead.id} lead={lead} work={work} />
     <div className="outreach-actions">
-      <div className="outreach-copy-options" role="group" aria-label="复制开发信内容">{copyParts.map((part) => {
+      {qualified && <div className="outreach-copy-options" role="group" aria-label="复制开发信内容">{copyParts.map((part) => {
         const current = copyPart === part.id
         const busy = current && pending
         const copied = current && copyState === 'copied'
         const label = current && copyState === 'checking' ? '核对中…' : current && copyState === 'copying' ? '复制中…' : copied ? part.copied : part.label
         return <button key={part.id} type="button" className="secondary-button outreach-copy-button" data-copy-part={part.id} disabled={!qualified || ledger.status !== 'ready' || pending} aria-busy={busy} onClick={() => void copyEmail(part.id)}>{busy ? <LoaderCircle className="outreach-copy-spinner" size={15} /> : copied ? <Check size={15} /> : <Copy size={15} />}{label}</button>
-      })}</div>
+      })}</div>}
       {onOpenSendRecord && <button type="button" className="primary-button outreach-record-button" disabled={ledger.busy} aria-controls={`company-send-record-${lead.id}`} onClick={onOpenSendRecord}><CalendarCheck size={15} />{version.state === 'unsent' ? '记录已发送' : '查看发送记录'}</button>}
-      <button type="button" className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>
+      {qualified && <button type="button" className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>}
     </div>
     <div className="outreach-copy-feedback" role="status" aria-live="polite">{message}</div>
     {manualText && <div className="outreach-manual-copy"><label>{manualLabel}<textarea ref={manualField} aria-label={manualLabel} readOnly value={manualText} rows={copyPart === 'subject' ? 2 : 12} onFocus={(event) => event.currentTarget.select()} /></label><button type="button" className="secondary-button" onClick={() => { manualField.current?.focus(); manualField.current?.select() }}>全选内容</button></div>}

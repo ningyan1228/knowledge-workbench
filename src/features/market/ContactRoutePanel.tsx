@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 import type { PublicLead } from '../../lib/productMarketMap'
 import { contactChannelLabels, customerContactRoutes, latestContact, type ContactChannel, type ContactLogEntry } from '../../lib/contactRoutes'
+import { selectBusinessRecipient } from '../../lib/contactEvidence'
 import { localDateToday, outreachCompanyKey } from '../../lib/outreachLedger'
 import { validWorkDate } from '../../lib/leadWorkbench'
 import type { LeadWork } from './useLeadWork'
@@ -47,7 +48,7 @@ export function ContactRoutePanel({ lead, work }: { lead: PublicLead; work?: Lea
       {!routes.contactPage && routes.website && <a href={routes.website} target="_blank" rel="noreferrer">官网查找联系入口<ExternalLink size={12}/></a>}
     </div>
     {routes.phone && <p>公开业务电话：{routes.phone}{!routes.whatsapp && ' · 尚未核实该号码是否使用 WhatsApp'}</p>}
-    <p>主题和正文均保留，可按对方界面分别复制；表单或私信可直接粘贴正文。入口是否允许留言、账号是否可联系，以对方页面为准；复制或打开入口不算已联系。</p>
+    <p>{selectBusinessRecipient(lead) ? '主题和正文可按对方界面分别复制。' : '请先通过公开联系资料补充并核验实际收件邮箱，再准备首封开发信。'}入口是否允许留言、账号是否可联系，以对方页面为准；复制或打开入口不算已联系。</p>
     {recent && <p className="outreach-channel-recorded">我的联系记录：{contactChannelLabels[recent.channel]}已联系 · {recent.contactedOn}（仅当前账号）</p>}
     {work?.status !== 'ready' && <p>私人渠道记录尚未连接，暂不能核对你是否已通过其他渠道联系；邮件记录仍以共享台账为准。</p>}
     <details className="outreach-route-record"><summary>记录表单／私信／电话联系</summary>

@@ -12,7 +12,7 @@ describe('separate identity and business channel evidence', () => {
     expect(contactAssessment(base.company, contact)).toMatchObject({ identity: true, email: false, phone: false, linkedIn: true })
     expect(contactAssessment(base.company, contact).labels).toContain('仅领英入口')
     expect(selectBusinessRecipient(withContacts([contact]))).toBeNull()
-    expect(createShortDevelopmentEmail(withContacts([contact]))?.body).toMatch(/^Hi Teknos Oy \(Teknos Group\) Team,/)
+    expect(createShortDevelopmentEmail(withContacts([contact]))).toBeNull()
   })
   it('requires current employer, exact role/name, ownership and actual dates', () => {
     const contact = provedContact(base.company)

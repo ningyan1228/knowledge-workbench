@@ -38,7 +38,7 @@ function NextActions({ lead, ledger }: { lead: PublicLead; ledger: OutreachLedge
   const email = businessRecipient(lead)?.email
   const hasNamedContact = Boolean(namedContact)
   const openMail = (event: MouseEvent<HTMLAnchorElement>) => { if (email) void openEmailWithDuplicateCheck(event, lead, ledger, email) }
-  return <section className="next-actions"><h3><Target size={17} />下一步动作</h3><div className="next-action-grid"><article><span>01</span><div><strong>{hasNamedContact ? `核验 ${namedContact!.name} 的采购影响力` : '找采购 / 供应链负责人'}</strong><p>{hasNamedContact ? '确认其是否参与原料评估、采购或供应商导入。' : '优先寻找 Procurement Manager、Purchasing Manager 或 Sourcing Manager。'}</p></div></article><article><span>02</span><div><strong>{hasNamedContact ? '找技术 / 生产负责人' : '找技术 / 研发 / 生产负责人'}</strong><p>{hasNamedContact ? '补充 Technical、R&D、Product、Production 或 Plant Manager。' : '优先寻找 Technical、R&D、Product、Production 或 Plant Manager。'}</p></div></article>{email ? <a className="next-action-mail" href={`mailto:${email}`} onClick={(event) => void openMail(event)}><Mail size={16} /><span><strong>03 写开发信</strong><small>打开前核对共享发送记录</small></span></a> : <article><span>03</span><div><strong>通过公开渠道联系</strong><p>复制开发信正文到官网表单或公开社交入口；也可继续补充邮箱。</p></div></article>}<article><span>04</span><div><strong>补齐联系证据</strong><p>分开记录任职身份、邮箱／电话来源和核验日期，再记录跟进计划。</p></div></article></div></section>
+  return <section className="next-actions"><h3><Target size={17} />下一步动作</h3><div className="next-action-grid"><article><span>01</span><div><strong>{hasNamedContact ? `核验 ${namedContact!.name} 的采购影响力` : '找采购 / 供应链负责人'}</strong><p>{hasNamedContact ? '确认其是否参与原料评估、采购或供应商导入。' : '优先寻找 Procurement Manager、Purchasing Manager 或 Sourcing Manager。'}</p></div></article><article><span>02</span><div><strong>{hasNamedContact ? '找技术 / 生产负责人' : '找技术 / 研发 / 生产负责人'}</strong><p>{hasNamedContact ? '补充 Technical、R&D、Product、Production 或 Plant Manager。' : '优先寻找 Technical、R&D、Product、Production 或 Plant Manager。'}</p></div></article>{email ? <a className="next-action-mail" href={`mailto:${email}`} onClick={(event) => void openMail(event)}><Mail size={16} /><span><strong>03 写开发信</strong><small>打开前核对共享发送记录</small></span></a> : <article><span>03</span><div><strong>通过公开渠道联系</strong><p>先查看官网联系页或公开社交入口，补充并核验实际收件邮箱后再准备首封。</p></div></article>}<article><span>04</span><div><strong>补齐联系证据</strong><p>分开记录任职身份、邮箱／电话来源和核验日期，再记录跟进计划。</p></div></article></div></section>
 }
 
 function OutreachSendPanel({ lead, ledger }: { lead: PublicLead; ledger: OutreachLedger }) {
@@ -82,7 +82,7 @@ function OutreachSendPanel({ lead, ledger }: { lead: PublicLead; ledger: Outreac
   </section>
 }
 
-export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }: { lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger; work: LeadWork; leads: PublicLead[]; onNavigate: (lead: PublicLead) => void }) {
+export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, initialSection }: { initialSection?: CompanyDetailSectionId; lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger; work: LeadWork; leads: PublicLead[]; onNavigate: (lead: PublicLead) => void }) {
   const [dirty, setDirty] = useState(false)
   const [activeSection, setActiveSection] = useState<CompanyDetailSectionId>('overview')
   const bodyRef = useRef<HTMLDivElement>(null)
@@ -102,7 +102,7 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate }
   closeRef.current = requestClose
   const opened = Boolean(lead)
   useEffect(() => { setDirty(false); bodyRef.current?.scrollTo({ top: 0 }) }, [lead?.id])
-  useEffect(() => { if (!opened) setActiveSection('overview') }, [opened])
+  useEffect(() => { if (!opened) setActiveSection('overview'); else if (initialSection) setActiveSection(initialSection) }, [opened, lead?.id, initialSection])
   useEffect(() => {
     if (!opened) return
     const previous = document.activeElement as HTMLElement | null

@@ -4,6 +4,7 @@ import { createShortDevelopmentEmail } from '../src/lib/shortDevelopmentEmail'
 import { leadEmailFacts } from '../src/lib/leadEmailFacts'
 import { conciseCompanyFact } from '../src/lib/conciseLeadEmailFacts'
 import { withProvedFirstContact } from './fixtures/contactEvidence'
+import { selectBusinessRecipient } from '../src/lib/contactEvidence'
 
 function draftFor(id: string) {
   const lead = publicLeads.find((item) => item.id === id)!
@@ -13,13 +14,21 @@ function draftFor(id: string) {
 }
 
 describe('ready-to-copy short development emails', () => {
+  it('requires a sourced recipient email before preparing a new first contact', () => {
+    const aexcel = publicLeads.find(item => item.id === 'aexcel-mentor')!
+    expect(aexcel.profile.contactPage).toBeTruthy()
+    expect(createShortDevelopmentEmail(aexcel)).toBeNull()
+    const reviewed = withProvedFirstContact(aexcel)
+    expect(createShortDevelopmentEmail(reviewed)?.subject).toContain('Aexcel')
+    expect(createShortDevelopmentEmail({ ...reviewed, profile: { ...reviewed.profile, contacts: reviewed.profile.contacts.map(person => ({ ...person, emailEvidence: undefined })) } })).toBeNull()
+  })
   it('prepares a reviewable email only after the saved independent exclusion check is complete', () => {
     expect(new Set(publicLeads.map((lead) => lead.id)).size).toBe(publicLeads.length)
     expect(new Set(Object.keys(leadEmailFacts))).toEqual(new Set(publicLeads.map((lead) => lead.id)))
     expect(new Set(Object.values(leadEmailFacts)).size).toBe(publicLeads.length)
     for (const lead of publicLeads) {
       const draft = createShortDevelopmentEmail(lead)
-      if (!lead.supplierCompetitorCheck?.conclusion || !lead.supplierCompetitorCheck.checkedAt) {
+      if (!lead.supplierCompetitorCheck?.conclusion || !lead.supplierCompetitorCheck.checkedAt || !selectBusinessRecipient(lead)) {
         expect(draft, lead.id).toBeNull()
         continue
       }
@@ -98,7 +107,7 @@ describe('ready-to-copy short development emails', () => {
   })
 
   it('keeps MARINCOAT outreach limited to a possible coating formulation fit', () => {
-    const draft = draftFor('marincoat-calvignasco')
+    const draft = createShortDevelopmentEmail(withProvedFirstContact(publicLeads.find(lead => lead.id === 'marincoat-calvignasco')!))!
     expect(draft.body).toContain('formulating and producing coatings for pipelines')
     expect(draft.body).toContain('epoxidized linseed oil (ELO)')
     expect(draft.body).not.toMatch(/corrosion resistance|tested|approved|qualified|currently uses/i)
