@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "zandleven-leeuwarden": "Your Leeuwarden team produces protective coatings for steel, supported by in-house research and development.",
   "seagrave-coatings-kenilworth": "Your AQUANAMEL Satin Water Base Precatalyzed varnish is offered for kitchen cabinets and office, school and hotel furniture.",
   "advanced-polymer-coatings-avon": "Your ChemLINE 784 is a two-component thermoset polymer coating offered for industrial tank linings and protection against corrosion.",
   "woodoc-gqeberha": "Your Woodoc Water-Borne INTERIOR is a clear sealer for interior wooden furniture, doors, window frames and countertops.",

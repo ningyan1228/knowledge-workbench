@@ -6173,11 +6173,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "zandleven-leeuwarden",
+    "company": "Zandleven Coatings B.V.",
+    "productId": "elo",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Leeuwarden",
+    "latitude": 53.2012,
+    "longitude": 5.7999,
+    "legacyCompanyDescription": "荷兰Leeuwarden自有钢结构防护涂料研发制造；Ganzlin/Transocean相关业务合计同一账户",
+    "fit": "可开发候选",
+    "signal": "当前集团页及ProtectiveHome明确Leeuwarden生产、研发和销售钢结构防护涂料；当前业务含环氧、聚氨酯、醇酸及锌防护成品；具名技术管理和对应邮箱/电话由当前Contact分别核实。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "实际六来源含五份有用自身原文：ProtectiveHome1714/Contact3798/Products1882/Group2328字符和C26三页PDF146行全文；根站593字符仅导航概览，完整另存，不当完整目录。当前Group明确Leeuwarden涂料生产研发、Ganzlin德国粉末工厂、ZandlevenPowder及Engineering；TransoceanCoatingsB.V.为2003年以来协会成员。会员/共同品牌并不自动构成与已经正式KossanPaint同一控股集团；Kossan记录是其马来西亚独立制造和协会会员，未把协会共同商标作为新账户或相同股权证明。当前Group和产品选择器实际范围为工业/船舶保护成品、粉末漆、工程咨询检验、稀释剂及涂料配套；返回Products只有真实类型/基材/用途分类和空搜索结果，不声称全部产品叶页已查。所读有限经营范围未识别ELO/ESBO/环氧化植物油/生物增塑稳定原料外售；普通环氧/聚酯粉末和成品底漆/硬化配套不自动等同ELO，按所选输入有限通过，不称配方/SDS/全球股权全审。PDFMONOPOX METALCOAT ZL80明确双组分工业环氧成品和钢材，但印刷08.03.2018，保留为历史官方产品证据，不能称2026新修订/当前库存/新项目，首封事实仅用当前自身钢防护制造研发。访客地址Snekertrekweg57-59与交付地址Marshallweg8分开，不用邮政信箱代街道。当前Contact明确TechnischManagement ing.GerardJ.Noordhuis、对应gnoordhuis@zandleven.com和+31582677591；分别存身份/精确业务邮箱/电话，未把其称采购人员。一般info@与+31582129545另存。Supplychaincoordination角色未证明原料采购职责，未强行当采购收件人。Group/Ganzlin/Transocean单位及已知商品名全正式/私有去重，一组只加一公司。源上认证、供应速度、ISO/施工安全/数值性能不转ELO或采购证据。"
+    },
+    "contact": {
+      "label": "官网具名技术管理业务邮箱及直线；公司一般邮箱和总机另存",
+      "email": "gnoordhuis@zandleven.com",
+      "phone": "+31 58 212 9545",
+      "contactUrl": "https://protective.zandleven.com/nl/contact"
+    },
+    "source": {
+      "label": "Zandleven current own Leeuwarden protective-coating manufacture, R&D and steel protection",
+      "url": "https://protective.zandleven.com/monolac-dl/home"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zandleven-leeuwarden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "seagrave-coatings-kenilworth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "advanced-polymer-coatings-avon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "woodoc-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6488,6 +6517,118 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zandleven-leeuwarden": {
+    "website": "https://zandleven.com/en",
+    "contactPage": "https://protective.zandleven.com/nl/contact",
+    "address": "Visitor address: Snekertrekweg 57-59, 8912 AA Leeuwarden, Netherlands; delivery address separately Marshallweg 8, 8912 AC Leeuwarden; city-only map marker.",
+    "generalEmail": "info@zandleven.com",
+    "generalEmailEvidence": {
+      "company": "Zandleven Coatings B.V.",
+      "value": "info@zandleven.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://protective.zandleven.com/nl/contact",
+          "summary": "Own current Contact identifies info@zandleven.com as the general Zandleven Group business mailbox, separate from named technical-manager email."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+31 58 212 9545",
+    "generalPhoneEvidence": {
+      "company": "Zandleven Coatings B.V.",
+      "value": "+31 58 212 9545",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact",
+          "url": "https://protective.zandleven.com/nl/contact",
+          "summary": "Own Contact publishes corporate31(0)58-2129545, distinct from fax2155996 and technical-management direct line2677591."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [
+      {
+        "name": "Gerard J. Noordhuis",
+        "title": "Technical Management",
+        "department": "Technical",
+        "email": "gnoordhuis@zandleven.com",
+        "phone": "+31 58 2677 591",
+        "identityEvidence": {
+          "company": "Zandleven Coatings B.V.",
+          "name": "Gerard J. Noordhuis",
+          "title": "Technical Management",
+          "responsibilities": "Official page lists Technisch Management under Laboratorium. Technical role verified; current material procurement authority and requirements unconfirmed.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current Contact technical management workplace entry",
+              "url": "https://protective.zandleven.com/nl/contact",
+              "summary": "Current Contact lists ing. Gerard J. Noordhuis under Laboratorium: Technisch Management, distinct from sales, QC, supply chain coordination and R&D staff."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        },
+        "emailEvidence": {
+          "company": "Zandleven Coatings B.V.",
+          "value": "gnoordhuis@zandleven.com",
+          "kind": "named-business",
+          "personName": "Gerard J. Noordhuis",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Contact technical management workplace entry",
+              "url": "https://protective.zandleven.com/nl/contact",
+              "summary": "Exact gnoordhuis@zandleven.com is published immediately under the named Gerard J. Noordhuis technical-management entry; not guessed from email pattern."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        },
+        "phoneEvidence": {
+          "company": "Zandleven Coatings B.V.",
+          "value": "+31 58 2677 591",
+          "kind": "named-business",
+          "personName": "Gerard J. Noordhuis",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Contact technical management workplace entry",
+              "url": "https://protective.zandleven.com/nl/contact",
+              "summary": "Exact31(0)58-2677591 is published in the same named technical-management workplace entry; distinct from corporate2129545, R&D2677593 and sales2677502."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        }
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://protective.zandleven.com/monolac-dl/home"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://protective.zandleven.com/nl/producten"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://zandlevengroep.zandleven.com/en"
+      },
+      {
+        "label": "Own current public contact and separate channel/role evidence",
+        "url": "https://protective.zandleven.com/nl/contact"
+      },
+      {
+        "label": "Own manufacturer/application/product or group scope original",
+        "url": "https://protective.zandleven.com/Userfiles/bestanden/66/C26-en.pdf"
+      }
+    ]
+  },
   "seagrave-coatings-kenilworth": {
     "website": "https://seagravecoatings.com/",
     "contactPage": "https://seagravecoatings.com/contact/",
@@ -20274,6 +20415,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zandleven-leeuwarden",
   "seagrave-coatings-kenilworth",
   "advanced-polymer-coatings-avon",
   "woodoc-gqeberha",
