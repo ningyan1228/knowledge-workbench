@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "paintcor-johannesburg": "Your Enviroprime is a water-based modified acrylic primer formulated to protect structural mild steel and galvanised iron from corrosion.",
   "woca-denmark-lunderskov": "Your Master Optima Lacquer is a water-based wood floor lacquer offered for offices and other medium-traffic commercial spaces.",
   "simiron-rochester-hills": "Your 971EPS epoxy siloxane floor coating is offered for automotive service areas, aircraft hangars and other floors.",
   "van-technologies-duluth": "Your GreenLight waterborne wood coatings include sealers, primers, stains, paints and topcoats developed for industrial wood finishing.",

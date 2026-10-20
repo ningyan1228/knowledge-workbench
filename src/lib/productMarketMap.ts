@@ -6062,11 +6062,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "paintcor-johannesburg",
+    "company": "Paintcor",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Johannesburg, Gauteng",
+    "latitude": -26.2041,
+    "longitude": 28.0473,
+    "legacyCompanyDescription": "南非自有品牌钢材防腐底漆等成品配方业务；总部、分销及门店合计一账户",
+    "fit": "可开发候选",
+    "signal": "当前自身网站以制造商身份描述自配涂料；Enviroprime明示是水性改性丙烯酸防腐底漆，用于结构低碳钢及镀锌铁，并提及自身技术部门及配方测试。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立全文审读5份可用自身正文：Home7411、FindBranch6623、SteelPrimers5897、Ruscon6634、Enviroprime9683chars；另ProductRanges5390仅分类标题/资料导航和通用cookie，标unusable_category_navigation_only并完整保存HTML/text/metadata，不作为完整目录或同行清白证据。当前网站明确自称paintmanufacturer并述自配涂料，具体自身Enviroprime为水性改性丙烯酸钢材/镀锌铁防腐底漆，正文提其配方技术及自身technicaldepartment；不拿客户评论、未读SAPMA新闻PDF或仅网站标题替代该具体配方证据，也不声称全部SKU均自厂自产/产能。实际Home/钢底漆类别/原文成品范围包括建筑及防护漆、封闭剂、木材处理、胶结增强、清洗、防潮防水、维修配套及设备；Ruscon是水性铁锈转化/成膜成品而非选定ELO原料，未隐去。所读有限业务及具体成品未识别ELO/ESBO/环氧化植物油/同类生物增塑稳定输入外售；有限通过，不称全部SKU/配方/SDS或全球股权审计。ELO产品TDS的coatings用途对应实际成品配方，不能因底漆水性或钢材用途转到NLW并泛化铝材。全库按Paintcor/两个官网域名/Colourways相关标识查重；总部、门店、仓库和stockist不拆新增。当前自身FindBranch明示Johannesburg总部1518ZeissStreetLaserParkHoneydew；旧第三方目录1494Mailship是搜索资料，未取代当前自有地址/杜撰邮编。三个以上自身正文均显示公开公司邮箱sales@paintcor.co.za及总机0117942885；部分HTMLmailto跳到sales@paintcorsa.co.za，明确保留显示值与链接差异，采用页面明示文本邮箱，不猜两者同投递/替代关系或个人归属。未从历史目录或SAPMA新闻认定当前MD及私人手机号；没有已核实具名采购/技术邮箱。原文防腐性能/250或500小时盐雾/Greenstar/NonToxic/认证安全施工等不转为ELO声明，也不推定ELO已用、适配、需求、预算或时机。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；未核实具名采购/技术收件人",
+      "email": "sales@paintcor.co.za",
+      "phone": "+27 11 794 2885",
+      "contactUrl": "https://paintcorsa.co.za/find-a-branch/"
+    },
+    "source": {
+      "label": "Paintcor own Enviroprime modified acrylic anti-corrosive steel primer",
+      "url": "https://paintcorsa.co.za/product/enviroprime-waterbased-modified-acrylic-steel-primer/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "paintcor-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "woca-denmark-lunderskov": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "simiron-rochester-hills": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "van-technologies-duluth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6373,6 +6402,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "paintcor-johannesburg": {
+    "website": "https://paintcorsa.co.za/",
+    "contactPage": "https://paintcorsa.co.za/find-a-branch/",
+    "address": "Head office: 1518 Zeiss Street, Laser Park, Honeydew, Johannesburg, South Africa; city-only marker, no invented postcode.",
+    "generalEmail": "sales@paintcor.co.za",
+    "generalEmailEvidence": {
+      "company": "Paintcor",
+      "value": "sales@paintcor.co.za",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://paintcorsa.co.za/find-a-branch/",
+          "summary": "Own current Contact explicitly displays sales@paintcor.co.za; page text value preserved, some alternate mailto targets differ. General company business inbox, no personal ownership or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+27 11 794 2885",
+    "generalPhoneEvidence": {
+      "company": "Paintcor",
+      "value": "+27 11 794 2885",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://paintcorsa.co.za/find-a-branch/",
+          "summary": "Own current Contact headquarters number +27(0)117942885; company general voice, not a named technical/purchasing line."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company manufacture/product-range evidence",
+        "url": "https://paintcorsa.co.za/"
+      },
+      {
+        "label": "Own public corporate contact and role/channel evidence",
+        "url": "https://paintcorsa.co.za/find-a-branch/"
+      },
+      {
+        "label": "Own company manufacture/product-range evidence",
+        "url": "https://paintcorsa.co.za/product-category/s/steel-primers/"
+      },
+      {
+        "label": "Own company manufacture/product-range evidence",
+        "url": "https://paintcorsa.co.za/product/ruscon-protect-against-rust/"
+      },
+      {
+        "label": "Own specific finished-coating product",
+        "url": "https://paintcorsa.co.za/product/enviroprime-waterbased-modified-acrylic-steel-primer/"
+      }
+    ]
+  },
   "woca-denmark-lunderskov": {
     "website": "https://wocadenmark.com/",
     "contactPage": "https://wocadenmark.com/contact",
@@ -19934,6 +20022,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "paintcor-johannesburg",
   "woca-denmark-lunderskov",
   "simiron-rochester-hills",
   "van-technologies-duluth",
