@@ -6229,11 +6229,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "peter-kwasny-gundelsheim",
+    "company": "Peter Kwasny GmbH",
+    "productId": "elo",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Gundelsheim",
+    "latitude": 49.2856,
+    "longitude": 9.1606,
+    "legacyCompanyDescription": "德国Gundelsheim自有成品涂料及防腐底漆研发制造；Auto-K/SprayMax/belton等品牌合计同一公司账户",
+    "fit": "可开发候选",
+    "signal": "当前公司及PrivateLabel页明确Gundelsheim涂料生产、研发与配方开发；Auto-K具体防腐底漆为磷酸锌成品，用于裸板及打磨铝材，当前公司业务邮箱与工厂地址明确。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立全文审读6份当前自身原文：公司11560、品牌7921、PrivateLabel1544、Contact1070、Auto-K产品概览541、防腐底漆1699字符。公司原文明确Gundelsheim自有生产、研发团队开发并优化配方；PrivateLabel区分自身开发溶剂/水性涂料与客户自有漆受托灌装，未把所有灌装都说成自主配方。Auto-K当前具体防腐底漆为磷酸锌成品底漆，用于裸板、打磨铝材及已固化打磨涂层；成膜基料只称特殊组合，不猜PU/环氧/醇酸组成或ELO已用量。当前品牌范围Auto-K、SprayMax、belton、Multona、FillIn、SprayTec、Racing、Spraila、hitcolor、2KPro/Graffiti均合计同一Kwasny账户，海外Herpé/法国、美国加拿大及其他子公司和Sinsheim物流不拆新增。公司历史1994Herpé收购、1963创立、2017开业/2023周年保留原日期，不称2026新工厂或采购时机。已读完整品牌正文及Auto-K概览现有全部导航包含成品清漆、色漆、底漆、塑料附着底漆、防锈转换剂、填料/腻子、玻纤/修补树脂、硬化配套、清洁护理/底盘保护和灌装系统；Auto-K概览正文仅541字符+链接分类，不冒称逐项TDS/SDS/组成已读。修补聚酯/环氧树脂、2K硬化卡匣/FillInConverter、表面用塑料附着底漆均不自动等同ELO/ESBO/环氧化植物油或生物增塑稳定原料；没有从名称猜固化化学。所读当前经营范围未识别上述所选ELO同类功能原料外售，按实际六来源有限范围通过，不声称全球全部SKU/配方/股权穷尽。德国Contact明确HeilbronnerStr96,74831Gundelsheim、info@kwasny.de和总机06269/95-0，技术热线95-540分开；Company传真95-70与Contact95-80均不选作业务电话。具名PrivateLabel销售Dr.GötzWilbert只证明该页职务，未公开对应具名邮箱、采购权限或当前需求，不录为具名收件人；创始人1926-2016不当现任。SourceISO/BSFZ专利数量、产能/员工数、膜厚/干燥/防腐/无铬/焊接及环保保证均不转为我方材料效果、独立法规结论或客户采购证据。最新main/root/全私有队列/frontier按全部已知公司、品牌及域名查重无对应账户，实际ELO使用、相容性、需求和时机待确认。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及总机，技术热线另述；未核实具名采购或研发收件邮箱",
+      "email": "info@kwasny.de",
+      "phone": "+49 6269 95 0",
+      "contactUrl": "https://www.kwasny.com/kontakt"
+    },
+    "source": {
+      "label": "Kwasny own Auto-K zinc-phosphate anti-corrosion primer and Gundelsheim formulation/manufacture",
+      "url": "https://www.auto-k.de/lacksprays/basic/korrosionsschutz-grundierung"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "peter-kwasny-gundelsheim": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "perma-chink-systems-redmond": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zandleven-leeuwarden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "seagrave-coatings-kenilworth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6546,6 +6575,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "peter-kwasny-gundelsheim": {
+    "website": "https://www.kwasny.com/",
+    "contactPage": "https://www.kwasny.com/kontakt",
+    "address": "Heilbronner Straße 96, 74831 Gundelsheim, Germany; current headquarters and production address, distinct from Sinsheim logistics; city-only map marker.",
+    "generalEmail": "info@kwasny.de",
+    "generalEmailEvidence": {
+      "company": "Peter Kwasny GmbH",
+      "value": "info@kwasny.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company contact",
+          "url": "https://www.kwasny.com/kontakt",
+          "summary": "Current corporate Contact explicitly publishes info@kwasny.de for Peter Kwasny GmbH; a general business mailbox, not a named purchasing or technical person's email."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+49 6269 95 0",
+    "generalPhoneEvidence": {
+      "company": "Peter Kwasny GmbH",
+      "value": "+49 6269 95 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company contact",
+          "url": "https://www.kwasny.com/kontakt",
+          "summary": "Current Contact explicitly labels Tel.06269/95-0, distinct from Fax95-80 and TechnologySupportHotline95-540. Company page separately confirms+49 international prefix."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturing/formulation, current brand/product and input-scope original",
+        "url": "https://www.kwasny.com/unternehmen"
+      },
+      {
+        "label": "Own manufacturing/formulation, current brand/product and input-scope original",
+        "url": "https://www.kwasny.com/unsere-marken"
+      },
+      {
+        "label": "Own manufacturing/formulation, current brand/product and input-scope original",
+        "url": "https://www.kwasny.com/private-label"
+      },
+      {
+        "label": "Own public company business email, voice and physical address",
+        "url": "https://www.kwasny.com/kontakt"
+      },
+      {
+        "label": "Own manufacturing/formulation, current brand/product and input-scope original",
+        "url": "https://www.auto-k.de/lacksprays/trenner/gesamtuebersicht-der-kwasny-lacksprays"
+      },
+      {
+        "label": "Own manufacturing/formulation, current brand/product and input-scope original",
+        "url": "https://www.auto-k.de/lacksprays/basic/korrosionsschutz-grundierung"
+      }
+    ]
+  },
   "perma-chink-systems-redmond": {
     "website": "https://www.permachink.com/",
     "contactPage": "https://store.permachink.com/contactus",
@@ -20507,6 +20599,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "peter-kwasny-gundelsheim",
   "perma-chink-systems-redmond",
   "zandleven-leeuwarden",
   "seagrave-coatings-kenilworth",
