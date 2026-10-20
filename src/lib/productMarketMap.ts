@@ -6118,11 +6118,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "advanced-polymer-coatings-avon",
+    "company": "Advanced Polymer Coatings",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Avon, Ohio",
+    "latitude": 41.4517,
+    "longitude": -82.0354,
+    "legacyCompanyDescription": "美国Avon自有研发实验室和专有工业/船舶防护成品配方业务；MarineLINE/ChemLINE/TriFLEX按同一账户",
+    "fit": "可开发候选",
+    "signal": "当前About明确Avon自有研发实验室、产品制造经营与涂层出货；ChemLINE784是双组分热固聚合物工业防腐内衬，MarineLINE也为具体自有船舶罐成品涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "全文独立审读6份自身原文：About5249、MarineLINE11736、Home6439、Contact3987、ChemLINE6220、Technology6574chars。当前About明确Avon总部、自有R&D实验室和自有涂层货运及产品生产业务；ChemLINE/MarineLINE具体成品配方、内部专有聚合物/交联技术及成品应用支持自身工业/船舶防护涂料配方方，不仅凭公司名Polymer推断原料身份。实际业务包括ChemLINE多等级双组分热固聚合物防腐内衬、MarineLINE船舶化学品/成品油船罐涂层、MarineMEND修复与TriFLEX成品涂层，不拆品牌、海外销售代表或应用场所为新客户。当前实际产品与技术范围未识别ELO/ESBO/环氧化植物油/生物增塑稳定输入外售；内部专有树脂/聚合物和载运biofuels的成品内衬不是同类ELO原料销售，有限通过，不称全部SKU/分子组成/SDS或全球股权审计。全库按公司/域名/MarineLINE/ChemLINE/Gridlock/TriFLEX已知标识查重无对应账户。Contact当前总部951JaycoxRd,AvonOH44011US；公司电话+14409376218与总部另一个800号码分清，不当具名技术直线。6份正文及返回links未有可核实公司业务邮箱或mailto，只有Sales/Support表单入口；不猜info@/sales@/人员姓名邮箱，不提交表单。About中DavidKeehan引语属于ISO叙述，不据无明确当前任职日期段落生成现任具名联系人。Source中GRAS/食品级、5年保险/保证、盐雾、耐化学、寿命2或3倍、784交联点、Nobel/ROI/面积/船数与营销痛点等均不转为ELO功能、认证、采购需求或数字案例；源码计数器0不当真实业务规模。ELO当前使用、技术相容、具体需求/采购时机未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司联系页及总部业务电话；未披露可核实业务邮箱或具名收件人",
+      "phone": "+1 440 937 6218",
+      "contactUrl": "https://www.adv-polymer.com/contact"
+    },
+    "source": {
+      "label": "APC own ChemLINE two-component thermoset industrial protective coatings and in-house R&D",
+      "url": "https://www.adv-polymer.com/chemline-coatings"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "advanced-polymer-coatings-avon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "woodoc-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "paintcor-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "woca-denmark-lunderskov": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6431,6 +6459,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "advanced-polymer-coatings-avon": {
+    "website": "https://www.adv-polymer.com/",
+    "contactPage": "https://www.adv-polymer.com/contact",
+    "address": "Headquarters: 951 Jaycox Rd, Avon, OH 44011, United States; city-only map marker.",
+    "generalPhone": "+1 440 937 6218",
+    "generalPhoneEvidence": {
+      "company": "Advanced Polymer Coatings",
+      "value": "+1 440 937 6218",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://www.adv-polymer.com/contact",
+          "summary": "Own current Contact header explicitly lists +14409376218 as corporate business voice; Headquarters separately lists8003347193. No named personal/direct technical ownership asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer, product and selected-input scope evidence",
+        "url": "https://www.adv-polymer.com/about"
+      },
+      {
+        "label": "Own manufacturer, product and selected-input scope evidence",
+        "url": "https://www.adv-polymer.com/marineline-coatings"
+      },
+      {
+        "label": "Own manufacturer, product and selected-input scope evidence",
+        "url": "https://www.adv-polymer.com/"
+      },
+      {
+        "label": "Own public corporate contact and address",
+        "url": "https://www.adv-polymer.com/contact"
+      },
+      {
+        "label": "Own specific finished coating application",
+        "url": "https://www.adv-polymer.com/chemline-coatings"
+      },
+      {
+        "label": "Own manufacturer, product and selected-input scope evidence",
+        "url": "https://www.adv-polymer.com/our-patented-technology"
+      }
+    ]
+  },
   "woodoc-gqeberha": {
     "website": "https://www.woodoc.com/",
     "contactPage": "https://www.woodoc.com/contact-us",
@@ -20106,6 +20182,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "advanced-polymer-coatings-avon",
   "woodoc-gqeberha",
   "paintcor-johannesburg",
   "woca-denmark-lunderskov",

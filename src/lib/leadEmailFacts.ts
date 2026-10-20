@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "advanced-polymer-coatings-avon": "Your ChemLINE 784 is a two-component thermoset polymer coating offered for industrial tank linings and protection against corrosion.",
   "woodoc-gqeberha": "Your Woodoc Water-Borne INTERIOR is a clear sealer for interior wooden furniture, doors, window frames and countertops.",
   "paintcor-johannesburg": "Your Enviroprime is a water-based modified acrylic primer formulated to protect structural mild steel and galvanised iron from corrosion.",
   "woca-denmark-lunderskov": "Your Master Optima Lacquer is a water-based wood floor lacquer offered for offices and other medium-traffic commercial spaces.",
