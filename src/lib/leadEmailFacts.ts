@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vmp-yekaterinburg": "Your ИЗОЛЭП-mastic is a two-pack epoxy primer-enamel for protecting metal and concrete structures.",
   "vernisol-codogno": "Your industrial range includes water-based epoxy primers and zinc-phosphate anticorrosive primers.",
   "rogneda-staraya-kupavna": "Your EUROTEX АКВАЛАЗУРЬ is an acrylic-dispersion wood coating with water dilution and application indoors and outdoors.",
   "multilac-panadura": "Your Italwood Water Based Wood Preservative Stain is an exterior wood coating for doors and windows.",

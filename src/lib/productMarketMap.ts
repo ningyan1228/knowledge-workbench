@@ -6369,11 +6369,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "vmp-yekaterinburg",
+    "company": "JSC VMP Research and Production Holding (VMP Group)",
+    "productId": "elo",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Yekaterinburg",
+    "latitude": 56.839,
+    "longitude": 60.606,
+    "legacyCompanyDescription": "自有工业防护涂料研发制造集团；Yekaterinburg为公开总部业务地址，工厂含Aramil等；地图为总部城市代表位置，非厂区实测坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有防护涂料研发及Aramil等工厂；ИЗОЛЭП-mastic为双组分环氧底漆面漆，用于金属和混凝土结构保护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立核验本轮5份当前原始HTML：俄文Home、全类别Products的相关工业及原料范围、英文Contact、Today自有研发制造和实际链接ИЗОЛЭП-mastic产品；无失败，1次预算未用。集团Today明确自主研发生产防护涂料及Aramil/SaintPetersburg等生产地点，Contact明确JSCVMP及VMP-NEVA工业设施同组。产品原文明确双包装环氧底漆面漆及金属/混凝土结构用途，铝粉版本只是已公布成品组成，不能套用ELO已兼容或防腐、固化、寿命、浸水保证。保留真实金属粉末业务：自有高分散锌粉、青铜粉；配套辅助为环氧/PU/乙基硅酸酯稀释剂、脱脂清洗剂、干燥促进剂和环氧腻子。这些产品不自动等于ELO/ESBO/环氧化植物油或同类生物基增塑剂；已读工业涂料/金属粉末/辅助范围未见所选同类原料外售。ИЗОЛЭП-oil目录项为环氧涂料组合物，不因oil字样认定为环氧化植物油。排除结论限已读范围，未逐一阅读全部全球SKU/SDS/PDF及所有配套原料组成，不虚构外购例外。官网主导航的供应商入口不当作采购ELO的证据。VMP/VMP-NEVA/VMPKazakhstan及各地厂址、ИЗОЛЭП/ВИНИКОР/ПЛАМКОР/ALISTERUS相关品牌作为一个集团账户，正式库332及当前main316、全私有队列和frontier按公司/品牌/域去重无匹配。office@fmp.ru为集团公司邮箱；gmr@fmp.ru仅官网技术支持与检验部门入口，不归属具名采购，电话不当WhatsApp。自有工厂事实和通用供应商入口不证明现有ELO配方、采购、需求量或项目时机。"
+    },
+    "contact": {
+      "label": "官网集团公司邮箱、电话及技术支持部门入口；无具名采购收件人",
+      "email": "office@fmp.ru",
+      "phone": "+7 343 3573097",
+      "contactUrl": "https://vmp-holding.com/kont/"
+    },
+    "source": {
+      "label": "Own ISOLEP-mastic epoxy primer-enamel, current manufacturing and product-scope originals",
+      "url": "https://vmp-anticor.ru/anticorrosive-materials/izolep-mastic/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vmp-yekaterinburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vernisol-codogno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rogneda-staraya-kupavna": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "multilac-panadura": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6691,6 +6720,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vmp-yekaterinburg": {
+    "website": "https://vmp-holding.ru/",
+    "contactPage": "https://vmp-holding.com/kont/",
+    "address": "Business headquarters: Tkachey Street 25, Yekaterinburg 620100, Russia. Own Aramil industrial site: Klubnaya Street 13, Aramil 624000. Headquarters city representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "office@fmp.ru",
+    "generalEmailEvidence": {
+      "company": "JSC VMP Research and Production Holding (VMP Group)",
+      "value": "office@fmp.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "VMP own current public company/department contact",
+          "url": "https://vmp-holding.com/kont/",
+          "summary": "Own official English Contacts publishes office@fmp.ru for JSC VMP at Tkachey25 and president reception; corporate mailbox, no named-person ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+7 343 3573097",
+    "generalPhoneEvidence": {
+      "company": "JSC VMP Research and Production Holding (VMP Group)",
+      "value": "+7 343 3573097",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "VMP own current public company/department contact",
+          "url": "https://vmp-holding.com/kont/",
+          "summary": "Own corporate contact explicitly publishes+7(343)357-30-97; retain the company business line, not WhatsApp or a named employee."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "gmr@fmp.ru",
+        "source": {
+          "label": "Own Technical support and inspection control department",
+          "url": "https://vmp-holding.com/kont/"
+        },
+        "emailEvidence": {
+          "company": "JSC VMP Research and Production Holding (VMP Group)",
+          "value": "gmr@fmp.ru",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "VMP own current public company/department contact",
+              "url": "https://vmp-holding.com/kont/",
+              "summary": "Own Contacts lists gmr@fmp.ru under Technical support and inspection control; department route, no person or purchasing responsibility inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own current company/manufacturing/coating/input-scope/business-contact original",
+        "url": "https://vmp-holding.ru/"
+      },
+      {
+        "label": "Own current company/manufacturing/coating/input-scope/business-contact original",
+        "url": "https://vmp-holding.ru/products/"
+      },
+      {
+        "label": "Own current company/manufacturing/coating/input-scope/business-contact original",
+        "url": "https://vmp-holding.com/kont/"
+      },
+      {
+        "label": "Own current company/manufacturing/coating/input-scope/business-contact original",
+        "url": "https://vmp-holding.ru/about/today/"
+      },
+      {
+        "label": "Own current company/manufacturing/coating/input-scope/business-contact original",
+        "url": "https://vmp-anticor.ru/anticorrosive-materials/izolep-mastic/"
+      }
+    ]
+  },
   "vernisol-codogno": {
     "website": "https://www.vernisol.it/",
     "contactPage": "https://www.vernisol.it/contatti.html",
@@ -20979,6 +21090,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vmp-yekaterinburg",
   "vernisol-codogno",
   "rogneda-staraya-kupavna",
   "multilac-panadura",
