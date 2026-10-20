@@ -6397,11 +6397,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "polysan-sumy",
+    "company": "Polysan (ТОВ «ВП «ПОЛІСАН»)",
+    "productId": "nl-w1201",
+    "country": "Ukraine",
+    "countryZh": "乌克兰",
+    "city": "Sumy",
+    "latitude": 50.908,
+    "longitude": 34.798,
+    "legacyCompanyDescription": "Polysan自有水性和醇酸成品涂料生产；Farbex、Maxima、Delfi和DekART为其品牌，一个账户。地图为Sumy城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有水性及醇酸成品涂料制造；Farbex面板丙烯酸清漆以丙烯酸分散体、水和添加剂配制，用于室内木质面板等装饰保护，明确不用于地板和家具。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立核验本轮6份官网HTML原文：Home、可见完整产品目录的相关成品及原料范围、About、中央办公室Contact、实际链接Farbex面板丙烯酸清漆和History。About当前说明生产醇酸与水分散成品涂料；History将自有生产起点明确为2004年11月、完整开厂为2005年3月、水性生产车间为2006年9月，这些历史日期不能写成2026新项目。2004年TiO2贸易以及当前色浆、颜料、646/647稀释剂、工具等业务如实保留，不自动等于NL-W1201所选水性聚烯烃/CPO原料供应。Quartz Primer为目录明示含石英填料的成品附着底涂，名称不证明其为原料级PO/CPO分散体。已读可见产品/制造范围未见对外销售同类水性聚烯烃/CPO或原料级附着促进剂；结论限本轮已读范围，未穷尽全部SKU、SDS、PDF或全球业务，未虚构外购例外。Farbex清漆明确水性丙烯酸及室内木材用途，并明确排除地板/家具，不能把它的附着、弹性或清洁性能套用我方材料。NL-W1201仅作为资料列明木材底涂/附着促进方向的潜在原料评估，现有配方相容、使用和采购均未确认。Polysan、Farbex、Maxima、Maxima Decor、Delfi、DekART及地区业务作为一个公司品牌账户；当前main317、当地正式库333、全私有队列与frontier524按公司、品牌、域去重未见匹配。官网中央办公室明确office@farbex.com.ua及公司总机；不用该邮箱冒称具名采购，不从页面具名角色借姓名或归属未经独立确认的个人邮箱。电话不推定为WhatsApp。"
+    },
+    "contact": {
+      "label": "官网中央办公室邮箱、总机与联系页；无独立确认的具名采购收件人",
+      "email": "office@farbex.com.ua",
+      "phone": "+380 542 650621",
+      "contactUrl": "https://farbex.ua/ru/contacts/"
+    },
+    "source": {
+      "label": "Own Farbex water-based panel varnish, current manufacturing, product scope and business contact originals",
+      "url": "https://farbex.ua/products/panelnyj-akrylovyj-lak-farbex/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "polysan-sumy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vmp-yekaterinburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vernisol-codogno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rogneda-staraya-kupavna": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6720,6 +6749,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "polysan-sumy": {
+    "website": "https://farbex.ua/",
+    "contactPage": "https://farbex.ua/ru/contacts/",
+    "address": "25 Ivana Piddubnoho Street, Sumy 40000, Ukraine. Public company business address; Sumy city representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "office@farbex.com.ua",
+    "generalEmailEvidence": {
+      "company": "Polysan (ТОВ «ВП «ПОЛІСАН»)",
+      "value": "office@farbex.com.ua",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Polysan own current central-office contact",
+          "url": "https://farbex.ua/ru/contacts/",
+          "summary": "Own Contacts explicitly lists office@farbex.com.ua under central office (Главный офис); corporate mailbox, no named purchasing ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+380 542 650621",
+    "generalPhoneEvidence": {
+      "company": "Polysan (ТОВ «ВП «ПОЛІСАН»)",
+      "value": "+380 542 650621",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Polysan own current central-office contact",
+          "url": "https://farbex.ua/ru/contacts/",
+          "summary": "Own central-office contact publishes (0542)650-621 and footer +38(0542)650621 in Ukraine. Corporate business voice line, not WhatsApp or private/named phone."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing, product, selected-input scope or corporate contact original",
+        "url": "https://farbex.ua/ru/"
+      },
+      {
+        "label": "Own current manufacturing, product, selected-input scope or corporate contact original",
+        "url": "https://farbex.ua/catalog-products/"
+      },
+      {
+        "label": "Own current manufacturing, product, selected-input scope or corporate contact original",
+        "url": "https://farbex.ua/ru/about/"
+      },
+      {
+        "label": "Own current manufacturing, product, selected-input scope or corporate contact original",
+        "url": "https://farbex.ua/ru/contacts/"
+      },
+      {
+        "label": "Own current manufacturing, product, selected-input scope or corporate contact original",
+        "url": "https://farbex.ua/products/panelnyj-akrylovyj-lak-farbex/"
+      },
+      {
+        "label": "Own current manufacturing, product, selected-input scope or corporate contact original",
+        "url": "https://farbex.ua/history/"
+      }
+    ]
+  },
   "vmp-yekaterinburg": {
     "website": "https://vmp-holding.ru/",
     "contactPage": "https://vmp-holding.com/kont/",
@@ -21090,6 +21182,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "polysan-sumy",
   "vmp-yekaterinburg",
   "vernisol-codogno",
   "rogneda-staraya-kupavna",
