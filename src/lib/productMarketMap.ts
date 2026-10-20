@@ -5978,11 +5978,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-19"
   },
+  {
+    "id": "van-technologies-duluth",
+    "company": "Van Technologies, Inc. (GreenLight Coatings)",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Duluth, Minnesota",
+    "latitude": 46.7867,
+    "longitude": -92.1005,
+    "legacyCompanyDescription": "美国自有水性木器工业成品配方与制造企业；GreenLight与ASAC技术按同一账户",
+    "fit": "可开发候选",
+    "signal": "当前About明确自身水性/UV工业涂料研发、实验室及制造，Waterborne与Products明确自配水性木器封闭剂、底漆、着色剂、色漆和面漆；GreenLight为其同一品牌。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-19",
+      "conclusion": "本次独立重读4份既有可用原文Waterborne9049/About10413/Products1693/Home5053，并全文读取新增Contact1384chars。Van此前5自有请求含contact-us404，本次只读取已实际发现的contact不同链接1次，累计6、剩余0；未把旧正文当新Fetch。About明确自身定制工业成品配方、化学团队、实验室和制造，GreenLight为其自有品牌，ASAC是其技术商标，不另增账户。实际业务为水性、UV/水性UV、木材、金属、塑料复合及特种成品体系；Products与Waterborne正文未出现水性PO乳液/CPO分散体或相关原料级附着促进剂外售。SEO标题CoatingMaterialSuppliers不能推翻正文成品身份，普通成品底漆不自动等于选定原料；按所读范围有限通过，不声称全SKU/SDS/股权审计。官网未给当前母公司结论；补充检索只命中自身技术说明，不把无搜索命中当无关联保证。GreenLight/Van/ASAC/已知域名经最新main/root/全私有队列/frontier去重，只有本条旧私有项，属于补证转正式，非新建发现或改名制造新增。新增Contact明确5791BerquistRd,DuluthMN55804、一般邮箱和同一2185259424公司业务电话；不以历史Duluth/学校/区号推造街址。About现任COO Linda Van Iseghem职责明确procurement，精确公开业务邮箱LindaV@vtcoatings.com，身份、职责和邮箱归属分开保存；不改写成采购经理、不宣称NLW采购权限。该页多人同用2185259424，按公司通用电话保存，Linda不存个人直线。通用info@只作公司后备。原文环境、认证、降本、性能、工艺/化学清洁/安全法律声明不转为我方或采购需求。"
+    },
+    "contact": {
+      "label": "官网具名COO职责明确采购；业务邮箱归属独立核验，公司总机另存",
+      "email": "LindaV@vtcoatings.com",
+      "phone": "+1 218 525 9424",
+      "contactUrl": "https://vantechnologies.com/contact/"
+    },
+    "source": {
+      "label": "Van own waterborne wood formulation/manufacture range",
+      "url": "https://vantechnologies.com/waterborne/"
+    },
+    "checkedAt": "2026-10-19"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "van-technologies-duluth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "aervoe-gardnerville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "protek-paint-toronto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "his-paint-oklahoma-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6286,6 +6315,102 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "van-technologies-duluth": {
+    "website": "https://vantechnologies.com/",
+    "contactPage": "https://vantechnologies.com/contact/",
+    "address": "5791 Berquist Rd, Duluth, MN 55804, United States. City-only map marker.",
+    "generalEmail": "info@vantechnologies.com",
+    "generalEmailEvidence": {
+      "company": "Van Technologies, Inc. (GreenLight Coatings)",
+      "value": "info@vantechnologies.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://vantechnologies.com/contact/",
+          "summary": "Contact explicitly publishes info@vantechnologies.com under Email Address; general company business mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "generalPhone": "+1 218 525 9424",
+    "generalPhoneEvidence": {
+      "company": "Van Technologies, Inc. (GreenLight Coatings)",
+      "value": "+1 218 525 9424",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current corporate contact page",
+          "url": "https://vantechnologies.com/contact/",
+          "summary": "Contact publishes 218.525.9424; About repeats the same company number for multiple leaders, not a personal direct line."
+        }
+      ],
+      "verifiedAt": "2026-10-19"
+    },
+    "contacts": [
+      {
+        "name": "Linda Van Iseghem",
+        "title": "Chief Operating Officer",
+        "department": "Procurement",
+        "email": "LindaV@vtcoatings.com",
+        "identityEvidence": {
+          "company": "Van Technologies, Inc. (GreenLight Coatings)",
+          "name": "Linda Van Iseghem",
+          "title": "Chief Operating Officer",
+          "responsibilities": "Own current team page explicitly says she oversees order management, financial operations, procurement, manufacturing coordination and fulfillment; selected-material authority and current needs unconfirmed.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Own current leadership team and responsibilities",
+              "url": "https://vantechnologies.com/about-us/",
+              "summary": "Linda Van Iseghem is listed as Chief Operating Officer and explicitly oversees procurement alongside operations."
+            }
+          ],
+          "verifiedAt": "2026-10-19"
+        },
+        "emailEvidence": {
+          "company": "Van Technologies, Inc. (GreenLight Coatings)",
+          "value": "LindaV@vtcoatings.com",
+          "kind": "named-business",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current leadership team published named business mailbox",
+              "url": "https://vantechnologies.com/about-us/",
+              "summary": "The Linda Van Iseghem COO block explicitly publishes LindaV@vtcoatings.com."
+            }
+          ],
+          "verifiedAt": "2026-10-19",
+          "personName": "Linda Van Iseghem"
+        }
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Get Affordable & High-Quality Waterborne Coatings In The USA",
+        "url": "https://vantechnologies.com/waterborne/"
+      },
+      {
+        "label": "About Us - Eco-Friendly Green Coating Material Suppliers In The USA",
+        "url": "https://vantechnologies.com/about-us/"
+      },
+      {
+        "label": "Products - Eco-Friendly Green Coating Material Suppliers In The USA",
+        "url": "https://vantechnologies.com/products/"
+      },
+      {
+        "label": "VAN Technologies - Eco-Friendly Green Coating Material Suppliers In The USA",
+        "url": "https://vantechnologies.com/"
+      },
+      {
+        "label": "Contact - Eco-Friendly Green Coating Material Suppliers In The USA",
+        "url": "https://vantechnologies.com/contact/"
+      }
+    ]
+  },
   "aervoe-gardnerville": {
     "website": "https://www.aervoe.com/",
     "contactPage": "https://www.aervoe.com/contact-us/",
@@ -19557,6 +19682,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "van-technologies-duluth",
   "aervoe-gardnerville",
   "protek-paint-toronto",
   "his-paint-oklahoma-city",
