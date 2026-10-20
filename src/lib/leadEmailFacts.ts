@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "multilac-panadura": "Your Italwood Water Based Wood Preservative Stain is an exterior wood coating for doors and windows.",
   "chrotex-athens": "Your ULTRAXYL AQUA VARNISH is a water-based acrylic wood varnish for interior and exterior protection and decoration.",
   "peter-kwasny-gundelsheim": "Your Auto-K anti-corrosion primer uses zinc phosphate and is offered for bare sheet metal and sanded aluminium.",
   "perma-chink-systems-redmond": "Your Sure Shine water-based clear finish is offered for wood floors and other interior surfaces.",

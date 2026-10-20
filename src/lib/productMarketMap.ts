@@ -6285,11 +6285,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "multilac-panadura",
+    "company": "Macksons Paints Lanka (Private) Limited (Multilac; Macksons Holdings)",
+    "productId": "nl-w1201",
+    "country": "Sri Lanka",
+    "countryZh": "斯里兰卡",
+    "city": "Panadura",
+    "latitude": 6.713,
+    "longitude": 79.904,
+    "legacyCompanyDescription": "Macksons Holdings旗下Multilac自有水性木器及其他成品涂料研发制造；Panadura城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确Panadura自有涂料工厂，集团页说明研发团队；Italwood Water Based Wood Preservative Stain为门窗用水性木器成品涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立核验本轮6次公开HTML读取，并保留上一轮6次原文历史；官网About明确Macksons Paints Lanka (Private) Limited及Panadura自有生产，集团Multilac页明确Macksons Holdings关联和研发团队。水性木器着色剂4158明确木质门窗用途。之前存疑的G.I. Adhesion Promoter现由真实目录链接定位2267：商品说明镀锌铁表面直接底涂、干后覆面漆及表面清洁打磨步骤，属成品底涂而非据名称推定的原料级PO/CPO分散体；不推断其配方、树脂种类或适用于我方木器场景。目录当前成品、底涂、稀释剂、色基、木器、汽车及工具范围和已读产品未见对外销售水性聚烯烃/CPO乳液或原料级同类附着促进剂，结论限已读范围；未穷尽所有SKU/TDS/全球业务。Multilac、Italwood及海外Macksons厂址一个集团账户，不拆子公司、经销商、品牌或研发人员新增。公开公司邮箱及工厂电话非具名采购；WhatsApp只保留原页明确链接。旧2024展会横幅及2004获得ISO9001:2015的矛盾时间不转为项目或认证事实。我方木器底涂评估不代表已适配、使用、采购或性能保证。"
+    },
+    "contact": {
+      "label": "官网公司业务邮箱、工厂电话及公开WhatsApp；无具名采购/技术收件人",
+      "email": "inquiry@multilac.com",
+      "phone": "+94 11 5530225",
+      "contactUrl": "https://multilac.com/contact-us/"
+    },
+    "source": {
+      "label": "Multilac own water-based wood product, manufacturer, selected-input role and public contact originals",
+      "url": "https://multilac.com/single-product-buy/4158"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "multilac-panadura": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chrotex-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "peter-kwasny-gundelsheim": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "perma-chink-systems-redmond": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6604,6 +6633,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "multilac-panadura": {
+    "website": "https://multilac.com/",
+    "contactPage": "https://multilac.com/contact-us/",
+    "whatsapp": "https://api.whatsapp.com/send?phone=94705222555",
+    "address": "78, Diggala Road, Keselwatte, Panadura, Sri Lanka. Own factory address; map uses a Panadura city representative location, not a surveyed factory coordinate.",
+    "generalEmail": "inquiry@multilac.com",
+    "generalEmailEvidence": {
+      "company": "Macksons Paints Lanka (Private) Limited (Multilac; Macksons Holdings)",
+      "value": "inquiry@multilac.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Multilac own current public business contact",
+          "url": "https://multilac.com/contact-us/",
+          "summary": "Sri Lanka factory section explicitly lists inquiry@multilac.com and +94-11-5530225, 5531000, 5523323; company channels, no named buyer inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+94 11 5530225",
+    "generalPhoneEvidence": {
+      "company": "Macksons Paints Lanka (Private) Limited (Multilac; Macksons Holdings)",
+      "value": "+94 11 5530225",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Multilac own current public business contact",
+          "url": "https://multilac.com/contact-us/",
+          "summary": "Sri Lanka factory section explicitly lists inquiry@multilac.com and +94-11-5530225, 5531000, 5523323; company channels, no named buyer inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own application/manufacturing/product-scope/business-channel original",
+        "url": "https://multilac.com/shop-now/"
+      },
+      {
+        "label": "Own application/manufacturing/product-scope/business-channel original",
+        "url": "https://multilac.com/single-product-buy/2267"
+      },
+      {
+        "label": "Own application/manufacturing/product-scope/business-channel original",
+        "url": "https://multilac.com/single-product-buy/4158"
+      },
+      {
+        "label": "Own application/manufacturing/product-scope/business-channel original",
+        "url": "https://multilac.com/about-us/"
+      },
+      {
+        "label": "Own application/manufacturing/product-scope/business-channel original",
+        "url": "https://multilac.com/contact-us/"
+      },
+      {
+        "label": "Own application/manufacturing/product-scope/business-channel original",
+        "url": "https://macksons.com/company/multilac/"
+      }
+    ]
+  },
   "chrotex-athens": {
     "website": "https://www.chrotex.gr/en/",
     "contactPage": "https://www.chrotex.gr/en/contact/",
@@ -20687,6 +20780,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "multilac-panadura",
   "chrotex-athens",
   "peter-kwasny-gundelsheim",
   "perma-chink-systems-redmond",
