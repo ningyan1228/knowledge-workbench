@@ -4,7 +4,6 @@ import { createShortDevelopmentEmail } from '../src/lib/shortDevelopmentEmail'
 import { leadEmailFacts } from '../src/lib/leadEmailFacts'
 import { conciseCompanyFact } from '../src/lib/conciseLeadEmailFacts'
 import { withProvedFirstContact } from './fixtures/contactEvidence'
-import { selectBusinessRecipient } from '../src/lib/contactEvidence'
 
 function draftFor(id: string) {
   const lead = publicLeads.find((item) => item.id === id)!
@@ -14,13 +13,13 @@ function draftFor(id: string) {
 }
 
 describe('ready-to-copy short development emails', () => {
-  it('requires a sourced recipient email before preparing a new first contact', () => {
+  it('prepares a company-specific first contact for public channels even without an email', () => {
     const aexcel = publicLeads.find(item => item.id === 'aexcel-mentor')!
     expect(aexcel.profile.contactPage).toBeTruthy()
-    expect(createShortDevelopmentEmail(aexcel)).toBeNull()
+    expect(createShortDevelopmentEmail(aexcel)?.body).toContain('Your team formulates industrial protective coatings')
     const reviewed = withProvedFirstContact(aexcel)
     expect(createShortDevelopmentEmail(reviewed)?.subject).toContain('Aexcel')
-    expect(createShortDevelopmentEmail({ ...reviewed, profile: { ...reviewed.profile, contacts: reviewed.profile.contacts.map(person => ({ ...person, emailEvidence: undefined })) } })).toBeNull()
+    expect(createShortDevelopmentEmail({ ...reviewed, profile: { ...reviewed.profile, contacts: reviewed.profile.contacts.map(person => ({ ...person, emailEvidence: undefined })) } })).not.toBeNull()
   })
   it('prepares a reviewable email only after the saved independent exclusion check is complete', () => {
     expect(new Set(publicLeads.map((lead) => lead.id)).size).toBe(publicLeads.length)
@@ -28,7 +27,7 @@ describe('ready-to-copy short development emails', () => {
     expect(new Set(Object.values(leadEmailFacts)).size).toBe(publicLeads.length)
     for (const lead of publicLeads) {
       const draft = createShortDevelopmentEmail(lead)
-      if (!lead.supplierCompetitorCheck?.conclusion || !lead.supplierCompetitorCheck.checkedAt || !selectBusinessRecipient(lead)) {
+      if (!lead.supplierCompetitorCheck?.conclusion || !lead.supplierCompetitorCheck.checkedAt) {
         expect(draft, lead.id).toBeNull()
         continue
       }

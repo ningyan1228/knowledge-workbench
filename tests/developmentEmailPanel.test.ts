@@ -11,6 +11,17 @@ const lead = publicLeads.find((item) => item.id === 'polyvine-cheddar')!
 const send: OutreachSend = { id: 'fixture', company_key: outreachCompanyKey(lead), company_name: lead.company, lead_id: lead.id, product_id: lead.productId, recipient_email: 'fixture@example.org', sent_on: '2026-10-13', sent_by: null, created_at: '2026-10-13T01:00:00Z', voided_at: null }
 const render = (status: OutreachLedger['status'], sends: OutreachSend[]) => renderToStaticMarkup(createElement(DevelopmentEmailPanel, { lead, ledger: { status, sends } as OutreachLedger }))
 describe('email preview follows sending status', () => {
+  it('shows a company-specific draft, all copy modes and Prompt for Advanced Polymer Coatings without an inbox', () => {
+    const company = publicLeads.find(item => item.id === 'advanced-polymer-coatings-avon')!
+    expect(company.profile.generalEmail).toBeUndefined()
+    const html = renderToStaticMarkup(createElement(DevelopmentEmailPanel, { lead: company, ledger: { status: 'ready', sends: [] } as unknown as OutreachLedger }))
+    expect(html).toContain('Your ChemLINE 784 is a two-component thermoset polymer coating')
+    expect(html).toContain('outreach-email-preview')
+    expect(html.match(/data-copy-part=/g)).toHaveLength(3)
+    expect(html).not.toMatch(/outreach-copy-button[^>]*disabled/)
+    expect(html).toContain('查看原 Prompt')
+    expect(html).not.toContain('暂不生成开发信')
+  })
   it('shows a concise draft for unrecorded sending and retains the old reference for sent or unreadable states', () => {
     const unsent = render('ready', [])
     const sent = render('ready', [send])

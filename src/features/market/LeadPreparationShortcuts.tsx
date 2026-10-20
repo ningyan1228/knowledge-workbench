@@ -8,8 +8,8 @@ import type { OutreachLedger } from './useOutreachLedger'
 import './LeadPreparationShortcuts.css'
 
 const shortcuts: Array<{ id: Exclude<PreparationFilter, 'all'>; description: string; hint: string }> = [
-  { id: 'ready', description: '邮箱已核验、证据完整、共享台账确认未发，且私人记录没有已联系或暂缓状态', hint: '打开客户直接查看首封；复制前会再次核对发送记录。' },
-  { id: 'needs-email', description: '未记录发送，尚无已核验的实际收件邮箱', hint: '打开客户查看公开联系资料；补充并核验邮箱后再准备首封。' },
+  { id: 'ready', description: '证据完整、有公开联系入口、共享台账确认未发，且私人记录没有已联系或暂缓状态；不要求有邮箱', hint: '打开客户直接查看首封；缺邮箱也能复制到公开表单或私信，复制前会再次核对发送记录。' },
+  { id: 'needs-email', description: '未记录发送，尚无已核验的实际收件邮箱', hint: '缺邮箱仍可正常查看并复制开发信；可使用已公开的表单或私信渠道。' },
   { id: 'sent', description: '公司在共享台账中有有效发送记录，同公司跨产品共用', hint: '打开客户查看发送历史、记录跟进；保留原首封参考。' },
 ]
 
@@ -19,7 +19,7 @@ export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, wor
   const counts = useMemo(() => Object.fromEntries(shortcuts.map(({ id }) => [id, new Set(filterWorkbenchLeads(leads, preparationFilters(filters, id), records, sends, today).map(outreachCompanyKey)).size])), [leads, filters, records, sends, today])
   const hint = sends === null ? '发送状态未知：连接共享发送台账后再区分未发与已发。'
     : records === null ? '私人记录未连接，暂不能排除已联系客户；连接后可使用“可准备首封”。'
-      : shortcuts.find(({ id }) => id === filters.preparation)?.hint ?? '按当前产品、地区、搜索及收录日期统计；证据待补的客户仍可在全部结果中查看。'
+      : shortcuts.find(({ id }) => id === filters.preparation)?.hint ?? '待补邮箱仅标明缺项，仍可准备开发信；它可与“可准备首封”重合。数量随当前筛选更新。'
   return <div className="work-preparation">
     <div className="work-preparation-shortcuts" role="group" aria-label="开发准备情况">
       <span>开发准备</span>

@@ -8,7 +8,20 @@ import type { BusinessFilters, WorkRecords } from './leadWorkbench'
 export type PreparationFilter = 'all' | 'ready' | 'needs-email' | 'sent'
 export const preparationLabels = { all: '全部准备情况', ready: '可准备首封', 'needs-email': '待补邮箱', sent: '已发送' } as const
 
-/** Sending is a shared fact; readiness additionally requires recipient, evidence and private-contact checks. */
+/** A draft can be prepared for any qualified public route; only email exports require an inbox. */
+export function canPrepareFirstContact(lead: PublicLead, sends: OutreachSend[] | null, records: WorkRecords | null) {
+  if (sends === null || records === null || activeOutreachSend(sends, lead)) return false
+  const record = records[outreachCompanyKey(lead)]
+  if ((record?.stage && record.stage !== 'todo') || latestContact(record?.contactLog)) return false
+  return Boolean(createShortDevelopmentEmail(lead, undefined, 'concise'))
+}
+
+/** Missing an inbox is a separate fact and can overlap with readiness for other public routes. */
+export function matchesPreparation(lead: PublicLead, preparation: PreparationFilter, sends: OutreachSend[] | null, records: WorkRecords | null) {
+  return preparation === 'all' || (preparation === 'ready' ? canPrepareFirstContact(lead, sends, records) : leadPreparation(lead, sends, records) === preparation)
+}
+
+/** Sending is a shared fact; an unreadable ledger is never proof of an unsent customer. */
 export function leadPreparation(lead: PublicLead, sends: OutreachSend[] | null, records: WorkRecords | null) {
   if (sends === null) return 'unknown'
   if (activeOutreachSend(sends, lead)) return 'sent'

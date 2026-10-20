@@ -13,18 +13,18 @@ import type { OutreachLedger } from '../src/features/market/useOutreachLedger'
 
 const lead=publicLeads.find(lead=>lead.id==='aexcel-mentor')!
 const entry={id:'fixture',channel:'form' as const,destination:'https://www.aexcelcorp.com/contact-us/',contactedOn:'2026-10-20',recordedAt:'2026-10-20T01:00:00Z'}
-describe('contact routes remain available while first emails require an inbox',()=>{
- it('keeps public contact routes but withholds first-email previews and copy until an inbox is verified',()=>{
+describe('contact routes and drafts independent of an inbox',()=>{
+ it('keeps company-specific drafts and copy controls available without inventing an email',()=>{
   const version=developmentEmailVersion(lead,[])
-  expect(version.email).toBeNull()
-  expect(version.label).toBe('待补邮箱 · 暂不生成开发信')
-  expect(createShortDevelopmentEmail(lead)).toBeNull()
+  expect(version.email?.body).toContain('Your team formulates industrial protective coatings')
+  expect(version.label).toBe('简洁首封 · 未记录发送')
+  expect(createShortDevelopmentEmail(lead)).not.toBeNull()
   const html=renderToStaticMarkup(createElement(DevelopmentEmailPanel,{lead,ledger:{status:'ready',sends:[]} as unknown as OutreachLedger}))
   expect(html).toContain('尚未取得已核验的收件邮箱')
   expect(html).toContain('官网联系页／表单入口')
-  expect(html).not.toContain('data-copy-part')
-  expect(html).not.toContain('outreach-email-preview')
-  expect(html).not.toContain('查看原 Prompt')
+  expect(html).toContain('data-copy-part="body"')
+  expect(html).toContain('outreach-email-preview')
+  expect(html).toContain('查看原 Prompt')
   expect(html).not.toContain('mailto:')
  })
  it('does not infer WhatsApp from a business phone or accept spoofed social URLs',()=>{

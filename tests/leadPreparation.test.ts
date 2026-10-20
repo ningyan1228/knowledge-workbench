@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { publicLeads, marketProducts, targetCompanyTypes, tdsVerifiedApplications, type PublicLead } from '../src/lib/productMarketMap'
-import { leadPreparation, preparationFilters } from '../src/lib/leadPreparation'
+import { canPrepareFirstContact, leadPreparation, preparationFilters } from '../src/lib/leadPreparation'
 import { emptyBusinessFilters, emptyWorkRecord, filterWorkbenchLeads } from '../src/lib/leadWorkbench'
 import { outreachCompanyKey, type OutreachSend } from '../src/lib/outreachLedger'
 import { developmentEmailVersion } from '../src/lib/developmentEmailVersion'
@@ -40,17 +40,22 @@ describe('sending facts and development preparation', () => {
     expect(filterWorkbenchLeads([lead], ready, {}, [send], '2026-10-20')).toEqual([])
     expect(filterWorkbenchLeads([lead], ready, {}, null, '2026-10-20')).toEqual([])
     expect(filterWorkbenchLeads([missingEmail], preparationFilters(current, 'needs-email'), {}, [], '2026-10-20')).toEqual([missingEmail])
+    expect(canPrepareFirstContact(missingEmail, [], {})).toBe(true)
+    expect(canPrepareFirstContact(missingEmail, [send], {})).toBe(false)
+    expect(canPrepareFirstContact(missingEmail, null, {})).toBe(false)
+    expect(filterWorkbenchLeads([missingEmail], ready, {}, [], '2026-10-20')).toEqual([missingEmail])
   })
-  it('blocks missing-email previews, copy and writing prompts while preserving sent references', () => {
-    expect(developmentEmailVersion(missingEmail, [])).toMatchObject({ pendingEmail: true, email: null })
-    expect(developmentEmailVersion(missingEmail, null).email).toBeNull()
+  it('keeps missing-email previews, copy and writing prompts available while preserving sent references', () => {
+    expect(developmentEmailVersion(missingEmail, []).email?.body).toContain('Your 2K-POLY86')
+    expect(developmentEmailVersion(missingEmail, null).state).toBe('unknown')
     expect(developmentEmailVersion(missingEmail, [send]).email?.text).toBe(createShortDevelopmentEmail(missingEmail, undefined, 'legacy')?.text)
     const markup = renderToStaticMarkup(createElement(DevelopmentEmailPanel, { lead: missingEmail, ledger: { status: 'ready', sends: [] } as unknown as OutreachLedger }))
-    expect(markup).toContain('待补邮箱 · 暂不生成开发信')
-    expect(markup).not.toContain('outreach-email-preview')
-    expect(markup).not.toContain('data-copy-part')
-    expect(markup).not.toContain('查看原 Prompt')
-    expect(createDevelopmentEmailPrompt({ lead: missingEmail, product: marketProducts.find(p => p.id === lead.productId)!, application: tdsVerifiedApplications.find(a => a.id === lead.companyEvidence.applicationId)!, targetType: targetCompanyTypes.find(t => t.id === lead.targetCompanyTypeId)! })).toContain('Not qualified for outreach')
+    expect(markup).toContain('缺邮箱仍可正常复制主题、正文和整封开发信')
+    expect(markup).toContain('outreach-email-preview')
+    expect(markup.match(/data-copy-part=/g)).toHaveLength(3)
+    expect(markup).not.toMatch(/outreach-copy-button[^>]*disabled/)
+    expect(markup).toContain('查看原 Prompt')
+    expect(createDevelopmentEmailPrompt({ lead: missingEmail, product: marketProducts.find(p => p.id === lead.productId)!, application: tdsVerifiedApplications.find(a => a.id === lead.companyEvidence.applicationId)!, targetType: targetCompanyTypes.find(t => t.id === lead.targetCompanyTypeId)! })).toContain('Company: Polyvine')
   })
   it('counts companies once and exposes unknown as unavailable rather than zero unsent', () => {
     const render = (status: OutreachLedger['status']) => renderToStaticMarkup(createElement(LeadPreparationShortcuts, { leads: [lead, { ...lead, id: 'same-company' }], filters: { ...emptyBusinessFilters }, onChange: () => {}, today: '2026-10-20', ledger: { status, sends: [] } as unknown as OutreachLedger, work: { status: 'ready', records: {} } as unknown as LeadWork }))

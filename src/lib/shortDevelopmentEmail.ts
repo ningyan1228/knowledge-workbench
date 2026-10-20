@@ -73,9 +73,6 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
     || !verifiedDay(evidence.verifiedAt)
     || !(lead.profile.website || lead.profile.contactPage || lead.profile.linkedIn || lead.profile.generalEmail || lead.profile.generalPhone || lead.profile.departmentEmails.length)) return null
 
-  // A company contact form or phone alone is not an email recipient. Preserve
-  // legacy references separately; no new first contact without a sourced inbox.
-  if (style === 'concise' && !selectBusinessRecipient(lead)) return null
   const companyFact = style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id)
   if (!companyFact) return null
   const productName = productNames[lead.productId]

@@ -4,7 +4,7 @@ import { contactAssessment, contactPhoneVerified } from './contactEvidence'
 import { activeOutreachSend, outreachCompanyKey, type OutreachSend } from './outreachLedger'
 import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
 import { latestContact, normalizeContactLog, type ContactLogEntry } from './contactRoutes'
-import { leadPreparation, type PreparationFilter } from './leadPreparation'
+import { matchesPreparation, type PreparationFilter } from './leadPreparation'
 
 export const developmentStages = { todo: '待开发', waiting: '待回复', replied: '已回复', sample: '样品沟通', paused: '暂缓' } as const
 export type DevelopmentStage = keyof typeof developmentStages
@@ -85,7 +85,7 @@ export function filterWorkbenchLeads(leads: PublicLead[], filters: BusinessFilte
     if (filters.contact !== 'all' && !channels[filters.contact as keyof typeof channels]) return false
     // Missing shared history is unknown, never proof that a company is unsent.
     if (filters.sendStatus !== 'all' && (sends === null || Boolean(activeOutreachSend(sends, lead)) !== (filters.sendStatus === 'sent'))) return false
-    if (filters.preparation !== 'all' && leadPreparation(lead, sends, records) !== filters.preparation) return false
+    if (!matchesPreparation(lead, filters.preparation, sends, records)) return false
     // Sent is a completed milestone, including companies already at a later stage.
     if (filters.stage === 'sent' && (sends === null || !activeOutreachSend(sends, lead))) return false
     if (filters.stage === 'waiting' && stage !== 'waiting' && stage !== 'sent') return false
