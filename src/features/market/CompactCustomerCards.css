@@ -2,23 +2,23 @@
 .market-workspace-page .mac-customer-map .lead-map-sidebar { gap:8px;padding:0 8px 8px;border-radius:14px }
 .market-workspace-page .mac-customer-map .lead-map-sidebar>.sidebar-title { min-height:36px;margin:0 -8px;padding:8px 12px }
 .market-workspace-page .mac-customer-map .customer-lead-card { border-radius:10px }
-.market-workspace-page .mac-customer-map .customer-card-heading { padding:9px 12px 4px;gap:7px }
+.market-workspace-page .mac-customer-map .customer-card-heading { padding:6px 12px 3px;gap:7px }
 .market-workspace-page .mac-customer-map .customer-card-company { display:block }
 .market-workspace-page .mac-customer-map .customer-card-company h3 { display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:1.4;font-weight:650 }
 .market-workspace-page .mac-customer-map .customer-card-heading .lead-dot { margin-top:5px }
-.customer-card-meta { display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:7px;padding:0 12px 6px }
+.customer-card-meta { display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:7px;padding:0 12px 4px }
 .customer-card-country,.customer-card-industry { min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;line-height:1.5;color:var(--muted) }
 .customer-card-country { color:var(--text) }
 .market-workspace-page .mac-customer-map .customer-card-send-status { padding:0;justify-self:end }
 .customer-card-meta .outreach-status-badge { padding:3px 7px;font-size:11px;gap:4px }
 .customer-card-meta .outreach-status-badge svg { width:12px;height:12px }
-.market-workspace-page .mac-customer-map .customer-card-evidence { margin:0 12px;padding:5px 8px;border-radius:6px }
+.market-workspace-page .mac-customer-map .customer-card-evidence { margin:0 12px;padding:4px 8px;border-radius:6px }
 .market-workspace-page .mac-customer-map .customer-card-reason { font-size:11px;line-height:1.55 }
 .market-workspace-page .mac-customer-map .customer-card-evidence>small { margin-top:2px;line-height:1.4 }
-.market-workspace-page .mac-customer-map .customer-card-dates { padding:5px 12px;line-height:1.5;gap:5px }
+.market-workspace-page .mac-customer-map .customer-card-dates { padding:2px 12px;line-height:1.5;gap:5px }
 .market-workspace-page .mac-customer-map .customer-card-dates svg { margin-top:1px }
 .market-workspace-page .mac-customer-map .customer-card-progress { padding:0 12px 5px;font-size:11px;line-height:1.5 }
-.market-workspace-page .mac-customer-map .customer-card-actions { padding:5px 12px;gap:12px }
+.market-workspace-page .mac-customer-map .customer-card-actions { padding:4px 12px;gap:12px }
 .market-workspace-page .mac-customer-map .customer-card-actions button,.market-workspace-page .mac-customer-map .customer-card-actions a { min-height:28px }
 .market-workspace-page .mac-customer-map .customer-card-actions .customer-card-favorite { width:28px }
 .market-workspace-page .mac-customer-map .customer-card-error { padding:0 12px 6px }

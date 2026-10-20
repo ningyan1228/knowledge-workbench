@@ -43,6 +43,23 @@ describe('evidence-first customer cards', () => {
     expect(render({ ledger: ready, variant: 'row' })).toContain('outreach-status-unsent')
   })
 
+  it('shows company-specific evidence and retains the exact full original, source and date in either view', () => {
+    const statement = '官网明确自产水性丙烯酸木材着色剂；用于室内外木材着色。尚未确认采购或配方相容性。'
+    const evidenceLead = { ...lead, companyEvidence: { ...lead.companyEvidence, statement, sourceName: '官方产品资料', sourceUrl: 'https://example.org/wood', verifiedAt: '2026-10-19' } }
+    for (const variant of ['card', 'row'] as const) {
+      const markup = render({ lead: evidenceLead, variant })
+      expect(markup).toContain('匹配理由：</strong>官网明确自产水性丙烯酸木材着色剂；用于室内外木材着色。')
+      expect(markup).toContain(`<p>${statement}</p>`)
+      expect(markup).toContain('完整依据')
+      expect(markup).toContain('href="https://example.org/wood"')
+      expect(markup).toContain('官方产品资料')
+      expect(markup).toContain('业务依据核验：')
+      expect(markup).not.toContain(' 原料评估')
+    }
+    const unsafe = { ...evidenceLead, companyEvidence: { ...evidenceLead.companyEvidence, sourceUrl: 'javascript:alert(1)' } }
+    expect(render({ lead: unsafe })).not.toContain('href="javascript:')
+  })
+
   it('does not turn an unverified or missing contact URL into an external action', () => {
     const noContact = { ...lead, profile: { ...lead.profile, contactPage: 'javascript:alert(1)', website: undefined } }
     const markup = render({ lead: noContact })

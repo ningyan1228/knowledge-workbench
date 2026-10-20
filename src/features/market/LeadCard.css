@@ -17,3 +17,22 @@
 .customer-card-actions .customer-card-favorite { width:32px;margin-left:auto;color:#b7791f }.customer-card-favorite:disabled { opacity:.45;cursor:default }
 .customer-card-actions a:hover { text-decoration:underline }.customer-card-heading:focus-visible,.customer-card-actions button:focus-visible,.customer-card-actions a:focus-visible { outline:2px solid var(--blue);outline-offset:2px }
 .customer-card-error { margin:0;padding:0 16px 10px;color:var(--warning);font-size:12px }
+.customer-business-evidence { min-width:0 }
+.customer-business-evidence>summary { display:block;list-style:none;cursor:pointer }
+.customer-business-evidence>summary::-webkit-details-marker { display:none }
+.customer-business-evidence>summary:focus-visible { outline:2px solid var(--blue);outline-offset:3px;border-radius:3px }
+.customer-evidence-footer { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2px 8px;margin-top:2px }
+.customer-evidence-footer>small { color:var(--muted);font-size:10px;line-height:1.4 }
+.customer-evidence-toggle { display:inline-flex;align-items:center;gap:2px;color:var(--blue);font-size:11px;line-height:1.5;white-space:nowrap }
+.customer-evidence-collapse { display:none }
+.customer-business-evidence[open] .customer-evidence-expand { display:none }
+.customer-business-evidence[open] .customer-evidence-collapse { display:inline }
+.customer-business-evidence[open] .customer-evidence-toggle svg { transform:rotate(90deg) }
+.customer-evidence-original { margin-top:7px;padding-top:7px;border-top:1px solid var(--line);font-size:11px;line-height:1.7;overflow-wrap:anywhere }
+.customer-evidence-original>strong { font-size:11px }
+.customer-evidence-original>p { margin:4px 0;white-space:pre-wrap }
+.customer-evidence-original>a { display:inline-flex;align-items:center;gap:4px;color:var(--blue);text-decoration:none }
+.customer-evidence-original>a:hover { text-decoration:underline }
+.customer-evidence-original>a:focus-visible { outline:2px solid var(--blue);outline-offset:2px }
+.customer-evidence-original>small { display:block;color:var(--muted);font-size:10px }
+.customer-row-application .customer-card-reason>strong,.customer-row-application .customer-evidence-original>strong { display:inline;font-size:inherit }
