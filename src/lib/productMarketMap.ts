@@ -6537,11 +6537,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "lakokraska-lida",
+    "company": "Lakokraska OJSC (ОАО «Лакокраска», Lida)",
+    "productId": "nl-w1201",
+    "country": "Belarus",
+    "countryZh": "白俄罗斯",
+    "city": "Lida",
+    "latitude": 53.887,
+    "longitude": 25.299,
+    "legacyCompanyDescription": "自有水分散及溶剂型成品涂料研发制造；兼有已注明的PVA、半成品清漆和树脂业务，一个公司账户。地图为Lida城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有涂料制造与开发；当前目录“Лаки водно-дисперсионные по дереву”列明水分散木器清漆，用于室内木门、面板等木制表面装饰保护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6次原文请求：裸域Home直读失败，EABA协会转述商务合作原文成功，native重读Home成功并明确最终跳转/en/，官网Company实际链接成功且最终跳转/en/o-kompanii，当前Catalog成功，具体水分散木器清漆产品链接Cachemiss失败，共4可读/2失败。制造与应用直接依据官网Company和完整返回Catalog中的明确命名产品条目及用途段，不把失败叶页当已读；并非从搜索摘要推断木材水性。官网Company明确自有生产设施及涂料研发，承接按客户要求配方制造；当前Catalog明确“Лакиводно-дисперсионныеподереву”用于室内木墙、天花、梁、栏杆、门、面板、踢脚线等，可作家具装饰。只采用室内木材用途，不把其他目录InteriorAqua/ParquetAqua或水性建筑涂料的性能/基材混入该条目。公司同时真实生产并外售邻苯二甲酸酐、PVA分散体、半成品清漆PF/AU、LidAlkyd、Bellak、LidAS以及PolyLid复合材料树脂，保留原料/半成品业务，不将所有树脂视同目标NL-W1201。已读当前公司、相关可见目录原料和成品范围未见水性聚烯烃乳液、PO/CPO分散体或原料级同类附着促进剂外售；PVA/醇酸/其他半成品树脂不是聚烯烃原料，结论限已读可见文字，未穷尽2000SKU、全部配方/SDS/PDF/全球股权及供应链，未虚构外购例外。官网57年描述、Home四品牌和Company六品牌差异仅保留为页面维护边界，不推断创立/重组日期、品牌数或2026新项目；EABA具名外贸联系人未单独核实当前身份与邮箱归属，不入具名联系人。只用当前官网header的support@lidalkm.by及+375154538585业务总机，不用privacy邮箱、不冒称采购、不推定WhatsApp。Lakokraska/Lida/lidalkm.by及Fresko/Massive/Garage/Dearoma/Bellak等一个账户；最新main322/root338、全队列/frontier531按公司域品牌无同主体，不以品牌/工厂改名制造新增。木材TDS应用只支持NLW底涂/附着促进方向原料评估，不保证当前清漆相容、已采购或性能提升。"
+    },
+    "contact": {
+      "label": "官网header业务支持邮箱、公司电话及公开公司页面；无具名采购收件人",
+      "email": "support@lidalkm.by",
+      "phone": "+375 154 538585",
+      "contactUrl": "https://lidalkm.by/en/"
+    },
+    "source": {
+      "label": "Own current catalogue named water-dispersion wood varnish and manufacturing statement",
+      "url": "https://lidalkm.by/en/catalog"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "lakokraska-lida": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mav-dzerzhinsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "litum-saint-petersburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "emlak-saint-petersburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6865,6 +6894,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "lakokraska-lida": {
+    "website": "https://lidalkm.by/en/",
+    "contactPage": "https://lidalkm.by/en/",
+    "address": "71 Ignatova Street, Lida231300,Belarus, as published on own current website. Lida city representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "support@lidalkm.by",
+    "generalEmailEvidence": {
+      "company": "Lakokraska OJSC (ОАО «Лакокраска», Lida)",
+      "value": "support@lidalkm.by",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Lakokraska corporate homepage business contact",
+          "url": "https://lidalkm.by/en/",
+          "summary": "Own current homepage and Company/Catalog headers explicitly publish support@lidalkm.by beside the call-centre business lines and LidaIgnatova71. General corporate support route; no named employee or purchasing identity inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+375 154 538585",
+    "generalPhoneEvidence": {
+      "company": "Lakokraska OJSC (ОАО «Лакокраска», Lida)",
+      "value": "+375 154 538585",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Lakokraska corporate homepage business contact",
+          "url": "https://lidalkm.by/en/",
+          "summary": "Own homepage/Company/Catalog header publishes+375(154)53 85 85 as call-centre company line. General public business voice phone, not a guessed person or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own actual current company/product-scope and business-contact original",
+        "url": "https://lidalkm.by/en/"
+      },
+      {
+        "label": "Own actual current company/product-scope and business-contact original",
+        "url": "https://lidalkm.by/en/o-kompanii"
+      },
+      {
+        "label": "Own actual current company/product-scope and business-contact original",
+        "url": "https://lidalkm.by/en/catalog"
+      }
+    ]
+  },
   "mav-dzerzhinsk": {
     "website": "https://mav.by/",
     "contactPage": "https://mav.by/contact_information/",
@@ -21534,6 +21614,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "lakokraska-lida",
   "mav-dzerzhinsk",
   "litum-saint-petersburg",
   "emlak-saint-petersburg",

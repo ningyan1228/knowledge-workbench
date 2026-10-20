@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "lakokraska-lida": "Your catalogue lists water-dispersion wood varnishes for interior doors, panels and other wooden surfaces.",
   "mav-dzerzhinsk": "Your BRAVA ACRYL 43 is a water-based varnish for wooden windows and doors.",
   "litum-saint-petersburg": "Your Litamastik 170 is a two-component epoxy coating for protecting ships and other industrial structures.",
   "emlak-saint-petersburg": "Your EMLAK PRIMER 263 is a two-component epoxy primer for inter-operation protection of steel structures and rolled steel.",
