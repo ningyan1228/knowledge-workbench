@@ -54,7 +54,7 @@ describe('ready-to-copy short development emails', () => {
   it('keeps Troforte’s coated-fertilizer facts distinct from claims about our material', () => {
     const draft = draftFor('troforte-innovations-wangara')
     expect(draft.body).toContain('polymer-coated')
-    expect(draft.body).toContain('raw material for fertilizer coating formulations')
+    expect(draft.body).toContain('reactive raw material for polyurethane fertilizer coatings')
     expect(draft.body).not.toMatch(/you (currently )?(need|buy|use) our/i)
   })
 
@@ -62,7 +62,32 @@ describe('ready-to-copy short development emails', () => {
     const draft = draftFor('polyvine-cheddar')
     expect(draft.body).toContain('2K-POLY86 is a two-pack water-based polyurethane varnish')
     expect(draft.body).toContain('NL-W1201')
+    expect(draft.body).toContain('water-based polyolefin dispersion for primer and adhesion-promoting formulations')
     expect(draft.body).not.toMatch(/guaranteed|adhesion value/i)
+  })
+
+  it('connects the Feroni wood-stain fact to a functional product description without promising wood performance', () => {
+    const draft = draftFor('colorificio-feroni-oppeano')
+    expect(draft.body).toContain('Your W1500 series is a water-based acrylic wood stain')
+    expect(draft.body).toContain('water-based polyolefin dispersion for primer and adhesion-promoting formulations')
+    expect(draft.body).toContain('Would evaluating this material for your wood coatings')
+    expect(draft.body).not.toContain('a water-based surface treatment material.')
+    expect(draft.body).not.toMatch(/improves? (your|W1500)|your adhesion problem|compatible with your/i)
+  })
+
+  it('keeps primer trials distinct from direct ink compatibility and from a customer’s pretreated film', () => {
+    const draft = draftFor('teknova-esenyurt')
+    expect(draft.body).toContain('with corona treatment')
+    expect(draft.body).toContain('as a primer for your water-based ink applications')
+    expect(draft.body).not.toMatch(/untreated.PP|food.contact|add it to your ink|replace.*corona/i)
+  })
+
+  it('describes ELO functions differently for PVC and coatings, preserving the tentative evaluation language', () => {
+    const pvc = draftFor('dacarto-osasco')
+    const coating = draftFor('vernital-cercola')
+    expect(pvc.body).toContain('secondary-plasticizer evaluation in PVC formulations')
+    expect(coating.body).toContain('flexibility and resin-modification trials in coatings')
+    expect(coating.body).not.toMatch(/ELO (improves|provides|guarantees)|corrosion resistance|salt.spray|tested|approved/i)
   })
 
   it('does not promise anticorrosion performance for ELO coating prospects', () => {

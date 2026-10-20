@@ -10,6 +10,7 @@ import { conciseCompanyFact } from './conciseLeadEmailFacts'
 import { isTaiwanMarket } from './leadMarketScope'
 import { namedEmailVerified, selectBusinessRecipient } from './contactEvidence'
 import { firstContactStrategy } from './firstContactStrategy'
+import { functionalProductPitch } from './functionalProductPitch'
 
 const verifiedDay = (value?: string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value)
 const publicSource = (value?: string) => Boolean(value && /^https:\/\//.test(value))
@@ -79,16 +80,15 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
   const subject = style === 'legacy' ? `${productName} — a brief introduction` : strategy.subject
   const verifiedRecipient = recipientName && lead.profile.contacts.find((contact) => contact.name === recipientName && namedEmailVerified(lead.company, contact))
   const greeting = recipientName === undefined ? recipientFor(lead) : verifiedRecipient ? `Hi ${verifiedRecipient.name.split(/\s+/)[0]},` : `Hi ${lead.company} Team,`
-  const introduction = lead.productId === 'fertilizer-coating' ? 'We supply a raw material for fertilizer coating formulations.'
-    : lead.productId === 'nl-w1201' ? 'We supply NL-W1201, a water-based surface treatment material.'
-      : 'We supply epoxidized linseed oil (ELO).'
+  const pitch = style === 'concise' ? functionalProductPitch(lead) : null
+  if (style === 'concise' && !pitch) return null
   const body = style === 'concise' ? `${greeting}
 
 ${companyFact}
 
-I’m Zhiwu from Neon Lion. ${introduction}
+I’m Zhiwu from Neon Lion. ${pitch!.introduction}
 
-${strategy.question}
+${pitch!.question ?? strategy.question}
 
 Best regards,
 Zhiwu

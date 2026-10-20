@@ -1,6 +1,7 @@
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
 import { selectBusinessRecipient } from './contactEvidence'
 import { firstContactStrategy } from './firstContactStrategy'
+import { functionalProductPitch } from './functionalProductPitch'
 import {
   type ApplicationLayer,
   type MarketExtendedApplication,
@@ -143,6 +144,7 @@ export function createDevelopmentEmailPrompt({
   const recipient = recipientFor(lead)
   const reference = productReferences[product.id]
   const strategy = firstContactStrategy(lead)
+  const pitch = style === 'concise' ? functionalProductPitch(lead) : null
   return `Write a concise, personalized English B2B first-contact email and two follow-ups using only the verified information below. This is a potential-fit outreach, not a confirmed purchase opportunity. Do not send an email or submit any form.
 
 Company
@@ -176,14 +178,22 @@ Allowed Product Reference (facts about our product only; not evidence about the 
 Positioning: ${reference.positioning}
 ${style === 'concise' ? 'Choose one relevant product description only; keep the detailed facts below out of the first email unless specifically requested.' : 'Use only 2–5 facts that are relevant to this recipient and the verified application:'}
 ${reference.allowedFacts.map((fact) => `- ${fact}`).join('\n')}
+${pitch ? `
+Concise functional introduction (use its function, not merely a generic material category)
+${pitch.introduction}
+Product facts used:
+${pitch.productFacts.map((fact) => `- ${fact}`).join('\n')}
+Application limits: ${pitch.limits}
+Connect this function to the company observation as a possible evaluation topic, not a proven customer need or performance result.
+` : ''}
 
 Recipient-aware CTA
-${style === 'concise' ? `First-contact approach: ${strategy.approach}. Close with one gentle relevance question: “${strategy.question}” Do not ask who handles purchasing, whether this is the right person, or ask the reader to forward the email or refer a colleague. The company’s downstream activity supports potential relevance, not confirmed purchasing needs. Do not open with a TDS, catalog, price or sample offer; share technical documents only after interest or a request.` : ctaFor(recipient)}
+${style === 'concise' ? `First-contact approach: ${strategy.approach}. Close with one gentle relevance question: “${pitch?.question ?? strategy.question}” Do not ask who handles purchasing, whether this is the right person, or ask the reader to forward the email or refer a colleague. The company’s downstream activity supports potential relevance, not confirmed purchasing needs. Do not open with a TDS, catalog, price or sample offer; share technical documents only after interest or a request.` : ctaFor(recipient)}
 
 Non-negotiable restrictions
 - Do not claim or imply that ${lead.company} currently buys, needs, sources, evaluates, or uses our material.
 - Do not invent a supplier, purchase volume, project, problem, performance result, application, technical data, contact, email, or certification.
-- ${style === 'concise' ? 'Do not attach or lead with a TDS, catalog or quotation in the first contact; first identify the relevant colleague or confirm relevance. No invented customer case, cost saving, response rate or purchasing timing.' : 'Do not say “TDS attached” unless an attachment is actually present. Use: “I can send the TDS and arrange a sample if relevant.”'}
+- ${style === 'concise' ? 'Do not attach or lead with a TDS, catalog or quotation in the first contact; confirm material relevance without asking for a colleague referral. No invented customer case, cost saving, response rate or purchasing timing.' : 'Do not say “TDS attached” unless an attachment is actually present. Use: “I can send the TDS and arrange a sample if relevant.”'}
 - Do not make price, free-sample, freight, exclusivity, delivery-time, regulatory-approval, or guarantee claims.
 - Do not transfer an application or chemistry from our Product Reference onto the customer unless the customer’s own public evidence supports it.
 ${reference.prohibitedClaims.map((claim) => `- ${claim}`).join('\n')}
