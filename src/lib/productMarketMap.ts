@@ -6201,11 +6201,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "perma-chink-systems-redmond",
+    "company": "Perma-Chink Systems, Inc.",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Redmond, Washington",
+    "latitude": 47.674,
+    "longitude": -122.121,
+    "legacyCompanyDescription": "美国水性木器涂料及木屋密封系统研发制造；田纳西自有工厂，Redmond公开业务地址",
+    "fit": "可开发候选",
+    "signal": "自身About及化学师文章明确自有工厂和木器配方研发；当前Sure Shine水性透明涂料用于木地板及室内表面，官网商店披露公司业务邮箱和地址。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立全文审读6份当前自身原文：About11118、SureShine8695、网上商店Contact1913、Products分类4537、Stores/Dealers8480、HealthyLiving9543字符。About明确自身开发木屋密封剂、着色剂及木器涂料、田纳西工厂；HealthyLiving明确自有化学师研究、按配方选择树脂/表活/溶剂/杀菌剂/颜填料/UV抑制剂，证实下游配方制造，不把原料选择说成已采购我方材料。SureShine为用于木地板及室内表面的水性透明成品。已读分类及完整导航覆盖木屋嵌缝/密封剂、内外木器着色/清漆、木材防护/清洁/修复、工具/干燥施工用品；UVBoost/MildewX等配套助剂名称予以考虑，不能自动等同PO/CPO分散体或原料级附着促进剂；产品分类页是分类入口，不称逐项TDS/SDS/全部SKU已审读。自身明确木屋木材养护为专注业务，在已读经营范围未识别水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂外售，按所选输入及实际原文范围通过，不声称全球股权/完整配方穷尽。网上商店明确PermaChinkSystems/PCSProducts、15459NE95thStRedmondWA98052、sales@permachink.com及8888385070；该地址为公开业务/网上商店入口，田纳西工厂不移到Redmond。门店/经销商和海外分销为同一经营关联查重背景，不拆成新增。RichDunstan搜索历史名字不赋予当前职务/具名邮箱；没有公开当前采购需求、原料用量、时机或配方适配证明。营销中的安全环保、VOC、耐磨、寿命、施工温度/覆盖率、24小时发货、第三方媒体及案例均不转作NLW性能或商业保证。当前main/root/全私有队列/frontier按公司、域名及Lifeline/SureShine已知品牌查重无命中；6次请求用尽，不以PDF或门店另开预算。"
+    },
+    "contact": {
+      "label": "官网商店公开公司业务客服邮箱及电话；未核实具名采购或技术收件人",
+      "email": "sales@permachink.com",
+      "phone": "+1 888 838 5070",
+      "contactUrl": "https://store.permachink.com/contactus"
+    },
+    "source": {
+      "label": "Perma-Chink own Sure Shine water-based wood finish and own factory/chemist formulation evidence",
+      "url": "https://www.permachink.com/product/sure-shine/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "perma-chink-systems-redmond": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zandleven-leeuwarden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "seagrave-coatings-kenilworth": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "advanced-polymer-coatings-avon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6517,6 +6546,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "perma-chink-systems-redmond": {
+    "website": "https://www.permachink.com/",
+    "contactPage": "https://store.permachink.com/contactus",
+    "address": "15459 NE 95th St., Redmond, WA 98052, United States; published business/online-store address, not asserted Tennessee factory location; city-only map marker.",
+    "generalEmail": "sales@permachink.com",
+    "generalEmailEvidence": {
+      "company": "Perma-Chink Systems, Inc.",
+      "value": "sales@permachink.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current online-store customer service contact",
+          "url": "https://store.permachink.com/contactus",
+          "summary": "Own Contact explicitly publishes sales@permachink.com for Perma-Chink Systems customer service; shared company route, no named-person ownership or purchasing title inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+1 888 838 5070",
+    "generalPhoneEvidence": {
+      "company": "Perma-Chink Systems, Inc.",
+      "value": "+1 888 838 5070",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current online-store customer service contact",
+          "url": "https://store.permachink.com/contactus",
+          "summary": "Own Contact explicitly publishes Phone888-838-5070 with online-store customer-service hours; distinct from branch phones/faxes and corporate800-548-3554."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer/application/product-scope original",
+        "url": "https://www.permachink.com/about-us/"
+      },
+      {
+        "label": "Own manufacturer/application/product-scope original",
+        "url": "https://www.permachink.com/product/sure-shine/"
+      },
+      {
+        "label": "Own public company business email/phone/address",
+        "url": "https://store.permachink.com/contactus"
+      },
+      {
+        "label": "Own manufacturer/application/product-scope original",
+        "url": "https://www.permachink.com/product-category/products/"
+      },
+      {
+        "label": "Own manufacturer/application/product-scope original",
+        "url": "https://www.permachink.com/dealers/"
+      },
+      {
+        "label": "Own manufacturer/application/product-scope original",
+        "url": "https://www.permachink.com/healthy-living-with-perma-chink-systems/"
+      }
+    ]
+  },
   "zandleven-leeuwarden": {
     "website": "https://zandleven.com/en",
     "contactPage": "https://protective.zandleven.com/nl/contact",
@@ -20415,6 +20507,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "perma-chink-systems-redmond",
   "zandleven-leeuwarden",
   "seagrave-coatings-kenilworth",
   "advanced-polymer-coatings-avon",
