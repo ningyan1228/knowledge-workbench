@@ -6,7 +6,7 @@ describe('sourced functions follow the product and application', () => {
   it('keeps untreated PP separate from wood, ink and aluminum evaluation', () => {
     const pp=publicLeads.find(lead=>lead.id==='schramm-coatings-offenbach')!
     expect(functionalProductPitch(pp)?.introduction).toContain('primarily used in untreated-PP primers')
-    for(const id of ['colorificio-feroni-oppeano','teknova-esenyurt','solventex-sao-paulo']){
+    for(const id of ['colorificio-feroni-oppeano','teknova-esenyurt','globalcolor-suzano']){
       const pitch=functionalProductPitch(publicLeads.find(lead=>lead.id===id)!)!
       expect(pitch.introduction).toContain('polyolefin dispersion')
       expect(pitch.introduction).not.toContain('untreated-PP')
