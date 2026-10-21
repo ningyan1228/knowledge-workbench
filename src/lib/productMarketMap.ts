@@ -6732,11 +6732,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "igis-panevezys",
+    "company": "IGIS (I. Kriščiūno firma „IGIS“)",
+    "productId": "nl-w1201",
+    "country": "Lithuania",
+    "countryZh": "立陶宛",
+    "city": "Panevėžys",
+    "latitude": 55.734,
+    "longitude": 24.357,
+    "legacyCompanyDescription": "IGIS实际自有制造主体I.KriščiūnofirmaIGIS位于Panevėžys；Taktika木器水性底涂/涂料与关联销售服务主体按一个业务账户。地图仅城市代表位置。",
+    "fit": "可开发候选",
+    "signal": "自有About明确IGIS自有制造及实验室、自有IGIS/Taktika品牌与委托制造；TaktikaWP技术正文明确木材底涂、丙烯酸分散体结合料和水稀释，配合水性木器面涂；Contact明确I.KriščiūnofirmaIGIS为Panevėžys制造主体。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网实际About证明自有实验室/制造与品牌配方业务，WP与WOOD两产品技术正文分别证明水性木材底涂和水性丙烯酸木器涂料。当前完整可见四大业务为底涂、腻子、涂料和装饰抹灰，已读Paint目录11项与木器两成品及制造信息未见外售水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂。底涂使用丙烯酸分散体、公司与DOW/OMYA/WACKER等上游合作的陈述，不等于其销售上游聚烯烃原料；保留委托制造及配套成品业务事实。结论限已读制造、当前可见导航/涂料目录和两成品，未穷尽全部SKU、安全/技术PDF、装饰抹灰配方或每家销售门店，不保证未披露业务。About与Product/Contact均指向I.KriščiūnofirmaIGIS制造，Contact另列UABIgisprekyba销售服务主体及区域商店；两不同公司代码与不同地址保持区分，按关联品牌制造业务一个客户账户，不编造股权比例、母子公司法律关系或把Vilnius门店当制造厂。当前公开全库、私有队列及集团/品牌/域名/商店去重，无同一账户；IGIS、Taktika、rimtamdarbui商店与地区渠道不拆新客户。制造商Contact块实际共享业务邮箱prekyba@igis.lt与+37068472323分别核验；该邮箱也列于销售服务块，仍为真实公司共享业务入口，不假称具名采购人，不借物流/技术俱乐部、会计或门店员工身份。电话非WhatsApp。WP施工、透入/吸收、附着/耐水、WOOD生物防护等客户资料不转为我方保证；NL-W1201仅TDS支持的木材底涂/附着促进原料评估，现有相容、采购、添加量、供应商准入、时机与性能均未知。"
+    },
+    "contact": {
+      "label": "官网制造主体共享公司业务邮箱、制造商电话及联系页；无具名采购收件人",
+      "email": "prekyba@igis.lt",
+      "phone": "+370 684 72323",
+      "contactUrl": "https://www.igis.lt/kontaktai/"
+    },
+    "source": {
+      "label": "Own actual Taktika WP acrylic-dispersion water-based wood-primer technical page and IGIS manufacture/contact originals",
+      "url": "https://www.igis.lt/produktas/medienos-gruntas-taktika-wp/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "igis-panevezys": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "npk-spetsemal-elektrougli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "krasko-dzerzhinsky": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "teohim-moscow": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7067,6 +7096,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "igis-panevezys": {
+    "website": "https://www.igis.lt/",
+    "contactPage": "https://www.igis.lt/kontaktai/",
+    "address": "Manufacturer I. Kriščiūno firma „IGIS“, companycode147203777,Tinklųg.33-1,LT-35115Panevėžys,Lithuania. Separate sales/servicecompany UABIgisprekyba code302517049,Vilnius; not asserted samelegalentity or factorylocation. Approximate Panevėžys city marker,not surveyed/geocodedfactoryentrance.",
+    "generalEmail": "prekyba@igis.lt",
+    "generalEmailEvidence": {
+      "company": "IGIS (I. Kriščiūno firma „IGIS“)",
+      "value": "prekyba@igis.lt",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own manufacturer business contact block",
+          "url": "https://www.igis.lt/kontaktai/",
+          "summary": "Own Contact manufacturer block listsprekyba@igis.lt underI.KriščiūnofirmaIGIS andcompanycode147203777. Same mailbox isalso shared with sales/servicecompany block; general businessroute,not named purchasing employee."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+370 684 72323",
+    "generalPhoneEvidence": {
+      "company": "IGIS (I. Kriščiūno firma „IGIS“)",
+      "value": "+370 684 72323",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own manufacturer business contact block",
+          "url": "https://www.igis.lt/kontaktai/",
+          "summary": "Own Contact manufacturer block explicitly publishes+37068472323 forIGIS atTinklų33-1Panevėžys; retain manufacturer corporatevoice, not Vilniusstore/employee/WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacturer, wood product, current product-family scope or public business contact original",
+        "url": "https://www.igis.lt/apie-mus/?lang=en"
+      },
+      {
+        "label": "Actual own manufacturer, wood product, current product-family scope or public business contact original",
+        "url": "https://www.igis.lt/produktas/medienos-dazai-taktika-wood/"
+      },
+      {
+        "label": "Actual own manufacturer, wood product, current product-family scope or public business contact original",
+        "url": "https://www.igis.lt/kontaktai/"
+      },
+      {
+        "label": "Actual own manufacturer, wood product, current product-family scope or public business contact original",
+        "url": "https://www.igis.lt/produktas/medienos-gruntas-taktika-wp/"
+      },
+      {
+        "label": "Actual own manufacturer, wood product, current product-family scope or public business contact original",
+        "url": "https://www.igis.lt/dazai/"
+      }
+    ]
+  },
   "npk-spetsemal-elektrougli": {
     "website": "https://spetsemal.ru/",
     "contactPage": "https://spetsemal.ru/contacts/",
@@ -22118,6 +22206,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "igis-panevezys",
   "npk-spetsemal-elektrougli",
   "krasko-dzerzhinsky",
   "teohim-moscow",

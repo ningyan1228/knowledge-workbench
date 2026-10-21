@@ -6,7 +6,7 @@ type LocatedLead = Pick<PublicLead, 'country' | 'countryZh'>
 
 const countriesByContinent: Partial<Record<Continent, string[]>> = {
   亚洲: ['China', 'India', 'Indonesia', 'Israel', 'Japan', 'Malaysia', 'Pakistan', 'Philippines', 'Singapore', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'Vietnam'],
-  欧洲: ['Belarus', 'Belgium', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Italy', 'Luxembourg', 'Netherlands', 'Poland', 'Russia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
+  欧洲: ['Belarus', 'Belgium', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Italy', 'Lithuania', 'Luxembourg', 'Netherlands', 'Poland', 'Russia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
   北美洲: ['Canada', 'Mexico', 'United States'],
   南美洲: ['Argentina', 'Brazil', 'Colombia'],
   非洲: ['South Africa'],
