@@ -7178,11 +7178,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "anova-production-vendargues",
+    "company": "ANOVA PRODUCTION SARL (Anova Bois)",
+    "productId": "nl-w1201",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Vendargues / Montpellier",
+    "latitude": 43.657,
+    "longitude": 3.969,
+    "legacyCompanyDescription": "Anova Production以AnovaBois品牌在法国制造木材维护/保护材料，VPT500为木质台面和桌面用水性清漆。城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网About明确Anova Bois在法国制造并从Vendargues制造仓库出货，法律声明对应ANOVA PRODUCTION SARL；实际VPT500为木质台面和桌面用水性清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立核对官网制造自述、法律主体、具体VPT500产品及完整可见用途导航和五项木材准备底涂分类。About明确在法国制造、在Vendargues制造仓库发货，产品开发与水性配方制造有原文；不是仅依据电商销售、法国制造图标或第三方店铺推定。VPT500原文明示木质台面/桌面用水性清漆，组成描述为水性聚氨酯树脂的成品清漆，不据此说其外售PU树脂原料，也不确认NL-W1201对其配方的相容性。保留真实木材清洁剂/浓缩清洁剂、脱灰剂、蜡、染色剂、疏水处理、杀虫/防真菌品、工具配件和施工底涂等配套经营，不称只有涂料或无添加配套。实际FondsDurs分类五项BP400/PAT400/PSP400/PUV400/PA400均用于木材表面施工后再覆涂，页面解释丙烯酸树脂渗透木材与涂刷工艺；其primaires accrochage称呼是成品表面底涂用途，不把它自动当作水性PO/CPO配方原料级附着促进剂。已读公司制造及可见品类、实际木材清漆和底涂用途未见水性聚烯烃乳液、PO/CPO分散体或同类原料附着促进剂外售证据；结论限实际已读公开范围，不声称所有SKU/全部TDS/SDS或未披露集团业务均已穷尽核查。法律声明明确AnovaBois品牌及anovabois网站属SARLANOVAPRODUCTION，RCSMontpellier797998648/TVAFR66797998648/70Impasse desMillepertuis34740Vendargues，与当前制造和业务信息对应；仅是官网自述身份，未冒称外部工商审计。AnovaBois/AnovaProduction/同一制造仓库、品牌和网店一个账户；不同anovacom/西班牙anovamachinery仅同名搜索命中，不借用联系人、海外工厂或并作同一集团。contact@和+33972562001既在首页公开业务联系区也在法律身份段刊载；法律声明另有隐私用途不改变已独立明示的一般业务入口，不把它冒称具名采购。电话不自动为WhatsApp。客户清漆食品接触/无毒、玩具标准、环保、UV防护、耐划和耐清洁剂等均为其产品网页自述，不转用为NLW认证或效果，亦不借顾客评论或IKEA预处理提示推定客户原料需求。潜在评估仅限NLW资料推荐木材底材及底涂/附着力促进用途，实际采购、用料、相容及性能均未确认。"
+    },
+    "contact": {
+      "label": "官网首页和法律声明公开公司邮箱及业务电话；无具名采购邮箱",
+      "email": "contact@anovabois.com",
+      "phone": "+33 9 72 56 20 01",
+      "contactUrl": "https://www.anovabois.com/fr/"
+    },
+    "source": {
+      "label": "Actual VPT500 water-based wood worktop/table varnish plus own French manufacture and legal identity",
+      "url": "https://www.anovabois.com/fr/vernis/1096-vernis-plan-de-travail-vpt500-cuisine-salle-de-bain-en-bois.html"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "anova-production-vendargues": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "novochema-levice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-eurotex-el-viso": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-monto-marines": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7529,6 +7558,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "anova-production-vendargues": {
+    "website": "https://www.anovabois.com/fr/",
+    "contactPage": "https://www.anovabois.com/fr/",
+    "address": "70 Impasse des Millepertuis,34740 Vendargues,France. Own Legal identifies SARL ANOVA PRODUCTION, RCS Montpellier797998648 / VATFR66797998648; current About attributes French manufacture and manufacturing warehouse in Vendargues. Self-published identity, not external registry audit; approximate city marker.",
+    "generalEmail": "contact@anovabois.com",
+    "generalEmailEvidence": {
+      "company": "ANOVA PRODUCTION SARL (Anova Bois)",
+      "value": "contact@anovabois.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual public company business information / legal identity",
+          "url": "https://www.anovabois.com/fr/",
+          "summary": "Own Home explicitly lists contact@anovabois.com in general contact/assistance information; own Legal independently repeats it with ANOVA PRODUCTION identity. General company business inbox, not named procurement."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+33 9 72 56 20 01",
+    "generalPhoneEvidence": {
+      "company": "ANOVA PRODUCTION SARL (Anova Bois)",
+      "value": "+33 9 72 56 20 01",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual public company business information / legal identity",
+          "url": "https://www.anovabois.com/fr/content/2-mentions-legales",
+          "summary": "Own Legal economic-operator block explicitly prints+33 9 72 56 20 01; Home gives matching09.72.56.20.01 general assistance number. Business voice, not WhatsApp or personal buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own French manufacturing, formulation and Vendargues manufacturing warehouse",
+        "url": "https://www.anovabois.com/fr/content/4-a-propos"
+      },
+      {
+        "label": "Actual VPT500 water-based wood worktop/table varnish",
+        "url": "https://www.anovabois.com/fr/vernis/1096-vernis-plan-de-travail-vpt500-cuisine-salle-de-bain-en-bois.html"
+      },
+      {
+        "label": "Own legal operator/brand ownership and exact company phone/mail",
+        "url": "https://www.anovabois.com/fr/content/2-mentions-legales"
+      },
+      {
+        "label": "Actual visible five finished wood primers/sealers and application process",
+        "url": "https://www.anovabois.com/fr/92-fonds-durs"
+      },
+      {
+        "label": "Own complete visible business category navigation and public business channels",
+        "url": "https://www.anovabois.com/fr/"
+      }
+    ]
+  },
   "novochema-levice": {
     "website": "https://novochema.sk/",
     "contactPage": "https://novochema.sk/kontakt/",
@@ -23556,6 +23644,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "anova-production-vendargues",
   "novochema-levice",
   "pinturas-eurotex-el-viso",
   "pinturas-monto-marines",

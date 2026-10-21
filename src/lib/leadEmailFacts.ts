@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "anova-production-vendargues": "Your VPT500 is a water-based clear varnish for wooden worktops and tables in kitchens and bathrooms.",
   "novochema-levice": "Your SYNPUR E topcoat is intended for machinery, construction equipment, bridges and structural applications.",
   "pinturas-eurotex-el-viso": "Your Pack Ligante Epoxi al Agua is a two-component protective epoxy primer for absorbent substrates.",
   "pinturas-monto-marines": "Your Barniz Universal Acqua is a water-based varnish for treating wood surfaces indoors and outdoors.",
