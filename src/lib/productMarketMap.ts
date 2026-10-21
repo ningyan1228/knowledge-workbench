@@ -6565,11 +6565,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "kvil-belgorod",
+    "company": "KVIL Paint Factory LLC (ООО «Завод Краски КВИЛ»)",
+    "productId": "nl-w1201",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Belgorod",
+    "latitude": 50.597,
+    "longitude": 36.588,
+    "legacyCompanyDescription": "KVIL自有装饰及工业成品涂料制造；БОР为其实际木器产品品牌，一个公司账户。地图为Belgorod城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确KVIL自有装饰与工业涂料生产；БОРAqua木材浸渍涂层以丙烯酸分散体、水、颜料和专用添加剂配制，用于木门窗等室内外木制品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6次具体原文：Home和真实БОРAqua叶页curl直读失败，native重读两页成功，官网链接Company和Contact成功，共4可读/2失败；失败不当已读。Company明确ОООЗаводКраскиКВИЛ自有装饰/工业成品生产与着色体系，产品原文明确丙烯酸分散体、水、颜料、专用添加剂及木门窗等室内外木材应用。可见自有业务范围是成品装饰、工业保护、木器、特种及着色体系，已读四原文可见范围未见外售水性聚烯烃乳液、PO/CPO分散体或原料级同类附着促进剂；产品组成中的丙烯酸分散体不是其销售原料的证据，成品附着/底涂用途也不自动等于上游同类聚烯烃原料。结论限当前已读Home/Company/Contact和具体成品及可见目录导航，未穷尽全部SKU、着色体系组成、TDS/SDS/PDF或全球业务，未虚构外购例外。原文生物防护、驱虫、UV过滤、耐水/干燥宣传及银纳米专利不转移我方，也不确认客户痛点或我方木材性能。KVIL/КВИЛ/БОР及地区销售一个账户，不把Brand或地址改名制造新增；当前main323/root339、全队列/frontier533按公司域品牌去重无同主体。Contact的公司general邮箱/总机有独立来源；具名员工虽然出现不同采购/销售角色，未额外核实当前身份，不借其姓名/个人式邮箱作为采购人，不把电话推定WhatsApp。NL-W1201仅资料支持的木材底涂/附着促进原料评估，现配方、现用、采购与时机未确认。"
+    },
+    "contact": {
+      "label": "官网公司邮箱、公司总机及联系页；无具名采购收件人",
+      "email": "info@kvil.ru",
+      "phone": "+7 4722 400167",
+      "contactUrl": "https://kvil.ru/contacts/"
+    },
+    "source": {
+      "label": "Own BOR Aqua water-based wood product, current KVIL manufacture and company contacts",
+      "url": "https://kvil.ru/catalog/dekorativnye-lkm/propitka-derevozashchitnaya-bor-aqua/"
+    },
+    "checkedAt": "2026-10-20"
+  },
+  {
+    "id": "russian-coatings-yaroslavl",
+    "company": "Russian Coatings JSC (АО «Русские краски»)",
+    "productId": "elo",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Yaroslavl",
+    "latitude": 57.626,
+    "longitude": 39.884,
+    "legacyCompanyDescription": "自有工业成品涂料与结合料研发生产；Prodecor、Strela、Liniya为实际工业业务品牌，关联业务入口合并一个账户。地图为Yaroslavl城市代表位置，非实测厂区坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有完整涂料制造、结合料研发及研究中心；官方关联工业业务域rk-industrial.ru列出Prodecor金属构件防护涂料范围。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "本轮6次原文请求：主站Home和Contactcurl失败，native重读两页成功，官方工业方向页和由该页实际链接rk-industrial.ru成功，共4可读/2失败。主站明确自有完整涂料制造、研究中心及自有结合料，工业页明确研发结合料与其成品涂料；Prodecor导航/官方工业首页明确金属构件防护成品范围。官网Contact及工业方向页把rk-industrial.ru归属该业务，子域自身明确АОРусскиеКраски和同一Yaroslavl地址，不把经销商页面当制造商。公开品类有Prodecor防护、Strela铁路、Liniya道路标线及底漆/底面合一/面漆/防火和施工辅助，未从未读叶页推断具体环氧牌号。ELO仅涂料/树脂改性潜在评估，不能将所选材料的环氧功能反写成客户当前配方。自有结合料研发、着色/辅助等事实不等于外售ELO/ESBO/环氧化植物油或同类生物基增塑剂；在本轮四原文可见范围未见所选同类原料外售。结论仅限当前制造与可见工业业务，不穷尽所有结合料、全球股权、TDS/SDS/PDF、品牌全部SKU或原料成分，无虚构外购例外。Ruskraski/RussianCoatings、官方工业域、Prodecor/Strela/Liniya、Contact披露的YaroslavskieKraski/YAZPK/Vika等关联业务路线按一个当前集团账户处理，不拆品牌/办事处制造新增，不根据联系人页虚构最终控制比例、历史Akzo股权变化或收购日期。宽泛旧查询rk.industrial点号作通配，误命中其他公司说明中的类似普通文本，最终以实际域名/明确公司和品牌复查当前main323/root339、全队列/frontier533无同主体。只保留真实公司共享邮箱info@及官网snab@供应管理部门邮箱，不借管理者姓名、具名式邮箱或电话宣称采购人；通用供应商入口不当ELO采购证明，电话非WhatsApp。"
+    },
+    "contact": {
+      "label": "官网公司邮箱、公司总机及联系页；无具名采购收件人",
+      "email": "info@ruskraski.ru",
+      "phone": "+7 4852 492708",
+      "contactUrl": "https://ruskraski.ru/contacts/"
+    },
+    "source": {
+      "label": "Own Prodecor protective coating range, Russian Coatings current manufacturing and corporate channels",
+      "url": "https://rk-industrial.ru/"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "russian-coatings-yaroslavl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "kvil-belgorod": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "lakokraska-lida": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mav-dzerzhinsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "litum-saint-petersburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -6894,6 +6952,139 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "russian-coatings-yaroslavl": {
+    "website": "https://ruskraski.ru/",
+    "contactPage": "https://ruskraski.ru/contacts/",
+    "address": "96 Bolshaya Fedorovskaya Street,Yaroslavl150002,Russia. Company public business address; city representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "info@ruskraski.ru",
+    "generalEmailEvidence": {
+      "company": "Russian Coatings JSC (АО «Русские краски»)",
+      "value": "info@ruskraski.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate public business channel",
+          "url": "https://ruskraski.ru/contacts/",
+          "summary": "Own Contacts explicitly publishes info@ruskraski.ru in central company reception and industrial/R&D blocks; retain as a general shared company route, not a named employee mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+7 4852 492708",
+    "generalPhoneEvidence": {
+      "company": "Russian Coatings JSC (АО «Русские краски»)",
+      "value": "+7 4852 492708",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate public business channel",
+          "url": "https://ruskraski.ru/contacts/",
+          "summary": "Own Contacts publishes+7(4852)49-27-08 as the company reception line and separately labels fax45-19-92. Store public company voice line only."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "snab@ruskraski.ru",
+        "source": {
+          "label": "Own supply-management department on current company Contacts",
+          "url": "https://ruskraski.ru/contacts/"
+        },
+        "emailEvidence": {
+          "company": "Russian Coatings JSC (АО «Русские краски»)",
+          "value": "snab@ruskraski.ru",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own corporate public business channel",
+              "url": "https://ruskraski.ru/contacts/",
+              "summary": "Own Contacts lists snab@ruskraski.ru under Управление снабжения (supply management); department mailbox, no named buyer, product demand or purchasing authority inferred."
+            }
+          ],
+          "verifiedAt": "2026-10-20"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://ruskraski.ru/"
+      },
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://ruskraski.ru/contacts/"
+      },
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://ruskraski.ru/trends/1-industrial/"
+      },
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://rk-industrial.ru/"
+      }
+    ]
+  },
+  "kvil-belgorod": {
+    "website": "https://kvil.ru/",
+    "contactPage": "https://kvil.ru/contacts/",
+    "address": "50 Studencheskaya Street,Belgorod308023,Russia. Public company business address; Belgorod city representative map position, not a surveyed factory coordinate.",
+    "generalEmail": "info@kvil.ru",
+    "generalEmailEvidence": {
+      "company": "KVIL Paint Factory LLC (ООО «Завод Краски КВИЛ»)",
+      "value": "info@kvil.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate public business channel",
+          "url": "https://kvil.ru/contacts/",
+          "summary": "Own Contacts corporate LLC block explicitly publishes info@kvil.ru. General company mailbox, not a named procurement/technical person."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+7 4722 400167",
+    "generalPhoneEvidence": {
+      "company": "KVIL Paint Factory LLC (ООО «Завод Краски КВИЛ»)",
+      "value": "+7 4722 400167",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate public business channel",
+          "url": "https://kvil.ru/contacts/",
+          "summary": "Own Contacts corporate block publishes+7(4722)400-167 as company telephone. Store this public voice line, not employee mobiles, fax or guessed WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://kvil.ru/"
+      },
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://kvil.ru/catalog/dekorativnye-lkm/propitka-derevozashchitnaya-bor-aqua/"
+      },
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://kvil.ru/company/"
+      },
+      {
+        "label": "Own actual product/manufacturing/selected-input business scope or corporate contact original",
+        "url": "https://kvil.ru/contacts/"
+      }
+    ]
+  },
   "lakokraska-lida": {
     "website": "https://lidalkm.by/en/",
     "contactPage": "https://lidalkm.by/en/",
@@ -21614,6 +21805,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "russian-coatings-yaroslavl",
+  "kvil-belgorod",
   "lakokraska-lida",
   "mav-dzerzhinsk",
   "litum-saint-petersburg",
