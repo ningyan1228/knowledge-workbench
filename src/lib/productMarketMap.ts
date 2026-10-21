@@ -6788,11 +6788,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "isomat-agios-athanasios",
+    "company": "ISOMAT S.A.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Agios Athanasios, Thessaloniki",
+    "latitude": 40.716,
+    "longitude": 22.728,
+    "legacyCompanyDescription": "ISOMAT自有研发制造工业环氧地坪等建筑化学系统；AgiosAthanasios为希腊总部制造地点，海外生产及商业分支按同一集团账户。地图仅城市代表位置。",
+    "fit": "可开发候选",
+    "signal": "ISOMAT自有Home明确集团自有希腊、罗马尼亚、塞尔维亚三生产工厂及研发中心；当前环氧工业地坪目录明确DUROFLOOR-11双组分环氧涂层/自流平地坪和DUROFLOOR-R辊涂环氧涂层；自有Contact明确希腊母公司总部及中央订单业务邮箱/电话。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "自有Home实际制造/研发/集团原文、当前八大可见经营类别、完整可见环氧工业地坪目录七个成品名称/简述及自有Contact独立读取。经营包括防水、外保温、漆与表面保护、瓷砖胶/填缝、混凝土/砂浆外加剂和修补、砌筑、工业地坪、微水泥装饰等；实际环氧目录为DUROFLOOR系列涂层/清漆/自流平及EPOMAX-MT灌浆成品。保留真实外加剂、树脂地坪/PU体系/底涂等业务，不笼统称无任何添加材料。当前已读类别与所列成品未见外售ELO、ESBO、环氧化植物油或同类生物基增塑/稳定输入原料；混凝土外加剂、施工环氧涂层和树脂地坪类别不自动等于同类环氧油销售。结论限实际已读公开范围，未穷尽所有叶级产品、SDS/配方或集团全球目录；AboutUs页只有导航/子页入口，不冒称已读详细公司正文，制造依据来自实际Home原文。第一次native官网请求403，随后明确计数的一次原生公开HTTP取得实质正文，未执行验证码/脚本；累计六请求，不重置预算。集团三制造国、四商业子公司、ISOMAT/DUROFLOOR/ISOFLEX与各地区域名按一个关联制造账户；不拆不同工厂、分支、品牌新增。AHK真实会员记录明确独立公司与域名，但其Edessa城市栏与自有总部地址不一致，地址以当前自有Contact的Ag.Athanasios为准，不借协会旧info@isomat.gr/576000替代当前官网渠道。已按最新main、全根目录、私有队列和已筛公司核对法人/域名/品牌，无同一账户。当前export@isomat.eu和+302310576005直接来自自有Contact的CentralOrders块，为共享公司商务入口，非具名采购负责人，非WhatsApp。客户成品认证、性能、施工用途和项目案例不转作我方ELO保证；仅按ELO资料提出环氧功能、生物基柔韧/树脂改性试验方向，现有相容、固化、采购需求/量/时机均未知。"
+    },
+    "contact": {
+      "label": "官网中央订单共享业务邮箱、电话及联系页；无具名采购收件人",
+      "email": "export@isomat.eu",
+      "phone": "+30 2310 576005",
+      "contactUrl": "https://www.isomat.eu/contact/"
+    },
+    "source": {
+      "label": "Own current ISOMAT Epoxies industrial-flooring catalogue, corroborated by actual own manufacturing/R&D Home",
+      "url": "https://www.isomat.eu/products/floorings/resin-floorings/epoxy/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "isomat-agios-athanasios": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "neotex-mandra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "igis-panevezys": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "npk-spetsemal-elektrougli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7125,6 +7154,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "isomat-agios-athanasios": {
+    "website": "https://www.isomat.eu/",
+    "contactPage": "https://www.isomat.eu/contact/",
+    "address": "Current own Contact headquarters:17th km Thessaloniki–Ag.Athanasios Road,P.O.BOX1043,57003Ag.Athanasios,Greece. Own Home identifies this headquarters as manufacturing/logistics/warehouse location; Romanian/Serbian production and other commercial branches kept within one group account. Approximate AgiosAthanasios city marker,not surveyed/geocodedfactoryentrance.",
+    "generalEmail": "export@isomat.eu",
+    "generalEmailEvidence": {
+      "company": "ISOMAT S.A.",
+      "value": "export@isomat.eu",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current ISOMAT Contact central-orders business block",
+          "url": "https://www.isomat.eu/contact/",
+          "summary": "Exact current own Contact central-orders block publishes export@isomat.eu for ISOMAT S.A.; shared company business/export route,not a named purchasing employee. Association info@isomat.gr was not substituted."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+30 2310 576005",
+    "generalPhoneEvidence": {
+      "company": "ISOMAT S.A.",
+      "value": "+30 2310 576005",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current ISOMAT Contact central-orders business block",
+          "url": "https://www.isomat.eu/contact/",
+          "summary": "Exact current own Contact CentralOrders block publishes+302310576005; telephone,notWhatsApp or namedbuyer. Technicalsupport+302105598700 remains a different departmental route."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual AHK company member record, discovery/corroboration only",
+        "url": "https://griechenland.ahk.de/el/mhele/kathalogos-melhon/isomat-s.a"
+      },
+      {
+        "label": "Actual own manufacturing, industrial finished-product catalogue, current public contact or navigation original",
+        "url": "https://www.isomat.eu/"
+      },
+      {
+        "label": "Actual own manufacturing, industrial finished-product catalogue, current public contact or navigation original",
+        "url": "https://www.isomat.eu/company/about-us/"
+      },
+      {
+        "label": "Actual own manufacturing, industrial finished-product catalogue, current public contact or navigation original",
+        "url": "https://www.isomat.eu/products/floorings/resin-floorings/epoxy/"
+      },
+      {
+        "label": "Actual own manufacturing, industrial finished-product catalogue, current public contact or navigation original",
+        "url": "https://www.isomat.eu/contact/"
+      }
+    ]
+  },
   "neotex-mandra": {
     "website": "https://neotex.gr/",
     "contactPage": "https://neotex.gr/contact/",
@@ -22294,6 +22382,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "isomat-agios-athanasios",
   "neotex-mandra",
   "igis-panevezys",
   "npk-spetsemal-elektrougli",

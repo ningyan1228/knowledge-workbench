@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "isomat-agios-athanasios": "Your DUROFLOOR-11 is a colored, two-component epoxy coating and self-leveling flooring.",
   "neotex-mandra": "Your Neopox Satine is a two-component epoxy coating for warehouse floors and interior metallic surfaces.",
   "igis-panevezys": "Your Taktika WP wood primer uses an acrylic dispersion and water before water-based finishing.",
   "npk-spetsemal-elektrougli": "Your production range includes epoxy materials and anticorrosion coatings for industrial use.",
