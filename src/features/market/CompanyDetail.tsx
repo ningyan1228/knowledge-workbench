@@ -159,8 +159,8 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, 
           <section className="company-overview-summary" aria-label="公司业务概览"><p className="company-lead-fact">{brief.fact}</p><div className="company-material-evaluation"><strong>可评估 {brief.product}</strong><p>{brief.evaluation}</p></div><small>适配待评估 · 采购未确认</small><ContactChannels lead={lead} /></section>
           <div ref={contactsRef} tabIndex={-1} aria-label="联系渠道">
           <div className="company-detail-links">{profile.website && <a href={profile.website} target="_blank" rel="noreferrer"><Globe2 size={15} />官网</a>}{profile.contactPage && <a href={profile.contactPage} target="_blank" rel="noreferrer"><FileText size={15} />Contact Page</a>}{profile.linkedIn && <a href={profile.linkedIn} target="_blank" rel="noreferrer"><Linkedin size={15} />LinkedIn</a>}{profile.whatsapp && <a href={profile.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} />WhatsApp</a>}</div>
-          <div className="company-detail-grid"><section><h3>公司公开联络</h3><CompanyBusinessContact lead={lead} onEmail={onEmail} compactEvidence /></section><section><h3>地址</h3><div className="detail-value"><MapPin size={15} /><span>{profile.address ?? `${lead.city}, ${lead.country}`}</span></div>{!profile.address && <p className="detail-empty">尚未从官方来源核验街道地址。</p>}</section></div>
-          <ContactEvidencePanel lead={lead} onEmail={onEmail} compactEvidence />
+          <div className="company-detail-grid"><section><h3>公司公开联络</h3><CompanyBusinessContact lead={lead} onEmail={onEmail} ledger={ledger} work={work} compactEvidence /></section><section><h3>地址</h3><div className="detail-value"><MapPin size={15} /><span>{profile.address ?? `${lead.city}, ${lead.country}`}</span></div>{!profile.address && <p className="detail-empty">尚未从官方来源核验街道地址。</p>}</section></div>
+          <ContactEvidencePanel lead={lead} onEmail={onEmail} ledger={ledger} work={work} compactEvidence />
           </div>
         </>}
         outreach={<>

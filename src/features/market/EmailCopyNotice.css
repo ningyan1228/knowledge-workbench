@@ -1,0 +1,4 @@
+.contact-email-copy { display:flex; align-items:center; flex-wrap:wrap; gap:5px; margin-left:auto; min-width:0 }
+.contact-email-copy .copy-value { display:inline-flex; align-items:center; gap:4px; font-size:11px; white-space:nowrap }
+.contact-copy-message { width:100%; max-width:280px; color:var(--muted); font-size:11px; line-height:1.6; overflow-wrap:anywhere }
+.contact-email-copy input { width:100%; min-width:0; padding:6px; color:var(--text); background:var(--surface-soft); border:1px solid var(--line); border-radius:5px }
