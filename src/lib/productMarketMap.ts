@@ -6816,11 +6816,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "duro-lak-laval",
+    "company": "duro-lak Inc.",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Laval, Quebec",
+    "latitude": 45.606,
+    "longitude": -73.713,
+    "legacyCompanyDescription": "duro-lak自有工业木器/金属/航空涂料制造及化学研发；Wood原目录明确水性类别。Laval业务地址与Toronto分支按一个账户，地图仅Laval城市代表点，未宣称工厂门址。",
+    "fit": "可开发候选",
+    "signal": "自有Home/About明确duro-lak制造工业木器等涂料及化学研发；实际Wood目录列WaterBase及封闭底涂、清漆、着色等成品类别；自有Contact说明公司咨询表单并列Laval业务电话/地址。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "完整读取自有法语Home、英文Wood/About/Contact/Metal/Brochures六份原文。About/Home明确工业木器/金属/航空成品涂料制造及化学研发；Wood列WaterBase、封闭底涂、预/后催化清漆、PU/聚酯/着色等，WaterBase是独立类别，不推定其余所有品类均为水性或编造具名水性SKU。Metal实际为底漆、IntermixPU、风干/烘烤漆、丙烯酸/聚酯、黄铜/玻璃涂层；Home航空范围为防火涂层/填充/聚酯/PU/缎光成品，Brochures仅可见防火成品体系及色卡标题，原附件/图片/认证未读取。已读制造和可见成品范围未见水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂外售；终端底漆/PU/聚酯类别不自动等于上游原料。结论限已读六页及其可见目录，不保证全部配方、原始TDS/SDS或全球集团业务。duro-lak/durolak、Laval/Montreal与Toronto/Mississauga地址/电话按一个账户去重；不凭相似名称认定与Envirolak、Canlak、DuroDesign或DuROCK存在股权关系，亦不为绕过已知Envirolak原料排除而换名。本轮main332/root348/完整队列/front559核对公司/域名/品牌/地址，无该同一业务账户。Contact有公司咨询表单说明及独立公司电话。原文列MariaCifelli客户服务与SylvainCharpentier副总裁的具名邮箱；不把这两邮箱改称通用/采购邮箱，未进一步确认当前任职，不纳入联系人/发送名单。现行页面仍保留2004–2022版权及过时45年营销年数，不把它当2026新投产/认证。NL-W1201仅资料支持的木材底涂/附着促进原料评估；不转移航空防火认证、木器附着/透明/柔韧效果，当前采购/相容及替代计划均未知。"
+    },
+    "contact": {
+      "label": "官网公司咨询联系页及Laval业务电话；未收录通用/部门邮箱，不冒用原文具名员工邮箱",
+      "phone": "+1 450 6874140",
+      "contactUrl": "https://durolak.com/en/contact"
+    },
+    "source": {
+      "label": "Own actual Wood finishing category list and About manufacturing/R&D evidence",
+      "url": "https://durolak.com/en/wood"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "vitex-aspropyrgos",
+    "company": "Vitex S.A.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Aspropyrgos, Attica",
+    "latitude": 38.061,
+    "longitude": 23.59,
+    "legacyCompanyDescription": "Vitex2026官方产品目录明确Aspropyrgos总部和自有生产，ChassisCoat为车辆底盘/框架防腐成品；技术支持入口注明NOORDERS，地图仅总部城市点。",
+    "fit": "可开发候选",
+    "signal": "2026自有ProductGuide明确VitexS.A.Aspropyrgos总部及五处生产设施；实际金属保护页列ChassisCoat用于车辆底盘/框架的溶剂型防腐涂层、SyntolSuper用于车辆/机械/金属构筑物；同目录末页明确技术支持邮箱、电话与NOORDERS限制。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "实际读取2026官方72页ProductGuide中制造前言/目录索引、可见建筑/木器/金属/底涂/专用成品范围及所查金属防护/配套页、技术支持末页；2021自有142页CSR读取到的企业/历史/市场/设施段作补充，未声称完整审读两份共214页、每个SKU或TDS/SDS。2026前言明确Aspropyrgos总部和五处生产设施，2021材料为四处；保留不同报告期/口径，不编造第五厂投产时间或把2021集团/人数当2026统计。实际ChassisCoat为车辆底盘/框架溶剂型防腐成品，SyntolSuper为车辆/机械/金属构件成品；保留AirDryHardener配套加硬/快干助剂、稀释剂、终端底涂和木油等业务，不笼统称无添加剂/油类。加硬/干燥用途、成品PU/醇酸/聚酯名称或木油不自动等于ELO/ESBO/环氧化植物油、生物基增塑/稳定输入销售。所读实际制造/可见产品和配套角色未见该同类输入外售，结论限已读范围，cachedfind未匹配不当不存在证明。Home返回真人验证墙，未通过或当作制造正文；三次PDF截图中两失败、一条仅图像引用未暴露像素，均计请求且不声称视觉审读。六次保守原文/渲染请求已到上限，未绕过验证/执行页面脚本；cachedPDF文本查找另留操作记录，不假装新增公司来源。Vitex/Vitextherm/Hermes及2021披露Yannidis/Yiannidis/Ermichrom旧名、Eumaria和海外分支按关联集团保守去重，不拆五厂/国家/品牌新增；2021更名叙述不改为2026事项。main332/root348/私队列/front559全量核对无同集团账户。公开联系入口为实际官方2026目录的技术支持邮箱/电话，明确NOORDERS，不改称订单/采购部门，不猜vitex@邮箱；官网HTML验证墙未冒称已访问可用表单。ELO只按资料的环氧功能/生物基柔韧/树脂改性提出潜在制造配方评估，不声称客户当前化学体系为环氧，也不转移成品防腐、耐燃油、干燥、认证、降本或采购需求。"
+    },
+    "contact": {
+      "label": "2026官网产品目录技术支持邮箱/电话（NO ORDERS，不接订单）；无具名采购或订单邮箱",
+      "email": "customercare@vitex.gr",
+      "phone": "+30 210 5589400",
+      "contactUrl": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf"
+    },
+    "source": {
+      "label": "Own 2026 Product Guide manufacturing preface, Chassis Coat/Syntol Super metal-protection product pages and technical-contact footer",
+      "url": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vitex-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "duro-lak-laval": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "isomat-agios-athanasios": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "neotex-mandra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "igis-panevezys": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7154,6 +7211,111 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vitex-aspropyrgos": {
+    "website": "https://www.vitex.gr/",
+    "contactPage": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf",
+    "address": "Own2026ProductGuide states headquartersAspropyrgos,Attica,Greece; no currentstreetentrance asserted. Own2021CSR separatelydocuments olderfourfacilityscope andsubsidiaries,not currentnewplantcommissioning. Approximate Aspropyrgoscitymarker.",
+    "generalEmail": "",
+    "generalPhone": "+30 210 5589400",
+    "generalPhoneEvidence": {
+      "company": "Vitex S.A.",
+      "value": "+30 210 5589400",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business channel",
+          "url": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf",
+          "summary": "Actual same2026Guide technicalsupport footer prints210.5589.400; Greekcountry context normalizes to+302105589400. Technicaldepartmentvoice,notWhatsApp/namedbuyer/orderline."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "customercare@vitex.gr",
+        "source": {
+          "label": "Own 2026 Product Guide technical support — NO ORDERS",
+          "url": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf"
+        },
+        "emailEvidence": {
+          "company": "Vitex S.A.",
+          "value": "customercare@vitex.gr",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own published corporate business channel",
+              "url": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf",
+              "summary": "Actual own ProductGuide2026 p72 (zero-based71) explicitly publishescustomercare@vitex.gr asTechnicalSupport,Mon–Fri09:00–15:00AthensTime,NOORDERS. Departmentaltechnicalinquiryroute,not purchasing/procurement ororderacceptance; no namedperson/sourcingresponsibility claimed."
+            }
+          ],
+          "verifiedAt": "2026-10-21"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf"
+      },
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://www.vitex.gr/wp-content/uploads/2024/06/Vitex_EKE_2021_GR.pdf"
+      }
+    ]
+  },
+  "duro-lak-laval": {
+    "website": "https://durolak.com/",
+    "contactPage": "https://durolak.com/en/contact",
+    "address": "Published Montreal/Laval business contact:3020boulevardLeCorbusier,Laval,QC H7L3W2,Canada. Toronto branch1065StaceyCourt,Mississauga,ON L4W2X7 is oneassociatedbusiness account,not anothercustomer. Approximate Lavalcitymarker,not a surveyedfactoryentrance.",
+    "generalEmail": "",
+    "generalPhone": "+1 450 6874140",
+    "generalPhoneEvidence": {
+      "company": "duro-lak Inc.",
+      "value": "+1 450 6874140",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business channel",
+          "url": "https://durolak.com/en/contact",
+          "summary": "Actual own Contact Montreal/Laval block publishes tel:(450)687-4140 separately from fax687-9886 and Toronto branch phone. Corporate public voice,notWhatsApp or named procurement."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://durolak.com/fr/acceuil"
+      },
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://durolak.com/en/wood"
+      },
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://durolak.com/en/about"
+      },
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://durolak.com/en/contact"
+      },
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://durolak.com/en/metal"
+      },
+      {
+        "label": "Actual own manufacturer, downstream product family, catalogue/report or business-channel original",
+        "url": "https://durolak.com/en/brochures-and-documentation"
+      }
+    ]
+  },
   "isomat-agios-athanasios": {
     "website": "https://www.isomat.eu/",
     "contactPage": "https://www.isomat.eu/contact/",
@@ -22382,6 +22544,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vitex-aspropyrgos",
+  "duro-lak-laval",
   "isomat-agios-athanasios",
   "neotex-mandra",
   "igis-panevezys",
