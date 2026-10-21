@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "quimica-pomiq-ciudad-mexico": "You develop marine coatings for ship hulls, decks and port structures.",
+  "colorchimica-pescantina": "Your LEGNOPIÙ 33200 is a water-based acrylic wood treatment for indoor and outdoor use.",
   "anova-production-vendargues": "Your VPT500 is a water-based clear varnish for wooden worktops and tables in kitchens and bathrooms.",
   "novochema-levice": "Your SYNPUR E topcoat is intended for machinery, construction equipment, bridges and structural applications.",
   "pinturas-eurotex-el-viso": "Your Pack Ligante Epoxi al Agua is a two-component protective epoxy primer for absorbent substrates.",

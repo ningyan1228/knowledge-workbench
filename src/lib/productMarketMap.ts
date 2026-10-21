@@ -7206,11 +7206,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "colorchimica-pescantina",
+    "company": "Colorchimica (Pescantina)",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Pescantina / Verona",
+    "latitude": 45.483,
+    "longitude": 10.869,
+    "legacyCompanyDescription": "意大利Colorchimica自有制造和研发，LEGNOPIÙ33200为水性丙烯酸木材处理成品；城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网About说明自有工厂、生产及研发，Wood分类明确LEGNOPIÙ 33200为室内外木材用水性丙烯酸处理成品；Contact对应Pescantina公司和实验室业务入口。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立审读实际官网Home、About、Wood、水性调色Binder、工业SpecialProducts及Contact六页。自有制造、研发及木器水性产品有原文，不把Pecchio零售检索结果、同名Reggello/Prato化学品贸易商或哥伦比亚Colorquimica混入该意大利公司。LEGNOPIÙ33200分类明确水性丙烯酸木材成品，其他水性木器列33250/33260–33261等；只采用实际分类可见短描述，未冒称已逐项读取叶页或PDF。实际水性Binders六项是快干/丙烯酸成品磁漆、抗锈底漆和环氧地坪面漆的调色基料，页面描述施工用途与90:10色浆比例；不是仅凭Binder名称宣称不销售任何配方输入，也未把丙烯酸或环氧调色漆基误认为水性PO/CPO。实际SpecialProducts仅可见金属装饰丙烯酸成品与临时保护可剥漆。保留调色系统、色浆、汽车resins/填料/清漆/稀释剂、工业防护漆和DIY木材护理等真实配套角色；已读制造、木器、水性Binder与工业特种范围未发现对外销售水性聚烯烃乳液、PO/CPO分散体或原料级附着力促进剂证据，结论限已读公开范围，不声称穷尽所有汽车辅助品/SKU/SDS及未披露股权。Home及About的45/44年和1980创立、2019投资/2020产能扩建、2024产量保留原年，不当作2026新投产/采购计划。Colorchimica/已披露Bascol、MrMixIt、LEGNOPIÙ及Pescantina制造和品牌只计一个账户；没有官方法人后缀或外部工商审计证据时不猜Srl或VAT。Contact实验室laboratorio@为部门邮箱，无具名采购/研发人员身份推断；主电话+390456766788有完整明示，底部更短号码不静默拼接或替代。木材应用仅支持NLW底涂/附着力促进评估，不保证与客户丙烯酸体系相容，亦不套用客户耐候/UV/产量性能。"
+    },
+    "contact": {
+      "label": "已核验官网公开公司业务渠道；无具名采购邮箱",
+      "email": "info@colorchimica.com",
+      "phone": "+39 045 676 6788",
+      "contactUrl": "https://colorchimica.com/contact/"
+    },
+    "source": {
+      "label": "Own verified downstream product/manufacture and public business evidence",
+      "url": "https://colorchimica.com/category/commercial-and-diy/wood/"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "quimica-pomiq-ciudad-mexico",
+    "company": "Química POMIQ",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Ciudad de México / Tláhuac",
+    "latitude": 19.433,
+    "longitude": -99.133,
+    "legacyCompanyDescription": "墨西哥QuímicaPOMIQ自主制造工业及海工防护涂料；官网公开Tláhuac业务地区，地图仅MexicoCity城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网明确Química POMIQ自主制造和开发工业防护涂料；实际Marinas产品介绍列船壳、甲板及港口结构涂料，首页公开同公司供应商联系邮箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立审读官网Home实际完整正文/可见产品链接、Marine、Epoxy、OilAnticorrosive及Privacy五页；同轮COMECI仅提供成品涂料施工服务，未证明自配制造，另行排除，不能借其制造/联系人。POMIQ自己明确somosfabricantes/制造和开发工业涂料，海工页具体列船壳、甲板、船内及港口结构防护成品，不仅凭decorative/generalpaint词入库。环氧页明确为已配制可施工成品涂料，油性防腐页明确为溶剂型树脂制成的油性防腐漆；oil-based不被误写为亚麻油/ELO化学体系，epoxy不被自动当作ELO/ESBO。Home可见目录均为聚氨酯、环氧、工业、海工、高温、交通、食品级等成品涂料和配方定制；保留Privacy泛称化学供应服务的事实，不声称公司没有任何其他化学经营。已读范围未发现ELO、ESBO、环氧化植物油、生物增塑剂或同类添加剂原料对外销售证据，结论限实际可见范围，不冒称所有SKU/SDS或外部工商股权审计。采用QuímicaPOMIQ公开公司名称及quimicapomiq域名，一个账户；未披露法定后缀、税号、父集团或详细门牌不编造。Home只有Tláhuac、CiudaddeMéxico、邮编13200，Privacy2024-03-05的domicilioPoractualizar占位如实保留，不把缺失门牌当作已核实工厂地址；地图仅城市代表点。Home明确info@为Contacto para proveedores供应商联系入口，ventas@为销售入口；Privacy另把ventas@用于隐私，不冒称其为采购负责人。采用info@一般公司供应商业务路线，无具名采购身份/邮箱猜测。页面一般国际标准/FDA/食品接触/防腐保证/多年保护及客户评论均未作独立认证验证，不转用为ELO相容、固化、耐蚀或合规性能；采购需求、数量、时机和具体原料体系均未确认。"
+    },
+    "contact": {
+      "label": "已核验官网公开公司业务渠道；无具名采购邮箱",
+      "email": "info@quimicapomiq.com",
+      "phone": "+52 55 5963 3802",
+      "contactUrl": "https://quimicapomiq.com/"
+    },
+    "source": {
+      "label": "Own verified downstream product/manufacture and public business evidence",
+      "url": "https://quimicapomiq.com/pinturas-marinas/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "quimica-pomiq-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "colorchimica-pescantina": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anova-production-vendargues": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "novochema-levice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-eurotex-el-viso": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7558,6 +7616,169 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "quimica-pomiq-ciudad-mexico": {
+    "website": "https://quimicapomiq.com/",
+    "contactPage": "https://quimicapomiq.com/",
+    "address": "C.P.13200,Alcaldía Tláhuac,Ciudad de México,Mexico (own public business location). No street/number or exact plant point disclosed. Own Privacy dated2024-03-05 still says domicilio Por actualizar; no complete factory address or legal suffix inferred. Approximate Mexico City marker.",
+    "generalEmail": "info@quimicapomiq.com",
+    "generalEmailEvidence": {
+      "company": "Química POMIQ",
+      "value": "info@quimicapomiq.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public company business channel",
+          "url": "https://quimicapomiq.com/",
+          "summary": "Own Home explicitly labels Contacto para proveedores and prints info@quimicapomiq.com; company supplier-contact route, not a named purchasing officer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+52 55 5963 3802",
+    "generalPhoneEvidence": {
+      "company": "Química POMIQ",
+      "value": "+52 55 5963 3802",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public company business channel",
+          "url": "https://quimicapomiq.com/",
+          "summary": "Own Home Telephone entry explicitly prints(52)55 5963 3802. Public business voice; not automatically WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacture, actual product categories and supplier contact channel",
+        "url": "https://quimicapomiq.com/"
+      },
+      {
+        "label": "Own marine coating development and ship/port applications",
+        "url": "https://quimicapomiq.com/pinturas-marinas/"
+      },
+      {
+        "label": "Own formulated industrial epoxy paint and manufacturing statements",
+        "url": "https://quimicapomiq.com/pintura-epoxica/"
+      },
+      {
+        "label": "Own oil-based anticorrosive finished paint distinguished from raw oil",
+        "url": "https://quimicapomiq.com/pintura-de-aceite-anticorrosiva/"
+      },
+      {
+        "label": "Actual self-published company privacy notice, incomplete domicile retained",
+        "url": "https://quimicapomiq.com/politica-privacidad/"
+      }
+    ]
+  },
+  "colorchimica-pescantina": {
+    "website": "https://colorchimica.com/",
+    "contactPage": "https://colorchimica.com/contact/",
+    "address": "Via Meucci,16,Loc.Settimo,37026 Pescantina(VR),Italy. Own factory/production/laboratory described in About. Public trading/company name preserved; no legal suffix/VAT or exact factory GPS inferred. Approximate city marker.",
+    "generalEmail": "info@colorchimica.com",
+    "generalEmailEvidence": {
+      "company": "Colorchimica (Pescantina)",
+      "value": "info@colorchimica.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public company business channel",
+          "url": "https://colorchimica.com/contact/",
+          "summary": "Contact explicitly identifies general company email alongside Pescantina address; not a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+39 045 676 6788",
+    "generalPhoneEvidence": {
+      "company": "Colorchimica (Pescantina)",
+      "value": "+39 045 676 6788",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public company business channel",
+          "url": "https://colorchimica.com/contact/",
+          "summary": "Primary Phone entry explicitly prints+39.045.676.67.88. The lower shortened call number is inconsistent and not used. Business voice, not WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "laboratorio@colorchimica.com",
+        "source": {
+          "label": "Own Research and Development Laboratory entry",
+          "url": "https://colorchimica.com/contact/"
+        },
+        "emailEvidence": {
+          "company": "Colorchimica (Pescantina)",
+          "value": "laboratorio@colorchimica.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual own public company business channel",
+              "url": "https://colorchimica.com/contact/",
+              "summary": "Research and Development Laboratory explicitly owns laboratorio@colorchimica.com; department/team route, no named person."
+            }
+          ],
+          "verifiedAt": "2026-10-21"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "commerciale@colorchimica.com",
+        "source": {
+          "label": "Own Sales Department entry",
+          "url": "https://colorchimica.com/contact/"
+        },
+        "emailEvidence": {
+          "company": "Colorchimica (Pescantina)",
+          "value": "commerciale@colorchimica.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual own public company business channel",
+              "url": "https://colorchimica.com/contact/",
+              "summary": "Explicit Sales Department mailbox, not a purchasing manager or named personal channel."
+            }
+          ],
+          "verifiedAt": "2026-10-21"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own current factory, production and research",
+        "url": "https://colorchimica.com/about-colorchimica/"
+      },
+      {
+        "label": "Actual visible waterborne wood-treatment products",
+        "url": "https://colorchimica.com/category/commercial-and-diy/wood/"
+      },
+      {
+        "label": "Actual water-based tinting binders and stated downstream functions",
+        "url": "https://colorchimica.com/category/tinting-systems/water-based-binders/"
+      },
+      {
+        "label": "Actual industrial special products",
+        "url": "https://colorchimica.com/category/industry-and-anti-corrosion/special-products/"
+      },
+      {
+        "label": "Own verified business and laboratory channels",
+        "url": "https://colorchimica.com/contact/"
+      }
+    ]
+  },
   "anova-production-vendargues": {
     "website": "https://www.anovabois.com/fr/",
     "contactPage": "https://www.anovabois.com/fr/",
@@ -23644,6 +23865,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "quimica-pomiq-ciudad-mexico",
+  "colorchimica-pescantina",
   "anova-production-vendargues",
   "novochema-levice",
   "pinturas-eurotex-el-viso",
