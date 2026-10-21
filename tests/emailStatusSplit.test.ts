@@ -16,17 +16,18 @@ const invalid: PublicLead = { ...missing, id: 'invalid-email', company: 'Invalid
 const send: OutreachSend = { id: 'fixture', company_key: outreachCompanyKey(missing), company_name: missing.company, lead_id: missing.id, product_id: 'nl-w1201', recipient_email: 'historical@example.org', sent_on: '2026-10-20', sent_by: null, created_at: '2026-10-20T01:00:00Z', voided_at: null }
 const filter = (status: BusinessFilters['sendStatus'], leads = [email, missing, invalid], sends: OutreachSend[] | null = []) => filterWorkbenchLeads(leads, { ...emptyBusinessFilters, sendStatus: status }, {}, sends, '2026-10-20')
 
-describe('email sending filter separates customers without a verified inbox', () => {
-  it('partitions unsent leads by the actual recipient selection, not merely a stored string', () => {
+describe('sending records are independent of the current inbox', () => {
+  it('includes all no-record companies while keeping verified inbox gaps separately available', () => {
     expect(selectBusinessRecipient(email)).toBeTruthy()
     expect(selectBusinessRecipient(missing)).toBeNull()
     expect(selectBusinessRecipient(invalid)).toBeNull()
-    expect(filter('unsent')).toEqual([email])
+    expect(filter('unsent')).toEqual(expect.arrayContaining([email, missing, invalid]))
+    expect(filter('unsent')).toHaveLength(3)
     expect(filter('needs-email')).toEqual(expect.arrayContaining([missing, invalid]))
     expect(filter('needs-email')).toHaveLength(2)
     expect(filter('all')).toHaveLength(3)
     const unverified = { ...invalid, profile: { ...invalid.profile, generalEmail: 'sales@example.org', generalEmailEvidence: { company: invalid.company, kind: 'general' as const, verifiedAt: '2026-10-20', sources: [] } } }
-    expect(filter('unsent', [unverified])).toEqual([])
+    expect(filter('unsent', [unverified])).toEqual([unverified])
     expect(filter('needs-email', [unverified])).toEqual([unverified])
   })
   it('keeps active historical sends in sent even after losing the current inbox, across products', () => {
@@ -46,12 +47,14 @@ describe('email sending filter separates customers without a verified inbox', ()
     expect(developmentEmailVersion(missing, []).email?.body).toContain('Your team formulates industrial protective coatings')
     expect(developmentEmailVersion(missing, []).email?.subject).toBeTruthy()
   })
-  it('exposes separate dropdown choices and disables them until shared history connects', () => {
+  it('exposes separate sending, channel and completeness dimensions even when history fails', () => {
     const render = (status: OutreachLedger['status']) => renderToStaticMarkup(createElement(LeadBusinessControls, { leads:[email, missing], filters:emptyBusinessFilters, onChange:()=>{}, work:{status:'ready',records:{},lists:[]} as unknown as LeadWork, ledger:{status,sends:[]} as unknown as OutreachLedger, allCustomerCount:2, allCustomersActive:true, onShowAll:()=>{} }))
     const markup = render('ready')
-    expect(markup).toContain('<option value="unsent">未发（已有核验邮箱）</option>')
-    expect(markup).toContain('<option value="needs-email">待补邮箱（未发）</option>')
-    expect(markup).not.toContain('未发（无发送记录）')
-    expect(render('error')).toMatch(/aria-label="开发信发送"[^>]*disabled/)
+    for (const label of ['发送记录', '可用联系渠道', '资料完整度']) expect(markup).toContain(`aria-label="${label}"`)
+    expect(markup).toContain('未查到发送记录')
+    expect(markup).toContain('邮箱待补')
+    expect(markup).not.toContain('待补邮箱（未发）')
+    expect(render('error')).toMatch(/data-dimension="sendStatus" data-filter="unsent"[^>]*disabled/)
+    expect(render('error')).not.toMatch(/data-dimension="completeness" data-filter="needs-email"[^>]*disabled/)
   })
 })

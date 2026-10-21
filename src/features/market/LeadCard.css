@@ -11,7 +11,7 @@
 .customer-card-dates { display:flex;align-items:flex-start;gap:6px;padding:11px 16px;color:var(--muted);font-size:11px;line-height:1.8 }
 .customer-card-dates svg { flex-shrink:0;margin-top:3px }.customer-card-dates time { white-space:nowrap }
 .customer-card-progress { display:block;width:100%;padding:0 16px 10px;border:0;background:transparent;color:var(--muted);text-align:left;font:inherit;font-size:12px;line-height:1.6;cursor:pointer }
-.customer-card-actions { display:flex;align-items:center;gap:14px;padding:10px 16px;border-top:1px solid var(--line) }
+.customer-card-actions { display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;padding:10px 16px;border-top:1px solid var(--line) }
 .customer-card-actions button,.customer-card-actions a { display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:32px;padding:0;border:0;background:transparent;color:var(--blue);font:inherit;font-size:12px;text-decoration:none;cursor:pointer }
 .customer-card-actions .customer-card-open { padding:5px 10px;border-radius:7px;background:var(--blue-soft);font-weight:650 }
 .customer-card-actions .customer-card-favorite { width:32px;margin-left:auto;color:#b7791f }.customer-card-favorite:disabled { opacity:.45;cursor:default }
@@ -58,4 +58,15 @@
 @media(max-width:620px) {
   .customer-brief-row { grid-template-columns:48px minmax(0,1fr);gap:6px }
   .customer-contact-channels>a,.customer-list-table .customer-contact-channels>a { min-height:32px }
+}
+.customer-card-actions .customer-card-prepare,.customer-list-table .customer-card-prepare { display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:30px;padding:5px 9px;border:0;border-radius:6px;background:var(--blue);color:var(--surface);font:inherit;font-size:11px;font-weight:650;line-height:1.5;white-space:nowrap;cursor:pointer }
+.customer-card-actions .customer-card-prepare:hover,.customer-list-table .customer-card-prepare:hover { filter:brightness(.95) }
+.market-workspace-page .mac-customer-map .customer-card-actions .customer-card-prepare { padding:5px 9px;color:#fff;background:#2563eb }
+.customer-list-table .customer-card-contact { min-height:30px;padding:0;border:0;background:transparent;color:var(--blue);font:inherit;font-size:11px;cursor:pointer }
+.customer-row-actions .customer-card-prepare { flex-basis:100% }
+.customer-list-table .customer-row-actions>div { gap:5px 8px }
+.customer-list-table .customer-row-detail { font-size:11px }
+@media(max-width:620px) {
+  .customer-card-actions .customer-card-prepare,.customer-list-table .customer-card-prepare { min-height:34px }
+  .market-workspace-page .mac-customer-map .customer-lead-card .customer-card-actions { gap:6px }
 }

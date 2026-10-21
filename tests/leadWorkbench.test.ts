@@ -18,7 +18,7 @@ describe('customer development workspace', () => {
     expect(developmentPriority({ ...lead, leadEligible: false }).score).toBe(0)
     const missing = { ...lead, profile: { contacts: [], departmentEmails: [], sources: [] }, companyEvidence: { ...lead.companyEvidence, statement: '', sourceUrl: '', verifiedAt: '' }, demandSideReason: '', supplierCompetitorCheck: undefined }
     expect(developmentPriority(missing).score).toBeLessThan(60)
-    expect(contactChannels(missing)).toEqual({ email: false, form: false, phone: false, named: false })
+    expect(contactChannels(missing)).toEqual({ email: false, form: false, phone: false, named: false, linkedin: false, whatsapp: false })
   })
   it('keeps unknown private or sending history distinct from an unsent customer', () => {
     expect(effectiveStage(lead, null, [])).toBe('unknown')
@@ -65,7 +65,7 @@ describe('customer development workspace', () => {
     const voided = { ...send, voided_at: '2026-10-12T01:00:00Z' }
     expect(filterWorkbenchLeads(leads, sentFilter, {}, [voided], '2026-10-12')).toEqual([])
     expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toEqual(expect.arrayContaining([lead, other]))
-    expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toHaveLength(2)
+    expect(filterWorkbenchLeads(leads, unsentFilter, {}, [voided], '2026-10-12')).toHaveLength(3)
     // This synthetic cross-product record no longer has a matching qualified
     // recipient; missing or inconsistent recipient evidence belongs separately.
     expect(filterWorkbenchLeads(leads, { ...emptyBusinessFilters, sendStatus: 'needs-email' }, {}, [voided], '2026-10-12')).toEqual([second])

@@ -6,6 +6,7 @@ import { timelineLeads, type TimelineOrder } from '../../lib/leadTimeline'
 import { LeadTimelineControls } from './LeadTimelineControls'
 import { filterLeadGeography, geographyOptions } from '../../lib/leadGeography'
 import { CompanyDetail } from './CompanyDetail'
+import type { CompanyDetailOpenTarget } from './CompanyDetailSections'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
 import { firstContactPlan, firstContactExport } from '../../lib/customerDevelopment'
 import { CustomerDevelopmentPanel } from './CustomerDevelopmentPanel'
@@ -54,6 +55,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const [selectedLead, setSelectedLead] = useState<PublicLead | null>(null)
   const [hoveredLead, setHoveredLead] = useState<PublicLead | null>(null)
   const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
+  const [detailTarget, setDetailTarget] = useState<CompanyDetailOpenTarget | undefined>()
   const [order, setOrder] = useState<TimelineOrder>('newest'), [day, setDay] = useState('all')
   const [continent, setContinent] = useState('all'), [country, setCountry] = useState('all')
   const [filters, setFilters] = useState<BusinessFilters>({ ...emptyBusinessFilters })
@@ -66,7 +68,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const businessLeads = useMemo(() => filterWorkbenchLeads(regionalLeads, filters, records, sends, today, order), [regionalLeads, filters, records, sends, today, order])
   const matching = useMemo(() => timelineLeads(businessLeads, order, day, today).sort((a, b) => businessLeads.indexOf(a) - businessLeads.indexOf(b)), [businessLeads, order, day, today])
   const resetFocus = () => { setSelectedLead(null); setHoveredLead(null); setOverviewToken((value) => value + 1) }
-  const openLeadDetail = (lead: PublicLead) => { setHoveredLead(null); setSelectedLead({ ...lead }); setDetailLead(lead) }
+  const openLeadDetail = (lead: PublicLead, target?: CompanyDetailOpenTarget) => { setDetailTarget(target); setHoveredLead(null); setSelectedLead({ ...lead }); setDetailLead(lead) }
   useEffect(() => { setFilters((current) => ({ ...current, industry: 'all', application: 'all' })); setDetailLead(null); resetFocus() }, [productId])
   useEffect(() => {
     setFilters((current) => {
@@ -74,7 +76,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
       return work.status !== 'ready' ? { ...current, preparation: current.preparation === 'ready' ? 'all' : current.preparation, stage: 'all', list: 'all', queue: 'all' } : listMissing ? { ...current, list: 'all' } : current
     })
   }, [work.status, work.lists])
-  useEffect(() => { if (ledger.status !== 'ready') setFilters((current) => ({ ...current, sendStatus: 'all', preparation: 'all', queue: current.queue === 'priority' || current.queue === 'recent' ? 'all' : current.queue })) }, [ledger.status])
+  useEffect(() => { if (ledger.status !== 'ready') setFilters((current) => ({ ...current, preparation: 'all', queue: current.queue === 'priority' || current.queue === 'recent' ? 'all' : current.queue })) }, [ledger.status])
   useEffect(() => { if (country !== 'all' && !options.countries.some((item) => item.value === country)) setCountry('all') }, [options, country])
   useEffect(() => {
     if (selectedLead && !matching.some((lead) => lead.id === selectedLead.id)) setSelectedLead(null)
@@ -119,7 +121,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     <div className={view === 'map' ? 'customer-map-view' : 'work-list-view'}>
       {view === 'map' ? <CustomerMapWorkspace leads={matching} selectedLead={selectedLead} hoveredLead={hoveredLead} onSelectLead={setSelectedLead} onHighlight={setHoveredLead} onOpenDetail={openLeadDetail} detailOpen={Boolean(detailLead)} overviewToken={overviewToken} onOverview={resetFocus} onReturnRegions={continent !== 'all' || country !== 'all' ? returnAllRegions : undefined} ledger={ledger} work={work} /> : matching.length > 0 && <LeadList leads={matching} selectedLead={selectedLead} onHighlight={setHoveredLead} onSelect={openLeadDetail} onOpenDetail={openLeadDetail} ledger={ledger} work={work} />}
       {!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选没有符合条件的客户</strong><span>可调整业务条件、日期或地区，或点击“清除筛选”。</span></div>}
-    </div><CompanyDetail initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={openLeadDetail} />
+    </div><CompanyDetail initialTarget={detailTarget} initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={(lead) => openLeadDetail(lead, detailTarget)} />
   </section>
 }
 

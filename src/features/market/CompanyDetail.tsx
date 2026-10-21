@@ -5,12 +5,12 @@ import { recordedTimeLabel } from '../../lib/leadTimeline'
 import { localDateToday, outreachCompanyKey } from '../../lib/outreachLedger'
 import { businessRecipient } from '../../lib/customerDevelopment'
 import { contactAssessment } from '../../lib/contactEvidence'
-import { DevelopmentEmailPanel } from './DevelopmentEmailPanel'
+import { DevelopmentEmailPreparation } from './DevelopmentEmailPreparation'
 import { LeadEvidenceSummary, LeadPrivatePanel } from './LeadWorkbench'
 import { CompanyBusinessContact, ContactEvidencePanel } from './ContactEvidencePanel'
 import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
-import { CompanyDetailSections, type CompanyDetailSectionId } from './CompanyDetailSections'
+import { CompanyDetailSections, type CompanyDetailOpenTarget, type CompanyDetailSectionId } from './CompanyDetailSections'
 import { OutreachStatusBadge } from './OutreachStatusBadge'
 import { CustomerContactStatus } from './CustomerContactStatus'
 import './CompanyDetailDrawer.css'
@@ -83,11 +83,13 @@ function OutreachSendPanel({ lead, ledger }: { lead: PublicLead; ledger: Outreac
   </section>
 }
 
-export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, initialSection }: { initialSection?: CompanyDetailSectionId; lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger; work: LeadWork; leads: PublicLead[]; onNavigate: (lead: PublicLead) => void }) {
+export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, initialSection, initialTarget }: { initialTarget?: CompanyDetailOpenTarget; initialSection?: CompanyDetailSectionId; lead: PublicLead | null; onClose: () => void; ledger: OutreachLedger; work: LeadWork; leads: PublicLead[]; onNavigate: (lead: PublicLead) => void }) {
+  const requestedSection = initialTarget === 'outreach' || initialTarget === 'send-record' ? 'outreach' : initialTarget ? 'overview' : initialSection
   const [dirty, setDirty] = useState(false)
-  const [activeSection, setActiveSection] = useState<CompanyDetailSectionId>('overview')
+  const [activeSection, setActiveSection] = useState<CompanyDetailSectionId>(requestedSection ?? 'overview')
   const bodyRef = useRef<HTMLDivElement>(null)
   const sendRecordRef = useRef<HTMLDetailsElement>(null)
+  const contactsRef = useRef<HTMLDivElement>(null)
   const openSendRecord = () => {
     const record = sendRecordRef.current
     if (!record) return
@@ -103,7 +105,12 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, 
   closeRef.current = requestClose
   const opened = Boolean(lead)
   useEffect(() => { setDirty(false); bodyRef.current?.scrollTo({ top: 0 }) }, [lead?.id])
-  useEffect(() => { if (!opened) setActiveSection('overview'); else if (initialSection) setActiveSection(initialSection) }, [opened, lead?.id, initialSection])
+  useEffect(() => { if (!opened) setActiveSection('overview'); else if (requestedSection) setActiveSection(requestedSection) }, [opened, lead?.id, requestedSection])
+  useEffect(() => {
+    if (!opened || initialTarget !== 'contacts' || activeSection !== 'overview') return
+    const frame = requestAnimationFrame(() => { contactsRef.current?.scrollIntoView({ block: 'start' }); contactsRef.current?.focus({ preventScroll: true }) })
+    return () => cancelAnimationFrame(frame)
+  }, [opened, lead?.id, initialTarget, activeSection])
   useEffect(() => {
     if (!opened) return
     const previous = document.activeElement as HTMLElement | null
@@ -139,19 +146,21 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, 
   const note = '仅展示官网或官方资料中公开的业务联系方式。它们证明的是业务相关性和信息可追溯性，不代表该公司已经采购或确认需求。'
   return <div className="company-detail-backdrop company-detail-drawer-backdrop" role="presentation" onMouseDown={requestClose}>
     <section className="company-detail company-detail-drawer" role="dialog" aria-modal="true" aria-labelledby="company-detail-title" onMouseDown={(event) => event.stopPropagation()}>
-      <header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p><div className="company-header-send-status" aria-live="polite"><CustomerContactStatus contactLog={contactLog} emailState={sendState} sentOn={sent?.sent_on} /></div></div><button className="detail-close" disabled={work.busy} onClick={requestClose} aria-label="关闭公司详情"><X size={19} /></button></header>
+      <header className="company-detail-header"><div><p className="eyebrow">COMPANY DETAIL · PUBLIC RESEARCH</p><h2 id="company-detail-title">{lead.company}</h2><p><MapPin size={15} />{lead.city}, {lead.countryZh} · {targetType.name}</p><div className="company-header-send-status" aria-live="polite"><CustomerContactStatus readError={ledger.status === 'error'} contactLog={contactLog} emailState={sendState} sentOn={sent?.sent_on} /></div></div><button className="detail-close" disabled={work.busy} onClick={requestClose} aria-label="关闭公司详情"><X size={19} /></button></header>
       <nav className="company-detail-navigation" aria-label="切换当前筛选客户"><button type="button" disabled={!previousLead || work.busy} onClick={() => navigate(previousLead)}>上一家</button><span role="status">{index >= 0 ? `当前结果 ${index + 1} / ${leads.length}` : `已移出当前结果 · 剩余 ${leads.length} 条`}</span><button type="button" disabled={!nextLead || work.busy} onClick={() => navigate(nextLead)}>下一家</button></nav>
       <CompanyDetailSections key={lead.id} bodyRef={bodyRef} dirty={dirty} note={note} active={activeSection} onSectionChange={setActiveSection}
         overview={<>
           <div className="company-detail-status"><span className={`lead-fit ${lead.fit === '优先核验' ? 'priority' : ''}`}>{lead.fit}</span><span><CalendarCheck size={14} />最后核验：{lead.checkedAt}</span><span><CalendarCheck size={14} />首次收录：{recordedTimeLabel(lead)}（北京时间）</span></div>
-          <section className="company-overview-summary" aria-label="公司业务概览"><div className="company-overview-heading"><strong>{product.name} → {application.name}</strong><OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} /></div><p>{lead.companyEvidence.statement}</p><small>潜在需求侧客户 · 尚未确认采购或使用我方产品</small></section>
+          <section className="company-overview-summary" aria-label="公司业务概览"><div className="company-overview-heading"><strong>{product.name} → {application.name}</strong><OutreachStatusBadge readError={ledger.status === 'error'} state={sendState} sentOn={sent?.sent_on} /></div><p>{lead.companyEvidence.statement}</p><small>潜在需求侧客户 · 尚未确认采购或使用我方产品</small></section>
+          <div ref={contactsRef} tabIndex={-1} aria-label="联系渠道">
           <div className="company-detail-links">{profile.website && <a href={profile.website} target="_blank" rel="noreferrer"><Globe2 size={15} />官网</a>}{profile.contactPage && <a href={profile.contactPage} target="_blank" rel="noreferrer"><FileText size={15} />Contact Page</a>}{profile.linkedIn && <a href={profile.linkedIn} target="_blank" rel="noreferrer"><Linkedin size={15} />LinkedIn</a>}{profile.whatsapp && <a href={profile.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} />WhatsApp</a>}</div>
           <div className="company-detail-grid"><section><h3>公司公开联络</h3><CompanyBusinessContact lead={lead} onEmail={onEmail} compactEvidence /></section><section><h3>地址</h3><div className="detail-value"><MapPin size={15} /><span>{profile.address ?? `${lead.city}, ${lead.country}`}</span></div>{!profile.address && <p className="detail-empty">尚未从官方来源核验街道地址。</p>}</section></div>
           <ContactEvidencePanel lead={lead} onEmail={onEmail} compactEvidence />
+          </div>
         </>}
         outreach={<>
-          <DevelopmentEmailPanel lead={lead} ledger={ledger} work={work} onOpenSendRecord={openSendRecord} />
-          <details ref={sendRecordRef} id={`company-send-record-${lead.id}`} className="company-disclosure"><summary>开发信发送记录<OutreachStatusBadge state={sendState} sentOn={sent?.sent_on} /></summary><OutreachSendPanel key={lead.id} lead={lead} ledger={ledger} /></details>
+          {activeSection === 'outreach' && <DevelopmentEmailPreparation key={lead.id} lead={lead} ledger={ledger} work={work} onOpenSendRecord={openSendRecord} onReady={() => { if (initialTarget === 'send-record') openSendRecord() }} />}
+          <details ref={sendRecordRef} id={`company-send-record-${lead.id}`} className="company-disclosure"><summary>开发信发送记录<OutreachStatusBadge readError={ledger.status === 'error'} state={sendState} sentOn={sent?.sent_on} /></summary><OutreachSendPanel key={lead.id} lead={lead} ledger={ledger} /></details>
           <details className="company-disclosure"><summary>我的开发进度与跟进{dirty && <span>有未保存修改</span>}</summary><LeadPrivatePanel key={work.ownerId ?? work.status} lead={lead} work={work} ledger={ledger} onDirtyChange={setDirty} /></details>
           <details className="company-disclosure"><summary>下一步动作与建议</summary><NextActions lead={lead} ledger={ledger} /></details>
         </>}

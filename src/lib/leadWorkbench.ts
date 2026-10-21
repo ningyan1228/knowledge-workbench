@@ -3,7 +3,8 @@ import { businessRecipient } from './customerDevelopment'
 import { contactAssessment, contactPhoneVerified } from './contactEvidence'
 import { activeOutreachSend, outreachCompanyKey, type OutreachSend } from './outreachLedger'
 import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
-import { latestContact, normalizeContactLog, type ContactLogEntry } from './contactRoutes'
+import { customerContactRoutes, latestContact, normalizeContactLog, type ContactLogEntry } from './contactRoutes'
+import { leadMissingDetails, type CompletenessFilter } from './leadCompleteness'
 import { matchesPreparation, type PreparationFilter } from './leadPreparation'
 
 export const developmentStages = { todo: '待开发', waiting: '待回复', replied: '已回复', sample: '样品沟通', paused: '暂缓' } as const
@@ -17,8 +18,8 @@ export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | nul
 export type LeadWorkList = { id: string; name: string }
 export type WorkRecords = Record<string, LeadWorkRecord>
 export type WorkQueue = 'all' | 'priority' | 'followup' | 'recent'
-export type BusinessFilters = { query: string; industry: string; application: string; contact: string; sendStatus: 'all' | 'sent' | 'unsent' | 'needs-email'; preparation: PreparationFilter; stage: string; list: string; sort: 'time' | 'priority'; queue: WorkQueue }
-export const emptyBusinessFilters: BusinessFilters = { query: '', industry: 'all', application: 'all', contact: 'all', sendStatus: 'all', preparation: 'all', stage: 'all', list: 'all', sort: 'time', queue: 'all' }
+export type BusinessFilters = { query: string; industry: string; application: string; contact: string; sendStatus: 'all' | 'sent' | 'unsent' | 'unknown' | 'needs-email'; completeness: CompletenessFilter; preparation: PreparationFilter; stage: string; list: string; sort: 'time' | 'priority'; queue: WorkQueue }
+export const emptyBusinessFilters: BusinessFilters = { query: '', industry: 'all', application: 'all', contact: 'all', sendStatus: 'all', completeness: 'all', preparation: 'all', stage: 'all', list: 'all', sort: 'time', queue: 'all' }
 export const emptyWorkRecord = (companyKey: string): LeadWorkRecord => ({ companyKey, stage: null, followUpOn: '', note: '', favorite: false, listIds: [] })
 export const applicationKey = (lead: PublicLead) => `${lead.companyEvidence.applicationLayer}:${lead.companyEvidence.applicationId}`
 export const leadApplication = (lead: PublicLead) => (lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications).find((item) => item.id === lead.companyEvidence.applicationId)
@@ -30,11 +31,14 @@ export function validWorkDate(value: string) {
 
 export function contactChannels(lead: PublicLead) {
   const profile = lead.profile
+  const routes = customerContactRoutes(lead)
   return {
     email: Boolean(businessRecipient(lead)),
     form: httpsUrl(profile.contactPage),
     phone: Boolean((profile.generalPhone && (profile.generalPhoneEvidence ? contactPhoneVerified(lead.company, profile.generalPhone, profile.generalPhoneEvidence) && profile.generalPhoneEvidence.kind !== 'named-business' : httpsUrl(profile.contactPage ?? profile.website))) || profile.contacts.some((person) => contactAssessment(lead.company, person).phone)),
     named: profile.contacts.some((person) => { const status = contactAssessment(lead.company, person); return status.identity && (status.namedEmail || status.phone || status.linkedIn) }),
+    linkedin: Boolean(routes.linkedin),
+    whatsapp: Boolean(routes.whatsapp),
   }
 }
 
@@ -83,14 +87,17 @@ export function filterWorkbenchLeads(leads: PublicLead[], filters: BusinessFilte
     if (filters.industry !== 'all' && lead.targetCompanyTypeId !== filters.industry) return false
     if (filters.application !== 'all' && applicationKey(lead) !== filters.application) return false
     if (filters.contact !== 'all' && !channels[filters.contact as keyof typeof channels]) return false
-    // No shared history means unknown. Unsent email-ready customers and missing
-    // verified inboxes are separate groups; active sends take precedence over both.
+    if (filters.completeness && filters.completeness !== 'all' && !leadMissingDetails(lead)[filters.completeness]) return false
+    // Absence of a shared record is independent of the currently available inbox.
     if (filters.sendStatus !== 'all') {
-      if (sends === null) return false
-      const sent = Boolean(activeOutreachSend(sends, lead))
-      if (filters.sendStatus === 'sent' ? !sent : sent) return false
-      if (filters.sendStatus === 'unsent' && !channels.email) return false
-      if (filters.sendStatus === 'needs-email' && channels.email) return false
+      if (filters.sendStatus === 'unknown') { if (sends !== null) return false }
+      else {
+        if (sends === null) return false
+        const sent = Boolean(activeOutreachSend(sends, lead))
+        if (filters.sendStatus === 'sent' ? !sent : sent) return false
+        // Retain the old internal value for callers; the visible UI uses completeness.
+        if (filters.sendStatus === 'needs-email' && channels.email) return false
+      }
     }
     if (!matchesPreparation(lead, filters.preparation, sends, records)) return false
     // Sent is a completed milestone, including companies already at a later stage.

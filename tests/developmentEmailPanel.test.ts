@@ -41,7 +41,7 @@ describe('email preview follows sending status', () => {
     expect(sent).toContain('outreach-status-sent')
     expect(sent).toContain('已记录收件邮箱：fixture@example.org')
     expect(unsent).toContain('outreach-send-banner-unsent')
-    expect(unsent).toContain('未发送（无记录）')
+    expect(unsent).toContain('未查到发送记录')
     expect(unknown).toContain('outreach-status-unknown')
     expect(unknown).not.toContain('outreach-status-unsent')
     if (process.env.CONCISE_EMAIL_PREVIEW === '1') {

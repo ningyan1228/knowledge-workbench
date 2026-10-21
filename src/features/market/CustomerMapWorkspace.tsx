@@ -5,6 +5,7 @@ import { mapCompanyCount } from '../../lib/leadMapClusters'
 import type { PublicLead } from '../../lib/productMarketMap'
 import { GlobalLeadMap } from './GlobalLeadMap'
 import { LeadCard } from './LeadCard'
+import type { CompanyDetailOpenTarget } from './CompanyDetailSections'
 import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
 import './CustomerMapWorkspace.css'
@@ -12,7 +13,7 @@ import './CustomerMapWorkspace.css'
 export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelectLead, onHighlight, onOpenDetail, detailOpen = false, overviewToken, onOverview, onReturnRegions, ledger, work }: {
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
   onSelectLead: (lead: PublicLead | null) => void; onHighlight: (lead: PublicLead | null) => void;
-  onOpenDetail: (lead: PublicLead) => void; detailOpen?: boolean; overviewToken: number; onOverview: () => void;
+  onOpenDetail: (lead: PublicLead, target?: CompanyDetailOpenTarget) => void; detailOpen?: boolean; overviewToken: number; onOverview: () => void;
   onReturnRegions?: () => void; ledger: OutreachLedger; work: LeadWork;
 }) {
   const [scope, setScope] = useState<'all' | 'viewport'>('viewport')

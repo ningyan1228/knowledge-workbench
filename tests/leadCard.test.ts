@@ -24,8 +24,8 @@ describe('evidence-first customer cards', () => {
     expect(markup).toContain('适配待评估 · 采购未确认')
     expect(markup).toContain('最近核验：')
     expect(markup).toContain('首次收录：')
-    expect(markup).toContain('查看客户')
-    expect(markup).toContain('查看联系入口')
+    expect(markup).toContain('客户详情')
+    expect(markup).toContain('查看联系渠道')
     expect(markup).toContain('aria-label="收藏客户"')
     expect(markup).not.toContain('可开发候选')
     expect(markup).not.toContain('未记录发送')
@@ -53,8 +53,15 @@ describe('evidence-first customer cards', () => {
       expect(followup).not.toContain('已发送开发信')
     }
     const ready = { status: 'ready', sends: [], activeSend: () => null } as unknown as OutreachLedger
-    expect(render({ ledger: ready })).toContain('未发送（无记录）')
+    expect(render({ ledger: ready })).toContain('未查到发送记录')
     expect(render({ ledger: ready, variant: 'row' })).toContain('outreach-status-unsent')
+    for (const variant of ['card', 'row'] as const) {
+      expect(render({ ledger: ready, variant })).toContain('准备开发信')
+      expect(render({ ledger: sendingLedger, variant })).toContain('查看原参考稿')
+      expect(render({ ledger: sendingLedger, variant })).toContain('发送记录')
+      expect(render({ ledger: { ...ready, status: 'error' }, variant })).toContain('发送记录读取失败')
+      expect(render({ ledger: { ...ready, status: 'error' }, variant })).not.toContain('>准备开发信<')
+    }
   })
 
   it('shows company-specific evidence and retains the exact full original, source and date in either view', () => {
@@ -90,7 +97,7 @@ describe('evidence-first customer cards', () => {
   it('does not turn an unverified or missing contact URL into an external action', () => {
     const noContact = { ...lead, profile: { ...lead.profile, contactPage: 'javascript:alert(1)', website: undefined } }
     const markup = render({ lead: noContact })
-    expect(markup).toContain('查看联系资料')
+    expect(markup).toContain('查看联系渠道')
     expect(markup).not.toContain('href="javascript:')
   })
 })

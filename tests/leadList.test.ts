@@ -21,7 +21,7 @@ describe('compact customer comparison list', () => {
     expect(html.match(/class="customer-lead-row/g)).toHaveLength(2)
     for (const lead of leads) expect(html).toContain(`data-lead-id="${lead.id}"`)
     expect(html).toContain('采购与使用待确认')
-    expect(html).toContain('查看客户')
+    expect(html).toContain('客户详情')
     expect(html).toContain('aria-label="收藏客户"')
     expect(html).not.toContain('mailto:')
     expect(html).not.toContain('customer-card-evidence')

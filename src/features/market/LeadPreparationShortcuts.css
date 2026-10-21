@@ -1,6 +1,8 @@
 .work-preparation { margin-top: 10px; }
+.work-preparation { display:grid;gap:5px;padding-top:8px;border-top:1px solid var(--line) }
+.work-preparation-hint button { margin-left:8px;padding:0;border:0;background:transparent;color:var(--blue);font:inherit;cursor:pointer }
 .work-preparation-shortcuts { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 13px; }
-.work-preparation-shortcuts > span { color: var(--muted); margin-right: 3px; }
+.work-preparation-shortcuts > span { flex:0 0 88px;color:var(--muted);margin-right:3px;font-size:11px }
 .work-preparation-shortcuts button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 32px; padding: 5px 11px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap; }
 .work-preparation-shortcuts button:hover:not(:disabled) { background: var(--surface-soft); color: var(--text); }
 .work-preparation-shortcuts button[aria-pressed="true"] { background: var(--blue-soft); color: var(--blue); }

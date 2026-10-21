@@ -7,5 +7,7 @@
 :root[data-theme="dark"] .outreach-status-badge.outreach-status-unsent { color:#fdba74;background:#422514;border-color:#9a4f21 }
 :root[data-theme="dark"] .outreach-status-badge.outreach-status-unknown { color:#cbd5e1;background:#293444;border-color:#59677c }
 .company-header-send-status { margin-top:9px }
+.outreach-status-badge.outreach-status-error { color:#b91c1c;background:#fef2f2;border-color:#fca5a5 }
+:root[data-theme="dark"] .outreach-status-badge.outreach-status-error { color:#fca5a5;background:#421f25;border-color:#9f424a }
 .company-detail .outreach-send-panel .outreach-send-confirmed { color:#166534 }
 :root[data-theme="dark"] .company-detail .outreach-send-panel .outreach-send-confirmed { color:#86efac }

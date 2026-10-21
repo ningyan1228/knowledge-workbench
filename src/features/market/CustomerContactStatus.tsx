@@ -5,11 +5,12 @@ import { OutreachStatusBadge } from './OutreachStatusBadge'
 import './CustomerContactStatus.css'
 
 /** Private channel contacts and shared email sends are separate facts. */
-export function CustomerContactStatus({ contactLog, emailState, sentOn, compact = false }: {
+export function CustomerContactStatus({ contactLog, emailState, sentOn, compact = false, readError = false }: {
   contactLog?: ContactLogEntry[]
   emailState: 'sent' | 'unsent' | 'unknown'
   sentOn?: string
   compact?: boolean
+  readError?: boolean
 }) {
   const contact = latestContact(contactLog)
   const today = shanghaiDay(new Date().toISOString())
@@ -19,6 +20,6 @@ export function CustomerContactStatus({ contactLog, emailState, sentOn, compact 
     {contact && <span className="customer-channel-status" data-contact-channel={contact.channel} title={`当前账号私人记录：${contactChannelLabels[contact.channel]} · ${date} · ${contact.destination}；不代表邮件已发送。`}>
       <CheckCircle2 size={14} aria-hidden="true" /><span>{contactChannelLabels[contact.channel]}已联系 · <time dateTime={date}>{label}</time><small>（我的记录）</small></span>
     </span>}
-    <OutreachStatusBadge state={emailState} sentOn={sentOn} compact={compact} />
+    <OutreachStatusBadge state={emailState} sentOn={sentOn} compact={compact} readError={readError} />
   </span>
 }
