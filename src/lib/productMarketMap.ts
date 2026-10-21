@@ -6676,11 +6676,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "krasko-dzerzhinsky",
+    "company": "Krasko NPO LLC (ООО «НПО КРАСКО»)",
+    "productId": "nl-w1201",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Dzerzhinsky, Moscow Oblast",
+    "latitude": 55.63,
+    "longitude": 37.85,
+    "legacyCompanyDescription": "Krasko自有成品涂料制造与研发；Drevogrunt-Aqua为实际按订单制造的水性木材底涂。地图为Dzerzhinsky城市代表位置，非厂区测绘。",
+    "fit": "可开发候选",
+    "signal": "自有Company明确ОООНПОКРАСКО制造及自有配方实验室；当前自有木材底涂分类列Древогрунт-Аква为水性木材防护底涂/浸渍产品，并标明按订单生产。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网Company与首页明确ОООНПОКРАСКО自有配方研发及成品涂料生产。当前木器底涂分类实际列Drevogrunt-Aqua为水性木材底涂/浸渍并标按订单制造；原分类首次读取失败，后来成功原文作为产品证据，不声称已读取其未访问叶页或具体树脂成分。可见业务含木材/金属/混凝土成品涂料、PU/环氧地坪、底漆、密封/胶、填料、腐蚀抑制、清洗/除油/除漆及溶剂稀释等配套范围；保留这些业务，不将成品附着/底漆功能笼统等同上游聚烯烃原料。已读制造信息、当前品类和木器底涂范围未见外售水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂；结论非全部28项配套材料、全SKU、SDS/配方或各地区业务穷尽保证。Krasko/НПОКРАСКО、Drevogrunt等品牌、Dzerzhinsky商务和Shmatovo法定地址、krasko.ru各地区站及自有施工路线按一个业务账户去重，不拆店址；Latvia的kraso.com与Germany的kraso.de仅相似搜索名称，未合并其制造/产品证据。当前全公开库、私有队列和集团/品牌/域名检查无同一账户。独立官网公司邮箱与总机保留，无具名采购、采购需求或WhatsApp推断。客户成品的防菌/防腐、木材保护、干燥或其他效果不转移NL-W1201；木材只作资料支持的材料评估方向，未确认现有相容、采购或改善。"
+    },
+    "contact": {
+      "label": "官网公司业务邮箱、电话及联系页；无具名采购收件人",
+      "email": "2212180@krasko.ru",
+      "phone": "+7 495 2212180",
+      "contactUrl": "https://www.krasko.ru/contacts/"
+    },
+    "source": {
+      "label": "Own current Drevogrunt-Aqua water-based wood-primer category, own R&D/manufacture and corporate contact original",
+      "url": "https://www.krasko.ru/catalog/lumber/grunt-propitki/"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "npk-spetsemal-elektrougli",
+    "company": "NPK Spetsemal LLC (ООО «НПК «СПЕЦЭМАЛЬ»»)",
+    "productId": "elo",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Elektrougli, Moscow Oblast",
+    "latitude": 55.717,
+    "longitude": 38.201,
+    "legacyCompanyDescription": "Spetsemal自有工业防护涂料生产与配方开发，SpetsPRO为其实际产品范围；地图为Elektrougli城市点，非厂区测绘。",
+    "fit": "可开发候选",
+    "signal": "自有Company明确自有生产、配方开发/调整，范围包括环氧材料和工业防腐保护涂料；自有首页及Contact独立列ElektroUgly生产/仓库地址和公司业务邮箱、总机。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网Company当前原文明确自有制造、配方开发和调整；工业成品范围包括环氧及防腐保护涂料，首页列原油天然气、造船修船、工业设备等真实业务应用。可见目录有不同成膜类别的漆、清漆、底漆/底面合一、胶、锌填充防护、地坪、密封/腻子、防火、溶剂等成品及配套，保留这些经营事实，不笼统称无树脂或辅助业务。环氧、氯化聚乙烯、环氧酯等在此为成膜类别名称，未据此断言其成分清单或外售ELO类输入；已读制造原文和完整可见类别范围未见ELO、ESBO、环氧化植物油或同类生物基增塑/稳定原料外售。结论限当前已读范围，不称250+SKU、全部TDS/SDS、地区公司和全球原料配方已穷尽审读；未访问Нашипотребности采购页，不把菜单当当前ELO需求。Spetsemal/НПКСПЕЦЭМАЛЬ、SpetsPRO、主站及实际披露的npkspetsemal.ru邮箱按同一公司账户去重；npkspetsemal.com仅相关旧搜索线索，未借其事实或推断股权，其他spec-emal.ru及UkraineDniproSpecemal同名企业未自动合并。实际官网公司sale@邮箱和总机有独立原文，不声称具名采购或WhatsApp。没有借用公开客户名单作为我方案例，现有ELO相容、采购及时机未知，不承诺防腐、降本、认证或定量性能。"
+    },
+    "contact": {
+      "label": "官网公司业务邮箱、电话及联系页；无具名采购收件人",
+      "email": "sale@npkspetsemal.ru",
+      "phone": "+7 495 7883668",
+      "contactUrl": "https://spetsemal.ru/contacts/"
+    },
+    "source": {
+      "label": "Own actual Spetsemal manufacture/formulation and epoxy/anticorrosion product-family evidence",
+      "url": "https://spetsemal.ru/company/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "npk-spetsemal-elektrougli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "krasko-dzerzhinsky": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "teohim-moscow": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "novbytkhim-saint-petersburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "russian-coatings-yaroslavl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7009,6 +7067,116 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "npk-spetsemal-elektrougli": {
+    "website": "https://spetsemal.ru/",
+    "contactPage": "https://spetsemal.ru/contacts/",
+    "address": "Own published production/warehouse:4SafonovskyLane,building2,Elektrougli,MoscowOblast,Russia. Approximate Elektrougli city marker, not an address-geocoded or surveyed factoryentrance.",
+    "generalEmail": "sale@npkspetsemal.ru",
+    "generalEmailEvidence": {
+      "company": "NPK Spetsemal LLC (ООО «НПК «СПЕЦЭМАЛЬ»»)",
+      "value": "sale@npkspetsemal.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://spetsemal.ru/contacts/",
+          "summary": "Own spetsemal.ru company header/footer and Contact expressly publish sale@npkspetsemal.ru as businessEmail. Cross-domain mailbox is accepted only because the actual company original publishes it; not guessed from a naming pattern, a named buyer or another regional entity."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+7 495 7883668",
+    "generalPhoneEvidence": {
+      "company": "NPK Spetsemal LLC (ООО «НПК «СПЕЦЭМАЛЬ»»)",
+      "value": "+7 495 7883668",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://spetsemal.ru/contacts/",
+          "summary": "Own company and contact original publish+7 495788-36-68 as the company telephone. General public voice, not named procurement, fax or inferredWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://spetsemal.ru/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://spetsemal.ru/company/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://spetsemal.ru/product/lakokrasochnaya-produktsiya-po-tipu-plenkoobrazovaniya/epoksidnye-materialy-ep/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://spetsemal.ru/contacts/"
+      }
+    ]
+  },
+  "krasko-dzerzhinsky": {
+    "website": "https://www.krasko.ru/",
+    "contactPage": "https://www.krasko.ru/contacts/",
+    "address": "Business office:25A AkademikaZhukovaStreet,4thfloor,room402,Dzerzhinsky140090,MoscowOblast,Russia. Separately published legaladdress:1LuganskayaStreet,Shmatovo,Stupino142821,MoscowOblast. Addresses are not asserted surveyed factoryentrances; approximate Dzerzhinsky city marker.",
+    "generalEmail": "2212180@krasko.ru",
+    "generalEmailEvidence": {
+      "company": "Krasko NPO LLC (ООО «НПО КРАСКО»)",
+      "value": "2212180@krasko.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://www.krasko.ru/contacts/",
+          "summary": "Own Contact publishes2212180@krasko.ru in company office/contact and legal-details block. Generic company order/business mailbox; no named procurement person."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+7 495 2212180",
+    "generalPhoneEvidence": {
+      "company": "Krasko NPO LLC (ООО «НПО КРАСКО»)",
+      "value": "+7 495 2212180",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://www.krasko.ru/contacts/",
+          "summary": "Own Contact publishes+7(495)221-21-80 for the Dzerzhinsky company office. Public corporate voice only; do not infer WhatsApp or assign listed employee/private mobile."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://www.krasko.ru/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://www.krasko.ru/about/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://www.krasko.ru/contacts/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product, visible business scope or corporate channel original",
+        "url": "https://www.krasko.ru/catalog/lumber/grunt-propitki/"
+      }
+    ]
+  },
   "teohim-moscow": {
     "website": "https://teohim.ru/",
     "contactPage": "https://teohim.ru/contacts/",
@@ -21950,6 +22118,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "npk-spetsemal-elektrougli",
+  "krasko-dzerzhinsky",
   "teohim-moscow",
   "novbytkhim-saint-petersburg",
   "russian-coatings-yaroslavl",

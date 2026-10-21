@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "npk-spetsemal-elektrougli": "Your production range includes epoxy materials and anticorrosion coatings for industrial use.",
+  "krasko-dzerzhinsky": "Your Drevogrunt-Aqua is a water-based antiseptic primer for wood, made to order.",
   "teohim-moscow": "Your Elakor-ED Grunt 2K/PR epoxy primer is used for protective coatings in industrial workshops and warehouses.",
   "novbytkhim-saint-petersburg": "Your varnish range includes a water-based product for furniture and decor.",
   "russian-coatings-yaroslavl": "Your Prodecor protective-coatings range is intended for metal structures and other metal surfaces.",
