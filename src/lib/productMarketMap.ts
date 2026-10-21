@@ -7290,11 +7290,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "arboritec-jorlanda",
+    "company": "Arboritec AB",
+    "productId": "nl-w1201",
+    "country": "Sweden",
+    "countryZh": "瑞典",
+    "city": "Jörlanda",
+    "latitude": 57.986,
+    "longitude": 11.831,
+    "legacyCompanyDescription": "当前Röko公司名录明确Arboritec为瑞典清漆和地板护理品开发制造商；其官网水性系列实际列Avenue双组分面涂，木材/拼花地板场景及瑞典业务邮箱电话有原文。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前Röko公司名录明确Arboritec为瑞典清漆和地板护理品开发制造商；其官网水性系列实际列Avenue双组分面涂，木材/拼花地板场景及瑞典业务邮箱电话有原文。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立审读Arboritec当前Home、Contact、Waterbased、Accessories、White&AmberAdditives及母公司Röko现有OurCompanies六份原文。Röko明确Weowncompanies并将Arboritec描述为瑞典清漆/地板护理开发制造商，与本公司实际木器地板成品和AB页脚对应；不是仅凭经销商、旧newsite未完工页面或Search摘要认定制造。Röko/roko.se不同于已在库ROKOSPOL/rokospol.com，不因Roko字样合并。Waterbased分类有10项实际产品，包括Avenue2K、FlowTec1K、底涂与填缝料；本轮不把NordicElastic的PVC/LVT范围套入NLW木器应用。实际Accessories有固化组分、Extender及添加剂；已读Additives叶页明确White/Amber为调整颜色的颜料添加剂，不是凭Additives标题猜PO/CPO或附着力输入。固化组分和气候/快干调整配套角色保留，未读其全部组成，不声称没有任何原料或全部助剂自用。已读公司/水性木器/完整可见配套及母公司返回名录范围未见水性聚烯烃乳液、PO/CPO分散体或原料级附着力促进剂外售证据；结论限当前已读范围，不保证未披露关联或全部配方/SDS。官网LinkedIn出站URL含uveliteres但该外链正文未读，不能从slug推定本公司更名、其为母集团或销售何种原料；不虚构UveLite已查清或没有原料经营。当前母公司归属采用Röko本轮实际名录，不引用未读收购报道中的80%/20%或创始人现职。ArboritecAB/欧洲品牌和同一瑞典业务、产品系列只计一户；美国Gehl明确为授权分销商，UK/Poland等经销商邮箱不移植给瑞典制造商。OlofWijksväg9Jörlanda为官网业务地址，不冒称已实地核验工厂GPS。info@及+4630356330同页明确为欧洲业务渠道，不称采购个人；没有新增个人身份。陶瓷纳米强化、耐划、强度、NMP/环保或施工表现均为客户原文，不转作NL-W1201对木材/其配方的效果保证。仅提出资料支持的木材底涂/附着力促进评估，当前需求、采购与相容均未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱及电话，无具名采购邮箱",
+      "email": "info@arboritec.com",
+      "phone": "+46 303 56 330",
+      "contactUrl": "https://arboritec.com/contact/"
+    },
+    "source": {
+      "label": "Actual own downstream product and attributed manufacture",
+      "url": "https://arboritec.com/products/waterbased"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "haymes-paint-ballarat",
+    "company": "Haymes Paint",
+    "productId": "elo",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Ballarat / Wendouree",
+    "latitude": -37.535,
+    "longitude": 143.822,
+    "legacyCompanyDescription": "官网About明确在Ballarat自有工厂制造涂料并仍为Haymes家族持有；实际3092KEpoxyHighGloss为工业和商业应用用自底涂双组分环氧成品，官网公开公司联系入口。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网About明确在Ballarat自有工厂制造涂料并仍为Haymes家族持有；实际3092KEpoxyHighGloss为工业和商业应用用自底涂双组分环氧成品，官网公开公司联系入口。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立审读当前官网Home、About、工业涂料系列、3092KEpoxy产品核心及页面通用说明、Contact和UltimateProtective系列六份原文。About明确当前Ballarat制造及家族所有权，2023年新厂Productionbegins是原始年份，不改写成2026投产/新采购。1935HenryHaymesPtyLtd注册沿革只作为历史，不擅填当前法定后缀/税号；对外名称用官网HaymesPaint。2019Dulux被Nippon收购为其比较背景，不倒置为Haymes属于Dulux/Nippon，也不借用搜索Nutech/经销商产品认定制造。实际309为two-packself-primingepoxy，页面明确工业/商业防护用途；不是仅因家装墙面漆业务入库。所查实际目录含工业醇酸/丙烯酸/聚氨酯/环氧成品底面漆、金属准备/清洗、ICS309/307固化配套，以及Ultimate环氧/聚氨酯防护、46/80grit防滑添加剂和丙烯酸装饰片。保留真实固化剂/添加剂外售角色，不把普通固化组分、防滑颗粒或色片自动认作ELO/ESBO、环氧化植物油或生物增塑原料；已读范围未见该所选同类输入外售，结论不覆盖所有未读叶页/组成/SDS/未披露集团。Shopify返回$0和截短商品卡片是页面显示，不当真实免费报价；309页大量SheenGuide/家居文章是通用组件，不借作该工业产品的全部适用场景或技术性能。范围内客户成品防腐、抗菌、化学/磨耗耐受、GlobalGreenTag和低VOC等不转用为ELO认证/适配/效果保证。Contact实际有CustomerService/LeaveaMessage入口、澳洲1800033431及POBox167Wendouree；邮箱未核实，绝不猜info@等地址，也不从email格式站构造个人邮箱。只保留实际业务联系页/公开电话及官网明示公司LinkedIn链接；未读取完整表单字段或验证提交/私信能成功，不称已联系或已发送。POBox为邮政地址不是工厂街道，地图仅Ballarat/Wendouree城市代表点。当前需求、用量、时机和ELO固化/相容均未确认。"
+    },
+    "contact": {
+      "label": "官网实际业务联系入口及公开电话；邮箱未核实",
+      "phone": "1800 033 431",
+      "contactUrl": "https://www.haymespaint.com.au/pages/contact-us"
+    },
+    "source": {
+      "label": "Actual own downstream product and attributed manufacture",
+      "url": "https://www.haymespaint.com.au/products/industrial-coating-solutions-309-2k-epoxy-high-gloss-i309b"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "haymes-paint-ballarat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "arboritec-jorlanda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "wagon-paints-bayswater-north": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "quimica-pomiq-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colorchimica-pescantina": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7645,6 +7702,110 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "haymes-paint-ballarat": {
+    "website": "https://www.haymespaint.com.au/",
+    "contactPage": "https://www.haymespaint.com.au/pages/contact-us",
+    "linkedIn": "https://www.linkedin.com/company/haymespaint/",
+    "address": "PO Box167,Wendouree,VIC3355,Australia (postal address only). Own About locates manufacturing in Ballarat. No factory street or current legal suffix inferred; approximate city marker.",
+    "generalPhone": "1800 033 431",
+    "generalPhoneEvidence": {
+      "company": "Haymes Paint",
+      "value": "1800 033 431",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public business contact information",
+          "url": "https://www.haymespaint.com.au/pages/contact-us",
+          "summary": "Actual company Contact Us customer-service phone1800 033 431. Australian domestic service number, no invented international dialling or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current Ballarat manufacture and historical timeline",
+        "url": "https://www.haymespaint.com.au/pages/about-us"
+      },
+      {
+        "label": "Actual309 self-priming two-pack industrial epoxy",
+        "url": "https://www.haymespaint.com.au/products/industrial-coating-solutions-309-2k-epoxy-high-gloss-i309b"
+      },
+      {
+        "label": "Visible industrial paint, preparation and hardener offering",
+        "url": "https://www.haymespaint.com.au/collections/products-industrial-coating-solutions"
+      },
+      {
+        "label": "Visible Ultimate protective range, non-slip additive and acrylic flakes",
+        "url": "https://www.haymespaint.com.au/collections/products-ultimate-protective-coatings"
+      },
+      {
+        "label": "Actual business contact/Leave a Message entry; email unverified",
+        "url": "https://www.haymespaint.com.au/pages/contact-us"
+      }
+    ]
+  },
+  "arboritec-jorlanda": {
+    "website": "https://arboritec.com/",
+    "contactPage": "https://arboritec.com/contact/",
+    "address": "Olof Wijksväg9,SE-44465 Jörlanda,Sweden. Own Contact identifies European business location; current Röko portfolio identifies Swedish manufacturing/development. Approximate locality marker, not exact factory GPS or external registry audit.",
+    "generalEmail": "info@arboritec.com",
+    "generalEmailEvidence": {
+      "company": "Arboritec AB",
+      "value": "info@arboritec.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public business contact information",
+          "url": "https://arboritec.com/contact/",
+          "summary": "Contact Europe explicitly publishes info@arboritec.com with Swedish address; not Gehl/distributor or named buyer email."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+46 303 56 330",
+    "generalPhoneEvidence": {
+      "company": "Arboritec AB",
+      "value": "+46 303 56 330",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public business contact information",
+          "url": "https://arboritec.com/contact/",
+          "summary": "Actual Contact Europe Phone(+46)30356-330; public Swedish company voice, not WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own actual current water-based floor-finishing range",
+        "url": "https://arboritec.com/products/waterbased"
+      },
+      {
+        "label": "Current parent portfolio explicitly attributes Swedish manufacturing",
+        "url": "https://roko.se/our-companies"
+      },
+      {
+        "label": "Actual White and Amber pigment additives and their functions",
+        "url": "https://arboritec.com/products/additives"
+      },
+      {
+        "label": "Actual visible accessories/cure and working-condition aids",
+        "url": "https://arboritec.com/products/accessories"
+      },
+      {
+        "label": "Own Swedish business channels separated from distributors",
+        "url": "https://arboritec.com/contact/"
+      }
+    ]
+  },
   "wagon-paints-bayswater-north": {
     "website": "https://www.wagonpaints.com.au/",
     "contactPage": "https://www.wagonpaints.com.au/contact-us/",
@@ -23953,6 +24114,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "haymes-paint-ballarat",
+  "arboritec-jorlanda",
   "wagon-paints-bayswater-north",
   "quimica-pomiq-ciudad-mexico",
   "colorchimica-pescantina",

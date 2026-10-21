@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "haymes-paint-ballarat": "Your 309 2K Epoxy High Gloss is a self-priming epoxy coating for industrial and commercial applications.",
+  "arboritec-jorlanda": "Your Avenue is a two-component finish in your water-based wood-floor coating range.",
   "wagon-paints-bayswater-north": "Your Rhinamel is a two-pack epoxy/polyamide finish for concrete floors and steel fabrications, including machinery and tanks.",
   "quimica-pomiq-ciudad-mexico": "You develop marine coatings for ship hulls, decks and port structures.",
   "colorchimica-pescantina": "Your LEGNOPIÙ 33200 is a water-based acrylic wood treatment for indoor and outdoor use.",
