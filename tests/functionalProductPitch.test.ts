@@ -30,4 +30,12 @@ describe('sourced functions follow the product and application', () => {
     expect(pvc.introduction).not.toMatch(/medical|approved|food.contact/)
     expect(pvc.limits).toContain('PVC requires the saved independent extension')
   })
+  it('keeps Chinese card evaluation topics available for every published product match', () => {
+    for (const lead of publicLeads) {
+      const topic = functionalProductPitch(lead)?.cardEvaluation
+      expect(topic, lead.id).toBeTruthy()
+      expect(topic, lead.id).toContain('评估')
+      expect(topic, lead.id).not.toMatch(/保证|已相容|已采购/)
+    }
+  })
 })

@@ -18,9 +18,10 @@ const render = (overrides: Partial<Parameters<typeof LeadCard>[0]> = {}) => rend
 describe('evidence-first customer cards', () => {
   it('shows the published business evidence and dates without repeating default status or scores', () => {
     const markup = render()
-    expect(markup).toContain('业务依据：')
-    expect(markup).toContain('潜在联系：')
-    expect(markup).toContain('采购待确认')
+    expect(markup).toContain('联系理由')
+    expect(markup).toContain('评估材料')
+    expect(markup).toContain('联系渠道')
+    expect(markup).toContain('适配待评估 · 采购未确认')
     expect(markup).toContain('最近核验：')
     expect(markup).toContain('首次收录：')
     expect(markup).toContain('查看客户')
@@ -30,7 +31,7 @@ describe('evidence-first customer cards', () => {
     expect(markup).not.toContain('未记录发送')
     expect(markup).not.toContain('100 分')
     expect(markup).not.toContain('待开发')
-    expect(markup).not.toContain('mailto:')
+    expect(markup).toContain('公开联系渠道')
     expect(markup).toContain('outreach-status-unknown')
     expect(markup).not.toContain('outreach-status-unsent')
   })
@@ -61,9 +62,9 @@ describe('evidence-first customer cards', () => {
     const evidenceLead = { ...lead, companyEvidence: { ...lead.companyEvidence, statement, sourceName: '官方产品资料', sourceUrl: 'https://example.org/wood', verifiedAt: '2026-10-19' } }
     for (const variant of ['card', 'row'] as const) {
       const markup = render({ lead: evidenceLead, variant })
-      expect(markup).toContain('业务依据：</strong>官网明确自产水性丙烯酸木材着色剂；用于室内外木材着色。')
-      expect(markup).toContain('潜在联系：')
-      expect(markup).toContain('采购待确认')
+      expect(markup).toContain('官网明确自产水性丙烯酸木材着色剂；用于室内外木材着色。')
+      expect(markup).toContain('评估材料')
+      expect(markup).toContain('适配待评估 · 采购未确认')
       expect(markup).toContain(`<p>${statement}</p>`)
       expect(markup).toContain('完整依据')
       expect(markup).toContain('href="https://example.org/wood"')
@@ -80,7 +81,7 @@ describe('evidence-first customer cards', () => {
     for (const variant of ['card', 'row'] as const) {
       const markup = render({ lead: invalid, variant })
       expect(markup).toContain('应用关联待补证据')
-      expect(markup).toContain('业务依据：</strong>官网仅介绍公司业务，具体产品用途待核实。')
+      expect(markup).toContain('官网仅介绍公司业务，具体产品用途待核实。')
       expect(markup).not.toMatch(/<details[^>]*\bopen(?:=|\s|>)/)
       expect(markup).not.toContain('可核对涂料材料评估')
     }
