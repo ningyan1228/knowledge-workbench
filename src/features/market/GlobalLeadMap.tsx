@@ -86,7 +86,7 @@ function ClusterMarker({ group, active, compact, onSelect }: { group: LeadMapGro
     html: `<span>${escapeHtml(group.label)}</span><strong>${group.count}<small> 家</small></strong>`,
     iconSize: compact ? [62, 44] : [112, 44], iconAnchor: [anchorX, anchorY],
   }), [group.label, group.count, active, compact, anchorX, anchorY])
-  return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击展开区域`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip>{label} · 点击展开区域</Tooltip></Marker>
+  return <Marker position={[group.latitude, group.longitude]} icon={icon} title={`${label}，点击展开区域`} alt={label} eventHandlers={{ click: () => onSelect(group) }}><Tooltip direction="top" offset={[0, -30]}>{label} · 点击展开区域</Tooltip></Marker>
 }
 
 function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead, onSelectGroup }: {
@@ -111,7 +111,9 @@ function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead
     {groups.map((group) => {
       const active = group.leads.some((lead) => lead.id === activeLead?.id)
       if (group.kind !== 'nearby' || (group.leads.length > 1 && zoom < 12)) {
-        return <Fragment key={`${group.kind}:${group.id}`}><ClusterMarker group={group} active={active} compact={width < 500} onSelect={selectGroup} />{active && activeLead && <CircleMarker center={[activeLead.latitude, activeLead.longitude]} radius={10} pathOptions={{ color: '#2563eb', fillColor: '#fff', fillOpacity: 1, weight: 3, interactive: false }}><Tooltip permanent direction="top">{activeLead.company}</Tooltip></CircleMarker>}</Fragment>
+        // A grouped company is represented by its highlighted cluster. Show its name
+        // only once it has an individual marker, keeping region labels and counts clear.
+        return <ClusterMarker key={`${group.kind}:${group.id}`} group={group} active={active} compact={width < 500} onSelect={selectGroup} />
       }
       // At city level, fan out shared coordinates so every company remains selectable.
       return <Fragment key={group.id}>{group.leads.map((lead, index) => {
