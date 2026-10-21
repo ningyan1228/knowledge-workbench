@@ -7122,11 +7122,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "pinturas-eurotex-el-viso",
+    "company": "Pinturas Eurotex S.A.",
+    "productId": "elo",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "El Viso del Alcor / Sevilla",
+    "latitude": 37.391,
+    "longitude": -5.719,
+    "legacyCompanyDescription": "西班牙Pinturas Eurotex自有制造工业涂料，实际产品含双组分环氧保护底漆及环氧内衬成品。城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有工厂制造工业及装饰涂料；工业目录中的Pack Ligante Epoxi al Agua为吸收性基材用双组分环氧保护底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "已读官网公司制造自述、完整可见产品大类、工业目录返回首18/45项、两项实际保护涂层叶子及实际联系页。公司明确1981年从门店起步、1987年开始自制Eurotex品牌涂料，当前仍列自有工厂、研发和配色体系；不是仅凭门店或行业会员推定制造。保留Eurotex-System调色/色料配比、稀释剂与脱漆剂、PU/环氧固化剂、成套体系基料、底漆、填料/腻子等配套与输入业务，不笼统称无树脂、固化剂或添加剂。重点核对名为Pack Ligante Epoxi al Agua的实际页面：正文明确其为施工用双组分环氧保护底漆，用于吸收性基材，不是仅据Ligante字样把它误写成ELO/ESBO或环氧化植物油原料。Europoxy Tankguard W300是成套双组分环氧保护内衬成品；食品/饮水认证与耐温耐磨等仅是该客户成品网页自述，未独立审计，不转用于我方ELO，也不提出在食品接触配方中直接加料。当前已读制造、分类、工业首批成品及实际底漆范围未见ELO、ESBO、环氧化植物油、生物基增塑剂或同类添加剂外售证据；结论限返回公开范围，不称45项逐一审完、全部TDS/SDS或全集团全球业务查清。Pinturas Eurotex SA/eurotex.es/Sevilla El Viso del Alcor与已有俄罗斯Rogneda旗下Eurotex/rogneda.ru为不同实际主体和域名，未见持股关系，不因同名字样合并；西班牙旗下产品品牌、门店/配色及分销点只记一家公司，不拆分制造新增。实际Contact正文公开hola共享公司邮箱、总机、总部及技术/报价表单，邮箱不冒称具名采购负责人；表单静态成功提示不等于已经提交或收到回复，未发送或提交。城市坐标仅代表El Viso del Alcor，不当工厂门口测绘。仅讨论ELO资料支持的环氧功能、涂料柔韧性/树脂改性评估，未确认其现配方使用植物油、材料相容、固化体系、已有采购或任何防腐/化学耐受/食品饮水合规效果。"
+    },
+    "contact": {
+      "label": "官网公开公司邮箱、总机及实际技术咨询/报价联系表单",
+      "email": "hola@eurotex.es",
+      "phone": "+34 955 741 592",
+      "contactUrl": "https://eurotex.es/contacto/"
+    },
+    "source": {
+      "label": "Actual Pack Ligante protective epoxy primer plus own factory and corporate contact",
+      "url": "https://eurotex.es/pavimento-senalizacion-industria/ligante-epoxi-al-agua/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-eurotex-el-viso": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-monto-marines": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chimtitan-bucharest": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "inchem-polonia-lodz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7471,6 +7500,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-eurotex-el-viso": {
+    "website": "https://eurotex.es/",
+    "contactPage": "https://eurotex.es/contacto/",
+    "address": "Own company and contact pages: Polígono Industrial Santa Isabel,s/n,41520 El Viso del Alcor,Sevilla,Spain. Own pages identify Pinturas Eurotex S.A.; manufacturing/factory attribution is its own published statement, not an external registry or capacity audit. Approximate city map marker.",
+    "generalEmail": "hola@eurotex.es",
+    "generalEmailEvidence": {
+      "company": "Pinturas Eurotex S.A.",
+      "value": "hola@eurotex.es",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company Contact business information",
+          "url": "https://eurotex.es/contacto/",
+          "summary": "Own actual Contact explicitly lists Email – hola@eurotex.es together with Pinturas Eurotex SA Spanish headquarters and telephone. Shared company business inbox, not named purchasing or a personal email."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+34 955 741 592",
+    "generalPhoneEvidence": {
+      "company": "Pinturas Eurotex S.A.",
+      "value": "+34 955 741 592",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company Contact business information",
+          "url": "https://eurotex.es/contacto/",
+          "summary": "Own actual Contact explicitly lists +34 955 741 592 for Spanish headquarters. General company voice number; no WhatsApp or named recipient inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial/decorative coating manufacture and factory",
+        "url": "https://eurotex.es/quienes-somos/"
+      },
+      {
+        "label": "Actual two-component epoxy protective primer for absorbent substrates",
+        "url": "https://eurotex.es/pavimento-senalizacion-industria/ligante-epoxi-al-agua/"
+      },
+      {
+        "label": "Actual own epoxy tank-lining coating product; claims remain customer-product-specific",
+        "url": "https://eurotex.es/recubrimiento-especial-industria/recubrimiento-epoxi-alimentario-agua-potable/"
+      },
+      {
+        "label": "Actual company business mailbox/phone and technical/quotation contact forms",
+        "url": "https://eurotex.es/contacto/"
+      },
+      {
+        "label": "Own public coating category hierarchy",
+        "url": "https://eurotex.es/productos/"
+      },
+      {
+        "label": "Industrial range; only returned first18/45items inspected",
+        "url": "https://eurotex.es/pinturas-industriales/"
+      }
+    ]
+  },
   "pinturas-monto-marines": {
     "website": "https://montopinturas.com/",
     "contactPage": "https://montopinturas.com/en-contact",
@@ -23372,6 +23464,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-eurotex-el-viso",
   "pinturas-monto-marines",
   "chimtitan-bucharest",
   "inchem-polonia-lodz",
