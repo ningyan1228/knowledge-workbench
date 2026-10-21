@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "romtehnochim-jilava": "Your Emex range includes industrial epoxy and polyurethane coatings, including anticorrosive systems for metal structures.",
   "dreisol-preussisch-oldendorf": "Your metal-protection coating range includes water-based and solvent-based primers, topcoats and single-coat finishes for industrial applications.",
   "barbot-vila-nova-gaia": "Your Barbolux Acqua is a water-based enamel for interior and exterior wood and metal surfaces.",
   "rokospol-kanovice": "Your Rokoprim EP S 2312 is a two-component epoxy primer for demanding anticorrosive steel-coating systems.",

@@ -6983,11 +6983,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "romtehnochim-jilava",
+    "company": "Romtehnochim (Emex)",
+    "productId": "elo",
+    "country": "Romania",
+    "countryZh": "罗马尼亚",
+    "city": "Jilava, Ilfov",
+    "latitude": 44.333,
+    "longitude": 26.075,
+    "legacyCompanyDescription": "Romtehnochim以Emex品牌制造工业及建筑涂料并提供地坪施工服务；联系地点为Jilava。地图为城市代表点，非独立核验的工厂入口。",
+    "fit": "可开发候选",
+    "signal": "自有About原文明示Romtehnochim制造Emex品牌环氧、聚氨酯、醇酸、氯化橡胶涂料及底漆；IndustrialCoatings明确工业环境防护和金属结构防腐系统。实际树脂/地坪目录及Contact补充业务角色、Jilava地址和公司/销售入口。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网明确Romtehnochim自行制造Emex工业防护涂料，并同时提供专业地坪施工；制造与施工角色分别保留。已读可见范围包括建筑/装饰涂料、工业水性/溶剂型底面涂层、防腐底漆、地坪/道路标线、浇注树脂及配套。树脂/地坪目录实际列EmexTOPCAST环氧浇注树脂、EmexYROCOATHD聚氨酯树脂、环氧填补/砂浆和配套固化剂，不能称其只销售成品漆或没有树脂材料外供。上述结合料、浇注/地坪体系及固化配套不自动等于ELO、ESBO、环氧化植物油或同功能生物基增塑稳定输入；已读制造、首页、工业应用和树脂/地坪可见范围未见该类原料外售。结论限实际已读公开范围，未穷尽全部分页、叶子配方/TDS/SDS或全球关联业务，不猜未披露的树脂成分，不编造外购例外。Romtehnochim/Emex及相关产品、施工服务和同名域名按一个账户去重，无同主体重复；公开称谓保留，未另读登记材料，不填猜测法定后缀或登记号。Contact的office为公司秘书处共享邮箱，vanzari为Sales部门邮箱，均不冒称具名采购；官网注明订单经表单/邮箱、不接电话下单，普通电话不当WhatsApp。ELO只用于制造配方的柔韧/树脂改性评估，客户防腐、耐久、认证、施工效果与现有采购不能转成我方保证。"
+    },
+    "contact": {
+      "label": "官网Sales部门邮箱、公司秘书处及联系表单；不冒称具名采购",
+      "email": "vanzari@emex.ro",
+      "phone": "+4021-457.1693",
+      "contactUrl": "https://emex.ro/contact"
+    },
+    "source": {
+      "label": "Own industrial protective/anticorrosive coating range with explicit own manufacture",
+      "url": "https://emex.ro/vopsele-industriale"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "romtehnochim-jilava": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "dreisol-preussisch-oldendorf": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "barbot-vila-nova-gaia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rokospol-kanovice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7327,6 +7356,85 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "romtehnochim-jilava": {
+    "website": "https://emex.ro/",
+    "contactPage": "https://emex.ro/contact",
+    "address": "Own Contact/footer:Str.SteauaSuduluiNr.22,Jilava,Ilfov,Romania. Own manufacture is established by About; this is a published business contact address, not independently surveyed plant entrance. City representative marker only.",
+    "generalEmail": "office@emex.ro",
+    "generalEmailEvidence": {
+      "company": "Romtehnochim (Emex)",
+      "value": "office@emex.ro",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual Contact Romtehnochim business department block",
+          "url": "https://emex.ro/contact",
+          "summary": "Own Contact Email Secretariat explicitly gives office@emex.ro; corporate shared correspondence, not personal procurement or technical mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+4021-457.1693",
+    "generalPhoneEvidence": {
+      "company": "Romtehnochim (Emex)",
+      "value": "+4021-457.1693",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual Contact Romtehnochim business department block",
+          "url": "https://emex.ro/contact",
+          "summary": "Own Contact Telefon Secretariat021-457.1693 and international footer+4021-457.1693 corroborate business voice. Orders are not taken by telephone; noWhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "vanzari@emex.ro",
+        "source": {"label":"Own Contact Sales department","url":"https://emex.ro/contact"},
+        "emailEvidence": {
+          "company": "Romtehnochim (Emex)",
+          "value": "vanzari@emex.ro",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own actual Contact Romtehnochim business department block",
+              "url": "https://emex.ro/contact",
+              "summary": "Own Contact Email Vânzări explicitly gives vanzari@emex.ro for sales; not assigned to a named buyer. Technical section only discloses phones, so no technical email guessed."
+            }
+          ],
+          "verifiedAt": "2026-10-21"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual own manufacture, visible business/product family or public contact original",
+        "url": "https://emex.ro/"
+      },
+      {
+        "label": "Actual own manufacture, visible business/product family or public contact original",
+        "url": "https://emex.ro/despre-noi"
+      },
+      {
+        "label": "Actual own manufacture, visible business/product family or public contact original",
+        "url": "https://emex.ro/vopsele-industriale"
+      },
+      {
+        "label": "Actual own manufacture, visible business/product family or public contact original",
+        "url": "https://emex.ro/pardoseli-trafic"
+      },
+      {
+        "label": "Actual own manufacture, visible business/product family or public contact original",
+        "url": "https://emex.ro/contact"
+      }
+    ]
+  },
   "dreisol-preussisch-oldendorf": {
     "website": "https://www.dreisol.de/",
     "contactPage": "https://www.dreisol.de/impressum/",
@@ -22900,6 +23008,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "romtehnochim-jilava",
   "dreisol-preussisch-oldendorf",
   "barbot-vila-nova-gaia",
   "rokospol-kanovice",
