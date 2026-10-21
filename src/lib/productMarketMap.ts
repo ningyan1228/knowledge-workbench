@@ -6927,11 +6927,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "barbot-vila-nova-gaia",
+    "company": "Barbot – Indústria de Tintas, S.A. (Grupo Barbot)",
+    "productId": "nl-w1201",
+    "country": "Portugal",
+    "countryZh": "葡萄牙",
+    "city": "Vila Nova de Gaia",
+    "latitude": 41.123,
+    "longitude": -8.611,
+    "legacyCompanyDescription": "Barbot集团制造和销售建筑及工业涂料；官网列葡萄牙Canelas/Laborim生产联系地点和BarboluxAcqua水性木材/金属面漆。集团各品牌合并为一个潜在客户，地图为VilaNovaDeGaia城市代表点。",
+    "fit": "可开发候选",
+    "signal": "集团页明确涂料及清漆生产，葡萄牙Contact列Fábrica/CentralWarehouse及Laborim厂址；BarboluxAcquaBrilhante产品原文说明室内外木材和金属用水性面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网证明建筑/工业涂料制造和葡萄牙厂址，实际BarboluxAcqua为水性木材/金属面漆。当前已读范围包含建筑成品、木器/金属涂料、工业底漆/面漆/地坪、配套清洁与稀释产品；工业可见清单还列BarbofloorJC加速剂，不把配套添加剂抹去。集团页另披露Jallut调色剂、包装涂层及Diera木器清漆/建筑胶与砂浆业务；这些成品、调色/加速配套不自动等于原料级水性聚烯烃乳液、PO/CPO分散体或同类附着促进输入。已读公开范围未见该类输入外售，未穷尽全部SKU、加速剂成分/SDS、未展示目录或全球关联业务。Barbot/Barbotex、Jallut、Diera及安哥拉/佛得角/莫桑比克区域单位按同一集团账户去重，无重复正式账户，不把各厂或品牌另算新增。总部邮箱和总机均有自有联系页对应，不冒称具名采购。NL-W1201仅提出木材底涂/附着促进评估，不把未处理PP资料转成木材实测、面漆相容或采购需求。"
+    },
+    "contact": {
+      "label": "官网公司共享业务邮箱、总机及联系页；无具名采购收件人",
+      "email": "barbot.sede@barbot.pt",
+      "phone": "+351 227 169 200",
+      "contactUrl": "https://barbot.pt/sobre/contactos/"
+    },
+    "source": {
+      "label": "Own Barbolux Acqua water-based wood/metal enamel original, group manufacturing account and Portuguese factory/contact blocks",
+      "url": "https://barbot.pt/produto/barbolux-acqua/"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "dreisol-preussisch-oldendorf",
+    "company": "Dreisol Coatings GmbH & Co. KG",
+    "productId": "elo",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Preußisch Oldendorf",
+    "latitude": 52.306,
+    "longitude": 8.494,
+    "legacyCompanyDescription": "Dreisol为自有配方研发与工业涂料制造企业，当前公开金属重防腐、塑料、纸张及薄膜涂层；工厂/法人地址PreußischOldendorf。地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "Company原文明示工业涂料研发、生产、自有配方与自动配料；金属防护页列水性及溶剂型底漆/面漆/单涂层、重防腐方向和机械设备/车辆/钢构行业。Impressum确认制造企业及法定代表公司。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "自有Company明确工业涂料研发、生产、自有配方及配料工艺；当前金属防护页明确工业用途、重防腐、水性和溶剂型涂层。首页描述醇酸/丙烯酸金属涂层、双组分PU塑料涂层及UV薄膜涂层，不把这些改写成已验证的具体环氧产品。保留纸张色卡体系结合料、色浆、效果涂层和金属调色基漆/色浆的外供角色，以及首页所列设备清洗溶剂；不笼统称无原料或添加剂。所查制造、首页与金属/纸张业务未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入外售；结合料/色浆和成品防护涂料本身不自动等于该类同行输入。结论限已读公开业务，未覆盖登录区全部技术资料、全部SKU/SDS或关联业务。Dreisol/Dreisodur/历史Dreisörner品牌及其管理合伙公司按一个账户去重；未凭相似产品推断Rickert等企业的股权关系，无重复正式账户。Impressum共享邮箱、明确Telefon和法人登记号独立核验，不把管理人或责任编辑当采购。ELO仅工业配方柔韧和树脂改性试验方向，相容性、固化、防腐结果与现有采购均未确认。"
+    },
+    "contact": {
+      "label": "官网公司共享业务邮箱、总机及联系页；无具名采购收件人",
+      "email": "mail@dreisol.de",
+      "phone": "+49 (0) 5742 9300 0",
+      "contactUrl": "https://www.dreisol.de/impressum/"
+    },
+    "source": {
+      "label": "Own current metal-protection coating product/application original with own formulation/manufacture and legal business contact",
+      "url": "https://www.dreisol.de/metallschutzlacke/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "dreisol-preussisch-oldendorf": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "barbot-vila-nova-gaia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rokospol-kanovice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "druchema-prague": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vitex-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7269,6 +7327,124 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "dreisol-preussisch-oldendorf": {
+    "website": "https://www.dreisol.de/",
+    "contactPage": "https://www.dreisol.de/impressum/",
+    "address": "Own legal/manufacturing contact:Industriestr.4,32361PreußischOldendorf,Germany; HRA5675,AmtsgerichtBadOeynhausen. Representing general partner:DreisolVerwaltungs-GmbH,HRB8385,not a second demand-side account. Approximate city marker, not surveyed gate.",
+    "generalEmail": "mail@dreisol.de",
+    "generalEmailEvidence": {
+      "company": "Dreisol Coatings GmbH & Co. KG",
+      "value": "mail@dreisol.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company public business contact block",
+          "url": "https://www.dreisol.de/impressum/",
+          "summary": "Own Impressum Kontakt explicitly publishes mail@dreisol.de for DreisolCoatingsGmbH&Co.KG; same own-site manufacturing footer corroborates. Corporate shared address, not a named manager, editor or buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+49 (0) 5742 9300 0",
+    "generalPhoneEvidence": {
+      "company": "Dreisol Coatings GmbH & Co. KG",
+      "value": "+49 (0) 5742 9300 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company public business contact block",
+          "url": "https://www.dreisol.de/impressum/",
+          "summary": "Own Impressum Kontakt identifies Telefon+49(0)574293000 separately from Telefax+49(0)5742930059. Footer second number49 not assigned an unsupported role; only explicit business Telefon retained, noWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://www.dreisol.de/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://www.dreisol.de/unternehmen/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://www.dreisol.de/metallschutzlacke/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://www.dreisol.de/papierlacke/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://www.dreisol.de/impressum/"
+      }
+    ]
+  },
+  "barbot-vila-nova-gaia": {
+    "website": "https://barbot.pt/",
+    "contactPage": "https://barbot.pt/sobre/contactos/",
+    "address": "Own headquarters and factory/central warehouse contact:Rua dos Borneiros466,Apartado529,4406-401Canelas–V.N.Gaia; another own factory atRua da Palmeira240,Apartado29,4431-953V.N.Gaia. Portugal. Marker is approximate city representative, not either entrance.",
+    "generalEmail": "barbot.sede@barbot.pt",
+    "generalEmailEvidence": {
+      "company": "Barbot – Indústria de Tintas, S.A. (Grupo Barbot)",
+      "value": "barbot.sede@barbot.pt",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company public business contact block",
+          "url": "https://barbot.pt/sobre/contactos/",
+          "summary": "Own Contact Sede/Serviços Administrativos e Comerciais and Fábrica/ArmazémCentral both explicitly publish barbot.sede@barbot.pt. Shared company headquarters/business route, not a named procurement person or inferred domain address."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+351 227 169 200",
+    "generalPhoneEvidence": {
+      "company": "Barbot – Indústria de Tintas, S.A. (Grupo Barbot)",
+      "value": "+351 227 169 200",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company public business contact block",
+          "url": "https://barbot.pt/sobre/contactos/",
+          "summary": "Own Contact publishes +351227169200 for headquarters/factory. Fax212/218 is separate; ordinary voice telephone is not asserted WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://barbot.pt/produto/barbolux-acqua/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://barbot.pt/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://barbot.pt/sobre/grupo-barbot/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://barbot.pt/industria/"
+      },
+      {
+        "label": "Actual own manufacturing, group, current visible product scope or public business-channel original",
+        "url": "https://barbot.pt/sobre/contactos/"
+      }
+    ]
+  },
   "rokospol-kanovice": {
     "website": "https://www.rokospol.com/",
     "contactPage": "https://www.rokospol.com/en/production-centre/",
@@ -22724,6 +22900,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "dreisol-preussisch-oldendorf",
+  "barbot-vila-nova-gaia",
   "rokospol-kanovice",
   "druchema-prague",
   "vitex-aspropyrgos",
