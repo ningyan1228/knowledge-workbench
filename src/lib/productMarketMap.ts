@@ -7372,11 +7372,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "colorificio-galfa-pianoro",
+    "company": "Colorificio GALFA s.n.c. di Galeotti Renato e Maria",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Pianoro / Pian di Macina",
+    "latitude": 44.4,
+    "longitude": 11.34,
+    "legacyCompanyDescription": "官网当前公司原文确认Pianoro工业涂料自有制造、配方研发和质检；标准产品目录明确水性及溶剂型双组分环氧底漆/面漆，公开公司业务邮箱和电话有直接原文。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网当前公司原文确认Pianoro工业涂料自有制造、配方研发和质检；标准产品目录明确水性及溶剂型双组分环氧底漆/面漆，公开公司业务邮箱和电话有直接原文。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立审读五次TinyFish当前自有正文/生成HTML及一次原生公开页面：Galfa公司、产品、工业领域、联系页，产品页HTML表示与原始意大利文产品页。en路径实际返回意大利正文，未冒称英文资料；两次TinyFish产品表示遗漏标准清单，不能当完整目录，随后第六次原生读取在同一来源预算内返回全部157行，实际读完水性、溶剂型及特种三类标准系列和公司页脚。其成品范围含单/双组分工业底漆、环氧/丙烯酸/聚氨酯面漆、锌类/铁云母/磷酸锌底涂、粉末涂装前防护底漆和定制/特种漆。公司页实际描述自有研发实验室、生产/最终质检以及为自身配方选择原料，未把这些投入误写成原料外售；一般epoxy/polyurethane/acrylic/低溶剂或成品primer不自动等同ELO/ESBO/环氧化植物油或生物增塑稳定输入。已读当前经营、三类实际标准产品与制造范围未见该所选同类输入外售证据；结论限此范围，不覆盖未披露关联、全部配方/SDS/所有股权或全球SKU，未虚构外购例外。原生产品页法定footer明确ColorificioGALFAsncdiGaleottiRenatoeMaria、VATIT00504271206/BO212656、同一Pianoro地址，与当前自有公司及联系页一致，按一家公司去重；法定商号中的Renato/Maria不是采购联系人，Guido历史创始人也未作现职买家。当前公司称子女继续经营，未读登记股权、不猜持股比例或其他集团；标准系列、工厂、品牌和海外客户不拆新增。Contact明确普通Istituzionale业务info邮箱与公司总机；PEC法律邮箱不用作开发收件人，传真0516517182不混作语音或WhatsApp。无具名收件人、SMTP/投递/完整表单验证、实际联系或发送。地图仅城市代表点；行政/生产地址按官网自述保留，不冒称实地工厂GPS。1994会议/1972厂史/客户ACS与WRAS、ISO12944C5M、盐雾防腐/水性无溶剂/低温和节能等为客户自述，不转移为ELO认证、食品接触/饮水资格、腐蚀性能、固化相容或降本保证；仅以用户资料提出涂料环氧功能、柔韧/树脂改性评估。当前采购、用料和需求仍待确认。"
+    },
+    "contact": {
+      "label": "官网明确公司普通业务邮箱及总机；非具名采购邮箱",
+      "email": "info@colorificiogalfa.it",
+      "phone": "+39 051 776056",
+      "contactUrl": "https://www.colorificiogalfa.it/en/contatti/"
+    },
+    "source": {
+      "label": "Own actual standard industrial epoxy primer and finish range",
+      "url": "https://www.colorificiogalfa.it/prodotti-vernicianti/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "colorificio-galfa-pianoro": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vista-paint-fullerton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "haymes-paint-ballarat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "arboritec-jorlanda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7730,6 +7759,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "colorificio-galfa-pianoro": {
+    "website": "https://www.colorificiogalfa.it/en/",
+    "contactPage": "https://www.colorificiogalfa.it/en/contatti/",
+    "address": "Via Salvador Allende 32, Pian di Macina,40065 Pianoro (BO),Italy. Own original footer identifies administrative/production site; approximate city marker, not surveyed factory GPS or an independent registry audit.",
+    "generalEmail": "info@colorificiogalfa.it",
+    "generalEmailEvidence": {
+      "company": "Colorificio GALFA s.n.c. di Galeotti Renato e Maria",
+      "value": "info@colorificiogalfa.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own explicit corporate business contact",
+          "url": "https://www.colorificiogalfa.it/en/contatti/",
+          "summary": "Contact explicitly labels Istituzionale info@colorificiogalfa.it; separate PEC is a legal channel, not selected. Shared company mailbox, no named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+39 051 776056",
+    "generalPhoneEvidence": {
+      "company": "Colorificio GALFA s.n.c. di Galeotti Renato e Maria",
+      "value": "+39 051 776056",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own explicit corporate business contact",
+          "url": "https://www.colorificiogalfa.it/en/contatti/",
+          "summary": "Actual corporate switchboard+39 051776056; Fax+39 0516517182 distinct. No personal/WhatsApp attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current family company, coating manufacture, R&D and QC",
+        "url": "https://www.colorificiogalfa.it/en/galfa/"
+      },
+      {
+        "label": "Complete returned Italian standard industrial product families and legal operator footer",
+        "url": "https://www.colorificiogalfa.it/prodotti-vernicianti/"
+      },
+      {
+        "label": "Own industrial anti-corrosion and pre-powder-coating primer use",
+        "url": "https://www.colorificiogalfa.it/en/settori/"
+      },
+      {
+        "label": "Explicit institutional business email/phone and distinct legal/fax channels",
+        "url": "https://www.colorificiogalfa.it/en/contatti/"
+      }
+    ]
+  },
   "vista-paint-fullerton": {
     "website": "https://www.vistapaint.com/",
     "contactPage": "https://www.vistapaint.com/contact/",
@@ -24186,6 +24270,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "colorificio-galfa-pianoro",
   "vista-paint-fullerton",
   "haymes-paint-ballarat",
   "arboritec-jorlanda",
