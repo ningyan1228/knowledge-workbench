@@ -7066,11 +7066,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "chimtitan-bucharest",
+    "company": "S.C. CHIMTITAN S.R.L.",
+    "productId": "elo",
+    "country": "Romania",
+    "countryZh": "罗马尼亚",
+    "city": "Bucharest / București",
+    "latitude": 44.4268,
+    "longitude": 26.1025,
+    "legacyCompanyDescription": "Chimtitan在罗马尼亚自有工厂和实验室配制工业/装饰涂料，Series302为双组分环氧金属防腐底漆；地图为布加勒斯特城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网Home及Compania明确自有工厂、实验室、研发配方、工业分散和珠磨；实际Series302产品原文为用于船舶、桥梁、储罐和机械等金属保护的双组分环氧防腐底漆，并列配套环氧中间漆和面漆。公司页脚将业务邮箱、电话及布加勒斯特地址与S.C.CHIMTITANS.R.L./CUI324996对应。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "自有工厂与实验室明确制造涂料、清漆、稀释剂和定制配方，实际Series302为施工用双组分环氧防腐底漆及配套系统，不是把原料树脂制造商或代理商当成下游配方厂。已读官网公司制造范围、Home完整可见产品导航、金属保护分类返回的工业/专业装饰/零售产品树以及302原文；保留外售稀释剂、通用色浆、硬化剂和电绝缘浇注材料等配套/输入角色，不笼统称无原料业务。普通色浆、固化剂或浇注材料名称本身不证明为环氧化植物油或生物基增塑剂；所读公开产品范围未见ELO、ESBO、环氧化植物油、生物基增塑剂或同类添加剂外售。该结论限所读当前范围，未穷尽每项配方/TDS/SDS或未披露关联业务，不保证所有化学输入均无关。S.C.CHIMTITANS.R.L.、chimtitan.ro、CUI324996及J1991005016400按同一布加勒斯特账户核对，未发现现有公开、全部私有队列或研究台账中的同主体/集团/域名记录；不把302/351等系列、工厂或颜色拆成客户。Home实际页脚有共享销售业务邮箱及公司本地语音号码，不对应具名采购负责人，不扩写WhatsApp或邮箱变体。公司页面上的产品防腐等级、磷酸锌、低温施工、食品接触、认证及寿命等是其自身产品说明，不转作ELO功能保证；客户是否使用或采购ELO、配方相容与评估意向均未确认。"
+    },
+    "contact": {
+      "label": "官网共享销售业务邮箱及公司语音电话；未核实具名采购负责人",
+      "email": "vanzari@chimtitan.ro",
+      "phone": "021.255.01.09",
+      "contactUrl": "https://www.chimtitan.ro/contact/"
+    },
+    "source": {
+      "label": "Own Series302 epoxy anticorrosive metal primer with actual in-house manufacture and legal company business footer",
+      "url": "https://www.chimtitan.ro/product/grund-epoxidic-seria-302-in-doi-componenti-7/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chimtitan-bucharest": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "inchem-polonia-lodz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tnue-taupo": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "romtehnochim-jilava": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7413,6 +7442,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chimtitan-bucharest": {
+    "website": "https://www.chimtitan.ro/",
+    "contactPage": "https://www.chimtitan.ro/contact/",
+    "address": "Own Home footer business address:B-dul Basarabia,Nr.248A,Sector3,Bucuresti,Romania. CUI324996 andNr.Reg.Com.J1991005016400 asownpublishedidentifiers. Ownmanufacturingconfirmed; publishedbusinessaddressnotseparatelysurveyedfactorygate. MapBucharestcityrepresentativeonly.",
+    "generalEmail": "vanzari@chimtitan.ro",
+    "generalEmailEvidence": {
+      "company": "S.C. CHIMTITAN S.R.L.",
+      "value": "vanzari@chimtitan.ro",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company Home footer explicitly pairs business route and legal operator",
+          "url": "https://www.chimtitan.ro/",
+          "summary": "Own Home footer explicitly publishes vanzari@chimtitan.ro next to company business telephone, Bucharest address and legal identifiers. Shared sales business mailbox, not a named purchasing or technical person."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "021.255.01.09",
+    "generalPhoneEvidence": {
+      "company": "S.C. CHIMTITAN S.R.L.",
+      "value": "021.255.01.09",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company Home footer explicitly pairs business route and legal operator",
+          "url": "https://www.chimtitan.ro/",
+          "summary": "Own Home and actual302 product footer explicitly publish021.255.01.09, company business voice route. Exact local published format retained; no guessed international/WhatsApp channel."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company manufacture and in-house formulation",
+        "url": "https://www.chimtitan.ro/compania/"
+      },
+      {
+        "label": "Own Home full visible product navigation, manufacturing process and legal business channel",
+        "url": "https://www.chimtitan.ro/"
+      },
+      {
+        "label": "Own metal-protection category, returned hierarchy through line308; not all611lines",
+        "url": "https://www.chimtitan.ro/product-category/vopsele-industriale/protectie-suprafete-metalice/"
+      },
+      {
+        "label": "Own actual Series302 two-component epoxy anticorrosive primer",
+        "url": "https://www.chimtitan.ro/product/grund-epoxidic-seria-302-in-doi-componenti-7/"
+      }
+    ]
+  },
   "inchem-polonia-lodz": {
     "website": "https://inchem.pl/",
     "contactPage": "https://inchem.pl/en/kontakt",
@@ -23173,6 +23257,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chimtitan-bucharest",
   "inchem-polonia-lodz",
   "tnue-taupo",
   "romtehnochim-jilava",
