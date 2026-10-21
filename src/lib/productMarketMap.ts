@@ -7150,11 +7150,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "novochema-levice",
+    "company": "NOVOCHEMA, družstvo",
+    "productId": "elo",
+    "country": "Slovakia",
+    "countryZh": "斯洛伐克",
+    "city": "Levice",
+    "latitude": 48.219,
+    "longitude": 18.606,
+    "legacyCompanyDescription": "NOVOCHEMA在Levice制造与开发涂料，SYNPUR E明确用于机械、桥梁和结构涂装。城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网明确在Levice自有生产并开发涂料；SYNPUR E为机械产品、建筑机械、桥梁及结构用面漆，按原文与专用固化剂混合使用。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立阅读官网Home完整484行、RENOLAST138行、SYNPURE161行、普通亚麻油150行、Contact128行及Company93行返回原文。Home明确产品直接在Levice制造，Company明确制造及研发，不把店铺/施工承包或协会会员当工厂。保留真实合成及水性漆、沥青涂层、木器保护油、亚麻油/熟油、渗透底涂、稀释剂、技术汽油/煤油及固化剂等业务，不笼统说只卖成品漆或没有输入材料。实际SYNPURE明示用于机械、建筑机械、桥梁和结构面漆，使用TVRDIDLOU7001与专用稀释剂；不凭名称把它改称环氧漆，也不把其耐候/UV/清洁化学品或间接食品接触自述转为我方ELO性能或认证。实际普通亚麻油页描述100%天然亚麻油、木材浸渍/维护和木材浸渍混合物配料，明确保留其作为配料的角色；未把天然亚麻油名称自动等同环氧化亚麻油、ESBO或生物增塑剂，也不称已用独立化验/全部SDS排除所有化学改性。已读自有制造、全可见产品大类及当前显示商品、实际油和保护面漆用途范围未见ELO、ESBO、环氧化植物油、生物基增塑剂或同类环氧功能改性原料外售证据；结论限已读公开范围，未穷尽全部商品/TDS/SDS/未披露关联企业。RENOLAST是沥青铝反射涂层，不假写成环氧重防腐。当前Contact明确NOVOCHEMAdružstvo/IČO00167886/Nixbrod28Levice；页面IČDPH按原样保存不修正或冒称工商审计。历史BABATEX/ŽENA/VZORODEV/VZOR及品牌/Levice门店按同一账户，COOPPRODUKTSLOVENSKO仅声明会员关系不当母公司，1964开始化工制造与1951合作社成立区分。当前公开obchodne为商业合作部门邮箱，非具名采购；邮发/出货expedicia、门店diskont和秘书渠道不混用。法定代表Ing.IvetaChmelová身份信息未转成个人采购联系人，novochema@公司地址不绑定个人所有。将公开斯洛伐克国内0905792005按国家码规范为+421905792005，仅业务电话不当WhatsApp。产品与ELO资料允许的涂料/树脂改性评估有潜在关联，不确认固化/体系相容、实际使用植物油、当前需求、采购或性能改善。"
+    },
+    "contact": {
+      "label": "官网商业合作部门公开邮箱及业务电话，另有实际联系表单",
+      "email": "obchodne@novochema.sk",
+      "phone": "+421 905 792 005",
+      "contactUrl": "https://novochema.sk/kontakt/"
+    },
+    "source": {
+      "label": "Own actual SYNPUR E industrial structural topcoat with Levice manufacture and corporate contact",
+      "url": "https://novochema.sk/produkt/synpur-e/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "novochema-levice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-eurotex-el-viso": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-monto-marines": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chimtitan-bucharest": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7500,6 +7529,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "novochema-levice": {
+    "website": "https://novochema.sk/",
+    "contactPage": "https://novochema.sk/kontakt/",
+    "address": "Own actual Contact: Nixbrod28,93439Levice,Slovakia; NOVOCHEMA,družstvo/IČO00167886/DIČ2020404232. Printed IČDPH SK22020404232 retained as published, not externally validated or silently corrected. Own manufacture in Levice; approximate city map marker.",
+    "generalEmail": "obchodne@novochema.sk",
+    "generalEmailEvidence": {
+      "company": "NOVOCHEMA, družstvo",
+      "value": "obchodne@novochema.sk",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual Contact by business department and company identity",
+          "url": "https://novochema.sk/kontakt/",
+          "summary": "Own Contact explicitly places obchodne@novochema.sk under Obchodná spolupráca (business cooperation), separate from dispatch/shop/secretariat. Shared business department mailbox, not a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+421 905 792 005",
+    "generalPhoneEvidence": {
+      "company": "NOVOCHEMA, družstvo",
+      "value": "+421 905 792 005",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual Contact by business department and company identity",
+          "url": "https://novochema.sk/kontakt/",
+          "summary": "Own Contact explicitly pairs business cooperation phone0905792005 with obchodne mailbox. Slovak domestic leading0 normalized to+421905792005. Business voice line, not WhatsApp or personal procurement contact."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Levice manufacture and full visible category/current product overview",
+        "url": "https://novochema.sk/"
+      },
+      {
+        "label": "Actual SYNPUR E machinery,bridge and structural topcoat and specified hardener",
+        "url": "https://novochema.sk/produkt/synpur-e/"
+      },
+      {
+        "label": "Actual ordinary linseed oil wood-impregnation and mixture-input role retained",
+        "url": "https://novochema.sk/produkt/lanovy-olej/"
+      },
+      {
+        "label": "Own manufacturer/developer and cooperative identity/history",
+        "url": "https://novochema.sk/o-firme/"
+      },
+      {
+        "label": "Actual legal identity and business-cooperation mailbox/phone",
+        "url": "https://novochema.sk/kontakt/"
+      },
+      {
+        "label": "Actual RENOLAST bituminous/aluminium roof coating, not epoxy",
+        "url": "https://novochema.sk/produkt/renolast/"
+      }
+    ]
+  },
   "pinturas-eurotex-el-viso": {
     "website": "https://eurotex.es/",
     "contactPage": "https://eurotex.es/contacto/",
@@ -23464,6 +23556,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "novochema-levice",
   "pinturas-eurotex-el-viso",
   "pinturas-monto-marines",
   "chimtitan-bucharest",
