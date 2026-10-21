@@ -6871,11 +6871,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "druchema-prague",
+    "company": "Druchema, družstvo pro chemickou výrobu a služby",
+    "productId": "nl-w1201",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Prague",
+    "latitude": 50.076,
+    "longitude": 14.438,
+    "legacyCompanyDescription": "Druchema化学制造合作社提供配方开发、测试、定制制造及液/粉混合；水性与醇类木材着色剂为其实际公开业务。地图仅Prague城市代表点，非工厂入口。",
+    "fit": "可开发候选",
+    "signal": "自有定制制造原文明确研发中心、配方/测试/混合及PrivateLabel生产，Hobby范围包含水性和醇类木材着色剂；自有品牌/现售木材着色目录支持木材成品业务，Contact核对制造合作社名称、Prague地址、注册号和共享公司入口。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网定制制造说明自有研究中心、开发测试、配方混合与PrivateLabel生产，包含水性和醇类木材着色剂；木材着色目录支持实际成品业务，不虚构具名水性清漆SKU。可见业务包括成品胶、清洁/护理、化妆品、艺术材料、木材着色/特殊涂层、滑雪蜡与汽车护理，并保留化学半成品供应和代工角色。所查制造、品牌与成品目录范围未见水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂外售；成品分散胶、蜡乳液或一般半成品不自动等于该类输入。结论限已读公开范围，未穷尽全部SKU、定制配方或SDS。Druchema合作社、登记号00027456、HERKULES/Dispercoll/Kanagom/HYDROVOSK/TEMPO及地区渠道按一个账户去重，无同主体重复。Contact中的共享podatelna邮箱和公司接待总机独立核验；网站维护邮箱不用于商务，通用入口不冒称具名采购。NL-W1201仅按资料讨论木材底涂/附着促进材料评估，未确认现有配方相容、采购、性能改善或降本。"
+    },
+    "contact": {
+      "label": "官网公开公司共享业务邮箱、总机及联系页；无具名采购收件人",
+      "email": "podatelna@druchema.cz",
+      "phone": "+420 296 814 111",
+      "contactUrl": "https://www.druchema.cz/s21381-kontakty"
+    },
+    "source": {
+      "label": "Own contract manufacturing and research capabilities explicitly listing water-based/alcohol-based wood stains, with own current wood-stain catalogue",
+      "url": "https://www.druchema.cz/s32891-zakazkova-vyroba"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "rokospol-kanovice",
+    "company": "ROKOSPOL a.s.",
+    "productId": "elo",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Kaňovice, Zlín Region",
+    "latitude": 49.06,
+    "longitude": 17.706,
+    "legacyCompanyDescription": "ROKOSPOL为自有研发/生产工业防腐涂层与建筑材料企业；Rokoprim为其工业底涂系列。Kaňovice为实际生产联系地点，地图仅地区代表位置。",
+    "fit": "可开发候选",
+    "signal": "自有Company说明1998起工业涂层自主制造及研发；实际RokoprimEPS2312产品为含铁云母双组分环氧底涂，用于钢制品重防腐体系；ProductionCentre明确Kaňovice制造联系地址、登记号25521446及公司总机/邮箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网证明自有研发、工业防腐涂层制造与Kaňovice生产中心；RokoprimEPS2312为含铁云母双组分环氧钢材防护底涂。可见业务含工业/建筑/木器/地坪成品和油蜡、结合料、填料及清洁等配套。制造商2024-11-20声明另明确Antikor3000–3003触变防腐凝胶用于自家成品，并通过RavagoChemicals向其他涂料制造商送样；保留其外供配方材料角色，不称添加剂全部自用，不推定Ravago股权关系。声明未披露完整凝胶组成，不能猜成分；触变防腐/颜填料用途不自动等于ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入。已读声明、制造信息和可见产品范围未见该类输入外售，结论不覆盖未披露配方、全部SKU/SDS或全球关联业务。ROKOSPOL/ROKO、Rokofloor/Rokostone、地区店点和.com/.cz域名按一个账户去重，无同主体重复。2024文件抬头与当前生产地址分别保留，不编造法定迁址；旧产能/ISO文字不作当前认证。跨域公司邮箱及总机由自有生产联系页独立核验，不冒称具名采购。ELO仅制造配方中的环氧功能、柔韧/树脂改性试验方向；客户防腐、固化与施工效果不转作我方承诺，采购及相容性未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司共享业务邮箱、总机及联系页；无具名采购收件人",
+      "email": "rokospol@rokospol.cz",
+      "phone": "+420 577 110 111",
+      "contactUrl": "https://www.rokospol.com/en/production-centre/"
+    },
+    "source": {
+      "label": "Own Rokoprim EP S2312 industrial anticorrosive epoxy-primer original, manufacturing company and production-centre contact",
+      "url": "https://www.rokospol.com/cz/epoxidove-a-epoxiesterove/3767id/rokoprim-ep-s-2312-/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rokospol-kanovice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "druchema-prague": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vitex-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "duro-lak-laval": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "isomat-agios-athanasios": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7211,6 +7269,128 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rokospol-kanovice": {
+    "website": "https://www.rokospol.com/",
+    "contactPage": "https://www.rokospol.com/en/production-centre/",
+    "address": "Own production/contact:Kaňovice101,76341BiskupiceuLuhačovic,CzechRepublic,IČ25521446. Manufacturer-authored20Nov2024letter also printsPragueaddress; not asserted currentlegalheadquartermove or secondentity. Approximate Kaňovicecity/area marker,not surveyedplantentrance.",
+    "generalEmail": "rokospol@rokospol.cz",
+    "generalEmailEvidence": {
+      "company": "ROKOSPOL a.s.",
+      "value": "rokospol@rokospol.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://www.rokospol.com/en/production-centre/",
+          "summary": "Own production-centre manufacturer block explicitly publishes rokospol@rokospol.cz even though the site is rokospol.com. Same shared address also appears atsecretariat; acceptedfromactualownsource,not constructed fromdomain orassigned topersonalnamedbuyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+420 577 110 111",
+    "generalPhoneEvidence": {
+      "company": "ROKOSPOL a.s.",
+      "value": "+420 577 110 111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://www.rokospol.com/en/production-centre/",
+          "summary": "Own manufacturer production-centre block publishes+420577110111. Generalcompany/secretariatvoice,notfax137,personalmanagerphone orWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.rokospol.com/en/company/"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.rokospol.com/cz/epoxidove-a-epoxiesterove/"
+      },
+      {
+        "label": "Actual manufacturer-authored20November2024project-use declaration hosted by TomasBataUniversity; source date preserved",
+        "url": "https://cps.utb.cz/images/MEP/new/Prohlen%20vrobce-antikor.pdf"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.rokospol.com/en/production-centre/"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.rokospol.com/en/products/"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.rokospol.com/cz/epoxidove-a-epoxiesterove/3767id/rokoprim-ep-s-2312-/"
+      }
+    ]
+  },
+  "druchema-prague": {
+    "website": "https://www.druchema.cz/",
+    "contactPage": "https://www.druchema.cz/s21381-kontakty",
+    "address": "Own Contact:Služeb753/3,10000Praha10–Strašnice,CzechRepublic; IČ00027456. Cityrepresentativemarker,not factoryentrancegeocoding. Retail/dealer/Slovakianchannels notindependentcustomers.",
+    "generalEmail": "podatelna@druchema.cz",
+    "generalEmailEvidence": {
+      "company": "Druchema, družstvo pro chemickou výrobu a služby",
+      "value": "podatelna@druchema.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://www.druchema.cz/s21381-kontakty",
+          "summary": "Own Contact E-maily lists podatelna@druchema.cz as shared company correspondence route. Not webmaster@ maintenance, a named employee or purchasingdepartment; sales mailbox printed twice is not used to infer a different address."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+420 296 814 111",
+    "generalPhoneEvidence": {
+      "company": "Druchema, družstvo pro chemickou výrobu a služby",
+      "value": "+420 296 814 111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://www.druchema.cz/s21381-kontakty",
+          "summary": "Own Contact recepce+420296814111 is corporate reception. Advice296814202,sales275/276 and receptionmobile are separate published routes; only generalreception retained, notWhatsApp or personalbuyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.druchema.cz/s32891-zakazkova-vyroba"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.druchema.cz/s20921-nase-znacky-od-a-z"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.druchema.cz/"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.druchema.cz/k62-moridla-a-natery-moridla-na-drevo"
+      },
+      {
+        "label": "Actual own manufacture, current visible product scope or public business channel original",
+        "url": "https://www.druchema.cz/s21381-kontakty"
+      }
+    ]
+  },
   "vitex-aspropyrgos": {
     "website": "https://www.vitex.gr/",
     "contactPage": "https://www.vitex.gr/wp-content/uploads/2026/01/Vitex_Product_Catalogue_EN.pdf",
@@ -22544,6 +22724,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rokospol-kanovice",
+  "druchema-prague",
   "vitex-aspropyrgos",
   "duro-lak-laval",
   "isomat-agios-athanasios",

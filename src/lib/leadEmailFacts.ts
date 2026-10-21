@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "rokospol-kanovice": "Your Rokoprim EP S 2312 is a two-component epoxy primer for demanding anticorrosive steel-coating systems.",
+  "druchema-prague": "Your contract-manufacturing services include water-based and alcohol-based wood stains.",
   "vitex-aspropyrgos": "Your Chassis Coat is an anticorrosive, solvent-based paint for vehicle chassis and frames.",
   "duro-lak-laval": "Your wood-finishing range includes water-based products alongside sealers, primers, lacquers and varnishes.",
   "isomat-agios-athanasios": "Your DUROFLOOR-11 is a colored, two-component epoxy coating and self-leveling flooring.",
