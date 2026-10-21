@@ -7011,11 +7011,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "tnue-taupo",
+    "company": "Tnue Limited",
+    "productId": "fertilizer-coating",
+    "country": "New Zealand",
+    "countryZh": "新西兰",
+    "city": "Taupō / Rotokawa",
+    "latitude": -38.684,
+    "longitude": 176.07,
+    "legacyCompanyDescription": "Tnue在Taupō自有设施为尿素颗粒施加控释膜，并提供控释氮肥和掺混肥；官网经营主体为TnueLimited。地图仅Taupō城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网Technology明确在Tnue自有工厂将微薄膜包覆肥料颗粒，Products实际列膜包尿素控释氮肥、Dual-Start及精确掺混；GetStarted明确TnueLimited、Taupō/Rotokawa经营地址和共享公司业务入口。先前行业原文另有Taupō商业包膜制造与2024投产报道，日期分别保留。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "当前官网明确Tnue工厂施加控释膜，产品为膜包尿素控释氮肥、Dual-Start及精确掺混；属于实际包膜运营，不把单纯混配当包膜。已读公司技术、全部当前Products正文和真实业务联系范围未见外售包膜树脂、PU反应型原料或同类肥料包膜剂；膜研发/施加、成品氮肥及掺混服务本身不等于原料外售，结论限所读公开范围，未披露膜配方及其他未读关联业务不作保证。旧行业报道中的Smartfert明确为Tnue控释膜技术，现以官网TnueLimited主体合并原私有线索，首次正式收录一次，不把新旧名称、膜品牌、地区人员或Taupō工厂拆为客户。2024-10-22投产报道为历史事件，不改称2026新投产；另一报道仅显示9月7日，不从页脚猜年份。Ballance尿素为其包膜投入来源，保留商业关系，不推定Ballance持股或新建第二个Ballance账户。共享sales邮箱、本地电话号码和地址均有自有公司页对应；现场技术销售人员不冒称原料采购，未核实当前具名采购。客户控释天数、响应、环保、增产与成本文字不转作我方承诺；膜化学、设备工艺相容、实际采购均未确认。"
+    },
+    "contact": {
+      "label": "官网共享公司业务邮箱、联系页及新西兰本地号码；未核实具名采购",
+      "email": "sales@tnue.co.nz",
+      "phone": "0800 214 387",
+      "contactUrl": "https://www.tnue.co.nz/get-started"
+    },
+    "source": {
+      "label": "Own Technology explicitly coating granules at Tnue plant with actual Products and business Contact; archived industry factory corroboration",
+      "url": "https://www.tnue.co.nz/our-technology"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "inchem-polonia-lodz",
+    "company": "INCHEM POLONIA Sp. z o.o.",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Łódź",
+    "latitude": 51.759,
+    "longitude": 19.458,
+    "legacyCompanyDescription": "InchemPolonia在Łódź自有实验室/工厂制造颜料浆、木器及建筑涂饰产品；Drewnomix为水性木器着色清漆。地图仅Łódź城市代表点。",
+    "fit": "可开发候选",
+    "signal": "自有B2B/About说明自1988年制造颜料浆、清漆、浸渍和装饰材料、自有实验室及定制配方；Drewnomix原文为室内外木材/木基材用水性着色清漆。Contact明确Łódź总部及生产厂、公司登记标识和业务表单。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网B2B/About明确自有制造、配方定制、实验室及Contact中的Łódź生产厂；Drewnomix为已核实的水性木器成品。当前完整可见目录标示44项并返回各项名称与用途；保留B2B颜料浆/水性及无水色浆、着色剂、闪光材料、儿童产品调色浆等对其他制造商外供的原料/配套角色，不笼统称无原料业务。目录另有石材水性结合料、氟聚合物浸渍材料、胶黏剂和建筑底漆；实际Gruntmix原文为建筑基材施工底涂，允许在石膏基材与漆混合，不把该施工规定误写为聚烯烃配方添加剂。所读44项可见名称/用途、五条B2B线和制造业务未见水性聚烯烃乳液、PO/CPO分散体或同类配方附着促进原料外售；水性、结合料、色浆、氟聚合物或成品底漆字样本身不等于PO/CPO输入。结论限已读公开范围，未穷尽全部叶子配方、TDS/SDS或未披露关联业务。INCHEMPOLONIA/inchem.pl、公司登记标识和Łódź厂址按一个账户去重，不凭Inchem相似名称合并其他国家化工公司。Contact有真实技术/商务询问表单和公司总机；邮箱在所有所读页均遮蔽，不解码、不猜地址、不从域名构造；技术/出口人员未另做身份与邮箱分项核验，不作个人收件人。产品页存在两种施工温度/覆涂时间说法，未调和或转进开发信；只采用无冲突的水性木器用途。NL-W1201仅木材底涂/附着促进评估，不承诺木器相容、耐候、防霉、附着提升或采购。"
+    },
+    "contact": {
+      "label": "官网业务联系表单及公开总机；邮箱被遮蔽，尚未核验可投递地址",
+      "phone": "+48 693 297 081",
+      "contactUrl": "https://inchem.pl/en/kontakt"
+    },
+    "source": {
+      "label": "Own actual Drewnomix water-based wood finish original with B2B manufacturing, complete visible44-product index and factory contact",
+      "url": "https://inchem.pl/en/produkty/ochrona-drewna/drewnomix-lakierobejca"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "inchem-polonia-lodz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "tnue-taupo": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "romtehnochim-jilava": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "dreisol-preussisch-oldendorf": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "barbot-vila-nova-gaia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7356,6 +7413,114 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "inchem-polonia-lodz": {
+    "website": "https://inchem.pl/",
+    "contactPage": "https://inchem.pl/en/kontakt",
+    "address": "OwnContact:head officeandproductionplant,ul.Bartnicza18,92-612Łódź,Poland. TaxID7282739405,REGON100811758,KRS0000345759 asownpublishedidentifiers; no externalregistryauditclaimed. Approximatecitymarker,notplantentrance.",
+    "generalEmail": "",
+    "generalPhone": "+48 693 297 081",
+    "generalPhoneEvidence": {
+      "company": "INCHEM POLONIA Sp. z o.o.",
+      "value": "+48 693 297 081",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://inchem.pl/en/kontakt",
+          "summary": "OwnContact explicitly lists+48693297081 ascompanygeneralphone,corroboratedbycompanyfooter/address. Not a namedtechnologistphone orWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://inchem.pl/en/dla-firm"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://inchem.pl/en/produkty/ochrona-drewna/drewnomix-lakierobejca"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://inchem.pl/en/produkty"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://inchem.pl/en/kontakt"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://inchem.pl/en/o-nas"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://inchem.pl/en/produkty/renowacja-i-impregnacja/gruntmix"
+      }
+    ]
+  },
+  "tnue-taupo": {
+    "website": "https://www.tnue.co.nz/",
+    "contactPage": "https://www.tnue.co.nz/get-started",
+    "address": "Own current business footer:887RakaunuiRoad,Rotokawa,Taupo,NewZealand. OwnplantatTaupoisestablished; exactpublishedaddressisabusinesscontact,notsurveyedfactoryentrance. Mapapproximatecityonly.",
+    "generalEmail": "sales@tnue.co.nz",
+    "generalEmailEvidence": {
+      "company": "Tnue Limited",
+      "value": "sales@tnue.co.nz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://www.tnue.co.nz/get-started",
+          "summary": "Own Technology/Products/GetStarted companyfooter identifiesTnueLimited and explicitlypublishes sales@tnue.co.nz underContact. Sharedcorporatebusinessroute,not assigned to a named purchasing orR&Dperson."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "0800 214 387",
+    "generalPhoneEvidence": {
+      "company": "Tnue Limited",
+      "value": "0800 214 387",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual company business contact block",
+          "url": "https://www.tnue.co.nz/get-started",
+          "summary": "Own currentcompanyfooterpublishes0800214387. ExactNZlocalvoicevalue retained; no constructedinternationaldiallingorWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://www.tnue.co.nz/our-technology"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://www.tnue.co.nz/our-products"
+      },
+      {
+        "label": "Actualownmanufacture,currentvisibleproductscopeorpublicbusinesschanneloriginal",
+        "url": "https://www.tnue.co.nz/get-started"
+      },
+      {
+        "label": "Archived original22October2024commissioningreport; historicaldatepreserved",
+        "url": "https://www.farmersweekly.co.nz/technology/fert-plant-provides-smarter-option/"
+      },
+      {
+        "label": "Archived originalindustrycoatingmanufacturingreport; visible7Septwithoutyear",
+        "url": "https://www.ruralcontractor.co.nz/blog/engineering-every-granule"
+      }
+    ]
+  },
   "romtehnochim-jilava": {
     "website": "https://emex.ro/",
     "contactPage": "https://emex.ro/contact",
@@ -23008,6 +23173,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "inchem-polonia-lodz",
+  "tnue-taupo",
   "romtehnochim-jilava",
   "dreisol-preussisch-oldendorf",
   "barbot-vila-nova-gaia",
