@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "teohim-moscow": "Your Elakor-ED Grunt 2K/PR epoxy primer is used for protective coatings in industrial workshops and warehouses.",
+  "novbytkhim-saint-petersburg": "Your varnish range includes a water-based product for furniture and decor.",
   "russian-coatings-yaroslavl": "Your Prodecor protective-coatings range is intended for metal structures and other metal surfaces.",
   "kvil-belgorod": "Your БОР Aqua wood treatment uses an acrylic dispersion with water for indoor and outdoor wooden products.",
   "lakokraska-lida": "Your catalogue lists water-dispersion wood varnishes for interior doors, panels and other wooden surfaces.",

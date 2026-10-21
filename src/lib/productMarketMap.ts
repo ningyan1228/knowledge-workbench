@@ -6621,11 +6621,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "novbytkhim-saint-petersburg",
+    "company": "Novbytkhim JSC (АО «Новбытхим»)",
+    "productId": "nl-w1201",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Saint Petersburg",
+    "latitude": 59.934,
+    "longitude": 30.335,
+    "legacyCompanyDescription": "Novbytkhim自有成品漆、清漆及胶生产，官网说明两处生产基地；地图仅SaintPetersburg城市代表位置，非厂区测绘。",
+    "fit": "可开发候选",
+    "signal": "官网当前首页明确АОНовбытхим自有漆、清漆、腻子和胶生产及两处生产基地；自有木器清漆目录实际列出家具与装饰用水性清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网首页明确自有成品漆、清漆及胶生产，实际清漆目录列家具装饰用水性产品。可见业务含漆、清漆/着色/木油、胶、日化、装饰及辅助成品；保留溶剂与其他辅助产品业务，所查范围未见外售水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂。终端产品或丙烯酸/乳胶清漆不自动等于上游聚烯烃原料。排除结论限已读首页、清漆目录与可见品类，不保证全部SKU/配方/SDS或全球业务；About、联系页及尝试的GlavnyTekhnolog叶页未取得，不作为已核证据。Novbytkhim/Новбытхим、newchem.ru、实际关联产品品牌及两处地址按一个公司账户去重，无同主体重复。公司业务邮箱及电话由成功读取的首页联系区独立核验，无具名采购人。木材应用仅讨论NL-W1201底涂/附着促进材料评估，未确认配方相容、采购、改善幅度或性能。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、电话与首页联系区；无具名采购人",
+      "email": "com@newchem.ru",
+      "phone": "+7 812 3223933",
+      "contactUrl": "https://www.newchem.ru/"
+    },
+    "source": {
+      "label": "Own current manufacturing homepage and actual water-based furniture/decor varnish catalogue card",
+      "url": "https://www.newchem.ru/katalog/laki-morilki-maslo/"
+    },
+    "checkedAt": "2026-10-21"
+  },
+  {
+    "id": "teohim-moscow",
+    "company": "TeoKhim / TeoKhim-Prom group (ООО «ТэоХим» / ООО «ТЭОХИМ-ПРОМ»)",
+    "productId": "elo",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Moscow",
+    "latitude": 55.756,
+    "longitude": 37.617,
+    "legacyCompanyDescription": "TeoKhim为配方/技术研发及品牌主体；TeoKhim-Prom为官网明确的实际Elakor制造主体，合并一个关联业务账户。地图仅Moscow城市位置。",
+    "fit": "可开发候选",
+    "signal": "官网Company明确TeoKhim研发配方/技术、TeoKhim-Prom实际制造Elakor；实际两页Elakor-EDGrunt2K/PR原技术说明列环氧树脂、溶剂、填料、固化剂、功能添加剂及工业厂房/仓库保护底涂用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "官网明确ОООТэоХим负责配方/技术研发及品牌，ОООТЭОХИМ-ПРОМ为Elakor实际制造主体，按一个关联业务账户去重；地区代表不另计客户或自动认定股权控制。自有原技术说明明确Elakor-EDGrunt2K/PR为环氧保护底涂，含环氧树脂、溶剂、填料、固化剂及功能添加剂，用于工业厂房/仓库等。可见业务有PU/环氧地坪与防护成品、底漆/清漆、胶/密封、矿物处理、混凝土添加剂、增稠/触变/防静电辅助、色浆、稀释剂及浇注树脂/复配料；保留这些业务事实，所查未见外售ELO、ESBO、环氧化植物油或同类生物基增塑/稳定输入，普通触变/增稠或终端成品不自动等于该类原料。结论限已读制造信息、技术说明及可见类别，非全部SKU/配方/SDS或地区代表业务保证。技术标准年份不当当前修订日，客户成品性能不转移我方。官网公开联系页及公司总机可用，原文未显示可核验的完整邮箱，不重排乱码或借用地区邮箱、具名号码。ELO仅制造配方的环氧功能、柔韧/树脂改性试验方向，现有相容、采购、添加量和性能均未确认。"
+    },
+    "contact": {
+      "label": "官网业务联系页与公司总机；未核验完整邮箱或具名采购人",
+      "phone": "+7 495 2212252",
+      "contactUrl": "https://teohim.ru/contacts/"
+    },
+    "source": {
+      "label": "Own Elakor-ED Grunt2K/PR original technical description and actual TeoKhim/TeoKhim-Prom manufacturing attribution",
+      "url": "https://teohim.ru/downloads/elakor-ed-grunt-2k-pr.pdf?1715839955="
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "teohim-moscow": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "novbytkhim-saint-petersburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "russian-coatings-yaroslavl": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "kvil-belgorod": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "lakokraska-lida": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -6952,6 +7009,94 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "teohim-moscow": {
+    "website": "https://teohim.ru/",
+    "contactPage": "https://teohim.ru/contacts/",
+    "address": "Office:10SuvorovskayaStreet,office15,Moscow107023,Russia. Own contact identifiesOOO TeoKhim OGRN1037739543126; ownCompany separately attributes manufacture toOOO TeoKhim-Prom. Office is not asserted factory address; approximate city map marker.",
+    "generalEmail": "",
+    "generalPhone": "+7 495 2212252",
+    "generalPhoneEvidence": {
+      "company": "TeoKhim / TeoKhim-Prom group (ООО «ТэоХим» / ООО «ТЭОХИМ-ПРОМ»)",
+      "value": "+7 495 2212252",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://teohim.ru/contacts/",
+          "summary": "Own Contacts multi-channel Moscow phone explicitly+7(495)221-22-52; corporate public voice route, not a named technician, representative mobile or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacturing, product, visible business scope or business channel original",
+        "url": "https://teohim.ru/"
+      },
+      {
+        "label": "Actual own manufacturing, product, visible business scope or business channel original",
+        "url": "https://teohim.ru/downloads/elakor-ed-grunt-2k-pr.pdf?1715839955="
+      },
+      {
+        "label": "Actual own manufacturing, product, visible business scope or business channel original",
+        "url": "https://teohim.ru/elakor/"
+      },
+      {
+        "label": "Actual own manufacturing, product, visible business scope or business channel original",
+        "url": "https://teohim.ru/contacts/"
+      }
+    ]
+  },
+  "novbytkhim-saint-petersburg": {
+    "website": "https://www.newchem.ru/",
+    "contactPage": "https://www.newchem.ru/",
+    "address": "Public business address:15B Kosaya Liniya,Vasilievsky Island,Saint Petersburg199106,Russia. Separately disclosed legal address:45ZheleznodorozhnayaStreet,Gatchina188304,LeningradRegion,Russia. City representative marker, not surveyed factory location.",
+    "generalEmail": "com@newchem.ru",
+    "generalEmailEvidence": {
+      "company": "Novbytkhim JSC (АО «Новбытхим»)",
+      "value": "com@newchem.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://www.newchem.ru/",
+          "summary": "Own company homepage sales-department header and company contact footer publish com@newchem.ru. Shared company business route; no named buyer or personal address assigned."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+7 812 3223933",
+    "generalPhoneEvidence": {
+      "company": "Novbytkhim JSC (АО «Новбытхим»)",
+      "value": "+7 812 3223933",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business channel",
+          "url": "https://www.newchem.ru/",
+          "summary": "Own homepage sales header and secretary/contact block publish8(812)322-39-33, normalized as Russian company voice+7 8123223933; not WhatsApp or a named mobile."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacturing, product, visible business scope or business channel original",
+        "url": "https://www.newchem.ru/"
+      },
+      {
+        "label": "Actual own manufacturing, product, visible business scope or business channel original",
+        "url": "https://www.newchem.ru/katalog/laki-morilki-maslo/"
+      }
+    ]
+  },
   "russian-coatings-yaroslavl": {
     "website": "https://ruskraski.ru/",
     "contactPage": "https://ruskraski.ru/contacts/",
@@ -21805,6 +21950,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "teohim-moscow",
+  "novbytkhim-saint-petersburg",
   "russian-coatings-yaroslavl",
   "kvil-belgorod",
   "lakokraska-lida",
