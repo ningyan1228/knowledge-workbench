@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "wagon-paints-bayswater-north": "Your Rhinamel is a two-pack epoxy/polyamide finish for concrete floors and steel fabrications, including machinery and tanks.",
   "quimica-pomiq-ciudad-mexico": "You develop marine coatings for ship hulls, decks and port structures.",
   "colorchimica-pescantina": "Your LEGNOPIÙ 33200 is a water-based acrylic wood treatment for indoor and outdoor use.",
   "anova-production-vendargues": "Your VPT500 is a water-based clear varnish for wooden worktops and tables in kitchens and bathrooms.",

@@ -7262,11 +7262,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "wagon-paints-bayswater-north",
+    "company": "Wagon Paints Australia Pty Ltd",
+    "productId": "elo",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Bayswater North / Melbourne",
+    "latitude": -37.824,
+    "longitude": 145.289,
+    "legacyCompanyDescription": "澳大利亚WagonPaints在BayswaterNorth自有工厂制造工业涂料，Rhinamel为混凝土地坪及钢构机器/储罐用双组分环氧面漆；城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网About说明Wagon Paints Australia自有Bayswater North制造工厂；实际Rhinamel为混凝土地坪及机器、储罐等钢制构件用双组分环氧/聚酰胺面漆，Contact对应公司和销售业务邮箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立审读官网Home、About、完整可见Products分类、Contact、Thinners&Additives完整可见条目及EpoxyTopcoats四项产品正文，共六次有用原文。当前自有purposebuiltplant/BayswaterNorth及制造事实有官网明示，不把经销商Mapquest或营销文案中的生产地当独立工厂证据。Rhinamel为双组分工业epoxy/polyamide成品面漆，具体用于混凝土地坪、机器和储罐等钢构件；不能据此声称客户制造聚酰胺原料或已使用ELO。保留真实对外原料/配套业务：EnamelConverter明确urethane添加剂，用于AutoEnamel干燥及韧性调整；EpoxyAccelerator为amine促进剂，PolyurethaneAccelerator为异氰酸酯固化体系促进剂；其余可见条目为烃类/化学溶剂、矿物松节油、MEK、变性乙醇、丙酮、清洗剂、缓干剂及Transocean专用稀释剂。不能称其不销售任何添加剂；这些已披露的固化促进和溶剂用途不自动等于ELO/ESBO、环氧化植物油或生物增塑原料。实际已读制造、成品分类和辅助目录范围未发现上述所选同类输入外售，结论限可见公开范围，不冒称已逐项读取全部叶页/TDS/SDS或穷尽未披露股权。Wagon/Rhinofloor/Rhinamel及同一厂址作为一个账户；Transocean明示为独立涂料制造商协会，不凭共同商标就与已在库Kossan/Zandleven判作同一控股集团，也不复制其核验结论。PerformancePolymersBV/Thermaguard属于公开战略伙伴技术和成品线，不据国际brand名称推定Wagon拥有荷兰法人或外售ELO原料，更不另列新客户。Contact明确WagonPaintsAustraliaPtyLtd/5StephensonRdBayswaterNorthVictoria3153/sales@，电话0397291344与传真0397202179分列；不把搜索社交摘要中的传真误作语音电话。公开公司邮箱不冒称具名采购；顾客评论、Cameron/Ross等称呼不作为当前员工身份/职务证据。澳洲所有权、ISO/APAS/RMU为官网自述，未冒称独立监管/注册审计；1975/1950年代历史不是2026扩产或采购公告。客户成品防腐、化学耐受、固化时间、25%干燥改善、高温范围和安全声明不转用于ELO性能/适配保证。仅提出有资料支持的环氧功能、柔韧及树脂改性评估，客户当前需求、用量、配方相容和采购时机均未确认。"
+    },
+    "contact": {
+      "label": "官网明确公司销售业务邮箱及语音电话；无具名采购邮箱",
+      "email": "sales@wagonpaints.com.au",
+      "phone": "+61 3 9729 1344",
+      "contactUrl": "https://www.wagonpaints.com.au/contact-us/"
+    },
+    "source": {
+      "label": "Own Rhinamel actual industrial epoxy/polyamide finish and current manufacture",
+      "url": "https://www.wagonpaints.com.au/product-category/epoxy-topcoats/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "wagon-paints-bayswater-north": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "quimica-pomiq-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colorchimica-pescantina": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anova-production-vendargues": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7616,6 +7645,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "wagon-paints-bayswater-north": {
+    "website": "https://www.wagonpaints.com.au/",
+    "contactPage": "https://www.wagonpaints.com.au/contact-us/",
+    "address": "5 Stephenson Rd,Bayswater North,Victoria3153,Australia. Own About identifies its purpose-built manufacturing plant in Bayswater North. Approximate locality marker; no exact factory GPS or external registry audit claimed.",
+    "generalEmail": "sales@wagonpaints.com.au",
+    "generalEmailEvidence": {
+      "company": "Wagon Paints Australia Pty Ltd",
+      "value": "sales@wagonpaints.com.au",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own company Contact Us",
+          "url": "https://www.wagonpaints.com.au/contact-us/",
+          "summary": "Own Contact explicitly lists sales@wagonpaints.com.au under company Email. Sales/company business inbox, not named procurement."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+61 3 9729 1344",
+    "generalPhoneEvidence": {
+      "company": "Wagon Paints Australia Pty Ltd",
+      "value": "+61 3 9729 1344",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own company Contact Us",
+          "url": "https://www.wagonpaints.com.au/contact-us/",
+          "summary": "Own Contact separates Phone(03)9729 1344 from Facsimile(03)9720 2179. Normalized public Australian voice number, not WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing plant and strategic-partner distinction",
+        "url": "https://www.wagonpaints.com.au/about-us/"
+      },
+      {
+        "label": "Actual Rhinamel industrial epoxy/polyamide product applications",
+        "url": "https://www.wagonpaints.com.au/product-category/epoxy-topcoats/"
+      },
+      {
+        "label": "Actual complete visible thinners/additives roles",
+        "url": "https://www.wagonpaints.com.au/product-category/thinners-additives/"
+      },
+      {
+        "label": "Own visible coating range",
+        "url": "https://www.wagonpaints.com.au/products/"
+      },
+      {
+        "label": "Exact company/contact identity and phone/fax separation",
+        "url": "https://www.wagonpaints.com.au/contact-us/"
+      }
+    ]
+  },
   "quimica-pomiq-ciudad-mexico": {
     "website": "https://quimicapomiq.com/",
     "contactPage": "https://quimicapomiq.com/",
@@ -23865,6 +23953,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "wagon-paints-bayswater-north",
   "quimica-pomiq-ciudad-mexico",
   "colorchimica-pescantina",
   "anova-production-vendargues",
