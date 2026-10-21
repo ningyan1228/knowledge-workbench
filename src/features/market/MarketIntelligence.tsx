@@ -1,11 +1,11 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Building2, CheckCircle2, ExternalLink, FileText, Globe2, Mail, MapPinned, Search, TriangleAlert, X } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 import { marketExtendedApplications, marketProducts, publicLeads, targetCompanyTypes, tdsVerifiedApplications, type MarketProduct, type PublicLead } from '../../lib/productMarketMap'
 import { timelineLeads, type TimelineOrder } from '../../lib/leadTimeline'
 import { LeadTimelineControls } from './LeadTimelineControls'
 import { filterLeadGeography, geographyOptions } from '../../lib/leadGeography'
-import { CompanyDetail } from './CompanyDetail'
+import { CompanyDetail, type CompanyDetailNavigation } from './CompanyDetail'
 import type { CompanyDetailOpenTarget } from './CompanyDetailSections'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
 import { firstContactPlan, firstContactExport } from '../../lib/customerDevelopment'
@@ -17,13 +17,14 @@ import { emptyBusinessFilters, filterWorkbenchLeads, type BusinessFilters } from
 import { shanghaiDay, timelineFilterLabel } from '../../lib/leadTimeline'
 import { CustomerMapWorkspace } from './CustomerMapWorkspace'
 import { MarketConnectionStatus } from './MarketConnectionStatus'
-import { LeadList } from './LeadList'
+import { CustomerBrowseList } from './CustomerBrowseList'
 import { marketTabForRoute, readLeadView, rememberLeadView, type MarketTab } from '../../lib/leadViewPreference'
 import './MarketWorkspace.css'
 import './MacCustomerMap.css'
 import './CompactMarketHeader.css'
 import './CompactCustomerCards.css'
 import './MarketVisualSystem.css'
+import './CalmWorkspace.css'
 
 const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
@@ -56,6 +57,28 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const [hoveredLead, setHoveredLead] = useState<PublicLead | null>(null)
   const [detailLead, setDetailLead] = useState<PublicLead | null>(null)
   const [detailTarget, setDetailTarget] = useState<CompanyDetailOpenTarget | undefined>()
+  const [detailRequest, setDetailRequest] = useState(0)
+  const navigationRef = useRef<CompanyDetailNavigation>(null)
+  const workspaceRef = useRef<HTMLDivElement>(null)
+  const didSelect = useRef(false)
+  const [wide, setWide] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width:1101px)').matches)
+  useEffect(() => {
+    const media = window.matchMedia('(min-width:1101px)')
+    const change = () => setWide(media.matches)
+    media.addEventListener('change', change)
+    return () => media.removeEventListener('change', change)
+  }, [])
+  useLayoutEffect(() => {
+    const element = workspaceRef.current
+    if (!element || view !== 'leads' || !wide) return
+    const update = () => element.style.setProperty('--customer-pane-height', `${Math.max(460, window.innerHeight - element.getBoundingClientRect().top - window.scrollY - 20)}px`)
+    const observer = new ResizeObserver(update)
+    const page = element.closest('.market-workspace-page')
+    page?.querySelectorAll('.work-controls-compact,.market-heading,.market-connection-notices').forEach(node => observer.observe(node))
+    document.querySelectorAll('.preview-banner,.topbar').forEach(node => observer.observe(node))
+    window.addEventListener('resize', update); update()
+    return () => { observer.disconnect(); window.removeEventListener('resize', update) }
+  }, [view, wide])
   const [order, setOrder] = useState<TimelineOrder>('newest'), [day, setDay] = useState('all')
   const [continent, setContinent] = useState('all'), [country, setCountry] = useState('all')
   const [filters, setFilters] = useState<BusinessFilters>({ ...emptyBusinessFilters })
@@ -68,8 +91,17 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const businessLeads = useMemo(() => filterWorkbenchLeads(regionalLeads, filters, records, sends, today, order), [regionalLeads, filters, records, sends, today, order])
   const matching = useMemo(() => timelineLeads(businessLeads, order, day, today).sort((a, b) => businessLeads.indexOf(a) - businessLeads.indexOf(b)), [businessLeads, order, day, today])
   const resetFocus = () => { setSelectedLead(null); setHoveredLead(null); setOverviewToken((value) => value + 1) }
-  const openLeadDetail = (lead: PublicLead, target?: CompanyDetailOpenTarget) => { setDetailTarget(target); setHoveredLead(null); setSelectedLead({ ...lead }); setDetailLead(lead) }
-  useEffect(() => { setFilters((current) => ({ ...current, industry: 'all', application: 'all' })); setDetailLead(null); resetFocus() }, [productId])
+  const openLeadDetail = (lead: PublicLead, target?: CompanyDetailOpenTarget, approved = false) => {
+    if (!approved && detailLead?.id !== lead.id && navigationRef.current && !navigationRef.current.canLeave()) return
+    setDetailRequest(value => value + 1); setDetailTarget(target); setHoveredLead(null); setSelectedLead(lead); setDetailLead(lead)
+  }
+  useEffect(() => { setFilters((current) => ({ ...current, industry: 'all', application: 'all' })); resetFocus() }, [productId])
+  useEffect(() => {
+    if (view === 'leads' && wide && matching.length && !didSelect.current) {
+      didSelect.current = true
+      setDetailLead(matching[0]); setSelectedLead(matching[0])
+    }
+  }, [view, wide, matching])
   useEffect(() => {
     setFilters((current) => {
       const listMissing = current.list !== 'all' && current.list !== 'favorites' && !work.lists.some((list) => list.id === current.list)
@@ -87,6 +119,11 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const selectCountry = (value: string) => { setCountry(value); resetFocus() }
   const regionLabel = country !== 'all' ? options.countries.find((item) => item.value === country)?.label ?? country : continent !== 'all' ? continent : '全部地区'
   const companyCount = new Set(matching.map(outreachCompanyKey)).size
+  const changeView = (next: 'leads' | 'map') => {
+    if (next === view || navigationRef.current && !navigationRef.current.canLeave()) return
+    setDetailLead(null); didSelect.current = false; onView(next)
+  }
+  const viewControls = <div className="work-view-toggle" role="group" aria-label="客户展示方式"><button type="button" aria-pressed={view === 'leads'} onClick={() => changeView('leads')}><Building2 size={15} />列表</button><button type="button" aria-pressed={view === 'map'} onClick={() => changeView('map')}><MapPinned size={15} />地图</button></div>
   const hasActiveFilters = productId !== 'all' || continent !== 'all' || country !== 'all' || day !== 'all' || order !== 'newest' || (Object.keys(emptyBusinessFilters) as Array<keyof BusinessFilters>).some((key) => filters[key] !== emptyBusinessFilters[key])
   const firstContactLeads = matching.filter((lead) => { const stage = records?.[outreachCompanyKey(lead)]?.stage; return !stage || stage === 'todo' })
   const unsentEmails = firstContactPlan(firstContactLeads, sends, Number.MAX_SAFE_INTEGER, undefined, false, records).batch
@@ -109,19 +146,24 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     finally { setDownloading(false) }
   }
   return <section className="market-map-workspace">
-    <LeadBusinessControls allCustomerCount={new Set(publicLeads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { setFilters(value); resetFocus() }} work={work} ledger={ledger}
+    <LeadBusinessControls viewControls={viewControls} allCustomerCount={new Set(publicLeads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { setFilters(value); resetFocus() }} work={work} ledger={ledger}
       primaryFilters={<div className="market-scope-controls"><div className="market-product-row"><span>产品</span><ProductPicker value={productId} onChange={onProduct} /></div>
     <div className="lead-geography-filters" role="group" aria-label="按地区筛选"><label>大洲<select aria-label="大洲" value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label><label>国家／地区<select aria-label="国家／地区" value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label></div>
     </div>}
       advancedContent={<LeadTimelineControls embedded leads={businessLeads} order={order} day={day} onOrder={setOrder} onDay={(value) => { setDay(value); resetFocus() }} />}
-      extraFilterCount={Number(day !== 'all') + Number(order !== 'newest')}
-      extraActiveFilters={<>{day !== 'all' && <button type="button" onClick={() => { setDay('all'); resetFocus() }} aria-label="移除收录日期筛选"><span>{timelineFilterLabel(day, today)}</span><X size={12} /></button>}{order !== 'newest' && <button type="button" onClick={() => setOrder('newest')} aria-label="恢复默认收录排序"><span>首次收录由旧到新</span><X size={12} /></button>}</>} />
-    <div className="market-results-bar compact-customer-results"><span className="market-result-count" role="status"><strong>{companyCount} 家公司</strong> · {new Set(matching.map((lead) => lead.country)).size} 个国家／地区{(continent !== 'all' || country !== 'all') && <small> · {regionLabel}</small>}{matching.length > companyCount && <small> · {matching.length} 条产品记录（部分公司匹配多个产品）</small>}</span><div className="market-results-tools"><div className="work-view-toggle" role="group" aria-label="客户展示方式"><button type="button" aria-pressed={view === 'map'} onClick={() => onView('map')}><MapPinned size={15} />地图模式</button><button type="button" aria-pressed={view === 'leads'} onClick={() => onView('leads')}><Building2 size={15} />列表模式</button></div></div></div>
-    {view === 'leads' && <div className="lead-email-download"><span>当前范围可供核对的首封草稿 {ledger.status === 'ready' ? unsentEmails.length : '—'} 封 · 下载不会标记已发送</span><button type="button" className="secondary-button" disabled={ledger.status !== 'ready' || downloading || !unsentEmails.length} onClick={() => void downloadEmails()}><FileText size={15} />{downloading ? '核对发送记录…' : '下载当前筛选开发信'}</button></div>}
-    <div className={view === 'map' ? 'customer-map-view' : 'work-list-view'}>
-      {view === 'map' ? <CustomerMapWorkspace leads={matching} selectedLead={selectedLead} hoveredLead={hoveredLead} onSelectLead={setSelectedLead} onHighlight={setHoveredLead} onOpenDetail={openLeadDetail} detailOpen={Boolean(detailLead)} overviewToken={overviewToken} onOverview={resetFocus} onReturnRegions={continent !== 'all' || country !== 'all' ? returnAllRegions : undefined} ledger={ledger} work={work} /> : matching.length > 0 && <LeadList leads={matching} selectedLead={selectedLead} onHighlight={setHoveredLead} onSelect={openLeadDetail} onOpenDetail={openLeadDetail} ledger={ledger} work={work} />}
+      extraFilterCount={Number(day !== 'all') + Number(order !== 'newest') + Number(productId !== 'all') + Number(continent !== 'all' || country !== 'all')}
+      extraActiveFilters={<>{productId !== 'all' && <button type="button" onClick={() => onProduct('all')} aria-label="移除产品筛选">{productOf(productId as MarketProduct['id']).name}<X size={12} /></button>}{(continent !== 'all' || country !== 'all') && <button type="button" onClick={returnAllRegions} aria-label="移除地区筛选">{regionLabel}<X size={12} /></button>}{day !== 'all' && <button type="button" onClick={() => { setDay('all'); resetFocus() }} aria-label="移除收录日期筛选"><span>{timelineFilterLabel(day, today)}</span><X size={12} /></button>}{order !== 'newest' && <button type="button" onClick={() => setOrder('newest')} aria-label="恢复默认收录排序"><span>首次收录由旧到新</span><X size={12} /></button>}</>} />
+    <div className="market-results-bar compact-customer-results"><span className="market-result-count" role="status"><strong>{companyCount} 家公司</strong> · {new Set(matching.map(lead => lead.country)).size} 个国家／地区{matching.length > companyCount && <small> · {matching.length} 条产品记录</small>}</span>
+      <button type="button" className="customer-export-action" disabled={ledger.status !== 'ready' || downloading || !unsentEmails.length} onClick={() => void downloadEmails()} title="下载前重新核对记录；下载不会标记已发送"><FileText size={14} />{downloading ? '核对发送记录…' : '下载开发信'}{ledger.status === 'ready' && <span>{unsentEmails.length}</span>}</button>
+    </div>
+    <div ref={workspaceRef} className={view === 'map' ? 'customer-map-view' : 'work-list-view customer-split-workspace'}>
+      {view === 'map' ? <CustomerMapWorkspace leads={matching} selectedLead={selectedLead} hoveredLead={hoveredLead} onSelectLead={setSelectedLead} onHighlight={setHoveredLead} onOpenDetail={openLeadDetail} detailOpen={Boolean(detailLead)} overviewToken={overviewToken} onOverview={resetFocus} onReturnRegions={continent !== 'all' || country !== 'all' ? returnAllRegions : undefined} ledger={ledger} work={work} /> : matching.length > 0 && <CustomerBrowseList leads={matching} selectedLead={detailLead} onHighlight={() => {}} onSelect={(lead) => openLeadDetail(lead, 'overview')} onOpenDetail={openLeadDetail} ledger={ledger} work={work} />}
       {!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选没有符合条件的客户</strong><span>可调整业务条件、日期或地区，或点击“清除筛选”。</span></div>}
-    </div><CompanyDetail initialTarget={detailTarget} initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={(lead) => openLeadDetail(lead, detailTarget)} />
+      {view === 'leads' && <CompanyDetail requestId={detailRequest} embedded={wide} navigationRef={navigationRef} initialTarget={detailTarget} initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={(lead, target) => openLeadDetail(lead, target, true)} />}
+      {view === 'leads' && !detailLead && <div className="customer-work-placeholder"><Building2 size={30} /><h2>选择一家客户</h2><p>查看联系理由、公开渠道，或准备开发信。</p></div>}
+    </div>
+    {view === 'map' && <CompanyDetail requestId={detailRequest} navigationRef={navigationRef} initialTarget={detailTarget} initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={(lead, target) => openLeadDetail(lead, target, true)} />}
+
   </section>
 }
 
@@ -141,8 +183,8 @@ export function MarketIntelligence() {
   const filteredLeads = useMemo(() => publicLeads.filter((lead) => productId === 'all' || lead.productId === productId), [productId])
   const openTab = (next: MarketTab) => setHash(`market-intelligence/${next}`)
   const customerView = tab === 'map' || tab === 'leads'
-  return <div className="market-workspace-page">
-    <header className="page-heading market-heading"><h1>客户开发工作台</h1><nav className="market-tabs" aria-label="市场情报导航">{tabs.map((item) => { const active = item.id === 'customers' ? customerView : tab === item.id; return <button key={item.id} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={() => openTab(item.id === 'customers' ? preferredView : item.id)}>{item.label}</button> })}</nav><MarketConnectionStatus ledger={ledger} work={work} /></header>
+  return <div className={`market-workspace-page${customerView ? ' calm-customer-page' : ''}`}>
+    <header className="page-heading market-heading">{!customerView && <h1>客户开发工作台</h1>}<nav className="market-tabs" aria-label="市场情报导航">{tabs.map((item) => { const active = item.id === 'customers' ? customerView : tab === item.id; return <button key={item.id} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={() => openTab(item.id === 'customers' ? preferredView : item.id)}>{item.label}</button> })}</nav><MarketConnectionStatus ledger={ledger} work={work} /></header>
     {customerView && <div className="market-connection-notices">{ledger.status !== 'ready' && <OutreachLedgerNotice ledger={ledger} />}{work.status !== 'ready' && <PrivateWorkNotice work={work} />}</div>}
     {tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} work={work} />}
     {tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}

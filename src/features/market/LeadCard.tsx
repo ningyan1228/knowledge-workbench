@@ -18,7 +18,7 @@ export type LeadCardProps = {
   variant?: 'card' | 'row';
 }
 
-function ContactChannels({ lead }: { lead: PublicLead }) {
+export function ContactChannels({ lead }: { lead: PublicLead }) {
   const { channels, missingEmail } = leadCardContactChannels(lead)
   const icons = { email: Mail, website: Globe2, linkedin: Linkedin, whatsapp: MessageCircle, phone: Phone }
   return <div className="customer-contact-channels" aria-label="公开联系渠道">
@@ -37,7 +37,7 @@ function BusinessEvidence({ lead, showContacts = true }: { lead: PublicLead; sho
   const brief = leadCardBrief(lead)
   return <div className="customer-business-brief">
     <div className="customer-brief-row"><span className="customer-brief-label">联系理由</span><p className="customer-card-reason">{brief.fact}</p></div>
-    <div className="customer-brief-row"><span className="customer-brief-label">评估材料</span><p className="customer-card-opportunity" title={brief.limits}><strong>{brief.product}</strong><span>{brief.evaluation}</span>{brief.extended && <small className="customer-extension-label">扩展应用</small>}</p></div>
+    <div className="customer-brief-row"><span className="customer-brief-label">评估材料</span><p className="customer-card-opportunity" title={brief.limits}><strong>可评估 {brief.product}</strong><span>{brief.evaluation}</span>{brief.extended && <small className="customer-extension-label">扩展应用</small>}</p></div>
     {showContacts && <div className="customer-brief-row"><span className="customer-brief-label">联系渠道</span><ContactChannels lead={lead} /></div>}
     <details className="customer-business-evidence">
     <summary>
@@ -47,6 +47,7 @@ function BusinessEvidence({ lead, showContacts = true }: { lead: PublicLead; sho
       <strong>完整核验原文</strong><p>{evidence.statement || '暂无已保存的业务依据。'}</p>
       {publicContactUrl(evidence.sourceUrl) && <a href={evidence.sourceUrl} target="_blank" rel="noreferrer">{evidence.sourceName || '查看业务来源'}<ExternalLink size={12} /></a>}
       <small>业务依据核验：<time dateTime={evidence.verifiedAt}>{evidence.verifiedAt || '日期未记录'}</time></small>
+      <small>最近核验：{lead.checkedAt} · 首次收录：{recordedTimeLabel(lead)}（北京时间）</small>
     </div>
     </details>
   </div>
@@ -70,7 +71,7 @@ export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, 
   const primaryLabel = sendState === 'sent' ? '查看原参考稿' : sendState === 'unsent' ? '准备开发信' : '核对发送记录'
   const actions = <>
     <button type="button" className="customer-card-prepare" onClick={() => onOpenDetail(lead, 'outreach')}><FileText size={13} />{primaryLabel}</button>
-    <button type="button" className="customer-card-contact" onClick={() => onOpenDetail(lead, sendState === 'sent' ? 'send-record' : 'contacts')}>{sendState === 'sent' ? '发送记录' : '查看联系渠道'}</button>
+    <button type="button" className={`customer-card-contact${sendState === 'sent' ? ' customer-card-send-record' : ''}`} onClick={() => onOpenDetail(lead, sendState === 'sent' ? 'send-record' : 'contacts')}>{sendState === 'sent' ? '发送记录' : '查看联系渠道'}</button>
     <button type="button" className="customer-row-detail" onClick={() => onOpenDetail(lead, 'overview')}>客户详情</button>
     <button type="button" className="customer-card-favorite customer-row-favorite" aria-label={record?.favorite ? '取消收藏' : '收藏客户'} aria-pressed={Boolean(record?.favorite)} disabled={work.status !== 'ready' || work.busy} title={work.status === 'ready' ? '收藏客户' : '登录后可收藏客户'} onClick={() => void favorite()}><Star size={16} fill={record?.favorite ? 'currentColor' : 'none'} /></button>
   </>
@@ -90,7 +91,7 @@ export function LeadCard({ lead, selected, onHighlight, onSelect, onOpenDetail, 
   return <article id={'map-card-' + lead.id} data-lead-id={lead.id} className={`lead-card customer-lead-card${selected ? ' selected' : ''}`}
     onMouseEnter={() => onHighlight(lead)} onMouseLeave={() => onHighlight(null)} onFocus={() => onHighlight(lead)}
     onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) onHighlight(null) }}>
-    <button type="button" className="customer-card-heading" onClick={() => onSelect(lead)} title="在地图中定位客户">
+    <button type="button" className="customer-card-heading" onClick={() => onSelect(lead)} aria-current={selected ? 'true' : undefined} title="选择客户">
       <span className="lead-dot" style={{ background: product.color }} /><span className="customer-card-identity"><span className="customer-card-company"><h3 title={lead.company}>{lead.company}</h3></span></span><ChevronRight size={16} />
     </button>
     <div className="customer-card-meta"><span className="customer-card-country" title={lead.countryZh}>{lead.countryZh}</span><span className="customer-card-industry" title={leadIndustry(lead)}>{leadIndustry(lead)}</span><div className="customer-card-send-status"><CustomerContactStatus readError={ledger.status === 'error'} contactLog={record?.contactLog} emailState={sendState} sentOn={sent?.sent_on} compact /></div></div>

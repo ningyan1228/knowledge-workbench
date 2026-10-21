@@ -5,7 +5,7 @@ import type { LeadWork } from './useLeadWork'
 import type { OutreachLedger } from './useOutreachLedger'
 import './LeadPreparationShortcuts.css'
 
-export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, work, today }: { leads: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; ledger: OutreachLedger; work: LeadWork; today: string }) {
+export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, work, today, extraFilters, extraFilterCount = 0 }: { extraFilters?: ReactNode; extraFilterCount?: number; leads: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; ledger: OutreachLedger; work: LeadWork; today: string }) {
   const [open, setOpen] = useState(false)
   const dialog = useRef<HTMLDialogElement>(null)
   const id = useId()
@@ -34,14 +34,14 @@ export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, wor
     })}
   </div>
   return <div className="work-preparation-compact">
+    <button type="button" className="work-dimensions-open" aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={() => setOpen(true)}><SlidersHorizontal size={15} />筛选{selected.length + extraFilterCount > 0 && <b>{selected.length + extraFilterCount}</b>}</button>
     <div className="work-preparation-quick" role="group" aria-label="发送记录快捷筛选"><span>发送记录</span>{([{id:'all',label:'全部'},{id:'sent',label:'已记录发送'},{id:'unsent',label:'未查到发送记录'}] as const).map(option => <button key={option.id} type="button" data-quick-send={option.id} aria-pressed={filters.sendStatus === option.id} disabled={option.id !== 'all' && sends === null} title={option.id === 'unsent' ? '共享台账中没有有效记录，不代表确定未发送。' : undefined} onClick={() => onChange({ ...filters, sendStatus:option.id, preparation:'all' })}>{option.label}</button>)}</div>
-    <button type="button" className="work-dimensions-open" aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={() => setOpen(true)}><SlidersHorizontal size={14} />渠道与资料筛选{selected.length > 0 && <b>{selected.length}</b>}</button>
     {selected.map(item => <button key={item.key} type="button" className="work-dimension-chip" aria-label={`移除筛选：${item.label}`} onClick={() => onChange({ ...filters, [item.key]:'all' })}>{item.label}<X size={12} /></button>)}
     {filters.sendStatus === 'unknown' && <button type="button" className="work-dimension-chip" aria-label="移除筛选：记录待确认" onClick={() => onChange({ ...filters, sendStatus:'all' })}>记录待确认<X size={12} /></button>}
     {ledger.status === 'error' && <button type="button" className="work-dimension-error" onClick={() => setOpen(true)}>发送记录读取失败</button>}
     <dialog ref={dialog} id={id} className="work-dimensions-dialog" aria-labelledby={`${id}-title`} onClose={() => setOpen(false)} onCancel={() => setOpen(false)} onKeyDown={event => {
       if (event.key !== 'Tab') return
-      const buttons = [...event.currentTarget.querySelectorAll<HTMLButtonElement>('button:not(:disabled)')]
+      const buttons = [...event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled),input:not(:disabled),select:not(:disabled),summary,a[href]')].filter(item => item.getClientRects().length > 0)
       const first = buttons[0], last = buttons.at(-1)
       if (event.shiftKey && document.activeElement === first && last) { event.preventDefault(); last.focus() }
       else if (!event.shiftKey && document.activeElement === last && first) { event.preventDefault(); first.focus() }
@@ -50,8 +50,9 @@ export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, wor
       const rect = event.currentTarget.getBoundingClientRect()
       if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) setOpen(false)
     }}>
-      <header><div><h2 id={`${id}-title`}>客户开发筛选</h2><p>按发送记录、联系渠道和资料缺项组合筛选。</p></div><button type="button" aria-label="关闭开发筛选" onClick={() => setOpen(false)}><X size={18} /></button></header>
+      <header><div><h2 id={`${id}-title`}>客户开发筛选</h2><p>按产品、地区、发送记录与联系渠道缩小范围。</p></div><button type="button" aria-label="关闭开发筛选" onClick={() => setOpen(false)}><X size={18} /></button></header>
       <div className="work-preparation">
+    {extraFilters && <div className="customer-extra-filters">{extraFilters}</div>}
     {group('sendStatus', '发送记录', [{ id:'all', label:'全部' }, { id:'unsent', label:'未查到发送记录' }, { id:'sent', label:'已记录发送' }, { id:'unknown', label:'记录待确认' }])}
     {group('contact', '可用联系渠道', [{ id:'all', label:'全部' }, { id:'email', label:'公开邮箱' }, { id:'form', label:'官网联系页' }, { id:'linkedin', label:'LinkedIn' }, { id:'whatsapp', label:'公开 WhatsApp' }, { id:'phone', label:'公开电话' }])}
     {group('completeness', '资料完整度', [{ id:'all', label:'全部' }, { id:'needs-email', label:'邮箱待补' }, { id:'needs-application', label:'应用证据待补' }, { id:'needs-evidence', label:'核验资料待补' }])}
@@ -63,5 +64,5 @@ export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, wor
     </dialog>
   </div>
 }
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { SlidersHorizontal, X } from 'lucide-react'

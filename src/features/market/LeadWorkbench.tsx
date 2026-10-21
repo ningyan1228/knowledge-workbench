@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent, type ReactNode } from 'react'
-import { Bookmark, CalendarClock, CheckCircle2, ChevronDown, ExternalLink, ListPlus, Search, SlidersHorizontal, Star, Target, X } from 'lucide-react'
+import { Bookmark, CalendarClock, CheckCircle2, ExternalLink, ListPlus, Search, Star, Target, X } from 'lucide-react'
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
 import { shanghaiDay } from '../../lib/leadTimeline'
@@ -37,8 +37,7 @@ export function LeadListManager({ work, leads }: { work: LeadWork; leads: Public
   </details>
 }
 
-export function LeadBusinessControls({ leads, preparationLeads = leads, filters, onChange, work, ledger, allCustomerCount, allCustomersActive, onShowAll, primaryFilters, advancedContent, extraActiveFilters, extraFilterCount = 0 }: { leads: PublicLead[]; preparationLeads?: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; work: LeadWork; ledger: OutreachLedger; allCustomerCount: number; allCustomersActive: boolean; onShowAll: () => void; primaryFilters?: ReactNode; advancedContent?: ReactNode; extraActiveFilters?: ReactNode; extraFilterCount?: number }) {
-  const [expanded, setExpanded] = useState(false)
+export function LeadBusinessControls({ leads, preparationLeads = leads, filters, onChange, work, ledger, allCustomerCount, allCustomersActive, onShowAll, primaryFilters, advancedContent, extraActiveFilters, extraFilterCount = 0, viewControls }: { viewControls?: ReactNode; leads: PublicLead[]; preparationLeads?: PublicLead[]; filters: BusinessFilters; onChange: (filters: BusinessFilters) => void; work: LeadWork; ledger: OutreachLedger; allCustomerCount: number; allCustomersActive: boolean; onShowAll: () => void; primaryFilters?: ReactNode; advancedContent?: ReactNode; extraActiveFilters?: ReactNode; extraFilterCount?: number }) {
   const industries = [...new Map(leads.map((lead) => [lead.targetCompanyTypeId, leadIndustry(lead)])).entries()]
   const applications = [...new Map(leads.map((lead) => [applicationKey(lead), leadApplication(lead)?.name ?? lead.companyEvidence.applicationId])).entries()]
   const records = work.status === 'ready' ? work.records : null, sends = ledger.status === 'ready' ? ledger.sends : null
@@ -59,14 +58,13 @@ export function LeadBusinessControls({ leads, preparationLeads = leads, filters,
     { key: 'sort' as const, label: '按开发优先级排列' },
     { key: 'queue' as const, label: queues.find((queue) => queue.id === filters.queue)?.label },
   ].filter(({ key }) => filters[key] !== emptyBusinessFilters[key])
-  const advancedCount = activeFilters.length + extraFilterCount
+  const advancedCount = activeFilters.filter(item => item.key !== 'contact').length + extraFilterCount
   return <>
     <section className="work-controls-compact" aria-label="客户开发筛选">
-      {primaryFilters}
-      <div className="work-search-toolbar"><label className="work-search"><Search size={16} /><input aria-label="搜索公司" value={filters.query} placeholder="搜索公司、国家、城市或应用" onChange={(event) => patch({ query: event.target.value })} /></label><button className="work-filter-toggle" type="button" aria-expanded={expanded} aria-controls="work-advanced-filters" onClick={() => setExpanded(!expanded)}><SlidersHorizontal size={15} />更多筛选{advancedCount > 0 && <b>{advancedCount}</b>}<ChevronDown size={14} className={expanded ? 'is-expanded' : ''} /></button>{!allCustomersActive && <button className="work-clear-filters" type="button" onClick={onShowAll}>清除筛选</button>}</div>
-      <LeadPreparationShortcuts leads={preparationLeads} filters={filters} onChange={onChange} ledger={ledger} work={work} today={today} />
-      {(activeFilters.length > 0 || extraFilterCount > 0) && <div className="work-active-filters" aria-label="已选业务条件">{activeFilters.map(({ key, label }) => <button type="button" key={key} onClick={() => onChange({ ...filters, [key]: emptyBusinessFilters[key] })} aria-label={`移除筛选：${label}`}><span>{label}</span><X size={12} /></button>)}{extraActiveFilters}</div>}
-      <div id="work-advanced-filters" hidden={!expanded}>
+      <div className="customer-work-toolbar">
+        <h1>客户开发</h1>
+        <label className="work-search"><Search size={17} /><input aria-label="搜索公司" value={filters.query} placeholder="搜索公司、国家或应用" onChange={event => patch({ query: event.target.value })} /></label>
+        <LeadPreparationShortcuts extraFilterCount={advancedCount} extraFilters={<>{primaryFilters}
       <div className="work-today" aria-label="今日开发清单"><h3 title={`${today} · 北京时间 · 全部客户为公开库总数；其余按当前产品、地区及业务条件统计，不含收录日期筛选`}><CalendarClock size={16} />开发清单</h3><div className="work-queues">{queues.map((queue) => {
         const requiresPrivate = queue.id !== 'all', requiresLedger = queue.id === 'priority' || queue.id === 'recent'
         const unavailable = (requiresPrivate && records === null) || (requiresLedger && sends === null)
@@ -83,7 +81,11 @@ export function LeadBusinessControls({ leads, preparationLeads = leads, filters,
     </div>
     {advancedContent}
     <LeadListManager work={work} leads={leads} />
-    </div></section>
+</>} leads={preparationLeads} filters={filters} onChange={onChange} ledger={ledger} work={work} today={today} />
+        {viewControls}
+      </div>
+      {(activeFilters.length > 0 || extraFilterCount > 0 || !allCustomersActive) && <div className="work-active-filters" aria-label="已选业务条件">{activeFilters.filter(item => !['contact'].includes(item.key)).map(({ key, label }) => <button type="button" key={key} onClick={() => onChange({ ...filters, [key]: emptyBusinessFilters[key] })} aria-label={`移除筛选：${label}`}><span>{label}</span><X size={12} /></button>)}{extraActiveFilters}{!allCustomersActive && <button className="work-clear-filters" type="button" onClick={onShowAll}>清除筛选</button>}</div>}
+    </section>
   </>
 }
 

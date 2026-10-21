@@ -7,7 +7,7 @@ const sections = [
   { id: 'evidence', label: '核验资料' },
 ] as const
 export type CompanyDetailSectionId = typeof sections[number]['id']
-export type CompanyDetailOpenTarget = 'overview' | 'outreach' | 'contacts' | 'send-record'
+export type CompanyDetailOpenTarget = 'overview' | 'outreach' | 'evidence' | 'contacts' | 'send-record'
 
 export function CompanyDetailSections({ overview, outreach, evidence, bodyRef, note, dirty, active, onSectionChange }: {
   overview: ReactNode; outreach: ReactNode; evidence: ReactNode;

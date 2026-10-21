@@ -1,0 +1,164 @@
+/* The customer workspace has one toolbar and two independently scrolling panes. */
+.calm-customer-page { --workbench-card-radius:14px; --workbench-inner-radius:10px }
+.calm-customer-page .market-heading { border:0; margin-bottom:18px; padding-bottom:0 }
+.calm-customer-page .market-heading .market-tabs button { border:0; padding:5px 10px; border-radius:6px; font-size:12px }
+.calm-customer-page .market-heading .market-tabs button.active { background:var(--surface); color:var(--text) }
+.calm-customer-page .work-controls-compact { padding:0; border:0; background:transparent; margin:0 0 12px }
+.customer-work-toolbar { display:grid; grid-template-columns:auto minmax(200px,1fr) auto auto; align-items:center; gap:12px 16px; min-width:0 }
+.customer-work-toolbar h1 { font-size:26px; letter-spacing:-.04em; margin:0 20px 0 0; white-space:nowrap }
+.customer-work-toolbar .work-search { grid-column:2; grid-row:1; display:flex; align-items:center; gap:9px; margin:0 0 0 auto; width:min(100%,430px); min-width:0; padding:0 12px; background:var(--surface); border:1px solid var(--line); border-radius:9px }
+.customer-work-toolbar .work-search input { width:100%; padding:10px 0; min-width:0; font-size:13px; border:0; background:transparent; color:var(--text); outline:none }
+.customer-work-toolbar .work-search:focus-within { outline:2px solid var(--blue); outline-offset:2px }
+.customer-work-toolbar .work-preparation-compact { display:contents }
+.customer-work-toolbar .work-dimensions-open { grid-column:3; grid-row:1; min-height:39px; padding:8px 12px; background:var(--surface); color:var(--text); border-color:var(--line); font-size:13px }
+.customer-work-toolbar .work-view-toggle { grid-column:4; grid-row:1; display:flex; border:0; background:var(--surface-soft); padding:3px; border-radius:9px }
+.customer-work-toolbar .work-view-toggle button { display:flex; align-items:center; justify-content:center; gap:5px; min-height:33px; padding:6px 12px; border:0; border-radius:7px; background:transparent; color:var(--muted); cursor:pointer; font-size:12px }
+.customer-work-toolbar .work-view-toggle button[aria-pressed="true"] { background:var(--surface); color:var(--text); box-shadow:0 1px 4px #00000012 }
+.customer-work-toolbar .work-preparation-quick { grid-column:1/-1; grid-row:2; gap:3px; margin:2px 0 0; border:0 }
+.customer-work-toolbar .work-preparation-quick>span { display:none }
+.customer-work-toolbar .work-preparation-quick button { padding:6px 11px; font-size:12px; border:0; background:transparent; border-radius:7px; color:var(--muted) }
+.customer-work-toolbar .work-preparation-quick button[aria-pressed="true"] { background:var(--blue-soft); color:var(--blue) }
+.customer-work-toolbar .work-dimension-chip { justify-self:start; grid-column:1/-1; margin:0; font-size:12px }
+.calm-customer-page .work-active-filters { margin-top:10px }
+.calm-customer-page .compact-customer-results { border:0; margin:0 0 10px; padding:0; min-height:28px }
+.customer-export-action { display:inline-flex; gap:6px; align-items:center; border:0; background:transparent; color:var(--muted); font:inherit; font-size:12px; cursor:pointer; padding:5px }
+.customer-export-action:disabled { opacity:.5; cursor:default }
+.customer-export-action span { font-variant-numeric:tabular-nums }
+.customer-split-workspace { display:grid; grid-template-columns:minmax(320px,38%) minmax(0,1fr); gap:0; height:var(--customer-pane-height,calc(100dvh - 280px)); min-height:460px; max-height:1100px; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--surface) }
+.customer-browse-list { min-width:0; height:100%; overflow:auto; overscroll-behavior:contain; scrollbar-gutter:stable; padding:8px; background:var(--surface-soft); border-right:1px solid var(--line) }
+.customer-browse-list:focus-visible { outline:2px solid var(--blue); outline-offset:-2px }
+.calm-customer-page .customer-browse-list .customer-lead-card { margin:0 0 5px; padding:18px 16px 12px; border:1px solid transparent; border-radius:10px; background:transparent; box-shadow:none }
+.calm-customer-page .customer-browse-list .customer-lead-card:hover { background:var(--surface) }
+.calm-customer-page .customer-browse-list .customer-lead-card.selected { border-color:color-mix(in srgb,var(--blue) 22%,var(--line)); background:var(--surface); box-shadow:0 2px 6px #00000005 }
+.customer-browse-list .customer-card-heading { padding:0; align-items:flex-start; gap:8px }
+.customer-browse-list .customer-card-heading .lead-dot { margin-top:5px; width:6px; height:6px }
+.customer-browse-list .customer-card-heading>svg { display:none }
+.customer-browse-list .customer-card-heading h3 { font-size:15px; font-weight:650; line-height:1.5; white-space:normal; overflow:visible; letter-spacing:-.02em }
+.customer-browse-list .customer-card-meta { display:flex; flex-wrap:wrap; gap:5px 8px; padding:3px 0 0; font-size:12px; line-height:1.6 }
+.customer-browse-list .customer-card-send-status { margin:4px 0 0; flex-basis:100% }
+.customer-browse-list .customer-card-evidence { margin:12px 0 0; padding:0; border:0; background:transparent }
+.customer-browse-list .customer-business-brief { gap:0 }
+.customer-browse-list .customer-business-evidence>summary { border:0; padding-top:0 }
+.customer-browse-list .customer-contact-channels>a { border:0; padding:2px 0; margin-right:8px; background:transparent }
+.customer-browse-list .customer-brief-row { display:block; padding:0; margin:0 0 10px }
+.customer-browse-list .customer-brief-label { display:none }
+.customer-browse-list .customer-card-reason { font-size:13px; line-height:1.8; color:var(--text) }
+.customer-browse-list .customer-card-opportunity { display:flex; flex-direction:column; align-items:flex-start; gap:2px; font-size:12px; line-height:1.7 }
+.customer-browse-list .customer-card-opportunity strong { font-weight:550; color:var(--text) }
+.customer-browse-list .customer-card-opportunity span { color:var(--muted) }
+.customer-browse-list .customer-business-evidence { margin-top:5px; font-size:10px }
+.customer-browse-list .customer-evidence-boundary { font-size:10px; color:var(--muted) }
+.customer-browse-list .customer-card-dates { display:none }
+.customer-browse-list .customer-card-actions { padding:12px 0 0; margin-top:0; border:0; gap:8px; flex-wrap:wrap }
+.customer-browse-list .customer-card-actions button { font-size:12px }
+.customer-browse-list .customer-card-prepare { padding:7px 10px; border-radius:7px; background:var(--blue); border:1px solid var(--blue); color:white }
+.customer-browse-list .customer-card-contact { display:none }
+.customer-browse-list .customer-card-contact.customer-card-send-record { display:inline-flex; color:var(--blue); background:transparent; border:0; padding:6px 0 }
+.customer-browse-list .customer-row-detail { padding:6px 0; border:0; color:var(--muted); background:transparent }
+.customer-browse-list .customer-card-favorite { margin-left:auto; padding:5px; color:var(--muted); border:0; background:transparent }
+@media(hover:hover) and (pointer:fine) { .calm-customer-page .customer-card-favorite:not([aria-pressed="true"]) { opacity:0 }.calm-customer-page .customer-lead-card:is(:hover,:focus-within) .customer-card-favorite,.calm-customer-page .customer-card-favorite:focus-visible { opacity:1 } }
+.market-workspace-page .outreach-status-badge { font-size:11px; font-weight:500; padding:2px 6px; border-radius:5px }
+.market-workspace-page .outreach-status-badge.outreach-status-unsent { color:var(--muted); background:var(--surface-soft); border-color:transparent }
+:root[data-theme="dark"] .market-workspace-page .outreach-status-badge.outreach-status-unsent { color:var(--muted); background:var(--surface-soft); border-color:transparent }
+.market-workspace-page .outreach-send-banner-unsent { border-color:var(--line); box-shadow:none }
+.customer-work-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:var(--muted); text-align:center; padding:24px }
+.customer-work-placeholder h2 { font-size:18px; font-weight:550; color:var(--text); margin:0 }
+.customer-work-placeholder p { font-size:13px; margin:0 }
+.market-workspace-page .company-detail-inline { position:static; inset:auto; display:block; padding:0; background:transparent; backdrop-filter:none; min-width:0; height:100%; overflow:hidden; z-index:auto }
+.market-workspace-page .company-detail-inline .company-detail { width:100%; height:100%; max-height:none; border:0; border-radius:0; box-shadow:none }
+.company-detail-inline .detail-close { display:none }
+.calm-customer-page .company-detail .company-detail-header { padding:22px 24px 12px }
+.calm-customer-page .company-detail-header .eyebrow { display:none }
+.calm-customer-page .company-detail-header h2 { font-size:22px; line-height:1.4; letter-spacing:-.03em; font-weight:650 }
+.calm-customer-page .company-detail-navigation { background:transparent; border-top:0; padding:5px 24px 12px }
+.calm-customer-page .company-detail-navigation button { border:0; padding:5px 0; background:transparent }
+.calm-customer-page .company-detail-navigation span { font-size:11px }
+.calm-customer-page .company-detail-tabs { padding:0 16px }
+.calm-customer-page .company-detail-tabs button { min-height:44px; font-size:13px; padding:10px 8px; margin-right:12px }
+.calm-customer-page .company-detail-body { padding:0 24px 24px }
+.calm-customer-page .company-detail-tabpanel { padding-top:20px }
+.calm-customer-page .company-overview-summary { border:0; padding:0 0 22px; background:transparent }
+.calm-customer-page .company-overview-summary .company-lead-fact { font-size:16px; line-height:1.9; margin:0 0 20px }
+.company-material-evaluation { margin:16px 0 10px }
+.company-material-evaluation strong { font-size:14px; font-weight:600 }
+.calm-customer-page .company-material-evaluation p { margin:6px 0; font-size:14px; line-height:1.8; color:var(--muted) }
+.company-overview-summary .customer-contact-channels { margin-top:16px }
+.calm-customer-page .company-disclosure { border:0; border-top:1px solid var(--line); border-radius:0; padding:0; margin:12px 0 }
+.calm-customer-page .company-detail-note { font-size:10px; color:var(--muted) }
+.calm-customer-page .company-detail-tabpanel .outreach-prompt { display:flex; flex-direction:column; gap:12px; margin:0 0 12px; padding:0; border:0; border-radius:0; background:transparent; overflow:visible }
+.calm-customer-page .outreach-send-banner { border:0; padding:0; background:transparent; border-radius:0; box-shadow:none; gap:6px }
+.calm-customer-page .outreach-send-banner>span:not(.outreach-status-badge) { font-size:11px }
+.calm-customer-page .outreach-send-banner-unsent:not(.outreach-send-banner-contacted),.calm-customer-page .outreach-prompt:has(.outreach-send-banner-unsent:not(.outreach-send-banner-contacted)) .outreach-draft-heading { display:none }
+.calm-customer-page .company-header-send-status { margin-top:6px }
+.calm-customer-page .outreach-draft-heading h3 { margin:0; font-size:13px; font-weight:500; color:var(--muted) }
+.calm-customer-page .outreach-current-channel { display:flex; flex-wrap:wrap; gap:6px; align-items:center }
+.calm-customer-page .outreach-current-channel p { font-size:11px; line-height:1.65 }
+.calm-customer-page .outreach-prompt>.outreach-recipient { padding:0 0 8px; border:0; border-radius:0; background:transparent }
+.calm-customer-page .outreach-recipient-address { align-items:center; gap:10px }
+.calm-customer-page .outreach-recipient-address input { padding:4px 0; border:0; background:transparent; font-size:13px; font-weight:500 }
+.calm-customer-page .outreach-recipient-address label { display:flex; align-items:center; gap:8px; font-size:10px }
+.calm-customer-page .outreach-recipient-address label>span { white-space:nowrap }
+.calm-customer-page .outreach-recipient-address button { padding:5px 6px; font-size:11px; border:0; background:transparent; color:var(--blue) }
+.outreach-recipient-provenance { margin-top:5px; font-size:10px; color:var(--muted) }
+.outreach-recipient-provenance summary { cursor:pointer }
+.calm-customer-page .outreach-email-preview { border:0; padding:0; margin:0; min-width:0 }
+.outreach-email-subject { padding:14px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+.outreach-email-preview small { font-size:11px; color:var(--muted); display:block; margin-bottom:8px }
+.outreach-email-subject h4 { font-size:15px; line-height:1.65; font-weight:550; color:var(--text); margin:0; overflow-wrap:anywhere }
+.outreach-email-body { padding:20px 0 10px }
+.calm-customer-page .outreach-email-preview pre { padding:0; margin:0; max-height:none; overflow:visible; border:0; background:transparent; font:14px/1.9 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; white-space:pre-wrap; overflow-wrap:anywhere; color:var(--text) }
+.calm-customer-page .outreach-supporting { border-top:1px solid var(--line); padding-top:12px; font-size:12px; color:var(--muted) }
+.outreach-supporting>summary { cursor:pointer; line-height:1.7; margin-bottom:8px }
+.calm-customer-page .outreach-supporting .outreach-contact-routes,.calm-customer-page .outreach-supporting .outreach-recipient { border:0; padding:8px 0; background:transparent }
+.calm-customer-page .outreach-prompt .outreach-actions { position:sticky; bottom:-24px; z-index:3; order:20; margin:0 -24px; padding:14px 24px calc(14px + env(safe-area-inset-bottom)); border-top:1px solid var(--line); background:var(--surface); align-self:stretch; justify-content:flex-start }
+.calm-customer-page .outreach-copy-options { width:100%; gap:8px }
+.calm-customer-page .outreach-copy-options .outreach-copy-button { width:auto; min-width:0; font-size:12px; padding:9px 12px; border-radius:8px }
+.calm-customer-page .outreach-copy-options [data-copy-part="body"] { border-color:var(--blue); background:var(--blue); color:white }
+.calm-customer-page .outreach-copy-options [data-copy-part="subject"] { margin-left:auto; border-color:transparent; color:var(--muted); background:transparent }
+.calm-customer-page .outreach-copy-feedback { order:19; font-size:12px }
+.calm-customer-page .outreach-manual-copy { order:18 }
+.customer-extra-filters { padding-bottom:16px; margin-bottom:20px; border-bottom:1px solid var(--line) }
+.customer-extra-filters .market-scope-controls { display:grid; gap:16px; margin-bottom:18px }
+.customer-extra-filters .market-product-row { align-items:flex-start }
+.customer-extra-filters .lead-geography-filters { display:flex; gap:12px; flex-wrap:wrap }
+.customer-extra-filters .lead-geography-filters label { flex:1; display:grid; gap:6px; font-size:12px; color:var(--muted) }
+.customer-extra-filters .lead-geography-filters select { width:100%; max-width:100%; min-width:0 }
+.customer-extra-filters .work-today { margin:16px 0; padding:0; border:0; background:transparent }
+.customer-extra-filters .work-business-filters { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.customer-extra-filters .work-list-manager { margin-top:14px }
+.customer-work-toolbar .work-dimensions-dialog { width:min(760px,calc(100vw - 32px)); border-radius:16px }
+@media(max-width:1100px) {
+  .customer-work-toolbar { grid-template-columns:auto 1fr auto; gap:12px }
+  .customer-work-toolbar h1 { font-size:23px; margin:0 }
+  .customer-work-toolbar .work-search { grid-column:1/3; grid-row:2; width:100% }
+  .customer-work-toolbar .work-dimensions-open { grid-column:3; grid-row:2 }
+  .customer-work-toolbar .work-view-toggle { grid-column:3; grid-row:1 }
+  .customer-work-toolbar .work-preparation-quick { grid-row:3; flex-wrap:wrap }
+  .customer-split-workspace { display:block; height:auto; max-height:none; min-height:0; border:0; overflow:visible; background:transparent }
+  .customer-browse-list { height:auto; max-height:none; border:0; padding:0; overflow:visible; background:transparent }
+  .calm-customer-page .customer-browse-list .customer-lead-card { background:var(--surface); border:1px solid var(--line); margin-bottom:12px }
+  .customer-work-placeholder { display:none }
+  .calm-customer-page .company-detail.company-detail-drawer { width:min(740px,100vw) }
+}
+@media(max-width:650px) {
+  .calm-customer-page .market-heading { margin-bottom:16px }
+  .customer-work-toolbar { gap:10px 8px }
+  .customer-work-toolbar .work-search input { padding:10px 0; font-size:13px }
+  .customer-work-toolbar .work-view-toggle button { padding:5px 9px; min-height:31px }
+  .customer-work-toolbar .work-preparation-quick { gap:0 }
+  .customer-work-toolbar .work-preparation-quick button { font-size:11px; padding:7px 8px }
+  .calm-customer-page .compact-customer-results { flex-wrap:nowrap }
+  .calm-customer-page .compact-customer-results .market-result-count { flex-basis:auto; font-size:11px }
+  .customer-export-action { white-space:nowrap; font-size:11px }
+  .calm-customer-page .company-detail .company-detail-header { padding:18px 16px 10px }
+  .calm-customer-page .company-detail-header h2 { font-size:20px }
+  .calm-customer-page .company-detail-navigation { padding:5px 16px 9px }
+  .calm-customer-page .company-detail-tabs { padding:0 8px }
+  .calm-customer-page .company-detail-tabs button { margin:0; font-size:12px }
+  .calm-customer-page .company-detail-body { padding:0 16px 16px }
+  .calm-customer-page .outreach-prompt .outreach-actions { margin:0 -16px; padding:12px 16px calc(12px + env(safe-area-inset-bottom)); bottom:-16px }
+  .calm-customer-page .outreach-copy-options { gap:5px }
+  .calm-customer-page .outreach-copy-options .outreach-copy-button { padding:9px 8px; font-size:11px }
+  .customer-extra-filters .work-business-filters { grid-template-columns:minmax(0,1fr) }
+  .customer-work-toolbar .work-dimensions-dialog { width:calc(100vw - 16px); max-width:calc(100vw - 16px) }
+}

@@ -6,6 +6,8 @@ import { developmentEmailVersion } from '../../lib/developmentEmailVersion'
 import { copyPlainText } from '../../lib/clipboard'
 import { DevelopmentEmailRecipient } from './DevelopmentEmailRecipient'
 import { CustomerContactStatus } from './CustomerContactStatus'
+import { ContactChannels } from './LeadCard'
+import { selectBusinessRecipient } from '../../lib/contactEvidence'
 import { ContactRoutePanel } from './ContactRoutePanel'
 import { contactChannelLabels, latestContact } from '../../lib/contactRoutes'
 import { outreachCompanyKey } from '../../lib/outreachLedger'
@@ -14,9 +16,9 @@ import type { OutreachLedger } from './useOutreachLedger'
 import './DevelopmentEmailPanel.css'
 
 const copyParts = [
-  { id: 'subject', label: '复制主题', copied: '主题已复制' },
   { id: 'body', label: '复制正文', copied: '正文已复制' },
   { id: 'full', label: '复制整封', copied: '整封已复制' },
+  { id: 'subject', label: '复制主题', copied: '主题已复制' },
 ] as const
 type CopyPart = typeof copyParts[number]['id']
 
@@ -33,6 +35,7 @@ export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: 
   const application = (lead.companyEvidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications).find((item) => item.id === lead.companyEvidence.applicationId)!
   const version = developmentEmailVersion(lead, ledger.status === 'ready' ? ledger.sends : null)
   const email = version.email
+  const recipient = selectBusinessRecipient(lead)
   const contactLog = work?.status === 'ready' ? work.records[outreachCompanyKey(lead)]?.contactLog : undefined
   const contacted = latestContact(contactLog)
   const qualified = Boolean(email)
@@ -117,24 +120,25 @@ export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: 
   const manualLabel = copyPart === 'subject' ? '手动复制主题' : copyPart === 'body' ? '手动复制正文' : '手动复制整封开发信'
   return <section className="outreach-prompt">
     <div className={`outreach-send-banner outreach-send-banner-${version.state}${contacted ? ' outreach-send-banner-contacted' : ''}`}><CustomerContactStatus readError={ledger.status === 'error'} contactLog={contactLog} emailState={version.state} sentOn={version.sent?.sent_on} /><span>{version.state === 'sent' ? `已记录收件邮箱：${version.sent!.recipient_email}` : version.state === 'unsent' ? contacted ? '已有其他渠道联系记录，请先核对再决定是否发送邮件。' : '实际发送后请标记；复制草稿不算发送。' : '请先读取共享发送记录，再确认是否已发送邮件。'}</span></div>
-    <div><p className="eyebrow">OUTREACH · REVIEW FIRST</p><h3><Mail size={17} />{contacted && version.state !== 'sent' ? '首封参考 · 已有其他渠道联系记录' : version.label}</h3>{qualified ? <p>{contacted && version.state !== 'sent' ? '已通过其他渠道联系；此处保留首封参考，后续联系前请核对历史，避免重复发送。' : version.note}</p> : <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div>
-    <DevelopmentEmailRecipient key={lead.id} lead={lead} />
-    <ContactRoutePanel key={lead.id} lead={lead} work={work} />
+    <div className="outreach-draft-heading"><h3><Mail size={17} />{contacted && version.state !== 'sent' ? '首封参考 · 已有其他渠道联系记录' : version.label}</h3>{!qualified && <p className="outreach-not-qualified"><TriangleAlert size={15} />Not qualified for outreach：当前记录缺少可追溯的产品、应用、公司证据或需求侧资格。</p>}</div>
+    <div className="outreach-current-channel"><ContactChannels lead={lead} />{!recipient && <p>邮箱待补，可复制正文到对方开放的联系页或私信渠道。</p>}</div>
+    {recipient && <DevelopmentEmailRecipient key={lead.id} lead={lead} />}
+    {email && <article className="outreach-email-preview" aria-label="开发信预览"><div className="outreach-email-subject"><small>主题</small><h4>{email.subject}</h4></div><div className="outreach-email-body"><small>正文</small><pre>{email.body}</pre></div></article>}
     <div className="outreach-actions">
       {qualified && <div className="outreach-copy-options" role="group" aria-label="复制开发信内容">{copyParts.map((part) => {
         const current = copyPart === part.id
         const busy = current && pending
         const copied = current && copyState === 'copied'
         const label = current && copyState === 'checking' ? '核对中…' : current && copyState === 'copying' ? '复制中…' : copied ? part.copied : part.label
-        return <button key={part.id} type="button" className="secondary-button outreach-copy-button" data-copy-part={part.id} disabled={!qualified || ledger.status !== 'ready' || pending} aria-busy={busy} onClick={() => void copyEmail(part.id)}>{busy ? <LoaderCircle className="outreach-copy-spinner" size={15} /> : copied ? <Check size={15} /> : <Copy size={15} />}{label}</button>
+        return <button key={part.id} type="button" className={`${part.id === 'body' ? 'primary-button' : 'secondary-button'} outreach-copy-button`} data-copy-part={part.id} disabled={!qualified || ledger.status !== 'ready' || pending} aria-busy={busy} onClick={() => void copyEmail(part.id)}>{busy ? <LoaderCircle className="outreach-copy-spinner" size={15} /> : copied ? <Check size={15} /> : <Copy size={15} />}{label}</button>
       })}</div>}
-      {onOpenSendRecord && <button type="button" className="primary-button outreach-record-button" disabled={ledger.busy} aria-controls={`company-send-record-${lead.id}`} onClick={onOpenSendRecord}><CalendarCheck size={15} />{version.state === 'unsent' ? '记录已发送' : '查看发送记录'}</button>}
-      {qualified && <button type="button" className="secondary-button outreach-preview-button" disabled={!qualified} aria-expanded={showPrompt} onClick={() => setShowPrompt((value) => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>}
     </div>
     <div className="outreach-copy-feedback" role="status" aria-live="polite">{message}</div>
     {manualText && <div className="outreach-manual-copy"><label>{manualLabel}<textarea ref={manualField} aria-label={manualLabel} readOnly value={manualText} rows={copyPart === 'subject' ? 2 : 12} onFocus={(event) => event.currentTarget.select()} /></label><button type="button" className="secondary-button" onClick={() => { manualField.current?.focus(); manualField.current?.select() }}>全选内容</button></div>}
-    {email && <div className="outreach-prompt-preview outreach-email-preview"><div><strong>{version.style === 'concise' ? '简洁版' : '原版参考'} · {lead.company}</strong><span>业务依据：<a href={email.evidenceUrl} target="_blank" rel="noreferrer">查看公开来源</a> · {email.verifiedAt} 核验</span></div><pre>{email.text}</pre></div>}
+    <details className="outreach-supporting"><summary>联系渠道与联系记录</summary>{!recipient && <DevelopmentEmailRecipient key={lead.id} lead={lead} />}<ContactRoutePanel key={lead.id} lead={lead} work={work} />{onOpenSendRecord && <button type="button" className="secondary-button outreach-record-button" disabled={ledger.busy} aria-controls={`company-send-record-${lead.id}`} onClick={onOpenSendRecord}><CalendarCheck size={15} />{version.state === 'unsent' ? '记录已发送' : '查看发送记录'}</button>}</details>
+    <details className="outreach-supporting"><summary>公司证据、产品边界与原 Prompt</summary><p>{version.note}</p>{email && <p>业务依据：<a href={email.evidenceUrl} target="_blank" rel="noreferrer">查看公开来源</a> · {email.verifiedAt} 核验</p>}{qualified && <button type="button" className="secondary-button outreach-preview-button" aria-expanded={showPrompt} onClick={() => setShowPrompt(value => !value)}><FileText size={15} />{showPrompt ? '收起原 Prompt' : '查看原 Prompt'}</button>}
     {showPrompt && qualified && <div className="outreach-prompt-preview"><div><strong>原 Prompt 预览</strong><span>供需要进一步定制时使用，不是待发送邮件。</span></div><pre>{prompt}</pre></div>}
+    </details>
   </section>
 }
 
