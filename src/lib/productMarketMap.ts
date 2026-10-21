@@ -7345,11 +7345,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "vista-paint-fullerton",
+    "company": "Vista Paint Corporation",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Fullerton, California",
+    "latitude": 33.8704,
+    "longitude": -117.9243,
+    "legacyCompanyDescription": "官网About确认Fullerton涂料制造、自产设施与研发；360Floortec当前产品页及其原始资料一致说明用于室内混凝土和轻工业场景的双组分环氧地坪成品，具有公开公司联系入口。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网About确认Fullerton涂料制造、自产设施与研发；360Floortec当前产品页及其原始资料一致说明用于室内混凝土和轻工业场景的双组分环氧地坪成品，具有公开公司联系入口。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "独立完整审读六份自有原文：About2551字符、360Floortec产品3984字符、Products1158字符、Contact556字符、ViewAllProducts9258字符及官网链接的360FloorTecPDF文字。初始Products仅返回9张产品卡和LoadMore，未拿局部作为全目录；随后实际ViewAllProducts完整表返回96个唯一产品名及其环境/基材/成品等级，包含建筑漆、PVA封闭/底漆、混凝土地坪、工业/金属维护、标线、自行车道、木器漆/清漆及相关成品。保留彩片/云母/效果颜料可混用及PartA/B成套施工、商店/第三方经销和配色等角色，不称只卖纯成品或原料完全不存在；PVA成品封闭漆、Acripoxy、epoxy、Acribond或primer名称本身不是ELO/ESBO/环氧化植物油/生物增塑稳定输入外售证据。已读自产/研发、完整可见成品表、具体环氧成品及公开经营范围未见所选同类输入作为外售原料的证据，结论限已查范围，不覆盖未披露关联、每个SKU组成/SDS或全球股权，不虚构外购例外。当前About确认Fullerton制造，页面标题FamilyOwned只作本公司身份背景，不把2022Search中的EddieFischer等历史人员当当前持股/采购；未读股权登记、不臆造持股比例或关联集团。美国公司在Mexico/Guam/China销售和50余自营商店/独立经销网络不是另一客户或大陆制造账户，按同一VistaPaintCorporation/vistapaint.com品牌只计一户。360HTML与其04.2023PDF关于双组分环氧、混凝土及轻工业用途一致；两份原件同时有100%solids文案与79%体积固体数据，不擅自调和或写入开发信。HTML通用KeyBenefits另有100%acrylic、外用及其他基材/吊顶文案，不能移作该环氧地坪确切用途；不转移客户抗菌/防滑/热胎/耐化学/冲击/附着/太阳能/PFAS/EG/MPI/LEED或VOC宣传为ELO测试、认证或相容保证。PDF经TinyFish实际文字提取阅读，保留日期与来源，不称下载二进制、逐页视觉审图或已读SDS。实际Contact有CorporateOfficeEmail但精确值遮蔽，无任何公开邮箱核实，不猜info@、不解码/拼接；仅保存真实SendusaMessage业务联系页、公司电话7146803800和Suite210邮寄办公地址，传真3809明确不作语音/WhatsApp。未提交表单/核实所有字段或确认投递成功，电话不等于WhatsApp。联系页与自有法定footer同公司；无具名负责人或个人收件人。地图为Fullerton城市代表点，办公地址不冒称工厂GPS。ELO仅按用户资料提出环氧功能、柔韧/树脂改性评估，客户当前用料、采购、固化相容和性能均待确认。"
+    },
+    "contact": {
+      "label": "官网公开公司业务联系页及电话；精确邮箱被遮蔽，未核实",
+      "phone": "714-680-3800",
+      "contactUrl": "https://www.vistapaint.com/contact/"
+    },
+    "source": {
+      "label": "Own specific epoxy floor product and original technical text",
+      "url": "https://www.vistapaint.com/products/360-floortec/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vista-paint-fullerton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "haymes-paint-ballarat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "arboritec-jorlanda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "wagon-paints-bayswater-north": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7702,6 +7730,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vista-paint-fullerton": {
+    "website": "https://www.vistapaint.com/",
+    "contactPage": "https://www.vistapaint.com/contact/",
+    "address": "2020 E. Orangethorpe Ave., Suite 210, Fullerton, CA 92831, United States (corporate office mailing address). Own About attributes manufacturing to Fullerton; no factory street/GPS or current registry/ownership percentage inferred.",
+    "generalPhone": "714-680-3800",
+    "generalPhoneEvidence": {
+      "company": "Vista Paint Corporation",
+      "value": "714-680-3800",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Corporate Office Telephone",
+          "url": "https://www.vistapaint.com/contact/",
+          "summary": "Actual Corporate Office Telephone714-680-3800; listen to prompts for departments. Fax714-680-3809 kept separate, no WhatsApp or personal buyer attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Fullerton manufacture and R&D",
+        "url": "https://www.vistapaint.com/about/"
+      },
+      {
+        "label": "Actual360Floortec two-component epoxy concrete/light-industrial coating",
+        "url": "https://www.vistapaint.com/products/360-floortec/"
+      },
+      {
+        "label": "Complete returned all-products table, 96 unique finished-product names",
+        "url": "https://www.vistapaint.com/view-all-products/"
+      },
+      {
+        "label": "Own linked360Floortec original PDF text, dated04.2023; no visual audit",
+        "url": "https://www.vistapaint.com/wp-content/uploads/2024/10/360-FloorTec.pdf"
+      },
+      {
+        "label": "Actual corporate business message entry/phone; exact email masked and unverified",
+        "url": "https://www.vistapaint.com/contact/"
+      }
+    ]
+  },
   "haymes-paint-ballarat": {
     "website": "https://www.haymespaint.com.au/",
     "contactPage": "https://www.haymespaint.com.au/pages/contact-us",
@@ -24114,6 +24186,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vista-paint-fullerton",
   "haymes-paint-ballarat",
   "arboritec-jorlanda",
   "wagon-paints-bayswater-north",

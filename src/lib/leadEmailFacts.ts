@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vista-paint-fullerton": "Your 360 Floortec is a two-component epoxy floor coating for concrete in light industrial settings.",
   "haymes-paint-ballarat": "Your 309 2K Epoxy High Gloss is a self-priming epoxy coating for industrial and commercial applications.",
   "arboritec-jorlanda": "Your Avenue is a two-component finish in your water-based wood-floor coating range.",
   "wagon-paints-bayswater-north": "Your Rhinamel is a two-pack epoxy/polyamide finish for concrete floors and steel fabrications, including machinery and tanks.",
