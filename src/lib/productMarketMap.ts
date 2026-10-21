@@ -6760,11 +6760,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "neotex-mandra",
+    "company": "NEOTEX S.A.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Mandra, Attica",
+    "latitude": 38.067,
+    "longitude": 23.5,
+    "legacyCompanyDescription": "希腊NEOTEX自有研发及制造建筑化学系统、工业环氧地坪/金属保护涂层。总部工厂与物流/北希腊分支按同一公司账户；地图仅Mandra城市代表位置。",
+    "fit": "可开发候选",
+    "signal": "NEOTEX自有Profile明确希腊工业企业研发及生产建筑化学系统；Neopox Satine实际产品及五页技术文件明确双组分溶剂型环氧涂层，用于仓库/停车场地面和室内金属表面，并列金属配套防腐环氧底涂；技术文件明确Mandra总部工厂与公司出口业务邮箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "已读自有制造Profile、NeopoxSatine成品页和5页技术文件、Products当前五类可见目录及官网Contact。公司研发制造防水、树脂地坪、聚氨酯清漆、保温、修补和专用建筑化学系统，Satine技术文件证明实际工业仓储地坪/室内金属用环氧保护涂层，并列金属配套防腐环氧底涂。当前已读范围未见外售ELO、ESBO、环氧化植物油或同类生物基增塑/稳定原料。树脂地坪、成品环氧涂层、配套底漆/溶剂/防滑填料不自动等于销售同类环氧油输入。结论限上述实际读取范围；表面保护分类页超时失败，未将其当已读，未穷尽所有SKU/SDS/海外代理产品或隐藏配方。希腊NEOTEX/neotex.gr、Neopox/Neodur/Epoxol品牌、Mandra工厂/物流和北希腊分支按一个制造商账户；西班牙neotex.com地毯企业、neotexpolymer.com及泰国Hato队列提及的Neotex品牌没有相同法人/域名证据，不自动合并、借用或拆出地区新增；全当前main、根目录、私有队列及已筛账户按名称/域名/品牌排重，无该希腊制造账户。export@neotex.gr来自实际自有Satine技术文件末页，为公司出口/商务共享入口，非具名采购负责人；Contact直接公布总机和表单，网页掩码邮箱未猜测，电话非WhatsApp。客户涂层的耐磨、附着、防腐和耐化学性能不转作我方ELO效果；我方仅以资料支持的环氧功能、生物基柔韧/树脂改性试验提出潜在评估，现有相容、固化、采购量/时机和需求均未确认。"
+    },
+    "contact": {
+      "label": "官网公司出口共享业务邮箱、公司总机及表单；无具名采购收件人",
+      "email": "export@neotex.gr",
+      "phone": "+30 210 555 7579",
+      "contactUrl": "https://neotex.gr/contact/"
+    },
+    "source": {
+      "label": "Own Neopox Satine industrial epoxy coating product and technical document, corroborated by own manufacturing profile",
+      "url": "https://neotex.gr/en/product/neopox-satine/"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "neotex-mandra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "igis-panevezys": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "npk-spetsemal-elektrougli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "krasko-dzerzhinsky": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7096,6 +7125,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "neotex-mandra": {
+    "website": "https://neotex.gr/",
+    "contactPage": "https://neotex.gr/contact/",
+    "address": "Published headquarters/plant: V. Moira str., Xiropigado, Industrial Area Mandra, P.O. Box2315, GR19600, Athens, Greece. Logistics at Loutsas str., Voro and northern branch Kalochori are separate premises of this one account. Approximate Mandra city marker; not a surveyed or address-geocoded factory entrance.",
+    "generalEmail": "export@neotex.gr",
+    "generalEmailEvidence": {
+      "company": "NEOTEX S.A.",
+      "value": "export@neotex.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own NEOTEX corporate business channel",
+          "url": "https://neotex.gr/wp-content/uploads/2026/03/Neopox-Satine-TDS-en-1.pdf",
+          "summary": "Actual own five-page Neopox Satine TDS page5 publishes www.neotex.gr and export@neotex.gr alongside NEOTEX headquarters/plant and corporate address. Shared corporate export/business mailbox, not named procurement. Masked contact-page email not reconstructed."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+30 210 555 7579",
+    "generalPhoneEvidence": {
+      "company": "NEOTEX S.A.",
+      "value": "+30 210 555 7579",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own NEOTEX corporate business channel",
+          "url": "https://neotex.gr/contact/",
+          "summary": "Actual own Contact explicitly publishes +30 210 555 7579 as NEOTEX corporate assistance telephone; independently matched in own TDS. No named employee or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual own manufacture, downstream product/TDS, visible current business scope or public company contact original",
+        "url": "https://neotex.gr/en/profile/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product/TDS, visible current business scope or public company contact original",
+        "url": "https://neotex.gr/en/product/neopox-satine/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product/TDS, visible current business scope or public company contact original",
+        "url": "https://neotex.gr/contact/"
+      },
+      {
+        "label": "Actual own manufacture, downstream product/TDS, visible current business scope or public company contact original",
+        "url": "https://neotex.gr/wp-content/uploads/2026/03/Neopox-Satine-TDS-en-1.pdf"
+      },
+      {
+        "label": "Actual own manufacture, downstream product/TDS, visible current business scope or public company contact original",
+        "url": "https://neotex.gr/en/products/"
+      }
+    ]
+  },
   "igis-panevezys": {
     "website": "https://www.igis.lt/",
     "contactPage": "https://www.igis.lt/kontaktai/",
@@ -22206,6 +22294,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "neotex-mandra",
   "igis-panevezys",
   "npk-spetsemal-elektrougli",
   "krasko-dzerzhinsky",
