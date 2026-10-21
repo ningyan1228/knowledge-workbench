@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pinturas-monto-marines": "Your Barniz Universal Acqua is a water-based varnish for treating wood surfaces indoors and outdoors.",
   "chimtitan-bucharest": "Your Series 302 is a two-component epoxy anticorrosive primer for metal structures, including ships, bridges and tanks.",
   "inchem-polonia-lodz": "Your Drewnomix is a water-based wood stain-varnish for interior and exterior wooden surfaces.",
   "tnue-taupo": "Your controlled-release nitrogen fertiliser uses a membrane applied to urea granules at Tnue’s plant.",

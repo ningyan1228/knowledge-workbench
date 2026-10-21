@@ -7094,11 +7094,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "pinturas-monto-marines",
+    "company": "PINTURAS MONTÓ, S.A.U.",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Marines / Valencia",
+    "latitude": 39.675,
+    "longitude": -0.562,
+    "legacyCompanyDescription": "PinturasMontó在Marines自有工厂和实验室制造涂料；BarnizUniversalAcqua为室内外木材用水性清漆。地图仅Marines城市代表点。",
+    "fit": "可开发候选",
+    "signal": "官网Production明确Marines自有水性漆、溶剂漆和粉末涂料工厂、厂内实验室检验及定制制造；同品牌专业站BarnizUniversalAcqua原文明确室内外木材用水性清漆。当前Contact将Marines公司地址、总机、产品/色彩部门邮箱与销售部门邮箱分别公开；LegalNotice明确PINTURASMONTÓS.A.U./CIFA46218210及涂料制造销售主体。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-21",
+      "conclusion": "自有Production说明Marines工厂水性/溶剂型/粉末涂料制造、厂内实验室和配方/调色生产；实际BarnizUniversalAcqua是室内外木材用水性成品清漆，不是把经销商、同名门店或原料供应商当制造商。已读当前公司产品分类、专业站完整可见用途导航、实际两项ADITIVOS及三项MULTIADHERENTE底涂短描述；保留硅油溶液防缩孔剂ConverplusAntisiliconas（用于其溶剂型涂料）、溶剂型消光添加剂、调色色浆/液体着色剂、稀释剂、PU固化剂、油蜡、密封胶/胶黏剂、建筑固定底涂/乳液等配套或输入业务，不笼统称无原料和添加剂。MontoprimerUniversal/Total/TotalAcqua按返回用途是供施工后覆涂的成品多基材底漆，其中一款明确丙烯酸树脂溶剂体系；不因multiadherente或acqua字样把其直接写成PO/CPO配方原料。两项添加剂功能与当前返回的制造/品类范围未见水性聚烯烃乳液、PO/CPO分散体或同类附着促进配方原料外售证据；结论限已读公开范围，未穷尽6000品项/全部子分类叶子、TDS/SDS或未披露集团业务。LegalNotice的主体、CIF及Marines地址与当前Production/Contact对应，官网montopinturas与同品牌/同地址/电话的专业TiendasMontó商品来源一起核验；PinturasMontó/Montomix/Cromiservice/MONTÓIndustry/Crea及门店、Llíria物流和古巴分支按同一账户，不拆品牌/地区制造新增。旧WOOX私有记录仅提经销Montó商品，不据此推定持股或同一制造主体。Contact的sac邮箱归Product+Colorimetry部门，comercial归Sales，两者都是共享部门业务邮箱，不是具名采购；不使用专业站倒序显示的邮箱、不猜解码地址，不以电话当WhatsApp。LegalNotice正文更新时间2022年2月1日保留，仅作为当前可见自述身份信息并由当前联系/制造页对应，不声称外部工商实时审计。客户清漆户外耐候/覆盖率/底材推荐等不转成NL-W1201木材相容或性能保证；材料仅提出资料支持的底涂/附着促进配方评估，实际需求和采购未确认。"
+    },
+    "contact": {
+      "label": "官网Product+Colorimetry部门邮箱优先；另有共享销售邮箱及公司总机",
+      "email": "sac@montopinturas.com",
+      "phone": "+34 961 648 339",
+      "contactUrl": "https://montopinturas.com/en-contact"
+    },
+    "source": {
+      "label": "Actual BarnizUniversalAcqua water-based wood varnish plus own Marines manufacture and corporate contact",
+      "url": "https://profesional.tiendasmonto.es/ver/3763/barniz-universal-acqua.html"
+    },
+    "checkedAt": "2026-10-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-monto-marines": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chimtitan-bucharest": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "inchem-polonia-lodz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tnue-taupo": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
@@ -7442,6 +7471,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-monto-marines": {
+    "website": "https://montopinturas.com/",
+    "contactPage": "https://montopinturas.com/en-contact",
+    "address": "Own current company contact: Ctra.de la Base Militar,11,46163Marines(Valencia),Spain. OwnProductionattributesMarinesfactory;LegalNoticeidentifiesPINTURASMONTOSAU/CIFA46218210 andMercantileRegistryValencia4084/1396/80/section8/sheet18868,bodyupdated01Feb2022. Self-publishedidentifiersnotexternalregistryaudit;approximateMarinescitymarker,notfactory-gatesurvey.",
+    "generalEmail": "comercial@montopinturas.com",
+    "generalEmailEvidence": {
+      "company": "PINTURAS MONTÓ, S.A.U.",
+      "value": "comercial@montopinturas.com",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual department and company business contact page",
+          "url": "https://montopinturas.com/en-contact",
+          "summary": "Own Contact explicitly lists comercial@montopinturas.com under Sales, corroborated by own LegalNotice corporate business mailbox. Shared sales department route, not a named buyer or person."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "generalPhone": "+34 961 648 339",
+    "generalPhoneEvidence": {
+      "company": "PINTURAS MONTÓ, S.A.U.",
+      "value": "+34 961 648 339",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual department and company business contact page",
+          "url": "https://montopinturas.com/en-contact",
+          "summary": "Own Contact/Production footer explicitly publishes+34 961648339 for the Marines company address. General company voice number, not WhatsApp or a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-21"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "sac@montopinturas.com",
+        "source": {
+          "label": "Own Product + Colorimetry department on company Contact",
+          "url": "https://montopinturas.com/en-contact"
+        },
+        "emailEvidence": {
+          "company": "PINTURAS MONTÓ, S.A.U.",
+          "value": "sac@montopinturas.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own actual department and company business contact page",
+              "url": "https://montopinturas.com/en-contact",
+              "summary": "Own Contact explicitly places sac@montopinturas.com under Product + Colorimetry, with separate department telephone96 1031056. Product/colour technical business route, not named procurement, order or shipping inbox."
+            }
+          ],
+          "verifiedAt": "2026-10-21"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Marines coating manufacture and in-plant laboratory",
+        "url": "https://montopinturas.com/production"
+      },
+      {
+        "label": "Same-brand/same-address professional original water-based wood varnish",
+        "url": "https://profesional.tiendasmonto.es/ver/3763/barniz-universal-acqua.html"
+      },
+      {
+        "label": "Own Product+Colorimetry,Sales and general company contact",
+        "url": "https://montopinturas.com/en-contact"
+      },
+      {
+        "label": "Actual original additive/finished-primer range or legal identity",
+        "url": "https://profesional.tiendasmonto.es/ver/4020/aditivos.html"
+      },
+      {
+        "label": "Actual original additive/finished-primer range or legal identity",
+        "url": "https://profesional.tiendasmonto.es/ver/3813/multiadherente-imprimaciones.html"
+      },
+      {
+        "label": "Actual original additive/finished-primer range or legal identity",
+        "url": "https://montopinturas.com/en/16456661454476780"
+      }
+    ]
+  },
   "chimtitan-bucharest": {
     "website": "https://www.chimtitan.ro/",
     "contactPage": "https://www.chimtitan.ro/contact/",
@@ -23257,6 +23372,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-monto-marines",
   "chimtitan-bucharest",
   "inchem-polonia-lodz",
   "tnue-taupo",
