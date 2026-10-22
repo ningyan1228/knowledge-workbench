@@ -7511,11 +7511,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "a-chem-alfreton",
+    "company": "A-Chem Limited",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Alfreton",
+    "latitude": 53.097,
+    "longitude": -1.388,
+    "legacyCompanyDescription": "当前官网明确自有研发、配方混配及灌装设施，Aquashield为水性高蜡/高树脂木器处理成品，Woodcare明确花园木材等户外木材保护，并提供水性托盘标识漆定制。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前官网明确自有研发、配方混配及灌装设施，Aquashield为水性高蜡/高树脂木器处理成品，Woodcare明确花园木材等户外木材保护，并提供水性托盘标识漆定制。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读当前About、Woodcare、Industrial总览、具体Aquashield水性产品、完整可见SpecialistProducts及SurfaceCleaningRestoration正文。About明确自有研发、混配容器、电脑配方控制、灌装与质检，Woodcare与Aquashield为实际配方制造而非仅零售目录。保留多元业务和真实原料/配套供应：汽车护理、清洁/除味、润滑、蜡/密封、木材处理成品和代工；工业专业目录有消泡剂、水软化剂、凡士林、挤出工具清洗/润滑，以及12项可见原料条目（碱、过氧化氢、盐酸两个浓度、IPA、磷酸、盐、硅油、次氯酸盐、白电油、二甲苯）。清洗/酸蚀为矿物表面预处理成品，非原料级PO/CPO附着促进分散体；PVCu挤出清洗剂也不是PVC树脂或聚烯烃输入。已读当前经营、木器配方与工业专业/原料/清洗范围未发现水性聚烯烃乳液、PO/CPO输入分散体或同类原料级附着促进材料外售证据，按实际范围有限通过；不声称不存在其他原料业务，不保证未公开定制配方、全SKU/TDS/SDS或所有股权资料。原料目录邀请询问未列化学品不是已供应某种未列材料的证据；Aquashield定制添加剂方向为耐候/抗UV成品定制，未披露组成，不猜PO或我方材料已相容。按当前A-ChemLimited/注册号01510555、achem.co.uk/achemshop关联域名、Alfreton厂址、公司业务邮箱及Timbashield关联名称核对最新main357家/root373/完整私有队列和frontier668，无同一正式或私有账户；自身公司与交易品牌只记一户，不与同名化工或AstraChemtech混为集团。不臆断当前股权百分比。About及6份正文直接公开info业务邮箱和01773公司电话，通用入口不冒称具名采购/技术人员；业务联系页采用实际已读About，其直接提供邮箱、电话及咨询区；未核实的独立Contact链接目标不写为确定URL，不自动提交。普通电话不变WhatsApp。客户成品VOC、UV、耐候、附着或安全声明不转为NL-W1201性能保证；只按用户资料提出聚烯烃分散体底涂/附着促进的潜在评估，不声称客户现用、采购、配方相容或需求时机。"
+    },
+    "contact": {
+      "label": "官网直接核实公司业务邮箱及电话；通用入口，无具名采购",
+      "email": "info@achem.co.uk",
+      "phone": "+44(0)1773 833 881",
+      "contactUrl": "https://www.achem.co.uk/about/"
+    },
+    "source": {
+      "label": "Own Aquashield water-based wood treatment and manufacturing",
+      "url": "https://www.achem.co.uk/woodcare/aquashield/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "a-chem-alfreton": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorificio-atria-partanna": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bosshard-farben-ruemlang": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colori-freddi-mantova": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7874,6 +7903,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "a-chem-alfreton": {
+    "website": "https://www.achem.co.uk/",
+    "contactPage": "https://www.achem.co.uk/about/",
+    "address": "Dunsford Road, Alfreton, Derbyshire DE55 7RH, United Kingdom (own company/manufacturing address). Approximate locality marker, not independently surveyed factory GPS.",
+    "generalEmail": "info@achem.co.uk",
+    "generalEmailEvidence": {
+      "company": "A-Chem Limited",
+      "value": "info@achem.co.uk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current manufacturing/About page and Aquashield product footer",
+          "url": "https://www.achem.co.uk/about/",
+          "summary": "Own About header/footer and specific Aquashield footer directly publish info@achem.co.uk as general company business mailbox; no named procurement identity."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+44(0)1773 833 881",
+    "generalPhoneEvidence": {
+      "company": "A-Chem Limited",
+      "value": "+44(0)1773 833 881",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current manufacturing/About page and Aquashield product footer",
+          "url": "https://www.achem.co.uk/about/",
+          "summary": "Own About and product footer directly publish +44(0)1773 833 881 as company voice number; no WhatsApp or named extension inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Current own R&D, recipe-controlled mixing, filling and legal identity",
+        "url": "https://www.achem.co.uk/about/"
+      },
+      {
+        "label": "Actual water-based wax/resin wood-treatment product",
+        "url": "https://www.achem.co.uk/woodcare/aquashield/"
+      },
+      {
+        "label": "Own garden-timber woodcare manufacturing and water-based pallet paint",
+        "url": "https://www.achem.co.uk/woodcare/"
+      },
+      {
+        "label": "Own industrial business overview",
+        "url": "https://www.achem.co.uk/industrial/"
+      },
+      {
+        "label": "Actual specialty/auxiliary products and twelve visible raw-chemical entries",
+        "url": "https://www.achem.co.uk/industrial/specialist-products/"
+      },
+      {
+        "label": "Actual acid-etch/parts-wash/degreasing surface-preparation products",
+        "url": "https://www.achem.co.uk/industrial/surface-cleaning-restoration/"
+      }
+    ]
+  },
   "colorificio-atria-partanna": {
     "website": "https://www.atria.it/",
     "contactPage": "https://www.atria.it/contatti",
@@ -24603,6 +24695,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "a-chem-alfreton",
   "colorificio-atria-partanna",
   "bosshard-farben-ruemlang",
   "colori-freddi-mantova",
