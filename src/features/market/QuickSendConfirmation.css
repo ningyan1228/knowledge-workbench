@@ -1,8 +1,9 @@
 .calm-customer-page .outreach-actions .outreach-copy-options { width:auto; flex:1 1 auto }
 .outreach-quick-send { flex:0 0 auto; margin-left:auto }
-.calm-customer-page .outreach-quick-send-button { min-height:36px; padding:9px 12px; font-size:12px; border-radius:8px }
-.outreach-quick-send-button.is-sent { color:#168153; border-color:var(--line) }
-:root[data-theme="dark"] .outreach-quick-send-button.is-sent { color:#86efac }
+.calm-customer-page .outreach-quick-send .outreach-quick-send-button { min-height:36px; padding:9px 12px; font-size:12px; border-radius:8px; color:var(--outreach-send-ink); background:var(--outreach-send-bg); border-color:var(--outreach-send-edge); box-shadow:none }
+.calm-customer-page .outreach-quick-send .outreach-quick-send-button:hover:not(:disabled) { background:var(--outreach-send-hover) }
+.calm-customer-page .outreach-quick-send .outreach-quick-send-button:disabled { opacity:.5; filter:saturate(.35) }
+.outreach-quick-send-button.is-sent { font-weight:600 }
 .quick-send-feedback { display:block; margin-top:4px; font-size:11px; color:var(--muted) }
 .quick-send-dialog:not([open]) { display:none }
 .quick-send-dialog { width:min(460px,calc(100vw - 32px)); max-width:calc(100vw - 32px); max-height:calc(100dvh - 32px); overflow:auto; overscroll-behavior:contain; padding:22px; border:1px solid var(--line); border-radius:16px; background:var(--surface); color:var(--text); box-shadow:0 18px 60px #0003; margin:auto }

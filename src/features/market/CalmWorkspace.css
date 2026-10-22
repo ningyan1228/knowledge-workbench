@@ -1,5 +1,17 @@
 /* The customer workspace has one toolbar and two independently scrolling panes. */
-.calm-customer-page { --workbench-card-radius:14px; --workbench-inner-radius:10px }
+.calm-customer-page {
+  --workbench-card-radius:14px; --workbench-inner-radius:10px;
+  --outreach-subject-ink:#6941b5; --outreach-subject-bg:#f2ecfb; --outreach-subject-edge:#ded2f3; --outreach-subject-hover:#e9ddf8;
+  --outreach-body-bg:#1463e8; --outreach-body-hover:#0a51c7;
+  --outreach-full-ink:#006b70; --outreach-full-bg:#e5f4f3; --outreach-full-edge:#bededc; --outreach-full-hover:#d5edeb;
+  --outreach-send-ink:#17683b; --outreach-send-bg:#e8f5ed; --outreach-send-edge:#b9ddc7; --outreach-send-hover:#d9eddf;
+}
+:root[data-theme="dark"] .calm-customer-page {
+  --outreach-subject-ink:#d6c3ff; --outreach-subject-bg:#302440; --outreach-subject-edge:#55416d; --outreach-subject-hover:#3d2d52;
+  --outreach-body-bg:#0a5bd8; --outreach-body-hover:#1268eb;
+  --outreach-full-ink:#9be6df; --outreach-full-bg:#163a3a; --outreach-full-edge:#2c5b59; --outreach-full-hover:#204a49;
+  --outreach-send-ink:#9ce6b1; --outreach-send-bg:#1d3828; --outreach-send-edge:#365c43; --outreach-send-hover:#284a35;
+}
 .calm-customer-page .market-heading { border:0; margin-bottom:18px; padding-bottom:0 }
 .calm-customer-page .market-heading .market-tabs button { border:0; padding:5px 10px; border-radius:6px; font-size:12px }
 .calm-customer-page .market-heading .market-tabs button.active { background:var(--surface); color:var(--text) }
@@ -112,9 +124,12 @@
 .calm-customer-page .outreach-supporting .outreach-contact-routes,.calm-customer-page .outreach-supporting .outreach-recipient { border:0; padding:8px 0; background:transparent }
 .calm-customer-page .outreach-prompt .outreach-actions { position:sticky; bottom:-24px; z-index:3; order:20; margin:0 -24px; padding:14px 24px calc(14px + env(safe-area-inset-bottom)); border-top:1px solid var(--line); background:var(--surface); align-self:stretch; justify-content:flex-start }
 .calm-customer-page .outreach-copy-options { width:100%; gap:8px }
-.calm-customer-page .outreach-copy-options .outreach-copy-button { width:auto; min-width:0; font-size:12px; padding:9px 12px; border-radius:8px }
-.calm-customer-page .outreach-copy-options [data-copy-part="body"] { border-color:var(--blue); background:var(--blue); color:white }
-.calm-customer-page .outreach-copy-options [data-copy-part="subject"] { border-color:var(--line); color:var(--text); background:var(--surface) }
+.calm-customer-page .outreach-copy-options .outreach-copy-button { width:auto; min-width:0; font-size:12px; padding:9px 12px; border-radius:8px; color:var(--copy-ink); background:var(--copy-bg); border-color:var(--copy-edge); box-shadow:none }
+.calm-customer-page .outreach-copy-options [data-copy-part="subject"] { --copy-ink:var(--outreach-subject-ink); --copy-bg:var(--outreach-subject-bg); --copy-edge:var(--outreach-subject-edge); --copy-hover:var(--outreach-subject-hover) }
+.calm-customer-page .outreach-copy-options [data-copy-part="body"] { --copy-ink:#fff; --copy-bg:var(--outreach-body-bg); --copy-edge:var(--outreach-body-bg); --copy-hover:var(--outreach-body-hover); box-shadow:0 3px 9px #1463e824 }
+.calm-customer-page .outreach-copy-options [data-copy-part="full"] { --copy-ink:var(--outreach-full-ink); --copy-bg:var(--outreach-full-bg); --copy-edge:var(--outreach-full-edge); --copy-hover:var(--outreach-full-hover) }
+.calm-customer-page .outreach-copy-options .outreach-copy-button:hover:not(:disabled) { background:var(--copy-hover); filter:none }
+.calm-customer-page .outreach-copy-options .outreach-copy-button:disabled { opacity:.5; filter:saturate(.35) }
 .calm-customer-page .outreach-copy-feedback { order:19; font-size:12px }
 .calm-customer-page .outreach-manual-copy { order:18 }
 .customer-extra-filters { padding-bottom:16px; margin-bottom:20px; border-bottom:1px solid var(--line) }
