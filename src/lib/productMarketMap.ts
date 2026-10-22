@@ -7841,11 +7841,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "sobeltec-ariomat-ronse",
+    "company": "Sobeltec NV (Ariomat; Cordeel-associated)",
+    "productId": "nl-w1201",
+    "country": "Belgium",
+    "countryZh": "比利时",
+    "city": "Ronse",
+    "latitude": 50.7457,
+    "longitude": 3.6005,
+    "legacyCompanyDescription": "研发制造Ariomat建筑及木器饰面；WOOD VARNISH 2C为室内木材用双组分水性清漆，技术资料注明含PU。 Ronse为城市代表点，非工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "研发制造Ariomat建筑及木器饰面；WOOD VARNISH 2C为室内木材用双组分水性清漆，技术资料注明含PU。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "既有同一Sobeltec/Ariomat私有项补证，非改名新增。先前独立完整读当前Ariomat法文Home302行，其工厂品牌SobeltecNV/比利时制造/R&D、Woodline木器处理和Stucline建筑装饰涂料/矿物饰面、业务表单、Ronse地址、info@ariomat.com及电话均为实际公开正文；先前AboutCacheMiss保留。现补读Cordeel自有报告139行、同公司公开LinkedIn360行和自有WOODVARNISH2C技术PDF两页完整94行文字。集团报告直接确认Sobeltec开发生产Ariomat漆/涂层/木器饰面，品牌官网和公司LinkedIn交叉确认Cordeel关联；只计一个制造法人关联账户，不拆品牌/厂区/集团、客户Timfin或其他C系列企业。报告导航出现2025但正文含2022/2023计划，保留混合时效，不叫2026新投产或最新完整集团审计。报告用矿物原料替代PU的概述不能改成所有产品禁用合成聚合物；具体2023-02-03版WOODVARNISH2C实际说明室内木材、双组分水性且含聚氨酯，保留两者不同范围，不猜配方变化/我方相容。当前LinkedIn品牌业务与水性室内木器清漆帖子亦实际读取，相关月龄/2024年末祝词不冒称2026发布、参展或采购；LinkedInPublicCompany/2–10人数/个人列表不是外部登记或具名买家核验，不导入人员。\n按实际已读制造法人/品牌整体业务及完整可见类别/LinkedIn专长，产品包括建筑矿物面层、漆、木饰面、清洁剂、底漆、疏水/阻燃饰面、hardwax油等；未见作为原料外售的水性PO/CPO分散体、聚烯烃乳液或同功能附着促进输入，所选输入及已读范围有限通过。成品底漆、含PU水性清漆和表面处理字样不自动视为原料同行，亦不保证所有未读SKU/SDS/母集团未披露业务。Woodline本页CacheMiss无正文，TDS文字已读但两次图片预览CacheMiss，未下载PDF二进制或完成视觉核对；不把失败当证据。PDF正文20%B组分与包装100cc/1L存在比例差异，原样保留，不替客户纠错、不推荐加料/混比；只用水性/室内木材/清漆事实，耐磨/防水/UV/环保数字不转我方。地图仅Ronse城市代表点，非工厂门口GPS。\n按Sobeltec/Ariomat/Cordeel/域名/Ronse地址核对当前main369/本地385/全私有队列frontier711，只有原待核验同一项；Levasseur记录仅提及Ariomat为另一家线索，不是共同控股。公开info@ariomat.com和总机来自10月22日实际品牌Home及PDF页眉，归属于Sobeltec品牌公司通用业务入口，不冒称采购负责人；info@sobeltec.be是2023技术文件另列地址，未当本轮新版收件地址，母集团可持续邮箱也不作采购。电话不构造WhatsApp。NL-W1201功能只按用户资料提出水性木器底涂/附着促进材料评估，不说客户已用/在采/相容/保证性能。"
+    },
+    "contact": {
+      "label": "Ariomat官网通用业务邮箱、电话及表单；非具名采购",
+      "email": "info@ariomat.com",
+      "phone": "+32 55 230 600",
+      "contactUrl": "https://ariomat.com/fr/"
+    },
+    "source": {
+      "label": "Own WOOD VARNISH2C technical sheet, indoor wood and waterborne two-component formulation",
+      "url": "https://ariomat.com/wp-content/uploads/2024/06/WOOD-VARNISH-2C_TDS_EN.pdf"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sobeltec-ariomat-ronse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "novol-komorniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "levasseur-newco-brussels": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "dyo-casati-kocaeli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8216,6 +8245,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sobeltec-ariomat-ronse": {
+    "website": "https://ariomat.com/fr/",
+    "contactPage": "https://ariomat.com/fr/",
+    "address": "Klein Frankrijkstraat 43,9600 Ronse,Belgium. Sobeltec NV manufacturer and Ariomat brand are one Cordeel-associated account. Coordinates represent Ronse city, not factory gate GPS.",
+    "generalEmail": "info@ariomat.com",
+    "generalEmailEvidence": {
+      "company": "Sobeltec NV (Ariomat; Cordeel-associated)",
+      "value": "info@ariomat.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current Ariomat brand business-contact block and own technical-sheet header",
+          "url": "https://ariomat.com/fr/",
+          "summary": "Own current homepage explicitly names SobeltecNV factory brand and publishes info@ariomat.com beside Ronse address, phone and business form. OwnPDF header independently matches this mailbox. Company/brand general business route only; no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+32 55 230 600",
+    "generalPhoneEvidence": {
+      "company": "Sobeltec NV (Ariomat; Cordeel-associated)",
+      "value": "+32 55 230 600",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current Ariomat brand business telephone",
+          "url": "https://ariomat.com/fr/",
+          "summary": "Own homepage contact block explicitly prints +32 55 230600 with Ronse address and SobeltecNV factorybrand. OwnPDF prints the same number spaced +32 55 23 06 00; corporate phone only, no named procurement/WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Actual current factorybrand, manufacture, Woodline/Stucline, business contact and form",
+        "url": "https://ariomat.com/fr/"
+      },
+      {
+        "label": "Cordeel own report directly attributes Sobeltec Ariomat manufacturing",
+        "url": "https://reports.cordeel.eu/chapter/sustainable-buildings-and-products/biobased-materials/"
+      },
+      {
+        "label": "Own2023-02-03 WOODVARNISH2C two-page technicalsheet, complete text only",
+        "url": "https://ariomat.com/wp-content/uploads/2024/06/WOOD-VARNISH-2C_TDS_EN.pdf"
+      },
+      {
+        "label": "Public own brand business scope and Cordeel association, no named contacts curated",
+        "url": "https://www.linkedin.com/company/ariomat"
+      }
+    ]
+  },
   "novol-komorniki": {
     "website": "https://novol.com/",
     "contactPage": "https://novol.com/kontakt/?contactBrand=INDUSTRIAL",
@@ -25586,6 +25670,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sobeltec-ariomat-ronse",
   "novol-komorniki",
   "levasseur-newco-brussels",
   "dyo-casati-kocaeli",
