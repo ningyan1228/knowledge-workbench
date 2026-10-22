@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "otani-paint-osaka": "Your VATON-FX is a penetrating wood stain formulated with plant oils, pigments and solvent.",
+  "asahipen-osaka": "Your water-based acrylic-emulsion varnish is intended for indoor wooden goods, excluding floors.",
   "bird-brand-feltwell": "Your Ecosote is a water-based exterior timber preserver for sheds and fences.",
   "a-chem-alfreton": "Your Aquashield water-based wood treatment uses wax and resin for exterior timber protection.",
   "colorificio-atria-partanna": "Your ATRIAPLASTIC P is a two-component epoxy-polyamide finish for industrial concrete floors.",

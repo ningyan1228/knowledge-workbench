@@ -7567,11 +7567,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "asahipen-osaka",
+    "company": "Asahipen Corporation",
+    "productId": "nl-w1201",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Osaka",
+    "latitude": 34.693,
+    "longitude": 135.502,
+    "legacyCompanyDescription": "当前官网明确自有研发及兵库涂料工厂生产；具体水性ニス原文为室内木制品（地板除外）使用的水性丙烯酸乳液树脂清漆；咨询页有公司、部门及咨询内容字段，可用作公开公司咨询入口，无真实收件邮箱被该页面披露。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前官网明确自有研发及兵库涂料工厂生产；具体水性ニス原文为室内木制品（地板除外）使用的水性丙烯酸乳液树脂清漆；咨询页有公司、部门及咨询内容字段，可用作公开公司咨询入口，无真实收件邮箱被该页面披露。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读当前公司概要、研发/工厂、具体水性ニス、咨询页、六大产品业务概览及服务/集团网络6份原文。公司明确研发、原料替代/效率改善及兵库厂自有家庭/工业涂料生产；水性ニス明确室内木材、丙烯酸乳液成品清漆与地板除外限制。当前实际已读业务为成品油/水性涂料、清漆/底漆/喷漆、涂装工具、修补填料、室内装饰、蜡/洗剂/去胶、园艺配套，保留制造/进口/销售混合经营，不称全产品均自制或没有其他输入材料业务。实际所查当前经营、工厂角色、六类产品范围和具体木器成品未发现水性聚烯烃乳液、PO/CPO输入分散体或同类原料级附着促进材料外售证据，按实际范围有限通过；未逐项遍历搜索提到的524SKU、全部分类叶、TDS/SDS或未披露配方/全球股权，不给无任何原料供应保证。以Asahipen/株式会社アサヒペン、.jp/.co.jp保守域名词及大阪本社、兵库/静冈厂、实际列出的集团企业共同查重；大豊塗料、共福産業、アサヒロジスト、ザ・ペット、サンパペル、保土ヶ谷電子販売、サコム、テクノタイムサービス与各销售/物流点只记一个关联账户，未推股权比例或把同名AsahiAgria混为本公司。中国自動車道是日本高速道路名称，不误作中国工厂。公司本社06-6930-5001与客户咨询室06-6934-0300不同，本记录保留本社实际公司电话。soudan原文咨询表单含公司/部门可选字段，是公开咨询入口，不是已核实采购表单/邮箱；访客输入示例绝不作为收件邮箱或写入邮箱字段，电话输入示例也不收录。Search旧SDS的质量邮箱未独立读取，不当真实当前联系人。未验证表单提交、投递/回复能力，未自动提交、猜邮箱、WhatsApp或具名采购职责。客户成品抗菌/F星认证/耐候/干燥等不转为我方NL-W1201效果；仅依据我方木材基材底涂/附着促进方向提出潜在评估，不声称客户现用PO、采购、配方相容或原料替代需求。"
+    },
+    "contact": {
+      "label": "官网公开公司咨询表单及本社电话；未核实收件邮箱，示例邮箱不收录",
+      "phone": "06-6930-5001",
+      "contactUrl": "https://www.asahipen.jp/soudan/"
+    },
+    "source": {
+      "label": "Own water-based varnish, manufacturing and public company enquiry form",
+      "url": "https://www.asahipen.jp/products/view/01121?genre=1"
+    },
+    "checkedAt": "2026-10-22"
+  },
+  {
+    "id": "otani-paint-osaka",
+    "company": "Otani Paint Co., Ltd.",
+    "productId": "elo",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Osaka",
+    "latitude": 34.676,
+    "longitude": 135.547,
+    "legacyCompanyDescription": "当前自有公司/首页明确日本木器涂料开发制造和熊本工厂；VATON-FX原始H008K目录返回部分明确其为含天然植物油、颜料、溶剂的渗透型木材着色涂料；另实际公开光泽调节添加剂及浇注环氧体系，均保留其角色，不把客户天然植物油写成使用ELO。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前自有公司/首页明确日本木器涂料开发制造和熊本工厂；VATON-FX原始H008K目录返回部分明确其为含天然植物油、颜料、溶剂的渗透型木材着色涂料；另实际公开光泽调节添加剂及浇注环氧体系，均保留其角色，不把客户天然植物油写成使用ELO。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读当前公司概要、可见产品页、首页、VATON-FX H008K目录实际返回321/339行及2023-07-25四页WaltzEpoxyResin主剂SDS364行；第3次外部咨询表单请求为JavaScript机器人校验页，计不可用，不称表单已读取或可提交。公司/首页明确日本高档木器涂料开发制造、工厂及水性着色剂生产；实际VATON-FX为植物油/颜料/溶剂的渗透型成品，不是植物油或ELO原料销售。保留真实混合角色：1K/2K水性/溶剂型木器涂料、油性/自然系/着色/密封/底/中/面涂、SX-02光泽调节添加剂、木材表面处理设备/工法与浇注环氧体系；SDS明确环氧树脂混合物主剂、成形用途，普通浇注环氧不自动等于环氧化植物油或生物基增塑/稳定添加剂。当前已读经营、可见配方范围、VATON-FX成品构成/使用角色和公开辅助/浇注用途未见ELO、ESBO、环氧化植物油或同功能生物基增塑/稳定输入对外销售证据，有限范围通过；未穷尽自述3000余种产品、所有筛选页、全部SDS/TDS、未披露配方或全球股权。SDS组成表未披露可读CAS，不用空白/通知对象无记载证明不存在ELO，不编造原料化学结构或外购例外。VATON目录为8个PDF页面的文本摘录，返回321/339行，末18行未读取，无二进制下载/视觉审读；产品不形成表面膜、颜色/用途限制及其WP系列差别保留，认证/食品接触/安全声明不转为ELO性能、认证或现场混配建议。Home列有2026-08-05标注熊本地震工厂状况更新，正文未另取，不声称具体当前产能、停复产或该事件发生于2026；下游制造判断以当前自身制造陈述为据。以Otani/Ohtani/大谷塗料、otanipaint、VATON/Waltz、日方本社地址和台湾代理商关联保守查重，无现有独立正式/私有账户；仅收日本公司，台湾大谷興業代理商及ecotanipaint邮箱/办公室不收、不借给日本公司。大阪本社电话来自当前公司页；waltz邮箱来自官网仍公开托管2023-07-25 SDS并同页具公司名称/大阪地址及技術室部门，保持原文档日期和核验日期分开，仅部门技术业务入口，不冒称具名采购或现任文件负责人。SDS06-6976-0254兼紧急号不列普通业务主电话。邮箱当前归属由官方托管及同一公司资料对应核验，未验证送达/现任员工/采购；外部表单挑战不绕过。仅按用户ELO环氧功能/柔韧/树脂改性资料提出潜在涂料评估，不宣称已采用、配方相容、抗腐蚀或采购需求。"
+    },
+    "contact": {
+      "label": "日本公司公开技术部门邮箱（2023-07-25官方SDS）及本社电话；非具名采购",
+      "email": "waltz@otanipaint.com",
+      "phone": "06-6976-0251",
+      "contactUrl": "https://otanipaint.com/company/"
+    },
+    "source": {
+      "label": "Own VATON-FX penetrating wood stain and current manufacture",
+      "url": "https://otanipaint.com/cat/cat_vat.pdf"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "otani-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "asahipen-osaka": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "bird-brand-feltwell": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "a-chem-alfreton": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorificio-atria-partanna": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7932,6 +7989,121 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "otani-paint-osaka": {
+    "website": "https://otanipaint.com/",
+    "contactPage": "https://otanipaint.com/company/",
+    "address": "3-1-18 Higashinakamoto, Higashinari-ku, Osaka 537-0021, Japan (own headquarters/business address). Kumamoto factory is separately listed; no exact factory GPS or capacity assumption.",
+    "generalPhone": "06-6976-0251",
+    "generalPhoneEvidence": {
+      "company": "Otani Paint Co., Ltd.",
+      "value": "06-6976-0251",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company overview, Osaka head office",
+          "url": "https://otanipaint.com/company/",
+          "summary": "Current company page publishes corporateTEL06-6976-0251. Do not replace it with SDStechnical/emergency0254, Taiwanagent or branch numbers."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "waltz@otanipaint.com",
+        "source": {
+          "label": "Own hosted SDS Section1; document revision2023-07-25",
+          "url": "https://otanipaint.com/sds/sds_wep_a.pdf"
+        },
+        "emailEvidence": {
+          "company": "Otani Paint Co., Ltd.",
+          "value": "waltz@otanipaint.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Officially hosted Waltz Epoxy Resin base SDS, revised 2023-07-25, Section1",
+              "url": "https://otanipaint.com/sds/sds_wep_a.pdf",
+              "summary": "Section1 names 大谷塗料株式会社, Osaka address, 技術室 and exact waltz@otanipaint.com. Department business mailbox only; preserve document revision2023-07-25 separately from current retrieval, no named/current employee, procurement or deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-10-22"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Japan manufacturer/company/legal identity, branches and Taiwan agency distinction",
+        "url": "https://otanipaint.com/company/"
+      },
+      {
+        "label": "Own current manufacture of wood coatings and water-based stains",
+        "url": "https://otanipaint.com/"
+      },
+      {
+        "label": "Visible product families, matting-additive and casting-system roles; not all3000SKU",
+        "url": "https://otanipaint.com/product/"
+      },
+      {
+        "label": "Actual H008K VATON-FX catalogue text returned321of339lines; not a complete PDF read",
+        "url": "https://otanipaint.com/cat/cat_vat.pdf"
+      },
+      {
+        "label": "Own technical-department mailbox and casting-base role; revised2023-07-25 SDS",
+        "url": "https://otanipaint.com/sds/sds_wep_a.pdf"
+      }
+    ]
+  },
+  "asahipen-osaka": {
+    "website": "https://www.asahipen.jp/",
+    "contactPage": "https://www.asahipen.jp/soudan/",
+    "address": "4-1-12 Tsurumi, Tsurumi-ku, Osaka 538-8666, Japan (own Osaka corporate headquarters). Approximate Osaka marker; Hyogo factory is separately described, not plotted as this address.",
+    "generalPhone": "06-6930-5001",
+    "generalPhoneEvidence": {
+      "company": "Asahipen Corporation",
+      "value": "06-6930-5001",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company overview Osaka headquarters",
+          "url": "https://www.asahipen.jp/company/",
+          "summary": "Own company profile publishes Osaka headquarters TEL06-6930-5001. Separate customer-consultation number and form input examples are not this corporate voice contact."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current company and head-office identity",
+        "url": "https://www.asahipen.jp/company/"
+      },
+      {
+        "label": "Own R&D and operating Hyogo manufacturing role",
+        "url": "https://www.asahipen.jp/company/kenkyu.html"
+      },
+      {
+        "label": "Actual water-based acrylic-emulsion varnish for indoor wooden goods, excluding floors",
+        "url": "https://www.asahipen.jp/products/view/01121?genre=1"
+      },
+      {
+        "label": "Actual company consultation form; visitor email example is not a recipient inbox",
+        "url": "https://www.asahipen.jp/soudan/"
+      },
+      {
+        "label": "Actual six product-business families, not all SKU inventory",
+        "url": "https://www.asahipen.jp/product/"
+      },
+      {
+        "label": "Actual current plants, offices and group businesses kept in one account",
+        "url": "https://www.asahipen.jp/company/network.html"
+      }
+    ]
+  },
   "bird-brand-feltwell": {
     "website": "https://www.birdbrand.co.uk/",
     "contactPage": "https://www.birdbrand.co.uk/about-us/",
@@ -24787,6 +24959,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "otani-paint-osaka",
+  "asahipen-osaka",
   "bird-brand-feltwell",
   "a-chem-alfreton",
   "colorificio-atria-partanna",
