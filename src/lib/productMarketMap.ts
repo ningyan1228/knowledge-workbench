@@ -7400,11 +7400,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-21"
   },
+  {
+    "id": "boehme-liebefeld",
+    "company": "Böhme AG",
+    "productId": "nl-w1201",
+    "country": "Switzerland",
+    "countryZh": "瑞士",
+    "city": "Liebefeld",
+    "latitude": 46.93,
+    "longitude": 7.41,
+    "legacyCompanyDescription": "当前自有公司资料明确瑞士Liebefeld木材涂料研发制造；SunCareJetMatt原文明确水性、室内针叶木涂装，并直接公开公司业务邮箱和电话。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前自有公司资料明确瑞士Liebefeld木材涂料研发制造；SunCareJetMatt原文明确水性、室内针叶木涂装，并直接公开公司业务邮箱和电话。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "审读当前Home、Company及SunCareJetMatt具体成品与其完整可见FAQ。公司明确自有木材处理品研发生产；FAQ描述着色剂、漆/清漆、木器底涂、油和防黄变/UV等木材涂装成品类别及具名施工用途，未见所选PO/CPO/水性聚烯烃或原料级附着促进输入外售。结论限实际经营说明、具体木材成品和可见类别，不声称已读全字母目录/全部SKU/SDS/组成或隐藏业务；没有把未返回的目录/联系请求当成功，也不从低溶剂/水性字样猜聚合物。普通木器油、底涂及色漆不是仅凭名称即认定同类输入。Home与Company称Donders家族经营；1994Romandie既有子公司又有自主创业措辞，保留同一品牌关联，不臆断全资比例或独立新买家；历史Hausmann、Böhme家族、Donders姓名和代理不拆客户。邮箱/电话从具体产品FAQ实际读得，非未返回Contact页；没有具名采购、SMTP或表单验证。城市Liebefeld来自Home，未猜街道/工厂GPS。防黄变、UV、硬度、VOC、Minergie等为客户成品描述，不转用为NLW测试或相容保证；仅提出用户资料支持的木材底涂/附着评估，需求待确认。 既有Vermont Natural Coatings账户保存2026-10-11制造合作证据，已明确注明；合作记录不等于相同Swiss法人/域名/厂址，未从合作推断当前股权。本条以Böhme当前自有瑞士家族制造业务、独立产品和渠道形成经营账户，不为Vermont合作品牌或单品另建客户。"
+    },
+    "contact": {
+      "label": "官网实际公司业务邮箱和电话；无具名采购邮箱",
+      "email": "info@boehme.ch",
+      "phone": "+41 31 971 11 63",
+      "contactUrl": "https://www.boehme.ch/de/kontakt"
+    },
+    "source": {
+      "label": "Own specific downstream product/cycle and actual manufacture",
+      "url": "https://www.boehme.ch/de/produkte/alphabetisch/23:suncare-jetmatt"
+    },
+    "checkedAt": "2026-10-22"
+  },
+  {
+    "id": "colori-freddi-mantova",
+    "company": "Industria Colori Freddi S. Giorgio s.r.l.",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Mantova",
+    "latitude": 45.156,
+    "longitude": 10.791,
+    "legacyCompanyDescription": "当前自有首页明确工业/防腐涂料制造研发；公开防腐工艺说明列水性双组分环氧体系及363底漆，官方产品咨询表单和公司电话有实际原文。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前自有首页明确工业/防腐涂料制造研发；公开防腐工艺说明列水性双组分环氧体系及363底漆，官方产品咨询表单和公司电话有实际原文。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "完整审读当前自有首页，以及原生读取的Listini、Anticorrosione和ColorimetriaSolvente正文；水性色浆页cachemiss明确不作已读。首页制造研发与可见8类成品经营明确，防腐页实际列环氧/聚氨酯及单组分水性、溶剂成品底面涂系统，另含清洗/脱漆/锈转化施工品。SICOLOR实际有16种180系列色浆，原文为聚合物润湿体系，并供应调色设备及各类有色成品；保留此配方/调色原料配套角色，不称没有任何原料销售，也不把色浆/润湿剂直接当ELO、ESBO或生物基增塑稳定原料。已读经营、具体成品工艺和溶剂调色用途未见所选同类环氧化植物油/生物塑化输入外售证据；限所查范围，不覆盖失败的水性色浆正文、所有SKU/SDS、未披露关联或组成，无虚构外购例外。3篇网页发布日期均2021-03-26，所链旧目录有2017/2018发现信息但PDF未读，不称2026新产品/当前价格/实时采购或系列持续销售保证；公司事实写公开工艺中所列而非买家现用我方材料。法律footer、VAT00682590203/MN9809、Mantova地址与当前域名一致；其他同名Freddi/历史家族财务新闻未原读，不据此推当前股权/关联或停产。业务表单的E-mail字段是访客输入，不是公司邮箱；公司精确邮箱未核实不猜填。电话与传真分开，不挂个人或WhatsApp。食品接触、海洋/工业防腐、施工时间和客户成品效果不转用为ELO认证、配方相容或防腐保证。"
+    },
+    "contact": {
+      "label": "官网实际产品咨询表单及公司电话；收件邮箱未核实",
+      "phone": "+39 0376 2721",
+      "contactUrl": "https://colorifreddi.it/listini/"
+    },
+    "source": {
+      "label": "Own specific downstream product/cycle and actual manufacture",
+      "url": "https://colorifreddi.it/ciclo-anticorrosione/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "colori-freddi-mantova": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "boehme-liebefeld": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorificio-galfa-pianoro": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vista-paint-fullerton": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "haymes-paint-ballarat": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7759,6 +7816,101 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "colori-freddi-mantova": {
+    "website": "https://colorifreddi.it/",
+    "contactPage": "https://colorifreddi.it/listini/",
+    "address": "Via U. Barbieri12,46100 Mantova(MN),Italy (own corporate footer address). Factory street/GPS and current registry/control not independently audited; approximate city marker.",
+    "generalPhone": "+39 0376 2721",
+    "generalPhoneEvidence": {
+      "company": "Industria Colori Freddi S. Giorgio s.r.l.",
+      "value": "+39 0376 2721",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual public company business contact",
+          "url": "https://colorifreddi.it/listini/",
+          "summary": "Own footer Tel.(+39)03762721; Fax0376370629 distinct. General company number, not named procurement/WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own actual current manufacture/development of industrial and anticorrosion coatings",
+        "url": "https://colorifreddi.it/"
+      },
+      {
+        "label": "Own published anti-corrosion coating cycles, page dated2021-03-26; no current procurement or performance inference",
+        "url": "https://colorifreddi.it/ciclo-anticorrosione/"
+      },
+      {
+        "label": "Own solvent colour-matching system and16pigment-paste roles; page dated2021-03-26",
+        "url": "https://colorifreddi.it/sistema-solvente/"
+      },
+      {
+        "label": "Actual general product-assistance form, legal footer and phone; no recipient email verified",
+        "url": "https://colorifreddi.it/listini/"
+      }
+    ]
+  },
+  "boehme-liebefeld": {
+    "website": "https://www.boehme.ch/de/",
+    "contactPage": "https://www.boehme.ch/de/kontakt",
+    "address": "Liebefeld, Switzerland. Own current company FAQ identifies headquarters locality and production history; street, registry ownership and exact factory GPS not independently read. Approximate locality marker.",
+    "generalEmail": "info@boehme.ch",
+    "generalEmailEvidence": {
+      "company": "Böhme AG",
+      "value": "info@boehme.ch",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual public company business contact",
+          "url": "https://www.boehme.ch/de/produkte/alphabetisch/23:suncare-jetmatt",
+          "summary": "Exact own product page and product-question FAQ explicitly give info@boehme.ch for company enquiries; not a personal mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+41 31 971 11 63",
+    "generalPhoneEvidence": {
+      "company": "Böhme AG",
+      "value": "+41 31 971 11 63",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual public company business contact",
+          "url": "https://www.boehme.ch/de/produkte/alphabetisch/23:suncare-jetmatt",
+          "summary": "Exact own product contact+41(0)319711163; optional national trunk(0) omitted in standard international rendering. Not WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing/family group and Liebefeld locality",
+        "url": "https://www.boehme.ch/de/"
+      },
+      {
+        "label": "Own company production and Romandie history with ownership boundary retained",
+        "url": "https://www.boehme.ch/de/unternehmen/wer-sind-wir"
+      },
+      {
+        "label": "Actual water-based softwood product plus complete visible business-category FAQ and direct business email/phone",
+        "url": "https://www.boehme.ch/de/produkte/alphabetisch/23:suncare-jetmatt"
+      },
+      {
+        "label": "Own linked contact page; full fields not retrieved in interrupted call",
+        "url": "https://www.boehme.ch/de/kontakt"
+      }
+    ]
+  },
   "colorificio-galfa-pianoro": {
     "website": "https://www.colorificiogalfa.it/en/",
     "contactPage": "https://www.colorificiogalfa.it/en/contatti/",
@@ -24270,6 +24422,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "colori-freddi-mantova",
+  "boehme-liebefeld",
   "colorificio-galfa-pianoro",
   "vista-paint-fullerton",
   "haymes-paint-ballarat",
