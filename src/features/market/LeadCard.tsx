@@ -41,10 +41,10 @@ function BusinessEvidence({ lead, showContacts = true }: { lead: PublicLead; sho
     {showContacts && <div className="customer-brief-row"><span className="customer-brief-label">联系渠道</span><ContactChannels lead={lead} /></div>}
     <details className="customer-business-evidence">
     <summary>
-      <span className="customer-evidence-boundary" title="应用关联不代表已确认采购、使用或配方相容性">适配待评估 · 采购未确认</span><span className="customer-evidence-toggle"><span className="customer-evidence-expand">完整依据</span><span className="customer-evidence-collapse">收起原文</span><ChevronRight size={12} /></span>
+      <span className="customer-evidence-toggle"><span className="customer-evidence-expand">完整依据</span><span className="customer-evidence-collapse">收起原文</span><ChevronRight size={12} /></span>
     </summary>
     <div className="customer-evidence-original">
-      <strong>完整核验原文</strong><p>{evidence.statement || '暂无已保存的业务依据。'}</p>
+      <p className="customer-evidence-boundary">适配待评估 · 采购未确认</p><strong>完整核验原文</strong><p>{evidence.statement || '暂无已保存的业务依据。'}</p>
       {publicContactUrl(evidence.sourceUrl) && <a href={evidence.sourceUrl} target="_blank" rel="noreferrer">{evidence.sourceName || '查看业务来源'}<ExternalLink size={12} /></a>}
       <small>业务依据核验：<time dateTime={evidence.verifiedAt}>{evidence.verifiedAt || '日期未记录'}</time></small>
       <small>最近核验：{lead.checkedAt} · 首次收录：{recordedTimeLabel(lead)}（北京时间）</small>

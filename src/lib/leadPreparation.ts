@@ -3,6 +3,7 @@ import { qualifiedContactCompany, selectBusinessRecipient } from './contactEvide
 import { activeOutreachSend, outreachCompanyKey, type OutreachSend } from './outreachLedger'
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
 import { latestContact } from './contactRoutes'
+import { latestResultEvent } from './outreachResults'
 import type { BusinessFilters, WorkRecords } from './leadWorkbench'
 
 export type PreparationFilter = 'all' | 'ready' | 'needs-email' | 'sent'
@@ -12,7 +13,7 @@ export const preparationLabels = { all: '全部准备情况', ready: '可准备�
 export function canPrepareFirstContact(lead: PublicLead, sends: OutreachSend[] | null, records: WorkRecords | null) {
   if (sends === null || records === null || activeOutreachSend(sends, lead)) return false
   const record = records[outreachCompanyKey(lead)]
-  if ((record?.stage && record.stage !== 'todo') || latestContact(record?.contactLog)) return false
+  if ((record?.stage && record.stage !== 'todo') || latestContact(record?.contactLog) || latestResultEvent(record?.resultEvents)) return false
   return Boolean(createShortDevelopmentEmail(lead, undefined, 'concise'))
 }
 
@@ -28,7 +29,7 @@ export function leadPreparation(lead: PublicLead, sends: OutreachSend[] | null, 
   if (!qualifiedContactCompany(lead)) return 'review'
   if (!selectBusinessRecipient(lead)) return 'needs-email'
   const record = records?.[outreachCompanyKey(lead)]
-  if (records === null || (record?.stage && record.stage !== 'todo') || latestContact(record?.contactLog)) return 'review'
+  if (records === null || (record?.stage && record.stage !== 'todo') || latestContact(record?.contactLog) || latestResultEvent(record?.resultEvents)) return 'review'
   return createShortDevelopmentEmail(lead, undefined, 'concise') ? 'ready' : 'review'
 }
 

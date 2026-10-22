@@ -4,6 +4,7 @@ import { contactAssessment, qualifiedContactCompany, selectBusinessRecipient } f
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
 import { recordedDay, shanghaiDay } from './leadTimeline'
 import { latestContact } from './contactRoutes'
+import { latestResultEvent } from './outreachResults'
 import type { WorkRecords } from './leadWorkbench'
 
 const southeastAsia = new Set(['Vietnam', 'Malaysia', 'Indonesia', 'Thailand', 'Philippines', 'Singapore', 'Cambodia', 'Laos', 'Myanmar', 'Brunei', 'Timor-Leste'])
@@ -20,7 +21,7 @@ export function firstContactPlan(leads: PublicLead[], sends: OutreachSend[] | nu
       const email = recipient && createShortDevelopmentEmail(lead, recipient.name ?? null)
       if (seen.has(key) || !recipient || !email) return []
       seen.add(key)
-      if (sends === null || records === null || activeOutreachSend(sends, lead) || latestContact(records[key]?.contactLog)) return []
+      if (sends === null || records === null || activeOutreachSend(sends, lead) || latestContact(records[key]?.contactLog) || latestResultEvent(records[key]?.resultEvents)) return []
       return [{ lead, recipient, email, southeastAsia: southeastAsia.has(lead.country) }]
     })
   const remaining = completed === null ? null : Math.max(0, goal - (daily ? completed : 0))

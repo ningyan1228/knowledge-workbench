@@ -2,14 +2,16 @@ import type { PublicLead } from './productMarketMap'
 import { qualifiedContactCompany, selectBusinessRecipient } from './contactEvidence'
 import { customerContactRoutes } from './contactRoutes'
 import { functionalProductPitch } from './functionalProductPitch'
-import { leadBusinessEvidenceBrief } from './leadBusinessEvidence'
+import { presentBusinessFact, readableBusinessFact } from './leadBusinessFactPresentation'
 import { savedLeadBusinessFact } from './leadBusinessFacts'
 import { refreshedLeadFact } from './publicLeadOverrides'
 
 export function leadCardBrief(lead: PublicLead) {
   const pitch = qualifiedContactCompany(lead) ? functionalProductPitch(lead) : null
+  const refreshed=refreshedLeadFact(lead)?.business
+  const fact=readableBusinessFact(refreshed) ? refreshed : savedLeadBusinessFact(lead)
   return {
-    fact: (refreshedLeadFact(lead)?.business ?? savedLeadBusinessFact(lead) ?? leadBusinessEvidenceBrief(lead.companyEvidence.statement, lead.company)) || '业务事实待补证据',
+    fact: presentBusinessFact(lead.companyEvidence.statement, fact),
     product: ({ 'fertilizer-coating': '肥料包膜原料', 'nl-w1201': 'NL-W1201', elo: 'ELO 环氧化亚麻油' })[lead.productId],
     evaluation: pitch?.cardEvaluation ?? '应用关联待补证据',
     limits: pitch?.limits,

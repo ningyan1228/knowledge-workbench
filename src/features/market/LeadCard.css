@@ -29,7 +29,7 @@
 .customer-card-opportunity>span { display:block;color:var(--muted) }
 .customer-extension-label { display:inline-block;margin-top:3px;padding:0 5px;border:1px solid var(--line);border-radius:4px;font-size:10px;color:var(--muted) }
 .customer-evidence-boundary { flex-shrink:0;white-space:nowrap;font-size:10px;color:var(--muted) }
-.customer-evidence-toggle { display:inline-flex;align-items:center;flex-shrink:0;gap:2px;color:var(--blue);font-size:11px;line-height:1.5;white-space:nowrap }
+.customer-evidence-toggle { display:inline-flex;align-items:center;flex-shrink:0;gap:2px;margin-left:auto;color:var(--blue);font-size:11px;line-height:1.5;white-space:nowrap }
 .customer-evidence-collapse { display:none }
 .customer-business-evidence[open] .customer-evidence-expand { display:none }
 .customer-business-evidence[open] .customer-evidence-collapse { display:inline }

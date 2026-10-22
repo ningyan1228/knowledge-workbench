@@ -22,13 +22,13 @@ describe('published customer data refresh',()=>{
     const lead={...structuredClone(template),id:'refresh-test',company:'Refresh fixture',companyEvidence:{...template.companyEvidence,statement:'A newly verified company application.'}}
     const time='2026-10-22T02:00:00Z', today=shanghaiDay(time)
     next.leads.push(lead);next.timeline[lead.id]={recordedAt:time,commit:'fixture'}
-    next.facts[lead.id]={statement:lead.companyEvidence.statement,email:'Your old reference fact.',concise:'Your verified application fact.',business:'已核验的应用事实。'}
+    next.facts[lead.id]={statement:lead.companyEvidence.statement,email:'Your old reference fact.',concise:'Your verified application fact.',business:'生产木器涂料。'}
     const before=leadTimelineSummary(publicLeads,today).today
     installPublicLeadSnapshot(validatePublicLeadSnapshot(next))
     expect(publicLeads.some(item=>item.id===lead.id)).toBe(true)
     expect(recordedTime(lead)).toBe(time)
     expect(leadTimelineSummary(publicLeads,today).today).toBe(before+1)
-    expect(leadCardBrief(lead).fact).toBe('已核验的应用事实。')
+    expect(leadCardBrief(lead).fact).toBe('生产木器涂料。')
     expect(createShortDevelopmentEmail(lead)?.body).toContain('Your verified application fact.')
     expect(createShortDevelopmentEmail(lead,undefined,'legacy')?.body).toContain('Your old reference fact.')
   })

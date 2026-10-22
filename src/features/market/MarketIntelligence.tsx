@@ -19,6 +19,7 @@ import { emptyBusinessFilters, filterWorkbenchLeads, type BusinessFilters } from
 import { shanghaiDay, timelineFilterLabel } from '../../lib/leadTimeline'
 import { CustomerMapWorkspace } from './CustomerMapWorkspace'
 import { MarketConnectionStatus } from './MarketConnectionStatus'
+import { OutreachResults } from './OutreachResults'
 import { CustomerBrowseList } from './CustomerBrowseList'
 import { marketTabForRoute, readLeadView, rememberLeadView, type MarketTab } from '../../lib/leadViewPreference'
 import './MarketWorkspace.css'
@@ -28,7 +29,7 @@ import './CompactCustomerCards.css'
 import './MarketVisualSystem.css'
 import './CalmWorkspace.css'
 
-const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
+const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources' | 'results'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'results', label: '开发结果' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
 function setHash(value: string) { window.location.hash = value }
 function productOf(id: MarketProduct['id']) { return marketProducts.find((product) => product.id === id)! }
@@ -209,5 +210,6 @@ export function MarketIntelligence() {
     {customerView && <LeadsWorkspace data={data} productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} work={work} view={tab as 'map' | 'leads'} onView={openTab} />}
     {tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}
     {tab === 'sources' && <SourcesView leads={filteredLeads} />}
+    {tab === 'results' && <OutreachResults key={work.ownerId ?? work.status} leads={data.leads} ledger={ledger} work={work} />}
   </div>
 }

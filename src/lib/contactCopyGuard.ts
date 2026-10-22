@@ -1,6 +1,7 @@
 import type { PublicLead } from './productMarketMap'
 import { outreachCompanyKey } from './outreachLedger'
 import { contactChannelLabels, latestContact } from './contactRoutes'
+import { latestResultEvent, resultLabels } from './outreachResults'
 import type { OutreachLedger } from '../features/market/useOutreachLedger'
 import type { LeadWork } from '../features/market/useLeadWork'
 
@@ -25,9 +26,11 @@ export async function confirmContactCopy(lead: PublicLead, ledger: OutreachLedge
     ]), cancelled])
     if (signal.aborted) throw new Error('复制已取消')
     const contact = latestContact(records?.[outreachCompanyKey(lead)]?.contactLog)
+    const result = latestResultEvent(records?.[outreachCompanyKey(lead)]?.resultEvents)
     const facts: string[] = []
     if (sent) facts.push(`共享记录：已于 ${sent.sent_on} 发送开发信至 ${sent.recipient_email}。`)
     if (contact) facts.push(`我的记录：已于 ${contact.contactedOn} 通过${contactChannelLabels[contact.channel]}联系，入口：${contact.destination}。`)
+    if (result) facts.push(`我的结果记录：${result.on} · ${resultLabels[result.kind]}。${result.note}`)
     if (records === null) facts.push('私人联系记录尚未连接，其他渠道是否已联系仍待确认。')
     const warning = facts.length ? `${lead.company}\n\n${facts.join('\n')}\n\n请先确认是否需要跟进，避免重复联系。${sent && action !== '邮箱' ? '开发信内容保留原参考稿。' : ''}仍要复制${action}吗？` : null
     if (warning && !window.confirm(warning)) return null
