@@ -7539,11 +7539,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "bird-brand-feltwell",
+    "company": "R K & J Jones Limited (Bird Brand)",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Feltwell",
+    "latitude": 52.487,
+    "longitude": 0.521,
+    "legacyCompanyDescription": "当前官网明确R K & J Jones自有制造并销售Bird Brand建筑/木器产品；具体Ecosote为水性户外木材保护处理配方，原文明确棚屋、围栏等木材及喷/浸/刷施工，不把客户生物杀灭或防腐声明转为我方性能。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前官网明确R K & J Jones自有制造并销售Bird Brand建筑/木器产品；具体Ecosote为水性户外木材保护处理配方，原文明确棚屋、围栏等木材及喷/浸/刷施工，不把客户生物杀灭或防腐声明转为我方性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读当前About、Home、Woodcare首屏21项及分页提示、完整可见Solvents8项、Ecosote具体水性木材处理产品及完整DecoratingSundries8项正文。自身About明确自有制造/经销与Feltwell/Thetford经营地址，Home继续明确生产木器与DIY产品，具体Ecosote原文为水性户外木材处理及哑光外观；不是仅凭零售品牌推制造。保留真实多元业务：煤焦油/传统木材保护、木器油/蜡/防护处理、屋面及保护涂料、清洁/燃料/家居/汽车配套；已读木器首屏有原亚麻油、煮亚麻油、丹麦油等，8种溶剂及8种装修清洗/去漆/工具配套亦如实保留，不说公司从未供应原料。实际所查制造和经营范围、水性木器成品、两项完整配套分类未见水性聚烯烃乳液、PO/CPO输入分散体或同类原料级附着促进材料对外销售证据，按实际范围有限通过；普通亚麻油、白电油/松节油/IPA/纤维素稀释剂及清洗品不因名称被等同PO原料。Woodcare第二页、其他品类逐SKU、全TDS/SDS、未披露成分和全球股权未独立穷尽，不给无任何原料经营或隐藏配方保证，不编造外购例外。按R K & J Jones Limited/Ltd、Bird Brand及T.K.Bird历史关联、birdbrand域名、Feltwell办公室地址与业务邮箱核对最新main358家/root374/全私有队列/frontier674，无同一正式/私有账户；六代家族史和品牌按一个关联账户，不将先祖企业、旧址、澳洲家族成员或经销商另增客户，不从家族自述推股权比例或2026新投产。About及产品Footer直接公开websales邮箱及公司电话，Home/header另有sales用于贸易订单；本记录采用实际通用websales业务入口，不冒称采购/研发个人或由邮箱前缀推具名职责。联系页面采用实际已读About，含业务邮箱/电话/公司办公室，不猜未访问Contact路径，不把普通电话变WhatsApp。Ecosote的HSE、杀菌/防藻/防腐/无害/渗透、耐褪色等客户成品声明不转为NL-W1201认证或效果；仅按用户TDS木材基材提出聚烯烃分散体底涂/附着促进潜在评估，未确认其现用、采购、相容或需求时机。"
+    },
+    "contact": {
+      "label": "官网直接核实公司业务邮箱与电话；通用入口，无具名采购",
+      "email": "websales@birdbrand.co.uk",
+      "phone": "+44 (0)1842 828101",
+      "contactUrl": "https://www.birdbrand.co.uk/about-us/"
+    },
+    "source": {
+      "label": "Own Ecosote water-based exterior timber treatment and manufacturing",
+      "url": "https://www.birdbrand.co.uk/shop/woodcare/ecosote/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bird-brand-feltwell": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "a-chem-alfreton": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorificio-atria-partanna": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bosshard-farben-ruemlang": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7903,6 +7932,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bird-brand-feltwell": {
+    "website": "https://www.birdbrand.co.uk/",
+    "contactPage": "https://www.birdbrand.co.uk/about-us/",
+    "address": "Southery Road, Feltwell, Thetford, Norfolk IP26 4EH, United Kingdom (own office/business address). Approximate Feltwell locality marker; exact factory GPS not independently surveyed.",
+    "generalEmail": "websales@birdbrand.co.uk",
+    "generalEmailEvidence": {
+      "company": "R K & J Jones Limited (Bird Brand)",
+      "value": "websales@birdbrand.co.uk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own manufacturer About page and Ecosote business footer",
+          "url": "https://www.birdbrand.co.uk/about-us/",
+          "summary": "Actual manufacturer About and Ecosote product footer directly publish websales@birdbrand.co.uk as business email. Generic company route, not a named procurement or technical contact."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+44 (0)1842 828101",
+    "generalPhoneEvidence": {
+      "company": "R K & J Jones Limited (Bird Brand)",
+      "value": "+44 (0)1842 828101",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own manufacturer About page and Ecosote business footer",
+          "url": "https://www.birdbrand.co.uk/about-us/",
+          "summary": "Actual About and product footer directly publish +44(0)1842828101 as company telephone. Fax828171 and ordinary voice are distinct; no WhatsApp or named extension inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company identity, manufacture/distribution and current business mailbox",
+        "url": "https://www.birdbrand.co.uk/about-us/"
+      },
+      {
+        "label": "Current own woodcare manufacturing Home and product-family overview",
+        "url": "https://www.birdbrand.co.uk/"
+      },
+      {
+        "label": "Actual Ecosote water-based treatment for exterior timber, sheds and fences",
+        "url": "https://www.birdbrand.co.uk/shop/woodcare/ecosote/"
+      },
+      {
+        "label": "Woodcare first21 listed items and second-page boundary, not full catalogue",
+        "url": "https://www.birdbrand.co.uk/product-category/woodcare/"
+      },
+      {
+        "label": "Actual complete eight-item solvent category",
+        "url": "https://www.birdbrand.co.uk/product-category/solvents/"
+      },
+      {
+        "label": "Actual complete eight-item decorating/cleaning/stripping auxiliary category",
+        "url": "https://www.birdbrand.co.uk/product-category/sundries/"
+      }
+    ]
+  },
   "a-chem-alfreton": {
     "website": "https://www.achem.co.uk/",
     "contactPage": "https://www.achem.co.uk/about/",
@@ -24695,6 +24787,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bird-brand-feltwell",
   "a-chem-alfreton",
   "colorificio-atria-partanna",
   "bosshard-farben-ruemlang",
