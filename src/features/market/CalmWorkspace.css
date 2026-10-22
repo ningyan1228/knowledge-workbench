@@ -114,7 +114,7 @@
 .calm-customer-page .outreach-copy-options { width:100%; gap:8px }
 .calm-customer-page .outreach-copy-options .outreach-copy-button { width:auto; min-width:0; font-size:12px; padding:9px 12px; border-radius:8px }
 .calm-customer-page .outreach-copy-options [data-copy-part="body"] { border-color:var(--blue); background:var(--blue); color:white }
-.calm-customer-page .outreach-copy-options [data-copy-part="subject"] { margin-left:auto; border-color:transparent; color:var(--muted); background:transparent }
+.calm-customer-page .outreach-copy-options [data-copy-part="subject"] { border-color:var(--line); color:var(--text); background:var(--surface) }
 .calm-customer-page .outreach-copy-feedback { order:19; font-size:12px }
 .calm-customer-page .outreach-manual-copy { order:18 }
 .customer-extra-filters { padding-bottom:16px; margin-bottom:20px; border-bottom:1px solid var(--line) }

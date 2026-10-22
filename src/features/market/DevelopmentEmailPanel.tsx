@@ -17,9 +17,9 @@ import type { OutreachLedger } from './useOutreachLedger'
 import './DevelopmentEmailPanel.css'
 
 const copyParts = [
+  { id: 'subject', label: '复制主题', copied: '主题已复制' },
   { id: 'body', label: '复制正文', copied: '正文已复制' },
   { id: 'full', label: '复制整封', copied: '整封已复制' },
-  { id: 'subject', label: '复制主题', copied: '主题已复制' },
 ] as const
 type CopyPart = typeof copyParts[number]['id']
 
