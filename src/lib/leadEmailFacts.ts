@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "higashi-nippon-toryo-tokyo": "Your product catalogue lists ソルエポ90 floor coatings alongside metal primers and waterproofing coatings.",
   "otani-paint-osaka": "Your VATON-FX is a penetrating wood stain formulated with plant oils, pigments and solvent.",
   "asahipen-osaka": "Your water-based acrylic-emulsion varnish is intended for indoor wooden goods, excluding floors.",
   "bird-brand-feltwell": "Your Ecosote is a water-based exterior timber preserver for sheds and fences.",

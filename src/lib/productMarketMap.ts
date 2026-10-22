@@ -7622,11 +7622,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "higashi-nippon-toryo-tokyo",
+    "company": "Higashi Nippon Toryo Co., Ltd.",
+    "productId": "elo",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Tokyo",
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "legacyCompanyDescription": "当前自有公司概要明确合成树脂及水性建筑涂料的设计、开发与制造；实际完整可见目录列有ソルエポ90地坪涂料、金属底漆和防水涂料，行业协会同一公司条目独立对应本社地址、电话和公开业务邮箱。 地图为东京城市代表点，不是埼玉工厂坐标。",
+    "fit": "可开发候选",
+    "signal": "当前自有公司概要明确合成树脂及水性建筑涂料的设计、开发与制造；实际完整可见目录列有ソルエポ90地坪涂料、金属底漆和防水涂料，行业协会同一公司条目独立对应本社地址、电话和公开业务邮箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读自有公司概要/沿革107行、行业协会同一公司条目73行、自有产品入口137行、完整可见目录266行及旧EPOⅡ两页技术目录303行；另一次当前MetalPrimerMild两页PDF提取为0行，不作已读技术原文。当前公司明确自行设计、研发和制造合成树脂/水性建筑防水、地坪和内外装涂料；自有目录列环氧/PU类地坪成品、金属底漆、防水体系，保留真实配套业务：フラットベースF、粉体/硅砂、片材/布/胶带、密封、清洗/剥离等。未逐项读取这些辅材SDS，不编造配方组成；普通成品环氧涂料不等于ELO原料。1977原料精製工場是历史设施记载，不能据此断言现在销售ELO，也不说其从未经营其他原料。按当前实际公司制造角色、可见四类产品目录及应用范围，未见ELO、ESBO、环氧化植物油或同类生物基增塑/稳定输入对外销售证据，有限范围通过；不保证未披露定制配方、全部SKU/SDS或全球股权均已排查。不把目录フルトップBio的生物基认证或旧EPOⅡ防腐、附着/F星性能转给我方ELO；旧目录印刷标记24.05仅作历史技术资料，植物油インキ指目录印刷油墨，绝非客户涂料含植物油或ELO的证明。当前MildPDF无正文，不从旧EPOⅡ外推Mild化学组成、混配或性能；开发信只用已读当前产品目录的具体产品/用途事实。按英日法人名、旧东日本酒精塗料、hnt-net域名、フローン品牌和东京本社/埼玉厂对照最新main、本地、完整私有队列及frontier，无同一账户；销售点、品牌和工厂只计一户。历史与电气化学工业/Bayer的研究技术合作不是集团持股证明，不与同名日本涂料或大日本涂料合并。协会公司专属条目直接公开eigyo邮箱并对应同公司、本社和官网，仅一般公司业务入口；不因邮箱前缀或董事表格推断具名采购/技术负责人，协会事务局邮箱电话不收。公司电话与协会相符，不用传真或分所电话替代本社。独立联系表单未读取，不标已核实可提交；未猜邮箱、WhatsApp或测试投递。ELO仅按用户资料提出涂料柔韧/树脂改性评估，不确认已采用、采购意向、相容性、固化或防腐表现。"
+    },
+    "contact": {
+      "label": "行业协会公司专属条目的公开业务邮箱及本社电话；非具名采购",
+      "email": "eigyo@hnt-net.co.jp",
+      "phone": "03-3693-0851",
+      "contactUrl": "https://kantoko.com/overview/member/hnt-net/"
+    },
+    "source": {
+      "label": "Own current product catalogue, own manufacturing and exact association company contact",
+      "url": "https://www.hnt-net.co.jp/product_pdf.html"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "higashi-nippon-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "otani-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "asahipen-osaka": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "bird-brand-feltwell": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7989,6 +8018,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "higashi-nippon-toryo-tokyo": {
+    "website": "https://www.hnt-net.co.jp/",
+    "contactPage": "https://kantoko.com/overview/member/hnt-net/",
+    "address": "3-25-18 Horikiri, Katsushika-ku, Tokyo 124-0006, Japan (head-office address explicitly published in the association company entry). Approximate Tokyo city marker; Saitama factory is a separate listed production site.",
+    "generalEmail": "eigyo@hnt-net.co.jp",
+    "generalEmailEvidence": {
+      "company": "Higashi Nippon Toryo Co., Ltd.",
+      "value": "eigyo@hnt-net.co.jp",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Kanto Paint Manufacturers Association, exact Higashi Nippon company member entry",
+          "url": "https://kantoko.com/overview/member/hnt-net/",
+          "summary": "Company-specific entry explicitly names 東日本塗料株式会社, hnt-net.co.jp, exact eigyo@hnt-net.co.jp, Tokyo head-office address and phone. Generic public business route; no named purchaser, department ownership or deliverability inferred from local part."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "03-3693-0851",
+    "generalPhoneEvidence": {
+      "company": "Higashi Nippon Toryo Co., Ltd.",
+      "value": "03-3693-0851",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company overview and history",
+          "url": "https://www.hnt-net.co.jp/company/history.html",
+          "summary": "Own current company page names HIGASHI NIPPON TORYO CO.,LTD and publishes 03-3693-0851. Association member entry independently matches this head-office phone and Tokyo address."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company identity, design/development/manufacture and dated history",
+        "url": "https://www.hnt-net.co.jp/company/history.html"
+      },
+      {
+        "label": "Own product-family and catalogue entry",
+        "url": "https://www.hnt-net.co.jp/products.html"
+      },
+      {
+        "label": "Actual current complete visible product catalogue and auxiliary roles",
+        "url": "https://www.hnt-net.co.jp/product_pdf.html"
+      },
+      {
+        "label": "Association company-specific business email, head office and factory listing",
+        "url": "https://kantoko.com/overview/member/hnt-net/"
+      }
+    ]
+  },
   "otani-paint-osaka": {
     "website": "https://otanipaint.com/",
     "contactPage": "https://otanipaint.com/company/",
@@ -24959,6 +25043,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "higashi-nippon-toryo-tokyo",
   "otani-paint-osaka",
   "asahipen-osaka",
   "bird-brand-feltwell",
