@@ -7953,11 +7953,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "pro-colore-virbalis",
+    "company": "UAB PRO COLORE",
+    "productId": "nl-w1201",
+    "country": "Lithuania",
+    "countryZh": "立陶宛",
+    "city": "Vilkaviškis district",
+    "latitude": 54.65,
+    "longitude": 23.03,
+    "legacyCompanyDescription": "自产涂料、木材浸渍剂和腻子；LIUKS-M为新旧木立面及围栏用水稀释涂料。 地图用Vilkaviškis行政城市代表点，非所列村落地址或工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "自产涂料、木材浸渍剂和腻子；LIUKS-M为新旧木立面及围栏用水稀释涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "已查公司自有制造介绍、LIUKS-M水稀释木器漆原文、完整可见业务导航，以及特殊用途材料目录实际返回的六个产品链接和DECOMAX原页。公开业务为成品漆、底涂、腻子、清漆、装饰灰泥、密封、防水及木材油／浸渍处理等；DECOMAX明确为延长丙烯酸漆、装饰腻子和清漆施工／干燥时间的添加剂，其用途不等同聚烯烃／CPO分散体或附着促进原料。在实际已读整体介绍、导航、目录链接索引及该添加剂说明范围内未见同类输入外售，所选输入有限通过；目录正文提取不完整，不声称所有产品、SDS或成分已逐一核验。法人、PROCOLOR品牌、procolor/e-procolor域名、公司编号及业务地址按同一账户；现有私有研究项补证入库，非改名制造新增。潜在材料评估相关不表示客户正在采购、已用或配方相容。"
+    },
+    "contact": {
+      "label": "官网实际出口业务邮箱、电话及联系表单入口；非具名采购人",
+      "email": "vytautas@procolor.lt",
+      "phone": "+370 656 54 970",
+      "contactUrl": "https://www.procolor.lt/contacts/"
+    },
+    "source": {
+      "label": "Own actual LIUKS-M water-dilutable wood-facade and fence paint original",
+      "url": "https://www.procolor.lt/product/catalog/paints/wood-paints/liuks-m-en/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pro-colore-virbalis": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "epurox-poznan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cathal-gliwice": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "prochem-klomnice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8332,6 +8361,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pro-colore-virbalis": {
+    "website": "https://www.procolor.lt/",
+    "contactPage": "https://www.procolor.lt/contacts/",
+    "address": "Company-published business address:Rytų g.19,Virbalio Miesto Laukų k.,Vilkaviškio r.sav.,70391,Lithuania; company185115813,VATLT851158113. Not independently designated a factory. Map uses approximate Vilkaviškis administrative-city representative, not village/address/factory GPS.",
+    "generalEmail": "vytautas@procolor.lt",
+    "generalEmailEvidence": {
+      "company": "UAB PRO COLORE",
+      "value": "vytautas@procolor.lt",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current PRO COLORE contact page: Export inquiries",
+          "url": "https://www.procolor.lt/contacts/",
+          "summary": "Actual Contact original explicitly lists this exact email under Export inquiries beside UAB PRO COLORE company/address/registration data. Export business channel, no full named identity, current title, procurement responsibility or deliverability verified."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+370 656 54 970",
+    "generalPhoneEvidence": {
+      "company": "UAB PRO COLORE",
+      "value": "+370 656 54 970",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current PRO COLORE contact page: Export inquiries business phone",
+          "url": "https://www.procolor.lt/contacts/",
+          "summary": "Actual Contact original lists +37065654970 under Export inquiries for UAB PRO COLORE. Business route only, not named purchaser or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "vytautas@procolor.lt",
+        "source": {
+          "label": "Own contact page: Export inquiries",
+          "url": "https://www.procolor.lt/contacts/"
+        },
+        "emailEvidence": {
+          "company": "UAB PRO COLORE",
+          "value": "vytautas@procolor.lt",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current PRO COLORE contact page: Export inquiries",
+              "url": "https://www.procolor.lt/contacts/",
+              "summary": "Actual Contact original explicitly lists this exact email under Export inquiries beside UAB PRO COLORE company/address/registration data. Export business channel, no full named identity, current title, procurement responsibility or deliverability verified."
+            }
+          ],
+          "verifiedAt": "2026-10-22"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own current Lithuanian downstream coating/wood impregnant manufacture",
+        "url": "https://www.procolor.lt/en/"
+      },
+      {
+        "label": "Own LIUKS-M actual original: water-dilutable paint for wooden facades and fences",
+        "url": "https://www.procolor.lt/product/catalog/paints/wood-paints/liuks-m-en/"
+      },
+      {
+        "label": "Own current legal/address and Export inquiries business route and contact form",
+        "url": "https://www.procolor.lt/contacts/"
+      },
+      {
+        "label": "Own special-purpose-materials limited returned body and six outbound product links",
+        "url": "https://www.procolor.lt/products/catalog/special-purpose-materials/"
+      },
+      {
+        "label": "Own DECOMAX actual retarder function, no PO/CPO adhesion-promoter claim",
+        "url": "https://www.procolor.lt/product/catalog/special-purpose-materials/decomax-en/"
+      }
+    ]
+  },
   "epurox-poznan": {
     "website": "https://epurox.pl/",
     "contactPage": "https://epurox.pl/",
@@ -25937,6 +26048,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pro-colore-virbalis",
   "epurox-poznan",
   "cathal-gliwice",
   "prochem-klomnice",

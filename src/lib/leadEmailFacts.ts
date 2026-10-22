@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pro-colore-virbalis": "Your LIUKS-M is a water-dilutable paint for new and previously painted wooden facades and fences.",
   "epurox-poznan": "Your EPOSTAR E 326 is a solvent-free, two-component epoxy primer-enamel for protecting concrete.",
   "cathal-gliwice": "Your Aqua art - perłowa is a water-based acrylic decorative paint for wooden objects.",
   "prochem-klomnice": "Your industrial anticorrosion range includes epoxy paints developed in your own laboratory.",
