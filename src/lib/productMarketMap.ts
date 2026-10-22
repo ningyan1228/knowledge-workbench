@@ -7455,11 +7455,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "bosshard-farben-ruemlang",
+    "company": "Bosshard-Farben AG",
+    "productId": "nl-w1201",
+    "country": "Switzerland",
+    "countryZh": "瑞士",
+    "city": "Rümlang",
+    "latitude": 47.451,
+    "longitude": 8.529,
+    "legacyCompanyDescription": "自有资料明确独立家族研发及Rümlang涂料生产；完整公开目录列Arbezol Aquaplast水性室内木器清漆，用于木护墙板、窗台和家具。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "自有资料明确独立家族研发及Rümlang涂料生产；完整公开目录列Arbezol Aquaplast水性室内木器清漆，用于木护墙板、窗台和家具。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读当前About、History、Contact及同页完整静态字母目录165项名称/货号/产品描述。公司有自有研发制造和2023新生产启用记录，所选Arbezol Aquaplast明确水性1K室内木器清漆，不借Hesse经销产品证明自身生产。保留真实配套经营：稀释/清洗溶剂、硬化剂、纤维、亚麻油清油、杀菌/木材防护品及含Whiteboard添加剂的配制面漆；不是只卖成品的笼统结论。ActivePrimer为硅氧烷矿物基材底涂，Tiefgrund LF为深渗底涂/稀释用途，两者实际允许首涂10%加入，保留此用途而不偷换为水性PO/CPO输入；Silicate/SolFixativ及纤维的矿物涂料配套用途、Leinölfirnis的油漆配制用途亦保留。当前已读制造/经营及完整本目录未发现所选水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进输入外售证据；有限范围通过，不保证全部关联品牌目录/全SKU组成/SDS/未披露业务。TopAir为页面介绍的空气净化添加方向，不推成PO/CPO组分或与我方性能关联。历史Arbezol/Benz、Sax、Candinas、Edacryl、AM-Dispersionen业务与销售点归同一关联账户，不拆产品/分店新增；公司自称独立家族，未臆断股权百分比，Sax2023共址生产不是2026新产线。Hesse Lignal为明确经销合作，不推集团所有权或把其产品/工厂/人员归本公司。Sika的Bernhard Bosshard是个人同姓，VERNILAC的basedacrylic文字不是Edacryl公司关联。公司业务邮箱与电话由自身Contact逐项核实，未给销售负责人Alberto Dilla虚构采购职责/个人邮箱，不猜WhatsApp。目录成品附着、防腐、UV、杀菌、认证和耐水效果不转为NL-W1201保证，仅按用户资料提出木材底涂/附着功能评估；现用、采购、时机和相容均待确认。"
+    },
+    "contact": {
+      "label": "官网核实公司业务邮箱及电话；无具名采购邮箱",
+      "email": "bosshard@bosshard-farben.ch",
+      "phone": "+41 44 817 73 73",
+      "contactUrl": "https://www.bosshard-farben.ch/kontakt"
+    },
+    "source": {
+      "label": "Own complete catalogue and actual manufacturing history",
+      "url": "https://www.bosshard-farben.ch/produkte-a-bis-z"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bosshard-farben-ruemlang": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colori-freddi-mantova": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "boehme-liebefeld": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colorificio-galfa-pianoro": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -7816,6 +7845,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bosshard-farben-ruemlang": {
+    "website": "https://www.bosshard-farben.ch/",
+    "contactPage": "https://www.bosshard-farben.ch/kontakt",
+    "address": "Ifangstrasse 97,8153 Rümlang,Switzerland (own corporate headquarters address). Approximate locality marker; exact factory GPS and registry ownership not audited.",
+    "generalEmail": "bosshard@bosshard-farben.ch",
+    "generalEmailEvidence": {
+      "company": "Bosshard-Farben AG",
+      "value": "bosshard@bosshard-farben.ch",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current business contact page",
+          "url": "https://www.bosshard-farben.ch/kontakt",
+          "summary": "Exact Contact page explicitly gives company E-Mail bosshard@bosshard-farben.ch; shared business entry, not the displayed sales manager’s personal mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+41 44 817 73 73",
+    "generalPhoneEvidence": {
+      "company": "Bosshard-Farben AG",
+      "value": "+41 44 817 73 73",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current business contact page",
+          "url": "https://www.bosshard-farben.ch/kontakt",
+          "summary": "Exact Contact headquarters phone; ordinary corporate voice line, not WhatsApp or a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own independent family company, R&D and business scope; Hesse distribution role retained",
+        "url": "https://www.bosshard-farben.ch/ueber-uns"
+      },
+      {
+        "label": "Own production, acquired brands and dated2023 commissioning history",
+        "url": "https://www.bosshard-farben.ch/firmen-geschichte"
+      },
+      {
+        "label": "Complete165-item HTML catalogue, actual Arbezol Aquaplast water-based interior wood varnish and auxiliary roles",
+        "url": "https://www.bosshard-farben.ch/produkte-a-bis-z"
+      },
+      {
+        "label": "Actual headquarters company email/phone and business form",
+        "url": "https://www.bosshard-farben.ch/kontakt"
+      }
+    ]
+  },
   "colori-freddi-mantova": {
     "website": "https://colorifreddi.it/",
     "contactPage": "https://colorifreddi.it/listini/",
@@ -24422,6 +24506,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bosshard-farben-ruemlang",
   "colori-freddi-mantova",
   "boehme-liebefeld",
   "colorificio-galfa-pianoro",

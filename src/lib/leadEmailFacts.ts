@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "bosshard-farben-ruemlang": "Your Arbezol Aquaplast is a water-based wood varnish for interior panelling, windowsills and furniture.",
   "colori-freddi-mantova": "Your published steel-coating cycles include a water-based epoxy primer, Series 363, for industrial environments.",
   "boehme-liebefeld": "Your SunCare JetMatt is a water-based coating for softwood panelling and interior wood applications.",
   "colorificio-galfa-pianoro": "Your industrial range includes water-based and solvent-based two-component epoxy primers and finishes.",
