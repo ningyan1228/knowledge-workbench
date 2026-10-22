@@ -5,6 +5,7 @@ import { createDevelopmentEmailPrompt } from '../../lib/outreachPrompt'
 import { developmentEmailVersion } from '../../lib/developmentEmailVersion'
 import { copyPlainText } from '../../lib/clipboard'
 import { DevelopmentEmailRecipient } from './DevelopmentEmailRecipient'
+import { QuickSendConfirmation } from './QuickSendConfirmation'
 import { CustomerContactStatus } from './CustomerContactStatus'
 import { ContactChannels } from './LeadCard'
 import { selectBusinessRecipient } from '../../lib/contactEvidence'
@@ -109,6 +110,7 @@ export function DevelopmentEmailPanel({ lead, ledger, work, onOpenSendRecord }: 
         const label = current && copyState === 'checking' ? '核对中…' : current && copyState === 'copying' ? '复制中…' : copied ? part.copied : part.label
         return <button key={part.id} type="button" className={`${part.id === 'body' ? 'primary-button' : 'secondary-button'} outreach-copy-button`} data-copy-part={part.id} disabled={!qualified || ledger.status !== 'ready' || pending} aria-busy={busy} onClick={() => void copyEmail(part.id)}>{busy ? <LoaderCircle className="outreach-copy-spinner" size={15} /> : copied ? <Check size={15} /> : <Copy size={15} />}{label}</button>
       })}</div>}
+      <QuickSendConfirmation lead={lead} ledger={ledger} onOpenSendRecord={onOpenSendRecord} />
     </div>
     <div className="outreach-copy-feedback" role="status" aria-live="polite">{message}</div>
     {manualText && <div className="outreach-manual-copy"><label>{manualLabel}<textarea ref={manualField} aria-label={manualLabel} readOnly value={manualText} rows={copyPart === 'subject' ? 2 : 12} onFocus={(event) => event.currentTarget.select()} /></label><button type="button" className="secondary-button" onClick={() => { manualField.current?.focus(); manualField.current?.select() }}>全选内容</button></div>}

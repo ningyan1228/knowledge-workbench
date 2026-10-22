@@ -123,6 +123,7 @@ export function CompanyDetail({ lead, onClose, ledger, work, leads, onNavigate, 
     document.body.style.overflow = 'hidden'
     dialog?.querySelector<HTMLElement>('.detail-close')?.focus()
     const onKey = (event: KeyboardEvent) => {
+      if (document.querySelector('dialog:modal')) return
       if (event.key === 'Escape') closeRef.current()
       if (event.key !== 'Tab' || !dialog) return
       const items = [...dialog.querySelectorAll<HTMLElement>('a[href],button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),summary')].filter((element) => element.tabIndex >= 0 && element.getClientRects().length > 0)
