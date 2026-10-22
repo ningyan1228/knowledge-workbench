@@ -7732,11 +7732,67 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "akcali-boya-istanbul",
+    "company": "Akçalı Boya ve Kimya San. Tic. A.Ş. (Permolit / WRX)",
+    "productId": "elo",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Istanbul",
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "legacyCompanyDescription": "当前官网明确Akçalı制造Permolit涂料并关联Akçalı UK／WRX品牌，公开伊斯坦布尔本部与Esenyurt工厂；所读合成涂料目录列Permomast合成底漆与Akçalı Antipas金属底漆。 Istanbul城市代表点，非Esenyurt厂门GPS。",
+    "fit": "可开发候选",
+    "signal": "当前官网明确Akçalı制造Permolit涂料并关联Akçalı UK／WRX品牌，公开伊斯坦布尔本部与Esenyurt工厂；所读合成涂料目录列Permomast合成底漆与Akçalı Antipas金属底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立复核自有公司介绍、完整返回的合成涂料分类本页及联系页可见业务和工厂部分。当前公司明确为Permolit涂料制造商，关联Akçalı UK与WRX；不将英国业务、品牌、办公室和工厂另计。当前公开分类含水性内外墙、天花、合成涂料、木保护、binder及底漆、隔离/着色、特殊漆、喷漆与技术喷雾；所读本页还列防锈金属底漆、金属面漆、腻子、合成底漆、合成及纤维素稀释剂、金属效果漆，不称只有纯成品桶漆或没有配套输入业务。所读制造角色、分类和合成系列未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定原料外售，按所选输入及实际已读范围有限通过；binder、thinner或technicalspray字样不自动当作ELO同行，也不猜未披露配方。未穷尽300多SKU、所有子类别/技术喷雾详情、全部SDS或最终股权。只使用真实底漆/合成涂料事实提出ELO资料支持的涂料柔韧/树脂改性材料评估，不转移防锈、抗菌、防霉、儿童安全、EN71、CE、ISO、耐候、降本或客户性能给我方材料，不确认客户现用、采购、配方相容或时机。当前main365、本地381、私有全队列/frontier703对公司/品牌/域名及已知关联全量去重，无同一已知账户；WR Coating等近似字样不凭缩写归并。联系页实际列办公室和工厂共用PBX，传真另列；PBX为公司公开业务电话，不冒称采购个人。公开表单可作为联系入口；未发现已核验邮箱，不猜写，不将输入框E-posta当收件地址。站内WhatsApp链接标签未独立核出具体href，不根据电话构造WhatsApp。历史1984成立/2017英国业务不当作2026投产。地图仅Istanbul城市代表点，非Esenyurt厂门GPS。"
+    },
+    "contact": {
+      "label": "官网公开业务联系表单和公司PBX；邮箱未核验",
+      "phone": "+90 212 371 60 00",
+      "contactUrl": "https://www.permolitboya.com.tr/iletisim/"
+    },
+    "source": {
+      "label": "Own current Permolit synthetic-coating and primer range",
+      "url": "https://www.permolitboya.com.tr/urunler/sentetik-boyalar/"
+    },
+    "checkedAt": "2026-10-22"
+  },
+  {
+    "id": "dyo-casati-kocaeli",
+    "company": "Dyo Boya Fabrikaları Sanayi ve Ticaret A.Ş. (Casati)",
+    "productId": "elo",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Kocaeli",
+    "latitude": 40.7654,
+    "longitude": 29.9408,
+    "legacyCompanyDescription": "Casati自有公司原文明确制造法人Dyo Boya Fabrikaları及DYO设施生产关系，现行DYO公司页列自产建筑、工业、家具、海事、防护涂料及不饱和聚酯树脂；Casati现有产品范围含合成底漆、木器清漆和内外墙装饰涂料。 Kocaeli省级中心代表点，非Dilovası厂门GPS。",
+    "fit": "可开发候选",
+    "signal": "DYO制造Casati涂料，系列含合成底漆、木器清漆及内外墙装饰漆；公司同时生产工业、家具、海事、防护涂料和不饱和聚酯树脂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立复核Casati公司页、当前DYO制造主体整体业务页及Casati业务联系页。Casati官网明确2013年末加入Dyo Boya Fabrikaları、2013年11月在DYO设施开始生产装饰涂料；当前DYO官网再次列DYO、Dewilux、Casati、Dyotherm、Klimatherm同一品牌体系和各涂料制造/R&D业务，不按品牌、Dilovası/Çiğli/Gebze/Krasnodar工厂或部门另计。官方Yaşar创始/基金会/招聘关联保留，不猜当前股权比例或把所有同名企业归组。真实业务同时含建筑、工业、家具、汽车修补、海事、防护、粉末、卷材、稀释剂、固化剂、腻子、配套用品和不饱和聚酯树脂生产，不隐去原料/树脂角色，也不将任意树脂生产当作ELO油类同行。按已读法人制造业务整体范围和Casati具体产品族，未见所选ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入外售，有限通过所选输入排除；不保证1200种产品、所有SDS、全部工业/聚酯详情、俄罗斯或最终全球控股已审计。源站宣称的唯一性、产量/配比、颜色数量、性能、认证不转给我方产品。Casati页的20%溶剂/80%水性比例为未标日期的站内陈述，不当2026独立产能统计；2013、1954、1971与旧copyright等保留历史含义，不写成新投产。仅以Casati真实底漆/木器清漆/装饰涂料事实个性化，ELO只提出资料支持的涂料柔韧/树脂改性评估，不声称客户已用、采购、相容、防腐或固化改善。公司/域名/品牌/已知Yaşar关联全量对照main365、本地381、私有全队列/frontier703无同一已知账户；与Akçalı/Permolit两家制造法人区分。实际Casati联系页公开casati@casati.com.tr和品牌业务电话，DYO及Casati自有双向品牌关系支持该公司部门邮箱归属；只称Casati品牌业务入口，不冒称整个DYO通用邮箱或具名采购，传真非电话、无WhatsApp推断。地图为Kocaeli省级中心代表点，不是Dilovası工厂GPS。"
+    },
+    "contact": {
+      "label": "Casati品牌公开业务部门邮箱、电话及表单；非具名采购",
+      "phone": "+90 (262) 754 75 60",
+      "contactUrl": "https://casati.com.tr/sayfa/iletisim"
+    },
+    "source": {
+      "label": "Own Casati product families and DYO manufacturing legal-entity attribution",
+      "url": "https://casati.com.tr/sayfa/kurumsal"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "dyo-casati-kocaeli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "akcali-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "saito-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "taiyo-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mikasa-paint-ichikawa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8103,6 +8159,101 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "dyo-casati-kocaeli": {
+    "website": "https://www.casati.com.tr/",
+    "contactPage": "https://casati.com.tr/sayfa/iletisim",
+    "address": "Casati business/manufacturing-site contact: D.O.S.B.2.Kısım Fırat Cad.No:11, Dilovası/Kocaeli, Turkey. DYO is the actual manufacturer; Casati/Dewilux/Dyotherm/Klimatherm are associated brands, not separate new companies. Coordinates are Kocaeli provincial-centre representative, not Dilovası factory GPS.",
+    "generalPhone": "+90 (262) 754 75 60",
+    "generalPhoneEvidence": {
+      "company": "Dyo Boya Fabrikaları Sanayi ve Ticaret A.Ş. (Casati)",
+      "value": "+90 (262) 754 75 60",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Casati business contact telephone",
+          "url": "https://casati.com.tr/sayfa/iletisim",
+          "summary": "Casati contact publishes Tel +90(262)75475 60 and separately Fax +90(262)75481 47 at Dilovası/Kocaeli. Brand business telephone only, not named procurement."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "casati@casati.com.tr",
+        "emailEvidence": {
+          "company": "Dyo Boya Fabrikaları Sanayi ve Ticaret A.Ş. (Casati)",
+          "value": "casati@casati.com.tr",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Casati department business email and own DYO/Casati manufacturing attribution",
+              "url": "https://casati.com.tr/sayfa/iletisim",
+              "summary": "Current official Casati business-contact block prints casati@casati.com.tr; the own Casati corporate page names DYO legal manufacturer and own DYO About lists Casati brand. This is the Casati business channel, not a named purchasing person, entire-group general inbox or deliverability assertion."
+            }
+          ],
+          "verifiedAt": "2026-10-22"
+        },
+        "source": {
+          "label": "Official Casati business contact",
+          "url": "https://casati.com.tr/sayfa/iletisim"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Casati legal manufacturer attribution and actual paint/primer/varnish range",
+        "url": "https://casati.com.tr/sayfa/kurumsal"
+      },
+      {
+        "label": "Own current DYO production, associated brands, resin and specialty-coating scope",
+        "url": "https://dekoratif.dyo.com.tr/kurumsal/hakkimizda"
+      },
+      {
+        "label": "Own current Casati brand business mailbox, phone, address and form",
+        "url": "https://casati.com.tr/sayfa/iletisim"
+      }
+    ]
+  },
+  "akcali-boya-istanbul": {
+    "website": "https://www.permolitboya.com.tr/",
+    "contactPage": "https://www.permolitboya.com.tr/iletisim/",
+    "address": "Factory: Osmangazi Mah. Mareşal Fevzi Çakmak Cad. No:5, Kıraç/Esenyurt/İstanbul. Head office: Ayazağa Mah. Mimar Sinan Sok. No:21, Seba Office Boulevard A-29, 34485 Sarıyer/İstanbul. Coordinates are Istanbul city representative, not factory GPS.",
+    "generalPhone": "+90 212 371 60 00",
+    "generalPhoneEvidence": {
+      "company": "Akçalı Boya ve Kimya San. Tic. A.Ş. (Permolit / WRX)",
+      "value": "+90 212 371 60 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current head-office and factory PBX listings",
+          "url": "https://www.permolitboya.com.tr/iletisim/",
+          "summary": "Office and factory share +90 212 37160 00 PBX; fax +90 21237160 66 is separate. General corporate business telephone, no named procurement attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturer, Permolit/WRX/UK associated business and product categories",
+        "url": "https://www.permolitboya.com.tr/hakkimizda/"
+      },
+      {
+        "label": "Own current complete synthetic-coating category and named primers",
+        "url": "https://www.permolitboya.com.tr/urunler/sentetik-boyalar/"
+      },
+      {
+        "label": "Own current office/factory addresses, PBX and public business form",
+        "url": "https://www.permolitboya.com.tr/iletisim/"
+      }
+    ]
+  },
   "saito-paint-osaka": {
     "website": "https://www.saito-paint.co.jp/ja/",
     "contactPage": "https://www.saito-paint.co.jp/ja/contact",
@@ -25287,6 +25438,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "dyo-casati-kocaeli",
+  "akcali-boya-istanbul",
   "saito-paint-osaka",
   "taiyo-toryo-tokyo",
   "mikasa-paint-ichikawa",

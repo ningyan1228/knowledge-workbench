@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "dyo-casati-kocaeli": "Your Casati range includes synthetic primers, wood varnishes and decorative interior and exterior coatings.",
+  "akcali-boya-istanbul": "Your synthetic coating range includes Permomast primer and Akçalı Antipas metal primer.",
   "saito-paint-osaka": "Your エポライト１０１０クリヤー is listed as a two-component epoxy coating for potting applications.",
   "taiyo-toryo-tokyo": "Your SLプライマーEP is listed as a one-component, modified epoxy rust-preventive primer.",
   "mikasa-paint-ichikawa": "Your ボンデ88 primer uses an epoxy–phenolic system for metal substrates, including light metals.",
