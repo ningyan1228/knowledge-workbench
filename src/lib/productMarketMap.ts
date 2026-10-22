@@ -7869,11 +7869,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "prochem-klomnice",
+    "company": "Przedsiębiorstwo Farb Przemysłowych PROCHEM Sp. z o.o.",
+    "productId": "elo",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Kłomnice / Częstochowa area",
+    "latitude": 50.8118,
+    "longitude": 19.1203,
+    "legacyCompanyDescription": "自产工业防腐及防水涂料并设自有实验室；产品范围包括环氧、聚氨酯、醇酸涂层及配套地坪树脂体系。 坐标为Częstochowa地区城市代表点，非Kłomnice工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "自产工业防腐及防水涂料并设自有实验室；产品范围包括环氧、聚氨酯、醇酸涂层及配套地坪树脂体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立完整读PROCHEM现官网首页128行、公司介绍66行、产品总目录116行、联系页139行。法人与地址为PrzedsiębiorstwoFarbPrzemysłowychPROCHEMSp.zo.o./Nieznanicka57,42-270Kłomnice/NIP5730210149/KRS211652；官网明确37年以上工业漆制造、原料由供应商供应并自有实验室研发。已读当前整体业务包含工业防腐/防水、醇酸/油性/聚乙烯基/环氧/PU/氯化橡胶/丙烯酸/沥青/水性漆、铁路/船舶用漆、木器浸渍、环氧和PU地坪树脂体系、配套稀释剂、焊丝/焊材、墙体抹灰、汽车护理/玻璃水/冷却液/IPA清洗及消毒类，不能说只有成品油漆或完全无树脂/添加配套。按已读制造法人整体业务、完整可见当前目录及产品组说明，未见ELO/ESBO/环氧化植物油/同类生物基增塑或稳定添加原料外售，所选输入及已读范围有限通过；地坪环氧/PU树脂体系与配套稀释剂本身不等同环氧植物油原料。未穷尽所有SKU/SDS/配方或披露外集团最终股权，不因Search零结果绝对断言全业务无任何添加剂。2019商标注册类别/1994公告仅Search历史记录，不当当前原料实际销售或已读法律意见。实读目录说详细技术卡须电话联系，未致电、索取、下载或补写TDS。环氧分类页仅一行MySQL错误；首页ZOBACZ实际解析到28-ftalowe分类后CacheMiss，两次均失败，不冒称读到抗腐蚀父目录/叶页或具体型号。当前公司环氧防腐漆事实来自实际首页和产品总目录，不由失败页面补造化学类型或性能。公司ISO/PZH/防腐、环保、节能和客户列表不转成我方牌号实测/认证/案例。未声称在采ELO、当前替代计划、配方相容、工厂新增产能或涂装现场加料。\n按freshmain370/本地386/全私有队列及frontier711，以PROCHEM/域名/NIP/KRS/Kłomnice全量检查。唯一同名片段为阿根廷ProchemBioSA，所在国、域名、公开法人和经营现场不同，无同一集团证据，不把词片段当同户，也不把同一波兰法人拆成多个品牌/厂区。无已知同法人/集团/域名正式客户；大陆/台湾排除。地图为Częstochowa地区城市代表点，非Kłomnice总部/工厂门口GPS。\n当前官网联系页“Działzakupówsurowców”明确原料采购部门并列zakupy@farby-prochem.pl，作为有归属的部门邮箱；同页biuro@farby-prochem.pl和34/3281480为公司通用业务入口。保留采购优先，部门邮箱不冒称TomaszKwarciak个人邮箱或采购需求确认；联系页人员虽可见，本轮不新增具名联系人。销售页重复拼接Aneta邮箱不修猜，个人数据保护官iod@不是采购，不采用。未声称联系页有提交表单；公开联系页及邮箱即业务入口。公司电话不拼WhatsApp。共享发送状态未知，不当未发送；正式后仅内存核对当前功能型简短生成，无可发送成稿/复制导出/邮件/表单/CRM/台账写入。"
+    },
+    "contact": {
+      "label": "官网原料采购部门邮箱及公司业务联系页",
+      "email": "zakupy@farby-prochem.pl",
+      "phone": "+48 34 328 14 80",
+      "contactUrl": "https://www.farby-prochem.pl/pl/kontakt"
+    },
+    "source": {
+      "label": "Own current manufacture, laboratory and epoxy anticorrosion-paint range",
+      "url": "https://www.farby-prochem.pl/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "prochem-klomnice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sobeltec-ariomat-ronse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "novol-komorniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "levasseur-newco-brussels": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8245,6 +8274,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "prochem-klomnice": {
+    "website": "https://www.farby-prochem.pl/",
+    "contactPage": "https://www.farby-prochem.pl/pl/kontakt",
+    "address": "ul. Nieznanicka57,42-270Kłomnice,Polska. Map uses Częstochowa regional city representative, not factory or head-office GPS.",
+    "generalEmail": "biuro@farby-prochem.pl",
+    "generalEmailEvidence": {
+      "company": "Przedsiębiorstwo Farb Przemysłowych PROCHEM Sp. z o.o.",
+      "value": "biuro@farby-prochem.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current PROCHEM public corporate contact page",
+          "url": "https://www.farby-prochem.pl/pl/kontakt",
+          "summary": "Published company email under current E-MAIL and repeated corporate footer; general office route, not a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+48 34 328 14 80",
+    "generalPhoneEvidence": {
+      "company": "Przedsiębiorstwo Farb Przemysłowych PROCHEM Sp. z o.o.",
+      "value": "+48 34 328 14 80",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current PROCHEM public corporate contact page",
+          "url": "https://www.farby-prochem.pl/pl/kontakt",
+          "summary": "Own homepage explicitly includes +48 country code; current corporate contact page identifies Centrala34/3281480. General business switchboard, not named procurement mobile or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "zakupy@farby-prochem.pl",
+        "emailEvidence": {
+          "company": "Przedsiębiorstwo Farb Przemysłowych PROCHEM Sp. z o.o.",
+          "value": "zakupy@farby-prochem.pl",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current PROCHEM public corporate contact page",
+              "url": "https://www.farby-prochem.pl/pl/kontakt",
+              "summary": "Exact address is published under Dział zakupów surowców, the raw-material purchasing department. The address belongs to a department and is not represented as Tomasz Kwarciak's personal email."
+            }
+          ],
+          "verifiedAt": "2026-10-22"
+        },
+        "source": {
+          "label": "Own raw-material procurement department mailbox",
+          "url": "https://www.farby-prochem.pl/pl/kontakt"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own current complete manufacture/laboratory and broader business scope",
+        "url": "https://www.farby-prochem.pl/"
+      },
+      {
+        "label": "Own current industrial-paint manufacturing and laboratory attribution",
+        "url": "https://www.farby-prochem.pl/pl/o-firmie"
+      },
+      {
+        "label": "Own current full visible product-family catalogue and epoxy protective-paint applications",
+        "url": "https://www.farby-prochem.pl/pl/produkty"
+      },
+      {
+        "label": "Own current legal company, address, raw-material purchasing mailbox and corporate phone",
+        "url": "https://www.farby-prochem.pl/pl/kontakt"
+      }
+    ]
+  },
   "sobeltec-ariomat-ronse": {
     "website": "https://ariomat.com/fr/",
     "contactPage": "https://ariomat.com/fr/",
@@ -25670,6 +25777,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "prochem-klomnice",
   "sobeltec-ariomat-ronse",
   "novol-komorniki",
   "levasseur-newco-brussels",
