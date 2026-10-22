@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "epurox-poznan": "Your EPOSTAR E 326 is a solvent-free, two-component epoxy primer-enamel for protecting concrete.",
   "cathal-gliwice": "Your Aqua art - perłowa is a water-based acrylic decorative paint for wooden objects.",
   "prochem-klomnice": "Your industrial anticorrosion range includes epoxy paints developed in your own laboratory.",
   "sobeltec-ariomat-ronse": "Your WOOD VARNISH 2C is a waterborne two-component finish for indoor wood.",

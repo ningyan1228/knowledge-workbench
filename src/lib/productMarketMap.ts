@@ -7925,11 +7925,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "epurox-poznan",
+    "company": "EPUROX sp. z o.o.",
+    "productId": "elo",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Poznań",
+    "latitude": 52.4064,
+    "longitude": 16.9252,
+    "legacyCompanyDescription": "自产环氧及聚氨酯涂层和胶黏剂；EPOSTAR E 326为用于混凝土保护的双组分无溶剂环氧底面漆。 坐标为Poznań城市代表点，非工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "自产环氧及聚氨酯涂层和胶黏剂；EPOSTAR E 326为用于混凝土保护的双组分无溶剂环氧底面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "已查公司当前制造介绍、完整可见五类业务、EPOSTAR E326底面漆原页及技术／安全资料索引。公开经营包括环氧／PU涂层、混凝土胶和腻子、树脂底涂、环氧地坪、石材地毯体系及EPOSTAR／PUROSTAR配套料号。索引列出组合试验和组成料文件，不据编号猜其化学成分或断言所有配方已读。在实际已读整体业务和可见范围内，未见ELO、ESBO、环氧化植物油或同类生物基增塑／稳定添加原料外售，所选输入及已读范围有限通过；成品环氧／PU体系及其配套料不自动等同环氧化油原料。同一法人、品牌、域名、Poznań业务地址只计一个账户，不拆牌号或制造地点。潜在材料评估相关不代表正在采购、已用或配方相容。"
+    },
+    "contact": {
+      "label": "官网实际公开公司业务邮箱及业务页脚入口",
+      "email": "biuro@epurox.pl",
+      "phone": "+48 605 890 233",
+      "contactUrl": "https://epurox.pl/"
+    },
+    "source": {
+      "label": "Own current EPOSTAR E 326 solvent-free two-component epoxy primer-enamel for concrete protection",
+      "url": "https://epurox.pl/oferta/gruntoemalie/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "epurox-poznan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cathal-gliwice": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "prochem-klomnice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sobeltec-ariomat-ronse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8303,6 +8332,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "epurox-poznan": {
+    "website": "https://epurox.pl/",
+    "contactPage": "https://epurox.pl/",
+    "address": "Company-published address:ul.Podgajska2,60-416Poznań,Polska; NIP6452550133,KRS0000663470. Polish production stated by company; this address is not independently assigned as a manufacturing plant. Map uses Poznań city representative, not factory GPS.",
+    "generalEmail": "biuro@epurox.pl",
+    "generalEmailEvidence": {
+      "company": "EPUROX sp. z o.o.",
+      "value": "biuro@epurox.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current EPUROX corporate business footer in three actual originals",
+          "url": "https://epurox.pl/",
+          "summary": "Actual company homepage identifies EPUROX sp. z o.o., its published Poznań address and general office email biuro@epurox.pl; the actual product-family and documentation pages repeat the same company and business email. No named buyer or deliverability inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+48 605 890 233",
+    "generalPhoneEvidence": {
+      "company": "EPUROX sp. z o.o.",
+      "value": "+48 605 890 233",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current EPUROX published corporate business telephone",
+          "url": "https://epurox.pl/",
+          "summary": "Actual company homepage header and corporate business footer publish +48605890233; same value repeats on actual product-family and documentation pages. General business mobile route, not named personal buyer or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturer/formulation scope, Polish production and corporate business contact footer",
+        "url": "https://epurox.pl/"
+      },
+      {
+        "label": "Own current EPOSTAR E 326 epoxy protective primer-enamel description for concrete",
+        "url": "https://epurox.pl/oferta/gruntoemalie/"
+      },
+      {
+        "label": "Own current complete visible technical/safety/declaration index; linked documents not read",
+        "url": "https://epurox.pl/dokumentacja/"
+      }
+    ]
+  },
   "cathal-gliwice": {
     "website": "https://www.cathal.com.pl/",
     "contactPage": "https://www.cathal.com.pl/contact.html",
@@ -25857,6 +25937,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "epurox-poznan",
   "cathal-gliwice",
   "prochem-klomnice",
   "sobeltec-ariomat-ronse",
