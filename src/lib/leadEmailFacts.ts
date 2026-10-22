@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "colorificio-atria-partanna": "Your ATRIAPLASTIC P is a two-component epoxy-polyamide finish for industrial concrete floors.",
   "bosshard-farben-ruemlang": "Your Arbezol Aquaplast is a water-based wood varnish for interior panelling, windowsills and furniture.",
   "colori-freddi-mantova": "Your published steel-coating cycles include a water-based epoxy primer, Series 363, for industrial environments.",
   "boehme-liebefeld": "Your SunCare JetMatt is a water-based coating for softwood panelling and interior wood applications.",

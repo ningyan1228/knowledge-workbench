@@ -7483,11 +7483,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "colorificio-atria-partanna",
+    "company": "Colorificio ATRIA S.r.l.",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Partanna",
+    "latitude": 37.726,
+    "longitude": 12.888,
+    "legacyCompanyDescription": "当前自有公司页明确Partanna自有涂料生产厂及定制；ATRIAPLASTIC P原文为双组分环氧聚酰胺成品地坪面漆，明确工业混凝土地面用途，另有自制调色浆。 地图为城市代表点。",
+    "fit": "可开发候选",
+    "signal": "当前自有公司页明确Partanna自有涂料生产厂及定制；ATRIAPLASTIC P原文为双组分环氧聚酰胺成品地坪面漆，明确工业混凝土地面用途，另有自制调色浆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立审读当前Company、工业8类别、具体ATRIAPLASTIC P成品页、完整静态产品总分类27项（建筑19/工业8）、全部可见8种溶剂配套条目及Solv System正文。公司明确自有生产厂、产品定制及自己测试制造的溶剂调色浆，实际工业/建筑成品涂料配方制造成立。保留真实配套业务：水性/溶剂双组分、底涂/固定剂、车用、地坪、木器、溶剂稀释/清洗，以及自产色浆/白基/转换料调色体系，不笼统称没有原料或配套输入外售。所查当前经营、各可见类别、具体环氧聚酰胺面漆及上述配套功能未见所选ELO/ESBO、环氧化植物油或同类生物基增塑稳定输入外售证据，按实际范围通过；不保证所有SKU/单品组成/TDS/SDS/全部关联股权或隐藏业务，无虚构外购例外。DP330名称为聚氨酯稀释剂而本站描述沿用环氧底面涂用途，保留原文差异，不据此补造组成或统一化学体系。当前主体、VAT00013450812、Partanna地址及官网域名一致，AtriaFloor/AtriaThermika/Atriacolors等按同一关联账户；不从Search同名Aturia泵业或经销商Antony推股权、工厂或新客户，不臆断法律所有权百分比。Company/产品页明确通用info邮箱及公司电话，不冒称具名采购人；公开WhatsApp采用同页实际href的389号码，和普通0924公司电话分开，不猜号或自动发消息。Contact是自身实际链接但未独立读取其表单字段，联系资格由已核实公司业务邮箱构成。客户成品防腐、厚度、耐清洗、无渗透、调色/干燥等性能不转为ELO效果/配方相容/认证或采购需求；仅以用户资料支持的环氧功能、柔韧/树脂改性方向作潜在评估。"
+    },
+    "contact": {
+      "label": "官网核实公司业务邮箱、电话及独立公开WhatsApp链接；无具名采购邮箱",
+      "email": "info@atria.it",
+      "phone": "+39 0924 49500",
+      "contactUrl": "https://www.atria.it/contatti"
+    },
+    "source": {
+      "label": "Own exact industrial floor coating and current manufacturing",
+      "url": "https://www.atria.it/prodotti/atriaplastic-p-pittura-epossipoliammidica-bicomponente/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "colorificio-atria-partanna": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bosshard-farben-ruemlang": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "colori-freddi-mantova": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "boehme-liebefeld": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -7845,6 +7874,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "colorificio-atria-partanna": {
+    "website": "https://www.atria.it/",
+    "contactPage": "https://www.atria.it/contatti",
+    "whatsapp": "https://api.whatsapp.com/send?phone=393898782453",
+    "address": "C.da Camarro Formeca,91028 Partanna (TP),Italy (own corporate address). Approximate locality marker; exact factory GPS/registry ownership not independently audited.",
+    "generalEmail": "info@atria.it",
+    "generalEmailEvidence": {
+      "company": "Colorificio ATRIA S.r.l.",
+      "value": "info@atria.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company and production page footer",
+          "url": "https://www.atria.it/azienda",
+          "summary": "Own current company page and exact product footer publish info@atria.it for general business enquiries; no named procurement identity asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+39 0924 49500",
+    "generalPhoneEvidence": {
+      "company": "Colorificio ATRIA S.r.l.",
+      "value": "+39 0924 49500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company and production page footer",
+          "url": "https://www.atria.it/azienda",
+          "summary": "Own current company and product footer Tel.+39 092449500. Ordinary company voice line, separate from separately published389WhatsApp number."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current production plant and company/legal identity",
+        "url": "https://www.atria.it/azienda"
+      },
+      {
+        "label": "Actual two-component epoxy-polyamide industrial concrete-floor finish",
+        "url": "https://www.atria.it/prodotti/atriaplastic-p-pittura-epossipoliammidica-bicomponente/"
+      },
+      {
+        "label": "Complete public27category product overview; not all individual SKU compositions",
+        "url": "https://www.atria.it/prodotti"
+      },
+      {
+        "label": "Actual solvent/thinner roles and retained DP330 wording discrepancy",
+        "url": "https://www.atria.it/prodotti/industria/categorie/41771/linea-solventi"
+      },
+      {
+        "label": "Own manufactured solvent tinting-paste/converter business",
+        "url": "https://www.atria.it/tintometro/solv-system"
+      },
+      {
+        "label": "Exact WhatsApp business link published in own current page footer",
+        "url": "https://api.whatsapp.com/send?phone=393898782453"
+      },
+      {
+        "label": "Own linked business Contact page; form fields not separately read",
+        "url": "https://www.atria.it/contatti"
+      }
+    ]
+  },
   "bosshard-farben-ruemlang": {
     "website": "https://www.bosshard-farben.ch/",
     "contactPage": "https://www.bosshard-farben.ch/kontakt",
@@ -24506,6 +24603,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "colorificio-atria-partanna",
   "bosshard-farben-ruemlang",
   "colori-freddi-mantova",
   "boehme-liebefeld",
