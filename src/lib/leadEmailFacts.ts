@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "levasseur-newco-brussels": "Your wood-finishing range includes Everhyd Color waterborne wood paint and Everxyl Aqua PU varnish.",
   "dyo-casati-kocaeli": "Your Casati range includes synthetic primers, wood varnishes and decorative interior and exterior coatings.",
   "akcali-boya-istanbul": "Your synthetic coating range includes Permomast primer and Akçalı Antipas metal primer.",
   "saito-paint-osaka": "Your エポライト１０１０クリヤー is listed as a two-component epoxy coating for potting applications.",

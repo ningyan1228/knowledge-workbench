@@ -7786,11 +7786,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "levasseur-newco-brussels",
+    "company": "Levasseur Newco SA",
+    "productId": "nl-w1201",
+    "country": "Belgium",
+    "countryZh": "比利时",
+    "city": "Brussels",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "legacyCompanyDescription": "开发生产工业涂料、清漆和定制配方，偏重水性体系；木器系列含Everhyd Color水性漆、Everxyl Aqua PU清漆及底漆。 业务联系地址为布鲁塞尔；坐标为城市代表点，非厂门GPS。",
+    "fit": "可开发候选",
+    "signal": "开发生产工业涂料、清漆和定制配方，偏重水性体系；木器系列含Everhyd Color水性漆、Everxyl Aqua PU清漆及底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立读取当前公司制造与定制配方页、完整23项木器饰面分类、完整9项木器底漆分类及公司业务联系页。公司明确生产工业漆、开发生产漆/清漆/涂层并偏重水性，同时销售建筑漆、设备和其他品牌成品；不称所有目录SKU均自产或只有纯成品业务。木器系列实际列Everhyd Color水性木器漆、Everxyl Aqua PU清漆及其他底漆。已读公司制造角色及木器饰面/底漆和9大产品类别未见水性PO/CPO分散体、聚烯烃乳液或同类附着促进原料外售，按所选输入及已读范围有限通过；成品Hydrogrip底漆、PU清漆、thinner和cellulose产品名称不自动作原料同行，也不推定未读配方相容。官网列Libert成品漆，保留销售角色，不把供应商品牌当已确认控股关联。搜索命中的2022展会制造/分销说明、第三方企业资料的Wavre注册/批发与咨询分类均仅发现信息，未作为原始注册、现行股权或新增制造证据；公司自己的现行制造与配方声明是制造依据。不把布鲁塞尔业务地址改作Wavre法定总部或工厂门址，不声称审计最终股权、全化工供应商页、全部SDS或所有目录。当前main367、本地383、全私有队列及frontier706对Levasseur/Newco/g-levasseur/域名和已知品牌全量去重，无同一已知账户；Ariomat/Sobeltec/Cordeel另一个未合格品牌集团不与其混并。公司当前自有联系页明确Levasseur Newco SA、布鲁塞尔地址、info@g-levasseur.com及业务电话，虽邮箱域名与网站不同，按实际发布归属核验，不猜域名、不当具名采购；传真另列，未构造WhatsApp。地图仅Brussels城市代表点，非工厂GPS。只用真实水性木器事实以及NL-W1201资料中的聚烯烃分散体/底涂及附着力促进功能提出材料评估问题，不说客户已使用、采购或配方相容，不将其PU/丙烯酸、抗涂鸦、抗菌、耐磨和认证性能转给我方。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、电话和联系页；非具名采购",
+      "email": "info@g-levasseur.com",
+      "phone": "+32 (0) 2 376 00 18",
+      "contactUrl": "https://www.levasseur.be/fr/levasseur-fr/contact-fr"
+    },
+    "source": {
+      "label": "Own current complete wood-finish range, waterborne wood paint and varnish",
+      "url": "https://www.levasseur.be/en/industry/wood-finishes-en"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "levasseur-newco-brussels": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "dyo-casati-kocaeli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "akcali-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "saito-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8159,6 +8188,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "levasseur-newco-brussels": {
+    "website": "https://www.levasseur.be/",
+    "contactPage": "https://www.levasseur.be/fr/levasseur-fr/contact-fr",
+    "address": "Published business contact: Rue du Bourdon 121, 1180 Bruxelles, Belgique. Business contact address, not independently verified factory GPS or statutory Wavre headquarters. Coordinates are Brussels city representative.",
+    "generalEmail": "info@g-levasseur.com",
+    "generalEmailEvidence": {
+      "company": "Levasseur Newco SA",
+      "value": "info@g-levasseur.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Levasseur Newco SA corporate business mailbox",
+          "url": "https://www.levasseur.be/fr/levasseur-fr/contact-fr",
+          "summary": "Company contact block prints Levasseur Newco SA and info@g-levasseur.com. Actual published corporate business mailbox, no named procurement, address construction or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+32 (0) 2 376 00 18",
+    "generalPhoneEvidence": {
+      "company": "Levasseur Newco SA",
+      "value": "+32 (0) 2 376 00 18",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company business telephone",
+          "url": "https://www.levasseur.be/fr/levasseur-fr/contact-fr",
+          "summary": "Company contact prints Tel +32(0)2 37600 18, separate Fax +32 2 37638 86; no WhatsApp or named purchasing attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current production, waterborne formulation and mixed manufacturer/marketing role",
+        "url": "https://www.levasseur.be/fr/levasseur-fr"
+      },
+      {
+        "label": "Own complete wood-finishing category with waterborne named products",
+        "url": "https://www.levasseur.be/en/industry/wood-finishes-en"
+      },
+      {
+        "label": "Own complete wood-primer range and product-category scope",
+        "url": "https://www.levasseur.be/en/industry/wood-primers-en"
+      },
+      {
+        "label": "Own legal company name, business mailbox, phone and contact address",
+        "url": "https://www.levasseur.be/fr/levasseur-fr/contact-fr"
+      }
+    ]
+  },
   "dyo-casati-kocaeli": {
     "website": "https://www.casati.com.tr/",
     "contactPage": "https://casati.com.tr/sayfa/iletisim",
@@ -25438,6 +25522,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "levasseur-newco-brussels",
   "dyo-casati-kocaeli",
   "akcali-boya-istanbul",
   "saito-paint-osaka",
