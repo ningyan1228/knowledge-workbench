@@ -7814,11 +7814,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "novol-komorniki",
+    "company": "NOVOL Sp. z o.o. (NOVOL Group)",
+    "productId": "elo",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Komorniki / Poznań area",
+    "latitude": 52.4064,
+    "longitude": 16.9252,
+    "legacyCompanyDescription": "自产工业防护及汽车修补涂料并设研发实验室；INDUSTRIAL系列含PROTECT 360 TIX环氧底漆和NOVORUST 2750 DTM环氧底面漆。 坐标为Poznań地区城市代表点，非Komorniki总部或工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "自产工业防护及汽车修补涂料并设研发实验室；INDUSTRIAL系列含PROTECT 360 TIX环氧底漆和NOVORUST 2750 DTM环氧底面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立完整读取当前NOVOL公司介绍327行、INDUSTRIAL主页271行和带INDUSTRIAL选项的公司联系页192行。当前自述有研发实验室、欧洲及亚洲工厂，制造汽车修补、工业防护和复合材料体系；公开业务同时包括底漆/面漆/填料/固化配套、喷涂密封材料、游艇复合材料胶、喷雾、非漆工具、汽车护理与服装，不说只有成品桶漆或完全没有添加/树脂配套。实际INDUSTRIAL页七个代表品和四类产品组含PROTECT360TIX环氧底漆、NOVORUST2750DTM环氧底面漆、其他PU/丙烯酸/醇酸体系及防护钢结构、车辆、储罐用途；未将军事认证或客户防腐/耐化学/附着/干燥性能转给我方。按已读当前公司整体品牌业务、工业产品系列和代表品描述，未见ELO/ESBO/环氧化植物油/同类生物基增塑稳定原料外售，所选输入及已读范围有限通过；普通环氧树脂体系、PU/固化配套、复合胶或NON-PAINT标签不自动当作同类油原料。未穷尽所有品牌子目录、全SKU、SDS和最终股权，不猜隐藏成分或外购例外。PROTECT360TIX实际产品链接GET503，无产品叶正文/TDS全文，仍只使用实际INDUSTRIAL主页明确的型号/环氧底漆事实；不把失败说成功。当前main368、本地384、私有队列/frontier709对NOVOL/法人数KRS0000011198及NIP7830001311/域名/Komorniki和已知品牌全量去重无已知同一账户；Renovo同名片段、其他公司nautica/nautic行业词不强并NOVOL。NOVOLHolding及SPECTRAL/COBRA/STP/ULTRA/NAUTIC/CAREVER/INDUSTRIAL等已披露同一品牌集团只计一户，不拆Strykowo/Włocławek或亚洲工厂，不收大陆/台湾账户。官网联系页明确NOVOLSp.zo.o.、Komorniki总部和总机+48618109800及业务表单，不冒称采购个人；表单email字段为用户填写项，不是公开收件邮箱。Search国防产业目录industrial@novol.com未读取原件，不作已核验邮箱；About受保护伦理邮箱和举报热线不是业务采购联系人，不解码、不挪用。当前表单静态“消息已发送”模板不表示本次发送，未提交。地图为Poznań地区城市代表点，非Komorniki总部/工厂门口GPS。ELO只依用户资料提涂料柔韧/树脂改性潜在材料评估，不承诺已用、在采、相容、腐蚀防护效果或现场加料。"
+    },
+    "contact": {
+      "label": "官网公开INDUSTRIAL业务联系表单及总部总机；邮箱未核验",
+      "phone": "+48 61 810 98 00",
+      "contactUrl": "https://novol.com/kontakt/?contactBrand=INDUSTRIAL"
+    },
+    "source": {
+      "label": "Own current INDUSTRIAL protective coatings, epoxy primer and epoxy primer-enamel range",
+      "url": "https://novol.com/industrial/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "novol-komorniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "levasseur-newco-brussels": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "dyo-casati-kocaeli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "akcali-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8188,6 +8216,42 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "novol-komorniki": {
+    "website": "https://novol.com/",
+    "contactPage": "https://novol.com/kontakt/?contactBrand=INDUSTRIAL",
+    "address": "Head office: ul. Żabikowska 7/9,62-052 Komorniki,Wielkopolska,Polska. Other disclosed plants at Strykowo and Włocławek belong to the same account. Map uses Poznań regional city representative, not Komorniki head-office/factory GPS.",
+    "generalPhone": "+48 61 810 98 00",
+    "generalPhoneEvidence": {
+      "company": "NOVOL Sp. z o.o. (NOVOL Group)",
+      "value": "+48 61 810 98 00",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current NOVOL head-office business telephone",
+          "url": "https://novol.com/kontakt/?contactBrand=INDUSTRIAL",
+          "summary": "Current company contact block and Komorniki headquarters block both publish +48 61 81098 00. This is the general business switchboard, not an ethics hotline, named procurement phone or WhatsApp account."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current full manufacture, laboratory and broader brand-business scope",
+        "url": "https://novol.com/o-nas/"
+      },
+      {
+        "label": "Own current INDUSTRIAL product-family and named epoxy protective-primer descriptions",
+        "url": "https://novol.com/industrial/"
+      },
+      {
+        "label": "Own legal company attribution, Komorniki headquarters, phone and INDUSTRIAL public business form",
+        "url": "https://novol.com/kontakt/?contactBrand=INDUSTRIAL"
+      }
+    ]
+  },
   "levasseur-newco-brussels": {
     "website": "https://www.levasseur.be/",
     "contactPage": "https://www.levasseur.be/fr/levasseur-fr/contact-fr",
@@ -25522,6 +25586,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "novol-komorniki",
   "levasseur-newco-brussels",
   "dyo-casati-kocaeli",
   "akcali-boya-istanbul",

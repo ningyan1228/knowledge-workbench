@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "novol-komorniki": "Your INDUSTRIAL range includes PROTECT 360 TIX epoxy primer and NOVORUST 2750 DTM epoxy primer-enamel.",
   "levasseur-newco-brussels": "Your wood-finishing range includes Everhyd Color waterborne wood paint and Everxyl Aqua PU varnish.",
   "dyo-casati-kocaeli": "Your Casati range includes synthetic primers, wood varnishes and decorative interior and exterior coatings.",
   "akcali-boya-istanbul": "Your synthetic coating range includes Permomast primer and Akçalı Antipas metal primer.",
