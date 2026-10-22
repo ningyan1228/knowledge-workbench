@@ -7650,11 +7650,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "mikasa-paint-ichikawa",
+    "company": "Mikasa Paint Company, Ltd.",
+    "productId": "elo",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Ichikawa",
+    "latitude": 35.721,
+    "longitude": 139.931,
+    "legacyCompanyDescription": "当前官网公司页明确千叶工厂、本社研究所和独立研发；公开生产品目与官网金属底漆原文对应，ボンデ88列为环氧/酚醛反应体系、用于各类金属含轻金属。实际业务包含金属/塑料底漆、面漆、功能涂层及专用胶黏成品。 地图为市川城市代表点，不是旭市工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "当前官网公司页明确千叶工厂、本社研究所和独立研发；公开生产品目与官网金属底漆原文对应，ボンデ88列为环氧/酚醛反应体系、用于各类金属含轻金属。实际业务包含金属/塑料底漆、面漆、功能涂层及专用胶黏成品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立读取自身公司57行、主产品入口28行、金属/塑料底漆112行、面漆235行、功能涂层122行和行业协会公司专属条目68行。当前公司列千叶工厂及本社研究所、独立配方研发；协会实际生产品目与自身具体产品对应，支持涂料成品制造角色。主产品页明确仅展示一部分产品，虽三页所展示正文均完整读取，不称全部经营/SKU/SDS/未披露配方/全球股权已穷尽。实际经营含环氧/酚醛金属防护底漆、1液环氧、丙烯酸/无油醇酸/聚酯/1-2液PU面漆、塑料用CPO成品底漆、植绒底漆与尼龙/PET绒粉配套、导电炭黑涂层、低摩擦丙烯酸硅氧烷、软触感、镜背和专用胶黏成品。P961L/FabricPL-A/MKX-PP等含PO/CPO的配制涂料不作为ELO原料，亦不另转NL-W1201客户规避该产品的同行规则。柔软触感成品不是生物基增塑/稳定原料外售证据；无油醇酸字样不证明其他所有配方无植物油。当前实际公司制造角色、公开三类成品与配套范围未见ELO、ESBO、环氧化植物油或同类生物基增塑/稳定输入外售证据，按所选输入和实际公开范围有限通过；不从未披露成分或目录没有关键字推出全产品无任何原料销售。ボンデ88仅记录原文环氧/酚醛金属底漆事实，不把其150℃烘烤条件、耐腐蚀/耐化学/附着等转为我方ELO的固化相容或防腐保证。以MikasaPaint/ミカサペイント/mikasa-p/ボンデ品牌和本社市川/千叶旭市工厂对照最新main362、本地378、完整私有队列/frontier687，无同一账户；品牌、工厂、办公室只计一户，不凭同名ミカサ设备、电子商社、体育品牌或列举纳入客户推定集团控制。协会公司条目直接公开info业务邮箱并与自身英日法人名、域名、地址和本社电话对应，属general公司入口；不把代表董事或业务客户名单写成采购负责人，不收协会office邮箱/事务局电话。仅保留本社047-393-7881，工厂/传真不同，不猜WhatsApp或个人邮箱。官网独立表单未另取，不称已核实可提交；实际公开联系入口采用已读协会公司页。页脚提示开启JavaScript但完整业务原文已返回，不是机器人校验，未执行JS。产品功能只取用户ELO资料，评估涂料柔韧/树脂改性，不确认使用、需求、采购、相容或项目时机。"
+    },
+    "contact": {
+      "label": "行业协会公司专属条目的公开业务邮箱及官网本社电话；非具名采购",
+      "email": "info@mikasa-p.co.jp",
+      "phone": "047-393-7881",
+      "contactUrl": "https://kantoko.com/overview/member/mikasa-p/"
+    },
+    "source": {
+      "label": "Own Bonde88 metal-primer original, company factory and exact association business contact",
+      "url": "https://www.mikasa-p.co.jp/products/1"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mikasa-paint-ichikawa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "higashi-nippon-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "otani-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "asahipen-osaka": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8018,6 +8047,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mikasa-paint-ichikawa": {
+    "website": "https://www.mikasa-p.co.jp/",
+    "contactPage": "https://kantoko.com/overview/member/mikasa-p/",
+    "address": "5-17-10 Minamiyawata, Ichikawa, Chiba272-0023, Japan (own headquarters/laboratory). Chiba manufacturing plant is separately listed in Asahi; city marker is approximate and does not represent factory GPS.",
+    "generalEmail": "info@mikasa-p.co.jp",
+    "generalEmailEvidence": {
+      "company": "Mikasa Paint Company, Ltd.",
+      "value": "info@mikasa-p.co.jp",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Kanto Paint Manufacturers Association, exact Mikasa Paint company member entry",
+          "url": "https://kantoko.com/overview/member/mikasa-p/",
+          "summary": "Company-specific entry explicitly names ミカサペイント株式会社, mikasa-p.co.jp, info@mikasa-p.co.jp, the same Ichikawa headquarters address and047-393-7881. Generic business mailbox only; no named buyer, personal ownership or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "047-393-7881",
+    "generalPhoneEvidence": {
+      "company": "Mikasa Paint Company, Ltd.",
+      "value": "047-393-7881",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company overview, headquarters and laboratory",
+          "url": "https://www.mikasa-p.co.jp/company/",
+          "summary": "Own company overview names Mikasa Paint Company,Ltd. and publishes headquarters/laboratory047-393-7881, separate Chiba factory0479-60-7110 and separate fax. Association member entry cross-matches headquarters value and address."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current English/Japanese company identity, factory and R&D",
+        "url": "https://www.mikasa-p.co.jp/company/"
+      },
+      {
+        "label": "Own three featured product families; explicitly not the entire inventory",
+        "url": "https://www.mikasa-p.co.jp/products/"
+      },
+      {
+        "label": "Actual epoxy/phenolic metal primers and CPO finished-coating role",
+        "url": "https://www.mikasa-p.co.jp/products/1"
+      },
+      {
+        "label": "Actual complete visible metal/plastic topcoat page",
+        "url": "https://www.mikasa-p.co.jp/products/2"
+      },
+      {
+        "label": "Actual complete visible functional-coating and auxiliary roles",
+        "url": "https://www.mikasa-p.co.jp/products/3"
+      },
+      {
+        "label": "Exact association company-specific general email and production-items entry",
+        "url": "https://kantoko.com/overview/member/mikasa-p/"
+      }
+    ]
+  },
   "higashi-nippon-toryo-tokyo": {
     "website": "https://www.hnt-net.co.jp/",
     "contactPage": "https://kantoko.com/overview/member/hnt-net/",
@@ -25043,6 +25135,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mikasa-paint-ichikawa",
   "higashi-nippon-toryo-tokyo",
   "otani-paint-osaka",
   "asahipen-osaka",
