@@ -9,11 +9,12 @@ import { leadMapFocusAnchor } from '../../lib/leadMapFocus'
 import type { LeadMapBounds } from '../../lib/leadMapBounds'
 import './GlobalLeadMap.css'
 
-function MapFocus({ target, leads, overviewToken, closeUp, detailOpen }: { target: PublicLead | null; leads: PublicLead[]; overviewToken: number; closeUp: boolean; detailOpen: boolean }) {
+function MapFocus({ target, leads, overviewToken, closeUp, detailOpen, dataRevision }: { dataRevision: number; target: PublicLead | null; leads: PublicLead[]; overviewToken: number; closeUp: boolean; detailOpen: boolean }) {
   const map = useMap()
   const targetRef = useRef(target)
   targetRef.current = target && leads.some((lead) => lead.id === target.id) ? target : null
   const detailOpenRef = useRef(detailOpen)
+  const previousRevision = useRef(dataRevision)
   detailOpenRef.current = detailOpen
   const focusTarget = useCallback((lead: PublicLead) => {
     const zoom = Math.max(map.getZoom(), 12)
@@ -34,7 +35,9 @@ function MapFocus({ target, leads, overviewToken, closeUp, detailOpen }: { targe
       if (targetRef.current) focusTarget(targetRef.current)
       else map.fitBounds([[south, west], [north, east]], { paddingTopLeft: [horizontalPadding, narrow ? 40 : 72], paddingBottomRight: [horizontalPadding, narrow ? 48 : 36], maxZoom, animate: false })
     }
-    fit()
+    const dataRefreshed = previousRevision.current !== dataRevision
+    previousRevision.current = dataRevision
+    if (!dataRefreshed) fit()
     let frame = 0
     const container = map.getContainer()
     let width = container.clientWidth, height = container.clientHeight
@@ -47,10 +50,10 @@ function MapFocus({ target, leads, overviewToken, closeUp, detailOpen }: { targe
     })
     observer.observe(container)
     return () => { observer.disconnect(); cancelAnimationFrame(frame) }
-  }, [map, south, west, north, east, maxZoom, overviewToken, focusTarget])
+  }, [map, south, west, north, east, maxZoom, overviewToken, focusTarget, dataRevision])
   useEffect(() => {
     if (targetRef.current) focusTarget(targetRef.current)
-  }, [map, target, detailOpen, focusTarget])
+  }, [map, target?.id, target?.latitude, target?.longitude, detailOpen, focusTarget])
   return null
 }
 
@@ -131,7 +134,8 @@ function MapLayers({ leads, selectedLead, hoveredLead, showDensity, onSelectLead
   </>
 }
 
-export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false, detailOpen = false, onReturnRegions, onBoundsChange }: {
+export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, onSelectGroup, overviewToken, closeUp = false, detailOpen = false, onReturnRegions, onBoundsChange, dataRevision = 0 }: {
+  dataRevision?: number;
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
   onSelectLead: (lead: PublicLead) => void; onSelectGroup: (group: LeadMapGroup) => void; overviewToken: number; closeUp?: boolean; onReturnRegions?: () => void;
   onBoundsChange?: (bounds: LeadMapBounds) => void; detailOpen?: boolean;
@@ -166,7 +170,7 @@ export function GlobalLeadMap({ leads, selectedLead, hoveredLead, onSelectLead, 
     <div className="lead-map-controls"><span>点击聚合点展开 · 点击公司联动客户卡片</span><label><input type="checkbox" checked={showDensity} onChange={(event) => setShowDensity(event.target.checked)} />显示线索密度</label></div>
     <MapContainer zoomAnimation={false} fadeAnimation={false} className="market-map global-lead-map" center={[20, 0]} zoom={1} minZoom={0} maxZoom={18} zoomSnap={0} maxBounds={[[-85, -180], [85, 180]]} maxBoundsViscosity={1} scrollWheelZoom aria-label="全球产品线索地图">
       <TileLayer noWrap attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <MapFocus target={selectedLead} leads={leads} overviewToken={overviewToken} closeUp={closeUp} detailOpen={detailOpen} />
+      <MapFocus dataRevision={dataRevision} target={selectedLead} leads={leads} overviewToken={overviewToken} closeUp={closeUp} detailOpen={detailOpen} />
       <MapBoundsObserver onChange={onBoundsChange} />
       <MapLayers leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} showDensity={showDensity} onSelectLead={onSelectLead} onSelectGroup={onSelectGroup} />
     </MapContainer>

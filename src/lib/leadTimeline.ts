@@ -2,7 +2,8 @@ import records from './leadFirstRecorded.json'
 
 type TimedLead = { id: string; company: string; checkedAt: string }
 export type TimelineRecord = { recordedAt: string; commit: string }
-const history: Record<string, TimelineRecord> = records
+let history: Record<string, TimelineRecord> = records
+export function replaceLeadTimeline(next: Record<string, TimelineRecord>) { history = next }
 export type TimelineOrder = 'newest' | 'oldest'
 
 export function recordedTime(lead: Pick<TimedLead, 'id'>): string | null {

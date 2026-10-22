@@ -1,4 +1,4 @@
-import { leadEmailFacts } from './leadEmailFacts'
+import { leadEmailFacts } from './leadEmailFacts.ts'
 
 // Editorial shortening of existing sourced observations only. Keep the original
 // sentences for legacy references; new customers use their reviewed fact directly.

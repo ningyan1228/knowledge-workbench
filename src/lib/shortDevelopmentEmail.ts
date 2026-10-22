@@ -7,6 +7,7 @@ import {
 } from './productMarketMap'
 import { leadEmailFacts } from './leadEmailFacts'
 import { conciseCompanyFact } from './conciseLeadEmailFacts'
+import { refreshedLeadFact } from './publicLeadOverrides'
 import { isTaiwanMarket } from './leadMarketScope'
 import { namedEmailVerified, selectBusinessRecipient } from './contactEvidence'
 import { firstContactStrategy } from './firstContactStrategy'
@@ -73,7 +74,8 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
     || !verifiedDay(evidence.verifiedAt)
     || !(lead.profile.website || lead.profile.contactPage || lead.profile.linkedIn || lead.profile.generalEmail || lead.profile.generalPhone || lead.profile.departmentEmails.length)) return null
 
-  const companyFact = style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id)
+  const refreshed = refreshedLeadFact(lead)
+  const companyFact = refreshed ? style === 'legacy' ? refreshed.email : refreshed.concise : style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id)
   if (!companyFact) return null
   const productName = productNames[lead.productId]
   const strategy = firstContactStrategy(lead, recipientName)

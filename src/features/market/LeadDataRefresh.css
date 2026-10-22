@@ -1,0 +1,14 @@
+.lead-data-refresh { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:5px 9px; min-width:0 }
+.lead-data-refresh button { display:inline-flex; align-items:center; justify-content:center; gap:5px; min-height:30px; padding:5px 8px; border:1px solid var(--line); border-radius:7px; color:var(--blue); background:var(--surface); font:inherit; font-size:12px; cursor:pointer; white-space:nowrap }
+.lead-data-refresh button:hover:not(:disabled) { background:var(--blue-soft) }
+.lead-data-refresh button:disabled { opacity:.65; cursor:wait }
+.lead-data-refresh button:focus-visible { outline:2px solid var(--blue); outline-offset:2px }
+.lead-data-refresh span { color:var(--muted); font-size:11px; line-height:1.6; overflow-wrap:anywhere; max-width:360px }
+.lead-data-refresh.has-error span { color:var(--warning) }
+.is-refreshing { animation:lead-data-refresh-spin 1s linear infinite }
+@keyframes lead-data-refresh-spin { to { transform:rotate(360deg) } }
+.customer-result-actions { display:flex; align-items:center; flex-wrap:wrap; justify-content:flex-end; gap:10px }
+.timeline-summary-row:has(.lead-data-refresh) { flex-wrap:wrap; gap:8px 16px }
+.timeline-summary-row>.lead-data-refresh { margin-left:auto }
+@media(max-width:650px) { .customer-result-actions { gap:5px }.customer-result-actions .lead-data-refresh span { flex-basis:100%; max-width:190px }.timeline-summary-row>.lead-data-refresh { justify-content:flex-start; margin-left:0 }.lead-data-refresh button { min-height:34px; font-size:11px } }
+@media(prefers-reduced-motion:reduce) { .is-refreshing { animation:none } }

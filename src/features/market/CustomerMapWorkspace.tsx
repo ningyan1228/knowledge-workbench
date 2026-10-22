@@ -10,7 +10,8 @@ import type { OutreachLedger } from './useOutreachLedger'
 import type { LeadWork } from './useLeadWork'
 import './CustomerMapWorkspace.css'
 
-export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelectLead, onHighlight, onOpenDetail, detailOpen = false, overviewToken, onOverview, onReturnRegions, ledger, work }: {
+export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelectLead, onHighlight, onOpenDetail, detailOpen = false, overviewToken, onOverview, onReturnRegions, ledger, work, dataRevision = 0 }: {
+  dataRevision?: number;
   leads: PublicLead[]; selectedLead: PublicLead | null; hoveredLead: PublicLead | null;
   onSelectLead: (lead: PublicLead | null) => void; onHighlight: (lead: PublicLead | null) => void;
   onOpenDetail: (lead: PublicLead, target?: CompanyDetailOpenTarget) => void; detailOpen?: boolean; overviewToken: number; onOverview: () => void;
@@ -19,6 +20,7 @@ export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelec
   const [scope, setScope] = useState<'all' | 'viewport'>('viewport')
   const [bounds, setBounds] = useState<LeadMapBounds | null>(null)
   const sidebar = useRef<HTMLDivElement>(null)
+  const previousRevision = useRef(dataRevision)
   const visible = useMemo(() => leadsInMapBounds(leads, bounds), [leads, bounds])
   const sidebarLeads = scope === 'viewport' ? visible : leads
   const allCount = mapCompanyCount(leads), visibleCount = mapCompanyCount(visible)
@@ -28,6 +30,7 @@ export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelec
   const showAll = () => { setScope('all'); sidebar.current?.scrollTo({ top: 0, behavior: 'instant' }); onOverview() }
 
   useEffect(() => {
+    if (previousRevision.current !== dataRevision) { previousRevision.current = dataRevision; return }
     if (!selectedLead || !sidebarLeads.some((lead) => lead.id === selectedLead.id)) return
     const frame = requestAnimationFrame(() => {
       const container = sidebar.current
@@ -44,7 +47,7 @@ export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelec
       container.scrollTo({ top: Math.max(0, top), behavior })
     })
     return () => cancelAnimationFrame(frame)
-  }, [selectedLead, sidebarLeads])
+  }, [selectedLead?.id, sidebarLeads, dataRevision])
 
   return <>
     <div className="map-list-toolbar">
@@ -56,7 +59,7 @@ export function CustomerMapWorkspace({ leads, selectedLead, hoveredLead, onSelec
       <span className="map-list-context" role="status">{scope === 'viewport' ? `列表随地图移动和缩放更新 · ${visibleCount} / ${allCount} 家` : `列表显示全部筛选结果 · 地图内 ${visibleCount} / ${allCount} 家`}</span>
     </div>
     <div className="market-map-layout lead-map-layout mac-customer-map">
-      <div><GlobalLeadMap leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} detailOpen={detailOpen} overviewToken={overviewToken} onBoundsChange={onBoundsChange} onReturnRegions={onReturnRegions}
+      <div><GlobalLeadMap dataRevision={dataRevision} leads={leads} selectedLead={selectedLead} hoveredLead={hoveredLead} detailOpen={detailOpen} overviewToken={overviewToken} onBoundsChange={onBoundsChange} onReturnRegions={onReturnRegions}
         onSelectLead={(lead) => { onHighlight(null); onSelectLead(lead) }}
         onSelectGroup={() => { setScope('viewport'); onHighlight(null); onSelectLead(null) }} /></div>
       <div ref={sidebar} className="lead-map-sidebar" aria-label="地图客户列表">
