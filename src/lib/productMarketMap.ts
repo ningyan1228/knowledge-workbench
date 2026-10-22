@@ -7897,11 +7897,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "cathal-gliwice",
+    "company": "CATHAL (Gliwice)",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Gliwice",
+    "latitude": 50.2945,
+    "longitude": 18.6714,
+    "legacyCompanyDescription": "自产涂料、清漆和胶黏剂并设实验室；Aqua art - perłowa为可用于木材的水性丙烯酸装饰漆。 坐标为Gliwice城市代表点，非工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "自产涂料、清漆和胶黏剂并设实验室；Aqua art - perłowa为可用于木材的水性丙烯酸装饰漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "已查CATHAL官网制造介绍和完整可见产品目录。公开业务为水性／溶剂型成品漆、清漆、木用PVAc类胶、装饰浆料、除锈及清洁制剂和润滑油分装。Aqua art - perłowa明确为可用于木材的水性丙烯酸漆；PE/PP用清漆按成品涂料描述，PVAc及丙烯酸改性分散体为胶配方基础，不据此认定外售聚烯烃原料。在实际已读整体制造业务和目录范围内，未见水性PO/CPO分散体、聚烯烃乳液或同功能附着促进原料外售，结论限所查范围，不保证未披露配方或所有历史产品。同域名、当前Gliwice地址及CATHAL经营名称只计一个账户，不拆历史法律形式或商标；未确认当前采购、我方材料相容性或性能。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱及联系页",
+      "email": "biuro@cathal.com.pl",
+      "phone": "+48 601 064 881",
+      "contactUrl": "https://www.cathal.com.pl/contact.html"
+    },
+    "source": {
+      "label": "Own current Aqua art - perłowa waterborne acrylic decorative-paint description including wood",
+      "url": "https://www.cathal.com.pl/produkty.html"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "cathal-gliwice": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "prochem-klomnice": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sobeltec-ariomat-ronse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "novol-komorniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8274,6 +8303,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "cathal-gliwice": {
+    "website": "https://www.cathal.com.pl/",
+    "contactPage": "https://www.cathal.com.pl/contact.html",
+    "address": "44-100 Gliwice,ul.Chorzowska58,Polska. Map uses Gliwice city representative, not factory GPS. Current public trade name retained; unverified legal suffix and registration numbers omitted.",
+    "generalEmail": "biuro@cathal.com.pl",
+    "generalEmailEvidence": {
+      "company": "CATHAL (Gliwice)",
+      "value": "biuro@cathal.com.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current CATHAL public business contact HTML and exact mailto link",
+          "url": "https://www.cathal.com.pl/contact.html",
+          "summary": "Actual direct original HTTP200 contact page names CATHAL/Gliwice address and publishes E-mail:biuro@cathal.com.pl with matching mailto. General company business mailbox, no named procurement ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "+48 601 064 881",
+    "generalPhoneEvidence": {
+      "company": "CATHAL (Gliwice)",
+      "value": "+48 601 064 881",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current CATHAL public company contact telephone",
+          "url": "https://www.cathal.com.pl/contact.html",
+          "summary": "Actual original contact page explicitly publishes Telefon:+48601064881 alongside company address and mailbox. This is a disclosed company business route, not named buyer or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current coating/varnish/adhesive manufacture and laboratory scope",
+        "url": "https://www.cathal.com.pl/"
+      },
+      {
+        "label": "Own current complete visible product range and Aqua art - perłowa waterborne acrylic paint including wood",
+        "url": "https://www.cathal.com.pl/produkty.html"
+      },
+      {
+        "label": "Own current public business address, exact company email and telephone via original contact HTML",
+        "url": "https://www.cathal.com.pl/contact.html"
+      }
+    ]
+  },
   "prochem-klomnice": {
     "website": "https://www.farby-prochem.pl/",
     "contactPage": "https://www.farby-prochem.pl/pl/kontakt",
@@ -25777,6 +25857,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "cathal-gliwice",
   "prochem-klomnice",
   "sobeltec-ariomat-ronse",
   "novol-komorniki",
