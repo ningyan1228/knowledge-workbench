@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "taiyo-toryo-tokyo": "Your SLプライマーEP is listed as a one-component, modified epoxy rust-preventive primer.",
   "mikasa-paint-ichikawa": "Your ボンデ88 primer uses an epoxy–phenolic system for metal substrates, including light metals.",
   "higashi-nippon-toryo-tokyo": "Your product catalogue lists ソルエポ90 floor coatings alongside metal primers and waterproofing coatings.",
   "otani-paint-osaka": "Your VATON-FX is a penetrating wood stain formulated with plant oils, pigments and solvent.",

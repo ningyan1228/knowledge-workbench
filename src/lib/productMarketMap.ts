@@ -7678,11 +7678,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "taiyo-toryo-tokyo",
+    "company": "太洋塗料株式会社",
+    "productId": "elo",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Tokyo",
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "legacyCompanyDescription": "当前官网明确建筑、工业及路面专用涂料的自主开发制造、东京大田区本社工厂与法人编号；现行资料页列SLプライマーEP为单组分改性环氧防锈底漆，另列双组分水性环氧及其他工业防护涂料。 地图为Tokyo城市代表点，非大田区厂门GPS。",
+    "fit": "可开发候选",
+    "signal": "当前官网明确建筑、工业及路面专用涂料的自主开发制造、东京大田区本社工厂与法人编号；现行资料页列SLプライマーEP为单组分改性环氧防锈底漆，另列双组分水性环氧及其他工业防护涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立复核当前公司、完整返回的现行资料页、实际公司联系页、协会公司专属生产品目、当前官网所链接2022-01-24修订产品表提取文字及主页有限正文。太洋塗料株式会社当前明确专用涂料开发制造，原法人编号T8010801006451、本社工厂地址与协会同名条目相符；历史第2工厂集约、JIS及ISO记录不冒称2026新增工厂或现行认证复核。当前资料覆盖建筑、工业、路面、下涂和颜色资料，既有环氧/改性环氧金属防护底漆与水性配方，也含无机/有机无机混成、丙烯酸、聚氨酯、醇酸、硅氧烷、剥离保护、抗结露/隔热、阻燃、木材保护和标线成品及SLパテ等配套。旧产品表实际列タイヨープライマー706为特殊偶联剂、用于费罗混凝土/彩色混凝土上标线漆的基材预处理，保留其成分/用途文字，不将其泛称ELO/ESBO/植物油增塑剂或不明原料附着剂，也不称公司只有面漆没有配套输入业务。当前所查制造角色、五类公开资料及旧产品表相关范围未见ELO、ESBO、环氧化植物油或同类生物基增塑/稳定原料外售证据，按所选输入和实际公开范围有限通过；不声称所有当前SKU、全部SDS、未披露配方、海外经营或最终股权已穷尽。首页仅216字符介绍/导航，不算完整业务审读；当前industrial链接未另取，不以未读页补证。产品表明印20220124修订，现仍链接不等于2026新版本；提取表格顺序交错，不据此猜逐行容量/基材关联、物理页数或视觉审阅。仅以当前资料页SLプライマーEP单组分改性环氧防锈底漆事实个性化，客户的防锈、固化、耐候、安全或认证效果不转给我方ELO；ELO仅为用户资料支持的涂料柔韧/树脂改性评估，不确认相容、现用、采购或替换需求。以太洋塗料/taiyotoryo/法人编号/主要品牌对照最新main363、本地379、全量私有队列/frontier695无同一账户，厂址、品牌和Search同址太洋塗料商事只记关联核验线索，不按品牌/工厂/商社另计新户；商社注册/现控股关系未读，不编造收购或共同控制。与太陽化学塗料、太陽化学溶剂、太洋弯管设备、太一/太田塗料、Asahipen关联大豊塗料区分，不能仅靠近似日文名称归组。当前官网邮箱以info［at］明确展示且原文要求将［at］替换＠，故按其明确说明规范为info@taiyotoryo.co.jp，不是猜邮箱；协会另列postmaster仅保留原始来源，不选作开发收件地址。官网电话与当前公司本社值一致，协会事务局电话/邮箱和公司传真不收作业务电话。仅general公司入口，无具名采购，不把代表/董事当买方，不猜WhatsApp/个人邮箱或确认可投递。当前主来源、应用来源及实际主页均为已读HTTPS，写入前依现有网站契约检查，不将旧HTTP协会链接自动改成新证据。地图是Tokyo城市代表点，非实测厂门坐标。"
+    },
+    "contact": {
+      "label": "当前官网明确展示的公司通用业务邮箱及本社电话；非具名采购",
+      "email": "info@taiyotoryo.co.jp",
+      "phone": "03-3745-0111",
+      "contactUrl": "https://www.taiyotoryo.co.jp/contact"
+    },
+    "source": {
+      "label": "Own current SLプライマーEP modified-epoxy rust-primer listing and disclosed company manufacture",
+      "url": "https://www.taiyotoryo.co.jp/document"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "taiyo-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mikasa-paint-ichikawa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "higashi-nippon-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "otani-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8047,6 +8076,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "taiyo-toryo-tokyo": {
+    "website": "https://www.taiyotoryo.co.jp/",
+    "contactPage": "https://www.taiyotoryo.co.jp/contact",
+    "address": "6-4-18 Higashikojiya, Ota-ku, Tokyo144-0033, Japan. Own current company page identifies headquarters/factory. Coordinates are a Tokyo city representative point, not surveyed Ota factory GPS; historical second factory is not a second customer.",
+    "generalEmail": "info@taiyotoryo.co.jp",
+    "generalEmailEvidence": {
+      "company": "太洋塗料株式会社",
+      "value": "info@taiyotoryo.co.jp",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current contact page with explicit anti-spam notation and normalization instruction",
+          "url": "https://www.taiyotoryo.co.jp/contact",
+          "summary": "Own company contact explicitly prints info［at］taiyotoryo.co.jp and instructs replacing［at］with＠when emailing. Canonical info@taiyotoryo.co.jp follows that instruction, not an inferred mailbox. General corporate enquiry only; association postmaster@ is not selected, no named buyer or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "generalPhone": "03-3745-0111",
+    "generalPhoneEvidence": {
+      "company": "太洋塗料株式会社",
+      "value": "03-3745-0111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current contact and company headquarters/factory",
+          "url": "https://www.taiyotoryo.co.jp/contact",
+          "summary": "Own contact Tel03-3745-0111 matches current Company headquarters/factory and company-specific association entry. Fax03-3743-9161 and association office03-3443-4011 are separate and not treated as company voice."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current company legal identity and manufacturing/headquarters factory",
+        "url": "https://www.taiyotoryo.co.jp/company"
+      },
+      {
+        "label": "Own current coating/document range and exact SLプライマーEP fact",
+        "url": "https://www.taiyotoryo.co.jp/document"
+      },
+      {
+        "label": "Own current exact corporate email normalization instruction and phone",
+        "url": "https://www.taiyotoryo.co.jp/contact"
+      },
+      {
+        "label": "Exact association company production-items record; its legacy postmaster mailbox is not selected",
+        "url": "https://kantoko.com/overview/member/taiyotoryo/"
+      },
+      {
+        "label": "Own linked product table, printed revision2022-01-24; extracted text only",
+        "url": "https://www.taiyotoryo.co.jp/_files/ugd/3eeda5_4724f718431f4d3b9c4656691bd55b1c.pdf"
+      },
+      {
+        "label": "Own current homepage limited216-character introduction/navigation",
+        "url": "https://www.taiyotoryo.co.jp/"
+      }
+    ]
+  },
   "mikasa-paint-ichikawa": {
     "website": "https://www.mikasa-p.co.jp/",
     "contactPage": "https://kantoko.com/overview/member/mikasa-p/",
@@ -25135,6 +25227,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "taiyo-toryo-tokyo",
   "mikasa-paint-ichikawa",
   "higashi-nippon-toryo-tokyo",
   "otani-paint-osaka",
