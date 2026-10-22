@@ -7706,11 +7706,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "saito-paint-osaka",
+    "company": "斎藤塗料株式会社 (SAITO PAINT CO.,LTD.)",
+    "productId": "elo",
+    "country": "Japan",
+    "countryZh": "日本",
+    "city": "Osaka",
+    "latitude": 34.6937,
+    "longitude": 135.5023,
+    "legacyCompanyDescription": "当前官网公司概要明确大阪本社工厂和各类涂料制造销售，联系页明确底漆及面漆的开发制造；特殊涂料目录列エポライト１０１０クリヤー为双组分环氧树脂涂料、用于灌封。 Osaka城市代表点，非三津屋北工厂GPS。",
+    "fit": "可开发候选",
+    "signal": "当前官网公司概要明确大阪本社工厂和各类涂料制造销售，联系页明确底漆及面漆的开发制造；特殊涂料目录列エポライト１０１０クリヤー为双组分环氧树脂涂料、用于灌封。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立复核当前自有特殊涂料目录、公司介绍、公司概要、公开业务联系表单、产品分类总览及マジッククリヤー具体页面的已返回正文。公司概要同时公开日文和英文法定名称、大阪本社工厂、涂料制造销售角色及关联SAKURA PAINT VIETNAM CO.,LTD.工厂，不按大阪/越南/品牌或喷涂器具网站分拆新增。当前目录包含环氧、聚氨酯、聚酯腻子、硝化纤维素漆、UV和基材处理配套；明确保留メラミン低温化添加剤S、マジッククリヤー和ルボン55等添加/改质产品，不称公司全部只卖成品面漆。实际读取的MagicClear详情标明硝化纤维素漆体系、用于将烘烤型三聚氰胺涂料转换成常温干燥修补漆；该用途不是ELO/ESBO或环氧化植物油增塑稳定原料销售的证据。按已读公司制造范围、完整返回的特殊涂料本页、产品总分类及具体改质剂原文，未见所选ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入外售，有限通过所选输入排除；不声称全部底漆/面漆子目录、所有SDS、未披露配方或全球最终股权已穷尽。其他未取具体添加剂详情不猜化学成分。ELO仅按用户资料支持的涂料柔韧/树脂改性方向提出材料评估；不把客户环氧/聚氨酯、抗锈、300%伸长、成本、耐溶剂、RoHS/REACH或其他性能/认证转给我方材料，不推定已使用、采购、相容或时机。当前main364、本地380、私有全队列及frontier700逐项核对公司/域名/关联越南厂/器具品牌，无同一已知账户；东京斉藤塗料商社、斎藤塗工店及其他同音承包商不是本大阪制造法人。公司公开表单确有业务询问入口，未填写或提交。页脚E-mail是未独立读取的图片，sample@company.com只是表单示例，均不猜写收件邮箱；不把越南厂电话转给日本本社，不添加具名采购、WhatsApp或可投递断言。地图为Osaka城市代表点，不是厂门实测坐标。全部主证据为实际已读HTTPS；六个特定URL来源封顶，MagicClear补读仅使用已缓存来源的find上下文，没有追加URL取件。"
+    },
+    "contact": {
+      "label": "已核验官网公开业务联系表单；收件邮箱尚未独立核验",
+      "contactUrl": "https://www.saito-paint.co.jp/ja/contact"
+    },
+    "source": {
+      "label": "Own current Epolite1010 clear two-component epoxy potting-coating listing",
+      "url": "https://www.saito-paint.co.jp/ja/product/list/3"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "saito-paint-osaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "taiyo-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mikasa-paint-ichikawa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "higashi-nippon-toryo-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8076,6 +8103,39 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "saito-paint-osaka": {
+    "website": "https://www.saito-paint.co.jp/ja/",
+    "contactPage": "https://www.saito-paint.co.jp/ja/contact",
+    "address": "〒532-0032 大阪市淀川区三津屋北3丁目2-4, Japan. Own company overview identifies headquarters/factory. Coordinates represent Osaka city; not surveyed factory GPS. Related Sakura Paint Vietnam factory retained as one associated account.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current special-coating list and epoxy potting-coating fact",
+        "url": "https://www.saito-paint.co.jp/ja/product/list/3"
+      },
+      {
+        "label": "Own current company introduction",
+        "url": "https://www.saito-paint.co.jp/ja/company"
+      },
+      {
+        "label": "Own current exact legal names, Osaka headquarters factory and associated Vietnam company",
+        "url": "https://www.saito-paint.co.jp/ja/company02"
+      },
+      {
+        "label": "Own current public business inquiry form; no submission",
+        "url": "https://www.saito-paint.co.jp/ja/contact"
+      },
+      {
+        "label": "Own current primer/topcoat/special and custom-formulation overview",
+        "url": "https://www.saito-paint.co.jp/ja/products"
+      },
+      {
+        "label": "Own current MagicClear nitrocellulose-lacquer modifier function; cached source-text contexts",
+        "url": "https://www.saito-paint.co.jp/ja/product/details/58"
+      }
+    ]
+  },
   "taiyo-toryo-tokyo": {
     "website": "https://www.taiyotoryo.co.jp/",
     "contactPage": "https://www.taiyotoryo.co.jp/contact",
@@ -25227,6 +25287,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "saito-paint-osaka",
   "taiyo-toryo-tokyo",
   "mikasa-paint-ichikawa",
   "higashi-nippon-toryo-tokyo",
