@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "anypsa-carabayllo": "Your Anypdur Epóxico range includes epoxy coatings for machinery, tools and metal furniture.",
+  "davies-paints-pasig": "Your AquaWood is a water-based acrylic wood varnish in your range of paints and coatings.",
   "irkom-kosjeric": "Your AQUALIN wood primer uses waterborne acrylic dispersions and prepares wood for the Aqualin finishing varnish.",
   "stancolac-thessaloniki": "Your 812 EPOXY PRIMER is a two-component epoxy-polyamide primer for steel structures, fuel tanks and harbor equipment.",
   "berling-inofita": "Your industrial coating range includes epoxy primers and intermediate coats, with polyurethane topcoats for outdoor applications.",

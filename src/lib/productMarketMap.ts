@@ -8064,11 +8064,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "davies-paints-pasig",
+    "company": "Davies Paints Philippines, Inc.",
+    "productId": "nl-w1201",
+    "country": "Philippines",
+    "countryZh": "菲律宾",
+    "city": "Pasig City",
+    "latitude": 14.5764,
+    "longitude": 121.0851,
+    "legacyCompanyDescription": "菲律宾水性木器及建筑成品涂料配方制造；公司2022版资料记载Pasig/Carmona生产与研发，当前官网品牌目录/联系入口复核",
+    "fit": "可开发候选",
+    "signal": "生产建筑及木器涂料；AquaWood 为水性丙烯酸木器清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立审读6次原始URL请求及缓存原文窗口。主站首页超时；主站Products和About当前读取仅导航，不当生产证明。当前自身DaviesColorFactory目录和Contact以DaviesPaintsPhilippinesInc版权、daviespaints.com.ph链接、公司域名邮箱及相同Pasig地址/客服线确认关联，AquaWood明确AcrylicWoodVarnish/Water-based。公司资料原件为FlipHTML5的DaviesPaints发布账户所载印尼版CompanyProfile，书内完整公司印记、官方域名、地址/客服线和当前自身目录对应；保留ISN2OCT2022及2022-12-26上线日期，不称2026新工厂。资料明确自有配方研发、原料评估、化学师逐批质控及Pasig/CarmonaCavite厂区；本轮只对文本作证，不宣称看过厂房照片或当前全厂状态实勘。缓存续读覆盖研发、木器、建筑/地坪涂料、防水/密封剂/修补体系和公司页；DV1350水性混凝土底涂、PONDO后续面漆附着促进、砂浆改性/防水体系均为施工成品及建筑配套，并不自动等同水性PO/CPO原料级附着促进剂。实际已读经营范围未发现所选NLW同类PO/CPO乳液或原料级附着促进剂对外销售；不称已读全全球SKU、叶页TDS或全部股权。AquaWood名称与其他厂家同名木器系列不可单凭产品名判同集团；公司/域名/CoatSaver/CharterChemical发现别名已完整查重无身份命中，DAVIES/CoatSaver/EZCoat/MONDO及海外区域不拆新增。现有网站客服邮箱customercare@daviespaints.com.ph及85707000明确公司归属，不用被遮蔽的2022个人邮箱，不把历史出口联系人当采购人。官网Mobile不自动当WhatsApp；1415A.Sandoval为公开业务地址，地图只Pasig城市位置，不把Carmona厂移到该坐标。未确认NLW适配、采购需求、时机、性能改善；公司成品VOC/抗菌/耐候/认证/项目案例不转为我方承诺。"
+    },
+    "contact": {
+      "label": "官网公开公司业务/客服邮箱及电话；未核实具名采购或技术收件人",
+      "email": "customercare@daviespaints.com.ph",
+      "phone": "+63 2 8570 7000",
+      "contactUrl": "https://www.daviescolorfactory.ph/contact-us"
+    },
+    "source": {
+      "label": "Own current AquaWood water-based acrylic wood varnish and dated company formulation/manufacturing profile",
+      "url": "https://www.daviescolorfactory.ph/color-factory-products"
+    },
+    "checkedAt": "2026-10-20"
+  },
+  {
+    "id": "anypsa-carabayllo",
+    "company": "Pinturas del Perú S.A. (ANYPSA)",
+    "productId": "elo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Carabayllo, Lima",
+    "latitude": -11.8667,
+    "longitude": -77.0333,
+    "legacyCompanyDescription": "秘鲁液体/粉末成品涂料及树脂配方制造；当前官网About/Contact称PinturasdelPerúS.A.，ANYPSA域名及既有名称统一关联查重",
+    "fit": "可开发候选",
+    "signal": "生产液体及粉末涂料；Anypdur Epóxico 为机械、工具和金属家具使用的工业环氧涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-20",
+      "conclusion": "独立审读6个当前官网来源及已缓存的业务段落：LíneaQuímica完整19项目录、About、Contact、AnypdurEpóxico、RMS60及Acrimax52。About与Contact明确运营称PINTURASDELPERUSA、自行生产液体/粉末涂料及CarabaylloLima业务地址，投诉表模板仍称ANYPSACORPORATIONSA；保留同网站关联名称而不虚构法人改名/合并时间。搜索Torvisco关联仅作发现别名查重，不当完整股权原始证据。AnypdurEpóxico为工业成品环氧涂层，适用于机械工具、汽车部件和金属家具，原文明确不建议户外暴露，不泛化为露天防腐保证。原料外售业务确实存在，不能因客户也卖原料就忽略同行检查：19项化工目录含醇酸/聚酯/马来酸/共聚树脂、催干剂、苯乙烯、MEKP、聚氨酯和乳液；ACEITEPOLIMERIZADO栏显示0项，不伪造已有油品SKU。RMS60为油改性丙烯酸共聚树脂、Acrimax52为水分散苯乙烯丙烯酸乳液，均200kg桶装供成品漆制造；这些不自动等同ELO/ESBO/环氧植物油或生物增塑稳定添加剂。按所选ELO输入及已读完整19项目录/两个实际原料叶页，未发现上述同类功能油/增塑添加剂外售；通过的是有限实际来源内排除，不称全部叶页/TDS/SDS/全球供应穷尽。配方制造树脂/成品涂料属ELO潜在下游，不把任意树脂供货误判ELO同行，也不把ELO已采购/适配当事实。ventas@anypsa.com.pe与(01)6139090归属当前Contact公司，通用销售/业务邮箱不冒充采购负责人；不选咨询分机/隐私或投诉表收件人，不自动将手机994649888当WhatsApp。ANYPSA/ANYPSAPERU/ANYPSACORP/PinturasdelPeru/Anypdur/RMS/Acrimax及已发现Torvisco名称统一查重，本轮一家公司；主站当前业务表述优先，不用2022扩建许可冒称2026新厂。没有当前采购、ELO使用/相容或性能保证，成品耐化学/机械性能及客户认证不转给我方材料。"
+    },
+    "contact": {
+      "label": "官网公开公司业务/客服邮箱及电话；未核实具名采购或技术收件人",
+      "email": "ventas@anypsa.com.pe",
+      "phone": "+51 1 613 9090",
+      "contactUrl": "https://www.anypsa.com.pe/contactenos"
+    },
+    "source": {
+      "label": "Own Anypdur Epóxico industrial coating, self manufacture and selected input catalogue originals",
+      "url": "https://www.anypsa.com.pe/linea-industrial/revestimientos/anypdur-epoxico"
+    },
+    "checkedAt": "2026-10-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "anypsa-carabayllo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "davies-paints-pasig": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "irkom-kosjeric": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "stancolac-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "berling-inofita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8447,6 +8505,128 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "anypsa-carabayllo": {
+    "website": "https://www.anypsa.com.pe/",
+    "contactPage": "https://www.anypsa.com.pe/contactenos",
+    "address": "Carretera Chillón Trapiche, Mz. S/N, Lote 69, Urb. Los Huertos de Tungasuca, Carabayllo, Lima, Peru; own current public business address. Map is a Carabayllo city representative point, not an exact plant geocode.",
+    "generalEmail": "ventas@anypsa.com.pe",
+    "generalEmailEvidence": {
+      "company": "Pinturas del Perú S.A. (ANYPSA)",
+      "value": "ventas@anypsa.com.pe",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company business contact",
+          "url": "https://www.anypsa.com.pe/contactenos",
+          "summary": "Own Contact names PINTURASDELPERUSA and explicitly publishes ventas@anypsa.com.pe as company email. Shared business/sales route, no named procurement identity."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+51 1 613 9090",
+    "generalPhoneEvidence": {
+      "company": "Pinturas del Perú S.A. (ANYPSA)",
+      "value": "+51 1 613 9090",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company business contact",
+          "url": "https://www.anypsa.com.pe/contactenos",
+          "summary": "Own Contact explicitly labels Telefono(01)6139090. Country+51 follows verified Peru company address; separate from consultation extension/mobile and no WhatsApp assumption."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.anypsa.com.pe/acerca-de-nosotros"
+      },
+      {
+        "label": "Own current public business contact/address",
+        "url": "https://www.anypsa.com.pe/contactenos"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.anypsa.com.pe/linea-industrial/revestimientos/anypdur-epoxico"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.anypsa.com.pe/linea-quimica"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.anypsa.com.pe/linea-quimica/copolimerizadas/rms--60"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.anypsa.com.pe/linea-quimica/emulsiones/acrimax--52"
+      }
+    ]
+  },
+  "davies-paints-pasig": {
+    "website": "https://www.daviespaints.com.ph/",
+    "contactPage": "https://www.daviescolorfactory.ph/contact-us",
+    "address": "1415 A. Sandoval Ave., cor. Mercedes Ave., Brgy. San Miguel, Pasig City, Metro Manila, Philippines; own current public business contact address, city-only map. The dated2022company profile separately identifies Pasig and Carmona Cavite plants; no new2026plant claim.",
+    "generalEmail": "customercare@daviespaints.com.ph",
+    "generalEmailEvidence": {
+      "company": "Davies Paints Philippines, Inc.",
+      "value": "customercare@daviespaints.com.ph",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company business contact",
+          "url": "https://www.daviescolorfactory.ph/contact-us",
+          "summary": "Own brand Contact explicitly publishes customercare@daviespaints.com.ph under Pasig/MetroManila for DaviesPaintsPhilippinesInc. Shared customer-care mailbox, not named procurement."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "generalPhone": "+63 2 8570 7000",
+    "generalPhoneEvidence": {
+      "company": "Davies Paints Philippines, Inc.",
+      "value": "+63 2 8570 7000",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company business contact",
+          "url": "https://www.daviescolorfactory.ph/contact-us",
+          "summary": "Own Contact explicitly labels Phone+63285707000, distinct from Mobile+639175721458, branch phones and faxes. No WhatsApp assumption."
+        }
+      ],
+      "verifiedAt": "2026-10-20"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.daviescolorfactory.ph/color-factory-products"
+      },
+      {
+        "label": "Own current public business contact/address",
+        "url": "https://www.daviescolorfactory.ph/contact-us"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://fliphtml5.com/ddalr/phyc/Company_Profile/"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.daviespaints.com.ph/products/"
+      },
+      {
+        "label": "Company application/manufacturing/product-scope original; publication date preserved separately",
+        "url": "https://www.daviespaints.com.ph/about-us/"
+      }
+    ]
+  },
   "irkom-kosjeric": {
     "website": "https://irkom.rs/",
     "contactPage": "https://irkomultra.rs/kontakt/",
@@ -26308,6 +26488,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "anypsa-carabayllo",
+  "davies-paints-pasig",
   "irkom-kosjeric",
   "stancolac-thessaloniki",
   "berling-inofita",
