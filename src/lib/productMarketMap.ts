@@ -8120,11 +8120,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-20"
   },
+  {
+    "id": "chromos-svjetlost-luzani",
+    "company": "CHROMOS-SVJETLOST d.o.o.",
+    "productId": "nl-w1201",
+    "country": "Croatia",
+    "countryZh": "克罗地亚",
+    "city": "Lužani — Croatia country-level map marker; exact site not geocoded",
+    "latitude": 45.1,
+    "longitude": 15.2,
+    "legacyCompanyDescription": "克罗地亚Lužani涂料制造企业；AQUALUX wood primer为水稀释丙烯酸木器底漆",
+    "fit": "可开发候选",
+    "signal": "生产涂料及木器涂装产品；AQUALUX wood primer 为水稀释丙烯酸木器底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "实际读取公司About生产/开发介绍、Aqualux目录第一页、独立Contact及AQUALUX wood primer产品正文；另保留Aqualux第一次工具连接失败和Industry目录Cache miss，共6次公司来源尝试，4正文/2失败，0剩余。实际可见全站家族菜单为Aqualux、金属保护、木材底涂/透明/着色/地板、外墙胶浆/腻子/底涂、内墙装饰、工业、调色、稀释剂及配套成品。Aqualux第一页列8种成品涂层/底漆并有第二页链接；未称已读第二页或全部SKU。AQUALUX木器底漆原文为可水稀释丙烯酸树脂及颜料、供Aqualux面漆前使用，属于成品木器底涂，未当作原料级PO/CPO乳液。已读经营范围未发现对外销售聚烯烃/CPO分散体或同类原料级附着力促进剂，属于有限实际来源内排除；Industry正文失败，其他叶页/TDS/SDS/配方及未披露关联原料业务未穷尽。不编造外购例外。About明确Lužani涂料生产/产品开发，1977加入Chromos化工联合体为历史日期；不据Chromos通名认定现今KansaiHelios/ChromosbojeilakoviZagreb同一法人或所有权，也不宣称工商终极受益所有权审计。公开公司名、地址、国家/语言站域名及Aqualux品牌共同查重；各国销售站、塞尔维亚代表处、同一木器系列不拆新增。官网Contact页面England标题与Croatia地址并存，采用正文/页脚明确的LužaniHrvatska业务地址，不称英国工厂。中间E行链接排版不完整，采用About及Contact页脚一致、明确公开的info@chromos-svjetlost.hr通用邮箱，不猜.eu邮箱，不冒充具名采购或技术人员。未读取到电话或WhatsApp，不补造。客户环保/防火/耐候/施工参数不移植为NL-W1201性能或认证。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱及联系页；未核验具名采购或技术收件人，未取得公开电话",
+      "email": "info@chromos-svjetlost.hr",
+      "contactUrl": "https://www.chromos-svjetlost.eu/en/contact"
+    },
+    "source": {
+      "label": "Actual AQUALUX water-dilutable acrylic wood primer and own Lužani paint manufacturing/development description",
+      "url": "https://www.chromos-svjetlost.eu/en/proizvod/aqualux-program/aqualux-wood-primer-5"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chromos-svjetlost-luzani": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anypsa-carabayllo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "davies-paints-pasig": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "irkom-kosjeric": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8505,6 +8533,46 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chromos-svjetlost-luzani": {
+    "website": "https://www.chromos-svjetlost.eu/en/about_us",
+    "contactPage": "https://www.chromos-svjetlost.eu/en/contact",
+    "address": "M. Stojanovića 13, HR–35257, Lužani, Hrvatska, as explicitly published on own About, product and Contact footer. The Contact heading says England but its address is Croatia; no UK plant asserted. Coordinates45.1,15.2 are deliberately coarse Croatia country-level indicative placement, not the geocoded position of Lužani, plant or street entrance.",
+    "generalEmail": "info@chromos-svjetlost.hr",
+    "generalEmailEvidence": {
+      "company": "CHROMOS-SVJETLOST d.o.o.",
+      "value": "info@chromos-svjetlost.hr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own official Contact corporate footer, cross-matched with About and product footer",
+          "url": "https://www.chromos-svjetlost.eu/en/contact",
+          "summary": "Contact footer explicitly lists CHROMOS-SVJETLOST d.o.o., exact info@chromos-svjetlost.hr and Lužani address; same exact mailbox on About and AQUALUX product. Use actual hr mailbox rather than reconstructing malformed middle E-line or guessing eu mailbox. General company channel; no named buyer, purchasing responsibility or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own About: Lužani paint/varnish production, product development and dated company history",
+        "url": "https://www.chromos-svjetlost.eu/en/about_us"
+      },
+      {
+        "label": "Own Aqualux catalogue first page: eight visible finished wood/metal products, page2 not read",
+        "url": "https://www.chromos-svjetlost.eu/en/items/aqualux-program-1"
+      },
+      {
+        "label": "Actual AQUALUX wood primer: water-dilutable acrylic resin/pigment basecoat for wood before topcoat",
+        "url": "https://www.chromos-svjetlost.eu/en/proizvod/aqualux-program/aqualux-wood-primer-5"
+      },
+      {
+        "label": "Own Contact: exact corporate general mailbox and Croatia business address; no phone read",
+        "url": "https://www.chromos-svjetlost.eu/en/contact"
+      }
+    ]
+  },
   "anypsa-carabayllo": {
     "website": "https://www.anypsa.com.pe/",
     "contactPage": "https://www.anypsa.com.pe/contactenos",
@@ -26488,6 +26556,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chromos-svjetlost-luzani",
   "anypsa-carabayllo",
   "davies-paints-pasig",
   "irkom-kosjeric",
