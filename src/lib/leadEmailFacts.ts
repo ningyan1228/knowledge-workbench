@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "egrokorr-erd": "Your KATEPOX is a two-component epoxy coating for corrosion protection of steel structures.",
   "malexim-warsaw": "Your EKOCYNKAL GRUNTOEMALIA AKRYLOWA 2w1 is a water-based acrylic primer-enamel for wood.",
   "sob-solutions-biars-sur-cere": "Your EPOX 125 is a solvent-free, two-component epoxy coating for industrial and commercial concrete floors.",
   "sparco-paints-singapore": "Your Sparcofloor SL 200 is a self-smoothing, solvent-free, two-component epoxy flooring system.",

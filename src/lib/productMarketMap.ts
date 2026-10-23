@@ -8286,11 +8286,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "egrokorr-erd",
+    "company": "EGROKORR Festékipari Zrt.",
+    "productId": "elo",
+    "country": "Hungary",
+    "countryZh": "匈牙利",
+    "city": "Érd — Hungary country-level indicative map marker; business/factory address not geocoded",
+    "latitude": 47,
+    "longitude": 19,
+    "legacyCompanyDescription": "匈牙利Érd自有研发及制造工业防护涂料企业；KATEPOX双组分环氧钢结构防护体系",
+    "fit": "可开发候选",
+    "signal": "自有研发和生产工业防护涂料；KATEPOX 为用于钢结构防护的双组分环氧涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "本轮共享公司来源6次全部成功，5份匈牙利官网正文及1份其公开链接的塞尔维亚Trade网站正文；KATEPOX商品页只完整审读首段独有说明和技术/应用内容至8500字符，后部重复块未全部逐字复读。Cégismertető明确自有研发/制造、2003年迁至Érd工厂，以及KATEPOX2Kepoxi钢结构防护体系；不是从经销商工业分类或粉末涂料名称单独推定。About说明BudalakkIV历史漆和合成树脂厂后为DunalakkKft，当前家族经营制造成品涂层；不把历史树脂生产当成当前对外销售ELO/ESBO，也不独立认定当前精确股权或财务人数。实际当前家族涉及防腐涂层、粉末漆、水/溶剂型成品、木器漆、硅酮/丙烯酸密封胶和配套稀释剂。工业文章称碳纳米管预处理和可用于涂料的制备物研发，并用它们制造自身抗静电粉末、丙烯酸和环氧底漆；没有把这种研发直接写成原料对外销售、ELO同行或已独立核验全部配方。LakkokHigitok页实际提取正文只有业务页脚，实际可见链接指向地板/铜清漆、Alvinol涂层和配套稀释剂；第2/3页、全部SKU/SDS/TDS未读，不称目录穷尽或没有辅助产品。实际Trade正文说明EGROKORRZrt支持、塞尔维亚经营并从匈牙利/罗马尼亚合作方供应成品粉末/工业/装饰漆与Renova翻新涂层；未认定其独立制造或精确母子公司持股，未单独新增。Dunalakk罗马尼亚外链未读，不虚构已核清全球关联业务；品牌、历史前身及Trade按同一保守来源/查重账户处理。以上实际读取的当前制造范围、工业体系与Trade产品角色中未见ELO、ESBO、环氧化植物油或同功能增塑/稳定原料外售证据，有限来源内同行排除通过，不保证未披露业务或未读成分，不编造外购例外。KATEPOX耐化学、防腐寿命、柔韧/硬度、饮用水/食品接触、热性能、ISO/EMI/AKMI等均为客户自己成品/历史许可表述，不赋予我方ELO。aux官网页脚明确本公司Érd业务地址、通用邮箱和总机；Contact返回只见标题/销售分机，未见表单字段，不冒称已读完整联系表单，不将店铺电话或Trade的office邮箱错配到匈牙利主体，不冒称具名采购/技术人。6次后停止，不因产品/品牌/国家/提供方重置。"
+    },
+    "contact": {
+      "label": "官网公开匈牙利公司通用业务邮箱和总机；未核验具名采购/技术人，未核实联系页表单字段，电话不作WhatsApp",
+      "email": "egrokorr@egrokorr.hu",
+      "phone": "+36 (23) 521 270",
+      "contactUrl": "https://egrokorr.hu/kapcsolatok/"
+    },
+    "source": {
+      "label": "Own manufacturing profile explicitly identifies KATEPOX two-component epoxy steel-structure protective coating",
+      "url": "https://egrokorr.hu/cegismerteto/"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "egrokorr-erd": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "malexim-warsaw": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sob-solutions-biars-sur-cere": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sparco-paints-singapore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8677,6 +8706,68 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "egrokorr-erd": {
+    "website": "https://egrokorr.hu/",
+    "address": "2030 Érd,Fehérvári út63/J.,Hungary, exact published corporate business address in own footer; own profile identifies Érd factory relocation2003. Coordinates47,19 are deliberately coarse Hungary country-level indicative placement, not geocoded factory, Érd street address or store.",
+    "generalEmail": "egrokorr@egrokorr.hu",
+    "generalEmailEvidence": {
+      "company": "EGROKORR Festékipari Zrt.",
+      "value": "egrokorr@egrokorr.hu",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual EGROKORR industrial lacquers/thinners page corporate footer",
+          "url": "https://egrokorr.hu/portfolio_entries/lakkok-higitok/",
+          "summary": "Actual641charownpagefooterpublishescompanyaddress,egrokorr@egrokorr.huandgeneraltelephone. GeneralHungariancorporateinbox, not namedbuyer orSerbianoffice@egrokorrtrade.com. No deliverytest ormessage."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhone": "+36 (23) 521 270",
+    "generalPhoneEvidence": {
+      "company": "EGROKORR Festékipari Zrt.",
+      "value": "+36 (23) 521 270",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual EGROKORR industrial lacquers/thinners page corporate footer",
+          "url": "https://egrokorr.hu/portfolio_entries/lakkok-higitok/",
+          "summary": "Actualownfooter corporateTel+36(23)521270, matchedÉrdcorporateaddress; differentshopTel/Fax364196 andKunszentmiklós655012notselectedasfactoryswitchboard. NoWhatsAppinference."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company profile: actual manufacture, Érd factory, KATEPOX2Kepoxi steel-structure system",
+        "url": "https://egrokorr.hu/cegismerteto/"
+      },
+      {
+        "label": "Own industrial coating systems article: protective and powder finished-coating production",
+        "url": "https://egrokorr.hu/iparban-hasznalhato-kulonleges-festekrendszerek-az-egrokorr-zrt-palettajan-2/"
+      },
+      {
+        "label": "Actual KATEPOX component-system product description and mixed two-component applications",
+        "url": "https://egrokorr.hu/termek/katepox-b-katranymentes-szurke-1-l/"
+      },
+      {
+        "label": "Actual corporate footer public business email/phone/address; auxiliary leaf/pagination limits retained",
+        "url": "https://egrokorr.hu/portfolio_entries/lakkok-higitok/"
+      },
+      {
+        "label": "Own Contact page: company title and sales extension hours, form fields not read",
+        "url": "https://egrokorr.hu/kapcsolatok/"
+      },
+      {
+        "label": "Publicly linked Serbian trade site: Egrokorr-supported finished-coating portfolio, one conservative account",
+        "url": "https://www.egrokorrtrade.com/en/"
+      }
+    ]
+  },
   "malexim-warsaw": {
     "website": "https://malexim.pl/",
     "address": "ul. Przecławska 5,03-879 Warszawa,Poland, publicly published business address on catalogue p52. Coordinates52,19 are deliberately coarse Poland country-level indicative placement, not geocoded Warsaw, factory or street entrance.",
@@ -26968,6 +27059,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "egrokorr-erd",
   "malexim-warsaw",
   "sob-solutions-biars-sur-cere",
   "sparco-paints-singapore",
