@@ -8008,11 +8008,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "stancolac-thessaloniki",
+    "company": "STANCOLAC S.A.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Thessaloniki — coarse city marker; exact site not geocoded",
+    "latitude": 40.6401,
+    "longitude": 22.9444,
+    "legacyCompanyDescription": "希腊工业防护涂料生产商；812为双组分环氧聚酰胺底漆，用于钢结构、储罐及港口设备；ELO评估与采购待确认",
+    "fit": "可开发候选",
+    "signal": "在希腊生产工业防护涂料；812 EPOXY PRIMER 为双组分环氧聚酰胺底漆，用于钢结构、储罐及港口设备。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "独立读取官网公司生产介绍、完整可见四类成品家族索引、防护涂料子分类、812双组分环氧聚酰胺底漆具体产品页、实际链接英文TDS及独立Contact，共6次/0剩余。所查主营为防火、工业防护、地坪与建筑装饰涂装成品；防护分类中的底中涂、面漆、DTM及配套稀释剂属于下游涂装系统。当前实际来源未见对外销售ELO、ESBO、环氧化植物油、生物基增塑剂或同功能输入添加剂；有限通过，不把客户成品中的epoxy/resin、B组分或稀释剂直接判成ELO同行，也不保证全部未披露关联业务。可见家族/子分类计数可能重叠，不宣称穷尽124款或独立SKU审计。自身STANCOLAC S.A.页脚与stancolac.gr按同一主体核对，FOTIOU为第三方发现别名用于去重，不作为已查工商母公司或独立新增。最新main5f8a0ffd公开375家、本地391家、全量队列与729私有项无同一公司/域名/品牌正式或私有重复；系列与地区经销商不拆分。"
+    },
+    "contact": {
+      "label": "官方公司通用业务邮箱及官网联系页；非具名采购负责人",
+      "email": "info@stancolac.gr",
+      "phone": "+30 2310 782645",
+      "contactUrl": "https://stancolac.gr/contact/"
+    },
+    "source": {
+      "label": "Actual STANCOLAC 812 EPOXY PRIMER own product and linked English TDS, with own production profile",
+      "url": "https://stancolac.gr/product/812-epoxy-primer/"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "stancolac-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "berling-inofita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pro-colore-virbalis": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "epurox-poznan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8389,6 +8418,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "stancolac-thessaloniki": {
+    "website": "https://stancolac.gr/",
+    "contactPage": "https://stancolac.gr/contact/",
+    "address": "11th Km. Old National Road Thessaloniki–Kilkis, PC57008, Thessaloniki, Greece, as stated on actual own Contact/TDS. City coordinates40.6401,22.9444 are coarse mapping only, not surveyed factory entrance. Own footer identifies STANCOLAC S.A.; third-party FOTIOU discovery alias is not a registry/ultimate-owner audit.",
+    "generalEmail": "info@stancolac.gr",
+    "generalEmailEvidence": {
+      "company": "STANCOLAC S.A.",
+      "value": "info@stancolac.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual separate official STANCOLAC Contact — explicit company E-mail",
+          "url": "https://stancolac.gr/contact/",
+          "summary": "Own Contact explicitly lists E-mail.info@stancolac.gr with corporate address/telephone and STANCOLAC S.A.footer; exact same mailbox appears in own product/company/category footers. General corporate route, no named identity, procurement duty, inbox login or deliverability assumed."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhone": "+30 2310 782645",
+    "generalPhoneEvidence": {
+      "company": "STANCOLAC S.A.",
+      "value": "+30 2310 782645",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual separate official STANCOLAC Contact — explicit Tel.",
+          "url": "https://stancolac.gr/contact/",
+          "summary": "Contact line explicitly Tel.+30 2310 782645, distinct Fax.+30 2310 780045. Public corporate voice contact, no personal buyer, call-test or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company production of fire-protection/industrial anti-corrosion/epoxy-floor/building coating systems",
+        "url": "https://stancolac.gr/company/"
+      },
+      {
+        "label": "Complete visible four-family product index; category tree not allSKU/recipe audit",
+        "url": "https://stancolac.gr/shop/"
+      },
+      {
+        "label": "Protective primer/intermediate/topcoat/DTM/thinner role categories, counts may overlap",
+        "url": "https://stancolac.gr/product-category/ab-protective/"
+      },
+      {
+        "label": "Actual specific812epoxy-polyamideprimer own body and linked31Mar2026 EnglishTDS",
+        "url": "https://stancolac.gr/product/812-epoxy-primer/"
+      },
+      {
+        "label": "Separate actual own Contact: exact general company email/voicephone and address; no named buyer or submitted form",
+        "url": "https://stancolac.gr/contact/"
+      }
+    ]
+  },
   "berling-inofita": {
     "website": "https://www.berling.gr/",
     "contactPage": "https://www.berling.gr/contact/",
@@ -26117,6 +26205,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "stancolac-thessaloniki",
   "berling-inofita",
   "pro-colore-virbalis",
   "epurox-poznan",
