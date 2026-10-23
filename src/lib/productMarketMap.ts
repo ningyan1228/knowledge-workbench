@@ -8258,11 +8258,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "malexim-warsaw",
+    "company": "Fabryka Farb i Lakierów Malexim Sp. z o.o.",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Warszawa — Poland country-level indicative map marker; business address not geocoded",
+    "latitude": 52,
+    "longitude": 19,
+    "legacyCompanyDescription": "波兰华沙装饰及工业涂料生产企业；拥有水性木材底漆及清漆产品",
+    "fit": "可开发候选",
+    "signal": "生产装饰及工业涂料；EKOCYNKAL GRUNTOEMALIA AKRYLOWA 2w1 为适用于木材的水性丙烯酸底面合一涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "官网2026产品目录共52页已下载，逐页读取全部可提取文字，并视觉核对第1、3、4、6、14、15、49、50、52页；并非全部52页视觉审读或全站/全球关联业务穷尽。第4页明确Fabryka Farb i Lakierów Malexim Sp. z o.o.自有装饰及工业涂料生产和配制；也有分销，不笼统否认。第14页实际叶页EKOCYNKAL GRUNTOEMALIA AKRYLOWA2w1明确水性木材底面合一漆及丙烯酸分散体经附着力促进剂改性；目录索引把14/15页标题对调，采用实际叶页。客户既有促进剂成分及外购来源未公开，不能称其已用聚烯烃或我方产品。目录涵盖水性、醇酸、丙烯酸、氯化橡胶、环氧、聚乙烯基、聚氨酯、硅树脂成品涂料。氯化橡胶并非CPO，PTFE成品组分不等于聚烯烃原料外售。49页MALSOLWENT1–6为配套稀释剂，EKOSOLWENT为除污脱脂清洗剂；50页KOREKTORM及UTWARDZACZM/2+1为实际对外漆用固化配套，不称没有任何添加剂或原料，不猜其成分。已读目录范围未发现聚烯烃/氯化聚烯烃分散体或原料级附着力促进剂外售，针对NL-W1201同类输入的有限同行排除通过；无独立外购需求例外或未披露股权穷尽结论。1993成立及ISO9001:2000是企业目录自述，不称当前证书已独立核验。目录2026封面已见、文件元数据2025年11月，不当作2026投产。当前HTML返回403，不称读到联系表单。52页同域名公开biuro@malexim.pl和完整电话0227442390；仅一般业务渠道，不冒称采购或个人，电话不作WhatsApp。malexim/品牌/产品只计一家公司；旧ELO发现索引并非已入库客户，但公司6次来源累计跨产品保留。"
+    },
+    "contact": {
+      "label": "官网2026目录末页公开公司业务邮箱和电话；未核验具名采购/技术人，未取得独立联系页可读正文，电话不作WhatsApp",
+      "email": "biuro@malexim.pl",
+      "phone": "022 744 23 90",
+      "contactUrl": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=52"
+    },
+    "source": {
+      "label": "Official catalogue actual p14 water-dilutable acrylic primer-enamel for wood; p4 own paint manufacturing",
+      "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=14"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "malexim-warsaw": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sob-solutions-biars-sur-cere": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sparco-paints-singapore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "oellers-immex-aldenhoven": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8648,6 +8677,64 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "malexim-warsaw": {
+    "website": "https://malexim.pl/",
+    "address": "ul. Przecławska 5,03-879 Warszawa,Poland, publicly published business address on catalogue p52. Coordinates52,19 are deliberately coarse Poland country-level indicative placement, not geocoded Warsaw, factory or street entrance.",
+    "generalEmail": "biuro@malexim.pl",
+    "generalEmailEvidence": {
+      "company": "Fabryka Farb i Lakierów Malexim Sp. z o.o.",
+      "value": "biuro@malexim.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official 2026 product catalogue, actual last page52",
+          "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=52",
+          "summary": "Actual downloaded same-domain catalogue p52 visually checked with Malexim logo/domain/address and exactbiuro@malexim.pl; general corporate inbox, not named buyer or inferred email. No mailbox delivery test or sending."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhone": "022 744 23 90",
+    "generalPhoneEvidence": {
+      "company": "Fabryka Farb i Lakierów Malexim Sp. z o.o.",
+      "value": "022 744 23 90",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official 2026 product catalogue, actual last page52",
+          "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=52",
+          "summary": "Actual catalogue p52 visually publishes full0227442390 plus abbreviated7442391. Store only the first fully written number, as published, no inferred second number or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official catalogue p4: company identity and own finished paint manufacturing",
+        "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=4"
+      },
+      {
+        "label": "Actual p14 water-dilutable EKOCYNKAL primer-enamel and wood use",
+        "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=14"
+      },
+      {
+        "label": "Actual p15 water-dilutable EKOCYNKAL acrylic clear coating for wood",
+        "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=15"
+      },
+      {
+        "label": "Catalogue product families and actual thinners/cleaner/hardeners; selected-input exclusion",
+        "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=49"
+      },
+      {
+        "label": "Actual p52 company public business email/phone; not a contact form",
+        "url": "https://malexim.pl/wp-content/uploads/2025/12/Katalog-2026.pdf#page=52"
+      }
+    ]
+  },
   "sob-solutions-biars-sur-cere": {
     "website": "https://www.sob.fr/",
     "contactPage": "https://www.sob.fr/contact/",
@@ -26881,6 +26968,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "malexim-warsaw",
   "sob-solutions-biars-sur-cere",
   "sparco-paints-singapore",
   "oellers-immex-aldenhoven",
