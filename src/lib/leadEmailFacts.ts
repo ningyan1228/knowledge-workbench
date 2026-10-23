@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "ferroluz-val-de-san-vicente": "Your PAVIFER 300 is a two-component epoxy primer for sealing concrete surfaces.",
   "chromos-svjetlost-luzani": "Your AQUALUX wood primer is a water-dilutable acrylic basecoat for wood before the Aqualux topcoat.",
   "anypsa-carabayllo": "Your Anypdur Epóxico range includes epoxy coatings for machinery, tools and metal furniture.",
   "davies-paints-pasig": "Your AquaWood is a water-based acrylic wood varnish in your range of paints and coatings.",

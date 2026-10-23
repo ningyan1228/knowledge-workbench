@@ -8147,11 +8147,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "ferroluz-val-de-san-vicente",
+    "company": "Pinturas Ferroluz",
+    "productId": "elo",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Val de San Vicente, Cantabria — Spain country-level indicative map marker; site not geocoded",
+    "latitude": 40.4,
+    "longitude": -3.7,
+    "legacyCompanyDescription": "西班牙涂料制造商；PAVIFER 300为用于混凝土表面的双组分环氧底漆",
+    "fit": "可开发候选",
+    "signal": "官网明确生产涂料；PAVIFER 300 是用于封闭混凝土表面的双组分环氧底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "实际读取官网Home147行、Pavimentos523行和Industriales378行全部返回正文。Home明确持续生产涂料并开展研发。PAVIFER 300及303为供混凝土表面封闭的成品双组分环氧底漆；303虽名称含resina epoxi，正文明确为施工用底漆，不等于原料树脂或环氧植物油。实际可见家族为地坪、防水、工业、外墙、装饰、木器、专用涂料及调色。工业第一页包括抗缩孔/消光添加剂、金属漆/清漆、可剥漆及明确配套环氧/聚氨酯涂料的催化剂；这些辅助品不是ELO/ESBO或生物基增塑剂的证据，不能因泛称添加剂/催化剂直接说是同行，也不能称其已经使用ELO。在这些实际经营与产品来源内未发现销售ELO、ESBO、环氧化植物油或同类增塑原料，有限来源排除通过。两类目录均显示5页，其他页和特殊添加剂子分类、全部SKU/TDS/SDS未读；不称完成全站原料排查或终极股权审计，不编造外购例外。About及总产品页Cache miss，独立Contact只返回验证等待页，3次均计入失败。Home及两目录实际页脚一致公开公司业务邮箱/电话/Los Tánagos地址，可用该真实来源核验通用渠道；不把搜索中实验室邮箱作为已读原始联系证据。西语/英语及www/非www站和PAVIFER系列统一查重，仅一个公司账户。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱和电话；未核验具名采购/技术收件人，电话未标为WhatsApp",
+      "email": "ferroluz@pinturasferroluz.com",
+      "phone": "(+34) 942 71 81 97",
+      "contactUrl": "https://pinturasferroluz.com/"
+    },
+    "source": {
+      "label": "Own PAVIFER 300 epoxy concrete primer product details and own Home paint-manufacturing description",
+      "url": "https://pinturasferroluz.com/es/productos/pavimentos.html"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ferroluz-val-de-san-vicente": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chromos-svjetlost-luzani": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anypsa-carabayllo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "davies-paints-pasig": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8533,6 +8562,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ferroluz-val-de-san-vicente": {
+    "website": "https://pinturasferroluz.com/",
+    "contactPage": "https://pinturasferroluz.com/",
+    "address": "Polígono Industrial Los Tánagos, parcelas 5 y 6, 39548 Val de San Vicente, Cantabria, Spain, from actual Home and product footers. Coordinates40.4,-3.7 are deliberately coarse Spain country-level indicative placement, not geocoded Val de San Vicente or factory coordinates. Legal-notice postal address seen only in search is not substituted as an independently read plant address.",
+    "generalEmail": "ferroluz@pinturasferroluz.com",
+    "generalPhone": "(+34) 942 71 81 97",
+    "generalEmailEvidence": {
+      "company": "Pinturas Ferroluz",
+      "value": "ferroluz@pinturasferroluz.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own Home corporate contact footer, repeated on two read catalogue pages",
+          "url": "https://pinturasferroluz.com/",
+          "summary": "Actual own Home footer publishes Pinturas Ferroluz, Los Tánagos Val de San Vicente address, exact general corporate email and telephone; same entries on both read product categories. General company route, no named procurement/technical buyer or deliverability claim. Independent Contact challenge not used as contact evidence."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhoneEvidence": {
+      "company": "Pinturas Ferroluz",
+      "value": "(+34) 942 71 81 97",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own Home corporate telephone footer",
+          "url": "https://pinturasferroluz.com/",
+          "summary": "Actual own Home footer publishes Pinturas Ferroluz, Los Tánagos Val de San Vicente address, exact general corporate email and telephone; same entries on both read product categories. General company route, no named procurement/technical buyer or deliverability claim. Independent Contact challenge not used as contact evidence."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home: continuing paint manufacture and product research; public business contact footer",
+        "url": "https://pinturasferroluz.com/"
+      },
+      {
+        "label": "Own Pavimentos first page: PAVIFER 300 and303 epoxy primer product details; pages2–5 not read",
+        "url": "https://pinturasferroluz.com/es/productos/pavimentos.html"
+      },
+      {
+        "label": "Own Industriales first page: coating auxiliary additives and product-specific epoxy/PU catalysts; pages2–5 not read",
+        "url": "https://pinturasferroluz.com/es/productos/industriales.html"
+      }
+    ]
+  },
   "chromos-svjetlost-luzani": {
     "website": "https://www.chromos-svjetlost.eu/en/about_us",
     "contactPage": "https://www.chromos-svjetlost.eu/en/contact",
@@ -26556,6 +26636,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ferroluz-val-de-san-vicente",
   "chromos-svjetlost-luzani",
   "anypsa-carabayllo",
   "davies-paints-pasig",
