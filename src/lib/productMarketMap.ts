@@ -8231,11 +8231,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "sob-solutions-biars-sur-cere",
+    "company": "SOB SOLUTIONS",
+    "productId": "elo",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Biars-sur-Cère — France country-level indicative map marker; site not geocoded",
+    "latitude": 46.6,
+    "longitude": 2.2,
+    "legacyCompanyDescription": "法国Biars-sur-Cère涂料生产企业；EPOX125为双组分无溶剂环氧混凝土地坪涂层",
+    "fit": "可开发候选",
+    "signal": "生产工业及建筑涂料；EPOX 125 为工业和商业混凝土地面用双组分无溶剂环氧涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "实际读取制造商商业简介166行及官网Home319行、生产设备114行、EPOX125产品248行、Contact138行、特殊产品/稀释剂目录400行完整返回文字，共6次公司请求6正文0失败，0剩余。官网生产原文说明自有研磨/分散、真空分散和环氧/聚酯腻子行星混合设备；批量4000升至5升是公司公开能力表述，不独立审计或改称2026投产。EPOX125虽名称Résineépoxy，正文明确为工业/商业混凝土地面用双组分无溶剂成品涂层，不等于原料环氧树脂或环氧植物油。全站可见家族为防腐/储水及食品接触成品、建筑、工业、调色、通用底漆和木器漆。当前特殊/稀释剂目录实际列脱脂剂、酸性表面处理剂、配套稀释剂、环氧修补腻子和特种成品涂料；EPOX125文中SOBTEX用途为防滑配套，不从泛称添加剂断言其ELO同行，也不虚构SOBTEX组成。生产页明确调色颜料浆SOBCOLOR可外售，不能笼统说不卖任何原料/添加剂；已读范围未发现ELO、ESBO、环氧化植物油或同类生物基增塑剂外售，有限实际来源内排除通过。其他全部SKU、叶页PDF/TDS/SDS及未披露关联原料业务未穷尽，不称完成终极股权/配方审计，不编造外购例外。商业简介的询价/用户投诉是其他人的个人内容，不提取为我方具名联系人、买家痛点或客户案例。公司实际自称SOBSolutions/PeinturesSOB、sob.fr和门户peintures-sob.fr统一查重，仅一个账户，不猜SARL/SAS法定形式或总部关联收购。官网Contact只有表单/电话/地址，没有当前明确公开邮箱；2021活动PDFSearch中的sob@peintures-sob.fr不作当前已核验邮箱，不猜info/sales。不收录活动主办方联系人，不自动提交表单。EPOX125客户耐化学、热胎及车流性能、饮水/食品接触成品说明、ISO/ACQPA图文不移植为我方ELO效果/认证/配方已相容。"
+    },
+    "contact": {
+      "label": "官网公开联系表单和公司业务电话；未取得当前明确公开业务邮箱，未核验具名采购/技术人，电话不视为WhatsApp",
+      "phone": "05 65 38 60 20",
+      "contactUrl": "https://www.sob.fr/contact/"
+    },
+    "source": {
+      "label": "Actual EPOX125 solvent-free two-component concrete-floor coating and own manufacturing equipment description",
+      "url": "https://www.sob.fr/produit/epox-125/"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sob-solutions-biars-sur-cere": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sparco-paints-singapore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "oellers-immex-aldenhoven": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ferroluz-val-de-san-vicente": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8620,6 +8648,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sob-solutions-biars-sur-cere": {
+    "website": "https://www.sob.fr/",
+    "contactPage": "https://www.sob.fr/contact/",
+    "address": "Rue Ambroise Croizat,46130Biars-sur-Cère,France, explicitly published business address on own Contact and matched public company directory. Coordinates46.6,2.2 are deliberately coarse France country-level indicative placement, not geocoded Biars-sur-Cère, factory or street entrance.",
+    "generalPhone": "05 65 38 60 20",
+    "generalPhoneEvidence": {
+      "company": "SOB SOLUTIONS",
+      "value": "05 65 38 60 20",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Contact company telephone and matching Biars-sur-Cère corporate address",
+          "url": "https://www.sob.fr/contact/",
+          "summary": "ActualContactpublishesSOBSolutions,RueAmbroiseCroizat46130Biars/cèreFrance andexact0565386020; corporate switchboard hours given. Generalbusinessphone,notpersonalbuyerorWhatsApp. Actualpublicformfieldsobserved,never submitted. No current publicmailbox read;2021brochuremailnot adopted as current."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home: finished coating family navigation and SOBSolutions identity; tradeprofile/source crossmatch",
+        "url": "https://www.sob.fr/"
+      },
+      {
+        "label": "Own Moyensdeproduction: grinding/dispersion, vacuum disperser and epoxy/polyester-filler planetary mixing",
+        "url": "https://www.sob.fr/societe/moyens-de-production/"
+      },
+      {
+        "label": "Actual EPOX125: solvent-free two-component coating for industrial/commercial concrete floors",
+        "url": "https://www.sob.fr/produit/epox-125/"
+      },
+      {
+        "label": "Own Contact: company public enquiry form/telephone/address; no current public email read",
+        "url": "https://www.sob.fr/contact/"
+      },
+      {
+        "label": "Own Produits spéciaux/Diluants: coating auxiliaries, diluents and finished repair/coating products",
+        "url": "https://www.sob.fr/categorie-produit/industrie/produits-speciaux/"
+      }
+    ]
+  },
   "sparco-paints-singapore": {
     "website": "https://www.sparcoasia.com/en/",
     "contactPage": "https://www.sparcoasia.com/en/contact",
@@ -26809,6 +26881,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sob-solutions-biars-sur-cere",
   "sparco-paints-singapore",
   "oellers-immex-aldenhoven",
   "ferroluz-val-de-san-vicente",
