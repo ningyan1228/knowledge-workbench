@@ -7981,11 +7981,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-22"
   },
+  {
+    "id": "berling-inofita",
+    "company": "BERLING S.A.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Oinofyta (Inofita), Boeotia — coarse approximate town marker; factory entrance not geocoded",
+    "latitude": 38.32,
+    "longitude": 23.64,
+    "legacyCompanyDescription": "希腊Inofita自产工业防护涂料；公开环氧底漆、中涂及PU面漆体系；ELO适配与采购待确认",
+    "fit": "可开发候选",
+    "signal": "在希腊 Inofita 自有工厂生产涂料；工业体系包括环氧底漆、中涂及聚氨酯面漆，应用于工业、农业和建筑设备。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-22",
+      "conclusion": "独立复读两份10-17原始公司Home和工业涂料正文，实际新读10-22公司Profile、Contact正文及其另一主内容HTML片段、完整可见Products分类概览，共6次公司来源请求。Profile明确自有涂料生产及生产线、第二代家族经营；未从YouTube邻接Vioryl、Baril同名或零售LeroyMerlin/ADEO片段推定母子关系或股权，当前最终受益控制未作工商审计。公开主营及可见完整分类为内外墙成品漆、乳胶漆/丙烯酸漆、底漆、防水、磁漆、木器清漆/防护、特殊成品、BIS保温、涂层腻子与工业/地坪体系；希腊语plastika chromata是成品乳胶漆分类，不是增塑剂原料。工业正文为环氧及聚氨酯施工涂层/底中面体系，NC1/Beroxy为配套溶剂链接，不因resin/epoxy/primer或generic特殊产品词将成品自动当ELO同行。在实际公开制造范围、完整可见产品家族与已读工业应用角色中未见对外销售ELO、ESBO、环氧化植物油或同功能生物基增塑/稳定输入原料；有限通过，未穷尽全部特殊SKU、叶页、TDS/SDS、化学成分或未披露全球关联业务，不伪造外购例外。BERLING SA/BERLING ΑΒΕΕ、berling.gr/b2b子域、Inofita/Oinofyta及官方公司LinkedIn属于同一已研究账户。最新main08cf7dc6的374家、本地390家、全量队列及727私有项核对：无正式同一账户，仅一个既有Berling私有待核验项和同一队列项。本次补齐后只正式新增一次；品牌系列、店点和厂区不拆分。"
+    },
+    "contact": {
+      "label": "官方公司联系页与有来源的通用业务电话；官网另公开公司LinkedIn链接，缺公开邮箱，表单及LinkedIn消息功能未另行检验",
+      "phone": "+302262308500",
+      "contactUrl": "https://www.berling.gr/contact/"
+    },
+    "source": {
+      "label": "Actual BERLING industrial epoxy/PU systems; original captured17Oct2026, archived original independently reread22Oct with current profile/catalogue/contact corroboration",
+      "url": "https://www.berling.gr/our-products/industrial/"
+    },
+    "checkedAt": "2026-10-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "berling-inofita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pro-colore-virbalis": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "epurox-poznan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cathal-gliwice": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8361,6 +8389,47 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "berling-inofita": {
+    "website": "https://www.berling.gr/",
+    "contactPage": "https://www.berling.gr/contact/",
+    "linkedIn": "https://www.linkedin.com/company/berling-s-a-",
+    "address": "Official Contact mailing address:BERLING ΑΒΕΕ,Agia Paraskevi,Oinofyta,Boeotia32011,Greece. Current English Profile independently identifies headquarters/own manufacturing in Inofita since1992 and historical2009facility investment; exact factory parcel/entrance and current legal registry/ultimate ownership not independently audited.38.32,23.64 is only a coarse approximate town marker,not surveyed factory coordinates. EnglishBERLINGSA and GreekBERLINGΑΒΕΕ self-identifications retained; no VAT or purchaser guessed.",
+    "generalPhone": "+302262308500",
+    "generalPhoneEvidence": {
+      "company": "BERLING S.A.",
+      "value": "+302262308500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual official BERLING Contact: company service phone and corporate mailing identity",
+          "url": "https://www.berling.gr/contact/",
+          "summary": "Actual Contact excerpt lists service line8011162222,then+302262308500and+302262031293,andBERLINGΑΒΕΕ/AgiaParaskevi/Oinofyta32011. Select exact first public corporate business phone+302262308500; no personal name/procurement duty/call-test/WhatsApp assertion. General office/service context, not guessed technical line. Alternate semantic mainHTML confirms same number/identity but supplies no inspected form fields/action."
+        }
+      ],
+      "verifiedAt": "2026-10-22"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial coating original captured17Oct2026, independently reread archived original22Oct2026; not live-refetched under cumulative cap",
+        "url": "https://www.berling.gr/our-products/industrial/"
+      },
+      {
+        "label": "Actual own22Oct2026Profile:Greekpaintmanufacturing/privatelyownedInofitafacilities and production line",
+        "url": "https://www.berling.gr/en/company/profile/"
+      },
+      {
+        "label": "Actual own22Oct2026complete visible product-family overview; not allSKU/SDSaudit",
+        "url": "https://www.berling.gr/our-products/"
+      },
+      {
+        "label": "Actual own22Oct2026Contact:corporateidentity/address/servicephone and official outbound LinkedIn company link; no business email or inspected inquiry form",
+        "url": "https://www.berling.gr/contact/"
+      }
+    ]
+  },
   "pro-colore-virbalis": {
     "website": "https://www.procolor.lt/",
     "contactPage": "https://www.procolor.lt/contacts/",
@@ -26048,6 +26117,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "berling-inofita",
   "pro-colore-virbalis",
   "epurox-poznan",
   "cathal-gliwice",
