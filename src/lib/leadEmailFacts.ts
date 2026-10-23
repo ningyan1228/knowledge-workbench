@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "sparco-paints-singapore": "Your Sparcofloor SL 200 is a self-smoothing, solvent-free, two-component epoxy flooring system.",
   "oellers-immex-aldenhoven": "Your Sunfirn Dekor W is a water-based wood coating made with synthetic resins and natural oils.",
   "ferroluz-val-de-san-vicente": "Your PAVIFER 300 is a two-component epoxy primer for sealing concrete surfaces.",
   "chromos-svjetlost-luzani": "Your AQUALUX wood primer is a water-dilutable acrylic basecoat for wood before the Aqualux topcoat.",

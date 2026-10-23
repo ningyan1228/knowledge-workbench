@@ -8203,11 +8203,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "sparco-paints-singapore",
+    "company": "Sparco Paints (S) Pte Ltd",
+    "productId": "elo",
+    "country": "Singapore",
+    "countryZh": "新加坡",
+    "city": "Singapore — country-level indicative map marker; factory/street not geocoded",
+    "latitude": 1.35,
+    "longitude": 103.82,
+    "legacyCompanyDescription": "新加坡自有配方研发和制造企业；Sparcofloor SL200为双组分无溶剂自流平环氧地坪体系",
+    "fit": "可开发候选",
+    "signal": "在新加坡研发并生产地坪及保护涂料；Sparcofloor SL 200 为无溶剂、双组分自流平环氧地坪体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "实际独立审读官网Home116行、Products261行、Contact125行、Sparcofloor SL200产品139行、ODM171行全部返回文本，以及Contact直接HTTPS原始HTML/正文，共6次公司请求，6正文/0失败，0剩余。Home明确在新加坡配方和生产环氧/PU地坪及保护涂料，ODM明确实验室配方、样品迭代、自有新加坡工厂生产与逐批质控。实际可见产品目录为22款成品地坪/底漆/清漆/运动场涂层/修补砂浆体系，含配套水性PUD、聚酯多元醇、交联剂、树脂/固化剂/骨料成套描述；这些是成品涂料/施工配套语境，不等于原料级环氧植物油或生物基增塑剂外售。在实际已读经营及完整可见目录内未发现ELO、ESBO、环氧化植物油或同类增塑原料销售，有限来源排除通过。其他隐藏/未读目录、全部SKU/PDF/TDS/SDS、未披露关联原料业务及终极股权未穷尽，不编造外购例外。Sparcofloor SL200是自流平/无溶剂/双组分环氧地坪成品；不把其4:1比例、固化时间、耐化学/机械性能及安全表述移植为我方ELO承诺，也不提出现场改变该配方。产品网页技术段部分字段自带省略号，未宣称完整规格书已读。网站匿名工程案例及ISO/bizSAFE图文未独立审计，不写为可追溯客户案例、认证或我方效果。研究计划Pakistan仅为发现市场，全部实际主体/制造/地址原文均指Singapore；以SparcoPaints(S)PteLtd及sparcoasia.com为一个账户，语言站、地区/ODM品牌不拆新增。商业名录Search中类似SparcoPaintsManufacturingMalaysia及其他Sparco关联推荐不当股权证明；无同名根库/正式库/队列/私有主体命中。Native邮箱保护占位未作邮箱，真实业务邮箱从同一公开联系页HTML三处data-cfemail字节解码一致核对为sparco2k@singnet.com.sg，属官网公司通用业务邮箱，不凭域名猜sales/info地址，不冒称具名采购，不做投递有效性承诺。公开+6562651188为公司电话，未标WhatsApp；只留原文公开业务地址15TuasStreet，不把其断言为已实勘厂址。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、联系表单及电话；未核验具名采购/技术收件人，电话不视为WhatsApp",
+      "email": "sparco2k@singnet.com.sg",
+      "phone": "+65 6265 1188",
+      "contactUrl": "https://www.sparcoasia.com/en/contact"
+    },
+    "source": {
+      "label": "Own actual Sparcofloor SL200 epoxy flooring product and Singapore in-house ODM formulation/production",
+      "url": "https://www.sparcoasia.com/en/products/sparcofloor-sl-200"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sparco-paints-singapore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "oellers-immex-aldenhoven": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ferroluz-val-de-san-vicente": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chromos-svjetlost-luzani": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8591,6 +8620,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sparco-paints-singapore": {
+    "website": "https://www.sparcoasia.com/en/",
+    "contactPage": "https://www.sparcoasia.com/en/contact",
+    "address": "15 Tuas Street, Singapore638452, explicitly published corporate business address on Home/Products/Contact/SL200/ODM. This is a sourced business address, not a factory site inspection. Coordinates1.35,103.82 are deliberately coarse Singapore country-level indicative placement, not geocoded factory/street entrance; no Pakistan location assigned.",
+    "generalEmail": "sparco2k@singnet.com.sg",
+    "generalPhone": "+65 6265 1188",
+    "generalEmailEvidence": {
+      "company": "Sparco Paints (S) Pte Ltd",
+      "value": "sparco2k@singnet.com.sg",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own public Contact HTML corporate mailbox, repeated protected email encodings verified from same page",
+          "url": "https://www.sparcoasia.com/en/contact",
+          "summary": "Actual own Contact identifies Sparco Paints (S) Pte Ltd,15TuasStreetSingapore638452 and+6562651188. Its public HTML contains three reversibly protected email values, each independently decoded locally to exact sparco2k@singnet.com.sg; three repetitions on one page, not three independent sources. General corporate business channel, no named buyer/responsibility/deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhoneEvidence": {
+      "company": "Sparco Paints (S) Pte Ltd",
+      "value": "+65 6265 1188",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact corporate phone, cross-matched with actual Home/product/ODM footers",
+          "url": "https://www.sparcoasia.com/en/contact",
+          "summary": "Actual own Contact identifies Sparco Paints (S) Pte Ltd,15TuasStreetSingapore638452 and+6562651188. Its public HTML contains three reversibly protected email values, each independently decoded locally to exact sparco2k@singnet.com.sg; three repetitions on one page, not three independent sources. General corporate business channel, no named buyer/responsibility/deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home: Singapore manufacture/formulation and actual corporate identity/address",
+        "url": "https://www.sparcoasia.com/en/"
+      },
+      {
+        "label": "Own Products:22 visible finished coating/flooring/primer/repair systems; no linked fullTDS/SDS read",
+        "url": "https://www.sparcoasia.com/en/products"
+      },
+      {
+        "label": "Actual SL200: self-smoothing solvent-free two-component epoxy flooring; technical-field ellipses retained",
+        "url": "https://www.sparcoasia.com/en/products/sparcofloor-sl-200"
+      },
+      {
+        "label": "Own ODM: lab formulation/sampling, own Singapore manufacturing and batch quality checks",
+        "url": "https://www.sparcoasia.com/en/odm"
+      },
+      {
+        "label": "Actual Contact: business form/phone/address and original public protected corporate email verified from HTML",
+        "url": "https://www.sparcoasia.com/en/contact"
+      }
+    ]
+  },
   "oellers-immex-aldenhoven": {
     "website": "https://www.oellers-immex.de/",
     "contactPage": "https://www.oellers-immex.de/",
@@ -26721,6 +26809,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sparco-paints-singapore",
   "oellers-immex-aldenhoven",
   "ferroluz-val-de-san-vicente",
   "chromos-svjetlost-luzani",
