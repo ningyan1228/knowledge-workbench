@@ -39,7 +39,7 @@ try {
 
 ## 3. 无状态代理
 
-在小服务器上构建 `services/proxy/Dockerfile`。只配置其 `.env.example` 中的服务端变量，反向代理仅允许 GitHub Pages 实际域名进入 CORS。服务不使用本地数据库、队列或附件目录；日志不得写入问题全文、客户信息、token 或签名 URL。
+在小服务器上构建 `services/proxy/Dockerfile`。只配置其 `.env.example` 中的服务端变量，反向代理仅允许 GitHub Pages 实际域名进入 CORS。原有文档任务仍使用 Supabase；团队客户跟进另使用专用的私有 `followup-data` volume 保存完整版本，并设置 `FOLLOWUP_OWNER_EMAIL`。权限、备份及上传说明见 [团队客户跟进](customer-followup.md)。日志不得写入问题全文、客户信息、token 或签名 URL。
 
 健康检查：`GET /health`。它只报告组件是否配置，不会返回任何密钥。生产环境需由反向代理提供 HTTPS、请求体限制和访问日志脱敏。
 

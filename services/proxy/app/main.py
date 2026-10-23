@@ -16,6 +16,7 @@ from fastapi.responses import JSONResponse
 from jwt import PyJWKClient
 from pydantic import BaseModel, Field, HttpUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from .followup import create_followup_router
 
 
 class Settings(BaseSettings):
@@ -80,6 +81,7 @@ class RunRequest(BaseModel):
 
 
 app = FastAPI(title='Neon Lion Knowledge Proxy', docs_url=None, redoc_url=None)
+app.include_router(create_followup_router(settings().supabase_url, settings().supabase_publishable_key))
 app.add_middleware(CORSMiddleware, allow_origins=settings().origins, allow_credentials=False, allow_methods=['GET', 'POST'], allow_headers=['Authorization', 'Content-Type'])
 
 
@@ -98,7 +100,8 @@ async def api_failure_handler(_: Request, error: ApiFailure):
 
 @app.exception_handler(HTTPException)
 async def http_exception_handler(_: Request, error: HTTPException):
-    return JSONResponse({'code': 'UNAUTHORIZED' if error.status_code == 401 else 'FORBIDDEN', 'detail': str(error.detail)}, status_code=error.status_code)
+    code = 'UNAUTHORIZED' if error.status_code == 401 else 'FORBIDDEN' if error.status_code == 403 else 'REQUEST_FAILED'
+    return JSONResponse({'code': code, 'detail': str(error.detail)}, status_code=error.status_code, headers={'Cache-Control': 'no-store'})
 
 
 @lru_cache

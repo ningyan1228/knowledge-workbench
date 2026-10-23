@@ -20,6 +20,7 @@ import { shanghaiDay, timelineFilterLabel } from '../../lib/leadTimeline'
 import { CustomerMapWorkspace } from './CustomerMapWorkspace'
 import { MarketConnectionStatus } from './MarketConnectionStatus'
 import { OutreachResults } from './OutreachResults'
+import { CustomerFollowUp } from './CustomerFollowUp'
 import { CustomerBrowseList } from './CustomerBrowseList'
 import { marketTabForRoute, readLeadView, rememberLeadView, type MarketTab } from '../../lib/leadViewPreference'
 import './MarketWorkspace.css'
@@ -29,7 +30,7 @@ import './CompactCustomerCards.css'
 import './MarketVisualSystem.css'
 import './CalmWorkspace.css'
 
-const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources' | 'results'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'results', label: '开发结果' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
+const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources' | 'results' | 'follow-up'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'follow-up', label: '客户跟进' }, { id: 'results', label: '开发结果' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
 function setHash(value: string) { window.location.hash = value }
 function productOf(id: MarketProduct['id']) { return marketProducts.find((product) => product.id === id)! }
@@ -203,7 +204,7 @@ export function MarketIntelligence() {
   const openTab = (next: MarketTab) => setHash(`market-intelligence/${next}`)
   const customerView = tab === 'map' || tab === 'leads'
   return <div className={`market-workspace-page${customerView ? ' calm-customer-page' : ''}`}>
-    <header className="page-heading market-heading">{!customerView && <h1>客户开发工作台</h1>}<nav className="market-tabs" aria-label="市场情报导航">{tabs.map((item) => { const active = item.id === 'customers' ? customerView : tab === item.id; return <button key={item.id} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={() => openTab(item.id === 'customers' ? preferredView : item.id)}>{item.label}</button> })}</nav><MarketConnectionStatus ledger={ledger} work={work} /></header>
+    <header className="page-heading market-heading">{!customerView && tab !== 'follow-up' && <h1>客户开发工作台</h1>}<nav className="market-tabs" aria-label="市场情报导航">{tabs.map((item) => { const active = item.id === 'customers' ? customerView : tab === item.id; return <button key={item.id} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={() => openTab(item.id === 'customers' ? preferredView : item.id)}>{item.label}</button> })}</nav>{tab !== 'follow-up' && <MarketConnectionStatus ledger={ledger} work={work} />}</header>
     {customerView && <div className="market-connection-notices">{ledger.status !== 'ready' && <OutreachLedgerNotice ledger={ledger} />}{work.status !== 'ready' && <PrivateWorkNotice work={work} />}</div>}
     {tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} work={work} />}
     {tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}
@@ -211,5 +212,6 @@ export function MarketIntelligence() {
     {tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}
     {tab === 'sources' && <SourcesView leads={filteredLeads} />}
     {tab === 'results' && <OutreachResults key={work.ownerId ?? work.status} leads={data.leads} ledger={ledger} work={work} />}
+    {tab === 'follow-up' && <CustomerFollowUp />}
   </div>
 }

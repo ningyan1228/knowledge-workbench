@@ -1,5 +1,5 @@
 export type LeadView = 'map' | 'leads'
-export type MarketTab = 'overview' | LeadView | 'products' | 'sources' | 'results'
+export type MarketTab = 'overview' | LeadView | 'products' | 'sources' | 'results' | 'follow-up'
 export const leadViewStorageKey = 'nl-market-customer-view'
 
 type ViewStorage = Pick<Storage, 'getItem' | 'setItem'>
@@ -16,5 +16,5 @@ export function rememberLeadView(view: LeadView, storage?: ViewStorage) {
 
 export function marketTabForRoute(segment: string | undefined, preferred: LeadView): MarketTab {
   // Explicit links and the overview tab take precedence over the saved display mode.
-  return segment === 'overview' || segment === 'map' || segment === 'leads' || segment === 'products' || segment === 'sources' || segment === 'results' ? segment : preferred
+  return segment === 'overview' || segment === 'map' || segment === 'leads' || segment === 'products' || segment === 'sources' || segment === 'results' || segment === 'follow-up' ? segment : preferred
 }

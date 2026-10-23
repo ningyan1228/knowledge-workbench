@@ -9,6 +9,10 @@ services:
       VIRTUAL_HOST: ${PROXY_PUBLIC_HOST}
       LETSENCRYPT_HOST: ${PROXY_PUBLIC_HOST}
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+      FOLLOWUP_OWNER_EMAIL: ${FOLLOWUP_OWNER_EMAIL:-}
+      FOLLOWUP_DB_PATH: /data/followup.sqlite3
+    volumes:
+      - followup-data:/data
     expose:
       - "8000"
     networks:
@@ -17,3 +21,6 @@ services:
 networks:
   web:
     external: true
+
+volumes:
+  followup-data:
