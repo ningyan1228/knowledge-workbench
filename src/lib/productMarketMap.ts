@@ -8036,11 +8036,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "irkom-kosjeric",
+    "company": "Irkom d.o.o.",
+    "productId": "nl-w1201",
+    "country": "Serbia",
+    "countryZh": "塞尔维亚",
+    "city": "Kosjerić — coarse town marker; exact site not geocoded",
+    "latitude": 43.9967,
+    "longitude": 19.9067,
+    "legacyCompanyDescription": "塞尔维亚木器与金属涂料生产商；AQUALIN为丙烯酸水分散体木器底漆；NL-W1201评估及采购待确认",
+    "fit": "可开发候选",
+    "signal": "生产木器及金属涂料；AQUALIN 水性透明木器底漆采用丙烯酸水分散体，供木器涂装使用。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "独立读取AQUALIN木器底漆正文、同公司IRKOM ULTRA生产/产品开发介绍与完整可见工业家族菜单、独立工业站Contact；另保留主站About两次500及主站Contact一次500，共6次公司/集团来源请求，3正文/3失败，0剩余。主站可见分类为木器/金属涂料、喷漆、配套稀释剂、除油/防腐准备品和其他成品；工业菜单为木器/金属涂层中的改性醇酸、环氧、PU、聚酯、丙烯酸、UV与胶黏剂。AKRILATI处于木器涂层菜单下，AQUALIN为含丙烯酸水分散体的成品底漆，不据resin/dispersion/primer词认定销售聚烯烃原料。实际已读公开业务未见对外销售水性PO/CPO分散体、同类聚烯烃乳液或附着力促进输入原料；有限通过，不声称读取全部SKU、其他成品叶页、配方、TDS/SDS及未披露全球关联业务。工业About明确该站为Irkom公司/UltraProfessional品牌；工业Contact与主站产品页同Kosjerić/NikoleTesle14b地址及irkom.com业务邮件域，按同一公司，不分拆品牌、域名或NoviSad网点。最新main与全量本地/私有队列按Irkom/IrkomUltra/irkom.rs/irkomultra.rs/irkom.com及Kosjerić主体核对，未见同一正式/私有客户；法律最终受益控制未作工商审计。"
+    },
+    "contact": {
+      "label": "官方技术支持部门邮箱与业务电话；邮箱前缀不作为姓名，未核验具名采购负责人",
+      "email": "branislav@irkom.com",
+      "phone": "+381648021501",
+      "contactUrl": "https://irkomultra.rs/kontakt/"
+    },
+    "source": {
+      "label": "Actual own AQUALIN waterborne acrylic-dispersion wood primer and official IRKOM ULTRA manufacturing narrative",
+      "url": "https://irkom.rs/proizvod/aqua-lak-osnovni/"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "irkom-kosjeric": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "stancolac-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "berling-inofita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pro-colore-virbalis": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8418,6 +8447,80 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "irkom-kosjeric": {
+    "website": "https://irkom.rs/",
+    "contactPage": "https://irkomultra.rs/kontakt/",
+    "address": "Nikole Tesle14b,31260 Kosjerić,Serbia, as stated in actual mainAqualinproduct corporate footer and officialULTRAContact. OwnULTRAAbout confirms Irkomcompany/UltraProfessionalbrand. Coordinates43.9967,19.9067 are coarse town mapping only, not surveyed/geocoded factory entrance. NoviSad product-footer office not a separate new company; mainAbout/contact returned500 and are not claimed as successfully read.",
+    "generalEmail": "branislav@irkom.com",
+    "generalEmailEvidence": {
+      "company": "Irkom d.o.o.",
+      "value": "branislav@irkom.com",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own IRKOM ULTRA Contact — Tehnička podrška (technical support)",
+          "url": "https://irkomultra.rs/kontakt/",
+          "summary": "Exact branislav@irkom.com appears under Technical support beside its business phone and same Nikole Tesle14b,Kosjerić address. OwnAbout explicitly calls this the official Irkom company/UltraProfessional brand site. Department channel only; email local part is not verified personal identity/title/procurement duty or deliverability."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhone": "+381648021501",
+    "generalPhoneEvidence": {
+      "company": "Irkom d.o.o.",
+      "value": "+381648021501",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own IRKOM ULTRA Contact — technical-support business voice phone",
+          "url": "https://irkomultra.rs/kontakt/",
+          "summary": "Exact +381648021501 is under Tehnička podrška. Separate sales phone+381646400047 and old/mainproduct technical line are not merged into this role. No call-test, named purchaser or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "branislav@irkom.com",
+        "source": {
+          "label": "Own IRKOM ULTRA Contact: Tehnička podrška",
+          "url": "https://irkomultra.rs/kontakt/"
+        },
+        "emailEvidence": {
+          "company": "Irkom d.o.o.",
+          "value": "branislav@irkom.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual own IRKOM ULTRA Contact — Tehnička podrška (technical support)",
+              "url": "https://irkomultra.rs/kontakt/",
+              "summary": "Exact branislav@irkom.com appears under Technical support beside its business phone and same Nikole Tesle14b,Kosjerić address. OwnAbout explicitly calls this the official Irkom company/UltraProfessional brand site. Department channel only; email local part is not verified personal identity/title/procurement duty or deliverability."
+            }
+          ],
+          "verifiedAt": "2026-10-23"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual own AQUALIN wood primer: aqueous acrylic dispersion, substrate/purpose and corporate footer",
+        "url": "https://irkom.rs/proizvod/aqua-lak-osnovni/"
+      },
+      {
+        "label": "Own official Irkomcompany/UltraProfessionalbrand paints-and-coatings production/development and complete visible industrial family menu",
+        "url": "https://irkomultra.rs/o-nama/"
+      },
+      {
+        "label": "Actual separate official industrialContact: technicalsupport exact business mailbox/phone and same Kosjerić address",
+        "url": "https://irkomultra.rs/kontakt/"
+      }
+    ]
+  },
   "stancolac-thessaloniki": {
     "website": "https://stancolac.gr/",
     "contactPage": "https://stancolac.gr/contact/",
@@ -26205,6 +26308,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "irkom-kosjeric",
   "stancolac-thessaloniki",
   "berling-inofita",
   "pro-colore-virbalis",

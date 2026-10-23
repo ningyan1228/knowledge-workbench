@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "irkom-kosjeric": "Your AQUALIN wood primer uses waterborne acrylic dispersions and prepares wood for the Aqualin finishing varnish.",
   "stancolac-thessaloniki": "Your 812 EPOXY PRIMER is a two-component epoxy-polyamide primer for steel structures, fuel tanks and harbor equipment.",
   "berling-inofita": "Your industrial coating range includes epoxy primers and intermediate coats, with polyurethane topcoats for outdoor applications.",
   "pro-colore-virbalis": "Your LIUKS-M is a water-dilutable paint for new and previously painted wooden facades and fences.",
