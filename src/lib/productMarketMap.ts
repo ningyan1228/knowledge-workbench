@@ -8175,11 +8175,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "oellers-immex-aldenhoven",
+    "company": "Oellers Immex Produktions- und Vertriebs GmbH & Co. KG",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Aldenhoven — Germany country-level indicative map marker; factory not geocoded",
+    "latitude": 51,
+    "longitude": 10,
+    "legacyCompanyDescription": "德国Aldenhoven涂料制造/研发企业；Sunfirn Dekor W为水性木器成品涂料",
+    "fit": "可开发候选",
+    "signal": "官网明确自有涂料生产和研发；Sunfirn Dekor W 是以合成树脂和天然油为基础的水性木器涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "实际完整审读官网产品页715行、首页204行，以及两条明确计数的直接HTTPS产品原文；另有两次产品页Cache miss，共6次公司请求，4正文/2失败，0剩余。产品页说明自有生产与研发，首页明确Aldenhoven工厂销售，版权实体Oellers Immex Produktions- und Vertriebs GmbH & Co. KG。Sunfirn Dekor W产品实际为基于合成树脂/天然油的水性木器成品涂料，表格Basis为Alkydharze；不是把经销商水性标签当原始依据。产品页概称allproducts内部生产，但目录有Drizoro标识Maxseal交叉销售；仅将自有OELLERS/Sunfirn配方生产作为资格证据，不宣称其他品牌均为自产或同一集团。针对实际出现Alkolin C Haftemulsion另读独立产品正文：明确是水泥/混凝土砂浆、找平层及抹灰的拌合液，配水后用于施工材料；不是因Haftemulsion名称就判PO/CPO同行，也不虚构其聚合物主链为PVAc/SBR或以此证明NLW适用水泥。实际可见范围是成品建筑/工业涂料、木器漆、底漆、防水和施工配套；未发现PO/CPO分散体或原料级工业附着促进剂对外销售证据，有限实际来源内排除通过。其他叶页、TDS/SDS、全部SKU及未披露关联原料业务未穷尽，不称完成全部股权/配方审计，不编造外购例外。德国公司、IMMEX名称、自有OELLERS/Sunfirn系列及语言站共同查重，只一个账户。官网自有一般咨询邮箱/电话已多页核对；直接取得的两份HTML均明确含https://wa.me/49246499060，仅保存该真实公开WhatsApp链接，不从电话猜账号，不发送消息。公司成品耐候、防水/施工性能及历史年数不移植为NLW产品性能、认证或投产日期。"
+    },
+    "contact": {
+      "label": "官网公开公司通用咨询邮箱、业务电话和明确WhatsApp链接；未核验具名采购/技术收件人",
+      "email": "info@oellers-immex.de",
+      "phone": "02464 99060",
+      "contactUrl": "https://www.oellers-immex.de/"
+    },
+    "source": {
+      "label": "Actual Sunfirn Dekor W water-based wood-coating original and own paint manufacturing/research description",
+      "url": "https://www.oellers-immex.de/OELLERS-Sunfirn-Dekor-W/008131450279.1M"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "oellers-immex-aldenhoven": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "ferroluz-val-de-san-vicente": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chromos-svjetlost-luzani": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "anypsa-carabayllo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8562,6 +8591,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "oellers-immex-aldenhoven": {
+    "website": "https://www.oellers-immex.de/",
+    "contactPage": "https://www.oellers-immex.de/",
+    "whatsapp": "https://wa.me/49246499060",
+    "address": "Aldenhoven, Germany, explicitly stated for the own paint factory/factory sales on Home. Street address was not read or invented. Coordinates51,10 are deliberately coarse Germany country-level indicative placement, not geocoded Aldenhoven, factory or street entrance.",
+    "generalEmail": "info@oellers-immex.de",
+    "generalPhone": "02464 99060",
+    "generalEmailEvidence": {
+      "company": "Oellers Immex Produktions- und Vertriebs GmbH & Co. KG",
+      "value": "info@oellers-immex.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own Home general corporate business contact footer",
+          "url": "https://www.oellers-immex.de/",
+          "summary": "Actual own Home and Products contact footer identifies Farbenfabrik OELLERS and publishes exact general business mailbox info@oellers-immex.de and02464 99060, repeated on both actual product bodies; corporate name in same copyright footer. General route, no named buyer, purchasing responsibility or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhoneEvidence": {
+      "company": "Oellers Immex Produktions- und Vertriebs GmbH & Co. KG",
+      "value": "02464 99060",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual own Home general business telephone footer",
+          "url": "https://www.oellers-immex.de/",
+          "summary": "Actual own Home and Products contact footer identifies Farbenfabrik OELLERS and publishes exact general business mailbox info@oellers-immex.de and02464 99060, repeated on both actual product bodies; corporate name in same copyright footer. General route, no named buyer, purchasing responsibility or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Products: in-house production/R&D and visible finished coating/construction product portfolio",
+        "url": "https://www.oellers-immex.de/produkte/"
+      },
+      {
+        "label": "Own Home: Aldenhoven paint factory/factory sales and general corporate email/telephone",
+        "url": "https://www.oellers-immex.de/"
+      },
+      {
+        "label": "Actual Sunfirn Dekor W: water-based wood coating from synthetic resins/natural oils; alkyd base in own table; exact public WhatsApp href in returned HTML",
+        "url": "https://www.oellers-immex.de/OELLERS-Sunfirn-Dekor-W/008131450279.1M"
+      },
+      {
+        "label": "Actual Alkolin C: construction mortar/screed/plaster mixing liquid, not identified as raw PO/CPO dispersion",
+        "url": "https://www.oellers-immex.de/OELLERS-Alkolin-C-Haftemulsion-Konzentrat/210513220431M"
+      }
+    ]
+  },
   "ferroluz-val-de-san-vicente": {
     "website": "https://pinturasferroluz.com/",
     "contactPage": "https://pinturasferroluz.com/",
@@ -26636,6 +26721,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "oellers-immex-aldenhoven",
   "ferroluz-val-de-san-vicente",
   "chromos-svjetlost-luzani",
   "anypsa-carabayllo",
