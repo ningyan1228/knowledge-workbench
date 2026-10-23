@@ -8314,11 +8314,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "mbm-lenux-timisoara",
+    "company": "MBM Lenux Premium SRL",
+    "productId": "nl-w1201",
+    "country": "Romania",
+    "countryZh": "罗马尼亚",
+    "city": "Timișoara — Romania country-level indicative marker; published store/business address not factory-geocoded",
+    "latitude": 46,
+    "longitude": 25,
+    "legacyCompanyDescription": "罗马尼亚 Timișoara 自产水性木器清漆及涂料企业",
+    "fit": "可开发候选",
+    "signal": "官网说明在 Timișoara 自有工厂生产涂料并设研发实验室；自产水性着色清漆用于室外木材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-23",
+      "conclusion": "Three actual freeTinyFishqueries andsix actual MBMLenuxcompanyURLattempts: four usableownbusinessbodies fullyread (lacquer5875/home2699/About4359/legalentitybody); Contact859charscookie-only unusable forformfields; observedOthercategory14altele404. All failures/unusablecounttoward6STOP. HomeexplicitownTimisoarafactory/laboratory; AboutownR&Dandwater-basedwoodfinishes; categoryexplicitownproductionandwater-basedtintedlacquersforexteriorwood. LegalidentifiesMBMLenuxPremiumSRL,RO42373374,J35/709/2020 andBorealWEBcreator/host, notparentcompany/customer. Undated27/30yearproductbrandhistory not currentlegalincorporation/provenfactoryage. Legal2024copyrightnot2026certification. Realgeneralemail/telephonefromAboutandhome, notguessedfrommaskedlegaltext. Explicitpublicweb.whatsapp.comlink observedinactualhomeoutboundlinks, notinferredfromphone. Contactonlycookiebody, noforminvented. Catalogue45products8visiblefirstpage, do notclaimallSKU/ingredients/auxcataloguecomplete; Other404notclearedauxiliaries. Currentactualportfoliofinishedwood/stone/cement/metalcoatings,2KPUmicrocementfinishnotrawPUinput; no PO/CPOdispersion/functionaladhesionrawinputsale inactualboundedmanufacturing/portfolioevidence. MahonPVC isdisplayedwoodfinishshade/name, notPVCsubstrateproof. Customer7year/UV/biocide/fire/lowVOC/rateclaims notourNLWclaims. SixSTOP, no retries or paidtools. 公司/品牌、域名、CUI RO42373374 和登记号 J35/709/2020 均与当前386公开/400本地正式、完整322队列、752私有frontier、来源索引及历史查重未匹配。Boreal WEB 仅为明确的建站和托管服务方，不是母公司/制造客户。有限实际当前制造/产品范围内同行排除通过，不称已穷尽未读SKU、SDS或全部原料成分，不虚构外购例外。"
+    },
+    "contact": {
+      "label": "官网明确通用业务邮箱、总机及公开 WhatsApp 链接；未核实联系页表单字段，无具名采购人",
+      "email": "contact@mbmlenux.ro",
+      "phone": "+40 725 211 872",
+      "contactUrl": "https://mbmlenux.ro/content/4-despre-noi"
+    },
+    "source": {
+      "label": "Own lacquer category explicitly states own production and water-based tinted exterior wood lacquers",
+      "url": "https://mbmlenux.ro/10-lacuri"
+    },
+    "checkedAt": "2026-10-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mbm-lenux-timisoara": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "egrokorr-erd": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "malexim-warsaw": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sob-solutions-biars-sur-cere": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8706,6 +8735,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mbm-lenux-timisoara": {
+    "website": "https://mbmlenux.ro/",
+    "address": "Bld. Eroilor de la Tisa,30–40,300551 Timișoara,Romania, actual published business/store address. Home identifies own factory in Timișoara but exact factory street/GPS not established. Coordinates46,25 intentionally coarse Romania country-level placement, not geocoded Timișoara business address or factory.",
+    "generalEmail": "contact@mbmlenux.ro",
+    "generalEmailEvidence": {
+      "company": "MBM Lenux Premium SRL",
+      "value": "contact@mbmlenux.ro",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own MBM Lenux company profile corporate business contact",
+          "url": "https://mbmlenux.ro/content/4-despre-noi",
+          "summary": "Exact public business inbox contact@mbmlenux.ro in own About and home. Legal page independently identifies MBM Lenux Premium SRL; no guessed decoding, named buyer or delivery test."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "generalPhone": "+40 725 211 872",
+    "generalPhoneEvidence": {
+      "company": "MBM Lenux Premium SRL",
+      "value": "+40 725 211 872",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own MBM Lenux company profile corporate business contact",
+          "url": "https://mbmlenux.ro/content/4-despre-noi",
+          "summary": "Exact About corporate contact +40725211872 also matches legal business identity. General company phone; WhatsApp only because separate explicit own-site outbound WhatsApp link exists."
+        }
+      ],
+      "verifiedAt": "2026-10-23"
+    },
+    "whatsapp": "https://web.whatsapp.com/send?phone=40725211872&text=https://mbmlenux.ro/",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own home: Timișoara factory/laboratory, general email and explicit public WhatsApp outbound link",
+        "url": "https://mbmlenux.ro/"
+      },
+      {
+        "label": "Own About: actual R&D, water-based wood coatings and exact business email/phone",
+        "url": "https://mbmlenux.ro/content/4-despre-noi"
+      },
+      {
+        "label": "Own lacquer category: own production, water-based tinted exterior wood lacquers; first8of45 products only",
+        "url": "https://mbmlenux.ro/10-lacuri"
+      },
+      {
+        "label": "Own legal identification: MBM Lenux Premium SRL,CUI RO42373374,J35/709/2020; web host not parent",
+        "url": "https://mbmlenux.ro/content/2-mentiuni-legale"
+      }
+    ]
+  },
   "egrokorr-erd": {
     "website": "https://egrokorr.hu/",
     "address": "2030 Érd,Fehérvári út63/J.,Hungary, exact published corporate business address in own footer; own profile identifies Érd factory relocation2003. Coordinates47,19 are deliberately coarse Hungary country-level indicative placement, not geocoded factory, Érd street address or store.",
@@ -27059,6 +27143,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mbm-lenux-timisoara",
   "egrokorr-erd",
   "malexim-warsaw",
   "sob-solutions-biars-sur-cere",
