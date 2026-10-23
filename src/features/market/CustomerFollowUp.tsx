@@ -4,6 +4,7 @@ import { useAccountSession } from '../../lib/accountSession'
 import { compareFollowup, parseFollowup, type FollowupCustomer } from '../../lib/customerFollowup'
 import { followupRequest, type FollowupAccess, type FollowupMembers, type FollowupSnapshot, type FollowupVersions } from '../../lib/followupApi'
 import { FollowupMarkdown } from './FollowupMarkdown'
+import { FollowupDatePicker } from './FollowupDatePicker'
 import './CustomerFollowUp.css'
 
 function dateTime(value: string) {
@@ -50,14 +51,15 @@ function FollowupWorkspace({ userId }: { userId: string }) {
   const historical = Boolean(loaded?.snapshot && loaded.snapshot.id !== loaded.index.current_id)
   const owner = loaded?.access.role === 'owner'
   const rows = document?.customers.filter(row => `${row.customer} ${row.product} ${row.status} ${row.next}`.toLowerCase().includes(query.trim().toLowerCase())) ?? []
-  const toCurrent = () => { selectedId.current = null; setExpanded(null); setMessage(''); void refresh(null) }
+  const selectVersion = (id: string) => { setExpanded(null); setQuery(''); setMessage(''); void refresh(id) }
+  const toCurrent = () => { selectedId.current = null; setExpanded(null); setQuery(''); setMessage(''); void refresh(null) }
   const download = () => {
     if (!loaded?.snapshot) return
     const url = URL.createObjectURL(new Blob([loaded.snapshot.markdown], { type: 'text/markdown;charset=utf-8' }))
     const anchor = window.document.createElement('a'); anchor.href = url; anchor.download = loaded.snapshot.filename; anchor.click()
     window.setTimeout(() => URL.revokeObjectURL(url), 1000)
   }
-  return <section className="customer-followup" aria-label="团队客户跟进">
+  return <section className="customer-followup" aria-label="团队客户跟进" aria-busy={refreshing}>
     <div className="followup-heading"><div><h1>客户跟进</h1><p><LockKeyhole size={13} />仅受邀成员可见{loaded && <> · {owner ? '你可以更新台账及管理共享成员' : '你拥有查看权限'}</>}</p></div><div className="followup-actions"><button type="button" className="secondary-button" disabled={refreshing} onClick={() => void refresh()}><RefreshCw size={15} className={refreshing ? 'followup-spinning' : ''} />刷新</button>{loaded && <><button type="button" className="secondary-button" onClick={() => setPanel('history')}><History size={15} />历史版本</button>{owner && <button type="button" className="secondary-button" onClick={() => setPanel('members')}><Users size={15} />共享成员</button>}{owner && !historical && <button type="button" className="primary-button" onClick={() => setPanel('upload')}><Upload size={15} />上传更新</button>}</>}</div></div>
     {error && <div className="followup-empty" role="alert"><LockKeyhole size={28} /><h2>暂时无法查看台账</h2><p>{error}</p><a href="#settings">账户与设置</a></div>}
     {!loaded && !error && <div className="followup-empty" role="status">正在核对权限并读取团队台账…</div>}
@@ -65,7 +67,7 @@ function FollowupWorkspace({ userId }: { userId: string }) {
     {loaded && !loaded.snapshot && <div className="followup-empty"><FileText size={30} /><h2>团队台账还没有内容</h2><p>{owner ? '上传一份 Markdown 台账，先预览，再更新给同事查看。' : '负责人上传后，你就可以在这里查看最新跟进。'}</p></div>}
     {loaded?.snapshot && document && <>
       {historical && <div className="followup-history-notice" role="status"><span>正在查看历史版本 · {loaded.snapshot.source_date ?? loaded.snapshot.filename}</span><button type="button" onClick={toCurrent}>返回最新版</button></div>}
-      <div className="followup-toolbar"><div className="followup-document-meta"><strong>资料日期 {loaded.snapshot.source_date ?? '未注明'}</strong><span>上传于 {dateTime(loaded.snapshot.created_at)}（北京时间）</span></div><div className="followup-read-actions"><div className="followup-view-switch" aria-label="阅读方式"><button type="button" aria-pressed={view === 'summary'} onClick={() => setView('summary')}>进度总览</button><button type="button" aria-pressed={view === 'original'} onClick={() => setView('original')}>完整原文</button></div><button type="button" className="secondary-button" onClick={download}><Download size={14} />下载 .md</button></div></div>
+      <div className="followup-toolbar"><div className="followup-document-meta"><FollowupDatePicker index={loaded.index} selectedId={loaded.snapshot.id} busy={refreshing} onSelect={selectVersion} /><span>上传于 {dateTime(loaded.snapshot.created_at)}（北京时间）</span></div><div className="followup-read-actions"><div className="followup-view-switch" aria-label="阅读方式"><button type="button" aria-pressed={view === 'summary'} onClick={() => setView('summary')}>进度总览</button><button type="button" aria-pressed={view === 'original'} onClick={() => setView('original')}>完整原文</button></div><button type="button" className="secondary-button" onClick={download}><Download size={14} />下载 .md</button></div></div>
       {view === 'summary' ? <>
         <div className="followup-list-toolbar"><span>{document.customers.length} 条客户 / 询盘主档{query && ` · 找到 ${rows.length} 条`}</span><label className="followup-search"><Search size={16} /><input aria-label="搜索跟进客户" placeholder="搜索客户、产品或进度" value={query} onChange={event => setQuery(event.target.value)} /></label></div>
         {document.warnings.map(warning => <p className="followup-warning" key={warning}>{warning}</p>)}
@@ -74,7 +76,7 @@ function FollowupWorkspace({ userId }: { userId: string }) {
       </> : <FollowupMarkdown markdown={loaded.snapshot.markdown} />}
     </>}
     {panel === 'upload' && loaded && owner && <UploadDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onSaved={() => { setPanel(null); toCurrent(); setMessage('台账已更新，同事打开后将看到最新版。') }} />}
-    {panel === 'history' && loaded && <HistoryDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onOpen={id => { setPanel(null); setExpanded(null); setMessage(''); void refresh(id) }} onRestored={() => { setPanel(null); toCurrent() }} />}
+    {panel === 'history' && loaded && <HistoryDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onOpen={id => { setPanel(null); selectVersion(id) }} onRestored={() => { setPanel(null); toCurrent() }} />}
     {panel === 'members' && owner && <MembersDialog userId={userId} onClose={() => setPanel(null)} />}
   </section>
 }
