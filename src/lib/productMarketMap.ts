@@ -8342,11 +8342,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-23"
   },
+  {
+    "id": "ninachim-ruse",
+    "company": "Ninachim EOOD (Нинахим ЕООД)",
+    "productId": "nl-w1201",
+    "country": "Bulgaria",
+    "countryZh": "保加利亚",
+    "city": "Ruse area — company states factory18km from Ruse; Bulgaria country-level indicative marker, not factory/street geocoding",
+    "latitude": 43,
+    "longitude": 25,
+    "legacyCompanyDescription": "保加利亚 Ruse 周边自产水性木器漆及其他涂料企业；精确工厂街址未核验",
+    "fit": "可开发候选",
+    "signal": "自行开发生产涂料并在距 Ruse 约18公里的自有建筑开展制造和产品测试；Marsel H20 是用于室内外木材的水性清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "Three actual freeTinyFishqueries andsixactualownNinachimHTMLoriginals completelyread: Home650,About5185,woodcategory1294,auxcategory489,actualMarselH20woodlacquer1540,Contact519chars. Aboutexplicitownbuildingmanufacture18kmfromRuse,development/productionandlabtestequipment; exactwater-basedwoodleafinterior/exteriorwood. No inventedfactorytown/streetGPSor2026newcommissioning: oldISO9001-2008andEU2014-2020grant/tenderperiodsnotcurrentcertification,activeRFQorcompletednewline. CurrentactualbrandMarsel/siBelle/MarselH2O/MARSELproandninachim.comlegacydomainoneconservativeaccount,notfourcustomers. Auxactualbodyfourshortdescriptionsandninevisibleleaflinkscoverthinners/tint/stovefinish/burningfluid/rustconverter; no allleaf/SDSaudit. Visibleindustrialnavigationincludesepoxyresinandtwo-componentB-system,woodcategorylinseedoil/alkydoil; these are not inferredPO/CPOdispersionorselectedfunctionaladhesionrawinputs,andunreadchemistrynotcalledverified. Actualfinitecurrentmanufacture/product/auxscopehasno identifiedsaleofselectedPO/CPO/functionaladhesionrawmaterial; boundedexclusionpassed,no allglobalSKU/hiddenbusinessguaranteeor inventedexternalbuyexception. Customerwater-base/UV/elasticity/adhesion/drying/rate/ISOclaimsnotourNLWperformanceguarantee; productmentionspreprimedmetal/plastic/mineralbutmatchonlyindependentlyverifiedwoodTDSscope. ExactContact/Homecorporateinboxninachim@ru-se.comandbusinessmobile+359886849345,notnamedpurchaser/privatepersonorWhatsApp. ContactWriteUslabelsbutnoactualformfieldsreturned, noformassertion. No currentnamedstaff/parentcontrol/fullexternalregistryaudit. SixSTOP, sourcebudgetsnotreset. 当前387公开/401本地正式、完整322私有队列、755frontier、来源索引与历史按公司、域名、旧ninachim.com及已知四个品牌查重无同一正式或私有研究账户；不按品牌/厂址拆新增。结论限实际所读当前制造和产品范围，不穷尽全部SKU/SDS、未披露业务或全球关联主体。"
+    },
+    "contact": {
+      "label": "官网明确公司通用业务邮箱和公开业务手机；无具名采购人，电话不作WhatsApp，未核实联系页表单字段",
+      "email": "ninachim@ru-se.com",
+      "phone": "+359 886 849 345",
+      "contactUrl": "https://ninachim.bg/contact"
+    },
+    "source": {
+      "label": "Own Marsel H20 water-based wood lacquer page: interior/exterior wood; own manufacture separately established in About",
+      "url": "https://ninachim.bg/products/lakove-i-beziri-za-dyrvo/marsel-h20-lazuren-lak-za-darvo.html"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ninachim-ruse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mbm-lenux-timisoara": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "egrokorr-erd": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "malexim-warsaw": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8735,6 +8764,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ninachim-ruse": {
+    contactPage: undefined,
+    "website": "https://ninachim.bg/",
+    "address": "Own About locates manufacturing in its own building18km from Ruse,Bulgaria; exact town/street/plant GPS not established by the six read sources. Coordinates43,25 intentionally coarse Bulgaria country-level indicative placement, not geocoded Ruse city or factory address.",
+    "generalEmail": "ninachim@ru-se.com",
+    "generalEmailEvidence": {
+      "company": "Ninachim EOOD (Нинахим ЕООД)",
+      "value": "ninachim@ru-se.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Ninachim corporate Contact page exact published channel",
+          "url": "https://ninachim.bg/contact",
+          "summary": "Exact company inbox ninachim@ru-se.com printed twice in own Contact and also Home. Externally hosted domain does not alter explicit own-site corporate attribution; general mailbox, no named buyer or delivery test."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "generalPhone": "+359 886 849 345",
+    "generalPhoneEvidence": {
+      "company": "Ninachim EOOD (Нинахим ЕООД)",
+      "value": "+359 886 849 345",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Ninachim corporate Contact page exact published channel",
+          "url": "https://ninachim.bg/contact",
+          "summary": "Exact own Contact number +359886849345 also displayed on Home. Explicit public company business mobile; no private-person assignment or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company About: development, manufacture in own building near Ruse and laboratory test equipment; old grant/ISO dates retained",
+        "url": "https://ninachim.bg/za-nas"
+      },
+      {
+        "label": "Own current Marsel H20 water-based wood lacquer, interior/exterior applications",
+        "url": "https://ninachim.bg/products/lakove-i-beziri-za-dyrvo/marsel-h20-lazuren-lak-za-darvo.html"
+      },
+      {
+        "label": "Own wood finishes category: actual limited product list, not all industrial resin leaf data",
+        "url": "https://ninachim.bg/category/products/lakove-i-beziri-za-dyrvo"
+      },
+      {
+        "label": "Own auxiliary products: actual short descriptions and visible leaf links; chemistry/SDS not exhaustively read",
+        "url": "https://ninachim.bg/category/products/sapatsvtvashti-produkti"
+      },
+      {
+        "label": "Own public business mail and voice; no contact form fields asserted",
+        "url": "https://ninachim.bg/contact"
+      }
+    ]
+  },
   "mbm-lenux-timisoara": {
     "website": "https://mbmlenux.ro/",
     "address": "Bld. Eroilor de la Tisa,30–40,300551 Timișoara,Romania, actual published business/store address. Home identifies own factory in Timișoara but exact factory street/GPS not established. Coordinates46,25 intentionally coarse Romania country-level placement, not geocoded Timișoara business address or factory.",
@@ -27143,6 +27231,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ninachim-ruse",
   "mbm-lenux-timisoara",
   "egrokorr-erd",
   "malexim-warsaw",
