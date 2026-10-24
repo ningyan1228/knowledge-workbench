@@ -8008,11 +8008,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "chromodomi-sindos",
+    "company": "CHROMODOMI",
+    "productId": "nl-w1201",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Thessaloniki / Sindos — own Company and Contact",
+    "latitude": 38.5,
+    "longitude": 23,
+    "legacyCompanyDescription": "希腊 Sindos 自产涂料及水性木器漆企业；使用官网公开名称 CHROMODOMI，未从目录网站或旧站检索片段补写法律后缀",
+    "fit": "可开发候选",
+    "signal": "希腊 Sindos 自有工厂、研发与生产涂料企业；RED SUN WATER 是用于室内和室外木材的水性清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "累计 6 个公司原文已完整读到：首页、RED SUN WATER 产品、Company、Contact、可见 Products 总类、Thinners/Oils。Company 明确自有生产设施与研发，实际水性木器产品已在其自有原文验证。产品导航为成品涂料、底涂、保温防水、工业/船舶涂料及工具，辅助类 5 项是 White Spirit、Epoxy Thinner、Nitro Thinner、Linseed Oil、Poly-Thinner；所读范围未发现销售水性聚烯烃乳液、CPO/PO 分散体或同类原料型附着力促进剂。Poly-Thinner 名称不推定为聚烯烃原料，普通亚麻油也不自动当作环氧亚麻油；本轮选 NL-W1201，不据此赋予 ELO 资格。未读所有叶页/SDS、B2B 登录目录或未披露化学体系，不声称全业务审计。查重覆盖 375 公开、389 本地、322 队列、765 私有记录、两个来源索引与全私有历史，域名、RED SUN WATER、创办人及联系页姓名拼写均无同一旧账户。Chromodoro 是另一域名及主体的旧发现项；Chromos、语言站、品牌、办公室和两个厂房不拆作新客户。"
+    },
+    "contact": {
+      "label": "官网采购部门邮箱；另有通用、化学技术和销售邮箱、业务电话及联系表单；无具名采购负责人",
+      "email": "agores@chromodomi.gr",
+      "phone": "+30 2310796663",
+      "contactUrl": "https://chromodomi.gr/en/contact/"
+    },
+    "source": {
+      "label": "Own RED SUN WATER actual aqueous varnish for indoor and outdoor wood",
+      "url": "https://chromodomi.gr/en/product/red-sun-water-water-based-wood-varnish/"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chromodomi-sindos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "superlux-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "epoksan-cacak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chemitrade-ratmalana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8389,6 +8418,132 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chromodomi-sindos": {
+    "website": "https://chromodomi.gr/",
+    "contactPage": "https://chromodomi.gr/en/contact/",
+    "address": "Own Contact: Building1 Warehouse & Office — Goodyear Building Block, Road2, Sindos Industrial Area,57022; Building2&3 Paint Factory & Packaging — DA14, Building Block OT35,B entrance, Industrial Area Sindos. Greece; marker38.5,23 is country-level research positioning, not geocoded office/factory entrances.",
+    "generalEmail": "info@chromodomi.gr",
+    "generalEmailEvidence": {
+      "company": "CHROMODOMI",
+      "value": "info@chromodomi.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "CHROMODOMI own official Contact exact department/company section",
+          "url": "https://chromodomi.gr/en/contact/",
+          "summary": "Exact own General information mailbox. Company route, no named-person ownership or deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "generalPhone": "+30 2310796663",
+    "generalPhoneEvidence": {
+      "company": "CHROMODOMI",
+      "value": "+30 2310796663",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "CHROMODOMI own official Contact exact department/company section",
+          "url": "https://chromodomi.gr/en/contact/",
+          "summary": "Own Contact publishes +30 2310796663 (5 lines), a public company business voice channel, not WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "agores@chromodomi.gr",
+        "source": {
+          "label": "Own Contact Procurement section",
+          "url": "https://chromodomi.gr/en/contact/"
+        },
+        "emailEvidence": {
+          "company": "CHROMODOMI",
+          "value": "agores@chromodomi.gr",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "CHROMODOMI own official Contact exact department/company section",
+              "url": "https://chromodomi.gr/en/contact/",
+              "summary": "Own Contact explicitly labels Procurement Department and exact agores@chromodomi.gr; department inbox, no invented purchasing person."
+            }
+          ],
+          "verifiedAt": "2026-10-24"
+        }
+      },
+      {
+        "department": "Technical",
+        "email": "chimio@chromodomi.gr",
+        "source": {
+          "label": "Own Contact Technical / Chemistry section",
+          "url": "https://chromodomi.gr/en/contact/"
+        },
+        "emailEvidence": {
+          "company": "CHROMODOMI",
+          "value": "chimio@chromodomi.gr",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "CHROMODOMI own official Contact exact department/company section",
+              "url": "https://chromodomi.gr/en/contact/",
+              "summary": "Own Contact explicitly labels Chemistry and exact chimio@chromodomi.gr. Department route, no individual scientist identity asserted."
+            }
+          ],
+          "verifiedAt": "2026-10-24"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "sales@chromodomi.gr",
+        "source": {
+          "label": "Own Contact Sales section",
+          "url": "https://chromodomi.gr/en/contact/"
+        },
+        "emailEvidence": {
+          "company": "CHROMODOMI",
+          "value": "sales@chromodomi.gr",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "CHROMODOMI own official Contact exact department/company section",
+              "url": "https://chromodomi.gr/en/contact/",
+              "summary": "Own Contact explicitly labels Sales Department and exact sales@chromodomi.gr; department route."
+            }
+          ],
+          "verifiedAt": "2026-10-24"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Company explicitly describes manufacture, privately-owned Sindos production facilities and R&D",
+        "url": "https://chromodomi.gr/en/company/"
+      },
+      {
+        "label": "Own RED SUN WATER exact water-based indoor/outdoor wood varnish",
+        "url": "https://chromodomi.gr/en/product/red-sun-water-water-based-wood-varnish/"
+      },
+      {
+        "label": "Own public current product groups and full product-page navigation, not every leaf/SDS",
+        "url": "https://chromodomi.gr/en/shop-2/"
+      },
+      {
+        "label": "Own complete five-item auxiliary thinner/oil category; no selected polyolefin/CPO input identified",
+        "url": "https://chromodomi.gr/en/product-category/surface-preparation-application/thinners-oils/"
+      },
+      {
+        "label": "Own current general/procurement/chemistry/sales channels, voicephone, addresses and form fields",
+        "url": "https://chromodomi.gr/en/contact/"
+      }
+    ]
+  },
   "superlux-thessaloniki": {
     "website": "https://superlux.gr/",
     "contactPage": "https://superlux.gr/en/contact/",
@@ -26053,6 +26208,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chromodomi-sindos",
   "superlux-thessaloniki",
   "epoksan-cacak",
   "chemitrade-ratmalana",
