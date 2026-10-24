@@ -7980,11 +7980,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "superlux-thessaloniki",
+    "company": "SUPERLUX",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Thessaloniki / Kalochori — own About and Contact",
+    "latitude": 38.5,
+    "longitude": 23,
+    "legacyCompanyDescription": "希腊 Thessaloniki 自产涂料企业；使用官网公开名称 SUPERLUX，不将目录网站的法律名称或旧检索标签当作已核验注册名",
+    "fit": "可开发候选",
+    "signal": "希腊 Thessaloniki 自产涂料企业；自有双组分环氧及 PU 系列产品卡片将 Metal Life Epoxy 2K Ferro 列为金属高防护双组分涂层体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "累计 6 次公司来源请求：About、可见产品总目录、Contact 及双组分环氧/PU 系列业务部分均已读；旧 SUPER EPOXY TOPCOAT PDF 与 Metal Life 独立产品页请求失败，均计入上限，不声称读过。公司原文明示在希腊制造涂料，当前产品卡片明确具名金属防护双组分体系，足以支持所保存的产品事实。16 类可见成品目录及所读系列 12 个卡片中未发现 ELO、ESBO、环氧植物油或同类生物基增塑添加剂销售；Crystal Bond 的 Liquid Glass Resin 名称不是其为 ELO 原料的证据，未读其 SDS，不虚构化学组成。排除范围限已读公开材料，不声称完成全部叶页、PDF 或隐藏业务审计。Casati/Biodur 导航名称不证明共同控股或原料经营关系，不拆分客户；DYO-Casati 已有账户未出现同一 SUPERLUX/域名/公开地址主体。查重覆盖 374 公开、388 本地、322 队列、764 私有研究、两个来源索引和全部私有历史；旧 Superlux/Ioannidis 标签与农学文章人名误命中、旧罗马尼亚语网页发现均已对齐，无先前公司原文请求。只收一个希腊 SUPERLUX，不按语言站或产品新增。未确认采购、使用 ELO 或配方适配。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱、业务电话及明确联系表单；无具名采购负责人",
+      "email": "info@superlux.gr",
+      "phone": "+30 2310 752609",
+      "contactUrl": "https://superlux.gr/en/contact/"
+    },
+    "source": {
+      "label": "Own two-component epoxy/PU product family, specific Metal Life Epoxy 2K Ferro card",
+      "url": "https://superlux.gr/en/product_category/two-component-epoxy-pu-products/"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "superlux-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "epoksan-cacak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chemitrade-ratmalana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pitura-belgrade": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8360,6 +8389,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "superlux-thessaloniki": {
+    "website": "https://superlux.gr/",
+    "contactPage": "https://superlux.gr/en/contact/",
+    "address": "Koritsas 9, Kalochori, Thessaloniki, 57009, Greece, as explicitly listed on own Contact. Marker38.5,23 is a coarse Greece-level research marker; no geocoded factory entrance or exact site coordinates asserted.",
+    "generalEmail": "info@superlux.gr",
+    "generalEmailEvidence": {
+      "company": "SUPERLUX",
+      "value": "info@superlux.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "SUPERLUX own public company Contact",
+          "url": "https://superlux.gr/en/contact/",
+          "summary": "Exact company mailbox explicitly printed on its own Contact; no named-person ownership, purchasing role or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "generalPhone": "+30 2310 752609",
+    "generalPhoneEvidence": {
+      "company": "SUPERLUX",
+      "value": "+30 2310 752609",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "SUPERLUX own public company Contact",
+          "url": "https://superlux.gr/en/contact/",
+          "summary": "Exact company Contact lists this number and +30 2310 752674. Curated first general business voice channel only; no WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own About explicitly states Greek paint manufacture and Thessaloniki headquarters",
+        "url": "https://superlux.gr/en/about-us/"
+      },
+      {
+        "label": "Own full visible current programme with16finished-product categories; not every leaf/SDS",
+        "url": "https://superlux.gr/en/our-products/"
+      },
+      {
+        "label": "Own selected epoxy/PU family, twelve product cards; business lines46–147 read, page footer not fully returned",
+        "url": "https://superlux.gr/en/product_category/two-component-epoxy-pu-products/"
+      },
+      {
+        "label": "Own Contact exact corporate email/voicephone/address and form fields; no submission",
+        "url": "https://superlux.gr/en/contact/"
+      }
+    ]
+  },
   "epoksan-cacak": {
     "website": "https://en.epoksan.rs/",
     "address": "Serbia; own EPOSAN E image caption identifies EPOKSAN-Čačak. Map marker44,21 is a coarse country-level research marker, not a verified head office, production site, street or entrance. Actual head/production-office map links were not opened.",
@@ -25969,6 +26053,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "superlux-thessaloniki",
   "epoksan-cacak",
   "chemitrade-ratmalana",
   "pitura-belgrade",
