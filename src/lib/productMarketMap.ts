@@ -7926,11 +7926,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "chemitrade-ratmalana",
+    "company": "Chemitrade Industrial Coatings (Pvt) Ltd",
+    "productId": "nl-w1201",
+    "country": "Sri Lanka",
+    "countryZh": "斯里兰卡",
+    "city": "Ratmalana, Western — actual corporate LinkedIn headquarters; country-level indicative map marker, not factory coordinates",
+    "latitude": 7,
+    "longitude": 81,
+    "legacyCompanyDescription": "斯里兰卡 Ratmalana 自产水性木器底漆及其他成品涂料企业；Lanco 为官网与官方公司页共同确认的本地品牌",
+    "fit": "可开发候选",
+    "signal": "在斯里兰卡自行制造 Chemitrade Paints／Lanco 木器及工业涂料；Water Based Primer 为适用于木材密封、填充用途的水性底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "Sixcompany-directedattempts, fivefullfiniteoriginalsread plusoneFacebooklogin_required failurecounted: Home,About,fullvisiblewoodfinishingprogramme,services-1 andactualcorporateLinkedIn. OwnAboutandreciprocalLinkedInproveChemitradeIndustrialCoatings(Pvt)Ltd SriLankanmanufacturer since1983 andChemitradePaints/Lancobrands; currentRatmalanaHQaddress fromactualLinkedIn. SpecificWaterBasedPrimerundercoatforwoodsealing/filling andwaterwoodlacquers proven. Visiblewood/auto/industrialfinishedcoatings,thinners,PUhardener,LancoFixfinishedwood/paperadhesive andLancoBondfinishedcontactadhesive do not establish saleofselectedrawPO/CPO/polyolefindispersion/functionaladhesion-promoterinput; noneidentified inreadscope. PUhardener not automaticallysameNLWinput; no allPDF/SDS/hiddenSKU auditclaimed. HomecontainsliteralWixplaceholdertestimonials/dummynames; allignoredforcompanyfacts/contacts. Career-onlyemailnotusedasbusinessinbox; WixsociallinksnotChemitradesocial. ActualHomepageWA link andactualcompanyLinkedIn validnon-emailchannels; do not derive voicephonefromWhatsApp or inventform. No rawNLWinputsale/groupduplicateidentified withinboundedreadscope; noNLWpurchase/use/compatibility/adhesionresultclaimed. SixSTOPacrossaliases/products/providers. 核对最新main ec599191实际372公开、386本地、完整322队列、759frontier、两个来源索引及私有历史：Chemitrade本名/工业公司全称/域名无旧正式或私有公司，Lanco旧5个匹配仅为通用预筛词与智利零售/多米尼加Search语境，未发现本斯里兰卡实体历史定向GET。只收一个Chemitrade账户，Lanco品牌不拆新增，不据同名将海外Lanco归为同一法律集团。公司真实身份由官网和其官方LinkedIn相互链接印证；LinkedIn营销获奖者/财务人员及模板姓名不收作采购联系人。"
+    },
+    "contact": {
+      "label": "官网明确公开WhatsApp业务链接及官方公司LinkedIn；缺已核验业务邮箱，不纳入批量邮件名单；不推断语音电话或联系表单",
+      "contactUrl": "https://wa.me/+94777579486"
+    },
+    "source": {
+      "label": "Own Water Based Primer undercoat for wood sealing/filling; manufacturing confirmed separately by About and official LinkedIn",
+      "url": "https://www.chemitradepaints.com/wood-coatings-sri-lanka"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chemitrade-ratmalana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pitura-belgrade": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ninachim-ruse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mbm-lenux-timisoara": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8304,6 +8331,37 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chemitrade-ratmalana": {
+    "website": "https://www.chemitradepaints.com/",
+    "linkedIn": "https://lk.linkedin.com/company/chemitrade-industrial-coatings-pvt-ltd",
+    "whatsapp": "https://wa.me/+94777579486",
+    "address": "Corporate LinkedIn primary headquarters: No.07, Sangabo Mawatha, Borupana Road, Ratmalana, Western10390,LK. Not independently factory-gate geocoded. Coordinates7,81 intentionally coarse SriLanka country-level indicative placement, not Ratmalana/HQ/street GPS.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own About actual legal company name, 1983 manufacture and water/solvent wood-coating portfolio; recruitment email excluded",
+        "url": "https://www.chemitradepaints.com/aboutus"
+      },
+      {
+        "label": "Own actual waterbasedwoodprimer/lacquer/finish andfinishedwoodadhesives; no inferredpolyolefininputtrade",
+        "url": "https://www.chemitradepaints.com/wood-coatings-sri-lanka"
+      },
+      {
+        "label": "Own actual Home WhatsApp href; template testimonials andWixsocials ignored, no formfields verified",
+        "url": "https://www.chemitradepaints.com/"
+      },
+      {
+        "label": "Own actual Lanco finishedwood/industrialprogramme, no unreadPDF/SDS claim",
+        "url": "https://www.chemitradepaints.com/services-1"
+      },
+      {
+        "label": "Official corporate LinkedIn reciprocalwebsite, Chemitrade/Lancobrand identity, manufacturing andheadquarters; incidental people/HRmailnotbuyercontacts",
+        "url": "https://lk.linkedin.com/company/chemitrade-industrial-coatings-pvt-ltd"
+      }
+    ],
+    "contactPage": undefined
+  },
   "pitura-belgrade": {
     "website": "https://www.pitura.co.rs/",
     "contactPage": "https://www.pitura.co.rs/kontakt",
@@ -25827,6 +25885,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chemitrade-ratmalana",
   "pitura-belgrade",
   "ninachim-ruse",
   "mbm-lenux-timisoara",
