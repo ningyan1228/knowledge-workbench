@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pitura-belgrade": "Your EPOKSAL EPP is a two-component epoxy topcoat for protecting industrial metal machinery and equipment.",
   "ninachim-ruse": "Your Marsel H20 wood lacquer is water-based and intended for interior and exterior wood applications.",
   "mbm-lenux-timisoara": "Your water-based tinted lacquers are designed for exterior wood applications.",
   "egrokorr-erd": "Your KATEPOX is a two-component epoxy coating for corrosion protection of steel structures.",

@@ -7898,11 +7898,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "pitura-belgrade",
+    "company": "Pitura",
+    "productId": "elo",
+    "country": "Serbia",
+    "countryZh": "塞尔维亚",
+    "city": "Belgrade — own About; exact factory street address not independently verified",
+    "latitude": 44.8693648,
+    "longitude": 20.3611717,
+    "legacyCompanyDescription": "塞尔维亚 Belgrade 自产工业防护及其他成品涂料企业；公司全称及法律后缀未在本轮原文中明确，使用实际公开名称 Pitura",
+    "fit": "可开发候选",
+    "signal": "在 Belgrade 自行研发、配制和生产涂料；EPOKSAL EPP 为用于工业金属机械及设备防护的双组分环氧面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "SixactualPituraoriginalsfullyread: home,ownEPOKSALEPPtopcoat,About,visibleproductionprogramme,auxiliarycategory,Contact. Aboutexplicitlymanufactures/formulates/testscoatings since1995Belgrade; productexactly2Kepoxyfinishtopcoatforindustrialmetal equipment, not aprimer orcustomeruseofELO. Fullvisiblecategories and9auxnames distinguishfinishedcoatings, rusttreatment/primer/solventfinish aids fromselectedELO/ESBO/epoxidizedvegetableoil/bioplasticizerinput; none selectedrawinputsaleidentified inreadscope. INHIBITORKOROZIJEname isnot a chemical/SDSaudit andnotassignedELOchemistry. Nullifirefinishedfireproofcoatingdistributorship andSiliglassbeadrepresentationdonotproveTremco/SiLigroupparentownershiporselectedELOinputsale. Exclusionlimitedtoreadcurrentpublicscope,notall100+SKU/SDS/globalunseenactivities. Source6STOP acrosslanguages/brands/products/providers; noextraGET. 当前371公开、385本地、完整322队列、756frontier、两个来源索引与全部私有历史按Pitura/域名/EPOKSAL查重无先前同一账户；新公开部门邮箱均来自同一自有Contact。只收一个Pitura账户，不按产品、语言站、地图点或销售/采购部门拆分；未披露D.O.O.等法律后缀和母集团不编造。"
+    },
+    "contact": {
+      "label": "官网采购部门邮箱；另有公司通用及销售部门邮箱、业务电话和明确称为表单的联系入口；无具名采购人",
+      "email": "nabavka@pitura.co.rs",
+      "phone": "+381 11 6301 820",
+      "contactUrl": "https://www.pitura.co.rs/kontakt"
+    },
+    "source": {
+      "label": "Own EPOKSAL EPP: two-component epoxy finishing topcoat for industrial metal machinery and equipment",
+      "url": "https://www.pitura.co.rs/premazi-za-metal/celicne-konstrukcije-i-laki-metali/epoksal-epp"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pitura-belgrade": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ninachim-ruse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mbm-lenux-timisoara": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "egrokorr-erd": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8275,6 +8304,110 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pitura-belgrade": {
+    "website": "https://www.pitura.co.rs/",
+    "contactPage": "https://www.pitura.co.rs/kontakt",
+    "address": "Belgrade, Serbia, from own About. Marker44.8693648,20.3611717 is the place-pin latitude/longitude explicitly embedded in the own Contact GoogleMaps link; street/land parcel/plant entrance not independently geocoded or read. No legal company suffix or factory-street address invented.",
+    "generalEmail": "info@pitura.co.rs",
+    "generalEmailEvidence": {
+      "company": "Pitura",
+      "value": "info@pitura.co.rs",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Pitura own Contact exact public business section",
+          "url": "https://www.pitura.co.rs/kontakt",
+          "summary": "Exact own Email section info@pitura.co.rs; publiccompanymail, no personalownership or deliverytest."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "generalPhone": "+381 11 3755 434",
+    "generalPhoneEvidence": {
+      "company": "Pitura",
+      "value": "+381 11 3755 434",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Pitura own Contact exact public business section",
+          "url": "https://www.pitura.co.rs/kontakt",
+          "summary": "Own Pozovitenas section lists (+38111)3755434 and (+38111)6301820; only sourcedpubliccompanybusinessphone, notWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "nabavka@pitura.co.rs",
+        "source": {
+          "label": "Own Služba nabavke section; also printed under technicalsupport",
+          "url": "https://www.pitura.co.rs/kontakt"
+        },
+        "emailEvidence": {
+          "company": "Pitura",
+          "value": "nabavka@pitura.co.rs",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Pitura own Contact exact public business section",
+              "url": "https://www.pitura.co.rs/kontakt",
+              "summary": "Exact own Službanabavke procurement section publishes nabavka@pitura.co.rs. Same exact mailbox is also shownunderTehničkapodrška; preserve one Procurement record, no inventedtechnicalalternative or namedbuyer."
+            }
+          ],
+          "verifiedAt": "2026-10-24"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "prodaja@pitura.co.rs",
+        "source": {
+          "label": "Own Služba prodaje sales section",
+          "url": "https://www.pitura.co.rs/kontakt"
+        },
+        "emailEvidence": {
+          "company": "Pitura",
+          "value": "prodaja@pitura.co.rs",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Pitura own Contact exact public business section",
+              "url": "https://www.pitura.co.rs/kontakt",
+              "summary": "Exact own Službaprodaje section publishes prodaja@pitura.co.rs; department mailbox, not aperson."
+            }
+          ],
+          "verifiedAt": "2026-10-24"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own About: manufacture/formulate/test products, 1995 Belgrade origin, no fabricated current capacity or ownership",
+        "url": "https://www.pitura.co.rs/o-nama"
+      },
+      {
+        "label": "Own specific EPOKSAL EPP two-component epoxy finishing topcoat",
+        "url": "https://www.pitura.co.rs/premazi-za-metal/celicne-konstrukcije-i-laki-metali/epoksal-epp"
+      },
+      {
+        "label": "Own current visible production programme, finished product categories",
+        "url": "https://www.pitura.co.rs/proizvodni-program"
+      },
+      {
+        "label": "Own actual nine auxiliary entries; no independent leaf-SDS or undisclosed100+SKU chemistry audit",
+        "url": "https://www.pitura.co.rs/pomocna-sredstva"
+      },
+      {
+        "label": "Own general/procurement/sales channels and explicit form invitation; no formsubmission",
+        "url": "https://www.pitura.co.rs/kontakt"
+      }
+    ]
+  },
   "ninachim-ruse": {
     contactPage: undefined,
     "website": "https://ninachim.bg/",
@@ -25694,6 +25827,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pitura-belgrade",
   "ninachim-ruse",
   "mbm-lenux-timisoara",
   "egrokorr-erd",
