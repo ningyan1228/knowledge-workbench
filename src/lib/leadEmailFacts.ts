@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "epoksan-cacak": "Your EPOSAN E is a two-component epoxy coating for protecting concrete floors and walls in industrial facilities.",
   "chemitrade-ratmalana": "Your Water Based Primer is an undercoat for wooden surfaces requiring sealing and filling properties.",
   "pitura-belgrade": "Your EPOKSAL EPP is a two-component epoxy topcoat for protecting industrial metal machinery and equipment.",
   "ninachim-ruse": "Your Marsel H20 wood lacquer is water-based and intended for interior and exterior wood applications.",

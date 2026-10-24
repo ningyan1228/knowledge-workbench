@@ -7952,11 +7952,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "epoksan-cacak",
+    "company": "Epoksan LLC",
+    "productId": "elo",
+    "country": "Serbia",
+    "countryZh": "塞尔维亚",
+    "city": "Čačak — 自有产品图片说明所列公司城市；具体总部及工厂地址未独立核实",
+    "latitude": 44,
+    "longitude": 21,
+    "legacyCompanyDescription": "塞尔维亚自产环氧工业地坪和防护涂料企业；使用首页明确公开的 Epoksan LLC 名称",
+    "fit": "可开发候选",
+    "signal": "Epoksan 在塞尔维亚自产环氧工业地坪和涂料；EPOSAN E 是用于工业厂房等混凝土地面及墙面防护的双组分环氧涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "本轮累计 6 次公司来源请求，完整读到首页、可见产品总目录、EPOSAN E 及 EPOSAN 涂料系列 4 个原文；环氧树脂目录请求失败、LinkedIn 被 robots 拒绝，均计入上限并停止。自有首页明确生产环氧工业地坪与涂料，具体 EPOSAN E 证明下游成品制造。首页“Epoxy resin”描述为装饰塑料件、金属和木材精加工用改性双组分透明成品体系；可见目录中未识别销售 ELO、ESBO、环氧植物油或同类生物基增塑添加剂。排除结论限已读公开范围，不声称读过全部 SDS、失败目录正文或未公开产品。查重覆盖 373 公开、387 本地、322 队列、761 私有研究、两个来源索引和私有历史；已有 Epoksan 发现记录更新为同一账户，日本 Saito 的 Epolite 名称命中为不同公司，不按品牌、语言站或产品拆分客户。未确认客户采购或使用 ELO。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及电话；未核实具名采购负责人",
+      "email": "epoksan@eunet.rs",
+      "phone": "+381 32 32 77 44",
+      "contactUrl": "https://en.epoksan.rs/"
+    },
+    "source": {
+      "label": "Own EPOSAN E two-component protective epoxy coating for industrial concrete floors and walls",
+      "url": "https://en.epoksan.rs/products/eposan-coatings/eposan-e/"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "epoksan-cacak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chemitrade-ratmalana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pitura-belgrade": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ninachim-ruse": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8331,6 +8360,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "epoksan-cacak": {
+    "website": "https://en.epoksan.rs/",
+    "address": "Serbia; own EPOSAN E image caption identifies EPOKSAN-Čačak. Map marker44,21 is a coarse country-level research marker, not a verified head office, production site, street or entrance. Actual head/production-office map links were not opened.",
+    "generalEmail": "epoksan@eunet.rs",
+    "generalEmailEvidence": {
+      "company": "Epoksan LLC",
+      "value": "epoksan@eunet.rs",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Epoksan own official English homepage public company header",
+          "url": "https://en.epoksan.rs/",
+          "summary": "Exact epoksan@eunet.rs address appears in the official company header; external email domain is attributed by the company itself. General corporate channel, no named recipient or delivery test."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "generalPhone": "+381 32 32 77 44",
+    "generalPhoneEvidence": {
+      "company": "Epoksan LLC",
+      "value": "+381 32 32 77 44",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Epoksan own official English homepage public company header",
+          "url": "https://en.epoksan.rs/",
+          "summary": "Exact company Tel address is printed in its own site header. Business voice number, no WhatsApp assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own homepage explicitly states production of industrial flooring and epoxy coatings, with public business header",
+        "url": "https://en.epoksan.rs/"
+      },
+      {
+        "label": "Own visible finished-product programme; full category inventory but not every leaf/SDS",
+        "url": "https://en.epoksan.rs/products/"
+      },
+      {
+        "label": "Own specific EPOSAN E downstream product",
+        "url": "https://en.epoksan.rs/products/eposan-coatings/eposan-e/"
+      },
+      {
+        "label": "Own EPOSAN family explicitly describes two-part epoxy coatings produced in multiple colours",
+        "url": "https://en.epoksan.rs/products/eposan-coatings/"
+      }
+    ],
+    "contactPage": undefined
+  },
   "chemitrade-ratmalana": {
     "website": "https://www.chemitradepaints.com/",
     "linkedIn": "https://lk.linkedin.com/company/chemitrade-industrial-coatings-pvt-ltd",
@@ -25885,6 +25969,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "epoksan-cacak",
   "chemitrade-ratmalana",
   "pitura-belgrade",
   "ninachim-ruse",
