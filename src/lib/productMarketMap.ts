@@ -1378,116 +1378,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "legacyCompanyDescription": "水性木器成品涂料制造与配方企业"
   },
   {
-    "id": "iffco-kalol",
-    "company": "Indian Farmers Fertiliser Cooperative Limited (IFFCO)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Kalol, Gandhinagar, Gujarat",
-    "latitude": 23.24,
-    "longitude": 72.5,
-    "fit": "可开发候选",
-    "signal": "官网 Kalol 工厂资料明确自 2015 年起全面生产苦楝油包衣尿素，当前尿素产品页明确 neem oil coating；作为同一 IFFCO 合作社账户收录，Kalol、Phulpur、Aonla 与其他工厂不拆为新增。已公开包衣能力可用于一般尿素包衣方向的潜在技术评估；苦楝油包衣不是聚氨酯或聚合物包膜，不证明使用或适配我方包膜剂。坐标代表 Kalol 城市位置。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立再次读取 Kalol 工厂、Neem Coated Urea 产品、主要养分产品目录、Our Businesses 集团/合资清单与采购入口；公开业务包括成品肥料、磷酸/氨尿素中间体、农业生物制品及其他非同类业务，所查未发现对外供应 PU 原料、包衣树脂或同类成套肥料包衣剂。未把一般化工中间体等同包衣原料。按 IFFCO 法人和 iffco.in 域名去重，工厂、品牌、国际合资企业不增加数量；核对最新 main ddc6df1 与本地数据及私有队列，无现有同一账户。"
-    },
-    "contact": {
-      "label": "Official procurement portal; named purchase and plant roles verified separately",
-      "contactUrl": "https://www.iffco.in/en/tenders"
-    },
-    "source": {
-      "label": "Official Kalol own neem-coated urea production and unit head",
-      "url": "https://www.iffco.in/en/production-unit-kalol-gujarat"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
-  },
-  {
-    "id": "national-fertilizers-nangal",
-    "company": "National Fertilizers Limited (NFL)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Naya Nangal, Punjab",
-    "latitude": 31.38,
-    "longitude": 76.37,
-    "fit": "可开发候选",
-    "signal": "官网 Startup 业务说明及公开质量手册均明确 NFL 自行制造、营销苦楝油包衣尿素；质量手册列自有 Nangal、Bathinda、Panipat、Vijaipur 制造网络。按 NFL 一个法人账户收录，地图代表 Nangal 城市而非推算厂区坐标。2026 年 Nangal 官方招标文件公开 Materials Department 业务邮箱及电话；其招标标的是防腐阳极，联系方式不构成包衣原料采购证明。苦楝油包衣不等同 PU/聚合物包膜，未确认我方产品采购、使用或配方适配。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立再次阅读官方制造/贸易范围和质量手册产品清单，区分自产尿素、Bio-Fertilizers、Bentonite Sulphur 与一般成品农资贸易。工业产品为氨、硝酸、硝酸盐、工业气体等，所查未发现 PU 原料、包衣树脂或同类肥料包衣剂对外供应。按 National Fertilizers/NFL、nfl.co.in 及法人号 L74899DL1974GOI007417 核对最新 main、本地正式数据和研究队列，无同一账户。Nangal 等分厂和 KISAN/BHARAT 品牌不另计；RFCL 合资关系不拆成新增。"
-    },
-    "contact": {
-      "label": "Official business department inbox; no personal identity inferred",
-      "email": "ranjits@nfl.co.in",
-      "phone": "+91 9464966819",
-      "contactUrl": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
-    },
-    "source": {
-      "label": "Official company quality manual: own neem-coated urea and industrial product scope",
-      "url": "https://www.nfl.co.in/nflportal/Quality/Manual.pdf?menu=33&pmenu=10"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
-  },
-  {
-    "id": "madras-fertilizers-manali",
-    "company": "Madras Fertilizers Limited (MFL)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Manali, Chennai, Tamil Nadu",
-    "latitude": 13.168,
-    "longitude": 80.265,
-    "fit": "可开发候选",
-    "signal": "官网工厂业绩直接报告 2024–25 财年自行生产 528,400 吨 Neem Coated Urea，工厂及公司页面确认 Manali 自有氨/尿素生产。Bharat/Vijay 尿素品牌按一个 MFL 法人账户处理。公开联系页提供 General Manager (Plant) 职能邮箱和电话，未猜测个人姓名。对应一般尿素包衣应用的潜在技术评估对象；苦楝油包衣不证明 PU 或聚合物包膜能力，也不证明采购或适配我方包膜剂。坐标代表 Manali 城市位置。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立重读 The Company、The Plant、Achievements、Chemical Fertilizers、Bio Fertilizers 与 Agro Chemicals–Neem Based 产品目录，确认自产包衣尿素而非仅经销。Neem-based 商品是 Vijay Neem 植保农药，不能改标为我方同类肥料包衣原料；一般氨等工业品销售也不等同 PU 输入原料。所查未发现 PU 包衣树脂、同类包衣原料或成套包衣剂销售。以 Madras Fertilizers/MFL、madrasfert.co.in、Manali 地址和法人号 L32201TN1966GOI005469 核对最新 main、本地客户与私有队列，无重复；品牌和工厂不拆分。"
-    },
-    "contact": {
-      "label": "Official business department inbox; no personal identity inferred",
-      "email": "gmplant@madrasfert.co.in",
-      "phone": "+91 44 25945310",
-      "contactUrl": "https://madrasfert.co.in/contact-us/"
-    },
-    "source": {
-      "label": "Official factory performance: own neem-coated urea production in FY2024–25",
-      "url": "https://madrasfert.co.in/the-plant/achievements/"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
-  },
-  {
-    "id": "chambal-fertilizers-gadepan",
-    "company": "Chambal Fertilisers and Chemicals Limited",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Gadepan, Kota, Rajasthan",
-    "latitude": 25.215,
-    "longitude": 76.004,
-    "fit": "可开发候选",
-    "signal": "2020–21 官方年报第 49 页明确公司自产尿素为 neem-coated；2025–26 最新官方年报确认 Gadepan 三套自有尿素工厂持续生产，并区分外购复杂肥/植保产品。当前 Bharat Urea 官方资料说明缓慢供氮，但不把它当作当前 PU 包膜证据；包衣事实保留原始年报时期。作为有公开包衣制造能力的一般尿素包衣评估对象，未确认采用、采购或适配我方材料。Uttam/Bharat 品牌与三套工厂只计一个法人；地图代表 Gadepan 地区。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立读取官网 Who We Are、Our Facilities、成品肥目录和 2025–26 年报及子公司业务，公开范围为自产尿素、农业成品贸易、氨及 TAN 业务，所查未发现 PU 输入原料、包衣树脂或同类肥料包衣剂销售。年报区分 inactive/信息技术子公司及 IMACID 磷酸合资，不将这些品牌、工厂和集团名称新增计数。以 Chambal/CFCL、chambalfertilisers.com、chambal.in 与法人号 L24124RJ1985PLC003293 核对最新 main、本地正式数据和研究队列，无重复。Purchase 邮箱从官网公开防垃圾脚本的数值实体和字面串展开，未按姓名或域名猜测；isc@chambal.in 为投资者邮箱，未用于采购联络。"
-    },
-    "contact": {
-      "label": "Official business department inbox; no personal identity inferred",
-      "email": "cg_purcom1@chambal.in",
-      "phone": "+91 744 2782915",
-      "contactUrl": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article"
-    },
-    "source": {
-      "label": "Official annual report 2020–21 p49: own neem-coated urea manufacture",
-      "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year-2020-2021.pdf"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自有苦楝油包衣尿素制造企业；非已确认聚合物或 PU 包膜客户"
-  },
-  {
     "id": "general-finishes-east-troy",
     "company": "General Finishes",
     "productId": "nl-w1201",
@@ -1595,88 +1485,6 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-11",
     "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
-  },
-  {
-    "id": "kribhco-hazira",
-    "company": "Krishak Bharati Cooperative Limited (KRIBHCO)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Hazira, Surat, Gujarat",
-    "latitude": 21.118,
-    "longitude": 72.65,
-    "fit": "可开发候选",
-    "signal": "官网 Neem Coated Urea 原文明确 Hazira 与 Shahjahanpur 工厂在自产尿素制造过程中均匀喷涂苦楝油；制造资格来自直接工艺说明，不是仅凭政府政策或销售品名。KRIBHCO 合作社与 KFL 子公司/两厂作为一个需求侧账户；与既有 IFFCO 共同参股 OMIFCO 的关联已记录，这种共同合资关系不代表两合作社同一法人。对应一般尿素包衣技术评估方向，苦楝油包衣不证明 PU/聚合物包膜或我方材料适配及采购意向。地图坐标为 Hazira 地区代表位置。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立第二次读取实际尿素包衣工艺、全产品导航与 Products & Services、官网 Contact、Subsidiaries/Joint Venture 范围。公开业务为自产/成品肥料、种子及农技服务，未发现 PU 输入原料、包衣树脂或同类成套包衣剂对外销售；不将苦楝油-coated 成品尿素当成包衣原料销售。KRIBHCO、Krishak Bharati Cooperative、KFL/kribhco.net 与相关品牌/地址核对 main、本地正式记录及私有队列，无既有同一账户；KFL 子公司和 Hazira/Shahjahanpur 两厂不额外计数。公开采购邮箱未核验成功；以官网厂区电话/联系入口为保底，不构造邮箱或虚构负责人。"
-    },
-    "contact": {
-      "label": "Official public business phone/contact page; procurement inbox not independently verified",
-      "phone": "+91 261 2862766",
-      "contactUrl": "https://www.kribhco.net/contact.html"
-    },
-    "source": {
-      "label": "Official own neem-oil coating during manufacturing at Hazira/Shahjahanpur",
-      "url": "https://www.kribhco.net/urea.html"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
-  },
-  {
-    "id": "hurl-new-delhi",
-    "company": "Hindustan Urvarak & Rasayan Limited (HURL)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "New Delhi",
-    "latitude": 28.631,
-    "longitude": 77.278,
-    "fit": "可开发候选",
-    "signal": "当前官方 Product Overview 与 Products 原文明确 HURL 的 Neem-Coated Urea 成品及 Gorakhpur、Barauni、Sindri 三家自有生产工厂；全目录另标进口 NPK 等成品业务，未混同自产。官网联系人表明示 Contracts & Materials 采购负责人 C. S. Prasad 及邮箱。HURL 是 CIL/NTPC/IOCL/FCIL/HFCL 合资法人，三厂和 Bharat/Apna 品牌只计一个账户；与其他肥企的合作公告不制造新增。作为一般包衣尿素工艺评估对象，未确认聚合物/PU 包膜，也不确认我方材料采购、使用或适配。地图为 New Delhi 总部位置，不代替三厂厂址。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立再次读取当前 Neem-Coated Urea 产品与明确自有工厂说明、完整 bulk/non-bulk 产品、Contact 各职能负责人及法人合资身份。成品目录包括尿素、磷钾/复合肥、硫/微量元素和生物肥，一般肥料贸易与自产已分开；公开 HURL 对外业务未发现 PU 原料、包衣树脂或同类肥料包衣剂销售。不把一般农资成品/合资股东所有上游行业等同 HURL 自身同类原料销售。按 HURL、Hindustan Urvarak & Rasayan、hurl.net.in 及合资法人/品牌核对 main、本地、队列，无既有正式同一公司；三个生产厂和股东不拆为本轮新增。采购与技术角色姓名/邮箱只用官网明示，不按域名猜测。"
-    },
-    "contact": {
-      "label": "Official public business inbox; role verified separately",
-      "email": "VPCnM@hurl.net.in",
-      "phone": "+91 11 22402305",
-      "contactUrl": "https://hurl.net.in/contact/"
-    },
-    "source": {
-      "label": "Official current own coated-urea product and three manufacturing plants",
-      "url": "https://hurl.net.in/ProductOverview/"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
-  },
-  {
-    "id": "bvfcl-namrup",
-    "company": "Brahmaputra Valley Fertilizer Corporation Limited (BVFCL)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Namrup, Dibrugarh, Assam",
-    "latitude": 27.181,
-    "longitude": 95.333,
-    "fit": "可开发候选",
-    "signal": "独立读取2019–20官方年报原文：BVFCL 自行设计建立 Namrup-II/III 苦楝油包衣设施，自2015年8月20日起两厂均生产包衣尿素；制造证据保留原报告期。当前官网 Plant Highlights（页面标注2026更新）列实际运行的 Namrup-III 氨/尿素装置，未声称 Namrup-II 仍运行。当前 Product 页的进口 MUKTA Neem Coated Urea 明确在 Trading Products 中，不用进口品替代自产证明。公开采购联系表列 C P Singh（Manager MM）及业务邮箱。属于一般尿素包衣潜在评估对象，苦楝油包衣不证明 PU/聚合物包膜或我方产品兼容性、采购及使用。地图为 Namrup 城市代表位置。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-11",
-      "conclusion": "独立重读原官方年报包衣线段落、当前运行装置、自产/进口产品分类、总部联系与 Management 材料/合同/技术部门表。所查对外范围是肥料/生物肥/种子等成品、进口农资与一般氨业务，未发现 PU 输入原料、包衣树脂或同类包衣剂销售；年报中的原料采购不能改写成外售原料。按 BVFCL 全称、bvfcl.com/bvfcl.co.in 与 Namrup 地址核对 main、本地和队列，无既有同一账户；Bharat/Mukta 品牌、两装置及待建设项目不单独计数。负责人仅用官网 Office Email；原始 Management 快照的住宅分机列已删除，未保留或使用私人联系电话。"
-    },
-    "contact": {
-      "label": "Official public business inbox; role verified separately",
-      "email": "cpsingh@bvfcl.com",
-      "contactUrl": "https://bvfcl.com/management/"
-    },
-    "source": {
-      "label": "Official annual report 2019–20: own neem coating plant and production history",
-      "url": "https://www.bvfcl.com/wp-content/uploads/2020/12/18th_Annual_Report_of_BVFCL_for_the_year_2019-20.pdf"
-    },
-    "checkedAt": "2026-10-11",
-    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；未确认 PU/聚合物包膜"
   },
   {
     "id": "hempel-lyngby",
@@ -2014,34 +1822,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "legacyCompanyDescription": "水性木器成品涂料研发制造企业"
   },
   {
-    "id": "ballance-tauranga",
-    "company": "Ballance Agri-Nutrients Limited",
-    "productId": "fertilizer-coating",
-    "country": "New Zealand",
-    "countryZh": "新西兰",
-    "city": "Tauranga",
-    "latitude": -37.6878,
-    "longitude": 176.1651,
-    "legacyCompanyDescription": "自行制造抑制剂包衣尿素；未确认 PU/聚合物包膜及我方原料适配、采购",
-    "fit": "可开发候选",
-    "signal": "发现后独立下载并提取2023年官方 Annual Review，渲染和目视核对 PDF第13页（印刷页24–25）：公司明确将自身新西兰制造的尿素和 SustaiN 列为产品；当前官网 SustaiN 与注册新闻确认产品含 AGROTAIN 脲酶抑制剂包衣，当前 Manufacturing 确认 Kapuni 尿素制造。属于有明确包衣产品和自制证据的潜在下游，未确认聚合物/PU树脂包膜或我方原料适配、采购，不把抑制剂包衣等同控释树脂膜。当前官网明确 Mount Maunganui 超磷酸盐制造已于2025年停止，地图点为 Tauranga 支持办公室城市代表位置，未将办公室标成仍生产的工厂。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-12",
-      "conclusion": "独立重读当前农业全产品类别、SustaiN、制造设施、注册公告、Industrials、合作社业务和当前领导层。实际工业产品有尿素、GoClear尿素液、氨、硫酸、HFA等；尿素供木板树脂制造不等同 PU包膜输入原料，对外工业业务事实保留。所查范围未发现肥料包膜树脂、PU输入原料或同类肥料包衣剂对外销售，结论限所查范围。AGROTAIN是成品使用的第三方抑制剂品牌，不将其上游品牌另作客户或误作 Ballance 所有的原料公司。按法定公司名、Ballance合作社、SustaiN、Ballance域名、Tauranga/制造厂区及联系邮箱与最新main的139家实际公开客户、本地和研究队列去重，无同一正式账户；Kapuni/Awarua/支持办公室/品牌只计一户。2023制造报告与当前产品交叉核验，历史年度不冒称2026项目投产日。优先采用当前官网明示的 Sourcing & Supply 负责人 David Healy 及业务邮箱；不把其个人业务邮箱当通用部门收件箱。"
-    },
-    "contact": {
-      "label": "Official public Sourcing & Supply executive business email",
-      "email": "david.healy@ballance.co.nz",
-      "phone": "+64 7 572 7900",
-      "contactUrl": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team"
-    },
-    "source": {
-      "label": "Original official 2023 Annual Review, PDF page 13: own New Zealand-manufactured SustaiN",
-      "url": "https://ballance.co.nz/medias/BAL14055-Annual-Review-2023-website-FA.pdf?attachment=true&context=bWFzdGVyfHJvb3R8ODg5MzAyM3xhcHBsaWNhdGlvbi9wZGZ8YURRd0wyZzFNeTg1TmpBd05EUTVPVE0zTkRNNEwwSkJUREUwTURVMVgwRnViblZoYkY5U1pYWnBaWGRmTWpBeU0xOTNaV0p6YVhSbFgwWkJMbkJrWmd8NWViZGJkM2MzZGIzMzAzNDE1Y2I5ZmEwNzE2ZWZhOThkYzBmMjdiYTBmYmVhMzU1MmM2NmM1OTZkZjY0NzlhMg"
-    },
-    "checkedAt": "2026-10-12"
-  },
-  {
     "id": "berger-seidle-gruenstadt",
     "company": "Berger-Seidle GmbH (Berger Group)",
     "productId": "nl-w1201",
@@ -2206,62 +1986,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "source": {
       "label": "Official own Wangara R&D/manufacturing facility and Macracote polymer-coated CRF",
       "url": "https://www.sunpalmaustralia.com.au/about-us/"
-    },
-    "checkedAt": "2026-10-12"
-  },
-  {
-    "id": "incitec-pivot-fertilisers-melbourne",
-    "company": "Incitec Pivot Pty Ltd (Incitec Pivot Fertilisers; Ridley Group)",
-    "productId": "fertilizer-coating",
-    "country": "Australia",
-    "countryZh": "澳大利亚",
-    "city": "Melbourne",
-    "latitude": -37.8136,
-    "longitude": 144.9631,
-    "legacyCompanyDescription": "自有系统生产 NBPT 抑制剂包衣尿素的澳洲肥料账户；现属 Ridley，未确认 PU／聚合物包膜及我方原料采购",
-    "fit": "可开发候选",
-    "signal": "发现后独立读取官网2025年8月21日塔斯马尼亚投资原文，明确 Scottsdale、Circular Head、Longford、Devonport 自有站点装有液体包衣系统，在出库前涂覆 Green Urea NV/eNpower；再读原始 Green Urea NV 配方说明，NBPT 经其共溶剂体系施加到尿素颗粒，100%澳洲制造。属于实际包衣尿素/包衣能力的潜在下游，抑制剂包衣不标为PU或聚合物包膜，我方原料适配、实际需求及采购未确认。政府ABN与现行供应商PDF v3确认运营法人 Incitec Pivot Pty Ltd，2025年9月30日由 Ridley 收购；旧母集团、旧 Limited 法人不沿用。地图为 Melbourne 城市代表位置，登记地区VIC3000，未核验总部街道，不把Tasmania站点当作该坐标。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-12",
-      "conclusion": "独立读取当前 Products、Blends & Coatings、Trace Element Coatings、Nitrogen Retention、eNpower、Green Urea 技术原文、自有站点施加流程、Supplier页面、政府ABN和2026/06官网现行供应商PDF v3。公司有肥料进口分销业务，资格依据是自有肥料颗粒包衣生产和配方；普通尿素/磷钾/微量元素肥料销售不等同PU包膜输入原料。保留 eNpower 原文称其为 patented coating 的事实；当前系列是施于肥料颗粒的成品/内部涂覆业务，所查未见独立包膜剂、包膜树脂或PU原料对外销售，结论限所查范围。按 Incitec Pivot Pty Ltd、现行ABN、IPF、Ridley、EASY Liquids、两个关联官网、公开采购邮箱及Tasmania站点核对最新main实际148家客户、本地和研究队列，无同一正式账户；Ridley/IPF旗下品牌、站点和EASY Liquids不拆户。采购邮箱以官网ROT13公开属性还原并与页面percent-encoded显示字面交叉一致，不猜测，不采用财务发票邮箱作为采购联系。"
-    },
-    "contact": {
-      "label": "Official public Procurement business inbox",
-      "email": "procurement@incitecpivot.com.au",
-      "phone": "1800 009 832 (Australia freecall)",
-      "contactUrl": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/"
-    },
-    "source": {
-      "label": "Official own Tasmanian liquid coating systems applying Green Urea NV before dispatch",
-      "url": "https://www.incitecpivot.com.au/news/latest-news/ipf-backs-tasmanian-producers-with-%2411m-investment/"
-    },
-    "checkedAt": "2026-10-12"
-  },
-  {
-    "id": "pvcfc-ca-mau",
-    "company": "Công ty Cổ phần Tổng công ty Phân bón Dầu khí Cà Mau (PVCFC / Phân Bón Cà Mau)",
-    "productId": "fertilizer-coating",
-    "country": "Vietnam",
-    "countryZh": "越南",
-    "city": "Cà Mau",
-    "latitude": 9.1768,
-    "longitude": 105.1524,
-    "legacyCompanyDescription": "自制 NBPT/DCD 双抑制剂包衣 N46.Plus 尿素的越南肥料法人；Petrovietnam关联已注明，未确认PU／聚合物包膜",
-    "fit": "可开发候选",
-    "signal": "发现后独立读取当前N46.Plus产品与完整系列，明确尿素表面NBPT和DCD双保护涂层；下载并逐页读取原始TCCS05:2023/PVCFC revision09，PDF第5页明确由该公司制造，第7页经渲染核验明确在Cà Mau尿素工厂生产。另读2016原始投产报道的设备/产线证据与2026年9月23日股东大会，保留Petrovietnam成员关系及新增工业气体范围。仅作为包衣尿素制造潜在下游，非已确认PU/聚合物包膜，我方原料适配、需求或购买未确认。地图为Cà Mau城市代表位置，不作为工厂GPS。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-12",
-      "conclusion": "独立再次读取当前完整单肥/NPK/有机/其他肥料及服务分类、N46.Plus原文、原始制造标准和2016投入设备产线新闻、2026股东大会的肥料/工业气体/相关化学品范围及官网招标、联系入口。一般petrochemical chemicals经营登记不直接推断其销售PU原料；所查实际产品范围未发现包膜树脂、PU输入原料或独立肥料包衣剂销售，结论限所查范围。按越文完整法人、PVCFC/Phân Bón Cà Mau/DCM、pvcfc.com.vn、总部及尿素工厂、业务邮箱核对最新main实际148家客户、本地和研究队列，无该正式法人或品牌。现有PVPAINT经PVMR/HPP参股，与PVCFC同有Petrovietnam关联，已明确保留；PVCFC是另一个有自有肥料工厂、独立法人/产品/域名/地址的运营账户，不是PVPAINT改名、品牌、子厂或新增地区分支，不重复添加Petrovietnam母集团、旗下肥料品牌或工厂。总经理姓名职务来自当前About页，未绑定通用邮箱为个人邮箱；公司业务contact与footer info以官网公开Cloudflare编码还原，举报邮箱未作为业务联系人收录。"
-    },
-    "contact": {
-      "label": "Official public General business inbox",
-      "email": "contact@pvcfc.com.vn",
-      "phone": "+84 290 381 9000",
-      "contactUrl": "https://www.pvcfc.com.vn/lien-he"
-    },
-    "source": {
-      "label": "Official original N46.Plus2023 manufacturing standard rev09; PDF pages5 and7",
-      "url": "https://www.pvcfc.com.vn/Data/Sites/1/media/fileattachment/%5Bsigned%5D05.-tccs-n46.plus-c%C3%A0-mau--rev9.pdf"
     },
     "checkedAt": "2026-10-12"
   },
@@ -2518,34 +2242,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-12"
   },
   {
-    "id": "mahadhan-agritech-pune",
-    "company": "Mahadhan AgriTech Limited (formerly Smartchem Technologies; DFPCL group)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Pune (city-level headquarters marker)",
-    "latitude": 18.5204,
-    "longitude": 73.8567,
-    "legacyCompanyDescription": "自有Smartek包衣NPK复合肥制造企业；公开为有机碳/矿物质包衣，未确认PU包膜及我方产品使用/采购/适配",
-    "fit": "可开发候选",
-    "signal": "发现后独立重新读取MAL法人/更名前称、自有Taloja NPK制造、Smartek具体产品及原始FY2024-25/FY2025-26年报。Smartek明确每个肥料颗粒包衣，涂层富含有机碳和矿物质；最新年报确认当前MAL Crop Nutrition业务及Smartek产品，不将旧TAN网页当作当前MAL产线。对应我方TDS包衣复合肥应用，可供潜在原料配方评估；未确认PU/聚合物包膜、缓控释性能、使用、采购需求或我方材料适配。地图为Pune城市总部位置，非Taloja厂区GPS。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-12",
-      "conclusion": "独立核对MAL完整农作物营养产品、自有制造原文和DFPCL FY2025-26原始年报PDF第7、8、37、40、95页完整业务范围，第7页已渲染核对三列产品归属。集团保留硝酸/IPA及药用溶剂/氨/CO2等工业原料业务，另有采矿用硝酸铵；Pickbrite为钢材酸洗添加剂，不能笼统宣称集团不卖任何原料或添加剂。所查公开产品为NP/NPK、硫、水溶肥/微量元素等肥料成品，未发现对外销售肥料包衣树脂、PU输入料或同类包衣剂，结论限所查公开范围。MAL FY2024-25年报明确2024-08-01重组生效、TAN转至DMSL，旧TAN站页不作当前主体证据。原始母公司年报来自公开索引的一方uat.dfpcl.com，属报告原文，未访问或确认QIP认购材料。按Mahadhan/MAL/Smartchem/STL/DFPCL/Deepak集团、两官网域名、Sai Hira总部/Taloja厂区、公开个人业务邮箱查最新main161家和本地/私有队列，无相同正式账户；品牌、改名主体和集团只计一个公司，不把地区办公室/经销商另计。Mahem Dwivedi职务按Crop Nutrition联系页原文AVP – Sales & Marketing Support保留，不改称技术或采购负责人。example@gmail.com及+0744-9999为页头占位，排除；rohan.tambe邮箱不推断姓名、职务，不作为具名联系人。"
-    },
-    "contact": {
-      "label": "Official expressly named crop-nutrition commercial business contact",
-      "email": "mahem.dwivedi@dfpcl.com",
-      "phone": "+91 20 66458171",
-      "contactUrl": "https://www.mahadhanagritech.com/contact"
-    },
-    "source": {
-      "label": "Official Smartek coated NPK granules: organic-carbon and mineral coating",
-      "url": "https://mahadhan.co.in/product-portfolio/value-added-npk-fertilizers-online/"
-    },
-    "checkedAt": "2026-10-12"
-  },
-  {
     "id": "axalta-philadelphia",
     "company": "Axalta Coating Systems Ltd. (Axalta group)",
     "productId": "elo",
@@ -2574,34 +2270,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "checkedAt": "2026-10-12"
   },
   {
-    "id": "paradeep-phosphates-bhubaneswar",
-    "company": "Paradeep Phosphates Limited (PPL; Zuari–OCP / Adventz association)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Bhubaneswar (registered-office city marker)",
-    "latitude": 20.2961,
-    "longitude": 85.8245,
-    "legacyCompanyDescription": "自产苦楝油包衣尿素企业；PPL/MCFL/原Zuari Goa合并为一账户，保留与Chambal的集团关联；未确认PU包膜或采购",
-    "fit": "可开发候选",
-    "signal": "独立重读官网自产Jai Kisaan Navratna苦楝油包衣尿素、Goa自有尿素制造与最新FY2025-26原始年报。PPL已整合MCFL及相关Mahad资产，按一个PPL法人收录；不把旧制造页两厂、季度资料三厂当作最新完整四单位范围。TDS尿素包衣应用支持潜在原料评估，苦楝油涂层不证明PU/聚合物包膜、我方材料适配、当前使用或采购。与Chambal有共同Zuari/Adventz背景，但原始年报显示不同法人、控制链、制造及公开业务入口。地图为Bhubaneswar注册城市，非工厂GPS。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-12",
-      "conclusion": "核对PPL最新323页FY2025-26原始年报、完整产品页和合并MCFL工业产品原文。公司确有肥料成品、磷酸/硫酸/氨/HFSA/石膏/ABC及SNF原料业务，不能宣称不销售任何原料；MCFL ChemCF SNF原文为混凝土减水/分散输入，所查范围未发现肥料包衣树脂、PU输入料或同类肥料包衣剂对外供应，结论限公开范围。关联Zuari官网仍含合并前持股/子公司描述，采用2026年报和2026-06-30股权表；OCP相关业务与交易按原始年报记录为磷矿、磷酸及肥料。PPL控股方Zuari Maroc为Zuari Agro与OCP合资；Chambal是现有独立上市法人，其最新年报子公司/合资清单没有PPL。保留共同Zuari/Adventz及共任董事关联，不声称双方没有任何关系；PPL独立制造、采购负责人和公司邮箱与Chambal Gadepan法人/采购邮箱不同，非改名新增。MCFL/Mangala、Jai Kisaan Navratna、原Zuari Goa及Mahad资产并入同一PPL账户，均不另外计数。PPL年报明确CIN由L24129OR1981PLC001020变更为L20122OR1981PLC001020，属于分类编码变更，不是新法人。按全部别名/法人/域名/办公及厂址/邮箱核对main164家和研究队列无既有PPL；采购负责人Raj Kumar Gupta仅存公开姓名职务，无个人邮箱，CorpAffairsBBSR@adventz.com保留一般公司入口，不归给个人。"
-    },
-    "contact": {
-      "label": "Official general corporate business inbox; procurement recipient is not individually attributed",
-      "email": "CorpAffairsBBSR@adventz.com",
-      "phone": "+91 674 6666100",
-      "contactUrl": "https://www.paradeepphosphates.com/contact-us"
-    },
-    "source": {
-      "label": "Official own Jai Kisaan Navratna neem-coated urea product",
-      "url": "https://www.paradeepphosphates.com/brands-and-products"
-    },
-    "checkedAt": "2026-10-12"
-  },
-  {
     "id": "toros-agri-istanbul",
     "company": "Toros Tarım Sanayi ve Ticaret A.Ş. (Toros Agri; Tekfen Group)",
     "productId": "fertilizer-coating",
@@ -2625,34 +2293,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "source": {
       "label": "Original 2021 Toros R&D study: actual NP20-20 compound-fertiliser surface-coating evaluation",
       "url": "https://www.eurjchem.com/index.php/eurjchem/article/view/2120"
-    },
-    "checkedAt": "2026-10-13"
-  },
-  {
-    "id": "gubretas-istanbul",
-    "company": "Gübre Fabrikaları Türk A.Ş. (GÜBRETAŞ; Tarım Kredi Group)",
-    "productId": "fertilizer-coating",
-    "country": "Turkey",
-    "countryZh": "土耳其",
-    "city": "İstanbul (headquarters city marker)",
-    "latitude": 41.0082,
-    "longitude": 28.9784,
-    "legacyCompanyDescription": "自产NBPT稳定化尿素SLOWFERT系列；官网缓释分类，非已确认聚合物/PU阻隔包膜",
-    "fit": "可开发候选",
-    "signal": "独立重读SLOWFERT SÜPER İNCİ具体产品与原始登记证。证书列Gübre Fabrikaları Türk Anonim Şirketi为Üretici（生产商）、生产国Türkiye，2023续证及2026签署袋标均已渲染核对；官网将该NBPT抑制剂尿素归入Slow Release Fertilizer系列。以公司公开缓释产品分类与TDS应用进行潜在配方评估，明确实际登记为NBPT稳定化尿素；不等同独立证实的聚合物阻隔膜/控释性能，未确认物理包衣工艺、PU、我方材料适配或采购。地图为İstanbul总部城市，非Yarımca厂区GPS。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-13",
-      "conclusion": "独立核对成品肥全部分类、NBPT成品登记制造主体、当前辅助产品原文与FY2025原始73页集团报告。公司/关联Razi确有氨、硫、硫酸、DAP、尿素等肥料及原料业务，Tarkim属植保，另有金矿；不宣称集团不卖任何原料。N-GATE原文为滴灌15%尿素氮成品肥，GF-MIX/PEHAWET为农业罐混/水质pH及叶面铺展用途，不因品牌名或泛称添加剂就写成肥料颗粒包衣剂。所查公开范围未发现对外销售独立肥料包衣树脂、PU输入料或同类包衣剂，结论限所查范围。Tarım Kredi控股关联和Razi/Tarkim/矿业同一账户均保留；Holding集团网页仅HTML壳，不作为完整业务核验依据。按GUBRETAS/Gübre Fabrikaları/Razi/Tarım Kredi、法人登记47535-0、域名、Bereket Plaza当前总部/Yarımca厂址、公司邮箱核对main167家及私有队列，无同一正式账户；生产基地/品牌不另计。旧英文管理页及FY2025报告仍将Musa Goral列供应链总监，最新2026-10-01原始公司公告已列总经理，采用最新职务；无个人邮箱公开，gubretas@gubretas.com.tr不归给他。原报告列Razi临时停产，不宣称该伊朗厂当前持续运行；土耳其登记NBPT成品制造证据独立保留。"
-    },
-    "contact": {
-      "label": "Official general company business inbox; personal recipient is not attributed",
-      "email": "gubretas@gubretas.com.tr",
-      "phone": "+90 216 468 5050",
-      "contactUrl": "https://www.gubretas.com.tr/tr/iletisim"
-    },
-    "source": {
-      "label": "Official SLOWFERT SÜPER İNCİ NBPT-inhibited urea product, marketed in slow-release series",
-      "url": "https://www.gubretas.com.tr/tr/urun/slowfert-super-inci"
     },
     "checkedAt": "2026-10-13"
   },
@@ -2737,34 +2377,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "source": {
       "label": "Official current international manufacturing sites and own R&D/product development",
       "url": "https://valresa.com/empresa/grupo/"
-    },
-    "checkedAt": "2026-10-13"
-  },
-  {
-    "id": "fcp-cerea-bonavicina",
-    "company": "Fabbrica Cooperativa Perfosfati Cerea S.C. (FCP Cerea)",
-    "productId": "fertilizer-coating",
-    "country": "Italy",
-    "countryZh": "意大利",
-    "city": "Bonavicina di San Pietro di Morubio",
-    "latitude": 45.207,
-    "longitude": 11.0964,
-    "legacyCompanyDescription": "自产复杂颗粒肥并有实际包衣线；PU/膜材料、我方产品使用/采购/配方适配未确认",
-    "fit": "可开发候选",
-    "signal": "独立读当前自有制造/包衣线、2018建成记录、当前Mastercote与Control、所有四大成品分类及81页原始英文目录：Fabbrica Cooperativa Perfosfati Cerea在Bonavicina实际生产复杂NPK/NP/PK颗粒肥并运行包衣线；原目录PDF43页(印刷84–85页)说明造粒后用液态/粉状微量营养/生物刺激等添加物涂覆自产肥。当前Mastercote为含包衣尿素的NPK成品，Control为含脲甲醛的缓释NPK；不据此宣称Mastercote每粒尿素均由该厂自行包膜，不将生物活化/NBPT/脲甲醛混为PU膜。对应肥料包衣原料TDS包衣复合肥应用的潜在技术评估；PU/聚合物膜树脂类型、使用/采购/需求/适配未确认。地图为Bonavicina城市代表位置。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-13",
-      "conclusion": "独立审读自有完整制造/研发、全部颗粒/特殊营养/水溶肥/有机认证产品分类、原始81页全目录、Cerere/Reactive/Futura实际成品用途与法名/VAT/业务联系。范围含NPK/NP/PK、包衣/缓释肥、叶面/滴灌营养、微生物/海藻/氨基酸/腐植酸生物刺激成品；保留Cerere含47%中长链多元醇事实，当前叶页明确叶面/根部抗逆成品用途，这不是公开对外销售PU反应多元醇原料或肥料树脂/独立包衣剂的证据。原目录自有包衣过程使用多种输入，并不据此推断全部输入自产或出售；所查未发现肥料包衣树脂、PU反应原料或独立肥料包衣剂对外销售，结论限所查公开范围。按Fabbrica Cooperativa Perfosfati Cerea S.C./FCP Cerea/Cerea FCP、VAT00222260234、fcpcerea域名、Farfusola6厂址及业务/实验室邮箱核对最新main176家、本地和私有队列，无同一正式账户；历史Cerea厂迁至Bonavicina、产品品牌/包衣线不拆户。实验室/出口邮箱按官网部门记录；不从francesca.moretto邮箱推断具名人员当前职位或把一般邮箱归给个人。"
-    },
-    "contact": {
-      "label": "Official laboratory business inbox; no named technical/procurement person inferred",
-      "email": "laboratorio@fcpcerea.it",
-      "phone": "+39 045 7125963",
-      "contactUrl": "https://fcpcerea.it/contatti"
-    },
-    "source": {
-      "label": "Official current own compound-fertilizer manufacture, actual coating plant and chemical/agronomic lab",
-      "url": "https://fcpcerea.it/azienda"
     },
     "checkedAt": "2026-10-13"
   },
@@ -2960,34 +2572,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "source": {
       "label": "Original currently linked US AMERLOCK400 seven-page PDS, revised2025-01-31",
       "url": "https://dam-cdn.ppg.com/adaptivemedia/rendition?id=8f0dedb9842d2dca9c1cf6d720c831654e1bef62"
-    },
-    "checkedAt": "2026-10-13"
-  },
-  {
-    "id": "rfcl-ramagundam",
-    "company": "Ramagundam Fertilizers and Chemicals Limited (RFCL)",
-    "productId": "fertilizer-coating",
-    "country": "India",
-    "countryZh": "印度",
-    "city": "Ramagundam (disclosed factory city marker)",
-    "latitude": 18.755,
-    "longitude": 79.474,
-    "legacyCompanyDescription": "独立合资自产苦楝油包衣尿素企业；与NFL等股权关联已注明；未确认PU/聚合物包膜或我方材料采购适配",
-    "fit": "可开发候选",
-    "signal": "独立读取当前官网自产尿素工艺、全产品类别（尿素/氨）、法定合资主体、业务联系及原始2025–26年报制造/法律/持股/经营章节。官网明确自产 neem-coated prilled urea，年报确认自身Ramagundam工厂继续制造尿素；苦楝油包衣是确实的下游包衣能力，不等于聚氨酯树脂、同类包膜体系或我方材料已适配/采购。年报2025–26尿素产量8.56LMT，不能把旧官网2024–25的11.95LMT或12.7LMT设计目标当2026实际产量。地图Ramagundam为已披露工厂所在城市代表点，不声称具体厂内GPS。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-13",
-      "conclusion": "独立查看当前公司整体业务、全部尿素/氨产品、自产流程及年报经营/原料/制造章节，所查未见销售包衣树脂、聚氨酯原料或肥料包衣剂；结论限实际读到的公开范围，不泛称不销售任何工业化学品（保留氨业务）。原报告及官网明确RFCL为2015年独立成立、自产并拥有自身采购流程的合资经营主体，NFL/EIL各26%、FCIL11%等关联已记明，不是NFL工厂更名；不能因NFL既有账户或共同参股自动折叠这个独立法定经营公司。按RFCL全名、CINU24100DL2015PLC276753、rfcl域名、Ramagundam工厂/NewDelhi注册/Noida经营地址及admin邮箱核对最新main184家及本地/私有研究，无同一正式账户；分支工厂不拆户。旧FCIL关停单位与新RFCL复产法人不靠改名制造新增。admin为一般业务路由，不标采购个人；2026-02-16 walkie-talkie招标中Ramya M仅明确Materials地址/公开邮箱，无完整职务且已于3月关闭，不推断原料采购负责人或借该招标写材料需求。年报S.K.Jindal以原披露首字母保存，M&C缩写不展开，不构造个人邮箱；团队称呼。"
-    },
-    "contact": {
-      "label": "Official general RFCL business mailbox; Ramagundam plant public telephone",
-      "email": "admin@rfcl.co.in",
-      "phone": "+91 8728 257488",
-      "contactUrl": "https://rfcl.co.in/contact.php"
-    },
-    "source": {
-      "label": "Official company profile explicitly reports own neem-coated prilled urea production and JV operating identity",
-      "url": "https://rfcl.co.in/"
     },
     "checkedAt": "2026-10-13"
   },
@@ -4079,62 +3663,6 @@ const rawPublicLeads: RawPublicLead[] = [
     "source": {
       "label": "Actual official DUC-LINE original: anticorrosive epoxy-cement coating for buried/submerged pipelines",
       "url": "https://www.petropipe.com.mx/2023/02/16/duc-line/"
-    },
-    "checkedAt": "2026-10-16"
-  },
-  {
-    "id": "fauji-fertilizer-rawalpindi",
-    "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
-    "productId": "fertilizer-coating",
-    "country": "Pakistan",
-    "countryZh": "巴基斯坦",
-    "city": "Rawalpindi, Punjab (approximate head-office city pin; coating operations evidenced at Goth Machhi)",
-    "latitude": 33.6,
-    "longitude": 73.05,
-    "legacyCompanyDescription": "FaujiFoundation集团旗下自制苦楝油/锌包覆尿素企业；我方聚氨酯体系适配及采购未确认",
-    "fit": "可开发候选",
-    "signal": "FFC本公司在PSX正式披露的2025年报完整原件608页、16632058字节，实际读PDF126/实印124页明确2025年已生产交付苦楝油包覆尿素206KMeT、生产发运锌化尿素51.6KMeT；PDF12/13产品组合对应SonaNeem/ZincCoatedUrea。PDF131/实印129页明确GothMachhi第二条锌包覆尿素线已成功投运，2024年7月30日是批准日期，具体投运日未披露，不能冒作2026新投产。PDF180/实印178页另将聚合物包覆尿素列为ProductsunderTrial，仍是合作研发/田间试验，不当作已量产PU/聚合物包膜线。报告期2025全年，PDF7明确发布于2026年2月23日；读取日期2026年10月16日不改写事件年份。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-16",
-      "conclusion": "公司官网Home本轮HTTP403，因此排除结论基于本公司正式提交交易所的完整原始年报，而不是搜索摘要或403页面。实际完整阅读产品组合/农业服务/集团业务（PDF12–17、22–23）、公司与集团经营范围/合并说明（PDF314–316、434等）及制造/新产品章节；保留真实尿素/DAP生产、SOP/MOP等进口贸易、硼/硫酸锌肥、工业尿素用途，以及电力、食品、银行、水泥、工程服务、关联Agritech尿素/GSSP和PMP磷酸业务。硼/锌商品明确为农用营养肥，不单凭有化学品/工业原料销售就认定为PU包衣原料供应商。PMP磷酸供应DAP生产，不偷换成包衣聚醇/PU树脂销售。实际所读公开业务未见向其他肥料厂家销售包衣树脂、聚氨酯原料或同功能包衣剂；全文关键词检索polyol/polyurethane/diisocyanate/coatingresin等无命中只作定位辅助，不单独作为排除已完成的证明。PDF131/180的LIMUS/抑制剂路线按已试验的成品处理尿素与未来上市计划保留，不认定已对外销售原始抑制剂，也不称已投运当前聚合物线。PDF180披露2025年NCU所需苦楝油多数本地采购，只支持该材料/该年份，不推断当前采购我方聚醇/PU或外部进口接受。结论限已读披露范围，未把608页全文提取等同人审全报告，也不保证全部未披露FaujiFoundation关联业务。FFBL于2024年7月1日合并入FFC并解散，FaujiFoundation为最终母实体，Agritech为37.36%关联公司、PMP为37.5%权益法关联公司，均保守标记关系；不把品牌/厂区/合并前FFBL另计新客户，也不把合资方OCP当然说成FFC全资子公司。"
-    },
-    "contact": {
-      "label": "2025年报于2026年披露的注册总部公开通用邮箱/电话；未核实具名采购/研发人员或投递状态",
-      "email": "ffcrwp@ffc.com.pk",
-      "phone": "+92 51 8450001",
-      "contactUrl": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10"
-    },
-    "source": {
-      "label": "Company-authored FFC Annual Integrated Report2025, PSX original, PDFpage126/printed124: actual neem-oil/zinc-coated urea production; published23Feb2026",
-      "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=126"
-    },
-    "checkedAt": "2026-10-16"
-  },
-  {
-    "id": "br-safra-rolandia",
-    "company": "BR Safra Fertilizantes Ltda.",
-    "productId": "fertilizer-coating",
-    "country": "Brazil",
-    "countryZh": "巴西",
-    "city": "Rolândia, Paraná (approximate city pin; factory coordinates unverified)",
-    "latitude": -23.31,
-    "longitude": -51.37,
-    "legacyCompanyDescription": "自有Rolândia工厂生产具逐步释放粘结/包埋技术的生物有机矿质颗粒肥；我方PU体系适配与采购未确认",
-    "fit": "可开发候选",
-    "signal": "BR Safra自身完整Home及SobreNós原文明确2021年购置造粒设备并开始商业化生产生物有机矿质成品颗粒肥，当前自有Rolândia工厂，直接面向农业生产者销售bigbag成品。About将生物聚合物技术描述为包埋及养分受控释放，当前四项颗粒技术明确使用逐步释放养分的粘结体系；不是仅有普通NPK配方/经销身份的推断。Home产品区完整可见22项颗粒成品配方/有机颗粒名称。采用TDS已验证的缓释肥应用，不把基质内粘结/包埋擅自改称外部PU壳层、流化床/转鼓线或已验证我方化学相容性。2012研发、2021商业生产是其品牌/技术自述历史，不擅自当作现法人注册年份或2026新投产。",
-    "supplierCompetitorCheck": {
-      "checkedAt": "2026-10-16",
-      "conclusion": "实际完整阅读当前Home全部技术/22项成品配方/工厂/销售/FAQ/联系区、About完整商业生产/四项技术/公司数据及Privacy经营主体原文；本网站其余可见产品入口均为同页锚点，没有另行声称读取不存在的22份TDS。实际销售组合是给种植者的生物有机矿质颗粒肥和有机颗粒，公开渠道为工厂直销、农资经销/合作社、商业代表和农艺支持。粘结剂、保水聚合物、腐植/黄腐/植酸、氨基酸及菌株按其自有颗粒的配方组成保留，不能把成品内部使用或独家研发字样当作已证实单独制造/对外销售同功能包衣原料。实际所读公开业务未见向其他肥料厂销售包衣树脂、PU原料、独立粘结/包衣剂或同功能反应型原料；结论仅限已读公开范围，不保证未披露关联业务。未猜测其粘结剂外购、化学结构/聚氨酯身份或所有技术来自我方。About和Home/Privacy对同一BRSAFRAFERTILIZANTESLTDA、CNPJ49.164.076/0001-41、同一工厂地址和业务渠道对应，自述CNPJ并非已做外部工商许可审计。Sforti技术/托管标识不作为集团持股、产品供应或客户身份依据；未从建站链接或经销合作推定母子公司关系。"
-    },
-    "contact": {
-      "label": "官网公开通用业务邮箱和公司电话/WhatsApp；未核实具名采购/研发人员",
-      "email": "contato@brsafra.com.br",
-      "phone": "+55 43 99668-9070",
-      "contactUrl": "https://brsafra.com.br/#contato"
-    },
-    "source": {
-      "label": "Actual official About and current pellet technology: own commercial manufacture, encapsulation and gradual nutrient-release binder",
-      "url": "https://brsafra.com.br/sobre-nos.html"
     },
     "checkedAt": "2026-10-16"
   },
@@ -8527,8 +8055,6 @@ const leadQualifications: Record<string, LeadQualification> = {
   "unicoat-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "isma-de-mexico-puebla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cbr-products-port-coquitlam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "br-safra-rolandia": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
-  "fauji-fertilizer-rawalpindi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "petropipe-coatzacoalcos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aksu-axu-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "racsa-pinturas-coacalco": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8568,7 +8094,6 @@ const leadQualifications: Record<string, LeadQualification> = {
   "cloverdale-paint-surrey": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "diamond-vogel-orange-city": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "sansin-strathroy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "rfcl-ramagundam": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "ppg-pittsburgh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "behr-santa-ana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "benjamin-moore-montvale": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8576,15 +8101,11 @@ const leadQualifications: Record<string, LeadQualification> = {
   "sika-baar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cifo-san-giorgio": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "coromandel-chennai": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "fcp-cerea-bonavicina": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "valresa-riba-roja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "isaval-ribarroja": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "juno-erandio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "gubretas-istanbul": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "toros-agri-istanbul": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
-  "paradeep-phosphates-bhubaneswar": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "axalta-philadelphia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
-  "mahadhan-agritech-pune": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "vital-agri-nutrients-lahore": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "polyvine-cheddar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "bedec-dunmow": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8594,15 +8115,12 @@ const leadQualifications: Record<string, LeadQualification> = {
   "morrells-stockport": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fiddes-cardiff": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "verinlegno-massa-cozzile": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "pvcfc-ca-mau": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "incitec-pivot-fertilisers-melbourne": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "troforte-innovations-wangara": {"targetCompanyTypeId":"controlled-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"controlled-release-fertilizer"},
   "dura-paints-edenvale": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "teknos-helsinki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "remmers-loeningen": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mipa-essenbach": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "berger-seidle-gruenstadt": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "ballance-tauranga": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "hesse-lignal-hamm": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "medal-paints-johannesburg": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "kupsa-oyon": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8615,17 +8133,10 @@ const leadQualifications: Record<string, LeadQualification> = {
   "nervion-tlalnepantla": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chugoku-marine-paints-tokyo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hempel-lyngby": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
-  "bvfcl-namrup": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "hurl-new-delhi": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "kribhco-hazira": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "renner-italia-minerbio": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vermont-natural-coatings-hardwick": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "target-coatings-fair-lawn": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "general-finishes-east-troy": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
-  "chambal-fertilizers-gadepan": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "madras-fertilizers-manali": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "national-fertilizers-nangal": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
-  "iffco-kalol": {"targetCompanyTypeId":"coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
   "duraway-coating-kapar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "elchemus-bukit-mertajam": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "mowilex-indonesia-cikande": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -18751,174 +18262,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       }
     ]
   },
-  "br-safra-rolandia": {
-    "website": "https://brsafra.com.br/",
-    "contactPage": "https://brsafra.com.br/#contato",
-    "address": "Av. Esplanada,1221,Parque Industrial Cafezal,Rolândia–PR,CEP86600-585,Brazil. Own Home/FAQ/About identify this as factory/business address and company BR SAFRA FERTILIZANTES LTDA, self-publishedCNPJ49.164.076/0001-41. Map-23.31,-51.37 deliberately approximates Rolândia city/populatedplace fromGeoNames3450964,not ADM2polygon6322961; factory/streetGPSnotverified. 2012research/2021commercialhistory not asserted legal incorporation date. One company/brand/factory account; softwarehosting/agencylink not ownership evidence or namedbuyer.",
-    "generalEmail": "contato@brsafra.com.br",
-    "generalEmailEvidence": {
-      "company": "BR Safra Fertilizantes Ltda.",
-      "value": "contato@brsafra.com.br",
-      "kind": "general",
-      "publicBusiness": true,
-      "sources": [
-        {
-          "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
-          "url": "https://brsafra.com.br/#contato",
-          "summary": "Actual Home Contato E-mail and footer explicitly publish contato@brsafra.com.br as the general company commercial enquiry route; own About Dados da empresa repeats same mailbox with legal name/CNPJ/address. Commercial section is primary evidence, not the Privacy/DPO use of the same inbox. No named employee, procurement responsibility or deliverability inferred."
-        }
-      ],
-      "verifiedAt": "2026-10-16"
-    },
-    "generalPhone": "+55 43 99668-9070",
-    "generalPhoneEvidence": {
-      "company": "BR Safra Fertilizantes Ltda.",
-      "value": "+55 43 99668-9070",
-      "kind": "general",
-      "publicBusiness": true,
-      "sources": [
-        {
-          "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
-          "url": "https://brsafra.com.br/#contato",
-          "summary": "Actual Home Contato/Telefone prints (43)99668-9070 at the Rolândia factory address; own About explicitly says Telefone e WhatsApp and actual wa.me5543996689070 agrees. Normalized to +55 from verified Brazil address. Published company business route, not private employee/purchasing line; no call or WhatsApp sent."
-        }
-      ],
-      "verifiedAt": "2026-10-16"
-    },
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "contato@brsafra.com.br",
-        "source": {
-          "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
-          "url": "https://brsafra.com.br/#contato"
-        },
-        "emailEvidence": {
-          "company": "BR Safra Fertilizantes Ltda.",
-          "value": "contato@brsafra.com.br",
-          "kind": "general",
-          "publicBusiness": true,
-          "sources": [
-            {
-              "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
-              "url": "https://brsafra.com.br/#contato",
-              "summary": "Actual Home Contato E-mail and footer explicitly publish contato@brsafra.com.br as the general company commercial enquiry route; own About Dados da empresa repeats same mailbox with legal name/CNPJ/address. Commercial section is primary evidence, not the Privacy/DPO use of the same inbox. No named employee, procurement responsibility or deliverability inferred."
-            }
-          ],
-          "verifiedAt": "2026-10-16"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Actual official About and current pellet technology: own commercial manufacture, encapsulation and gradual nutrient-release binder",
-        "url": "https://brsafra.com.br/sobre-nos.html"
-      },
-      {
-        "label": "Actual Home: all22finished-pellet product names, four technological roles, own factory/direct sales and business contact",
-        "url": "https://brsafra.com.br/"
-      },
-      {
-        "label": "Actual official Home business contact section: exact company email, telephone/WhatsApp and factory address",
-        "url": "https://brsafra.com.br/#contato"
-      },
-      {
-        "label": "Actual legal operator/CNPJ/address correspondence; Privacy printed update30Sep2026, not procurement-contact role",
-        "url": "https://brsafra.com.br/politica-de-privacidade.html"
-      }
-    ]
-  },
-  "fauji-fertilizer-rawalpindi": {
-    "website": "https://www.ffc.com.pk/",
-    "contactPage": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
-    "address": "Registered/Head Office: Sona Tower,156 The Mall,Rawalpindi Cantt,Punjab,Pakistan (annual reportPDF10/17/314). Approximate city-map33.60,73.05fromGeoNamesRawalpindi33.59733,73.04790; not street/factoryGPS. ActualmanufacturingplantGothMachhi,Sadiqabad,RahimYarKhan; furtherplantsMirpurMathelo/PortQasimpartofsameaccount. UltimateparentFaujiFoundation; exFFBLmergedintoFFCeffective1Jul2024. AgritechLimited37.36%associated,PMP37.5%associatedandnotforeignoperatingsubsidiary; regionaloffices/SONA/FFBLnotseparateleads. Contactentry is actual public RegisteredOffice page of23Feb2026companyreporthostedatPSX, not a live company contact form; ownHome403 during this read.",
-    "generalEmail": "ffcrwp@ffc.com.pk",
-    "generalEmailEvidence": {
-      "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
-      "value": "ffcrwp@ffc.com.pk",
-      "kind": "general",
-      "publicBusiness": true,
-      "sources": [
-        {
-          "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
-          "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
-          "summary": "Actual original PDFpage10, visually inspected, lists ffcrwp@ffc.com.pk specifically under Registered Office,156TheMallRawalpindi,besidewww.ffc.com.pk and corporate telephones. This is distinct from CFO,secretary,investor-relations,sustainabilityfeedback andwhistleblowing inboxes; those are not assigned procurement roles. Public general corporate business route,notnamedemployee/procurement/deliverabilityproof. Reportpublished23Feb2026forFY2025,retrieved/read16Oct2026; live company Home403,notclaimed revalidated via liveContact."
-        }
-      ],
-      "verifiedAt": "2026-10-16"
-    },
-    "generalPhone": "+92 51 8450001",
-    "generalPhoneEvidence": {
-      "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
-      "value": "+92 51 8450001",
-      "kind": "general",
-      "publicBusiness": true,
-      "sources": [
-        {
-          "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
-          "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
-          "summary": "Same actual Registered Office block visually prints +92-51-8450001, separately fromUAN111332111,fax8459925,CFO/secretary/plants/marketing/auditor/registrarphones. General corporate business line normalized only. Reportpublished23Feb2026,read16Oct2026; no namedbuyer/privatephone/WhatsApp assertion."
-        }
-      ],
-      "verifiedAt": "2026-10-16"
-    },
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "ffcrwp@ffc.com.pk",
-        "source": {
-          "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
-          "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10"
-        },
-        "emailEvidence": {
-          "company": "Fauji Fertilizer Company Limited (FFC / Sona)",
-          "value": "ffcrwp@ffc.com.pk",
-          "kind": "general",
-          "publicBusiness": true,
-          "sources": [
-            {
-              "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
-              "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10",
-              "summary": "Actual original PDFpage10, visually inspected, lists ffcrwp@ffc.com.pk specifically under Registered Office,156TheMallRawalpindi,besidewww.ffc.com.pk and corporate telephones. This is distinct from CFO,secretary,investor-relations,sustainabilityfeedback andwhistleblowing inboxes; those are not assigned procurement roles. Public general corporate business route,notnamedemployee/procurement/deliverabilityproof. Reportpublished23Feb2026forFY2025,retrieved/read16Oct2026; live company Home403,notclaimed revalidated via liveContact."
-            }
-          ],
-          "verifiedAt": "2026-10-16"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Company-authored FFC Annual Integrated Report2025, PSX original, PDFpage126/printed124: actual neem-oil/zinc-coated urea production; published23Feb2026",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=126"
-      },
-      {
-        "label": "Original FFC2025 annual report PDFpage10/printed08 Registered Office: exact general business email and phone, published23Feb2026",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=10"
-      },
-      {
-        "label": "Actual original2025 product portfolio/brands, PDF12–13/printed10–11",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=12"
-      },
-      {
-        "label": "Actual group/associate roles and ownership, PDF22–23/printed20–21; no raw-coating-input assertion from genericchemicals",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=22"
-      },
-      {
-        "label": "Actual second zinc-coated urea line commissioned; approval30Jul2024 distinguished from undisclosed commissioning date, PDF131",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=131"
-      },
-      {
-        "label": "Actual localneemoilsourcing and polymer-coated-urea trial stage, PDF180/printed178",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=180"
-      },
-      {
-        "label": "Actual legal/plant operation and ultimateparent, PDF314/printed312; exFFBLmergerPDF315",
-        "url": "https://financials.psx.com.pk/lib/DownloadPDF.php?id=270829#page=314"
-      }
-    ]
-  },
   "petropipe-coatzacoalcos": {
     "website": "https://www.petropipe.com.mx/",
     "contactPage": "https://www.petropipe.com.mx/contacto/",
@@ -22369,61 +21712,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       }
     ]
   },
-  "rfcl-ramagundam": {
-    "website": "https://rfcl.co.in/",
-    "contactPage": "https://rfcl.co.in/contact.php",
-    "generalEmail": "admin@rfcl.co.in",
-    "generalPhone": "+91 8728 257488",
-    "address": "RFCL plant: Fertilizers City, RFCL Plant, Ramagundam, Peddapalli, Telangana505210,India. Registered: ScopeComplex,7InstitutionalArea,LodhiRoad,NewDelhi110003. Corporate:4thFloor,Wing-A,KribhcoBhawan,Sector1,Noida201301. CINU24100DL2015PLC276753. Marker is factory city, not precise plant GPS.",
-    "contacts": [
-      {
-        "name": "S. K. Jindal",
-        "title": "DGM (M&C); Unit Head, Ramagundam Unit",
-        "department": "Production",
-        "source": {
-          "label": "Original132-page AnnualReport2025–26, own legal operation and actual urea production; financial chapters not claimed fully read",
-          "url": "https://rfcl.co.in/upload/RFCL%20Annual%20Report%202025-2026.pdf"
-        },
-        "verifiedAt": "2026-10-13"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "admin@rfcl.co.in",
-        "source": {
-          "label": "Official registered/corporate/plant public contact and explicitly published general admin@rfcl.co.in",
-          "url": "https://rfcl.co.in/contact.php"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official company profile explicitly reports own neem-coated prilled urea production and JV operating identity",
-        "url": "https://rfcl.co.in/"
-      },
-      {
-        "label": "Original132-page AnnualReport2025–26, own legal operation and actual urea production; financial chapters not claimed fully read",
-        "url": "https://rfcl.co.in/upload/RFCL%20Annual%20Report%202025-2026.pdf"
-      },
-      {
-        "label": "Official actual own urea-manufacturing process",
-        "url": "https://rfcl.co.in/urea.php"
-      },
-      {
-        "label": "Official whole other product category: own ammonia manufacture",
-        "url": "https://rfcl.co.in/ammonia.php"
-      },
-      {
-        "label": "Official registered/corporate/plant public contact and explicitly published general admin@rfcl.co.in",
-        "url": "https://rfcl.co.in/contact.php"
-      },
-      {
-        "label": "Official current own legal/JV profile",
-        "url": "https://rfcl.co.in/about.php"
-      }
-    ]
-  },
   "ppg-pittsburgh": {
     "website": "https://www.ppg.com/",
     "contactPage": "https://procurement.ppg.com/Raw-Material-Introduction",
@@ -22892,98 +22180,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       }
     ]
   },
-  "fcp-cerea-bonavicina": {
-    "website": "https://fcpcerea.it/",
-    "contactPage": "https://fcpcerea.it/contatti",
-    "generalEmail": "fcpcerea@fcpcerea.it",
-    "generalPhone": "+39 045 7125911",
-    "address": "Via Farfusola 6, 37050 Bonavicina di S. Pietro di Morubio, Verona, Italy",
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "Technical",
-        "email": "laboratorio@fcpcerea.it",
-        "source": {
-          "label": "Official current explicitly disclosed department business mailbox",
-          "url": "https://fcpcerea.it/contatti"
-        }
-      },
-      {
-        "department": "General",
-        "email": "fcpcerea@fcpcerea.it",
-        "source": {
-          "label": "Official current explicitly disclosed department business mailbox",
-          "url": "https://fcpcerea.it/contatti"
-        }
-      },
-      {
-        "department": "Technical",
-        "email": "agronomia@fcpcerea.it",
-        "source": {
-          "label": "Official current explicitly disclosed department business mailbox",
-          "url": "https://fcpcerea.it/contatti"
-        }
-      },
-      {
-        "department": "Sales",
-        "email": "francesca.moretto@fcpcerea.it",
-        "source": {
-          "label": "Official current explicitly disclosed department business mailbox",
-          "url": "https://fcpcerea.it/contatti"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official current own compound-fertilizer manufacture, actual coating plant and chemical/agronomic lab",
-        "url": "https://fcpcerea.it/azienda"
-      },
-      {
-        "label": "Official2018 coating-plant construction for liquid/powder post-granulation enrichment",
-        "url": "https://fcpcerea.it/fcp-cerea-la-storia"
-      },
-      {
-        "label": "Official original81page English catalogue; physicalPDF43/printed84–85 coating manufacture,PDF29/printed56–57 Cerere; document revision date not assumed from retrieval",
-        "url": "https://fcpcerea.it/uploads/media/catalogo-eng.pdf"
-      },
-      {
-        "label": "Official current Mastercote NPK with coated urea; coating chemistry/manufacturing of every constituent not disclosed",
-        "url": "https://fcpcerea.it/prodotti/mastercote/"
-      },
-      {
-        "label": "Official current Control slow-release urea-formaldehyde NPK; not proof of PU film",
-        "url": "https://fcpcerea.it/prodotti/control/"
-      },
-      {
-        "label": "Official current laboratory/general/agronomic/export business contact and legal/VAT identity",
-        "url": "https://fcpcerea.it/contatti"
-      },
-      {
-        "label": "Official all granular finished fertilizers",
-        "url": "https://fcpcerea.it/categoria/granulari"
-      },
-      {
-        "label": "Official all special plant-nutrition formulations",
-        "url": "https://fcpcerea.it/categoria/nutrizione-speciale"
-      },
-      {
-        "label": "Official all water-soluble finished fertilizers",
-        "url": "https://fcpcerea.it/categoria/idrosolubile"
-      },
-      {
-        "label": "Official all organic-approved finished products",
-        "url": "https://fcpcerea.it/categoria/biologica"
-      },
-      {
-        "label": "Official Cerere polyol/humic plant foliar/root stress-protection formulation; preserve actual use",
-        "url": "https://fcpcerea.it/prodotti/cerere/"
-      },
-      {
-        "label": "Official actual research and formulation activity",
-        "url": "https://fcpcerea.it/ricerca-e-sviluppo-in-fcp-cerea"
-      }
-    ]
-  },
   "valresa-riba-roja": {
     "website": "https://valresa.com/",
     "contactPage": "https://valresa.com/contact/",
@@ -23180,80 +22376,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       }
     ]
   },
-  "gubretas-istanbul": {
-    "website": "https://www.gubretas.com.tr/",
-    "contactPage": "https://www.gubretas.com.tr/tr/iletisim",
-    "generalPhone": "+90 216 468 5050",
-    "address": "Headquarters: Yamanevler Mahallesi, Ahmet Tevfik İleri Caddesi, Bereket Plaza No.1, İç Kapı No.3, 34768 Ümraniye, İstanbul, Turkey. Production registration names Turkey; city marker is not Yarımca plant GPS.",
-    "contacts": [
-      {
-        "name": "Musa Goral",
-        "title": "General Manager",
-        "department": "Management",
-        "source": {
-          "label": "Official 1 October 2026 announcement: Musa Goral is current General Manager",
-          "url": "https://www.gubretas.com.tr/tr/haber/gubretas-olaganustu-genel-kurulu-yogun-yatirimci-katilimiyla--tamamlandi--"
-        },
-        "verifiedAt": "2026-10-13"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "gubretas@gubretas.com.tr",
-        "source": {
-          "label": "Official current corporate business inbox and production-site contact routes",
-          "url": "https://www.gubretas.com.tr/tr/iletisim"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official SLOWFERT SÜPER İNCİ NBPT-inhibited urea product, marketed in slow-release series",
-        "url": "https://www.gubretas.com.tr/tr/urun/slowfert-super-inci"
-      },
-      {
-        "label": "Official current original product registration: named producer, Turkey, NBPT urea; renewed 2023 registration and 2026 signed label",
-        "url": "https://www.gubretas.com.tr/uploads/files/products/33557-superinci-417.pdf"
-      },
-      {
-        "label": "Official GUBRETAS own manufacturing, full legal identity and consolidated associated businesses",
-        "url": "https://www.gubretas.com.tr/tr/hakkimizda"
-      },
-      {
-        "label": "Original GUBRETAS FY2025 annual report: own production, Razi commodity raw-material scope, Tarkim and mining associations",
-        "url": "https://www.gubretas.com.tr/uploads/files/pages/gubretas_faaliyet_raporu_31122025-1012.pdf"
-      },
-      {
-        "label": "Official complete plant-nutrition and auxiliary-product classifications",
-        "url": "https://www.gubretas.com.tr/tr/urunler/bitki-besleme-grubu"
-      },
-      {
-        "label": "Official auxiliary N-GATE: finished 15% urea-nitrogen fertiliser for drip irrigation",
-        "url": "https://www.gubretas.com.tr/tr/urun/n-gate"
-      },
-      {
-        "label": "Official GF-MIX: agricultural tank-mix and water pH conditioner",
-        "url": "https://www.gubretas.com.tr/tr/urun/gf-mix"
-      },
-      {
-        "label": "Official PEHAWET: foliar/drip application water conditioner and spreader",
-        "url": "https://www.gubretas.com.tr/tr/urun/pehawet"
-      },
-      {
-        "label": "Official 1 October 2026 announcement: Musa Goral is current General Manager",
-        "url": "https://www.gubretas.com.tr/tr/haber/gubretas-olaganustu-genel-kurulu-yogun-yatirimci-katilimiyla--tamamlandi--"
-      },
-      {
-        "label": "Official current corporate business inbox and production-site contact routes",
-        "url": "https://www.gubretas.com.tr/tr/iletisim"
-      },
-      {
-        "label": "Official shareholder structure; retain Tarım Kredi controlling association",
-        "url": "https://www.gubretas.com.tr/tr/ortaklik-yapisi"
-      }
-    ]
-  },
   "toros-agri-istanbul": {
     "website": "https://www.toros.com.tr/",
     "contactPage": "https://www.toros.com.tr/tr/toros-kurumsal/iletisim/genel-iletisim-bilgileri",
@@ -23289,76 +22411,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       {
         "label": "Official Toros corporate business contact entry, telephone and current headquarters",
         "url": "https://www.toros.com.tr/tr/toros-kurumsal/iletisim/genel-iletisim-bilgileri"
-      }
-    ]
-  },
-  "paradeep-phosphates-bhubaneswar": {
-    "website": "https://www.paradeepphosphates.com/",
-    "contactPage": "https://www.paradeepphosphates.com/contact-us",
-    "generalPhone": "+91 674 6666100",
-    "address": "Registered office per official contact page: 5th Floor, Bayan Bhavan, Pandit Jawaharlal Nehru Marg, Bhubaneswar 751001, Odisha, India. Corporate office: 3rd Floor, Adventz Centre, 28 Union Street, Off Cubbon Road, Bengaluru 560001. Latest annual report includes Paradeep, Goa, Mangaluru and Mahad manufacturing units; city marker is not factory GPS.",
-    "contacts": [
-      {
-        "name": "Raj Kumar Gupta",
-        "title": "Chief Procurement Officer",
-        "department": "Procurement",
-        "source": {
-          "label": "Official procurement leadership, disclosed title and function; no personal email attributed",
-          "url": "https://www.paradeepphosphates.com/about-us/leadership"
-        },
-        "verifiedAt": "2026-10-12"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "CorpAffairsBBSR@adventz.com",
-        "source": {
-          "label": "Official PPL general corporate inbox, registered/corporate offices and plants",
-          "url": "https://www.paradeepphosphates.com/contact-us"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official own Jai Kisaan Navratna neem-coated urea product",
-        "url": "https://www.paradeepphosphates.com/brands-and-products"
-      },
-      {
-        "label": "Official own acquired Goa urea manufacturing facilities",
-        "url": "https://www.paradeepphosphates.com/our-capabilities/manufacturing"
-      },
-      {
-        "label": "Original PPL FY2025-26 annual report: current CIN, integrated manufacture, four units, portfolio and holding-company relationship",
-        "url": "https://www.paradeepphosphates.com/uploads/content/paradeep-phosphate-ar-24082026-1.pdf"
-      },
-      {
-        "label": "Official completed MCFL merger, effective 16 October 2025; same consolidated PPL account",
-        "url": "https://www.paradeepphosphates.com/uploads/content/17-10-25.pdf"
-      },
-      {
-        "label": "Original 30 June 2026 PPL promoter shareholding; table visually checked",
-        "url": "https://www.paradeepphosphates.com/uploads/content/shp-30062026.pdf"
-      },
-      {
-        "label": "Original Chambal FY2025-26 annual report: separate CIN, facilities, shareholders, subsidiaries and joint venture",
-        "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year_2025-26.pdf"
-      },
-      {
-        "label": "Official complete current fertiliser and industrial scope including ABC and SNF",
-        "url": "https://www.paradeepphosphates.com/about-us"
-      },
-      {
-        "label": "Merged MCFL original SNF powder: concrete-admixture dispersant input scope",
-        "url": "https://www.mangalorechemicals.com/what_we_do/products_md_chemcfnp"
-      },
-      {
-        "label": "Official procurement leadership, disclosed title and function; no personal email attributed",
-        "url": "https://www.paradeepphosphates.com/about-us/leadership"
-      },
-      {
-        "label": "Official PPL general corporate inbox, registered/corporate offices and plants",
-        "url": "https://www.paradeepphosphates.com/contact-us"
       }
     ]
   },
@@ -23431,52 +22483,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       {
         "label": "Official current press-release directory reviewed for subsequent closing announcements",
         "url": "https://ir.axalta.com/news/press-releases"
-      }
-    ]
-  },
-  "mahadhan-agritech-pune": {
-    "website": "https://www.mahadhanagritech.com/",
-    "contactPage": "https://www.mahadhanagritech.com/contact",
-    "generalPhone": "+91 20 66458000",
-    "address": "Corporate and registered office: Sai Hira, Survey No. 93, Mundhwa, Pune 411036, Maharashtra, India. Own NPK manufacturing at Taloja, Raigad; map marker represents Pune headquarters city, not factory GPS.",
-    "contacts": [
-      {
-        "name": "Mahem Dwivedi",
-        "title": "AVP – Sales & Marketing Support",
-        "department": "Sales",
-        "email": "mahem.dwivedi@dfpcl.com",
-        "source": {
-          "label": "Official expressly named crop-nutrition business contact, title, email and corporate address",
-          "url": "https://www.mahadhanagritech.com/contact"
-        },
-        "verifiedAt": "2026-10-12"
-      }
-    ],
-    "departmentEmails": [],
-    "sources": [
-      {
-        "label": "Official Smartek coated NPK granules: organic-carbon and mineral coating",
-        "url": "https://mahadhan.co.in/product-portfolio/value-added-npk-fertilizers-online/"
-      },
-      {
-        "label": "Official current MAL legal identity, former Smartchem name and own Taloja NPK manufacture",
-        "url": "https://www.mahadhanagritech.com/overview"
-      },
-      {
-        "label": "Official own crop-nutrition manufacturing and finished fertiliser portfolio",
-        "url": "https://www.mahadhanagritech.com/crop-nutrition-business"
-      },
-      {
-        "label": "Original MAL FY2024-25 annual report: Smartek manufacture and completed group restructuring",
-        "url": "https://www.mahadhanagritech.com/uploads/2026/02/MAL-ANNUAL-REPORT-F-Y-2024-2025.pdf"
-      },
-      {
-        "label": "Original DFPCL FY2025-26 annual report: MAL crop-nutrition entity and complete group core product scope",
-        "url": "https://uat.dfpcl.com/uploads/2026/08/DFPCL-AR-2025-26.pdf"
-      },
-      {
-        "label": "Official expressly named crop-nutrition business contact, title, email and corporate address",
-        "url": "https://www.mahadhanagritech.com/contact"
       }
     ]
   },
@@ -23943,148 +22949,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       }
     ]
   },
-  "pvcfc-ca-mau": {
-    "website": "https://www.pvcfc.com.vn/",
-    "contactPage": "https://www.pvcfc.com.vn/lien-he",
-    "generalEmail": "contact@pvcfc.com.vn",
-    "generalPhone": "+84 290 381 9000",
-    "address": "647–649 Ngô Quyền, Phường An Xuyên, Tỉnh Cà Mau, Vietnam (current headquarters); N46.Plus manufacture: Nhà máy Đạm Cà Mau, Khánh An, U Minh, Cà Mau as specified in the original2023 standard.",
-    "contacts": [
-      {
-        "name": "Nguyễn Thanh Tùng",
-        "title": "General Director (Tổng Giám đốc), current About page states sinceApril2026",
-        "department": "Management",
-        "source": {
-          "label": "Official current General Director",
-          "url": "https://www.pvcfc.com.vn/gioi-thieu"
-        },
-        "verifiedAt": "2026-10-12"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "General",
-        "email": "contact@pvcfc.com.vn",
-        "source": {
-          "label": "Official expressly published General business inbox",
-          "url": "https://www.pvcfc.com.vn/lien-he"
-        }
-      },
-      {
-        "department": "General",
-        "email": "info@pvcfc.com.vn",
-        "source": {
-          "label": "Official corporate headquarters footer business inbox",
-          "url": "https://www.pvcfc.com.vn/lien-he"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official original N46.Plus2023 manufacturing standard rev09; PDF pages5 and7",
-        "url": "https://www.pvcfc.com.vn/Data/Sites/1/media/fileattachment/%5Bsigned%5D05.-tccs-n46.plus-c%C3%A0-mau--rev9.pdf"
-      },
-      {
-        "label": "Official current N46.Plus dual-protection coating product",
-        "url": "https://www.pvcfc.com.vn/n46plus-ca-mau"
-      },
-      {
-        "label": "Official complete current fertilizer portfolio; NBPT/DCD-coated N46.Plus",
-        "url": "https://www.pvcfc.com.vn/san-pham-dich-vu"
-      },
-      {
-        "label": "Official original coating product launch and invested machinery/line",
-        "url": "https://www.pvcfc.com.vn/tang-cuong-giai-phap-tiet-kiem-phan-bon-cho-nha-nong-dam-ca-mau-ra-mat-san-pham-moi-n46plus"
-      },
-      {
-        "label": "Official2026 extraordinary AGM: Petrovietnam member and actual business scope",
-        "url": "https://www.pvcfc.com.vn/pvcfc-thong-qua-cac-quyet-sach-quan-trong-tai-dai-hoi-co-dong-bat-thuong-2026"
-      },
-      {
-        "label": "Official current legal name, headquarters and public business contacts",
-        "url": "https://www.pvcfc.com.vn/lien-he"
-      },
-      {
-        "label": "Official current company history and General Director fromApril2026",
-        "url": "https://www.pvcfc.com.vn/gioi-thieu"
-      },
-      {
-        "label": "Official public supplier/tender entry; no form submitted",
-        "url": "https://www.pvcfc.com.vn/moi-thau"
-      },
-      {
-        "label": "Official PVMR2026 AGM: existing PVPAINT/Petrovietnam group relationship",
-        "url": "https://www.pvmr.vn/dhdcd-thuong-nien-2026-pvmr-kien-toan-nhan-su-cap-cao-lay-khoa-hoc-cong-nghe-lam-dong-luc-tang-truong/"
-      },
-      {
-        "label": "Existing PVPAINT official2026 AGM: PVMR/HPP shareholders, separate paint account",
-        "url": "https://pvpaint.vn/pv-paint-to-chuc-dai-hoi-dong-co-dong-thuong-nien-nam-2026/"
-      }
-    ]
-  },
-  "incitec-pivot-fertilisers-melbourne": {
-    "website": "https://www.incitecpivotfertilisers.com.au/",
-    "contactPage": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/",
-    "generalPhone": "1800 009 832 (Australia freecall)",
-    "address": "Registered main business location: VIC 3000, Australia (ABN 37 007 656 046; street address not independently verified). Own coating operations reported at Scottsdale, Circular Head, Longford and Devonport, Tasmania.",
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "Procurement",
-        "email": "procurement@incitecpivot.com.au",
-        "source": {
-          "label": "Official expressly published Procurement business inbox",
-          "url": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official own Tasmanian liquid coating systems applying Green Urea NV before dispatch",
-        "url": "https://www.incitecpivot.com.au/news/latest-news/ipf-backs-tasmanian-producers-with-%2411m-investment/"
-      },
-      {
-        "label": "Official Green Urea NV own NBPT coating formulation and Australian manufacture",
-        "url": "https://www.incitecpivotfertilisers.com.au/resources/agronomic-insights/green-urea-nv-made-for-australian-soil/"
-      },
-      {
-        "label": "Official current government operating entity, registered business name and VIC3000",
-        "url": "https://abr.business.gov.au/ABN/View/37007656046"
-      },
-      {
-        "label": "Official current supplier legal/ownership document v3, PDF pages3–4",
-        "url": "https://www.incitecpivotfertilisers.com.au/wp-content/uploads/sites/3/2026/06/ippl_-_commercial-credit-information.pdf"
-      },
-      {
-        "label": "Official current Ridley ownership, 14July2026 stakeholder update",
-        "url": "https://www.incitecpivotfertilisers.com.au/news/incitec-pivot-fertilisers-stakeholder-update-14-july-2026/"
-      },
-      {
-        "label": "Official public procurement business inbox; encoded display cross-checked",
-        "url": "https://www.incitecpivotfertilisers.com.au/about-us/supplying-incitec-pivot/"
-      },
-      {
-        "label": "Official complete fertilizer portfolio",
-        "url": "https://www.incitecpivotfertilisers.com.au/products/"
-      },
-      {
-        "label": "Official blend/coating finished fertilizer scope",
-        "url": "https://www.incitecpivotfertilisers.com.au/products/enhanced/blends-coating/"
-      },
-      {
-        "label": "Official trace-element coated fertilizer product scope",
-        "url": "https://www.incitecpivotfertilisers.com.au/products/enhanced/blends-coating/trace-element-coatings/"
-      },
-      {
-        "label": "Official nitrogen-retention fertilizer range",
-        "url": "https://www.incitecpivotfertilisers.com.au/products/smart/nitrogen-retention/"
-      },
-      {
-        "label": "Official eNpower finished fertilizer application and own coating technology",
-        "url": "https://www.incitecpivotfertilisers.com.au/products/smart/nitrogen-retention/enpower/"
-      }
-    ]
-  },
   "troforte-innovations-wangara": {
     "website": "https://www.trofortefarming.com.au/",
     "contactPage": "https://www.trofortefarming.com.au/contact",
@@ -24449,65 +23313,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       {
         "label": "Official legal entity and managing director",
         "url": "https://berger-seidle.de/impressum/"
-      }
-    ]
-  },
-  "ballance-tauranga": {
-    "website": "https://ballance.co.nz/",
-    "contactPage": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team",
-    "generalPhone": "+64 7 572 7900",
-    "address": "National Support Office: 161 Hewletts Road, Mount Maunganui, Tauranga, New Zealand; postal: Private Bag 12-503, Tauranga",
-    "contacts": [
-      {
-        "name": "David Healy",
-        "title": "General Manager Operations, Sourcing & Supply",
-        "department": "Procurement",
-        "email": "david.healy@ballance.co.nz",
-        "phone": "0800 222 090",
-        "source": {
-          "label": "Official current leadership: Operations, Sourcing & Supply and publicly listed business email",
-          "url": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team"
-        },
-        "verifiedAt": "2026-10-12"
-      }
-    ],
-    "departmentEmails": [],
-    "sources": [
-      {
-        "label": "Original official 2023 Annual Review, PDF page 13: own New Zealand-manufactured SustaiN",
-        "url": "https://ballance.co.nz/medias/BAL14055-Annual-Review-2023-website-FA.pdf?attachment=true&context=bWFzdGVyfHJvb3R8ODg5MzAyM3xhcHBsaWNhdGlvbi9wZGZ8YURRd0wyZzFNeTg1TmpBd05EUTVPVE0zTkRNNEwwSkJUREUwTURVMVgwRnViblZoYkY5U1pYWnBaWGRmTWpBeU0xOTNaV0p6YVhSbFgwWkJMbkJrWmd8NWViZGJkM2MzZGIzMzAzNDE1Y2I5ZmEwNzE2ZWZhOThkYzBmMjdiYTBmYmVhMzU1MmM2NmM1OTZkZjY0NzlhMg"
-      },
-      {
-        "label": "Official current SustaiN inhibitor-coated finished fertilizer",
-        "url": "https://ballance.co.nz/sustain"
-      },
-      {
-        "label": "Official SustaiN registration and inhibitor identity",
-        "url": "https://ballance.co.nz/news/sustain-lands-nz-registration"
-      },
-      {
-        "label": "Official current manufacturing and Mount Maunganui production closure",
-        "url": "https://ballance.co.nz/Our-Business-and-History/Manufacturing"
-      },
-      {
-        "label": "Official actual industrial supply scope checked separately",
-        "url": "https://ballance.co.nz/our-business-and-history/industrials"
-      },
-      {
-        "label": "Official current agricultural product categories",
-        "url": "https://ballance.co.nz/Fertiliser-Products/c/All-Product-Ranges"
-      },
-      {
-        "label": "Official current co-operative business scope",
-        "url": "https://ballance.co.nz/our-business-and-history"
-      },
-      {
-        "label": "Official current sourcing executive and explicit public business email",
-        "url": "https://ballance.co.nz/Our-People/?key=Specialisation&value=Leadership%20Team"
-      },
-      {
-        "label": "Official support-office and manufacturing-site contact addresses",
-        "url": "https://ballance.co.nz/contact-us"
       }
     ]
   },
@@ -25148,170 +23953,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       }
     ]
   },
-  "bvfcl-namrup": {
-    "website": "https://bvfcl.com/",
-    "contactPage": "https://bvfcl.com/management/",
-    "generalEmail": "cpsingh@bvfcl.com",
-    "address": "Namrup, P.O. Parbatpur 786623, District Dibrugarh, Assam, India",
-    "contacts": [
-      {
-        "name": "C P Singh",
-        "title": "Manager (MM)",
-        "department": "Procurement",
-        "email": "cpsingh@bvfcl.com",
-        "source": {
-          "label": "Official Materials Management & Transportation contact table",
-          "url": "https://bvfcl.com/management/"
-        },
-        "verifiedAt": "2026-10-11"
-      },
-      {
-        "name": "N M Das",
-        "title": "DGM, Technical Services",
-        "department": "Technical",
-        "email": "nm.das@bvfcl.com",
-        "source": {
-          "label": "Official Technical Services contact table",
-          "url": "https://bvfcl.com/management/"
-        },
-        "verifiedAt": "2026-10-11"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "Procurement",
-        "email": "cpsingh@bvfcl.com",
-        "source": {
-          "label": "Official materials-management office inbox",
-          "url": "https://bvfcl.com/management/"
-        }
-      },
-      {
-        "department": "Technical",
-        "email": "nm.das@bvfcl.com",
-        "source": {
-          "label": "Official technical-services office inbox",
-          "url": "https://bvfcl.com/management/"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official annual report 2019–20: own neem coating plant and production history",
-        "url": "https://www.bvfcl.com/wp-content/uploads/2020/12/18th_Annual_Report_of_BVFCL_for_the_year_2019-20.pdf"
-      },
-      {
-        "label": "Official currently running Namrup-III manufacturing plant",
-        "url": "https://bvfcl.com/plant-highlights/"
-      },
-      {
-        "label": "Official own product and explicitly imported trading product separation",
-        "url": "https://bvfcl.com/product/"
-      },
-      {
-        "label": "Official materials-management business names and office emails; residential column omitted",
-        "url": "https://bvfcl.com/management/"
-      },
-      {
-        "label": "Official legal business office/address and general inbox",
-        "url": "https://bvfcl.com/contact-us/"
-      }
-    ]
-  },
-  "hurl-new-delhi": {
-    "website": "https://hurl.net.in/",
-    "contactPage": "https://hurl.net.in/contact/",
-    "generalEmail": "VPCnM@hurl.net.in",
-    "generalPhone": "+91 11 22402305",
-    "address": "Core-4, 9th Floor, SCOPE MINAR, Laxmi Nagar, New Delhi 110092, India",
-    "contacts": [
-      {
-        "name": "C. S. Prasad",
-        "title": "Vice President (Contracts & Materials)",
-        "department": "Procurement",
-        "email": "VPCnM@hurl.net.in",
-        "phone": "+91 11 22402305",
-        "source": {
-          "label": "Official HURL headquarters contact table",
-          "url": "https://hurl.net.in/contact/"
-        },
-        "verifiedAt": "2026-10-11"
-      },
-      {
-        "name": "Dibesh Behera",
-        "title": "Associate Vice President (Technical)",
-        "department": "Technical",
-        "email": "dibeshbehera@hurl.net.in",
-        "source": {
-          "label": "Official HURL Barauni contact table",
-          "url": "https://hurl.net.in/contact/"
-        },
-        "verifiedAt": "2026-10-11"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "Procurement",
-        "email": "VPCnM@hurl.net.in",
-        "source": {
-          "label": "Official Contracts & Materials contact",
-          "url": "https://hurl.net.in/contact/"
-        }
-      },
-      {
-        "department": "Technical",
-        "email": "dibeshbehera@hurl.net.in",
-        "source": {
-          "label": "Official Barauni technical contact",
-          "url": "https://hurl.net.in/contact/"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official current own coated-urea product and three manufacturing plants",
-        "url": "https://hurl.net.in/ProductOverview/"
-      },
-      {
-        "label": "Official current complete finished-fertilizer catalogue and import distinctions",
-        "url": "https://hurl.net.in/products/"
-      },
-      {
-        "label": "Official procurement and technical business contacts",
-        "url": "https://hurl.net.in/contact/"
-      }
-    ]
-  },
-  "kribhco-hazira": {
-    "website": "https://www.kribhco.net/",
-    "contactPage": "https://www.kribhco.net/contact.html",
-    "generalPhone": "+91 261 2862766",
-    "address": "Hazira Fertilizer Complex, P.O. KRIBHCO Nagar, Surat 394515, Gujarat, India",
-    "contacts": [],
-    "departmentEmails": [],
-    "sources": [
-      {
-        "label": "Official own neem-oil coating during manufacturing at Hazira/Shahjahanpur",
-        "url": "https://www.kribhco.net/urea.html"
-      },
-      {
-        "label": "Official complete product/service categories",
-        "url": "https://www.kribhco.net/pages/products/product.html"
-      },
-      {
-        "label": "Official Hazira business phone and contact entry",
-        "url": "https://www.kribhco.net/contact.html"
-      },
-      {
-        "label": "Official joint-venture relationship with IFFCO; not the same cooperative",
-        "url": "https://kribhco.net/pages/about/jv.html"
-      },
-      {
-        "label": "Official subsidiary scope",
-        "url": "https://www.kribhco.net/pages/about/subsidiaries.html"
-      }
-    ]
-  },
   "renner-italia-minerbio": {
     "website": "https://renneritalia.com/",
     "contactPage": "https://renneritalia.com/en/the-company-and-the-group/",
@@ -25474,184 +24115,6 @@ const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'depart
       {
         "label": "Official TransTint acquisition and brand deduplication",
         "url": "https://transtintdyes.com/"
-      }
-    ]
-  },
-  "chambal-fertilizers-gadepan": {
-    "website": "https://www.chambalfertilisers.com/",
-    "contactPage": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article",
-    "generalPhone": "+91 744 2782915",
-    "address": "P.O. Gadepan 325208, District Kota, Rajasthan, India",
-    "contacts": [
-      {
-        "name": "Narinder Goyal",
-        "title": "Business Head - Manufacturing Operations",
-        "department": "Production",
-        "source": {
-          "label": "Official 2025–26 annual report leadership team",
-          "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year_2025-26.pdf"
-        },
-        "verifiedAt": "2026-10-11"
-      }
-    ],
-    "departmentEmails": [
-      {
-        "department": "Procurement",
-        "email": "cg_purcom1@chambal.in",
-        "source": {
-          "label": "Official Purchase mailbox; encoded public script expanded",
-          "url": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official annual report 2020–21 p49: own neem-coated urea manufacture",
-        "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year-2020-2021.pdf"
-      },
-      {
-        "label": "Official annual report 2025–26: current own plants and business scope",
-        "url": "https://www.chambalfertilisers.com/pdf/Annual-Report-for-the-Financial-Year_2025-26.pdf"
-      },
-      {
-        "label": "Official Gadepan manufacturing facilities",
-        "url": "https://www.chambalfertilisers.com/indexc0bc.html"
-      },
-      {
-        "label": "Official Purchase email and general plant telephone",
-        "url": "https://www.chambalfertilisers.com/index43c2.html?Itemid=122&id=161&option=com_content&view=article"
-      },
-      {
-        "label": "Official current Bharat Urea brochure",
-        "url": "https://www.chambalfertilisers.com/pdf/English-Bulk/Urea-Eng.pdf"
-      }
-    ]
-  },
-  "madras-fertilizers-manali": {
-    "website": "https://madrasfert.co.in/",
-    "contactPage": "https://madrasfert.co.in/contact-us/",
-    "generalPhone": "+91 44 25945310",
-    "address": "Madras Fertilizers Limited, Manali, Chennai 600068, India",
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "Production",
-        "email": "gmplant@madrasfert.co.in",
-        "source": {
-          "label": "Official General Manager (Plant) inbox",
-          "url": "https://madrasfert.co.in/contact-us/"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official factory performance: own neem-coated urea production in FY2024–25",
-        "url": "https://madrasfert.co.in/the-plant/achievements/"
-      },
-      {
-        "label": "Official company and own Manali plant",
-        "url": "https://madrasfert.co.in/the-company/"
-      },
-      {
-        "label": "Official neem-coated urea product category",
-        "url": "https://madrasfert.co.in/marketing/chemical-fertilizers/"
-      },
-      {
-        "label": "Official plant-management business contact",
-        "url": "https://madrasfert.co.in/contact-us/"
-      },
-      {
-        "label": "Official neem-based pesticide catalogue for supplier exclusion",
-        "url": "https://madrasfert.co.in/marketing/agro-chemicals-neem-based/"
-      }
-    ]
-  },
-  "national-fertilizers-nangal": {
-    "website": "https://nfl.co.in/",
-    "contactPage": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf",
-    "generalPhone": "+91 9464966819",
-    "address": "National Fertilizers Limited, Naya Nangal, Punjab 140126, India",
-    "contacts": [],
-    "departmentEmails": [
-      {
-        "department": "Procurement",
-        "email": "ranjits@nfl.co.in",
-        "source": {
-          "label": "Official Nangal Materials Department",
-          "url": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
-        }
-      },
-      {
-        "department": "Procurement",
-        "email": "tilak@nfl.co.in",
-        "source": {
-          "label": "Official Nangal Materials Department",
-          "url": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
-        }
-      }
-    ],
-    "sources": [
-      {
-        "label": "Official company quality manual: own neem-coated urea and industrial product scope",
-        "url": "https://www.nfl.co.in/nflportal/Quality/Manual.pdf?menu=33&pmenu=10"
-      },
-      {
-        "label": "Official manufacturing and agro-input trading business statement",
-        "url": "https://nfl.co.in/Startup2024/startupInNFL.jsp"
-      },
-      {
-        "label": "Official 2026 Nangal Materials Department business contact",
-        "url": "https://tenders.nfl.co.in/admin_tender/upload/20260603111644_ATCX27459_6b95da9d-975d-41c7-9e731779448342706_buyer11.nfln.pb.pdf"
-      }
-    ]
-  },
-  "iffco-kalol": {
-    "website": "https://www.iffco.in/",
-    "contactPage": "https://www.iffco.in/en/tenders",
-    "address": "IFFCO Kalol Unit, Kasturi Nagar, Gandhinagar, Gujarat 382423, India",
-    "contacts": [
-      {
-        "name": "M M Patel",
-        "title": "DGM (Purchase)",
-        "department": "Procurement",
-        "source": {
-          "label": "Official Kalol purchase department directory",
-          "url": "https://appskalol.iffco.coop/NFPDIR"
-        },
-        "verifiedAt": "2026-10-11"
-      },
-      {
-        "name": "Pravin Kumar Singh",
-        "title": "General Manager & Unit Head, Kalol",
-        "department": "Production",
-        "source": {
-          "label": "Official Kalol unit head",
-          "url": "https://www.iffco.in/en/production-unit-kalol-gujarat"
-        },
-        "verifiedAt": "2026-10-11"
-      }
-    ],
-    "departmentEmails": [],
-    "sources": [
-      {
-        "label": "Official Kalol own neem-coated urea production and unit head",
-        "url": "https://www.iffco.in/en/production-unit-kalol-gujarat"
-      },
-      {
-        "label": "Official neem-oil-coated urea product",
-        "url": "https://www.iffco.in/en/urea-fertilizer"
-      },
-      {
-        "label": "Official business and group-venture overview",
-        "url": "https://www.iffco.in/en/our-business"
-      },
-      {
-        "label": "Official procurement and vendor contact portal",
-        "url": "https://www.iffco.in/en/tenders"
-      },
-      {
-        "label": "Official purchase department business names; residential details not retained",
-        "url": "https://appskalol.iffco.coop/NFPDIR"
       }
     ]
   },
@@ -27383,8 +25846,6 @@ const demandSideLeadIds = new Set([
   "unicoat-monterrey",
   "isma-de-mexico-puebla",
   "cbr-products-port-coquitlam",
-  "br-safra-rolandia",
-  "fauji-fertilizer-rawalpindi",
   "petropipe-coatzacoalcos",
   "aksu-axu-antalya",
   "racsa-pinturas-coacalco",
@@ -27424,7 +25885,6 @@ const demandSideLeadIds = new Set([
   "cloverdale-paint-surrey",
   "diamond-vogel-orange-city",
   "sansin-strathroy",
-  "rfcl-ramagundam",
   "ppg-pittsburgh",
   "behr-santa-ana",
   "benjamin-moore-montvale",
@@ -27432,15 +25892,11 @@ const demandSideLeadIds = new Set([
   "sika-baar",
   "cifo-san-giorgio",
   "coromandel-chennai",
-  "fcp-cerea-bonavicina",
   "valresa-riba-roja",
   "isaval-ribarroja",
   "juno-erandio",
-  "gubretas-istanbul",
   "toros-agri-istanbul",
-  "paradeep-phosphates-bhubaneswar",
   "axalta-philadelphia",
-  "mahadhan-agritech-pune",
   "vital-agri-nutrients-lahore",
   "polyvine-cheddar",
   "bedec-dunmow",
@@ -27450,15 +25906,12 @@ const demandSideLeadIds = new Set([
   "morrells-stockport",
   "fiddes-cardiff",
   "verinlegno-massa-cozzile",
-  "pvcfc-ca-mau",
-  "incitec-pivot-fertilisers-melbourne",
   "troforte-innovations-wangara",
   "dura-paints-edenvale",
   "teknos-helsinki",
   "remmers-loeningen",
   "mipa-essenbach",
   "berger-seidle-gruenstadt",
-  "ballance-tauranga",
   "hesse-lignal-hamm",
   "medal-paints-johannesburg",
   "kupsa-oyon",
@@ -27471,17 +25924,10 @@ const demandSideLeadIds = new Set([
   "nervion-tlalnepantla",
   "chugoku-marine-paints-tokyo",
   "hempel-lyngby",
-  "bvfcl-namrup",
-  "hurl-new-delhi",
-  "kribhco-hazira",
   "renner-italia-minerbio",
   "vermont-natural-coatings-hardwick",
   "target-coatings-fair-lawn",
   "general-finishes-east-troy",
-  "chambal-fertilizers-gadepan",
-  "madras-fertilizers-manali",
-  "national-fertilizers-nangal",
-  "iffco-kalol",
   "duraway-coating-kapar",
   "elchemus-bukit-mertajam",
   "mowilex-indonesia-cikande",

@@ -64,10 +64,10 @@ describe('development-email prompt', () => {
   })
 
   it('routes a disclosed procurement role through the company inbox when no personal email is published', () => {
-    const prompt = promptFor('paradeep-phosphates-bhubaneswar')
+    const prompt = promptFor('diversatech-bangi', (lead) => ({ ...lead, profile: { ...lead.profile, departmentEmails: [] } }))
     expect(prompt).toContain('Name / team: General Team')
     expect(prompt).toContain('Would evaluating this material for your fertilizer coating formulations be relevant to your team?')
-    expect(prompt).not.toContain('Name / team: Raj Kumar Gupta')
+    expect(prompt).not.toContain('Name / team: Khairulnizam Bin Po’at')
   })
 
   it('makes concise drafting the default without losing company evidence or qualification rules', () => {

@@ -9,7 +9,6 @@ const conciseOverrides: Record<string, string> = {
   'isaval-ribarroja': 'Your Xanol Barniz Interior is a single-component water-based polyurethane varnish for wood.',
   'polyvine-cheddar': 'Your 2K-POLY86 is a two-pack water-based polyurethane varnish for wooden floors and interior timber.',
   'bedec-dunmow': 'Your MSV range is a water-based acrylic varnish reinforced with polyurethane for wood applications.',
-  'incitec-pivot-fertilisers-melbourne': 'Your Tasmanian sites apply Green Urea NV and eNpower using their own fertiliser coating systems.',
   'chugoku-marine-paints-tokyo': 'Your company manufactures marine, industrial and container paints, with factories and R&D centres in Japan.',
   'saraswanti-anugerah-indonesia-mempawah': 'Your NPK product page describes a coating step intended to regulate nutrient release before packing.',
 }

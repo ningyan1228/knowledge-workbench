@@ -14,7 +14,7 @@ describe('sourced functions follow the product and application', () => {
     }
   })
   it('describes our fertilizer route without attributing it to neem, sulfur or inhibitor-coated customers', () => {
-    for(const id of ['pvcfc-ca-mau','kribhco-hazira','vital-agri-nutrients-lahore']){
+    for(const id of ['farmhannong-ulsan','rcf-mumbai','vital-agri-nutrients-lahore']){
       const pitch=functionalProductPitch(publicLeads.find(lead=>lead.id===id)!)!
       expect(pitch.introduction).toContain('We supply a reactive raw material')
       expect(pitch.introduction).not.toMatch(/your (polyurethane|polymer)|same coating|release period/i)

@@ -35,7 +35,7 @@ describe('three customer-card decisions', () => {
     expect(coating.evaluation).toContain('反应性环氧基')
     expect(coating.evaluation).toContain('树脂改性评估')
     expect(coating.evaluation).not.toMatch(/防腐|保证|已相容/)
-    const fertilizer = leadCardBrief(lead('kribhco-hazira'))
+    const fertilizer = leadCardBrief(lead('rcf-mumbai'))
     expect(fertilizer.evaluation).toContain('我方聚氨酯路线')
     expect(fertilizer.evaluation).not.toMatch(/客户采用|相同体系|释放期/)
     expect(leadCardBrief({ ...lead('polyvine-cheddar'), supplierCompetitorCheck: undefined }).evaluation).toBe('应用关联待补证据')
