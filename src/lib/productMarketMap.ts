@@ -8036,11 +8036,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "tetralux-sindos",
+    "company": "TETRALUX",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Sindos, Thessaloniki — own About and Contact; country-level map marker",
+    "latitude": 38.5,
+    "longitude": 23,
+    "legacyCompanyDescription": "希腊 Sindos 自产建筑及工业涂料企业，使用官网公开名称 TETRALUX；Tzelos 及其已披露合并品牌归入同一账户，不虚构法律后缀",
+    "fit": "可开发候选",
+    "signal": "希腊 Sindos 自有建筑及工业涂料生产企业；Epolux 540 是用于水泥基材、金属及钢结构防护的双组分溶剂型环氧面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-24",
+      "conclusion": "累计 6 次公司定向来源请求，完整读到 About、Epolux 540、Contact、Products 总类及工业环氧类首页 5 个返回原文；Diamond Liquid Glass 链接第 6 次请求为 Cache miss，未读到正文，失败计入上限并停止。About 明确自有 Sindos 涂料生产单元、生产设备及化学部门；具体双组分工业防护面漆由其产品原文证明。12 个可见产品大类包括各类成品建筑/工业涂料、腻子、建筑材料和稀释剂；工业环氧目录仅实际第一页 1–12/15 项，并非全部 SKU。已读范围未识别销售 ELO、ESBO、环氧植物油或同类生物基增塑添加剂；不将环氧树脂计算器、普通涂料原料储罐或未读到的 Liquid Glass 名称推断成制造/销售 ELO，也不声称读过该失败正文、全部叶页/SDS、第二页或未公开业务。查重覆盖最新 main 376 公开客户、390 本地客户、322 队列、767 私有记录、两个来源索引和完整私有历史；TETRALUX、Tzelos、EPOLUX 540、PANCHROM/PANCHROME 及 perfect.gr/alpina.gr/mondobello.gr 未发现同一旧账户。About 披露 PANCHROM、PERFECT 和本地 ALPINA 合并及 Mondo Bello 代理关系，仅收一个 TETRALUX 账户，不拆分品牌、语言站、厂房或关联业务；不据 ALPINA 通用名称推断为其他国际同名集团。公司仅为潜在需求侧研发评估客户，未确认采购或使用 ELO。"
+    },
+    "contact": {
+      "label": "官网已核验联系表单及公司业务电话；邮箱在实际联系页显示为保护占位，未核实精确邮箱，不进入批量邮件名单；无具名采购负责人",
+      "phone": "2310-796110",
+      "contactUrl": "https://tetralux.gr/contact/?lang=en"
+    },
+    "source": {
+      "label": "Own Epolux 540 two-component protective epoxy topcoat for cement, metal and steel structures",
+      "url": "https://tetralux.gr/proionta/epolux-540/?lang=en"
+    },
+    "checkedAt": "2026-10-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "tetralux-sindos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chromodomi-sindos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "superlux-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "epoksan-cacak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8418,6 +8446,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "tetralux-sindos": {
+    "website": "https://tetralux.gr/",
+    "contactPage": "https://tetralux.gr/contact/?lang=en",
+    "address": "Own Contact: O.T. 5B, STREET 7/8 VI.PE., Sindos Thessaloniki 570 22; RN038233405000 as disclosed. Country marker38.5,23 is approximate Greece research positioning, not factory/office geocoding.",
+    "generalPhone": "2310-796110",
+    "generalPhoneEvidence": {
+      "company": "TETRALUX",
+      "value": "2310-796110",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "TETRALUX own Contact Informations public company phone",
+          "url": "https://tetralux.gr/contact/?lang=en",
+          "summary": "Exact national-format business phone 2310-796110, alongside 2310-796278; fax2310-723096 is not a voice contact. No WhatsApp or person attribution, no phone/mail verification call."
+        }
+      ],
+      "verifiedAt": "2026-10-24"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own About actual manufacture, chemical department and named local mergers/representation",
+        "url": "https://tetralux.gr/company/about-us/?lang=en"
+      },
+      {
+        "label": "Own Epolux 540 exact downstream industrial protective product",
+        "url": "https://tetralux.gr/proionta/epolux-540/?lang=en"
+      },
+      {
+        "label": "Own 12 product-family overview, no full individual SKU/SDS audit",
+        "url": "https://tetralux.gr/products/?lang=en"
+      },
+      {
+        "label": "Own industrial epoxy directory first page1–12/15 only, returned business representation fully read",
+        "url": "https://tetralux.gr/product-category-en/industrial-epoxy-paints/?lang=en"
+      },
+      {
+        "label": "Own Contact form fields, company address and business phones; mailbox protected/unknown",
+        "url": "https://tetralux.gr/contact/?lang=en"
+      }
+    ]
+  },
   "chromodomi-sindos": {
     "website": "https://chromodomi.gr/",
     "contactPage": "https://chromodomi.gr/en/contact/",
@@ -26208,6 +26280,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "tetralux-sindos",
   "chromodomi-sindos",
   "superlux-thessaloniki",
   "epoksan-cacak",
