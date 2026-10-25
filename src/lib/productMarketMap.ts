@@ -8424,11 +8424,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "micca-laval",
+    "company": "Peinture Micca Inc.",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Laval headquarters/store; country-level approximate map marker",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "legacyCompanyDescription": "加拿大魁北克成品涂料制造商，含水性木器清漆；Micca/Crystallo系列及门店按一个账户",
+    "fit": "可开发候选",
+    "signal": "在魁北克制造室内外成品涂料，提供木器清漆与着色剂；Crystallo M2550-00为水性木器清漆，用于木地板与木器表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "完整独立读取官网产品总入口220行、木器类别240行、联系171行、CrystalloM2550具体页160行；首页原生读取timeout及一次明确普通HTTPS代理连接失败均计入6次累计来源，未把失败页当已读业务信息，不再换工具/语种/新轮次重置。产品/联系/具体页页脚均明确PeintureMiccainc在魁北克制造室内外成品涂料；木器类别完整可见7项，有水性或油性透明木器清漆、丙烯酸木器着色剂及醇酸封闭涂料。CrystalloM2550具体页明确SKU、木器清漆归类，官网返回的页面标题明确水性木地板/木器用途；类别当前继续列该产品。具体页正文没有完整技术描述；不把Search里2023PDF的聚氨酯/油改性树脂/配方数值和家具柜体范围当成已读取TDS，不声称已读该PDF或精确树脂类型，不泛化水/油类别全部都是水性。已读可见七大业务导航、产品标签、完整7项木器系列及具体成品页内未见PO/CPO分散体或所选同类原料级附着促进剂外售；清洗/表面准备/工具导航保留为未逐页核业务，不能说全产品只卖涂料，不声称穷尽全部工业/特种/清洗SKU、TDS/SDS或最终股权。搜索组件出现Adapters/Automation/Hacks等非涂料分类，不拿这些词当其实际产品制造/采购/同行排除证据，不推断网站安全或所有权变化。Micca/PeintureMicca及Crystallo等系列、12个门店与经销入口按一个账户，ColorGuild与经销商/涂装服务合作不自动当母子公司；未独立确认最终股权或股东，不从2018媒体Search/第三方企业库补负责人或股东。名称/品牌/域名/邮箱域及完整当前main390、本地404、私有804、队列/来源索引和全历史核对，无现有同一正式/私有主体；历史Micca会员目录链接与Search不算Micca官网原文已读。1740BoulevardSaintElzéarOuest为官网总部兼门店，非已核精确生产门牌；地图为加拿大国家级概略点。info@micca.ca及4506861740为官网总部通用业务邮箱/电话，非具名采购或WhatsApp；表单可见但未提交/验证送达。NL-W1201只依据用户资料的水性聚烯烃分散体、木材底涂/附着促进方向提出潜在实验室评估，未证实客户现用/采购、配方相容或性能改善；不将客户成品UV/防霉/耐久宣传移作我方保证，不建议现场掺入成品。"
+    },
+    "contact": {
+      "label": "官网总部通用业务邮箱、电话和可见表单；无具名采购或WhatsApp",
+      "email": "info@micca.ca",
+      "phone": "450 686-1740",
+      "contactUrl": "https://micca.ca/nous-joindre/"
+    },
+    "source": {
+      "label": "Own Crystallo M2550 wood varnish and explicit water-based wood-floor product-page title",
+      "url": "https://micca.ca/boutique/micca-crystallo-2/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "micca-laval": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "denalt-paints-montreal": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chemtec-epoxy-laval": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bythim-polychrome-krasnoyarsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8820,6 +8849,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "micca-laval": {
+    "website": "https://micca.ca/",
+    "contactPage": "https://micca.ca/nous-joindre/",
+    "address": "Head office and paint store: 1740 boulevard Saint-Elzéar Ouest, Laval, Québec H7L 3N2, Canada. Official headquarters/store, not independently verified factory-gate coordinates. Country-level approximate map marker.",
+    "generalEmail": "info@micca.ca",
+    "generalPhone": "450 686-1740",
+    "generalEmailEvidence": {
+      "company": "Peinture Micca Inc.",
+      "value": "info@micca.ca",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own contact page explicitly labelled headquarters email",
+          "url": "https://micca.ca/nous-joindre/",
+          "summary": "Own Siège social & Magasin Peinture block gives exact Courriel:info@micca.ca at1740Saint-ElzéarOuest Laval with corporate business phones; public company inbox, not named procurement contact."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhoneEvidence": {
+      "company": "Peinture Micca Inc.",
+      "value": "450 686-1740",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate contact page business voice phone",
+          "url": "https://micca.ca/nous-joindre/",
+          "summary": "Own headquarters block explicitlyTéléphone4506861740 and5143338500, separatefax4506860477. Selectedmainbusinessvoicephone, not WhatsApp or named buyer; no dial test."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own product/manufacturer portal and visible whole-business navigation",
+        "url": "https://micca.ca/nos-produits/"
+      },
+      {
+        "label": "Own current seven-product wood varnish/stain/sealer category",
+        "url": "https://micca.ca/categorie-produit/produits/vernis-teintures-et-scellants-pour-bois/"
+      },
+      {
+        "label": "Own exact CrystalloM2550 wood-varnish classification and water-based wood-floor page title",
+        "url": "https://micca.ca/boutique/micca-crystallo-2/"
+      },
+      {
+        "label": "Own headquarters public inbox/voice telephone/contact form",
+        "url": "https://micca.ca/nous-joindre/"
+      }
+    ]
+  },
   "denalt-paints-montreal": {
     "website": "https://denalt.ca/fr",
     "contactPage": "https://denalt.ca/fr/nous-joindre",
@@ -27399,6 +27483,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "micca-laval",
   "denalt-paints-montreal",
   "chemtec-epoxy-laval",
   "bythim-polychrome-krasnoyarsk",
