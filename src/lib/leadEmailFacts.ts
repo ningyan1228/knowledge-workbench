@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "het-ohnic": "Your AQUADECOL LAZURA PREMIUM is a water-dilutable, thin-layer stain for wooden surfaces in your wood-coating range.",
   "detecha-nove-mesto": "Your Epoxyban is a two-component epoxy coating for heavily used concrete floors in production halls, warehouses and garages.",
   "vouga-tintas-viseu": "Your Vougadex Acetinado Aquoso is a water-based varnish for protecting and decorating interior and exterior wood.",
   "durostick-aspropyrgos": "Your DUROEPOXY is a solvent-based, two-component epoxy paint for protecting cementitious industrial floors and concrete or metal surfaces.",

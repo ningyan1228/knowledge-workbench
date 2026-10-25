@@ -8229,11 +8229,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "het-ohnic",
+    "company": "HET spol. s r.o.",
+    "productId": "nl-w1201",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Ohníč; country-level map marker",
+    "latitude": 49.8,
+    "longitude": 15.5,
+    "legacyCompanyDescription": "捷克自产涂料企业，总部及生产厂位于Ohníč；AQUADECOL/SOLDECOL/PROHET与海外分支按同一集团账户",
+    "fit": "可开发候选",
+    "signal": "HET 在捷克 Ohníč 运营总部及涂料生产厂；AQUADECOL LAZURA PREMIUM 为水可稀释薄层木器色漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "本公司累计4次原始请求：Home109行、木器系列144行、Contact431行及建筑/涂装原料辅助类124行；Contact首次仅0–265行，后一次缓存导航完整0–430行读取，不追加URL预算。Home明确捷克自产涂料企业，Contact法定主体HET spol. s r.o./IČO43223168并明示Ohníč总部及生产厂，具体AQUADECOL LAZURA PREMIUM明示水可稀释薄层木器色漆，FORTE为水可稀释中层木器色漆，不将SOLDECOL溶剂型/木油都称水性。完整可见原料辅助类实际9项为墙面填料/丙烯酸腻子/灰泥/石膏及白水泥；普通建筑矿物原料、成品底涂/乳胶漆/木油不自动当作所选水性聚烯烃或PO/CPO分散体同行。已读制造角色、12个可见成品/辅助分类导航、完整木器及建筑原料辅助范围未见外售所选原料型PO/CPO分散体或同类附着力促进输入；结论限已读范围，未穷尽全部SKU/TDS/SDS、隐藏业务、成分或最终股权。PROHET工业系列、AQUADECOL/SOLDECOL、捷克各销售中心、HET SLOVAKIA及多语站按同一集团账户保留；波兰F.H.U.DOMAR在官网明示为分销商，非新增生产客户。2026年与E-CORECO联合促销不证明收购或共同控股。查重覆盖最新main383公开、397本地、322私有队列、782私有记录、两来源索引及完整研究历史；HET确切域名/43223168/品牌/采购邮箱无既有账户，历史2个仅Search，无定向公司原文请求；瑞典verksamhetspolicy包含字母het并非HET，已排除误匹配。Contact采购负责人区明确列nakup@het.cz，按采购部门邮箱保留，不冒称具名个人收件人；总部联系区单独公开obchod@het.cz与+420417810111。公司联系目录非已核验表单，电话不视为WhatsApp。地图用捷克国家级概略坐标，不称厂门定位。仅潜在配方研发材料评估，不确认采购、现用我方材料、配方相容或附着改善，不把客户杀菌/防霉/UV/耐久宣传移植为我方材料性能。"
+    },
+    "contact": {
+      "label": "官网采购部门邮箱、总部业务总机及公司联系目录；非具名个人、非已核验联系表单、非WhatsApp",
+      "email": "nakup@het.cz",
+      "phone": "+420 417 810 111",
+      "contactUrl": "https://www.het.cz/kontakty/"
+    },
+    "source": {
+      "label": "Own AQUADECOL LAZURA PREMIUM explicitly water-dilutable thin-layer wood stain",
+      "url": "https://www.het.cz/katalog-vyrobku/lazury-oleje-a-napoustedla-na-drevo/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "het-ohnic": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "detecha-nove-mesto": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vouga-tintas-viseu": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "durostick-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8618,6 +8647,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "het-ohnic": {
+    "website": "https://www.het.cz/",
+    "contactPage": "https://www.het.cz/kontakty/",
+    "address": "HET spol. s r.o., čp. 61,417 65 Ohníč,Czech Republic; IČO43223168. Own Contact explicitly identifies headquarters and manufacturing plant here. Marker49.8,15.5 is a country-level approximation, not factory/office geocoding; no precise coordinates verified.",
+    "generalEmail": "obchod@het.cz",
+    "generalEmailEvidence": {
+      "company": "HET spol. s r.o.",
+      "value": "obchod@het.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact headquarters and production-plant company business inbox",
+          "url": "https://www.het.cz/kontakty/",
+          "summary": "Company headquarters/production-plant block at lines30–39 expressly publishes obchod@het.cz with legalname,address,registration43223168 and mainphone. Public headquarters business/sales route, not namedperson or procurement inbox."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhone": "+420 417 810 111",
+    "generalPhoneEvidence": {
+      "company": "HET spol. s r.o.",
+      "value": "+420 417 810 111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact headquarters and production-plant main telephone",
+          "url": "https://www.het.cz/kontakty/",
+          "summary": "Exact +420417810111 in headquarters/production-plant block lines30–39. Corporate voice telephone, not namedpurchaser/mobile/WhatsApp or call-tested."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "nakup@het.cz",
+        "source": {
+          "label": "Own Contact production / purchasing-head section",
+          "url": "https://www.het.cz/kontakty/"
+        },
+        "emailEvidence": {
+          "company": "HET spol. s r.o.",
+          "value": "nakup@het.cz",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own Contact Vedoucí nákupu exact purchasing-department mailbox",
+              "url": "https://www.het.cz/kontakty/",
+              "summary": "Production section lines308–314 identifies Vedoucí nákupu (head of purchasing) and expressly lists nakup@het.cz alongside separate named martin.jelinek@het.cz. Adopt only exact department nakup@het.cz without asserting personal ownership or buyer identity/current demand."
+            }
+          ],
+          "verifiedAt": "2026-10-25"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Home Czech coating manufacturer, wood-coating scope and brand/language links",
+        "url": "https://www.het.cz/"
+      },
+      {
+        "label": "Own full wood range, exact water-dilutable AQUADECOL LAZURA PREMIUM and FORTE",
+        "url": "https://www.het.cz/katalog-vyrobku/lazury-oleje-a-napoustedla-na-drevo/"
+      },
+      {
+        "label": "Own full Contact legal Ohníč production-plant identity, headquarters and purchasing-department channels",
+        "url": "https://www.het.cz/kontakty/"
+      },
+      {
+        "label": "Own full raw/auxiliary category: nine fillers, gypsum, stucco and white-cement products",
+        "url": "https://www.het.cz/katalog-vyrobku/tmely-stuky-stavebni-a-malirske-suroviny/"
+      }
+    ]
+  },
   "detecha-nove-mesto": {
     "contactPage": undefined,
     "website": "https://www.detecha.cz/",
@@ -26791,6 +26898,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "het-ohnic",
   "detecha-nove-mesto",
   "vouga-tintas-viseu",
   "durostick-aspropyrgos",
