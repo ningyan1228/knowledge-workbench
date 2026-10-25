@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vechro-athens": "Your SMALTOXYL HYDRO ECO is a water-based protective and decorative varnish for indoor and outdoor wooden surfaces.",
   "tetralux-sindos": "Your Epolux 540 is a two-component epoxy topcoat for protecting cement substrates, metal surfaces and steel structures.",
   "chromodomi-sindos": "Your RED SUN WATER is a water-based varnish for indoor and outdoor wood surfaces.",
   "superlux-thessaloniki": "Your Metal Life Epoxy 2K Ferro is a two-component protective coating system for metal surfaces.",

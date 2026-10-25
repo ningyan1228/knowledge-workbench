@@ -8063,11 +8063,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-24"
   },
+  {
+    "id": "vechro-athens",
+    "company": "VECHRO S.A.",
+    "productId": "nl-w1201",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Athens headquarters; Petra Viotias factory — own Contact/Timeline and HPD",
+    "latitude": 38.01461,
+    "longitude": 23.719453,
+    "legacyCompanyDescription": "希腊自产涂料企业，官网明确 VECHRO S.A.；Athens总部与Petra自有厂归同一客户，不新增语言站或OEM品牌账户",
+    "fit": "可开发候选",
+    "signal": "VECHRO 在希腊 Petra 自有工厂制造涂料，总部位于雅典；SMALTOXYL HYDRO ECO 是用于室内及室外木材的水性保护和装饰清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "累计 6 个公司定向原始来源：Home、具体水性木器产品、制造商自编 HPD、Contact、Special Applications 第1页及自有 Timeline。5 个有限 HTML 返回原文完整读取；HPD 35页仅实际返回及缓存定位部分，读到封面、制造商与工厂、技术邮箱等段落，不声称完整或视觉读过。Timeline 明确 Petra 自有厂及生产，2026年1月发布的 HPD 同时列出制造商 VECHRO PAINTS 与 Petra 工厂。Home和16项特殊用途成品及12个类别筛选未发现销售原料型水性聚烯烃乳液、CPO/PO 分散体或同类附着力促进剂；水性丙烯酸多用途成品底漆与配色体系不自动当作同类原料。未读第2/3页、全部SDS、隐藏目录或未披露原料，不声称全面交易审计；HPD的大量 Undisclosed 项不推定为我方材料或某种相容体系。核对最新 main 377 公开、391 本地、322 队列、768 私有记录、两个索引及完整私有历史，VECHRO/SMALTOXYL/SMALTOLUX/SMALTOPLAST、家族姓名、技术邮箱及已披露历史法国股东/OEM关联未发现同一旧账户；9个历史匹配为名字建议、预检或Search发现，无旧公司正文抓取。1963法国股东及1981股权变化按历史保留，不推断当前属于杜邦等国际同名集团；Praktiker OEM客户不当作VECHRO母公司、也不新增Praktiker账户。多语言站、Athens总部和Petra工厂只计一家。仅潜在研发材料评估客户，不声称已采购或使用NL-W1201。"
+    },
+    "contact": {
+      "label": "制造商HPD明确公开的技术业务邮箱、官网公司总机及联系表单；不冒称具名采购负责人",
+      "email": "rtdevelopment@vechro.gr",
+      "phone": "+30 210 4816101",
+      "contactUrl": "https://www.vechro.gr/en/contact-us"
+    },
+    "source": {
+      "label": "Own SMALTOXYL HYDRO ECO exact water-based varnish for indoor/outdoor wood",
+      "url": "https://www.vechro.gr/en/products/smaltoxyl-hydro-eco"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vechro-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tetralux-sindos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chromodomi-sindos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "superlux-thessaloniki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8446,6 +8475,83 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vechro-athens": {
+    "generalEmail": undefined,
+    "website": "https://www.vechro.gr/en",
+    "contactPage": "https://www.vechro.gr/en/contact-us",
+    "address": "Own Contact:302 LIOSION AVE, ATHENS11145; own headquarters page explicitly lists38.01461,23.719453 as location, used as sourced HQ marker, not factory-gate geocoding. Petra Viotias32001 factory from ownTimeline andHPD; no secondcustomer.",
+    "generalPhone": "+30 210 4816101",
+    "generalPhoneEvidence": {
+      "company": "VECHRO S.A.",
+      "value": "+30 210 4816101",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact public center telephone range",
+          "url": "https://www.vechro.gr/en/contact-us",
+          "summary": "Own centre publishes +30 210-4816101-3. This is the first number of the disclosed company range, normalized with published +30 country code; no WhatsApp or individual direct-line claim."
+        },
+        {
+          "label": "Manufacturer HPD exact first company phone",
+          "url": "https://hpdrepository.hpd-collaborative.org/repository/HPDs/1804_SMALTOLUX_HYDRO_MASTER_PRIMER_ECO.pdf",
+          "summary": "Section6 exact2104816101 corroborates first number in owncompany center range. Does not establish a personal telephone owner."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "rtdevelopment@vechro.gr",
+        "source": {
+          "label": "Manufacturer HPD Section6 exact Technical Director business route",
+          "url": "https://hpdrepository.hpd-collaborative.org/repository/HPDs/1804_SMALTOLUX_HYDRO_MASTER_PRIMER_ECO.pdf"
+        },
+        "emailEvidence": {
+          "company": "VECHRO S.A.",
+          "value": "rtdevelopment@vechro.gr",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "VECHRO self-prepared HPD published2026-01-26, Section6 Manufacturer Information, printedpage35",
+              "url": "https://hpdrepository.hpd-collaborative.org/repository/HPDs/1804_SMALTOLUX_HYDRO_MASTER_PRIMER_ECO.pdf",
+              "summary": "Manufacturer VECHRO PAINTS, own domain/address and Technical Director contact explicitly paired with exact rtdevelopment@vechro.gr. Corporate technical route; not asserted as a personally owned mailbox, current personal identity or procurement department. Source is manufacturer self-declaration, not independent HPDC validation."
+            }
+          ],
+          "verifiedAt": "2026-10-25"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Timeline explicit privately-owned Petra factory, Athensoffice, manufacture and disclosed historical ownership/OEM",
+        "url": "https://www.vechro.gr/en/company/history"
+      },
+      {
+        "label": "Own precise waterbased indoor/outdoor wood varnish",
+        "url": "https://www.vechro.gr/en/products/smaltoxyl-hydro-eco"
+      },
+      {
+        "label": "Own Home product range and company identity",
+        "url": "https://www.vechro.gr/en"
+      },
+      {
+        "label": "Own SpecialApplications firstpage16productcards/categoryfilter12; pages2/3 not read",
+        "url": "https://www.vechro.gr/en/products/special-surface"
+      },
+      {
+        "label": "Manufacturer self-prepared HPD2026, selectedmanufacturer/factory/technicalcontact portions only, not all35pages",
+        "url": "https://hpdrepository.hpd-collaborative.org/repository/HPDs/1804_SMALTOLUX_HYDRO_MASTER_PRIMER_ECO.pdf"
+      },
+      {
+        "label": "Own Contact actualform/headquarterscoordinates/companyphone; generalemail protected/unverified",
+        "url": "https://www.vechro.gr/en/contact-us"
+      }
+    ]
+  },
   "tetralux-sindos": {
     "website": "https://tetralux.gr/",
     "contactPage": "https://tetralux.gr/contact/?lang=en",
@@ -26280,6 +26386,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vechro-athens",
   "tetralux-sindos",
   "chromodomi-sindos",
   "superlux-thessaloniki",
