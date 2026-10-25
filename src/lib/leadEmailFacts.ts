@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vouga-tintas-viseu": "Your Vougadex Acetinado Aquoso is a water-based varnish for protecting and decorating interior and exterior wood.",
   "durostick-aspropyrgos": "Your DUROEPOXY is a solvent-based, two-component epoxy paint for protecting cementitious industrial floors and concrete or metal surfaces.",
   "novamix-thiva": "Your PLANOFINISH EPOXY is a water-based, two-component epoxy varnish for protecting microcement coatings and indoor industrial concrete floors.",
   "restreet-aspropyrgos": "Your epoxy paint range includes EPOXY LINE, EPOXY LINE PRIMER and EPOXYLINE AQUA.",

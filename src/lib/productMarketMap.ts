@@ -8173,11 +8173,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "vouga-tintas-viseu",
+    "company": "Vouga Tintas – Industria & Comercio de Tintas, Ld.ª (VOTIN)",
+    "productId": "nl-w1201",
+    "country": "Portugal",
+    "countryZh": "葡萄牙",
+    "city": "Viseu, Coimbrões",
+    "latitude": 40.625255,
+    "longitude": -7.888647,
+    "legacyCompanyDescription": "葡萄牙自产涂料企业，VOTIN为Vouga Tintas自有品牌；旧Bodiosa地址与现Coimbrões生产设施只计同一公司",
+    "fit": "可开发候选",
+    "signal": "葡萄牙自产涂料企业；Vougadex Acetinado Aquoso 为用于室内外木材保护与装饰的水性清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "累计6个本公司原始HTML来源：Home72行、Madeiras/Carpintarias93行、Apresentação70行、Diversos87行、Contact63行、Historial93行，有限返回原文均逐行完整读取，无PDF或视频。Apresentação明确制造/销售涂料；Historial明确1992年由Francisco Duque Santos e Filhos创立、1999年购入Viseu Coimbrões生产与实验室设备，VOTIN为Vouga自身更名品牌。2007年E.B.S.水性建筑涂料与Eliokem合作为历史合作，不推成现有股权、同集团或原料代理业务。木器页明确五个水性保护/多种水性面漆、具体Vougadex Acetinado Aquoso室内外木材用途；另保留真实溶剂/PU/纤维素木器成品，不推所有产品水性。完整Diversos列木纸/PVC/接触/拼花胶、墙石防水、清洁剂/去模油/金属清漆、Aditivo Antibolores e Algas水性杀真菌及藻类配套，不将普通胶、杀菌配套乳液、成品PU漆或附着力词当作原料PO/CPO同行。已读制造角色、十类产品导航、全部当前木器表及完整Diversos范围未见外售原料型水性聚烯烃乳液、PO/CPO分散体或同类附着力促进输入；此为有限公开范围判断，未读全部其它家族、TDS/SDS、隐藏目录和未披露交易，不声称穷尽所有SKU及最终受益股权。查重覆盖最新main381公开、395本地、322队列、780私有记录、两索引及完整私有历史；法名/域名/品牌/已披露创始人/公开邮箱无旧账户。9旧匹配仅Search或预检，无本公司定向正文GET；普通voting/devoting包含Votin字母不是同一主体。一个制造账户，不按VOTIN品牌、旧Bodiosa地址、现Coimbrões地址、语言站拆新。网站明示维护/页脚更新2023-05-05，按当前可读原文保留，不虚构2026投产或新版产品发布日期。Contact坐标与Home坐标不同，使用Contact明确坐标并保留差异，不称测绘确认的厂门位置。仅潜在实验室材料评估，未确认采购、现用NL-W1201或配方相容/增粘性能。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱、总机及联系表单；非具名采购负责人，非WhatsApp",
+      "email": "geral@vougatintas.pt",
+      "phone": "+351 232 470 970",
+      "contactUrl": "https://vougatintas.pt/contact/"
+    },
+    "source": {
+      "label": "Own Madeiras / Carpintarias exact waterborne Vougadex Acetinado Aquoso for indoor/outdoor wood",
+      "url": "https://vougatintas.pt/produtos/produtos/madeiras-carpintarias/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vouga-tintas-viseu": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "durostick-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "novamix-thiva": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "restreet-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8560,6 +8589,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vouga-tintas-viseu": {
+    "website": "https://vougatintas.pt/",
+    "contactPage": "https://vougatintas.pt/contact/",
+    "address": "P. Industrial de Coimbrões, L.10,3500-618 Viseu,Portugal. Contact explicitly publishes40.625255,-7.888647,used as its companylocationreference. Home alternatively publishes40.628740,-7.879955; discrepancy retained, not harmonized/invented or surveyedfactorygateprecision. HistoricalBodiosa-Viseu is priorlocation, notsecondcustomer.",
+    "generalEmail": "geral@vougatintas.pt",
+    "generalEmailEvidence": {
+      "company": "Vouga Tintas – Industria & Comercio de Tintas, Ld.ª (VOTIN)",
+      "value": "geral@vougatintas.pt",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact explicit company email",
+          "url": "https://vougatintas.pt/contact/",
+          "summary": "Contact explicitly lists geral@vougatintas.pt with Viseu companyaddress; generalcorporatebusinessroute, not namedprocurement/person. Same exactmail repeatedonHome and currentwoodtable."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhone": "+351 232 470 970",
+    "generalPhoneEvidence": {
+      "company": "Vouga Tintas – Industria & Comercio de Tintas, Ld.ª (VOTIN)",
+      "value": "+351 232 470 970",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact company landline with countrycode",
+          "url": "https://vougatintas.pt/contact/",
+          "summary": "Tel:+351232470970 exactcorporatelandline; separate mobile notadopted and noWhatsAppclaim. Ownwoodtablealsoexplicit(+351)232470970."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home businesscontact/address and alternativeGPS; footer2023-05-05",
+        "url": "https://vougatintas.pt/"
+      },
+      {
+        "label": "Own exactwaterbornewoodcoatingtable and10visiblecategorylinks; maintenancenotice retained",
+        "url": "https://vougatintas.pt/produtos/produtos/madeiras-carpintarias/"
+      },
+      {
+        "label": "Own Apresentação expressly manufacturespaintandvarnish",
+        "url": "https://vougatintas.pt/empresa/apresentacao/"
+      },
+      {
+        "label": "Own fullDiversos actualglues/cleaners/waterrepellents and unrelatedfungicidalauxiliary",
+        "url": "https://vougatintas.pt/produtos/produtos/diversos/"
+      },
+      {
+        "label": "Own Contact exactgeneralemail/landline/form/preferredpublishedGPS",
+        "url": "https://vougatintas.pt/contact/"
+      },
+      {
+        "label": "Own Historial manufacturer/factory/lab/brand/founder; historicalEliokemcooperationnotownership",
+        "url": "https://vougatintas.pt/empresa/historial/"
+      }
+    ]
+  },
   "durostick-aspropyrgos": {
     "generalEmail": undefined,
     "website": "https://www.durostick.gr/en/",
@@ -26611,6 +26703,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vouga-tintas-viseu",
   "durostick-aspropyrgos",
   "novamix-thiva",
   "restreet-aspropyrgos",
