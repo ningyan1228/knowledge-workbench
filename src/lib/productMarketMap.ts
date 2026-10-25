@@ -8369,11 +8369,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "chemtec-epoxy-laval",
+    "company": "Chemtec Epoxy Coatings",
+    "productId": "elo",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Laval head office; country-level approximate map marker",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "legacyCompanyDescription": "加拿大自有环氧成品涂料制造与私有配方企业；Chemtec/Squidpoxy及欧洲办公室按一个账户",
+    "fit": "可开发候选",
+    "signal": "自主配方制造100%固体分环氧涂料，并提供私有配方服务；CHEM100 V.4.0为双组分非水性环氧成品涂料，可作底涂、底层与面涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "独立读取官网完整首页241行、环氧类别142行、CHEM100具体页171行。首页明确2013年起为制造商兼分销商，自2019年提供私有品牌/私有配方服务并在自有设施制造，主营地坪环氧、特种/浇注/密封环氧、聚天门冬、聚氨酯、裂缝填补、色片等成品体系。CHEM100 V.4.0明确双组分100%固体分、非水性成品涂料及底涂/底层/面涂用途；不用其耐紫外、耐化学或机械宣传作为ELO性能保证。所查完整首页、八款环氧类别及具体成品页可见范围未见ELO、ESBO、环氧化植物油或同类生物基增塑/稳定剂原料外售；普通环氧成品、配套固化/浇注树脂、聚氨酯及Binders导航不自动等于所选环氧化植物油。排除结论限已读公开范围，未穷尽所有分销SKU、Binders/Speciality子类正文、TDS/SDS或隐藏集团业务，不虚构外购例外。Chemtec/Epoxy Chemtec/Squidpoxy及欧洲办公室按一个相关账户，不拆新增；法名/域名/品牌/当前公开388、本地402、私有799、全队列与历史无同主体正式账户。仅将官网名称Chemtec Epoxy Coatings作为已核运营名，不从政府Search摘要单独确认Gestion Jason Bérubé改名和法人连续性。2026新制造设施首页仍COMING SOON，不称已投产；资格建立在已有自有制造/配方原文，不依赖新项目。4117 Boulevard Industriel为明确总部，1225 Saint-Elzéar为培训设施，不冒称已核厂门；加拿大地图为国家级概略点。info@为公开公司通用邮箱，450-629-1717为总部业务电话，无具名采购/WhatsApp；联系入口使用已核首页总部业务联系区；Contact子页未读，不猜链接路径或确认表单送达。ELO仅潜在涂料柔韧/树脂改性实验室评估，未证实采购、现用、配方相容、固化或性能改善。"
+    },
+    "contact": {
+      "label": "已核官网首页总部公司邮箱与业务电话；Contact子页未读，无具名采购或WhatsApp",
+      "email": "info@epoxychemtec.com",
+      "phone": "450-629-1717",
+      "contactUrl": "https://epoxychemtec.com/"
+    },
+    "source": {
+      "label": "Own CHEM100 V.4.0 finished two-component 100%-solids epoxy coating",
+      "url": "https://epoxychemtec.com/products/chem-100"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chemtec-epoxy-laval": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bythim-polychrome-krasnoyarsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "stachema-cz-kolin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "austis-prague": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8763,6 +8792,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chemtec-epoxy-laval": {
+    "website": "https://epoxychemtec.com/",
+    "contactPage": "https://epoxychemtec.com/",
+    "address": "Head office: 4117 Boulevard Industriel, Laval, Quebec H7L 6G9, Canada. Training facility separately at 1225 Boulevard Saint-Elzéar O, Laval. Head-office address, not verified factory-gate coordinates; country-level approximate map marker.",
+    "generalEmail": "info@epoxychemtec.com",
+    "generalPhone": "450-629-1717",
+    "generalEmailEvidence": {
+      "company": "Chemtec Epoxy Coatings",
+      "value": "info@epoxychemtec.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own home explicitly labeled head-office business email",
+          "url": "https://epoxychemtec.com/",
+          "summary": "HEAD OFFICE block lists Chemtec, 4117 Boulevard Industriel Laval, exact info@epoxychemtec.com and telephone; general company inbox, not named buyer. Europe inbox is separate regional route."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhoneEvidence": {
+      "company": "Chemtec Epoxy Coatings",
+      "value": "450-629-1717",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own home head-office business telephone",
+          "url": "https://epoxychemtec.com/",
+          "summary": "HEAD OFFICE block exact Phone450-629-1717 alongside Laval address and company inbox. A business voice line, not a named procurement contact, WhatsApp or call-tested route."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own home manufacture and private formulation, current headquarters contact and separate coming-soon plant",
+        "url": "https://epoxychemtec.com/"
+      },
+      {
+        "label": "Own visible eight-product epoxy finished-coating category",
+        "url": "https://epoxychemtec.com/collections/epoxies"
+      },
+      {
+        "label": "Own exact CHEM100 V.4.0 composition and basecoat/topcoat/primer technical snapshot",
+        "url": "https://epoxychemtec.com/products/chem-100"
+      }
+    ]
+  },
   "bythim-polychrome-krasnoyarsk": {
     "website": "https://polychrome.group/",
     "contactPage": "https://polychrome.group/contacts/",
@@ -27242,6 +27322,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chemtec-epoxy-laval",
   "bythim-polychrome-krasnoyarsk",
   "stachema-cz-kolin",
   "austis-prague",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "chemtec-epoxy-laval": "Your CHEM100 V.4.0 is a two-component, 100%-solids epoxy coating formulated for use as both a basecoat and topcoat.",
   "bythim-polychrome-krasnoyarsk": "Your GOODWOOD decorative wood impregnation uses an acrylic dispersion and water for indoor and outdoor wood surfaces.",
   "stachema-cz-kolin": "Your NX200 and NX210 are epoxy topcoats for steel structures, within STACHEMA’s epoxy and polyurethane coating range.",
   "austis-prague": "Your ETERNAL na dřevo základní is a water-dilutable primer for wooden doors, windows, fences and wood-based boards.",
