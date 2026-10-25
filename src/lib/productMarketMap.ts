@@ -8201,11 +8201,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "detecha-nove-mesto",
+    "company": "Detecha, chemické výrobní družstvo",
+    "productId": "elo",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Nové Město nad Metují; country-level map marker",
+    "latitude": 49.8,
+    "longitude": 15.5,
+    "legacyCompanyDescription": "捷克自产涂料合作社；自有DETECHA涂料及REGINA/JELENÍ LŮJ成品护理品牌，总部与商店、历史工厂只计同一主体",
+    "fit": "可开发候选",
+    "signal": "捷克自产涂料合作社；Epoxyban 是用于生产车间、仓库等高负荷混凝土地坪的双组分环氧涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "累计6次公司定向请求：Home97行、Epoxyban261行、About87行、Sortiment325行、History137行完整返回原文读取；Contact一次400超时无正文，计入预算且不声称有已核验联系表单。About明确自主制造DETECHA涂料、REGINA/JELENÍ LŮJ成品化妆及健康护理产品；可承接溶剂/水性涂料和稀释剂代工，公开原料混合、分散机、珠磨机、均质及灌装设备，提供实际制造/配方角色。具体Epoxyban明确双组分环氧涂料用于车间、仓库等高负荷混凝土地面；施工参考、抗滑/耐化学宣传及参数不转作ELO保证。完整可见Sortiment包含木器涂层/木油、金属防护底面漆、混凝土地坪漆、环氧漆、沥青汽车底盘防护、抗滑粉及防霉成品；普通木油、沥青成品、抗滑高分子粉、稀释剂和成品化妆品不自动视为ELO/ESBO原料同行。已查当前制造/公开代工范围、完整可见成品目录及具体工业环氧产品未见外售ELO、ESBO、环氧化植物油或同类生物基聚合物增塑/稳定输入；结论限已读公开范围，未穷尽全部TDS/SDS、成分、隐藏目录及最终受益股权。公司1954年合作社历史、Tis/Česká Skalice旧工厂照片和新城总部/公司商店按同一主体保留，不当作2026新投产或额外客户。零售商/Druchema分类页出现Detecha文字不证明它与已公开Druchema Prague同集团；官方主体、品牌和地址独立，不推断关系。查重覆盖main382公开、396本地、322队列、781私有记录、两来源索引及完整私有历史；Detecha/域名/Epoxyban/Karbolineum/Tlumex/已披露PetrJanata/公司业务邮箱无旧账户；旧2个初始匹配中一个为其他产品词，精确Detecha/品牌仅1个旧Search，无公司定向正文请求。公司业务联系采用已读About/Footer公开barvy@，总机为公司商店固定电话原文491477147，保留本国写法不猜前缀/WhatsApp或个人电话；不采用公开具名董事邮箱作为未交叉核验联系人。地图仅捷克国家级概略标记，不声称真实厂门坐标。仅潜在材料研发评估，未确认采购/现用ELO或配方相容，不把客户涂层优势改写成我方改善保证。"
+    },
+    "contact": {
+      "label": "官网已读公司涂料业务邮箱及公司商店固定电话；联系页超时，实际业务入口为About公开联系信息，非已核验表单/具名采购负责人",
+      "email": "barvy@detecha.cz",
+      "phone": "491 477 147",
+      "contactUrl": "https://www.detecha.cz/o-spolecnosti/"
+    },
+    "source": {
+      "label": "Own Epoxyban explicit two-component epoxy coating for heavily loaded concrete floors and production halls",
+      "url": "https://www.detecha.cz/produkt/epoxyban/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "detecha-nove-mesto": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vouga-tintas-viseu": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "durostick-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "novamix-thiva": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8589,6 +8618,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "detecha-nove-mesto": {
+    "contactPage": undefined,
+    "website": "https://www.detecha.cz/",
+    "address": "Husovo náměstí1208,54901Nové Město nad Metují,CzechRepublic. Companyshop:Kpt.Jaroše472,sametown. Marker49.8,15.5 iscountry-levelapproximationforCzechRepublic,not office/factorygeocoding; no precisecoordinates established fromreadpages.",
+    "generalEmail": "barvy@detecha.cz",
+    "generalEmailEvidence": {
+      "company": "Detecha, chemické výrobní družstvo",
+      "value": "barvy@detecha.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own cooperative About footer exact paints-business inbox",
+          "url": "https://www.detecha.cz/o-spolecnosti/",
+          "summary": "Own About pairs fulllegalcooperativename/address with exact barvy@detecha.cz. Corporate paints-businessroute, not namedperson/currentprocurement. ExactmailalsoonHome,Epoxyban,Portfolio,History."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhone": "491 477 147",
+    "generalPhoneEvidence": {
+      "company": "Detecha, chemické výrobní družstvo",
+      "value": "491 477 147",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own About footer company-shop fixed telephone",
+          "url": "https://www.detecha.cz/o-spolecnosti/",
+          "summary": "Podniková prodejna(companyshop) atKpt.Jaroše472 expresslypublishes491477147 andseparatemobile737218116. Adopt onlyfixed9-digitnationalnumber exactlyasprinted; no guessedcountrycode/personal/WhatsAppownership."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home fullidentity/address/paints-businessmail/companyshop",
+        "url": "https://www.detecha.cz/"
+      },
+      {
+        "label": "Own exactEpoxyban 2Kindustrialfloorcoating; performancebelongs tofinishedproduct",
+        "url": "https://www.detecha.cz/produkt/epoxyban/"
+      },
+      {
+        "label": "Own About actualformulation/mixing/dispersers/mills/contractmanufacture andcorporatemail",
+        "url": "https://www.detecha.cz/o-spolecnosti/"
+      },
+      {
+        "label": "FullvisibleSortiment actualfinishedpaint/woodoil/asphaltcoat/antislip/antimould range",
+        "url": "https://www.detecha.cz/sortiment/"
+      },
+      {
+        "label": "Own History historicalcooperative/manufacture; not currentprojectdate",
+        "url": "https://www.detecha.cz/nase-hrda-historie/"
+      }
+    ]
+  },
   "vouga-tintas-viseu": {
     "website": "https://vougatintas.pt/",
     "contactPage": "https://vougatintas.pt/contact/",
@@ -26703,6 +26791,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "detecha-nove-mesto",
   "vouga-tintas-viseu",
   "durostick-aspropyrgos",
   "novamix-thiva",
