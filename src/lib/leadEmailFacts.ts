@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "durostick-aspropyrgos": "Your DUROEPOXY is a solvent-based, two-component epoxy paint for protecting cementitious industrial floors and concrete or metal surfaces.",
   "novamix-thiva": "Your PLANOFINISH EPOXY is a water-based, two-component epoxy varnish for protecting microcement coatings and indoor industrial concrete floors.",
   "restreet-aspropyrgos": "Your epoxy paint range includes EPOXY LINE, EPOXY LINE PRIMER and EPOXYLINE AQUA.",
   "vechro-athens": "Your SMALTOXYL HYDRO ECO is a water-based protective and decorative varnish for indoor and outdoor wooden surfaces.",

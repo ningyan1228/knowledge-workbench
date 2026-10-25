@@ -8145,11 +8145,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "durostick-aspropyrgos",
+    "company": "DUROSTICK S.A.",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Aspropirgos / Aspropyrgos, Attica; facilities rather than precise geocoding",
+    "latitude": 38.5,
+    "longitude": 23,
+    "legacyCompanyDescription": "官网Contact表单披露DUROSTICK S.A.法名；Athens与Thessaloniki设施、产品系列和语言站仅计同一制造账户",
+    "fit": "可开发候选",
+    "signal": "自产环氧防护涂料；DUROEPOXY 为用于工业水泥地坪及混凝土、金属表面的双组分溶剂型环氧漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "本范围6次定向来源：DUROSTICK4次、ELASTOTET2次。DUROSTICK Home636行经缓存定位读全、DUROEPOXY产品92行和CompanyProfile562行读全；Contact600行实际读405行（0–13及209–599），主联系正文、表单、电话、设施和法名段均读到，未读14–208重复导航，不冒称整个Contact全读。Company明确制造、生产设备、实验室/R&D、设计生产成品涂料及建材；具体产品原文明示双组分溶剂型工业防护成品及工业水泥地坪、混凝土/金属用途。完整可见十类家族及子类涵盖瓷砖/大理石、防水密封、砂浆修补/混凝土外加剂、腻子底漆涂料、地坪树脂/液体玻璃、保温/屋面体系、清洁保护、管道与专用胶黏剂。已读制造角色、公开家族及该成品用途未见外售ELO、ESBO、环氧化植物油或同类生物基聚合物增塑/稳定原料；保留真实外加剂、环氧胶/施工树脂、溶剂及润滑类，不将普通树脂/水泥外加剂/成品附着力词自动判成ELO同行。有限范围通过，未穷尽全部SKU、TDS/SDS、私有业务或最终受益股权。查重覆盖main380公开、394本地、322队列、776私有记录、两个来源索引及完整私有历史；Durostick域名/法名/089002402000、DUROEPOXY、Choulis/Χούλης未发现同一旧账户。Aspropirgos/Aspropyrgos、Athens/Thessaloniki、品牌/语言站不拆账户。未确认采购或使用ELO，不声称现有体系相容、改善防腐/耐介质、降本或认证。ELASTOTET另有2正文，联系渠道/原料范围未核验，不随本公司入库。"
+    },
+    "contact": {
+      "label": "Technical技术支持部门公开邮箱来自可访问DUROEPOXY产品页；新版联系页技术电话对应。公司电话为Thessaloniki设施，非WhatsApp；官网联系表单字段已读，未提交，无具名采购联系人",
+      "email": "technical@durostick.com",
+      "phone": "+30 2310 795 797",
+      "contactUrl": "https://www.durostick.gr/en/epikoinonia/"
+    },
+    "source": {
+      "label": "Own DUROEPOXY two-component solvent-based industrial protective coating",
+      "url": "https://www.durostick.gr/en/products/paints-undercoats-decorative-products/epoxy-paints-primers/duroepoxy-en"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "durostick-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "novamix-thiva": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "restreet-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vechro-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8531,6 +8560,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "durostick-aspropyrgos": {
+    "generalEmail": undefined,
+    "website": "https://www.durostick.gr/en/",
+    "contactPage": "https://www.durostick.gr/en/epikoinonia/",
+    "address": "Athens: Aspropirgos Attica19300. Thessaloniki: IndustrialPark-SINDOS,StreetS.B.44DA10,57022. Generalvoice route is Thessaloniki. Countrymarker38.5,23 approximate, not exactfactory/officegeocoding.",
+    "generalPhone": "+30 2310 795 797",
+    "generalPhoneEvidence": {
+      "company": "DUROSTICK S.A.",
+      "value": "+30 2310 795 797",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current ownContact ThessalonikiFacilities Tel line397",
+          "url": "https://www.durostick.gr/en/epikoinonia/",
+          "summary": "Exact Thessaloniki facilityvoice +30 2310 795 797; fax is +30 2310 797 367. Athens500-599range not converted into a guessed line; no person/WhatsApp attribution."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "technical@durostick.com",
+        "emailEvidence": {
+          "company": "DUROSTICK S.A.",
+          "value": "technical@durostick.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Accessible ownDUROEPOXY productfooter TECHNICALSUPPORT exactdepartmentmail",
+              "url": "https://www.durostick.gr/en/products/paints-undercoats-decorative-products/epoxy-paints-primers/duroepoxy-en",
+              "summary": "TECHNICALSUPPORT explicitly publishes technical@durostick.com and +30 2105516500. Productroutefooter is2023; current2026Contact corroborates exactTechnicalSupportphone, but its emailtext is protected/unread. Exact publicdepartmentmail, not general/named/guessed; deliverability not tested."
+            }
+          ],
+          "verifiedAt": "2026-10-25"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "OwnHome completevisible ten-family programme and technicalformfields",
+        "url": "https://www.durostick.gr/en/"
+      },
+      {
+        "label": "OwnCompany manufacture/equipment/laboratory",
+        "url": "https://www.durostick.gr/en/i-etaireia/"
+      },
+      {
+        "label": "OwnDUROEPOXY currentaccessible body and explicitdepartmentmail; routefooter2023 retained",
+        "url": "https://www.durostick.gr/en/products/paints-undercoats-decorative-products/epoxy-paints-primers/duroepoxy-en"
+      },
+      {
+        "label": "CurrentContact selectedbusinesssections/form/legalname/facilities/phone; mailtextprotected",
+        "url": "https://www.durostick.gr/en/epikoinonia/"
+      }
+    ]
+  },
   "novamix-thiva": {
     "website": "https://novamix.gr/en/",
     "contactPage": "https://novamix.gr/en/contact/",
@@ -26522,6 +26611,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "durostick-aspropyrgos",
   "novamix-thiva",
   "restreet-aspropyrgos",
   "vechro-athens",
