@@ -8313,11 +8313,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "stachema-cz-kolin",
+    "company": "STACHEMA CZ s.r.o.",
+    "productId": "elo",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Kolín, Zibohlavy; country-level map marker",
+    "latitude": 49.8,
+    "longitude": 15.5,
+    "legacyCompanyDescription": "捷克STACHEMA CZ自有环氧及聚氨酯涂料制造；官网列DEK集团，关联品牌/分支不拆新增",
+    "fit": "可开发候选",
+    "signal": "官网明确自有环氧及聚氨酯涂料制造；自有品牌目录列NX200哑光和NX210亮光钢结构环氧面漆。ELO的TDS涂料/树脂改性用途支持潜在实验室柔韧及环氧功能材料评估；未证实其采购、现用ELO或配方相容性、固化和防腐性能。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "独立复读官网公司介绍、公司/生产分支联系目录、自有品牌成品类别及法律页面：企业自制环氧与聚氨酯涂料，NX200/NX210明确为钢结构环氧面漆。已读可见范围未见ELO、ESBO、环氧化植物油或同类增塑/稳定剂原料外售；普通成品环氧、树脂和固化剂不自动等同环氧化植物油。此结论不代表穷尽全目录、所有TDS/SDS或隐藏业务。官网列STACHEMA CZ s.r.o./IČ46353747为DEK集团公司；品牌、Slaný/Mělník/Brno及海外分支只计一个关联账户。另有涉及STACHEMA Kolín/Bratislava的拟售报道，未证实完成，不将其与本法定主体合并或称已被Saint-Gobain收购。法名、注册号、域名、品牌与当前公开/本地/私有记录核对，仅原私有账户升级，无同主体正式客户；其他公司备注提及STACHEMA不构成身份相同。stachema@为公司公共邮箱，+420312500070为Slaný表面处理生产分支业务电话，不是总部总机、具名采购或WhatsApp；官网Contact为联系目录，未确认表单。地图为捷克国家级概略点。潜在涂料配方材料评估不代表现用、采购需求、相容性、固化或防腐保证。"
+    },
+    "contact": {
+      "label": "官网公共公司邮箱及Slaný表面处理生产分支业务电话；无具名采购、已核验表单或WhatsApp",
+      "email": "stachema@stachema.cz",
+      "phone": "+420 312 500 070",
+      "contactUrl": "https://stachema.cz/kontakty-spolecnosti"
+    },
+    "source": {
+      "label": "Own STACHEMA listing: NX200 matte and NX210 gloss epoxy topcoats for steel structures",
+      "url": "https://stachema.cz/produkty/vypis/105-podlahy/2061474824-stachema"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "stachema-cz-kolin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "austis-prague": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "polymer-color-krupka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "het-ohnic": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8705,6 +8734,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "stachema-cz-kolin": {
+    "website": "https://stachema.cz/",
+    "contactPage": "https://stachema.cz/kontakty-spolecnosti",
+    "address": "Hasičská 1, 280 02 Kolín - Zibohlavy, Czech Republic",
+    "generalEmail": "stachema@stachema.cz",
+    "generalPhone": "+420 312 500 070",
+    "generalEmailEvidence": {
+      "company": "STACHEMA CZ s.r.o.",
+      "value": "stachema@stachema.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company customer-service email, not a named buyer",
+          "url": "https://stachema.cz/kontakty-spolecnosti",
+          "summary": "Company contact directory identifies STACHEMA CZ s.r.o./IČ46353747 and publishes stachema@stachema.cz; current own category and legal notice repeat this inbox."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhoneEvidence": {
+      "company": "STACHEMA CZ s.r.o.",
+      "value": "+420 312 500 070",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Slaný surface-treatment manufacturing division business line",
+          "url": "https://stachema.cz/kontakty-spolecnosti",
+          "summary": "Divize Povrchové úpravy (výrobní závod), U Ploché dráhy 294, 27401 Slaný, explicitly lists +420312500070. A division business line, not headquarters switchboard or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own STACHEMA CZ manufacturing description and divisions",
+        "url": "https://stachema.cz/obsah/o-nas/uvod"
+      },
+      {
+        "label": "Own NX200/NX210 steel-structure epoxy topcoats and epoxy/PU finished coating family; first category page only",
+        "url": "https://stachema.cz/produkty/vypis/105-podlahy/2061474824-stachema"
+      },
+      {
+        "label": "Own legal identity, company inbox and Slany manufacturing-division business line",
+        "url": "https://stachema.cz/kontakty-spolecnosti"
+      },
+      {
+        "label": "Own legal notice explicitly listing STACHEMA CZ 46353747 among DEK group companies",
+        "url": "https://stachema.cz/obsah/o-nas/zasady-ochrany-osobnich-udaju"
+      }
+    ]
+  },
   "austis-prague": {
     "website": "https://www.austis.cz/",
     "contactPage": "https://www.barvy-eternal.cz/",
@@ -27070,6 +27154,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "stachema-cz-kolin",
   "austis-prague",
   "polymer-color-krupka",
   "het-ohnic",

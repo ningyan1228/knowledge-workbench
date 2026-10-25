@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "stachema-cz-kolin": "Your NX200 and NX210 are epoxy topcoats for steel structures, within STACHEMA’s epoxy and polyurethane coating range.",
   "austis-prague": "Your ETERNAL na dřevo základní is a water-dilutable primer for wooden doors, windows, fences and wood-based boards.",
   "polymer-color-krupka": "Your Polycol 321 is a solvent-free, two-component epoxy coating for concrete floors in production halls, warehouses and garages.",
   "het-ohnic": "Your AQUADECOL LAZURA PREMIUM is a water-dilutable, thin-layer stain for wooden surfaces in your wood-coating range.",
