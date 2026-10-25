@@ -8091,11 +8091,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "restreet-aspropyrgos",
+    "company": "RESTREET INTERNATIONAL",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Aspropyrgos, Attica — own Contact; country-level indicative map marker",
+    "latitude": 38.5,
+    "longitude": 23,
+    "legacyCompanyDescription": "希腊自产工业及环氧地坪涂料企业，使用官网公开名称 RESTREET INTERNATIONAL；未从Search目录补写法律后缀、具名负责人或工厂规模",
+    "fit": "可开发候选",
+    "signal": "自行设计并生产工业及环氧地坪涂料，产品含 EPOXY LINE、EPOXYLINE AQUA 和配套底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "累计6次公司原始来源请求：Products、Company、完整4项EpoxyPaints目录、Contact、EPOXY LINE叶页和AntiGraffiti类别。5个有限业务HTML完整读到，具体EPOXY LINE叶页为Cache miss，失败计入上限并停止，不声称读过其TDS、双组分结构、配方或具体基材。Company明确设计/生产道路标线、运动场、环氧地坪和工业涂料；EpoxyPaints原文将本类成品用于重载工业防护，4项真实目录可作公司事实。可见六大类为成品涂料、反光玻璃珠及道路安全产品，AntiGraffiti类别仅有描述且产品列表为空。已读范围未识别销售ELO、ESBO、环氧植物油或同类生物基增塑添加剂；反光玻璃珠不是本轮选定同类环氧油输入，不将涂料名称、AQUA字样或未知叶页补成原料体系/功能。未穷尽所有SKU/SDS、历史英文域名或隐藏业务，结论限实际范围。最新main378公开、392本地、322队列、771私有、两个索引及完整私有历史按准确公司名、restreet.gr/旧restreetinternational.com和Search税号/注册名查重无同一旧账户；宽泛Restreet命中加拿大SAMAN资料中的FiltreStreet，为地址字符串假命中，准确主体检索已排除且SAMAN保持原样。希腊RESTREET的语言站、旧域名、品牌及Aspropyrgos地址只计一家，未从第三方Search补写P.C./I.K.E.法律后缀或负责人姓名。仅潜在下游材料评估客户，不声称已有采购或使用ELO。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱、公司电话及联系表单；未核实具名采购负责人",
+      "email": "info@restreet.gr",
+      "phone": "+30 211 750 8070",
+      "contactUrl": "https://restreet.gr/en/contact/"
+    },
+    "source": {
+      "label": "Own four-item epoxy paint/primer range; no unsupported failed-leaf specification",
+      "url": "https://restreet.gr/en/product-category/epoxy-paints/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "restreet-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vechro-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tetralux-sindos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chromodomi-sindos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8475,6 +8504,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "restreet-aspropyrgos": {
+    "website": "https://restreet.gr/en/",
+    "contactPage": "https://restreet.gr/en/contact/",
+    "address": "Own Contact:Thesi Lakkos Katsari,IND.AREA ASPROPYRGOU,19300 Aspropyrgos Attica,GREECE. Coordinates38.5,23 are coarse Greece research positioning, not verified head-office/factory-gate geocoding; map href not opened.",
+    "generalEmail": "info@restreet.gr",
+    "generalEmailEvidence": {
+      "company": "RESTREET INTERNATIONAL",
+      "value": "info@restreet.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "RESTREET own official Contact actual public business section",
+          "url": "https://restreet.gr/en/contact/",
+          "summary": "Exact public company Email info@restreet.gr in ownContact and ownfooter. General company route, not a named purchasing person, no deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhone": "+30 211 750 8070",
+    "generalPhoneEvidence": {
+      "company": "RESTREET INTERNATIONAL",
+      "value": "+30 211 750 8070",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "RESTREET own official Contact actual public business section",
+          "url": "https://restreet.gr/en/contact/",
+          "summary": "Exact ownContact businessphone+30 2117508070, corroborated bysamecompanyfooter. Companyvoicephone, not WhatsApp, fax or a person directline."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Company actual industrial/epoxy flooring paint design and manufacture",
+        "url": "https://restreet.gr/en/about/"
+      },
+      {
+        "label": "Own six visible downstream product families; not entireunpublishedSKU/SDSaudit",
+        "url": "https://restreet.gr/en/products/"
+      },
+      {
+        "label": "Own epoxy range allfour names and heavyindustrial protectivecategory; no failedleafdetails",
+        "url": "https://restreet.gr/en/product-category/epoxy-paints/"
+      },
+      {
+        "label": "Own anti-graffiti category paragraph and emptyproductlist, no hiddenformulationinferred",
+        "url": "https://restreet.gr/en/product-category/anti-graffiti-coating/"
+      },
+      {
+        "label": "Own current exact generalmailbox,voicephone,address andInterestform fields",
+        "url": "https://restreet.gr/en/contact/"
+      }
+    ]
+  },
   "vechro-athens": {
     "generalEmail": undefined,
     "website": "https://www.vechro.gr/en",
@@ -26386,6 +26474,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "restreet-aspropyrgos",
   "vechro-athens",
   "tetralux-sindos",
   "chromodomi-sindos",
