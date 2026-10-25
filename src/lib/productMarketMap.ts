@@ -8119,11 +8119,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "novamix-thiva",
+    "company": "NOVAMIX — DOMOCHEMICAL SA",
+    "productId": "elo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Thiva manufacturing unit; Chalandri business headquarters — own Company history; country-level approximate marker",
+    "latitude": 38.5,
+    "longitude": 23,
+    "legacyCompanyDescription": "NOVAMIX — DOMOCHEMICAL SA，使用官网明确披露的品牌与制造主体，Thiva工厂和Chalandri总部仅计同一公司",
+    "fit": "可开发候选",
+    "signal": "希腊自有工厂生产涂料及建材；PLANOFINISH EPOXY 是用于微水泥及室内工业混凝土地坪防护的双组分水性环氧清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "本范围共6次来源请求：DOMISSIMA的Home与Floorings均403，未读正文；NOVAMIX当前独立4次请求中完整读到Company226行、PLANOFINISH EPOXY产品211行、Contact150行，工业地坪分类第4次请求Cache miss，失败计入上限。NOVAMIX Company明确DOMOCHEMICAL SA自有制造、进出厂实验室质控、Thiva产能及2019年液体产品产线扩展；2008年“所售100%制造”是历史陈述，不冒充2026每个SKU产地证明。完整可见产品家族涵盖建材、成品涂层、环氧填缝/密封、胶黏剂、防水、工业地坪、底漆、石毯粘结树脂及水泥砂浆外加剂；具体自有2K水性环氧防护清漆由已读产品页证明。已读制造角色、公开家族和该成品用途范围未发现对外销售ELO、ESBO、环氧植物油或同类生物基聚合物增塑/稳定输入原料；普通环氧树脂、施工粘结树脂及水泥外加剂名称不自动等同ELO。未读全部叶页/SDS/目录PDF，失败的工业类正文未读，不声称全业务审计或存在外购例外。查重覆盖最新main379公开、393本地、322队列、774私有记录、两个来源索引及全私有历史，NOVAMIX/novamix.gr/DOMOCHEMICAL/DOMOCHIMECAL/ΔΟΜΟΧΗΜΙΚΗ、PLANOFINISH及披露的PIRA/KLIMA-PIRA历史名称未发现已有同一公开账户；不凭近似名称归到国际DOMO Chemicals，不把PIRA历史主体、品牌、厂区和办公室拆成新客户。最终受益股权未作工商审计。仅为潜在需求侧材料评估客户，未确认采购、当前使用ELO、相容性或性能改善。"
+    },
+    "contact": {
+      "label": "官网业务联系页可读取；留言部分要求JavaScript，字段与提交未验证；邮箱和电话未核实，无具名采购联系人，不进入批量邮件名单",
+      "contactUrl": "https://novamix.gr/en/contact/"
+    },
+    "source": {
+      "label": "Own PLANOFINISH EPOXY two-component aqueous protective varnish for microcement and indoor industrial concrete floors",
+      "url": "https://novamix.gr/en/shop/building-materials/special-building-materials-and-adhesives/industrial-floor-systems/planofinish-epoxy/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "novamix-thiva": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "restreet-aspropyrgos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vechro-athens": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "tetralux-sindos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8504,6 +8531,27 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "novamix-thiva": {
+    "website": "https://novamix.gr/en/",
+    "contactPage": "https://novamix.gr/en/contact/",
+    "address": "Own Company page identifies a production unit in Thiva and business headquarters in Chalandri, Greece. Country marker38.5,23 is approximate research positioning; no verified street address or factory/office geocoding.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Company: manufacturing, laboratory production control, Thiva unit,2019liquid-production expansion, complete visible product-family programme and historical PIRA/KLIMA-PIRA context",
+        "url": "https://novamix.gr/en/company/"
+      },
+      {
+        "label": "Own PLANOFINISH EPOXY exact2K aqueous protective coating, indoor industrial concrete-floor application and company laboratory/TechnicalSupport statements",
+        "url": "https://novamix.gr/en/shop/building-materials/special-building-materials-and-adhesives/industrial-floor-systems/planofinish-epoxy/"
+      },
+      {
+        "label": "Own Contact accessible: Send us a message; JavaScript required, form fields/submission not read or tested; exact public email/phone unverified",
+        "url": "https://novamix.gr/en/contact/"
+      }
+    ]
+  },
   "restreet-aspropyrgos": {
     "website": "https://restreet.gr/en/",
     "contactPage": "https://restreet.gr/en/contact/",
@@ -26474,6 +26522,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "novamix-thiva",
   "restreet-aspropyrgos",
   "vechro-athens",
   "tetralux-sindos",
