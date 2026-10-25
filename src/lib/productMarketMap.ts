@@ -8341,11 +8341,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "bythim-polychrome-krasnoyarsk",
+    "company": "BYTHIM LLC (POLYCHROME BH)",
+    "productId": "nl-w1201",
+    "country": "Russia",
+    "countryZh": "俄罗斯",
+    "city": "Krasnoyarsk sales/legal office; Beryozovka production; country-level map marker",
+    "latitude": 61.5,
+    "longitude": 105.3,
+    "legacyCompanyDescription": "俄罗斯自有水性木器及建筑涂料制造商；POLYCHROME BH/ООО БЫТХИМ及旗下品牌按一个账户",
+    "fit": "可开发候选",
+    "signal": "官网明确自有水性涂料研发与生产；GOODWOOD装饰保护木器涂料的具体配方说明列丙烯酸分散体、功能添加剂、颜料和水，适用于室内外干燥木材与木制品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "官网首页明确自有水性成品涂料研发、实验室与生产；GOODWOOD木器装饰保护浸渍涂料的具体正文列丙烯酸分散体、功能添加剂、耐光颜料和水，适用于室内外干燥木材及木制品。已查首页、该成品、特殊材料类别及矿物防滑添加剂：业务含成品漆、底漆、清漆、腻子、胶、防水和矿物颗粒；AQUASTRONG防滑添加剂明确为粉碎天然矿物，不是聚烯烃乳液/PO或CPO分散体/原料级附着促进剂。上述可见范围未见所选同类原料外售；不声称穷尽全部SKU、SDS、隐藏业务或最终股权。官网联系页将POLYCHROME BH与ООО БЫТХИМ/ИНН2464025961/ОГРН1022402297653及销售、生产地址连接；Goodwood、Aquastrong、Nevel、Ecoline、Rolplast、БытХим等品牌和零售入口只计一个账户。法名、注册号、域名、邮箱域、品牌及地址去重，当前公开/本地/私有/队列/来源索引和历史无同一主体；Novbytkhim字符串含Бытхим但主体АОНовбытхим/newchem.ru不同，不能误合并或改名再计。info@bythim.ru为官网明示通用业务邮箱，+73912265065是销售/生产共同业务电话，非具名采购人或WhatsApp。联系页含公共询价组件，仅核验可见入口，未提交或验证送达。地图为俄罗斯国家级概略点，精确厂门坐标未核。NL-W1201木材底涂/附着促进用途仅支持实验室潜在评估；没有证实现用、采购、配方相容或附着/耐久性能改善，不将成品防霉/耐候宣传套到我方材料。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、销售/生产业务电话及可见公共询价组件；未提交，不是具名采购或WhatsApp",
+      "email": "info@bythim.ru",
+      "phone": "+7 (391) 226-50-65",
+      "contactUrl": "https://polychrome.group/contacts/"
+    },
+    "source": {
+      "label": "Own GOODWOOD waterborne acrylic decorative wood coating",
+      "url": "https://polychrome.group/product/dekorativnaya-propitka-po-derevu-goodwood/"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bythim-polychrome-krasnoyarsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "stachema-cz-kolin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "austis-prague": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "polymer-color-krupka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8734,6 +8763,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bythim-polychrome-krasnoyarsk": {
+    "website": "https://polychrome.group/",
+    "contactPage": "https://polychrome.group/contacts/",
+    "address": "Sales/legal: 660010 Krasnoyarsk, Vavilova 2D, building 2; production: Krasnoyarsk Krai, Beryozovka, Yunosti 11A, Russia. INN 2464025961; OGRN 1022402297653. Country-level approximate map marker; precise factory coordinates unverified.",
+    "generalEmail": "info@bythim.ru",
+    "generalPhone": "+7 (391) 226-50-65",
+    "generalEmailEvidence": {
+      "company": "BYTHIM LLC (POLYCHROME BH)",
+      "value": "info@bythim.ru",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own contact page links BYTHIM legal entity with sales/production inbox",
+          "url": "https://polychrome.group/contacts/",
+          "summary": "POLYCHROME contact body lists ООО БЫТХИМ, INN2464025961, OGRN1022402297653, sales and production addresses and the exact info@bythim.ru inbox; same in own home and product footer. General business route, no named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhoneEvidence": {
+      "company": "BYTHIM LLC (POLYCHROME BH)",
+      "value": "+7 (391) 226-50-65",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own contact page sales and production business telephone",
+          "url": "https://polychrome.group/contacts/",
+          "summary": "Exact +7(391)226-50-65 accompanies both sales office and production location; a company business line, not a named buyer, call-tested line or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own waterborne coatings formulation laboratory and production",
+        "url": "https://polychrome.group/"
+      },
+      {
+        "label": "Own exact GOODWOOD wood application and acrylic dispersion/water composition",
+        "url": "https://polychrome.group/product/dekorativnaya-propitka-po-derevu-goodwood/"
+      },
+      {
+        "label": "Own BYTHIM legal identity, sales/production locations and public business routes",
+        "url": "https://polychrome.group/contacts/"
+      },
+      {
+        "label": "Own visible special-material catalog",
+        "url": "https://polychrome.group/catalog/?page-loaded=1&product_type=specz-materialy"
+      },
+      {
+        "label": "Own AQUASTRONG anti-slip additive explicitly crushed natural minerals",
+        "url": "https://polychrome.group/product/antiskolzyashhaya-dobavka-aquastrong/"
+      }
+    ]
+  },
   "stachema-cz-kolin": {
     "website": "https://stachema.cz/",
     "contactPage": "https://stachema.cz/kontakty-spolecnosti",
@@ -27154,6 +27242,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bythim-polychrome-krasnoyarsk",
   "stachema-cz-kolin",
   "austis-prague",
   "polymer-color-krupka",
