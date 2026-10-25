@@ -8285,11 +8285,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "austis-prague",
+    "company": "AUSTIS a.s.",
+    "productId": "nl-w1201",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Prague, Slivenec; country-level map marker",
+    "latitude": 49.8,
+    "longitude": 15.5,
+    "legacyCompanyDescription": "捷克自产水性涂料企业；ETERNAL/SANAKRYL/FORTEKRYL与建筑施工/物业业务按同一主体，不拆品牌计数",
+    "fit": "可开发候选",
+    "signal": "捷克自产水性涂料企业；ETERNAL na dřevo základní 是用于门窗、围栏及人造木板的可水稀释木器底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "原有私有AUSTIS/ETERNAL/SANAKRYL/FORTEKRYL同一账户升级，不新建集团/品牌账户。历史2个公司原始HTML：AUSTIS135行及ETERNAL首页145行，本轮重读保存正文；当前3次公司请求为含language参数的具体木器页Cachemiss一次、无该参数同产品页142行成功、特殊涂料/消毒类别237行成功，累计5次剩1次，不重置、不隐去失败；共享木器范围6次已停止，另3次属于Stachema。AUSTIS原文明确自主开发/制造/销售建筑化学材料和水可稀释涂料、清漆、木器色漆；2004年有限公司转股份公司及2020年员工/营收仅历史事实。具体ETERNAL木器底漆明确门窗/围栏/刨花板/纤维板用途及最多5%水调稀，不把其附着/遮渍/填孔/耗量宣传变成NL-W1201保证。已读制造业务、九类建筑涂装导航、具体成品木器底漆及特殊涂料类别可见内容；该类别实际仅三个功能涂料/消毒子类链接，未读这些子类SKU，不称完整特殊产品目录，页脚2025不称2026新产品发布。公开自有成品涂料/底漆、防水、建筑施工、物业管理角色以及SANAKRYL工业成品应用不自动等于外售原料型聚烯烃乳液、PO/CPO分散体或同类附着力促进输入。上述已读范围未见所选同类原料销售；判断限可见公开范围，未穷尽所有子类/TDS/SDS、隐藏业务、全部成分及最终股权，不虚构外购例外。查重覆盖main385公开、399本地、322队列、787私有记录、两来源索引及完整私有历史；确切法名/00550655/域名/品牌无公开或正式账户，仅一条原有2次来源的待补证私有记录和对应索引。总部Prague、ETERNAL/SANAKRYL/FORTEKRYL、自营商店和语言站不拆新。官网已读首页及具体产品页相互印证austis@和+420251099111；前者通用公司邮箱，后者总机，订单邮箱不冒称采购邮箱，技术热线不冒称个人或WhatsApp。ETERNAL首页实际可见咨询输入组件，保留该公开业务入口，不称已提交/验证送达。地图仅捷克国家级概略标记，地址为公开总部，不假称实测厂门。仅潜在木器底涂/配方研发材料评估，未证实采购、现用我方材料、相容性或性能增益。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱、总部总机及品牌首页公开咨询组件；未提交或验证送达，非具名采购负责人、非WhatsApp",
+      "email": "austis@austis.cz",
+      "phone": "+420 251 099 111",
+      "contactUrl": "https://www.barvy-eternal.cz/"
+    },
+    "source": {
+      "label": "Own ETERNAL na dřevo základní water-dilutable primer for wood, doors, windows, fences and wood-based boards",
+      "url": "https://www.barvy-eternal.cz/?id_produkt=24&s=produkty"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "austis-prague": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "polymer-color-krupka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "het-ohnic": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "detecha-nove-mesto": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8676,6 +8705,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "austis-prague": {
+    "website": "https://www.austis.cz/",
+    "contactPage": "https://www.barvy-eternal.cz/",
+    "address": "K Austisu680,15400Praha5–Slivenec,CzechRepublic; IČ00550655. Public headquarters, not verified factory-gate location. Marker49.8,15.5 is country-level approximation; precise coordinates not verified.",
+    "generalEmail": "austis@austis.cz",
+    "generalEmailEvidence": {
+      "company": "AUSTIS a.s.",
+      "value": "austis@austis.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own exact ETERNAL product footer corporate business inbox",
+          "url": "https://www.barvy-eternal.cz/?id_produkt=24&s=produkty",
+          "summary": "Footer pairs AUSTISa.s./00550655/Prague headquarters with exact austis@austis.cz. Same on own corporate and brandHome. Generalcompanybusiness route, not named procurement or orders mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhone": "+420 251 099 111",
+    "generalPhoneEvidence": {
+      "company": "AUSTIS a.s.",
+      "value": "+420 251 099 111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own exact ETERNAL product footer company main telephone",
+          "url": "https://www.barvy-eternal.cz/?id_produkt=24&s=produkty",
+          "summary": "Exact +420251099111 in companylegal/addressfooter; same on corporate andbrandHome. Main corporatevoice, not technicalmobile/WhatsApp/call-tested."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own corporate Home explicit development/manufacture/sale of water-dilutable paints and legal identity",
+        "url": "https://www.austis.cz/"
+      },
+      {
+        "label": "Own ETERNAL brand Home corporate identity/business inbox and actual public inquiry inputs",
+        "url": "https://www.barvy-eternal.cz/"
+      },
+      {
+        "label": "Own exact water-dilutable ETERNAL wood-primer use and company footer",
+        "url": "https://www.barvy-eternal.cz/?id_produkt=24&s=produkty"
+      },
+      {
+        "label": "Own special-coating/disinfection category, nine application families and three subcategory links; not all SKU bodies",
+        "url": "https://www.barvy-eternal.cz/?id_kategorie=2&s=produkty"
+      }
+    ]
+  },
   "polymer-color-krupka": {
     "website": "https://www.polymercolor.cz/",
     "contactPage": "https://www.polymercolor.cz/cz/kontakt",
@@ -26986,6 +27070,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "austis-prague",
   "polymer-color-krupka",
   "het-ohnic",
   "detecha-nove-mesto",
