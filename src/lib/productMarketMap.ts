@@ -8257,11 +8257,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "polymer-color-krupka",
+    "company": "POLYMER COLOR, s.r.o.",
+    "productId": "elo",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Krupka; country-level map marker",
+    "latitude": 49.8,
+    "longitude": 15.5,
+    "legacyCompanyDescription": "捷克自产环氧涂料及建筑配方材料企业，POLYCOL为自有系列；自营商店和经销网络只计同一主体",
+    "fit": "可开发候选",
+    "signal": "捷克自产环氧涂料企业；Polycol 321 为用于车间、仓库等混凝土地坪的无溶剂双组分环氧涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "累计6次本公司定向请求：About285行、涂料目录312行、Contact303行、Pojiva506行、Polycol321具体页297行；Ostatni一次Cachemiss无正文，计入预算并停止，不称已读。Pojiva首读仅0–274行，随后一次缓存导航完整0–505行读取，零新增URL。About明确自制建筑应用专业产品，Pojiva明确制造环氧涂料、浇注地坪、环氧腻子、底涂及环氧/PU清漆；Contact主体POLYMER COLOR,s.r.o./IČ25424131、Krupka地址及2000年注册，非把网页日期作投产。Polycol321明确无溶剂双组分环氧涂料，具体用途为生产车间/仓库/停车楼/维修车间等混凝土矿物地坪；该成品机械/耐水/耐化学/寿命宣传、配比和耗量不转作ELO性能。已读15个可见产品/辅助分类导航、全部6项涂料目录、完整5项Pojiva及具体工业环氧产品；Pojiva为Polycol123/112/117/264双组分环氧胶结料及141柔性胶结组合物。下游配方环氧胶结料、普通颜料/填料/彩片分类不是外售ELO/ESBO/环氧化植物油/同类生物基增塑原料的证据；已读公开业务及上述范围未见销售所选同类原料，结论限实际已读页面，不声称读过失败的Ostatni、所有15类产品、全部TDS/SDS、隐藏目录及最终股权。查重覆盖最新main384公开、398本地、322队列、785私有记录、两来源索引和完整私有历史，确切域名/法名/25424131/Polycol321无既有账户或历史定向原始请求；初始广义Polycol匹配的2个旧Search实际是乌克兰Polycolor与印尼PolycolorPrimaPerkasa，不当作本公司原文预算。POLYCOL品牌和自营商店/经销商不拆新客户；Saint-Gobain/Weber仅在经销商搜索表出现，不推断该公司为其子公司或采用其联系人。Contact公开info@及主线+420475500435，通用公司邮箱不冒称采购或具名负责人；另有商用/技术支持电话但不猜具名身份及WhatsApp。Contact为联系目录，无已核验表单。无精确坐标证据，地图使用捷克国家级概略标记。仅潜在实验室柔韧/树脂改性评估，未确认现用ELO、采购、相容或配方性能，不建议现场掺入既售成品。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱、总机和联系目录；非具名采购负责人、非已核验表单、非WhatsApp",
+      "email": "info@polymercolor.cz",
+      "phone": "+420 475 500 435",
+      "contactUrl": "https://www.polymercolor.cz/cz/kontakt"
+    },
+    "source": {
+      "label": "Own Polycol321 explicit solvent-free two-component epoxy coating for industrial concrete floors",
+      "url": "https://polymercolor.cz/cz/natery/5f73273243d93-polycol-321"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "polymer-color-krupka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "het-ohnic": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "detecha-nove-mesto": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "vouga-tintas-viseu": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8647,6 +8676,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "polymer-color-krupka": {
+    "website": "https://www.polymercolor.cz/",
+    "contactPage": "https://www.polymercolor.cz/cz/kontakt",
+    "address": "Za Chabařovickým nádražím282,41742Krupka,CzechRepublic; IČ25424131. Own corporate billing/contactaddress, not independently surveyed manufacturing-gate coordinates. Marker49.8,15.5 is country-level approximation; no precise geocoding verified.",
+    "generalEmail": "info@polymercolor.cz",
+    "generalEmailEvidence": {
+      "company": "POLYMER COLOR, s.r.o.",
+      "value": "info@polymercolor.cz",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact corporate general mailbox",
+          "url": "https://www.polymercolor.cz/cz/kontakt",
+          "summary": "Contact pairs legalname,registration25424131,Krupkaaddress and exact info@polymercolor.cz. Separate obchod@ also public but not curated as a procurement or named mailbox. Generalcompanybusiness route, no currentdemand/deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhone": "+420 475 500 435",
+    "generalPhoneEvidence": {
+      "company": "POLYMER COLOR, s.r.o.",
+      "value": "+420 475 500 435",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact main telephone",
+          "url": "https://www.polymercolor.cz/cz/kontakt",
+          "summary": "Contact explicitly labels +420475500435 telefon; separate commercial/technical support mobiles not adopted as namedbuyers or WhatsApp. Use exact published international business voice number."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own About actual manufacturing of construction products and Polycol epoxy materials",
+        "url": "https://www.polymercolor.cz/cz/o-firme"
+      },
+      {
+        "label": "Own full coating directory six current finished products",
+        "url": "https://www.polymercolor.cz/cz/natery"
+      },
+      {
+        "label": "Own full Contact legal identity and sourced corporate mailbox/telephone",
+        "url": "https://www.polymercolor.cz/cz/kontakt"
+      },
+      {
+        "label": "Own full binder range and explicit manufacture of epoxy coatings/floors/putties/primers",
+        "url": "https://www.polymercolor.cz/cz/pojiva"
+      },
+      {
+        "label": "Own exact Polycol321 two-component solvent-free epoxy coating and industrial concrete-floor uses",
+        "url": "https://polymercolor.cz/cz/natery/5f73273243d93-polycol-321"
+      }
+    ]
+  },
   "het-ohnic": {
     "website": "https://www.het.cz/",
     "contactPage": "https://www.het.cz/kontakty/",
@@ -26898,6 +26986,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "polymer-color-krupka",
   "het-ohnic",
   "detecha-nove-mesto",
   "vouga-tintas-viseu",
