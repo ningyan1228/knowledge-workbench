@@ -8397,11 +8397,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "denalt-paints-montreal",
+    "company": "Denalt Paints",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Montréal / Saint-Léonard headquarters; country-level approximate map marker",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "legacyCompanyDescription": "加拿大蒙特利尔成品涂料制造商，含水性木器着色封闭涂料；Denalt及其系列只计一个账户",
+    "fit": "可开发候选",
+    "signal": "在蒙特利尔制造成品涂料，供应室外木器着色与封闭涂料；626-12X技术资料列100%丙烯酸树脂、水性溶剂，适用于松木和云杉等室外木材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-25",
+      "conclusion": "独立完整读取官网首页152行、企业页108行、水性木器产品184行、联系110行、成品目录142行及具体626-12X技术PDF163行。官网明确蒙特利尔制造，目录包括室内外成品漆、木器着色封闭涂料、底漆、地坪环氧与防锈漆。具体626-12X技术表列100%丙烯酸树脂、水性溶剂，室外松木和云杉，明确不推荐雪松、红杉、异国木或室内；以技术资料为准，网页泛化natural-resin/oil宣传不作为该SKU事实。已查完整可见导航/产品目录及该成品/TDS未见聚烯烃或氯化聚烯烃分散体、所选同类原料级附着促进剂外售；成品底漆及植物来源醇酸树脂配方描述不等于原料销售。排除结论限已读范围，未穷尽其他全部SKU/SDS或最终股权。Denalt/Peintures Denalt/Denalt Paints及自有系列一个账户；Craftsman/Black+Decker/Stanley/Rona的受许或代工关系不冒称所有权或新子公司。Search另见Protech于2001年收购Denalt Powder Coatings，不能据此认定当前液体漆Denalt为Protech子公司；扩大去重同时检查Protech/Evotech/Prolux及Denalt/Avanti/地址域名，实际当前公开389、本地403、私有801、队列和来源索引无相关已入库账户，历史命中为Search与异国语词，并无Denalt先前定向来源请求。不把未独立读取的政府/LEI/目录Search法名与股权字段升级为已核法人事实。8620 Rue Pascal-Gagnon为官网明确总部，非精确已核厂门；加拿大国家级地图概略点。官网只核到表单及5143282727/18003613847业务电话，不猜邮箱，目录Search中的info@denaltpaints.com未作为公开已核邮箱。电话不等于WhatsApp，无具名采购。NL-W1201仅依据用户资料的水性聚烯烃分散体、木材底涂/附着促进用途提出潜在实验室评估，未证实现用、采购、配方相容或性能改善，不建议现场掺入成品。"
+    },
+    "contact": {
+      "label": "官网已核联系表单及总部业务电话；官网公开邮箱未核，无具名采购或WhatsApp",
+      "phone": "514 328-2727",
+      "contactUrl": "https://denalt.ca/fr/nous-joindre"
+    },
+    "source": {
+      "label": "Own 626-12X waterborne acrylic translucent outdoor wood stain and sealer TDS",
+      "url": "https://denalt.ca/app/uploads/2026/05/TDS-DENALT-2026-626-12X-FR.pdf"
+    },
+    "checkedAt": "2026-10-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "denalt-paints-montreal": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chemtec-epoxy-laval": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bythim-polychrome-krasnoyarsk": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "stachema-cz-kolin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8792,6 +8820,55 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "denalt-paints-montreal": {
+    "website": "https://denalt.ca/fr",
+    "contactPage": "https://denalt.ca/fr/nous-joindre",
+    "address": "Head office: 8620 Rue Pascal-Gagnon, Saint-Léonard (Montréal), Québec H1P 1Z1, Canada. Official headquarters; exact factory-gate location not independently verified. Country-level approximate map marker.",
+    "generalEmail": "",
+    "generalPhone": "514 328-2727",
+    "generalPhoneEvidence": {
+      "company": "Denalt Paints",
+      "value": "514 328-2727",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own contact page headquarters public business voice line",
+          "url": "https://denalt.ca/fr/nous-joindre",
+          "summary": "Official headquarters block gives exact 514 328-2727 and 1 800 361-3847 next to Montréal address; visible business inquiry form below. No email, named buyer or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Montréal manufacture home",
+        "url": "https://denalt.ca/fr"
+      },
+      {
+        "label": "Own manufacturer and contracted brand relationship",
+        "url": "https://denalt.ca/fr/lentreprise"
+      },
+      {
+        "label": "Own water-based translucent wood-finish page",
+        "url": "https://denalt.ca/fr/peinture/fini-translucide-a-base-deau"
+      },
+      {
+        "label": "Own exact 626-12X waterborne acrylic outdoor wood technical sheet",
+        "url": "https://denalt.ca/app/uploads/2026/05/TDS-DENALT-2026-626-12X-FR.pdf"
+      },
+      {
+        "label": "Own complete visible finished-paint categories",
+        "url": "https://denalt.ca/fr/peintures"
+      },
+      {
+        "label": "Own headquarters phone and public contact form",
+        "url": "https://denalt.ca/fr/nous-joindre"
+      }
+    ]
+  },
   "chemtec-epoxy-laval": {
     "website": "https://epoxychemtec.com/",
     "contactPage": "https://epoxychemtec.com/",
@@ -27322,6 +27399,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "denalt-paints-montreal",
   "chemtec-epoxy-laval",
   "bythim-polychrome-krasnoyarsk",
   "stachema-cz-kolin",
