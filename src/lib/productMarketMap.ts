@@ -8674,11 +8674,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "crystalac-tennessee",
+    "company": "CrystaLac",
+    "productId": "nl-w1201",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Tennessee origin stated by official website; country-level approximate map marker",
+    "latitude": 37.1,
+    "longitude": -95.7,
+    "legacyCompanyDescription": "美国CrystaLac水性涂饰品牌；同一旧私有TheCrystaLacCompany账户补证升级，当前网站明确自配制造，未独立核验登记股权或厂门街址",
+    "fit": "可开发候选",
+    "signal": "美国水性木材涂饰材料自有配方与制造品牌，木器目录包含Acrylothane水性面涂、木材封闭剂、填孔剂及通用漆基和底涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立完整读取当前公开Home/SafetyTechnicalIndex/WoodFinishing/Contact4份自有HTML及同一次WoodHTML中明确的12商品JSON目录元数据；JSON.parse只解析字面JSON，不执行公司远程JavaScript/Shopify脚本/处理器/自动资产。Home直接说明FormulatedManufacturedSold并承诺自行manufacture，Tennesseeorigin为站点自身说明，不从商店/厂商名推断制造，也不冒充独立厂门定位或登记股东审计。Wood实际Show12Results，Acrylothane标题直接PremiumWaterBasedTopcoat；此为木器目录自身水性成品，不根据URL/耐水D3/乙烯基字样推断水基。其余成品包括ExtremeProtectionPolyurethane、CrabCoat、ItsKnotShellac、SandingSealer、WoodGrainFiller、UniversalPaintBasePrimer、FlipNAwesome等，未把单项全部TDS/SDS或每项组分宣称已读。Safety索引实际12个SDS链接+5个TDS链接，保留为完整可见索引，不说17份PDF已读取/有效性全部核实。完整Wood目录明确有助剂而非隐藏：ReducerRetarderThinnerExtender/WarmToneDyeConcentrate为实际metadataAdditives，SurfaceConditioner和PrepCleanCarePolishWipes为metadataCleaner；SurfaceConditioner仅产品名不能自动判聚烯烃附着促进原料，当前自身类别明确Cleaner。此分类核对是业务角色证据，不保证具体未读SDS成分。全可见主要产品类别为水性木器/工艺/乐器成品、清漆/漆基底涂/染色/封闭填充、装饰颜料、工具和已列清洁/稀释延缓/着色配套助剂，实际4原文/12商品/完整技术索引未发现对外销售所选PO/CPO水性聚烯烃分散体或原料型附着促进输入，限定可见经营范围同行排除通过。不给出未读全站/全SKU/所有PDF或最终股权绝对排除保证；首页CoverAll顾客评价不是客户购买需求或成分证明，不据testimonial制造具名采购人。NLW仅作为其自有水性木材涂料/底涂配方的潜在底涂/附着力促进材料评估，不声称现用/购买/客户配方已相容或附着力改善保证，也不建议终端已售漆现场混料。旧2026-10-12原官网thecrystalaccompany.com一次403完整保留计额；本轮未访问该受阻旧入口。独立公开商店thecrystalacstore.com实际301明确Location当前www.crystalac.com，随后4正文，总累计旧1+本轮5=6/rem0STOP，不借商店迁移、日期、品牌、产品/host/provider重置。全最新main399/root413/front820初查及完整queue/indices/history只有同一旧私有TheCrystaLacCompany，没有正式重复；本次同一研究账户补证升级，不靠改名增加两个客户。Store/CrystaLacAcademy/商品品牌不分拆客户或断言独立制造实体；官网当前自身贸易品牌CrystaLac作为公开客户名称，法律登记全称/股权未独立核验。当前Contact直接help@crystalac.com/4237276425及另一公开tollfree8883875516，采用通用支持邮箱和第一号码，不冒称采购/具名，不猜WhatsApp；国家级概略地图，不伪造精确街址/厂门坐标。商城按地区显示CNY/China是购物地域选项，不能当公司在中国生产的证据；本条为自身Tennessee美国业务。未登录、购物、注册新产品测试、下载Word、提交表单/消息/CRM。共享发送台账未知，不当未发送，无就绪信/复制/导出/历史改写。"
+    },
+    "contact": {
+      "label": "官网通用业务支持邮箱及电话；非具名采购，无公开WhatsApp",
+      "email": "help@crystalac.com",
+      "phone": "423-727-6425",
+      "contactUrl": "https://www.crystalac.com/pages/contact-us"
+    },
+    "source": {
+      "label": "Own complete returned12-product wood-finishing range and source-literal category metadata",
+      "url": "https://www.crystalac.com/collections/wood-finishing"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "crystalac-tennessee": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gulf-coast-paint-loxley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "international-chem-crete-usa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "kaufman-products-maryland": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9079,6 +9108,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "crystalac-tennessee": {
+    "website": "https://www.crystalac.com/",
+    "contactPage": "https://www.crystalac.com/pages/contact-us",
+    "address": "Official website states Tennessee origin, United States. Exact business/factory street address and factory-gate coordinates were not disclosed or independently verified in the four read pages; country-level approximate map marker.",
+    "generalEmail": "help@crystalac.com",
+    "generalPhone": "423-727-6425",
+    "generalEmailEvidence": {
+      "company": "CrystaLac",
+      "value": "help@crystalac.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public customer/business support email",
+          "url": "https://www.crystalac.com/pages/contact-us",
+          "summary": "Current Contact explicitly prints Email help@crystalac.com with public product questions/support route. Corporate general mailbox, not a named procurement or technical manager. No identity or deliverability inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "CrystaLac",
+      "value": "423-727-6425",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current published general voice telephone",
+          "url": "https://www.crystalac.com/pages/contact-us",
+          "summary": "Contact explicitly prints Phone423-727-6425 and separatelyTollFree888-387-5516. Firstexactpublishedformatretained; no internationalprefix orWhatsApp guessed, no call made."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current explicit formulation/manufacture and water-based finish business",
+        "url": "https://www.crystalac.com/"
+      },
+      {
+        "label": "Own all12 returned wood-finishing products and embedded literal product-type metadata",
+        "url": "https://www.crystalac.com/collections/wood-finishing"
+      },
+      {
+        "label": "Own complete visible12SDS/5TDS index; linked PDF documents not fetched",
+        "url": "https://www.crystalac.com/pages/safety"
+      },
+      {
+        "label": "Own actual public general business support email and voice telephone",
+        "url": "https://www.crystalac.com/pages/contact-us"
+      }
+    ]
+  },
   "gulf-coast-paint-loxley": {
     "website": "https://gulfcoastpaint.com/",
     "contactPage": "https://gulfcoastpaint.com/",
@@ -28159,6 +28243,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "crystalac-tennessee",
   "gulf-coast-paint-loxley",
   "international-chem-crete-usa",
   "kaufman-products-maryland",

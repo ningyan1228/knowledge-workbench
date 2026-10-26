@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "crystalac-tennessee": "Your wood-finishing range includes Acrylothane water-based topcoat, sanding sealer, and Universal Paint Base and Primer.",
   "gulf-coast-paint-loxley": "Your industrial coatings range includes epoxy mastics and epoxy novolacs for chemical-processing environments.",
   "international-chem-crete-usa": "Your CHEM-NOVOLAC is a two-component epoxy coating, within a ten-product coatings and linings range that also includes heavy-duty flooring systems.",
   "kaufman-products-maryland": "Your SurePoxy HiBild is a two-component, flexibilized epoxy protective coating, and your factory offers custom blending of liquid and powder formulations.",
