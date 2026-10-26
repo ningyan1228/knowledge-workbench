@@ -8702,11 +8702,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "bionic-house-ukraine",
+    "company": "Bionic House",
+    "productId": "nl-w1201",
+    "country": "Ukraine",
+    "countryZh": "乌克兰",
+    "city": "Ukraine; country-level approximate marker; Kyiv-region warehouse contact",
+    "latitude": 48.38,
+    "longitude": 31.16,
+    "legacyCompanyDescription": "乌克兰Bionic House Research and Production Enterprise LLC；自身VR-0008产品页披露制造主体，未独立核验登记股权及工厂地址",
+    "fit": "可开发候选",
+    "signal": "乌克兰木器涂饰材料研发制造商，VR-0008为水性丙烯酸木器底漆，用于木地板、木板及木材制品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26完整独立读取Home、About、VR-0008产品、总产品目录、Contact、木器清漆目录六份原始HTML，累计6/rem0停止，不重置日期、域名、品牌、产品或provider。About明确自1999研发并生产木材保护材料；VR-0008产品明确MadeinUkraine及制造主体BionicHouseResearchandProductionEnterpriseLLC，并明列acrylicwater-based、底涂处理parquet/woodpanels/timber。未将品牌/网站/经销网点当自制证据。总目录全部15个可见分类涵盖木器涂饰浸渍剂/清漆/油蜡/防腐底涂/漂白/端面封闭腻子/染色/防火保护、内外墙与道路标线、装饰石/水族底砂/装饰灰泥及色卡；木器清漆目录全部9项均为成品木材涂饰，含white-spirit溶剂型yachtvarnish与水性acrylic/acrylicurethane/polyurethane系列，不能把所有产品统称水性。总目录所述water-dispersion/acrylate/polyurethane-acrylateemulsions是木器成品涂层的基料说明，不能当向工厂销售PO/CPO原料的证据；Joncryl配方名称不建立与BASF同一客户关系或证明直接采购指定原料。所读公开主要经营范围未见向配方厂销售所选PO/CPO水性聚烯烃分散体或原料型附着促进剂，限定可见业务排除通过；未声称已读全站每个SKU/SDS或独立股权登记。产品页生态/VOC-free/耐候/抗菌/寿命等为客户自己的声明，不移植为NL-W1201性能或合规保证。我方仅按用户TDS木材底涂/附着力促进方向作为潜在实验室配方评估，未确认现用、购买、需求、相容或改善幅度。Contact自身明确基辅州Schaslyve仓储门店和Lviv另一门店及经销商清单，不当工厂/额外客户；地图国家概略，不造厂门坐标。自身公开信息与销售邮箱通过同一次HTML内Joomla公开邮箱纯文本字面量的数字HTML实体解码和字符串拼接取得，未eval/执行DOM/远程JS/下载自动资源；并非猜邮箱或绕登录/验证，原文和解码过程独立归档。info为通用、sale为销售部门，未虚构采购人/具名联系人，电话不等于WhatsApp。最新main400/root414及front823/fullqueue/indices/history初查无本公司和域名，独立新账户，仅一客户。无表单、购物、邮件、私信或CRM；共享发送台账unknown不当unsent，不生成就绪稿/复制导出或改历史。"
+    },
+    "contact": {
+      "label": "官网通用及销售部门邮箱、电话；非具名采购，无公开WhatsApp",
+      "email": "info@bionic-house.com.ua",
+      "phone": "+38 (096) 443-35-45",
+      "contactUrl": "https://bionic-house.com.ua/en/contacts.html"
+    },
+    "source": {
+      "label": "Own explicit water-based acrylic VR-0008 primer and Ukrainian manufacturer",
+      "url": "https://bionic-house.com.ua/en/catalog/varnishes-for-wood/primer-varnish-for-wood.html"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bionic-house-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "crystalac-tennessee": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gulf-coast-paint-loxley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "international-chem-crete-usa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9108,6 +9137,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bionic-house-ukraine": {
+    "website": "https://bionic-house.com.ua/en/",
+    "contactPage": "https://bionic-house.com.ua/en/contacts.html",
+    "address": "Public warehouse-store contact: Perspektyvna 21, Schaslyve village, Boryspil district, Kyiv region, Ukraine. Contact also lists a Lviv warehouse store; these are contact locations, not independently located factories. Country-level approximate map marker.",
+    "generalEmail": "info@bionic-house.com.ua",
+    "generalPhone": "+38 (096) 443-35-45",
+    "generalEmailEvidence": {
+      "company": "Bionic House",
+      "value": "info@bionic-house.com.ua",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public Contact and same-response literal email text",
+          "url": "https://bionic-house.com.ua/en/contacts.html",
+          "summary": "Contact labels info and sales departments. Published info@bionic-house.com.ua decoded only from quoted HTML numeric-character-entity text in the same public response; no code execution. General company route, no named person."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Bionic House",
+      "value": "+38 (096) 443-35-45",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public Contact and same-response literal email text",
+          "url": "https://bionic-house.com.ua/en/contacts.html",
+          "summary": "Contact explicitly prints this telephone for the Kyiv-region warehouse-store. Exact published format retained. No named buyer, WhatsApp inference, or call."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sale@bionic-house.com.ua",
+        "source": {
+          "label": "Own public Sales department email",
+          "url": "https://bionic-house.com.ua/en/contacts.html"
+        },
+        "emailEvidence": {
+          "company": "Bionic House",
+          "value": "sale@bionic-house.com.ua",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own public Contact and same-response literal email text",
+              "url": "https://bionic-house.com.ua/en/contacts.html",
+              "summary": "Contact publicly labels info and sales departments and exposes exact sale@bionic-house.com.ua as literal HTML-entity text; independent same-response literal decode archived. Sales department route, not named procurement."
+            }
+          ],
+          "verifiedAt": "2026-10-26"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own research and production role",
+        "url": "https://bionic-house.com.ua/en/about-us.html"
+      },
+      {
+        "label": "Own VR-0008 explicit water-based acrylic wood primer and Ukrainian manufacturer",
+        "url": "https://bionic-house.com.ua/en/catalog/varnishes-for-wood/primer-varnish-for-wood.html"
+      },
+      {
+        "label": "Own complete visible main product categories",
+        "url": "https://bionic-house.com.ua/en/catalog.html"
+      },
+      {
+        "label": "Own full returned nine-product wood-varnish range",
+        "url": "https://bionic-house.com.ua/en/catalog/varnishes-for-wood.html"
+      },
+      {
+        "label": "Own corporate public business channels and warehouse locations",
+        "url": "https://bionic-house.com.ua/en/contacts.html"
+      }
+    ]
+  },
   "crystalac-tennessee": {
     "website": "https://www.crystalac.com/",
     "contactPage": "https://www.crystalac.com/pages/contact-us",
@@ -28243,6 +28354,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bionic-house-ukraine",
   "crystalac-tennessee",
   "gulf-coast-paint-loxley",
   "international-chem-crete-usa",
