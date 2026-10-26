@@ -8618,11 +8618,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "international-chem-crete-usa",
+    "company": "International Chem-Crete",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Richardson official head-office contact; country-level approximate map marker",
+    "latitude": 37.1,
+    "longitude": -95.7,
+    "legacyCompanyDescription": "美国混凝土防护材料自有研发制造企业；美国及斯洛伐克生产/欧洲联系按一个账户，Richardson为总部联系而非Burleson厂门地址",
+    "fit": "可开发候选",
+    "signal": "美国自有研发及制造的混凝土防护材料企业，在得州及斯洛伐克设生产设施；环氧涂层与衬里包括CHEM-NOVOLAC双组分涂料及重载地坪体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立完整读取六份自有HTML返回：About50行、Shop65、Contact110、Epoxies141、BondingAgents145及CoatingsAndLinings167，共678行。About直接明确自身研发、制造，BurlesonTexas和Slovakia两生产设施，总部也是研究设施；是自身制造原文而非施工商、分销名单、Thomasnet分类、第三方TDS或Search摘要推断。自己1969创立、1987改名/历史人物RadiAlRashed仅自述历史，不推当前最终股权注册结论。产品为混凝土/沥青耐久保护、修补、防水及工程体系，自述120多项保留为自述。Shop完整返回19顶级产品类别，涵盖路面保护/混凝土外加与增强/防水防潮/文物/水下/冷库/结构灌浆/止水及PU灌浆/环氧/接缝/粘接/土壤稳定/混凝土修补硬化抛光染色/封闭/瓷砖灌浆粘结/清洁/养护脱模。Epoxies第一页确为1–12of32，只12件卡片和整页应用说明完整返回，不说全部32SKU或全部单项TDS/SDS已读。其六子类别为锚固、涂层衬里、凝胶、注浆、砂浆、底漆，正文直接指明CHEM-NOVOLAC用于化学防护、CHEM-HCR及CHEM-FLOOR为工业防护体系。实际CoatingsAndLinings明确ShowingAll10Results，全10标题包括CHEM-FLOOR/FLOORS/FLOOR45重载环氧、CHEM-NOVOLAC双组分化学防护、CHEM-HCR、E430水箱、CHEM-KOTE3、CHEM-GUARD80、CHEM-WET2和CHEM-TARLC，不把水箱/饮用水/无毒/耐酸认证或客户原有性能转成ELO保证；不称单项组分或酸防护配方已独立读TDS。实际BondingAgents全4：CCC550液体乳液用于新旧混凝土、CHEM-BOND2双组分无溶剂环氧、BOND2GEL结构粘合、CHEM-FLUID双组分环氧粘结料，均保留，不因binder/emulsion字样自动当ELO/ESBO原料同行。六原文及19类/全部10涂层/全部4粘接体系可见范围未见ELO、ESBO、环氧化植物油或同类生物增塑稳定/改性输入外售，所选ELO同行排除有限范围通过；不保证未读其余环氧20项、全部外加剂/PU详情/SDS或隐藏经营无相关输入，也不将泛泛Thomasnet环氧固化剂目录当本公司外售ELO证据。USA InternationalChemCrete与ChemCreteEurope sro/HolicSlovakia为官网同一制造网络，按一个客户账户，Slovakia工厂/官网/大学站/品牌/经销商不另计。全main397/root411/front813/完整queue/来源与排除索引/历史前查仅旧身份预查假设文件，无旧本体定向GET或正式重复，不改名造新增。六次请求均实际成功全文返回678行，0失败/0空页/无PDF；累计6/rem0STOP，不跨日期/host/产品/区域网站/工具重置。当前Contact公开美国通用邮箱contact-us@chem-crete.com与Phone+1 800 480 0878、Fax+1 972 238 0307，采用明确带1的USA号码而非footer省略国家码的+800；通用产品支持/报价联系非具名采购。800SecurityRowSuite1RichardsonTX75081是美国总部/联系，不冒充Burleson厂址，工厂精确门址坐标未核；地图美国国家级概略点。欧洲Lenka邮箱没有角色/责任/当前具名归属链，未补入联系人。无WhatsApp，不把电话猜成WhatsApp；不发送表单/消息。ELO只按用户资料反应性环氧功能、树脂改性/柔韧的潜在实验室配方评估，不称客户现用/采购ELO、固化或成品相容/耐腐耐酸或防水改善，不向已售成品现场加料。"
+    },
+    "contact": {
+      "label": "官网美国通用业务/产品支持邮箱及电话；非具名原料采购，无公开WhatsApp",
+      "email": "contact-us@chem-crete.com",
+      "phone": "+1 800 480 0878",
+      "contactUrl": "https://www.chem-crete.com/contact/"
+    },
+    "source": {
+      "label": "Own complete10-product epoxy protective coatings and linings range",
+      "url": "https://www.chem-crete.com/product-category/epoxies/floorings-coating/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "international-chem-crete-usa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "kaufman-products-maryland": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "magiechem-boucherville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chemmasters-madison-oh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9021,6 +9050,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "international-chem-crete-usa": {
+    "website": "https://www.chem-crete.com/",
+    "contactPage": "https://www.chem-crete.com/contact/",
+    "address": "Official USA head-office/research and business contact: 800 Security Row, Suite 1, Richardson, Texas 75081, United States. Own manufacturing is stated at Burleson, Texas and Slovakia; exact factory-gate street coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "contact-us@chem-crete.com",
+    "generalPhone": "+1 800 480 0878",
+    "generalEmailEvidence": {
+      "company": "International Chem-Crete",
+      "value": "contact-us@chem-crete.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current USA general business and product-support mailbox",
+          "url": "https://www.chem-crete.com/contact/",
+          "summary": "Official Contact underUSA/InternationalChemCreteCompany explicitly printscontact-us@chem-crete.com. General company product-support/quote route, not a named raw-material procurement person. Slovakia office mailbox kept separate and not guessed as a buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "International Chem-Crete",
+      "value": "+1 800 480 0878",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current USA corporate voice telephone",
+          "url": "https://www.chem-crete.com/contact/",
+          "summary": "Official USA Contact explicitly statesPhone+1 800 480 0878 and separatelyFax+1 972 238 0307. Exact voice number retained; genericfooter+800 is not silently normalized as another source. No call made or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own US and Slovakia manufacturing network and company R&D",
+        "url": "https://www.chem-crete.com/about-us/"
+      },
+      {
+        "label": "Own full returned19-category construction-chemical scope",
+        "url": "https://www.chem-crete.com/shop/"
+      },
+      {
+        "label": "Own epoxy page application explanations;1–12of32product cards only",
+        "url": "https://www.chem-crete.com/product-category/epoxies/"
+      },
+      {
+        "label": "Own all10 protective epoxy coatings and linings",
+        "url": "https://www.chem-crete.com/product-category/epoxies/floorings-coating/"
+      },
+      {
+        "label": "Own all4 concrete bonding systems for selected input exclusion",
+        "url": "https://www.chem-crete.com/product-category/bonding-agents/"
+      },
+      {
+        "label": "Own USA business contact and Europe same-network office",
+        "url": "https://www.chem-crete.com/contact/"
+      }
+    ]
+  },
   "kaufman-products-maryland": {
     "website": "https://www.kaufmanproducts.net/",
     "contactPage": "https://www.kaufmanproducts.net/contact.html",
@@ -27979,6 +28071,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "international-chem-crete-usa",
   "kaufman-products-maryland",
   "magiechem-boucherville",
   "chemmasters-madison-oh",
