@@ -8563,11 +8563,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "magiechem-boucherville",
+    "company": "MAGIECHEM",
+    "productId": "elo",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Boucherville official facility contact; country-level approximate map marker",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "legacyCompanyDescription": "加拿大自有地坪涂料系统制造与配方研发企业；MAGIECHEM及相关成品品牌按一个账户，Boucherville为公开业务设施地址",
+    "fit": "可开发候选",
+    "signal": "在加拿大制造及研发环氧等地坪涂料；24套成品系统含工业环氧SCR I及导电／耗散型ESD环氧体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "独立完整复读2026-10-25已存自有Home338行、Contact72行，并完整读取2026-10-26实际自有Systems42行，共452行业务原文。Home直接明确加拿大制造及配方开发、内部实验室和制造质控，核心为环氧/聚天门冬氨酸酯/聚氨酯成品地坪、停车场、砂浆及防水系统；不是只将承包施工或第三方目录当制造。当前原始Systems明确24套全返回系统，SCR I为工业化学防护环氧地坪，另有ESD环氧/novolac、聚氨酯、装饰环氧/片状/石英、聚天门冬氨酸酯等。实际成品体系目录支持具体工业防护涂料应用，上轮未读LoadingProducts不能作证据的缺口由这一新原始系统目录补充；未读到具体详情页/组分配方，不假称全SKU/全部TDS或SDS已读。Home自述1000+产品保留为自述，24系统不是1000SKU完整清单。全部所读可见业务Home及24体系目录未发现ELO、ESBO、环氧植物油/同功能增塑稳定和树脂改性原料对外供应，有限所查范围通过所选同行排除；底涂为已列成品系统层，不当ELO等输入同行。未披露隐藏集团业务或未读单项不作保证。MAGIECHEM/MAGIEFLOOR/MAGIEDECK/MAGIEKRETE/MAGIEROOF/AKUREX及www/nonwww按一个账户。Home客户logo有Canlak/Halton/Brenntag等，不当股权/真实合作或认证、客户案例保证。全main395/root409/front811/全队列/索引/历史去重仅同一旧MAGIECHEM私有记录，本轮原地升级，不改名造新私有记录；当前没有正式同主体。历史3请求Home/Contact成功、Products1行Loading不可用；本轮3请求（nonwww具体SCR详情CacheMiss、www系统目录42成功、从目录实际链接www同SCR详情CacheMiss）。失败及不同host和品牌均计数，总6/rem0STOP；3业务完整正文452行、旧Loading1不可用、2失败，无新预算。Contact原始2026-10-25公开info@magiechem.com、(450)444-4949、1365rueVoltaBouchervilleQCJ4B7H5。info同时标TechnicalSupport及GeneralInquiry，通用公司入口非具名原料采购；部门sales/service/partners/hr不虚构具名身份或采购权限，不把placeholderJohnDoe/样例邮箱电话当联系人；无WhatsApp。联系和制造证据读取日保留10-25，系统目录/独立资格审查10-26，不虚构今日重抓联系页。业务设施联系地址，精确厂门坐标未独立核，地图加拿大国家级概略点。ELO仅用户资料反应性环氧功能/涂料柔韧和树脂改性方向的潜在实验室评估，不证实客户现用、采购、固化相容、防腐/机械/化学改善、认证/LEED/ASTM/VOC保证，不向已售成品现场掺料。"
+    },
+    "contact": {
+      "label": "官网通用信息/技术支持邮箱和业务电话；非具名原料采购，无公开WhatsApp",
+      "email": "info@magiechem.com",
+      "phone": "(450) 444-4949",
+      "contactUrl": "https://www.magiechem.com/contact/"
+    },
+    "source": {
+      "label": "Own current industrial epoxy floor system directory: SCR I and ESD systems",
+      "url": "https://www.magiechem.com/systems/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "magiechem-boucherville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chemmasters-madison-oh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bradite-paints-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "garon-wall-nj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8964,6 +8993,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "magiechem-boucherville": {
+    "website": "https://www.magiechem.com/",
+    "contactPage": "https://www.magiechem.com/contact/",
+    "address": "Official business facility contact: 1365 rue Volta, Boucherville, Québec J4B 7H5, Canada. Exact factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "info@magiechem.com",
+    "generalPhone": "(450) 444-4949",
+    "generalEmailEvidence": {
+      "company": "MAGIECHEM",
+      "value": "info@magiechem.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own official general inquiry and technical-support business inbox",
+          "url": "https://www.magiechem.com/contact/",
+          "summary": "Official Contact page publishes exact info@magiechem.com as both Technical Support and General Inquiry. General company business route, not a named procurement officer. Original was read2026-10-25 and independently re-read from the unchanged archive2026-10-26."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "generalPhoneEvidence": {
+      "company": "MAGIECHEM",
+      "value": "(450) 444-4949",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own official company business voice telephone",
+          "url": "https://www.magiechem.com/contact/",
+          "summary": "Official Contact page publishes(450)444-4949 with MAGIECHEM corporate contact address. Business voice telephone, not a named buyer or WhatsApp. Original read2026-10-25, cached re-read2026-10-26; no call made."
+        }
+      ],
+      "verifiedAt": "2026-10-25"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Canada coating manufacture/formulation and internal laboratory, original read2026-10-25",
+        "url": "https://www.magiechem.com/"
+      },
+      {
+        "label": "Own complete returned24-system directory including industrial SCR I epoxy and ESD systems, read2026-10-26",
+        "url": "https://www.magiechem.com/systems/"
+      },
+      {
+        "label": "Own official business contact, original read2026-10-25",
+        "url": "https://www.magiechem.com/contact/"
+      }
+    ]
+  },
   "chemmasters-madison-oh": {
     "website": "https://www.chemmasters.net/",
     "contactPage": "https://www.chemmasters.net/ContactChemMasters.php",
@@ -27827,6 +27907,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "magiechem-boucherville",
   "chemmasters-madison-oh",
   "bradite-paints-uk",
   "garon-wall-nj",
