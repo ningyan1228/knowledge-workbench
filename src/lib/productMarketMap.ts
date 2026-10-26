@@ -8452,11 +8452,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-25"
   },
+  {
+    "id": "pepin-cowansville",
+    "company": "Industries Pépin Ltée",
+    "productId": "elo",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Cowansville official facility contact; country-level approximate map marker",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "legacyCompanyDescription": "加拿大Cowansville自有工业涂料制造及研发企业；Pépin及相关系列/双语域名按一个账户",
+    "fit": "可开发候选",
+    "signal": "制造按金属应用定制的工业涂料，并设有研发中心；Synguard和Northprime为双组分环氧底漆，用于包括铝合金、镀锌金属在内的表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "完整读取官网Home47行、About12行、环氧底漆40行、联系29行、Specialite13行和Autres31行，共172行。Home明确自有定制金属工业涂料生产，About有Cowansville工厂和研究开发中心历史；具体环氧底漆包括Synguard/Northprime/Pepin双组分成品，支持多种金属含铝合金和镀锌表面。Specialite返回通用制造说明和图片，不能称图片内全SKU已读；Autres具体列泳池乳胶丙烯酸漆/氯化橡胶型醇酸成品、耐热/锤纹/标记/结构底漆/热固醇酸等。全部已读可见业务范围未发现ELO、ESBO、环氧化植物油或同功能生物增塑/稳定剂原料外售；保留制造兼分销和Solvants/Autres业务，不说只卖成品，未逐读所有Solvants/PU/醇酸子项或TDS/SDS，Specialite图片及Autres的Plusieursautres不当完整隐含SKU清单，不对未披露全球/集团业务作保证。Pépin、MetalForce、Synguard、Northprime、Northane、Synthane及peinturepepin.com/pepincoatings.com/ipepin.com保守按同一账户。扩大去重命中Norglass澳大利亚Northane成品品牌，同名不是Pépin集团证明；其NorglassLaboratories法律运营名、norglass.com.au域名和澳大利亚地址与加拿大Pépin不同，不凭泛品牌名合并。法国PEPINSAS机械加工同名也不合并；不从搜索摘要断言最终股权或购买人。正式main391/本地405/私有805、全队列/来源索引及全历史没有同一已入库主体；早期Pépin只有Search，未有本主体原文GET，旧pépinière育苗法语泛词不当实体预算。来源1-4于2026-10-25读取，5-6于10-26恢复，跨日不重置总6次；首次调用因用量不足自动审批失败未执行，未创建预留也未发生来源请求，恢复后仅执行剩2次。联系明确IndustriesPépinLtée、290rueMinerCowansvilleJ2K3Y7和info@ipepin.com及4502631848，旧第三方536Rivière地址不用。此为公开设施联系地址，精确厂门未核，地图加拿大国家级概略点。info为信息/安全资料通用入口，commande为客户订单收件不当原料采购人；只记录通用info和业务电话，无具名采购/WhatsApp/联系人。ELO仅依据用户资料的反应性环氧功能及涂料柔韧/树脂改性潜在实验室评估，未证实现用、采购、固化体系相容、附着/防腐/化学/机械性能改善，不将成品宣传或VOC阈值移作ELO保证，不建议现场掺入已售成品。"
+    },
+    "contact": {
+      "label": "官网通用信息业务邮箱与电话；无具名原料采购或WhatsApp",
+      "email": "info@ipepin.com",
+      "phone": "450 263-1848",
+      "contactUrl": "https://www.peinturepepin.com/nous-joindre/"
+    },
+    "source": {
+      "label": "Own Synguard/Northprime two-component epoxy primers for metal surfaces",
+      "url": "https://www.peinturepepin.com/produits/apprets-epoxydiques/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pepin-cowansville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "micca-laval": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "denalt-paints-montreal": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "chemtec-epoxy-laval": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8849,6 +8878,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pepin-cowansville": {
+    "website": "https://www.peinturepepin.com/",
+    "contactPage": "https://www.peinturepepin.com/nous-joindre/",
+    "address": "Current official facility contact: 290 rue Miner, Cowansville, Québec J2K 3Y7, Canada. Current company facility address; exact factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "info@ipepin.com",
+    "generalPhone": "450 263-1848",
+    "generalEmailEvidence": {
+      "company": "Industries Pépin Ltée",
+      "value": "info@ipepin.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current contact page general information and safety-data business inbox",
+          "url": "https://www.peinturepepin.com/nous-joindre/",
+          "summary": "Official contact page identifies Industries Pépin Ltée in Cowansville and exact info@ipepin.com under information/safety-data requests. Separate commande@ inbox is for customer orders; neither is named raw-material procurement."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Industries Pépin Ltée",
+      "value": "450 263-1848",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate information contact business voice phone",
+          "url": "https://www.peinturepepin.com/nous-joindre/",
+          "summary": "Exact telephone4502631848 is separately listed from fax4502631850 and orderdesk4502631939. Company business voice line, not named buyer or WhatsApp; no dial test."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturing and industrial metal coating range",
+        "url": "https://www.peinturepepin.com/"
+      },
+      {
+        "label": "Own factory and research-development history",
+        "url": "https://www.peinturepepin.com/a-propos/"
+      },
+      {
+        "label": "Own two-component epoxy primers with metal substrate application",
+        "url": "https://www.peinturepepin.com/produits/apprets-epoxydiques/"
+      },
+      {
+        "label": "Own current corporate facility and general business contact",
+        "url": "https://www.peinturepepin.com/nous-joindre/"
+      },
+      {
+        "label": "Own visible specialty category, generic body and images only",
+        "url": "https://www.peinturepepin.com/produits/specialite/"
+      },
+      {
+        "label": "Own Other-products finished pool and special-purpose coatings",
+        "url": "https://www.peinturepepin.com/produits/autres/"
+      }
+    ]
+  },
   "micca-laval": {
     "website": "https://micca.ca/",
     "contactPage": "https://micca.ca/nous-joindre/",
@@ -27483,6 +27575,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pepin-cowansville",
   "micca-laval",
   "denalt-paints-montreal",
   "chemtec-epoxy-laval",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pepin-cowansville": "Your Synguard and Northprime are two-component epoxy primers for metal surfaces, including aluminium alloys and galvanized metal.",
   "micca-laval": "Your Crystallo M2550-00 is a water-based wood varnish offered within your wood-finishing range.",
   "denalt-paints-montreal": "Your 626-12X translucent wood stain and sealer is water-based and uses an acrylic resin for outdoor wood such as pine and spruce.",
   "chemtec-epoxy-laval": "Your CHEM100 V.4.0 is a two-component, 100%-solids epoxy coating formulated for use as both a basecoat and topcoat.",
