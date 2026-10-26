@@ -43,3 +43,9 @@
 时间线沿用源事件ID，其余按客户和源行定位；同分钟的明确事件重复引用只保留一事件及多个来源，不以日期合并不同邮件。任务保持原状态，无完成证据不自动完成；提及附件仅显示源记录及“原件未随本次文件提供”。
 
 回归：`pnpm exec vitest run tests/customerFollowup.test.ts tests/followupCompleteness.test.ts tests/followupDatePicker.test.ts`；代理 `python -m unittest discover -s tests -p test_followup.py -v`。真实客户原文及浏览器截图仅存私有工作目录，不提交公开仓库。
+
+## 客户名称与项目显示
+
+普通视图显示“客户公司／联系人 · 对应产品”，保留客户ID作为内部键。支持原编号台账，以及文件头customer_identity_map、project_display_overrides和customer_id/event_id/task_id注释。总览客户名称打开原档案；邮件、报价付款、样品、任务、冲突和原文渲染中的名称打开同版客户详情。冲突涉及两客户时各有入口，不合并建档。未归属后缀与未知字段照录；缺少明确项目时显示“对应产品待确认”。
+
+项目覆盖只从源文件明确产品和映射读取；同一客户的其他项目共用客户ID。内部注释及版本映射在普通视图隐藏，在源文本/复制/原始字节下载中完整保留。名称显示调整不修改原始快照、事件键、任务键、权限或业务状态；新台账资料更新仍沿用追加快照机制。
