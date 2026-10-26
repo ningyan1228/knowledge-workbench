@@ -8508,11 +8508,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "bradite-paints-uk",
+    "company": "Bradite Paints Limited",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Manchester postal contact; North Wales manufacturing, country-level approximate map marker",
+    "latitude": 55.4,
+    "longitude": -3.4,
+    "legacyCompanyDescription": "英国North Wales自有水性防护涂料制造企业；Bradite/ONECAN及LittleGreene相关branding保守按一个账户，Manchester为邮寄联系地址",
+    "fit": "可开发候选",
+    "signal": "英国North Wales持续自有制造的家族防护涂料企业；现行范围为全水性单组分和双组分涂料，涵盖地坪及直涂金属；ONE CAN为单组分水性底面合一成品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "本轮按ELO涂料应用独立完整复读此前已存Home109/About67/ONECAN70/Contact94行，共340行原始业务正文；没有任何Bradite新网络来源请求。Oct19两次原始Home/About失败仍计入，加Oct26上一轮4次成功共6/rem0STOP，不跨NLW/ELO/日期/品牌/域名/工具重置。原About直接写明家族英国自有制造、原料投料成品涂料制造、NorthWales至今生产及全水性单/双组分防护涂料、地坪/直涂金属；当前footer法人BraditePaintsLimited，ONECAN原始页明确单组分水性底面漆。本轮ELO TDS涂料/树脂改性允许范围无需套用NLW的木材/PVC/铝基材门槛：上轮NLW仍缺具体基材证据，本轮不将其补成已证事实，也不把直涂金属推成铝。完整可见导航为ONECANMatt/Eggshell、FloorIt、HDFloorWall、Roadline、LowSlip、IndustrialDegreaser、AcidEtch、RustConverter。所读四原文可见自有成品涂料和配套表面处理范围未发现ELO/ESBO/环氧植物油/生物增塑稳定或同功能树脂改性原料外售，有限范围通过同行排除；LowSlip仅见产品名，不猜成分或称已读技术资料。未逐读所有叶/TDS/SDS/隐藏关联业务，不对未披露销售作保证。主页LittleGreene图标支持关联branding，非完整终极股权证据；Bradite/BraditePaintsLimited/ONECAN与LittleGreene相关品牌按同一保守账户边界，不拆品牌制造新增。全main393/root407/front809/完整queue/source/exclusion/history去重无正式Bradite/LittleGreene；现有Bradite私有记录及索引原地升级，保留原名和历史，不另建私有重复。当前Contact公开sales@bradite.com及01248600315，普通商业销售/客服入口非原料采购；ManchesterTheCoachworks420AshtonOldRoadM112DT明示邮寄地址，不当NorthWales厂门，国家级概略地图点。未使用旧Rawlins第三方PDF、LittleGreeneUSA域或搜索片段补制造/联系人/股权。ELO仅反应性环氧功能、涂料柔韧/树脂改性潜在实验室评估，不说明已在其水性体系溶解/分散/相容、已经采购或保证附着防腐等性能，不向已售水性成品现场加料。"
+    },
+    "contact": {
+      "label": "官网通用商业销售邮箱和客服电话；无具名原料采购/WhatsApp",
+      "email": "sales@bradite.com",
+      "phone": "01248 600315",
+      "contactUrl": "https://bradite.com/contact"
+    },
+    "source": {
+      "label": "Own current manufacture and water-based protective coatings",
+      "url": "https://bradite.com/about-us"
+    },
+    "checkedAt": "2026-10-26"
+  },
+  {
+    "id": "chemmasters-madison-oh",
+    "company": "ChemMasters, Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Madison, Ohio corporate contact; country-level approximate map marker",
+    "latitude": 37.1,
+    "longitude": -95.7,
+    "legacyCompanyDescription": "美国混凝土防护涂料制造及配方研发企业；ChemMasters/Vexcon与已披露JTM/Murphy-Phoenix关联家族业务按一个账户",
+    "fit": "可开发候选",
+    "signal": "美国混凝土与砌体防护涂料和化学品的自有制造、配方与研发企业；实际产品范围含桥梁、墙面与建筑外墙涂料，明确开发和制造低VOC溶剂型配方；Vexcon按同一集团账户。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "完整读取当前About258/Home256/Contact321/Vexcon35/Family246/JTM154行，共1270行，均原始HTML。About直接确认混凝土涂料/化学品自有制造、研究开发及低VOC溶剂型配方开发制造；Home/About完整可见类别有桥梁、墙面、建筑外墙/Gateway涂料、养护和封闭剂、灌浆/修补、加速缓凝、清洗溶剂、脱模粘结剂与施工助剂。保留配套化学品/代工/溶剂事实，不说只销售成品。所读Vexcon当前官网明确归属ChemMasters，地址/电话已切到300EdwardsMadison；Vexcon不再另计，旧Search费城资料不作当前主体/工厂地址。Family列关联Murphy轮胎装配润滑、Phoenix管道接头润滑，链接JTM；实际JTM首页重定向jtmproducts.com，完整可见产品含Ferrnsol天然基础皂/清洗、轮胎与管道配制润滑剂、焊接防溅、脱模/金属成形膏、橡胶润滑、链条输送润滑及定制皂/润滑剂配方代工。这些已披露皂和润滑业务不等于所选反应性ELO/ESBO/环氧植物油或同功能聚合物增塑稳定/树脂改性原料供应。所读全部可见范围未发现该类输入原料外售，有限公开范围通过同行排除；未逐读全部JTM工业产品/全部ChemMasters成品/私有代工配方/TDS/SDS或隐藏集团业务，不作全SKU无同类输入保证。ChemMasters/Vexcon/JTM/Murphy-Phoenix/Ferrnsol/Gateway及关联域按一个账户，不以品牌或子公司增计；Family与Vexcon原文支持已披露关联，不虚构完整终极股权。全量main393/root407/front809/队列/索引/历史严格实体去重无该主体；Garon记录提Vexcon/ChemMasters只是不同候选比较，法人/域名/地址均不同，不是收购或关联证明，也不是本组旧GET；额外JTM/Ferrnsol/Murphy-Phoenix精确实体预查无既有记录。历史14命中实际只有旧Search及Garon文本，本组本轮6/rem0STOP，不跨JTM新域名/品牌/产品/工具重置。当前官方Contact仅公开表单和4404282105/8004867866，未核到公开邮箱，不猜info/sales或具名采购/WhatsApp；表单模板有错误提示文本，未提交或证明实际表单运行成功。300EdwardsStreetMadisonOH44057是当前企业联系地址，厂门坐标未核，国家级概略地图点。ELO只按用户资料的涂料/树脂改性、反应性环氧及柔韧性方向做潜在实验室原料评估，未证实现用/采购/溶剂配方相容或性能保证；原低VOC/标准/质量宣传不移作ELO认证或承诺，不建议现场向已售成品加料。"
+    },
+    "contact": {
+      "label": "官网业务联系表单和电话；公开邮箱尚未核到，无具名采购/WhatsApp",
+      "phone": "440.428.2105",
+      "contactUrl": "https://www.chemmasters.net/ContactChemMasters.php"
+    },
+    "source": {
+      "label": "Own manufacture and formulation of concrete protective coatings",
+      "url": "https://chemmasters.net/AboutChemMasters.php"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chemmasters-madison-oh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "bradite-paints-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "garon-wall-nj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pepin-cowansville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "micca-laval": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8907,6 +8964,109 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chemmasters-madison-oh": {
+    "website": "https://www.chemmasters.net/",
+    "contactPage": "https://www.chemmasters.net/ContactChemMasters.php",
+    "address": "Official company business contact: 300 Edwards Street, Madison, Ohio 44057, United States. Exact factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalPhone": "440.428.2105",
+    "generalPhoneEvidence": {
+      "company": "ChemMasters, Inc.",
+      "value": "440.428.2105",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current ChemMasters contact page corporate voice phone",
+          "url": "https://www.chemmasters.net/ContactChemMasters.php",
+          "summary": "Official contact page separately lists business Phone440.428.2105 and tollfree800.486.7866, fax440.428.7091. Voice business line, not named procurement or WhatsApp; no call made."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer, formulation and concrete protective-coating R&D statement",
+        "url": "https://chemmasters.net/AboutChemMasters.php"
+      },
+      {
+        "label": "Own complete visible product categories and current corporate identity",
+        "url": "https://www.chemmasters.net/"
+      },
+      {
+        "label": "Own corporate contact form and voice phone; no sourced email",
+        "url": "https://www.chemmasters.net/ContactChemMasters.php"
+      },
+      {
+        "label": "Own Vexcon current integration into ChemMasters",
+        "url": "https://www.vexcon.com/"
+      },
+      {
+        "label": "Own disclosed family brands and related JTM soaps/lubricants business",
+        "url": "https://chemmasters.net/family.php"
+      },
+      {
+        "label": "Own JTM complete visible soap/lubricant/custom-formulation range",
+        "url": "https://jtmproducts.com/"
+      }
+    ]
+  },
+  "bradite-paints-uk": {
+    "website": "https://bradite.com/",
+    "contactPage": "https://bradite.com/contact",
+    "address": "Official postal business contact: The Coachworks, 420 Ashton Old Road, Manchester M11 2DT, United Kingdom. Postal contact only; own About locates current manufacture in North Wales without an independently verified factory-gate location. Country-level approximate map marker.",
+    "generalEmail": "sales@bradite.com",
+    "generalPhone": "01248 600315",
+    "generalEmailEvidence": {
+      "company": "Bradite Paints Limited",
+      "value": "sales@bradite.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current sales/customer commercial contact",
+          "url": "https://bradite.com/contact",
+          "summary": "Contact page expressly invites sales/order communication at sales@bradite.com, footer names Bradite Paints Limited. Generic company commercial inbox; no named raw-material procurement officer asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Bradite Paints Limited",
+      "value": "01248 600315",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own customer-service voice telephone",
+          "url": "https://bradite.com/contact",
+          "summary": "Official Contact page publishes01248600315 for company customer service/general enquiries. Business voice telephone, not a named buyer or WhatsApp; no call made."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own full visible product range and current operator footer",
+        "url": "https://bradite.com/"
+      },
+      {
+        "label": "Own North Wales manufacture and water-based protective coating range",
+        "url": "https://bradite.com/about-us"
+      },
+      {
+        "label": "Own ONE CAN single-pack water-based primer and finish",
+        "url": "https://bradite.com/one-can-all-surface"
+      },
+      {
+        "label": "Own actual commercial email, voice and postal contact",
+        "url": "https://bradite.com/contact"
+      }
+    ]
+  },
   "garon-wall-nj": {
     "website": "https://www.garonproducts.com/",
     "contactPage": "https://www.garonproducts.com/contact-us/",
@@ -27667,6 +27827,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chemmasters-madison-oh",
+  "bradite-paints-uk",
   "garon-wall-nj",
   "pepin-cowansville",
   "micca-laval",

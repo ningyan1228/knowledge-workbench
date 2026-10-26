@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "chemmasters-madison-oh": "You manufacture concrete protective coatings and develop low-VOC solvent-based formulations in your own research and development facility.",
+  "bradite-paints-uk": "Your protective coating range is entirely water-based and includes single- and twin-pack paints for floors and direct-to-metal applications.",
   "garon-wall-nj": "Your GARONGUARD is a two-component epoxy basecoat for industrial and commercial concrete floors, supplied as pre-measured resin and hardener kits.",
   "pepin-cowansville": "Your Synguard and Northprime are two-component epoxy primers for metal surfaces, including aluminium alloys and galvanized metal.",
   "micca-laval": "Your Crystallo M2550-00 is a water-based wood varnish offered within your wood-finishing range.",
