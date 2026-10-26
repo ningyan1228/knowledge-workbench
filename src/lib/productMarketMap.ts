@@ -8646,11 +8646,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "gulf-coast-paint-loxley",
+    "company": "Gulf Coast Paint Mfg. Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Loxley official business address; country-level approximate map marker",
+    "latitude": 37.1,
+    "longitude": -95.7,
+    "legacyCompanyDescription": "美国Loxley工业防护涂料自有配方制造企业；家族经营历史为官网自述，一个公司账户，未将公开联系地址冒充已定位厂门",
+    "fit": "可开发候选",
+    "signal": "美国工业涂料自有配方与制造企业，生产钢材和混凝土防护涂层、储罐衬里及地坪体系，产品包括用于化工环境的环氧厚浆涂料与环氧酚醛涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立读取四份自有完整HTML正文（首页、产品手册索引、SpecialtyProducts全2项、S20单品）和2页公司PDF；PDF文字提取并逐页视觉核对。首次www首页301无正文计1次，随后真实Location裸域首页200独立计1次；全公司累计6请求=1重定向+4HTML+1PDF，停止新增，无自动重试/资产读取/远程JavaScript。首页明确GulfCoastPaintMfgInc、AlabamaLoxley、1976年以来家族第三代、自有配方和制造；不是据域名/公司名称/自动模板推断工厂。自述历史与家族经营不是工商登记或最终股东证明。自身完整可见7产品分类：环氧底漆、环氧涂层、聚氨酯、聚天冬氨酸、富锌底漆、100%固含环氧地坪、特种产品；首页明确钢材/混凝土化学防护及化工厂用epoxy mastics/epoxy novolacs、内部储罐、地坪/防滑等成品。PDF独立标明制造高性能Epoxies和Polyurethanes、混凝土地坪/修补/储罐体系，与当前首页一致。PDF服务器路径2026/06不是文档版本；元数据创建/修改2019-08-14，仅按当前官网仍提供的历史手册使用，不说2026新版本或新建厂。索引所列PC1820名为100%SolidsEpoxyResin不直接当ELO原料同行；它处于工业地坪成品体系，但未读PC1820单项PDF不声称全部组分或配方。SpecialtyProducts实际ShowingAll2Results，CS669为丙烯酸漆混凝土封闭剂，S20为醇酸漆催化剂；S20实际完整单品明确含聚异氰酸酯，用于传统油/醇酸漆现场添加，并禁止用于环氧/双组分聚氨酯/水性/硝基漆。不隐藏该催化剂外售，也不把它说成环氧化植物油/生物增塑稳定或ELO树脂改性原料；所选ELO同行排除在实际完整业务菜单、手册和特种产品可见范围通过。其余7类全部SKU/全部SDS及隐藏业务未逐项读取，不声称绝对无任何原料/添加剂经营。ELO仅针对其自有环氧工业防护配方的潜在实验室材料评估，不用于S20推荐，不向已售成品现场掺入，不保证醇酸/环氧相容、固化、耐腐/耐酸、释放期、增塑幅度、采购或现用。全main398/root412/front817/完整queue/索引/排除/历史实体域名去重无旧本体来源或正式记录；无已披露新父集团/另品牌可分拆，单公司单账户。初始域名仅模型记忆发现假设，后由实际业务正文验证，Search0不冒充Search/Google/TinyFish。官网正文ContactUs区info@gulfcoastpaint.com和251.964.7911、30075CountyRoad49LoxleyAL36551与PDF一致。页尾移动导航混有info@example.com和5555555555示例，已明确排除，不收集个人或猜采购职责。总部/公开联系地址未独立证明厂门坐标，采用美国国家级概略点，不伪造精确位置。没有单独读取/contact/或/about-us/，不将其链接存在冒充完整读取；公开业务邮箱来源用实际首页/PDF。共享发送台账未知，无就绪开发信、复制/导出、发送或历史改写。"
+    },
+    "contact": {
+      "label": "官网首页公开公司通用业务邮箱及电话；非具名采购，无公开WhatsApp",
+      "email": "info@gulfcoastpaint.com",
+      "phone": "251.964.7911",
+      "contactUrl": "https://gulfcoastpaint.com/"
+    },
+    "source": {
+      "label": "Own current industrial protective epoxy formulation and manufacturing",
+      "url": "https://gulfcoastpaint.com/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "gulf-coast-paint-loxley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "international-chem-crete-usa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "kaufman-products-maryland": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "magiechem-boucherville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9050,6 +9079,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "gulf-coast-paint-loxley": {
+    "website": "https://gulfcoastpaint.com/",
+    "contactPage": "https://gulfcoastpaint.com/",
+    "address": "Official public business address: 30075 County Road 49, Loxley, Alabama 36551, United States. Own company states formulation/manufacturing in Loxley; exact factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "info@gulfcoastpaint.com",
+    "generalPhone": "251.964.7911",
+    "generalEmailEvidence": {
+      "company": "Gulf Coast Paint Mfg. Inc.",
+      "value": "info@gulfcoastpaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual business Contact Us block; cross-checked in company brochure",
+          "url": "https://gulfcoastpaint.com/",
+          "summary": "Current corporate Contact Us block explicitly prints info@gulfcoastpaint.com and Loxley business address. Same exact mailbox in both pages of company brochure. General company mailbox; no named procurement role. Template info@example.com is rejected."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Gulf Coast Paint Mfg. Inc.",
+      "value": "251.964.7911",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own actual business voice telephone",
+          "url": "https://gulfcoastpaint.com/",
+          "summary": "Current Contact Us block explicitly shows 251.964.7911; company brochure repeats251-964-7911 and distinguishes fax251-964-7918. Actual public formatting retained, no WhatsApp inferred; template555-555-5555 discarded."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current company formulation and manufacturing, industrial protective epoxy applications and business contact",
+        "url": "https://gulfcoastpaint.com/"
+      },
+      {
+        "label": "Own complete returned brochure index; linked documents not all read",
+        "url": "https://gulfcoastpaint.com/product-brochures/"
+      },
+      {
+        "label": "Own two-page company brochure, both pages text and visually inspected; metadata2019",
+        "url": "https://gulfcoastpaint.com/wp-content/uploads/2026/06/GCP-Company-Brochure.pdf"
+      },
+      {
+        "label": "Own full two-product specialty range",
+        "url": "https://gulfcoastpaint.com/product-category/specialty-products/"
+      },
+      {
+        "label": "Own S20 alkyd coating catalyst; polyisocyanate chemistry distinguished from selected epoxidized-oil input",
+        "url": "https://gulfcoastpaint.com/product/s-20-enamel-catalyst/"
+      }
+    ]
+  },
   "international-chem-crete-usa": {
     "website": "https://www.chem-crete.com/",
     "contactPage": "https://www.chem-crete.com/contact/",
@@ -28071,6 +28159,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "gulf-coast-paint-loxley",
   "international-chem-crete-usa",
   "kaufman-products-maryland",
   "magiechem-boucherville",
