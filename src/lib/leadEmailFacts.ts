@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "garon-wall-nj": "Your GARONGUARD is a two-component epoxy basecoat for industrial and commercial concrete floors, supplied as pre-measured resin and hardener kits.",
   "pepin-cowansville": "Your Synguard and Northprime are two-component epoxy primers for metal surfaces, including aluminium alloys and galvanized metal.",
   "micca-laval": "Your Crystallo M2550-00 is a water-based wood varnish offered within your wood-finishing range.",
   "denalt-paints-montreal": "Your 626-12X translucent wood stain and sealer is water-based and uses an acrylic resin for outdoor wood such as pine and spruce.",

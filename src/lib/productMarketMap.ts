@@ -8480,11 +8480,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "garon-wall-nj",
+    "company": "Garon Products Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Wall, New Jersey official mailing address; country-level approximate map marker",
+    "latitude": 37.1,
+    "longitude": -95.7,
+    "legacyCompanyDescription": "美国自有环氧等混凝土修复与防护涂料制造及配方开发企业；Wall为当前公开通信地址，Garon成品品牌同一账户",
+    "fit": "可开发候选",
+    "signal": "美国自有混凝土修复及防护涂料制造和配方开发企业；GARONGUARD为双组分环氧混凝土地坪底涂，以树脂/固化剂预配套装供应，用于工业及商业地坪。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "完整读取官网About130/Home281/Contact120/AllProducts第一页304/GARONGUARD产品226行，以及由产品页直链的官方PDS两页231行，共1292行。About明确美国制造商、自有生产和配方研发，涉及环氧/聚氨酯/聚天门冬氨酸酯/丙烯酸/酚醛环氧等成品技术；不是把施工安装或经销身份当制造。Home与全导航列混凝土修复、灌浆、接缝、地坪、墙面、屋面、钢材涂料、清洗表面处理及工具；已读AllProducts第一页为预配环氧底漆/砂浆/灌浆/环氧成品和水泥品，含STEELZ钢材环氧胶泥安全涂层、TIGERSKIN水性环氧地坪封闭成品。GARONGUARD页和完整PDS独立复核双组分环氧、高固体底涂/混凝土应用及PartA树脂/PartB固化剂套装，不能把成品树脂组件当向配方厂销售ELO/ESBO原料的证据。上述已读业务范围未发现ELO、ESBO、环氧化植物油、生物增塑剂/同功能原料外售，有限公开范围通过所选输入同行排除。AllProducts存在6页；仅第一页和可见完整类别已读，未逐读其余5页/全部TDS/SDS，不声称完整所有SKU/隐含集团业务被穷尽，也不声称仅出售成品而无工具。原公开质量/性能宣传不移用于我方材料。当前官方Contact明确CustomerCare@garonproducts.com、8006315380及P.O.Box1924WallNJ07719-1924；通用客户支持业务入口，非具名/原料采购负责人。P.O.Box为通信地址，非已核工厂门址；地图美国国家级概略点。旧2001年前后GSA目录Search出现Tara/TW邮箱及2150Highway35SeaGirt，不采用作当前联系人/地址。最新main392、root406、私有807、完整队列/来源与排除索引及历史去重：Garon无已正式/私有主体，旧oct19bn两份同一Search归档不含本公司定向原文GET，不把它当两次或重开旧预算。Garon Products/GARONGUARD/Garon相关成品品牌和官网/直链S3技术文件按同一企业累计6来源，剩0STOP，不因品牌/域名/轮次/工具重置；Vexcon/ChemMasters其他候选不与Garon混用证据，未断言最终股权完全独立。ELO仅按用户资料涂料/树脂改性、反应性环氧功能与柔韧性方向作潜在实验室原料评估；无现用/采购需求、既有固化体系相容或性能改善保证，不建议现场掺入已售套装。"
+    },
+    "contact": {
+      "label": "官网通用客户支持业务邮箱、电话与表单；非具名原料采购，无公开WhatsApp",
+      "email": "CustomerCare@garonproducts.com",
+      "phone": "(800) 631-5380",
+      "contactUrl": "https://www.garonproducts.com/contact-us/"
+    },
+    "source": {
+      "label": "Own GARONGUARD two-component epoxy concrete floor basecoat",
+      "url": "https://www.garonproducts.com/garonguard/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "garon-wall-nj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pepin-cowansville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "micca-laval": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "denalt-paints-montreal": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -8878,6 +8907,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "garon-wall-nj": {
+    "website": "https://www.garonproducts.com/",
+    "contactPage": "https://www.garonproducts.com/contact-us/",
+    "address": "Official business mailing address: P.O. Box 1924, Wall, NJ 07719-1924, United States. Mailing address only; actual factory address and factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "CustomerCare@garonproducts.com",
+    "generalPhone": "(800) 631-5380",
+    "generalEmailEvidence": {
+      "company": "Garon Products Inc.",
+      "value": "CustomerCare@garonproducts.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Customer Support contact page",
+          "url": "https://www.garonproducts.com/contact-us/",
+          "summary": "Official contact page expressly lists CustomerCare@garonproducts.com with Garon Products Inc. mailing details. General customer-support company business inbox; not a named procurement officer."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Garon Products Inc.",
+      "value": "(800) 631-5380",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company business telephone",
+          "url": "https://www.garonproducts.com/contact-us/",
+          "summary": "Official contact page lists (800)631-5380 as Phone and separately identifies fax. Business voice telephone, no named buyer or WhatsApp assertion; no call made."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturer, formulation and business product scope",
+        "url": "https://www.garonproducts.com/about-us/"
+      },
+      {
+        "label": "Own current finished coating kits and complete visible categories",
+        "url": "https://www.garonproducts.com/"
+      },
+      {
+        "label": "Own current official corporate business contact",
+        "url": "https://www.garonproducts.com/contact-us/"
+      },
+      {
+        "label": "Own all-products listing page one, six-page pagination not fully traversed",
+        "url": "https://www.garonproducts.com/all-products/"
+      },
+      {
+        "label": "Own GARONGUARD two-component industrial concrete epoxy floor coating",
+        "url": "https://www.garonproducts.com/garonguard/"
+      },
+      {
+        "label": "Official product-page-linked GARONGUARD technical sheet, complete parsed two pages",
+        "url": "https://garon-pds.s3.amazonaws.com/Garonguard-PDS.pdf"
+      }
+    ]
+  },
   "pepin-cowansville": {
     "website": "https://www.peinturepepin.com/",
     "contactPage": "https://www.peinturepepin.com/nous-joindre/",
@@ -27575,6 +27667,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "garon-wall-nj",
   "pepin-cowansville",
   "micca-laval",
   "denalt-paints-montreal",
