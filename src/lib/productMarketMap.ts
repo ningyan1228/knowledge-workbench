@@ -8814,11 +8814,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "eureka-colour-soligo",
+    "company": "Eureka Colour S.r.l.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Soligo public business address; country-level approximate map marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "意大利Eureka Colour S.r.l.自有场地研发制造木器涂料，官网披露Soligo地址及VAT；创始人历史不当现任采购或最终股东，未独立定位厂门",
+    "fit": "可开发候选",
+    "signal": "意大利自有研发制造木器涂料企业，水性家具底漆系列包括FW 440触变透明底漆、FW 420透明底漆及FPW 121双组分水性底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立完整审读六份自有HTML：Home、水性家具底漆完整6项正文、总产品目录、ChiSiamo、History、Contact。六请求全200，终身6/rem0STOP，无重试/redirect/自动资产/远程JS/PDF；本次恢复只复读已保存原文，无公司新GET。Home明确1991以来设计制造木器涂料、整个活动位于FarraDiSoligo，Products直接interamenterealizzatenelnostrositoitaliano及内部实验室，About直接设计生产销售及化学实验室定制测试；制造不从名字/品牌/经销商推断。水性家具底漆正文FW440/FW420均明确单组分水性透明，FPW121为双组分水性，FS705色漆及FWA260.100/FPW250.100抗单宁水性系列，后者正文FWA/FPW标注存在不一致，保留原文，不擅改型号或借未读TDS保证组分。六项信息来自可见HTML，不是登陆产品库。全部主要业务为木框/家具/木地板/门窗成品涂饰，水/溶剂型做旧、着色、封闭、底涂、面涂、喷/挤涂、金箔/效果、油、防火和抗菌涂层，不把所有系列统称水性。Isolanti为木器封闭涂饰分类，不能仅凭名称当PO/CPO原料附着促进剂；FPW配套CW01仅原文催化比例，未读其SDS。六原文和完整主要菜单/目录未见所选PO/CPO水性聚烯烃分散体或原料型附着促进输入外售，有限可见业务同行排除通过，不声称全SKU/全部SDS/未知最终集团业务绝对审计。技术册和TDS处于reserved区，只观察链接，未访问/注册/登录/绕限制，不声称已读。客户抗菌/防火/环保/单宁封闭/干燥/附着等不转为NLW功能保证；NLW仅按用户TDS木材底涂/附着促进方向作潜在实验室配方评估，不声称现用/采购/需求/相容/性能改善，也不建议已售成品现场混加。History仅AurelioMeler1991创建及家族叙述，不当其2026任职/股东或采购身份；EurekaColourSrl/VAT00889610267/REA202252为自己披露，未独立工商审计。全main404/root418/front827及完整queue/index/excluded/history按名称/域名/VAT/创始人去重无旧本体GET或账户，销售国家/水性溶剂系列/厂地址不分新客户。Contact直接info@eurekacolour.com及+390438981823原格式和VialeEuropa32Soligo意大利业务地址，国家概略坐标，不造厂门GPS/具名采购/WhatsApp。表单只读无提交/外联/CRM；unknown共享台账不当unsent，无就绪稿/复制导出或改历史。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及电话；非具名采购，无公开WhatsApp",
+      "email": "info@eurekacolour.com",
+      "phone": "+39 0438 981823",
+      "contactUrl": "https://www.eurekacolour.com/contatti/"
+    },
+    "source": {
+      "label": "Own FW440/FW420 and other water-based furniture-primer formulations",
+      "url": "https://www.eurekacolour.com/fondi-per-mobili-all-acqua/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "eureka-colour-soligo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rica-resine-castel-guelfo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bayris-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vires-collegno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9224,6 +9253,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "eureka-colour-soligo": {
+    "website": "https://www.eurekacolour.com/",
+    "contactPage": "https://www.eurekacolour.com/contatti/",
+    "address": "Own public business address: Viale Europa 32, 31010 Soligo (TV), Italy. Own home locates production in Farra di Soligo; VAT00889610267/REA TV202252 are website statements. Factory-gate coordinates and corporate registry not independently verified; country-level approximate map marker.",
+    "generalEmail": "info@eurekacolour.com",
+    "generalPhone": "+39 0438 981823",
+    "generalEmailEvidence": {
+      "company": "Eureka Colour S.r.l.",
+      "value": "info@eurekacolour.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public Contact corporate channel",
+          "url": "https://www.eurekacolour.com/contatti/",
+          "summary": "Contact explicitly prints E-mail info@eurekacolour.com with matching mailto link for Eureka Colour Srl; general company route, not named procurement or deliverability proof."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Eureka Colour S.r.l.",
+      "value": "+39 0438 981823",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public Contact corporate channel",
+          "url": "https://www.eurekacolour.com/contatti/",
+          "summary": "Contact explicitly publishes Tel +39 0438 981823 with matching telephone link. Exact format retained; no WhatsApp inferred and no call."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own wood-coating manufacture in Farra di Soligo",
+        "url": "https://www.eurekacolour.com/"
+      },
+      {
+        "label": "Own complete returned six water-based furniture-primer products",
+        "url": "https://www.eurekacolour.com/fondi-per-mobili-all-acqua/"
+      },
+      {
+        "label": "Own full main product categories and in-house manufacture/laboratory",
+        "url": "https://www.eurekacolour.com/prodotti/"
+      },
+      {
+        "label": "Own formulation, production and chemical laboratory",
+        "url": "https://www.eurekacolour.com/chi-siamo/"
+      },
+      {
+        "label": "Own history; founder not asserted as current procurement contact",
+        "url": "https://www.eurekacolour.com/la-storia/"
+      },
+      {
+        "label": "Own public general business email, voice telephone and legal identity",
+        "url": "https://www.eurekacolour.com/contatti/"
+      }
+    ]
+  },
   "rica-resine-castel-guelfo": {
     "website": "https://www.ricaresine.com/",
     "contactPage": "https://www.ricaresine.com/Contatti",
@@ -28630,6 +28722,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "eureka-colour-soligo",
   "rica-resine-castel-guelfo",
   "bayris-ukraine",
   "vires-collegno",
