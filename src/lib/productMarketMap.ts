@@ -8758,11 +8758,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "bayris-ukraine",
+    "company": "TVK Bayris LLC",
+    "productId": "nl-w1201",
+    "country": "Ukraine",
+    "countryZh": "乌克兰",
+    "city": "Lviv head office; country-level approximate map marker",
+    "latitude": 48.38,
+    "longitude": 31.16,
+    "legacyCompanyDescription": "乌克兰TVK Bayris LLC/BAYRIS集团自有木器涂饰品牌；自有生产与合作厂生产并存，兼代理其他成品品牌，TVK/Port/BudBox按一个账户，未审计最终股权或逐SKU生产厂",
+    "fit": "可开发候选",
+    "signal": "乌克兰BAYRIS木器涂饰制造品牌，具有自有生产及实验室，产品包括AQUALAZUR水性木器涂饰材料与AQUAGRUNT水性木材底涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立完整读取六份原始HTML：乌文Home、英文AQUAGRUNT、乌文Contact、英文PolymerProductsForConcrete、英文总目录、英文AQUALAZUR，6/rem0STOP，无自动资源/重试/远程JS/PDF。Home直接TVKBayrisLLC为乌克兰制造商，生产木材保护品、混凝土添加剂及醇酸漆，有自有实验室进行质量控制和新配方开发测试，自有乌克兰企业并结合波兰/摩尔多瓦/其他EU合作工厂生产；不能把所有SKU或境外工厂都归为自己拥有。AQUALAZUR自身BAYRIS商标成品，明确Basewaterbased/装饰木器涂层/柔性成膜，水性不是据URL/耐水性推断；AQUAGRUNT明确水性木材底涂且不成膜，含生物防护用途，不混写其为普通成膜底漆，不把其抗虫抗真菌/毒理/分类认证移给NLW，也不建议往已售杀菌浸渍剂现场加料。当前NLW仅针对自有水性木器涂饰配方的潜在实验室底涂/附着促进方向，不保证现成体系相容、功能叠加或我方生物杀灭作用。Home实际包括代理SherwinWilliamsPoland的ALTAX、PortBayris代表Unicell的LuxDecor/Primacol和法国V33，代理关系不是收购/股权相同，不把已有Sherwin/V33等集团当本公司子客户；TVK/Port/BudBox及各地门店只算一个BAYRIS账户，不拆品牌/经营地址。完整总目录15主类和可见子类含混凝土添加剂/底涂/腻子/漆/醇酸漆/金属底涂/溶剂/清漆/灰泥/环氧成品/木保护/保养清洁/机喷装饰/历史商品；存在添加剂业务不隐藏，具体PolymerProductsForConcrete完整列表仅FiberPlus聚丙烯微纤维，用于混凝土分散增强，实体纤维不是所选PO/CPO水性聚烯烃分散体或原料型附着促进剂。混凝土plasticiser字样不能自动等同NLW原料同行。六页可见业务未发现所选同类原料外售，有限业务排除通过；不声称全部SKU/SDS或未披露集团登记股权已查。产品页TDS/生态/合格证链接只观察未下载，历史/失效日期不冒充2026有效证明；不采用客户生态、安全、1小时耐水、耐候等为我方保证。自身manufacturing/lab是原文证据而非品牌名推断，AQUALAZUR具体配方及每SKU实际生产厂/委外比例未核验，保留这些限制。全latestmain402/root416/front825/fullqueue/indices/history本体与TVK/Port/BudBox去重无旧正式；旧两文件只Search和预查，无旧GET，不新给他集团预算。Contact公开bayris@bayris.ua通用邮箱与主办公室(096)099-00-99本地格式电话，LvivPoliska6物流园办公室不是已定位厂门；其他分销人/店号不当采购人或WhatsApp。无外联、注册、表单或CRM，unknown共享台账不当unsent，无就绪稿/导出/改历史。"
+    },
+    "contact": {
+      "label": "官网主办公室通用业务邮箱及电话；无具名采购或公开WhatsApp",
+      "email": "bayris@bayris.ua",
+      "phone": "(096) 099-00-99",
+      "contactUrl": "https://www.bayris.ua/kontakty"
+    },
+    "source": {
+      "label": "Own AQUALAZUR water-based decorative wood-coating formulation range",
+      "url": "https://www.bayris.ua/en/aqualazur-fast-drying-decorative-wood-treatment"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bayris-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vires-collegno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bionic-house-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "crystalac-tennessee": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9166,6 +9195,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bayris-ukraine": {
+    "website": "https://www.bayris.ua/",
+    "contactPage": "https://www.bayris.ua/kontakty",
+    "address": "Official head office: TVK Bayris LLC, Poliska Street 6, Lviv Logistics Park, Lviv 79037, Ukraine. This is an office/logistics contact; exact manufacturing-site coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "bayris@bayris.ua",
+    "generalPhone": "(096) 099-00-99",
+    "generalEmailEvidence": {
+      "company": "TVK Bayris LLC",
+      "value": "bayris@bayris.ua",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own head-office public corporate channel",
+          "url": "https://www.bayris.ua/kontakty",
+          "summary": "Own Contact explicitly prints this general email under the TVK Bayris head office. No named procurement recipient or deliverability inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "TVK Bayris LLC",
+      "value": "(096) 099-00-99",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own head-office public corporate channel",
+          "url": "https://www.bayris.ua/kontakty",
+          "summary": "Own Contact explicitly prints this telephone under the head office; exact local printed format retained. A separate international tel link is present, not treated as WhatsApp. No call made."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturer, laboratory, mixed production and represented-brand roles",
+        "url": "https://www.bayris.ua/"
+      },
+      {
+        "label": "Own AQUALAZUR explicit water-based wood coating",
+        "url": "https://www.bayris.ua/en/aqualazur-fast-drying-decorative-wood-treatment"
+      },
+      {
+        "label": "Own AQUAGRUNT explicit water-based non-film timber primer",
+        "url": "https://www.bayris.ua/en/aquagrunt-bioprotective-wood-impregnant"
+      },
+      {
+        "label": "Own entire visible main product-category catalogue",
+        "url": "https://www.bayris.ua/en/bayris-products-catalog"
+      },
+      {
+        "label": "Own polypropylene microfibre concrete-product range; not a polyolefin dispersion",
+        "url": "https://www.bayris.ua/en/polymer-products-for-concrete"
+      },
+      {
+        "label": "Own public head-office business contact and group distribution network",
+        "url": "https://www.bayris.ua/kontakty"
+      }
+    ]
+  },
   "vires-collegno": {
     "website": "https://www.vires.it/",
     "contactPage": "https://www.vires.it/contattaci/",
@@ -28446,6 +28538,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bayris-ukraine",
   "vires-collegno",
   "bionic-house-ukraine",
   "crystalac-tennessee",
