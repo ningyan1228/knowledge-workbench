@@ -8786,11 +8786,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "rica-resine-castel-guelfo",
+    "company": "Rica Resine S.r.l.",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Castel Guelfo di Bologna public business address; country-level approximate map marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "意大利Rica Resine S.r.l.工业环氧配方与涂料制造企业；当前官网披露PIVA和业务地址，旧RICASNC名称及邮件href只用于防重复/保留差异，不假定登记沿革或第二邮箱现用",
+    "fit": "可开发候选",
+    "signal": "意大利工业涂料自有研发制造商，生产用于混凝土和铁材的溶剂型及水分散环氧底漆，以及地坪、储罐和工业防护涂装体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立完整读取RicaResine自身Home/Vernici/ResineEpossidicheIndurenti/PrivateLabel/ChiSiamo/Contatti六份原始HTML，6/rem0STOP，无失败/redirect/重试/自动资产/远程JS/PDF。Home/About/PrivateLabel直接自行配方制造、研发定制、实验室测试及代工，不从名字/域名推断制造。Vernici明确生产工业涂料，溶剂型和水分散环氧底漆用于混凝土与铁材、环氧/聚氨酯配方及保护面涂，PrivateLabel/About明确防腐和耐酸涂料及工业地坪体系。ResineEpossidicheIndurenti完整业务含单/双组分环氧体系、胺/聚酰胺固化、浇注/层压、找平粘结剂、水性陶瓷填缝及粘结、混凝土修复/加固和防护成品，原文明确转化为prodottifiniti。存在环氧树脂/固化剂/胶黏/密封/电气绝缘业务不隐藏，不能仅因resine或indurenti词当ELO/ESBO/环氧植物油或生物增塑稳定添加剂同行。六页完整主要业务菜单和上述配方制造范围未见所选同类原料外售，有限可见输入同行排除通过，不保证全部SKU/SDS/未知集团业务已审计。用户ELO只潜在自有工业涂料实验室柔韧/树脂改性评估，不保证其胺/聚酰胺固化相容、防腐耐酸效果、耐水/温度/寿命、采购现用或成本改善，不向已售涂料现场添加。客户食品接触/认证等自身声明不转给我方ELO，也未下载核实证书。原SearchPAVIPLAST历史RICASNC同址PDF只是发现，不冒称已读版本/组分/历史主体证明；当前官网明确RicaResineSrl/PIVA00692611205。其旧别名RICASNC及.com/.it/ricasnc.it已合并去重无正式/私有账户，5历史文件均Search/预查/状态引用无旧GET，不重复旧搜索或给新日期不同法名fresh6。Contact当前正文明确E-mailrica@ricaresine.it，六页页脚也显示同址；同一HTMLmailtohref仍是rica@ricasnc.it，差异完整保留，仅采用页面正文明确公开的rica@ricaresine.it，不把旧href认作其已核现用第二邮箱，不猜更正域名/实际投递或已发历史。Contact文字Tel+390542670689、Fax+390542670690分开，采用页脚可见+390542670689格式，不把传真/错click视作手机或WhatsApp。公开CastelGuelfo业务地址不冒称独立定位厂门，国家概略坐标。网页表单ThankYou/Error都是静态模板，不是本任务提交结果，无表单提交/外联/CRM。unknown共享台账不当unsent，无就绪稿/复制导出或改历史。"
+    },
+    "contact": {
+      "label": "官网当前正文明确公开的通用业务邮箱及电话；mailto旧href差异保留，无具名采购或WhatsApp",
+      "email": "rica@ricaresine.it",
+      "phone": "+39 0542 670689",
+      "contactUrl": "https://www.ricaresine.com/Contatti"
+    },
+    "source": {
+      "label": "Own industrial protective epoxy coating formulation and production",
+      "url": "https://www.ricaresine.com/Vernici"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rica-resine-castel-guelfo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bayris-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vires-collegno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bionic-house-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9195,6 +9224,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rica-resine-castel-guelfo": {
+    "website": "https://www.ricaresine.com/",
+    "contactPage": "https://www.ricaresine.com/Contatti",
+    "address": "Own public business contact: Via I Maggio 5, 40023 Castel Guelfo di Bologna (BO), Italy; P.IVA 00692611205 as stated on own website. Exact factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "rica@ricaresine.it",
+    "generalPhone": "+39 0542 670689",
+    "generalEmailEvidence": {
+      "company": "Rica Resine S.r.l.",
+      "value": "rica@ricaresine.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact explicit visible company channel",
+          "url": "https://www.ricaresine.com/Contatti",
+          "summary": "Contact main body explicitly labels E-mail rica@ricaresine.it and every read page visibly prints the same current corporate address. The HTML mailto href differs (rica@ricasnc.it); retain discrepancy, select explicit visible corporate address only, no assumption of old-domain current ownership or deliverability."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Rica Resine S.r.l.",
+      "value": "+39 0542 670689",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact explicit visible company channel",
+          "url": "https://www.ricaresine.com/Contatti",
+          "summary": "Own Contact main body labels voice Tel +39 0542670689 and separately fax +39 0542 670690. Footer visibly formats the voice number as +39 0542 670689; exact visible format retained. No WhatsApp or personal identity inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own development/formulation/manufacture and full main business menu",
+        "url": "https://www.ricaresine.com/"
+      },
+      {
+        "label": "Own industrial protective coating and epoxy-primer production",
+        "url": "https://www.ricaresine.com/Vernici"
+      },
+      {
+        "label": "Own complete returned epoxy-system, hardener and finished-compound business",
+        "url": "https://www.ricaresine.com/Resine-Epossidiche-Indurenti"
+      },
+      {
+        "label": "Own private-label formulation and anticorrosion coating manufacture",
+        "url": "https://www.ricaresine.com/Private-Label"
+      },
+      {
+        "label": "Own company identity and R&D formulation role",
+        "url": "https://www.ricaresine.com/chi-siamo"
+      },
+      {
+        "label": "Own explicit visible corporate email, voice/fax distinction and address; legacy href differs",
+        "url": "https://www.ricaresine.com/Contatti"
+      }
+    ]
+  },
   "bayris-ukraine": {
     "website": "https://www.bayris.ua/",
     "contactPage": "https://www.bayris.ua/kontakty",
@@ -28538,6 +28630,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rica-resine-castel-guelfo",
   "bayris-ukraine",
   "vires-collegno",
   "bionic-house-ukraine",

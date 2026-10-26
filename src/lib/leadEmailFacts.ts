@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "rica-resine-castel-guelfo": "Your industrial coatings include solvent-based and water-dispersed epoxy primers for concrete and iron surfaces.",
   "bayris-ukraine": "Your woodcare range includes AQUALAZUR water-based decorative coating and AQUAGRUNT water-based timber primer.",
   "vires-collegno": "Your industrial protective range includes VIRMASTIC 78 epoxy-polyamide primer and epoxy coatings for tanks and pipelines.",
   "bionic-house-ukraine": "Your VR-0008 primer-varnish is a water-based acrylic coating for parquet, wood panels, and timber.",
