@@ -4,7 +4,7 @@ export type Source = { id: string; start: number; end: number; section: string; 
 export type MarkdownBlock = Source & ({ kind: 'heading'; level: number; text: string } | { kind: 'table'; headers: string[]; rows: string[][]; rowLines: number[] } | { kind: 'text'; text: string })
 export type FollowupEvent = { id: string; customerId: string; project: string; time: string; precision: string; type: string; content: string; source: Source; relatedSources?: Source[] }
 export type FollowupTask = { id: string; customerId: string; project: string; action: string; waiting: string; dateNature: string; status: string; evidence: string; source: Source }
-export type FollowupCustomer = { id: string; customer: string; product: string; actionDate: string | null; actionLabel: string; progress: string; status: string; next: string; detail: string; fields: { label: string; value: string }[]; customerTime: string; sentTime: string; waiting: string; dateNature: string; uncertainty: string; currentFields: Source[]; sources: Source[]; events: FollowupEvent[]; tasks: FollowupTask[] }
+export type FollowupCustomer = { id: string; customer: string; product: string; actionDate: string | null; actionLabel: string; lastEmailProcessedDate: string | null; processingDateLabel: string; processingActionText: string; processingDatePrecision: '日期' | '待核'; processingSourceText: string; processingSources: Source[]; sourceOrder: number; progress: string; status: string; next: string; detail: string; fields: { label: string; value: string }[]; customerTime: string; sentTime: string; waiting: string; dateNature: string; uncertainty: string; currentFields: Source[]; sources: Source[]; events: FollowupEvent[]; tasks: FollowupTask[] }
 export type FollowupDocument = { title: string; blocks: MarkdownBlock[]; customers: FollowupCustomer[]; domestic: Source[]; sections: Source[]; events: FollowupEvent[]; tasks: FollowupTask[]; identities: FollowupIdentity[]; warnings: string[]; metadata: Record<string, string>; coverage: { total: number; retained: number; unretained: number }; failed: boolean }
 
 // Render a deliberately small, text-only Markdown subset. Uploaded HTML is never executed.
@@ -54,6 +54,16 @@ function validDate(value: string): string | null {
   return Number.isFinite(date.valueOf()) && date.toISOString().slice(0, 10) === match[1] ? match[1] : null
 }
 
+// Only an explicitly dated mail-processing field can drive this order. Ranges,
+// incoming messages, legacy suggestions and import dates never fill missing dates.
+export function mailProcessingDate(value: string): string | null {
+  return /^20\d{2}-\d{2}-\d{2}$/.test(value.trim()) ? validDate(value.trim()) : null
+}
+
+export function sortByMailProcessing(rows: FollowupCustomer[]): FollowupCustomer[] {
+  return [...rows].sort((a, b) => (b.lastEmailProcessedDate ?? '').localeCompare(a.lastEmailProcessedDate ?? '') || a.sourceOrder - b.sourceOrder)
+}
+
 function parseDocument(markdown: string): FollowupDocument {
   const blocks = markdownBlocks(markdown), warnings: string[] = []
   const identities = readFollowupIdentities(markdown)
@@ -65,7 +75,7 @@ function parseDocument(markdown: string): FollowupDocument {
   let inOverview = false
   let summary: Extract<MarkdownBlock, {kind: 'table'}> | undefined
   for (const block of blocks) {
-    if (block.kind === 'heading' && block.level === 2) inOverview = /客户总览|按建议跟进时间|跟进.*总表/.test(block.text)
+    if (block.kind === 'heading' && block.level === 2) inOverview = /客户总览|客户.*总表|按建议跟进时间|跟进.*总表/.test(block.text)
     if (inOverview && block.kind === 'table' && block.headers.some(h => /客户/.test(h))) { summary = block; break }
   }
   if (!summary) warnings.push('未识别到客户总览表。完整原文仍可阅读；本次更新请先核对原文。')
@@ -95,11 +105,13 @@ function parseDocument(markdown: string): FollowupDocument {
   const exactCustomerIndex = index(/^(?:客户(?:\s*\/\s*地区)?|国家及原档客户信息)$/)
   const customerIndex = exactCustomerIndex >= 0 ? exactCustomerIndex : index(/^客户(?!公司|显示|编号)/), productIndex = index(/^产品|^项目$/), dateIndex = index(/下一次跟进|建议.*日期|建议行动|跟进日/)
   const progressIndex = index(/最新.*进度|最近有据可查/), statusIndex = index(/当前状态|当前阶段|目前阶段/), nextIndex = index(/具体下一步|^下一步/)
-  const customers = (summary?.rows ?? []).map((row, n) => {
+  const processingIndex = index(/^最近邮件处理日期$/), processingActionIndex = index(/^最近处理内容[／/]发送状态$/)
+  let customers = (summary?.rows ?? []).map((row, n) => {
     const get = (i: number) => i < 0 ? '' : markdownText(row[i] ?? '')
     const idValue = get(0), id = internalFollowupKey(idValue) || identities.find(i => i.displayName === visibleFollowupText(idValue))?.id || (/^C?\d+$/.test(idValue) ? 'C' + idValue.replace(/^C/, '').padStart(2, '0') : `row-${n}`)
     const actionLabel = get(dateIndex), actionDate = validDate(actionLabel)
-    return { id, customer: get(customerIndex), product: get(productIndex), actionDate, actionLabel: actionLabel || '未注明建议日期', progress: get(progressIndex), status: get(statusIndex), next: get(nextIndex), detail: details.get(id)?.raw ?? '', fields: headers.map((label, i) => ({ label, value: get(i) })), customerTime: get(index(/^最近已核客户消息/)), sentTime: get(index(/^最近已核我方发送/)), waiting: get(index(/当前等待对象/)), dateNature: get(index(/日期性质/)), uncertainty: get(index(/关键待确认/)), sources: [] as Source[], currentFields: [] as Source[], events: [] as FollowupEvent[], tasks: [] as FollowupTask[] }
+    const processingDateLabel = get(processingIndex) || '待核', lastEmailProcessedDate = mailProcessingDate(processingDateLabel)
+    return { id, customer: get(customerIndex), product: get(productIndex), actionDate, actionLabel: actionLabel || '未注明建议日期', lastEmailProcessedDate, processingDateLabel, processingActionText: get(processingActionIndex) || '本版未提供邮件处理内容／发送状态，待核', processingDatePrecision: (lastEmailProcessedDate ? '日期' : '待核') as '日期' | '待核', processingSourceText: '', processingSources: [] as Source[], sourceOrder: n, progress: get(progressIndex), status: get(statusIndex), next: get(nextIndex), detail: details.get(id)?.raw ?? '', fields: headers.map((label, i) => ({ label, value: get(i) })), customerTime: get(index(/^最近已核客户消息/)), sentTime: get(index(/^最近已核我方发送/)), waiting: get(index(/当前等待对象/)), dateNature: get(index(/日期性质/)), uncertainty: get(index(/关键待确认/)), sources: [] as Source[], currentFields: [] as Source[], events: [] as FollowupEvent[], tasks: [] as FollowupTask[] }
   })
   for (const c of customers) if (!identities.some(i => i.id === c.id)) {
     const name = c.customer.replace(/^[^｜]*｜/, '').replace(/ \/ /g, '／') || c.id
@@ -116,10 +128,11 @@ function parseDocument(markdown: string): FollowupDocument {
   const ids = customers.map(row => row.id)
   if (new Set(ids).size !== ids.length) warnings.push('总览存在重复编号，请核对原文；系统不会自动合并客户。')
   if (customers.some(row => !row.customer)) warnings.push('部分总览行没有客户名称，请核对原文。')
-  if (customers.length && !customers.some(row => row.actionDate)) warnings.push('此版本未注明可识别的建议跟进日期，保留原表顺序。')
+  if (processingIndex < 0 && customers.length && !customers.some(row => row.actionDate)) warnings.push('此版本未注明可识别的建议跟进日期，保留原表顺序。')
   // Versioned datasets own their row order, including ties. Retain the legacy
   // date ordering only for older ledgers without a dataset contract.
-  if (!metadata.dataset_id) customers.sort((a, b) => (a.actionDate ?? '9999').localeCompare(b.actionDate ?? '9999'))
+  if (processingIndex >= 0) customers = sortByMailProcessing(customers)
+  else if (!metadata.dataset_id) customers.sort((a, b) => (a.actionDate ?? '9999').localeCompare(b.actionDate ?? '9999'))
   const events: FollowupEvent[] = [], tasks: FollowupTask[] = []
   const rowSource = (b: Extract<MarkdownBlock, { kind: 'table' }>, i: number): Source => ({ id: `source-L${b.rowLines[i]}`, start: b.rowLines[i], end: b.rowLines[i], section: b.section, raw: [lines[b.start - 1], lines[b.start], lines[b.rowLines[i] - 1]].join('\n') })
   const tokens = (c: FollowupCustomer) => [...new Set([...c.customer.split(/｜| \/ /).map(s => s.trim()), ...(c.customer.match(/[A-Za-zÀ-ž][A-Za-zÀ-ž-]{3,}/g) ?? []), ...(c.detail.match(/[\w.+-]+@[\w.-]+\.[a-z]{2,}/gi) ?? [])])].filter(s => s.length >= 4 && /[a-zA-Z]/.test(s))
@@ -132,13 +145,23 @@ function parseDocument(markdown: string): FollowupDocument {
     for (const b of blocks) {
       if (b === summary || (detail && b.start >= detail.start && b.end <= detail.end)) continue
       if (b.kind === 'table') b.rows.forEach((row, i) => {
-        if (belongs(markdownText(row.join(' ')), c)) c.sources.push(rowSource(b, i))
+        if (belongs(markdownText(row.join(' ')), c)) {
+          const source = rowSource(b, i)
+          c.sources.push(source)
+          if (b.headers.includes('最近邮件处理日期') && b.headers.includes('依据') && internalFollowupKey(row[0]) === c.id) {
+            c.processingSources.push(source)
+            c.processingSourceText = markdownText(row[b.headers.indexOf('依据')] ?? '')
+          }
+        }
       })
       else if (b.kind === 'text' && belongs(b.raw, c)) c.sources.push(b)
     }
     if (summary) {
       const i = summary.rows.findIndex(row => internalFollowupKey(row[0]) === c.id || identities.find(i => i.displayName === visibleFollowupText(row[0]))?.id === c.id || (row[0].replace(/^C/, '').padStart(2, '0')) === c.id.slice(1))
-      if (i >= 0) tasks.push({ id: `${c.id}-suggested-L${summary.rowLines[i]}`, customerId: c.id, project: c.product, action: c.next || '原文未提供', waiting: c.waiting || '待确认', dateNature: `${c.actionLabel} · ${c.dateNature || '原表建议，非已确认排期'}`, status: /暂停/.test(c.actionLabel) ? '暂停／条件触发；处理情况待核' : '建议行动，处理情况待核', evidence: '原文未提供完成依据，未自动标完成', source: rowSource(summary, i) })
+      if (i >= 0) {
+        if (processingIndex >= 0) c.processingSources.unshift(rowSource(summary, i))
+        tasks.push({ id: `${c.id}-suggested-L${summary.rowLines[i]}`, customerId: c.id, project: c.product, action: c.next || '原文未提供', waiting: c.waiting || '待确认', dateNature: processingIndex >= 0 ? '下一次实际排期待确认；旧建议仅在详情历史参考中保留' : `${c.actionLabel} · ${c.dateNature || '原表建议，非已确认排期'}`, status: /暂停|暂不供货/.test(`${c.actionLabel} ${c.status}`) ? '暂停／条件触发；处理情况待核' : '建议行动，处理情况待核', evidence: '原文未提供完成依据，未自动标完成', source: rowSource(summary, i) })
+      }
     }
   }
   const eventType = (label: string) => /草稿|拟|编辑窗口/.test(label) ? '我方草稿／发送待核' : /已发送|已回复|我方.*已发/.test(label) ? '我方已发送（按源记录）' : /客户.*回复|客户.*邮件|客户.*动作|客户.*来信/.test(label) ? '客户来信／动作' : /工厂|技术反馈|内部/.test(label) ? '内部协调／技术反馈' : /更正|纠正/.test(label) ? '历史更正' : /PI|文件|箱唛/.test(label) ? '文件／版本记录（非发送证明）' : '历史记录（类型按原文待核）'
