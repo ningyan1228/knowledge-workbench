@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
-import { ChevronDown, Download, FileText, History, LockKeyhole, RefreshCw, Search, Upload, Users, X } from 'lucide-react'
+import { Download, FileText, History, LockKeyhole, RefreshCw, Search, Upload, Users, X } from 'lucide-react'
 import { useAccountSession } from '../../lib/accountSession'
-import { compareFollowup, parseFollowup, type FollowupCustomer } from '../../lib/customerFollowup'
+import { compareFollowup, parseFollowup } from '../../lib/customerFollowup'
 import { followupRequest, type FollowupAccess, type FollowupMembers, type FollowupSnapshot, type FollowupVersions } from '../../lib/followupApi'
 import { FollowupMarkdown } from './FollowupMarkdown'
 import { FollowupDatePicker } from './FollowupDatePicker'
+import { FollowupContent, followupViews, type FollowupView } from './FollowupViews'
 import './CustomerFollowUp.css'
 
 function dateTime(value: string) {
@@ -22,7 +23,8 @@ type LoadedState = { access: FollowupAccess; index: FollowupVersions; snapshot: 
 function FollowupWorkspace({ userId }: { userId: string }) {
   const [loaded, setLoaded] = useState<LoadedState | null>(null), [error, setError] = useState(''), [refreshing, setRefreshing] = useState(false)
   const [panel, setPanel] = useState<'upload' | 'history' | 'members' | null>(null), [query, setQuery] = useState(''), [expanded, setExpanded] = useState<string | null>(null)
-  const [view, setView] = useState<'summary' | 'original'>('summary'), [message, setMessage] = useState('')
+  const [view, setView] = useState<FollowupView>('summary'), [message, setMessage] = useState('')
+  const [sourceLine, setSourceLine] = useState<number | null>(null)
   const selectedId = useRef<string | null>(null), request = useRef(0), abort = useRef<AbortController | null>(null)
   const refresh = useCallback(async (versionId?: string | null) => {
     abort.current?.abort()
@@ -50,15 +52,23 @@ function FollowupWorkspace({ userId }: { userId: string }) {
   const document = loaded?.snapshot ? parseFollowup(loaded.snapshot.markdown) : null
   const historical = Boolean(loaded?.snapshot && loaded.snapshot.id !== loaded.index.current_id)
   const owner = loaded?.access.role === 'owner'
-  const rows = document?.customers.filter(row => `${row.customer} ${row.product} ${row.status} ${row.next}`.toLowerCase().includes(query.trim().toLowerCase())) ?? []
-  const selectVersion = (id: string) => { setExpanded(null); setQuery(''); setMessage(''); void refresh(id) }
+  const selectVersion = (id: string) => { setExpanded(null); setQuery(''); setSourceLine(null); setMessage(''); void refresh(id) }
   const toCurrent = () => { selectedId.current = null; setExpanded(null); setQuery(''); setMessage(''); void refresh(null) }
-  const download = () => {
+  const onSource = (line: number) => { setSourceLine(line); setView('original') }
+  const download = async () => {
     if (!loaded?.snapshot) return
-    const url = URL.createObjectURL(new Blob([loaded.snapshot.markdown], { type: 'text/markdown;charset=utf-8' }))
-    const anchor = window.document.createElement('a'); anchor.href = url; anchor.download = loaded.snapshot.filename; anchor.click()
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+    try {
+      const snapshot = await followupRequest<FollowupSnapshot>(userId, `/versions/${loaded.snapshot.id}`)
+      const bytes = snapshot.source_base64 ? Uint8Array.from(atob(snapshot.source_base64), c => c.charCodeAt(0)) : new TextEncoder().encode(snapshot.markdown)
+      const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))).map(b => b.toString(16).padStart(2, '0')).join('')
+      if (digest !== snapshot.content_hash) throw new Error('下载校验失败，未生成文件。请刷新后重试。')
+      const url = URL.createObjectURL(new Blob([bytes], { type: 'text/markdown;charset=utf-8' }))
+      const anchor = window.document.createElement('a'); anchor.href = url; anchor.download = snapshot.filename; anchor.click()
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+      setMessage('原文件下载校验通过 · SHA-256 ' + digest)
+    } catch (cause) { setMessage(cause instanceof Error ? cause.message : '下载失败') }
   }
+
   return <section className="customer-followup" aria-label="团队客户跟进" aria-busy={refreshing}>
     <div className="followup-heading"><div><h1>客户跟进</h1><p><LockKeyhole size={13} />仅受邀成员可见{loaded && <> · {owner ? '你可以更新台账及管理共享成员' : '你拥有查看权限'}</>}</p></div><div className="followup-actions"><button type="button" className="secondary-button" disabled={refreshing} onClick={() => void refresh()}><RefreshCw size={15} className={refreshing ? 'followup-spinning' : ''} />刷新</button>{loaded && <><button type="button" className="secondary-button" onClick={() => setPanel('history')}><History size={15} />历史版本</button>{owner && <button type="button" className="secondary-button" onClick={() => setPanel('members')}><Users size={15} />共享成员</button>}{owner && !historical && <button type="button" className="primary-button" onClick={() => setPanel('upload')}><Upload size={15} />上传更新</button>}</>}</div></div>
     {error && <div className="followup-empty" role="alert"><LockKeyhole size={28} /><h2>暂时无法查看台账</h2><p>{error}</p><a href="#settings">账户与设置</a></div>}
@@ -67,13 +77,11 @@ function FollowupWorkspace({ userId }: { userId: string }) {
     {loaded && !loaded.snapshot && <div className="followup-empty"><FileText size={30} /><h2>团队台账还没有内容</h2><p>{owner ? '上传一份 Markdown 台账，先预览，再更新给同事查看。' : '负责人上传后，你就可以在这里查看最新跟进。'}</p></div>}
     {loaded?.snapshot && document && <>
       {historical && <div className="followup-history-notice" role="status"><span>正在查看历史版本 · {loaded.snapshot.source_date ?? loaded.snapshot.filename}</span><button type="button" onClick={toCurrent}>返回最新版</button></div>}
-      <div className="followup-toolbar"><div className="followup-document-meta"><FollowupDatePicker index={loaded.index} selectedId={loaded.snapshot.id} busy={refreshing} onSelect={selectVersion} /><span>上传于 {dateTime(loaded.snapshot.created_at)}（北京时间）</span></div><div className="followup-read-actions"><div className="followup-view-switch" aria-label="阅读方式"><button type="button" aria-pressed={view === 'summary'} onClick={() => setView('summary')}>进度总览</button><button type="button" aria-pressed={view === 'original'} onClick={() => setView('original')}>完整原文</button></div><button type="button" className="secondary-button" onClick={download}><Download size={14} />下载 .md</button></div></div>
-      {view === 'summary' ? <>
-        <div className="followup-list-toolbar"><span>{document.customers.length} 条客户 / 询盘主档{query && ` · 找到 ${rows.length} 条`}</span><label className="followup-search"><Search size={16} /><input aria-label="搜索跟进客户" placeholder="搜索客户、产品或进度" value={query} onChange={event => setQuery(event.target.value)} /></label></div>
-        {document.warnings.map(warning => <p className="followup-warning" key={warning}>{warning}</p>)}
-        {document.customers.length > 0 ? <div className="followup-list"><div className="followup-columns followup-column-head" aria-hidden="true"><span>建议行动日</span><span>客户 / 产品</span><span>当前状态</span><span>具体下一步</span><span /></div>{rows.map(row => <CustomerRow key={row.id} row={row} expanded={expanded === row.id} onToggle={() => setExpanded(expanded === row.id ? null : row.id)} />)}{!rows.length && <div className="followup-empty">没有匹配的客户，请调整搜索内容。</div>}</div> : <FollowupMarkdown markdown={loaded.snapshot.markdown} />}
-        <p className="followup-footnote">建议行动日沿用台账原文，不代表客户承诺或已约定联系日期。待确认、草稿、付款与发运状态均保留原文。</p>
-      </> : <FollowupMarkdown markdown={loaded.snapshot.markdown} />}
+      <div className="followup-toolbar"><div className="followup-document-meta"><FollowupDatePicker index={loaded.index} selectedId={loaded.snapshot.id} busy={refreshing} onSelect={selectVersion} /><span>上传于 {dateTime(loaded.snapshot.created_at)}（北京时间）</span></div><div className="followup-read-actions"><div className="followup-view-switch" aria-label="阅读方式">{followupViews.map(([id, label]) => <button key={id} type="button" aria-pressed={view === id} onClick={() => { setSourceLine(null); setView(id) }}>{label}</button>)}</div><button type="button" className="secondary-button" onClick={download}><Download size={14} />下载 .md</button></div></div>
+      <p className="followup-footnote">数据版本 {document.metadata.dataset_version || loaded.snapshot.id} · 文件整理日 {document.metadata.updated_date || loaded.snapshot.source_date || '待确认'} · {document.metadata.timezone || '时区按原文'} · 原文 SHA-256 {loaded.snapshot.content_hash}</p>
+      <div className="followup-list-toolbar"><label className="followup-search"><Search size={16} /><input aria-label="搜索跟进客户" placeholder="搜索客户、历史、产品或进度" value={query} onChange={event => setQuery(event.target.value)} /></label><button className="followup-text-button" onClick={() => setQuery('')}>清除搜索</button><span>{document.coverage.total} 个非空正文块已保留 · 未保留 {document.coverage.unretained}</span></div>
+      {document.warnings.map(warning => <p className="followup-warning" key={warning}>{warning}</p>)}
+      <FollowupContent key={loaded.snapshot.id} document={document} markdown={loaded.snapshot.markdown} view={view} query={query} expanded={expanded} setExpanded={setExpanded} onSource={onSource} sourceLine={sourceLine} />
     </>}
     {panel === 'upload' && loaded && owner && <UploadDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onSaved={() => { setPanel(null); toCurrent(); setMessage('台账已更新，同事打开后将看到最新版。') }} />}
     {panel === 'history' && loaded && <HistoryDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onOpen={id => { setPanel(null); selectVersion(id) }} onRestored={() => { setPanel(null); toCurrent() }} />}
@@ -81,13 +89,10 @@ function FollowupWorkspace({ userId }: { userId: string }) {
   </section>
 }
 
-function CustomerRow({ row, expanded, onToggle }: { row: FollowupCustomer; expanded: boolean; onToggle: () => void }) {
-  return <article className="followup-row"><button type="button" className="followup-columns" onClick={onToggle} aria-expanded={expanded} aria-controls={`followup-detail-${row.id}`}><span className="followup-action-date">{row.actionDate ? row.actionDate.slice(5).replace('-', '月') + '日' : row.actionLabel}</span><span className="followup-customer-name"><small>{row.id}</small><strong>{row.customer}</strong><span>{row.product}</span></span><span className="followup-status">{row.status || '原文未单列状态'}</span><span className="followup-next">{row.next || '请查看原文'}</span><ChevronDown size={16} className={expanded ? 'expanded' : ''} /></button>{expanded && <section id={`followup-detail-${row.id}`} className="followup-customer-detail"><h2>跟进记录</h2>{row.progress && <p className="followup-progress">最近已知进度：{row.progress}</p>}{row.detail ? <FollowupMarkdown markdown={row.detail} /> : <p>此版本未匹配到该客户的独立档案，请切换“完整原文”查阅。</p>}</section>}</article>
-}
-
 function UploadDialog({ userId, loaded, onClose, onSaved }: { userId: string; loaded: LoadedState; onClose: () => void; onSaved: () => void }) {
   const [base] = useState(loaded)
-  const [draft, setDraft] = useState<{ filename: string; markdown: string } | null>(null), [error, setError] = useState(''), [busy, setBusy] = useState(false), [confirmed, setConfirmed] = useState(false)
+  const [allowRevision, setAllowRevision] = useState(false)
+  const [draft, setDraft] = useState<{ filename: string; markdown: string; source_base64: string } | null>(null), [error, setError] = useState(''), [busy, setBusy] = useState(false), [confirmed, setConfirmed] = useState(false)
   const fileRevision = useRef(0)
   const next = draft ? parseFollowup(draft.markdown) : null
   const previous = base.snapshot ? parseFollowup(base.snapshot.markdown) : null
@@ -99,19 +104,21 @@ function UploadDialog({ userId, loaded, onClose, onSaved }: { userId: string; lo
     try {
       if (!/\.(md|markdown)$/i.test(file.name)) throw new Error('请选择 .md 或 .markdown 文件。')
       if (file.size > 524288) throw new Error('文件不能超过 512 KB。')
-      const markdown = new TextDecoder('utf-8', { fatal: true }).decode(await file.arrayBuffer())
+      const bytes = new Uint8Array(await file.arrayBuffer())
+      const markdown = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes)
+      const source_base64 = btoa(Array.from(bytes, b => String.fromCharCode(b)).join(''))
       if (!markdown.trim() || markdown.includes('\u0000')) throw new Error('文件为空或不是有效文本，请另存为 UTF-8。')
-      if (revision === fileRevision.current) setDraft({ filename: file.name, markdown })
+      if (revision === fileRevision.current) setDraft({ filename: file.name, markdown, source_base64 })
     } catch (cause) { if (revision === fileRevision.current) setError(cause instanceof Error ? cause.message : '无法读取文件。') }
   }
   const save = async () => {
     if (!draft || !confirmed || busy) return
     setBusy(true); setError('')
-    try { await followupRequest(userId, '/versions', { ...draft, expected_current_id: base.index.current_id }); onSaved() }
+    try { await followupRequest(userId, '/versions', { ...draft, allow_revision: allowRevision, activate: !next?.failed, expected_current_id: base.index.current_id }); onSaved() }
     catch (cause) { setError(cause instanceof Error ? cause.message : '上传失败，请重试。') }
     finally { setBusy(false) }
   }
-  return <Dialog title="上传台账更新" onClose={onClose} busy={busy}><p className="followup-dialog-intro">上传完整的 Markdown 台账，预览后更新团队可见版本。历史版本会保留。</p><label className="followup-upload-target"><Upload size={26} /><strong>选择 .md 文件</strong><span>UTF-8 · 最大 512 KB</span><input type="file" accept=".md,.markdown,text/markdown" disabled={busy} onChange={event => void choose(event.target.files?.[0])} /></label>{draft && next && change && <div className="followup-upload-preview"><strong>{draft.filename}</strong><p>识别到 {next.customers.length} 条客户 / 询盘主档</p><p>与当前版本按编号比较：新增 {change.added} · 内容变化 {change.changed} · 未出现在本版 {change.removed}</p>{change.removed > 0 && <p className="followup-warning">本版少了 {change.removed} 条主档。更新会以本版完整内容为准；旧版记录仍可查阅。</p>}{next.warnings.map(w => <p key={w} className="followup-warning">{w}</p>)}<details><summary>预览完整原文</summary><FollowupMarkdown markdown={draft.markdown} /></details><label className="followup-confirm"><input type="checkbox" checked={confirmed} disabled={busy} onChange={event => setConfirmed(event.target.checked)} /><span>我已核对客户状态及日期，确认以这份完整台账更新团队版本。</span></label></div>}{error && <p role="alert" className="followup-error">{error}</p>}<footer><button type="button" className="secondary-button" disabled={busy} onClick={onClose}>取消</button><button type="button" className="primary-button" disabled={!draft || !confirmed || busy} onClick={() => void save()}>{busy ? '正在保存…' : '确认更新'}</button></footer></Dialog>
+  return <Dialog title="上传台账更新" onClose={onClose} busy={busy}><p className="followup-dialog-intro">上传完整的 Markdown 台账，预览后更新团队可见版本。历史版本会保留。</p><label className="followup-upload-target"><Upload size={26} /><strong>选择 .md 文件</strong><span>UTF-8 · 最大 512 KB</span><input type="file" accept=".md,.markdown,text/markdown" disabled={busy} onChange={event => void choose(event.target.files?.[0])} /></label>{draft && next && change && <div className="followup-upload-preview"><strong>{draft.filename}</strong><p>识别到 {next.customers.length} 条客户 / 询盘主档</p><p>与当前版本按编号比较：新增 {change.added} · 内容变化 {change.changed} · 未出现在本版 {change.removed}</p>{change.removed > 0 && <p className="followup-warning">本版少了 {change.removed} 条主档。更新会以本版完整内容为准；旧版记录仍可查阅。</p>}{next.warnings.map(w => <p key={w} className="followup-warning">{w}</p>)}<p>数据集 {next.metadata.dataset_id || '未注明'} · 版本 {next.metadata.dataset_version || '未注明'} · 事件 {next.events.length} · 任务 {next.tasks.length} · 未保留正文块 {next.coverage.unretained}</p><label className="followup-confirm"><input type="checkbox" checked={allowRevision} onChange={e => setAllowRevision(e.target.checked)} /><span>若同版本号内容不同，显式追加修订快照（原版保留）</span></label><details><summary>预览完整原文</summary><FollowupMarkdown markdown={draft.markdown} /></details><label className="followup-confirm"><input type="checkbox" checked={confirmed} disabled={busy} onChange={event => setConfirmed(event.target.checked)} /><span>我已核对客户状态及日期，确认以这份完整台账更新团队版本。</span></label></div>}{error && <p role="alert" className="followup-error">{error}</p>}<footer><button type="button" className="secondary-button" disabled={busy} onClick={onClose}>取消</button><button type="button" className="primary-button" disabled={!draft || !confirmed || busy} onClick={() => void save()}>{busy ? '正在保存…' : next?.failed ? '仅保存原文，不替换当前版本' : '确认更新'}</button></footer></Dialog>
 }
 
 function HistoryDialog({ userId, loaded, onClose, onOpen, onRestored }: { userId: string; loaded: LoadedState; onClose: () => void; onOpen: (id: string) => void; onRestored: () => void }) {

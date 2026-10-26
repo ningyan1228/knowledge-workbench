@@ -1,7 +1,7 @@
 import { apiBaseUrl, supabase } from './supabase'
 
 export type FollowupVersion = { id: string; filename: string; title: string; source_date: string | null; content_hash: string; created_at: string; created_by: string; restored_from: string | null }
-export type FollowupSnapshot = FollowupVersion & { markdown: string }
+export type FollowupSnapshot = FollowupVersion & { markdown: string; source_base64?: string; dataset_id?: string | null; dataset_version?: string | null }
 export type FollowupVersions = { current_id: string | null; versions: FollowupVersion[] }
 export type FollowupAccess = { email: string; role: 'owner' | 'reader' }
 export type FollowupMembers = { owner: string; members: { email: string; invited_at: string }[] }

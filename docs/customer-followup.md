@@ -29,3 +29,17 @@
 备份可通过容器内 Python `sqlite3.Connection.backup` 创建一致性副本，再将副本保存到私有备份位置；应同时保留负责人配置。恢复时先停止该代理，将备份放回 volume 并保持 UID/GID 10001 的所有权，随后启动验证。不要对该部署使用 `docker compose down -v`，这会删除台账 volume。
 
 验证：`pnpm test -- tests/customerFollowup.test.ts`；代理镜像内执行 `python -m unittest discover -s tests -p test_followup.py`，使用临时数据库与模拟身份，不连接生产账号或更改发送历史。
+
+## 完整版本索引（2026-10-26）
+
+概览、详情、历史时间线、任务、发送核验、冲突、国内与其他线索、全部章节和原文共用选中快照。每个非空Markdown块保留原始行范围与安全显示位置；详情关联该客户原始章节及有明确编号、唯一联系人/公司名称或唯一邮箱的引用行。表头缺少分隔符只在结构化索引修复并提示，源文件不变。
+
+概览保留全部字段，显示最新进度、当前状态、两类消息时间、等待对象、日期性质和待确认事项。历史状态不会覆盖当前字段。来源按钮跳到当前版本原文行。未知Markdown以安全文本显示；全部章节与完整源文本始终可访问。
+
+原始UTF-8文件（含BOM、换行）作为SQLite BLOB与文本、SHA-256、数据集ID和版本号一起保存。下载前重新核对成员权限并校验原始字节SHA-256；另提供受相同成员权限保护的 `/follow-up/versions/{id}/download`。既有无BLOB的快照兼容按原存储文本导出，不改变历史。
+
+相同hash的任一历史文件再次上传返回重复提示。同数据集同版本不同字节必须显式勾选追加修订；旧版本号上传只存历史，不切当前。恢复仍需负责人显式操作。解析失败的上传仅存原文历史（activate=false），不替换当前；失败版本查看仅显示本版原文，不套用旧版索引。
+
+时间线沿用源事件ID，其余按客户和源行定位；同分钟的明确事件重复引用只保留一事件及多个来源，不以日期合并不同邮件。任务保持原状态，无完成证据不自动完成；提及附件仅显示源记录及“原件未随本次文件提供”。
+
+回归：`pnpm exec vitest run tests/customerFollowup.test.ts tests/followupCompleteness.test.ts tests/followupDatePicker.test.ts`；代理 `python -m unittest discover -s tests -p test_followup.py -v`。真实客户原文及浏览器截图仅存私有工作目录，不提交公开仓库。

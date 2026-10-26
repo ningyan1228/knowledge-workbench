@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import hashlib
+import base64
+import binascii
 import os
 import re
 import sqlite3
@@ -9,6 +11,7 @@ import uuid
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 import httpx
 from fastapi import APIRouter, Depends, Header, HTTPException, Response
@@ -21,6 +24,9 @@ class SnapshotInput(BaseModel):
     filename: str = Field(min_length=1, max_length=200)
     markdown: str = Field(min_length=1, max_length=MAX_MARKDOWN_BYTES)
     expected_current_id: str | None
+    source_base64: str | None = Field(default=None, max_length=700_000)
+    allow_revision: bool = False
+    activate: bool = True
 
 
 class RestoreInput(BaseModel):
@@ -53,7 +59,12 @@ def snapshot_metadata(filename: str, markdown: str) -> dict:
             source_date = datetime(*(int(x) for x in match.groups())).date().isoformat()
         except ValueError:
             pass
+    head = re.match(r'^\ufeff?---\r?\n(.*?)\r?\n---(?:\r?\n|$)', markdown, re.S)
+    metadata = dict(re.findall(r'^(\w+):\s*([^\r\n]+)', head[1], re.M)) if head else {}
+    if re.fullmatch(r'20\d{2}-\d{2}-\d{2}', metadata.get('updated_date', '')):
+        source_date = metadata['updated_date']
     return {'filename': filename, 'title': title[:300], 'source_date': source_date,
+            'dataset_id': metadata.get('dataset_id'), 'dataset_version': metadata.get('dataset_version'),
             'content_hash': hashlib.sha256(markdown.encode('utf-8')).hexdigest()}
 
 
@@ -80,6 +91,10 @@ class FollowupStore:
                     email TEXT PRIMARY KEY, invited_at TEXT NOT NULL, invited_by TEXT NOT NULL
                 );
             ''')
+            columns = {row[1] for row in db.execute('PRAGMA table_info(followup_versions)')}
+            for name, kind in [('source_bytes', 'BLOB'), ('dataset_id', 'TEXT'), ('dataset_version', 'TEXT')]:
+                if name not in columns:
+                    db.execute(f'ALTER TABLE followup_versions ADD COLUMN {name} {kind}')
             with db:
                 yield db
         finally:
@@ -97,32 +112,52 @@ class FollowupStore:
         with self.connection() as db:
             return {'current_id': db.execute('SELECT current_id FROM followup_state WHERE id=1').fetchone()[0],
                     'versions': [dict(row) for row in db.execute('''SELECT id,filename,title,source_date,
-                        content_hash,created_at,created_by,restored_from FROM followup_versions ORDER BY rowid DESC''')]}
+                        content_hash,created_at,created_by,restored_from,dataset_id,dataset_version FROM followup_versions ORDER BY rowid DESC''')]}
 
     def read(self, version_id: str) -> dict:
         with self.connection() as db:
             row = db.execute('SELECT * FROM followup_versions WHERE id=?', (version_id,)).fetchone()
             if not row:
                 raise HTTPException(404, '该版本不存在，请刷新版本列表。')
-            return dict(row)
+            result = dict(row)
+            raw = result.pop('source_bytes')
+            result['source_base64'] = base64.b64encode(raw if raw is not None else result['markdown'].encode('utf-8')).decode('ascii')
+            return result
 
-    def publish(self, filename: str, markdown: str, actor: str, expected: str | None, restored_from: str | None = None) -> str:
+    def publish(self, filename: str, markdown: str, actor: str, expected: str | None, restored_from: str | None = None, source_base64: str | None = None, allow_revision: bool = False, activate: bool = True) -> str:
         meta = snapshot_metadata(filename, markdown)
+        try:
+            raw = base64.b64decode(source_base64, validate=True) if source_base64 is not None else markdown.encode('utf-8')
+            if len(raw) > MAX_MARKDOWN_BYTES or raw.decode('utf-8') != markdown:
+                raise ValueError('mismatch')
+        except (ValueError, UnicodeError, binascii.Error):
+            raise HTTPException(422, '原始文件字节与预览文本不一致或编码无效。')
+        meta['content_hash'] = hashlib.sha256(raw).hexdigest()
         with self.connection() as db:
             db.execute('BEGIN IMMEDIATE')
             current = db.execute('SELECT current_id FROM followup_state WHERE id=1').fetchone()[0]
             if current != expected:
                 raise HTTPException(409, '台账刚有新版本，请刷新并重新核对后再更新。')
-            if current:
-                prior = db.execute('SELECT content_hash FROM followup_versions WHERE id=?', (current,)).fetchone()
-                if prior and prior[0] == meta['content_hash']:
-                    raise HTTPException(409, '这份内容已经是当前版本，无需重复上传。')
+            if not restored_from:
+                if db.execute('SELECT id FROM followup_versions WHERE content_hash=?', (meta['content_hash'],)).fetchone():
+                    raise HTTPException(409, '这份原文件已保存；重复上传不会新增客户、事件或回退当前版本。请从历史版本查看。')
+                if meta['dataset_id'] and meta['dataset_version']:
+                    conflict = db.execute('SELECT id FROM followup_versions WHERE dataset_id=? AND dataset_version=?', (meta['dataset_id'], meta['dataset_version'])).fetchone()
+                    if conflict and not allow_revision:
+                        raise HTTPException(409, '同数据集／版本号已有不同字节的文件。请显式选择追加修订，原版将保留。')
+                    prior = db.execute('SELECT dataset_id,dataset_version,source_date FROM followup_versions WHERE id=?', (current,)).fetchone() if current else None
+                    if prior and prior['dataset_id'] == meta['dataset_id']:
+                        def version_key(value):
+                            return tuple(int(n) for n in re.findall(r'\d+', value or ''))
+                        if version_key(meta['dataset_version']) < version_key(prior['dataset_version']):
+                            activate = False
             version_id = str(uuid.uuid4())
-            db.execute('INSERT INTO followup_versions VALUES(?,?,?,?,?,?,?,?,?)', (
+            db.execute('INSERT INTO followup_versions(id,filename,title,source_date,markdown,content_hash,created_at,created_by,restored_from,source_bytes,dataset_id,dataset_version) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)', (
                 version_id, filename, meta['title'], meta['source_date'], markdown, meta['content_hash'],
-                datetime.now(timezone.utc).isoformat(), actor, restored_from,
+                datetime.now(timezone.utc).isoformat(), actor, restored_from, raw, meta['dataset_id'], meta['dataset_version'],
             ))
-            db.execute('UPDATE followup_state SET current_id=? WHERE id=1', (version_id,))
+            if activate:
+                db.execute('UPDATE followup_state SET current_id=? WHERE id=1', (version_id,))
             return version_id
 
 
@@ -180,12 +215,20 @@ def create_followup_router(supabase_url: str, publishable_key: str, store: Follo
 
     @router.post('/versions')
     def publish(body: SnapshotInput, user: dict = Depends(owner)):
-        return {'id': store.publish(body.filename, body.markdown, user['email'], body.expected_current_id)}
+        return {'id': store.publish(body.filename, body.markdown, user['email'], body.expected_current_id, source_base64=body.source_base64, allow_revision=body.allow_revision, activate=body.activate)}
+
+    @router.get('/versions/{version_id}/download')
+    def download(version_id: uuid.UUID, _user: dict = Depends(member)):
+        source = store.read(str(version_id))
+        return Response(base64.b64decode(source['source_base64']), media_type='text/markdown; charset=utf-8', headers={
+            'Cache-Control': 'no-store', 'X-Content-SHA256': source['content_hash'],
+            'Content-Disposition': "attachment; filename*=UTF-8''" + quote(source['filename']),
+        })
 
     @router.post('/versions/{version_id}/restore')
     def restore(version_id: uuid.UUID, body: RestoreInput, user: dict = Depends(owner)):
         source = store.read(str(version_id))
-        return {'id': store.publish(source['filename'], source['markdown'], user['email'], body.expected_current_id, str(version_id))}
+        return {'id': store.publish(source['filename'], source['markdown'], user['email'], body.expected_current_id, str(version_id), source_base64=source['source_base64'])}
 
     @router.get('/members')
     def members(_user: dict = Depends(owner)):

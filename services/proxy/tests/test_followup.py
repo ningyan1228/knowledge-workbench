@@ -1,4 +1,6 @@
 import tempfile
+import base64
+import hashlib
 import unittest
 import uuid
 from pathlib import Path
@@ -94,6 +96,38 @@ class FollowupTest(unittest.TestCase):
         self.assertEqual(self.store.versions()['versions'], [])
         with self.assertRaises(HTTPException):
             FollowupStore(str(Path(self.temp.name) / 'unconfigured.sqlite3'), '').role(OWNER)
+
+    def test_original_bytes_download_and_permissions(self):
+        raw = ('\ufeff' + MARKDOWN.replace('\n', '\r\n') + '\r\n').encode('utf-8')
+        response = self.client.post('/follow-up/versions', headers=self.headers, json={
+            'filename': '原台账.md', 'markdown': raw.decode('utf-8'), 'source_base64': base64.b64encode(raw).decode(), 'expected_current_id': None})
+        version_id = response.json()['id']
+        path = '/follow-up/versions/' + version_id + '/download'
+        result = self.client.get(path, headers=self.headers)
+        self.assertEqual(result.content, raw)
+        self.assertEqual(result.headers['x-content-sha256'], hashlib.sha256(raw).hexdigest())
+        self.assertEqual(result.headers['cache-control'], 'no-store')
+        self.assertEqual(self.client.get(path).status_code, 401)
+        self.user['email'] = 'stranger@example.org'
+        self.assertEqual(self.client.get(path, headers=self.headers).status_code, 403)
+
+    def test_dataset_revisions_old_upload_and_failed_staging_keep_current(self):
+        def ledger(version, content='待核'):
+            return f'---\ndataset_id: test\ndataset_version: {version}\n---\n' + MARKDOWN + content
+        one = self.publish(ledger('2026-10-25-r1')).json()['id']
+        self.assertEqual(self.publish(ledger('2026-10-25-r1', '不同字节'), one).status_code, 409)
+        response = self.client.post('/follow-up/versions', headers=self.headers, json={
+            'filename': 'revision.md', 'markdown': ledger('2026-10-25-r1', '补证'), 'allow_revision': True, 'expected_current_id': one})
+        two = response.json()['id']
+        self.assertEqual(self.publish(ledger('2026-10-25-r1'), two).status_code, 409)
+        old = self.publish(ledger('2026-10-23-r1'), two).json()['id']
+        self.assertEqual(self.store.versions()['current_id'], two)
+        self.assertIn('2026-10-23-r1', self.store.read(old)['markdown'])
+        failed = self.client.post('/follow-up/versions', headers=self.headers, json={
+            'filename': 'unparsed.md', 'markdown': '新原文待解析', 'activate': False, 'expected_current_id': two})
+        self.assertEqual(failed.status_code, 200)
+        self.assertEqual(self.store.versions()['current_id'], two)
+        self.assertEqual(self.store.read(failed.json()['id'])['markdown'], '新原文待解析')
 
 
 if __name__ == '__main__':
