@@ -96,7 +96,9 @@ function parseDocument(markdown: string): FollowupDocument {
   if (new Set(ids).size !== ids.length) warnings.push('总览存在重复编号，请核对原文；系统不会自动合并客户。')
   if (customers.some(row => !row.customer)) warnings.push('部分总览行没有客户名称，请核对原文。')
   if (customers.length && !customers.some(row => row.actionDate)) warnings.push('此版本未注明可识别的建议跟进日期，保留原表顺序。')
-  customers.sort((a, b) => (a.actionDate ?? '9999').localeCompare(b.actionDate ?? '9999'))
+  // Versioned datasets own their row order, including ties. Retain the legacy
+  // date ordering only for older ledgers without a dataset contract.
+  if (!metadata.dataset_id) customers.sort((a, b) => (a.actionDate ?? '9999').localeCompare(b.actionDate ?? '9999'))
   const events: FollowupEvent[] = [], tasks: FollowupTask[] = []
   const rowSource = (b: Extract<MarkdownBlock, { kind: 'table' }>, i: number): Source => ({ id: `source-L${b.rowLines[i]}`, start: b.rowLines[i], end: b.rowLines[i], section: b.section, raw: [lines[b.start - 1], lines[b.start], lines[b.rowLines[i] - 1]].join('\n') })
   const tokens = (c: FollowupCustomer) => [...new Set([...c.customer.split(/｜| \/ /).map(s => s.trim()), ...(c.customer.match(/[A-Za-zÀ-ž][A-Za-zÀ-ž-]{3,}/g) ?? []), ...(c.detail.match(/[\w.+-]+@[\w.-]+\.[a-z]{2,}/gi) ?? [])])].filter(s => s.length >= 4 && /[a-zA-Z]/.test(s))

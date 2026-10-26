@@ -34,6 +34,10 @@ dataset_version: 2026-10-25-r1
 `
 
 describe('complete private ledger indexing', () => {
+  it('preserves the source order of a versioned dataset rather than imposing a future date order', () => {
+    const reordered = source.replace('| C01 | 2026-10-25', '| C02 | 2026-10-29 | 客户乙 | 项目乙 | 待核 | 待核 | 核对 | 未知 | 未知 | 待核 | 建议 | 未知 |\n| C01 | 2026-10-25')
+    expect(parseFollowup(reordered).customers.map(c => c.id)).toEqual(['C02', 'C01'])
+  })
   it('repairs a missing header separator only in the index, preserving all twelve fields', () => {
     const d = parseFollowup(source), c = d.customers[0]
     expect(c.fields).toHaveLength(12)
