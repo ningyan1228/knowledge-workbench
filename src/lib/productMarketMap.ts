@@ -8591,11 +8591,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "kaufman-products-maryland",
+    "company": "Kaufman Products, Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Hanover official business contact; country-level approximate map marker",
+    "latitude": 37.1,
+    "longitude": -95.7,
+    "legacyCompanyDescription": "美国自有工厂与实验室的混凝土化学品及防护涂料制造商；Kaufman/KPI/SurePoxy/KPro按一个账户，Hanover为当前业务联系地址",
+    "fit": "可开发候选",
+    "signal": "美国自有工厂及实验室的混凝土处理与防护涂料制造商，生产SurePoxy HiBild双组分柔性化环氧防护涂料，并提供液体和粉料定制配方生产。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26独立完整读取五份自身HTML原文：History54行、EpoxyCoatings129行、AllProducts301行、Contact125行、TollBlending162行，合771行。History明确自有工厂制造全部所售产品、American Family-owned与自身原料选择及环氧配方；TollBlending明确自有工厂/充分配备实验室、高速涂料分散机、原料检测、罐区及200加仑起化学批次，不将工程规范制造商名单/LinkedIn/搜索摘要当制造原文。具体EpoxyCoatings明确SurePoxyHiBild为双组分100%固体柔性化环氧防护涂料，使用环氧树脂与脂肪族加成硬化剂交联，KProCRS为化学防护环氧封闭剂。原产品性能/ASTM/环保/循环成分和DOT认可仅为客户自述，不转为ELO改善或认证保证；未读单项TDS/SDS不声称已读。AllProducts从A-D至T-Z全返回，展示116个产品链接标签；History自述200多项，索引不是全部200SKU或全部配方审计。覆盖混凝土修补/水泥及聚合物砂浆、乳胶粘接剂、已配方环氧粘合/注浆/锚固/涂料、养护/密封、硅烷、金属及非金属灌浆、脱模/清洁/硬化等成品及配套骨料。Tolling亦明确丙烯酸/苯丙、水性烃树脂涂料、蜡乳液涂料、硅酸盐、热固环氧、油/水脱模与乳胶体系，未隐去定制混配和配套输入。上述可见经营未列ELO/ESBO/环氧植物油或同类生物增塑稳定改性原料外售，有限所查范围通过选定ELO同行排除；已配方环氧粘接和防护系统及骨料不自动等同ELO原料同行。不保证隐藏集团/未读SKU/SDS全无相关原料。History自身家庭所有与品牌Kaufman/KPI/SurePoxy/KPro按一个账户，未由搜索无收购结果推最终法律股权独立；全main396/root410/front812/完整queue/来源与排除索引/历史前查，无正式同主体或旧定向GET，旧oct26s-x查询工程规范中名字只发现提及，不重置既有预算。当前六次实际来源请求均计：五完整HTML和一28页目录PDF；PDF工具仅解析176行表格片段（主要P8/P19/P20/P24/P27），没有获取28页完整正文或视觉逐页，标为不完整不可用，不据此完成产品/原料排除或制造核验。无失败但一不完整响应，六次预算用尽6/rem0STOP，不按host/语言/产品/日期重开。Contact及产品索引/涂料页均列7050HiTechDriveSuite102HanoverMaryland21076；History/Toll旧页仍3811CurtisAvenueBaltimoreMD21226-1131。两地址差异原样保留，采用当前Contact地址为业务联系，不断言工厂迁址/原厂关闭或精确门坐标。Contact公开410-354-8600和800-637-6372、传真410-354-1122，实际业务语音入口。页面DirectlyEmailUs及人员Email链接未解析具体地址，故不猜邮箱、具名收件人或采购角色；不把现有公开姓名加职位当已核邮箱归属。页面允许短信不代表WhatsApp，无WhatsApp链接，不构造账号。无邮箱不阻止合格客户，但排除批量邮件名单。ELO潜在应用仅用户资料支持的反应性环氧功能、涂料/树脂改性与柔韧评估，面向配方实验室；不声称客户现用ELO、正在采购、固化相容、耐蚀/机械/释放/成本改善或向已售成品现场掺料。"
+    },
+    "contact": {
+      "label": "官网业务电话及联系页；邮箱链接未解析，无可用批量邮件地址或WhatsApp",
+      "phone": "410-354-8600",
+      "contactUrl": "https://www.kaufmanproducts.net/contact.html"
+    },
+    "source": {
+      "label": "Own SurePoxy HiBild two-component protective epoxy formulation",
+      "url": "https://www.kaufmanproducts.net/product-type/coatings/epoxy.html"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "kaufman-products-maryland": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "magiechem-boucherville": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "chemmasters-madison-oh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bradite-paints-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -8993,6 +9021,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "kaufman-products-maryland": {
+    "website": "https://www.kaufmanproducts.net/",
+    "contactPage": "https://www.kaufmanproducts.net/contact.html",
+    "address": "Current official business contact: 7050 Hi Tech Drive, Suite 102, Hanover, Maryland 21076, United States. History/toll pages retain 3811 Curtis Avenue, Baltimore; factory relocation and exact factory-gate coordinates are not verified. Country-level approximate map marker.",
+    "generalPhone": "410-354-8600",
+    "generalPhoneEvidence": {
+      "company": "Kaufman Products, Inc.",
+      "value": "410-354-8600",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current official business voice telephone and Hanover contact address",
+          "url": "https://www.kaufmanproducts.net/contact.html",
+          "summary": "Contact page explicitly publishes410-354-8600 and tollfree800-637-6372;410-354-1122 is fax. General business voice route; no named buyer or WhatsApp inferred. Email link targets not obtained, no public email address asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own factory manufacture and family-owned company history",
+        "url": "https://www.kaufmanproducts.net/about/history.html"
+      },
+      {
+        "label": "Own specific two-component SurePoxy HiBild protective epoxy formulation",
+        "url": "https://www.kaufmanproducts.net/product-type/coatings/epoxy.html"
+      },
+      {
+        "label": "Complete returned A-Z product index; not all200+SKU or SDS audit",
+        "url": "https://www.kaufmanproducts.net/products-alphabetical.html"
+      },
+      {
+        "label": "Own toll formulation, raw material QC, factory and laboratory capabilities",
+        "url": "https://www.kaufmanproducts.net/about/toll-blending.html"
+      },
+      {
+        "label": "Own current Hanover contact address and business voice route; email not verified",
+        "url": "https://www.kaufmanproducts.net/contact.html"
+      }
+    ]
+  },
   "magiechem-boucherville": {
     "website": "https://www.magiechem.com/",
     "contactPage": "https://www.magiechem.com/contact/",
@@ -27907,6 +27979,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "kaufman-products-maryland",
   "magiechem-boucherville",
   "chemmasters-madison-oh",
   "bradite-paints-uk",
