@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vires-collegno": "Your industrial protective range includes VIRMASTIC 78 epoxy-polyamide primer and epoxy coatings for tanks and pipelines.",
   "bionic-house-ukraine": "Your VR-0008 primer-varnish is a water-based acrylic coating for parquet, wood panels, and timber.",
   "crystalac-tennessee": "Your wood-finishing range includes Acrylothane water-based topcoat, sanding sealer, and Universal Paint Base and Primer.",
   "gulf-coast-paint-loxley": "Your industrial coatings range includes epoxy mastics and epoxy novolacs for chemical-processing environments.",

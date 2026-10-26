@@ -8730,11 +8730,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "vires-collegno",
+    "company": "VIRES Srl",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Collegno official operating contact; country-level approximate map marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "意大利VIRES Srl工业涂料研发制造商；自身官网披露Collegno生产及经营地址、Turin登记地址和PIVA，未独立审计最终股东或厂门定位",
+    "fit": "可开发候选",
+    "signal": "意大利Collegno工业防护涂料自有研发制造商，生产环氧底漆、环氧中间涂及用于储罐、管道和工业结构的防腐涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26六份自有原始HTML完整独立审读：Home、About、IndustriaAnticorrosione全正文、Contact、全部可见资料索引和Pavimenti。全公司本轮/终身6/rem0停止，无重定向/失败/自动资源/PDF/远程JS，搜索只是发现非原文替代。Home明确自有生产、代工和按客户规格配方，工业页明确在Collegno生产；About确认研发生产，工业页说明自有实验室针对客户规范开发测试。当前公共Contact披露VIRESSrl、PIVA01413180017、Collegno经营地址和Turin登记地址，不将登记与经营两址分客户或把网站作者TizianaFranconieri当现任采购/所有者。ICE/LinkedIn仅Search未原文读，不把其全法律名/人名作为登记审计。工业页完整可见产品及工艺含水性/溶剂型primer/epoxyintermediate/polyurethane/acrylicfinishes、特殊防护：VIRMASTIC78为双组分epoxy-polyamide磷酸锌底漆，PRIMEREPOXV86为双组分环氧底漆，EPOXROLL为无溶剂改性环氧底面涂，COALTARVIREPOX为双组分煤焦油改性环氧，PROTECT030V12为铁件用配方保护油。真实煤焦油/溶剂/客户既有化学体系不隐藏；配方保护油不是ELO/ESBO原料销售证据。Home全主导航和资料索引覆盖工业防腐、水/溶剂体系、船舶、地坪/微水泥/设计、建筑墙面装饰/木/铁/保温、葡萄酒及食品行业成品涂装。Pavimenti直接生产地坪铺设用树脂、提供完整施工或人员培训；相关resine是地坪涂装配方体系，不能仅因resine词认定环氧植物油或生物增塑剂同行。资料索引实际十个PDF链接只读索引未下载，不冒称10PDF/SDS/全部SKU成分读取。六页实际公开经营和全可见主要业务未发现对外销售ELO/ESBO/环氧化植物油及类似生物增塑稳定原料，限定可见范围同行排除通过，不声称全部隐藏业务或股权登记绝对排除。ELO仅按用户资料coatings/resinmodification/epoxyfunctionality方向考虑自有工业防护配方的潜在实验室柔韧性/树脂改性评估，不声称其现用/购买、配方相容/固化适配、防腐耐酸提升、寿命、成本或食品接触/船级社合规；不会建议成品现场掺加。全main401/root415/front824/fullqueue/index/excluded/history去重无本体；历史3匹配为巴基斯坦税法vires和PlanetBioscience投资人VisVires，无公司定向GET，不占制造商预算/无重置。当前官网无披露新集团拆分，一公司一账户。Contactinfo@vires.it为公开通用邮箱、+390114111718号码原格式保留，无具名采购/WhatsApp猜测；公开经营地址不冒称已独立定位厂门，地图国家级概略。全程无注册/购物/表单/外联/CRM；unknown共享发送台账不当unsent，无就绪稿/复制导出/改历史。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话；非具名采购，无公开WhatsApp",
+      "email": "info@vires.it",
+      "phone": "+39 011 411 1718",
+      "contactUrl": "https://www.vires.it/contattaci/"
+    },
+    "source": {
+      "label": "Own industrial protective epoxy coating manufacture in Collegno",
+      "url": "https://www.vires.it/industria_anticorrosione/"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vires-collegno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bionic-house-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "crystalac-tennessee": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gulf-coast-paint-loxley": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9137,6 +9166,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vires-collegno": {
+    "website": "https://www.vires.it/",
+    "contactPage": "https://www.vires.it/contattaci/",
+    "address": "Own public operating contact: Via Niccolò Tommaseo 61, 10093 Collegno (TO), Italy. Own registered office: Via Guido Reni 125, 10137 Torino (TO). These are one company; exact factory-gate coordinates not independently verified. Country-level approximate map marker.",
+    "generalEmail": "info@vires.it",
+    "generalPhone": "+39 011 411 1718",
+    "generalEmailEvidence": {
+      "company": "VIRES Srl",
+      "value": "info@vires.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact public company channel",
+          "url": "https://www.vires.it/contattaci/",
+          "summary": "Contact explicitly prints info@vires.it and mailto link for VIRES Srl. Company general business route, not named procurement; no deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "VIRES Srl",
+      "value": "+39 011 411 1718",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact public company channel",
+          "url": "https://www.vires.it/contattaci/",
+          "summary": "Contact explicitly prints Telefono +39 011 411 1718, separately identifies a fax. Published voice number retained exactly, no WhatsApp inferred or call made."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacture, contract formulation and current full business menu",
+        "url": "https://www.vires.it/"
+      },
+      {
+        "label": "Own company development and production role",
+        "url": "https://www.vires.it/azienda/"
+      },
+      {
+        "label": "Own entire returned industrial protective coating systems and explicit Collegno manufacture",
+        "url": "https://www.vires.it/industria_anticorrosione/"
+      },
+      {
+        "label": "Own current full brochure index; linked PDFs not fetched",
+        "url": "https://www.vires.it/download-brochure-e-cataloghi/"
+      },
+      {
+        "label": "Own floor-coating resin formulation business",
+        "url": "https://www.vires.it/pavimenti/"
+      },
+      {
+        "label": "Own company public general email, telephone and addresses",
+        "url": "https://www.vires.it/contattaci/"
+      }
+    ]
+  },
   "bionic-house-ukraine": {
     "website": "https://bionic-house.com.ua/en/",
     "contactPage": "https://bionic-house.com.ua/en/contacts.html",
@@ -28354,6 +28446,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vires-collegno",
   "bionic-house-ukraine",
   "crystalac-tennessee",
   "gulf-coast-paint-loxley",
