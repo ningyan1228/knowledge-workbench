@@ -8842,11 +8842,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "zambotto-vernici-cerea",
+    "company": "Zambotto Vernici S.r.l.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Cerea public business address; country-level approximate map marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "意大利Cerea自有木器涂料制造企业及内部实验室；VAT和地址取自官网，地图为国家概略点，不冒称已核验厂门或最终股权",
+    "fit": "可开发候选",
+    "signal": "意大利Cerea木器涂料生产商，设有内部实验室；Fondo-Primer cerato all’acqua是适用于室内外木材的水性透明底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-26",
+      "conclusion": "2026-10-26六份自有原始HTML完整独立审读：Company、FondoPrimer完整1项分类、具体水性底漆详情、DiluentiSolventi完整6项、AltriProdotti第1页、Contact。六请求全200无重定向/失败/自动重试，终身6/rem0STOP；无远程JS、图片、视频或PDF读取。Company明确Cerea自有木器涂料制造、原料购入控制、成品取样追踪、内部实验室和生产区，水性及溶剂体系均自己制造，不从网店名称或品牌推断；5500/1500平方米为公司自述不当现场审计。具体FondoPrimer为室内外木材水性透明底漆，刷/喷/滚施涂；不猜成膜树脂、PO/CPO组成，客户干燥/湿度/耐候/面积/环保等不转为NLW效果或认证。Company及全部主要可见菜单涵盖木器着色/做旧/底涂/面涂/油/蜡/虫害处理/清洗脱漆/酒精溶剂、金属及墙面成品漆、木制家具和施工配件。六项Diluenti为硝基和PU稀释剂、变性乙醇、无味白电油、99.5度丙酮及ConcentratoRitardanteUniversale30；通用缓干剂/配套硬化剂不因additivi词自动认作所选PO/CPO水性聚烯烃分散体或原料附着促进剂，未读其SDS/全部成分，未声称化学组成绝对排除。AltriProdotti实际只返回34项中前12项，均为木工工作台/饰条/木箱/框/桌等，已知还有第2/3页未读取，明确不称全部34项目录已读。依据当前公司经营陈述、全部主要菜单、明确水性木器底漆和可见溶剂/配套/家具业务，未识别对外销售所选PO/CPO水性聚烯烃或原料附着促进输入；按有限公开经营范围通过所选产品同行排除，不声称所有SKU/隐藏原料及最终股权穷尽。ZambottoVerniciSrl、域名、Cerea地址及VAT02244530230全main405/root419/front829、全queue/sourceindex/excluded/history独立去重，无旧本体或定向原文；历史7匹配仅检索及预查/交接，非新预算重置。未披露集团关系，不创造子公司或按零售包装/厂址/水溶剂产品拆新增。当前Contact和各页店铺信息明确本公司通用邮箱zambotto@zambottovernici.com、电话+390442321141和ViaVenezia8Cerea；mailto末尾有不可见FEFF，正文邮箱实际可见，保留正文并不带控制字符。无具名采购/WhatsApp/邮箱投递验证；地图仅意大利概略非厂门坐标。NLW只按用户TDS木材水性底涂/附着促进用途作为潜在实验室评估，未确认使用、购买、相容、性能改善或需求。网店/表单/评论界面仅只读，未购物、注册、提交、联络或写CRM；shared发送台账unknown不当unsent，无就绪邮件/复制导出或历史改写。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及电话；非具名采购，无公开WhatsApp",
+      "email": "zambotto@zambottovernici.com",
+      "phone": "+39 0442 32 1141",
+      "contactUrl": "https://zambottovernici.com/contattaci"
+    },
+    "source": {
+      "label": "Own Fondo-Primer cerato all’acqua for interior/exterior wood",
+      "url": "https://zambottovernici.com/fondo-primer-cerato-all-acqua-per-legno-da-interni-ed-esterni"
+    },
+    "checkedAt": "2026-10-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zambotto-vernici-cerea": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "eureka-colour-soligo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rica-resine-castel-guelfo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bayris-ukraine": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9253,6 +9282,68 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zambotto-vernici-cerea": {
+    "website": "https://zambottovernici.com/",
+    "contactPage": "https://zambottovernici.com/contattaci",
+    "generalEmail": "zambotto@zambottovernici.com",
+    "generalPhone": "+39 0442 32 1141",
+    "generalEmailEvidence": {
+      "company": "Zambotto Vernici S.r.l.",
+      "value": "zambotto@zambottovernici.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate Contact store-information footer",
+          "url": "https://zambottovernici.com/contattaci",
+          "summary": "Own Contact explicitly prints zambotto@zambottovernici.com for Zambotto Vernici Srl. General company mailbox, not a named buyer; visible body corroborates mailto whose trailing FEFF is excluded."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "generalPhoneEvidence": {
+      "company": "Zambotto Vernici S.r.l.",
+      "value": "+39 0442 32 1141",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate Contact store-information footer",
+          "url": "https://zambottovernici.com/contattaci",
+          "summary": "Own Contact explicitly prints +39 0442 32 1141 for Zambotto Vernici Srl; no WhatsApp or personal procurement identity inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-26"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Cerea manufacture, in-house laboratory and complete main business categories",
+        "url": "https://zambottovernici.com/content/chi-siamo"
+      },
+      {
+        "label": "Own returned complete single water-based wood-primer category",
+        "url": "https://zambottovernici.com/fondo-primer-cerato-all-acqua"
+      },
+      {
+        "label": "Own interior/exterior water-based wood primer formulation",
+        "url": "https://zambottovernici.com/fondo-primer-cerato-all-acqua-per-legno-da-interni-ed-esterni"
+      },
+      {
+        "label": "Own complete returned six thinners and solvents including retarder",
+        "url": "https://zambottovernici.com/diluenti-e-solventi"
+      },
+      {
+        "label": "Own other-products page one: 12 of 34 furniture/woodcraft items only",
+        "url": "https://zambottovernici.com/altri-prodotti"
+      },
+      {
+        "label": "Own public business contact and corporate identity",
+        "url": "https://zambottovernici.com/contattaci"
+      }
+    ]
+  },
   "eureka-colour-soligo": {
     "website": "https://www.eurekacolour.com/",
     "contactPage": "https://www.eurekacolour.com/contatti/",
@@ -28722,6 +28813,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zambotto-vernici-cerea",
   "eureka-colour-soligo",
   "rica-resine-castel-guelfo",
   "bayris-ukraine",
