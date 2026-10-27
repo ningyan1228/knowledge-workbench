@@ -9008,11 +9008,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "pragati-paints-pune",
+    "company": "Pragati Paints & Allied Products",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Pimpri Chinchwad, Pune public business address; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "Pune工业成品涂料制造兼贸易合伙企业，PPAP/Pragati同一账户；公开表单及平台路由电话，未取得明示邮箱。",
+    "fit": "可开发候选",
+    "signal": "制造工业底漆与面漆，设原料和成品检测实验室；产品包括双组分环氧磷酸锌及环氧锌铬底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立完整审读4份自有HTTPS业务HTML：Primer、Profile、Infrastructure、Contact，全200无跳转/失败/重试，不执行远程JS/图片/PDF，Pragati终身4/rem2。Primer正文明确自制PU底漆由优质原料经专业团队制造；具体环氧磷酸锌底漆为2pack及钢/混凝土基面，环氧锌铬底漆为2pack及金属基面，不把锌硅酸盐、所有底漆或可燃溶剂类一并说成同一化学体系。Profile开头确有Trader/WholesaleSupply，保留兼贸易角色；自身Factory/Manufacturing、工程/化学人员、配方应用及制造/研究QC人员/合同OEM能力和产品制造章节，加Infrastructure独立制造单位/原料与成品质量检测实验室，支持自有成品涂料制造，不把所有外采产品都当自己配制。ProfileVendorBase段混入装饰灯照明，未用于涂料制造/供应商范围证明；不借其夸张激光检测/认证/客户名单为独立核验。完整可见主要产品为工业环氧/PU/合成瓷漆/氯化橡胶/煤焦油/沥青/快干/耐热成品漆、金属底涂、配套稀释剂及防锈油；EpoxyBasedProducts实际条目为成品漆/底漆，AntiRustPreventiveOil未据oil字样推ELO/ESBO/环氧化植物油或生物增塑稳定输入外售，所读有限完整主要经营未识别选定ELO同行。未声称全部SDS/隐藏SKU/最终股权已穷尽。ELO仅用户TDS涂料、环氧功能及树脂改性方向的潜在实验室柔韧/配方评估，不证明客户现用/采购/需求或保证固化、相容、防腐、耐热、锌铬环保/标准合规，不建议成品现场掺加。Pragati/PPAP及原拼写Pragti同一公司；Partnership、GST27AAIFP4510C1ZM、Partner/Promoter为自己披露非独立工商/采购授权，未改成PrivateLimited。ProfileCEO KiranJadhav与ContactBhushanCEO不一致，未擅统一任职、具名邮箱或采购职责，不录具名联系人。Profile地址PIN411001和Contact412114不同，保留Contact公开业务地址，不据邮编拆两账户或冒称独立定位厂门，地图印度概略。全main411/root425/front838/queue/index/excluded/privatehistory按公司/domain/GST/partners查重仅有旧Search及无GET预查，无旧本体来源预算。官网由IndiaMART托管是公司自有域名控制的公开业务页面，平台非集团母公司。Contact明示+91-8047637539平台路由公司电话，原格式/国家码为页面披露，不冒称工厂直线/个人/WhatsApp；公开表单可由用户手动使用。4份原HTML未取得明确业务邮箱，SendEmail按钮不是邮箱；缺邮箱不阻止合格非邮件渠道入库，不猜地址。静态Thankyou不是本次发送；不发短信/邮件/消息、不提交表单/CRM。共享发送台账unknown不当未发送，仅验证条件短文案事实和功能，无就绪稿/复制导出/历史改写。"
+    },
+    "contact": {
+      "label": "官网公开联系表单和平台路由业务电话，缺明示邮箱",
+      "phone": "+91-8047637539",
+      "contactUrl": "https://www.pragatipaints.net/enquiry.html"
+    },
+    "source": {
+      "label": "Own two-pack epoxy zinc phosphate and epoxy zinc chromate industrial primers",
+      "url": "https://www.pragatipaints.net/primer.html"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pragati-paints-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mathur-corr-tech-coimbatore": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "trident-engineering-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bluray-chemicals-ghaziabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9425,6 +9453,45 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pragati-paints-pune": {
+    "website": "https://www.pragatipaints.net/profile.html",
+    "contactPage": "https://www.pragatipaints.net/enquiry.html",
+    "generalPhone": "+91-8047637539",
+    "generalPhoneEvidence": {
+      "company": "Pragati Paints & Allied Products",
+      "value": "+91-8047637539",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact header exact platform-routed business phone",
+          "url": "https://www.pragatipaints.net/enquiry.html",
+          "summary": "Contact header explicitly discloses+91-8047637539 for the company. A platform-routed business route, not a direct factory/personal number orWhatsApp; no actual email disclosed."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial epoxy primers and full visible main product range",
+        "url": "https://www.pragatipaints.net/primer.html"
+      },
+      {
+        "label": "Own manufacture plus trade profile with legal self-disclosures",
+        "url": "https://www.pragatipaints.net/profile.html"
+      },
+      {
+        "label": "Own manufacturing unit and raw-material/finished-product quality laboratory",
+        "url": "https://www.pragatipaints.net/infrastructure.html"
+      },
+      {
+        "label": "Own contact form and platform-routed phone, no explicit mailbox",
+        "url": "https://www.pragatipaints.net/enquiry.html"
+      }
+    ]
+  },
   "mathur-corr-tech-coimbatore": {
     "website": "https://www.mathurco.net/",
     "contactPage": "https://www.mathurco.net/",
@@ -29176,6 +29243,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pragati-paints-pune",
   "mathur-corr-tech-coimbatore",
   "trident-engineering-ahmedabad",
   "bluray-chemicals-ghaziabad",

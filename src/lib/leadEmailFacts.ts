@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pragati-paints-pune": "Your industrial primer range includes two-component epoxy zinc phosphate and epoxy zinc chromate primers.",
   "mathur-corr-tech-coimbatore": "Your MATWUD wood coating range includes water-based polyurethane coatings and one- and two-pack wood sealers.",
   "trident-engineering-ahmedabad": "Your two-component epoxy zinc phosphate primer is designed for fabricated steel and mild steel.",
   "bluray-chemicals-ghaziabad": "Your EquaWood water-based PU system includes wood fillers, sealers, topcoats and stainers.",
