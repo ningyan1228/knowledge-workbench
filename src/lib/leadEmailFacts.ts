@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "kelcot-jose-ingenieros": "Your E-752 range includes two-component self-levelling epoxy systems for industrial floors.",
+  "pinar-villa-gobernador-galvez": "Your Fondo Epoxi is a solvent-based epoxy-polyamide primer for ferrous, aluminium and galvanised surfaces.",
   "grupo-olmos-empalme": "Your Del Bosque water-based acrylic varnish is designed for interior and exterior wooden surfaces.",
   "suga-boya-pendik": "Your solvent-based epoxy primer is a two-component coating for concrete, metal and wood surfaces.",
   "cubo-basergun-antalya": "Your CUBOWOOD water-based gloss varnish is a clear, ready-to-use finish for decorative wood surfaces.",

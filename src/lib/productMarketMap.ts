@@ -9258,11 +9258,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "pinar-villa-gobernador-galvez",
+    "company": "Pinar S.A.",
+    "productId": "elo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Villa Gobernador Gálvez/Santa Fe disclosed business address; country-level approximate map marker",
+    "latitude": -38.4,
+    "longitude": -63.6,
+    "legacyCompanyDescription": "PinarSA自有工业涂料设计开发制造，公开SantaFe业务地址；未独立测绘厂门或核验最终股权。",
+    "fit": "可开发候选",
+    "signal": "自有工业涂料设计、开发及制造业务；FondoEpoxi为溶剂型聚酰胺固化环氧底漆，用于铁金属、铝及镀锌表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读3份自有HTTPS200：Home、当前产品总览及实际FondoEpoxi产品；终身3/rem3，无跳转/重试/脚本/PDF，当前ELO范围6次GET含另Kelcot2和Resin失败1。Home明确设计开发制造液体涂料/稀释剂/砂浆及工业地坪涂层，Pinar品牌由PinarSA制造销售；具体产品明确溶剂型、聚酰胺固化环氧和金属保护用途。完整当前产品页主要经营为醇酸/烘烤/转印/氯化橡胶/水性成品、冷镀锌及PU/环氧/地坪体系，含富锌/MIO/环氧聚酰胺/高固体/沥青环氧成品。已读主要经营未识别ELO/ESBO/环氧化植物油或相近生物增塑稳定输入外售，所选ELO同行排除通过；补充定向原料词Search为空只作辅助，不能证明未索引业务不存在，不声称穷尽全部SDS/隐藏股权。ELO按用户TDS涂料/环氧功能/树脂改性潜在实验室柔韧评估，不保证客户配方相容/固化/附着/防腐/食品或海工合规，不建议现场掺入成品；不把客户底漆现有颜料/性能变成我方测试。35/40年自述、客户logos、IRAM/IQNET/2027文件名不作独立注册年/客户采购/认证结论，未读附件不冒称已核验。SantaFe的VillaGobernadorGalvez地址为公开业务位置，非测绘厂门；地图阿根廷概略。全main420/root434/front851/队列/索引/排除/历史按公司/Pinar/域名无旧账户或GET，HardNET仅建站服务。3原文明确pinar@pinar.com.ar和03415183131，选通用邮箱/原格式国内业务电话，无具名采购/可达或国际拨号推断。另实际公开wa.me链接为另一号码，仅保留原公开WhatsApp链接不从座机猜账号。contactPage采用已读HomeFooter，未读Contact不标已核验。未知共享发送台账不当未发送，仅条件生成器事实和用户TDS功能核对，无就绪信/复制导出/历史改写；没有邮件、表单、消息或CRM提交。"
+    },
+    "contact": {
+      "label": "官网通用公司邮箱及业务电话；无具名采购",
+      "email": "pinar@pinar.com.ar",
+      "phone": "0341 518-3131",
+      "contactUrl": "https://www.pinar.com.ar/"
+    },
+    "source": {
+      "label": "Own FondoEpoxi for ferrous aluminium and galvanised surfaces",
+      "url": "https://www.pinar.com.ar/productos/epoxi/fondo-epoxi"
+    },
+    "checkedAt": "2026-10-27"
+  },
+  {
+    "id": "kelcot-jose-ingenieros",
+    "company": "KELCOT S.A.",
+    "productId": "elo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "José Ingenieros/Buenos Aires disclosed business address; country-level approximate map marker",
+    "latitude": -38.4,
+    "longitude": -63.6,
+    "legacyCompanyDescription": "KelcotSA自有配方实验室及工业涂层制造施工，E752成品体系；公开业务地址非实地核验工厂门。",
+    "fit": "可开发候选",
+    "signal": "自有实验室配方研发、制造并施工工业涂层；E-752系列为双组分自流平环氧地坪成品体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读2份自有HTTPS200：Home完整经营/制造/研发及当前Products目录；终身2/rem4，当前ELO范围合计6GET已到上限，不为单公司配额读取6页。Home明确自行开发生产施工、自己的配方实验室；当前产品目录12类、声明317项但只返回9款，实际逐项读取这9款及完整可见类别，不谎称读完317SKU。E752/E752F条目明确双组分自流平环氧地坪，HomeE752同一成品系列和制造主体一致。主经营为工业/装饰地坪、防水、工业维护/防腐、耐化学坦克管道、胶黏砂浆、建筑漆、瓷漆清漆、耐高温、防火、道路运动地坪及弹性密封等成品和施工；DocumentationAuxiliaries7项未逐页读取，不能断言其全部成分。实际已读主要经营及可见产品未识别ELO/ESBO/环氧化植物油或相近生物增塑稳定原料外售，所选ELO同行排除通过；定向原料词Search为空仅辅助，不当全部SKU/SDS/隐藏业务穷尽或外购证明。用户ELO资料支持涂料/环氧功能/树脂改性，作为潜在实验室柔韧/改性评估，不保证客户2K固化/相容、地坪性能/食品/核工业认证，不建议成品施工现场掺加。Home1977、SENASA/FDA/P1303标签、客户logos和化学耐受宣传不作独立注册/合规/客户采购或我方性能，特别不把PU水泥体系标签外推到E752。KELCOT/KelcotSA同一账户，BuenosAiresJoséIngenierosRománGómez2085为业务地址，不宣称已独立定位工厂门，坐标阿根廷概略。全main420/root434/front851/完整队列/索引/排除/历史按Kelcot及域名无旧账户/GET，未做隐藏最终股权保证。两原文页脚公开mailto:consultas@kelcot.com.ar和实际wa.me业务链接，即使图标无文字也不从手机号猜邮箱/链接；通用咨询公司邮箱不冒称具名采购。未读得公开电话呼叫线路，不把WhatsApp号码反推座机/手机电话，generalPhone保持缺项。contactPage使用已读Home公开渠道区，不把未读Contact单页标已核验。未知发送台账不当未发送，仅核对条件生成器事实/TDS功能，无就绪信/复制导出或改写发送历史，无邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网通用咨询邮箱及实际公开WhatsApp链接；无具名采购或电话线路验证",
+      "email": "consultas@kelcot.com.ar",
+      "contactUrl": "https://www.kelcot.com.ar/"
+    },
+    "source": {
+      "label": "Own E-752 epoxy floor coating systems",
+      "url": "https://www.kelcot.com.ar/productos"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "kelcot-jose-ingenieros": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "pinar-villa-gobernador-galvez": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "grupo-olmos-empalme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "suga-boya-pendik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cubo-basergun-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9684,6 +9741,91 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "kelcot-jose-ingenieros": {
+    "website": "https://www.kelcot.com.ar/",
+    "contactPage": "https://www.kelcot.com.ar/",
+    "address": "RománGómez2085,JoséIngenieros,BuenosAires,Argentina. Disclosed businesslocation, not surveyedfactoryentrance; Argentina-level approximate marker.",
+    "generalEmail": "consultas@kelcot.com.ar",
+    "generalEmailEvidence": {
+      "company": "KELCOT S.A.",
+      "value": "consultas@kelcot.com.ar",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public corporate business route",
+          "url": "https://www.kelcot.com.ar/",
+          "summary": "Own corporatefooter publishes exactmailto companyinquiryroute, repeatedownproductscatalogue. Public generalbusinesschannel withicon, no namedpurchasing/deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://wa.me/5491133026020?text=Hola%20Kelcot,%20estoy%20visitando%20el%20sitio%20web%20y%20deseo%20hacer%20una%20consulta.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own formulation laboratory manufacture/current majorbusiness and corporatecontactroutes",
+        "url": "https://www.kelcot.com.ar/"
+      },
+      {
+        "label": "Own current catalogue12categories9visibleof317; E752two-component epoxyfloorcoatings",
+        "url": "https://www.kelcot.com.ar/productos"
+      }
+    ]
+  },
+  "pinar-villa-gobernador-galvez": {
+    "website": "https://www.pinar.com.ar/",
+    "contactPage": "https://www.pinar.com.ar/",
+    "address": "Av.Soldado Aguirre3483,2124VillaGobernadorGálvez,SantaFe,Argentina. Disclosed business address, not surveyedfactoryentrance; Argentina-level approximate marker.",
+    "generalEmail": "pinar@pinar.com.ar",
+    "generalEmailEvidence": {
+      "company": "Pinar S.A.",
+      "value": "pinar@pinar.com.ar",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public corporate business route",
+          "url": "https://www.pinar.com.ar/",
+          "summary": "Home explicitly prints company-brand mailbox and mailto, repeated Products/FondoEpoxi; generalcompanyroute, not namedpurchasing or deliverability."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "0341 518-3131",
+    "generalPhoneEvidence": {
+      "company": "Pinar S.A.",
+      "value": "0341 518-3131",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public corporate business route",
+          "url": "https://www.pinar.com.ar/",
+          "summary": "OwnHome labels rotationalbusinesslines and prints03415183131, repeatedotherownoriginals. Exactlocalformat, not guessedinternationalformat/personalphone/WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://wa.me/5493412127219?text=Hola%2C%20me%20gustar%C3%ADa%20que%20se%20contacten%20para%20recibir%20informaci%C3%B3n.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial coating design development manufacture and corporatecontact",
+        "url": "https://www.pinar.com.ar/"
+      },
+      {
+        "label": "Own complete visible major finished coating range",
+        "url": "https://www.pinar.com.ar/productos"
+      },
+      {
+        "label": "Own solvent-based epoxy-polyamide metal primer",
+        "url": "https://www.pinar.com.ar/productos/epoxi/fondo-epoxi"
+      }
+    ]
+  },
   "grupo-olmos-empalme": {
     "website": "https://olmos.com.uy/",
     "contactPage": "https://olmos.com.uy/contact/",
@@ -29894,6 +30036,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "kelcot-jose-ingenieros",
+  "pinar-villa-gobernador-galvez",
   "grupo-olmos-empalme",
   "suga-boya-pendik",
   "cubo-basergun-antalya",
