@@ -9203,11 +9203,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "suga-boya-pendik",
+    "company": "SUGA BOYA KİMYA SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+    "productId": "elo",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Pendik/Kurtköy/Istanbul disclosed factory; country-level approximate map marker",
+    "latitude": 39,
+    "longitude": 35.2,
+    "legacyCompanyDescription": "SugaBoya自有工厂及涂层配方制造，SugaMarket为官方同主体销售平台，办公通知处与Pendik工厂不拆客户。",
+    "fit": "可开发候选",
+    "signal": "在IstanbulPendikKurtköy自有设施研发及制造涂层；当前SolventliEpoksiAstar为双组分溶剂型环氧底漆，应用于混凝土、金属和木材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读4份自有HTTPS200：SugaMarketAbout、实际链接企业站Guncel、企业站环氧产品目录及具体SolventliEpoksiAstar底漆。终身4/rem2；当前范围另读MPlus2份经营原文仍私有，合计6GET，无跳转/重试/远程JS，不为单公司配额读满6。平台About明确SUGABOYAKIMYASANAYIVETICARETLIMITEDSIRKETI自有PendikKurtköy工厂、研发团队原料选择及配方、官方网店与制造方同一实体，列税号7821368086/MERSIS0782136808600001/登记234732为自述未查注册机关。企业站明确Suga品牌及同公司info邮箱/电话并反向链接官方网店，两个自有站相互对应，不是将普通经销商城当制造商。当前环氧目录含溶剂型底漆、溶剂型面漆及UltraClear环氧清漆；具体底漆明确双组分环氧及防腐蚀颜料和混凝土/金属/木材应用。完整平台主要经营为11类地坪/环氧/道路标线/修补/底涂/防水/隔热成品、工业及特殊用途、施工材料和木器清漆，企业站7类导航一致；配套辊筒、稀释剂等不作ELO同行。有限已读完整主要业务未识别ELO、ESBO、环氧化植物油及相近生物增塑稳定输入外售，所选原料同行排除通过，不声称已读全部SDS/SKU/隐藏业务。用户ELO资料支持涂料、环氧功能及树脂改性，自己制造环氧保护涂层可作为潜在实验室柔韧/树脂改性评估，未确认实际采购/使用/配方相容或改善防腐/固化/附着，不建议成品现场掺加。自有页面的客户案例、低VOC/性能/安全表/覆盖量/认证与市场排名不作独立核验事实，也不转为我方保证；平台ISO列销售进口出口范围和企业页面产品ISO表述不能替代原始制造证据或品牌合规证明，资格来自独立重读明确工厂制造/配方叙述和具体成品。公司Suga/SugaMarket/SugaBoya及sugazemin施工网站为同一关联方向，工厂与FatihOyunSok4/16通知地址不拆新增；公开厂址ŞeyhliMahŞüedaCad29/1PendikKurtköy为企业自述，不推实地GPS，地图土耳其概略。全main418/root432/front848/完整队列/索引/排除/历史按主体/品牌/两域名/税号/MERSIS/电话查重无同一客户或旧GET。企业站Guncel/目录/底漆明确info@sugaboya.com.tr、+90(850)9660558，选一般公司邮箱及非地域业务线路，不冒称具名采购、工厂直线或可达。平台AboutCloudflare邮箱不从掩码猜地址，企业站明文相互佐证；实际wa.me链接在平台原文公开，保留原链接而非由电话猜WhatsApp。未读Contact页不标已核验，contactPage采用企业站已读GuncelFooter。LinkedIn带undefined字段不采作个人身份；VOX/Nesa为建站/系统服务方不当母集团。共享发送状态unknown不当未发送，仅核对条件生成器事实/TDS功能，不生成就绪信、复制导出或改写发送历史，无邮件/表单/消息/CRM提交。"
+    },
+    "contact": {
+      "label": "企业官网明文通用邮箱、公司业务热线，非具名采购",
+      "email": "info@sugaboya.com.tr",
+      "phone": "+90 (850) 966 05 58",
+      "contactUrl": "https://sugaboya.com.tr/guncel/"
+    },
+    "source": {
+      "label": "Own SUGA Solventli Epoksi Astar two-component coating",
+      "url": "https://sugaboya.com.tr/urun/suga-solventli-epoksi-astar-20-kg/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "suga-boya-pendik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cubo-basergun-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "son-hoa-viet-ho-chi-minh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "durafine-coatings-vaughan": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9627,6 +9656,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "suga-boya-pendik": {
+    "website": "https://sugaboya.com.tr/",
+    "contactPage": "https://sugaboya.com.tr/guncel/",
+    "address": "Disclosed factory:Şeyhli Mahallesi Şüeda Caddesi No29/1,34906Kurtköy–Pendik/Istanbul. Officialstore notificationoffice:FatihMahOyunSokNo4/16Pendik. Oneaccount; no independently surveyedfactoryentrance, Turkey-level approximate map marker.",
+    "generalEmail": "info@sugaboya.com.tr",
+    "generalEmailEvidence": {
+      "company": "SUGA BOYA KİMYA SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+      "value": "info@sugaboya.com.tr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate Guncel public contact footer",
+          "url": "https://sugaboya.com.tr/guncel/",
+          "summary": "Corporate Guncel explicitly prints company email and mailto, repeated own epoxy category and primer; no named buyer/deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "+90 (850) 966 05 58",
+    "generalPhoneEvidence": {
+      "company": "SUGA BOYA KİMYA SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+      "value": "+90 (850) 966 05 58",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own corporate Guncel public contact footer",
+          "url": "https://sugaboya.com.tr/guncel/",
+          "summary": "Corporate Guncel header/footer prints this company non-geographic business line with matching tel:+908509660558; same officialstore hotline, not a named/directfactory line."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://wa.me/908509660558?text=Merhaba%2C%20websitenizden%20yaz%C4%B1yorum%2C%0Ahttps%3A%2F%2Fsugamarket.com%2Fsayfa%2Fhakkimizda",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own official store legal operator, factory/R&D and full primary business",
+        "url": "https://sugamarket.com/sayfa/hakkimizda"
+      },
+      {
+        "label": "Own corporate site with reciprocal store link and exact contact",
+        "url": "https://sugaboya.com.tr/guncel/"
+      },
+      {
+        "label": "Own current solvent-based epoxy primer/topcoat/UltraClear varnish range",
+        "url": "https://sugaboya.com.tr/kategori/epoksi-kaplama-sistemleri/"
+      },
+      {
+        "label": "Own two-component solvent-based epoxy primer for concrete metal wood",
+        "url": "https://sugaboya.com.tr/urun/suga-solventli-epoksi-astar-20-kg/"
+      }
+    ]
+  },
   "cubo-basergun-antalya": {
     "website": "https://cubo.com.tr/",
     "contactPage": "https://cubo.com.tr/iletisim/",
@@ -29737,6 +29822,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "suga-boya-pendik",
   "cubo-basergun-antalya",
   "son-hoa-viet-ho-chi-minh",
   "durafine-coatings-vaughan",
