@@ -8925,11 +8925,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "bluray-chemicals-ghaziabad",
+    "company": "Bluray Chemicals Pvt. Ltd.",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ghaziabad public business address; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "印度Ghaziabad木器及工业成品涂料研发制造业务，Bluray/Blueray和EquaWood同一账户；公开业务地址非独立定位厂门，未推最终集团股权。",
+    "fit": "可开发候选",
+    "signal": "自有涂料制造与研发实验室；EquaWood为水性PU木器体系，包含填充剂、封闭底涂、面涂和着色剂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立完整业务审读3份自有HTTPS原始HTML：WoodCoatings、Profile、Contact，3次全200无跳转/失败/重试，未执行远程JS或读取额外资源，终身3/rem3保留。Wood正文明确EquaWood是waterbasedPUcoatingsystem，单组分室内和2K室外，完整系列为水性填充/封闭底涂/面涂/着色；NewSilk/Classic/Star等其他PU系列不全部冒称水性，也不只据AQUA产品菜单猜体系。Profile直接自有现代涂料制造设施、R&D实验室、配方设计/质量/生产技术支持；通用页脚R&D原文进一步说明产品在研发配方测试后送制造单位，不从品牌或经销列表推制造。完整可见主要菜单/经营范围为木器/金属/玻璃/塑料/建筑/地坪/汽车及OEM成品漆，溶剂和水性PU、环氧及环氧煤焦油/氯化橡胶/硝基/烘烤/合成体系、底面涂/腻子等；SurfaceAdhesion是研发能力说明，不是原料AP外售，AcrylicEmulsionWithHighSheen属于装饰成品漆。有限实际业务未识别PO/CPO/水性聚烯烃分散体或原料级附着促进输入外售，同行排除通过；不声称已读全部SKU/SDS/隐藏股权或全化学配方。用户NLW仅按TDS木材底涂/表面处理及附着促进的潜在实验室配方评估，不把客户ISO/foodgrade/leadfree/lowVOC/UV/硬度/寿命/耐热等宣称转为我方相容/性能/法规承诺；不暗示现用/购买、需求或把成品现场掺加。BLURAY/BLUERAY/BlueRay及EquaWood均按同一公司；完整main408/root422/front835及全queue/index/excluded/history按名称/域名/品牌/邮箱精确查重无旧本体GET或账户，未披露集团归属不造最终股权结论。页脚BLURAYCHEMICALSPVTLTD及C645SHAHEEDNAGARGAZIABAD为自身业务身份和地址，不猜CIN/GST/具名采购，不当已独立定位厂门；地图印度概略。Contact和另外两页均通过公开data-cfemail字节属性披露同一info@bluraychemical.com及HR邮箱；离线确定性XOR解码保留3页原始hex和结果，无远程代码、授权绕过、格式猜测或自动域名修正。业务邮箱是单数chemical.com而站点是复数chemicals.com，按3份一致披露原值保留，未作投递/SMTP或独立域名登记核验；HR不录作采购。选通用info及官网原格式01202860802业务电话，另01202680802未合并猜改，电话不自动WhatsApp。website指向已实际读取Profile而非未访问根页。表单只读无提交/消息/CRM；共享发送台账unknown不当unsent，只有事实和条件生成器核对，无就绪稿/复制导出或改历史。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及电话；邮箱从公开编码属性确定性解码，非具名采购",
+      "email": "info@bluraychemical.com",
+      "phone": "0120 2860802",
+      "contactUrl": "https://bluraychemicals.com/index.php/contact-us/"
+    },
+    "source": {
+      "label": "Own EquaWood water-based wood fillers, sealers, topcoats and stainers",
+      "url": "https://bluraychemicals.com/index.php/wood-coatings/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "bluray-chemicals-ghaziabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rely-paints-ghaziabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indogem-enamels-ludhiana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zambotto-vernici-cerea": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9339,6 +9368,56 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "bluray-chemicals-ghaziabad": {
+    "website": "https://bluraychemicals.com/index.php/profile/",
+    "contactPage": "https://bluraychemicals.com/index.php/contact-us/",
+    "generalEmail": "info@bluraychemical.com",
+    "generalPhone": "0120 2860802",
+    "generalEmailEvidence": {
+      "company": "Bluray Chemicals Pvt. Ltd.",
+      "value": "info@bluraychemical.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact public business email attributes",
+          "url": "https://bluraychemicals.com/index.php/contact-us/",
+          "summary": "The public Contact Bluray footer data-cfemail decodes deterministically toinfo@bluraychemical.com, independently matching the other2saved own pages. Singularchemical.com is retained exactly; not guessed from pluralwebsite, not a named buyer or deliverability proof."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhoneEvidence": {
+      "company": "Bluray Chemicals Pvt. Ltd.",
+      "value": "0120 2860802",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact public corporate telephone",
+          "url": "https://bluraychemicals.com/index.php/contact-us/",
+          "summary": "Contact footer explicitly printsPHONE NO0120 2860802 and0120 2680802; first exact public company number retained, no personal/WhatsApp/direct-factory inference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own EquaWood explicitly water-based PU wood-coating system",
+        "url": "https://bluraychemicals.com/index.php/wood-coatings/"
+      },
+      {
+        "label": "Own paint manufacture, R&D laboratory and full main business scope",
+        "url": "https://bluraychemicals.com/index.php/profile/"
+      },
+      {
+        "label": "Own public company contact and encoded business email attributes",
+        "url": "https://bluraychemicals.com/index.php/contact-us/"
+      }
+    ]
+  },
   "rely-paints-ghaziabad": {
     "website": "https://www.relypaints.co.in/",
     "contactPage": "https://www.relypaints.co.in/enquiry.html",
@@ -28955,6 +29034,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "bluray-chemicals-ghaziabad",
   "rely-paints-ghaziabad",
   "indogem-enamels-ludhiana",
   "zambotto-vernici-cerea",
