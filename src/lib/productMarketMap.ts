@@ -9313,11 +9313,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "urchemikal-urlak-mendaro",
+    "company": "Urchemikal / URLAK",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Mendaro, Guipuzkoa; disclosed business address; approximate country marker",
+    "latitude": 40.4,
+    "longitude": -3.7,
+    "legacyCompanyDescription": "URLAK/Urchemikal自有木器水性清漆配方及制造；Mendaro为公开业务地址，未测绘厂门。",
+    "fit": "可开发候选",
+    "signal": "自有工厂制造水性清漆和微水泥，自有化学配方及研发部门；Urlak 600/700为用于木材高人流区域的双组分水性聚氨酯清漆，Primer-1/202为水性木材底涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "全文读取Home、当前Products和Contact。Home明确自有清漆/微水泥工厂，Contact明确自行开发所有产品配方及当前I+D，Products明确木器水性底涂及Urlak600/700等成品。完整可见产品页另有微水泥、配套水性丙烯酸Resina/P50、Primer5、成品水性PU封闭及辅料；这些成品和微水泥配套丙烯酸组分未显示为所选PO/CPO或聚烯烃附着促进原料外售，不能把所有Resina字样一概当作同类原料同行。未读技术PDF不冒称验证；催化剂条目疑似重复820文案，不以该重复内容建证。发现查询中Uruguay只是检索地，已按明确Mendaro/Guipuzkoa地址归西班牙；不为了查询地把企业放乌拉圭。URCHEMIKAL页脚与URLAK业务同域一账户，未公开公司法律后缀不补SL/CIF/注册年；十五年为团队经验，非独立成立日期。全最新main422/root436/front854/完整队列/索引/排除/历史按Urchemikal/Urlak/域名/电话/地址去重，旧三份文件只是Search/预检，0历史公司GET；没有已存账户。公开公司邮箱及原格式电话分别留来源，无具名经理采购、无猜WhatsApp。 当前独立审读每家公司3份自有HTTPS200正文，终身各3/rem3，本NL-W1201范围6次GET即止，无重试、自动跳转、脚本执行或附件读取。所有应用及公司制造、公开渠道证据分开核验。已读当前主要业务未识别所选聚烯烃乳液、CPO/PO分散体或附着促进原料外售，通过本产品同行排除；不把成品水性木器涂层等同于原料同行，也不声称穷尽全部SKU/SDS/隐藏业务或最终股权。NL-W1201用户资料支持木材表面处理、聚烯烃分散体及底涂/附着促进用途；只作为潜在配方实验室评估对象，不声称客户现有体系含我方路线、已经相容或采购，不保证性能/耐候/固化。未知共享发送台账不当未发送；仅核对未来条件生成器，未生成就绪开发信、复制/导出或改写发送历史，无邮件、表单、消息或CRM。"
+    },
+    "contact": {
+      "label": "官网通用公司邮箱及公开业务电话；无具名采购",
+      "email": "info@urchemikal.com",
+      "phone": "722616346",
+      "contactUrl": "https://urchemikal.com/contacto"
+    },
+    "source": {
+      "label": "Own Urlak 600/700 waterborne wood varnishes and Primer-1/202, corroborated own formula development and factory",
+      "url": "https://urchemikal.com/productos"
+    },
+    "checkedAt": "2026-10-27"
+  },
+  {
+    "id": "crisoles-montevideo",
+    "company": "Crisoles S.A.",
+    "productId": "nl-w1201",
+    "country": "Uruguay",
+    "countryZh": "乌拉圭",
+    "city": "Montevideo; disclosed Campichuelo business address; approximate country marker",
+    "latitude": -32.5,
+    "longitude": -55.8,
+    "legacyCompanyDescription": "CrisolesSA自有Belvedere制造工厂及技术部门，水性木材保护涂层；公开业务地址不等同测绘厂门。",
+    "fit": "可开发候选",
+    "signal": "自有Belvedere涂料制造工厂及技术部门，开发制造木器涂层；公开水性木材保护涂层Natural/Cedro/Caoba/Nogal/Cristal，实际Cristal 900 ml产品与官网制造主体一致。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "全文读取Home、完整可见水性木材保护产品类别及实际Cristal900ml页。Home明确开发制造、Belvedere自有生产工厂及技术部门；类别实际返回12款、两页中第一页，不声称读完所有SKU。Cristal页正文只明确水性木材保护涂层及0.900L包装，不捏造成分、树脂类型、内外用途、释放/耐候/防腐性能；技术PDF及颜色卡未读不标验证。Home完整可见主营为成品水性漆、织纹/微水泥、合成瓷漆、木器清漆/底涂/水性及溶剂保护涂层、表面准备、防锈底漆及水性柔印墨等成品；不将仅有柔印墨标签外推本轮未采用的印刷基材。历史自述创办人CarlosBarreira曾在家族PinturasGranitol工作，已保留关联说明；不凭家族前雇主推断当前控股集团，也不把创办人当具名采购。全最新main422/root436/front854/队列/索引/排除及历史按Crisoles/Granitol/Barreira/域名/地址/电话检查无旧账户，36份匹配均为葡语普通barreira屏障术语，逐项核对并保存预算解析，历史0公司GET。1991为官网自述不当工商独立认证。公开公司邮箱、座机及另一显式WhatsApp分别留来源；未读Contact单页，用已读Home实际业务渠道区作contactPage。 当前独立审读每家公司3份自有HTTPS200正文，终身各3/rem3，本NL-W1201范围6次GET即止，无重试、自动跳转、脚本执行或附件读取。所有应用及公司制造、公开渠道证据分开核验。已读当前主要业务未识别所选聚烯烃乳液、CPO/PO分散体或附着促进原料外售，通过本产品同行排除；不把成品水性木器涂层等同于原料同行，也不声称穷尽全部SKU/SDS/隐藏业务或最终股权。NL-W1201用户资料支持木材表面处理、聚烯烃分散体及底涂/附着促进用途；只作为潜在配方实验室评估对象，不声称客户现有体系含我方路线、已经相容或采购，不保证性能/耐候/固化。未知共享发送台账不当未发送；仅核对未来条件生成器，未生成就绪开发信、复制/导出或改写发送历史，无邮件、表单、消息或CRM。"
+    },
+    "contact": {
+      "label": "官网通用公司邮箱及公开业务电话；无具名采购",
+      "email": "crisoles@crisoles.com.uy",
+      "phone": "(+598) 2307 1664",
+      "contactUrl": "https://crisoles.uy/"
+    },
+    "source": {
+      "label": "Own water-based wood-protector range and Cristal product, independently corroborated factory and technical department",
+      "url": "https://crisoles.uy/protector-para-madera-base-agua"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "crisoles-montevideo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+  "urchemikal-urlak-mendaro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "kelcot-jose-ingenieros": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinar-villa-gobernador-galvez": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "grupo-olmos-empalme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9741,6 +9799,109 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "crisoles-montevideo": {
+    "website": "https://crisoles.uy/",
+    "contactPage": "https://crisoles.uy/",
+    "address": "Campichuelo 244, Montevideo, Uruguay. Disclosed business address; own manufacturing plant described in Belvedere, exact factory entrance not independently surveyed; country-level approximate marker.",
+    "generalEmail": "crisoles@crisoles.com.uy",
+    "generalEmailEvidence": {
+      "company": "Crisoles S.A.",
+      "value": "crisoles@crisoles.com.uy",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business channel",
+          "url": "https://crisoles.uy/",
+          "summary": "Own Home/category/Cristal product footer explicitly publishes mailto:crisoles@crisoles.com.uy. The .com.uy mailbox differs from the .uy site but is explicitly company-disclosed; no guessed domain or named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "(+598) 2307 1664",
+    "generalPhoneEvidence": {
+      "company": "Crisoles S.A.",
+      "value": "(+598) 2307 1664",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business channel",
+          "url": "https://crisoles.uy/",
+          "summary": "Own footer explicitly publishes (+598) 2307 1664 with tel:59823071664. Separate public WhatsApp link uses another number and is retained only as the actual disclosed wa.me URL."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://wa.me/59895170337",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own coating development/manufacture, Belvedere factory and technical department; business channels and family history",
+        "url": "https://crisoles.uy/"
+      },
+      {
+        "label": "Own water-based wood-protector category; 12 visible products of two pages",
+        "url": "https://crisoles.uy/protector-para-madera-base-agua"
+      },
+      {
+        "label": "Own Cristal 900 ml water-based wood protector; published channels",
+        "url": "https://crisoles.uy/15955-protector-de-madera-al-agua-cristal-900-ml"
+      }
+    ]
+  },
+  "urchemikal-urlak-mendaro": {
+    "website": "https://urchemikal.com/",
+    "contactPage": "https://urchemikal.com/contacto",
+    "address": "POL. IND. Igartualdea, 17 Nave NN.6, 20850 Mendaro (Guipuzkoa), Spain. Disclosed business address; factory entrance not independently surveyed; country-level approximate marker.",
+    "generalEmail": "info@urchemikal.com",
+    "generalEmailEvidence": {
+      "company": "Urchemikal / URLAK",
+      "value": "info@urchemikal.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business channel",
+          "url": "https://urchemikal.com/contacto",
+          "summary": "Own Contact page explicitly publishes info@urchemikal.com alongside URLAK business identity and Mendaro address. General company route, no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "722616346",
+    "generalPhoneEvidence": {
+      "company": "Urchemikal / URLAK",
+      "value": "722616346",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business channel",
+          "url": "https://urchemikal.com/contacto",
+          "summary": "Own Contact page explicitly prints 722616346 as corporate contact. Exact published local format retained; international prefix and WhatsApp not inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own waterborne varnish and microcement factory",
+        "url": "https://urchemikal.com/"
+      },
+      {
+        "label": "Complete visible major product range; waterborne wood finishes and primers",
+        "url": "https://urchemikal.com/productos"
+      },
+      {
+        "label": "Own formula development, current R&D and published business contact",
+        "url": "https://urchemikal.com/contacto"
+      }
+    ]
+  },
   "kelcot-jose-ingenieros": {
     "website": "https://www.kelcot.com.ar/",
     "contactPage": "https://www.kelcot.com.ar/",
@@ -30036,6 +30197,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "crisoles-montevideo",
+  "urchemikal-urlak-mendaro",
   "kelcot-jose-ingenieros",
   "pinar-villa-gobernador-galvez",
   "grupo-olmos-empalme",
