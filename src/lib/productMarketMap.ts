@@ -9035,11 +9035,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "tara-paints-ahmedabad",
+    "company": "Tara Paints Pvt Ltd (TARALAC)",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ahmedabad / Moraiya public business address; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "Tara Paints当前TARALAC木器及工业成品涂料制造业务，历史TaraPaints&Chemicals及TPNA关联不拆客户；原私有项首次正式入库。",
+    "fit": "可开发候选",
+    "signal": "自有涂料工厂及研发、应用和质检实验室；TARALAC 0853为单组分水性丙烯酸哑光木器面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立完整审读当前3份自有HTTPS业务HTML：Home、AboutUs、0853单组分水性木器面漆；当前商城Shop另1请求25秒超时无正文，不声称已读其完整目录/SDS。合计本轮4请求3业务原文+1超时，沿用旧2026-10-19实际TinyFish两URL超时，终身6STOP/0余额；旧木器行业/0853原始响应2errors已核原件，旧复本不重复计调用，跨日期/provider不归零，当前0853为显式手动复核并已计请求，不自动重试。About明确TaraPaintsPvtLtd当前经营，TARALAC商标、Moraiya/Changodar制造单位、自动配料和产品生产设施；分设PilotProcess/advanced/application/production/QC实验室及QA/R&D。原有TaraPaints&Chemicals为自身历史时间线，不重造新客户；TPNA是自述北美关联业务，不另收美国/其他分支账户，最终股权/工商注册未独立验证。1977起点/2017和2018厂房时间/面积与客户数量仅自身营销描述，保留原文差异不推当前产能，不借认证/包装食品接触声明为我方性能。0853主文明确TARALACWATERBASEPUD是polyacrylicdispersion，用作wood/woodenmaterialsfinishing；自身产品分类是singlepack、waterbased、matt、Finish/TopCoat及WoodCoatings，不从PUD缩写推为原料聚氨酯/聚烯烃分散体，也不把所有PU/溶剂木器产品说成水性。完整已读首页主要ProductProfile/Industry范围为建筑装饰、木器/防护、汽车修补护理、工业基础设施、路标地坪、包装、电器绝缘、建筑防水、气雾成品漆等；所读3份实际主要经营原文未发现PO/CPO/水性聚烯烃分散体或同类原料级附着促进输入外售，有限公开主要业务同行排除通过。Search目录Additive/Adhesive通用筛选标签及未读Product20仅是发现线索，不凭标签确认选定原料同行，也不冒称目录各页/全部SKU/SDS/隐藏业务均核验。0853明确成品木材面涂，不能因polyacrylicdispersion词将其当成NLW同类PO原料。NLW仅用户TDS木材表面处理/底涂附着促进的潜在实验室配方评估，不暗示0853当前使用我方原料/有采购需求或保证相容、硬度、耐候/防腐/食品法规/阻燃等；KCMA/FDA/ZED/ISO等公司声明未独立复核，不转成我方认证或性能保证，不建议成品现场掺加。全main412/root426/front841/全queue/index/excluded/privatehistory按TARALAC/TaraPaints/tarapaints.com/独立TPNA词去重，只有原私有Tara同一账户，无公开同组；宽TPNA曾匹配HTTPnamed等片段，已用单词边界复核并排除Fertco/TintasKar上下文误中，不因此合并集团/预算。CurrentHome/About/Product三页均公开data-cfemail属性确定性离线XOR得admin@tarapaints.com及ahmedabad@tarapaints.com，保留各页hex与原文件hash；选择admin通用公司邮箱，不冒称具名采购/实际技术职责，域名与taralac不同按原文保留，不猜地址/SMTP/投递核验。Header明示+918000011774原格式，其他手机/座机不猜WhatsApp；业务地址A423/14Moraiya为公开公司地址，印度概略地图非独立厂门定位。Home公开表单只读，honeypot/静态Contact不是提交；无邮件/消息/表单/CRM写入。共享发送台账unknown不当未发送，仅核将来条件文案事实和材料功能，不生成就绪稿/复制导出/改历史。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱、电话和表单；编码邮箱离线解码，非具名采购",
+      "email": "admin@tarapaints.com",
+      "phone": "+91 8000 011 774",
+      "contactUrl": "https://taralac.com/"
+    },
+    "source": {
+      "label": "Own TARALAC0853 single-pack water-based acrylic matt wood finish",
+      "url": "https://taralac.com/product/0853-wb-1k-acrylic-matt/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "tara-paints-ahmedabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pragati-paints-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mathur-corr-tech-coimbatore": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "trident-engineering-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9453,6 +9482,56 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "tara-paints-ahmedabad": {
+    "website": "https://taralac.com/",
+    "contactPage": "https://taralac.com/",
+    "generalEmail": "admin@tarapaints.com",
+    "generalPhone": "+91 8000 011 774",
+    "generalEmailEvidence": {
+      "company": "Tara Paints Pvt Ltd (TARALAC)",
+      "value": "admin@tarapaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home CONTACT public business email attributes",
+          "url": "https://taralac.com/",
+          "summary": "Publicdata-cfemail decodes offline toadmin@tarapaints.com, matching About and0853page. Exact company general mailbox, not inferred fromtaralacdomain, named procurement or deliverability proof."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhoneEvidence": {
+      "company": "Tara Paints Pvt Ltd (TARALAC)",
+      "value": "+91 8000 011 774",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home header public company phone",
+          "url": "https://taralac.com/",
+          "summary": "Header explicitly discloses+91 8000 011 774, also matching footer mobile8000011774. General business route, no personal buyer/direct-factory/WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current finished-coating business and public contact",
+        "url": "https://taralac.com/"
+      },
+      {
+        "label": "Own current manufacture, corporate history and laboratories",
+        "url": "https://taralac.com/about-us/"
+      },
+      {
+        "label": "Own0853 water-based acrylic matt wood finish",
+        "url": "https://taralac.com/product/0853-wb-1k-acrylic-matt/"
+      }
+    ]
+  },
   "pragati-paints-pune": {
     "website": "https://www.pragatipaints.net/profile.html",
     "contactPage": "https://www.pragatipaints.net/enquiry.html",
@@ -29243,6 +29322,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "tara-paints-ahmedabad",
   "pragati-paints-pune",
   "mathur-corr-tech-coimbatore",
   "trident-engineering-ahmedabad",
