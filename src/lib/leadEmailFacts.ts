@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "biofa-bad-boll": "Your Vorlack AQUA 1211 is a water-dilutable primer for wood and wood-based materials.",
   "pinturas-gamma-color-villa-alemana": "Your Anticorrosivo Epóxico is a two-component epoxy primer for metal equipment and infrastructure.",
   "pinturas-del-plata-elbex-montevideo": "Your Esmalte Epoxi Brillante is a two-component finishing paint for demanding industrial coating systems.",
   "productos-promade-algete": "Your Barniz Exteriores Brillo al Agua is a gloss water-based varnish for exterior wooden surfaces.",

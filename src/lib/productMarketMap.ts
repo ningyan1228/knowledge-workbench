@@ -9509,11 +9509,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "biofa-bad-boll",
+    "company": "BIOFA Naturprodukte W. Hahn GmbH",
+    "productId": "nl-w1201",
+    "country": "Germany",
+    "countryZh": "德国",
+    "city": "Bad Boll; disclosed business address; approximate country marker",
+    "latitude": 51.2,
+    "longitude": 10.4,
+    "legacyCompanyDescription": "BIOFA自有受控制造木器、建筑涂料及护理品；BadBoll同一德国账户，全球联系点不拆为制造客户，坐标为国家级近似。",
+    "fit": "可开发候选",
+    "signal": "官网明确自有涂料制造及内部生产控制；Vorlack AQUA 1211为用于木材和木质材料的水稀释底漆，另有水性木器底面涂体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立完整复读4份当前自有HTTPS200原文：花园外用品类14113字符（本地续读余下正文，不是只读初始截断）、About10918字符（含本地续读）、Products入口和其明确链接的总览。入口是导航/透明配方说明，不冒称全SKU目录；总览完整显示室内木器/地板/室内装修/玩具/墙顶/清洁护理和室外花园/房屋立面/清洁9类主营，花园页完整覆盖木蜡油/水性Lasur/水性Vorlack1211/VERNILUXAqua等成品。VorlackAQUA1211明确水稀释、用于木材及木质材料底涂；HolzlasurAquaIndustrie8101/81011明确水稀释木材底面涂体系。About当前质量承诺明确内部受控制造，Footer直接称Hersteller，历史自述植物基涂料/油/蜡/清漆/lasur/护理清洁品制造，非仅经销或施工者。已读完整主营分类、公司及具体户外成品范围未见所选水性聚烯烃乳液、PO/CPO分散体或独立附着促进原料外售，有限所选原料同行排除通过；天然油/树脂投入和成品乳液不自动认定所选PO/CPO同行，不声称全部SKU/隐藏工业登录区/全部TDS/SDS/PDF或最终股权已审计。用户NLW1201资料聚烯烃分散及底涂/附着促进功能、木材TDS基材，仅支持潜在实验室材料评估；BIOFA天然原料偏好与认证定位须另由客户评估，不暗示我方材料天然/符合其生态比例、已有配方相容、已采购或任何附着/耐候/阻燃/食品/玩具认证保证。网站natureplus/QNG/SHI/DIN及天然百分比/45年/1976历史均为客户自述，不移植至我方，也不把网站误写72,3当独立认证。About称1976源于顺势疗法企业、1980独立和1981更名，作为历史自述保存不冒称工商登记已查；全球联系点混有不同名称及重复桌面/移动旧地址，不当全为子公司/现役工厂或建立多个客户。只收录当前德国BadBoll同一BIOFA/W.Hahn账户；Russia/Bulgari/Portugal/BIOFA同名渠道不拆新增，其他FARBECO/EuropLabo/Jota/Woodcare/NaturalPaint等联系点没有所有权证据不强行并集团、不移植其邮箱或预算。全公开429/root443/front864/完整队列/索引/排除/历史复核未见现存主体；11份旧匹配逐份核对为预查模式、Search（含RussianBIOFA产品）或实际InVeNaBiopin会员页导航BIOFA链接，非定向BIOFA公司请求，不捏造以前读过BIOFA会员页。本轮4次终身4/rem2，主动停取，不跨日期/国家/产品/提供商重置。四份自有页脚均公开info@biofa.de及mailto（不同于访问域名biofa-de.com但有直接归属证据），精确保留+49(0)7164-94050原格式公司电话和Dobelstrasse22BadBoll地址，不冒称具名采购或实测厂门。没有实际WhatsApp链接，不从电话推造；未读取单独Contact/Impressum，不说已核验该页，用已读About实际联系区作入口。不打开工业/经销登录、不执行JS、下表单/邮件/社媒消息或CRM；未知共享台账不当未发，只未来条件生成器审计，无就绪稿、复制导出或历史改写。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司电话；无具名采购或实际WhatsApp链接",
+      "email": "info@biofa.de",
+      "phone": "+ 49 (0) 7164-9405 0",
+      "contactUrl": "https://www.biofa-de.com/265/ueber-uns"
+    },
+    "source": {
+      "label": "Own Vorlack AQUA1211 and waterborne wood coating range",
+      "url": "https://www.biofa-de.com/547/aussenbereich-garten"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "biofa-bad-boll": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pinturas-gamma-color-villa-alemana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-del-plata-elbex-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "productos-promade-algete": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9944,6 +9973,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "biofa-bad-boll": {
+    "website": "https://www.biofa-de.com/",
+    "contactPage": "https://www.biofa-de.com/265/ueber-uns",
+    "address": "Dobelstraße 22, 73087 Bad Boll, Germany. Exact disclosed business address; factory entrance not independently surveyed. International contact points not separately counted or assumed owned manufacturing subsidiaries; country-level approximate marker.",
+    "generalEmail": "info@biofa.de",
+    "generalEmailEvidence": {
+      "company": "BIOFA Naturprodukte W. Hahn GmbH",
+      "value": "info@biofa.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own About corporate footer, repeated across current product pages",
+          "url": "https://www.biofa-de.com/265/ueber-uns",
+          "summary": "Exact info@biofa.de and mailto in own company footer, repeated outdoor/product/overview pages. Official directly disclosed different email domain; general corporate inbox, no named buyer or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "+ 49 (0) 7164-9405 0",
+    "generalPhoneEvidence": {
+      "company": "BIOFA Naturprodukte W. Hahn GmbH",
+      "value": "+ 49 (0) 7164-9405 0",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own About corporate footer, repeated across current product pages",
+          "url": "https://www.biofa-de.com/265/ueber-uns",
+          "summary": "Exact publicly printed own corporate footer telephone, repeated in all4 actual originals. No actual public WhatsApp link observed; none inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own complete outdoor coating range with water-dilutable wood primer and wood base/finish systems",
+        "url": "https://www.biofa-de.com/547/aussenbereich-garten"
+      },
+      {
+        "label": "Own company controlled manufacture history and corporate business contacts",
+        "url": "https://www.biofa-de.com/265/ueber-uns"
+      },
+      {
+        "label": "Own product navigation and transparent-formulation explanation; not a full SKU catalogue",
+        "url": "https://www.biofa-de.com/266/produkte"
+      },
+      {
+        "label": "Complete visible9 main product/application families and quality process statement",
+        "url": "https://www.biofa-de.com/4315/produkte-leitsystem/produktuebersicht"
+      }
+    ]
+  },
   "pinturas-gamma-color-villa-alemana": {
     "website": "https://www.gammacolor.cl/",
     "contactPage": "https://www.gammacolor.cl/nosotros",
@@ -30622,6 +30706,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "biofa-bad-boll",
   "pinturas-gamma-color-villa-alemana",
   "pinturas-del-plata-elbex-montevideo",
   "productos-promade-algete",
