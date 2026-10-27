@@ -9425,11 +9425,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "productos-promade-algete",
+    "company": "Productos Promade S.A.",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Algete, Madrid; disclosed business address; approximate country marker",
+    "latitude": 40.4,
+    "longitude": -3.7,
+    "legacyCompanyDescription": "Promade自有木器养护产品制造、测试及研发；水性外用清漆及底涂，公开Algete业务地址未测绘厂门。",
+    "fit": "可开发候选",
+    "signal": "自有木材养护产品制造测试及研发；Barniz Exteriores Brillo al Agua为水性亮光外用木器清漆，另有水性lasur和封孔底涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读3份自有HTTPS200业务原文：Home完整主营/自制研发及实际联系区、完整可见ExteriorYJardin类别13项、实际BarnizExterioresBrilloAlAgua产品。另产品短路径301到真实分类产品路径，计来源不自动跟随；本公司终身4/rem2，当前范围另Riolac同既有TecnoLac主体2GET，共6名额已到上限，无重试/脚本/附件/图片读取。Home明确自有制造测试及I+D，主营为外用lasur/油/清漆、室内清漆/染色剂/色浆、修复蜡/腻子/修补品及砂磨施工辅具。已读完整外用目录为成品水性lasur、水性teka油、外用水性亮光清漆、水性封孔底涂及其他成品清漆/木油/煮熟亚麻油等；未识别所选水性聚烯烃乳液、PO/CPO分散体或独立附着促进原料外售，通过NL-W1201同行排除。煮熟亚麻油产品不当所选聚烯烃同行，也不据此把本公司改为ELO客户；未声称穷尽全部SKU/SDS/隐藏最终股权。具体产品标题明确水性外用木器亮光清漆，包装750ml，原文声明以水稀释作首道、也提示不同木材/施工/暴露条件会改变表现；只用于支持产品/应用事实，不把其耐候/防黑/化学/无气味宣称当我方性能或相容保证。用户NL-W1201资料为聚烯烃分散体及底涂/附着促进用途，木材为TDS已验证基材；只作为潜在实验室配方评估，不说现有配方含我方路线、已采购、已相容或保证附着。产品SDS/技术PDF只有链接未读，不标已核验，不推断树脂类别、固含或认证。ProductosPromadeSA法律称谓为官网页脚自述，AlgeteMadrid为公开业务地址，不补NIF/独立注册年、工厂坐标或投产年；40年经验/ISO/SGS标签不作独立认证。全main426/root440/front860/队列/索引/排除/历史按Promade/域名/邮箱/电话无现存公司，旧两份只是Search，不是公司GET；与Riolac/TecnoLac分开，后者已依自己法律声明去重且预算并入既有主体，不靠不同域名制造新增。Home与两原始产品页脚明示administracion@productospromade.com，保存行政部门邮箱，General枚举用于行政/公司综合渠道，不冒称采购或具名负责人；显式空generalEmail避免rawcontact.email自动复制为通用邮箱。原格式667502448为官网公开业务电话。Home实际有另一号码的api.whatsapp.com/send链接，原样保存，不从电话猜WhatsApp；未读Contact单页，不标验证，用已读Home实际表单/邮箱区作联系入口。未知共享发送台账不当未发送，只作未来条件生成器事实及用户功能核对，无就绪开发信/复制导出/历史改写，没有邮件、表单、消息、CRM。"
+    },
+    "contact": {
+      "label": "官网行政部门邮箱及公开业务电话；无具名采购",
+      "email": "administracion@productospromade.com",
+      "phone": "667502448",
+      "contactUrl": "https://productospromade.com/"
+    },
+    "source": {
+      "label": "Own Barniz Exteriores Brillo al Agua water-based wood varnish",
+      "url": "https://productospromade.com/exterior-y-jardin/barniz-exteriores-brillo-agua/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "productos-promade-algete": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "regis-las-heras": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tecnolac-laguardia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "crisoles-montevideo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9857,6 +9886,63 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "productos-promade-algete": {
+    "website": "https://productospromade.com/",
+    "contactPage": "https://productospromade.com/",
+    "address": "Calle Espino nº 2, Poligono Malatones, 28110 Algete, Madrid, Spain. Disclosed business address; factory entrance not independently surveyed; country-level approximate marker.",
+    "generalEmail": "",
+    "generalPhone": "667502448",
+    "generalPhoneEvidence": {
+      "company": "Productos Promade S.A.",
+      "value": "667502448",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published corporate business route",
+          "url": "https://productospromade.com/",
+          "summary": "Own corporate footer explicitly prints 667502448 and tel:+34667502448 under company contact; repeated category and product. Exact displayed business phone retained; separate actual WhatsApp link uses another number."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://api.whatsapp.com/send?phone=34672677401&text=Soy%20El%20Especialista,%20%C2%BFEn%20qu%C3%A9%20te%20puedo%20ayudar?",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "administracion@productospromade.com",
+        "emailEvidence": {
+          "company": "Productos Promade S.A.",
+          "value": "administracion@productospromade.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own published corporate business route",
+              "url": "https://productospromade.com/",
+              "summary": "Own footer expressly publishes administracion@productospromade.com and mailto, repeated current category/product. Administration department route, stored under general corporate/administrative department enum; no named procurement or deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-10-27"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own manufacture testing R&D and complete visible major business; actual corporate contact and WhatsApp",
+        "url": "https://productospromade.com/"
+      },
+      {
+        "label": "Own complete visible exterior wood-care range",
+        "url": "https://productospromade.com/exterior-y-jardin/"
+      },
+      {
+        "label": "Own specific water-based exterior gloss wood varnish",
+        "url": "https://productospromade.com/exterior-y-jardin/barniz-exteriores-brillo-agua/"
+      }
+    ]
+  },
   "regis-las-heras": {
     "website": "https://www.regissa.com/",
     "contactPage": "https://www.regissa.com/contacto/",
@@ -30366,6 +30452,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "productos-promade-algete",
   "regis-las-heras",
   "tecnolac-laguardia",
   "crisoles-montevideo",

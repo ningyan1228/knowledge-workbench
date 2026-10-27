@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "productos-promade-algete": "Your Barniz Exteriores Brillo al Agua is a gloss water-based varnish for exterior wooden surfaces.",
   "regis-las-heras": "Your E-160 is a zinc-rich epoxy primer for temporary or permanent protection of carbon steel.",
   "tecnolac-laguardia": "Your aqueous wood-coating range includes basecoats, protectors, finishes and stains for furniture, floors and exterior applications.",
   "crisoles-montevideo": "Your water-based wood-protector range includes Natural, Cedro, Caoba, Nogal and Cristal finishes.",
