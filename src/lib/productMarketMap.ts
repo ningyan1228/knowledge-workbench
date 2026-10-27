@@ -9481,11 +9481,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "pinturas-gamma-color-villa-alemana",
+    "company": "Pinturas Gamma Color Ltda.",
+    "productId": "elo",
+    "country": "Chile",
+    "countryZh": "智利",
+    "city": "Villa Alemana; disclosed headquarters sales address; approximate country marker",
+    "latitude": -35.7,
+    "longitude": -71.5,
+    "legacyCompanyDescription": "PinturasGammaColorLtda自制工业双组分环氧防腐底漆及面漆；VillaAlemana总部与其他城市销售网点为一个账户，坐标为国家级近似。",
+    "fit": "可开发候选",
+    "signal": "官网自述制造涂料并披露生产经营历史；Anticorrosivo Epóxico为用于金属设备和基础设施的双组分环氧防腐底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立复读本轮3份实际自有完整HTTPS正文：Industrial具体双组分环氧防腐底漆和面漆、Nosotros当前公司制造历史及全页、Servicios完整经营服务。官网明确PinturasGammaColorLtda制造及销售涂料/腻子/纹理材料、Peñablanca生产经营历史；工业页AnticorrosivoEpoxico明确2组分环氧树脂底漆，用于金属设备和基础设施并配套环氧面涂，非仅同行类目或施工商。完整可见主要产品为水性漆/腻子纹理/合成瓷漆油漆/防水/木器/工业/特种/EIFS/稀释剂溶剂/工具配件及家居花园，服务全文为涂装咨询、配色、培训与干膜厚度检测；在实际已读主要成品及服务范围未发现ELO/ESBO/环氧化植物油/同类生物增塑稳定原料供应，通过有限所选原料排除。产品成分环氧树脂和配套稀释剂不是所选ELO同行证据；未读完整商城/外链2026目录/云盘TDS/HDS/Legal和隐藏集团，不宣称穷尽全部SKU/SDS/股权或借口外购例外。用户ELO资料涂料/环氧功能/树脂改性只支持潜在实验室柔韧或配方改性评估，不等于客户现用ELO、采购意愿、既有体系相容、防腐/固化/耐化学/医疗食品认证保证，勿建议施工现场掺入成品。公司About的ISO9001:2000、项目/员工/满意度/生产历史和服务ISO/ASTM营销未独立认证，不转为我方性能/认证或精确注册年证据；不采用Odoo模板空地图/示例段落作地址或需求证据。实际About CasaMatrizAmunategui187VillaAlemana，其他Coquimbo/VinaDelMar网点同一公司不拆客户或声称每处生产厂门；国家为Chile，原发现Ecuador只是检索范围，不重定位。全公开428/root442/front861/完整队列/索引/排除及历史去重，唯一旧命中Oct23Search的LinkedIn公司结果不是定向公司GET，本轮公司3/rem3；本范围另Unidas2次403、Epothan1次307登录握手，共6次已达范围上限，停止追加；失败/跨提供商/登录跳转均计，不追认证跳转。官网三个原始HTML重复公开data-cfemail本地解码同ventas@gammacolor.cl，属Sales部门邮箱，无猜址/具名采购/投递保证；不把错误https://ventas@...独立当邮箱证据，不移植分公司邮箱给个人。保留原文+56-322727668公司电话及独立实际api.whatsapp明确链接，非电话推WhatsApp；AboutLuisGonzalez经理故事未用作具名收件人。未知共享发送台账不当未发，仅未来条件生成器审计，无就绪信/复制导出/历史改写，无邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网Sales部门邮箱及公司电话/实际WhatsApp；无具名采购",
+      "email": "ventas@gammacolor.cl",
+      "phone": "+56-322727668",
+      "contactUrl": "https://www.gammacolor.cl/nosotros"
+    },
+    "source": {
+      "label": "Own two-component epoxy anticorrosive primer for metal equipment and infrastructure",
+      "url": "https://www.gammacolor.cl/pinturas-industriales"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-gamma-color-villa-alemana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-del-plata-elbex-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "productos-promade-algete": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "regis-las-heras": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9915,6 +9944,63 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-gamma-color-villa-alemana": {
+    "website": "https://www.gammacolor.cl/",
+    "contactPage": "https://www.gammacolor.cl/nosotros",
+    "address": "Casa Matriz: Amunátegui 187, Villa Alemana, Chile. Exact disclosed headquarters/sales location; not an independently surveyed factory entrance. Coquimbo and Viña del Mar branches remain one account; country-level approximate marker.",
+    "generalEmail": "",
+    "generalPhone": "+56-322727668",
+    "generalPhoneEvidence": {
+      "company": "Pinturas Gamma Color Ltda.",
+      "value": "+56-322727668",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own complete company page corporate contact",
+          "url": "https://www.gammacolor.cl/nosotros",
+          "summary": "Exact company telephone in own header/footer; Casa Matriz repeats local32-2727668. Retain full displayed corporate number; no named buyer. Actual separate WhatsApp link uses56989501858."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://api.whatsapp.com/send/?phone=56989501858&text=Buen+d%C3%ADa+Gamma+Color%2C+me+interesa+saber+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas@gammacolor.cl",
+        "emailEvidence": {
+          "company": "Pinturas Gamma Color Ltda.",
+          "value": "ventas@gammacolor.cl",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own complete company page corporate contact",
+              "url": "https://www.gammacolor.cl/nosotros",
+              "summary": "Repeated publicly exposed data-cfemail values in complete own Industrial/About/Services originals locally decode exactly to ventas@gammacolor.cl; own company header/footer and Casa Matriz context corroborate Sales corporate route, not manager personal mailbox. No deliverability assertion."
+            }
+          ],
+          "verifiedAt": "2026-10-27"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own industrial coating portfolio: exact two-component epoxy primer and finish",
+        "url": "https://www.gammacolor.cl/pinturas-industriales"
+      },
+      {
+        "label": "Own company manufacturing history, actual headquarters and corporate channels",
+        "url": "https://www.gammacolor.cl/nosotros"
+      },
+      {
+        "label": "Own complete coating advice custom colour training and inspection services; bounded business exclusion",
+        "url": "https://www.gammacolor.cl/servicios"
+      }
+    ]
+  },
   "pinturas-del-plata-elbex-montevideo": {
     "website": "https://www.pinturaselbex.com/sitionuevo/",
     "contactPage": "https://www.pinturaselbex.com/sitionuevo/",
@@ -30536,6 +30622,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-gamma-color-villa-alemana",
   "pinturas-del-plata-elbex-montevideo",
   "productos-promade-algete",
   "regis-las-heras",

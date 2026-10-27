@@ -20,7 +20,7 @@ describe('customer map geography', () => {
 
   it('offers only countries within the selected continent, with accurate counts', () => {
     const options = geographyOptions(publicLeads, '南美洲')
-    expect(options.countries.map((item) => item.value).sort()).toEqual(['Argentina', 'Brazil', 'Colombia', 'Peru', 'Uruguay'])
+    expect(options.countries.map((item) => item.value).sort()).toEqual(['Argentina', 'Brazil', 'Chile', 'Colombia', 'Peru', 'Uruguay'])
     expect(options.countries.reduce((sum, item) => sum + item.count, 0)).toBe(filterLeadGeography(publicLeads, '南美洲').length)
     expect(options.continents.reduce((sum, item) => sum + item.count, 0)).toBe(publicLeads.length)
   })
