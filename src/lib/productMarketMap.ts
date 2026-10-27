@@ -9369,11 +9369,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "tecnolac-laguardia",
+    "company": "Industrias Químicas Tecnolac (Tecno-Lac)",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Laguardia, Alava; disclosed business address; approximate country marker",
+    "latitude": 40.4,
+    "longitude": -3.7,
+    "legacyCompanyDescription": "Tecno-Lac自行制造木器水性底涂、保护剂、面漆及染色剂；公开Laguardia业务地址未独立测绘厂门。",
+    "fit": "可开发候选",
+    "signal": "自有木器清漆制造业务；水性底涂、保护剂、面漆和染色剂用于家具、地板及户外，制造透明及着色品种。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "逐家公司独立全文审读3份自有HTTPS200：Home、完整可见Products、Contact；终身3/rem3，无跳转/重试/脚本/PDF读取，本NL-W1201范围另MMEL失败1共4次，额度上限不是必须用满。Home明确自行制造木器清漆，Products明确水性底涂、保护剂、面漆和染色剂，均制造透明和着色品种，应用家具、地板、户外木器；以实际木器水性成品形成用户NL-W1201木材表面处理链。完整可见主要业务为木器透明/无色PU和硝基底涂/面漆、白色和调色成品、施工清洗/PU/漆用溶剂及防硅/防虫/消泡等施工辅料、水性木器底涂及成品；未识别所选水性聚烯烃乳液、PO/CPO分散体或附着促进输入外售，通过所选产品同行排除。不声称全部SDS/隐藏业务或最终股权穷尽；不把施工助剂类别自动说成同类聚烯烃原料。NL-W1201用户资料为聚烯烃分散体及底涂/附着促进用途，木材为TDS已验证基材；只作为潜在实验室评估对象，不把客户PU/硝基/水性体系说成现有我方材料体系或保证相容、附着、耐候、固化、销售/采购需求。IndustriasQuímicasTecnolac/Tecno-Lac/tecnolac.es同一主体，公开业务地址LaguardiaAlavaSpain，不补SL/SA法律后缀、CIF、注册年或测绘厂门；地图西班牙概略。全main424/root438/front858/队列/索引/排除/历史按两名称、域名及公开电话945625240无旧记录/GET，旧预算未重置。Home/Products/Contact均明示pedidos@tecnolac.es，保存为订单部门公司邮箱而非具名采购；仅Sales部门枚举作订单商业渠道类别，不推定销售人员姓名或采购职责。945625240为明确公开公司业务电话原格式，无国际拨号/WhatsApp推断。Contact有公开Name/Email/Message表单，base64占位串不当表单提交或新渠道，没有填表/点击发送/外联。未知共享发送台账不当未发送，仅未来条件生成器事实/TDS功能复核，无就绪开发信、复制导出或改写历史，无邮件、表单、消息、CRM。"
+    },
+    "contact": {
+      "label": "官网订单部门业务邮箱及公司电话；无具名采购",
+      "email": "pedidos@tecnolac.es",
+      "phone": "945 62 52 40",
+      "contactUrl": "https://tecnolac.es/contacto"
+    },
+    "source": {
+      "label": "Own aqueous wood finishes and basecoats",
+      "url": "https://tecnolac.es/productos"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "tecnolac-laguardia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "crisoles-montevideo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "urchemikal-urlak-mendaro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "kelcot-jose-ingenieros": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9799,6 +9828,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "tecnolac-laguardia": {
+    "website": "https://tecnolac.es/",
+    "contactPage": "https://tecnolac.es/contacto",
+    "address": "Pol. Industrial Casablanca, C/ La Paz, s/n, 01300 Laguardia, Alava, Spain. Disclosed business address; factory entrance not independently surveyed; country-level approximate marker.",
+    "generalPhone": "945 62 52 40",
+    "generalPhoneEvidence": {
+      "company": "Industrias Químicas Tecnolac (Tecno-Lac)",
+      "value": "945 62 52 40",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own published business channel",
+          "url": "https://tecnolac.es/contacto",
+          "summary": "Exact publicly printed corporate business telephone on own Contact, repeated Home and complete Products. No guessed international prefix or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "pedidos@tecnolac.es",
+        "emailEvidence": {
+          "company": "Industrias Químicas Tecnolac (Tecno-Lac)",
+          "value": "pedidos@tecnolac.es",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own published business channel",
+              "url": "https://tecnolac.es/contacto",
+              "summary": "Exact own published pedidos (orders) company mailbox, repeated Home/Products/Contact. Orders/commercial departmental route, not named purchasing manager or proof of deliverability."
+            }
+          ],
+          "verifiedAt": "2026-10-27"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own manufacturing of wood varnishes and waterborne systems",
+        "url": "https://tecnolac.es/"
+      },
+      {
+        "label": "Complete visible major finished wood coating and auxiliary range",
+        "url": "https://tecnolac.es/productos"
+      },
+      {
+        "label": "Own contact form, orders mailbox and corporate phone",
+        "url": "https://tecnolac.es/contacto"
+      }
+    ],
+    "generalEmail": ""
+  },
   "crisoles-montevideo": {
     "website": "https://crisoles.uy/",
     "contactPage": "https://crisoles.uy/",
@@ -30197,6 +30282,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "tecnolac-laguardia",
   "crisoles-montevideo",
   "urchemikal-urlak-mendaro",
   "kelcot-jose-ingenieros",
