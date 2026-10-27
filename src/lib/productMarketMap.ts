@@ -9453,11 +9453,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "pinturas-del-plata-elbex-montevideo",
+    "company": "Pinturas del Plata S.A. / Elbex",
+    "productId": "elo",
+    "country": "Uruguay",
+    "countryZh": "乌拉圭",
+    "city": "Montevideo; disclosed business address; approximate country marker",
+    "latitude": -32.5,
+    "longitude": -55.8,
+    "legacyCompanyDescription": "乌拉圭Pinturas del Plata制造Elbex双组分工业环氧面漆；按公开历史关联与Sinteplast集团保守合并为一个账户，不单列父公司或品牌。",
+    "fit": "可开发候选",
+    "signal": "自有技术文件明确由Pinturas del Plata S.A.在乌拉圭制造；Esmalte Epoxi Brillante为工业体系双组分环氧面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立复读3份实际自有完整HTML及产品页明确链接的2页技术PDF，并逐页渲染检查：PDF第二页明确FABRICADO POR PINTURAS DEL PLATA S.A、CARLOS A LOPEZ6526和乌拉圭电话，Home同址同号并描述本国制造，证明实际环氧涂层下游制造而非仅进口/代理。EsmalteEpoxiBrillante为苛刻工业体系双组分面漆，PDF载体为催化环氧树脂；产品限定不适于浸泡、强酸强碱，户外存在粉化限制。用户ELO资料的涂料/树脂改性功能仅支持潜在实验室柔韧或配方改性评估，不是客户现用ELO、采购意愿、既有体系相容/固化/防腐/化学耐受/食品或医疗用途保证，也不建议施工时掺入成品。完整可见主要业务Elbex建筑乳胶/瓷漆/纹理涂料/防水/木器/前处理/泳池/密封及工业/汽车成品，Sinteplast自述制造涂料/涂层/建材、区域工厂含乌拉圭，当前主要目录建筑/汽车/工业涂料、胶黏密封、催化剂/稀释剂/底涂和高性能地坪；未发现所选ELO/ESBO/环氧化植物油/同类生物增塑稳定原料外售，通过有限已读主要业务排除，不将所有涂料色浆或环氧树脂等同于所选ELO同行，不声称穷尽全部品牌/SDS/最终股权。第三次辅助Search返回Volza宽泛混合HS条目，UNIPOX原料不能归属Sinteplast；不用贸易目录拼接内容作其原料供货或实际采购证明。2018报道Sinteplast/PinturasdelPlata收购Behar/Elbex，当前自有父公司About仅证实乌拉圭制造布局，不冒称工商登记已复核；保守把集团与公开品牌视为同一账户，未来不拆父公司/品牌/国家工厂为新增。全公开427/root441/完整队列/front861/来源索引/排除及97份历史匹配复核，仅Elbex既有私有2次；公开Tecno-Lac的Casablanca是西班牙工业园同名误报，不合并来源或改Tecno预算。原2次脚本壳与301不豁免，本轮3HTML+1PDF=终身6/rem0，停止取页。官网info@pinturaselbex.com和(+598)23201111原文公司入口，通用邮箱不冒充采购人；Newsletter提及WhatsApp不等于公开跳转，无实际WhatsAppURL不构造。原私有记录本轮完整证据链后升级1次，不新append私有公司，不把联系补充单算客户。未知共享台账不当未发送；只未来条件生成器审计，无就绪信/复制导出/历史改写，无邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司电话；无具名采购或实际WhatsApp链接",
+      "email": "info@pinturaselbex.com",
+      "phone": "(+598) 2320 1111",
+      "contactUrl": "https://www.pinturaselbex.com/sitionuevo/"
+    },
+    "source": {
+      "label": "Own two-component industrial epoxy finishing paint",
+      "url": "https://www.pinturaselbex.com/sitionuevo/producto/esmalte-epoxi-brillante/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-del-plata-elbex-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "productos-promade-algete": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "regis-las-heras": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tecnolac-laguardia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9886,6 +9915,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-del-plata-elbex-montevideo": {
+    "website": "https://www.pinturaselbex.com/sitionuevo/",
+    "contactPage": "https://www.pinturaselbex.com/sitionuevo/",
+    "address": "Cno. Carlos A López 6526, Montevideo, Uruguay. Own corporate footer and own technical manufacturer declaration match. Public historical Sinteplast/Pinturas del Plata acquisition association retained conservatively as one group account; not a current corporate-registry ownership verification. Country-level approximate marker, not surveyed factory coordinates.",
+    "generalEmail": "info@pinturaselbex.com",
+    "generalEmailEvidence": {
+      "company": "Pinturas del Plata S.A. / Elbex",
+      "value": "info@pinturaselbex.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Home corporate contact footer",
+          "url": "https://www.pinturaselbex.com/sitionuevo/",
+          "summary": "Exact info@pinturaselbex.com published in current own Home header/footer and mailto route. General company inbox, no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "(+598) 2320 1111",
+    "generalPhoneEvidence": {
+      "company": "Pinturas del Plata S.A. / Elbex",
+      "value": "(+598) 2320 1111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Home corporate contact footer",
+          "url": "https://www.pinturaselbex.com/sitionuevo/",
+          "summary": "Exact own Home corporate number; same number in technical PDF manufacturer footer. No actual public WhatsApp jump URL observed; do not derive one from phone."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current Home main finished-coating portfolio manufacturing story and business contact",
+        "url": "https://www.pinturaselbex.com/sitionuevo/"
+      },
+      {
+        "label": "Own two-component industrial epoxy finishing paint",
+        "url": "https://www.pinturaselbex.com/sitionuevo/producto/esmalte-epoxi-brillante/"
+      },
+      {
+        "label": "Own two-page industrial epoxy technical file identifying Uruguayan manufacturer",
+        "url": "https://www.pinturaselbex.com/sitionuevo/wp-content/uploads/2022/04/Linea_Industrial_Esmalte_Epoxi_Brillante.pdf"
+      },
+      {
+        "label": "Sinteplast current own manufacturing and major finished-business portfolio; one group account",
+        "url": "https://www.sinteplast.com.ar/institucional-quienes-somos/"
+      }
+    ]
+  },
   "productos-promade-algete": {
     "website": "https://productospromade.com/",
     "contactPage": "https://productospromade.com/",
@@ -30452,6 +30536,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-del-plata-elbex-montevideo",
   "productos-promade-algete",
   "regis-las-heras",
   "tecnolac-laguardia",
