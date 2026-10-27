@@ -8980,11 +8980,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "mathur-corr-tech-coimbatore",
+    "company": "Mathur Corr Tech Private Limited",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Coimbatore public head office; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "印度Coimbatore总部的工业及木器成品涂料制造与定制业务，Mathur Corr-Tech/MATWUD同一账户；另两城为办公室，不拆为制造客户。",
+    "fit": "可开发候选",
+    "signal": "制造工业涂料与定制配方；MATWUD木器系列含水性聚氨酯、木材封闭底涂及清漆，覆盖门窗、家具和木地板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立完整审读2份自有HTTPS原始HTML业务正文：WoodCoatings及Home，另独立/about路径请求404错误页，合计3次终身来源/rem3；错误不是业务正文，未声称3份有效原文，未重试、跳转、PDF/脚本/资产加载。ABOUT/CONTACT实际为首页分段，首次对独立/about路径的假设错误和HTTP404原始body/http/reservation均保留。Wood页面MATWUD明确聚氨酯木材封闭1K/2K、清漆1K/2K、桌面环氧透明漆、水性PU及水性阻燃漆，并明确门窗、家具、橱柜、木制工艺、运动地板等木材；未把全部溶剂PU/封闭剂一并冒称水性。Home主文明确自己manufacturingindustrialcoatingsandchemicals及按工业定制产品，木器条目再次水性PU，非只从标题/代理商品牌推生产。完整所读主要经营范围含防腐、环氧/PU/丙烯酸/乙烯/瓷漆底面涂、水性环氧地坪、建筑、海工、体育场地、木器、夜光/反光/阻燃成品漆，另表面除锈/磷化/洗车预处理剂、混凝土外加剂/减水剂/灌缝/防水等建筑化学品；未识别PO/CPO/聚烯烃分散体/同类原料级附着促进输入外售。混凝土SuperPlasticizers、RustConverters/去锈磷化及成品Primer不凭化学品/预处理通用名称推定选定NLW同行，有限所见完整主要业务同行排除通过，不声称已读所有SKU/SDS/隐藏股权。用户NLW仅TDS木材表面处理/底涂和附着促进的潜在实验室配方评估，不把客户水性阻燃/foodgrade/ESD/防腐/寿命声明借为我方认证/性能保证，也不推客户现用聚烯烃、采购、配方相容或成品现场添加。HomeMathurCorrTechPrivateLimited与footerMathurCorr-TechPvtLtd及MATWUD同一账户，Coimbatore总部/Bengaluru/Chennai办公室不拆客户；1995成立/150产品/1000项目为页面自述，未独立工商/项目/股权核验或全部目录计数。全main410/root424/front837/全queue/index/excluded/privatehistory按MathurCorrTech/mathurco.net/mathurco.in/MATWUD查重无旧账户或来源GET。16ArunNagarVadavalliCoimbatore为HeadOffice公开地址，不是独立定位工厂门，印度概略地图。Home明示info@mathurco.in业务邮箱（网站.net、邮箱.in不同后缀按原文保留不猜改）及+919952575763/9944949490电话，选第一组完整带国家码原格式，不将第二个缺前缀号补造或电话号码当WhatsApp。无具名负责人/采购/社媒账号推断，无SMTP/投递核验；官网首页公开表单只读，静态Thanksforsubmitting不是本次发送结果。共享发送状态unknown不当未发送，只有条件生成器事实/功能核对，无就绪信、复制导出、发送历史改写、外发/表单/CRM。"
+    },
+    "contact": {
+      "label": "官网首页公开通用业务邮箱、电话及表单；未核具名负责人",
+      "email": "info@mathurco.in",
+      "phone": "+91 9952575763",
+      "contactUrl": "https://www.mathurco.net/"
+    },
+    "source": {
+      "label": "Own MATWUD wood sealers and water-based polyurethane wood coatings",
+      "url": "https://www.mathurco.net/wood-coatings"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mathur-corr-tech-coimbatore": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "trident-engineering-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bluray-chemicals-ghaziabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rely-paints-ghaziabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9396,6 +9425,52 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mathur-corr-tech-coimbatore": {
+    "website": "https://www.mathurco.net/",
+    "contactPage": "https://www.mathurco.net/",
+    "generalEmail": "info@mathurco.in",
+    "generalPhone": "+91 9952575763",
+    "generalEmailEvidence": {
+      "company": "Mathur Corr Tech Private Limited",
+      "value": "info@mathurco.in",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home CONTACT section public business email",
+          "url": "https://www.mathurco.net/",
+          "summary": "Home CONTACT HeadOffice explicitly disclosesinfo@mathurco.in; .in mailbox is retained exactly despite .net website, no constructed email or named buyer/delivery inference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhoneEvidence": {
+      "company": "Mathur Corr Tech Private Limited",
+      "value": "+91 9952575763",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home CONTACT section public company phone",
+          "url": "https://www.mathurco.net/",
+          "summary": "CONTACT explicitly prints+91 9952575763 as first full company business number. Not a personal/procurement/WhatsApp channel and not an independently verified factory line."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own complete MATWUD wood-coating products and wood applications",
+        "url": "https://www.mathurco.net/wood-coatings"
+      },
+      {
+        "label": "Own industrial-coating manufacture and full main business range with public CONTACT section",
+        "url": "https://www.mathurco.net/"
+      }
+    ]
+  },
   "trident-engineering-ahmedabad": {
     "website": "https://www.tridentpaintco.com/",
     "contactPage": "https://www.tridentpaintco.com/enquiry.html",
@@ -29101,6 +29176,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mathur-corr-tech-coimbatore",
   "trident-engineering-ahmedabad",
   "bluray-chemicals-ghaziabad",
   "rely-paints-ghaziabad",
