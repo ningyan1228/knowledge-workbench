@@ -8953,11 +8953,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "trident-engineering-ahmedabad",
+    "company": "Trident Engineering",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ahmedabad public business address; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "Ahmedabad工业成品涂料制造、工程及贸易业务，GST和独资身份为自身披露；未找到明示邮箱，保留官网表单及平台转接电话。",
+    "fit": "可开发候选",
+    "signal": "制造工业涂料并设研发与检测部门；Trident双组分环氧磷酸锌底漆用于钢材，另有环氧及PU成品涂层系列。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读4份自有HTTPS原始HTML：Home、Profile、EpoxyPrimer、Contact，全200无跳转/失败/重试，不执行远程JS、不加载产品PDF/图片/验证码，终身4/rem2保留。Home直接声明自己制造paints/sealants/coatings并有制造单位；Profile明确制造经营、Factory/Manufacturing、R&D部门、测试设施和自身paint/coating/division，另有桥梁伸缩缝、工程重型制作服务及零售/批发，不把所有转售品当自产。EpoxyPrimer主正文具体Trident双组分环氧磷酸锌底漆TPGP，用于fabricatedsteel/MS/steel；同页有富锌环氧、环氧黑漆、沥青及PU/蚀刻成品底涂，FBE行中2K/thermosetting等不一致表述不借为所选产品工艺。完整可见主要产品菜单为工业防护/PU/环氧/合成瓷漆/建筑乳胶/金属铝漆/路标/防火/沥青/水泥养护/防碳化/防污/防水成品涂料和施工工程；AsianEnamel明确另有转售品牌，不强称全目录自己配方。未识别外售ELO/ESBO/环氧化植物油/相近生物增塑稳定输入，有限所选原料同行排除通过，不声称所有SDS/隐藏SKU/股权已穷尽。RustConverter/成品Paint/水性BituminousEmulsion/施工服务不单凭名称冒称选定ELO原料供应商；底漆中epoxyresins/hardener为自身成品体系说明，不是ELO已用证据。用户ELO仅按TDS涂料/环氧功能/树脂改性的潜在实验室柔韧评估，不保证相容、固化、防腐、导电、阻燃、foodgrade、耐候/释放、认证/IS标准符合，不把对方government/client/4unit/500staff宣传当独立验证或我方案例，不建议成品现场掺加。GST24AKXPJ8592R1ZS和Proprietorship/PammySaumilVisharia为自身披露，非独立工商/采购授权；MsSVisharia姓名/代词与CEO披露不擅统一或推集团归属。公司地址Ahmedabad2339NaniMakeriwad为业务/注册地址不当独立定位厂门，印度概略坐标；IndiaMART是网站服务商不是母公司。全main409/root423/front836及queue/index/excluded/fullprivatehistory按TridentEngineering/domain/GST/proprietor查重无旧本体或来源GET，未与同名其他工程企业强行合并或拆厂新增。Contact明示表单及08043820658平台路由业务电话，页脚8043820658省略首0，保留Header原值，不冒称直达工厂/个人号/WhatsApp。SendEmail按钮无实际地址，所读原HTML未找到明确业务邮箱，不猜邮箱。JayMehta在Contact为MarketingExecutive仅自己披露，未独立核当前任职/邮箱归属，不录具名联系人或采购称呼。静态ThankyouHTML不是本次发送结果；无短信/表单/消息/CRM提交。缺邮箱不阻止合格非邮件渠道入库，共享发送台账unknown不当未发送，只有条件短文案生成器核对，无就绪信/复制导出或历史改写。"
+    },
+    "contact": {
+      "label": "官网公开联系表单及平台转接业务电话，未找到明示邮箱",
+      "phone": "08043820658",
+      "contactUrl": "https://www.tridentpaintco.com/enquiry.html"
+    },
+    "source": {
+      "label": "Own Trident two-component epoxy zinc phosphate steel primer",
+      "url": "https://www.tridentpaintco.com/epoxy-primer.html"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "trident-engineering-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "bluray-chemicals-ghaziabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rely-paints-ghaziabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indogem-enamels-ludhiana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9368,6 +9396,45 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "trident-engineering-ahmedabad": {
+    "website": "https://www.tridentpaintco.com/",
+    "contactPage": "https://www.tridentpaintco.com/enquiry.html",
+    "generalPhone": "08043820658",
+    "generalPhoneEvidence": {
+      "company": "Trident Engineering",
+      "value": "08043820658",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact header public company phone",
+          "url": "https://www.tridentpaintco.com/enquiry.html",
+          "summary": "Header explicitly prints08043820658. Public platform-routed business channel, not a direct factory or personal number and notWhatsApp; no email disclosed."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own paint manufacture and full main range",
+        "url": "https://www.tridentpaintco.com/"
+      },
+      {
+        "label": "Own manufacturer profile with R&D and testing facilities",
+        "url": "https://www.tridentpaintco.com/profile.html"
+      },
+      {
+        "label": "Own two-component epoxy zinc phosphate steel primer",
+        "url": "https://www.tridentpaintco.com/epoxy-primer.html"
+      },
+      {
+        "label": "Own contact form and platform-routed phone, no explicit email",
+        "url": "https://www.tridentpaintco.com/enquiry.html"
+      }
+    ]
+  },
   "bluray-chemicals-ghaziabad": {
     "website": "https://bluraychemicals.com/index.php/profile/",
     "contactPage": "https://bluraychemicals.com/index.php/contact-us/",
@@ -29034,6 +29101,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "trident-engineering-ahmedabad",
   "bluray-chemicals-ghaziabad",
   "rely-paints-ghaziabad",
   "indogem-enamels-ludhiana",
