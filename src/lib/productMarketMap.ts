@@ -9063,11 +9063,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "ramdev-resins-gandhinagar",
+    "company": "Ramdev Resins Pvt. Ltd. (Ramdev Coatings)",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Khatraj / Gandhinagar disclosed plant; Ahmedabad public office; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "Gandhinagar工业成品涂料制造及客户定制研发，RamdevCoatings/RAMCOAT同一账户；Ahmedabad办公室与Khatraj工厂不拆客户。",
+    "fit": "可开发候选",
+    "signal": "自有工业环氧及PU涂料制造与定制研发；RAM PRIME 103为双组分环氧磷酸锌底漆，另有MIO高膜厚环氧涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立完整审读3份自有HTTPS原始HTML：Home、Products、ProductRange，全200无跳转/失败/重试，未抓图片/PDF或执行远程JS，Ramdev终身3/rem3不机械补满6。Home明确自己exclusive制造工业环氧/PU/特种成品涂料及Khatraj工厂；Products明确客户定制涂料R&D及前处理/应用/固化技术研发，不由Resins公司名推定外售原料树脂。ProductRange完整主要5类为环氧底漆面漆、高膜厚环氧、PU、其他特种及定制涂层；实际RAMPRIME103是双组分聚酰胺固化环氧磷酸锌红底漆，RAMGUARDMIO635是MIO增强高膜厚环氧中间涂层，用于钢结构。其他成品含环氧透明渗透/锌铬/富锌、煤焦油、表面容忍/无溶剂环氧、PU底面涂、耐热铝漆及无机锌硅酸盐底漆。选定完整可见主要业务未发现ELO/ESBO/环氧化植物油或相近生物增塑稳定输入外售，有限所见同行排除通过；不声称已读取所有SDS/隐藏SKU或最终股权，不因SolventFree/Epoxy/Resins名称反向推其使用ELO。Home通用mildstone疑似原文用词保留，不借来推材料；具体钢/混凝土/金属应用取ProductRange对应原文。用户ELO仅按TDS涂料、环氧功能及树脂改性方向潜在实验室柔韧/配方评估，不证明客户现用/采购、确定相容、固化/防腐/耐热/浸泡/船舶/抗菌/标准认证或性能保证，不建议客户成品现场掺加。RamdevResinsPvtLtd/RamdevCoatings/RAMCOAT及RAMPRIME/RAMGUARD/RAMTHANE为同一账户；Khatraj/Gandhinagar工厂和Ahmedabad公司办公室不拆客户，注册/最终股权未独立工商核验，不猜CIN/GST/具名采购。Home1999成立/产能/面积/ISO/海军铁路供应商及2024DRDOToT过程均自身宣传，未冒称2026当前订单/完工/我方认证案例或采购时机，页脚2025不替代核验日。全main413/root427/front841/全queue/index/excluded/privatehistory按公司/domain/完整RAMCOAT词查重无旧实体GET或客户账户。Home及另外两页均明确info@ramdevcoatings.com与+917940327390Header电话，选确切通用邮箱和原电话格式，不冒称具名采购或SMTP/投递核验；另footer+919375080940为办公室/工厂共享公开公司号，不自动当个人/WhatsApp。Home公开FooterContact含公司与工厂地址，contactPage使用已读取Home，不把未请求Contact路径写成已读来源，地图印度概略非独立厂门定位。不发邮件/表单/消息/CRM；共享发送台账unknown不当未发送，仅条件短文案生成器审读，无就绪稿/复制导出/历史改写。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱、电话及Footer联系地址；无具名采购",
+      "email": "info@ramdevcoatings.com",
+      "phone": "+91 79 4032 7390",
+      "contactUrl": "https://www.ramdevcoatings.com/index.html"
+    },
+    "source": {
+      "label": "Own RAM PRIME103 two-pack epoxy zinc phosphate primer and RAM GUARD MIO635 high-build epoxy",
+      "url": "https://www.ramdevcoatings.com/product_range.html"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ramdev-resins-gandhinagar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tara-paints-ahmedabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pragati-paints-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mathur-corr-tech-coimbatore": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9482,6 +9511,56 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ramdev-resins-gandhinagar": {
+    "website": "https://www.ramdevcoatings.com/index.html",
+    "contactPage": "https://www.ramdevcoatings.com/index.html",
+    "generalEmail": "info@ramdevcoatings.com",
+    "generalPhone": "+91 79 4032 7390",
+    "generalEmailEvidence": {
+      "company": "Ramdev Resins Pvt. Ltd. (Ramdev Coatings)",
+      "value": "info@ramdevcoatings.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home header/footer public business email",
+          "url": "https://www.ramdevcoatings.com/index.html",
+          "summary": "Own Home explicitly disclosesinfo@ramdevcoatings.com, matching Products andProductRange; company general mailbox, not a named buyer, guessed email or delivery proof."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhoneEvidence": {
+      "company": "Ramdev Resins Pvt. Ltd. (Ramdev Coatings)",
+      "value": "+91 79 4032 7390",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home header exact company business phone",
+          "url": "https://www.ramdevcoatings.com/index.html",
+          "summary": "Home header explicitly prints+91 79 4032 7390, matching both own product pages; general company phone, no personal buyer/direct-factory/WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current industrial-coating manufacture and public company contact",
+        "url": "https://www.ramdevcoatings.com/index.html"
+      },
+      {
+        "label": "Own tailored protective-coating R&D and full major scope",
+        "url": "https://www.ramdevcoatings.com/products.html"
+      },
+      {
+        "label": "Own complete main finished primer, epoxy, PU and speciality product range",
+        "url": "https://www.ramdevcoatings.com/product_range.html"
+      }
+    ]
+  },
   "tara-paints-ahmedabad": {
     "website": "https://taralac.com/",
     "contactPage": "https://taralac.com/",
@@ -29322,6 +29401,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ramdev-resins-gandhinagar",
   "tara-paints-ahmedabad",
   "pragati-paints-pune",
   "mathur-corr-tech-coimbatore",

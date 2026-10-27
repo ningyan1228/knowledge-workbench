@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "ramdev-resins-gandhinagar": "Your range includes RAM PRIME 103 two-pack epoxy zinc phosphate primer and RAM GUARD MIO 635 epoxy coating.",
   "tara-paints-ahmedabad": "Your TARALAC 0853 is a single-pack, water-based acrylic matt finish for wood and wooden materials.",
   "pragati-paints-pune": "Your industrial primer range includes two-component epoxy zinc phosphate and epoxy zinc chromate primers.",
   "mathur-corr-tech-coimbatore": "Your MATWUD wood coating range includes water-based polyurethane coatings and one- and two-pack wood sealers.",
