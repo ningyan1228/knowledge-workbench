@@ -9175,11 +9175,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "cubo-basergun-antalya",
+    "company": "Başergün Boya ve Kimya A.Ş. (CUBO)",
+    "productId": "nl-w1201",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Antalya/Döşemealtı disclosed central factory; country-level approximate map marker",
+    "latitude": 39,
+    "longitude": 35.2,
+    "legacyCompanyDescription": "Başergün自有CUBO成品涂料及建筑材料制造；CUBOWOOD/Arte/Build/Insulation品牌同一账户，Antalya工厂为当前官网披露。",
+    "fit": "可开发候选",
+    "signal": "Başergün以CUBO品牌自制建筑及工业涂料；当前CUBOWOOD亮光木器清漆为透明、即用水性成品，官网列Antalya中央工厂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读5份自有HTTPS200：Home、About、当前木器目录、CUBOWOOD水性亮光清漆、Contact；终身5/rem1，无跳转/重试/远程JS。当前NLW范围另有Redcolour首页HTTP200但仅1726字节JS框架，合计6GET，后者不是业务正文。About明确1994建筑材料业务、2004BaşergünBoyaVeKimyaAŞ以CUBO品牌制造建筑/工业涂料，2012EPS及建筑化学材料设施，当前为涂料/效果层/建筑化学品/水性防水/保温/EPS同一制造公司。Home和所有完整主要产品导航为内外墙、木器/金属/工业成品、环氧/丙烯酸/硝基涂料、底漆腻子、Echol成品系列、效果矿物涂层、瓷砖胶/填缝及地坪/防水保温配套，不将EPS泡沫或建筑胶黏成品当PO/CPO原料。实际木器目录9款，4款明确SuBazlı；所选亮光清漆正文明确水性/透明/即用/刷辊施涂，是下游成品。有限已读主要经营和产品范围未识别外售水性聚烯烃乳液、PO/CPO分散体或同类附着力原料，所选NLW同行排除通过；不声称穷尽未读特殊用途/Echol各SKU、SDS/配方/隐藏股权，未读PDF/图片/证书不写已核验。木器基材为用户NLW资料支持方向，只提出潜在实验室底涂/附着促进材料评估；未确认实际采购/使用/现配方相容，不将未处理PP性能变成木材实测或保证客户清漆UV/防潮/干燥效果，不建议现场掺入成品。产品页自述覆盖面积有内部数字不一致，所有耗量/耐久/证书/排名不作我方或客户独立测试证据。CUBO/CUBOWOOD/CuboArte/Build/Insulation及Başergün前后名称同一账户；全main417/root431/front846/队列/来源索引/排除/历史按品牌/域名/主体查重无同一客户或旧定向GET，4个Cubo历史命中逐档是西语立方体/漆桶和巴西CuboItau创新中心。初查Dufa模糊命中不构成CUBO与Dufa集团关系，未作此断言。当前Contact明确AntalyaMerkezFabrikaGenelMudurluk及DöşemealtıOSB35CaddeNo12，不把地址当独立测绘厂门；地图土耳其国家概略。Contact/Home/Product明确info@cubo.com.tr、+902422581630一般公司业务渠道及联系表单，旁+902422581609明确传真不选电话；无具名采购/WhatsApp/SMTP或投递可达推断。Gurukafa为建站方不当集团。未知共享发送台账不当未发送，仅核对条件生成器事实与用户TDS功能，无就绪信/复制导出/发送历史改写；没有表单、邮件、消息或CRM提交。"
+    },
+    "contact": {
+      "label": "官网通用公司邮箱、业务电话及表单，非具名采购",
+      "email": "info@cubo.com.tr",
+      "phone": "+90 242 258 16 30",
+      "contactUrl": "https://cubo.com.tr/iletisim/"
+    },
+    "source": {
+      "label": "Own CUBOWOOD water-based gloss wood varnish",
+      "url": "https://cubo.com.tr/cubowood-su-bazli-parlak-vernik/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "cubo-basergun-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "son-hoa-viet-ho-chi-minh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "durafine-coatings-vaughan": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "primco-industries-sikandrabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9598,6 +9627,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "cubo-basergun-antalya": {
+    "website": "https://cubo.com.tr/",
+    "contactPage": "https://cubo.com.tr/iletisim/",
+    "address": "Organize Sanayi Bölgesi3.Kısım35.CaddeNo12, Döşemealtı/Antalya/Türkiye. Own Contact labels central factory/general management; no independently surveyed factory-entrance coordinates. Turkey-level approximate map marker.",
+    "generalEmail": "info@cubo.com.tr",
+    "generalEmailEvidence": {
+      "company": "Başergün Boya ve Kimya A.Ş. (CUBO)",
+      "value": "info@cubo.com.tr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact corporate business channel",
+          "url": "https://cubo.com.tr/iletisim/",
+          "summary": "Own Contact footer prints exact company mailbox with mailto, repeated Home/About/Wood/Product; no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "+90 242 258 16 30",
+    "generalPhoneEvidence": {
+      "company": "Başergün Boya ve Kimya A.Ş. (CUBO)",
+      "value": "+90 242 258 16 30",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact corporate business channel",
+          "url": "https://cubo.com.tr/iletisim/",
+          "summary": "Contact explicitly labels telephone and matching tel:+902422581630; neighbouring+902422581609 is fax and is not selected. Public company route, not a personal/WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current primary business and branded product range",
+        "url": "https://cubo.com.tr/"
+      },
+      {
+        "label": "Own Başergün manufacture and CUBO attribution",
+        "url": "https://cubo.com.tr/hakkimizda/"
+      },
+      {
+        "label": "Own nine-product wood-finish range",
+        "url": "https://cubo.com.tr/ahsap-boyalar/"
+      },
+      {
+        "label": "Own CUBOWOOD water-based ready-to-use gloss wood varnish",
+        "url": "https://cubo.com.tr/cubowood-su-bazli-parlak-vernik/"
+      },
+      {
+        "label": "Own Antalya factory/general management and corporate contact",
+        "url": "https://cubo.com.tr/iletisim/"
+      }
+    ]
+  },
   "son-hoa-viet-ho-chi-minh": {
     "website": "https://sonhoaviet.vn/",
     "contactPage": "https://sonhoaviet.vn/",
@@ -29649,6 +29737,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "cubo-basergun-antalya",
   "son-hoa-viet-ho-chi-minh",
   "durafine-coatings-vaughan",
   "primco-industries-sikandrabad",

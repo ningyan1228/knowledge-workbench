@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "cubo-basergun-antalya": "Your CUBOWOOD water-based gloss varnish is a clear, ready-to-use finish for decorative wood surfaces.",
   "son-hoa-viet-ho-chi-minh": "Your SƠN 2 IN 1 is a two-component solvent-based coating for protecting iron, steel and wood.",
   "durafine-coatings-vaughan": "Your Hydrospray range includes water-based wood stains, with custom colour matching available on request.",
   "primco-industries-sikandrabad": "Your wood coatings include melamine and N.C. finishes, alongside your decorative paints.",
