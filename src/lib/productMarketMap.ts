@@ -9147,11 +9147,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "son-hoa-viet-ho-chi-minh",
+    "company": "Công ty TNHH Sơn Hoa Việt",
+    "productId": "elo",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Ho Chi Minh City office/factory locations disclosed by company; country-level approximate map marker",
+    "latitude": 14.1,
+    "longitude": 108.3,
+    "legacyCompanyDescription": "SơnHoaViệt品牌涂料配方制造，NghiệpPhát为自述历史前身；当前办公及工厂一账户，不从历史年份推独立工商登记或采购。",
+    "fit": "可开发候选",
+    "signal": "自有配方制造多基材涂料；SƠN2IN1为改性聚酯/环氧/丙烯酸树脂路线的双组分溶剂型成品涂层，用于铁、钢和木材的装饰保护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读4份自有HTTPS200：首页3823字元、About2728、当前完整产品总览3111及实际SƠN2IN1产品3012；终身4/rem2，无跳转/错误/重试/远程JS，不为配额读满6。About明确自己制造品牌涂层，并从欧洲采购树脂、添加剂用于制造；通用进口表述不等于已采购ELO。SƠN2IN1明确双组分溶剂型、改性聚酯/环氧/丙烯酸路线、铁钢木材装饰保护及混配施工，属于下游成品而非原料。完整当前产品总览22项包括工业金属成品、木器漆/擦涂油/腻子、玻璃/效果漆、建筑防水/墙面成品，以及2K环氧基胶黏MT08和水性丙烯酸胶KN02；历史2008前身生产nhựa及胶黏剂也保留，不据树脂或油字样自动等同ELO/ESBO供应。所读完整主要经营未识别ELO、ESBO、环氧化植物油或相近生物增塑稳定原料外售，有限可见业务同行排除通过，不声称已读全SDS/隐藏股权/未读附件或SKU成分。用户ELO资料支持涂料/环氧功能/树脂改性方向，仅潜在实验室柔韧及树脂改性评估，不保证与客户具体聚酯/环氧/丙烯酸固化体系相容或改善防腐/干燥/附着/耐候；不建议向客户成品现场掺加，不虚构实际需求/采购/用量。Search旧2022研发新闻未GET，不引用QUATEST性能、无毒防污或阶段1为2026投产证据；网页显示0客户统计为动态占位不作经营规模。自有About披露1995PU业务前身NghiepPhat、2008前身塑料/树脂及胶黏业务、2015更名HoaViet，同账户保留非多个新增；办公/工厂公开地址按当前官网TPHoChiMinh，不推精确厂门或擅改旧行政区域，地图越南概略。主体现行公司名/品牌/域名/电话/前身全main416/root430/front845/队列/索引/排除/历史查重无同一客户或旧定向GET；18个NghiepPhat模糊命中逐文件实为nghiepPhatTrien/PhatSinh通用越南语，另有预算消歧记录，无归零。四页页脚均明确info@sonhoaviet.vn和(0274)3712335，选此公开公司通用邮箱/业务电话，另热线0886677886不当具名采购或WhatsApp。contactPage使用已读HomeFooter，不把未读Contact、GoogleDrive附件或工厂参访新闻写已核验。无具名人、邮箱猜测、SMTP或渠道可达推断。共享台账unknown不当未发送，仅核对条件生成器事实/用户TDS功能，无就绪信、复制导出或历史改写；没有邮件/表单/消息/CRM提交。"
+    },
+    "contact": {
+      "label": "官网公开公司通用邮箱及业务电话，非具名采购",
+      "email": "info@sonhoaviet.vn",
+      "phone": "(0274) 3712335",
+      "contactUrl": "https://sonhoaviet.vn/"
+    },
+    "source": {
+      "label": "Own SƠN2IN1 solvent-based coating for iron steel and wood",
+      "url": "https://sonhoaviet.vn/san-pham/son-2-in-1/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "son-hoa-viet-ho-chi-minh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "durafine-coatings-vaughan": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "primco-industries-sikandrabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ramdev-resins-gandhinagar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9569,6 +9598,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "son-hoa-viet-ho-chi-minh": {
+    "website": "https://sonhoaviet.vn/",
+    "contactPage": "https://sonhoaviet.vn/",
+    "address": "Office:184/29 Đường An Phú18, KP Bình PhướcB, Phường An Phú, TP Hồ Chí Minh; disclosed factory:Khu phố Long Bình, Phường Tân Hiệp, TP Hồ Chí Minh. Current own footer addresses; not independently located factory entrance. Vietnam-level approximate map marker.",
+    "generalEmail": "info@sonhoaviet.vn",
+    "generalEmailEvidence": {
+      "company": "Công ty TNHH Sơn Hoa Việt",
+      "value": "info@sonhoaviet.vn",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home public corporate contact footer",
+          "url": "https://sonhoaviet.vn/",
+          "summary": "Own Home explicitly prints this general company mailbox, repeated About/ProductIndex/SƠN2IN1. No named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "(0274) 3712335",
+    "generalPhoneEvidence": {
+      "company": "Công ty TNHH Sơn Hoa Việt",
+      "value": "(0274) 3712335",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home public corporate contact footer",
+          "url": "https://sonhoaviet.vn/",
+          "summary": "Own Home prints this business phone with tel:02743712335; repeated all3other originals. Public corporate route, not a named/directfactory/WhatsApp claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacture, predecessor and generic resin/additive purchase",
+        "url": "https://sonhoaviet.vn/ve-son-hoa-viet/"
+      },
+      {
+        "label": "Own current22-item finished-product scope",
+        "url": "https://sonhoaviet.vn/elementor-5193/"
+      },
+      {
+        "label": "Own SƠN2IN1 two-component solvent-based coating for iron steel wood",
+        "url": "https://sonhoaviet.vn/san-pham/son-2-in-1/"
+      },
+      {
+        "label": "Own public corporate contact and disclosed office/factory locations",
+        "url": "https://sonhoaviet.vn/"
+      }
+    ]
+  },
   "durafine-coatings-vaughan": {
     "website": "https://durafinecoatings.com/",
     "contactPage": "https://durafinecoatings.com/",
@@ -29565,6 +29649,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "son-hoa-viet-ho-chi-minh",
   "durafine-coatings-vaughan",
   "primco-industries-sikandrabad",
   "ramdev-resins-gandhinagar",
