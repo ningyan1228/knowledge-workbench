@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "durafine-coatings-vaughan": "Your Hydrospray range includes water-based wood stains, with custom colour matching available on request.",
   "primco-industries-sikandrabad": "Your wood coatings include melamine and N.C. finishes, alongside your decorative paints.",
   "ramdev-resins-gandhinagar": "Your range includes RAM PRIME 103 two-pack epoxy zinc phosphate primer and RAM GUARD MIO 635 epoxy coating.",
   "tara-paints-ahmedabad": "Your TARALAC 0853 is a single-pack, water-based acrylic matt finish for wood and wooden materials.",

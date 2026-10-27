@@ -9119,11 +9119,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "durafine-coatings-vaughan",
+    "company": "Durafine Coatings (Durafine Industrial Coatings)",
+    "productId": "nl-w1201",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Vaughan public business address; Canada-level approximate map marker",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "legacyCompanyDescription": "加拿大水性工业及木器涂层配方制造业务；TAGChemicals为自己披露的脱模剂/特种添加剂合作伙伴，美国供货业务不单独计客户。",
+    "fit": "可开发候选",
+    "signal": "自有配方及定制制造水性木器涂层，Hydrospray系列含水性木器色漆；加拿大Vaughan为公开业务地址，美国为供货市场。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读5份自有HTTPS原文：首页、WoodStains、About、AdhesiveTieCoatPrimer、TPOCoatings，全部200无跳转/重试/远程JS。公司终身5/rem1；同一NLW范围另有Earthpaint首页403一次，范围合计6请求，不补读SKU或PDF。WoodStains明确自己制造水性木器涂料和按客户要求定制、Hydrospray水性及溶剂型木器色漆；不把所有系列都说成水性。Home/About明确配方研发及制造，完整主要经营为木器顶涂/底涂/封闭/色漆、PVC/TPO/橡胶圈/仿木/临时保护成品涂层、脱模剂及润滑配套。DynabondGrey为可喷涂刷涂的水性1K界面成品底涂；DynabondAP500为有24小时适用期、可调色及哑/亮光的水性2K成品TPO涂层，不能因TPO或adhesion字样就等同外售PO/CPO原料乳液。About披露TAGChemicalsGermany合作提供脱模剂和特种添加剂，未声称集团控股或所有产品自主合成；有限已读主要经营范围未识别外售水性聚烯烃乳液、PO/CPO分散体或同类附着力原料，所选NLW同行排除通过。结论限当前5份主要原文，未声称穷尽全部SDS/隐藏股权/未读合作方业务；无外购例外或客户采购证据。仅按用户TDS木材及水性底涂/附着促进方向提出潜在实验室材料评估，未确认现用/采购/配方相容或性能，不把未处理PP效果扩写成木器实测，不用汽车/胶黏市场扩展入库。产品页的占位ClientCompanyName和百分比案例不作可核验客户、需求、改善幅度或我方性能证据；TPO页把polycarbonate误列polyolefin的括号也不采纳。官网公司/品牌/域名/电话/地址全库及main415/root429/front843/完整队列/索引/排除/历史查重无同一客户；旧2026-10-17仅Search发现3文件未GET、未入私有索引。TAG仅明确合作伙伴，不冒称独立股权已核实；加拿大业务主体一账户，不按美国供货页面再造美国客户。公开地址100-400ApplewoodCresVaughanON为业务联系处，不推具体工厂门；地图用加拿大国家概略坐标。5页页眉页脚均明确info@durafinecoatings.com和(+1)416.628.3132通用渠道；已读Home有联系表单及真实公开web.whatsapp链接，可保留原链接，不猜联系人、职位或号码归属以外信息，不声称渠道可达/SMTP验证。contactPage使用已读Home联系区，不把未读Contact页标为已查。未知共享发送台账不当未发送，仅核对条件生成器事实和用户TDS功能，不生成就绪信、复制、导出或改写历史；未提交任何表单、邮件、消息或CRM。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及电话；无具名采购",
+      "email": "info@durafinecoatings.com",
+      "phone": "(+1) 416.628.3132",
+      "contactUrl": "https://durafinecoatings.com/"
+    },
+    "source": {
+      "label": "Own manufacturing and Hydrospray water-based wood stains",
+      "url": "https://durafinecoatings.com/wood-coatings/stains/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "durafine-coatings-vaughan": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "primco-industries-sikandrabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ramdev-resins-gandhinagar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tara-paints-ahmedabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9540,6 +9569,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "durafine-coatings-vaughan": {
+    "website": "https://durafinecoatings.com/",
+    "contactPage": "https://durafinecoatings.com/",
+    "address": "100-400 Applewood Cres., Vaughan, Ontario, L4K 0C3, Canada. Disclosed business contact address; no independently located factory entrance. Marker is Canada-level approximate only.",
+    "generalEmail": "info@durafinecoatings.com",
+    "generalEmailEvidence": {
+      "company": "Durafine Coatings (Durafine Industrial Coatings)",
+      "value": "info@durafinecoatings.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home public corporate contact section",
+          "url": "https://durafinecoatings.com/",
+          "summary": "Own Home header/footer explicitly prints this company mailbox, repeated all four other own pages; not a named buyer or deliverability confirmation."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "(+1) 416.628.3132",
+    "generalPhoneEvidence": {
+      "company": "Durafine Coatings (Durafine Industrial Coatings)",
+      "value": "(+1) 416.628.3132",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Home public corporate contact section",
+          "url": "https://durafinecoatings.com/",
+          "summary": "Own Home header/footer prints exact corporate number and matching tel links, repeated other own sources; not a named personal/direct factory claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "whatsapp": "https://web.whatsapp.com/send?phone=+(1)416.628.3132",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacture, entire primary business range and general contact",
+        "url": "https://durafinecoatings.com/"
+      },
+      {
+        "label": "Own Hydrospray and waterborne wood-stain manufacturing",
+        "url": "https://durafinecoatings.com/wood-coatings/stains/"
+      },
+      {
+        "label": "Own formulation and TAG release-agent/additive partnership",
+        "url": "https://durafinecoatings.com/about/"
+      },
+      {
+        "label": "Own Dynabond Grey finished waterborne interfacial primer",
+        "url": "https://durafinecoatings.com/speciality-coatings/adhesive-tie-coat-primer/"
+      },
+      {
+        "label": "Own Dynabond AP-500 finished two-component waterborne TPO coating",
+        "url": "https://durafinecoatings.com/speciality-coatings/tpo-coatings/"
+      }
+    ]
+  },
   "primco-industries-sikandrabad": {
     "website": "https://primcopaints.com/about/",
     "contactPage": "https://primcopaints.com/about/",
@@ -29476,6 +29565,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "durafine-coatings-vaughan",
   "primco-industries-sikandrabad",
   "ramdev-resins-gandhinagar",
   "tara-paints-ahmedabad",
