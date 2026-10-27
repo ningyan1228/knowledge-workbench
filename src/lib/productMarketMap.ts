@@ -9397,11 +9397,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "regis-las-heras",
+    "company": "REGIS S.A.",
+    "productId": "elo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Las Heras, Mendoza; disclosed business address; approximate country marker",
+    "latitude": -38.4,
+    "longitude": -63.6,
+    "legacyCompanyDescription": "RegisSA自有工厂制造环氧保护涂层、树脂和胶黏剂；Mendoza与Chile联系点同一账户，未测绘厂门。",
+    "fit": "可开发候选",
+    "signal": "自有工厂制造树脂、涂料及胶黏剂；E-160为碳钢保护用富锌环氧底涂，另有E-150环氧防锈涂层及E-600双组分沥青环氧。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "逐家公司独立复读原始证据：本轮仅新GET指定/contacto/自有HTTPS200完整联系正文，另重新审读同日私有存档Home、完整Resinas目录及完整PinturasRevestimientosEpoxi三份原始业务正文，没有把缓存复读计为新联网；原4次含/contact/301，本轮1次，终身5/rem1，不跨范围/日期/产品/提供商重置。Home明确当前自有工厂制造树脂、涂料、胶黏剂，并区分磨料/金刚石工具贸易；环氧页有E160富锌底涂/E150防锈底涂/E600双组分高固体沥青环氧及工业地坪体系。完整已读主要业务为聚酯/环氧/PU配方树脂、施工环氧/水性/合成/PU涂料、胶黏剂、丙烯酸橡胶/水泥砂浆、着色浆/珠光颜料、苯乙烯、触变胶及双组分模具硅胶；未识别所选ELO/ESBO/环氧化植物油或相近生物增塑稳定原料外售，通过所选原料同行排除，不把所有下游环氧/PU树脂都说成ELO同行，也不穷尽全部SDS/隐藏最终股权。用户ELO资料支持涂料/环氧功能/树脂改性潜在实验室柔韧评估；不声称在客户现有环氧配方已相容、保证固化/附着/防腐/食品或葡萄酒接触认证、不建议施工现场掺入成品。不采用Home INV/食品用途宣传作为我方合规/性能或客户采购结论，未读PDF不标核验。REGIS/RegisSA/regissa.com同一主体，MendozaLasHeras为阿根廷业务位置，ChileRancagua为同域另一联系地点，不拆两客户或据发现Uruguay查询重定位；无独立工商年/产能或厂门测绘声明。全main425/root439/front860/完整队列/来源索引/排除/历史按公司、域名和电话复核：只有原来1个未准入私有REGIS记录，没有公开重复；本轮正式升级现有记录，不再append私有公司或把联系补充单独计客户。实际Contact明示info@regissa.com通用邮箱及+549261722-2902公司电话（原格式+54 9261722-2902），电话文本提及WhatsApp但链接是#，插件图标/配置不等于公开wa.me链接，故不构造WhatsApp跳转。表单提示启用JS，只核实公开入口，未执行脚本/填表/发送。未知共享台账不当未发送，未来条件生成器仅校验事实与用户功能，无就绪信/复制导出或历史改写，没有邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司电话；无具名采购或实际WhatsApp链接",
+      "email": "info@regissa.com",
+      "phone": "+54 9261722-2902",
+      "contactUrl": "https://www.regissa.com/contacto/"
+    },
+    "source": {
+      "label": "Own protective epoxy coating and zinc-rich primer systems",
+      "url": "https://www.regissa.com/pinturas-revestimientos-epoxi/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "regis-las-heras": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tecnolac-laguardia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "crisoles-montevideo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "urchemikal-urlak-mendaro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -9828,6 +9857,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "regis-las-heras": {
+    "website": "https://www.regissa.com/",
+    "contactPage": "https://www.regissa.com/contacto/",
+    "address": "Santa Rita 3100, Parque Industrial y minero eje Norte, Las Heras, Mendoza, Argentina. Disclosed business address; Chile/Rancagua contact belongs to same account, not separate manufacturer; country-level approximate marker.",
+    "generalEmail": "info@regissa.com",
+    "generalEmailEvidence": {
+      "company": "REGIS S.A.",
+      "value": "info@regissa.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact corporate channel",
+          "url": "https://www.regissa.com/contacto/",
+          "summary": "Own Contact explicitly publishes info@regissa.com under REGIS corporate business identity and invites enquiries to commercial department. General company mailbox; no named buyer/deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "+54 9261722-2902",
+    "generalPhoneEvidence": {
+      "company": "REGIS S.A.",
+      "value": "+54 9261722-2902",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact corporate channel",
+          "url": "https://www.regissa.com/contacto/",
+          "summary": "Exact corporate call/WhatsApp number printed in own Contact, retained without deriving wa.me from phone or plugin configuration. Home footer has another formatting/line, not silently combined."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own factory manufacturing coatings resins and adhesives; tools trading separately described",
+        "url": "https://www.regissa.com/"
+      },
+      {
+        "label": "Complete visible major resin/formulated system/auxiliary range",
+        "url": "https://www.regissa.com/resinas/"
+      },
+      {
+        "label": "Own protective epoxy coating range, including zinc-rich E-160 primer",
+        "url": "https://www.regissa.com/pinturas-revestimientos-epoxi/"
+      },
+      {
+        "label": "Current own public corporate email phone and form entry",
+        "url": "https://www.regissa.com/contacto/"
+      }
+    ]
+  },
   "tecnolac-laguardia": {
     "website": "https://tecnolac.es/",
     "contactPage": "https://tecnolac.es/contacto",
@@ -30282,6 +30366,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "regis-las-heras",
   "tecnolac-laguardia",
   "crisoles-montevideo",
   "urchemikal-urlak-mendaro",
