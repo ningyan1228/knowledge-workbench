@@ -9091,11 +9091,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "primco-industries-sikandrabad",
+    "company": "Primco Industries Pvt Ltd (Primco Paints)",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Sikandrabad disclosed works; Ghaziabad public corporate office; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "PrimcoPaints成品涂料生产及研发业务，原NLW私有项因水性木器关联未确认保留；本次按ELO涂料TDS应用首次正式核验，办公室和工厂同一账户。",
+    "fit": "可开发候选",
+    "signal": "Sikandrabad自有水性、溶剂型及粉末涂料制造设施并设生产研发团队；木器业务含三聚氰胺及N.C.成品涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "按本轮ELO涂料/树脂改性TDS方向独立复核，而不是把上轮缺水性木器链接的NLW记录改标签即通过。完整业务原文2份：沿用上轮AboutHTTPS200、当前PlantMachineryHTTPS200；当前官网实际链接P.U.Finish分类请求404错误页，明确未读其业务正文/具体PU牌号。终身旧1+当前2=3/rem3，HTTP404已计请求并存body/hash，不重试、抓PDF/图片或执行远程JS，原NLW水性基材缺口保持未确认，不凭两独立菜单推水性木器配方。About明确PrimcoIndustriesPvtLtd/PrimcoPaints品牌生产研发团队和装饰/工业木器/PU/NC成品涂层，正文实际WoodcoatingwithMelamyne&N.CFinish；当前PlantMachinery明确半自动水性/溶剂/粉末涂料制造单位、Sikandrabad工厂、emulsiontank及ALKYDplant，家具/修补成品系列，不将厂内醇酸生产设施等同外售ELO/ESBO/环氧化植物油。已读2份完整主要导航/经营为装饰内外墙/地坪/金属效果/丙烯酸成品漆、底涂/腻子/石膏、防水、成品水性/溶剂瓷漆、家具/锤纹/密封成品、铝漆、配套稀释剂、木器硝基/三聚氰胺清漆封闭剂和PU、汽车NC及粉末涂料；其中PolymerandAcrylic是墙腻子子类，不当原料聚合物外售。有限实际完整主要业务未识别ELO/ESBO/环氧化植物油或相近生物增塑稳定输入外售，所选ELO同行排除通过；不声称已读全部SKU/SDS/未读PU分类或隐藏股权。自制涂料与自身成品木器体系足以支持用户TDS涂料应用及潜在实验室树脂改性/柔韧评估，不代表客户现用/采购/需求或现有三聚氰胺/NC/PU体系与ELO已相容，不能保证固化、干燥、附着、防腐/耐热/食品合规，不建议成品现场掺加。不把ELO环氧官能团说明变成客户生产环氧漆的说法。CompanyPrimcoIndustriesPvtLtd与PrimcoPaints为同一账户，SahibabadGhaziabadCorporateOffice及C79SikandrabadBulandshahrWorks不拆工厂/城市新增；工厂地址为自述非独立地理门牌核验，地图印度概略。设备页20000MT/7500sqm/六个月扩产为未标报告年份自身宣传，footer2022不是实地核验日，不推2026产能/投产/当前采购。全main414/root428/front843/queue/index/excluded/privatehistory按公司/域名查重仅原1次About私有项，无公开同账户，旧NLW私有证据和预算保留；本次首次按ELO正式收录。About和Plant均明确info@primcopaints.com、customercare@及1800-309-8111，选前者通用邮箱和原格式免费热线，不把admin/customer-service当具名采购，不猜号段/WhatsApp/SMTP或投递；contactPage用已读AboutFooter，不把未读Contact单页写已核验。无具名人员/职责猜测、邮件/表单/订阅/消息/CRM提交。共享发送台账unknown不当未发送，只有条件生成器事实/材料功能核对，无就绪信/复制导出/历史改写。"
+    },
+    "contact": {
+      "label": "官网公开通用公司邮箱及免费业务热线；无具名采购",
+      "email": "info@primcopaints.com",
+      "phone": "1800-309-8111",
+      "contactUrl": "https://primcopaints.com/about/"
+    },
+    "source": {
+      "label": "Own Primco decorative/wood coating manufacture, melamine and N.C. finishes",
+      "url": "https://primcopaints.com/about/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "primco-industries-sikandrabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ramdev-resins-gandhinagar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tara-paints-ahmedabad": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pragati-paints-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9511,6 +9540,52 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "primco-industries-sikandrabad": {
+    "website": "https://primcopaints.com/about/",
+    "contactPage": "https://primcopaints.com/about/",
+    "generalEmail": "info@primcopaints.com",
+    "generalPhone": "1800-309-8111",
+    "generalEmailEvidence": {
+      "company": "Primco Industries Pvt Ltd (Primco Paints)",
+      "value": "info@primcopaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own About header and CONTACT footer exact general mailbox",
+          "url": "https://primcopaints.com/about/",
+          "summary": "About explicitly disclosesinfo@primcopaints.com, matching currentPlantMachinery footer. General company mailbox, no named purchasing/identity or deliverability inference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhoneEvidence": {
+      "company": "Primco Industries Pvt Ltd (Primco Paints)",
+      "value": "1800-309-8111",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own About footer toll-free business line",
+          "url": "https://primcopaints.com/about/",
+          "summary": "About andcurrentPlantMachinery explicitly print1800-309-8111 asTollFree company contact. Exact public generalbusiness route, not a personal/directfactory/WhatsApp number."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Primco manufacturing/R&D, actual wood finishes and public corporate contact",
+        "url": "https://primcopaints.com/about/"
+      },
+      {
+        "label": "Own semi-automatic paint manufacturing and factory facilities",
+        "url": "https://primcopaints.com/plant-machinery/"
+      }
+    ]
+  },
   "ramdev-resins-gandhinagar": {
     "website": "https://www.ramdevcoatings.com/index.html",
     "contactPage": "https://www.ramdevcoatings.com/index.html",
@@ -29401,6 +29476,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "primco-industries-sikandrabad",
   "ramdev-resins-gandhinagar",
   "tara-paints-ahmedabad",
   "pragati-paints-pune",
