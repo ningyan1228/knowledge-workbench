@@ -8,7 +8,7 @@ const countriesByContinent: Partial<Record<Continent, string[]>> = {
   亚洲: ['China', 'India', 'Indonesia', 'Israel', 'Japan', 'Malaysia', 'Pakistan', 'Philippines', 'Singapore', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'Vietnam'],
   欧洲: ['Belarus', 'Belgium', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Italy', 'Lithuania', 'Luxembourg', 'Netherlands', 'Poland', 'Portugal', 'Romania', 'Russia', 'Serbia', 'Slovakia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
   北美洲: ['Canada', 'Mexico', 'United States'],
-  南美洲: ['Argentina', 'Brazil', 'Colombia', 'Peru'],
+  南美洲: ['Argentina', 'Brazil', 'Colombia', 'Peru', 'Uruguay'],
   非洲: ['South Africa'],
   大洋洲: ['Australia', 'New Zealand'],
 }

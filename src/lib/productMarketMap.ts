@@ -9231,11 +9231,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "grupo-olmos-empalme",
+    "company": "Grupo Olmos (Del Bosque / Belco / Duperol)",
+    "productId": "nl-w1201",
+    "country": "Uruguay",
+    "countryZh": "乌拉圭",
+    "city": "Empalme Olmos/Canelones disclosed group manufacturing complex; country-level approximate map marker",
+    "latitude": -32.5,
+    "longitude": -55.8,
+    "legacyCompanyDescription": "Olmos集团在自有园区生产陶瓷和涂料；DelBosque等自有品牌同一账户，3M/WEG为披露的代理关系，未独立查运营子公司RUT。",
+    "fit": "可开发候选",
+    "signal": "GrupoOlmos明确在EmpalmeOlmos园区自制涂料；DelBosque自有系列含用于室内外木材的水性丙烯酸清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读6份自有HTTPS200：Home、Quienes、Pinturas品牌总览、具体BarnizAlAguaDelBosque、Contact和完整可见DelBosque目录；终身6/rem0STOP，无跳转/重试/错误/远程JS，不读PDF/图片/额外品牌子页。Quienes用现在时明确园区当前制造陶瓷、卫浴及涂料，自己生产AquaBelco/Facil/Oxifast/Fungimax/DelBosque/Duperol，并代理3M/WEG；不把代理产品都声称自己制造。Pinturas仅是品牌总览并非全SKU审计，DelBosque可见8项为硝基封闭/清漆、木材保护剂、柔性/传统清漆及3项水性木器产品；其中PlastificanteAlAgua为该木器成品类别名，未据名字推外售原料增塑剂。具体水性清漆明确丙烯酸树脂、室内外木材及家具/框架/围栏/deck、即用及可水稀释、实验室开发信息。有限已读当前主要经营及木器成品范围未识别外售水性聚烯烃乳液、PO/CPO分散体或同类附着力输入，所选NLW同行排除通过；不声称已穷尽未读各品牌SKU/SDS、3M/WEG全球业务或集团隐藏股权，不把普通代理品牌名自动等同所选原料外售，也不虚构外购例外。用户NLW资料支持木材及水性底涂/附着促进评估，仅潜在实验室方向，未确认采购/现用/相容/具体木材附着力或防水/防霉/UV改善，未处理PP性能不外推。原文安全警示/耗量/耐久/1937陶瓷起始年/2023网页新闻和footer不能作为我方保证、当前公司注册年/产能或2026采购项目，未读PDF不标已核验。GrupoOlmos及全部所述自有品牌作为一个集团制造账户，具体运营子公司RUT未独立查证；3M/WEG代理不是股权归属。全main419/root433/front850/队列/索引/排除/历史按品牌/域名/Olmos及Guichon关联查重无同一账户或旧GET；不按不同品牌/陶瓷/园区再造客户。集团公开地址26demayo91002EmpalmeOlmosCanelones为业务地址，不假装测绘厂门坐标，地图乌拉圭国家概略。Contact明确姓名/姓氏/邮箱/电话/留言表单，DelBosque页明确涂料咨询08001515，选公开打印0800-1515，不擅改国际拨法或保证海外可达；另08001937未擅归部门。六原文无公开mailto或明确邮箱、无直接WhatsApp链接；Joinchat按钮/Poweredby和电话不能推账号/WhatsApp链接，邮箱/具名采购保持缺项。LinkedIn为官网实际公司链接，未读个人任职/职责不录人员。表单/电话为用户后续手动渠道，不提交表单/发送消息或写CRM；缺邮箱不阻止合格客户正文预备能力，但未知共享发送台账不当未发送，当前只有条件生成器事实/功能核对，无就绪稿/复制导出或历史改写。"
+    },
+    "contact": {
+      "label": "官网联系表单及涂料咨询电话；未找到公开邮箱",
+      "phone": "0800-1515",
+      "contactUrl": "https://olmos.com.uy/contact/"
+    },
+    "source": {
+      "label": "Own Barniz al Agua DelBosque for indoor/outdoorwood",
+      "url": "https://olmos.com.uy/product/barniz-al-agua-del-bosque/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "grupo-olmos-empalme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "suga-boya-pendik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "cubo-basergun-antalya": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "son-hoa-viet-ho-chi-minh": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9656,6 +9684,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "grupo-olmos-empalme": {
+    "website": "https://olmos.com.uy/",
+    "contactPage": "https://olmos.com.uy/contact/",
+    "address": "26 de mayo,91002EmpalmeOlmos,Departamento deCanelones,Uruguay. Own groupbusinessaddress/manufacturingcomplex; no exactfactoryentrancecoordinates, Uruguay-level approximate marker.",
+    "generalPhone": "0800-1515",
+    "generalPhoneEvidence": {
+      "company": "Grupo Olmos (Del Bosque / Belco / Duperol)",
+      "value": "0800-1515",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own DelBosque paint-enquiry line and Contact footer",
+          "url": "https://olmos.com.uy/delbosque-pintura/",
+          "summary": "DelBosque explicitly invitespaintproductenquiries via08001515; Contact/otherownpagesprint0800-1515. Exactpubliccompanytollfreeroute, nooverseasreachability, namedpersonorWhatsAppinference."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current group paint manufacture, selfmade brands and disclosed3M/WEGdistribution",
+        "url": "https://olmos.com.uy/quienes/"
+      },
+      {
+        "label": "Own current main paint-brand directory",
+        "url": "https://olmos.com.uy/pinturas/"
+      },
+      {
+        "label": "Own water-based acrylic DelBosque wood varnish and indoor/outdoorwood application",
+        "url": "https://olmos.com.uy/product/barniz-al-agua-del-bosque/"
+      },
+      {
+        "label": "Own visible complete DelBosque wood-finish range and paint enquiry phone",
+        "url": "https://olmos.com.uy/delbosque-pintura/"
+      },
+      {
+        "label": "Own public corporate contact form and group address",
+        "url": "https://olmos.com.uy/contact/"
+      }
+    ]
+  },
   "suga-boya-pendik": {
     "website": "https://sugaboya.com.tr/",
     "contactPage": "https://sugaboya.com.tr/guncel/",
@@ -29822,6 +29894,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "grupo-olmos-empalme",
   "suga-boya-pendik",
   "cubo-basergun-antalya",
   "son-hoa-viet-ho-chi-minh",
