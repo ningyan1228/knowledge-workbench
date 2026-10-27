@@ -9537,11 +9537,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "pinturas-adoral-la-roda",
+    "company": "Pinturas Adoral",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "La Roda; disclosed business address; approximate country marker",
+    "latitude": 40.4,
+    "longitude": -3.7,
+    "legacyCompanyDescription": "自有设施制造及开发成品涂料；本条为西班牙LaRoda同一Adoral账户，相关品牌和经销渠道不拆计。坐标为国家级近似。",
+    "fit": "可开发候选",
+    "signal": "官网设施页明确用于制造及开发涂料；Barniz Parquet al Agua 1C为水性脂肪族聚氨酯清漆，用于木材和拼花地板，可按应用作底涂及面涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "官网设施页明确涂料制造和开发，具体木器清漆为水性脂肪族聚氨酯成品。保留其Polimul202塑化醋酸乙烯体系封闭剂及Latexkril乙烯基共聚物浓缩乳胶（用于增强水性涂料、墙面处理和装饰面涂）的经营事实，不笼统称无聚合物乳胶或配方辅助品业务。已读主营导航、当前目录首18项、固定剂类别全3项及两项乳胶完整说明中，未见所选水性聚烯烃/PO/CPO分散体或独立附着促进原料供货证据；不将乙烯基乳胶直接当作聚烯烃。结论限已读范围，未穷尽其8页目录，实际采购及配方相容性待确认。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司电话；无具名采购或实际WhatsApp链接",
+      "email": "info@pinturasadoral.com",
+      "phone": "+34 967 44 38 38",
+      "contactUrl": "https://www.pinturasadoral.es/nuestras-instalaciones/"
+    },
+    "source": {
+      "label": "Own water-based wood and parquet varnish application",
+      "url": "https://www.pinturasadoral.es/producto/barniz-parquet-al-agua-1c/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-adoral-la-roda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "biofa-bad-boll": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pinturas-gamma-color-villa-alemana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-del-plata-elbex-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9973,6 +10002,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-adoral-la-roda": {
+    "website": "https://www.pinturasadoral.es/",
+    "contactPage": "https://www.pinturasadoral.es/nuestras-instalaciones/",
+    "address": "Autovía A-31, P.K: 41,8, 2630 La Roda (España). Current disclosed business address as printed; factory entrance not independently surveyed. Country-level approximate marker.",
+    "generalEmail": "info@pinturasadoral.com",
+    "generalEmailEvidence": {
+      "company": "Pinturas Adoral",
+      "value": "info@pinturasadoral.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own facilities page corporate contact footer, repeated across current own pages",
+          "url": "https://www.pinturasadoral.es/nuestras-instalaciones/",
+          "summary": "Exact info@pinturasadoral.com and matching mailto in all5 actual own HTML corporate footers. Different .com email domain directly attributed by .es corporate site. General inbox, no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "generalPhone": "+34 967 44 38 38",
+    "generalPhoneEvidence": {
+      "company": "Pinturas Adoral",
+      "value": "+34 967 44 38 38",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own facilities page corporate contact footer, repeated across current own pages",
+          "url": "https://www.pinturasadoral.es/nuestras-instalaciones/",
+          "summary": "Exact public company phone in all5 actual HTML footers. No actual WhatsApp link observed; none inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own facilities for manufacture and development of paints and coatings",
+        "url": "https://www.pinturasadoral.es/nuestras-instalaciones/"
+      },
+      {
+        "label": "Own complete specific water-based polyurethane wood varnish body",
+        "url": "https://www.pinturasadoral.es/producto/barniz-parquet-al-agua-1c/"
+      },
+      {
+        "label": "Current visible product navigation and first18 catalogue items;8pages disclosed, later pages not read",
+        "url": "https://www.pinturasadoral.es/tienda/"
+      },
+      {
+        "label": "Complete visible3-item fixatives/primers category",
+        "url": "https://www.pinturasadoral.es/categoria-producto/fijadores-imprimaciones/"
+      },
+      {
+        "label": "Actual public catalogue JSON: full Polimul202 and concentrated vinyl-copolymer latex product descriptions",
+        "url": "https://www.pinturasadoral.es/wp-json/wc/store/v1/products?include=1181,1179&per_page=2"
+      },
+      {
+        "label": "Current About navigation and corporate contact footer; old Search history not in current body",
+        "url": "https://www.pinturasadoral.es/quienes-somos/"
+      }
+    ]
+  },
   "biofa-bad-boll": {
     "website": "https://www.biofa-de.com/",
     "contactPage": "https://www.biofa-de.com/265/ueber-uns",
@@ -30706,6 +30798,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-adoral-la-roda",
   "biofa-bad-boll",
   "pinturas-gamma-color-villa-alemana",
   "pinturas-del-plata-elbex-montevideo",
