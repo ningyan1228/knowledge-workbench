@@ -8870,11 +8870,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-26"
   },
+  {
+    "id": "indogem-enamels-ludhiana",
+    "company": "Indogem Enamels Private Limited",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ludhiana public business address; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "Ludhiana工业涂料制造及研发业务，VINLAC产品同一账户；公司地址为公开业务联系点，未独立核验厂门或最终股权。",
+    "fit": "可开发候选",
+    "signal": "在Ludhiana制造工业涂料；双组分环氧系列含磷酸锌底漆、MIO中间漆和富锌底漆，另有PU及其他工业成品涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读3份自有原始HTTPS HTML：Home3960字符、EpoxyCoatings、Contact；3次全200无跳转/重试/脚本执行，终身3/rem3，不为配额读满6。Home明确自己制造工业涂料、研发制造咨询及完整主要产品目录；Epoxy页明确双组分环氧磷酸锌底漆、MIO中间漆、富锌底漆，金属/结构钢/工业设备/混凝土/海工与浸泡等自身应用描述。所读完整主要经营目录另含PU、快干汽车修补、耐热、烘烤、合成瓷漆/底漆、家具漆、腻子、锤纹/金属效果、铸件封闭、单双组分铝漆、稀释剂、环氧酯1K/丙烯酸/HIPSABS及PU1K底漆等成品配套，未识别外售ELO/ESBO/环氧化植物油及相近生物增塑稳定输入。有限可见业务同行排除通过，不声称全SKU/SDS/配方/隐藏股权穷尽，不从epoxyester字样推植物油结构或ELO已用量。ELO只按用户TDS涂料/树脂改性方向作潜在实验室柔韧评估，不保证现配方相容、固化、防腐耐热/海工合规或使用需求，不建议客户成品现场掺加。网页1971成立/MDVedparkashAhuja为自己披露，未工商/股权/现任采购独立验证，不录具名联系人；VINLAC为当前产品关联，同一公司一账户。当前main406/root420/front833/fullqueue/index/excluded/history按公司/域名/VINLAC查重无本体/旧GET，不拆产品或工厂。Contact明确info@和sales@公司邮箱及LudhianaE123Phase4地址/两电话，选公开info@通用邮箱和+911614621867；sales@不自动变具名负责人。业务地址不冒称已独立定位工厂门，坐标国家概略。无WhatsApp、SMTP、表单/邮件/消息/CRM；共享发送记录unknown不当unsent，仅验证将来未发送时的短功能型生成器，无就绪稿/复制导出或历史改写。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及电话，非具名采购",
+      "email": "info@indogempaints.com",
+      "phone": "+91 161 4621867",
+      "contactUrl": "https://indogempaints.com/reach-us/"
+    },
+    "source": {
+      "label": "Own epoxy zinc-phosphate primers, MIO intermediates and zinc-rich primers",
+      "url": "https://indogempaints.com/epoxy-coatings/"
+    },
+    "checkedAt": "2026-10-27"
+  },
+  {
+    "id": "rely-paints-ghaziabad",
+    "company": "Rely Paints Private Limited",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ghaziabad public business address; country-level approximate map marker",
+    "latitude": 20.6,
+    "longitude": 79,
+    "legacyCompanyDescription": "Ghaziabad工业涂料配方制造兼贸易业务，GST/CIN为自己披露；Delhi登记处和Morta业务地址同一账户，未取得明示邮箱。",
+    "fit": "可开发候选",
+    "signal": "在Ghaziabad配制和制造工业涂料，设有生产、研发与质量检验部门；成品系列含环氧锌铬底漆和环氧涂层漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-27",
+      "conclusion": "独立全文审读3份公司控制的原始HTTPS HTML：IndiaMART管理的自有域名CompanyBrief11442字符、Home和Contact；3次全200无跳转/重试/远程JS，终身3/rem3。CompanyBrief明确制造兼贸易、原料购入、专业人员配方、制造设备/processing/quality/R&D单位、环氧/PU/工业成品涂料，Home具体列EpoxyZincChromatePrimer及EpoxyCoatingPaint；不把所有外购产品或销售范围都声称自己生产。完整可见经营/产品表涵盖装饰/工业/汽车修补/卷材/罐/船舶/环氧地坪/PU成品，瓷漆、金属底漆、硝基/丙烯酸乳胶成品漆、稀释剂、氯化橡胶/沥青漆、木材封闭/抛光/三聚氰胺成品等，未见ELO/ESBO/环氧化植物油或类似生物增塑稳定原料外售。AcrylicEmulsion菜单在Home明确为AcrylicEmulsionPaints，不仅凭通用树脂/乳液字样判断所选ELO同行，也未声称所有SDS/隐藏业务已读。有限可见选定原料同行排除通过；ELO仅用户TDS涂料/环氧功能/树脂改性潜在实验室柔韧评估，实际采购/使用/相容/固化/防腐提升未知。当前自身GST09AAGCR0685P1ZN/CINU24220DL2012PTC241435和注册地址/分支信息为自己披露；2005经营起始与2012法人编号不擅统一为注册年。GhaziabadMorta业务地址与Delhi登记处不拆客户/工厂，不推精确厂门。SharadGupta为页面Director、其他GSTPartner列名不当当前采购授权或邮箱归属；IndiaMART是页面服务商不是集团/制造商。全main406/root420/front833/fullqueue/index/excluded/history按公司/域名/GST/Director无旧本体或GET，CIN追加全库精确核对。Contact公开表单及07949343069平台路由业务电话，可手动查看，电话不冒称工厂直线/个人号/WhatsApp；未读得明示业务邮箱，SEND EMAIL按钮不是实际邮箱，缺邮箱不阻止合格非邮件渠道记录。表单Thankyou/已发送为静态HTML，无表单、短信、邮件、消息、报价、地图跳转/CRM提交。共享发送台账unknown不当未发送，不生成就绪信或改写邮件历史；非邮件渠道文案仅供未来用户手动投递，当前不复制导出。"
+    },
+    "contact": {
+      "label": "官网公开表单和平台转接业务电话，未取得明示邮箱",
+      "phone": "07949343069",
+      "contactUrl": "https://www.relypaints.co.in/enquiry.html"
+    },
+    "source": {
+      "label": "Own Epoxy Zinc Chromate Primer and Epoxy Coating Paint",
+      "url": "https://www.relypaints.co.in/"
+    },
+    "checkedAt": "2026-10-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rely-paints-ghaziabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+  "indogem-enamels-ludhiana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "zambotto-vernici-cerea": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "eureka-colour-soligo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "rica-resine-castel-guelfo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -9282,6 +9339,91 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rely-paints-ghaziabad": {
+    "website": "https://www.relypaints.co.in/",
+    "contactPage": "https://www.relypaints.co.in/enquiry.html",
+    "generalPhone": "07949343069",
+    "generalPhoneEvidence": {
+      "company": "Rely Paints Private Limited",
+      "value": "07949343069",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business contact page",
+          "url": "https://www.relypaints.co.in/enquiry.html",
+          "summary": "Header prints07949343069 as public platform-routed company channel; not a direct factory or personal number and notWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacturing/formulation profile, full visible range and legal self-disclosure",
+        "url": "https://www.relypaints.co.in/profile.html"
+      },
+      {
+        "label": "Own epoxy zinc-chromate primer and epoxy coating paint",
+        "url": "https://www.relypaints.co.in/"
+      },
+      {
+        "label": "Own business form and public platform-routed phone; no visible email",
+        "url": "https://www.relypaints.co.in/enquiry.html"
+      }
+    ]
+  },
+  "indogem-enamels-ludhiana": {
+    "website": "https://indogempaints.com/",
+    "contactPage": "https://indogempaints.com/reach-us/",
+    "generalPhone": "+91 161 4621867",
+    "generalPhoneEvidence": {
+      "company": "Indogem Enamels Private Limited",
+      "value": "+91 161 4621867",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own public business contact page",
+          "url": "https://indogempaints.com/reach-us/",
+          "summary": "Contact prints+91 161 4621867 and2670067 for this company; first exact printed number selected, noWhatsApp or named identity inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial coating manufacture and full primary range",
+        "url": "https://indogempaints.com/"
+      },
+      {
+        "label": "Own two-component epoxy primers and intermediates",
+        "url": "https://indogempaints.com/epoxy-coatings/"
+      },
+      {
+        "label": "Own corporate contact routes",
+        "url": "https://indogempaints.com/reach-us/"
+      }
+    ],
+    "generalEmail": "info@indogempaints.com",
+    "generalEmailEvidence": {
+      "company": "Indogem Enamels Private Limited",
+      "value": "info@indogempaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact corporate email",
+          "url": "https://indogempaints.com/reach-us/",
+          "summary": "Contact explicitly printsinfo@indogempaints.com alongsidesales@indogempaints.com. Selected general company mailbox; not a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-10-27"
+    }
+  },
   "zambotto-vernici-cerea": {
     "website": "https://zambottovernici.com/",
     "contactPage": "https://zambottovernici.com/contattaci",
@@ -28813,6 +28955,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rely-paints-ghaziabad",
+  "indogem-enamels-ludhiana",
   "zambotto-vernici-cerea",
   "eureka-colour-soligo",
   "rica-resine-castel-guelfo",

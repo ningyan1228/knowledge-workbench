@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "rely-paints-ghaziabad": "Your coating range includes Epoxy Zinc Chromate Primer and Epoxy Coating Paint.",
+  "indogem-enamels-ludhiana": "Your two-component epoxy coating range includes zinc phosphate primers, MIO intermediates and zinc-rich primers.",
   "zambotto-vernici-cerea": "Your Fondo-Primer cerato all’acqua is a water-based primer for interior and exterior wood.",
   "eureka-colour-soligo": "Your water-based furniture primers include FW 440 thixotropic primer and FW 420 transparent primer.",
   "rica-resine-castel-guelfo": "Your industrial coatings include solvent-based and water-dispersed epoxy primers for concrete and iron surfaces.",
