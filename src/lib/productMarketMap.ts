@@ -9677,11 +9677,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "theolaur-lauragais-noyelles",
+    "company": "Théolaur Peintures / Lauragais",
+    "productId": "nl-w1201",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Noyelles-lès-Seclin; disclosed group business address; two French plants count as one group; approximate country marker",
+    "latitude": 48.9,
+    "longitude": 2.3,
+    "legacyCompanyDescription": "Théolaur涂料配方制造集团及Lauragais品牌；公开合并关系与8品牌/两个法国生产地点合并一账户，不作股权或厂门测量保证。",
+    "fit": "可开发候选",
+    "signal": "Théolaur集团自产涂料；Laurabois’O Vitrificateur Satin为水性聚氨酯木地板涂层，另有乳液型木材底涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "真实涂料配方制造集团，Lauragais为已披露品牌，不拆分Théodore/Ecoplas等品牌或两个生产地点新增。已读集团主营/品牌/服务、完整木器指南、主目录当前分类及首页5款产品，包含成品底涂、木器/墙面/金属/地坪/防水配方、清洗处理及调色技术服务；不笼统称无辅助材料。木材底涂和成品附着/防锈措辞不自动等于PO/CPO输入供货。有限实际所读范围未见独立PO、CPO、水性聚烯烃或同类附着促进原料对外供应；未穷尽主目录108款、全部品牌SKU或技术PDF，NL-W1201的实际相容、固化、附着效果及采购均待确认。"
+    },
+    "contact": {
+      "label": "集团官网通用邮箱/电话及Lauragais官方联系表单；无具名采购或公开WhatsApp",
+      "email": "contact@theolaur.com",
+      "phone": "+33 3 61 26 54 32",
+      "contactUrl": "https://www.lauragais-peintures.fr/contact/"
+    },
+    "source": {
+      "label": "Own full wood guide with explicit water-based polyurethane floor finish and emulsion wood primer",
+      "url": "https://www.lauragais-peintures.fr/decouvrez-notre-gamme-bois/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "theolaur-lauragais-noyelles": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pinturas-prismex-leon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "induworker-bogota": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pivema-palau-solita": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
@@ -10118,6 +10147,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "theolaur-lauragais-noyelles": {
+    "website": "https://www.theolaur.com/",
+    "contactPage": "https://www.lauragais-peintures.fr/contact/",
+    "address": "ZI-A,5 rue René Cauche,59139 Noyelles-lès-Seclin,France. Group/brand business address; disclosed French production sites Noyelles-lès-Seclin and Colomiers belong to one group account. Approximate country marker; factory entrance not surveyed.",
+    "generalEmail": "contact@theolaur.com",
+    "generalEmailEvidence": {
+      "company": "Théolaur Peintures / Lauragais",
+      "value": "contact@theolaur.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Théolaur group homepage business contacts, linked to Lauragais by the same manufacturing/brand statement",
+          "url": "https://www.theolaur.com/",
+          "summary": "Exact contact@theolaur.com/mailto on own group homepage, which explicitly identifies Lauragais among its manufactured paint brands. General corporate business inbox; no named purchasing person or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "+33 3 61 26 54 32",
+    "generalPhoneEvidence": {
+      "company": "Théolaur Peintures / Lauragais",
+      "value": "+33 3 61 26 54 32",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current Théolaur group homepage business contacts, linked to Lauragais by the same manufacturing/brand statement",
+          "url": "https://www.theolaur.com/",
+          "summary": "Exact +33 3 61 26 54 32 and public tel link on group homepage; LauragaisContact shows matching local03 61 26 54 32. General business telephone, not a WhatsApp claim."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own full wood guide explicitly separates water-based wood finishes/primers from solvent products",
+        "url": "https://www.lauragais-peintures.fr/decouvrez-notre-gamme-bois/"
+      },
+      {
+        "label": "Own historical merger confirms Lauragais and ThéodoreLefebvre became Théolaur, not distinct new accounts",
+        "url": "https://www.lauragais-peintures.fr/histoire/"
+      },
+      {
+        "label": "Actual Lauragais public business form, address and general/technical company telephone routes; no form submitted",
+        "url": "https://www.lauragais-peintures.fr/contact/"
+      },
+      {
+        "label": "Own current group manufacturing/formulation, all8visible brand names and exact general business email/phone",
+        "url": "https://www.theolaur.com/"
+      },
+      {
+        "label": "Current main range:complete category tree and first5of108visible products, including cleaning and finished coating formulations",
+        "url": "https://www.lauragais-peintures.fr/peintures/"
+      }
+    ]
+  },
   "pinturas-prismex-leon": {
     "website": "https://www.pinturasprismex.com/",
     "contactPage": "https://www.pinturasprismex.com/",
@@ -31156,6 +31244,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "theolaur-lauragais-noyelles",
   "pinturas-prismex-leon",
   "induworker-bogota",
   "pivema-palau-solita",
