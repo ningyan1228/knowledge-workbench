@@ -25,16 +25,16 @@ export function readFollowupIdentities(markdown: string): FollowupIdentity[] {
   let section = '', entry: Record<string, string> | null = null
   const flush = () => {
     if (!entry?.customer_id) return
-    if (section === 'customer_identity_map' && entry.display_name) identities.push(identityFromLabel(entry.customer_id, entry.display_name, entry.category === 'domestic' ? 'domestic' : 'overseas'))
+    if (section === 'customer_identity_map' && entry.display_name) identities.push(identityFromLabel(entry.customer_id, entry.display_name, entry.category?.startsWith('domestic') ? 'domestic' : 'overseas'))
     if (section === 'project_display_overrides') overrides.push(entry as { customer_id: string; project?: string; display_name?: string })
     entry = null
   }
   for (const line of head.split(/\r?\n/)) {
     const top = /^(\w+):/.exec(line)
     if (top) { flush(); section = top[1]; continue }
-    const item = /^  - customer_id:\s*([CD]\d+)\s*$/.exec(line)
+    const item = /^(?:  )?- customer_id:\s*([CD]\d+)\s*$/.exec(line)
     if (item) { flush(); entry = { customer_id: item[1] }; continue }
-    const field = /^    (display_name|category|project):\s*(.+)$/.exec(line)
+    const field = /^ {2,4}(display_name|category|project):\s*(.+)$/.exec(line)
     if (field && entry) entry[field[1]] = unquote(field[2])
   }
   flush()
