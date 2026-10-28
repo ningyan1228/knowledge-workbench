@@ -9845,11 +9845,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "pac-chem-cape-town",
+    "company": "Pac-Chem cc",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town, Montague Gardens; disclosed business address; approximate city-level marker",
+    "latitude": -33.92,
+    "longitude": 18.42,
+    "legacyCompanyDescription": "官网以Pac-Chem cc自述在南非制造定制环氧产品及酒罐内衬，同时经营蜡/松香和胶粘剂经销；当前自述名称及业务地址非独立工商、股权或现场工厂核验。",
+    "fit": "可开发候选",
+    "signal": "Pac-Chem在南非定制制造环氧产品及E2酒罐内衬，后者用于混凝土酒罐并可配适底涂用于低碳钢罐。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "官网自述定制制造环氧产品，并明确在南非制造E2 Malta / E2 Copertura酒罐内衬体系；混凝土酒罐及配适底涂后的低碳钢罐用途形成实际下游涂料制造场景。特种产品页另有Plastoprime WTD成品湿干粘结底涂与Grippox390环氧防护涂料；后者的PVC管用途是涂层应用，不推为PVC混炼/增塑制造或ELO既有用料。完整可见主目录和导航列有底涂、地坪/自流平、封闭防尘、胶粘剂、徽章定制、水性环氧及其他业务。实际读取原料蜡类页，保留Sasol石蜡/FT石蜡、微晶蜡及WW级松香供货；其所述纸涂/抛光/个人护理/蜡改性用途不等于环氧植物油或生物增塑剂。Araldite页明确为西开普小包装胶粘剂经销，所列90分钟、5分钟及钢填充双组分粘合剂为成品胶，不作为自制Araldite或ELO/ESBO原料证明。保留Startwell机械启动器导航业务，未读取叶页，不假定持股/自制或同类材料。有限实际所读制造、完整可见类别、精确内衬及特种配制品、蜡/松香和胶粘剂经销范围内未见ELO、ESBO、环氧植物油、生物增塑剂或同类添加剂输入供货；并非全部未读叶页、隐藏SKU、配方/SDS或最终股权审计。Pac-Chem/Pacchem/Pac-Chem cc及E2、Plastoprime、Grippox合并同一公司账户；Araldite/Sasol/Startwell仅可见供应或代理品牌，不据此推母子集团，不另计品牌、酒罐体系、地址或Namibia发货目的地。ELO仅按用户资料的涂料/树脂改性环氧功能路线评估相关性，客户现用材料、固化/分散相容、食品接触合规、性能和采购需求均未确认。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、精确公开电话及已读业务页；无具名采购或WhatsApp",
+      "email": "info@pacchem.co.za",
+      "phone": "+27 21 552 4937",
+      "contactUrl": "https://www.pacchem.co.za/"
+    },
+    "source": {
+      "label": "Own manufacture of E2 Malta / E2 Copertura wine-tank lining in South Africa for concrete and mild steel tanks",
+      "url": "https://www.pacchem.co.za/wine-tank-linning/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pac-chem-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "palcanarias-telde": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "plack-torrita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "desenzani-castiglione": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10292,6 +10321,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pac-chem-cape-town": {
+    "website": "https://www.pacchem.co.za/",
+    "contactPage": "https://www.pacchem.co.za/",
+    "address": "46 Marconi Road, Montague Gardens, Cape Town 7441, South Africa, as currently printed on the company website. Approximate city-level marker; actual factory entrance and postal allocation not independently verified.",
+    "generalEmail": "info@pacchem.co.za",
+    "generalEmailEvidence": {
+      "company": "Pac-Chem cc",
+      "value": "info@pacchem.co.za",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current business header, repeated on six complete own HTML originals",
+          "url": "https://www.pacchem.co.za/",
+          "summary": "Exact info@pacchem.co.za text and mailto:info@pacchem.co.za. General corporate mailbox, not a named buyer. No mailbox deliverability or current purchase confirmation."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "+27 21 552 4937",
+    "generalPhoneEvidence": {
+      "company": "Pac-Chem cc",
+      "value": "+27 21 552 4937",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current business header and footer",
+          "url": "https://www.pacchem.co.za/",
+          "summary": "Exact +27 21 552 4937 display and tel:+27215524937 on actual own originals. No WhatsApp recipient inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own exact E2 system manufacturing and concrete/mild steel wine tank application",
+        "url": "https://www.pacchem.co.za/wine-tank-linning/"
+      },
+      {
+        "label": "Own current custom epoxy manufacture, contacts and business address",
+        "url": "https://www.pacchem.co.za/"
+      },
+      {
+        "label": "Own current complete visible product category index and wider business navigation",
+        "url": "https://www.pacchem.co.za/products/"
+      },
+      {
+        "label": "Own actual paraffin/FT wax, microwax and gum rosin supply scope",
+        "url": "https://www.pacchem.co.za/waxes/"
+      },
+      {
+        "label": "Own Western Cape small-pack Araldite finished adhesive distribution",
+        "url": "https://www.pacchem.co.za/araldite-epoxy-adhesives/"
+      },
+      {
+        "label": "Own Plastoprime WTD primer and Grippox390 protective epoxy coating",
+        "url": "https://www.pacchem.co.za/products/specialised-products/"
+      }
+    ]
+  },
   "palcanarias-telde": {
     "website": "https://palcanarias.es/",
     "contactPage": "https://palcanarias.es/ecologia-y-medio-ambiente/",
@@ -31698,6 +31790,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pac-chem-cape-town",
   "palcanarias-telde",
   "plack-torrita",
   "desenzani-castiglione",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pac-chem-cape-town": "You manufacture the E2 Malta / E2 Copertura wine-tank lining system in South Africa for concrete and mild steel tanks.",
   "palcanarias-telde": "Your Garde Parquet is a one-component water-based polyurethane varnish for parquet, timber stairs and furniture.",
   "plack-torrita": "Your Hydroplack range includes water-based wood primers and finishes for interior and exterior joinery.",
   "desenzani-castiglione": "Your VIL102 water-based clear wood coating is intended for furniture, parquet, doors, panelling and other interior wooden items.",
