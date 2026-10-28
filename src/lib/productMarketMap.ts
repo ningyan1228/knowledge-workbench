@@ -9789,11 +9789,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "plack-torrita",
+    "company": "PLACK Vernici",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Torrita di Siena; self-disclosed manufacturing city; country-level approximate marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "官网自述研发及生产水性/溶剂木器涂料，Hydroplack等按同一PLACK贸易账户记录；页脚GPA Srl运营者仅自述，非独立所有权/工商核验。",
+    "fit": "可开发候选",
+    "signal": "PLACK自述研发及制造水性木器涂料；Hydroplack用于室内外木材，目录列有水性底漆、面漆及门窗和家具用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "官网明确木器水性/溶剂型涂料研发和生产，Torrita di Siena现有厂区含研发、生产及测试区域；完整用途/系列页、专业目录及室内外水性添加剂功能页均实际读取。保留其COLORPLACK调色系统、转换基料、色浆、催化剂、稀释剂、D3/D4木胶及DIY/在线销售业务，不称无助剂或单一成品业务。室外8款及室内7款添加剂披露防腐保存、消泡、防缩孔/流平、润湿、消光、触变等功能；这些功能本身不证明是聚烯烃/PO/CPO分散体或原料级附着促进剂，也不猜测其化学组成。在本次实际读取的主业、完整可见水性木器分类及两份具体添加剂功能表范围内，未发现选定同类PO/CPO/水性聚烯烃附着促进原料对外供货。未逐一读取全部产品叶页、转换基料/催化剂化学、SDS/TDS、隐藏SKU、其他业务或最终股权，结论仅为有范围限定的选定原料同行排除。PLACK、Hydroplack、COLORPLACK、BLU SKY及同站GPA Srl页脚关联按一个账户去重；GPA Srl与VAT仅网站自述运营者信息，不冒称独立工商/所有权核验。NL-W1201只能以用户资料中的木材底涂/附着促进材料方向评估潜在相关性，不是客户现有配方、相容性、效果或采购确认。"
+    },
+    "contact": {
+      "label": "官方公开WhatsApp、公司电话及已读公司业务页；无核验业务邮箱或具名采购",
+      "email": "",
+      "phone": "+39 0577 553039",
+      "contactUrl": "https://www.plack.it/vernici/vernici-acqua-legno-chi-siamo.html"
+    },
+    "source": {
+      "label": "Own manufactured Hydroplack aqueous wood coatings, primers/finishes and interior/exterior joinery applications",
+      "url": "https://www.plack.it/vernici/vernici-legno-settori-utilizzo-gamma-prodotti.html"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "plack-torrita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "desenzani-castiglione": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "neo-paints-namibia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fersan-haina": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
@@ -10234,6 +10263,56 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "plack-torrita": {
+    "website": "https://www.plack.it/",
+    "contactPage": "https://www.plack.it/vernici/vernici-acqua-legno-chi-siamo.html",
+    "address": "Torrita di Siena, Italy. Own current manufacturing-city statement; street and factory entrance not independently verified. Country-level approximate marker.",
+    "generalEmail": "",
+    "generalPhone": "+39 0577 553039",
+    "generalPhoneEvidence": {
+      "company": "PLACK Vernici",
+      "value": "+39 0577 553039",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Exact current own corporate footer, repeated on six complete originals",
+          "url": "https://www.plack.it/vernici/vernici-acqua-legno-chi-siamo.html",
+          "summary": "Exact +39 0577 553039 corporate telephone. Separately listed mobile has its own explicit public WhatsApp link; landline not inferred as WhatsApp. No verified purchasing person."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "whatsapp": "https://api.whatsapp.com/send?phone=+39337700537",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current wood-coating development/manufacture and Torrita di Siena site plus actual business channels",
+        "url": "https://www.plack.it/vernici/vernici-acqua-legno-chi-siamo.html"
+      },
+      {
+        "label": "Own full Hydroplack water-based wood uses and disclosed product/brand/auxiliary range",
+        "url": "https://www.plack.it/vernici/vernici-legno-settori-utilizzo-gamma-prodotti.html"
+      },
+      {
+        "label": "Own complete professional-line introduction and product/sector navigation",
+        "url": "https://www.plack.it/vernici-legno-professionale.html"
+      },
+      {
+        "label": "Own complete visible professional category tree for aqueous interior/exterior and solvent wood coatings",
+        "url": "https://www.plack.it/vernici-legno-professionale-scegli-prodotto.html"
+      },
+      {
+        "label": "Own complete eight-item exterior aqueous wood-coating additives with exact disclosed functions",
+        "url": "https://www.plack.it/additivi-vernici-acqua-legno-esterno.html"
+      },
+      {
+        "label": "Own complete seven-item interior aqueous wood-coating additives with exact disclosed functions",
+        "url": "https://www.plack.it/additivi-vernici-acqua-legno-interno.html"
+      }
+    ]
+  },
   "desenzani-castiglione": {
     "website": "https://www.desenzani.it/",
     "contactPage": "https://www.desenzani.it/azienda.html",
@@ -31518,6 +31597,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "plack-torrita",
   "desenzani-castiglione",
   "neo-paints-namibia",
   "fersan-haina",
