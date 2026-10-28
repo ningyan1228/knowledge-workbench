@@ -9873,11 +9873,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "pam-ak-chorvatsky-grob",
+    "company": "PAM-ak, s.r.o.",
+    "productId": "nl-w1201",
+    "country": "Slovakia",
+    "countryZh": "斯洛伐克",
+    "city": "Chorvátsky Grob, Čierna Voda–Triblavina; disclosed business address; country-level approximate marker",
+    "latitude": 48.7,
+    "longitude": 19.7,
+    "legacyCompanyDescription": "官网自述斯洛伐克涂料/灰泥制造商，分散体基成品系列；当前公司/产品及其所链2021年技术文件关联同一经营主体，非独立工商、股权或工厂现场核验。",
+    "fit": "可开发候选",
+    "signal": "PAM-ak自述制造分散体基涂料；Pam Lak当前页及所链2021年TDS支持水性丙烯酸木器清漆，用于室内木饰面、天花和儿童木家具。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "官网公司介绍明确为斯洛伐克涂料及饰面灰泥制造商，成品系列以分散体为基础；当前Pam Lak产品页及直接链接、发行日2021-03-01的两页技术文件明确PAM-ak为制造者，配方为水性丙烯酸分散体、成膜助剂及专用添加剂，产品为水可稀释透明室内木器清漆。具体木饰面、天花及儿童木家具用途支持真实下游制造/配方场景，不把丙烯酸分散体配制品等同聚烯烃输入供应。首页完整可见主分类为木器、室内、室外、金属、防霉及通用涂层；保留建筑涂料/灰泥、成品色漆/木器清漆/底涂、木材维护及防霉体系等自述经营。木器分类页虽有分类和业务页脚，实际未返回产品卡片，不能声称已读完整木器目录；其他分类叶页、辅助原料目录及全部TDS/SDS未逐一读取。在本次实际制造定位、全部可见业务类别、当前展示成品、公司说明及精确Pam Lak技术配方范围内，未见水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进输入对外供应。结论限所读公开范围，不作隐藏SKU、配方成分穷尽或最终股权保证；技术文件中的成膜助剂/专用添加剂是成品配料，不是仅凭词语就推销售相同原料。PAM/PAM-ak/PAM ak/PAMAK及Pamakryl、PamLazex、PamLak、Biozor、Verniol同站品牌按一个公司去重，官网下方商店/合作伙伴链接不等于控股集团或新生产客户。1990创立及当时无外资属官网自述历史，不冒称2026独立登记/最终所有人审计。NL-W1201仅考虑用户资料中的木材底涂/附着促进材料评估，现配方相容、成膜/附着改善或采购意向均未确认；儿童用品、食品接触、等级/性能及施工参数自述不转成我方材料认证或保证。"
+    },
+    "contact": {
+      "label": "当前官网通用业务邮箱原样空格显示、业务电话及已读公司页；无具名采购或WhatsApp",
+      "email": "pam@pam.sk",
+      "phone": "+421 903 775 520",
+      "contactUrl": "https://www.pam.sk/o-nas"
+    },
+    "source": {
+      "label": "Own current Pam Lak interior wood application, with directly linked2021 aqueous-acrylic technical document",
+      "url": "https://www.pam.sk/pam-lak/1189"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pam-ak-chorvatsky-grob": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pac-chem-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "palcanarias-telde": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "plack-torrita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10321,6 +10350,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pam-ak-chorvatsky-grob": {
+    "website": "https://www.pam.sk/",
+    "contactPage": "https://www.pam.sk/o-nas",
+    "address": "Triblavinská47, m.č.Čierna Voda–Triblavina,90025 Chorvátsky Grob,Slovakia, as currently printed on the official website. Country-level approximate marker; no independently surveyed factory entrance or interpreted GPS hemisphere.",
+    "generalEmail": "pam@pam.sk",
+    "generalEmailEvidence": {
+      "company": "PAM-ak, s.r.o.",
+      "value": "pam@pam.sk",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own business footer plus exact same-mailbox directly linked2021 TDS",
+          "url": "https://www.pam.sk/o-nas",
+          "summary": "Current original footer explicitly prints pam @ pam.sk; only display whitespace normalized to pam@pam.sk. No mailto claimed. The currently linked TDS dated2021-03-01 separately prints exact pam@pam.sk for PAM-ak, same address. General business route, not named buyer or delivery confirmation."
+        },
+        {
+          "label": "Currently linked historical Pam Lak TDS exact corporate mailbox",
+          "url": "https://www.pam.sk/userfiles/products_pdf/tl_pam_lak_032021.pdf",
+          "summary": "Page1 self-dated2021-03-01 prints PAM-ak s.r.o., Triblavinská47,90025 Chorvátsky Grob and pam@pam.sk; historical document is corroboration, not sole current-contact proof."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "+421 903 775 520",
+    "generalPhoneEvidence": {
+      "company": "PAM-ak, s.r.o.",
+      "value": "+421 903 775 520",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own business/footer customer-support text",
+          "url": "https://www.pam.sk/o-nas",
+          "summary": "Exact +421 903 775 520 in actual current HTML. No tel URI or WhatsApp link claimed/inferred. Different02 landline/fax in2021 TDS remain historical and are not promoted as current."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Current own precise Pam Lak interior wood, panelling, ceilings and wooden furniture application",
+        "url": "https://www.pam.sk/pam-lak/1189"
+      },
+      {
+        "label": "Actual company manufacture of dispersion-based coatings and plasters",
+        "url": "https://www.pam.sk/o-nas"
+      },
+      {
+        "label": "Current visible six business categories and selected finished products",
+        "url": "https://www.pam.sk/"
+      },
+      {
+        "label": "Directly linked two-page Pam Lak water-based acrylic TDS, self-dated2021-03-01",
+        "url": "https://www.pam.sk/userfiles/products_pdf/tl_pam_lak_032021.pdf"
+      }
+    ]
+  },
   "pac-chem-cape-town": {
     "website": "https://www.pacchem.co.za/",
     "contactPage": "https://www.pacchem.co.za/",
@@ -31790,6 +31879,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pam-ak-chorvatsky-grob",
   "pac-chem-cape-town",
   "palcanarias-telde",
   "plack-torrita",
