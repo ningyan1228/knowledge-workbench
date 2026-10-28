@@ -9705,11 +9705,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "fersan-haina",
+    "company": "FERSAN / Fertilizantes Santo Domingo",
+    "productId": "fertilizer-coating",
+    "country": "Dominican Republic",
+    "countryZh": "多米尼加共和国",
+    "city": "Santo Domingo business office; Haina fertilizer plant; approximate country marker",
+    "latitude": 18.9,
+    "longitude": -70.5,
+    "legacyCompanyDescription": "FERSAN肥料制造及Haina聚合物颗粒肥包覆系统；关联Newport-Fersan Jamaica及其他工厂/包装业务合并一账户，国家级近似坐标。",
+    "fit": "可开发候选",
+    "signal": "FERSAN自行制造肥料；Haina工厂明确设有以聚合物包覆颗粒肥料、延缓养分释放的系统，并披露包覆设备安装历史。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "Haina工厂当前明确以聚合物包覆颗粒肥料并延缓释放，真实下游肥料制造及包膜能力成立；不同于普通混配、抑制剂处理、进口经销或仅规划项目。已读公司主营及当前全部可见导航类别、Haina完整所选包覆/生产/储运段落与历史：肥料、作物保护、柔性包装/袋绳、种子及畜牧用品，包含肥料原料储存和对外成品分销，不笼统称无其他业务。有限已读范围未见独立肥料包膜树脂、PU包膜输入或同类包膜原料对外供应；未逐一审计所有SKU、农化配方、集团最终股权或全部历史。未证明其现有聚合物为PU，未证明使用/采购我方原料、配方相容、释放期或效果。关联Newport-Fersan Jamaica及其他工厂/包装业务本次合并一个FERSAN集团账户。"
+    },
+    "contact": {
+      "label": "官网Sales部门邮箱、公司电话及明确公开的独立WhatsApp链接；无具名采购",
+      "email": "ventas@fersan.com.do",
+      "phone": "+1 809 227-1717",
+      "contactUrl": "https://www.fersan.com.do/contacto"
+    },
+    "source": {
+      "label": "Own Haina fertilizer plant: polymer coating system for slower nutrient release",
+      "url": "https://www.fersan.com.do/planta-haina"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fersan-haina": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "theolaur-lauragais-noyelles": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pinturas-prismex-leon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "induworker-bogota": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10147,6 +10176,75 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fersan-haina": {
+    "website": "https://www.fersan.com.do/",
+    "contactPage": "https://www.fersan.com.do/contacto",
+    "whatsapp": "https://api.whatsapp.com/send?phone=18096065749&text=Gracias%20por%20contactar%20a%20Fersan%2C%20%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte%3F",
+    "address": "Avenida John F. Kennedy #60, Esquina Central, Apartado Postal 1405, Santo Domingo, Dominican Republic. Disclosed business-office address; the Haina fertilizer plant is a separate site within the same account. Country-level approximate marker, factory entrance not surveyed.",
+    "generalEmail": "",
+    "generalPhone": "+1 809 227-1717",
+    "generalPhoneEvidence": {
+      "company": "FERSAN / Fertilizantes Santo Domingo",
+      "value": "+1 809 227-1717",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public FERSAN application footer/contact links, inspected as published static text",
+          "url": "https://www.fersan.com.do/assets/index-6bdd5b73.js",
+          "summary": "Exact visible +1(809) 227-1717 in the current own footer business contacts. Link is #, so no tel URI asserted. Distinct public WhatsApp destination18096065749 preserved separately."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas@fersan.com.do",
+        "source": {
+          "label": "Own current footer ventas@fersan.com.do and mailto:Ventas@fersan.com.do",
+          "url": "https://www.fersan.com.do/assets/index-6bdd5b73.js"
+        },
+        "emailEvidence": {
+          "company": "FERSAN / Fertilizantes Santo Domingo",
+          "value": "ventas@fersan.com.do",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current public FERSAN application footer/contact links, inspected as published static text",
+              "url": "https://www.fersan.com.do/assets/index-6bdd5b73.js",
+              "summary": "Exact visible ventas@fersan.com.do and same mailbox in mailto:Ventas@fersan.com.do on current own public application. Sales department, no named buyer or deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-10-28"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own Haina plant with explicit polymer-coating manufacturing system",
+        "url": "https://www.fersan.com.do/planta-haina"
+      },
+      {
+        "label": "Own Haina factory text component, including current physical coating system and installation history",
+        "url": "https://www.fersan.com.do/assets/PlantaHaina-9a44d3a7.js"
+      },
+      {
+        "label": "Own current company manufacture, crop-protection and flexible-packaging business description",
+        "url": "https://www.fersan.com.do/nosotros"
+      },
+      {
+        "label": "Own company-description text component",
+        "url": "https://www.fersan.com.do/assets/Nosotros-6a24ff2e.js"
+      },
+      {
+        "label": "Own current navigation, group plant identities and original public sales/phone/WhatsApp channels",
+        "url": "https://www.fersan.com.do/assets/index-6bdd5b73.js"
+      }
+    ]
+  },
   "theolaur-lauragais-noyelles": {
     "website": "https://www.theolaur.com/",
     "contactPage": "https://www.lauragais-peintures.fr/contact/",
@@ -31244,6 +31342,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fersan-haina",
   "theolaur-lauragais-noyelles",
   "pinturas-prismex-leon",
   "induworker-bogota",
