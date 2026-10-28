@@ -9817,11 +9817,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "palcanarias-telde",
+    "company": "Palcanarias S.A.",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Telde, Gran Canaria; self-disclosed factory city; approximate city-level marker",
+    "latitude": 27.99,
+    "longitude": -15.42,
+    "legacyCompanyDescription": "官网自述在加那利本地制造涂料，设Telde工厂及Las Palmas办公室；Palcanarias S.A.按网站自述名称记录，非独立登记/股权或现场核验。",
+    "fit": "可开发候选",
+    "signal": "Palcanarias自述在加那利制造涂料；Garde Parquet为单组分水性聚氨酯清漆，用于木地板、木楼梯和家具。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "当前官网明确本地涂料制造及Telde工厂，具体Garde Parquet水性聚氨酯木器清漆及木地板/楼梯/家具用途原文已读取，构成真实下游涂料制造场景。完整可见22类产品树、6款水性木器目录、2款建筑砂浆粘结桥、9款特殊清漆/添加剂及5款胶粘剂均实际读取；保留丙烯酸固结剂、乙烯基乳液封闭体系、木胶/PVA胶、建筑底涂、抗滑石英/玻璃微珠、防霉、消光辅料及溶剂等实际供货，不笼统称无树脂/胶/助剂。TACK为丙烯酸建筑砂浆底涂；附着/胶/聚合物等词不自动等于PO/CPO原料。在本次实际主业、完整可见类别、具体水性木器产品及上述辅助品范围内，未见选定水性聚烯烃/PO/CPO分散体或同类原料级附着促进剂供货。部分目录仅产品简介，未逐一读取全部叶页、隐藏SKU、TDS/SDS或最终股权，不把有限排除说成全配方审计。Palcanarias及Garde等同站产品、工厂/办公室和分销地点按一个公司账户去重；与罗马尼亚Kober同名Ecoplast搜索无集团证据，不转移预算。NL-W1201仅可就用户资料的木材底涂/附着促进方向评估相关性，不等于客户现配方相容、改善效果或我方材料采购确认。"
+    },
+    "contact": {
+      "label": "官网销售部门邮箱、精确公开商业电话及已读业务页；无具名采购或WhatsApp",
+      "email": "comercial@palcanarias.es",
+      "phone": "+34928244440",
+      "contactUrl": "https://palcanarias.es/ecologia-y-medio-ambiente/"
+    },
+    "source": {
+      "label": "Own Garde Parquet one-component water-based polyurethane varnish for parquet, timber stairs and furniture",
+      "url": "https://palcanarias.es/producto/garde-parquet-barniz-poliuterano-ecologico/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "palcanarias-telde": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "plack-torrita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "desenzani-castiglione": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "neo-paints-namibia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10263,6 +10292,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "palcanarias-telde": {
+    "website": "https://palcanarias.es/",
+    "contactPage": "https://palcanarias.es/ecologia-y-medio-ambiente/",
+    "address": "Factory: Calle Albañil, 2 y 4, Urb. Indust. Salinetas, Telde, Gran Canaria, Spain. Office: C. Leopoldo Matos, 20, 35006 Las Palmas de Gran Canaria. Approximate city-level marker; factory entrance not independently surveyed.",
+    "generalEmail": "",
+    "generalPhone": "+34928244440",
+    "generalPhoneEvidence": {
+      "company": "Palcanarias S.A.",
+      "value": "+34928244440",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current DPTO COMERCIAL Y VENTAS business footer repeated on six originals",
+          "url": "https://palcanarias.es/ecologia-y-medio-ambiente/",
+          "summary": "Exact commercial footer 928 24 44 40 and actual tel:+34928244440. Commercial department route; no named purchasing person or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "comercial@palcanarias.es",
+        "source": {
+          "label": "Own current commercial and sales department footer",
+          "url": "https://palcanarias.es/ecologia-y-medio-ambiente/"
+        },
+        "emailEvidence": {
+          "company": "Palcanarias S.A.",
+          "value": "comercial@palcanarias.es",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current DPTO COMERCIAL Y VENTAS business footer repeated on six originals",
+              "url": "https://palcanarias.es/ecologia-y-medio-ambiente/",
+              "summary": "Exact comercial@palcanarias.es and mailto under DPTO COMERCIAL Y VENTAS on all six current own originals. Sales department mailbox, not a named procurement recipient."
+            }
+          ],
+          "verifiedAt": "2026-10-28"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own local manufacture, factory/office and actual commercial department contacts",
+        "url": "https://palcanarias.es/ecologia-y-medio-ambiente/"
+      },
+      {
+        "label": "Own full six-item aqueous wood range and complete current visible 22-category product tree",
+        "url": "https://palcanarias.es/categoria-producto/tratamientos-al-agua-para-maderas/"
+      },
+      {
+        "label": "Own complete Garde Parquet product, HTML technical table and exact wood applications; PDF not read",
+        "url": "https://palcanarias.es/producto/garde-parquet-barniz-poliuterano-ecologico/"
+      },
+      {
+        "label": "Own full two-item construction mortar bonding-bridge category",
+        "url": "https://palcanarias.es/categoria-producto/puentes-de-union/"
+      },
+      {
+        "label": "Own full nine-item special varnish/additive category with actual acrylic/vinyl and auxiliary roles",
+        "url": "https://palcanarias.es/categoria-producto/barnices-especiales-y-aditivos/"
+      },
+      {
+        "label": "Own full five-item adhesive category, including disclosed PVA adhesive and wood/glass-fabric uses",
+        "url": "https://palcanarias.es/categoria-producto/colas/"
+      }
+    ]
+  },
   "plack-torrita": {
     "website": "https://www.plack.it/",
     "contactPage": "https://www.plack.it/vernici/vernici-acqua-legno-chi-siamo.html",
@@ -31597,6 +31698,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "palcanarias-telde",
   "plack-torrita",
   "desenzani-castiglione",
   "neo-paints-namibia",
