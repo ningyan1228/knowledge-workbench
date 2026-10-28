@@ -9733,11 +9733,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "neo-paints-namibia",
+    "company": "NEO Paints Namibia",
+    "productId": "elo",
+    "country": "Namibia",
+    "countryZh": "纳米比亚",
+    "city": "Namibia; country-level approximate marker; current detailed street address not independently verified",
+    "latitude": -22,
+    "longitude": 17,
+    "legacyCompanyDescription": "当前官网确认在纳米比亚配方开发、制造及测试自有涂料；NEO贸易主体合并一账户，旧PDF法律名/两地地址不当当前登记或拆分客户。",
+    "fit": "可开发候选",
+    "signal": "NEO Paints在纳米比亚自行配方开发、制造及测试涂料；当前自产产品目录列有NEO Epoxy Floor Paint环氧地坪漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "当前官网明确本地配方开发、制造及测试，当前总目录与专用品分类都列NEO自有环氧地坪漆，真实下游涂料制造场景成立。完整当前目录53款可见名称及全部类别已读，保留胶黏剂、封闭剂、木材涂层、砂浆改性/修补配制品和甲苯/松节油/稀释剂供货，不笼统称无辅助品或纯成品单一业务。目录另列煮亚麻油；独立读取其2018自述日期的完整两页TDS，明确直接刷涂的氧化固化木材处理/底涂体系，而不是将普通亚麻油名称当作ELO、环氧植物油或生物增塑剂证据。有限所读公开范围未见独立ELO、ESBO、环氧植物油或同类增塑稳定输入供货；53款仅完整目录名称和分类，并非53份配方/安全文件审计。当前环氧地坪漆详情的施工/颜色/覆盖率为N/A，不猜双组分、固化剂、基材细节或性能。PPG Sigma为另一个可见品牌入口，未将该品牌涂料当NEO自制或据品牌名推断法律母子公司；本次仅NEO本地主体一客户，不拆地点/品牌。实际ELO用料、配方相容、固化和采购均未知。"
+    },
+    "contact": {
+      "label": "当前官网通用业务邮箱、电话及联系入口；无具名采购或公开WhatsApp",
+      "email": "info@neopaints.com",
+      "phone": "+264 61 348 700",
+      "contactUrl": "https://neopaints.com/"
+    },
+    "source": {
+      "label": "Own current locally manufactured NEO range including Epoxy Floor Paint",
+      "url": "https://neopaints.com/products/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "neo-paints-namibia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fersan-haina": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "theolaur-lauragais-noyelles": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pinturas-prismex-leon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10176,6 +10205,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "neo-paints-namibia": {
+    "website": "https://neopaints.com/",
+    "contactPage": "https://neopaints.com/",
+    "address": "Namibia, explicitly stated by the current own manufacturing/about/product pages. Current detailed business-office or factory street address not independently verified; country-level approximate marker. Historical2018 addresses not presented as current.",
+    "generalEmail": "info@neopaints.com",
+    "generalEmailEvidence": {
+      "company": "NEO Paints Namibia",
+      "value": "info@neopaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current NEO Paints business footer",
+          "url": "https://neopaints.com/",
+          "summary": "Exact current public corporate footer mailbox info@neopaints.com, deterministically decoded from the original public Cloudflare data-cfemail bytes without executing scripts or guessing. General business route, no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "+264 61 348 700",
+    "generalPhoneEvidence": {
+      "company": "NEO Paints Namibia",
+      "value": "+264 61 348 700",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current NEO Paints business footer",
+          "url": "https://neopaints.com/",
+          "summary": "Exact +264 61 348 700 in the current own business footer across five current HTML sources. The different2018 PDF number61-384700 is historical and not used. No public WhatsApp recipient or tel URI inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current manufacturer and original general business channels",
+        "url": "https://neopaints.com/"
+      },
+      {
+        "label": "Own explicit local formulation, manufacturing and testing",
+        "url": "https://neopaints.com/about-us/"
+      },
+      {
+        "label": "Own current specialized coating range with NEO Epoxy Floor Paint",
+        "url": "https://neopaints.com/product-category/specialized-products/"
+      },
+      {
+        "label": "Current NEO Epoxy Floor Paint identity and5L listing; application/coverage details markedN/A",
+        "url": "https://neopaints.com/product/neo-epoxy-floor-paint/"
+      },
+      {
+        "label": "Own full visible current53-product range and locally manufactured range statement; individual53formulae not audited",
+        "url": "https://neopaints.com/products/"
+      },
+      {
+        "label": "Self-datedNovember2018 LO01TDS:separate direct-use wood-treatment/coating role of boiled linseed oil; historical contacts not reused",
+        "url": "https://neopaints.com/wp-content/uploads/2019/10/lo01-neo-linseed-oil-boiled.pdf"
+      }
+    ]
+  },
   "fersan-haina": {
     "website": "https://www.fersan.com.do/",
     "contactPage": "https://www.fersan.com.do/contacto",
@@ -31342,6 +31434,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "neo-paints-namibia",
   "fersan-haina",
   "theolaur-lauragais-noyelles",
   "pinturas-prismex-leon",
