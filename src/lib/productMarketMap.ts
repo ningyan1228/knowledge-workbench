@@ -9649,11 +9649,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "pinturas-prismex-leon",
+    "company": "Pinturas Prismex (EUROFORTE)",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "León de los Aldama, Guanajuato; disclosed factory/business address; approximate country marker",
+    "latitude": 19.4,
+    "longitude": -99.1,
+    "legacyCompanyDescription": "官网自称涂料制造商及莱昂工厂，Prismex与EUROFORTE在同页共用业务联系，合并一账户；法律登记和全部股权未独立核验。",
+    "fit": "可开发候选",
+    "signal": "官网明确Fabricamos及莱昂Prismex工厂，完整可见8项涂料/防水/封闭剂目录；Pro Plástica为内外用乙烯基乳胶漆，明确可用水稀释，另有用于石膏、水泥及混凝土墙面的施工封闭剂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "独立读取自有主营、完整可见8项产品目录及乳胶漆和封闭剂两项具体用途，属于自制涂料的下游需求侧。保留乙烯基墙面封闭剂与防水配制品经营；Sellador5×1具体为施工涂刷封闭新旧墙面孔隙，不因封闭剂或浓缩稀释比例就推为ELO/ESBO原料同行。所读业务及用途范围未见ELO、ESBO、环氧植物油或类似生物增塑/稳定输入对外供货。结论限当前公开所读范围，不代表全部隐藏SKU、技术PDF、成分或所有关联企业已审计；ELO在乳胶漆中的分散、固化、相容与采购意向待确认。"
+    },
+    "contact": {
+      "label": "官网通用邮箱；明确WhatsApp号码477 380 0460及官网手动入口，无公司直接聊天链接；无具名采购",
+      "email": "info@euroforte.mx",
+      "phone": "477 380 0460",
+      "contactUrl": "https://www.pinturasprismex.com/"
+    },
+    "source": {
+      "label": "Own complete interior/exterior ProPlastica vinyl-latex paint description with water dilution",
+      "url": "https://www.pinturasprismex.com/product-page/vinlica-acrilica-plastica"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-prismex-leon": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "induworker-bogota": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pivema-palau-solita": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
   "plastimur-modica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10089,6 +10118,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-prismex-leon": {
+    "website": "https://www.pinturasprismex.com/",
+    "contactPage": "https://www.pinturasprismex.com/",
+    "address": "Av. Arroyo de las Liebres1108, Granjas Ceres,37289 León de los Aldama,Guanajuato,Mexico. Own factory/business address statement; country-level approximate marker, factory entrance not independently surveyed.",
+    "generalEmail": "info@euroforte.mx",
+    "generalEmailEvidence": {
+      "company": "Pinturas Prismex (EUROFORTE)",
+      "value": "info@euroforte.mx",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own factory homepage contact block explicitly pairs Prismex/byEUROFORTE and this channel",
+          "url": "https://www.pinturasprismex.com/",
+          "summary": "Exact info@euroforte.mx is visibly printed in the own factory homepage contact block under PinturasPrismex/byEUROFORTE. Plaintext source, no mailto present; general corporate inbox, no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "477 380 0460",
+    "generalPhoneEvidence": {
+      "company": "Pinturas Prismex (EUROFORTE)",
+      "value": "477 380 0460",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own factory homepage contact block explicitly pairs Prismex/byEUROFORTE and this channel",
+          "url": "https://www.pinturasprismex.com/",
+          "summary": "Exact local-format4773800460 is printed in the own contact block with WHATSAPP. Number preserved as printed, no country-prefix guess. Product WhatsApp buttons only share product URLs without recipient and are not corporate chat destinations."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own explicit manufacture/factory, co-branded trade name and exact public business contact block",
+        "url": "https://www.pinturasprismex.com/"
+      },
+      {
+        "label": "Complete current visible AllProducts listing:8finished paint/waterproofing/sealer items",
+        "url": "https://www.pinturasprismex.com/category/all-products"
+      },
+      {
+        "label": "Own complete ProPlastica vinyl-latex paint and water dilution/application",
+        "url": "https://www.pinturasprismex.com/product-page/vinlica-acrilica-plastica"
+      },
+      {
+        "label": "Own complete vinyl wall-sealer application, distinct from selected raw ELO input",
+        "url": "https://www.pinturasprismex.com/product-page/pintura-para-exteriores"
+      }
+    ]
+  },
   "induworker-bogota": {
     "website": "https://induworker.com/",
     "contactPage": "https://induworker.com/",
@@ -31072,6 +31156,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-prismex-leon",
   "induworker-bogota",
   "pivema-palau-solita",
   "plastimur-modica",

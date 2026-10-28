@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pinturas-prismex-leon": "Your Pro Plástica vinyl latex paint is offered for interior and exterior surfaces with water dilution.",
   "induworker-bogota": "Your IW-Epoxycover is a two-component high-solids epoxy coating for industrial floors and other surfaces.",
   "pivema-palau-solita": "Your Imprimación Aquapox Antioxidante is a water-based epoxy primer used as a base coat on aluminum.",
   "plastimur-modica": "Your Extra Professionale is a water-based interior paint formulated with resin emulsions, micronized fillers and specific additives.",
