@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "desenzani-castiglione": "Your VIL102 water-based clear wood coating is intended for furniture, parquet, doors, panelling and other interior wooden items.",
   "neo-paints-namibia": "Your NEO Epoxy Floor Paint forms part of your locally manufactured specialized coatings range in Namibia.",
   "fersan-haina": "Your Haina plant operates a polymer-coating system for granular fertilizers designed to slow nutrient release.",
   "theolaur-lauragais-noyelles": "Your Laurabois’O Vitrificateur Satin is a water-based polyurethane finish for protecting and decorating wooden floors.",

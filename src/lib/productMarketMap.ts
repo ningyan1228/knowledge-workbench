@@ -9761,11 +9761,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "desenzani-castiglione",
+    "company": "Colorificio Ing. Desenzani & C. S.n.c.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Castiglione delle Stiviere, Mantova; disclosed business address; country-level approximate marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "官网自述生产并批发零售墙面/木材/金属涂料，含真实水性木器涂层；当前贸易/法律名称按自己网站保存，非独立登记或厂门实测。",
+    "fit": "可开发候选",
+    "signal": "Desenzani自主生产墙面、木材及金属涂料；水性木器目录列有VIL102透明涂层，用于家具、木地板、门和室内木制品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "当前公司原文明确涂料自主生产以及批发/零售业务，具体水性木器产品和用途已独立读取，保留真实混合经营身份，不称纯经销也不称只做生产。完整水性木器目录20款含木材浸渍/底涂/饰面及D3木胶；另读公司完整主业、总分类与其他产品页，保留墙面、金属/环氧地坪涂料、装饰材料、刷辊/胶带等工具和辅材销售。D3木胶与成品底漆不是仅凭附着/聚合物词即认定PO/CPO原料供货；在有限实际所读范围内，未见独立水性聚烯烃、PO/CPO分散体或同类附着促进原料对外销售。其他产品页自述仍待上线，未穷尽其未展示商品、金属/墙面叶页、合作伙伴、TDS/SDS或最终股权，不作全集团/隐藏配方审计保证。公司名称/域名/已知贸易名及完整公私历史无重复；一个公司和同一地址只计一客户。NL-W1201仅可考虑用户资料所列木材底涂/附着促进材料评估，不等于客户现有树脂体系、相容、效果或采购。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、原文本地电话及已读公司业务页；无具名采购或公开WhatsApp",
+      "email": "desenzani@desenzani.it",
+      "phone": "0376 1814073",
+      "contactUrl": "https://www.desenzani.it/azienda.html"
+    },
+    "source": {
+      "label": "Own water-based VIL102 clear coating for furniture, parquet, doors, panelling and interior wooden items",
+      "url": "https://www.desenzani.it/prodotti-per-legno-all-acqua.html"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "desenzani-castiglione": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "neo-paints-namibia": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fersan-haina": {"targetCompanyTypeId":"slow-release-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"slow-release-fertilizer"},
   "theolaur-lauragais-noyelles": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10205,6 +10234,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "desenzani-castiglione": {
+    "website": "https://www.desenzani.it/",
+    "contactPage": "https://www.desenzani.it/azienda.html",
+    "address": "Via Cavour93/95,46043 Castiglione delle Stiviere(MN),Statale Goitese Km36.450,Italy. Current disclosed business address; country-level approximate marker, factory entrance not independently surveyed.",
+    "generalEmail": "desenzani@desenzani.it",
+    "generalEmailEvidence": {
+      "company": "Colorificio Ing. Desenzani & C. S.n.c.",
+      "value": "desenzani@desenzani.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company-page business footer, repeated across four complete own originals",
+          "url": "https://www.desenzani.it/azienda.html",
+          "summary": "Exact desenzani@desenzani.it and mailto on four actual current own originals. General corporate business mailbox, not a named purchasing recipient. Separately printed PEC/legalmail address not curated as sales mailbox."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "0376 1814073",
+    "generalPhoneEvidence": {
+      "company": "Colorificio Ing. Desenzani & C. S.n.c.",
+      "value": "0376 1814073",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current company-page business footer, repeated across four complete own originals",
+          "url": "https://www.desenzani.it/azienda.html",
+          "summary": "Exact local 0376 1814073 in own corporate footer and same digits in tel://03761814073. No international prefix, standard tel URI or WhatsApp recipient inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own complete20-item water-based wood range, exact VIL102 use and corporate contacts",
+        "url": "https://www.desenzani.it/prodotti-per-legno-all-acqua.html"
+      },
+      {
+        "label": "Own explicit manufacture plus wholesale/retail business, company name and current business address",
+        "url": "https://www.desenzani.it/azienda.html"
+      },
+      {
+        "label": "Own actual other-products/tools/decorating-accessories scope; pending online items not audited",
+        "url": "https://www.desenzani.it/altri-prodotti.html"
+      },
+      {
+        "label": "Own complete current visible category tree and manufacture/wood/metal/building/flooring range",
+        "url": "https://www.desenzani.it/prodotti.html"
+      }
+    ]
+  },
   "neo-paints-namibia": {
     "website": "https://neopaints.com/",
     "contactPage": "https://neopaints.com/",
@@ -31434,6 +31518,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "desenzani-castiglione",
   "neo-paints-namibia",
   "fersan-haina",
   "theolaur-lauragais-noyelles",
