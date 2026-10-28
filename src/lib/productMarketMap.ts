@@ -9565,11 +9565,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-27"
   },
+  {
+    "id": "plastimur-modica",
+    "company": "Plastimur",
+    "productId": "elo",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Modica; disclosed headquarters; approximate country marker",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "legacyCompanyDescription": "自产涂料及建筑表面处理材料；意大利Modica总部与Ragusa展示店计同一账户，国家级近似坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确自产涂料与建筑材料；Extra Professionale为用于室内石膏、石膏板及水泥/石灰基材的水性树脂乳液涂料，含微细填料和特定助剂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "官网明确自制涂料和建筑材料，Extra Professionale为含树脂乳液及填料的水性室内涂料。保留砂浆增强乳胶、固结剂、防水及清洗处理配方业务，不笼统称无添加剂销售。Top Latex公开用途为砂浆配制增强和疏水乳液，不能凭柔性/黏结字样推定其为环氧植物油或生物增塑剂。已读主营、添加剂目录及具体用途范围未见ELO、ESBO、环氧植物油或相似生物增塑/稳定输入供货。Top Fer Gel英文页标题与误用的Top Latex正文冲突，具体成分和用途未采信；结论不覆盖未披露配方，实际采购及水性配方相容性待确认。"
+    },
+    "contact": {
+      "label": "官网总部通用邮箱及电话；无具名采购或实际WhatsApp链接",
+      "email": "info@plastimur.it",
+      "phone": "+39 0932 760097",
+      "contactUrl": "https://www.plastimur.it/en/plastimur/"
+    },
+    "source": {
+      "label": "Own complete Extra Professionale water-based resin-emulsion paint description",
+      "url": "https://www.plastimur.it/en/extra-professionale/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "plastimur-modica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-adoral-la-roda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "biofa-bad-boll": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pinturas-gamma-color-villa-alemana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10002,6 +10031,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "plastimur-modica": {
+    "website": "https://www.plastimur.it/",
+    "contactPage": "https://www.plastimur.it/en/plastimur/",
+    "address": "Headquarters: S.P. Rocciola Scrofani km 4, 400, 97015 Modica, Italy. Ragusa showroom/shop: Via Achille Grandi35,97100 Ragusa, same account, not another manufacturing customer. Country-level approximate marker; factory entrance not surveyed.",
+    "generalEmail": "info@plastimur.it",
+    "generalEmailEvidence": {
+      "company": "Plastimur",
+      "value": "info@plastimur.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company headquarters contact footer, repeated across6 actual company/product pages",
+          "url": "https://www.plastimur.it/en/plastimur/",
+          "summary": "Exact info@plastimur.it and mailto repeatedly printed in all6 own originals, separately from the website developer email. General corporate inbox; no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "+39 0932 760097",
+    "generalPhoneEvidence": {
+      "company": "Plastimur",
+      "value": "+39 0932 760097",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company headquarters contact footer, repeated across6 actual company/product pages",
+          "url": "https://www.plastimur.it/en/plastimur/",
+          "summary": "Exact headquarters company telephone, separately labelled from the Ragusa showroom phone. No actual public WhatsApp URL; none inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own10-category main business range and corporate headquarters contacts",
+        "url": "https://www.plastimur.it/en/products/"
+      },
+      {
+        "label": "Own explicit manufacture and marketing of building paints/materials; same headquarters/store account",
+        "url": "https://www.plastimur.it/en/plastimur/"
+      },
+      {
+        "label": "Complete visible10-item admixtures/consolidating/protective/sanitizing category",
+        "url": "https://www.plastimur.it/en/admixtures-consolidating-protective-sanitizing/"
+      },
+      {
+        "label": "Own complete precise resin-emulsion interior paint body",
+        "url": "https://www.plastimur.it/en/extra-professionale/"
+      },
+      {
+        "label": "Own complete TopLatex mortar-reinforcement admixture application and limits",
+        "url": "https://www.plastimur.it/en/top-latex/"
+      },
+      {
+        "label": "Own TopFerGel page contains inconsistent copied TopLatex body; not used as verified composition or application proof",
+        "url": "https://www.plastimur.it/en/top-fer-gel/"
+      }
+    ]
+  },
   "pinturas-adoral-la-roda": {
     "website": "https://www.pinturasadoral.es/",
     "contactPage": "https://www.pinturasadoral.es/nuestras-instalaciones/",
@@ -30798,6 +30890,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "plastimur-modica",
   "pinturas-adoral-la-roda",
   "biofa-bad-boll",
   "pinturas-gamma-color-villa-alemana",
