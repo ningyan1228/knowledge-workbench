@@ -9621,11 +9621,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "induworker-bogota",
+    "company": "Induworker",
+    "productId": "elo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Bogotá D.C.; disclosed business address; approximate country marker",
+    "latitude": 4.6,
+    "longitude": -74.1,
+    "legacyCompanyDescription": "自制、开发及施工环氧地坪系统；波哥大公司地址及同一产品系列合并一账户，国家级近似坐标。",
+    "fit": "可开发候选",
+    "signal": "官网明确为多层无缝环氧地坪的制造商及施工商，参与配方开发；IW-Epoxycover为双组分高固含环氧涂层，另有水性双组分Acuapox及地坪底涂/找平配制品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "已读完整主营、公司介绍及三类具体产品原文，明确自制和开发地坪涂层。保留施工维护、双组分液体环氧底涂、黏结桥与找平/加填料配制业务；Epoxyfiller虽称液体环氧聚合物，具体为双组分反应固化的地坪配制体系，不能据此视作ELO或ESBO输入原料销售。所读业务、八项可见产品导航及三项用途范围未见ELO、ESBO、环氧植物油或类似生物增塑/稳定输入对外供货。结论限实际可见所读范围，不表示所有SKU、未读技术PDF、成分或关联主体已审计；实际材料采购、固化与相容性待确认。"
+    },
+    "contact": {
+      "label": "官网Sales部门邮箱、商业办公室1电话及明确公开WhatsApp链接；无具名采购",
+      "email": "iw-comercial@induworker.com",
+      "phone": "+57 320 209 0504",
+      "contactUrl": "https://induworker.com/"
+    },
+    "source": {
+      "label": "Own complete IW-Epoxycover two-component epoxy-flooring coating application",
+      "url": "https://induworker.com/productos-iw-epoxycover/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "induworker-bogota": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pivema-palau-solita": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
   "plastimur-modica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-adoral-la-roda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10060,6 +10089,75 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "induworker-bogota": {
+    "website": "https://induworker.com/",
+    "contactPage": "https://induworker.com/",
+    "whatsapp": "https://api.whatsapp.com/send?phone=573202090504&text=Hola,%20quiero%20recibir%20m%C3%A1s%20informaci%C3%B3n",
+    "address": "Calle 22d #127-84, Bodegas 6–7, Bogotá D.C., Colombia. Disclosed company business address; country-level approximate marker, factory entrance not independently surveyed.",
+    "generalEmail": "",
+    "generalPhone": "+57 320 209 0504",
+    "generalPhoneEvidence": {
+      "company": "Induworker",
+      "value": "+57 320 209 0504",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own complete corporate homepage business contact section, repeated across five current own originals",
+          "url": "https://induworker.com/",
+          "summary": "Exact +57 320 209 0504 is labelled Oficina Comercial1 on the own homepage and repeated as3202090504 business contact across five actual originals. Exact public WhatsApp destination also uses573202090504; no contradictory secondary number included."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "iw-comercial@induworker.com",
+        "source": {
+          "label": "Own public commercial-office email repeated in five own originals",
+          "url": "https://induworker.com/"
+        },
+        "emailEvidence": {
+          "company": "Induworker",
+          "value": "iw-comercial@induworker.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own complete corporate homepage business contact section, repeated across five current own originals",
+              "url": "https://induworker.com/",
+              "summary": "Exact iw-comercial@induworker.com and mailto repeated in five actual complete corporate/product originals; commercial departmental route, not a named procurement person or delivery claim."
+            }
+          ],
+          "verifiedAt": "2026-10-28"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own explicit manufacturing and formulation role plus actual business channels",
+        "url": "https://induworker.com/"
+      },
+      {
+        "label": "Own engineering/development company, Bogotá corporate identity and public contacts",
+        "url": "https://induworker.com/nosotros/"
+      },
+      {
+        "label": "Own complete two-component high-solids epoxy-coating body",
+        "url": "https://induworker.com/productos-iw-epoxycover/"
+      },
+      {
+        "label": "Own complete water-based two-component Acuapox concrete-floor coating body",
+        "url": "https://induworker.com/productos-iw-acuapox/"
+      },
+      {
+        "label": "Own complete Epoxyfiller two-component primer/bonding/levelling application",
+        "url": "https://induworker.com/productos-iw-epoxyfiller/"
+      }
+    ]
+  },
   "pivema-palau-solita": {
     "website": "https://www.pivema.com/",
     "contactPage": "https://www.pivema.com/empresa/",
@@ -30974,6 +31072,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "induworker-bogota",
   "pivema-palau-solita",
   "plastimur-modica",
   "pinturas-adoral-la-roda",
