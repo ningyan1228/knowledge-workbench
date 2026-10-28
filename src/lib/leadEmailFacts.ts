@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "pivema-palau-solita": "Your Imprimación Aquapox Antioxidante is a water-based epoxy primer used as a base coat on aluminum.",
   "plastimur-modica": "Your Extra Professionale is a water-based interior paint formulated with resin emulsions, micronized fillers and specific additives.",
   "pinturas-adoral-la-roda": "Your Barniz Parquet al Agua 1C is a water-based aliphatic polyurethane varnish for wood and parquet.",
   "biofa-bad-boll": "Your Vorlack AQUA 1211 is a water-dilutable primer for wood and wood-based materials.",

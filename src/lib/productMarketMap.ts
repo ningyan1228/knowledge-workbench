@@ -9593,11 +9593,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "pivema-palau-solita",
+    "company": "PIVEMA S.A.",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Palau-solità i Plegamans, Barcelona; disclosed business address; approximate country marker",
+    "latitude": 40.4,
+    "longitude": -3.7,
+    "legacyCompanyDescription": "自制水性丙烯酸、环氧及PU成品涂料；本条为西班牙PIVEMA同一账户，坐标为国家级近似。",
+    "fit": "可开发候选",
+    "signal": "官网明确自制丙烯酸、环氧和聚氨酯涂料；Imprimación Aquapox Antioxidante明确为用于铝材等基材的水性环氧底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-28",
+      "conclusion": "官网明确自制丙烯酸、环氧及聚氨酯涂料，Aquapox Antioxidante为用于铝材等基材的水性环氧底漆。已读公司主营、完整可见地坪技术索引及塑性涂料范围，包含成品底面涂、修补树脂、稀释剂、骨料、防滑/触变及清洗辅助品；不笼统称无辅助材料业务。Extra Adherente为地坪体系底涂分类，不能仅凭附着字样认定为所选原料。有限已读范围未见独立PO/CPO/水性聚烯烃或同类附着促进原料供货证据；未穷尽全部PDF/SDS，实际相容及采购待确认。"
+    },
+    "contact": {
+      "label": "官网通用邮箱及电话；另公开WhatsApp号码689 329 597，可经官网手动联系，未取得直接聊天链接",
+      "email": "info@pivema.com",
+      "phone": "+34 93 863 93 20",
+      "contactUrl": "https://www.pivema.com/empresa/"
+    },
+    "source": {
+      "label": "Own Aquapox Antioxidante water-based primer with explicit aluminum substrate",
+      "url": "https://www.pivema.com/antioxidantes/"
+    },
+    "checkedAt": "2026-10-28"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pivema-palau-solita": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"aluminum-primer"},
   "plastimur-modica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pinturas-adoral-la-roda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "biofa-bad-boll": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10031,6 +10060,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pivema-palau-solita": {
+    "website": "https://www.pivema.com/",
+    "contactPage": "https://www.pivema.com/empresa/",
+    "address": "Ctra. Sentmenat,77,08184 Palau-solità i Plegamans, Barcelona, Spain. Disclosed business address; factory entrance not independently surveyed. Country-level approximate marker.",
+    "generalEmail": "info@pivema.com",
+    "generalEmailEvidence": {
+      "company": "PIVEMA S.A.",
+      "value": "info@pivema.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company public contact section, repeated across4 actual pages",
+          "url": "https://www.pivema.com/empresa/",
+          "summary": "Exact info@pivema.com and mailto in all4 actual originals. General business mailbox, no named buyer. Data-rights contact is excluded from business recipients."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "generalPhone": "+34 93 863 93 20",
+    "generalPhoneEvidence": {
+      "company": "PIVEMA S.A.",
+      "value": "+34 93 863 93 20",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own company public contact section, repeated across4 actual pages",
+          "url": "https://www.pivema.com/empresa/",
+          "summary": "Exact public tel:+34938639320 supports international company number; body prints93 863 93 20. Malformed alternate header tel:+938639320 retained in audit, not used. This telephone differs from separately labelled WhatsApp689329597."
+        }
+      ],
+      "verifiedAt": "2026-10-28"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own manufacture statement and corporate business/WhatsApp-number contact section; no direct WhatsApp destination link",
+        "url": "https://www.pivema.com/empresa/"
+      },
+      {
+        "label": "Own actual water-based epoxy primer specifically including aluminum",
+        "url": "https://www.pivema.com/antioxidantes/"
+      },
+      {
+        "label": "Complete visible flooring technical directory including formulated primers/topcoats, repair and auxiliary items; linked PDFs not downloaded",
+        "url": "https://www.pivema.com/fichas-tecnicas-gama-pavimentacion/"
+      },
+      {
+        "label": "Complete visible5 plastic-paint families and acrylic/styrenic water-emulsion range",
+        "url": "https://www.pivema.com/pintura-plastica/"
+      }
+    ]
+  },
   "plastimur-modica": {
     "website": "https://www.plastimur.it/",
     "contactPage": "https://www.plastimur.it/en/plastimur/",
@@ -30890,6 +30974,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pivema-palau-solita",
   "plastimur-modica",
   "pinturas-adoral-la-roda",
   "biofa-bad-boll",
