@@ -9901,11 +9901,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-28"
   },
+  {
+    "id": "hermosa-paints-nairobi",
+    "company": "Hermosa Paints Limited",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Nairobi; disclosed business location; approximate city-level marker",
+    "latitude": -1.29,
+    "longitude": 36.82,
+    "legacyCompanyDescription": "官网自述涂料制造/配方并经营经销网络，结构化类型保留PaintStore；ABDAS公开条目说明制造，KAM仅主体/官网/电话佐证。非独立工商、最终股权或现场工厂核验。",
+    "fit": "可开发候选",
+    "signal": "Hermosa官网自述制造及配方涂料；当前产品接口列有双组分环氧地坪漆，用于化工厂、工厂及高人流区域。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-29",
+      "conclusion": "实际官网全文明确制造及自身涂料配方叙述，原始JSON-LD description自称涂料制造商；其@type实际为PaintStore，保留门店/经销身份，不冒称结构化Manufacturer类型或实地工厂核验。ABDAS已读原文明确该奈洛比公司manufacture & provide涂料并链接同官网；KAM已读条目佐证同名主体、官网及电话，不能将其推荐栏其他公司的Manufacturing转给Hermosa。官网公开products.php实际返回35款，11类全部行/说明已读，Epoxy Floor Coating的双组分环氧身份、化工厂/工厂/高人流区域用途稳定，形成真实下游涂料配方制造场景。保留装饰涂料、醇酸/硝基木器涂层、底涂、建筑填缝/腻子/封闭描述、金属/道路/屋面/防水成品与实际稀释剂供货；Epoxy Thinner明确有机溶剂配制稀释剂，不自动等同ELO或同类环氧植物油添加剂。所读制造/配方定位、完整当前接口35行和可见11类范围内未见ELO、ESBO、环氧植物油、生物增塑剂或同类添加剂输入对外供应。结论有限，未穷尽隐藏SKU、全部未读技术/SDS、制造工艺或最终所有权。目录存在字段冲突：环氧项solvent-free与使用Epoxy Thinner并存、普通Floor Paint描述alkyd但类型写PU、部分辅助品名称与描述错位，因此不采用其精确溶剂含量、树脂/固化剂配方、参数、性能或名称—化学功能配对；这些冲突不推翻稳定的双组分环氧产品及制造角色。首页67款为网站营销自述，实际只读取接口35款，不能称核验全部67款。Hermosa/Hermosa Paints Limited/同域名及奈洛比和各地门店/仓库按一个账户去重，合作商和行业比较品牌不推所有权。ELO仅按用户资料的涂料/树脂改性环氧功能方向潜在评估，客户现用ELO、相容、改善效果、性能保证或采购意向均未确认。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、实际国际tel及公开WhatsApp链接；无具名采购",
+      "email": "info@hermosapaints.com",
+      "phone": "+254794899999",
+      "contactUrl": "https://hermosapaints.com/"
+    },
+    "source": {
+      "label": "Actual official public JSON:Epoxy Floor Coating, two-component epoxy paint for chemical plants/factories/high-traffic areas",
+      "url": "https://hermosapaints.com/products.php"
+    },
+    "checkedAt": "2026-10-29"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "hermosa-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pam-ak-chorvatsky-grob": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pac-chem-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "palcanarias-telde": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10350,6 +10379,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "hermosa-paints-nairobi": {
+    "website": "https://hermosapaints.com/",
+    "contactPage": "https://hermosapaints.com/",
+    "address": "Highport Properties, Road C, Industrial Area, P.O.Box78895-00507 Nairobi, Kenya, as currently disclosed on the company website. Approximate city-level marker; factory entrance not independently surveyed.",
+    "generalEmail": "info@hermosapaints.com",
+    "generalEmailEvidence": {
+      "company": "Hermosa Paints Limited",
+      "value": "info@hermosapaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own current public business header and contact section",
+          "url": "https://hermosapaints.com/",
+          "summary": "Exact info@hermosapaints.com plus mailto:info@hermosapaints.com repeated in current own HTML. General company mailbox, not a named purchasing recipient; no delivery/SMTP or procurement confirmation."
+        }
+      ],
+      "verifiedAt": "2026-10-29"
+    },
+    "generalPhone": "+254794899999",
+    "generalPhoneEvidence": {
+      "company": "Hermosa Paints Limited",
+      "value": "+254794899999",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own exact public telephone href and separate displayed number",
+          "url": "https://hermosapaints.com/",
+          "summary": "Exact tel:+254794899999 corresponds to displayed0794 899 999. International value taken from actual href, not guessed country prefix. Other displayed company phones0794 919 191/0759 111 333 retained in raw original only. Explicit wa.me/254794899999 link independently exists; telephone alone was not treated as WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-29"
+    },
+    "whatsapp": "https://wa.me/254794899999?text=Hi%20Hermosa%20Paints%2C%20I%27d%20like%20to%20know%20more%20about%20your%20products.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own current complete35-row public catalogue, precise stable two-component epoxy floor application",
+        "url": "https://hermosapaints.com/products.php"
+      },
+      {
+        "label": "Own full business/about/contact HTML, manufacturer description and actual public WhatsApp link",
+        "url": "https://hermosapaints.com/"
+      },
+      {
+        "label": "Actual KAM company name/website/Nairobi-region/phone identity corroboration; suggested other manufacturers not attributed",
+        "url": "https://directory.kam.co.ke/listing/hermosa-paints-limited-2/"
+      },
+      {
+        "label": "Actual ABDAS manufacture & provide paints description, same company/domain",
+        "url": "https://abdas.org/business-directory/69539/hermosa-paints-limited/"
+      }
+    ]
+  },
   "pam-ak-chorvatsky-grob": {
     "website": "https://www.pam.sk/",
     "contactPage": "https://www.pam.sk/o-nas",
@@ -31879,6 +31964,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "hermosa-paints-nairobi",
   "pam-ak-chorvatsky-grob",
   "pac-chem-cape-town",
   "palcanarias-telde",

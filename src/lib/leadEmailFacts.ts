@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "hermosa-paints-nairobi": "Your Hermosa 2 Pack Epoxy Floor Paint is intended for chemical plants, factories and other high-traffic areas.",
   "pam-ak-chorvatsky-grob": "Your Pam Lak is a water-based acrylic clear varnish for interior wood panelling, ceilings and children's wooden furniture.",
   "pac-chem-cape-town": "You manufacture the E2 Malta / E2 Copertura wine-tank lining system in South Africa for concrete and mild steel tanks.",
   "palcanarias-telde": "Your Garde Parquet is a one-component water-based polyurethane varnish for parquet, timber stairs and furniture.",
