@@ -10012,11 +10012,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-29"
   },
+  {
+    "id": "vuka-floors-durban",
+    "company": "Vuka Floors",
+    "productId": "elo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Durban; disclosed KwaMashu head office and separately described Cornubia manufacturing; approximate city marker",
+    "latitude": -29.86,
+    "longitude": 31.02,
+    "legacyCompanyDescription": "官网自述Durban制造、供货及施工；法定后缀与最终股权未独立核查，各地销售/施工网点及Vuka产品族按一个账户。",
+    "fit": "可开发候选",
+    "signal": "Vuka Floors官网自述在Durban自制地坪涂料；Vuka Resist340为用于混凝土和钢制玻纤增强储罐衬里的多组分环氧体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-29",
+      "conclusion": "实际6次父级免费TinyFetch定向读取Home、Products、Contact、CorrosionProtectionSystems、CleaningChemicals及AdhesivesLaminatesGrouts，全部完整提取正文及返回链接已归档，累计6/rem0STOP；是provider提取正文而非原始HTML二进制，未公开HTTP码、内部JS/隐藏跳转/重试历史，不作原生200或零内部请求保证。未读取任何PDF/TDS/SDS或第七页。Home明确公司全部产品在CornubiaIndustrialEstate,Durban,KZN,SouthAfrica工厂制造，Products复述manufactured epoxyflooringrange；实际制造/供应/施工混合角色保留，全球树脂制造商研发测试合作不当当前ELO采购证明或独立技术认证。Products当前完整可见12类成品系统，保留light/medium/heavy地坪、墙面、抗静电、停车场、抑尘、墙角/抹面、底涂/找平、防腐、胶粘剂/层压/灌浆、清洁化学品。具体防护页13段体系中明确VukaResist340为multi-component solvent-free epoxyresinsystem，配玻璃纤维用于混凝土及钢制储罐衬里与化学腐蚀防护；不是ELO原料。VukaPrime103实际称concrete/grano底涂、poresealer及adhesionpromoter，是已配制混凝土环氧compound，不能因通用功能名就当PO/CPO原料或ELO输入。相邻真实供货包括novolac-modifiedepoxylining、glassfibrereinforcedE/N/Vlinings、PUcementitiousscreeds、formulatedepoxythinners、工业/碱性/溶剂清洁剂、WetToDry新旧混凝土粘结剂、多组分触变epoxylaminating/adhesiveresin及epoxypourablegrout；不能称其不卖树脂、添加剂、层压材料或溶剂。上述实际所读主营、12类范围与3项辅助/防护完整页面未见对外销售ELO、ESBO、环氧植物油或同类生物增塑/稳定输入，选定ELO排除只限真实所读范围，非全隐藏SKU/全部叶页/PDF/SDS/最终集团保证或外购例外。VukaResist340与FoodGrade另为独立页面段落，不把客户特定FDA树脂/饮用水/食品接触声明、98%硫酸、100度/120度耐温、抗菌、固化或防腐性能移给ELO，不保证配方相容/性能改善或使用采购。当前Contact总部97BoulevardRoad,BridgeCity,KwaMashu4360；Home另述Cornubia制造厂，两处不强行合并同一厂址。地图Durban城市级近似点，非厂门GPS或工商审计。名称采用实际官网VukaFloors，PtyLtd只在Search出现不当当前法定后缀证实。规划Kenya发现范围实际命中SouthAfrica，按官网地理入南非一个账户，不虚构肯尼亚产线；各地sales/applicators、Vuka品牌与施工部门不拆分客户。初检447公开/root461/front893/index175/完整queue322/excluded6无同主体，8历史命中仅Search/旧预检/其他公司审查引文，无旧原文，prior0；扩展Vuka产品族历史复核已完成：42份匹配文件中新增9份旧摘要/脚本/交接/事务副本及无关人名Search已逐一复核，无旧原文或关联账户未决项，不以批次/品牌/域名/日期/provider重置额度。Contact明确MichaelCook的ProductsalesRSAandExports、Exports及建筑专业客户联系职能和精确michael@vukafloors.co.za，分别保存当前身份/业务职能与邮箱归属证据，不改写为采购、技术、负责人或正式职级；generalEmail和generalPhone明确空，未构造info/sales邮箱。官网导航实际公开https://wa.me/+27685176241，逐字保留为公司公开按钮，不从电话号码拼接，也不归属于Michael；其号码与页面另一地区联系不同，未将所有渠道绑给同一个人。电话本条未精选；不发送、不跳转消息、不证明邮箱可投递。"
+    },
+    "contact": {
+      "label": "官网Michael Cook产品销售及出口业务邮箱；职能有来源，非采购身份",
+      "email": "michael@vukafloors.co.za",
+      "contactUrl": "https://vukafloors.co.za/contact/"
+    },
+    "source": {
+      "label": "Current own Vuka Resist340 multi-component epoxy system: glass-fibre concrete/steel tank linings",
+      "url": "https://vukafloors.co.za/corrosion-protection-systems/"
+    },
+    "checkedAt": "2026-10-29"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "vuka-floors-durban": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "silvaprodukt-ljubljana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fossilcote-sabaki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "basco-products-nairobi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10465,6 +10493,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "vuka-floors-durban": {
+    "website": "https://vukafloors.co.za/",
+    "contactPage": "https://vukafloors.co.za/contact/",
+    "address": "Head Office Durban KZN:97 Boulevard Road, Bridge City, Kwa Mashu,4360,South Africa (current Contact). Home separately identifies manufacturing at Cornubia Industrial Estate,Durban,KZN. Do not equate addresses; approximate Durban marker,not a surveyed factory entrance.",
+    "generalEmail": "",
+    "generalPhone": "",
+    "whatsapp": "https://wa.me/+27685176241",
+    "contacts": [
+      {
+        "name": "Michael Cook",
+        "title": "Product sales RSA and Exports",
+        "department": "Sales",
+        "email": "michael@vukafloors.co.za",
+        "identityEvidence": {
+          "company": "Vuka Floors",
+          "name": "Michael Cook",
+          "title": "Product sales RSA and Exports",
+          "responsibilities": "Product sales in RSA and exports; published current sales/contact function, also listed for building-industry professionals. No procurement, R&D or material-buying authority asserted.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Official current Contact: Product sales RSA and Exports / Michael Cook",
+              "url": "https://vukafloors.co.za/contact/",
+              "summary": "Current own company Contact explicitly lists Michael Cook under Product sales RSA and Exports, Exports and Building industry Professionals. The stored title is the published contact function, not an invented job grade, technical/purchasing responsibility, directorship or raw-material buying authority."
+            }
+          ],
+          "verifiedAt": "2026-10-29"
+        },
+        "emailEvidence": {
+          "company": "Vuka Floors",
+          "value": "michael@vukafloors.co.za",
+          "kind": "named-business",
+          "personName": "Michael Cook",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official current Michael Cook product-sales/exports business email",
+              "url": "https://vukafloors.co.za/contact/",
+              "summary": "Exact michael@vukafloors.co.za is printed next to Michael Cook in the Exports and Product sales RSA and Exports sections of the official contact page. Named public business mailbox; not constructed, generic, procurement, SMTP or deliverability proof."
+            }
+          ],
+          "verifiedAt": "2026-10-29"
+        },
+        "source": {
+          "label": "Actual official current sales/exports contact, identity and mailbox evidence stored separately",
+          "url": "https://vukafloors.co.za/contact/"
+        },
+        "verifiedAt": "2026-10-29"
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Complete extracted own manufacture at Cornubia, industrial floor range and global resin partnerships",
+        "url": "https://vukafloors.co.za/"
+      },
+      {
+        "label": "Complete visible12-category product index; formulated finish and auxiliary businesses retained",
+        "url": "https://vukafloors.co.za/products/"
+      },
+      {
+        "label": "Complete current public named sales/exports contact and head-office address; WhatsApp button link exact",
+        "url": "https://vukafloors.co.za/contact/"
+      },
+      {
+        "label": "Complete industrial protective coating/lining scope including VukaResist340; PDF links not read",
+        "url": "https://vukafloors.co.za/corrosion-protection-systems/"
+      },
+      {
+        "label": "Complete cleaning-chemical range:formulated thinners/industrial/alkaline/brush cleaners",
+        "url": "https://vukafloors.co.za/cleaning-chemicals/"
+      },
+      {
+        "label": "Complete manufactured epoxy adhesive,laminating compound and pourablegrout range",
+        "url": "https://vukafloors.co.za/adhesives-laminates-grouts/"
+      }
+    ]
+  },
   "silvaprodukt-ljubljana": {
     "website": "https://silvaprodukt.si/en/",
     "contactPage": "https://silvaprodukt.si/en/about-us/contact/",
@@ -32214,6 +32320,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "vuka-floors-durban",
   "silvaprodukt-ljubljana",
   "fossilcote-sabaki",
   "basco-products-nairobi",

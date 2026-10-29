@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "vuka-floors-durban": "Your Vuka Resist 340 epoxy system is used for glass-fibre-reinforced tank linings on concrete and steel.",
   "silvaprodukt-ljubljana": "Your Silvalazur range includes a water-based thin-layer coating for wooden windows, doors and garden furniture.",
   "fossilcote-sabaki": "Your Fossilcote floor-coating range includes epoxy systems for commercial and industrial facilities.",
   "basco-products-nairobi": "Your Duracoat Ultima Aqua Gloss Enamel is a water-based finish recommended for furniture, doors and other wooden surfaces.",
