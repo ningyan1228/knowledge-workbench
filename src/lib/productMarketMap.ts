@@ -9929,11 +9929,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-29"
   },
+  {
+    "id": "basco-products-nairobi",
+    "company": "Basco Products (K) Limited (Basco Paints)",
+    "productId": "nl-w1201",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Nairobi; disclosed Embakasi business address; approximate city-level marker",
+    "latitude": -1.29,
+    "longitude": 36.82,
+    "legacyCompanyDescription": "官网自述涂料及建筑化学品制造，Basco/Duracoat品牌及肯尼亚/乌干达业务按一个账户；未独立核查工商、最终股权或现场厂门。",
+    "fit": "可开发候选",
+    "signal": "Basco官网明确自制涂料；Duracoat Ultima Aqua Gloss Enamel为水性产品，推荐家具、门及木器表面，并列木器底漆配套。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-29",
+      "conclusion": "实际完整读取3份当前官网HTML（具体Ultima Aqua Gloss产品、About、Get-in-touch）、24页当前官网链接价目表及72页AquaTech手册；另Bond Latex503详情403已计入6次预算，未读其业务正文，不作补抓。About直接自述制造涂料及相关产品，具体产品明确Water Based并推荐家具、门、踢脚和木器表面，For Wooden Surfaces配套Aqua Wood Primer，形成真实自制水性木器涂层需求侧应用。2026价目表封面自署生效2026-04-17、路径2026-07及PDF元数据7月1日含义分别保留，不代表7月新增工厂或配方生效；72页手册元数据2022-02-01，属于历史产品资料，不能称2026新版。完整所读目录保留成品建筑/工业/汽车/木器涂料、底涂、溶剂稀释剂、木胶/纸胶/接触胶/瓷砖胶、PU泡沫、建筑防水和水泥添加剂、PU/环氧注浆树脂等真实供货，不能称公司不卖添加剂或树脂。手册实际第34—37页Bond Latex503为水泥/砂浆改性及砖石粘结、与水泥混用；其原文acrylic与搜索详情同时acrylic/SBR描述不统一，不选择性改写精确现配方。APP为已改性沥青建筑防水成品膜，不当水性聚烯烃分散体原料；其他polymer dispersion和PU injection resin均保留各自防水/注浆应用角色。所读完整两份目录及主营范围未见对外供应所选水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进输入，通过有限实际范围的NL-W1201同行排除；不是全隐藏SKU/SDS/OEM、最终集团业务或外购材料保证。AquaTech手册Duralastic两处单/双组分描述相冲突，保留且不据此推精确配方或性能。2022新Emulsion Plant只保留其历史自述，不推断为当前外售原料乳液生产。Basco Products(K)Limited/Ltd、Basco Paints、Duracoat/Ultima/Value/Autoguard/Durabond/Maxicryl以及Embakasi/Kampala和各地网点统一一个客户；San Marco、Pentrilo等所售品牌或合作不自动推股权归属。最新444公开/root458/frontier890/来源索引172/完整队列322/排除索引6及全部私有历史按主体、域名和扩展品牌复核，无既有同一账户；51份历史命中均已分类并哈希，新增Kampala碰撞是他站地区选项或旧肥料搜索，不作为Basco关联。不能改品牌或地区拆分新增。公司邮箱为Customer Service部门入口，不是具名采购或原料RFQ；generalEmail明确空，General枚举只承载客服综合业务部门，电话保持官网0800国内免费号不补国际前缀，无公开WhatsApp证据不猜。Airport North Road Embakasi为官网业务地址，Nairobi城市近似坐标不是厂门核验。NL-W1201只按用户资料的水性聚烯烃分散体、木材底涂/附着促进方向潜在配方评估，不把我方路线写成客户现用体系，不确认相容、提升、采购、认证、环保或防腐保证。"
+    },
+    "contact": {
+      "label": "官网Customer Service部门邮箱（General类别）及国内免费电话；无具名采购或WhatsApp",
+      "email": "customerservice@bascopaints.com",
+      "phone": "0800 221 331",
+      "contactUrl": "https://www.duracoat.com/get-in-touch"
+    },
+    "source": {
+      "label": "Actual official water-based Ultima Aqua Gloss Enamel, recommended for furniture, doors and wood; matching wood-primer sequence",
+      "url": "https://www.duracoat.com/duracoat-ultima-aqua-gloss-enamel"
+    },
+    "checkedAt": "2026-10-29"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "basco-products-nairobi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "hermosa-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pam-ak-chorvatsky-grob": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "pac-chem-cape-town": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10379,6 +10408,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "basco-products-nairobi": {
+    "website": "https://www.duracoat.com/",
+    "contactPage": "https://www.duracoat.com/get-in-touch",
+    "address": "Airport North Road, Embakasi, Nairobi, Kenya; own current business footer. Current price-list head office P.O. Box34424-00100. City-level approximate map point, not an independently surveyed factory entrance.",
+    "generalEmail": "",
+    "generalPhone": "0800 221 331",
+    "generalPhoneEvidence": {
+      "company": "Basco Products (K) Limited (Basco Paints)",
+      "value": "0800 221 331",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current contact-page displayed domestic freephone and tel href",
+          "url": "https://www.duracoat.com/get-in-touch",
+          "summary": "Exact displayed0800 221 331 and tel:0800221331; a second contact link omits the leading0 but the correctly printed header/footer domestic freephone is preserved. No guessed international prefix, WhatsApp, named buyer or call made."
+        }
+      ],
+      "verifiedAt": "2026-10-29"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "General",
+        "email": "customerservice@bascopaints.com",
+        "emailEvidence": {
+          "company": "Basco Products (K) Limited (Basco Paints)",
+          "value": "customerservice@bascopaints.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Actual official public contact page, customer-service mailto and current footer",
+              "url": "https://www.duracoat.com/get-in-touch",
+              "summary": "Exact customerservice@bascopaints.com and mailto repeated on current duracoat.com HTML, which identifies Basco Products(K)Ltd as operator. Customer Service department; General is the application category, not a named buyer or purchase department. Same exact mailbox also printed on current price-list head-office page. No SMTP/delivery or purchasing confirmation."
+            }
+          ],
+          "verifiedAt": "2026-10-29"
+        },
+        "source": {
+          "label": "Customer Service department",
+          "url": "https://www.duracoat.com/get-in-touch"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Actual current water-based furniture/door/wood finish and recommended wood-primer sequence",
+        "url": "https://www.duracoat.com/duracoat-ultima-aqua-gloss-enamel"
+      },
+      {
+        "label": "Actual own paint-manufacture narrative, brand range and country reach",
+        "url": "https://www.duracoat.com/about-us"
+      },
+      {
+        "label": "Actual own customer-service mailbox, domestic freephone and Embakasi business address",
+        "url": "https://www.duracoat.com/get-in-touch"
+      },
+      {
+        "label": "All24 extracted product-table pages; cover effective2026-04-17, not a factory commissioning record",
+        "url": "https://www.duracoat.com/sites/default/files/2026-07/main-pricelist.pdf"
+      },
+      {
+        "label": "All72 extracted historical construction-chemical pages; metadata2022-02-01, actual cement-modifier and finished waterproofing/injection scope",
+        "url": "https://www.duracoat.com/sites/default/files/resource/aquatech-waterproofing.pdf"
+      }
+    ]
+  },
   "hermosa-paints-nairobi": {
     "website": "https://hermosapaints.com/",
     "contactPage": "https://hermosapaints.com/",
@@ -31964,6 +32061,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "basco-products-nairobi",
   "hermosa-paints-nairobi",
   "pam-ak-chorvatsky-grob",
   "pac-chem-cape-town",
