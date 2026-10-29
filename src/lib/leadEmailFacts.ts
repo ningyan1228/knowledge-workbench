@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "fossilcote-sabaki": "Your Fossilcote floor-coating range includes epoxy systems for commercial and industrial facilities.",
   "basco-products-nairobi": "Your Duracoat Ultima Aqua Gloss Enamel is a water-based finish recommended for furniture, doors and other wooden surfaces.",
   "hermosa-paints-nairobi": "Your Hermosa 2 Pack Epoxy Floor Paint is intended for chemical plants, factories and other high-traffic areas.",
   "pam-ak-chorvatsky-grob": "Your Pam Lak is a water-based acrylic clear varnish for interior wood panelling, ceilings and children's wooden furniture.",

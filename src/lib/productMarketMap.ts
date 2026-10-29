@@ -9957,11 +9957,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-29"
   },
+  {
+    "id": "fossilcote-sabaki",
+    "company": "Fossilcote Limited",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Sabaki, along Mombasa Road; disclosed business address; approximate Kenya country-level marker",
+    "latitude": -0.02,
+    "longitude": 37.91,
+    "legacyCompanyDescription": "当前官网自述制造及供应树脂地坪，同时经营安装/涂装与外部制造商产品；South Africa/Kenya/Uganda区域合并一个账户，非工商或现场厂门核验。",
+    "fit": "可开发候选",
+    "signal": "Fossilcote官网自述制造及供应树脂地坪并经营施工；完整体系页列有用于商业及工业设施的环氧地坪涂层系统。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-29",
+      "conclusion": "实际完整阅读当前自有Home、About、Systems、Epoxy Floor Coatings四份200HTML，分别4966/8934/8696/9155字正文，最后一页尾155字另行补读；首个www301空响应及最后公司手册超时均计预算，累计6/rem0STOP，无自动跳转/重试。Home直接自称supplying and manufacturing premium seamless resin flooring and niche texture wall coatings；同时明确安装、涂装、防水及和外部制造商的关系，About也说works with several manufacturers，保留制造/供应/施工混合角色，不据此保证所有SKU自产或现场工厂审计。Systems完整当前可见目录四类为环氧地坪砂浆、PU砂浆、环氧地坪涂层、装饰地坪；明确商业和工业floor coating范围，装饰项含vinyl flakes/epoxy matrix。Epoxy Floor Coatings详情实际三项为Fossilcote Latex（水泥/砂浆粘结及防水添加剂）、Pourable GP Epoxy（已配制低粘度环氧灌浆/锚固/填充compound）和Smooth & Patch Special（双组分丙烯酸聚合物改性水泥防水抹灰）；不能把它们改成三款环氧地坪漆或宣称公司不卖添加剂/树脂。上述真实建筑辅材和配制灌浆树脂保留，但不等同所选ELO/ESBO、环氧植物油、生物增塑稳定及树脂改性原料输入。所读主营、完整四体系及三项详情范围未见对外供应所选同类输入，选定ELO同行排除仅限实际读取范围；未读其他三类详情、Fossilcote Floors PDF、SDS/精确配方、隐藏SKU/OEM及最终集团业务，超时Company Profile不能当已读手册或当前TDS。Home自述制造足以支持下游角色，但不将大厂合作、客户评价/标识、抗菌Polygiene、500+Brands、寿命、快速返工或认证标志当独立审计、我方性能或相容保证。Fossilcote/Fossilcote Limited及South Africa/Kenya/Uganda等公开区域按一个账户，不拆分厂/城市或品牌；旧2018博客仅Search发现，其联系人/地址/电话号码/人员不直接作为当前证据。完整445公开/root459/front891/index173/完整queue322/excluded6及全私有历史初检prior0；扩展集团/品牌独立复核已完成：57份历史相关上下文与文件已分类并保留哈希，两份同时新增本地配置/其他产品Search审计在单独清关记录中闭合，无既有同一账户或新增历史原文事件；不以日期或www重置额度。当前Home footer实际info@fossilcote.com和mailto、实际tel:+254797367745且显示(254)797367745，国际值来自实际链接不补猜前缀；(406)555-0120为不相关模板号排除，header另一743号不作具名联系。WhatsApp只见插件按钮/配置，未见实际可复制联系URL，不从号码拼接WhatsApp，社交分享不当公司LinkedIn。About founder Craig Robertson历史陈述与Google旧评价不构成当前职务、采购身份或个人邮箱证据，无具名联系人。当前自述地址Unit J3,Dul Dul Enterprises,Sabaki,Along Mombasa Rd,Kenya，不补旧博客Nairobi邮政箱，不推Machakos工厂县址或厂门；地图为Kenya国家级概略点。ELO只按用户资料的环氧功能及涂料/树脂改性潜在材料评估方向，不把我方原料路线写成客户现有体系，不确认采购、用量、相容、释放期、防腐、抗菌、认证或性能改善。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及实际国际tel；无具名采购或已核验WhatsApp链接",
+      "email": "info@fossilcote.com",
+      "phone": "+254797367745",
+      "contactUrl": "https://fossilcote.com/"
+    },
+    "source": {
+      "label": "Actual official complete Systems: epoxy floor coating systems for commercial and industrial applications",
+      "url": "https://fossilcote.com/systems/"
+    },
+    "checkedAt": "2026-10-29"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fossilcote-sabaki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "basco-products-nairobi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "hermosa-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "pam-ak-chorvatsky-grob": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10408,6 +10437,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fossilcote-sabaki": {
+    "website": "https://fossilcote.com/",
+    "contactPage": "https://fossilcote.com/",
+    "address": "Unit J3, Dul Dul Enterprises, Sabaki, Along Mombasa Rd, Kenya, as disclosed in current official footer. Country-level approximate Kenya marker; not a surveyed factory entrance or independently established county/postal address.",
+    "generalEmail": "info@fossilcote.com",
+    "generalEmailEvidence": {
+      "company": "Fossilcote Limited",
+      "value": "info@fossilcote.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current own footer mail and exact mailto",
+          "url": "https://fossilcote.com/",
+          "summary": "Exact info@fossilcote.com plus mailto:info@fossilcote.com in current Home HTML, same company identified as Fossilcote Limited. General corporate business route; not a named buyer, raw-material RFQ, SMTP or delivery confirmation."
+        }
+      ],
+      "verifiedAt": "2026-10-29"
+    },
+    "generalPhone": "+254797367745",
+    "generalPhoneEvidence": {
+      "company": "Fossilcote Limited",
+      "value": "+254797367745",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Actual current official footer phone and international tel href",
+          "url": "https://fossilcote.com/",
+          "summary": "Exact tel:+254797367745; corresponding display(254)797367745. International number is sourced, not guessed. Unrelated tel:(406)555-0120 template link excluded; a second header phone not promoted to procurement. WhatsApp plugin button/config does not provide an actual verified public jump URL."
+        }
+      ],
+      "verifiedAt": "2026-10-29"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Complete current own manufacturing/supply and application narrative, mixed installation role and actual corporate channels",
+        "url": "https://fossilcote.com/"
+      },
+      {
+        "label": "Complete own company history and disclosed SouthAfrica/Kenya/Uganda regional presence; external manufacturers retained",
+        "url": "https://fossilcote.com/about/"
+      },
+      {
+        "label": "Complete current four-category floor-coating system directory",
+        "url": "https://fossilcote.com/systems/"
+      },
+      {
+        "label": "Complete actual three-product concrete-modifier/grout/plaster detail; adjacent chemical supply preserved",
+        "url": "https://fossilcote.com/epoxy-floor-coatings/"
+      }
+    ]
+  },
   "basco-products-nairobi": {
     "website": "https://www.duracoat.com/",
     "contactPage": "https://www.duracoat.com/get-in-touch",
@@ -32061,6 +32145,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fossilcote-sabaki",
   "basco-products-nairobi",
   "hermosa-paints-nairobi",
   "pam-ak-chorvatsky-grob",
