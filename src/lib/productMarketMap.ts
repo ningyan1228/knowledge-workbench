@@ -9985,11 +9985,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-29"
   },
+  {
+    "id": "silvaprodukt-ljubljana",
+    "company": "Silvaprodukt d.o.o.",
+    "productId": "nl-w1201",
+    "country": "Slovenia",
+    "countryZh": "斯洛文尼亚",
+    "city": "Ljubljana; disclosed headquarters and store; Ig production plant kept within the same account; approximate city-level marker",
+    "latitude": 46.05,
+    "longitude": 14.51,
+    "legacyCompanyDescription": "官网自述开发木材保护配方，Contact明确全部产品由Ig工厂制造；总部/门店Ljubljana与Ig工厂及品牌按一户，非现场或最终股权审计。",
+    "fit": "可开发候选",
+    "signal": "官网明确Ig工厂制造全部产品；Silvalazur为用于木窗、门及园林家具的水性薄层木器涂料，当前摘要标为丙烯酸体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-29",
+      "conclusion": "实际6次父级定向来源请求：1FAQ、2About、3Silvalazur由已核实零费用TinyFetch返回完整提取正文及链接；4全Shop目录调用发生会话传输错误，已计失败，不重试或冒称目录已读；5History、6Contact为实际200官网HTML且完整阅读。前三份是provider提取正文，不是已保存原始HTML二进制，工具未公开HTTP码、内部脚本或自动跳转历史，不作200/零脚本等无证据保证。第5页只有未渲染[bold_timeline]，无可读发展年表，不补猜工厂成立时间；第6页明确All our products are made at the production plant in Ig，自述工厂Zabrv1161292Ig，支持制造角色；About另直接说明公司与卢布尔雅那大学木材科研部门开发产品。第3页现行Silvalazur明确水性薄层木材表面及装饰涂层，用于木窗、门、园林家具、栏杆等，相关产品完整提取列表8项，含Silvaclean木/石清洁、Silvaroyal/Silvanol水性木材保护剂、Silvapro热改性木、Silvalazur及Strong丙烯酸薄层水性木器涂层、Silvacera水性木表蜡配方、StipolAF防开裂涂层。保留木材处理服务、杀生物保护剂、天然蜡/水性蜡配方等真实邻近业务，不称公司不卖添加剂或所有含蜡体系均不相关；所读主营、具体木器涂层、8项成品范围摘要及生产自述未见对外销售所选水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料，有限实际范围NL-W1201排除，非完整全店目录/所有隐藏SKU/SDS/蜡化学/最终集团业务或外购证明。FAQ仍使用Silvanol stainB/Silvaroyal等名称，当前产品页有Silvalazur/相关说明又见Silvanolin，不凭名字自动宣布改名、等同配方或全系列一致性。Silvalazur原文明确禁止稀释或与其他物质混合；NL-W1201仅针对制造商潜在研发配方或木材底涂/附着促进评估，不向终端用户建议加进现成品，不确认可相容、已使用或采购。客户自身杀菌、防虫、环境友好、无毒、三倍寿命、永久不重涂、试验/认证标志不得借为我方产品效果或独立保证。Silvaprodukt及所读品牌、Ljubljana总部/门店和Ig工厂合并一个账户，不拆分地址或品牌；初检446公开/root460/front892/index174/完整队列322/排除6无同主体命中，完整私有历史prior0，扩展品牌历史独立复核已通过，35份匹配历史均为当前轮资料，无旧原文/关联账户未决项，不以工具/域名/日期/产品重置6次预算。当前Contact自述法定业务名Silvaprodukt d.o.o.、Dolenjska cesta42 1000Ljubljana Slovenia与工厂地址，并公布精确mailto:info@silvaprodukt.si；仅通用业务邮箱不冒称采购或RFQ，无SMTP/投递验证。Contact所列销售代表不当具名采购或技术负责人；本条不精选其个人渠道，contacts及部门列表空。电话暂不精选，页面零售电话显示+38601而href为+38612800571，国内免费0801202不补国际前缀；没有真实公开WhatsApp链接不从电话拼接。地图为Ljubljana城市近似点，非Ig厂门现场或工商最终股权核验。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及联系表单；无精选具名采购、电话或WhatsApp",
+      "email": "info@silvaprodukt.si",
+      "contactUrl": "https://silvaprodukt.si/en/about-us/contact/"
+    },
+    "source": {
+      "label": "Actual official Silvalazur: water-based thin-layer decorative wood coating; current related range identifies acrylic",
+      "url": "https://silvaprodukt.si/en/izdelek/silvalazur/"
+    },
+    "checkedAt": "2026-10-29"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "silvaprodukt-ljubljana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fossilcote-sabaki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "basco-products-nairobi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "hermosa-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10437,6 +10465,47 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "silvaprodukt-ljubljana": {
+    "website": "https://silvaprodukt.si/en/",
+    "contactPage": "https://silvaprodukt.si/en/about-us/contact/",
+    "address": "Dolenjska cesta 42, 1000 Ljubljana, Slovenia (headquarters/industrial store). Own Ig production plant: Zabrv 116, 1292 Ig, Slovenia. Current company self-disclosure; map marker is approximate Ljubljana city level, not a surveyed factory entrance.",
+    "generalEmail": "info@silvaprodukt.si",
+    "generalEmailEvidence": {
+      "company": "Silvaprodukt d.o.o.",
+      "value": "info@silvaprodukt.si",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current official Contact page, exact business mailto and operator/address",
+          "url": "https://silvaprodukt.si/en/about-us/contact/",
+          "summary": "Exact info@silvaprodukt.si plus mailto:info@silvaprodukt.si in actual current Contact HTML identifies Silvaprodukt d.o.o. and its Ljubljana store/Ig production plant. General corporate channel, not a named buyer, purchase need, SMTP or delivery confirmation."
+        }
+      ],
+      "verifiedAt": "2026-10-29"
+    },
+    "generalPhone": "",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Complete extracted actual Silvalazur wood-coating body, application instructions and eight-item related finished-product range; not full shop catalog",
+        "url": "https://silvaprodukt.si/en/izdelek/silvalazur/"
+      },
+      {
+        "label": "Actual complete current own Contact HTML: all products made at Ig, business address and exact general mailbox",
+        "url": "https://silvaprodukt.si/en/about-us/contact/"
+      },
+      {
+        "label": "Complete extracted own About body: products developed with wood-science faculty; self-reported claims kept separate",
+        "url": "https://silvaprodukt.si/en/about-us/"
+      },
+      {
+        "label": "Complete extracted FAQ: water-based wood-protection systems; older product naming not automatically equated to current formulation",
+        "url": "https://silvaprodukt.si/en/frequently-asked-questions/"
+      }
+    ]
+  },
   "fossilcote-sabaki": {
     "website": "https://fossilcote.com/",
     "contactPage": "https://fossilcote.com/",
@@ -32145,6 +32214,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "silvaprodukt-ljubljana",
   "fossilcote-sabaki",
   "basco-products-nairobi",
   "hermosa-paints-nairobi",
