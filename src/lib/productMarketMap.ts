@@ -10039,11 +10039,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-29"
   },
+  {
+    "id": "nevena-color-leskovac",
+    "company": "Nevena Color",
+    "productId": "nl-w1201",
+    "country": "Serbia",
+    "countryZh": "塞尔维亚",
+    "city": "Leskovac; current own business contact location; approximate city marker, not a surveyed plant entrance or registry address",
+    "latitude": 42.998,
+    "longitude": 21.946,
+    "legacyCompanyDescription": "自述生产和开发涂料；COOL为其成品品牌，自有Berilje矿石料用于自身需求；当前Leskovac业务地址，保留注册地及最终股权未审计的边界。",
+    "fit": "可开发候选",
+    "signal": "官网自述生产油漆、清漆及木器/矿物表面涂层；COOL Acrylic Primer for Wood明确为丙烯酸黏结料、颜料及助剂配成的水性木器底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-30",
+      "conclusion": "实际6次父级零费用TinyFetch定向请求，依次读取全产品索引第一页、水性木器基础保护分类、COOL Acrylic Primer for Wood产品正文、About、Additives分类及Contact；返回提取正文和链接完整阅读，非已保存原始HTML或已知HTTP状态，内部JS/隐藏跳转/重试未披露，不保证零内部资源请求。产品索引仅实际第一页12/91结果，不冒称全部91项已读；主营导航含金属、木材、塑料及镀锌表面、建筑涂层和稀释剂/辅助剂。水性木器基础保护分类完整2项COOL Acrylic Primer for Wood和COOL Wood Stop Crack，具体底漆页明确water-based及acrylic binders/pigments/additives，用于室内外木材；不把所有金属或其他系列推为NL-W1201适配。About直接自述生产油漆、清漆、稀释剂、建筑防护装饰材料和水性涂层开发、生产团队，COOL为水性及溶剂型成品涂料品牌；Berilje自有矿加工石料供自身需要，非另一个客户。辅助剂分类完整4项paint remover ecco、paint remover professional、Antirost、Firnajz；保留助剂/脱漆剂/稀释剂/建筑胶等邻近真实业务，不声称不卖添加剂或不含树脂，不在未读详情下推测Firnajz化学组成。实际所读公司业务、5大目录导航、第一页12成品、2木器分类产品及4辅助剂未见对外销售水性聚烯烃乳液、PO/CPO分散体或聚烯烃附着促进原料，属于所选NL-W1201原料的有限公开范围排除，不是全部隐藏SKU/SDS/全球最终集团/外购证明。6次累计已达上限，跨日期/品牌/域名/产品/工具不重置。初检448公开/root462/front894/index176/队列322/排除6无相同主体；扩展Nevena/Nevenacolor/Berilje完整历史20文件，唯一旧记录为wood-oct23ap原生Search零定向原文，仅北马其顿零售商HROMAK列NEVENA；不是旧核验/新增预算。1984 ICI许可证只是历史，不推现时ICI/Akzo股权；Search Becej提示不作为Leskovac注册地或另一户依据，当前自有Contact仅支持Leskovac业务地址，不声称法定注册地址/最终股权或厂门实测。Contact将外部链接明确置于Our Distributors，不当其为集团母公司或制造商。NL-W1201按用户资料只提出制造商水性聚烯烃分散体木材底涂/附着促进配方评估，不声称客户已用/采购、替代丙烯酸、成品可混加或实测相容。客户环保/无害/ISO质量环境安全等声明不转作我方环保、认证或性能保证。精确info@nevenacolor.co.rs为通用业务邮箱，+381 16 234 420为通用业务电话，Sales另号不混为个人；无具名采购/R&D/WhatsApp证据，不造人名/WhatsApp/邮箱，不验证SMTP或投递。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、业务电话及联系表单；无具名采购/WhatsApp",
+      "email": "info@nevenacolor.co.rs",
+      "contactUrl": "https://nevenacolor.co.rs/en/contact/"
+    },
+    "source": {
+      "label": "Official COOL Acrylic Primer for Wood: water-based acrylic binders, pigments and additives for interior/exterior wood",
+      "url": "https://nevenacolor.co.rs/en/products/cool-acrylic-primer-for-wood/"
+    },
+    "checkedAt": "2026-10-30"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "nevena-color-leskovac": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vuka-floors-durban": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "silvaprodukt-ljubljana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fossilcote-sabaki": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10493,6 +10521,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "nevena-color-leskovac": {
+    "website": "https://nevenacolor.co.rs/en/",
+    "contactPage": "https://nevenacolor.co.rs/en/contact/",
+    "address": "Ul. Đorđa Stamenkovića bb, 16000 Leskovac, Srbija. Current own public business contact address; not independently audited registry or factory-gate coordinates.",
+    "generalEmail": "info@nevenacolor.co.rs",
+    "generalEmailEvidence": {
+      "company": "Nevena Color",
+      "value": "info@nevenacolor.co.rs",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact page exact public corporate mailbox",
+          "url": "https://nevenacolor.co.rs/en/contact/",
+          "summary": "CONTACT NEVENA COLOR / LESKOVAC explicitly publishes info@nevenacolor.co.rs beside its address and corporate telephone. General company route; no named buyer, procurement intent or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-30"
+    },
+    "generalPhone": "+381 16 234 420",
+    "generalPhoneEvidence": {
+      "company": "Nevena Color",
+      "value": "+381 16 234 420",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact page exact general business telephone",
+          "url": "https://nevenacolor.co.rs/en/contact/",
+          "summary": "LESKOVAC corporate contact lists +381 16 234 420. Separately labelled Sales department +381 16 234.410 not merged into personal ownership; no WhatsApp link asserted."
+        }
+      ],
+      "verifiedAt": "2026-10-30"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own product index only first12/91 cards plus category navigation",
+        "url": "https://nevenacolor.co.rs/en/all-products/"
+      },
+      {
+        "label": "Own water-based acrylic basic wood protection category all2 results",
+        "url": "https://nevenacolor.co.rs/en/product-category/coatings-for-wood/basic-wood-protection/water-based-acrylic-coating-en-4/"
+      },
+      {
+        "label": "Specific own COOL Acrylic Primer for Wood application/composition",
+        "url": "https://nevenacolor.co.rs/en/products/cool-acrylic-primer-for-wood/"
+      },
+      {
+        "label": "Own About production/development statement and COOL/Berilje relationship",
+        "url": "https://nevenacolor.co.rs/en/about-us/"
+      },
+      {
+        "label": "Own Additives category all4 visible products; limited selected-input exclusion",
+        "url": "https://nevenacolor.co.rs/en/product-category/thinners-and-auxiliary-agents/additives/"
+      },
+      {
+        "label": "Own Contact current business address and exact general mailbox/telephone",
+        "url": "https://nevenacolor.co.rs/en/contact/"
+      }
+    ]
+  },
   "vuka-floors-durban": {
     "website": "https://vukafloors.co.za/",
     "contactPage": "https://vukafloors.co.za/contact/",
@@ -32320,6 +32411,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "nevena-color-leskovac",
   "vuka-floors-durban",
   "silvaprodukt-ljubljana",
   "fossilcote-sabaki",
