@@ -10066,11 +10066,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-30"
   },
+  {
+    "id": "zemilli-paint-addis-ababa",
+    "company": "Zemilli Paint Factory",
+    "productId": "elo",
+    "country": "Ethiopia",
+    "countryZh": "埃塞俄比亚",
+    "city": "Addis Ababa; approximate city interpretation from disclosed Bole DH Geda Tower business contact, not a disclosed factory location or surveyed entrance",
+    "latitude": 9.03,
+    "longitude": 38.74,
+    "legacyCompanyDescription": "官网自述埃塞俄比亚涂料制造及分销；Mega为成品品牌，DH GEDA姐妹企业关系保留，一户合并，不推最终股权/厂门位置。",
+    "fit": "可开发候选",
+    "signal": "在埃塞俄比亚生产涂料并开展配料、分散、研磨及研发；Mega Anti-Rust为空气干燥合成防锈涂料，用于钢铁结构。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "实际6次定向Node原文请求均200HTML：Home/About/Products/Paints色卡/QualityPolicy/Contact，完整原始HTML、提取正文及链接已归档阅读，手动跳转禁自动跟随、0重试、0远程JS、0图片/PDF请求。首页及About的Sister Companies仅图像不能靠纯文本忽略：源HTML title属性明确DH Geda Blanket/Minerals/Flour/Steel/Dyeing and Bleaching/Tower/G.I.S./Construction Chemicals和DH GEDA，Products每个产品段明示ZEMILLI PAINT FACTORY(Ethiopia)DH GEDA Sister Company，Mega为品牌，共用一账户、全组6次已达上限，不以品牌/域名/日期/工具重置。About明确选择颜料、树脂、溶剂、助剂以及配料混合分散、研磨、质控、灌装和研发，不当纯分销；QualityPolicy同时明示制造及分销、水性/溶剂型/工业涂料与重型工业方向，保留混合商业角色。Products完整6成品家族与展开原文：SuperPlastic水性乳液墙漆、Synthetic/Enamel、Quartz/Mineral、Anti-Rust、Alkyd/PUVarnishes、MegaGlue，保留成品木器/纸箱/贴面胶、合成树脂/聚氨酯清漆、石英矿物原料相关描述和矿物/建筑化学姐妹企业，不称无胶、树脂或添加剂销售。Anti-Rust明确air drying synthetic and rust inhibitive paint for iron and steel structures；不是环氧涂层，不因Scribd和搜索出现epoxy就推客户现用环氧/PU/植物油体系。Paints页仅3色卡系列（塑料乳液、Enamel、Quartz），不是全隐藏SKU/PDF成分清单；未取5个TDS链接，不称已读。所读公开成品目录、业务及原料使用流程未见对外销售ELO/ESBO/环氧化植物油/生物基增塑剂，同类原料排除限于上述实际范围，非最终股权、全部姐妹企业SKU/SDS或外购证明。历史初检449公开/root463/front895/index177/完整队列322/排除6无同主体；初5文件及扩展17文件仅当前资料，DH Geda/Mega/Zemilli与拼写及阿姆哈拉语别名再全历史复核，无旧原文，不给姐妹企业新预算。官网Contact仅Bole DH Geda Tower业务地址，Addis Ababa城市近似点为基于Bole地名的地理定位解释，不冒称登记地址、生产工厂或现场厂门。精确公开通用邮箱info@zemillipaint.com既见同一原始HTML og:description也由data-cfemail本地解码一致，非猜测/SMTP/收件验证；电话0116 62 83 99按国内原样，未补+251，无WhatsApp链接不拼接，contacts/departments空，不造具名负责人。ELO按用户资料仅提出含环氧功能原料用于涂层柔韧/树脂改性评估，不保证在其空气干燥合成体系的氧化干燥、相容、替代树脂或防锈/耐候性能，不认定采购意图。客户lowVOC/持久耐用/环保/健康/高品质/ISO等自身宣传不作为我方性能认证，产品目录为用途证据而非第三方性能验证。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、国内格式业务电话和联系表单；无具名采购或WhatsApp",
+      "email": "info@zemillipaint.com",
+      "contactUrl": "https://zemillipaint.com/contact-us/"
+    },
+    "source": {
+      "label": "Own Products: Mega Anti-Rust air-drying synthetic rust-inhibitive paint for iron and steel structures; explicit Ethiopia producer",
+      "url": "https://zemillipaint.com/products/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zemilli-paint-addis-ababa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "nevena-color-leskovac": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vuka-floors-durban": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "silvaprodukt-ljubljana": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10521,6 +10549,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zemilli-paint-addis-ababa": {
+    "website": "https://zemillipaint.com/",
+    "contactPage": "https://zemillipaint.com/contact-us/",
+    "address": "Bole DH Geda Tower (official business contact location). Approximate Addis Ababa city marker interpreted from Bole; no production-plant, registry or surveyed-gate address asserted.",
+    "generalEmail": "info@zemillipaint.com",
+    "generalEmailEvidence": {
+      "company": "Zemilli Paint Factory",
+      "value": "info@zemillipaint.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current Contact raw HTML public og:description and matching Cloudflare-encoded business email",
+          "url": "https://zemillipaint.com/contact-us/",
+          "summary": "Exact info@zemillipaint.com in public og:description independently matches locally decoded data-cfemail in the same original page. General company route; no named employee, purchasing need, SMTP/delivery or hidden private contact inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "0116 62 83 99",
+    "generalPhoneEvidence": {
+      "company": "Zemilli Paint Factory",
+      "value": "0116 62 83 99",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current Contact Phone Numbers exact published domestic format",
+          "url": "https://zemillipaint.com/contact-us/",
+          "summary": "Phone Numbers explicitly publishes 0116 62 83 99 and matching tel:0116%2062%2083%2099. Domestic formatting preserved; no international prefix or WhatsApp guessed."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home manufacturer and Mega brand; sister image-title metadata also inspected",
+        "url": "https://zemillipaint.com/"
+      },
+      {
+        "label": "Own About raw-material selection, blending/dispersion/milling and R&D; DH Geda sister titles",
+        "url": "https://zemillipaint.com/about-us/"
+      },
+      {
+        "label": "Own Products all6 families and expanded manufacturer/application paragraphs",
+        "url": "https://zemillipaint.com/products/"
+      },
+      {
+        "label": "Own Paints exactly3 visible colour-card series, not whole SKU/TDS audit",
+        "url": "https://zemillipaint.com/paints/"
+      },
+      {
+        "label": "Own multilingual Quality Policy states manufacture/distribution and industrial coatings; policy not performance certification",
+        "url": "https://zemillipaint.com/quality-policy/"
+      },
+      {
+        "label": "Own Contact exact Bole business address, general mailbox metadata/encoding and domestic phone",
+        "url": "https://zemillipaint.com/contact-us/"
+      }
+    ]
+  },
   "nevena-color-leskovac": {
     "website": "https://nevenacolor.co.rs/en/",
     "contactPage": "https://nevenacolor.co.rs/en/contact/",
@@ -32411,6 +32502,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zemilli-paint-addis-ababa",
   "nevena-color-leskovac",
   "vuka-floors-durban",
   "silvaprodukt-ljubljana",
