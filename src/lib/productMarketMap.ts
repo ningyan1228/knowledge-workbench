@@ -10120,11 +10120,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "nash-paints-harare",
+    "company": "Nash Paints",
+    "productId": "elo",
+    "country": "Zimbabwe",
+    "countryZh": "津巴布韦",
+    "city": "Harare; disclosed Graniteside head office, not an identified production plant; approximate city marker",
+    "latitude": -17.83,
+    "longitude": 31.05,
+    "legacyCompanyDescription": "自述在津巴布韦制造并零售工业、汽车、装饰和木器涂料；保留外部品牌分销、施工及多国分支，未推所有SKU自产/最终股权/厂门位置。",
+    "fit": "可开发候选",
+    "signal": "在津巴布韦制造工业、汽车、装饰及木器涂料；工业金属涂层系列包括结构钢用底漆和快干瓷漆，并经营品牌零售及施工服务。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "实际6次公司定向来源：1Home、2About、4Services、5Contact、6Branches为完整200官网HTML；3IndustrialPaints是2页实际导航链接的nashpaints.nashtv.net商店地址，发生DNS ENOTFOUND无正文，已计失败且不重试，不把商店全目录或任何SKU/TDS说成已读。手动跳转、0自动重试、0远程JS/图片/PDF/外部资源调用，公司及关联商店/preview/www/无www同一预算6STOP。一次未加引号的@industrial本地命令参数在URL校验前失败，无source3预约或GET；随后实际第3次网络尝试按真实DNS失败计数，不把本地校验错误冒称额外官网抓取。Home直接We manufacture decorative,industrial,automotive and woodline paints且自述制造及零售；Services具体列工业金属涂层的结构钢底漆及快干瓷漆，支持下游制造角色；没有具体环氧牌号/配方证据，不能从本轮ELO检索词epoxy推客户现用环氧或生物油。保留Glascor/Luxor/Plascon品牌进货、汽车2k/basecoat、木器填料/木胶、工具辅材、调色、专业涂装及装修服务；不把所售品牌都说成自制或推其品牌股权。实读主营、五类产品导航与产品服务摘要未见对外销售ELO/ESBO/环氧化植物油/同类生物基增塑剂，属于有限已读公开业务范围排除，非完整商店SKU/SDS/树脂配方/所有分支或最终集团的无原料保证；未借商店失败放宽成分或供应商断言。额外第3个ELO Search返回SBS菲律宾原料表等不相干页面，不是Nash的正负原料证据，更不能把无关供应商合并为客户。Branches提取正文只读到28Activebranches及HQGraniteside标题、Loading/NoBranchesFound模板，未请求外部脚本/数据，不宣称已核实28个完整分店或所有地址；该模板不代表公司无分支。Home自述Zambia/Botswana存在，仍按同一Nash账户，未认定当地制造/独立采购主体。StateviceEnterprises历史2018Search提示只纳入去重，不当现时登记名称/法律状态；未用版权2023或URL参数时间当本次核验日期。初检451公开/root465/front897/index179/队列322/排除6及全私有名称/域名/历史均无旧原文，prior0，独立再复核当前新商店关联。联系页精确sales@nashpaints.co.zw及+263 773 750 709为公司公开业务入口，无具名采购/R&D、个人邮箱/角色或SMTP验证；邮箱前缀sales作为企业销售路线，未冒充采购负责人。公司页面真实WhatsApp按钮原样为http://api.whatsapp.com/send?phone=263773750709，只保留该HTTP证据，未猜https或新号，未经额外HTTPS核实不精选可用HTTPS跳转；网站Contact可供用户自行查看官方按钮。HeadOffice41KelvinRoadNorthGranitesideHarare为总部业务地址，不把其写成已核验厂房，地图仅Harare城市近似点。ELO按用户资料只提出涂层柔韧/树脂改性试验，不保证钢结构防腐、耐候、固化/干燥相容、现用体系或采购。网站奖项、客户名单、700钣金店/项目、15年Gamazine寿命及环保目标等不转作我方性能或独立商业需求证据。无邮件/表单/报价/消息/CRM或台账改写，发送状态未知。"
+    },
+    "contact": {
+      "label": "官网公开企业业务邮箱sales@、公司电话及联系页；HTTP WhatsApp按钮保留待核可用HTTPS",
+      "email": "sales@nashpaints.co.zw",
+      "contactUrl": "https://www.nashpaints.co.zw/contact.html"
+    },
+    "source": {
+      "label": "Own Services: industrial metal coating range includes primers and quick-dry enamels for structural steel; Home explicitly manufactures industrial paints",
+      "url": "https://www.nashpaints.co.zw/service.html"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "nash-paints-harare": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "harlequin-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zemilli-paint-addis-ababa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "nevena-color-leskovac": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10577,6 +10605,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "nash-paints-harare": {
+    "website": "https://www.nashpaints.co.zw/",
+    "contactPage": "https://www.nashpaints.co.zw/contact.html",
+    "address": "Head Office: 41 Kelvin Road North, Graniteside, Harare, Zimbabwe. Official business headquarters disclosure; no production-plant, surveyed factory gate or registry address asserted.",
+    "generalEmail": "sales@nashpaints.co.zw",
+    "generalEmailEvidence": {
+      "company": "Nash Paints",
+      "value": "sales@nashpaints.co.zw",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact and corporate header/footer exact public sales mailbox",
+          "url": "https://www.nashpaints.co.zw/contact.html",
+          "summary": "Own Contact publishes sales@nashpaints.co.zw as the corporate business route; sales prefix is not a named employee, purchase role or current procurement claim. Exact public value, no constructed mailbox or SMTP test."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "+263 773 750 709",
+    "generalPhoneEvidence": {
+      "company": "Nash Paints",
+      "value": "+263 773 750 709",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current Contact exact corporate header and footer telephone",
+          "url": "https://www.nashpaints.co.zw/contact.html",
+          "summary": "Exact +263 773 750 709 published in own Contact header/footer. Corporate route, no named person or WhatsApp number guessed from telephone."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home manufacture/retail and explicit industrial product type; stock brands retained",
+        "url": "https://www.nashpaints.co.zw/"
+      },
+      {
+        "label": "Own About current company role and production quality-policy statement",
+        "url": "https://www.nashpaints.co.zw/about.html"
+      },
+      {
+        "label": "Own Services full visible product/service range; no failed shop catalog coverage claimed",
+        "url": "https://www.nashpaints.co.zw/service.html"
+      },
+      {
+        "label": "Own Contact exact corporate sales mailbox, phone, legacy HTTP WhatsApp button and head office",
+        "url": "https://www.nashpaints.co.zw/contact.html"
+      },
+      {
+        "label": "Own Branches only28headline/HQ and loading-template body; full branch data not fetched",
+        "url": "https://www.nashpaints.co.zw/branch.html"
+      }
+    ]
+  },
   "harlequin-paints-cape-town": {
     "website": "https://www.harlequinpaint.com/",
     "contactPage": "https://www.harlequinpaint.com/contact",
@@ -32593,6 +32680,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "nash-paints-harare",
   "harlequin-paints-cape-town",
   "zemilli-paint-addis-ababa",
   "nevena-color-leskovac",
