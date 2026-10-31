@@ -10256,11 +10256,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "meyer-plc-ikeja",
+    "company": "Meyer PLC",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Ikeja (Lagos); Oregun public head-office location, approximate city marker, not an independently verified manufacturing-plant gate",
+    "latitude": 6.6,
+    "longitude": 3.35,
+    "legacyCompanyDescription": "官网明确制造丙烯酸、环氧及聚酯工业涂料，环氧标线漆面向停车场和仓库；旧名及历次股权按原文历史时点保留，不推2026最终所有权。",
+    "fit": "可开发候选",
+    "signal": "制造工业及船舶防护涂料；两组分环氧标线漆面向货车停车场、停车场和仓库。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "IndustrialAndMarine和Products原文均明确自身生产acrylic/epoxy/polyester工业涂料，About自述制造及研发，实际工业六项产品摘要含EPOXYBASEDROADMARKING/LININGPAINT、TwoPackedPaintSystem，明确truckparks/carparks/warehouses用途，构成下游制造证据。该页另一ChlorinatedRubberPaint段混有wallsatin/0heat文案，WoodFinishes页混入autopaint段、P.USlipResistance与CelluloseWoodFiller标题重复且一段为melaminethinner用途，这些编辑/重复问题保留，不把异常段推性能或新SKU，也不转到环氧标线漆配方。6工业摘要、木器16显示标题块/14不同标题及4产品组合页已读，非全部店铺/装饰及汽车分类/年报/数据表/集团全球原料目录皆读。木器成品包括NC底漆/面漆、纤维素封闭剂/着色漆、双组分三聚氰胺和PU漆、填料、稀释剂；RetarderSolution原文明示纤维素漆/砂光封闭剂湿度发白和流平相关用途。History明示2003收购Dunlop地板胶业务，属于地板/胶粘剂下游，不把adhesives/resin/retarder词假称全无原料或猜全化学组成；该页还称floor-tilesproductionpresentlysuspended，未给现时时点，不改写成已核验2026停工或新投产。当前六正文未见外售ELO/ESBO/环氧化植物油/同类生物基增塑剂，结论限已读公开业务范围；未证明原料外购，也不声称全部隐含SDS/目录无供应。客户已有环氧涂料产品不等于使用我方ELO，ELO仅按用户资料提出环氧功能/柔韧与树脂改性评估，不承诺固化/腐蚀防护/耐磨耐候/干燥/环保/相容/降本结果，不提供客户标线漆配比。历史页自述1940sHagemeyerNigeria/Sigma起源、1960成立、1979上市、1994Dunlop收购后DNMeyer、July2003退出Dunlop并ACIMS接手、2010Citiprops领衔投资者买入、2016更名MeyerPLC；按原文历史时间保存，不当2026最终股东/与现时PPGSigma或全球Dunlop共同股权审计。HagemeyerNigeria/DNMeyer/Meyer品牌/ACIMS/Citiprops相关别名纳入本组一实体预算与去重，旧Sigma产品史不另增账号；mepaint.netlify检索副站不当独立客户或多给6次。原始预检唯一bareMeyer前沿命中为缅甸AgriFirst与MAPCO/Mitsui/BehnMeyer合资肥料公司，已本地读取其旧报告澄清不同主体；原held预检和独立清关保留，不重置缅甸/BehnMeyer原预算。另旧Watermeyer南非Paintcor经销邮箱/商店、旧Meyer.?Paint本地检索pattern均非尼日利亚原文。六份实际HTTP200HTML、0重试/跳转/JS/图片/PDF/额外资源，累计6STOP剩0，不换年报/品牌/域名/日期追加。ContactHeadOffice当前No32BillingsWayOregunIkejaLagos为业务总部地址，非已核验生产厂门；地图仅Ikeja城市近似。公开info@meyerpaints.com及mailto归属公司；选取同页页眉精确+2348123438237，Contact正文08123438237与tel08123438237相符。另一08020672366虽在正文/页脚可见，其页脚tel0023253652654不对应，不精选该异常拨号链接，不猜WhatsApp、实名采购或个人手机号。About客户好评内人名/DevelopmentManager/GeneralManager不是Meyer当前采购员工证据，合作伙伴/地区办公室也不拆新公司或冒认股权；contacts和departmentEmails均空。ISO/环保/毒性/防腐/省维护费等公司宣传不转作我方认证或独立采购需求；版权2020不当运营日期。无直接采购确认；共享发送台账未知，不视为未发送，不产生可发送正文、邮件/表单/消息/CRM动作。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与公开页眉电话；无具名采购/研发或已核验WhatsApp",
+      "email": "info@meyerpaints.com",
+      "contactUrl": "https://meyerpaints.com/contact-us/"
+    },
+    "source": {
+      "label": "Own IndustrialAndMarine: acrylic/epoxy/polyester manufacture and two-pack epoxy marking paint for truck/car parks and warehouses",
+      "url": "https://meyerpaints.com/industrial-and-marine/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "meyer-plc-ikeja": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colortone-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "royal-paints-industries-thika": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rystix-sales-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-formulator","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10718,6 +10746,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "meyer-plc-ikeja": {
+    "website": "https://meyerpaints.com/",
+    "contactPage": "https://meyerpaints.com/contact-us/",
+    "address": "Head Office: No 32, Billings Way, Oregun, Ikeja, Lagos State, Nigeria. Current business headquarters disclosure; no independently verified manufacturing-plant gate or ultimate-ownership assertion.",
+    "generalEmail": "info@meyerpaints.com",
+    "generalEmailEvidence": {
+      "company": "Meyer PLC",
+      "value": "info@meyerpaints.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact exact corporate mailbox and mailto, also all six page headers/footers",
+          "url": "https://meyerpaints.com/contact-us/",
+          "summary": "Contact lists info@meyerpaints.com as company route with exact mailto. General business inbox, no named purchasing/R&D owner or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "+2348123438237",
+    "generalPhoneEvidence": {
+      "company": "Meyer PLC",
+      "value": "+2348123438237",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact international-format header phone, corresponding domestic head-office phone and tel",
+          "url": "https://meyerpaints.com/contact-us/",
+          "summary": "Same page header publishes +2348123438237; HeadOffice body and tel publish 08123438237. Save exact displayed international header, no inferred country conversion. Other footer08020672366 has mismatched tel0023253652654, not selected. No personal or WhatsApp ownership inferred."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own industrial/marine manufacture and six actual visible product summaries; epoxy road-lining two-pack use",
+        "url": "https://meyerpaints.com/industrial-and-marine/"
+      },
+      {
+        "label": "Own About manufactures/produced paints and R&D; testimonials/ISO not buyer identity or our certification",
+        "url": "https://meyerpaints.com/about-us/"
+      },
+      {
+        "label": "Own History dated names/divestment/acquisitions; current ownership/tile-operation timing unverified",
+        "url": "https://meyerpaints.com/about-us/our-history/"
+      },
+      {
+        "label": "Own Products four current ranges and explicit acrylic/epoxy/polyester manufacture; no full hidden catalogue claim",
+        "url": "https://meyerpaints.com/products/"
+      },
+      {
+        "label": "Own Contact exact company email/header phone/head-office address; malformed footer dial link retained as limit",
+        "url": "https://meyerpaints.com/contact-us/"
+      },
+      {
+        "label": "Own WoodFinishes sixteen displayed blocks/fourteen unique titles; retarder/thinner/finished lacquer uses and duplicated headings retained",
+        "url": "https://meyerpaints.com/wood-finishes/"
+      }
+    ]
+  },
   "colortone-cape-town": {
     "website": "https://colortone.co.za/",
     "contactPage": "https://colortone.co.za/contact-us/",
@@ -33006,6 +33097,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "meyer-plc-ikeja",
   "colortone-cape-town",
   "royal-paints-industries-thika",
   "rystix-sales-gqeberha",
