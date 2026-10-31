@@ -10229,11 +10229,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "colortone-cape-town",
+    "company": "Colortone",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town; Ottery public business contact location, approximate city marker, not a surveyed or independently verified current factory gate",
+    "latitude": -33.92,
+    "longitude": 18.42,
+    "legacyCompanyDescription": "官网明确制造木器涂料并披露CapeTown起步与化学师团队；现行水性FloorVarnish用于室内软木地板。",
+    "fit": "可开发候选",
+    "signal": "在南非制造室内外木器涂料；水性Floor Varnish专用于室内软木地板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "官网Shop和About现行自述制造室内外木器涂料，结合About1997年CapeTown小工厂起步及expertchemistteam，按自制木器涂料企业核验；不把历史起步地点、现行联系地址、919stockists或factorycollection描述改成现场查验厂门、审计产能或数百独立新客户。实际完整产品目录展示10项：WoodSeal、WoodVarnish、WoodCoat、FloorVarnish、FloorVarnishWaterBased、WoodStain、DeckVarnish、DeckProtector、SuperPaintStripper、Sportsliner；6类别All/Other/SealantsProtectors/WoodCoatings/WoodStains/WoodVarnishes，仅3项产品详细正文另读（WaterBasedFloorVarnish、SuperPaintStripper、Sportsliner），不称10项全部SDS/隐藏SKU/配方皆读。目标FloorVarnish明确water-based、softwoodinteriorfloors及不推荐crackedsoftwood，现行目录并列另一个FloorVarnish，不将旧2015普通FloorVarnish含溶剂SDS检索片段混为水性产品矛盾或已读PDF。原木器表面需除旧涂层、打磨、清洁干燥，首道稀释10%水/后两道及干燥覆盖率是客户成品工艺，不能转给NL-W1201或保证相容。NL-W1201只按用户资料提出木材水性底涂/附着促进配方评估，不称直接加入成品、适合全部硬木/草坪/石材/所有金属或客户现用聚烯烃体系。客户耐踩踏、leadfree、耐UV等仅客户产品说明，不转为我方环保/性能/认证/成本保证。Other类两项实际原文重点核查：SuperPaintStripper是用于已有丙烯酸/油/清漆/漆涂面的刷涂刮除凝胶成品，10至15分钟后刮除并水洗、干透再涂，需通风避热；Sportsliner是草坪运动场划线用浓缩水性丙烯酸标线涂料，其稀释工艺/不损草宣传不用于我方木材应用。这些是下游成品用途证据，未凭名称或丙烯酸猜全部化学组成，不称没有任何树脂/添加剂。当前六份完整HTML正文、10项展示目录及Other两项用途未见水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料外售，结论限该实际范围，并非全部隐藏SDS/配方/集团全球无供应保证或外购原料证明。当前通用info@colortone.co.za和mailto、业务电话+27 21 703 1553及tel同属公司公开联系入口；Mobile号码不当WhatsApp，六页无已核验WhatsApp跳转。Regionalagents若干跨地区重复姓名及外域公司渠道仅留原文，不冒称当前雇员/采购研发或父子公司；精选contacts与departmentEmails均空。Namibia代理/全国分销网络不另增公司或预算。3PaddyCloseOtteryCapeTown是实际业务联系位置，不因About老工厂说明就声称当前生产厂门；城市近似点。Colortone/ColortonePaintsCc地图链接标签/主机与www潜在别名/品牌按一账户处理，工商全称最终所有人未独立核验。旧全私有匹配英国Colourtone.com的Manor经销Search、CUTEKColortone着色剂/美国同名商品、普通colourtones/toners、以及旧木器检索和被引用pattern均分开，不将同名企业或代理认作共同股权或重置其预算。6次实际HTTP200HTML，0跳转/失败/重试/JS/图片/PDF/额外请求，累计6STOP剩0；资料已足够不追加。共享发送台账未知，不当未发送、不创建可发送正文、不对外联系。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及联系表单；未选定具名采购/研发联系人或WhatsApp",
+      "email": "info@colortone.co.za",
+      "contactUrl": "https://colortone.co.za/contact-us/"
+    },
+    "source": {
+      "label": "Own Floor Varnish (Water Based) full product/application body, corroborated by own manufacture and catalogue",
+      "url": "https://colortone.co.za/products/floor-varnish-water-based/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "colortone-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "royal-paints-industries-thika": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rystix-sales-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-formulator","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gripseal-chemicals-johannesburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10690,6 +10718,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "colortone-cape-town": {
+    "website": "https://colortone.co.za/",
+    "contactPage": "https://colortone.co.za/contact-us/",
+    "address": "3 Paddy Close, Ottery, Cape Town, South Africa. Current public business contact address; no surveyed or independently verified current manufacturing-plant gate assertion.",
+    "generalEmail": "info@colortone.co.za",
+    "generalEmailEvidence": {
+      "company": "Colortone",
+      "value": "info@colortone.co.za",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact current public corporate email and matching mailto, also in all six page footers",
+          "url": "https://colortone.co.za/contact-us/",
+          "summary": "Own Contact lists info@colortone.co.za with exact mailto. General company route, not a named purchasing/R&D person or deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "+27 21 703 1553",
+    "generalPhoneEvidence": {
+      "company": "Colortone",
+      "value": "+27 21 703 1553",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact corporate telephone and tel:+27217031553",
+          "url": "https://colortone.co.za/contact-us/",
+          "summary": "Visible company Phone: +27 21 703 1553 with corresponding tel link. Published mobile and regional-agent numbers not inferred as WhatsApp or individual buyer ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own full returned shop catalogue actual10items/current manufacture statement",
+        "url": "https://colortone.co.za/products/"
+      },
+      {
+        "label": "Own Water Based Floor Varnish exact interior-softwood use/cracked-softwood limit and preparation",
+        "url": "https://colortone.co.za/products/floor-varnish-water-based/"
+      },
+      {
+        "label": "Own About SouthAfrica manufacture/chemist team; history/stockists not capacity or current plant gate",
+        "url": "https://colortone.co.za/about-us/"
+      },
+      {
+        "label": "Own Contact exact company email/phone/form/address; regional agents not procurement/employer/ownership assumptions",
+        "url": "https://colortone.co.za/contact-us/"
+      },
+      {
+        "label": "Own Super Paint Stripper actual downstream brush-on/scrape-off gel and process limits",
+        "url": "https://colortone.co.za/products/super-paint-stripper/"
+      },
+      {
+        "label": "Own Sportsliner finished water-based acrylic sports-field line-marker use; not rawPO/CPO composition",
+        "url": "https://colortone.co.za/products/sportsliner/"
+      }
+    ]
+  },
   "royal-paints-industries-thika": {
     "website": "https://www.royalpaints.co.ke/",
     "contactPage": "https://www.royalpaints.co.ke/contacts.html",
@@ -32915,6 +33006,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "colortone-cape-town",
   "royal-paints-industries-thika",
   "rystix-sales-gqeberha",
   "gripseal-chemicals-johannesburg",
