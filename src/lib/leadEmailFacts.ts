@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "rystix-sales-gqeberha": "Your Exterior Armadek is a water-based protective coating designed for use on exterior timber.",
   "gripseal-chemicals-johannesburg": "Your Classic water-based acrylic wood sealer is designed for furniture, bookshelves, cupboards and panelling.",
   "nash-paints-harare": "Your industrial metal-coating range includes primers and quick-drying enamels for structural steel.",
   "harlequin-paints-cape-town": "Your water-based wood stain is made in Cape Town for furniture, doors, windows, decks and fences.",

@@ -182,6 +182,7 @@ export const marketExtendedApplications: MarketExtendedApplication[] = [
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
+  {"id":"waterbased-wood-coating-formulator","productId":"nl-w1201","name":"水性木器涂料配方商","nameEn":"Water-Based Wood Coating Formulator","kind":"target","applicationReferences":[{"layer":"tds-verified","applicationId":"wood-surface-treatment"}]},
   { id: 'waterbased-wood-primer-manufacturer', productId: 'nl-w1201', name: '水性木材底漆生产商', nameEn: 'Water-Based Wood Primer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },
   { id: 'waterbased-wood-coating-manufacturer', productId: 'nl-w1201', name: '水性木器涂料生产商', nameEn: 'Water-Based Wood Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },
   { id: 'controlled-release-fertilizer-manufacturer', productId: 'fertilizer-coating', name: '控释肥生产商', nameEn: 'Controlled Release Fertilizer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'controlled-release-fertilizer' }] },
@@ -10174,11 +10175,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "rystix-sales-gqeberha",
+    "company": "Rystix Sales cc (Rystix Timbacare)",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Gqeberha (Port Elizabeth); Newton Park public business-contact location, approximate city marker, not a verified manufacturing-plant gate",
+    "latitude": -33.96,
+    "longitude": 25.6,
+    "legacyCompanyDescription": "Rystix自述开发木器涂层并开展持续实验室研究；按下游水性木器涂料配方商核验，未独立确认生产工厂。",
+    "fit": "可开发候选",
+    "signal": "开展木器涂层开发及实验室研究；Exterior Armadek水性保护涂层用于室外木材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "官网自述Rystix Sales cc自1990年供应层压及指接木材胶粘剂，1992年开始开发RystixTimbacare涂层系列，并继续实验室研究及现场试验；结合现行木器涂层具体产品，按下游木器涂料配方研发角色收录，不将供货、实验室研究、地址或历史年份改写成已核实自有量产工厂/现用具体配方。ExteriorArmadek原文明示水性保护涂层、室外木材；InteriorArmafloor另明示自交联聚合丙烯酸乳液、木地板/吧台，不混为同一配方，也不因乳液一词把它当PO/CPO原料外售。当前Home实际10个产品正文完整读到：ExteriorSealer、ExteriorArmadek、InteriorArmafloor、InteriorCoating、PenetratingOil、InteriorPolyfloor、Clearbond531-D3、Clearbond531-W、Lambond、Fingerbond，三类分组Timbacare/PVA/Resorcinol-MUF。保留溶剂型聚氨酯涂层、渗透油及PVA/合成树脂木工胶真实业务；Lambond/Fingerbond明确用于实木层压/指接的双组分胶粘树脂系统，不猜其全部化学组成，不假称没有任何树脂或附着相关产品。当前四份完整业务正文、Home十项用途及FAQ未见所选水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料外售；为有限已读公开业务范围排除，不是全部未读SDS/配方/集团全球原料目录的无供应保证。NL-W1201只依据用户资料提出木材底涂/附着促进配方评估，不称可直接混入Armadek成品或与客户现有体系相容；客户耐UV、耐候、抗菌抗虫、标准合规、加速老化比较/优于对手及FAQ宣称60–70%维护节省均不得借为我方结果、认证或成本承诺。FAQ保留清洁干燥、适当打磨、木材含水、薄涂、清色与着色面涂差异，亦明说错误工况可失效，非通用免打磨/无处理PP证据。现行Contact公开姓名/Email/Phone/Message联系表单及公司电话+27 41 365 7172；当前四HTML无公开收件邮箱，旧经销商PDF的rystix@iafrica.com及旧成员/电话仅Search线索未作当前邮箱或具名采购证据，generalEmail留空。页面WhatsAppus及插件未呈现完整已核验wa.me/WhatsApp发送链接，不执行JS或从号码构造跳转；可供用户查看官网现有按钮。RystixHouse16 7thAveNewtonParkGqeberha为业务联系位置，城市近似点，不称工厂门址；PortElizabeth为同一城市历史名称，不另增公司。Rystix/RystixSalescc/Timbacare/产品品牌/主机及www共享一主体预算，出口Zimbabwe/Malawi/Namibia/Seychelles/Comores/全国零售点不是各自新工厂或账号。Sealachem多品牌经销Search列表并非Rystix与Permoseal/Bostik共同股权证据；不把同页品牌误当集团，也不声称完成工商最终所有人审计。旧Dacrylate两份Search归档中的JaneRyder是SherwinWilliams/BCF人士，非Rystix旧原文或证明其归属Sherwin；预检旧来源prior0，最终全历史别名另复查。四次实际200HTML，无自动重试/跳转/远程JS/PDF或额外资产，当前累计4/6、余2，所需证据足够即停止而不凑页数；日期/产品/工具不重置。共享发送台账未知，不冒称未发送，无具名采购、无开发信正文导出或对外联系。"
+    },
+    "contact": {
+      "label": "官网联系表单和公司业务电话；未发现当前公开收件邮箱/具名采购",
+      "email": "",
+      "contactUrl": "https://www.rystix.co.za/contact-us/"
+    },
+    "source": {
+      "label": "Own Home Exterior Armadek specific water-based exterior timber use; About formulation-development role",
+      "url": "https://www.rystix.co.za/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rystix-sales-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-formulator","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gripseal-chemicals-johannesburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "nash-paints-harare": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "harlequin-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10633,6 +10662,47 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rystix-sales-gqeberha": {
+    "website": "https://www.rystix.co.za/",
+    "contactPage": "https://www.rystix.co.za/contact-us/",
+    "address": "Rystix House, 16 7th Ave, Newton Park, Gqeberha, South Africa. Public business contact location; no verified manufacturing-plant gate assertion.",
+    "generalEmail": "",
+    "generalPhone": "+27 41 365 7172",
+    "generalPhoneEvidence": {
+      "company": "Rystix Sales cc (Rystix Timbacare)",
+      "value": "+27 41 365 7172",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact current visible company telephone, same as all four page footers",
+          "url": "https://www.rystix.co.za/contact-us/",
+          "summary": "Visible Tel: +27 41 365 7172 at company business contact location. No individual ownership, department, inferred WhatsApp or historical-TDS telephone adopted."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home actual ten wood-coating/wood-adhesive product bodies; Exterior Armadek water-based",
+        "url": "https://www.rystix.co.za/"
+      },
+      {
+        "label": "Own About company-specific Timbacare development and ongoing laboratory research; no factory claim",
+        "url": "https://www.rystix.co.za/about-us/"
+      },
+      {
+        "label": "Own Contact actual public form/current company phone/address; no recipient mailbox found",
+        "url": "https://www.rystix.co.za/contact-us/"
+      },
+      {
+        "label": "Own FAQ timber preparation/clear-vs-tints/water-based and solvent ranges; client performance claims not transferred",
+        "url": "https://www.rystix.co.za/faq/"
+      }
+    ]
+  },
   "gripseal-chemicals-johannesburg": {
     "website": "https://gripseal.co.za/",
     "contactPage": "https://gripseal.co.za/contact-us/",
@@ -32753,6 +32823,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rystix-sales-gqeberha",
   "gripseal-chemicals-johannesburg",
   "nash-paints-harare",
   "harlequin-paints-cape-town",
