@@ -10147,11 +10147,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "gripseal-chemicals-johannesburg",
+    "company": "Gripseal Chemicals (Pty) Ltd",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Johannesburg; North Riding public business-contact location, approximate city marker, not a surveyed production-plant gate",
+    "latitude": -26.2,
+    "longitude": 28.04,
+    "legacyCompanyDescription": "南非自述家族经营的水性木器及砌体密封剂开发制造商；Gripseal名称、八成品品牌及官网主机按一账户核验。",
+    "fit": "可开发候选",
+    "signal": "在南非开发制造水性密封剂；Classic水性丙烯酸木器密封剂用于家具、书架、橱柜及木饰面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "累计6次定向原文尝试：1Home默认网络DNS ENOTFOUND失败计入预算，2同一Home经网络授权人工另次读取、3Products、4Classic、5ContactUs、6Gripflex均完整200HTML，五份实际正文/链接/原始HTML已归档；手动跳转、0自动重试、0远程JS/PDF/图片/资源。累计6STOP，域名www/非www、品牌、产品、日期或工具不重置。首次失败后人工第2次读取单独计数，不抹去失败；权限说明中“收费”误指来源预算计次，不代表付费工具或费用，实际付费0。第1次reservation误带旧模板batch标签coatings-oct30f，原件保留并另存更正，实际本组coatings-oct30x计一次。Home明确family-owned/operated及1984以来在南非开发制造water-based/co-polymer/acrylic sealants。Products实际8个成品条目均已读：Classic、BrickSealer、Resilience、SlastoNaturalStoneSealer、Everwood、Pavecote、PolywoodArmour、Gripflex；不宣称其8个深层详情全部读取。Classic明确水性丙烯酸木器密封剂用于书架、桌柜、家具、护墙板等多孔木材；保留木材吸水测试、表面清洁、薄涂、试板及木地板需耐磨面涂限制，不能把推荐木材变成无处理PP现用配方或硬地板单层保证。PolywoodArmour为聚氨酯成品面涂、Pavecote道路标线配方成品涂料、Everwood水性木油、Gripflex水性透明防水/填缝成品等真实业务保留；Gripflex可配膜并与河砂/木屑填缝，并非已证聚烯烃/氯化聚烯烃乳液原料外售，其化学组成未披露不猜。当前五份正文、完整八成品摘要及重点木器/填缝页未见PO/CPO/聚烯烃分散体或所选同类聚烯烃附着促进原料销售；这是有限已读公开业务范围排除，不是全部隐藏SKU/SDS/所有配方/全部上游树脂保证。NL-W1201只按用户资料提出木材水性底涂及附着促进配方评估，不宣称可直接掺入Classic成品、替代Gripflex、或已采购/相容/性能改善。客户lowVOC/non-toxic/leadfree/儿童家具/耐候/抗菌/耐水/耐化学等宣传不可转成我方认证、性能或相容保证。ContactUs公开实际联系表单SENDUSANEMAIL及姓名/Email/Subject/message输入；未显示可供直接发送的公司收件邮箱，不从表单标签、PrivacyPolicy占位符、站点域名猜邮箱，generalEmail留空且不做批量邮件名单。电话原样(011)4622874对应可见(011) 462 2874，不按异常tel:+011链接猜国际号码或WhatsApp，无具名采购/部门/个人邮箱。原文We do not sell directly to the public/No direct sales from premises说明其零售网络政策，不否定制造，也不声称客户接受某种原料采购。MiniUnit1&2SpeculatorAveNorthlandsBusinessParkNorthRidingJohannesburg为公开业务联系处，未把它声明为经独立实地核实的工厂门址；约翰内斯堡城市近似点。Gripseal/GripSeal/GripsealChemicals及www/非www、八产品品牌、全国零售网络共享主体和预算，family-owned自述不等于最终工商股权。旧Harlequin范围Search6目录出现该名为发现摘录而非Gripseal旧定向页面；预算precheck实际prior0，独立全历史复读。共享发送台账未知，不当未发送、不创建可发送正文、不投递表单/邮件/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网联系表单和业务电话；未发现公开收件邮箱或具名采购",
+      "email": "",
+      "contactUrl": "https://gripseal.co.za/contact-us/"
+    },
+    "source": {
+      "label": "Own Classic water-based acrylic wood-sealer body and furniture/bookshelves/cupboards/panelling uses",
+      "url": "https://gripseal.co.za/gripseal-classic/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "gripseal-chemicals-johannesburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "nash-paints-harare": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "harlequin-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zemilli-paint-addis-ababa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10605,6 +10633,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "gripseal-chemicals-johannesburg": {
+    "website": "https://gripseal.co.za/",
+    "contactPage": "https://gripseal.co.za/contact-us/",
+    "address": "Mini Unit 1 & 2, Speculator Ave, Northlands Business Park, North Riding, Johannesburg, South Africa. Public business contact location; no independently verified production-plant gate assertion.",
+    "generalEmail": "",
+    "generalPhone": "(011) 462 2874",
+    "generalPhoneEvidence": {
+      "company": "Gripseal Chemicals (Pty) Ltd",
+      "value": "(011) 462 2874",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact visible domestic company business telephone",
+          "url": "https://gripseal.co.za/contact-us/",
+          "summary": "Own CALL US prints (011) 462 2874 and (011) 462 2875. Preserve first exact domestic visible value; malformed tel:+011 not expanded to international number, personal ownership or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home family-operated South African development and manufacture of water-based sealants",
+        "url": "https://gripseal.co.za/"
+      },
+      {
+        "label": "Own Products all eight returned finished-product summaries; individual detail coverage not inflated",
+        "url": "https://gripseal.co.za/products/"
+      },
+      {
+        "label": "Own Classic water-based acrylic wood-sealer uses and porosity/application/floor limitations",
+        "url": "https://gripseal.co.za/gripseal-classic/"
+      },
+      {
+        "label": "Own Contact actual form and domestic business phones; no public recipient mailbox found",
+        "url": "https://gripseal.co.za/contact-us/"
+      },
+      {
+        "label": "Own Gripflex finished aqueous transparent weatherproofing/joint filler; not proof of raw PO/CPO composition",
+        "url": "https://gripseal.co.za/gripseal-gripflex/"
+      }
+    ]
+  },
   "nash-paints-harare": {
     "website": "https://www.nashpaints.co.zw/",
     "contactPage": "https://www.nashpaints.co.zw/contact.html",
@@ -32680,6 +32753,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "gripseal-chemicals-johannesburg",
   "nash-paints-harare",
   "harlequin-paints-cape-town",
   "zemilli-paint-addis-ababa",
