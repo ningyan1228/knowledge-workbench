@@ -10283,11 +10283,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "aqualis-campbellfield",
+    "company": "Aqualis Coatings Pty Ltd",
+    "productId": "nl-w1201",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Campbellfield, Victoria; business contact city near Melbourne, approximate marker, not a surveyed factory gate",
+    "latitude": -37.65,
+    "longitude": 144.96,
+    "legacyCompanyDescription": "官网明确在澳大利亚开发制造水性木器涂料；H2Oil用于室内外木制品、家具和木结构。母公司Intec同组一账户。",
+    "fit": "可开发候选",
+    "signal": "在澳大利亚开发制造水性木器涂料；H2Oil自底涂面漆用于室内外木制品、家具和木结构。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "官网About现行自述木器产品在澳大利亚开发制造，母公司IntecCoatingsPtyLtd为2006成立澳大利亚涂料制造企业，2015设立Aqualis部门，持续研发/代工业务；页脚现列AqualisCoatingsPtyLtd及ABN。日期为公司历史说明，不当2026最终受益所有权审计；Aqualis/Intec/H2Oil/H2OIL、aqualis.com.au与inteccoatings.com.au按同一集团一客户一份6次累计预算，不能按法律名、品牌、母子或域名重复新增。47ALaraWayCampbellfieldVictoria3061为两站披露业务/办公地址，Aqualis原文Campbelfield拼写保留说明，不声称现场核验生产厂门；城市近似点。六份原文实际About/自然木材分类/Contact/H2OilTimber/IntecHome/TractionWTimber；分类只展示H2OilTimber与TimberGrey两项，另有多类计数与相关产品，不称2或全部站内SKU/TDS/SDS完整皆读。H2Oil正文自底涂面漆用于室内外木制品、家具和木结构，须妥善处理硬木/软木、去油渍灰化与单宁；已有非Aqualis涂层须打磨或剥除至原木。About及IntecHome明确waterbased timber/decking finish。当前产品为selfpriming，不意味着客户需要另加底涂或直接加入我方材料；NL-W1201仅按用户TDS木材水性底涂/附着促进配方评估，不把未处理PP性能转为客户木器相容/附着结果，也不扩为全部竹/复合材/石材/金属或成品混合指南。TractionW实际为木材防滑涂层，WPC为另一个复合木材等级；该页P4/P5、AS/NZS4586-2013为客户自述，未读认证报告/技术PDF，不转为我方防滑/合规保证。H2Oil/Traction页面的覆盖率、干燥/重涂、耐候/环保宣传仅客户成品信息，不转用我方配方、性能或降本承诺。母公司Home实际完整可见业务导航含木器硝基/预催化/乐器/丙烯酸漆、金属漆/2K环氧/2K异氰酸酯free/水性系统、木着色剂、底漆、混凝土/石材封闭剂及Thinners；正文具体PrecatSealer、H2OIL、F320SP钢材溶剂型磷酸锌底漆、F350AS混凝土溶剂丙烯酸漆及代工。保留稀释剂/树脂及代工业务，不说只卖成品或没有任何添加剂；相关树脂/thinners化学组成未披露，未逐读全子项/SDS，不凭词名认定PO。六份业务正文、可见产品分类及实际Traction下游涂层用途未见水性聚烯烃乳液、PO/CPO分散体或同类附着促进原料外售，结论限已读范围，不作集团隐藏配方/全球原料不存在保证，不编外购例外或现用我方体系。IntecHome含建筑模板ModernMinimalistHouse/Architecturer/KevinMcCloud等演示内容，不作客户、人员、工程/认证或采购证据；其可见电话6139357950与tel61393579510不一致，排除不精选。AqualisContact精确Sales邮箱sales@aqualis.com.au与mailto及电话1300046832(原显示1300 046 832)可核，公司/销售部门路线非具名采购；锚标签被错误标为BusinessHours/Address，实际可见字段与href分别核对。通用邮箱留空，Sales部门单独存真实证据；contacts0、无实际WhatsApp跳转，不把电话转WhatsApp或猜国际号码。不提交表单/评论/购物/订阅。旧唯一bareIntec匹配为西班牙FRP-Intec报告文件名Search，不属澳大利亚集团；保留最初held预检及清关哈希，不重置别家预算。六次HTTP200原文无跳转/失败/重试/远程JS/PDF/图片请求，累计6STOP剩0。共享发送记录未知，不当未发送，不生成可投递正文/复制导出或改发送历史。"
+    },
+    "contact": {
+      "label": "官网Sales业务邮箱、公开电话及表单；无具名采购/研发或已核验WhatsApp",
+      "email": "sales@aqualis.com.au",
+      "contactUrl": "https://www.aqualis.com.au/contact-us/"
+    },
+    "source": {
+      "label": "Own H2Oil Timber full application body; own About and parent Home water-based manufacture corroboration",
+      "url": "https://www.aqualis.com.au/product/h2oil-timber/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "aqualis-campbellfield": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "meyer-plc-ikeja": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colortone-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "royal-paints-industries-thika": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10746,6 +10774,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "aqualis-campbellfield": {
+    "website": "https://www.aqualis.com.au/",
+    "contactPage": "https://www.aqualis.com.au/contact-us/",
+    "address": "47A Lara Way, Campbellfield, Victoria 3061, Australia. Aqualis page spells Campbelfield; Intec office spells Campbellfield at same address. Public business/office location, no independently verified manufacturing-plant gate.",
+    "generalEmail": "",
+    "generalPhone": "1300 046 832",
+    "generalPhoneEvidence": {
+      "company": "Aqualis Coatings Pty Ltd",
+      "value": "1300 046 832",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Aqualis Contact exact current toll-free telephone and matching tel link",
+          "url": "https://www.aqualis.com.au/contact-us/",
+          "summary": "Visible Phone Toll Free:1300 046 832; exact tel:1300%20046%20832. Australian published business number preserved; no guessed international form or WhatsApp. Parent malformed phone/href excluded."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@aqualis.com.au",
+        "emailEvidence": {
+          "company": "Aqualis Coatings Pty Ltd",
+          "value": "sales@aqualis.com.au",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Own current Contact visible Email and exact mailto:sales@aqualis.com.au",
+              "url": "https://www.aqualis.com.au/contact-us/",
+              "summary": "Visible Email field is sales@aqualis.com.au and matching mailto is present. Sales business route; anchor text Business Hours is a page-label issue, not a named buyer. No deliverability or role ownership assumed."
+            }
+          ],
+          "verifiedAt": "2026-10-31"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Own About Australian R&D/manufacture, Intec parent and2015Aqualis division; current office not verified plant gate",
+        "url": "https://www.aqualis.com.au/about-aqualis-coatings/"
+      },
+      {
+        "label": "Own NaturalTimber catalogue actual2displayeditems and other category navigation, not all SKU bodies",
+        "url": "https://www.aqualis.com.au/product-category/natural-timber/"
+      },
+      {
+        "label": "Own Contact visible Sales mailbox/tollfree/address/form, anchor-label issue retained",
+        "url": "https://www.aqualis.com.au/contact-us/"
+      },
+      {
+        "label": "Own H2Oil Timber specific selfpriming interior/exterior wood/furniture use and preparation limitations",
+        "url": "https://www.aqualis.com.au/product/h2oil-timber/"
+      },
+      {
+        "label": "Own parent Intec full Home manufacture/business navigation and4coating summaries; template debris and malformed phone not curated",
+        "url": "https://www.inteccoatings.com.au/"
+      },
+      {
+        "label": "Own Traction W Timber finished anti-slip coating; WPC separate, no certification/PDF/performance transfer",
+        "url": "https://www.aqualis.com.au/product/traction-w-timber/"
+      }
+    ]
+  },
   "meyer-plc-ikeja": {
     "website": "https://meyerpaints.com/",
     "contactPage": "https://meyerpaints.com/contact-us/",
@@ -33097,6 +33193,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "aqualis-campbellfield",
   "meyer-plc-ikeja",
   "colortone-cape-town",
   "royal-paints-industries-thika",
