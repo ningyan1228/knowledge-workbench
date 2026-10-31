@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "harlequin-paints-cape-town": "Your water-based wood stain is made in Cape Town for furniture, doors, windows, decks and fences.",
   "zemilli-paint-addis-ababa": "Your Mega Anti-Rust range includes an air-drying, rust-inhibitive synthetic paint for iron and steel structures.",
   "nevena-color-leskovac": "Your COOL Acrylic Primer for Wood is a water-based primer made with acrylic binders, pigments and additives.",
   "vuka-floors-durban": "Your Vuka Resist 340 epoxy system is used for glass-fibre-reinforced tank linings on concrete and steel.",

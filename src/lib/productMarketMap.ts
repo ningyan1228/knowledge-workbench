@@ -10093,11 +10093,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "harlequin-paints-cape-town",
+    "company": "Harlequin Paints",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town; current own Paarden Eiland manufacture/contact disclosure; approximate city marker, not a surveyed factory entrance",
+    "latitude": -33.92,
+    "longitude": 18.42,
+    "legacyCompanyDescription": "官网明确在CapeTownPaardenEiland自身工厂制造水性涂料、木材着色剂和底漆；Harlequin名称、邮箱域与链接品牌按一账户去重，非最终股权审计。",
+    "fit": "可开发候选",
+    "signal": "在开普敦工厂制造水性涂料及木器底漆；水性木材着色剂用于家具、门窗、露台板、围栏与室内护墙板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "实际6次定向原文均Node200HTML：Home、AllProducts当前首屏、Water-BasedWoodStain、About、HarlequinLiquidSandpaper、Contact；原始HTML、完整提取正文及链接均阅读归档，手动跳转、0重试、0远程JS/图片/PDF/额外资源请求，累计6STOP不以域名/品牌/日期/工具重置。目录明示52products，当前首屏实际24项和LoadMore/page2链接，不宣称52全部已读；保留成品涂料、液体除光剂、SteriSeal抗微生物封闭剂、MouldShieldPrewash、AntiMouldPaint、蜡、着色剂、多种EASYSEAL封闭剂、辅材与工艺工具等真实业务。About明确所有产品由自身工厂制造，搬迁至PaardenEiland，仍制造水性木材/灰泥底漆；具体WoodStain页明确CapeTown制造、用于室内外家具、门窗、露台板、围栏和护墙板。所选NL-W1201只对应木材水性底涂/附着促进配方评估，不凭公司其他金属/多表面业务推所有金属或聚烯烃兼容，也不声称其现用聚烯烃/丙烯酸体系或当前采购。重点实际读取LiquidSandpaper500ml：它是用于已有高光/清漆/涂漆表面的水性化学除光成品，5至10分钟后湿布彻底擦去再涂漆；不能用于原木、未封闭MDF/刨花板、敏感塑料等限制保留。这是下游表面预处理成品的公开用途，不当作已证PO/CPO分散体原料外售，也不猜组成或声称无任何附着相关产品。当前所读制造业务、产品分类、首24/52成品及关键除光成品用途未见对外销售水性聚烯烃乳液、PO/CPO分散体或所选同类聚烯烃附着促进原料；结论限实际范围，不是全部隐藏SKU/SDS/所有供应配方或外购证明。Stain与除光剂分别保留不同基材/工序，不能将除光剂禁原木误套到木材着色剂，也不建议NL-W1201加入成品或作为除光剂直接替代。客户自身solventfree/non-toxic/lowVOC/抗菌抗霉/生态/耐UV/耐候等宣传不是我方性能、环保、认证或相容证明。HarlequinPaint/HarlequinPaints/harlequinpaint.com/www、公开邮箱域harlequin.co.za和链接MineralPaint.org按关联去重及共享预算，未访问后者，不推另一个客户、最终股权或全部集团全球业务。旧2份nativeSearch（其中1归档副本）及1本地预检只含Search摘录/匹配模式，无旧Harlequin定向原文；初检未知项原报告保留，经读取旧预检确认仅pattern出现并另存清关记录，prior0成立。初450公开/root464/front896/index178/队列322/排除6无相同账户，独立再查全部别名历史。Contact真实公开精确通用info@harlequin.co.za（与主站不同域）及mailto归属公司，不猜主站同域邮箱；电话021-510-7252保持国内格式不补+27，没有WhatsApp不从电话构造。官网公开团队姓名/职位未当采购、研发或个人邮箱，也未收为本条精选联系人。Contact静态HTML含Thanksforsubmitting模板不代表发生表单投递；无表单/消息/CRM动作，台账未知不当未发送。地址15WallflowerStreetPaardenEilandCapeTown7405SouthAfrica为公司自述当前工厂及联系处，城市近似点非现场厂门测绘/工商核验。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、国内格式业务电话及联系页；无精选具名采购/WhatsApp",
+      "email": "info@harlequin.co.za",
+      "contactUrl": "https://www.harlequinpaint.com/contact"
+    },
+    "source": {
+      "label": "Own Water-Based Wood Stain: Cape Town manufacture and furniture/doors/windows/decks/fences/panelling uses",
+      "url": "https://www.harlequinpaint.com/product-page/water-based-woodstain"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "harlequin-paints-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zemilli-paint-addis-ababa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "nevena-color-leskovac": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "vuka-floors-durban": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10549,6 +10577,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "harlequin-paints-cape-town": {
+    "website": "https://www.harlequinpaint.com/",
+    "contactPage": "https://www.harlequinpaint.com/contact",
+    "address": "15 Wallflower Street, Paarden Eiland, Cape Town, 7405 South Africa. Own current manufacture/contact disclosure; approximate city marker, not a surveyed factory-gate or registry assertion.",
+    "generalEmail": "info@harlequin.co.za",
+    "generalEmailEvidence": {
+      "company": "Harlequin Paints",
+      "value": "info@harlequin.co.za",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact exact public company email and mailto; matching About and footer",
+          "url": "https://www.harlequinpaint.com/contact",
+          "summary": "Own Contact explicitly lists info@harlequin.co.za and exact mailto. Cross-domain corporate mailbox from own site, not constructed from harlequinpaint.com, a named buyer or a deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "021-510-7252",
+    "generalPhoneEvidence": {
+      "company": "Harlequin Paints",
+      "value": "021-510-7252",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Current own Contact exact domestic telephone and matching tel link",
+          "url": "https://www.harlequinpaint.com/contact",
+          "summary": "021-510-7252 printed with tel:0215107252; formatting only differs. Domestic number preserved; no guessed +27, WhatsApp or personal ownership."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home manufacturing/wood-primer statements and range navigation",
+        "url": "https://www.harlequinpaint.com/"
+      },
+      {
+        "label": "Own All Products current initial24/52 only; load-more not followed",
+        "url": "https://www.harlequinpaint.com/category/all-products"
+      },
+      {
+        "label": "Own Water-Based Wood Stain full specific manufacturing/application body",
+        "url": "https://www.harlequinpaint.com/product-page/water-based-woodstain"
+      },
+      {
+        "label": "Own About current own factory and continued water-based wood/plaster primer manufacture",
+        "url": "https://www.harlequinpaint.com/about"
+      },
+      {
+        "label": "Own Liquid Sandpaper actual500ml chemical deglosser use/limitations; no unproved raw-input composition",
+        "url": "https://www.harlequinpaint.com/product-page/harlequin-liquid-sandpaper"
+      },
+      {
+        "label": "Own Contact exact company mailbox/domestic telephone/address; static success template not submission proof",
+        "url": "https://www.harlequinpaint.com/contact"
+      }
+    ]
+  },
   "zemilli-paint-addis-ababa": {
     "website": "https://zemillipaint.com/",
     "contactPage": "https://zemillipaint.com/contact-us/",
@@ -32502,6 +32593,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "harlequin-paints-cape-town",
   "zemilli-paint-addis-ababa",
   "nevena-color-leskovac",
   "vuka-floors-durban",
