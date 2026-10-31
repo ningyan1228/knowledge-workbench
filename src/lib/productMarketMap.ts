@@ -10202,11 +10202,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "royal-paints-industries-thika",
+    "company": "Royal Paints Industries Ltd.",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Thika; current Contact/header/structured address uses Thika, while Home footer mentions Changamwe Road Nairobi; current exact business/factory location not independently reconciled, approximate city marker",
+    "latitude": -1.04,
+    "longitude": 37.07,
+    "legacyCompanyDescription": "肯尼亚RoyalPaintsIndustries以自有品牌经营工业/汽车/建筑涂料，公司雇主说明公开自述涂料制造商；保留旧职位时间与当前官网两地地址差异，不称已核实工厂。",
+    "fit": "可开发候选",
+    "signal": "工业涂料系列包括用于钢结构的双组分环氧锌磷酸盐底漆，并提供工厂环氧地坪涂装服务。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "当前肯尼亚官网以RoyalPaintsIndustriesLtd经营，提供工业/建筑/汽车/木器涂层及服务；其公司发布的LinkedIn职位完整公司说明明确paintmanufacturerlocatedinThika。该职位仅标2yearsago且Nolongeracceptingapplications，作为已公开制造角色说明结合当前官网自有品牌工业系列核验，不改写成当前招聘、扩产、采购或已核实工厂门址。工业页服务于工厂/仓库/管线/电厂，页面内实际静态产品数据10条已逐项阅读：环氧锌磷酸盐底漆、黄/红环氧锌铬酸盐底漆、双组分环氧涂料、环氧煤焦黑、环氧稀释剂、快干底漆、环氧底漆、环氧固化剂、环氧稀释剂。锌磷酸盐条目明示twopackepoxyprimerforsteelstructures；仅按这项具体公开用途准备公司事实，不把环保、安全、耐蚀、耐磨、耐化学、耐热或释放性能当我方保证。静态内嵌业务字段以语法树读取，没有运行网页JS或请求其图片/远程脚本，也不声称交互产品卡或弹窗已实际渲染。保留Royal2KEpoxyHardener用于环氧树脂固化及2Kacrylichardener、Harmony木工胶/拼花地板胶、填料、溶剂和防水涂装等业务，不假称没有添加剂或树脂；固化剂用途不是已证ELO/ESBO/环氧化植物油/生物增塑剂外售，未披露组成不猜。有限已读公开业务范围排除：Home九类公开范围、四个有实质业务正文页面及十条工业静态数据未见所选ELO、ESBO、环氧化植物油或同类生物增塑原料销售；不能扩为全部SDS/隐藏配方/采购或集团全球原料保证。第6Thinner响应虽200且全部响应字节已读，只包含导航与七项稀释剂名称，未给正文/完整溶剂目录，计一次无有效目录正文的已用来源，不称所有溶剂化学组成核验完成。客户ISO/C5M、650°C、15年防护/20年保修、500场所、Bidco/KPLC/港口案例、40%维护节省及证言均未独立验证、不作采购或我方性能/客户案例。制造角色源中Copenhagen是页面搜索控件位置，不是公司所在国；未获取隐私账户、投递岗位或联系员工。当前精确公司通用业务邮箱info@royalpaints.co.ke及mailto、国内格式0787 500 500和公开WhatsApp链接均由官网联系页核验；WhatsApp号码254785220220与首个电话不同，分别保留，不由电话构造，不选个人采购称呼。当前Contact写OffGarissaRoadDelmonteRoadMakongeniThika，Home可见页脚又写ChangamweRoadNairobi，同时结构化地址及页面头写Thika；保留地址差异，不独立确认搬迁完成时间或唯一工厂，地图仅Thika城市近似点。115份通名碰撞记录分别是越南HoangGia/royalpaint.vn待证企业、意大利Loggia的RoyalPaint产品分类、尼泊尔Pashupati检索提及的RoyalPaintspvt；并非肯尼亚皇家涂料旧定向原文，旧主体预算不改。当前RoyalPaintsIndustries/royalpaints.co.ke/Harmony/royalpaintz/Thika与Nairobi联系处及零售网络按一主体去重，SunriseSyntheticCompound仅旧目录地点线索不是已证母公司。当前6次预算含5个官网HTML响应（1个仅导航）和1个公司雇主说明完整提取体，累计6STOP，不以域名/产品/日期/工具或社交平台重置。ELO只按用户TDS提出环氧功能/树脂改性及柔韧配方评估，不声称客户已用ELO、确定原料需求、配方相容或涂层防腐保证。共享发送台账未知，无具名采购、无可发送正文导出，无任何对外联系。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱、电话及原始WhatsApp链接；无精选具名采购",
+      "email": "info@royalpaints.co.ke",
+      "contactUrl": "https://www.royalpaints.co.ke/contacts.html"
+    },
+    "source": {
+      "label": "Own Industrial actual published static primer entry and Services industrial coating applications",
+      "url": "https://www.royalpaints.co.ke/industrial.html"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "royal-paints-industries-thika": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rystix-sales-gqeberha": {"targetCompanyTypeId":"waterbased-wood-coating-formulator","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "gripseal-chemicals-johannesburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "nash-paints-harare": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10662,6 +10690,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "royal-paints-industries-thika": {
+    "website": "https://www.royalpaints.co.ke/",
+    "contactPage": "https://www.royalpaints.co.ke/contacts.html",
+    "address": "Contact: Off Garissa Road, Delmonte Road, Makongeni, Thika, Kenya. Home footer separately says Changamwe Road, Nairobi, while header/structured address says Thika; discrepancy retained, no verified manufacturing-plant gate or relocation-date assertion.",
+    "generalEmail": "info@royalpaints.co.ke",
+    "generalEmailEvidence": {
+      "company": "Royal Paints Industries Ltd.",
+      "value": "info@royalpaints.co.ke",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact exact public company mailbox and mailto, corroborated by Home/Industrial/Services footer",
+          "url": "https://www.royalpaints.co.ke/contacts.html",
+          "summary": "Email Us explicitly info@royalpaints.co.ke with exact mailto; general corporate route, no named person/procurement claim, no SMTP/deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "0787 500 500",
+    "generalPhoneEvidence": {
+      "company": "Royal Paints Industries Ltd.",
+      "value": "0787 500 500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own Contact visible first business telephone and exact tel link",
+          "url": "https://www.royalpaints.co.ke/contacts.html",
+          "summary": "0787 500 500 visible, own tel:+254787500500 separately printed in link. Preserve visible domestic formatting; not inferred from distinctWhatsApp254785220220."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "whatsapp": "https://wa.me/254785220220?text=Hello%20Royal%20Paints",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own Home current Kenya company identity/product categories/email/phone/WhatsApp; conflicting visible Nairobi footer retained",
+        "url": "https://www.royalpaints.co.ke/"
+      },
+      {
+        "label": "Own Contact exact company mailbox/phone/WhatsApp and Thika business address",
+        "url": "https://www.royalpaints.co.ke/contacts.html"
+      },
+      {
+        "label": "Own Industrial current static10published business records extracted without executing JS; not all card rendering/TDS verified",
+        "url": "https://www.royalpaints.co.ke/industrial.html"
+      },
+      {
+        "label": "Own Services industrial/factory epoxy-flooring application; unverified client performance/testimonials not transferred",
+        "url": "https://www.royalpaints.co.ke/services.html"
+      },
+      {
+        "label": "Own employer-published LinkedIn company description identifies paint manufacturer inThika;2yearsago/closed job,not currentrecruitment",
+        "url": "https://ke.linkedin.com/jobs/view/salesperson-at-royal-paints-industries-3860134765"
+      },
+      {
+        "label": "Own Thinner HTTP200 navigation-only response; no complete main solvent catalogue/body",
+        "url": "https://www.royalpaints.co.ke/thinner.html"
+      }
+    ]
+  },
   "rystix-sales-gqeberha": {
     "website": "https://www.rystix.co.za/",
     "contactPage": "https://www.rystix.co.za/contact-us/",
@@ -32823,6 +32915,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "royal-paints-industries-thika",
   "rystix-sales-gqeberha",
   "gripseal-chemicals-johannesburg",
   "nash-paints-harare",
