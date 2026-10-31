@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "solewant-sspc-port-harcourt": "Your SSPC range includes zinc-rich epoxy primers and high-build epoxy coatings for steel and industrial assets.",
   "aqualis-campbellfield": "Your water-based H2Oil is a self-priming topcoat for interior and exterior woodwork, furniture and timber structures.",
   "meyer-plc-ikeja": "Your range includes a two-pack epoxy road-marking paint for truck parks, car parks and warehouses.",
   "colortone-cape-town": "Your water-based Floor Varnish is designed for softwood interior floors and gives a suede finish.",

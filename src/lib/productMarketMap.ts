@@ -10310,11 +10310,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "solewant-sspc-port-harcourt",
+    "company": "Solewant Group (SSPC & Paints)",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Port Harcourt; Rumuibekwe corporate business headquarters, approximate city marker, not a surveyed manufacturing-plant gate",
+    "latitude": 4.82,
+    "longitude": 7.05,
+    "legacyCompanyDescription": "SSPC开发制造工业防护涂料；集团同时经营管线涂覆和钢管业务，与原私有Solewant账户合并。",
+    "fit": "可开发候选",
+    "signal": "在尼日利亚开发制造工业防护涂料；产品包括用于钢材和工业设施的富锌环氧底漆及高膜厚环氧涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-10-31",
+      "conclusion": "原私有Solewant/SSPC同组账户升级前独立复核，不另造新公司或再给6次。旧3次为集团Home/About两份完整HTTP200及VoiceOfNigeria投产报道超时失败；本轮续用第4次NewsDirect完整HTTP200产品报道、第5次官网Contact完整HTTP200、第6次BusinessDay实际原生Open全部240行，累计6STOP剩0。本轮3次无失败，累计旧1次失败保留；BusinessDay来源原站HTTP状态未知，不假称6份自有HTML/全部HTTP200，未执行远程JS/下载图片/PDF或重试。三份自有Home/About/Contact实际确定尼日利亚管线涂覆、钢管/混凝土/PU/FBE服务和集团业务联系方式；2022版权不当停业或当前投产日期。制造与配方证据补自BusinessDay发表于2026年8月2日的投产活动报道：CEO明确SSPC开发制造防护涂料、11项配方由本地设施开发生产并与高校合作；不把旧管线施工单独当涂料工厂。8月24日NewsDirect正文列出11项成品，富锌环氧底漆、高膜厚环氧涂层与丙烯酸聚氨酯等工业/重防护系统得到两份公开原文交叉支持，钢材用途来自BusinessDay对应段。报道中的具体投产活动日未精确独立核定，未读到旧政府报道，不称本轮原文确认7月31日。11项为Solguard建筑/醇酸/氧化铁底漆/富锌环氧/高膜厚环氧/丙烯酸PU及Novaguard100固体三类等公开成品范围，并非逐个TDS/SDS/配方皆读。BusinessDay后段写Silgard/Novagard、100%solidpolyolefin，而NewsDirect写Solguard/Novaguard及100%solidepoxy，保留拼写/化学命名差异；不替该冲突SKU判定化学组成，选取两源一致的富锌环氧/高膜厚环氧涂料，不扩成客户现用ELO/ESBO或相容结论。CEO将新涂料称为供既有涂覆厂的rawmaterial，按完整语境保留成套防护涂料对管线厂的下游供料角色，不忽略rawmaterial/PE/PP/FBE业务，也不把epoxy/polyolefin等单词等同环氧化植物油原料。已读自有三正文＋完整NewsDirect范围＋BusinessDay240行公开制造/产品说明未见外售ELO、ESBO、环氧化植物油或同功能生物基增塑/稳定原料；结论限实际已读业务，未证明原料外购或集团隐藏SDS/全球供应保证。ELO仅按用户资料提出环氧功能/柔韧和树脂改性配方评估，不能转述客户耐腐蚀/耐磨/防水/UV/膜厚/寿命/降本/本地认证/石化案例为我方效果。SolewantGroup与SSPC、FieldJointCoating、相关钢管/培训/能源实体及公开品牌保守按集团一个客户一个预算；Namibia路演/美办/基地不另增客户，不凭同名Novaguard推PPG共同股权，未做最终所有权登记审计。官网现行CorporateHQ22AhoadaRoadRumuibekwePortHarcourt为业务总部；Base3AlodePipeCoatingCentre与报道IndustrialPark保留地点角色，地图城市近似，不宣称生产厂门实地核验。官网原文info@solewantgroup.com及第一公开号码+234-8074021496归集团通用路线，未见mailto/tel不捏造链接，未进行送达测试；第二号码及美国办公室仅原文保留。BusinessDay页脚自己的digitalsales邮箱/电话和作者、教授、政府官员、CEO不作本账户采购人或收件邮箱，contacts和departmentEmails均空，未发现实际WhatsApp跳转不猜号码。需求/预算/时机/客户ELO使用未知；共享发送记录未知，不当未发送，不创建可发送正文/复制导出或改写历史，不外联/CRM。"
+    },
+    "contact": {
+      "label": "集团官网公开通用邮箱及第一业务电话；无具名采购/研发或已核验WhatsApp",
+      "email": "info@solewantgroup.com",
+      "contactUrl": "https://solewantgroup.com/contact-us"
+    },
+    "source": {
+      "label": "BusinessDay actual240providedlines on SSPC own developed/manufactured protective coatings and steel epoxy primers/coats",
+      "url": "https://businessday.ng/life/article/insight-into-nigerias-push-for-global-leadership-in-paint-tech-and-oil-pipe-protective-coating/"
+    },
+    "checkedAt": "2026-10-31"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "solewant-sspc-port-harcourt": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aqualis-campbellfield": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "meyer-plc-ikeja": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "colortone-cape-town": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10774,6 +10802,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "solewant-sspc-port-harcourt": {
+    "website": "https://solewantgroup.com/",
+    "contactPage": "https://solewantgroup.com/contact-us",
+    "address": "Corporate Headquarters: 22 Ahoada Road, Rumuibekwe, Port Harcourt, Rivers State, Nigeria. Public business headquarters; Base 3 Alode pipe-coating centre and reported manufacturing industrial park are separate location descriptions, no surveyed factory-gate assertion.",
+    "generalEmail": "info@solewantgroup.com",
+    "generalEmailEvidence": {
+      "company": "Solewant Group (SSPC & Paints)",
+      "value": "info@solewantgroup.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own group Contact visible exact corporate Email field",
+          "url": "https://solewantgroup.com/contact-us",
+          "summary": "Email:info@solewantgroup.com is directly disclosed with the group headquarters/bases. Corporate route for one Solewant/SSPC group account, not a named buyer or deliverability result. No mailto link invented."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "generalPhone": "+234-8074021496",
+    "generalPhoneEvidence": {
+      "company": "Solewant Group (SSPC & Paints)",
+      "value": "+234-8074021496",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Own group Contact exact first published company business number",
+          "url": "https://solewantgroup.com/contact-us",
+          "summary": "Phone:+234-8074021496,+234-8034541119. Select first exact displayed number; no personal-owner, tel link or WhatsApp assumption. Publisher footer support numbers not company contact."
+        }
+      ],
+      "verifiedAt": "2026-10-31"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own group Home:actual pipeline coating/steel business, not SSPC paint-formulation proof alone",
+        "url": "https://solewantgroup.com/"
+      },
+      {
+        "label": "Own group About:actual corporate business/mission, old copyright not operating-date proof",
+        "url": "https://solewantgroup.com/about-us"
+      },
+      {
+        "label": "NewsDirect actual full24Aug2026 product article:eleven SSPC Solguard/Novaguard coatings; Namibia roadshow not a new factory/account",
+        "url": "https://nigeriannewsdirect.com/solewant-unveils-11-product-coatings-range-in-namibia/"
+      },
+      {
+        "label": "Own group Contact:exact mailbox/first phone/corporate HQ/bases/USoffice, no named buyer or WhatsApp",
+        "url": "https://solewantgroup.com/contact-us"
+      },
+      {
+        "label": "BusinessDay actual full240providerlines2Aug2026:own R&D/manufacture/facility and steel epoxy product use; raw-material context/brand variants retained",
+        "url": "https://businessday.ng/life/article/insight-into-nigerias-push-for-global-leadership-in-paint-tech-and-oil-pipe-protective-coating/"
+      }
+    ]
+  },
   "aqualis-campbellfield": {
     "website": "https://www.aqualis.com.au/",
     "contactPage": "https://www.aqualis.com.au/contact-us/",
@@ -33193,6 +33280,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "solewant-sspc-port-harcourt",
   "aqualis-campbellfield",
   "meyer-plc-ikeja",
   "colortone-cape-town",
