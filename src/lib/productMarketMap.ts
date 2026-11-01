@@ -10582,11 +10582,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "duracolor-torredonjimeno",
+    "company": "Duracolor Coatings S.L.U.",
+    "productId": "elo",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Torredonjimeno, Jaén; official business/factory-footer city, approximate city marker, not surveyed gate",
+    "latitude": 37.77,
+    "longitude": -3.96,
+    "legacyCompanyDescription": "官网自研自产涂料；ARM EPOXI PAVIMENTOS 为双组分溶剂型环氧聚酰胺地坪漆，用于室内混凝土。",
+    "fit": "可开发候选",
+    "signal": "官网自研自产涂料；ARM EPOXI PAVIMENTOS 为双组分溶剂型环氧聚酰胺地坪漆，用于室内混凝土。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Six actualownNodeHTTP200HTML,prior0/current6/lifetime6STOP/rem0 across Duracolor/DuracolorCoatings/Armenteros/ARM products/domains/dates/providers,0fail/redirect/retry/PDF/assets/remoteJS/seventh. Initialwww.duracolor.es explicitdomainhypothesis fromcompany/branddiscovery, notcurrentSearch-foundownURL; firstGET independentlyconfirmedbrand/manufacture/legalselfname. OwnHome Fabrica andAbout explicitinternalI+D+i developsownfabricados, manufacturerrolepositive; legalselfnameDuracolorCoatingsSLU fromHome/footer, notlegalregistrycertificate orstatutoryownershipaudit. Search jobportal callsPinturasArmenteros behindDuracolor, conservativeonegroupdedupe/budget only, notshareholdingproof. Source2 defaultcatalogueHTTP200 actualemptyproductslot plus11finishedcoatingcategories, notallproductscope. Source3 properpublicfilterlinkIndustrial f8 gives first10cards of54across6pages; page2-6/SDS/port8082TDS/GoogleDrivecatalogue notdownloaded/read, not54auditedleafs. Selectedrawpeercheck recognizes ADITIX600g separatelysoldhighpuritysepiolite mineralrheologythickener for100percent-solidsepoxy, functionflow/anti-segregation/viscosity, notepoxidizedvegetableoil/bio-plasticizer orELOepoxyfunctionalresinmodifier merelybecausebothareadditives. Otherfirst-pageARM itemsfinishedacrylic/PU/epoxycoatingspluscuringcomponents, notmerchantselectedoil. Exact P051ARMEPOXIPAVIMENTOS ownleaf current solventborne2-componentepoxy-polyamide forinteriorconcreteparking/industry/workshops. Notallformulas/currentrawpurchaseproof/no allhiddenbusinessclaim; finite6bodieshave noELO/ESBO/epoxidizedvegetableoil/bio-plasticizer merchantline identified. Finishedproductproperties/corrosionclasses/certifications arecustomerclaimsnotours orindependentlyperformanceaudited. Ownplantwater/solventinvestmentnotice fundingprogram2021-27 notindependentlyverified commissioning/completedcapacity orfertilizercoatline. TeamEquipoHumano pagecurrentlylists COMPRAS-SalvadorAlvarezNieto-pdsan@duracolor.es withactualmailto; identityname/function/currentcompanylisting evidence andmailownership storedseparately, sharedURLactuallyestablishesboth. Pageundated, currentEmployment isofficialcurrent-sitelistverificationretrievaldate, notindependentemploymentregistry/LinkedInconfirmation, senioritymanager/selectedmaterialauthority/currentbuying/deliverabilitynotasserted. Othersevenstaff notcurated. Generalmailblank: ContactfooterCleanTalkmasknotdecoded/bypassed; managementduracolor@ isnotinferredprocurement/sharedmail; no personalpdsan relabelasdepartment/general. Phone953573002actualcompanycentralatContactandfooter, notassignedtoSalvador/no+34prefixguess/noWhatsAppfromtelephone. ContactactualNameEmailMessageprivacyarithmeticfields observed, noform/CAPTCHA/cookieJSsubmitted. BusinessPolIndMirabueno23650TorredonjimenoJaen explicit; approximatecitycoordinatesnotfactorygate/visit. History5files oldBESASearch+identicalarchivecopyzeroDuracolororiginals, current3Search/config only; wholepublic/root/front/index/excluded/unwrappedqueueclear. ELOuserTDS coating/resinmodification/epoxyfunctionalitypotentialmaterialevaluationonly, notdropin/curecompatibility/flexibilitygain/corrosionprotection/confirmeduse/need/order/volume/timing. Sharedsentledgerunknownnotunsent,no readybody/copy/export/historyrewrite/outreach."
+    },
+    "contact": {
+      "label": "官网团队页列示采购联系人与业务邮箱；总机为公司公共号码",
+      "email": "pdsan@duracolor.es",
+      "phone": "953 573 002",
+      "contactUrl": "https://www.duracolor.es/contacto/"
+    },
+    "source": {
+      "label": "Official ARM EPOXI PAVIMENTOS P-051 finished solventborne two-component epoxy-polyamide coating for interior concrete floors",
+      "url": "https://www.duracolor.es/catalogo-de-productos/?p=P-051__.__"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "duracolor-torredonjimeno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "perupaint-villa-el-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rolax-emal-dnipro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "corporacion-mara-pinturas-aurora-lurin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11056,6 +11085,93 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "duracolor-torredonjimeno": {
+    "website": "https://www.duracolor.es/",
+    "contactPage": "https://www.duracolor.es/contacto/",
+    "address": "Pol. Ind. \"Mirabueno\", s/n, 23650 TORREDONJIMENO (JAÉN), Spain. Official business/factory footer and Contact address; map marker approximate city, not surveyed factory gate.",
+    "generalEmail": "",
+    "generalPhone": "953 573 002",
+    "generalPhoneEvidence": {
+      "company": "Duracolor Coatings S.L.U.",
+      "value": "953 573 002",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact and repeated factory/business footer central telephone",
+          "url": "https://www.duracolor.es/contacto/",
+          "summary": "Exact published Tel 953 573 002, independent company general route; not individual Salvador telephone, no international-prefix rewrite or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [
+      {
+        "name": "Salvador Alvarez Nieto",
+        "title": "Purchasing (COMPRAS)",
+        "department": "Procurement",
+        "email": "pdsan@duracolor.es",
+        "verifiedAt": "2026-11-01",
+        "identityEvidence": {
+          "company": "Duracolor Coatings S.L.U.",
+          "name": "Salvador Alvarez Nieto",
+          "title": "Purchasing (COMPRAS)",
+          "responsibilities": "Official Equipo Humano lists COMPRAS (Purchasing). Current official website listing checked; no purchasing-manager seniority or selected-material buying authority/demand established. Undated page; no independent employment registry or LinkedIn confirmation.",
+          "currentEmployment": true,
+          "sources": [
+            {
+              "label": "Official current-site Equipo Humano: COMPRAS staff listing (undated page, retrieved 2026-11-01)",
+              "url": "https://www.duracolor.es/quienes-somos/",
+              "summary": "The current company About team section explicitly lists COMPRAS - Salvador Alvarez Nieto. Purchasing function translated faithfully; no manager seniority, ELO purchasing mandate or buyer-confirmed requirement asserted. Page publication/update date undisclosed; no independent LinkedIn or employment-registry check."
+            }
+          ],
+          "verifiedAt": "2026-11-01"
+        },
+        "emailEvidence": {
+          "company": "Duracolor Coatings S.L.U.",
+          "value": "pdsan@duracolor.es",
+          "kind": "named-business",
+          "personName": "Salvador Alvarez Nieto",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official Equipo Humano exact name-role-email mapping and mailto:pdsan@duracolor.es",
+              "url": "https://www.duracolor.es/quienes-somos/",
+              "summary": "The same current team row explicitly maps COMPRAS - Salvador Alvarez Nieto - pdsan@duracolor.es and exact mailto. Separately verified public named business channel; not prefix-constructed, general/department mailbox, deliverability test or current order evidence."
+            }
+          ],
+          "verifiedAt": "2026-11-01"
+        }
+      }
+    ],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Home manufacturing role, legal self-name, water/solvent plant investment notice and business footer",
+        "url": "https://www.duracolor.es/"
+      },
+      {
+        "label": "Official default catalogue full body: eleven categories but no product rows without filter, not full SKU catalogue",
+        "url": "https://www.duracolor.es/catalogo-de-productos/"
+      },
+      {
+        "label": "Official Industrial catalogue first page: ten product cards out of stated54, including mineral ADITIX and finished epoxy/polyurethane coatings",
+        "url": "https://www.duracolor.es/catalogo-de-productos/?f=8"
+      },
+      {
+        "label": "Official About own R&D/manufacturing and Equipo Humano directory: separate identity and exact email ownership evidence",
+        "url": "https://www.duracolor.es/quienes-somos/"
+      },
+      {
+        "label": "Official ARM EPOXI PAVIMENTOS P-051 finished solventborne two-component epoxy-polyamide coating for interior concrete floors",
+        "url": "https://www.duracolor.es/catalogo-de-productos/?p=P-051__.__"
+      },
+      {
+        "label": "Official Contact public message form, company business address and published central telephone",
+        "url": "https://www.duracolor.es/contacto/"
+      }
+    ]
+  },
   "perupaint-villa-el-salvador": {
     "website": "https://perupaint.com.pe/",
     "contactPage": "https://perupaintgroup.com/contactanos/",
@@ -34066,6 +34182,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "duracolor-torredonjimeno",
   "perupaint-villa-el-salvador",
   "rolax-emal-dnipro",
   "corporacion-mara-pinturas-aurora-lurin",
