@@ -10445,11 +10445,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "pinturas-kendall-san-miguel-petapa",
+    "company": "Pinturas Kendall",
+    "productId": "elo",
+    "country": "Guatemala",
+    "countryZh": "危地马拉",
+    "city": "San Miguel Petapa; official central-office city, approximate city marker, not independently verified factory gate",
+    "latitude": 14.5028,
+    "longitude": -90.5517,
+    "legacyCompanyDescription": "自述制造涂料；Anticorrosivo Luz 为醇酸树脂成品漆，用于工业及建筑金属结构。",
+    "fit": "可开发候选",
+    "signal": "自述制造涂料；Anticorrosivo Luz 为醇酸树脂成品漆，用于工业及建筑金属结构。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Actual four ownHTTP200HTML Home/Products/About/Contact plus one ownHTTP200PDF fully read2pages and one approved-network DNSfailure on officially linked pinturaluz.com: six lifetime requests,6STOP/rem0, no seventh/domain/provider/product reset. About says each gallon we manufacture/sell/apply. Specific Anticorrosivo Luz finished enamel is alkyd-resin with rust inhibitors, industrial/architectural metal structures; September2020 edition is currently linked, not proof2026reformulation. Not an independently verified Kendall epoxy product: Scribd2025catalogue and SearchPDF extracts not used for that claim. Own published businessscope comprises three finished-coating categories Automotive/Architectural/Industrial, four brands Kendall/Luz/Sol/MetalCoat,14distinct ownlinked architectural technical-sheet files including paints/primers/woodfinishes/waterproofing. Names/linkpurpose reviewed, only Anticorrosivo PDF read; not all14docs/industrialformula/brandworldwidebusiness. No selected ELO/ESBO/epoxidizedvegetableoil/bio-plasticizer supplyline identified in fourownbodies and actualoneTDS. Finite business exclusion, not proof of external raw purchases or allhiddencomposition. SixthDNSfailure gives no current Luzbrandbody and is not proof of companyclosure; no TLSdisable/HTTPfallback. Public Home/About/Contact and TDS consistently give2daAv3-53zona6LosAlamosSanMiguelPetapa; Contact also has stray710RusselStationSuite315templatefield, rejected against repeatedownaddress/TDS, no factorygateclaim. Exact encoded owninfo@pinturaskendall.com locallydecoded, repeatedcompanyphone+5026628-2500; genericnotnamedbuyer, noWhatsApp/people/departments or deliverytest. Otherbranchretailmailboxes notselected. Fullpublic/root/front/index/queue/excluded andmain/domain/branddedupe clear; fiveoldgenericMetalCoathits are ORCA/PTMetalCoatIndonesia/Taralac unrelated sources, no Kendall priororiginals, othercompanybudgets preserved. SearchTodoColorretailnames conservativefuturealiases only, not legalregistry/ownershipproof. ELOcoatings/resinmodification TDS supports potentialepoxy-functional flexibility/resinmodification evaluation only; no confirmedcurrentuse/need/purchase/volume/timing/curecompatibility, anticorrosion or performancepromise. Sharedsendingledgerunknownnotunsent, no readybody/copy/export/historyrewrite/outreach."
+    },
+    "contact": {
+      "label": "官方通用业务邮箱、电话及联系页；无具名采购联系人或已核验WhatsApp",
+      "email": "info@pinturaskendall.com",
+      "contactUrl": "https://pinturaskendall.com/contacto/"
+    },
+    "source": {
+      "label": "Official Anticorrosivo Luz two-page technical sheet, September2020 edition currently linked",
+      "url": "https://pinturaskendall.com/wp-content/uploads/sites/3/2023/05/FICHA-TECNICA-ANTICORROSIVO-LUZ.pdf"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "pinturas-kendall-san-miguel-petapa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "productos-venier-san-martin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "de-vos-verf-den-haag": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zhaia-pinturas-la-paz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10914,6 +10942,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "pinturas-kendall-san-miguel-petapa": {
+    "website": "https://pinturaskendall.com/",
+    "contactPage": "https://pinturaskendall.com/contacto/",
+    "address": "2da. Av. 3-53 zona 6, Los Álamos, San Miguel Petapa, Guatemala. Repeated official central-office contact address and original product TDS; not independently verified factory gate.",
+    "generalEmail": "info@pinturaskendall.com",
+    "generalEmailEvidence": {
+      "company": "Pinturas Kendall",
+      "value": "info@pinturaskendall.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact exact Cloudflare-encoded company inbox, locally decoded",
+          "url": "https://pinturaskendall.com/contacto/",
+          "summary": "Company general route independently present in actual raw Contact href and repeated own footer, not guessed or named procurement."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "generalPhone": "+502 6628-2500",
+    "generalPhoneEvidence": {
+      "company": "Pinturas Kendall",
+      "value": "+502 6628-2500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact company telephone and exact tel link",
+          "url": "https://pinturaskendall.com/contacto/",
+          "summary": "Contact publishes (502)6628-2500/tel:50266282500 and footer +5026628-2500; no inferred WhatsApp or named person."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Home product families, brands and technical-sheet links",
+        "url": "https://pinturaskendall.com/"
+      },
+      {
+        "label": "Official Products three finished-coating categories and current linked technical sheets",
+        "url": "https://pinturaskendall.com/productos/"
+      },
+      {
+        "label": "Official About own manufacture and company development",
+        "url": "https://pinturaskendall.com/sobre-nosotros/"
+      },
+      {
+        "label": "Official Contact company business routes and central office",
+        "url": "https://pinturaskendall.com/contacto/"
+      },
+      {
+        "label": "Official Anticorrosivo Luz two-page technical sheet, September2020 edition currently linked",
+        "url": "https://pinturaskendall.com/wp-content/uploads/sites/3/2023/05/FICHA-TECNICA-ANTICORROSIVO-LUZ.pdf"
+      }
+    ]
+  },
   "productos-venier-san-martin": {
     "website": "https://pinturasvenier.com/",
     "contactPage": "https://pinturasvenier.com/",
@@ -33625,6 +33712,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "pinturas-kendall-san-miguel-petapa",
   "productos-venier-san-martin",
   "de-vos-verf-den-haag",
   "zhaia-pinturas-la-paz",
