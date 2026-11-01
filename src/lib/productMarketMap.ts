@@ -10554,11 +10554,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "perupaint-villa-el-salvador",
+    "company": "Perupaint Group (Perupaint / Recin)",
+    "productId": "elo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Villa El Salvador, Lima; official business/office city, approximate city marker, not surveyed factory gate",
+    "latitude": -12.2092,
+    "longitude": -76.9378,
+    "legacyCompanyDescription": "官网明确制造涂料；RECMASTIC 870 HSHB 为环氧聚酰胺胺体系高固体分成品涂料。",
+    "fit": "可开发候选",
+    "signal": "官网明确制造涂料；RECMASTIC 870 HSHB 为环氧聚酰胺胺体系高固体分成品涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Six lifetime requests, prior0/current6/6STOP/rem0 across Perupaint/PerupaintGroup/Recin/Ecolux/Glossenamel/Peruconcrete/Ebanista/Coatingandmarine domains,brands,products,providers,dates. Five complete own HTTP200HTML Home/GroupAbout/RECMASTICproduct/GroupContact/ConcreteAdmixtures, all business text and anchor links read; fourth direct linked TDS PDF request timedout once, no body/PDF/page read, no retry/redirect/assets/remoteJS/seventh. About explicitly says manufacture and commercialization of paints, industrial/signaling/alkyd/architecture/wood finished systems; one conservative manufacturer group account, not sixnewbrands. RECMASTIC870HSHB exact current HTML explicitly highsolids finishedcoating based on EpoxiPoliamidaAmina, not ELO feedstock orcustomerformula inferredfrombrand. Product body oddly repeats Recprimer Epoxy870FD caption; product heading and explicit RECMASTIC description agree; fact uses only latter. Existing Resin/Catalyst/Diluent labels are components of finished application kits, not evidence of merchant ELO/ESBO raw oil. Home has14 industrialpaint category names, not allcategoryleaves/SDSread orauditedSKUcount. Actual GroupConcreteAdmixtures describes chemicals added to concrete mix, not epoxidizedoil/plasticizers; actualfinitefivebodies show no ELO/ESBO/epoxidizedvegetableoil/bio-plasticizer merchant supplyline, selected-input peer exclusionpassed, notallhiddenformulas/subsidiarysites/globalpurchasesproof. Known2023historyPDF/2021SDS/2025revisionTDS links notdownloaded/read; no relianceonSearch asoriginalorcurrentcertificationaudit. Company publicnamePerupaintGroup/Perupaint and explicitbrandrelationship accepted; S.A.C. spelling appearsinSearch/PDFfilename butunreadlegalPDF, nolegalregistration/ownershipclaim ornewlegalentitycount. GroupAbout30years vsfooter25years and2021projectexamples not2026capacity/stock/news claims. Productsite footer businessaddress JrLasMaquinarias MzVlot1 differsfromGroupContact MzTlot11parcelaII; preserveboth actual addresses asdifferentoffice/business listings, noassertionofsamefactorygate/relocation; mapapproximateVillaElSalvadorcity. Shared company commercialbusinessroute comercial@perupaint.com.pe exactownContact mailto, treatedgeneralcorporateinbox withoutguessingdepartment/currentbuyer/individualownership; namedchattechnicalcommercialadvisors notprocurement/notcurated. Businessmobile+51981063008 exactpublishedContact telephone; noWA URLverified, mobile notautomaticWA; widgetjavascript anchors notusablepublicWA jumpverification. Noheaders/captchas/forms submitted. Local prior0 historyclearance18files initially thenexpanded42files identified BrasiluxEcolux/ProstarGlossEnamel/KoberEcoluxKolor unrelatedbrandcollisions andpreviousSearchonly Perupaint discovery; nooldgroup originals. Sequence expandedaliashelper completedwhilesource3wasread; finalreconciliationafter3before4, nofalseclaimofpriorcompletedexpandedcheck. Entirepublic/root/front/index/excluded/unwrappedqueue clear. ELOuserTDS coating/resinmodification/epoxyfunctionality possibleformulationevaluation only; epoxyaminecustomerpaint doesnotprove dropin/curestoichiometry/compatibility/flexibilityimprovement/corrosionprotection/currentuse/procurement/timing/demand. Unknownsharedsentledger notunsent, no readybody/copy/export/historyrewrite/outreach."
+    },
+    "contact": {
+      "label": "官网共用商业联系邮箱和业务电话；非具名采购负责人",
+      "email": "comercial@perupaint.com.pe",
+      "phone": "+51 981 063 008",
+      "contactUrl": "https://perupaintgroup.com/contactanos/"
+    },
+    "source": {
+      "label": "Official RECMASTIC 870 HSHB finished high-solids epoxy-polyamide-amine coating original product page",
+      "url": "https://perupaint.com.pe/product/recmastic-870-hshb/"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "perupaint-villa-el-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rolax-emal-dnipro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "corporacion-mara-pinturas-aurora-lurin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mua-vang-fertilizer-ha-noi": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
@@ -11027,6 +11056,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "perupaint-villa-el-salvador": {
+    "website": "https://perupaint.com.pe/",
+    "contactPage": "https://perupaintgroup.com/contactanos/",
+    "address": "Group Contact office/business address: Mz. T Lt. 11 parcela II Parque industrial - Villa El Salvador - Lima. Perupaint product-site footer separately lists Jr. Las maquinarias Mz. V lote 1, Parque industrial, Villa el Salvador - Lima. Different published addresses retained; no confirmed shared factory gate or relocation. Map marker approximate Villa El Salvador city.",
+    "generalEmail": "comercial@perupaint.com.pe",
+    "generalPhone": "+51 981 063 008",
+    "generalEmailEvidence": {
+      "company": "Perupaint Group (Perupaint / Recin)",
+      "value": "comercial@perupaint.com.pe",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Group Contact exact shared corporate commercial mailbox",
+          "url": "https://perupaintgroup.com/contactanos/",
+          "summary": "Exact Contact mailto and repeated product-site footer email; shared corporate commercialbusinessroute, not namedperson, procurementdepartment orprovenbuyingintent. No emailprefix-derived job title."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "generalPhoneEvidence": {
+      "company": "Perupaint Group (Perupaint / Recin)",
+      "value": "+51 981 063 008",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Group Contact published business telephone",
+          "url": "https://perupaintgroup.com/contactanos/",
+          "summary": "Exact Contact tel:+51981063008 and visible +51 981 063 008; business phone route, no WhatsApp/accountguess orcalltest."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Perupaint Home published finished industrial-paint categories and shared corporate business contact",
+        "url": "https://perupaint.com.pe/"
+      },
+      {
+        "label": "Official Group About explicit own manufacture, six finished-product sectors and six same-group brands",
+        "url": "https://perupaintgroup.com/nosotros/"
+      },
+      {
+        "label": "Official RECMASTIC 870 HSHB finished high-solids epoxy-polyamide-amine coating original product page",
+        "url": "https://perupaint.com.pe/product/recmastic-870-hshb/"
+      },
+      {
+        "label": "Official Group Contact shared business email, telephone and Villa El Salvador office address",
+        "url": "https://perupaintgroup.com/contactanos/"
+      },
+      {
+        "label": "Official concrete-admixture line: additives added to concrete mixture, not epoxidized-oil raw-material catalogue",
+        "url": "https://perupaintgroup.com/linea-aditivos/"
+      }
+    ]
+  },
   "rolax-emal-dnipro": {
     "website": "https://rolax.ua/",
     "contactPage": "https://rolax.ua/kontakty.html",
@@ -33978,6 +34066,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "perupaint-villa-el-salvador",
   "rolax-emal-dnipro",
   "corporacion-mara-pinturas-aurora-lurin",
   "mua-vang-fertilizer-ha-noi",

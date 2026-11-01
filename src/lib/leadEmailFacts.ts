@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "perupaint-villa-el-salvador": "Your RECMASTIC 870 HSHB is a high-solids industrial coating based on epoxy polyamide amine resins.",
   "rolax-emal-dnipro": "Your AQUALACK PANEL uses a waterborne acrylic dispersion for interior wood panels and similar surfaces.",
   "corporacion-mara-pinturas-aurora-lurin": "Your Auromastic 70 EP+ is a two-component epoxy mastic for industrial maintenance and metal structures.",
   "mua-vang-fertilizer-ha-noi": "Your Con Lười F35 fertilizer combines multiple organic biological coating layers with small, firm granules.",
