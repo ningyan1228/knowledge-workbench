@@ -10526,11 +10526,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "rolax-emal-dnipro",
+    "company": "ROLAX (ЧППФ «Эмаль»)",
+    "productId": "nl-w1201",
+    "country": "Ukraine",
+    "countryZh": "乌克兰",
+    "city": "Dnipro; official business/factory-footer city, approximate city marker, not surveyed factory gate",
+    "latitude": 48.4647,
+    "longitude": 35.0462,
+    "legacyCompanyDescription": "自述制造涂料；AQUALACK PANEL 为水性丙烯酸清漆，用于室内木材和木质板材，明确不用于地板。",
+    "fit": "可开发候选",
+    "signal": "自述制造涂料；AQUALACK PANEL 为水性丙烯酸清漆，用于室内木材和木质板材，明确不用于地板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Six actualownNodeHTTP200HTML Home/Company/AQUALACKPANEL/SPEC.PRIMER/Contact/FunctionalAdditives,allfulltext+anchorlinksread.0prior/current6/lifetime6STOP/rem0,no failures/redirects/retries/PDF/assets/remoteJS/seventh. Homeexplicitlyfactoryproduction/ownlabcontrol,morethan300assortedfinishedcoatings self-reportnotindependentlyauditedcurrentSKU/capacity. LegalselfidentificationЧППФЭмаль repeatedhome/company/contact,notlegalregistrycertifiedownership. SpecificAQUALACKPANEL original waterdispersionacryliccopolymer+auxiliaries forinteriorwoodpanels/naturalwood/plywood/OSB/MDF/chipboard/fiberboard;expresslynotfloors. Notgenericallwoodfinisheswaterbased orPP/PET/brassprimerchemistry. Publishednavigation includes55distinctfinishedproductURLs;finitepaints/enamels/primers/varnishes/woodprotection/adhesives/sealants/foams/solvents/Paritet/drymixscope. Notallleaf/SDS/2022cataloguePDFread,currentcertificates orallglobalhiddenformulas. SPEC.PRIMER actualmodifiedalkydresin+pigment/filler/solvent finishedbrush/roller/sprayprimer; notsamePO/CPOemulsionrawadhesionpromoterseller merelybecauseextraadhesionname. FunctionalAdditivesactualsingleFIBERBASALT card constructionbinder/concrete reinforcement,notselectedPO/CPOdispersion. Acrosssixownbodies noselectedpolyolefindispersion/CPO/POemulsion/rawadhesionpromotersupplylineidentified;finitepublicinputexclusionnotexternalrawpurchaseproof/allunreadchemistry. Groupprior0 fullpublic/root/front/index/excluded andunwrappedcandidatequeuecleared;ROLAX/Emal/Paritet/mailrolax.dp.ua/linkedrolax.com.uasameconservativeaccount/budget,11historyfiles+6copies onlyactualsource1representations not6oldrequests. Domaininitiallyexplicitdiscoveryhypothesis,notverifieduntilownfirstGET;historicalmemorynotqualification. Procurement/supplydeptОтделснабженияsnab@rolax.dp.ua exactownContact;departmentnotnamedbuyer,currentneed/deliverabilitynotasserted. sbyt@ isSalesnotgenericprocurement;leavegeneralemailblank andcurateonlyProcurementmailboxwithseparateevidence. Generalreception+38(067)552-17-07preservepublishedformat;noWhatsAppfromcellnumber. DniproEnergy14a actualbusiness/factoryfooteraddress,approxcitycoordinatesnotgate/geocode/independentplantvisit. ProductTUU2008andlinked2022catalogue not2026newformula/currentstock/capacity;currentdirectHTMLhasnoprintdate. NLWuserTDS waterbasedpolyolefindispersion/primer/adhesionpurposepotentialwoodformulationtrialonly,notdirectfinishedvarnishdrop-in,compatibility/adhesiongain/currentuse/orderorperformancepromise. Sharedsentledgerunknown≠unsent,no readybody/copy/export/senthistoryrewrite/outreach."
+    },
+    "contact": {
+      "label": "官方采购／物资供应部门邮箱及总机；非具名负责人，无已核验WhatsApp",
+      "email": "snab@rolax.dp.ua",
+      "phone": "+38 (067) 552-17-07",
+      "contactUrl": "https://rolax.ua/kontakty.html"
+    },
+    "source": {
+      "label": "Official AQUALACK PANEL waterborne acrylic-copolymer interior wood varnish composition/use original",
+      "url": "https://rolax.ua/lak-akrilovyj-akvalak.html"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "rolax-emal-dnipro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "corporacion-mara-pinturas-aurora-lurin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mua-vang-fertilizer-ha-noi": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "pinturas-kendall-san-miguel-petapa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10998,6 +11027,78 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "rolax-emal-dnipro": {
+    "website": "https://rolax.ua/",
+    "contactPage": "https://rolax.ua/kontakty.html",
+    "address": "49089, Украина, г. Днепр, ул. Энергетическая, 14а. Official factory/business footer and Contact address; map coordinates approximate Dnipro city, not surveyed gate.",
+    "generalEmail": "",
+    "generalPhone": "+38 (067) 552-17-07",
+    "generalPhoneEvidence": {
+      "company": "ROLAX (ЧППФ «Эмаль»)",
+      "value": "+38 (067) 552-17-07",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact Приемная reception and repeated factory footer",
+          "url": "https://rolax.ua/kontakty.html",
+          "summary": "Exact reception centralnumber published independently from supplydepartment phones; generalbusinessroute, no namedbuyer/WhatsApp/internationalprefixrewrite/calltest."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Procurement",
+        "email": "snab@rolax.dp.ua",
+        "source": {
+          "label": "Official Contact Отдел снабжения supply/procurement department",
+          "url": "https://rolax.ua/kontakty.html"
+        },
+        "emailEvidence": {
+          "company": "ROLAX (ЧППФ «Эмаль»)",
+          "value": "snab@rolax.dp.ua",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official Contact exact supply/procurement department mailbox",
+              "url": "https://rolax.ua/kontakty.html",
+              "summary": "Actual Contact body explicitly labels Отдел снабжения then phones andsnab@rolax.dp.ua; not derivedfromemailprefix, notnamedprocurementperson orconfirmedbuyingintent."
+            }
+          ],
+          "verifiedAt": "2026-11-01"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official Home own manufacture and published complete product-navigation business scope",
+        "url": "https://rolax.ua/"
+      },
+      {
+        "label": "Official Company index and legal factory footer, company/history/contact links",
+        "url": "https://rolax.ua/kompaniya.html"
+      },
+      {
+        "label": "Official AQUALACK PANEL waterborne acrylic-copolymer interior wood varnish composition/use original",
+        "url": "https://rolax.ua/lak-akrilovyj-akvalak.html"
+      },
+      {
+        "label": "Official SPEC. PRIMER modified-alkyd solventborne finished application primer; not polyolefin raw promoter",
+        "url": "https://rolax.ua/spec-grunt-extra-adgezionniy-spec-primer.html"
+      },
+      {
+        "label": "Official Contact legal factory/Dnipro address, procurement and sales departmental mailboxes, reception telephone",
+        "url": "https://rolax.ua/kontakty.html"
+      },
+      {
+        "label": "Official Functional Additives category: basalt fiber reinforcement for construction binders",
+        "url": "https://rolax.ua/funkcionalnye-dobavki.html"
+      }
+    ]
+  },
   "corporacion-mara-pinturas-aurora-lurin": {
     "website": "https://www.aurora.com.pe/",
     "contactPage": "https://www.aurora.com.pe/nosotros/",
@@ -33877,6 +33978,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "rolax-emal-dnipro",
   "corporacion-mara-pinturas-aurora-lurin",
   "mua-vang-fertilizer-ha-noi",
   "pinturas-kendall-san-miguel-petapa",
