@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "productos-venier-san-martin": "Your Supercapa polyurethane waterproofing membrane is designed for exterior use on roofs and other suitable substrates.",
   "de-vos-verf-den-haag": "Your Glazol WPM is a water-based primer for wood, used in interior and exterior priming applications.",
   "zhaia-pinturas-la-paz": "Your VOLKAH epoxy enamel is cured with polyamide and used on carbon steel and galvanized sheet.",
   "dq-coatings-monterrey": "You manufacture liquid protective coatings for industrial steel structures, supports and structural frames in Monterrey.",

@@ -10418,11 +10418,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "productos-venier-san-martin",
+    "company": "Productos Venier (Pinturas Venier)",
+    "productId": "elo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "General San Martín, Buenos Aires; officialoffices, approximatecitymarker, not independently verified factorygate",
+    "latitude": -34.5753,
+    "longitude": -58.5377,
+    "legacyCompanyDescription": "政府机构与官网资料支持其开发制造涂料，Supercapa 为室外屋顶用聚氨酯防水涂膜。",
+    "fit": "可开发候选",
+    "signal": "开发并制造涂料；Supercapa 为室外屋顶用聚氨酯防水涂膜。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Six actual directed originals:INTIgovernmentmanufacturerHTML2001,actualINTI-linkedownHomeNodeConnectTimeout1,then4completeownnativeproviderextracts Home93/About86/Productfamilies135/Supercapa112=426providedlines. NativeoriginHTTPstatusundisclosednull,not4HTTP200or6ownHTML;noPDF/assets/JS/furtherrequest. INTI July2025 independent profileactualdevelops/manufactures18millionLselfreportedcapacity/SanMartinLasHerasplants andformulation/materialevaluation; not2026capacity/commissioningaudit orourcustomertrial/qualification. OwnAboutdevelopment/R&D/currentmanufacturingstandards corroboratefinishedcoatingformulator/manufacturer. ActualSupercapa exactpolyurethanewaterproofingmembrane underroofcategory,exteriorbrushroller/spray,waterdilutioninstructions observedbutnotourELOmixrecipe; itisnotepoxyprimer orcustomerELOuse. ELO TDScoatings/resinmodification supports formulationdependentepoxyfunction/flexibilityassessment only, noPUcurecompatibility/performanceguarantee. Searchinitialepoxykeywords/SibacoRustOleumkits/thirdpartytradediluyenteepoxi notusedtoproveVenierownEpoxyline. OwnProductfamilies21titles include finishedcoatings/enamels/roofmembranes/tints/strippers/solvents/woodfinishes, no identifiedselectedepoxidizedlinseed/soybeanoil/bio-basedplasticizer supplyline inactualfourbodies plusmanufacturerprofile;finitebusinessscope,notallSKU/SDS/globalformulaabsence. Titlesnotallcategoryleafbodies/PDFsread; tinting/solvent/refillfinishedauxiliaries do not itselfestablishselectedELOinputpeer. Ownsupercapapurposesupportscoatingapplication,notcorrosionclaims/copiedINTIcertificate/generalmanufacturingqualityperformance. GeneralMotors1955history/notcurrentbuyer; INTIresearchstaff namesnotVenierpurchasers,capacity/certificationnotours. Publicgeneralinfo@pinturasvenier.com.ar andexactlocal0115297-8900 corroboratedall4currentownextracts,actualHomeportalvendoreslinkwww.pinturasvenier.com.ar supportsassociatedcompanydomain,notindependentnewcustomer. No guessedemail/phonecountrycode/WA; INTIgovsocialshareWhatsAppnotcompanycontact. OficinasPueyrredon1244B1650SanMartinBuenosAires explicitofficeaddress; logisticoVillaMartelli andLasHerasplant separatebusinesssites,noseparatecustomers,approxofficecitynotverifiedfactorygate. INTIagencyboletinmailnotcuratedcompanyemail. Twooldidentityhits oneunrelatedDutchvakbladdehovenier substring andoneunrequestedPetrilachypothesis,fullyread/hashclearedprior0;currenttradeSearchPetrilacbrandnotownershipproof,conservativealiascheckonly. Company/domain/brand/groupdedupepassed,oneaccount6STOP,nofresh6frommissingindex/date/provider/product. NoactualELOneed/purchase/RFQ/volume/timing/currentchemistryproved,sharedledgerunknownnotunsent,noreadybody/copy/export/historyrewrite. KianArjanold4current2=6STOPupdatedprivateonly,noformal/ourmaterialbuyerclaim. Noemails/forms/messages/CRM."
+    },
+    "contact": {
+      "label": "官方通用邮箱和原样本地电话；无具名采购或公开WhatsApp",
+      "email": "info@pinturasvenier.com.ar",
+      "contactUrl": "https://pinturasvenier.com/"
+    },
+    "source": {
+      "label": "Official Supercapa exterior roofwaterproofing product",
+      "url": "https://pinturasvenier.com/producto/membrana-poliuretanica-supercapa-blanco/"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "productos-venier-san-martin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "de-vos-verf-den-haag": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zhaia-pinturas-la-paz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "dq-coatings-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10886,6 +10914,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "productos-venier-san-martin": {
+    "website": "https://pinturasvenier.com/",
+    "contactPage": "https://pinturasvenier.com/",
+    "address": "Pueyrredón 1244, B1650 San Martín, Provincia de Buenos Aires, Argentina. Explicit official offices; not the Las Heras plant or logistics centre.",
+    "generalEmail": "info@pinturasvenier.com.ar",
+    "generalEmailEvidence": {
+      "company": "Productos Venier (Pinturas Venier)",
+      "value": "info@pinturasvenier.com.ar",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Home current publicly stated general company inbox",
+          "url": "https://pinturasvenier.com/",
+          "summary": "Exact companywide business inbox, repeated onAbout/Products/Supercapa. Mainownsite links salesportal on same .com.ar domain. Not INTIagencyemail or a namedbuyer."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "generalPhone": "011 5297-8900",
+    "generalPhoneEvidence": {
+      "company": "Productos Venier (Pinturas Venier)",
+      "value": "011 5297-8900",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Home exact published local business phone",
+          "url": "https://pinturasvenier.com/",
+          "summary": "Exact localformat repeated onallfourownextracts; no inferred +54 or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "INTI official July2025 manufacturer and formulation-development profile",
+        "url": "https://www.argentina.gob.ar/inti/pymes-exportan/construccion/venier-calidad-argentina-con-respaldo-tecnico"
+      },
+      {
+        "label": "Official Home current product and businesschannels",
+        "url": "https://pinturasvenier.com/"
+      },
+      {
+        "label": "Official About coatingdevelopment and manufacturingstandards",
+        "url": "https://pinturasvenier.com/nosotros-pinturas-venier/"
+      },
+      {
+        "label": "Official Products21finished-coating-family titles",
+        "url": "https://pinturasvenier.com/productos-lineas/"
+      },
+      {
+        "label": "Official Supercapa polyurethane exterior roofwaterproofing product",
+        "url": "https://pinturasvenier.com/producto/membrana-poliuretanica-supercapa-blanco/"
+      }
+    ]
+  },
   "de-vos-verf-den-haag": {
     "website": "https://www.devosverf.nl/",
     "contactPage": "https://www.devosverf.nl/contact/",
@@ -33538,6 +33625,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "productos-venier-san-martin",
   "de-vos-verf-den-haag",
   "zhaia-pinturas-la-paz",
   "dq-coatings-monterrey",
