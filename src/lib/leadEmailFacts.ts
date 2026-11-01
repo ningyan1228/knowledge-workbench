@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "mua-vang-fertilizer-ha-noi": "Your Con Lười F35 fertilizer combines multiple organic biological coating layers with small, firm granules.",
   "pinturas-kendall-san-miguel-petapa": "Your Anticorrosivo Luz is formulated with alkyd resins for industrial and architectural metal structure applications.",
   "productos-venier-san-martin": "Your Supercapa polyurethane waterproofing membrane is designed for exterior use on roofs and other suitable substrates.",
   "de-vos-verf-den-haag": "Your Glazol WPM is a water-based primer for wood, used in interior and exterior priming applications.",

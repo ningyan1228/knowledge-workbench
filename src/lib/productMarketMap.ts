@@ -10472,11 +10472,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "mua-vang-fertilizer-ha-noi",
+    "company": "Phân bón Mùa Vàng (Con Lười)",
+    "productId": "fertilizer-coating",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Ha Noi; official Gia Lam/Dang Xa business-contact city, approximate city marker, not independently verified factory gate",
+    "latitude": 21.0285,
+    "longitude": 105.8542,
+    "legacyCompanyDescription": "自述生产Con Lười F35 NPK12-6-8；产品及生产说明明确多层有机生物膜包覆。",
+    "fit": "可开发候选",
+    "signal": "自述生产Con Lười F35 NPK12-6-8；产品及生产说明明确多层有机生物膜包覆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Six actual ownNodeHTTP200HTML: F35product/companyhistory/F35manufacturingannouncement/authenticitynotice/Contact/fertilizerlisting. prior0/current6/lifetime6STOP/rem0;no redirects/fails/PDF/assets/remoteJS/seventhrequest. SavedVietnamese namedHTMLentities decodedlocally withoutnewGET, rawbodies andbothderivedextracts retained/hasheschecked. CurrentF35product and26August2023ownmanufacturingannouncement explicitlymultipleorganicbiologicalcoatinglayers,smallfirmgranules andcompanycurrentlyproducingfor2023-24season;12November2025ownauthenticitynotice identifies NPK12-6-8 manufacturedbyMuaVang. Companyhistory describes continualproductionprocess/productdevelopment since2013, notcurrent2026capacityaudit. These specificF35originals supersede prior Search-only compressedfertilizer/generalPVCFCeducationalclassification; do not assumeF16/F18/F22allusecoating orcallinhibitor-only/researchpelletaplant. Productpagecartshowsoutofstock, listingstilloffersF35andownarticle sidebars haveOct2026updates; no guaranteedcurrentavailability/productionrun/orders/plantcapacity or falseshutdowninference. CurrentpublishedfourproductURLs F35/F16/F18/F22 are finishedfertilizers; sixreadbodies show no selectedfertilizercoating-agent/resin/PUraw-material supplyline. Finitepublicbusinessreview, notallleaf/SDS/globalhiddenchemistry/externalpurchaseproof. MuaVanglegalVietnamesenamefromownfooter andoneConLuoiaccount; priorcompletepublic/root/front/index/queue/excluded/name/domain/groupcheck clear.18localhistoryfiles and6Bascoactualoldreceipts independentlyreconciled0priorMuaVangoriginals, otherentitybudgetsunchanged; originalunknownSTOPprechecksbackedup, nofreshbudgetfrommissingindex. Actualcurrentgeneralcongtypbmuavang@gmail.com exactmailto/Contact andlocaloffice02438760150, no inventedcorporatedomainmail/buyer/department/phonecode; genericGmailisofficiallypublishedcompanyroute, notnamedperson. HarmlessfooterHai label/tel:#notverifiedemployeeorprocurementcontact. ActualZalo/FacebooklinksnotWhatsApp andnotmessaged. Số25LamVienDangXaGiaLamHaNoiofficialbusinessaddress, cityapproxnotfactorygate. Ourmaterial reactivepolyurethane route/drum-fluidbedprocessesfromuserintro are onlypotentialalternativecoatingevaluation topics; customerreportedorganicbiologicalcoatingnotprovenPU/currentinput/purchase/compatibility/releaseperiod/performance. Noclaimedcost,yield,release,certification or replacementguarantee; owntrademarkclaimsnotindependentlycheckedregistration. Sharedledgerunknownnotunsent,no readybody/copy/export/historyrewrite/email/forms/messages/CRM."
+    },
+    "contact": {
+      "label": "官方通用业务邮箱、电话及联系页；未核验具名采购人或WhatsApp",
+      "email": "congtypbmuavang@gmail.com",
+      "contactUrl": "https://phanconluoi.com/lien-he"
+    },
+    "source": {
+      "label": "Official F35 product: multiple organic biological coating layers and small firm granules",
+      "url": "https://phanconluoi.com/phan-bon-hieu-con-luoi-the-he-f35"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "mua-vang-fertilizer-ha-noi": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "pinturas-kendall-san-miguel-petapa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "productos-venier-san-martin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "de-vos-verf-den-haag": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10942,6 +10970,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "mua-vang-fertilizer-ha-noi": {
+    "website": "https://phanconluoi.com/",
+    "contactPage": "https://phanconluoi.com/lien-he",
+    "address": "Số 25 Lâm Viên, Khu đô thị Đặng Xá, xã Đặng Xá, huyện Gia Lâm, TP Hà Nội, Vietnam. Repeated official business-contact address; not independently verified factory gate.",
+    "generalEmail": "congtypbmuavang@gmail.com",
+    "generalEmailEvidence": {
+      "company": "Phân bón Mùa Vàng (Con Lười)",
+      "value": "congtypbmuavang@gmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact exact company general mailbox and mailto",
+          "url": "https://phanconluoi.com/lien-he",
+          "summary": "Exact published Gmail company route on own Contact and all six own pages, no guessed domain address, named buyer or delivery test."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "generalPhone": "024 3876 0150",
+    "generalPhoneEvidence": {
+      "company": "Phân bón Mùa Vàng (Con Lười)",
+      "value": "024 3876 0150",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact and F35 manufacturing notice exact office telephone",
+          "url": "https://phanconluoi.com/lien-he",
+          "summary": "Contact footer/tel:02438760150, manufacturingnotice publishes02438760150withspacing; preserve localdigits, no guessed+84 or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official F35 product: multiple organic biological coating layers and small firm granules",
+        "url": "https://phanconluoi.com/phan-bon-hieu-con-luoi-the-he-f35"
+      },
+      {
+        "label": "Official Mua Vang company history, own manufacturing and product development",
+        "url": "https://phanconluoi.com/lich-su-cong-ty"
+      },
+      {
+        "label": "Official F35 manufacturing announcement,26August2023, own multi-layer bio-organic coating product",
+        "url": "https://phanconluoi.com/phan-bon-hieu-con-luoi-the-he-f35-phuc-vu-ba-con-trong-lua"
+      },
+      {
+        "label": "Official F35 authenticity notice,12November2025: NPK12-6-8 and manufacturer attribution",
+        "url": "https://phanconluoi.com/nhan-dien-phan-bon-hieu-con-luoi-f35-chinh-hang"
+      },
+      {
+        "label": "Official Contact exact company general mailbox, phone and Ha Noi business address",
+        "url": "https://phanconluoi.com/lien-he"
+      },
+      {
+        "label": "Official complete published fertilizer listing: F35,F16,F18,F22",
+        "url": "https://phanconluoi.com/phan-bon"
+      }
+    ]
+  },
   "pinturas-kendall-san-miguel-petapa": {
     "website": "https://pinturaskendall.com/",
     "contactPage": "https://pinturaskendall.com/contacto/",
@@ -33712,6 +33803,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "mua-vang-fertilizer-ha-noi",
   "pinturas-kendall-san-miguel-petapa",
   "productos-venier-san-martin",
   "de-vos-verf-den-haag",
