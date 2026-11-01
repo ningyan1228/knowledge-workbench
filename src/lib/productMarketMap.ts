@@ -10337,11 +10337,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-10-31"
   },
+  {
+    "id": "dq-coatings-monterrey",
+    "company": "DQ Coatings",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Monterrey (Nuevo León); official city-level manufacturing disclosure, approximate city marker, not verified plant gate",
+    "latitude": 25.6866,
+    "longitude": -100.3161,
+    "legacyCompanyDescription": "制造粉末及液体工业防护涂料；液体体系面向钢结构、支架和厂房框架，提供定制配方开发。",
+    "fit": "可开发候选",
+    "signal": "在蒙特雷制造粉末及液体工业涂料；液体防护体系用于钢结构、支架及工业厂房框架。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Five actual own HTTP200HTML originals Home/About/LiquidRange/Contact/SteelApplication show manufacture and development of finished powder/liquid industrial coatings in Monterrey. The public business ranges reviewed are finished paint/coating systems, not a rawELO/ESBO/epoxidizedvegetableoil/bio-basedplasticizer line; no selected-input supply found in the five actual bodies. This is a finite public-business check, not an allSDS/hiddenformula/ultimate-group-catalogue audit or proof of external purchasing. Powder homepage mentions epoxy and superdurable oven-cured systems; do not transfer powder chemistry or200C cure to liquid paints or ELO. Steel liquid page expressly develops anticorrosive systems for industrial structures, frames/supports; no actual liquid resin chemistry, namedSKU or customer ELO use/purchase is disclosed. Own ISO/ASTM/AAMA/NSF/salt-spray/lifespan/cost claims remain company claims and never our certification/compatibility/performance/food-water approval. TDS/SDS/certification button labels in steel page do not link to an actual document; zero PDF/SDS documents fetched. ELO limited to supplied epoxy functionality/formulation-dependent flexibility/resin-modification evaluation, not confirmed use/need/compatibility/cure/corrosion or savings. About 1988 founding/mid2000s powder expansion is self-reported history;30years/fourdecades marketing not precise currentanniversary or independentregistry. About Dequimsa policy-acceptance label href# is a conservative same-group alias, not verified legal company name/ultimateownership or separateaccount. Initial DQ sourcefilename glob matched69 oldscope-dq Bayris/etc files; allactualcontents independently read and hashed, no companyname/domain, full uniqueidentity history has only currentSearch/helpers; conservative prior0 cleared with originalheldprecheck retained. New Dequimsa/diquimsa identity fullhistory3currentonly/no old, and Diquimtex is distinct namedpubliccompany, not merged. Generic public HQ only Monterrey/NuevoLeon from footer; no street or verified factorygate. Exact info@dqcoatings.com/mailto on Home/Contact generalcompany, no namedbuyer or deliverability guarantee. Exact Contact footerWAhttps://wa.me/528116890531 sourced and corroborated all5footers; no phone inferred from itsdigits. HomeCTAhttps://wa.me/521000000000?text=... is obviousplaceholder, ContactCTA# is non-route, neither selected; never rewrite malformed links. contacts0/depts0/generalPhoneblank. Wholepublic459/root473/front911/index193/queue/excluded and group/domain/history checked beforeadmission. POMIQ/Nervion/Axalta/MONTO alreadypublic fromSearch and not newcounts/contacts. No external purchasing/RFQ/need/timing verified; sharedsentledgerunknown notunsent, no readybody/copy/export/oldsenthistory rewrite, no outreach/CRM."
+    },
+    "contact": {
+      "label": "Official general company inbox/Contact and exact valid footerWhatsApp; no named buyer or inferred telephone",
+      "email": "info@dqcoatings.com",
+      "contactUrl": "https://www.dqcoatings.com/contacto/"
+    },
+    "source": {
+      "label": "Official liquid coating application for steel structures/supports/frames",
+      "url": "https://www.dqcoatings.com/productos/pintura-liquido/estructuras-de-acero/"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "dq-coatings-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "solewant-sspc-port-harcourt": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aqualis-campbellfield": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "meyer-plc-ikeja": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10802,6 +10830,52 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "dq-coatings-monterrey": {
+    "website": "https://www.dqcoatings.com/",
+    "contactPage": "https://www.dqcoatings.com/contacto/",
+    "address": "Monterrey, Nuevo León, Mexico. City-level manufacturing/business location expressly disclosed in official site footer; street address and manufacturing-plant gate not independently verified.",
+    "generalEmail": "info@dqcoatings.com",
+    "generalEmailEvidence": {
+      "company": "DQ Coatings",
+      "value": "info@dqcoatings.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official current Contact exact company inbox and mailto",
+          "url": "https://www.dqcoatings.com/contacto/",
+          "summary": "Contact header/footer publishes info@dqcoatings.com with exact mailto. General company route; no named purchasing owner or deliverability inference."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "generalPhone": "",
+    "whatsapp": "https://wa.me/528116890531",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official homepage manufacture and finished powder/liquid ranges",
+        "url": "https://www.dqcoatings.com/"
+      },
+      {
+        "label": "Official About manufacture/history and Dequimsa policy label",
+        "url": "https://www.dqcoatings.com/sobre-dq/"
+      },
+      {
+        "label": "Official liquid industrial protective coating range",
+        "url": "https://www.dqcoatings.com/productos/pintura-liquido/"
+      },
+      {
+        "label": "Official Contact exact general mailbox and footer WhatsApp",
+        "url": "https://www.dqcoatings.com/contacto/"
+      },
+      {
+        "label": "Official liquid coating application for steel structures/supports/frames",
+        "url": "https://www.dqcoatings.com/productos/pintura-liquido/estructuras-de-acero/"
+      }
+    ]
+  },
   "solewant-sspc-port-harcourt": {
     "website": "https://solewantgroup.com/",
     "contactPage": "https://solewantgroup.com/contact-us",
@@ -33280,6 +33354,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "dq-coatings-monterrey",
   "solewant-sspc-port-harcourt",
   "aqualis-campbellfield",
   "meyer-plc-ikeja",
