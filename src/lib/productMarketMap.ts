@@ -10499,11 +10499,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "corporacion-mara-pinturas-aurora-lurin",
+    "company": "Corporación Mara S.A. (Pinturas Aurora)",
+    "productId": "elo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Lurín, Lima; official office/industrial-plant city, approximate city marker, not surveyed factory gate",
+    "latitude": -12.28,
+    "longitude": -76.87,
+    "legacyCompanyDescription": "制造Aurora工业涂料；Auromastic 70 EP+为双组分环氧成品漆，用于金属结构及工业维护。",
+    "fit": "可开发候选",
+    "signal": "制造Aurora工业涂料；Auromastic 70 EP+为双组分环氧成品漆，用于金属结构及工业维护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Five actual ownHTTP200 originals: Mining/About/Home completeHTML and currently linked Auromastic70EP+ April2025TDS3pages plus21September2026Rev09manufacturingpolicy1page; all4PDFpages text+visual read.0fail/redirect/retry/remoteJS,prior0/current5/rem1,required evidence complete without forcing sixth. OwnAbout identifies CorporaciónMaraSA(CMSA), design/development/production/sale of finishedpaints/coatings atLurinplant. ExactAuroTDS expressly says Aurora products manufacturedbyCorporacionMaraSA and two-component epoxy-polyamide-amine mastic for metalstructures andindustrialmaintenance. RevisionApril2025/current2026link is not2026reformulation or independent performancecertification. Finitepublishedbusinessscope fourfinishedcoatingsectorsMarine/Construction/Mining/Transport; onecurrentAuroTDS andonecurrentpolicyread, notallSKU/SDS/allglobalformulas. Across these5 originals no selectedELO/ESBO/epoxidizedvegetableoil/bio-basedplasticizer supplyline identified. Auroresin/catalyst kit components and coatings use resins; not treated as evidence of ELOinputselling. No blanket allhiddenchemistry/externalrawpurchases conclusion. Miningpage also lists Sigma/Amerlock; those third-partybrandformulas are not used as own Auro evidence and brandpresence does not prove PPG ownership. OnelegalMara/Aurora account; exactbusinessname/domain/root/public/front/index/excluded andunwrappedcandidatequeueclear,19group/historymatches independentlyaudited, onlyolderCodelpaSearchLI-similar-pagesreference,0oldMaraoriginals; othergroupbudgets unchanged. Contact exact01 2013535 repeatedcentralofficeandindustrialplant footer, no +51 rewrite/WhatsAppguess or namedprocurement. PublicAboutcallback/quotationform asksName/email/mobileandCAPTCHA, not a verifiedfree-messagebodyfield; viewedonly/not submitted. ActualownfootercompanyLinkedIn link retained aspubliccompanyentry, no profile/login/messageinterface read or DMavailabilityguarantee. No businessmailbox found in5 originals, leaveempty and exclude frombulkemailrecipient/inboxcounts. Lurin/Limaaddress repeatedown, coordinatesapproximateLurincity notsurveyedgate. UserTDS ELOepoxy-functional/bio-basedcoatings flexibility/resinmodification assessment only; no currentELOuse/need/purchase/volumes/timing,curecompatibility,anticorrosionimprovement,performanceguarantee or certification transfer. Sharedsentledgerunknown≠unsent; no readybody/copy/export/historyrewrite/outreach."
+    },
+    "contact": {
+      "label": "官网询价／回电表单及总机；未核验公开业务邮箱或具名采购人",
+      "phone": "01 2013535",
+      "contactUrl": "https://www.aurora.com.pe/nosotros/"
+    },
+    "source": {
+      "label": "Official Auromastic 70 EP+ technical sheet, April2025 revision, three full pages",
+      "url": "https://www.aurora.com.pe/wp-content/uploads/2026/03/HT-Auromastic-70-EP-_Rev_Abr2025_v5.pdf"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "corporacion-mara-pinturas-aurora-lurin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "mua-vang-fertilizer-ha-noi": {"targetCompanyTypeId":"coated-compound-fertilizer-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-compound-fertilizer"},
   "pinturas-kendall-san-miguel-petapa": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "productos-venier-san-martin": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10970,6 +10998,52 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "corporacion-mara-pinturas-aurora-lurin": {
+    "website": "https://www.aurora.com.pe/",
+    "contactPage": "https://www.aurora.com.pe/nosotros/",
+    "linkedIn": "https://www.linkedin.com/company/corporaci-n-mara-s-a-sigma-coatings---pinturas-aurora-/about/",
+    "address": "Manzana D Lote 10, Urbanización Parcelación Semi Rústica Las Praderas de Lurín, Lima – Lima – Lurín, Peru. Repeated official central-office and industrial-plant address; map coordinates are approximate Lurín city, not surveyed gate.",
+    "generalEmail": "",
+    "generalPhone": "01 2013535",
+    "generalPhoneEvidence": {
+      "company": "Corporación Mara S.A. (Pinturas Aurora)",
+      "value": "01 2013535",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official About actual central telephone and office/industrial-plant footer",
+          "url": "https://www.aurora.com.pe/nosotros/",
+          "summary": "Central01 2013535 repeated on Mining/About/Home; generalbusinessswitchboard, no inferred WhatsApp/named procurement/extension or call test."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official mining finished-coating portfolio, Auro and Sigma/Amerlock products distinguished",
+        "url": "https://www.aurora.com.pe/mineria/"
+      },
+      {
+        "label": "Official About: Corporación Mara legal manufacturer, Lurin plant, business scope and callback/contact form",
+        "url": "https://www.aurora.com.pe/nosotros/"
+      },
+      {
+        "label": "Official Auromastic 70 EP+ technical sheet, April2025 revision, three full pages",
+        "url": "https://www.aurora.com.pe/wp-content/uploads/2026/03/HT-Auromastic-70-EP-_Rev_Abr2025_v5.pdf"
+      },
+      {
+        "label": "Official Home four finished-coating sectors, linked corporate LinkedIn and public central office/phone",
+        "url": "https://www.aurora.com.pe/"
+      },
+      {
+        "label": "Official Corporación Mara industrial-paint manufacturing policy21September2026 Rev09, one full page",
+        "url": "https://www.aurora.com.pe/wp-content/uploads/2026/09/Politica-de-Gestion-Integrada-v9.pdf"
+      }
+    ]
+  },
   "mua-vang-fertilizer-ha-noi": {
     "website": "https://phanconluoi.com/",
     "contactPage": "https://phanconluoi.com/lien-he",
@@ -33803,6 +33877,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "corporacion-mara-pinturas-aurora-lurin",
   "mua-vang-fertilizer-ha-noi",
   "pinturas-kendall-san-miguel-petapa",
   "productos-venier-san-martin",
