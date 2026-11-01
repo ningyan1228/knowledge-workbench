@@ -10391,11 +10391,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "de-vos-verf-den-haag",
+    "company": "De Vos Verf (Verffabriek H. de Vos & Zonen B.V.)",
+    "productId": "nl-w1201",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Den Haag; officialbusinesscontactcity, approximatecitymarker, not independently verified factorygate",
+    "latitude": 52.0705,
+    "longitude": 4.3007,
+    "legacyCompanyDescription": "官网自述制造漆、墙漆和腻子，Glazol WPM 为室内外木材用水性成品底漆。",
+    "fit": "可开发候选",
+    "signal": "自述制造漆、墙漆和腻子；Glazol WPM 为室内外木材用水性成品底漆，可刷涂或辊涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Five actual ownHTTP200HTML Home/About/GlazolWPM/Contact/Products, no redirects/retries/remoteJS/PDF/assets. OwnAbout since1905 manufacturer oflacquers/wallpaints/putties and currentproductdevelopment; preciseplantgate/productioncapacity/currentlegalregistry notverified. ActualGlazolWPM waterbornehechtprimer is finished brush/roller primer/undercoat for indoor/outdoor wood; plasticsPVC/Trespaandmetals described but do not generalize plasticstoPP/PE orallmetalstoourNLW. Specificownfinishedprimer NOT evidenceofsellingselectedpolyolefinrawadhesionpromoter; ownproductBREEAM/VOS/corrosion/woodbleed/film/dryingclaims not transferredtoourmaterial or certificationguarantees. OwnProducts47unique finished-productURLs/titles including Glazol/Fluwex/Remonta/Planol/DevoCote/Roestex/Fluwol/Firo/Firolin, primers/wallpaintpaste/fixatives/putties/deckvarnishes/oxaliccleaner; actualcardsreviewed, not all47leafpages/PDFs/hiddenformulas. No selectedwaterbasedPO/CPOdispersion/adhesion-input supply line identified in fiveactualbodies; finitepublicscope, notblanketallgroupworldwidechemistry/externalpurchaseproof. Brochure/SDSlinks observednotfetched, Search2015/2021PDFtext notactualPDFread or currentcertificate. ActualownAbout discloses17March2020closecollaborationwithDrostCoatings: recordpartnership, notassumecommonultimateownership/currentregistry orindependentconfirmedbuyer. Fullname/domain/brandandDrost dedupehasnoformal/privategroupaccount; onlyoldDrostunrequestedidentityhypothesis. Expandedbrandscan22oldhitsfullyread21unrelatedsubstringcollisions(Remonta repair/dateback/PlanolBarcelona),oneoldunrequestedDrosthypothesis,0companyoriginals; sameconservativefuturegroupboundary,notfresh6frommissingindex. CurrentWestvlietweg1072495ADDenHaagcontact supersedesSearchold2015Saturnusstraat, notverifiedfactorygate. Home115years/About1905 not2026anniversaryaudit. Exactinfo@devosverf.nl/mailto officialContact, generalcompanyinbox, phoneexact0703473631publishedwithspacing, no guessed+31orWA; no namedpurchaser/departments. No actualNLWuse/currentneed/volume/timing/compatibility/performanceimprovementorRFQ; sharedledgerunknownnotunsent/no readybody/copy/export/historyrewrite. All5sources sufficientstoprem1,notforce6. AnkerStuyexisting6STOP no neworiginal; memory-safe precheckhelper correction privateonly/unchangedpublictests. No emails/forms/messages/CRM."
+    },
+    "contact": {
+      "label": "官方通用业务邮箱和电话；无具名采购联系人或公开WhatsApp链接",
+      "email": "info@devosverf.nl",
+      "contactUrl": "https://www.devosverf.nl/contact/"
+    },
+    "source": {
+      "label": "Official Glazol WPM water-based finished wood adhesion primer",
+      "url": "https://www.devosverf.nl/producten/glazol-wpm-multiprimer/"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "de-vos-verf-den-haag": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "zhaia-pinturas-la-paz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "dq-coatings-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "solewant-sspc-port-harcourt": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -10858,6 +10886,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "de-vos-verf-den-haag": {
+    "website": "https://www.devosverf.nl/",
+    "contactPage": "https://www.devosverf.nl/contact/",
+    "address": "Westvlietweg 107, 2495 AD Den Haag, Netherlands. Current official business contact address; not independently verified manufacturing-plant gate.",
+    "generalEmail": "info@devosverf.nl",
+    "generalEmailEvidence": {
+      "company": "De Vos Verf (Verffabriek H. de Vos & Zonen B.V.)",
+      "value": "info@devosverf.nl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact current exact company email and mailto",
+          "url": "https://www.devosverf.nl/contact/",
+          "summary": "Exact publicly stated company general inbox, no namedbuyer or deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "generalPhone": "070 347 36 31",
+    "generalPhoneEvidence": {
+      "company": "De Vos Verf (Verffabriek H. de Vos & Zonen B.V.)",
+      "value": "070 347 36 31",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact exact business telephone",
+          "url": "https://www.devosverf.nl/contact/",
+          "summary": "Exact local-format phone published on current Contact. No inferred country-code rewrite or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Home current products and company navigation",
+        "url": "https://www.devosverf.nl/"
+      },
+      {
+        "label": "Official About paint manufacturer and disclosed Drost collaboration",
+        "url": "https://www.devosverf.nl/over-ons/"
+      },
+      {
+        "label": "Official Glazol WPM water-based finished wood adhesion primer",
+        "url": "https://www.devosverf.nl/producten/glazol-wpm-multiprimer/"
+      },
+      {
+        "label": "Official Contact current DenHaag address/generalmail and phone",
+        "url": "https://www.devosverf.nl/contact/"
+      },
+      {
+        "label": "Official Products47 visible unique finished-product cards",
+        "url": "https://www.devosverf.nl/producten/"
+      }
+    ]
+  },
   "zhaia-pinturas-la-paz": {
     "website": "https://zhaiapinturas.mx/",
     "contactPage": "https://zhaiapinturas.mx/contacto/",
@@ -33451,6 +33538,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "de-vos-verf-den-haag",
   "zhaia-pinturas-la-paz",
   "dq-coatings-monterrey",
   "solewant-sspc-port-harcourt",
