@@ -10364,11 +10364,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "zhaia-pinturas-la-paz",
+    "company": "Zhaia Pinturas",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "La Paz / Los Reyes Acaquilpan (Estado de México); officialbusinesslocation, approximatecitymarker, not independently verified manufacturing-plant gate",
+    "latitude": 19.3599,
+    "longitude": -98.9777,
+    "legacyCompanyDescription": "官网自述制造工业、汽车、建筑及木器成品涂料；VOLKAH 环氧面漆用于工业设施的碳钢和镀锌板。",
+    "fit": "可开发候选",
+    "signal": "生产工业、汽车等成品涂料；VOLKAH 聚酰胺固化环氧面漆用于工业设施、碳钢和镀锌板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-01",
+      "conclusion": "Five actual ownNode200HTML IndustrialRange/About/VOLKAH/Contact/AutomotiveVehicle read without redirects/retries/JS/PDF/assets. AboutPhilosophy explicitly productsfabricados con tecnologia plusVisionfabricacion paint context; actualownVOLKAH product is polyamide-catalyzed epoxy enamel for industrialinstallations/carbonsteel/galvanizedsheet, with currentindustrialcategory6visiblecards. This supports downstreampaint manufacture, not verified plantgate/registry/productioncapacity/onsiteR&D or confirmedpurchasing. Broadernav shows automotivefinish systems, hardeners, primers, lacquer/stains and decorativepaints. No externalELO/ESBO/epoxidizedvegetableoil/bio-basedplasticizer line found in fiveactualbodies; selected-input exclusion limited those actualpublishedbusiness bodies, notallhiddenSDS/groupglobalcatalogue or externalprocurementproof. AutomotiveVehicledeAjusteparaBaseColor source5 has title/category/19L4Lpackaging only, no technicalpurpose/composition; do not invent its chemistry, ingredients, use instructions or claim all products fully characterized. Other catalysts/accelerator/powderpearls are publishednav titles, not proof of selectedELO/ESBO supplierbusiness. Bare disclosure of a paintformulation intermediate does not itself establish manufacture of selectedepoxidizedoils; finite exclusion is based on actual finishedindustrialpaint business and no positive selected-input supply evidence, not a blanket absence assertion. Officialsource3VOLKAH is itsown product and not copiedCGPaint reseller text. Full industrialcategory has6cards, notallcompanyshop orautocategoryread. ActualVOLKAH TDSlink onzhaia.app is observed butnotdownloaded; old2016/wpcontent andSearchPDFmanufacturer descriptions not currentfetchedPDFbody/year or procurementproof. Curetime/filmprotection/durability/savings/certification/compatibility not copied asourELOclaims. ELO onlysuppliedepoxy functionality and formulation-dependentflexibility/resinmodification evaluation; notcatalystreplacement, polyamidecompatibility, existingELOuse, directaddition or finishedmixinstructions. Initialfullworkspace5identityhits comprise4currentmetadata/Search andonly1oldnativeSearch(turn925search/DirIndlisting), independentlyread andhashed; notoldcompanyGET. Originalheldprecheck andoldSearchclearance retained, prior0 reconstructed, no budgetreset acrosslegal/domain/product/provider/date. DirIndlabelGrupoEspecialistaEnPinturasDeCalidad is a conservativealias only, not separatelyverifiedcurrentlegalname/ultimateowner. Officialzhaiapinturas.mx footerlinkzhaia.app automotiveformula system treatedonegroupaccount/budget, no newbrandcustomers; public/root/front/index/queue/excludedidentitydedupepassed. Exact ventas@zhaiapinturas.mx decodedlocally from actualCFemailattributes/hrefhex of all5ownHTML, no remoteJS/no guessedmail. CorporateSales department, no namedpurchaser. Generalemailblank, oneSalesdepartmentemail. ExactpublishedSalesphone5558570777 andtel preserved, no invented+52phoneconversion. ActualWhatsAppapi.whatsapp.com/send?phone=525558570777 linkedall5ownfooters, exacturlpreserved, no WAguess fromtel. AddressKm19.5MexicoPuebla/ColReyesAcaquilpan/LaPazEstadoMexico56400 officialbusinesslocation, approximatecitynotverifiedfactorygate. No namedcontacts, revieweremployee orpersonalmail. MetcomexSearchEcoating/stamping service notrawELOformulatormanufactureproof,0GET; MareloldBARQUIMPPAsolventprimerrecord meanspriorunknownSTOP,0newGET/nofresh6afterproductswitch. No publicRFQ/need/volume/timing/externalpurchase verified. Sharedsentledgerunknown notunsent, no readybody/copy/export/senthistoryrewrite or email/form/message/CRM."
+    },
+    "contact": {
+      "label": "官方销售部门邮箱、销售电话及实际WhatsApp链接；无具名采购或研发负责人",
+      "email": "ventas@zhaiapinturas.mx",
+      "contactUrl": "https://zhaiapinturas.mx/contacto/"
+    },
+    "source": {
+      "label": "Official VOLKAH epoxy enamel carbonsteel/galvanizedsheet application",
+      "url": "https://zhaiapinturas.mx/productos/esmalte-epoxico-volkah/"
+    },
+    "checkedAt": "2026-11-01"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "zhaia-pinturas-la-paz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "dq-coatings-monterrey": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "solewant-sspc-port-harcourt": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "aqualis-campbellfield": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -10830,6 +10858,75 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "zhaia-pinturas-la-paz": {
+    "website": "https://zhaiapinturas.mx/",
+    "contactPage": "https://zhaiapinturas.mx/contacto/",
+    "address": "Km 19.5 carretera federal México-Puebla, Col. Reyes Acaquilpan, La Paz, Estado de México, C.P.56400, Mexico. Official businesscontact address; not independently verified manufacturing-plant gate.",
+    "generalEmail": "",
+    "generalPhone": "5558570777",
+    "generalPhoneEvidence": {
+      "company": "Zhaia Pinturas",
+      "value": "5558570777",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact exact published Ventas phone and tel",
+          "url": "https://zhaiapinturas.mx/contacto/",
+          "summary": "Contact and footer publish Ventas:5558570777 and tel:5558570777. Preserve exact localformat; no inferred internationaltelephone or personal owner."
+        }
+      ],
+      "verifiedAt": "2026-11-01"
+    },
+    "whatsapp": "https://api.whatsapp.com/send?phone=525558570777",
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "ventas@zhaiapinturas.mx",
+        "emailEvidence": {
+          "company": "Zhaia Pinturas",
+          "value": "ventas@zhaiapinturas.mx",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official Contact current Cloudflare encoded sales mailbox, locally decoded and corroborated all5ownHTML",
+              "url": "https://zhaiapinturas.mx/contacto/",
+              "summary": "Exact raw cfemail/hrefhex decodes ventas@zhaiapinturas.mx. Sales companydepartment route; no namedbuyer, constructedmail or deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-11-01"
+        },
+        "source": {
+          "label": "Official Contact locally decoded current salesdepartment inbox",
+          "url": "https://zhaiapinturas.mx/contacto/"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official industrial range six visible product cards and broader coating-family navigation",
+        "url": "https://zhaiapinturas.mx/categoria-producto/linea-industrial/"
+      },
+      {
+        "label": "Official About current own manufactured-products philosophy",
+        "url": "https://zhaiapinturas.mx/nosotros/"
+      },
+      {
+        "label": "Official VOLKAH epoxy enamel carbonsteel/galvanizedsheet application",
+        "url": "https://zhaiapinturas.mx/productos/esmalte-epoxico-volkah/"
+      },
+      {
+        "label": "Official Contact exact encoded departmentemail/phone/WhatsApp and businessaddress",
+        "url": "https://zhaiapinturas.mx/contacto/"
+      },
+      {
+        "label": "Official automotive base-colour adjustment vehicle title/packaging only",
+        "url": "https://zhaiapinturas.mx/productos/vehiculo-de-ajuste-para-base-color/"
+      }
+    ]
+  },
   "dq-coatings-monterrey": {
     "website": "https://www.dqcoatings.com/",
     "contactPage": "https://www.dqcoatings.com/contacto/",
@@ -33354,6 +33451,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "zhaia-pinturas-la-paz",
   "dq-coatings-monterrey",
   "solewant-sspc-port-harcourt",
   "aqualis-campbellfield",

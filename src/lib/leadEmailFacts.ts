@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "zhaia-pinturas-la-paz": "Your VOLKAH epoxy enamel is cured with polyamide and used on carbon steel and galvanized sheet.",
   "dq-coatings-monterrey": "You manufacture liquid protective coatings for industrial steel structures, supports and structural frames in Monterrey.",
   "solewant-sspc-port-harcourt": "Your SSPC range includes zinc-rich epoxy primers and high-build epoxy coatings for steel and industrial assets.",
   "aqualis-campbellfield": "Your water-based H2Oil is a self-priming topcoat for interior and exterior woodwork, furniture and timber structures.",
