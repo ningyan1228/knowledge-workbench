@@ -10740,11 +10740,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-02"
   },
+  {
+    "id": "first-polymer-cikande",
+    "company": "First Polymer (PT. First Cable Industries)",
+    "productId": "elo",
+    "country": "Indonesia",
+    "countryZh": "印度尼西亚",
+    "city": "Cikande（Serang, Banten；城市级近似点，非厂门测绘）",
+    "latitude": -6.2,
+    "longitude": 106.35,
+    "legacyCompanyDescription": "印尼PT. First Cable Industries的First Polymer聚合物业务制造PVC配混料，产品涵盖电缆绝缘/护套、软管及鞋材。",
+    "fit": "可开发候选",
+    "signal": "印尼PT. First Cable Industries的First Polymer聚合物业务制造PVC配混料，产品涵盖电缆绝缘/护套、软管及鞋材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-02",
+      "conclusion": "4次官网原始HTTPS200完整HTML：Home、About、Contact及一个完整Products页面，0跳转/失败/重试/PDF/远程JS；终身旧0+本次4=4，余2按主体/集团/域名/日期/全部产品共享，不机械补满6。产品页面实际同时返回Electrical、General及Footwear三类：线缆配混、可挤出软管/型材及软质注塑/发泡鞋材，不需要重复抓取首页另外两个同页锚点路由。Home明确PVC配混自制和研发，About明确First Cable Industries与业内人士2018年设立聚合物业务，Contact再次自列PT. First Cable Industries，保守按First Polymer/First Cable Industries同一关联账户计一次，不编独立PT First Polymer法人或拆分电缆/厂区。About泛称Jakarta，Contact给出Cikande Serang Banten具体地址；保留两者原称，采用Contact业务地址，坐标仅Cikande城市近似，非实地厂门/独立地理核验。实际可见完整产品范围未发现ELO/ESBO/环氧化植物油或同类生物增塑稳定原料对外供应；PVC配混成品是下游配方材料，不因compound或polymers字样误判为ELO原料同行。结论限四份实际已读经营和产品，不冒称全部隐藏配方、SDS、最终股权或原料外购例外。20份首次请求前历史及48份扩展痕迹核对：旧Search中first polymer film/first polymer company和两份依赖代码except first不是该公司原文GET；其余是当前真实4次GET的原文/抽取/日志副本，不将复制文件重算请求，亦未因缺索引重置预算。ELO关联沿用已核验Wiley DOI10.1002/vjch.202000023的PVC辅助增塑扩展，只供潜在配方评估，不证明客户正在使用/采购ELO、主增塑替代、相容/热稳定/耐油/电性能或任何认证。Contact的Email us是留言表单标题，输入框email要求访客填自己的邮箱，不是公开业务邮箱；HTML另有网站制作方BIIIZ的meta Reply-to contact@biiiz.com，不属于First Polymer业务收件人，未收录；未发现客户业务地址，不猜info/sales或买家，批量邮件名单不纳入。实际免费文本留言表单与+62 254 8480810公开公司电话可作联系入口，电话不等于WhatsApp，0具名采购。未知共享发送台账不当未发送，不生成就绪信或自动提交表单。"
+    },
+    "contact": {
+      "label": "官网留言表单及公司电话；未核实公开业务邮箱，非具名采购",
+      "email": "",
+      "phone": "+62 254 8480810",
+      "contactUrl": "https://www.firstpolymer.co.id/contact-us"
+    },
+    "source": {
+      "label": "Official complete PVC compound product range",
+      "url": "https://www.firstpolymer.co.id/our-products/cable-compound"
+    },
+    "checkedAt": "2026-11-02"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "first-polymer-cikande": {"targetCompanyTypeId":"pvc-compound-manufacturer","applicationLayer":"market-extended","applicationId":"elo-pvc-plasticizer"},
   "veleca-verano-brianza": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "octagon-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tukan-bochnia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11219,6 +11248,47 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "first-polymer-cikande": {
+    "website": "https://www.firstpolymer.co.id/",
+    "contactPage": "https://www.firstpolymer.co.id/contact-us",
+    "address": "PT. First Cable Industries, Jl. Utama Modern Industri, Blok AB/1, Modern Cikande Industrial Estate, Jl. Raya Jakarta - Serang Km. 68, Cikande Serang 42186, Banten, Indonesia. Official contact address; About broadly says Jakarta. Not an independent legal-registry/factory-gate survey.",
+    "generalEmail": "",
+    "generalPhone": "+62 254 8480810",
+    "generalPhoneEvidence": {
+      "company": "First Polymer (PT. First Cable Industries)",
+      "value": "+62 254 8480810",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official First Polymer contact page; self-identified PT. First Cable Industries business telephone",
+          "url": "https://www.firstpolymer.co.id/contact-us",
+          "summary": "Exact +62 254 8480810 printed under the company business address; central company route, no named procurement ownership or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official PVC compounding manufacture, development and three product categories",
+        "url": "https://www.firstpolymer.co.id/"
+      },
+      {
+        "label": "Official Polymer Division relationship to PT. First Cable Industries and manufacturing facility",
+        "url": "https://www.firstpolymer.co.id/page/about-us"
+      },
+      {
+        "label": "Official self-identified company/address, message form and exact public phone; no business email found",
+        "url": "https://www.firstpolymer.co.id/contact-us"
+      },
+      {
+        "label": "Official complete product page including soft injection and flexible hose/profile compounds",
+        "url": "https://www.firstpolymer.co.id/our-products/cable-compound"
+      }
+    ]
+  },
   "veleca-verano-brianza": {
     "website": "https://www.veleca.it/",
     "contactPage": "https://www.veleca.it/contatti",
@@ -34549,6 +34619,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "first-polymer-cikande",
   "veleca-verano-brianza",
   "octagon-paints-nairobi",
   "tukan-bochnia",

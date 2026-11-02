@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "first-polymer-cikande": "You develop and manufacture PVC compounds for cable insulation and sheathing, flexible hoses and footwear.",
   "veleca-verano-brianza": "Your Acrivel is a water-based polyacrylic sanding sealer for furniture, doors and other wooden items.",
   "octagon-paints-nairobi": "You formulate and manufacture paints in Kenya, including Super Gloss enamel for wood, metal and other surfaces.",
   "tukan-bochnia": "You manufacture waterborne wood varnishes, including TUKMAL-PARKIET acrylic coatings for boards, floors, parquet and mosaics.",
