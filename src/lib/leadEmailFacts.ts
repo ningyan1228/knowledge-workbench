@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "encres-dubuit-mitry-mory": "Your MONO-PAD is a one-component solvent-based pad-printing ink for industrial applications on untreated polypropylene.",
   "first-polymer-cikande": "You develop and manufacture PVC compounds for cable insulation and sheathing, flexible hoses and footwear.",
   "veleca-verano-brianza": "Your Acrivel is a water-based polyacrylic sanding sealer for furniture, doors and other wooden items.",
   "octagon-paints-nairobi": "You formulate and manufacture paints in Kenya, including Super Gloss enamel for wood, metal and other surfaces.",

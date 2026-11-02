@@ -10768,11 +10768,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-02"
   },
+  {
+    "id": "encres-dubuit-mitry-mory",
+    "company": "Encres DUBUIT",
+    "productId": "cpp-cpo",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Mitry-Mory（城市级近似点，非测绘厂门）",
+    "latitude": 48.98,
+    "longitude": 2.61,
+    "legacyCompanyDescription": "法国Mitry-Mory自主配方及生产工业油墨；MONO-PAD为未处理PP工业印刷用单组分溶剂型移印油墨。",
+    "fit": "可开发候选",
+    "signal": "法国Mitry-Mory自主配方及生产工业油墨；MONO-PAD为未处理PP工业印刷用单组分溶剂型移印油墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-02",
+      "conclusion": "独立完整审读六份官网HTTPS200原始HTML：Home、OurProfile、MONO-PAD及Digital/Pad/Screen三技术目录，0失败/跳转/重试/PDF/远程JS；终身旧0+本次6=6，余0STOP，不继续第七页。Profile明确法国Mitry-Mory总部及自有生产/配方，MONO-PAD具体单组分溶剂型且未处理PP适用；不从其他UV/水性油墨或技术摘要推同样基材/现有树脂。三个目录实际完整返回Digital10、Pad8、Screen67个独特产品链接，各类有交叉，不冒充85个独立SKU或逐叶TDS/SDS审计。实际涉及印刷用成品溶剂/UV/水性油墨、导电银/碳/石墨烯/介电功能油墨与清漆、数码底涂/涂层/维护配套；不能凭generic additive、coating或polymer-based varnish误断为CPP/CPO原料。有限已读自身经营与三类范围未识别CPP/CPO/氯化聚烯烃树脂或相似PP附着用原料对外供应；未审未读SpecialEffects/伙伴全部SKU、隐藏配方/最终股权，不编原料外购例外。Home/Profile明确法国、Tintas Dubuit西班牙、上海厂和Publivenor/Dubuit America等分布；越南Home只列联系地址，不由地址推自产。集团保守一个法国账户，国外工厂/经销技术中心/品牌不拆新增，上海不新增，Machines Dubuit仅历史合作不推当前股权。SAATI/FIMOR/Wilflex(Avient)/CST/M&R为伙伴标签，不当收购或母公司。6份首次GET前历史、读Home后16份扩展集团历史及六页后49份痕迹逐项hash核验，旧两份只有EuPIA/目录Search提及，当前保存副本不重算为额外请求；没有因缺索引或第四产品重置预算。Home法国总部区域info@encresdubuit.com明确通用业务邮箱和mailto；商品页表单的同邮箱另作隐私用途不推采购。精确总部电话+33 1.64.67.41.60，无具名采购/WhatsApp猜测。地址1 rue Isaac Newton为自身总部/制造自述，城市近似坐标非独立厂门测绘；法定后缀/税号/最终工商股权未查不编。CPP关联使用已保存独立CPO油墨扩展及用户七牌号指南，非完整TDS，未确认MONO-PAD自身树脂、牌号相容性、采购需求或性能；不借用NL-W1201水性/ELO功能。"
+    },
+    "contact": {
+      "label": "法国总部通用业务邮箱及电话；非具名采购",
+      "email": "info@encresdubuit.com",
+      "phone": "+33 1.64.67.41.60",
+      "contactUrl": "https://www.encresdubuit.com/en/"
+    },
+    "source": {
+      "label": "Official MONO-PAD solvent-based ink for untreated polypropylene",
+      "url": "https://www.encresdubuit.com/en/products/mono-pad/"
+    },
+    "checkedAt": "2026-11-02"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "encres-dubuit-mitry-mory": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "first-polymer-cikande": {"targetCompanyTypeId":"pvc-compound-manufacturer","applicationLayer":"market-extended","applicationId":"elo-pvc-plasticizer"},
   "veleca-verano-brianza": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "octagon-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11248,6 +11277,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "encres-dubuit-mitry-mory": {
+    "website": "https://www.encresdubuit.com/en/",
+    "contactPage": "https://www.encresdubuit.com/en/",
+    "address": "1, rue Isaac Newton, 77290 Mitry-Mory, France. Official French global headquarters address; Profile identifies head office and production in Mitry-Mory. Not an independent registry or factory-gate survey.",
+    "generalEmail": "info@encresdubuit.com",
+    "generalEmailEvidence": {
+      "company": "Encres DUBUIT",
+      "value": "info@encresdubuit.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Home French global headquarters general business inbox and exact mailto",
+          "url": "https://www.encresdubuit.com/en/",
+          "summary": "info@encresdubuit.com is printed in the French global headquarters block with the exact mailto; a company business route, no named procurement identity or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "generalPhone": "+33 1.64.67.41.60",
+    "generalPhoneEvidence": {
+      "company": "Encres DUBUIT",
+      "value": "+33 1.64.67.41.60",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Home French global headquarters exact business phone",
+          "url": "https://www.encresdubuit.com/en/",
+          "summary": "Exact published +33 1.64.67.41.60, central corporate route; no named person or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official French headquarters business email/phone and related international group contacts",
+        "url": "https://www.encresdubuit.com/en/"
+      },
+      {
+        "label": "Official own ink formulation/manufacture and French production, group structure",
+        "url": "https://www.encresdubuit.com/en/our-profile/"
+      },
+      {
+        "label": "Official exact MONO-PAD untreated PP solvent ink",
+        "url": "https://www.encresdubuit.com/en/products/mono-pad/"
+      },
+      {
+        "label": "Official complete returned Digital product range; finite selected-input check",
+        "url": "https://www.encresdubuit.com/en/technologie/digital-inks/"
+      },
+      {
+        "label": "Official complete returned Pad product range; finite selected-input check",
+        "url": "https://www.encresdubuit.com/en/technologie/pad-printing/"
+      },
+      {
+        "label": "Official complete returned Screen product range; finite selected-input check",
+        "url": "https://www.encresdubuit.com/en/technologie/screen-printing/"
+      }
+    ]
+  },
   "first-polymer-cikande": {
     "website": "https://www.firstpolymer.co.id/",
     "contactPage": "https://www.firstpolymer.co.id/contact-us",
@@ -34619,6 +34711,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "encres-dubuit-mitry-mory",
   "first-polymer-cikande",
   "veleca-verano-brianza",
   "octagon-paints-nairobi",
