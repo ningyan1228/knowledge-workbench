@@ -36,6 +36,15 @@ export function functionalProductPitch(lead: PublicLead): FunctionalProductPitch
       ...(ink ? { question: 'Would evaluating this material as a primer for your water-based ink applications be relevant to your team?' } : {}),
     }
   }
+  if (lead.productId === 'cpp-cpo') {
+    if (!['cpp-pp-tpo-primer', 'cpp-pp-printing-ink', 'cpp-pp-tpo-adhesive', 'cpp-pp-adhesion'].includes(application)) return null
+    return {
+      introduction: 'We supply MAH-modified CPP/CPO grades for PP adhesion evaluation, with low-viscosity and selected ester-soluble options.',
+      cardEvaluation: 'MAH 改性 CPP／CPO；PP 附着、粘度与溶剂体系评估',
+      productFacts: ['The supplied selection guide lists PP adhesion and low-viscosity grades.', 'NL-MC50-30 lists propyl acetate; NL-MS10 lists propyl acetate and ethyl acetate.'],
+      limits: 'Grade-specific evaluation only. No confirmed customer chemistry, compatibility, purchasing need, food-contact approval, halogen-free claim or performance guarantee. Low chlorine, low viscosity and high molecular weight belong to different grade options.',
+    }
+  }
   if (lead.productId !== 'elo') return null
   if (application === 'elo-pvc-plasticizer') return {
     introduction: 'We supply epoxidized linseed oil (ELO), a bio-based additive for secondary-plasticizer evaluation in PVC formulations.',

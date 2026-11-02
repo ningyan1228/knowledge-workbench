@@ -3,7 +3,7 @@ import { marketExtendedApplications, marketProducts, publicLeads, targetCompanyT
 
 describe('global product lead map', () => {
   it('gives each product a defined customer-search route', () => {
-    expect(marketProducts.map((product) => product.id).sort()).toEqual(['elo', 'fertilizer-coating', 'nl-w1201'])
+    expect(marketProducts.map((product) => product.id).sort()).toEqual(['cpp-cpo', 'elo', 'fertilizer-coating', 'nl-w1201'])
     for (const product of marketProducts) {
       expect(product.tdsApplicationIds.length).toBeGreaterThan(0)
       expect(product.searchLogic).not.toHaveLength(0)

@@ -18,7 +18,7 @@ import { verifiedAnjoLeads } from './verifiedAnjoLead.ts'
 import { verifiedMarindecLeads } from './verifiedMarindecLead.ts'
 
 export type MarketProduct = {
-  id: 'fertilizer-coating' | 'nl-w1201' | 'elo'
+  id: 'fertilizer-coating' | 'nl-w1201' | 'elo' | 'cpp-cpo'
   name: string
   nameEn: string
   color: string
@@ -125,6 +125,13 @@ export type PublicLead = {
 
 export const marketProducts: MarketProduct[] = [
   {
+    id: 'cpp-cpo', name: 'MAH 改性 CPP／CPO', nameEn: 'MAH-modified Chlorinated Polypropylene / Polyolefin', color: '#2563eb',
+    tdsApplicationIds: ['cpp-pp-adhesion', 'cpo-pe-adhesion', 'cpp-elastomer-metal-adhesion'],
+    searchLogic: '全球寻找自行配制或生产 PP 塑料底漆、PP 溶剂型油墨及 PP/TPO 胶黏剂的企业。终端行业按独立来源核验；排除 CPP/CPO 原料同行、经销商、中国大陆及台湾地区，集团和品牌去重。成品使用商需另证实自主配方或原料使用能力。',
+    searchTerms: ['polypropylene primer manufacturer', 'TPO bumper coating formulator', 'untreated polypropylene screen printing ink manufacturer', 'polypropylene laminating adhesive manufacturer'],
+    tdsScope: '依据用户提供的七牌号选型指南（非完整逐牌号 TDS）：PP 附着为主要方向；PE 限 NL-MS300；弹性体和金属限 NL-MD100-20。NL-MC50-30 与 NL-MS10 列有酯类溶剂。客户配方、TPO、油墨、复合胶及最终性能须逐案验证，不承诺无卤、无芳烃或食品接触合规。',
+  },
+  {
     id: 'fertilizer-coating', name: '缓释肥料包膜原料', nameEn: 'Controlled-release Fertilizer Coating Material', color: '#d97706',
     tdsApplicationIds: ['controlled-release-fertilizer', 'slow-release-fertilizer', 'coated-urea', 'polyurethane-coated-urea', 'coated-compound-fertilizer'],
     searchLogic: '只反查有公开包膜证据的肥料生产商：明确生产控释肥 / 缓释肥 / 包膜尿素 / 包膜复合肥，或有包衣生产能力；普通特种肥企业不得仅凭分类入库。',
@@ -148,6 +155,9 @@ export const marketProducts: MarketProduct[] = [
 ]
 
 export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
+  { id: 'cpp-pp-adhesion', productId: 'cpp-cpo', name: 'PP 附着力', nameEn: 'PP adhesion', description: '七牌号选型指南列明 PP 附着方向；具体体系须验证。', sourceDocument: '用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades，2026-11-02 核对' },
+  { id: 'cpo-pe-adhesion', productId: 'cpp-cpo', name: 'PE 附着力（NL-MS300）', nameEn: 'PE adhesion — NL-MS300', description: '仅 NL-MS300 明确列有 PE 附着，不泛化到全部牌号。', sourceDocument: '用户提供：MAH Modified CPO Selection Guide，第6页' },
+  { id: 'cpp-elastomer-metal-adhesion', productId: 'cpp-cpo', name: '弹性体／金属附着（NL-MD100-20）', nameEn: 'Elastomer / metal adhesion — NL-MD100-20', description: '不等于已验证橡胶金属复合结构胶或防腐性能。', sourceDocument: '用户提供：MAH Modified CPO Selection Guide，第5页' },
   { id: 'controlled-release-fertilizer', productId: 'fertilizer-coating', name: '控释肥包膜', nameEn: 'Controlled-Release Fertilizer Coating', description: '用于控释肥生产。', sourceDocument: '用户提供：缓释肥料专用包膜剂产品介绍' },
   { id: 'slow-release-fertilizer', productId: 'fertilizer-coating', name: '缓释肥包膜', nameEn: 'Slow-Release Fertilizer Coating', description: '用于缓释肥生产。', sourceDocument: '用户提供：缓释肥料专用包膜剂产品介绍' },
   { id: 'coated-urea', productId: 'fertilizer-coating', name: '尿素包膜', nameEn: 'Coated Urea / Urea Coating', description: '用于尿素颗粒包膜。', sourceDocument: '用户提供：缓释肥料专用包膜剂产品介绍' },
@@ -176,12 +186,18 @@ export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
 ]
 
 export const marketExtendedApplications: MarketExtendedApplication[] = [
+  { id: 'cpp-pp-tpo-primer', productId: 'cpp-cpo', name: 'PP／TPO 汽车塑料底漆', nameEn: 'PP / TPO automotive plastic primers', basedOnTdsApplicationId: 'cpp-pp-adhesion', sourceName: 'Nippon Paper: acid-modified CPO applications; category evidence, not NL-grade validation', sourceUrl: 'https://www.nipponpapergroup.com/english/products/chemical/acid_modified_chlorinated_polyolefin/index.html', verifiedAt: '2026-11-02' },
+  { id: 'cpp-pp-printing-ink', productId: 'cpp-cpo', name: 'PP 溶剂型印刷油墨', nameEn: 'PP solvent-based printing inks', basedOnTdsApplicationId: 'cpp-pp-adhesion', sourceName: 'Nippon Paper SUPERCHLON: CPO ink binder/additive category; NL compatibility unconfirmed', sourceUrl: 'https://www.nipponpapergroup.com/english/products/chemical/superchlon/index.html', verifiedAt: '2026-11-02' },
+  { id: 'cpp-pp-tpo-adhesive', productId: 'cpp-cpo', name: 'PP／TPO 复合胶黏剂', nameEn: 'PP / TPO laminating adhesives', basedOnTdsApplicationId: 'cpp-pp-adhesion', sourceName: 'Nippon Paper acid-modified CPO: PP/TPO laminating adhesives; no food-contact claim', sourceUrl: 'https://www.nipponpapergroup.com/english/products/chemical/acid_modified_chlorinated_polyolefin/index.html', verifiedAt: '2026-11-02' },
   { id: 'elo-pvc-plasticizer', productId: 'elo', name: 'PVC 增塑剂应用', nameEn: 'PVC Plasticizer Application', basedOnTdsApplicationId: 'polymer-plasticizer', sourceName: 'Wiley: The epoxidized linseed oil as a secondary plasticizer in PVC processing', sourceUrl: 'https://onlinelibrary.wiley.com/doi/abs/10.1002/vjch.202000023', verifiedAt: '2026-09-26' },
   { id: 'elo-anticorrosion-coating-research', productId: 'elo', name: '防腐涂层研究方向', nameEn: 'Anticorrosion Coating Research Direction', basedOnTdsApplicationId: 'coatings', sourceName: 'Composite Materials from Renewable Resources as Sustainable Corrosion Protection Coatings (Polymers, 2021)', sourceUrl: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8588247/', verifiedAt: '2026-09-29' },
   { id: 'waterborne-ink-anchorage-on-pp-pe', productId: 'nl-w1201', name: 'PP / PE 水性油墨附着力底涂', nameEn: 'Waterborne Ink Anchorage Primer on PP / PE', basedOnTdsApplicationId: 'pe-primer', sourceName: 'ICHEMCO technical catalog: waterborne primer for PP/PE improves anchorage of waterborne inks', sourceUrl: 'https://services.ichemco.com/eng/Catalogs/Ichemco%20Products%20for%20Tapes%20and%20Protective%20Films%202020.pdf', verifiedAt: '2026-09-26' },
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
+  { id: 'cpp-plastic-primer-formulator', productId: 'cpp-cpo', name: 'PP／TPO 塑料底漆配方商', nameEn: 'PP / TPO plastic primer formulator', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'cpp-pp-tpo-primer' }] },
+  { id: 'cpp-solvent-ink-manufacturer', productId: 'cpp-cpo', name: 'PP 溶剂型油墨生产商', nameEn: 'PP solvent ink manufacturer', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'cpp-pp-printing-ink' }] },
+  { id: 'cpp-laminating-adhesive-formulator', productId: 'cpp-cpo', name: 'PP／TPO 复合胶配方商', nameEn: 'PP / TPO laminating adhesive formulator', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'cpp-pp-tpo-adhesive' }] },
   {"id":"waterbased-wood-coating-formulator","productId":"nl-w1201","name":"水性木器涂料配方商","nameEn":"Water-Based Wood Coating Formulator","kind":"target","applicationReferences":[{"layer":"tds-verified","applicationId":"wood-surface-treatment"}]},
   { id: 'waterbased-wood-primer-manufacturer', productId: 'nl-w1201', name: '水性木材底漆生产商', nameEn: 'Water-Based Wood Primer Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },
   { id: 'waterbased-wood-coating-manufacturer', productId: 'nl-w1201', name: '水性木器涂料生产商', nameEn: 'Water-Based Wood Coating Manufacturer', kind: 'target', applicationReferences: [{ layer: 'tds-verified', applicationId: 'wood-surface-treatment' }] },

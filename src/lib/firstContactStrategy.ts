@@ -2,6 +2,9 @@ import type { PublicLead } from './productMarketMap'
 
 /** Saved application evidence supplies the topic; it never confirms a current purchase. */
 const contexts: Record<string, { application: string; subject: string }> = {
+  'cpp-pp-tpo-primer': { application: 'PP plastic primers', subject: 'PP-primer material evaluation' },
+  'cpp-pp-printing-ink': { application: 'PP printing inks', subject: 'PP-ink material evaluation' },
+  'cpp-pp-tpo-adhesive': { application: 'PP laminating adhesives', subject: 'PP-adhesive material evaluation' },
   'untreated-pp-primer': { application: 'PP primers', subject: 'PP-primer materials' },
   'pe-primer': { application: 'PE primers', subject: 'PE-primer materials' },
   'opp-primer': { application: 'OPP primers', subject: 'OPP-primer materials' },

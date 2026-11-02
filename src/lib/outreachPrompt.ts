@@ -30,6 +30,11 @@ type ProductReference = {
 // product references. It intentionally contains only TDS-backed facts and
 // drafting guardrails so a copied prompt can be used without a local Skill.
 const productReferences: Record<MarketProduct['id'], ProductReference> = {
+  'cpp-cpo': {
+    positioning: 'MAH-modified CPP/CPO for PP adhesion evaluation, based on the user-supplied grade selection guide.',
+    allowedFacts: ['Low-viscosity grades include NL-MC50-22 and NL-MC50-30.', 'NL-MC50-30 lists propyl acetate; NL-MS10 lists ethyl acetate and propyl acetate.', 'NL-MB100-22 and NL-MD100-20 are described as low-chlorine grades.', 'High-molecular-weight NL-MS300 lists PP and PE adhesion.'],
+    prohibitedClaims: ['Do not combine all grade attributes into one grade.', 'Do not infer aromatic-free formulations, halogen-free status, food-contact approval or automotive qualification.', 'No guaranteed adhesion, corrosion resistance, peel strength or customer compatibility.'],
+  },
   'fertilizer-coating': {
     positioning: 'Reactive raw material for slow-release and controlled-release fertilizer coating systems.',
     allowedFacts: [

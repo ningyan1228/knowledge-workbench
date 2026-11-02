@@ -29,6 +29,7 @@ const productNames: Record<PublicLead['productId'], string> = {
   'fertilizer-coating': 'fertilizer coating material',
   'nl-w1201': 'NL-W1201',
   elo: 'epoxidized linseed oil (ELO)',
+  'cpp-cpo': 'MAH-modified CPP/CPO',
 }
 
 function positioningFor(lead: PublicLead) {
@@ -45,6 +46,7 @@ function positioningFor(lead: PublicLead) {
       ? 'a water-based surface treatment material for preliminary PP/PE adhesion-formulation evaluation'
       : 'a water-based surface treatment material for primer and adhesion-promoter formulation evaluation'
   }
+  if (lead.productId === 'cpp-cpo') return 'a MAH-modified CPP/CPO raw material for PP adhesion-formulation evaluation'
   if (applicationId === 'elo-pvc-plasticizer') return 'a bio-based functional additive for preliminary plasticizer evaluation in PVC formulations'
   if (applicationId === 'coatings' || applicationId === 'elo-anticorrosion-coating-research') return 'a bio-based functional additive for preliminary coating-formulation evaluation'
   if (applicationId === 'adhesives') return 'a bio-based functional additive for preliminary adhesive-formulation evaluation'

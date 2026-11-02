@@ -162,7 +162,7 @@ export function screenDiscoveryBatch(candidates: DiscoveryInput[], refs: Screeni
     const reasons: string[] = []
     const validInput = candidate.companyName?.trim() && candidate.country?.trim()
       && normalizeCompanyName(candidate.companyName)
-      && ['fertilizer-coating', 'nl-w1201', 'elo'].includes(candidate.productId)
+      && ['fertilizer-coating', 'nl-w1201', 'elo', 'cpp-cpo'].includes(candidate.productId)
       && validDate(candidate.discoveredAt) && candidate.discoverySource?.name?.trim()
       && validHttps(candidate.discoverySource?.url)
     if (!validInput || (candidate.website && !validHttps(candidate.website))) {

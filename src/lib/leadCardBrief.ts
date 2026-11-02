@@ -12,7 +12,7 @@ export function leadCardBrief(lead: PublicLead) {
   const fact=readableBusinessFact(refreshed) ? refreshed : savedLeadBusinessFact(lead)
   return {
     fact: presentBusinessFact(lead.companyEvidence.statement, fact),
-    product: ({ 'fertilizer-coating': '肥料包膜原料', 'nl-w1201': 'NL-W1201', elo: 'ELO 环氧化亚麻油' })[lead.productId],
+    product: ({ 'fertilizer-coating': '肥料包膜原料', 'nl-w1201': 'NL-W1201', elo: 'ELO 环氧化亚麻油', 'cpp-cpo': 'MAH 改性 CPP／CPO' })[lead.productId],
     evaluation: pitch?.cardEvaluation ?? '应用关联待补证据',
     limits: pitch?.limits,
     extended: lead.companyEvidence.applicationLayer === 'market-extended',

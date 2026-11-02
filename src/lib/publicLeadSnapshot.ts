@@ -11,7 +11,7 @@ const object = (value: unknown): value is Record<string, unknown> => Boolean(val
 const text = (value: unknown): value is string => typeof value === 'string'
 const strings = (value: Record<string, unknown>, keys: string[]) => keys.every(key => text(value[key]))
 const arrayWithIds = (value: unknown): value is Array<Record<string, unknown> & { id: string }> => Array.isArray(value) && value.every(item => object(item) && text(item.id) && item.id) && new Set(value.map(item => item.id)).size === value.length
-const supportedProduct = (value: unknown) => ['fertilizer-coating','nl-w1201','elo'].includes(String(value))
+const supportedProduct = (value: unknown) => ['fertilizer-coating','nl-w1201','elo','cpp-cpo'].includes(String(value))
 
 /** Reject an incomplete release before changing any live data or statistics. */
 export function validatePublicLeadSnapshot(value: unknown): PublicLeadSnapshot {
@@ -21,7 +21,7 @@ export function validatePublicLeadSnapshot(value: unknown): PublicLeadSnapshot {
     || !arrayWithIds(value.extendedApplications) || !arrayWithIds(value.targetTypes)) return invalid()
   const ids = new Set(value.leads.map(lead => lead.id))
   const products = new Set(value.products.map(item => item.id))
-  if (value.products.length !== 3 || value.products.some(item => !supportedProduct(item.id) || !strings(item,['name','nameEn','color','tdsScope','searchLogic']) || !Array.isArray(item.tdsApplicationIds) || !Array.isArray(item.searchTerms))) return invalid()
+  if (value.products.length !== 4 || value.products.some(item => !supportedProduct(item.id) || !strings(item,['name','nameEn','color','tdsScope','searchLogic']) || !Array.isArray(item.tdsApplicationIds) || !Array.isArray(item.searchTerms))) return invalid()
   if (value.tdsApplications.some(item => !products.has(String(item.productId)) || !strings(item,['name','nameEn','description','sourceDocument']))
     || value.extendedApplications.some(item => !products.has(String(item.productId)) || !strings(item,['name','nameEn','sourceName','sourceUrl','verifiedAt','basedOnTdsApplicationId']))) return invalid()
   const applications = new Map<string, Record<string,unknown>>([...value.tdsApplications.map(item => [`tds-verified:${item.id}`,item] as const), ...value.extendedApplications.map(item => [`market-extended:${item.id}`,item] as const)])
