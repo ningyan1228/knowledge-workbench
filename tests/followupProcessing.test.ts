@@ -45,4 +45,11 @@ describe('mail-processing date semantics', () => {
     const legacy = parseFollowup('# 旧版\n## 客户总览\n| 编号 | 下一次跟进日 | 客户 | 产品/项目 | 当前状态 |\n|---|---|---|---|---|\n| C01 | 2026-11-12 | 旧客户 | 产品 | 日期待核 |')
     expect(legacy.customers[0]).toMatchObject({ actionDate: '2026-11-12', lastEmailProcessedDate: null, processingDateLabel: '待核' })
   })
+  it('keeps an explicitly scoped outbound-mail date separate from a later internal WeChat date', () => {
+    const label = '2026-10-22（对客邮件）；2026-11-02为内部技术微信及历史邮件核对，不是新对客发件。'
+    expect(mailProcessingDate(label)).toBe('2026-10-22')
+    const d = parseFollowup(ledger.replace('| C03 | 2026-10-26 |', `| C03 | ${label} |`))
+    expect(d.customers.find(c => c.id === 'C03')).toMatchObject({ lastEmailProcessedDate: '2026-10-22', processingDateLabel: label })
+    for (const unknown of ['2026-11-02（内部微信）；对客日期待核', '2026-11-02内部微信，对客2026-10-22', '2026-02-30（对客邮件）；2026-11-02内部微信']) expect(mailProcessingDate(unknown)).toBeNull()
+  })
 })

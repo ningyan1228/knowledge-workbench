@@ -57,7 +57,12 @@ function validDate(value: string): string | null {
 // Only an explicitly dated mail-processing field (optionally annotated) can drive this order. Ranges,
 // incoming messages, legacy suggestions and import dates never fill missing dates.
 export function mailProcessingDate(value: string): string | null {
-  return /^20\d{2}-\d{2}-\d{2}(?:（[^）]*）)?$/.test(value.trim()) ? validDate(value.trim()) : null
+  const label = value.trim()
+  if (/^20\d{2}-\d{2}-\d{2}(?:（[^）]*）)?$/.test(label)) return validDate(label)
+  // The source may explicitly distinguish an outbound-mail date from a later
+  // internal WeChat update in the same field. Keep the scoped mail date only.
+  const scoped = /^(20\d{2}-\d{2}-\d{2})（对客(?:邮件)?）[；;].*内部(?:技术)?微信/.exec(label)
+  return scoped ? validDate(scoped[1]) : null
 }
 
 export function sortByMailProcessing(rows: FollowupCustomer[]): FollowupCustomer[] {
