@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { publicLeads, type PublicLead } from '../src/lib/productMarketMap'
 import { outreachCompanyKey, type OutreachSend } from '../src/lib/outreachLedger'
 import { effectiveStage, emptyWorkRecord, normalizeWorkRecord } from '../src/lib/leadWorkbench'
-import { companyResults, countResults, normalizeResultEvents, resultGroups, type ResultEvent } from '../src/lib/outreachResults'
+import { companyResults, countResults, milestoneKinds, evidenceGroups, normalizeResultEvents, resultGroups, type ResultEvent } from '../src/lib/outreachResults'
 import { OutreachResults } from '../src/features/market/OutreachResults'
 import type { LeadWork } from '../src/features/market/useLeadWork'
 import type { OutreachLedger } from '../src/features/market/useOutreachLedger'
@@ -24,10 +24,10 @@ describe('actual outreach results', () => {
   it('counts each company once per independent milestone, never treating a copy or legacy stage as a result', () => {
     const rows = companyResults([lead, second], [send, { ...send, id: 'duplicate' }], { [key]: record }, '2026-10-22')
     expect(rows).toHaveLength(1)
-    expect(countResults(rows)).toEqual({ contacted: 1, replied: 1, technical: 1, sample: 0 })
+    expect(countResults(rows)).toMatchObject({ contacted: 1, replied: 1, technical: 1, sample: 0 })
     expect(companyResults([lead], [], { [key]: { ...emptyWorkRecord(key), stage: 'sample', note: 'Sample discussion, not an evaluation.' } }, '2026-10-22')).toEqual([])
     expect(companyResults([lead], [], {}, '2026-10-22')).toEqual([])
-    expect(countResults(companyResults([lead], [], { [key]: { ...record, resultEvents: [event('sample')] } }, '2026-10-22'))).toEqual({ contacted: 0, replied: 0, technical: 0, sample: 1 })
+    expect(countResults(companyResults([lead], [], { [key]: { ...record, resultEvents: [event('sample')] } }, '2026-10-22'))).toMatchObject({ contacted: 0, replied: 0, technical: 0, sample: 1 })
   })
   it('uses earliest valid actual contact for monthly cohorts, with later results attributed to that cohort', () => {
     const work = { ...record, contactLog: [{ id: 'form', channel: 'form' as const, destination: 'https://example.org/contact', contactedOn: '2026-09-02', recordedAt: '2026-09-02T08:00:00Z' }] }
@@ -39,7 +39,7 @@ describe('actual outreach results', () => {
   it('excludes revoked, invalid and future records and can undo a result without affecting mail', () => {
     const invalid = { ...event('sample'), on: '2026-02-30' }
     const work = { ...record, resultEvents: [invalid, event('technical', '2026-10-23'), { ...event('replied'), voidedAt: '2026-10-22T02:00:00Z' }] }
-    expect(countResults(companyResults([lead], [send], { [key]: work }, '2026-10-22'))).toEqual({ contacted: 1, replied: 0, technical: 0, sample: 0 })
+    expect(countResults(companyResults([lead], [send], { [key]: work }, '2026-10-22'))).toMatchObject({ contacted: 1, replied: 0, technical: 0, sample: 0 })
     expect(companyResults([lead], [{ ...send, voided_at: '2026-10-22T02:00:00Z' }], { [key]: work }, '2026-10-22')).toEqual([])
     expect(normalizeResultEvents([event('replied'), event('replied'), { ...event('sample'), note: '' }, { ...event('technical'), kind: 'purchaseProbability' }])).toHaveLength(1)
   })
@@ -62,7 +62,7 @@ describe('actual outreach results', () => {
       const ledger = { status: ledgerStatus, sends: [], error: 'Read failed' } as unknown as OutreachLedger
       const work = { status: workStatus, records: {}, lists: [], ownerId: null } as unknown as LeadWork
       const html = renderToStaticMarkup(createElement(OutreachResults, { leads: [lead], ledger, work }))
-      expect(html.match(/<dd>—/g)).toHaveLength(4)
+      expect(html.match(/<dd>—/g)).toHaveLength(milestoneKinds.length)
       expect(html).not.toContain('class="result-comparison"')
       expect(html).toContain('当前账号')
     }
@@ -84,5 +84,48 @@ describe('actual outreach results', () => {
     const revoked = { [companyKey]: { ...records[companyKey], resultEvents: [{ ...event('technical'), voidedAt: '2026-10-22T02:00:00Z' }] } }
     expect(canPrepareFirstContact(eligible, [], revoked)).toBe(true)
     expect(firstContactPlan([eligible], [], 100, '2026-10-22', false, revoked).batch).toHaveLength(1)
+  })
+})
+
+describe('business pipeline and evidence attribution', () => {
+  it('keeps shipping, evaluation, feedback, quote and order independent', () => {
+    const events = [event('shipped'), event('ordered')]
+    const rows = companyResults([lead, second], [], { [key]: { ...emptyWorkRecord(key), resultEvents: events } }, '2026-10-22')
+    expect(countResults(rows)).toMatchObject({ shipped: 1, ordered: 1, sample: 0, replied: 0, contacted: 0, quoted: 0 })
+    expect(effectiveStage(lead, { [key]: { ...record, stage: 'replied', resultEvents: events } }, [])).toBe('ordered')
+  })
+  it('holds and resumes plans using actual dated disposition, excluding voided/future holds', async () => {
+    const { followUpDue } = await import('../src/lib/leadWorkbench')
+    const work = { ...emptyWorkRecord(key), followUpOn: '2026-10-21', resultEvents: [event('rejected')] }
+    expect(followUpDue(work, '2026-10-22')).toBe(false)
+    expect(effectiveStage(lead, { [key]: work }, [])).toBe('rejected')
+    expect(followUpDue({ ...work, resultEvents: [...work.resultEvents, event('resumed', '2026-10-21')] }, '2026-10-22')).toBe(true)
+    expect(followUpDue({ ...work, resultEvents: [event('paused', '2026-10-23')] }, '2026-10-22')).toBe(true)
+    expect(followUpDue({ ...work, resultEvents: [{ ...event('paused'), voidedAt: '2026-10-22T01:00:00Z' }] }, '2026-10-22')).toBe(true)
+  })
+  it('preserves historical feedback, next step, date and attribution through private storage normalization', () => {
+    const full = { ...event('feedback'), nextStep: 'Confirm substrate', followUpOn: '2026-10-25', application: 'Coatings', pitch: 'Flexibility evaluation' }
+    const normalized = normalizeWorkRecord({ ...record, nextStep: 'Follow up', resultEvents: [full] }, key)
+    expect(normalized.resultEvents).toEqual([full])
+    expect(normalized.nextStep).toBe('Follow up')
+    expect(normalizeResultEvents([{ ...full, followUpOn: '2026-02-30' }])).toEqual([])
+  })
+  it('compares only explicit context, with deduplicated and matched contact denominators', () => {
+    const events = [event('sample'), { ...event('replied'), application: 'A' }, { ...event('technical'), application: 'A' }, { ...event('contacted'), application: 'B' }]
+    const rows = companyResults([lead, second], [send], { [key]: { ...record, resultEvents: events } }, '2026-10-22')
+    const groups = evidenceGroups(rows, 'application')
+    expect(groups.find(row => row.label === 'A')).toMatchObject({ companies: 1, replyRate: null, counts: { sample: 0, replied: 1, contacted: 0 } })
+    expect(groups.find(row => row.label === 'B')).toMatchObject({ companies: 1, contacted: 1, replies: 0, replyRate: 0 })
+    expect(evidenceGroups(rows, 'pitch')).toEqual([])
+  })
+  it('shows a dated action and complete milestones without inventing outcomes', () => {
+    const ledger = { status: 'ready', sends: [] } as unknown as OutreachLedger
+    const work = { status: 'ready', lists: [], records: { [key]: { ...emptyWorkRecord(key), nextStep: 'Confirm test temperature', followUpOn: '2026-01-01' } } } as unknown as LeadWork
+    const html = renderToStaticMarkup(createElement(OutreachResults, { leads: [lead, second], ledger, work }))
+    expect(html).toContain('Confirm test temperature')
+    expect(html).toContain('今日跟进清单')
+    expect(html).toContain('实际寄样')
+    expect(html).toContain('已确认订单')
+    expect(html).toContain('尚无明确归属的反馈记录')
   })
 })

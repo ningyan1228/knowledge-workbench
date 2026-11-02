@@ -6,16 +6,16 @@ import { recordedDay, timelineLeads, type TimelineOrder } from './leadTimeline'
 import { customerContactRoutes, latestContact, normalizeContactLog, type ContactLogEntry } from './contactRoutes'
 import { leadMissingDetails, type CompletenessFilter } from './leadCompleteness'
 import { matchesPreparation, type PreparationFilter } from './leadPreparation'
-import { latestResultEvent, normalizeResultEvents, type ResultEvent } from './outreachResults'
+import { latestResultEvent, normalizeResultEvents, resultDisposition, type ResultEvent } from './outreachResults'
 
 export const developmentStages = { todo: '待开发', waiting: '待回复', replied: '已回复', sample: '样品沟通', paused: '暂缓' } as const
 export type DevelopmentStage = keyof typeof developmentStages
-export const developmentProgressLabels = { todo: developmentStages.todo, sent: '已发送开发信', waiting: developmentStages.waiting, replied: developmentStages.replied, sample: developmentStages.sample, technical: '技术沟通', evaluating: '样品评估', paused: developmentStages.paused, unknown: '进度未确认' } as const
+export const developmentProgressLabels = { todo: developmentStages.todo, sent: '已发送开发信', waiting: developmentStages.waiting, replied: developmentStages.replied, sample: developmentStages.sample, shipped: '已寄样', feedback: '测试反馈', quoted: '已报价', ordered: '已确认订单', rejected: '客户拒绝', unsuitable: '不适合', technical: '技术沟通', evaluating: '样品评估', paused: developmentStages.paused, unknown: '进度未确认' } as const
 export type EffectiveDevelopmentStage = keyof typeof developmentProgressLabels
 export function developmentProgressLabel(stage: EffectiveDevelopmentStage, hasSent: boolean) {
   return hasSent && stage !== 'sent' && stage !== 'unknown' ? `已发送开发信 · ${developmentProgressLabels[stage]}` : developmentProgressLabels[stage]
 }
-export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | null; followUpOn: string; note: string; favorite: boolean; listIds: string[]; contactLog?: ContactLogEntry[]; resultEvents?: ResultEvent[] }
+export type LeadWorkRecord = { companyKey: string; stage: DevelopmentStage | null; followUpOn: string; nextStep?: string; note: string; favorite: boolean; listIds: string[]; contactLog?: ContactLogEntry[]; resultEvents?: ResultEvent[] }
 export type LeadWorkList = { id: string; name: string }
 export type WorkRecords = Record<string, LeadWorkRecord>
 export type WorkQueue = 'all' | 'priority' | 'followup' | 'recent'
@@ -67,10 +67,13 @@ export function developmentPriority(lead: PublicLead) {
 
 export function effectiveStage(lead: PublicLead, records: WorkRecords | null, sends: OutreachSend[] | null): EffectiveDevelopmentStage {
   const manual = records?.[outreachCompanyKey(lead)]?.stage
-  if (manual && manual !== 'todo') return manual
+  const disposition = resultDisposition(records?.[outreachCompanyKey(lead)]?.resultEvents)
+  if (disposition && disposition !== 'resumed') return disposition
+  if (manual === 'paused' && disposition !== 'resumed') return manual
   const events = records?.[outreachCompanyKey(lead)]?.resultEvents
-  const result = (['sample', 'technical', 'replied', 'contacted'] as const).map(kind => latestResultEvent(events?.filter(event => event.kind === kind))).find(Boolean)
-  if (result) return result.kind === 'technical' ? 'technical' : result.kind === 'sample' ? 'evaluating' : result.kind === 'replied' ? 'replied' : 'waiting'
+  const result = (['ordered', 'quoted', 'feedback', 'sample', 'shipped', 'technical', 'replied', 'contacted'] as const).map(kind => latestResultEvent(events?.filter(event => event.kind === kind))).find(Boolean)
+  if (result) return ['ordered', 'quoted', 'feedback', 'shipped'].includes(result.kind) ? result.kind as EffectiveDevelopmentStage : result.kind === 'technical' ? 'technical' : result.kind === 'sample' ? 'evaluating' : result.kind === 'replied' ? 'replied' : 'waiting'
+  if (manual && manual !== 'todo' && !(manual === 'paused' && disposition === 'resumed')) return manual
   if (sends !== null && activeOutreachSend(sends, lead)) return 'sent'
   if (latestContact(records?.[outreachCompanyKey(lead)]?.contactLog)) return 'waiting'
   if (records === null) return 'unknown'
@@ -78,7 +81,7 @@ export function effectiveStage(lead: PublicLead, records: WorkRecords | null, se
 }
 
 export function followUpDue(record: LeadWorkRecord | undefined, today: string) {
-  return Boolean(record && record.stage !== 'paused' && validWorkDate(record.followUpOn) && record.followUpOn <= today)
+  return Boolean(record && (resultDisposition(record.resultEvents, today) === 'resumed' || (record.stage !== 'paused' && !['paused', 'rejected', 'unsuitable'].includes(resultDisposition(record.resultEvents, today) ?? ''))) && validWorkDate(record.followUpOn) && record.followUpOn <= today)
 }
 
 export function filterWorkbenchLeads(leads: PublicLead[], filters: BusinessFilters, records: WorkRecords | null, sends: OutreachSend[] | null, today: string, order: TimelineOrder = 'newest', day = 'all') {
@@ -125,7 +128,7 @@ export function normalizeWorkRecord(value: unknown, companyKey: string): LeadWor
   const base = emptyWorkRecord(companyKey)
   if (!value || typeof value !== 'object') return base
   const raw = value as Record<string, unknown>
-  return { companyKey, stage: typeof raw.stage === 'string' && Object.hasOwn(developmentStages, raw.stage) ? raw.stage as DevelopmentStage : null, followUpOn: typeof raw.followUpOn === 'string' && validWorkDate(raw.followUpOn) ? raw.followUpOn : '', note: typeof raw.note === 'string' ? raw.note.slice(0, 4000) : '', favorite: raw.favorite === true, listIds: Array.isArray(raw.listIds) ? [...new Set(raw.listIds.filter((id): id is string => typeof id === 'string'))] : [], contactLog: normalizeContactLog(raw.contactLog), resultEvents: normalizeResultEvents(raw.resultEvents) }
+  return { companyKey, nextStep: typeof raw.nextStep === 'string' ? raw.nextStep.slice(0, 500) : '', stage: typeof raw.stage === 'string' && Object.hasOwn(developmentStages, raw.stage) ? raw.stage as DevelopmentStage : null, followUpOn: typeof raw.followUpOn === 'string' && validWorkDate(raw.followUpOn) ? raw.followUpOn : '', note: typeof raw.note === 'string' ? raw.note.slice(0, 4000) : '', favorite: raw.favorite === true, listIds: Array.isArray(raw.listIds) ? [...new Set(raw.listIds.filter((id): id is string => typeof id === 'string'))] : [], contactLog: normalizeContactLog(raw.contactLog), resultEvents: normalizeResultEvents(raw.resultEvents) }
 }
 
 export function companyAssociations(lead: PublicLead) {

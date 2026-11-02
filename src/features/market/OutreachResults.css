@@ -41,3 +41,13 @@
 .result-event-list p { margin:6px 0; font-size:14px; white-space:pre-wrap; }
 .result-empty,.result-unavailable { padding:22px; background:var(--surface,#fff); border-radius:12px; color:var(--muted,#64748b); }
 @media(max-width:650px) { .result-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }.result-metrics>div { padding:16px; }.result-metrics dd { font-size:28px; }.result-actions { width:100%; }.result-actions button { flex:1; justify-content:center; }.result-filters label { min-width:100%; }.result-record-fields>label { min-width:100%; }.result-company-details li { flex-direction:column; gap:2px; }.result-dimensions button { padding:8px; }.result-heading h2 { font-size:24px; } }
+
+.result-today,.result-insights { margin:24px 0; padding:22px; border:1px solid var(--line,#e0e5ef); border-radius:16px; background:var(--surface,#fff); }
+.result-today h3 small { font-size:13px; font-weight:400; color:var(--muted,#64748b); }
+.result-today ul { list-style:none; padding:0; }
+.result-today li { display:flex; justify-content:space-between; gap:16px; padding:16px 0; border-top:1px solid var(--line,#e0e5ef); overflow-wrap:anywhere; }
+.result-today li>div { min-width:0; }.result-today small { display:block; margin:8px 0; }.result-today li button { align-self:start; flex-shrink:0; }
+.result-record-panel label { display:flex; flex-direction:column; gap:7px; }.result-record-panel input,.result-record-panel select,.result-record-panel textarea { padding:10px; max-width:100%; min-width:0; font:inherit; color:var(--text); background:var(--surface); border:1px solid var(--line); border-radius:8px; }
+.result-plan { margin:20px 0; }.result-plan fieldset { display:grid; gap:14px; border:1px solid var(--line,#e0e5ef); border-radius:12px; padding:18px; }.result-plan button { justify-self:start; }
+.result-metrics { grid-template-columns:repeat(4,minmax(0,1fr)); }.work-next-step { font-size:13px; color:var(--muted,#64748b); overflow-wrap:anywhere; }
+@media(max-width:650px) { .result-today,.result-insights { padding:14px; }.result-today li { flex-direction:column; }.result-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } }

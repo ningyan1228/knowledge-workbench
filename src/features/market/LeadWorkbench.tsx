@@ -7,6 +7,8 @@ import { applicationKey, companyAssociations, developmentPriority, developmentPr
 import type { LeadWork } from './useLeadWork'
 import type { OutreachLedger } from './useOutreachLedger'
 import './leadWorkbench.css'
+import { ResultRecordPanel } from './ResultRecordPanel'
+import './OutreachResults.css'
 import { LeadPreparationShortcuts } from './LeadPreparationShortcuts'
 
 export function PrivateWorkNotice({ work }: { work: LeadWork }) {
@@ -100,38 +102,40 @@ export function LeadWorkCard({ lead, work, ledger, onOpen }: { lead: PublicLead;
     try { await work.save(lead, { favorite: !record?.favorite }) } catch (error) { setError(error instanceof Error ? error.message : '收藏失败') }
   }
   return <div className="work-card-meta"><div><button type="button" className={`work-priority ${priority.score >= 80 ? 'high' : ''}`} title={priority.reasons.join('\n')} onClick={onOpen}>{priority.label} · {priority.score} 分</button><button type="button" className="work-favorite" aria-label={record?.favorite ? '取消收藏' : '收藏客户'} aria-pressed={Boolean(record?.favorite)} disabled={work.status !== 'ready' || work.busy} onClick={() => void favorite()}><Star size={16} fill={record?.favorite ? 'currentColor' : 'none'} /></button></div>
-    <button type="button" className="work-stage-link" onClick={onOpen}>{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn && <span className={followUpDue(record, today) ? 'work-due' : ''}> · {record.stage === 'paused' ? '暂缓的计划' : followUpDue(record, today) ? '需跟进' : '下次跟进'} {record.followUpOn}</span>}</button>{error && <p role="alert">{error}</p>}
+    <button type="button" className="work-stage-link" onClick={onOpen}>{developmentProgressLabel(stage, Boolean(sent))}{record?.followUpOn && <span className={followUpDue(record, today) ? 'work-due' : ''}> · {record.stage === 'paused' ? '暂缓的计划' : followUpDue(record, today) ? '需跟进' : '下次跟进'} {record.followUpOn}</span>}</button>{record?.nextStep && <p className="work-next-step">下一步：{record.nextStep}</p>}{error && <p role="alert">{error}</p>}
   </div>
 }
 
 export function LeadPrivatePanel({ lead, work, ledger, onDirtyChange }: { lead: PublicLead; work: LeadWork; ledger: OutreachLedger; onDirtyChange?: (dirty: boolean) => void }) {
   const record = (work.status === 'ready' ? work.records[outreachCompanyKey(lead)] : null) ?? emptyWorkRecord(outreachCompanyKey(lead))
-  const [stage, setStage] = useState(record.stage ?? ''), [date, setDate] = useState(record.followUpOn), [note, setNote] = useState(record.note)
+  const [stage, setStage] = useState(record.stage ?? ''), [date, setDate] = useState(record.followUpOn), [note, setNote] = useState(record.note), [nextStep, setNextStep] = useState(record.nextStep ?? '')
   const [favorite, setFavorite] = useState(record.favorite), [listIds, setListIds] = useState(record.listIds)
   const [dirty, setDirty] = useState(false), [message, setMessage] = useState('')
   useEffect(() => { onDirtyChange?.(dirty) }, [dirty, onDirtyChange])
   const signature = JSON.stringify(record)
   useEffect(() => {
-    if (!dirty) { setStage(record.stage ?? ''); setDate(record.followUpOn); setNote(record.note); setFavorite(record.favorite); setListIds(record.listIds) }
+    if (!dirty) { setStage(record.stage ?? ''); setDate(record.followUpOn); setNote(record.note); setNextStep(record.nextStep ?? ''); setFavorite(record.favorite); setListIds(record.listIds) }
   }, [signature, dirty])
   const actualStage = effectiveStage(lead, work.status === 'ready' ? work.records : null, ledger.status === 'ready' ? ledger.sends : null)
   const sent = ledger.status === 'ready' ? ledger.activeSend(lead) : null
   const save = async (event: FormEvent) => {
     event.preventDefault(); setMessage('')
     try {
-      await work.save(lead, { stage: stage ? stage as DevelopmentStage : null, followUpOn: date, note, favorite, listIds: listIds.filter((id) => work.lists.some((list) => list.id === id)) })
+      await work.save(lead, { stage: stage ? stage as DevelopmentStage : null, followUpOn: date, nextStep, note, favorite, listIds: listIds.filter((id) => work.lists.some((list) => list.id === id)) })
       setDirty(false); setMessage('私人进度已保存。')
     } catch (error) { setMessage(error instanceof Error ? error.message : '保存失败，请重试。') }
   }
   return <section className="work-private-panel" aria-label="私人开发进度"><h3><CalendarClock size={17} />我的开发进度与跟进</h3>
     {work.status === 'ready' ? <form onSubmit={(event) => void save(event)}><p>当前进度：{developmentProgressLabel(actualStage, Boolean(sent))}。{sent ? `开发信于 ${sent.sent_on} 发送；后续进度仅当前账户可见，同公司跨产品共用。` : '私人进度仅当前账户可见，同公司跨产品共用。'}</p>
       <fieldset disabled={work.busy}><div className="work-private-fields"><label>开发状态<select aria-label="开发状态" value={stage} onChange={(event) => { setStage(event.target.value); setDirty(true) }}><option value="">跟随实际发送记录{sent ? '（已发送开发信）' : ''}</option>{Object.entries(developmentStages).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label><label>下次跟进日期<input type="date" value={date} onChange={(event) => { setDate(event.target.value); setDirty(true) }} /></label></div>
+      <label className="work-note-label">下一步<input aria-label="客户下一步" maxLength={500} value={nextStep} onChange={event => { setNextStep(event.target.value); setDirty(true) }} placeholder="明确下次要完成的动作" /></label>
       <label className="work-note-label">开发备注<textarea aria-label="开发备注" rows={3} maxLength={4000} value={note} placeholder="记录沟通情况、样品要求或下一步动作" onChange={(event) => { setNote(event.target.value); setDirty(true) }} /></label>
       <label className="work-check"><input type="checkbox" checked={favorite} onChange={(event) => { setFavorite(event.target.checked); setDirty(true) }} />收藏这家公司</label>
       <div className="work-list-checks" role="group" aria-label="加入私人名单">{work.lists.map((list) => <label className="work-check" key={list.id}><input type="checkbox" checked={listIds.includes(list.id)} onChange={(event) => { setListIds((previous) => event.target.checked ? [...previous, list.id] : previous.filter((id) => id !== list.id)); setDirty(true) }} />{list.name}</label>)}{!work.lists.length && <small>可在页面“管理我的名单”中创建名单。</small>}</div>
       <div className="work-private-save"><button className="primary-button" disabled={!dirty}>{work.busy ? '正在保存…' : '保存私人进度'}</button><small>状态调整不会标记邮件已发送；暂缓客户不出现在今日跟进中。</small></div></fieldset>
     </form> : <PrivateWorkNotice work={work} />}
     {message && <p role="status">{message}</p>}
+    {work.status === 'ready' && <details className="outreach-results"><summary>业务进展与原始反馈</summary>{dirty ? <p>请先保存上方修改，再记录业务进展。</p> : <ResultRecordPanel key={lead.id} lead={lead} work={work} />}</details>}
   </section>
 }
 
