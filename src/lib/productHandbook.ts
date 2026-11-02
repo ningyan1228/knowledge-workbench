@@ -6,7 +6,7 @@ export const handbookChapters = productHandbook.split(/^## /m).slice(1).map((cha
   return { title: chapter.slice(0, newline), body: chapter.slice(newline + 1).trim() }
 })
 
-const productChapters: Record<string, string> = { 'nl-w1201': '二、', elo: '三、', 'fertilizer-coating': '四、' }
+const productChapters: Record<string, string> = { 'nl-w1201': '二、', elo: '三、', 'fertilizer-coating': '四、', 'cpp-cpo': '十一、' }
 export function getProductChapter(id: string) {
   return handbookChapters.find((chapter) => chapter.title.startsWith(productChapters[id] ?? '__'))
 }

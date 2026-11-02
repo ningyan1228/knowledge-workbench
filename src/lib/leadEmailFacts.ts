@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  'proell-weissenburg': 'Your Norifin PP N is a solvent-based screen and pad printing ink for untreated polypropylene.',
   "duracolor-torredonjimeno": "Your ARM EPOXI PAVIMENTOS is a two-component epoxy-polyamide coating intended for interior industrial concrete floors.",
   "perupaint-villa-el-salvador": "Your RECMASTIC 870 HSHB is a high-solids industrial coating based on epoxy polyamide amine resins.",
   "rolax-emal-dnipro": "Your AQUALACK PANEL uses a waterborne acrylic dispersion for interior wood panels and similar surfaces.",

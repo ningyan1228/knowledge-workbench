@@ -206,7 +206,7 @@ export function MarketIntelligence() {
   return <div className={`market-workspace-page${customerView ? ' calm-customer-page' : ''}`}>
     <header className="page-heading market-heading">{!customerView && tab !== 'follow-up' && <h1>客户开发工作台</h1>}<nav className="market-tabs" aria-label="市场情报导航">{tabs.map((item) => { const active = item.id === 'customers' ? customerView : tab === item.id; return <button key={item.id} className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={() => openTab(item.id === 'customers' ? preferredView : item.id)}>{item.label}</button> })}</nav>{tab !== 'follow-up' && <MarketConnectionStatus ledger={ledger} work={work} />}</header>
     {customerView && <div className="market-connection-notices">{ledger.status !== 'ready' && <OutreachLedgerNotice ledger={ledger} />}{work.status !== 'ready' && <PrivateWorkNotice work={work} />}</div>}
-    {tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} work={work} />}
+    {tab === 'overview' && <CustomerDevelopmentPanel ledger={ledger} work={work} productId={productId} />}
     {tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}
     {customerView && <LeadsWorkspace data={data} productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} work={work} view={tab as 'map' | 'leads'} onView={openTab} />}
     {tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}

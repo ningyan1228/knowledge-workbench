@@ -3,6 +3,86 @@ import { getFactoryTasks, getHandbookSpecs } from './productHandbook'
 
 export const products: ProductSummary[] = [
   {
+  "id": "cpp-cpo",
+  "name": "MAH 改性 CPP／CPO",
+  "englishName": "MAH-modified Chlorinated Polypropylene / Polyolefin",
+  "grade": "NL-MA200-24 / NL-MB100-22 / NL-MC50-22 / NL-MC50-30 / NL-MD100-20 / NL-MS10 / NL-MS300",
+  "category": "PP 附着 / 氯化聚烯烃树脂",
+  "status": "学习资料已更新",
+  "description": "七牌号选型指南支持 PP 附着方向，部分牌号有低氯、低粘度、酯溶性或高分子量特点。各特点不可混用为同一牌号承诺；PE 限 NL-MS300，弹性体／金属限 NL-MD100-20。",
+  "applications": [
+    "PP／TPO 塑料底漆评估",
+    "PP 溶剂型印刷油墨评估",
+    "PP／TPO 复合胶评估",
+    "NL-MS300 的 PE 附着评估",
+    "NL-MD100-20 的弹性体／金属附着评估"
+  ],
+  "keywords": [
+    "MAH-modified CPP",
+    "chlorinated polyolefin",
+    "PP primer",
+    "polypropylene printing ink",
+    "ester-soluble CPO"
+  ],
+  "specs": [
+    {
+      "name": "NL-MA200-24",
+      "originalValue": "氯 24 ± 1%；MAH 1.0–1.5%；溶液粘度 150–250 mPa·s",
+      "condition": "20% 甲苯；测试温度待完整 TDS 确认",
+      "note": "PP 附着与树脂相容性。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "name": "NL-MB100-22",
+      "originalValue": "氯 20–24%；MAH 0.8–1.2%；溶液粘度 10–100 mPa·s",
+      "condition": "20% 甲苯；测试温度待完整 TDS 确认",
+      "note": "低氯、低粘度、PP 附着。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "name": "NL-MC50-22",
+      "originalValue": "氯 22 ± 2%；MAH 1.0–1.5%；溶液粘度 10–50 mPa·s",
+      "condition": "20% 甲苯；测试温度待完整 TDS 确认",
+      "note": "低粘度、PP 附着与树脂相容性。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "name": "NL-MC50-30",
+      "originalValue": "氯 30 ± 1%；MAH 1.0–1.5%；溶液粘度 10–50 mPa·s",
+      "condition": "20% 甲苯；测试温度待完整 TDS 确认",
+      "note": "列有醋酸丙酯；PP 附着。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "name": "NL-MD100-20",
+      "originalValue": "氯 20 ± 2%；MAH 1.0–1.5%；溶液粘度 10–100 mPa·s",
+      "condition": "10% 甲苯；测试温度待完整 TDS 确认",
+      "note": "PP、弹性体和金属附着。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "name": "NL-MS10",
+      "originalValue": "氯 30–32%；MAH 0.6–1.0%；溶液粘度 10–50 mPa·s",
+      "condition": "20% 甲苯；测试温度待完整 TDS 确认",
+      "note": "醋酸乙酯／醋酸丙酯；低软化点。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "name": "NL-MS300",
+      "originalValue": "氯 28–32%；MAH 0.6–1.0%；溶液粘度 250–350 mPa·s",
+      "condition": "20% 甲苯；测试温度待完整 TDS 确认",
+      "note": "高分子量 300,000–400,000；PP／PE 附着。来源：用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades（2026-11-02 核对，选型指南非完整 TDS）。不得跨测试浓度直接比较粘度。",
+      "reviewStatus": "needs_review"
+    }
+  ],
+  "reviewTasks": [
+    "取得每个选定牌号完整 TDS、SDS 和批次 COA，确认测试温度与方法。",
+    "核对客户 PP／PE／TPO 基材、表面处理、主树脂及溶剂配比。",
+    "逐案测试溶解性、储存稳定性、附着、干燥和后续涂层相容性。",
+    "确认包装储存、保质期及目的用途合规；不把低氯说成无卤。"
+  ]
+},
+  {
     id: 'nl-w1201', name: 'NL-W1201 水性表面处理剂', englishName: 'Water-Based Surface Treatment Agent',
     grade: 'NL-W1201', category: '表面处理 / 附着力促进', status: '学习资料已更新',
     description: '水性聚烯烃乳液／树脂分散体，主要用于未处理 PP 的底涂和附着力促进。水是载体；其他基材及与丙烯酸、聚氨酯乳液混用需结合客户体系验证。',

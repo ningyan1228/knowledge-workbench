@@ -8,6 +8,7 @@ export type WorkspaceSource = { id: string; name: string; endpoint_url: string; 
 export type WorkspaceArticle = { id: string; title: string; canonical_url: string; source_published_at: string | null; source_published_text: string | null; content_access: string; content_text: string | null; kind: string; source_id: string | null }
 
 export const sourceCatalog = [
+  { name: 'Crossref · CPP／CPO 聚丙烯附着', adapter: 'crossref', endpoint_url: 'https://api.crossref.org/works?query=chlorinated%20polyolefin%20polypropylene%20adhesion&rows=20', homepage_url: 'https://www.crossref.org/', productKey: 'cpp-cpo' },
   { name: 'OpenAlex · 控释肥包膜', adapter: 'openalex', endpoint_url: 'https://api.openalex.org/works?search=controlled%20release%20fertilizer%20coating&per-page=20', homepage_url: 'https://openalex.org/', productKey: 'fertilizer-coating' },
   { name: 'Crossref · 环氧化亚麻油', adapter: 'crossref', endpoint_url: 'https://api.crossref.org/works?query=epoxidized%20linseed%20oil&rows=20', homepage_url: 'https://www.crossref.org/', productKey: 'elo' },
   { name: 'Crossref · PP 水性涂层', adapter: 'crossref', endpoint_url: 'https://api.crossref.org/works?query=waterborne%20coating%20polypropylene&rows=20', homepage_url: 'https://www.crossref.org/', productKey: 'nl-w1201' },

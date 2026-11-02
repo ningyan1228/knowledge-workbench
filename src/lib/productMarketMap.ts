@@ -17,6 +17,8 @@ import { verifiedPolenLeads } from './verifiedPolenLead.ts'
 import { verifiedAnjoLeads } from './verifiedAnjoLead.ts'
 import { verifiedMarindecLeads } from './verifiedMarindecLead.ts'
 
+import { verifiedCppCpoLeads } from './verifiedCppCpoLeads.ts'
+
 export type MarketProduct = {
   id: 'fertilizer-coating' | 'nl-w1201' | 'elo' | 'cpp-cpo'
   name: string
@@ -35542,4 +35544,4 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads).concat(verifiedKubilayLeads).concat(verifiedOrhunLeads)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedCppCpoLeads).concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads).concat(verifiedKubilayLeads).concat(verifiedOrhunLeads)
