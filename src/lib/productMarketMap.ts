@@ -10712,11 +10712,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-02"
   },
+  {
+    "id": "veleca-verano-brianza",
+    "company": "VELECA S.r.l.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Verano Brianza（官网经营城市；城市级近似坐标，非测绘厂门）",
+    "latitude": 45.69,
+    "longitude": 9.23,
+    "legacyCompanyDescription": "意大利生产木器处理产品；Acrivel为家具、门等木件用水性聚丙烯酸树脂透明封闭底漆。",
+    "fit": "可开发候选",
+    "signal": "意大利生产木器处理产品；Acrivel为家具、门等木件用水性聚丙烯酸树脂透明封闭底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-02",
+      "conclusion": "6次实际官网请求包括5份完整HTML及1次278字节301跳转，累计6已停。公司页自述生产木器处理产品；Acrivel明示聚丙烯酸树脂、水为溶剂及家具/门等木件封闭底漆用途。首页完整返回五类木器涂料及维护/修复产品目录；实际已读范围未发现聚烯烃乳液、CPO/PO分散体或同类附着力原料外售，不把水性丙烯酸成品底漆、虫胶木器涂饰或着色产品因“树脂/添加”字样误判为该类原料；未逐一读取全部叶页/SDS或审计隐藏配方。privacy实页明确经营主体VELECA S.r.l.、VAT02535310961及Verano Brianza地址，仅作官网自列身份佐证，不冒称工商/股权或实地工厂审计。Veleca/VELECA S.r.l./veleca.it按同一账户，未发现已证集团别名或正式库重复。原文前7份历史及扩展42份痕迹核查：两份旧Tecnicom网页只在嵌入图片的base64串巧合命中veleca，原抓取URL为tecnicomagro.com.ar，非Veleca原文；没有因缺索引直接给新预算。其余为当前记录和6次原文的保存副本。公司通用邮箱info@veleca.it由联系页mailto确认；隐私专用PEC邮箱不作业务收件人，不编具名采购。官网不向公众直接零售不等于经销商，生产自述及自有Acrivel产品分别核实。潜在原料评估客户，现用NL-W1201、相容性、性能或采购需求未确认。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、业务电话及联系表单；非具名采购人",
+      "email": "info@veleca.it",
+      "phone": "(+39) 0362/990252",
+      "contactUrl": "https://www.veleca.it/contatti"
+    },
+    "source": {
+      "label": "Official Acrivel water-based polyacrylic wood sanding sealer",
+      "url": "https://www.veleca.it/det-prodotti-41-Acrivel"
+    },
+    "checkedAt": "2026-11-02"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "veleca-verano-brianza": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "octagon-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tukan-bochnia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "acorn-screen-products-loughborough": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11190,6 +11219,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "veleca-verano-brianza": {
+    "website": "https://www.veleca.it/",
+    "contactPage": "https://www.veleca.it/contatti",
+    "address": "Viale Lombardia n.19, 20843 Verano Brianza (MB), Italy. Official legal/business address self-published with VAT02535310961, not independently surveyed factory gate.",
+    "generalEmail": "info@veleca.it",
+    "generalEmailEvidence": {
+      "company": "VELECA S.r.l.",
+      "value": "info@veleca.it",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contatti general corporate mailbox and exact mailto",
+          "url": "https://www.veleca.it/contatti",
+          "summary": "info@veleca.it is published for business contact with exact mailto. Legal self-name and VAT are independently matched in the same website privacy page; general company route, no named buyer or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "generalPhone": "(+39) 0362/990252",
+    "generalPhoneEvidence": {
+      "company": "VELECA S.r.l.",
+      "value": "(+39) 0362/990252",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contatti exact public company phone",
+          "url": "https://www.veleca.it/contatti",
+          "summary": "Exact published (+39) 0362/990252; central company phone, no guessed prefix, named-person ownership or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official actual returned five-category wood-product range",
+        "url": "https://www.veleca.it/"
+      },
+      {
+        "label": "Official own production of wood coatings/treatments",
+        "url": "https://www.veleca.it/azienda"
+      },
+      {
+        "label": "Official exact Acrivel wood primer, polyacrylic binder and water solvent",
+        "url": "https://www.veleca.it/det-prodotti-41-Acrivel"
+      },
+      {
+        "label": "Official business mailbox, phone and contact form",
+        "url": "https://www.veleca.it/contatti"
+      },
+      {
+        "label": "Official self-legal company name/VAT/address; no legal guidance or registry claim",
+        "url": "https://www.veleca.it/privacy/"
+      }
+    ]
+  },
   "octagon-paints-nairobi": {
     "website": "https://www.octagonpaintskenya.co.ke/",
     "contactPage": "https://www.octagonpaintskenya.co.ke/contact/",
@@ -34461,6 +34549,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "veleca-verano-brianza",
   "octagon-paints-nairobi",
   "tukan-bochnia",
   "acorn-screen-products-loughborough",
