@@ -10684,11 +10684,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-02"
   },
+  {
+    "id": "octagon-paints-nairobi",
+    "company": "Octagon Paints Ltd.",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Nairobi（官网经营城市；城市级近似坐标，非测绘New Njiru厂门）",
+    "latitude": -1.29,
+    "longitude": 36.82,
+    "legacyCompanyDescription": "肯尼亚自研配方并制造成品涂料；Super Gloss高光瓷漆用于木材、金属等表面。",
+    "fit": "可开发候选",
+    "signal": "肯尼亚自研配方并制造成品涂料；Super Gloss高光瓷漆用于木材、金属等表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-02",
+      "conclusion": "复核4份完整官网HTML：首页及制造页明确肯尼亚自研配方、混合研磨制造及包装；完整返回产品目录列自有Super Gloss木/金属用高光瓷漆、建筑乳胶漆、底漆、屋顶/地坪漆及普通溶剂。已读可见范围未见ELO、ESBO、环氧化植物油或同类生物增塑原料外售；白电油/松节油、红氧底漆及施工服务不因名称误作该类原料。排除限4页实际可见范围，未审计隐藏配方、全部SDS、外购记录或完整股权。环氧地坪仅见服务导航，不证明自制环氧/胺固化涂料，不把Super Gloss推定为特定醇酸或环氧体系。ELO按用户TDS的涂料/树脂改性用途提出原料评估，环氧功能描述我方材料，不描述客户现有配方。Octagon Paints Ltd.、Octagon Paints Kenya、Direct Paints Kenya及octagonpaintskenya.co.ke同账户去重；官网Crown/Basco对比与用户证言不证明所属集团、采购关系或我方案例，未采纳相同性能/节省/认证营销说法。联系页页脚自列Ltd，不冒称工商登记或已测绘工厂。全量正式/根库、私有索引、排除项及拆包队列无主体重复；初查3份、扩展27份当前痕迹核清既往0/本轮4/累计4余2，不因产品/域名/平台/日期重置。现用材料、相容性、性能和采购需求均未确认。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱、总机与联系页；非具名采购人",
+      "email": "info@octagonpaintskenya.co.ke",
+      "phone": "+254784111114",
+      "contactUrl": "https://www.octagonpaintskenya.co.ke/contact/"
+    },
+    "source": {
+      "label": "Official Octagon Super Gloss finished coating and catalog",
+      "url": "https://www.octagonpaintskenya.co.ke/products/"
+    },
+    "checkedAt": "2026-11-02"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "octagon-paints-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "tukan-bochnia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "acorn-screen-products-loughborough": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "duracolor-torredonjimeno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11161,6 +11190,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "octagon-paints-nairobi": {
+    "website": "https://www.octagonpaintskenya.co.ke/",
+    "contactPage": "https://www.octagonpaintskenya.co.ke/contact/",
+    "address": "New Njiru town, off Kangundo Road, Nairobi, Kenya; P. O BOX 28711-00200. Official company business contact location; exact manufacturing gate not independently surveyed.",
+    "generalEmail": "info@octagonpaintskenya.co.ke",
+    "generalEmailEvidence": {
+      "company": "Octagon Paints Ltd.",
+      "value": "info@octagonpaintskenya.co.ke",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Home general enquiries email and matching mailto",
+          "url": "https://www.octagonpaintskenya.co.ke/",
+          "summary": "Home General Inquiries explicitly publishes info@octagonpaintskenya.co.ke with matching mailto for Octagon Paints; general corporate route, no named procurement person or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "generalPhone": "+254784111114",
+    "generalPhoneEvidence": {
+      "company": "Octagon Paints Ltd.",
+      "value": "+254784111114",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact central business telephone and tel anchor",
+          "url": "https://www.octagonpaintskenya.co.ke/contact/",
+          "summary": "Official contact page publishes 0784 111114 and exact tel:+254784111114; retained as central business telephone, not a named person."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Home general business mailbox and own manufacturer self-description",
+        "url": "https://www.octagonpaintskenya.co.ke/"
+      },
+      {
+        "label": "Official full returned finished-coating catalog",
+        "url": "https://www.octagonpaintskenya.co.ke/products/"
+      },
+      {
+        "label": "Official formula/mixing/milling manufacturing process",
+        "url": "https://www.octagonpaintskenya.co.ke/paint-manufacturers-kenya/"
+      },
+      {
+        "label": "Official contact page company self-name, exact business phone and business location",
+        "url": "https://www.octagonpaintskenya.co.ke/contact/"
+      }
+    ]
+  },
   "tukan-bochnia": {
     "website": "https://www.ekolakiery.pl/",
     "contactPage": "https://www.ekolakiery.pl/kontakt",
@@ -34377,6 +34461,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "octagon-paints-nairobi",
   "tukan-bochnia",
   "acorn-screen-products-loughborough",
   "duracolor-torredonjimeno",

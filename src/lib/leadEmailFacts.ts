@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "octagon-paints-nairobi": "You formulate and manufacture paints in Kenya, including Super Gloss enamel for wood, metal and other surfaces.",
   "tukan-bochnia": "You manufacture waterborne wood varnishes, including TUKMAL-PARKIET acrylic coatings for boards, floors, parquet and mosaics.",
   "acorn-screen-products-loughborough": "Your solvent-based screen printing inks are manufactured in the UK for polypropylene and Correx applications.",
   'proell-weissenburg': 'Your Norifin PP N is a solvent-based screen and pad printing ink for untreated polypropylene.',
