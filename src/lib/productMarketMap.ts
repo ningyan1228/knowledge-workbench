@@ -10656,11 +10656,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-02"
   },
+  {
+    "id": "tukan-bochnia",
+    "company": "P.P.U.H. TUKAN",
+    "productId": "nl-w1201",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Bochnia（官网经营地址；城市级坐标，非测绘厂门）",
+    "latitude": 49.97,
+    "longitude": 20.43,
+    "legacyCompanyDescription": "波兰Bochnia自研自产水性木器漆；TUKMAL-PARKIET为木板、地板、镶木地板及拼花用水性丙烯酸涂料。",
+    "fit": "可开发候选",
+    "signal": "波兰Bochnia自研自产水性木器漆；TUKMAL-PARKIET为木板、地板、镶木地板及拼花用水性丙烯酸涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-02",
+      "conclusion": "复核6份完整官网HTML：首页及公司页证明自研配方和工业混合生产；水性漆页列TUKMAL-PARKIET丙烯酸木器涂料。产品及导航范围为木器/石材成品漆、着色剂、浸渍剂和建筑底涂；另读“底涂浓缩液”页，明确用于石膏板、抹灰及混凝土等墙体表面施工，属于成品施工底涂，不能仅因“改善附着”字样误判为配方用附着原料。实际6页可见范围未发现聚烯烃乳液、CPO/PO分散体或同类附着力原料对外销售，不宣称全SKU/隐藏配方审计。官网联系表单列完整经营主体PRZEDSIĘBIORSTWO PRODUKCYJNO-USŁUGOWO-HANDLOWE TUKAN WYTWÓRNIA I ROZLEWNIA LAKIERÓW ST.CHMIELEK & ST.CHMIELEK；P.P.U.H. TUKAN、TUKMAL、ekolakiery.pl按同主体账户去重。历史提及的Oświęcim研究合作不推定股权关联；未查工商登记及完整股权。全量正式库、根库、索引、排除项及拆包队列无重复，初查3份和完整经营名扩展37份当前痕迹核清既往0、本轮6、累计6已停。仅为潜在原料评估客户，未确认现用我方材料、相容性或采购意向；不转述旧证书为现行认证。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、总机与业务联系表单；非具名负责人",
+      "email": "tukan@ekolakiery.pl",
+      "phone": "+48146112578",
+      "contactUrl": "https://www.ekolakiery.pl/kontakt"
+    },
+    "source": {
+      "label": "Official TUKMAL-PARKIET aqueous acrylic wood varnishes",
+      "url": "https://www.ekolakiery.pl/nasze-produkty/lakiery-wodne"
+    },
+    "checkedAt": "2026-11-02"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "tukan-bochnia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "acorn-screen-products-loughborough": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "duracolor-torredonjimeno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "perupaint-villa-el-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11132,6 +11161,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "tukan-bochnia": {
+    "website": "https://www.ekolakiery.pl/",
+    "contactPage": "https://www.ekolakiery.pl/kontakt",
+    "address": "ul. Łany 6, 32-700 Bochnia, Poland. Official business/manufacturing-company contact address; not independently surveyed factory gate.",
+    "generalEmail": "tukan@ekolakiery.pl",
+    "generalEmailEvidence": {
+      "company": "P.P.U.H. TUKAN",
+      "value": "tukan@ekolakiery.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Kontakt: public email-cloak literal strings decoded locally",
+          "url": "https://www.ekolakiery.pl/kontakt",
+          "summary": "Exact tukan@ekolakiery.pl from three literal strings in saved official contact HTML, numeric HTML entities decoded without executing JavaScript; company general mailbox, not a named person or deliverability test."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "generalPhone": "+48146112578",
+    "generalPhoneEvidence": {
+      "company": "P.P.U.H. TUKAN",
+      "value": "+48146112578",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Kontakt company telephone and exact tel anchor",
+          "url": "https://www.ekolakiery.pl/kontakt",
+          "summary": "Exact tel:+48146112578 is a public business switchboard link on the company contact page; no named person or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own formula development and manufacturing",
+        "url": "https://www.ekolakiery.pl/o-nas"
+      },
+      {
+        "label": "Official waterborne acrylic wood varnishes",
+        "url": "https://www.ekolakiery.pl/nasze-produkty/lakiery-wodne"
+      },
+      {
+        "label": "Official manufactured product range",
+        "url": "https://www.ekolakiery.pl/oferta"
+      },
+      {
+        "label": "Official complete operator name, public contact form and general business channels",
+        "url": "https://www.ekolakiery.pl/kontakt"
+      },
+      {
+        "label": "Official wall-application primer concentrate, not raw formulation input by name",
+        "url": "https://www.ekolakiery.pl/nasze-produkty/koncentraty-gruntujace"
+      }
+    ]
+  },
   "acorn-screen-products-loughborough": {
     "website": "https://www.acornsp.co.uk/",
     "contactPage": "https://www.acornsp.co.uk/contact-us/",
@@ -34289,6 +34377,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "tukan-bochnia",
   "acorn-screen-products-loughborough",
   "duracolor-torredonjimeno",
   "perupaint-villa-el-salvador",
