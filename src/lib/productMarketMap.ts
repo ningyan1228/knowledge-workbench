@@ -10628,11 +10628,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-01"
   },
+  {
+    "id": "acorn-screen-products-loughborough",
+    "company": "Acorn Screen Products Limited",
+    "productId": "cpp-cpo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Loughborough; official company contact city, approximate city marker, not surveyed factory gate",
+    "latitude": 52.77,
+    "longitude": -1.21,
+    "legacyCompanyDescription": "英国自研制造 PP、Correx 等基材用溶剂型丝印油墨；CorriPrint 用于中空聚烯烃片材。",
+    "fit": "可开发候选",
+    "signal": "英国自研制造 PP、Correx 等基材用溶剂型丝印油墨；CorriPrint 用于中空聚烯烃片材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-02",
+      "conclusion": "核对4份完整官网HTML：首页明确英国自研自产与PP用途；塑料油墨可见4系列、首页还列纸板和交通标识等成品油墨。CorriPrint页为聚烯烃片材用成品油墨，B9-91稀释剂与B9-92缓干剂不是凭名称推定的CPP/CPO原料。实际已读经营范围未发现CPP/CPO、氯化聚烯烃或同类附着树脂原料对外销售；检查限4页可见内容，不宣称全SKU、隐藏配方、采购或股权审计。Acorn Screen Products、Acorn Screen Products Limited、acornsp.co.uk和官网自列公司号02232508按同主体去重；未查商业登记册，不将网站“independent”表述当法定无集团关系证明。全量正式库、根目录、私有研究/来源索引、排除索引及拆包队列无主体重复；原文前5份历史及扩展29份当前痕迹核清既往0次、本轮4次、累计4余2，不通过日期/品牌/产品/平台重置。潜在原料评估客户，未确认现用CPP/CPO、我方牌号相容性或采购需求。"
+    },
+    "contact": {
+      "label": "官网公开销售部门邮箱与公司总机；非具名采购人",
+      "email": "sales@acornsp.co.uk",
+      "phone": "01509 610 665",
+      "contactUrl": "https://www.acornsp.co.uk/contact-us/"
+    },
+    "source": {
+      "label": "Acorn official manufacturing and polypropylene solvent screen-ink range",
+      "url": "https://www.acornsp.co.uk/"
+    },
+    "checkedAt": "2026-11-02"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "acorn-screen-products-loughborough": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "duracolor-torredonjimeno": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "perupaint-villa-el-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "rolax-emal-dnipro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11103,6 +11132,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "acorn-screen-products-loughborough": {
+    "website": "https://www.acornsp.co.uk/",
+    "contactPage": "https://www.acornsp.co.uk/contact-us/",
+    "address": "Units 10-11 Meadow Lane Industrial Estate, Gordon Road, Loughborough LE11 1JP, United Kingdom. Official company contact address; not independently surveyed production gate.",
+    "generalEmail": "",
+    "generalPhone": "01509 610 665",
+    "generalPhoneEvidence": {
+      "company": "Acorn Screen Products Limited",
+      "value": "01509 610 665",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact Us public company telephone",
+          "url": "https://www.acornsp.co.uk/contact-us/",
+          "summary": "Exact Tel 01509 610 665 for Acorn Screen Products Limited; no international-prefix rewrite, named-person ownership or WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-02"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "sales@acornsp.co.uk",
+        "emailEvidence": {
+          "company": "Acorn Screen Products Limited",
+          "value": "sales@acornsp.co.uk",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official Contact Us company sales mailbox and actual mailto",
+              "url": "https://www.acornsp.co.uk/contact-us/",
+              "summary": "The company contact page publishes sales@acornsp.co.uk and a matching mailto alongside Acorn Screen Products Limited; department/general business route, no named buyer or deliverability claim."
+            }
+          ],
+          "verifiedAt": "2026-11-02"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official own manufacturing and PP solvent-ink applications",
+        "url": "https://www.acornsp.co.uk/"
+      },
+      {
+        "label": "Official CorriPrint exact fluted-polyolefin finished ink",
+        "url": "https://www.acornsp.co.uk/inks-for-plastics/corriprint/"
+      },
+      {
+        "label": "Official visible plastic-ink range",
+        "url": "https://www.acornsp.co.uk/inks-for-plastics/"
+      },
+      {
+        "label": "Official legal self-name, mailbox and company telephone",
+        "url": "https://www.acornsp.co.uk/contact-us/"
+      }
+    ]
+  },
   "duracolor-torredonjimeno": {
     "website": "https://www.duracolor.es/",
     "contactPage": "https://www.duracolor.es/contacto/",
@@ -34200,6 +34289,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "acorn-screen-products-loughborough",
   "duracolor-torredonjimeno",
   "perupaint-villa-el-salvador",
   "rolax-emal-dnipro",
