@@ -10824,11 +10824,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-03"
   },
+  {
+    "id": "edifloor-prishtina",
+    "company": "Edifloor Group",
+    "productId": "elo",
+    "country": "Kosovo",
+    "countryZh": "科索沃",
+    "city": "Prishtina（城市级近似点，非工厂门牌测绘）",
+    "latitude": 42.66,
+    "longitude": 21.16,
+    "legacyCompanyDescription": "自主研发、配方和生产环氧及聚氨酯地坪体系，包括 Epoxy Sealer 100 底漆和 Epoxy Selfleveling 500。",
+    "fit": "可开发候选",
+    "signal": "自主研发、配方和生产环氧及聚氨酯地坪体系，包括 Epoxy Sealer 100 底漆和 Epoxy Selfleveling 500。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-03",
+      "conclusion": "完整阅读官网Home业务文本及About、Services、Contact原文：自行配方、生产并施工环氧与聚氨酯地坪，经营范围列自流平、配套底漆、亮/哑面环氧、聚氨酯封闭/面涂及基层处理修补。所读范围未发现ELO、ESBO、环氧化植物油或相近生物增塑稳定原料对外销售；配套环氧底漆按施工涂层处理，不冒称独立原料油。结论限已读经营范围，未读全部PDF/SDS或隐藏配方。当前品牌、域名及公开/私有库跨产品去重无命中，仅新增Edifloor Group一个品牌主体；未以Search同名NTSH/H SHPK记录推定法律主体、集团关系或分支新增。工厂城市据官网为Prishtina；Dukagjini Center仅为联系地点，不认定为工厂门牌。阿尔巴尼亚是服务市场，不替代科索沃所在地。“唯一工厂”、20多年、零值动态计数及耐化学/UV/卫生/认证等宣传不作资格或我方性能事实。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及联系页；非具名采购",
+      "email": "info@edifloorgroup.com",
+      "phone": "+383 49 941 040",
+      "contactUrl": "https://www.edifloorgroup.com/contact"
+    },
+    "source": {
+      "label": "Official Epoxy Sealer 100 and Epoxy Selfleveling 500 systems; own manufacturing in About",
+      "url": "https://www.edifloorgroup.com/services"
+    },
+    "checkedAt": "2026-11-03"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "edifloor-prishtina": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indercol-sintra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "encres-dubuit-mitry-mory": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "first-polymer-cikande": {"targetCompanyTypeId":"pvc-compound-manufacturer","applicationLayer":"market-extended","applicationId":"elo-pvc-plasticizer"},
@@ -11306,6 +11335,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "edifloor-prishtina": {
+    "website": "https://www.edifloorgroup.com/",
+    "contactPage": "https://www.edifloorgroup.com/contact",
+    "address": "1st Floor, Dukagjini Center, Prishtina, Kosovo. Official contact location; not asserted factory street address.",
+    "generalEmail": "info@edifloorgroup.com",
+    "generalEmailEvidence": {
+      "company": "Edifloor Group",
+      "value": "info@edifloorgroup.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact printed business mailbox and exact mailto",
+          "url": "https://www.edifloorgroup.com/contact",
+          "summary": "info@edifloorgroup.com is publicly printed and linked through mailto. General business route, no named purchasing role."
+        }
+      ],
+      "verifiedAt": "2026-11-03"
+    },
+    "generalPhone": "+383 49 941 040",
+    "generalPhoneEvidence": {
+      "company": "Edifloor Group",
+      "value": "+383 49 941 040",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact exact telephone and tel link",
+          "url": "https://www.edifloorgroup.com/contact",
+          "summary": "Printed +383 49 941 040 matches tel:+38349941040. A second phone is also published; neither is assumed WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-11-03"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Home native complete105-line text; in-house factory in Prishtina",
+        "url": "https://edifloorgroup.com/"
+      },
+      {
+        "label": "Official own R&D, formulation and production",
+        "url": "https://www.edifloorgroup.com/about"
+      },
+      {
+        "label": "Official complete stated flooring-system service range and exact named epoxy products",
+        "url": "https://www.edifloorgroup.com/services"
+      },
+      {
+        "label": "Official current business mailbox, phones and office contact location",
+        "url": "https://www.edifloorgroup.com/contact"
+      }
+    ]
+  },
   "indercol-sintra": {
     "website": "https://indercol.pt/",
     "contactPage": "https://indercol.pt/contactos/",
@@ -34791,6 +34875,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "edifloor-prishtina",
   "indercol-sintra",
   "encres-dubuit-mitry-mory",
   "first-polymer-cikande",
