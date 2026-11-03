@@ -10796,11 +10796,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-02"
   },
+  {
+    "id": "indercol-sintra",
+    "company": "Indercol, Lda",
+    "productId": "elo",
+    "country": "Portugal",
+    "countryZh": "葡萄牙",
+    "city": "Sintra（城市级近似点，非工厂门牌测绘）",
+    "latitude": 38.8,
+    "longitude": -9.38,
+    "legacyCompanyDescription": "葡萄牙自主研发生产涂料；ESMALTE EPÓXI - WB为双组分水性环氧涂料，用于地坪、墙面和金属。",
+    "fit": "可开发候选",
+    "signal": "葡萄牙自主研发生产涂料；ESMALTE EPÓXI - WB为双组分水性环氧涂料，用于地坪、墙面和金属。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-03",
+      "conclusion": "独立完整审读Company/Contact两份官网HTTPS200 HTML及实际公司页链接的2026产品目录PDF全部29页；另本地渲染全部页概览，详细视觉核对PDF12/20/29页（印刷页22/39及封底）。终身旧0+本组3次=3余3，跨2026-11-02/03共享，不重开6次，不机械补满。11月2日第二来源命令在执行前因审批服务额度未审成，确认无请求/预约/原文文件；11月3日审批恢复后首次实际获取PDF计一次，不把未执行命令当公司请求或网站故障。Company明确自己生产涂料/清漆/胶及Sintra实验室研发，Contact单列FÁBRICA并与PDF封底同址同邮箱；不将1977历史/2011投资或ISO自述当2026新投产/认证/采购。PDF12（印刷22）明确ESMALTE EPÓXI-WB双组分水性环氧施工涂料，地坪/墙/金属用途，不借其他厂家TDS。完整目录11类含成品建筑/地坪/木器/防水/底漆、丙烯酸水泥添加剂、配套防霉添加剂和Durocol WB专用CATALIZADOR-2K、填料/施工胶密封及工具。ANTI-FUNGOS用于防霉藻，未识别为ELO类生物增塑稳定输入；配套PU固化剂和丙烯酸水泥改性剂不自动等同环氧化植物油。Bostik/DL/Gofix/Indasa/Pardal等为目录配套商品，未当母公司或自有全制造；不笼统称无任何添加剂/经销。实际两HTML及完整目录范围未见ELO、ESBO、环氧化植物油或相近生物增塑稳定原料外售，结论限已读公开经营，不称隐藏配方/所有SDS/终极股权审计，不编外购例外。3份首次GET前历史及25份扩展痕迹逐项hash核查，唯一文件名不带本组标签的Python脚本实际只本地读取本组已下载PDF，非旧GET；当前原文/抽取/日志副本不算多次请求。PDF封底视觉自列INDERCOL,Lda，非工商认证；Sintra厂、门市和Alentejo门市同账户，不拆品牌/城市。Greatives/London/Ukraine示例电话及Lorem ipsum是网页主题残留，不作为客户地址/联系。Contact工厂区精确+351 210 966 975及geral@indercol.pt/mailto为公开工厂/通用业务路线；footer与PDF另列+351219673407及传真，保留差异不推更号。无具名采购或WhatsApp推断。ELO仅按用户TDS涂料/树脂改性及柔韧评估，未确认客户现用ELO、当前需求、水性相容、固化比例、耐蚀/耐化学性能或食品医疗认证，不建议成品现场掺加。"
+    },
+    "contact": {
+      "label": "官网工厂通用邮箱和电话；非具名采购",
+      "email": "geral@indercol.pt",
+      "phone": "+351 210 966 975",
+      "contactUrl": "https://indercol.pt/contactos/"
+    },
+    "source": {
+      "label": "Official ESMALTE EPÓXI-WB in complete2026 catalogue, PDF12/printed22",
+      "url": "https://indercol.pt/wp-content/uploads/2026/02/CATA%CC%81LOGO_INDERCOL-2026.pdf#page=12"
+    },
+    "checkedAt": "2026-11-03"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "indercol-sintra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "encres-dubuit-mitry-mory": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "first-polymer-cikande": {"targetCompanyTypeId":"pvc-compound-manufacturer","applicationLayer":"market-extended","applicationId":"elo-pvc-plasticizer"},
   "veleca-verano-brianza": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11277,6 +11306,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "indercol-sintra": {
+    "website": "https://indercol.pt/",
+    "contactPage": "https://indercol.pt/contactos/",
+    "address": "Rua de Santo António, lote 11, Arm.1, A-dos-Ralhados, 2710-006 Sintra, Portugal. Official FÁBRICA address, matched to visually read PDF back cover; not independently surveyed/registry-certified.",
+    "generalEmail": "geral@indercol.pt",
+    "generalEmailEvidence": {
+      "company": "Indercol, Lda",
+      "value": "geral@indercol.pt",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact factory business block and exact mailto",
+          "url": "https://indercol.pt/contactos/",
+          "summary": "geral@indercol.pt is explicitly printed for the factory with exact mailto; general company business mailbox, not a named buyer."
+        }
+      ],
+      "verifiedAt": "2026-11-03"
+    },
+    "generalPhone": "+351 210 966 975",
+    "generalPhoneEvidence": {
+      "company": "Indercol, Lda",
+      "value": "+351 210 966 975",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact factory telephone and exact tel anchor",
+          "url": "https://indercol.pt/contactos/",
+          "summary": "Exact +351 210 966 975 in the FÁBRICA block with tel:+351210966975. Footer/catalogue alternatively list +351219673407; current choice is the explicit factory block, no inferred replacement or WhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-11-03"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own manufacturing, laboratory and formulation activity; retrieved2026-11-02",
+        "url": "https://indercol.pt/empresa/"
+      },
+      {
+        "label": "Official entire2026 catalogue29PDF pages; exact epoxy coating PDF12/printed22 and self-company back cover29",
+        "url": "https://indercol.pt/wp-content/uploads/2026/02/CATA%CC%81LOGO_INDERCOL-2026.pdf"
+      },
+      {
+        "label": "Official factory contact/address, exact business mailbox and phone; retrieved2026-11-03",
+        "url": "https://indercol.pt/contactos/"
+      }
+    ]
+  },
   "encres-dubuit-mitry-mory": {
     "website": "https://www.encresdubuit.com/en/",
     "contactPage": "https://www.encresdubuit.com/en/",
@@ -34711,6 +34791,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "indercol-sintra",
   "encres-dubuit-mitry-mory",
   "first-polymer-cikande",
   "veleca-verano-brianza",
