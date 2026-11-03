@@ -118,4 +118,15 @@ describe('priority ledger with an embedded historical snapshot', () => {
     expect(d.sections.some(s => s.historical && s.raw.includes('旧日期依据'))).toBe(true)
     source.split('\n').forEach((line, i) => { if (line.trim()) expect(d.blocks.some(b => b.start <= i + 1 && b.end >= i + 1)).toBe(true) })
   })
+  it('reads a compact latest-status table without inventing a sent state from drafts', () => {
+    const compact = source.replace(/\| 项目 \| 截至2026-10-28最新口径 \|[\s\S]*?(?=### 2\.)/, `| 项目 | 最新状态 |\n|---|---|\n| 联系人 | 示例联系人，邮箱待核 |\n| 最近邮件处理日期／实际发送 | 2026-11-03，用户确认已发 |\n| 已发内容 | 询用途及数量；抄送同事 |\n| 下一步 | 等需求 |\n`)
+    const c = parseFollowup(compact).customers.find(c => c.id === 'C06')!
+    expect(c.currentFields).toHaveLength(1)
+    expect(c).toMatchObject({ lastEmailProcessedDate: '2026-11-03', sentTime: '2026-11-03，用户确认已发', processingActionText: '询用途及数量；抄送同事' })
+    expect(parseFollowup(compact.replace('2026-11-03，用户确认已发', '实际发送待核')).customers.find(c => c.id === 'C06')?.sentTime).toBe('')
+  })
+  it('retains dated-section events when the new table omits a separate date column', () => {
+    const d = parseFollowup(source.replace('## 九、旧版', '### 11月3日新增事件\n| 项目 | 最新进展 |\n|---|---|\n| C06 客户乙 | 用户确认已回复，待客户补资料 |\n## 九、旧版'))
+    expect(d.events.find(e => e.customerId === 'C06' && e.content.includes('待客户补资料'))).toMatchObject({ time: '11月3日', type: '本版新增事件（时间按源章节）' })
+  })
 })

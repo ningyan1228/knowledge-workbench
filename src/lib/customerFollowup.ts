@@ -59,6 +59,8 @@ function validDate(value: string): string | null {
 export function mailProcessingDate(value: string): string | null {
   const label = value.trim()
   if (/^20\d{2}-\d{2}-\d{2}(?:（[^）]*）)?$/.test(label)) return validDate(label)
+  if (/^20\d{2}-\d{2}-\d{2}（[^）]*）[；;](?:20\d{2}-)?\d{2}-\d{2}为(?:上一轮|此前|历史)/.test(label)) return validDate(label)
+  if (/^20\d{2}-\d{2}-\d{2}[，,]用户确认已发$/.test(label)) return validDate(label)
   // The source may explicitly distinguish an outbound-mail date from a later
   // internal WeChat update in the same field. Keep the scoped mail date only.
   const scoped = /^(20\d{2}-\d{2}-\d{2})（对客(?:邮件)?）[；;].*内部(?:技术)?微信/.exec(label)
@@ -170,20 +172,24 @@ function parseDocument(markdown: string): FollowupDocument {
     const detail = details.get(c.id)
     if (detail) c.sources.push(detail)
     c.sources.push(...historicalDetails.filter(s => internalFollowupKey(s.raw) === c.id))
-    c.currentFields = activeBlocks.filter(b => detail && b.start >= detail.start && b.end <= detail.end && (b.kind === 'heading' && /当前核对字段/.test(b.text) || b.kind === 'table' && (b.headers[0] === '字段' || b.headers[0] === '项目' && /最新口径/.test(b.headers[1] ?? ''))))
+    c.currentFields = activeBlocks.filter(b => detail && b.start >= detail.start && b.end <= detail.end && (b.kind === 'heading' && /当前核对字段/.test(b.text) || b.kind === 'table' && (b.headers[0] === '字段' || b.headers[0] === '项目' && /最新口径|^最新状态$/.test(b.headers[1] ?? ''))))
     const currentTable = c.currentFields.find((b): b is Extract<MarkdownBlock, { kind: 'table' }> => 'kind' in b && b.kind === 'table')
     if (currentTable?.headers[0] === '项目') {
       const field = (label: string) => markdownText(currentTable.rows.find(r => r[0] === label)?.[1] ?? '')
-      c.processingDateLabel = field('最近邮件处理日期') || c.processingDateLabel
+      const compactMail = field('最近邮件处理日期／实际发送')
+      c.processingDateLabel = field('最近邮件处理日期') || compactMail || c.processingDateLabel
       c.lastEmailProcessedDate = mailProcessingDate(c.processingDateLabel)
       c.processingDatePrecision = c.lastEmailProcessedDate ? '日期' : '待核'
-      c.processingActionText = field('最近处理内容/发送状态') || c.processingActionText
+      c.processingActionText = field('最近处理内容/发送状态') || field('已发内容') || c.processingActionText
       c.processingSources.push(currentTable)
       c.processingSourceText = field('补充事实与边界')
       c.customerTime = field('最近有据可查客户消息')
-      c.sentTime = field('最近已核我方发件')
+      c.sentTime = field('最近已核我方发件') || (mailProcessingDate(compactMail) && /用户确认已发/.test(compactMail) ? compactMail : '')
       c.waiting = field('等待对象')
       c.priorityReason = field('为什么排在这里')
+      // These source notes may explicitly retain an earlier state. Keep the
+      // note, while directing readers to the current execution record first.
+      if (c.processingSourceText && /最新执行记录/.test(c.detail)) c.processingSourceText = '源表补充说明（含历史口径，请结合下方最新执行记录核对）：' + c.processingSourceText
     }
     for (const b of blocks) {
       if (b === summary || (detail && b.start >= detail.start && b.end <= detail.end)) continue
@@ -220,6 +226,11 @@ function parseDocument(markdown: string): FollowupDocument {
     } else if (!source.historical && /新增.*事件/.test(b.section) && b.headers[0] === '日期') {
       const customerId = followupReferenceIds(row[1] ?? '', identities)[0]
       if (customerId) events.push({ id: `${customerId}-history-L${source.start}`, customerId, project: identities.find(c => c.id === customerId)?.product ?? '待确认', time: cells[0], precision: timePrecision(cells[0]), type: '新增／纠正记录（按原文）', content: b.headers.map((h, k) => `${h}：${cells[k] ?? ''}`).join('\n'), source })
+    } else if (!source.historical && /新增.*事件/.test(b.section) && b.headers[0] === '项目' && b.headers[1] === '最新进展') {
+      const customerId = followupReferenceIds(row[0] ?? '', identities)[0]
+      const heading = blocks.filter(h => h.kind === 'heading' && h.level === 3 && h.start < b.start).at(-1)
+      const time = heading && 'text' in heading ? heading.text.replace(/新增事件.*$/, '').trim() : '日期待核'
+      if (customerId) events.push({ id: `${customerId}-history-L${source.start}`, customerId, project: identities.find(c => c.id === customerId)?.product ?? '待确认', time, precision: timePrecision(time), type: '本版新增事件（时间按源章节）', content: cells.join('\n'), source })
     } else if (!source.historical && /国内对接/.test(b.section) && b.headers[0] === '对象') {
       const customerId = internalFollowupKey(row[0])
       if (customerId) tasks.push({ id: `${customerId}-suggested-L${source.start}`, customerId, project: identities.find(c => c.id === customerId)?.product ?? '待确认', action: cells[3], waiting: '按源记录核对；不自动指派', dateNature: '原文内部建议／条件触发，不确认为承诺排期', status: '处理情况按原文；不自动完成', evidence: cells[2], source })

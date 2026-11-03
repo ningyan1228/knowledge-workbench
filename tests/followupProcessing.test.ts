@@ -52,4 +52,9 @@ describe('mail-processing date semantics', () => {
     expect(d.customers.find(c => c.id === 'C03')).toMatchObject({ lastEmailProcessedDate: '2026-10-22', processingDateLabel: label })
     for (const unknown of ['2026-11-02（内部微信）；对客日期待核', '2026-11-02内部微信，对客2026-10-22', '2026-02-30（对客邮件）；2026-11-02内部微信']) expect(mailProcessingDate(unknown)).toBeNull()
   })
+  it('keeps the current processing date when an explicitly historical sending date follows it', () => {
+    expect(mailProcessingDate('2026-11-03（来信及拟稿）；11-02为上一轮已确认发件。')).toBe('2026-11-03')
+    expect(mailProcessingDate('2026-11-03，用户确认已发')).toBe('2026-11-03')
+    for (const label of ['2026-11-03；11-02为上一轮发件', '2026-11-03，发送待核', '2026-02-30（拟稿）；11-02为上一轮发件']) expect(mailProcessingDate(label)).toBeNull()
+  })
 })
