@@ -1,6 +1,8 @@
 import handbook from '../content/core-products-handbook.md?raw'
 
-export const productHandbook = handbook.replace(/\r\n/g, '\n')
+import comparison from '../content/product-route-comparison.md?raw'
+
+export const productHandbook = handbook.replace(/\r\n/g, '\n') + '\n\n## 十二、产品路线对照\n\n' + comparison
 export const handbookChapters = productHandbook.split(/^## /m).slice(1).map((chapter) => {
   const newline = chapter.indexOf('\n')
   return { title: chapter.slice(0, newline), body: chapter.slice(newline + 1).trim() }
