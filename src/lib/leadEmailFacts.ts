@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "veeto-hobbies-ambala": "Your Super PP Screen Printing Inks are solvent-based systems for untreated and treated polypropylene containers and automotive battery housings.",
   "cmt-group-baku": "Your Zinkomastik PR is a two-component, amine-cured epoxy anticorrosive primer containing zinc phosphate for steel and metal surfaces.",
   "asia-coatings-savar": "Your Bangladesh facility manufactures water-based wood coatings alongside PU and UV coating systems.",
   "effect-group-yerevan": "Your Anticorrosive Paint (Red-brown) uses an alkyd-resin system for steel, cast iron and other ferrous surfaces.",

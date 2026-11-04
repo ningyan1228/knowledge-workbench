@@ -11019,11 +11019,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "veeto-hobbies-ambala",
+    "company": "Veeto Hobbies (India)",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Saha, Ambala, Haryana（联系页公开地图点，未经厂门测绘）",
+    "latitude": 30.30061,
+    "longitude": 76.96719,
+    "legacyCompanyDescription": "印度Ambala自有油墨制造企业；Super PP为用于未处理及已处理PP容器、汽车电池外壳的溶剂型丝印油墨，技术资料明确溶剂挥发干燥。",
+    "fit": "可开发候选",
+    "signal": "印度Ambala自有油墨制造企业；Super PP为用于未处理及已处理PP容器、汽车电池外壳的溶剂型丝印油墨，技术资料明确溶剂挥发干燥。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "独立复读公司About、具体Super PP产品页、联系页、Raw Material For Manufacture Of Flexo Roto Inks栏目及完整一页厂家技术资料。About明确染颜料加工、生产设备和质量检查；Super PP网页列PP基材、溶剂型、丝印、Radiant品牌及印度制造，一页资料进一步列未处理/已处理PP容器、电池外壳与溶剂挥发干燥。原料栏目实际唯一具体条目为PU/Tetron成品溶剂型丝印/喷涂油墨，用于PU泡沫、Tetron、EVA，并不是CPP/CPO树脂销售证明；全局导航另有色浆、碳黑、稀释剂、PVC等成品油墨，不因销售无关颜料而认定为CPP/CPO原料同行。所读有限经营范围未见CPP、CPO、MAH改性聚烯烃附着力原料外售；未读取全部其他叶页、SDS或全配方，不能称全SKU审计。Radiant/Vynoshine按已归属于Veeto的品牌处理，不将所有通用Radiant名称、IndiaMART服务商或Asian Paints栏目自动视为同集团；veetohobbies.com、veeto.co.in、veetoindia.com按同一保守账户去重，出口市场不拆新增。公开技术文件来自相同IndiaMART卖家15259573，名称、PP产品与Plot413 Saha联系地址交叉对应，未声称与未抓取的另一个Product Brochure端点字节一致。用户CPP/CPO指南及独立CPO油墨应用来源只支持PP附着原料实验室评估，不证明客户现用CPP/CPO、我方牌号适配、采购、性能或认证。"
+    },
+    "contact": {
+      "label": "厂家公开技术资料中的通用业务邮箱及电话；官网联系页，非具名采购",
+      "email": "veetohobbies@hotmail.com",
+      "phone": "+91 7027002328",
+      "contactUrl": "https://www.veetohobbies.com/enquiry.html"
+    },
+    "source": {
+      "label": "Veeto official Super PP solvent-based screen ink and branded one-page Product Information",
+      "url": "https://www.veetohobbies.com/super-pp-ink.html"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "veeto-hobbies-ambala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "cmt-group-baku": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "asia-coatings-savar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "effect-group-yerevan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11508,6 +11537,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "veeto-hobbies-ambala": {
+    "website": "https://www.veetohobbies.com/",
+    "contactPage": "https://www.veetohobbies.com/enquiry.html",
+    "address": "Business contact: Plot413, HSIIDC Industrial Area(Saha), Ambala, Haryana133104, India. About lists registered address99, The Mall, Ambala Cantt133001. Current contact-page map point30.30061000,76.96719000 is reproduced as published; not independently surveyed factory gate.",
+    "generalEmail": "veetohobbies@hotmail.com",
+    "generalEmailEvidence": {
+      "company": "Veeto Hobbies (India)",
+      "value": "veetohobbies@hotmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Veeto-authored Super PP Product Information, public IndiaMART seller15259573 PDF",
+          "url": "https://5.imimg.com/data5/SELLER/Doc/2026/3/588867345/YT/GG/XK/15259573/super-pp-ink.pdf",
+          "summary": "One fully read and locally visually checked page explicitly publishes veetohobbies@hotmail.com and +91-7027002328/29/75 with Plot413 HSIIDC Industrial Area(Saha), matching the current Veeto product/contact site. Generic company mailbox; no named recipient or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "generalPhone": "+91 7027002328",
+    "generalPhoneEvidence": {
+      "company": "Veeto Hobbies (India)",
+      "value": "+91 7027002328",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Veeto-authored Super PP Product Information, public IndiaMART seller15259573 PDF",
+          "url": "https://5.imimg.com/data5/SELLER/Doc/2026/3/588867345/YT/GG/XK/15259573/super-pp-ink.pdf",
+          "summary": "Company Product Information explicitly prints +91-7027002328/29/75. Only the fully stated first mobile number is recorded; shortened suffixes are not expanded, no WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Veeto official Super PP solvent-based screen ink and branded one-page Product Information",
+        "url": "https://www.veetohobbies.com/super-pp-ink.html"
+      },
+      {
+        "label": "Current official About manufacturing, production infrastructure and business scope",
+        "url": "https://www.veetohobbies.com/about-us.html"
+      },
+      {
+        "label": "Official raw-material category actually lists formulated PU/Tetron ink, not CPP/CPO resin",
+        "url": "https://www.veetohobbies.com/raw-material-for-manufacture-of-flexo-roto-inks.html"
+      },
+      {
+        "label": "Current official public contact page, Plot413 Saha address and published map point",
+        "url": "https://www.veetohobbies.com/enquiry.html"
+      },
+      {
+        "label": "Full one-page Veeto Super PP Product Information, exact public business email/phone and untreated/treated PP",
+        "url": "https://5.imimg.com/data5/SELLER/Doc/2026/3/588867345/YT/GG/XK/15259573/super-pp-ink.pdf"
+      }
+    ]
+  },
   "cmt-group-baku": {
     "website": "https://knarrpaints.com/",
     "contactPage": "https://cmt.com.az/contact",
@@ -35444,6 +35532,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "veeto-hobbies-ambala",
   "cmt-group-baku",
   "asia-coatings-savar",
   "effect-group-yerevan",
