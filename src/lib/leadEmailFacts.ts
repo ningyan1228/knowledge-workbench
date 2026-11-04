@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "asia-coatings-savar": "Your Bangladesh facility manufactures water-based wood coatings alongside PU and UV coating systems.",
   "effect-group-yerevan": "Your Anticorrosive Paint (Red-brown) uses an alkyd-resin system for steel, cast iron and other ferrous surfaces.",
   "union-inks-singapore": "Your UNI-PP 59-00 screen ink targets untreated rigid polypropylene and dries through solvent evaporation.",
   "intercolor-megrine": "Your team develops and manufactures Sellyogard, a two-component epoxy primer and intermediate coating for protective applications.",

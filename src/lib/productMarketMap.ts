@@ -10964,11 +10964,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "asia-coatings-savar",
+    "company": "Asia Coatings (Pvt) Ltd (JAT Holdings Group)",
+    "productId": "nl-w1201",
+    "country": "Bangladesh",
+    "countryZh": "孟加拉国",
+    "city": "Dhaka（城市级近似点，Savar工厂地址另列）",
+    "latitude": 23.81,
+    "longitude": 90.41,
+    "legacyCompanyDescription": "JAT集团全资Asia Coatings在孟加拉Savar自有并运营木器涂料工厂；当前公司介绍明确制造水性、PU和UV木器涂层，母公司投产公告交叉印证。",
+    "fit": "可开发候选",
+    "signal": "JAT集团全资Asia Coatings在孟加拉Savar自有并运营木器涂料工厂；当前公司介绍明确制造水性、PU和UV木器涂层，母公司投产公告交叉印证。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "当前Asia Coatings介绍明确制造水性木器涂料、研发和孟加拉工厂地址，母公司公告明确全资子公司自有并运营工厂，2022年9月22日投产；不是以代理Sayerlack或Borma品牌反推自产。当前主页另将JChem列为JAT自有品牌，母公司业务导航列Mirotone新西兰/澳大利亚与JATPaintsAfrica等，统一保守作为一个账户，不分国家品牌新增。Sherwin-Williams/Sayerlack及Borma合作或经销不推定母子公司，既有Renner/Sayerlack同名字样不作未经证明的集团合并；Mirotone、JAT、AsiaCoatings在全量正式及私有身份扫描无同一已入库主体。所读四份完整原生官网正文及母公司业务范围未发现水性聚烯烃、CPO/PO分散体或同类附着力促进原料对外销售。其自制醇酸树脂及母公司明确丙烯酸绑定料业务不凭泛称binder认定为所选聚烯烃原料；亦不将这些生产能力当作外购NL-W1201证明。此结论限已读经营范围，不宣称全部SKU、原料产品SDS或股权登记已审计。JChemOneCoat在母公司原文为溶剂型，不能套成水性；水性木器制造依据来自公司明确介绍及自有工厂公告。潜在底涂/附着力促进配方评估，不确认现用NL-W1201、我方材料相容、性能或采购。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与电话；非具名采购",
+      "email": "info@asia-coatings.com",
+      "phone": "+880 1942 847 306",
+      "contactUrl": "https://www.jatasiacoatings.com/about-us"
+    },
+    "source": {
+      "label": "Official current Asia Coatings water-based wood manufacture with own factory attribution",
+      "url": "https://www.jatasiacoatings.com/about-us"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "asia-coatings-savar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "effect-group-yerevan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "union-inks-singapore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "intercolor-megrine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11451,6 +11480,71 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "asia-coatings-savar": {
+    "website": "https://www.jatasiacoatings.com/",
+    "contactPage": "https://www.jatasiacoatings.com/about-us",
+    "address": "Corporate office: Ranks Business Center (5th Floor), Ka-218/1 Pragati Sarani, Kuril, Dhaka-1229, Bangladesh. Factory: RS Dag No.218,228,230,231, Village & Mouza Khagan, PO & Union Birulia, Savar, Bangladesh. Dhaka city-level map point, not a surveyed factory gate.",
+    "generalEmail": "info@asia-coatings.com",
+    "generalEmailEvidence": {
+      "company": "Asia Coatings (Pvt) Ltd (JAT Holdings Group)",
+      "value": "info@asia-coatings.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official About public business email",
+          "url": "https://www.jatasiacoatings.com/about-us",
+          "summary": "Exact visible info@asia-coatings.com on own company About/Home, distinct mailbox domain explicitly disclosed; no mailto, named-buyer, SMTP or deliverability claim."
+        },
+        {
+          "label": "Official Asia Coatings Home company business footer",
+          "url": "https://www.jatasiacoatings.com/",
+          "summary": "Same exact company business email/phone shown separately beside corporate office and factory addresses."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "generalPhone": "+880 1942 847 306",
+    "generalPhoneEvidence": {
+      "company": "Asia Coatings (Pvt) Ltd (JAT Holdings Group)",
+      "value": "+880 1942 847 306",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official About public company telephone",
+          "url": "https://www.jatasiacoatings.com/about-us",
+          "summary": "Exact published international business phone retained; no guessed WhatsApp, personal identity or purchasing role."
+        },
+        {
+          "label": "Official Asia Coatings Home company business footer",
+          "url": "https://www.jatasiacoatings.com/",
+          "summary": "Same exact company business email/phone shown separately beside corporate office and factory addresses."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Current company About: own water-based wood coatings, group and factory/contact",
+        "url": "https://www.jatasiacoatings.com/about-us"
+      },
+      {
+        "label": "Current Home: plant business perimeter, JChem own brand, group partners and contact",
+        "url": "https://www.jatasiacoatings.com/"
+      },
+      {
+        "label": "Parent fiscal2024-25 release: acrylic binder and alkyd plant business; JChemOneCoat solvent-based",
+        "url": "https://www.jatholdings.com/news/jat-holdings-records-74percent-increase-in-bottomline-for-fy2024-25-23rd-may-2025-colombo/"
+      },
+      {
+        "label": "Parent own Bangladesh commissioning: self-operated wholly-owned factory,22Sep2022 event; article8Nov2022",
+        "url": "https://www.jatholdings.com/news/jat-holdings-delivers-on-key-ipo-commitment-launches-cutting-edge-manufacturing-facility-in-bangladesh/"
+      }
+    ]
+  },
   "effect-group-yerevan": {
     "website": "https://effectgroup.am/en/",
     "contactPage": "https://effectgroup.am/en/about-us/",
@@ -35278,6 +35372,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "asia-coatings-savar",
   "effect-group-yerevan",
   "union-inks-singapore",
   "intercolor-megrine",
