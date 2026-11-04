@@ -10936,11 +10936,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "effect-group-yerevan",
+    "company": "Effect Group CJSC (Shen)",
+    "productId": "elo",
+    "country": "Armenia",
+    "countryZh": "亚美尼亚",
+    "city": "Yerevan（城市级近似点，非工厂门牌测绘）",
+    "latitude": 40.18,
+    "longitude": 44.51,
+    "legacyCompanyDescription": "亚美尼亚自有建材与涂料生产企业；当前红棕防腐漆及对应官方技术表明确为醇酸树脂体系，用于钢、铸铁和其他黑色金属表面。",
+    "fit": "可开发候选",
+    "signal": "亚美尼亚自有建材与涂料生产企业；当前红棕防腐漆及对应官方技术表明确为醇酸树脂体系，用于钢、铸铁和其他黑色金属表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "公司介绍明确亚美尼亚本地生产、原料和成品质量控制及新产品开发，并从多国进口原料；当前两页23项涂料目录、具体红棕防腐漆与其EffectGroup标识技术表形成自有涂料制造链。技术表明确醇酸树脂、颜填料和白电油，不能称为环氧涂料。经营范围及全店分类涵盖涂料、腻子、瓷砖胶、地坪建材、混凝土块与砖；已读范围未发现ELO、ESBO、环氧化植物油或相近生物增塑稳定原料对外销售。商店仅完整读取第一页及其全分类、两页涂料目录和一个具体产品/技术表，不声称所有店铺分页、Other五项叶页、SDS或全SKU已审计；相关商品K Acrylic只见名称及建筑辅料语境，不能推断为ELO类原料或确定组成。通用原料进口说明不代表采购ELO。Shen品牌与EffectGroup及第三方关联ShenHolding按一个保守账户去重，不作为独立子公司新增或声称完成股权登记审计；其他品牌不推断母子公司。未见选定同类原料外售的结论限本次所读公开经营范围。潜在ELO涂料柔韧性/树脂改性实验室评估，不确认其现用、采购、配方相容或防腐性能。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与电话；非具名采购",
+      "email": "info@effectgroup.am",
+      "phone": "+374 60 61 09 09",
+      "contactUrl": "https://effectgroup.am/en/about-us/"
+    },
+    "source": {
+      "label": "Official Anticorrosive Paint (Red-brown) and linked alkyd technical sheet",
+      "url": "https://effectgroup.am/en/shop/anticorrosive-paint-red-brown/"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "effect-group-yerevan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "union-inks-singapore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "intercolor-megrine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sanchez-screentec-tepeji": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11422,6 +11451,79 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "effect-group-yerevan": {
+    "website": "https://effectgroup.am/en/",
+    "contactPage": "https://effectgroup.am/en/about-us/",
+    "address": "Yerevan, Shirak 2/5, Armenia. Official corporate footer business address; city-level map point, not surveyed factory gate.",
+    "generalEmail": "info@effectgroup.am",
+    "generalEmailEvidence": {
+      "company": "Effect Group CJSC (Shen)",
+      "value": "info@effectgroup.am",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official About corporate mailbox and exact mailto",
+          "url": "https://effectgroup.am/en/about-us/",
+          "summary": "Visible company business mailbox matches exact mailto:info@effectgroup.am; generic route, not named procurement or deliverability proof."
+        },
+        {
+          "label": "Official current Anticorrosive Paint product corporate footer",
+          "url": "https://effectgroup.am/en/shop/anticorrosive-paint-red-brown/",
+          "summary": "The same corporate business channel repeats with Yerevan Shirak2/5 address."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "generalPhone": "+374 60 61 09 09",
+    "generalPhoneEvidence": {
+      "company": "Effect Group CJSC (Shen)",
+      "value": "+374 60 61 09 09",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official About international business telephone and exact tel",
+          "url": "https://effectgroup.am/en/about-us/",
+          "summary": "Visible +37460610909 matches tel:+37460610909; no invented WhatsApp or procurement role."
+        },
+        {
+          "label": "Official current Anticorrosive Paint product corporate footer",
+          "url": "https://effectgroup.am/en/shop/anticorrosive-paint-red-brown/",
+          "summary": "The same corporate business channel repeats with Yerevan Shirak2/5 address."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official company local manufacturing, production development and raw/finished QC",
+        "url": "https://effectgroup.am/en/about-us/"
+      },
+      {
+        "label": "Current red-brown protective paint and exact linked TDS",
+        "url": "https://effectgroup.am/en/shop/anticorrosive-paint-red-brown/"
+      },
+      {
+        "label": "Full1page official technical sheet: alkyd system/ferrous substrates; undated",
+        "url": "https://effectgroup.am/wp-content/uploads/Hakakorozipn-karmrashaganakaguyn-en.pdf"
+      },
+      {
+        "label": "Official paints catalogue page1, categories and brands;12cards",
+        "url": "https://effectgroup.am/en/product-category/paints-en/"
+      },
+      {
+        "label": "Official paints catalogue page2, remaining11cards incl red-brown/gray anticorrosives",
+        "url": "https://effectgroup.am/en/product-category/paints-en/page/2/"
+      },
+      {
+        "label": "Actual store first page and full product-category filter; not all pagination/SDS",
+        "url": "https://effectgroup.am/en/shop/"
+      }
+    ]
+  },
   "union-inks-singapore": {
     "website": "https://www.unioninks.com/",
     "contactPage": "https://www.unioninks.com/contact_us.html",
@@ -35176,6 +35278,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "effect-group-yerevan",
   "union-inks-singapore",
   "intercolor-megrine",
   "sanchez-screentec-tepeji",
