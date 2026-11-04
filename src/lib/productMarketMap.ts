@@ -10852,11 +10852,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-03"
   },
+  {
+    "id": "sanchez-screentec-tepeji",
+    "company": "Grupo Sánchez (Screentec)",
+    "productId": "cpp-cpo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Tepeji del Río de Ocampo（城市级近似点，非厂址门牌测绘）",
+    "latitude": 19.9,
+    "longitude": -99.34,
+    "legacyCompanyDescription": "集团自主生产丝印油墨；Poliprox NT Q6 专用于未处理 PP，技术表说明按溶剂挥发和氧化干燥。",
+    "fit": "可开发候选",
+    "signal": "集团自主生产丝印油墨；Poliprox NT Q6 专用于未处理 PP，技术表说明按溶剂挥发和氧化干燥。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "完整读取Screentec与集团首页、辅助剂页及两份原始技术表三页：Grupo Sánchez明确自主生产与研发，Screentec、Sánchez S.A.de C.V.及Voller涂料品牌按同一集团账户，工厂/门店/其他国家不拆新增。集团经营列成品油墨、涂料、印刷胶、设备及塑料包装；保留其配套化学品销售事实。Acondicionadores技术表明确为挥发性溶剂或混合物，不成为最终漆膜组成部分，不能仅因“促进附着力”就等同CPP/CPO成膜树脂。网页与技术表部分P1编码不同，未逐SKU合并或补造化学组成。Poliprox Base Q6-6019列于油墨色系，未推断纯CPO成分；网版工艺用乳剂也未仅凭名称当CPO乳液。所查当前类目及原文未发现CPP/CPO/聚烯烃树脂或同类原料级附着输入外售，结论限已读范围，未声称全SKU/SDS/全部股权审计。集团、品牌、域名及公开/私有库跨产品查重无已入库命中。2021版文档本轮于2026-11-03获取，2026-11-04独立复核；合规、耐水、附着等成品宣传不转为我方材料保证。"
+    },
+    "contact": {
+      "label": "公开丝印技术部门邮箱及业务电话；非具名采购",
+      "email": "lbseri@sanchez.com.mx",
+      "phone": "(+52) 77-37-33-97-30",
+      "contactUrl": "https://screentec.com.mx/"
+    },
+    "source": {
+      "label": "Official Poliprox NT Q6 untreated-PP screen ink and own group production",
+      "url": "https://screentec.com.mx/wp-content/uploads/2021/01/POLIPROX-NT-Q6.pdf#page=1"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "sanchez-screentec-tepeji": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "edifloor-prishtina": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indercol-sintra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "encres-dubuit-mitry-mory": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11335,6 +11364,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "sanchez-screentec-tepeji": {
+    "website": "https://screentec.com.mx/",
+    "contactPage": "https://screentec.com.mx/",
+    "address": "Calle 2 S/N, Carretera México-Querétaro KM61, Parque Industrial Tepeji, 42884, Tepeji del Río de Ocampo, Hidalgo, México. Current group contact address and visually read PDF footer; not a surveyed factory coordinate.",
+    "generalEmail": "",
+    "generalPhone": "(+52) 77-37-33-97-30",
+    "generalPhoneEvidence": {
+      "company": "Grupo Sánchez (Screentec)",
+      "value": "(+52) 77-37-33-97-30",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Screentec Home business phone, matched to Grupo Sanchez and visually read PDF footer digits",
+          "url": "https://screentec.com.mx/",
+          "summary": "Home visibly prints (+52)77-37-33-97-30; group and PDF footer show7737339730. Public business telephone, no WhatsApp or named buyer inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Technical",
+        "email": "lbseri@sanchez.com.mx",
+        "emailEvidence": {
+          "company": "Grupo Sánchez (Screentec)",
+          "value": "lbseri@sanchez.com.mx",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official Poliprox NT Q6 page1 Departamento Técnico public business mailbox",
+              "url": "https://screentec.com.mx/wp-content/uploads/2021/01/POLIPROX-NT-Q6.pdf#page=1",
+              "summary": "The original page explicitly publishes lowercase lbseri@sanchez.com.mx for Departamento Técnico. Selected from this sheet; other auxiliary sheet uses capital Lbseri. No named person, purchasing responsibility or delivery guarantee inferred."
+            }
+          ],
+          "verifiedAt": "2026-11-04"
+        }
+      },
+      {
+        "department": "Sales",
+        "email": "ventas@screentec.com.mx",
+        "emailEvidence": {
+          "company": "Grupo Sánchez (Screentec)",
+          "value": "ventas@screentec.com.mx",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Official Screentec Home public sales mailbox",
+              "url": "https://screentec.com.mx/",
+              "summary": "Current business footer visibly publishes ventas@screentec.com.mx for Screentec, explicitly part of Grupo Sanchez. Department route, no personal name or procurement role."
+            }
+          ],
+          "verifiedAt": "2026-11-04"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official Screentec group membership, own ink/material production and public business routes; retrievedNov3",
+        "url": "https://screentec.com.mx/"
+      },
+      {
+        "label": "Original Poliprox NT Q6 two-page technical sheet, Jan2021; solvent/oxidation drying and untreatedPP; readNov3",
+        "url": "https://screentec.com.mx/wp-content/uploads/2021/01/POLIPROX-NT-Q6.pdf"
+      },
+      {
+        "label": "Official group Home finite overall portfolio, own R&D/production and Voller link; retrievedNov3",
+        "url": "https://sanchez.com.mx/"
+      },
+      {
+        "label": "Official conditioner sales page; retrievedNov3",
+        "url": "https://screentec.com.mx/producto/acondicionadores-auxiliares-limpiadores-para-serigrafia-screentec/"
+      },
+      {
+        "label": "Original conditioner one-page technical sheet, Jan2021; volatile-solvent definition; readNov3",
+        "url": "https://screentec.com.mx/wp-content/uploads/2021/01/ACONDICIONADORES.pdf"
+      }
+    ]
+  },
   "edifloor-prishtina": {
     "website": "https://www.edifloorgroup.com/",
     "contactPage": "https://www.edifloorgroup.com/contact",
@@ -34875,6 +34986,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "sanchez-screentec-tepeji",
   "edifloor-prishtina",
   "indercol-sintra",
   "encres-dubuit-mitry-mory",
