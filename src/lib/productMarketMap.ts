@@ -10908,11 +10908,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "union-inks-singapore",
+    "company": "Union Inks and Graphics Pte Ltd",
+    "productId": "cpp-cpo",
+    "country": "Singapore",
+    "countryZh": "新加坡",
+    "city": "Singapore（国家/城市级示意点，非Buroh厂址门牌测绘）",
+    "latitude": 1.35,
+    "longitude": 103.82,
+    "legacyCompanyDescription": "自主制造丝印油墨并设有研发设施；UNI-PP 59-00 用于未处理硬质 PP，按溶剂挥发干燥。",
+    "fit": "可开发候选",
+    "signal": "自主制造丝印油墨并设有研发设施；UNI-PP 59-00 用于未处理硬质 PP，按溶剂挥发干燥。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "官网明确自行制造传统及UV丝印油墨并设研发设施，具体UNI-PP59-00技术表支持未处理硬质PP溶剂型体系。完整读取首页、油墨目录、经营范围、联系页及两页原始技术表；配套业务为丝网、感光乳剂/制版化学品、膜片、刮刀、设备和制版服务。感光乳剂按网版工艺语境处理，不以乳剂一词推定为CPP/CPO分散原料；油墨介质、罩光/金属墨基料及稀释清洗配套品也未推断为纯CPP/CPO原料。在已读经营及产品范围未见对外供应CPP/CPO/聚烯烃树脂或同类原料级附着输入，结论有限，不声称所有SKU、SDS或全部化学组成已审计。联系页将新加坡与印度ShreeUnion列为制造厂，作为同一账户；越南AnHyThinh及毛里求斯ToyoLtd列经销商，不按名称认定日本ToyoInk股权关系。中国销售办公室不作目标或另计。按公司、品牌、域名、制造关联及跨产品公开/私有库查重无同一账户；未声称完整股权注册审计。当前CPP/CPO使用、我方牌号相容性及采购需求未确认。"
+    },
+    "contact": {
+      "label": "新加坡官网通用业务邮箱与电话；非具名采购",
+      "email": "enquiry@unioninks.com",
+      "phone": "(65) 6283 8133",
+      "contactUrl": "https://www.unioninks.com/contact_us.html"
+    },
+    "source": {
+      "label": "Official UNI-PP59-00 solvent-evaporation untreated-rigid-PP screen ink and own manufacture",
+      "url": "https://www.unioninks.com/PDF%20downloads/tds-inks/59-00%20Series.pdf#page=1"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "union-inks-singapore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "intercolor-megrine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sanchez-screentec-tepeji": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "edifloor-prishtina": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11393,6 +11422,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "union-inks-singapore": {
+    "website": "https://www.unioninks.com/",
+    "contactPage": "https://www.unioninks.com/contact_us.html",
+    "address": "8 Buroh Street #02-11, Singapore 627563. Official Singapore business/manufacturing location, shared group with the India plant; indicative city point, not a surveyed factory coordinate.",
+    "generalEmail": "enquiry@unioninks.com",
+    "generalEmailEvidence": {
+      "company": "Union Inks and Graphics Pte Ltd",
+      "value": "enquiry@unioninks.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact Singapore corporate business email in main and manufacturing-plant blocks",
+          "url": "https://www.unioninks.com/contact_us.html",
+          "summary": "The exact visible business mailbox enquiry@unioninks.com is printed twice forUnionInksandGraphicsPteLtd Singapore. Plaintextdisclosure, no mailto asserted, name/role or deliverability guessed."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "generalPhone": "(65) 6283 8133",
+    "generalPhoneEvidence": {
+      "company": "Union Inks and Graphics Pte Ltd",
+      "value": "(65) 6283 8133",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Contact Singapore labelled Tel, distinct from Fax",
+          "url": "https://www.unioninks.com/contact_us.html",
+          "summary": "The official Singapore block explicitly labels Tel:(65)62838133 and separatelyFax:(65)62838122. Exactpublishedformat preserved, no added+normalisation, namedbuyer orWhatsApp."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Home ink manufacture and own R&D facilities",
+        "url": "https://www.unioninks.com/"
+      },
+      {
+        "label": "Official current product listing and exact59-00 technicalsheetlink, other inkseries distinct",
+        "url": "https://www.unioninks.com/productinfo.html"
+      },
+      {
+        "label": "Complete original UNI-PP59-00 two-page technicalsheet, undatedTIL506B, retrievedNov4",
+        "url": "https://www.unioninks.com/PDF%20downloads/tds-inks/59-00%20Series.pdf"
+      },
+      {
+        "label": "Official Contact manufacturingplants versusdistributors and separateSingaporebusinesschannels",
+        "url": "https://www.unioninks.com/contact_us.html"
+      },
+      {
+        "label": "Official own conventional/UVmanufacture, exactsubstrates and complete complementarybusinessscope",
+        "url": "https://www.unioninks.com/whatweoffer.html"
+      }
+    ]
+  },
   "intercolor-megrine": {
     "website": "https://www.intercolor.com.tn/",
     "contactPage": "https://www.intercolor.com.tn/",
@@ -35088,6 +35176,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "union-inks-singapore",
   "intercolor-megrine",
   "sanchez-screentec-tepeji",
   "edifloor-prishtina",
