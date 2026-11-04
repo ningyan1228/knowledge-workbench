@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "intercolor-megrine": "Your team develops and manufactures Sellyogard, a two-component epoxy primer and intermediate coating for protective applications.",
   "sanchez-screentec-tepeji": "Your Poliprox NT Q6 screen-printing ink targets untreated polypropylene and dries by solvent evaporation and oxidation.",
   "edifloor-prishtina": "Your team formulates and manufactures Epoxy Sealer 100 primers and Epoxy Selfleveling 500 flooring systems.",
   "indercol-sintra": "Your ESMALTE EPÓXI - WB is a two-component water-based epoxy coating for floors, walls and metals.",

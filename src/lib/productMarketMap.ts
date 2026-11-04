@@ -10880,11 +10880,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "intercolor-megrine",
+    "company": "Intercolor S.A.",
+    "productId": "elo",
+    "country": "Tunisia",
+    "countryZh": "突尼斯",
+    "city": "Mégrine（城市级近似点，非工厂门牌测绘）",
+    "latitude": 36.77,
+    "longitude": 10.23,
+    "legacyCompanyDescription": "自主研发并制造 SELLYO 防护涂料；SELLYOGARD 为双组分环氧体系，可用作底漆和中间涂层。",
+    "fit": "可开发候选",
+    "signal": "自主研发并制造 SELLYO 防护涂料；SELLYOGARD 为双组分环氧体系，可用作底漆和中间涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "官网公司介绍及公开手册将自有研发制造的 SELLYO 与进口 PPG、ALCEA 等品牌明确区分；以自制 SELLYOGARD 环氧涂层作为需求侧证据，不把代理品牌当作自产或集团股权关系。所读首页、公司介绍、三大类产品总览、具体涂层、配套稀释剂页及八页手册，未发现 ELO、ESBO、环氧化植物油或相近生物增塑稳定原料对外销售。DILUANT EPOXY 9043 只有产品名称及配套涂料分类，未给组成；不推断为挥发性溶剂、反应型稀释剂或 ELO 类原料。配套固化剂、柔性聚酯腻子和涂装系统中的环氧树脂称谓不自动等同所选原料。结论限已读经营范围，未声称全部 SKU、SDS、配方或完整股权已审计。Intercolor S.A.、SELLYO 及相关品牌/域名按同一客户核对，公开与私有库无同一已入库账户；国际合作不是母子公司证明。现用 ELO、我方材料相容性及采购需求均未确认。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与电话；非具名采购",
+      "email": "intercolor@gnet.tn",
+      "phone": "+216 71 433 290",
+      "contactUrl": "https://www.intercolor.com.tn/"
+    },
+    "source": {
+      "label": "Official Sellyogard epoxy coating with own SELLYO R&D/manufacturing attribution",
+      "url": "https://www.intercolor.com.tn/produit/sellyogard/"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "intercolor-megrine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "sanchez-screentec-tepeji": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "edifloor-prishtina": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "indercol-sintra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11364,6 +11393,79 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "intercolor-megrine": {
+    "website": "https://www.intercolor.com.tn/",
+    "contactPage": "https://www.intercolor.com.tn/",
+    "address": "8, avenue de la Gare, Z.I. Sidi Rézig, 2033 Mégrine, Tunisie. Published corporate business location; city-level map point, not a surveyed factory gate.",
+    "generalEmail": "intercolor@gnet.tn",
+    "generalEmailEvidence": {
+      "company": "Intercolor S.A.",
+      "value": "intercolor@gnet.tn",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Intercolor Home corporate mailbox and exact mailto",
+          "url": "https://www.intercolor.com.tn/",
+          "summary": "Visible intercolor@gnet.tn and matching mailto on the company own site; externally hosted gnet.tn inbox is explicitly published forIntercolor, not guessed, named or deliverability-verified."
+        },
+        {
+          "label": "Official public company brochure page8 corporate contact",
+          "url": "https://www.intercolor.com.tn/wp-content/uploads/2025/08/brochure-intercolor-FR-2024.pdf#page=8",
+          "summary": "Company business footer repeats this channel and the sameMegrineaddress; fax is separately marked."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "generalPhone": "+216 71 433 290",
+    "generalPhoneEvidence": {
+      "company": "Intercolor S.A.",
+      "value": "+216 71 433 290",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Intercolor Home published business telephone",
+          "url": "https://www.intercolor.com.tn/",
+          "summary": "Visible international business number +21671433290 is published; underlyingtel71433290 is domesticformat. Public text retained without inventedWhatsApp or namedpurchasingrole."
+        },
+        {
+          "label": "Official public company brochure page8 corporate contact",
+          "url": "https://www.intercolor.com.tn/wp-content/uploads/2025/08/brochure-intercolor-FR-2024.pdf#page=8",
+          "summary": "Company business footer repeats this channel and the sameMegrineaddress; fax is separately marked."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Own company Home manufacture, own R&D, full business perimeter and public contact",
+        "url": "https://www.intercolor.com.tn/"
+      },
+      {
+        "label": "Official Sellyogard two-component epoxy primer/intermediate product",
+        "url": "https://www.intercolor.com.tn/produit/sellyogard/"
+      },
+      {
+        "label": "Own SELLYO development/manufacture and separate international partnerships",
+        "url": "https://www.intercolor.com.tn/presentation/"
+      },
+      {
+        "label": "Actual three business-category product overview,24displayedcards, not all leaf/SDS",
+        "url": "https://www.intercolor.com.tn/nos-produits/"
+      },
+      {
+        "label": "Published DILUANT EPOXY9043 accompanying product; no composition disclosed",
+        "url": "https://www.intercolor.com.tn/produit/diluant-epoxy-9043/"
+      },
+      {
+        "label": "Full8page public brochure: own-manufacture, importedbrands and exactcontact; retrievedNov4",
+        "url": "https://www.intercolor.com.tn/wp-content/uploads/2025/08/brochure-intercolor-FR-2024.pdf"
+      }
+    ]
+  },
   "sanchez-screentec-tepeji": {
     "website": "https://screentec.com.mx/",
     "contactPage": "https://screentec.com.mx/",
@@ -34986,6 +35088,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "intercolor-megrine",
   "sanchez-screentec-tepeji",
   "edifloor-prishtina",
   "indercol-sintra",
