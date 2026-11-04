@@ -10992,11 +10992,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "cmt-group-baku",
+    "legacyCompanyDescription": "阿塞拜疆自有涂料制造企业；Knarr Zinkomastik PR为双组分胺固化环氧防腐底漆，含磷酸锌，用于钢构和金属表面。",
+    "company": "CMT Group LLC (Knarr Paints)",
+    "productId": "elo",
+    "country": "Azerbaijan",
+    "countryZh": "阿塞拜疆",
+    "city": "Baku（城市级近似点，非工厂门牌测绘）",
+    "latitude": 40.4,
+    "longitude": 49.9,
+    "fit": "可开发候选",
+    "signal": "阿塞拜疆自有涂料制造企业；Knarr Zinkomastik PR为双组分胺固化环氧防腐底漆，含磷酸锌，用于钢构和金属表面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-04",
+      "conclusion": "CMT官网Brands明确制造建材、涂料及混凝土外加剂，并以Knarr生产工业、家具、船舶和汽车涂料；Knarr官网重复制造声明、工厂及业务地址，具体Zinkomastik PR产品页明确双组分胺固化环氧、磷酸锌及钢构/金属底涂用途。已读母公司品牌经营范围、Knarr全局产品分类、防腐底漆目录8款与具体PR页、母公司联系页，显示成品涂料、配套稀释剂及水泥/石膏建材和混凝土外加剂；该有限公开范围未发现ELO、ESBO、环氧化植物油或同类生物增塑/稳定原料外售。未读取全部叶页、各品牌全部SKU、SDS或PDF，不能声称全目录成分审计；第6次母公司Production链接返回404/0字节，不是生产正文。生产身份由两站明确自述和自有具体产品相互核对，不将404页面用作工厂设备、投产年或产能证据。Penguin、Knarr、EPO Kimya及Zink按CMT一个保守集团账户处理，俄罗斯分支不另计；Transocean为其所列船用品牌，不据此认定全球所有Transocean成员公司为同一母公司或所有合作伙伴均被CMT持有。ELO只作自有涂料柔韧性/树脂改性的实验室评估方向，不确认其现用、采购、固化相容、防腐提升或NL牌号适配。"
+    },
+    "contact": {
+      "label": "官网业务联系表单与公开电话；邮箱遮蔽未核验，未提交表单",
+      "phone": "+994 12 502 45 50",
+      "contactUrl": "https://cmt.com.az/contact"
+    },
+    "source": {
+      "label": "Official Knarr Zinkomastik PR two-component amine-cured zinc-phosphate epoxy primer",
+      "url": "https://knarrpaints.com/az/products/1"
+    },
+    "checkedAt": "2026-11-04"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "cmt-group-baku": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "asia-coatings-savar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "effect-group-yerevan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "union-inks-singapore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11480,6 +11508,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "cmt-group-baku": {
+    "website": "https://knarrpaints.com/",
+    "contactPage": "https://cmt.com.az/contact",
+    "address": "Corporate office: Badamdar highway 27, Baku, Azerbaijan. Factory as listed by Knarr: Hazi Javadov street 3, Ashaghi Guzdek, Absheron, Azerbaijan. Baku map point is approximate, not a surveyed factory gate.",
+    "generalPhone": "+994 12 502 45 50",
+    "generalPhoneEvidence": {
+      "company": "CMT Group LLC (Knarr Paints)",
+      "value": "+994 12 502 45 50",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official Knarr corporate business telephone and CMT manufacturer footer",
+          "url": "https://knarrpaints.com/",
+          "summary": "The public company footer explicitly lists +99412 5024550; generic business phone, no named purchaser or WhatsApp inference."
+        }
+      ],
+      "verifiedAt": "2026-11-04"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Knarr Zinkomastik PR two-component amine-cured zinc-phosphate epoxy primer",
+        "url": "https://knarrpaints.com/az/products/1"
+      },
+      {
+        "label": "CMT official brands and downstream manufacture scope: Penguin, Knarr, EPO Kimya, Zink",
+        "url": "https://cmt.com.az/Brands"
+      },
+      {
+        "label": "Knarr official manufacture statement, factory/corporate addresses and public business phone",
+        "url": "https://knarrpaints.com/"
+      },
+      {
+        "label": "Official full anticorrosive-primer category, eight named products and full site category navigation",
+        "url": "https://knarrpaints.com/az/categories/2"
+      },
+      {
+        "label": "CMT official public business contact form; email masked and not inferred",
+        "url": "https://cmt.com.az/contact"
+      }
+    ]
+  },
   "asia-coatings-savar": {
     "website": "https://www.jatasiacoatings.com/",
     "contactPage": "https://www.jatasiacoatings.com/about-us",
@@ -35372,6 +35444,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "cmt-group-baku",
   "asia-coatings-savar",
   "effect-group-yerevan",
   "union-inks-singapore",
