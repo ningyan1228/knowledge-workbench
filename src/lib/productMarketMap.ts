@@ -11075,11 +11075,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-05"
   },
+  {
+    "id": "deutschcolor-durres",
+    "company": "Deutschcolor sh.a.",
+    "productId": "elo",
+    "country": "Albania",
+    "countryZh": "阿尔巴尼亚",
+    "city": "Tiranë–Durrës corridor（Tirana城市粗略标点，非工厂定位）",
+    "latitude": 41.3275,
+    "longitude": 19.8187,
+    "legacyCompanyDescription": "阿尔巴尼亚Tiranë–Durrës走廊自有涂料工厂及研发实验室；Epo Farbe SV具体条目和对应两页技术资料均明确双组分环氧金属防护涂料，用于工业钢构、金属罐及船舶/港口设备。",
+    "fit": "可开发候选",
+    "signal": "阿尔巴尼亚Tiranë–Durrës走廊自有涂料工厂及研发实验室；Epo Farbe SV具体条目和对应两页技术资料均明确双组分环氧金属防护涂料，用于工业钢构、金属罐及船舶/港口设备。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-05",
+      "conclusion": "独立复读公司制造/研发介绍、官方Delta Corporation品牌页、金属成品涂料目录、具体Epo Farbe SV环氧条目、官方联系页及该条目链接的完整两页技术资料。公司是自有涂料/建材配方制造商；已读经营范围包括成品涂料、建筑胶、灌浆料、防水/地坪和砂浆混凝土添加剂，以及PU成品体系配套催化剂/稀释剂，未见外售ELO、ESBO、环氧植物油或同类生物基增塑输入原料。普通建筑添加剂或树脂体系名称不能自动当作所选输入原料同行。有限已读范围通过排除，未读全SKU/SDS/所有集团子公司配方，不保证未披露业务。目录另有同名Epo Farbe SV聚氨酯条目；仅采用无-2的具体环氧URL及其链接的PDF，不把所有同名产品泛化为环氧。HTML与PDF包装信息不同，不采用包装/混比/认证/性能参数作开发事实。集团官方品牌页列Deutschcolor、DAST、DC Industries、Delta、Thermo Swiss及DC Investment；这些主体、德国GmbH联系页脚、阿尔巴尼亚工厂与多国市场保守按一个关联账户，不宣称完成法定股权审计或把合作关系直接等同全资母子公司。历史Nash Paints津巴布韦客户表的Delta Corporation及VIRES意大利EPOX DAST产品名不当作本集团来源或归属证明。用户ELO资料支持涂料/树脂改性的潜在实验室原料评估，不证明客户已用ELO、正在采购、具体配方相容或可改善其防腐性能。"
+    },
+    "contact": {
+      "label": "厂家技术资料公开通用邮箱、官网电话和表单入口，非具名采购",
+      "email": "info@deutschcolor.de",
+      "phone": "+355 57 59 4000",
+      "contactUrl": "https://deutschcolor.com/en/contact-paint-supplier/"
+    },
+    "source": {
+      "label": "Deutschcolor official exact Epo Farbe SV two-component epoxy metal coating and industrial/marine recommendations",
+      "url": "https://deutschcolor.com/en/product/epo-farbe-sv/"
+    },
+    "checkedAt": "2026-11-05"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "deutschcolor-durres": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ekolak-raca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "veeto-hobbies-ambala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "cmt-group-baku": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11566,6 +11595,74 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "deutschcolor-durres": {
+    "website": "https://deutschcolor.com/en/",
+    "contactPage": "https://deutschcolor.com/en/contact-paint-supplier/",
+    "address": "Official Albanian manufacturer/contact: Autostrada Tiranë–Durrës, km19, Albania. Website footer separately identifies Deutschcolor GmbH, Fennstraße29,13353 Berlin,Germany. Map uses only a coarse Tirana city marker41.3275,19.8187, not an asserted factory coordinate or storefront geocode.",
+    "generalEmail": "info@deutschcolor.de",
+    "generalEmailEvidence": {
+      "company": "Deutschcolor sh.a.",
+      "value": "info@deutschcolor.de",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Deutschcolor-authored Epo Farbe SV two-page Technical Data Sheet, both page footers",
+          "url": "https://deutschcolor.com/en/wp-content/uploads/2019/04/epo-farbe-sv.pdf",
+          "summary": "Both fully read and locally visually checked page footers explicitly publish Deutschcolor sh.a, Autostrada Tiranë–Durrës km19, Albania, info@deutschcolor.de and +355 57 59 4000; same exact product linked by current official epoxy page. Generic business mailbox, no named buyer or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-11-05"
+    },
+    "generalPhone": "+355 57 59 4000",
+    "generalPhoneEvidence": {
+      "company": "Deutschcolor sh.a.",
+      "value": "+355 57 59 4000",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Deutschcolor official Albania Contact",
+          "url": "https://deutschcolor.com/en/contact-paint-supplier/",
+          "summary": "Current official Contact explicitly identifies Deutschcolor sh.a, Autostrada Tirane–Durres km19, Albania and +355 57 59 4000; public inquiry form. HTML email masked and not decoded; exact mailbox separately verified in the branded PDF."
+        },
+        {
+          "label": "Deutschcolor-authored Epo Farbe SV two-page Technical Data Sheet, both page footers",
+          "url": "https://deutschcolor.com/en/wp-content/uploads/2019/04/epo-farbe-sv.pdf",
+          "summary": "Both fully read and locally visually checked page footers explicitly publish Deutschcolor sh.a, Autostrada Tiranë–Durrës km19, Albania, info@deutschcolor.de and +355 57 59 4000; same exact product linked by current official epoxy page. Generic business mailbox, no named buyer or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-11-05"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Deutschcolor official exact Epo Farbe SV two-component epoxy metal coating and industrial/marine recommendations",
+        "url": "https://deutschcolor.com/en/product/epo-farbe-sv/"
+      },
+      {
+        "label": "Official Deutschcolor own Albanian factory, research laboratory and chemists",
+        "url": "https://deutschcolor.com/en/about-us-construction-materials/"
+      },
+      {
+        "label": "Delta Corporation official associated brands and activities; one conservative account",
+        "url": "https://deltacorporation.eu/products-brands/"
+      },
+      {
+        "label": "Official metal coating catalogue and finite downstream product scope",
+        "url": "https://deutschcolor.com/en/product-category/metal-paints/paints-for-metals/"
+      },
+      {
+        "label": "Deutschcolor official Albania Contact",
+        "url": "https://deutschcolor.com/en/contact-paint-supplier/"
+      },
+      {
+        "label": "Deutschcolor-authored Epo Farbe SV two-page Technical Data Sheet, both page footers",
+        "url": "https://deutschcolor.com/en/wp-content/uploads/2019/04/epo-farbe-sv.pdf"
+      }
+    ]
+  },
   "ekolak-raca": {
     "website": "https://ekolak.rs/en/",
     "contactPage": "https://ekolak.rs/en/kontakt/",
@@ -35620,6 +35717,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "deutschcolor-durres",
   "ekolak-raca",
   "veeto-hobbies-ambala",
   "cmt-group-baku",
