@@ -11047,11 +11047,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-04"
   },
+  {
+    "id": "ekolak-raca",
+    "company": "EkoLak d.o.o.",
+    "productId": "nl-w1201",
+    "country": "Serbia",
+    "countryZh": "塞尔维亚",
+    "city": "Vučić, Rača（官网公开地图点，未经厂门测绘）",
+    "latitude": 44.2026355,
+    "longitude": 21.0129596,
+    "legacyCompanyDescription": "塞尔维亚Rača家族涂料制造商，官网明确自有生产设施；Acrylic Varnish – Invisible为实木和木皮室内家具用水性木器涂料。",
+    "fit": "可开发候选",
+    "signal": "塞尔维亚Rača家族涂料制造商，官网明确自有生产设施；Acrylic Varnish – Invisible为实木和木皮室内家具用水性木器涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-05",
+      "conclusion": "独立复读官网首页自有配方及生产设施、具体Invisible水性木器清漆、全产品分类、工业产品分类与联系页。产品覆盖木器水性底/面漆、木器油蜡、维护剂、LED固化成品涂层、调色基漆及色浆、金属成品涂料；Baze i paste为具体木器涂料基漆及调色色浆，不能因base/paste或BTF Primer名称认定为聚烯烃分散体原料。已读有限范围未见外售PO/CPO水性分散体、聚烯烃乳液或同类附着促进原料；未读全部叶页/SDS/完整配方，不作全SKU排除保证。不把天然油蜡或LED系列泛化成水性。塞尔维亚EkoLak自述2010年成立、Vučić/Rača及ekolak.rs，与Colorlak已核验的捷克2007年收购Bílovice历史EKOLAK工厂按具体主体/地点/来源区分；波兰Tukan的ekolakiery.pl不是该域名。Pulena是发现阶段经销商/旧资料主机，未当制造商或母公司。ekolak.rs及shop.ekolak.rs、区域销售点和出口市场均按同一保守账户，不拆新增；不称完成全球股权登记审计。NL-W1201用户资料支持木材及水性底涂/附着促进原料的实验室评估，客户现用树脂、我方产品相容性、采购计划、性能与认证均未确认。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话和联系表单入口，非具名采购",
+      "email": "info@ekolak.rs",
+      "phone": "+381 34 355 339",
+      "contactUrl": "https://ekolak.rs/en/kontakt/"
+    },
+    "source": {
+      "label": "EkoLak official Acrylic Varnish – Invisible water-based interior wood coating",
+      "url": "https://ekolak.rs/en/proizvod/akrilni-lak-invisible/"
+    },
+    "checkedAt": "2026-11-05"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "ekolak-raca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "veeto-hobbies-ambala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "cmt-group-baku": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "asia-coatings-savar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11537,6 +11566,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "ekolak-raca": {
+    "website": "https://ekolak.rs/en/",
+    "contactPage": "https://ekolak.rs/en/kontakt/",
+    "address": "Vučić bb, 34210 Rača, Serbia. Official contact page publishes map marker 44.2026355, 21.0129596; reproduced as published, not an independently surveyed factory gate.",
+    "generalEmail": "info@ekolak.rs",
+    "generalEmailEvidence": {
+      "company": "EkoLak d.o.o.",
+      "value": "info@ekolak.rs",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "EkoLak official Contact, exact company business email, telephone and Vučić/Rača address",
+          "url": "https://ekolak.rs/en/kontakt/",
+          "summary": "Official contact block explicitly publishes info@ekolak.rs, +381 34 355 339 and Vučić bb, 34210 Rača, Serbia; footer identifies EkoLak D.O.O. Generic company routes, no named recipient or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-11-05"
+    },
+    "generalPhone": "+381 34 355 339",
+    "generalPhoneEvidence": {
+      "company": "EkoLak d.o.o.",
+      "value": "+381 34 355 339",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "EkoLak official Contact, exact company business email, telephone and Vučić/Rača address",
+          "url": "https://ekolak.rs/en/kontakt/",
+          "summary": "Official contact block explicitly publishes info@ekolak.rs, +381 34 355 339 and Vučić bb, 34210 Rača, Serbia; footer identifies EkoLak D.O.O. Generic company routes, no named recipient or deliverability assertion."
+        }
+      ],
+      "verifiedAt": "2026-11-05"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "EkoLak official Acrylic Varnish – Invisible water-based interior wood coating",
+        "url": "https://ekolak.rs/en/proizvod/akrilni-lak-invisible/"
+      },
+      {
+        "label": "EkoLak official About section: family-owned since2010, own formulation and Serbian production facility",
+        "url": "https://ekolak.rs/en/"
+      },
+      {
+        "label": "EkoLak official water-based wood coating, natural oil/wax and other finished-product categories",
+        "url": "https://ekolak.rs/en/proizvodi/"
+      },
+      {
+        "label": "EkoLak official industrial wood coatings, finished coating bases and tinting pastes",
+        "url": "https://ekolak.rs/en/industrijski-proizvodi/"
+      },
+      {
+        "label": "EkoLak official Contact, exact company business email, telephone and Vučić/Rača address",
+        "url": "https://ekolak.rs/en/kontakt/"
+      }
+    ]
+  },
   "veeto-hobbies-ambala": {
     "website": "https://www.veetohobbies.com/",
     "contactPage": "https://www.veetohobbies.com/enquiry.html",
@@ -35532,6 +35620,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "ekolak-raca",
   "veeto-hobbies-ambala",
   "cmt-group-baku",
   "asia-coatings-savar",
