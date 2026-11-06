@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "wood-kare-bangi": "Your Aqua Top Coat SEALER is a water-based acrylic polyurethane finish used in interior wood coating systems.",
   "deutschcolor-durres": "Your Epo Farbe SV is a two-component epoxy metal coating for industrial structures, tanks and marine or port equipment.",
   "ekolak-raca": "Your Acrylic Varnish - Invisible is a water-based coating for solid and veneered interior wood furniture.",
   "veeto-hobbies-ambala": "Your Super PP Screen Printing Inks are solvent-based systems for untreated and treated polypropylene containers and automotive battery housings.",

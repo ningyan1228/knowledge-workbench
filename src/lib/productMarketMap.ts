@@ -11103,11 +11103,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-05"
   },
+  {
+    "id": "wood-kare-bangi",
+    "company": "Wood-Kare (M) Sdn Bhd",
+    "productId": "nl-w1201",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Bandar Baru Bangi, Selangor（沿用已有城市级近似点，非厂门坐标）",
+    "latitude": 2.96,
+    "longitude": 101.755,
+    "legacyCompanyDescription": "马来西亚Bandar Baru Bangi木器涂料制造商，官网明确自有配方及生产；Aqua Top Coat SEALER为室内木器用水性丙烯酸聚氨酯封闭涂层。",
+    "fit": "可开发候选",
+    "signal": "马来西亚Bandar Baru Bangi木器涂料制造商，官网明确自有配方及生产；Aqua Top Coat SEALER为室内木器用水性丙烯酸聚氨酯封闭涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-06",
+      "conclusion": "独立复读官网首页、公司介绍、具体Aqua Top Coat SEALER、两页全部31项产品目录及联系页。官网明确1998年起自有配方及Otter木石护理产品生产，当前自述马来西亚木器/水性涂料制造商，非仅把出口国家当海外工厂。具体产品为水性丙烯酸聚氨酯室内木器封闭/面涂配套体系。目录同时销售Epoxy Resin A+B Set、松节油、稀释剂和施工工具：这些不能隐瞒，也不能等同所选PO/CPO水性分散体原料。已读官网两页目录及制造介绍未见外售聚烯烃分散体、氯化聚烯烃分散体或聚烯烃乳液等所选附着促进原料；未读取全部31个叶页、SDS或完整配方，不作全部化学原料排除保证。Wood-Coat Marketing/Woodcoat Marketing旧名、Wood-Kare与Otter品牌及官网关联Otter International按同一保守账户去重，品牌、分支、出口市场不拆新增；历史Woodkote美国品牌独家经销关系不是共同所有权证明，也不替代该公司当前自有配方/生产证据。未完成全球股权登记审计。NL-W1201用于其水性木器配方/底涂附着促进的实验室评估仅为潜在关联，不认定客户现用我方材料、具体配方相容、采购需求或性能保证。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话和联系表单，非具名采购",
+      "email": "enquiry@wood-kare.com",
+      "phone": "+603-8922 3288",
+      "contactUrl": "https://www.wood-kare.com/contact-8"
+    },
+    "source": {
+      "label": "Wood-Kare official Aqua Top Coat SEALER: water-based acrylic polyurethane interior wood finish",
+      "url": "https://www.wood-kare.com/product-page/aqua-top-coat"
+    },
+    "checkedAt": "2026-11-06"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "wood-kare-bangi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "deutschcolor-durres": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ekolak-raca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "veeto-hobbies-ambala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11595,6 +11624,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "wood-kare-bangi": {
+    "website": "https://www.wood-kare.com/",
+    "contactPage": "https://www.wood-kare.com/contact-8",
+    "address": "1, Jalan P10/21, Taman Industri Selaman, 43650 Bandar Baru Bangi, Selangor, Malaysia. Map uses existing workbench city-level approximate marker 2.96, 101.755; not independently verified factory-gate coordinates.",
+    "generalEmail": "enquiry@wood-kare.com",
+    "generalEmailEvidence": {
+      "company": "Wood-Kare (M) Sdn Bhd",
+      "value": "enquiry@wood-kare.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Wood-Kare official Contact: generic business email, telephone and Bandar Baru Bangi address",
+          "url": "https://www.wood-kare.com/contact-8",
+          "summary": "Official contact block names enquiry@wood-kare.com, +603-8922 3288 and the Bandar Baru Bangi address. Generic company routes, no named procurement contact or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "generalPhone": "+603-8922 3288",
+    "generalPhoneEvidence": {
+      "company": "Wood-Kare (M) Sdn Bhd",
+      "value": "+603-8922 3288",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Wood-Kare official Contact: generic business email, telephone and Bandar Baru Bangi address",
+          "url": "https://www.wood-kare.com/contact-8",
+          "summary": "Official contact block names enquiry@wood-kare.com, +603-8922 3288 and the Bandar Baru Bangi address. Generic company routes, no named procurement contact or deliverability claim."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Wood-Kare official Aqua Top Coat SEALER: water-based acrylic polyurethane interior wood finish",
+        "url": "https://www.wood-kare.com/product-page/aqua-top-coat"
+      },
+      {
+        "label": "Wood-Kare official home: own manufacture, former company name and Otter brand association",
+        "url": "https://www.wood-kare.com/"
+      },
+      {
+        "label": "Wood-Kare official About: own formulations and production, Malaysian water-based wood coating manufacturer",
+        "url": "https://www.wood-kare.com/about-us"
+      },
+      {
+        "label": "Wood-Kare official product catalogue, page1 of2: finished coating systems and accessories",
+        "url": "https://www.wood-kare.com/category/all-products"
+      },
+      {
+        "label": "Wood-Kare official product catalogue, page2 of2: epoxy A+B set, solvents and accessories; selected input exclusion perimeter",
+        "url": "https://www.wood-kare.com/category/all-products?page=2"
+      },
+      {
+        "label": "Wood-Kare official Contact: generic business email, telephone and Bandar Baru Bangi address",
+        "url": "https://www.wood-kare.com/contact-8"
+      }
+    ]
+  },
   "deutschcolor-durres": {
     "website": "https://deutschcolor.com/en/",
     "contactPage": "https://deutschcolor.com/en/contact-paint-supplier/",
@@ -35717,6 +35809,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "wood-kare-bangi",
   "deutschcolor-durres",
   "ekolak-raca",
   "veeto-hobbies-ambala",
