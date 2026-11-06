@@ -11159,11 +11159,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-06"
   },
+  {
+    "id": "champion-color-polchowo",
+    "company": "Champion Color Plus P. Lelito Sp. J.",
+    "productId": "cpp-cpo",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Połchowo（波兰国家级示意点）",
+    "latitude": 52,
+    "longitude": 19,
+    "legacyCompanyDescription": "波兰 Champion Color 自行生产和开发气雾涂料，官网现售保险杠喷雾底漆明确用于聚丙烯表面涂装前的附着处理。",
+    "fit": "可开发候选",
+    "signal": "波兰 Champion Color 自行生产和开发气雾涂料，官网现售保险杠喷雾底漆明确用于聚丙烯表面涂装前的附着处理。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-06",
+      "conclusion": "核读制造商官网首页、两页31项成品目录及具体保险杠底漆。官网明确自行生产气雾涂料、配置设备并改进配方。目录覆盖家用、建筑及汽车成品喷漆、底漆、车身护理、空罐灌装喷雾产品及配套品，已读范围未见销售CPP/CPO、MAH改性CPO或同类附着促进原料。Petrex产品页把ChampionColor列为制造方，Petrex托管的2019年安全数据表标识CHAMPION COLOR PLUS P. Lelito Sp. J.为该表供应方，列明PP底涂、溶剂及氯化聚烯烃，企业地址和总机与当前官网相符。SDS中的THETA为文档联系人，不是客户邮箱。现官网底漆确认PP用途并链接一份不同版本的文件，本轮未下载新版，不把2019年所列成分、比例、CAS或来源当作当前配方。CPP/CPO仅作PP底漆潜在配方评估，不推定牌号、相容性、采购或需求。Petrex只作为销售证据来源，未确认为同一股权集团，不新增销售方记录。Champion Color、ChampionColor Plus、Spray Professional及Połchowo同一经营主体计一户，所见有限业务范围不代表全SKU、上游采购或股权审计。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱和电话",
+      "email": "biuro@championcolor.pl",
+      "phone": "+48 58 673 94 36",
+      "contactUrl": "https://championcolor.pl/"
+    },
+    "source": {
+      "label": "Champion Color official bumper primer, explicitly for polypropylene",
+      "url": "https://championcolor.pl/produkt/podklad-na-zderzaki/"
+    },
+    "checkedAt": "2026-11-06"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "champion-color-polchowo": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "chiara-brcko": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "wood-kare-bangi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "deutschcolor-durres": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11653,6 +11682,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "champion-color-polchowo": {
+    "website": "https://championcolor.pl/",
+    "contactPage": "https://championcolor.pl/",
+    "address": "ul. Dworcowa 7, 84-123 Połchowo, Poland. Map marker is country-level only.",
+    "generalEmail": "biuro@championcolor.pl",
+    "generalEmailEvidence": {
+      "company": "Champion Color Plus P. Lelito Sp. J.",
+      "value": "biuro@championcolor.pl",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Champion Color official homepage, company inbox and phone",
+          "url": "https://championcolor.pl/",
+          "summary": "The official website publishes biuro@championcolor.pl, +48 58 673 94 36 and ul. Dworcowa 7, 84-123 Połchowo. The address and main phone match the older branded safety data sheet."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "generalPhone": "+48 58 673 94 36",
+    "generalPhoneEvidence": {
+      "company": "Champion Color Plus P. Lelito Sp. J.",
+      "value": "+48 58 673 94 36",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Champion Color official homepage, company inbox and phone",
+          "url": "https://championcolor.pl/",
+          "summary": "The official website publishes biuro@championcolor.pl, +48 58 673 94 36 and ul. Dworcowa 7, 84-123 Połchowo. The address and main phone match the older branded safety data sheet."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Champion Color official bumper primer, explicitly for polypropylene",
+        "url": "https://championcolor.pl/produkt/podklad-na-zderzaki/"
+      },
+      {
+        "label": "Champion Color official homepage, company inbox and phone",
+        "url": "https://championcolor.pl/"
+      },
+      {
+        "label": "Champion Color finished product catalogue, page 1 of 2",
+        "url": "https://championcolor.pl/produkty/"
+      },
+      {
+        "label": "Champion Color finished product catalogue, page 2 of 2",
+        "url": "https://championcolor.pl/produkty/page/2/"
+      },
+      {
+        "label": "Petrex listing attributes plastic primer to ChampionColor",
+        "url": "https://www.petrex.pl/pl/produkty/podklad-na-plastik/"
+      },
+      {
+        "label": "Champion Color 2019 plastic primer SDS hosted by Petrex, historical formulation",
+        "url": "https://www.petrex.pl/media/ckeditor/pdf/PODKLAD_%20NA_PLASTIK_01082019.pdf"
+      }
+    ]
+  },
   "chiara-brcko": {
     "website": "https://chiara.ba/?lang=en",
     "contactPage": "https://chiara.ba/kontakt/?lang=en",
@@ -35901,6 +35993,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "champion-color-polchowo",
   "chiara-brcko",
   "wood-kare-bangi",
   "deutschcolor-durres",
