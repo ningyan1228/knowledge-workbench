@@ -11187,11 +11187,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-06"
   },
+  {
+    "id": "hemiprodukt-novi-sad",
+    "company": "Hemiprodukt",
+    "productId": "elo",
+    "country": "Serbia",
+    "countryZh": "塞尔维亚",
+    "city": "Novi Sad / Begeč（官网地图视图中心示意）",
+    "latitude": 45.257356,
+    "longitude": 19.840048,
+    "legacyCompanyDescription": "塞尔维亚 Hemiprodukt 官网确认在 Begeč 自有涂料工厂，工业金属防腐体系列有 Hemipoks osnovni 2K 双组分环氧底漆。",
+    "fit": "可开发候选",
+    "signal": "塞尔维亚 Hemiprodukt 官网确认在 Begeč 自有涂料工厂，工业金属防腐体系列有 Hemipoks osnovni 2K 双组分环氧底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-06",
+      "conclusion": "独立复读官网首页、公司介绍、防腐产品及联系等原文。公司自述1991年开始生产油漆和清漆，在Begeč工业区自建涂料生产仓储综合体，公开Novi Sad总部与Begeč工厂，按一户计。官网也明确从事国内外贸易、咨询和代理，已读实际产品组合包括工业金属用成品环氧、聚氨酯、醇酸、硝基、乙烯基丙烯酸涂料与清洗脱脂配套，以及木器和建筑应用。已读范围未见销售ELO、ESBO、环氧化植物油或同类生物基增塑剂。总产品链接与防腐分类返回相同正文，特殊产品链接只有页面框架及联系信息，因此未把它们算作额外独立目录证据，也不声称全面查阅其他SKU、配方、SDS、代理目录或工商股权。2024英文目录检索命中仅用于发现，未下载或用于本轮资格判断。Begeč与Novi Sad地址为同一经营主体，Karajkov家族所有按官网说明记录，未做股权登记审计。现用原料、采购、配方相容及产品性能均未确认。"
+    },
+    "contact": {
+      "label": "官网公布的Begeč销售部门邮箱及电话",
+      "email": "hemiboje@gmail.com",
+      "phone": "+381 21-2998-420",
+      "contactUrl": "https://hemiprodukt.co.rs/sr-el/kontakt"
+    },
+    "source": {
+      "label": "Hemiprodukt official anticorrosion systems for metal and Hemipoks osnovni 2K",
+      "url": "https://hemiprodukt.co.rs/proizvodi-hemiprodukt/sistemi-za-antikorozionu-zastitu-metala"
+    },
+    "checkedAt": "2026-11-06"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "hemiprodukt-novi-sad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "champion-color-polchowo": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "chiara-brcko": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "wood-kare-bangi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11682,6 +11711,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "hemiprodukt-novi-sad": {
+    "website": "https://hemiprodukt.co.rs/",
+    "contactPage": "https://hemiprodukt.co.rs/sr-el/kontakt",
+    "address": "Office: Masarikova 1, 21000 Novi Sad. Production: Nikole Tesle 35, Begeč, Serbia. Coordinates show the official embedded map view centre, not a verified facility marker.",
+    "generalPhone": "+381 21-2998-420",
+    "generalPhoneEvidence": {
+      "company": "Hemiprodukt",
+      "value": "+381 21-2998-420",
+      "kind": "department",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Hemiprodukt official contact, published Begeč sales department email and telephone",
+          "url": "https://hemiprodukt.co.rs/sr-el/kontakt",
+          "summary": "The company contact page publishes hemiboje@gmail.com and +381 21-2998-420 under Prodaja - Begeč, and lists the separate Novi Sad office and Begeč production site."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "contacts": [],
+    "departmentEmails": [
+      {
+        "department": "Sales",
+        "email": "hemiboje@gmail.com",
+        "source": {
+          "label": "Hemiprodukt official contact, published Begeč sales department email and telephone",
+          "url": "https://hemiprodukt.co.rs/sr-el/kontakt"
+        },
+        "emailEvidence": {
+          "company": "Hemiprodukt",
+          "value": "hemiboje@gmail.com",
+          "kind": "department",
+          "publicBusiness": true,
+          "sources": [
+            {
+              "label": "Hemiprodukt official contact, published Begeč sales department email and telephone",
+              "url": "https://hemiprodukt.co.rs/sr-el/kontakt",
+              "summary": "The company contact page publishes hemiboje@gmail.com and +381 21-2998-420 under Prodaja - Begeč, and lists the separate Novi Sad office and Begeč production site."
+            }
+          ],
+          "verifiedAt": "2026-11-06"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "label": "Hemiprodukt official anticorrosion systems for metal and Hemipoks osnovni 2K",
+        "url": "https://hemiprodukt.co.rs/proizvodi-hemiprodukt/sistemi-za-antikorozionu-zastitu-metala"
+      },
+      {
+        "label": "Hemiprodukt company introduction and own Begeč production facility",
+        "url": "https://hemiprodukt.co.rs/sr-el/o-nama"
+      },
+      {
+        "label": "Hemiprodukt company homepage and operating product scope",
+        "url": "https://hemiprodukt.co.rs/"
+      },
+      {
+        "label": "Hemiprodukt official contact, published Begeč sales department email and telephone",
+        "url": "https://hemiprodukt.co.rs/sr-el/kontakt"
+      }
+    ]
+  },
   "champion-color-polchowo": {
     "website": "https://championcolor.pl/",
     "contactPage": "https://championcolor.pl/",
@@ -35993,6 +36085,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "hemiprodukt-novi-sad",
   "champion-color-polchowo",
   "chiara-brcko",
   "wood-kare-bangi",
