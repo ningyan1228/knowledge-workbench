@@ -1,4 +1,5 @@
 import { supabase } from './supabase'
+import { outreachError } from './outreachError'
 import type { PublicLead } from './productMarketMap'
 
 export type OutreachSend = {
@@ -44,7 +45,7 @@ export async function loadOutreachSends(): Promise<OutreachSend[]> {
     const { data, error } = await database().from('market_intel_outreach_sends')
       .select('id,company_key,company_name,lead_id,product_id,recipient_email,sent_on,sent_by,created_at,voided_at')
       .order('created_at', { ascending: false }).range(offset, offset + 499)
-    if (error) throw error
+    if (error) throw outreachError(error)
     rows.push(...(data ?? []) as OutreachSend[])
     if (!data || data.length < 500) return rows
   }
@@ -55,7 +56,7 @@ export async function findCurrentOutreachSend(lead: Pick<PublicLead, 'company' |
     .select('id,company_key,company_name,lead_id,product_id,recipient_email,sent_on,sent_by,created_at,voided_at')
     .eq('company_key', outreachCompanyKey(lead)).is('voided_at', null)
   const { data, error } = await (signal ? query.abortSignal(signal) : query).maybeSingle()
-  if (error) throw error
+  if (error) throw outreachError(error)
   return data as OutreachSend | null
 }
 
@@ -68,10 +69,10 @@ export async function recordOutreachSend(lead: PublicLead, recipientEmail: strin
     recipient_email: recipientEmail.trim(),
     sent_on: sentOn,
   })
-  if (error) throw error
+  if (error) throw outreachError(error)
 }
 
 export async function voidOutreachSend(sendId: string, reason: string) {
   const { error } = await database().rpc('outreach_void_send', { p_send_id: sendId, p_reason: reason.trim() })
-  if (error) throw error
+  if (error) throw outreachError(error)
 }
