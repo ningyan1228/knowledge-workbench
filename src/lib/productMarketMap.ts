@@ -11131,11 +11131,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-06"
   },
+  {
+    "id": "chiara-brcko",
+    "company": "Chiara d.o.o.",
+    "productId": "elo",
+    "country": "Bosnia and Herzegovina",
+    "countryZh": "波斯尼亚和黑塞哥维那",
+    "city": "Brčko（官网地图链接标记）",
+    "latitude": 44.8545863,
+    "longitude": 18.8186158,
+    "legacyCompanyDescription": "波黑布尔奇科工业涂料制造商，官网说明自有生产与研发，合作方公开其生产设施。PROTECT E 2K PRIMER 是钢表面防腐体系用双组分环氧底漆。",
+    "fit": "可开发候选",
+    "signal": "波黑布尔奇科工业涂料制造商，官网说明自有生产与研发，合作方公开其生产设施。PROTECT E 2K PRIMER 是钢表面防腐体系用双组分环氧底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-06",
+      "conclusion": "独立复读5份Chiara官网和1份Prohema SRB官方合作伙伴原文。Chiara自述研发和生产涂料，合作方明确Brčko生产及仓储厂房。两页59项公开目录列工业金属、木器、道路及混凝土成品涂料、稀释剂、清洗剂、水玻璃及工具。已读目录及公开业务范围内未见外售ELO、ESBO、环氧化植物油或同类生物基增塑剂，有限于已读范围，未核全部SKU技术文件或配方。Chiara于2010年承接波黑Prohema Brčko生产项目并沿用Prohema品牌，按同一保守账户计数。塞尔维亚Prohema SRB公开为长期经销商，只用于佐证，不计独立客户，不凭分销关系推定股权。ELO仅作其工业环氧涂料原料的潜在实验室评估，现用配方、相容性、采购和性能待确认。"
+    },
+    "contact": {
+      "label": "官网通用公司业务邮箱、电话及联系表单",
+      "email": "info@chiara.ba",
+      "phone": "+387 49 240 400",
+      "contactUrl": "https://chiara.ba/kontakt/?lang=en"
+    },
+    "source": {
+      "label": "Chiara official PROTECT E 2K PRIMER for steel protection systems",
+      "url": "https://chiara.ba/proizvod/protekt-e-2k-osnovni/?lang=en"
+    },
+    "checkedAt": "2026-11-06"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "chiara-brcko": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "wood-kare-bangi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "deutschcolor-durres": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "ekolak-raca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11624,6 +11653,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "chiara-brcko": {
+    "website": "https://chiara.ba/?lang=en",
+    "contactPage": "https://chiara.ba/kontakt/?lang=en",
+    "address": "Bescarinska zona bb, 76100 Brčko, Bosnia and Herzegovina. Marker reproduced from the official contact page map link, with no independent gate survey.",
+    "generalEmail": "info@chiara.ba",
+    "generalEmailEvidence": {
+      "company": "Chiara d.o.o.",
+      "value": "info@chiara.ba",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Chiara official business contact page",
+          "url": "https://chiara.ba/kontakt/?lang=en",
+          "summary": "The company contact page identifies Chiara d.o.o. and publishes info@chiara.ba, +387 49 240 400, the Brčko address and an enquiry form."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "generalPhone": "+387 49 240 400",
+    "generalPhoneEvidence": {
+      "company": "Chiara d.o.o.",
+      "value": "+387 49 240 400",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Chiara official business contact page",
+          "url": "https://chiara.ba/kontakt/?lang=en",
+          "summary": "The company contact page identifies Chiara d.o.o. and publishes info@chiara.ba, +387 49 240 400, the Brčko address and an enquiry form."
+        }
+      ],
+      "verifiedAt": "2026-11-06"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Chiara official PROTECT E 2K PRIMER for steel protection systems",
+        "url": "https://chiara.ba/proizvod/protekt-e-2k-osnovni/?lang=en"
+      },
+      {
+        "label": "Chiara official company history and own paint production",
+        "url": "https://chiara.ba/o-nama/?lang=en"
+      },
+      {
+        "label": "Chiara official finished products catalogue, page 1 of 2",
+        "url": "https://chiara.ba/proizvodi/?lang=en"
+      },
+      {
+        "label": "Chiara official finished products catalogue, page 2 of 2",
+        "url": "https://chiara.ba/proizvodi/page/2/?lang=en"
+      },
+      {
+        "label": "Prohema SRB official partner page on Chiara production facilities and distribution",
+        "url": "https://www.prohema.rs/partneri/chiara/?lang=en"
+      },
+      {
+        "label": "Chiara official business contact page",
+        "url": "https://chiara.ba/kontakt/?lang=en"
+      }
+    ]
+  },
   "wood-kare-bangi": {
     "website": "https://www.wood-kare.com/",
     "contactPage": "https://www.wood-kare.com/contact-8",
@@ -35809,6 +35901,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "chiara-brcko",
   "wood-kare-bangi",
   "deutschcolor-durres",
   "ekolak-raca",
