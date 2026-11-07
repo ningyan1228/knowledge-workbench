@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "quimovil-barbera-del-valles": "Your AQUAPLUS and BBB AQUA-FILM ranges include water-based flexographic inks for printing on PE and PP films.",
   "damru-everest-kitwe": "Your Everest Paints range includes stoving and insulating varnishes, with coatings supplied to Zambia’s commercial and mining sectors.",
   "hemiprodukt-novi-sad": "Your Hemipoks osnovni 2K epoxy primer is part of your corrosion protection systems for metal surfaces.",
   "champion-color-polchowo": "Your aerosol bumper primer is formulated for polypropylene surfaces before subsequent paint coats are applied.",

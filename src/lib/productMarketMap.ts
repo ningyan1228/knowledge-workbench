@@ -11243,11 +11243,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-07"
   },
+  {
+    "id": "quimovil-barbera-del-valles",
+    "company": "Quimovil S.A.",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Barberà del Vallès（城市示意坐标，非工厂定位）",
+    "latitude": 41.516,
+    "longitude": 2.126,
+    "legacyCompanyDescription": "西班牙Barberà del Vallès水性油墨配方与制造企业；现行AQUAPLUS及BBB AQUA-FILM用于PE、PP薄膜柔版印刷。",
+    "fit": "可开发候选",
+    "signal": "西班牙Barberà del Vallès水性油墨配方与制造企业；现行AQUAPLUS及BBB AQUA-FILM用于PE、PP薄膜柔版印刷。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-07",
+      "conclusion": "独立复读既有首页/产品概览及本轮现行薄膜应用、辅助产品类别、法律声明共五个完整HTTP200HTML；另保留旧工业页HTTP404，不作旧PP溶剂油墨经营证据。首页明确家族企业制造油墨并自有开发/配方，具体AQUAPLUS和BBB AQUA-FILM为PE/PP水性柔印油墨；FILMAPERS为制墨色浆/技术基料体系，不凭其基料字样推定外售PO/CPO分散体。辅助产品类别实际列消泡剂、蜡、干燥加速/延缓、antitrapping、pH调节、清洗剂和AEROBOOK成品水墨；有限已读公开范围未发现水性聚烯烃乳液、PO/CPO分散体或同类原料附着促进剂销售线。成品印刷primer不自动视为同类原料，未声称读完全部产品叶页、配方/SDS、完整股权或隐藏目录。法律声明QUIMOVIL SA/NIFA08121279与官网地址对应，品牌/域名为一账户。Brain Up Grup为网站设计署名，不推定集团股权。AQUAPLUS旧文件重名为意大利Damiani Acqua Plus图片，不是该公司；当前正式库及队列无已公开Quimovil账户，旧CPP私有线索升级同一记录，不重复计数。累计六次原文：上组3含1HTTP404，本组3HTTP200；六次用尽停止，不因CPP转NLW重置。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及联系入口",
+      "email": "quimovil@quimovil.com",
+      "phone": "+34 937 29 19 44",
+      "contactUrl": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/"
+    },
+    "source": {
+      "label": "Quimovil current own PE/PP waterbased film inks",
+      "url": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/"
+    },
+    "checkedAt": "2026-11-07"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "quimovil-barbera-del-valles": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
   "damru-everest-kitwe": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hemiprodukt-novi-sad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "champion-color-polchowo": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -11740,6 +11769,75 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "quimovil-barbera-del-valles": {
+    "website": "https://www.quimovil.com/",
+    "contactPage": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/",
+    "address": "Av. Torre d'en Mateu, 77, 08210 Barberà del Vallès, Barcelona, Spain. Map point is an approximate city marker, not a geocoded factory gate.",
+    "generalEmail": "quimovil@quimovil.com",
+    "generalEmailEvidence": {
+      "company": "Quimovil S.A.",
+      "value": "quimovil@quimovil.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Quimovil current official flexible-film products and business contact",
+          "url": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/",
+          "summary": "Current official flexible-film application page publishes QUIMOVIL business email, telephone and Barbera del Valles address; current legal notice identifies QUIMOVIL SA, tax ID A08121279, as website owner at the same address. General company route, no named purchasing contact or WhatsApp link."
+        },
+        {
+          "label": "Quimovil current legal identity",
+          "url": "https://www.quimovil.com/aviso-legal/",
+          "summary": "Website owner QUIMOVIL SA, NIF A08121279, registered postal address matching the company footer; legal notices mailbox is not represented as procurement."
+        }
+      ],
+      "verifiedAt": "2026-11-07"
+    },
+    "generalPhone": "+34 937 29 19 44",
+    "generalPhoneEvidence": {
+      "company": "Quimovil S.A.",
+      "value": "+34 937 29 19 44",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Quimovil current official flexible-film products and business contact",
+          "url": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/",
+          "summary": "Current official flexible-film application page publishes QUIMOVIL business email, telephone and Barbera del Valles address; current legal notice identifies QUIMOVIL SA, tax ID A08121279, as website owner at the same address. General company route, no named purchasing contact or WhatsApp link."
+        },
+        {
+          "label": "Quimovil current legal identity",
+          "url": "https://www.quimovil.com/aviso-legal/",
+          "summary": "Website owner QUIMOVIL SA, NIF A08121279, registered postal address matching the company footer; legal notices mailbox is not represented as procurement."
+        }
+      ],
+      "verifiedAt": "2026-11-07"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Quimovil current company manufacturing overview",
+        "url": "https://www.quimovil.com/"
+      },
+      {
+        "label": "Quimovil current product overview",
+        "url": "https://www.quimovil.com/productos/"
+      },
+      {
+        "label": "Quimovil current waterbased PE/PP ink products and business contact",
+        "url": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/"
+      },
+      {
+        "label": "Quimovil current auxiliary product categories",
+        "url": "https://www.quimovil.com/categoria-producto/otros-productos/"
+      },
+      {
+        "label": "Quimovil current legal identity",
+        "url": "https://www.quimovil.com/aviso-legal/"
+      }
+    ]
+  },
   "damru-everest-kitwe": {
     "website": "https://damrupaintszm.com/",
     "contactPage": "https://damrupaintszm.com/contact.html",
@@ -36165,6 +36263,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "quimovil-barbera-del-valles",
   "damru-everest-kitwe",
   "hemiprodukt-novi-sad",
   "champion-color-polchowo",
