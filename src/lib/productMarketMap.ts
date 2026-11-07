@@ -11271,11 +11271,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-07"
   },
+  {
+    "id": "crown-technology-accra",
+    "company": "Crown Technology International Limited",
+    "productId": "elo",
+    "country": "Ghana",
+    "countryZh": "加纳",
+    "city": "Accra（城市示意坐标，非工厂定位）",
+    "latitude": 5.56,
+    "longitude": -0.197,
+    "legacyCompanyDescription": "加纳Accra自有涂料制造及配方企业；BRIEN系列包含锌粉环氧底漆、环氧面漆及工业地坪涂料，另有Crown木器漆与Ivory建筑涂料。",
+    "fit": "可开发候选",
+    "signal": "加纳Accra自有涂料制造及配方企业；BRIEN系列包含锌粉环氧底漆、环氧面漆及工业地坪涂料，另有Crown木器漆与Ivory建筑涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-07",
+      "conclusion": "独立读取五份完整HTTP200HTML：About制造/配方声明、全部19个独立成品产品链接、BRIEN锌粉环氧底漆具体正文、Contact实际业务邮箱/WhatsApp、Services工业地坪/钢结构应用。已读范围为Brien成品建筑/工业漆、Crown木器成品漆和Ivory经济建筑漆，以及腻子、skimcoat、防水、瓷砖胶/填缝剂等施工成品；有限公开业务范围未发现外售ELO、ESBO、环氧化植物油或同类生物基增塑剂原料。不是将全部含epoxy/resin字样企业当同行；未声称全部叶页/SDS/隐藏配方或所有集团化学品均已核验。About自述2013成立、Accra制造配方及自有三品牌足以支持经营主体制造链，不将未独立核实的2025奖项、产能/认证/排名或街道厂门写作事实。独立全库去重未发现Crown Technology/crowntechintl.com账户；泛Crown同名不推定与他国CrownPaints有股权，未做最终持股登记审计。233旧品牌词命中实际为Ivory颜色/科特迪瓦国家/CSS、O’Brien/Hector-Brien等人地名或cubriendo子串，与加纳公司无关。五次实际原文合计43778字节，prior0/current5/rem1，资料已足够停止；不因品牌、产品或语言另开预算。公开WhatsApp实际链接才设置，不由电话猜测。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公开WhatsApp号码；无具名负责人",
+      "email": "sales@crowntechintl.com",
+      "phone": "+233 26 538 3367",
+      "contactUrl": "https://crowntechintl.com/contact"
+    },
+    "source": {
+      "label": "Crown Technology BRIEN zinc-rich epoxy primer",
+      "url": "https://crowntechintl.com/products/brien-anti-rust-zinc-rich-epoxy-primer"
+    },
+    "checkedAt": "2026-11-07"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "crown-technology-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "quimovil-barbera-del-valles": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
   "damru-everest-kitwe": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hemiprodukt-novi-sad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11769,6 +11798,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "crown-technology-accra": {
+    "website": "https://crowntechintl.com/",
+    "contactPage": "https://crowntechintl.com/contact",
+    "address": "Accra, Ghana, as stated on the official manufacturing overview. Street address and factory-gate location were not independently established. Coordinates are an approximate city marker.",
+    "generalEmail": "sales@crowntechintl.com",
+    "generalEmailEvidence": {
+      "company": "Crown Technology International Limited",
+      "value": "sales@crowntechintl.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Crown Technology current official business contact",
+          "url": "https://crowntechintl.com/contact",
+          "summary": "Official general Get In Touch page publishes sales@crowntechintl.com under Email Address and +233265383367 under WhatsApp-Message, with actual mailto and wa.me/233265383367 links. Published company inquiry route, no named buyer or explicitly identified sales employee. No message/form submitted."
+        }
+      ],
+      "verifiedAt": "2026-11-07"
+    },
+    "generalPhone": "+233 26 538 3367",
+    "generalPhoneEvidence": {
+      "company": "Crown Technology International Limited",
+      "value": "+233 26 538 3367",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Crown Technology current official business contact",
+          "url": "https://crowntechintl.com/contact",
+          "summary": "Official general Get In Touch page publishes sales@crowntechintl.com under Email Address and +233265383367 under WhatsApp-Message, with actual mailto and wa.me/233265383367 links. Published company inquiry route, no named buyer or explicitly identified sales employee. No message/form submitted."
+        }
+      ],
+      "verifiedAt": "2026-11-07"
+    },
+    "whatsapp": "https://wa.me/233265383367",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Crown Technology own manufacture, formulation and brands",
+        "url": "https://crowntechintl.com/about"
+      },
+      {
+        "label": "Crown Technology full visible finished-product catalogue",
+        "url": "https://crowntechintl.com/product"
+      },
+      {
+        "label": "Crown Technology BRIEN zinc-rich epoxy primer",
+        "url": "https://crowntechintl.com/products/brien-anti-rust-zinc-rich-epoxy-primer"
+      },
+      {
+        "label": "Crown Technology official business email and explicit WhatsApp link",
+        "url": "https://crowntechintl.com/contact"
+      },
+      {
+        "label": "Crown Technology industrial floor/steel coating application captions",
+        "url": "https://crowntechintl.com/services"
+      }
+    ]
+  },
   "quimovil-barbera-del-valles": {
     "website": "https://www.quimovil.com/",
     "contactPage": "https://www.quimovil.com/aplicaciones/film-para-embalaje-flexible/",
@@ -36263,6 +36352,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "crown-technology-accra",
   "quimovil-barbera-del-valles",
   "damru-everest-kitwe",
   "hemiprodukt-novi-sad",
