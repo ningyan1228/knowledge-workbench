@@ -11215,11 +11215,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-06"
   },
+  {
+    "id": "damru-everest-kitwe",
+    "company": "Damru Enterprises (Everest Paints)",
+    "productId": "elo",
+    "country": "Zambia",
+    "countryZh": "赞比亚",
+    "city": "Kitwe（赞比亚国别示意坐标，非工厂定位）",
+    "latitude": -13,
+    "longitude": 28,
+    "legacyCompanyDescription": "赞比亚Kitwe涂料制造企业；官网明确本地生产，Everest系列包括烘烤、绝缘和木器清漆，并面向商业及矿业领域。",
+    "fit": "可开发候选",
+    "signal": "赞比亚Kitwe涂料制造企业；官网明确本地生产，Everest系列包括烘烤、绝缘和木器清漆，并面向商业及矿业领域。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-07",
+      "conclusion": "独立复读Damru官网全部三个公开导航页面：公司介绍、首页业务/合作伙伴和联系页。已读经营范围为PVA、光泽、快干成品漆及烘烤/绝缘/木器清漆，Natures Coat为木材饰面/封闭成品体系；在该有限公开范围未见外售ELO、ESBO、环氧化植物油或同类生物基增塑剂。官网文字Epoxy Painters不作为具体环氧品种、双组分或防腐体系证据。未核所有SKU/SDS、完整股权或隐藏目录。Damru与Everest、Natures Coat按同一账户；首页Clares Paints及Splash Paints只是Trusted Partners图片，未证明共同股权，不能拆为新增，也不将津巴布韦Splash私有未核验资料转为客户事实。官网新投资者收购自述没有日期/法人名单，不编造2026收购事件。当前main、正式库、队列及域名/品牌去重无已公开Damru账户。潜在原料评估不等于现用或采购。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及联系页",
+      "email": "damrukitwe@gmail.com",
+      "phone": "+260 972 801 034",
+      "contactUrl": "https://damrupaintszm.com/contact.html"
+    },
+    "source": {
+      "label": "Damru official company manufacturing and Everest finished-varnish range",
+      "url": "https://damrupaintszm.com/about.html"
+    },
+    "checkedAt": "2026-11-07"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "damru-everest-kitwe": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "hemiprodukt-novi-sad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "champion-color-polchowo": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "chiara-brcko": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11711,6 +11740,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "damru-everest-kitwe": {
+    "website": "https://damrupaintszm.com/",
+    "contactPage": "https://damrupaintszm.com/contact.html",
+    "address": "PLOT 2810 Vibhav Business Park, North Industrial Area, Kitwe, Zambia. Map point is an illustrative Zambia country marker, not a geocoded office or factory.",
+    "generalEmail": "damrukitwe@gmail.com",
+    "generalEmailEvidence": {
+      "company": "Damru Enterprises (Everest Paints)",
+      "value": "damrukitwe@gmail.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Damru official business contact page",
+          "url": "https://damrupaintszm.com/contact.html",
+          "summary": "Damru official Contact Us page publishes the company Kitwe address, damrukitwe@gmail.com and two general business telephone numbers. No named mailbox, procurement role or WhatsApp link is stated."
+        }
+      ],
+      "verifiedAt": "2026-11-07"
+    },
+    "generalPhone": "+260 972 801 034",
+    "generalPhoneEvidence": {
+      "company": "Damru Enterprises (Everest Paints)",
+      "value": "+260 972 801 034",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Damru official business contact page",
+          "url": "https://damrupaintszm.com/contact.html",
+          "summary": "Damru official Contact Us page publishes the company Kitwe address, damrukitwe@gmail.com and two general business telephone numbers. No named mailbox, procurement role or WhatsApp link is stated."
+        }
+      ],
+      "verifiedAt": "2026-11-07"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Damru official About and product range",
+        "url": "https://damrupaintszm.com/about.html"
+      },
+      {
+        "label": "Damru official business overview and partner logos",
+        "url": "https://damrupaintszm.com/index.html"
+      },
+      {
+        "label": "Damru official business contact",
+        "url": "https://damrupaintszm.com/contact.html"
+      }
+    ]
+  },
   "hemiprodukt-novi-sad": {
     "website": "https://hemiprodukt.co.rs/",
     "contactPage": "https://hemiprodukt.co.rs/sr-el/kontakt",
@@ -36085,6 +36165,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "damru-everest-kitwe",
   "hemiprodukt-novi-sad",
   "champion-color-polchowo",
   "chiara-brcko",

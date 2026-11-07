@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "damru-everest-kitwe": "Your Everest Paints range includes stoving and insulating varnishes, with coatings supplied to Zambia’s commercial and mining sectors.",
   "hemiprodukt-novi-sad": "Your Hemipoks osnovni 2K epoxy primer is part of your corrosion protection systems for metal surfaces.",
   "champion-color-polchowo": "Your aerosol bumper primer is formulated for polypropylene surfaces before subsequent paint coats are applied.",
   "chiara-brcko": "Your PROTECT E 2K PRIMER is a two-component epoxy primer for steel corrosion protection systems.",
