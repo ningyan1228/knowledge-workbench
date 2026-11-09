@@ -11411,11 +11411,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-09"
   },
+  {
+    "id": "odassia-meknes",
+    "company": "O'DASSIA Peintures",
+    "productId": "elo",
+    "country": "Morocco",
+    "countryZh": "摩洛哥",
+    "city": "Meknès（城市级示意点）",
+    "latitude": 33.89,
+    "longitude": -5.55,
+    "legacyCompanyDescription": "摩洛哥O’DASSIA在梅克内斯运营自有涂料工厂和研发实验室；其SOL EPOXY是用于工业场景室内混凝土或水泥地坪的双组分水性环氧涂料。",
+    "fit": "可开发候选",
+    "signal": "摩洛哥O’DASSIA在梅克内斯运营自有涂料工厂和研发实验室；其SOL EPOXY是用于工业场景室内混凝土或水泥地坪的双组分水性环氧涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-09",
+      "conclusion": "独立核读官方生产史、地坪成品类别、SOL EPOXY具体产品、品牌页、工厂/研发创新说明共5个HTTP200HTML。创新页明确自有运营工厂和R&D实验室；历史页记载2006年梅克内斯开始生产，日期不冒充新扩建。SOL EPOXY明确水性双组分，用于工业室内混凝土/水泥地坪，施工说明分别混合Epoxy base和Durcisseur，是成品体系。地坪页八个产品及全站导航六类为装饰、外墙、隔热、地坪、木材金属瓷砖和防水成品；NETFLOR AN99虽称环氧树脂，实际定义为室内地坪成品，不据此误认为ELO同类原料。有限已读范围未识别销售环氧化亚麻油、环氧化植物油或同类环氧增塑/改性原料；未声称读全每个叶页、SDS、配方或完整股权。O’DASSIA/Odassia/O’DASSIA Peintures及ODACOLOR调色品牌为同一账户，未核实完整工商法律形式，故不编造SARL/SA；不将历史引语人Abdessamad Jennane冒称采购或收件人。扩展38个历史匹配和34个文件名匹配全部为本轮资料，六套正式/私有数据无同公司或品牌。官方通用contact邮箱和总机及真实wa.me链接分别有原文，不推定电话就是WhatsApp、不打开或发送链接；官网联系入口用已读品牌页真实业务页脚，不推定弹窗表单可投递。自述历史ISO/Ecolabel未下载证书/独立核实有效期，不推广为我方原料认证。第一响应中注释里的非活动analytics脚本导致初次本地提取吞掉正文，已保留原始字节及旧提取，先去注释再去活动脚本离线重解析，未追加网络请求或执行远程JS。该公司累计5次余1；本共享ELO范围另RESIPRO域名解析失败1次，共6/6停止，不重置。仅潜在材料联系，不承诺水性配方可直接混入ELO、相容、附着/防腐、认证或采购。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话与公开 WhatsApp",
+      "email": "contact@odassia.com",
+      "phone": "+212 535 404 654",
+      "contactUrl": "https://odassia.com/la-marque/"
+    },
+    "source": {
+      "label": "Official SOL EPOXY water-based two-component industrial floor coating",
+      "url": "https://odassia.com/produit/sol-epoxy-peinture/"
+    },
+    "checkedAt": "2026-11-09"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "odassia-meknes": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "industrias-sambara-paracuellos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fremplast-guarulhos": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "universal-colors-diamniadio": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11914,6 +11943,76 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "odassia-meknes": {
+    "website": "https://odassia.com/",
+    "contactPage": "https://odassia.com/la-marque/",
+    "address": "62-71, zone Industrielle Mejjat-Meknès, Morocco. Coordinates are an approximate Meknès city marker, not a geocoded factory gate.",
+    "generalEmail": "contact@odassia.com",
+    "generalEmailEvidence": {
+      "company": "O'DASSIA Peintures",
+      "value": "contact@odassia.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official brand and current public business contacts",
+          "url": "https://odassia.com/la-marque/",
+          "summary": "Official current business footer publishes contact@odassia.com with the Mejjat-Meknès manufacturing-site address."
+        },
+        {
+          "label": "Official SOL EPOXY water-based two-component industrial floor coating",
+          "url": "https://odassia.com/produit/sol-epoxy-peinture/",
+          "summary": "Official current business footer publishes contact@odassia.com with the Mejjat-Meknès manufacturing-site address."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "generalPhone": "+212 535 404 654",
+    "generalPhoneEvidence": {
+      "company": "O'DASSIA Peintures",
+      "value": "+212 535 404 654",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official brand and current public business contacts",
+          "url": "https://odassia.com/la-marque/",
+          "summary": "Official current business footer publishes +212 535 404 654; the separately published wa.me link is retained as a distinct channel."
+        },
+        {
+          "label": "Official SOL EPOXY water-based two-component industrial floor coating",
+          "url": "https://odassia.com/produit/sol-epoxy-peinture/",
+          "summary": "Official current business footer publishes +212 535 404 654; the separately published wa.me link is retained as a distinct channel."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "whatsapp": "https://wa.me/212661727956?text=Bonjourestcequejepeuxavoirplusdinformationsconcernant",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official Meknes production history",
+        "url": "https://odassia.com/odassia-lhistoire-de-la-marque/"
+      },
+      {
+        "label": "Official finished floor-coating range",
+        "url": "https://odassia.com/nos-revetements/revetements-pour-sols/"
+      },
+      {
+        "label": "Official SOL EPOXY water-based two-component industrial floor coating",
+        "url": "https://odassia.com/produit/sol-epoxy-peinture/"
+      },
+      {
+        "label": "Official brand and current public business contacts",
+        "url": "https://odassia.com/la-marque/"
+      },
+      {
+        "label": "Official own operating factory and formulation R&D laboratory",
+        "url": "https://odassia.com/odassia-linnovation-au-service-dun-batiment-durable/"
+      }
+    ]
+  },
   "industrias-sambara-paracuellos": {
     "website": "https://www.industrias-sambara.com/",
     "contactPage": "https://www.industrias-sambara.com/contacto/",
@@ -36709,6 +36808,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "odassia-meknes",
   "industrias-sambara-paracuellos",
   "fremplast-guarulhos",
   "universal-colors-diamniadio",
