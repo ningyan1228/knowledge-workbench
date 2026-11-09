@@ -11299,11 +11299,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-07"
   },
+  {
+    "id": "fujifilm-sericol-pune",
+    "company": "Fujifilm Sericol India Private Limited",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Pune（浦那城市级示意点）",
+    "latitude": 18.52,
+    "longitude": 73.86,
+    "legacyCompanyDescription": "印度 Fujifilm Sericol 在浦那自行制造油墨，官网 Polydyne YN 明确为用于未处理聚丙烯基材的溶剂型油墨系列。",
+    "fit": "可开发候选",
+    "signal": "印度 Fujifilm Sericol 在浦那自行制造油墨，官网 Polydyne YN 明确为用于未处理聚丙烯基材的溶剂型油墨系列。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-09",
+      "conclusion": "核读印度主体官网自有制造说明、Polydyne YN 包装油墨页、制版解决方案、乳剂及化学品页和办公室目录。浦那实际制造设施与用于未处理PP的溶剂型油墨均有直接证据。已读乳剂为DIRASOL/EMU感光制版乳剂；Xtend为丝网回收清洗化学品，不能因乳剂或化学品名称将其误判为CPP/CPO附着原料。上述有限已读业务范围未识别销售CPP/CPO、MAH改性氯化聚烯烃或同类聚烯烃附着促进原料，不声称完成所有SKU、SDS或全球关联企业采购和股权审计。公司属于Fujifilm Ink Solutions Group，与Fujifilm Speciality Ink Systems、Colorants US及Fujifilm Inks & Colorants保守合并去重；这些名称及印度各分支不另计客户。海外经销目录不代表同一所有权，不新增经销商。材料仅供PP溶剂型油墨潜在配方评估，未确认现用原料、相容性、采购需求或时机。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱和总机",
+      "email": "fsid@fujifilm.com",
+      "phone": "+91 (0) 2137 392500",
+      "contactUrl": "https://www.fujifilmsericol.in/our-offices"
+    },
+    "source": {
+      "label": "Fujifilm Sericol official Polydyne YN packaging inks",
+      "url": "https://www.fujifilmsericol.in/copy-of-industrial-inks"
+    },
+    "checkedAt": "2026-11-09"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fujifilm-sericol-pune": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "crown-technology-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "quimovil-barbera-del-valles": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
   "damru-everest-kitwe": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11798,6 +11827,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fujifilm-sericol-pune": {
+    "website": "https://www.fujifilmsericol.in/",
+    "contactPage": "https://www.fujifilmsericol.in/our-offices",
+    "address": "46/47/48/53 & 54, B.U Bhandari Industrial Estate, Sanaswadi, Tal: Shirur, Pune 412208, India. Map marker is Pune city-level only.",
+    "generalEmail": "fsid@fujifilm.com",
+    "generalEmailEvidence": {
+      "company": "Fujifilm Sericol India Private Limited",
+      "value": "fsid@fujifilm.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Fujifilm Sericol official Pune office",
+          "url": "https://www.fujifilmsericol.in/our-offices",
+          "summary": "Pune Office identifies Fujifilm Sericol India Private Limited and explicitly publishes fsid@fujifilm.com as its email."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "generalPhone": "+91 (0) 2137 392500",
+    "generalPhoneEvidence": {
+      "company": "Fujifilm Sericol India Private Limited",
+      "value": "+91 (0) 2137 392500",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Fujifilm Sericol official Pune office",
+          "url": "https://www.fujifilmsericol.in/our-offices",
+          "summary": "Pune Office explicitly publishes Contact: +91 (0) 2137 392500; the footer also provides this exact tel link. No WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own Pune manufacturing and FISG group identity",
+        "url": "https://www.fujifilmsericol.in/about-us"
+      },
+      {
+        "label": "Official Polydyne YN solvent ink for untreated PP",
+        "url": "https://www.fujifilmsericol.in/copy-of-industrial-inks"
+      },
+      {
+        "label": "Official screen-making business range",
+        "url": "https://www.fujifilmsericol.in/screen-making-solutions"
+      },
+      {
+        "label": "Official DIRASOL and EMU stencil emulsions",
+        "url": "https://www.fujifilmsericol.in/copy-of-table-chemicals"
+      },
+      {
+        "label": "Official Xtend screen recovery chemicals",
+        "url": "https://www.fujifilmsericol.in/copy-of-table-inkije-textile"
+      },
+      {
+        "label": "Official Pune office company channels",
+        "url": "https://www.fujifilmsericol.in/our-offices"
+      }
+    ]
+  },
   "crown-technology-accra": {
     "website": "https://crowntechintl.com/",
     "contactPage": "https://crowntechintl.com/contact",
@@ -36352,6 +36444,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fujifilm-sericol-pune",
   "crown-technology-accra",
   "quimovil-barbera-del-valles",
   "damru-everest-kitwe",
