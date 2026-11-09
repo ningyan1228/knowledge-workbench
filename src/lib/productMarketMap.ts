@@ -11383,11 +11383,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-09"
   },
+  {
+    "id": "industrias-sambara-paracuellos",
+    "company": "Industrias Sambara S.L.",
+    "productId": "nl-w1201",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Paracuellos de Jarama（城市级示意点）",
+    "latitude": 40.5,
+    "longitude": -3.53,
+    "legacyCompanyDescription": "西班牙Industrias Sambara在Madrid的Paracuellos de Jarama自行研发和生产木器涂料，HIDROFON和HIDROLAC为水性木器底漆与面漆，提供单组分及双组分系列。",
+    "fit": "可开发候选",
+    "signal": "西班牙Industrias Sambara在Madrid的Paracuellos de Jarama自行研发和生产木器涂料，HIDROFON和HIDROLAC为水性木器底漆与面漆，提供单组分及双组分系列。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-09",
+      "conclusion": "独立核读官方工业产品、公司、工厂历史与联系页共4个完整HTTP200HTML。工业页明确按客户需要开发制造，并列溶剂木器体系和水性木器体系；公司页明确研究设计生产，历史页记载1975年Paracuellos de Jarama工厂投产和后续现代化，仅按原文日期记录，不冒称新投产项目。HIDROFON/HIDROLAC位于BASE AGUA MADERA之下，为木材成品底漆和面漆，非原料乳液。所读有限页面列硝基、PU、丙烯酸、UV、聚酯、合成木器涂料、调色及水性木器系列和配套溶剂，未识别销售水性聚烯烃乳液、PO/CPO分散体或同类附着促进原料。不因有配套溶剂、色料或成品底漆便判为同类原料同行；未声称读全金属/装饰目录、全部SDS或完整股权。Sambara、Industrias Sambara及官网明确的S.L.同一主体；HIDROFON/HIDROLAC/PROTECSAM/LASURSAM/LASURTIX/AQUAFON PARQUET按同一产品线去重，不造品牌账户。扩展历史52个匹配中24个为Hidrolaca/Hidrolack/HIDROFOND等其他厂商词段，逐文件完整窄身份复查无该公司，28个为本轮资料；六套正式/私有记录无该主体。原始Paraguay查询发现该西班牙公司，国家按其Madrid原文修正，共用本范围预算不重置。公司通用info邮箱和带Tel标签的电话明确，Fax单独保留为原文但不当业务电话，不推定具名采购人或WhatsApp。四次原文足以核验后停止，余2次保留，本范围含K-TECH另1次共5/6；未下载PDF或执行远程JS。仅潜在下游用途关联，不确认现用原料、采购或附着性能。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及联系页",
+      "email": "info@industrias-sambara.com",
+      "phone": "+34 91 658 04 45",
+      "contactUrl": "https://www.industrias-sambara.com/contacto/"
+    },
+    "source": {
+      "label": "Official water-based wood primers and finishes, own custom manufacture",
+      "url": "https://www.industrias-sambara.com/productos-industria/"
+    },
+    "checkedAt": "2026-11-09"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "industrias-sambara-paracuellos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fremplast-guarulhos": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "universal-colors-diamniadio": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fujifilm-sericol-pune": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11885,6 +11914,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "industrias-sambara-paracuellos": {
+    "website": "https://www.industrias-sambara.com/",
+    "contactPage": "https://www.industrias-sambara.com/contacto/",
+    "address": "Ctra. de Belvis, km 1.200, 28860 Paracuellos de Jarama, Madrid, Spain. Coordinates are an approximate city marker, not a factory-gate position.",
+    "generalEmail": "info@industrias-sambara.com",
+    "generalEmailEvidence": {
+      "company": "Industrias Sambara S.L.",
+      "value": "info@industrias-sambara.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official company business email, telephone and address",
+          "url": "https://www.industrias-sambara.com/contacto/",
+          "summary": "The official contact page names INDUSTRIAS SAMBARA S.L., its Madrid address and the public general info@industrias-sambara.com mailbox."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "generalPhone": "+34 91 658 04 45",
+    "generalPhoneEvidence": {
+      "company": "Industrias Sambara S.L.",
+      "value": "+34 91 658 04 45",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official company business email, telephone and address",
+          "url": "https://www.industrias-sambara.com/contacto/",
+          "summary": "The official contact page labels +34 91 658 04 45 as Tel; a distinct number is labelled Fax and is not used as the business phone."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official water-based wood primers and finishes, own custom manufacture",
+        "url": "https://www.industrias-sambara.com/productos-industria/"
+      },
+      {
+        "label": "Official research, design and production",
+        "url": "https://www.industrias-sambara.com/sambara/"
+      },
+      {
+        "label": "Official Paracuellos de Jarama factory history",
+        "url": "https://www.industrias-sambara.com/sambara-historia/"
+      },
+      {
+        "label": "Official company business email, telephone and address",
+        "url": "https://www.industrias-sambara.com/contacto/"
+      }
+    ]
+  },
   "fremplast-guarulhos": {
     "website": "https://www.fremplast.com.br/",
     "contactPage": "https://www.fremplast.com.br/",
@@ -36625,6 +36709,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "industrias-sambara-paracuellos",
   "fremplast-guarulhos",
   "universal-colors-diamniadio",
   "fujifilm-sericol-pune",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "industrias-sambara-paracuellos": "Your HIDROFON and HIDROLAC ranges include water-based wood primers and finishes in one- and two-component versions.",
   "fremplast-guarulhos": "Your FPP Print is a single-component solvent-based ink for screen and pad printing on untreated rigid polypropylene.",
   "universal-colors-diamniadio": "Your Coloris Epoxy Sol is a two-component epoxy coating for protecting interior steel and concrete surfaces.",
   "fujifilm-sericol-pune": "Your Polydyne YN series comprises solvent-based inks for untreated polypropylene substrates, alongside your other packaging ink systems.",
