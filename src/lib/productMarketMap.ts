@@ -11355,11 +11355,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-09"
   },
+  {
+    "id": "fremplast-guarulhos",
+    "company": "Fremplast Tintas",
+    "productId": "cpp-cpo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Guarulhos（城市级示意点）",
+    "latitude": -23.45,
+    "longitude": -46.53,
+    "legacyCompanyDescription": "巴西 Fremplast 在 Guarulhos 自行配方和生产油墨，现行官方目录的 FPP Print 为用于未处理硬质PP的单组分溶剂型丝印及移印油墨。",
+    "fit": "可开发候选",
+    "signal": "巴西 Fremplast 在 Guarulhos 自行配方和生产油墨，现行官方目录的 FPP Print 为用于未处理硬质PP的单组分溶剂型丝印及移印油墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-09",
+      "conclusion": "独立核读官网首页、产品目录HTML、目录直接引用的静态dados.js、联系页和公司/工厂介绍，共5次来源。首页及公司页确认Guarulhos自有配方、实验室和生产；静态文件为window.FP赋值一个严格JSON字面量，实际JSON.parse，不执行远程代码。解析156条目录记录/156不同slug，重复标题不当156种独立产品；读全部标题及选取的48条相关描述，逐条核读FPP及附着底涂、丙烯酸PSA和成品印花基料等7条详细记录，不声称读全156套SDS或全部博客/经销商资料。FPP明确单组分溶剂型、未处理硬质PP及丝印/移印。Fotograv为感光制版乳剂/去膜清洗及配套品，Fremptec为丝网配套；Primer de Aderência和PPA200用于擦涂基材后再印刷或贴带，明确不可混入油墨，是成品底涂，不据名称冒认为CPP/CPO原料。PSA为已配制丙烯酸胶；所查范围未识别销售CPP/CPO、MAH改性氯化聚烯烃或同类聚烯烃附着促进原料，不把所有清漆/颜料/树脂字样都视为同行，也不声称全SKU/股权审计。Fremplast、Fotograv、Cromajet、Fremptec和Andreasi家族经营线索保守计一户；旧协会F.S.GUARU名称作关联去重，未冒称当前工商主体登记已核实。Homer打印机合作不推定股权。公开联系页明确表单为原型，故公开联系入口采用首页真实公司邮箱/总机/WhatsApp资料，不把表单当可投递。邮箱由官方公开email-protection属性本地解码确认，非拼接猜测；真实wa.me链接未打开或发送。旧2019PDF及ISO自述未下载/冒称当前独立认证。CPP/CPO仅作PP油墨材料评估潜在关联，不确认现用树脂、溶剂/牌号相容、采购时机或性能。"
+    },
+    "contact": {
+      "label": "官网公开邮箱、总机与 WhatsApp；表单未作为投递渠道",
+      "email": "contato@fremplast.com.br",
+      "phone": "+551124896960",
+      "contactUrl": "https://www.fremplast.com.br/"
+    },
+    "source": {
+      "label": "Fremplast official FPP Print product data and own factory description",
+      "url": "https://www.fremplast.com.br/assets/data/dados.js"
+    },
+    "checkedAt": "2026-11-09"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "fremplast-guarulhos": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "universal-colors-diamniadio": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fujifilm-sericol-pune": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "crown-technology-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -11856,6 +11885,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "fremplast-guarulhos": {
+    "website": "https://www.fremplast.com.br/",
+    "contactPage": "https://www.fremplast.com.br/",
+    "address": "Rua Eduardo Froner, 460, Bonsucesso, Guarulhos/SP, CEP 07243-590, Brazil. Coordinates are an approximate Guarulhos city marker.",
+    "generalEmail": "contato@fremplast.com.br",
+    "generalEmailEvidence": {
+      "company": "Fremplast Tintas",
+      "value": "contato@fremplast.com.br",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Fremplast official public company email",
+          "url": "https://www.fremplast.com.br/contato.html",
+          "summary": "Official E-mail block and footer publish this company inbox in public email-protection attributes; actual values decoded locally and matched. Not a guessed pattern or named procurement address. The page labels its message form as a prototype, so it is not treated as an operational submission route."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "generalPhone": "+551124896960",
+    "generalPhoneEvidence": {
+      "company": "Fremplast Tintas",
+      "value": "+551124896960",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Fremplast official company switchboard",
+          "url": "https://www.fremplast.com.br/contato.html",
+          "summary": "Official company phone is (11) 2489-6960 with actual tel:+551124896960 href, separate from the WhatsApp mobile number."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "whatsapp": "https://wa.me/5511947805981?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Fremplast%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.",
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own Guarulhos manufacturing and laboratory",
+        "url": "https://www.fremplast.com.br/"
+      },
+      {
+        "label": "Official current catalogue HTML and linked data provenance",
+        "url": "https://www.fremplast.com.br/produtos.html"
+      },
+      {
+        "label": "Official static product data: FPP Print and relevant auxiliaries",
+        "url": "https://www.fremplast.com.br/assets/data/dados.js"
+      },
+      {
+        "label": "Official public company email, switchboard and actual WhatsApp link; prototype form excluded",
+        "url": "https://www.fremplast.com.br/contato.html"
+      },
+      {
+        "label": "Official family-operated formulation, factory and own brands",
+        "url": "https://www.fremplast.com.br/fremplast.html"
+      }
+    ]
+  },
   "universal-colors-diamniadio": {
     "website": "https://universal-colors.sn/",
     "contactPage": "https://universal-colors.sn/contact/",
@@ -36536,6 +36625,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "fremplast-guarulhos",
   "universal-colors-diamniadio",
   "fujifilm-sericol-pune",
   "crown-technology-accra",
