@@ -11327,11 +11327,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-09"
   },
+  {
+    "id": "universal-colors-diamniadio",
+    "company": "Universal Colors",
+    "productId": "elo",
+    "country": "Senegal",
+    "countryZh": "塞内加尔",
+    "city": "Diamniadio（塞内加尔国家级示意点）",
+    "latitude": 14.5,
+    "longitude": -14.5,
+    "legacyCompanyDescription": "塞内加尔 Universal Colors 在 Diamniadio 运营涂料工厂和研发配方业务，自有 Coloris 系列 Epoxy Sol 为用于室内钢材及混凝土保护的双组分环氧涂层。",
+    "fit": "可开发候选",
+    "signal": "塞内加尔 Universal Colors 在 Diamniadio 运营涂料工厂和研发配方业务，自有 Coloris 系列 Epoxy Sol 为用于室内钢材及混凝土保护的双组分环氧涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-09",
+      "conclusion": "独立重读官网公司、成品总目录、防腐成品、地坪系列、具体Epoxy Sol及联系页六份完整HTML。公司明确自有研发实验室、涂料配方生产，联系页确认工厂；总目录称Coloris及Universal Building为自有品牌，Epoxy Sol页面明确Coloris双组分环氧树脂/固化剂及室内钢材混凝土保护用途。AkzoNobel International成品线单独标为分销，不冒充其自产或股权集团。所查主要成品类别及已读配套说明未识别对外销售ELO、ESBO、环氧化植物油、生物增塑或同类所选添加剂；化学建材、环氧成品和固化剂不能自动等同所选油类原料同行。结论限实际已读公开范围，不称审计全部SKU/SDS/上游采购/股权。两官网域名、自有品牌和Diamniadio/Dakar网点计一户；官网地图目的地标SOKAMOUSSE仅为地点线索，不证明所有权，不为其另建账户。旧UNIPOX原料和Sinteplast贸易目录提及与本公司无已证实关系，不拼接为原料销售或采购证据。旧ASN证书搜索有效期至2024，未下载或冒称当前认证。ELO仅作为潜在配方柔韧或树脂改性评估，不确认现用油料、相容性、采购需求、工期或性能保证。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱和总部总机",
+      "email": "contact@universalcolors.sn",
+      "phone": "+221 33 898 03 40",
+      "contactUrl": "https://universal-colors.sn/contact/"
+    },
+    "source": {
+      "label": "Universal Colors official Coloris Epoxy Sol",
+      "url": "https://universal-colors.sn/portfolio-item/epoxy-sol/"
+    },
+    "checkedAt": "2026-11-09"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "universal-colors-diamniadio": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "fujifilm-sericol-pune": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
   "crown-technology-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "quimovil-barbera-del-valles": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
@@ -11827,6 +11856,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "universal-colors-diamniadio": {
+    "website": "https://universal-colors.sn/",
+    "contactPage": "https://universal-colors.sn/contact/",
+    "address": "Diamniadio – Site de l’Aprosi, Senegal (headquarters/factory as published; showrooms are in Dakar). Map marker is country-level only.",
+    "generalEmail": "contact@universalcolors.sn",
+    "generalEmailEvidence": {
+      "company": "Universal Colors",
+      "value": "contact@universalcolors.sn",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Universal Colors official contact and headquarters footer",
+          "url": "https://universal-colors.sn/contact/",
+          "summary": "The contact page publishes contact@universalcolors.sn as the company business route in its FAQ and headquarters footer; not the separately published HR mailbox."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "generalPhone": "+221 33 898 03 40",
+    "generalPhoneEvidence": {
+      "company": "Universal Colors",
+      "value": "+221 33 898 03 40",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Universal Colors official headquarters contact",
+          "url": "https://universal-colors.sn/contact/",
+          "summary": "Siège social Diamniadio – Site de l’Aprosi explicitly publishes +221 33 898 03 40. Separate showroom phone and FAQ WhatsApp number are not confused with the headquarters switchboard."
+        }
+      ],
+      "verifiedAt": "2026-11-09"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official own formulation, production and R&D",
+        "url": "https://universal-colors.sn/a-propos/"
+      },
+      {
+        "label": "Official catalogue identifies Coloris and Universal Building house brands",
+        "url": "https://universal-colors.sn/nos-produits/"
+      },
+      {
+        "label": "Official own protective products versus AkzoNobel distributed finished paints",
+        "url": "https://universal-colors.sn/peintures-anticorrosion/"
+      },
+      {
+        "label": "Official own floor-coating range",
+        "url": "https://universal-colors.sn/revetements-de-sols/"
+      },
+      {
+        "label": "Official exact Coloris Epoxy Sol two-component coating",
+        "url": "https://universal-colors.sn/portfolio-item/epoxy-sol/"
+      },
+      {
+        "label": "Official company contact and factory location",
+        "url": "https://universal-colors.sn/contact/"
+      }
+    ]
+  },
   "fujifilm-sericol-pune": {
     "website": "https://www.fujifilmsericol.in/",
     "contactPage": "https://www.fujifilmsericol.in/our-offices",
@@ -36444,6 +36536,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "universal-colors-diamniadio",
   "fujifilm-sericol-pune",
   "crown-technology-accra",
   "quimovil-barbera-del-valles",

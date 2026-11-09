@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+  "universal-colors-diamniadio": "Your Coloris Epoxy Sol is a two-component epoxy coating for protecting interior steel and concrete surfaces.",
   "fujifilm-sericol-pune": "Your Polydyne YN series comprises solvent-based inks for untreated polypropylene substrates, alongside your other packaging ink systems.",
   "crown-technology-accra": "Your BRIEN range includes zinc-rich epoxy primer and epoxy coatings for factory floors and steel structures.",
   "quimovil-barbera-del-valles": "Your AQUAPLUS and BBB AQUA-FILM ranges include water-based flexographic inks for printing on PE and PP films.",
