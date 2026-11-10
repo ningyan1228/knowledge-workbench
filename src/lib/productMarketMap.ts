@@ -11439,11 +11439,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-09"
   },
+  {
+    "id": "montana-colors-sant-vicenc",
+    "company": "Montana Colors S.L.",
+    "productId": "cpp-cpo",
+    "country": "Spain",
+    "countryZh": "西班牙",
+    "city": "Sant Vicenç de Castellet（城市级示意点）",
+    "latitude": 41.67,
+    "longitude": 1.86,
+    "legacyCompanyDescription": "西班牙Montana Colors S.L.在巴塞罗那自行生产喷漆，MTN WEPRO Plastic Primer为后续涂装PP/EPDM塑料提供附着底层；Montana/MTN及Briolf关联品牌按同集团一户跟进。",
+    "fit": "可开发候选",
+    "signal": "西班牙Montana Colors S.L.在巴塞罗那自行生产喷漆，MTN WEPRO Plastic Primer为后续涂装PP/EPDM塑料提供附着底层；Montana/MTN及Briolf关联品牌按同集团一户跟进。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-10",
+      "conclusion": "核读官方PP/EPDM Plastic Primer、公司制造介绍及Briolf集团业务原文。公司说明喷漆在Barcelona生产；具体产品是喷涂后用于后续面漆的成品附着底漆，不是供其他厂商配方使用的CPP/CPO原料。可见产品导航含喷漆、油墨与补充液、成品底漆/清漆、胶、填料、清洁剂及配件；集团分涂料、气雾剂和粘接三板块，Inchimica另有双组分聚氨酯胶与树脂，不因树脂字样便等同CPP/CPO。有限已读业务范围未识别外售CPP/CPO或MAH改性聚烯烃同类附着促进原料，未逐读全部品牌叶页/SDS或隐藏配方，不声称完整股权和全球SKU审计。当前集团官网明确MTN Vice、94与WEPRO所属气雾剂板块，Montana/MTN/WEPRO及Briolf关联品牌合并一户，不按经销店、国家分支、旧PRO与新WEPRO名称拆计。公司About的独立品牌营销表述不作为当前所有权结论。集团Intec明确意大利制造、域名intecforcomposites.com，与既有澳大利亚Intec/Aqualis的inteccoatings.com.au区分。Montana Química巴西木材防腐产品及相似Montana名称未据字面合并；本次经营主体以官网Montana Colors S.L.和西班牙地址为准。公开邮箱及电话为公司通用业务路线，非具名采购；未确认WhatsApp、不提交表单。客户自述ISO未独立读取证书，不转为我方认证。仅潜在原料应用关联，不确认客户现用树脂、采购、牌号相容或性能。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及公司业务页",
+      "email": "montana@montanacolors.com",
+      "phone": "+34 93 833 27 87",
+      "contactUrl": "https://www.montanacolors.com/en/about-montana/"
+    },
+    "source": {
+      "label": "Montana Colors official MTN WEPRO PP/EPDM Plastic Primer",
+      "url": "https://www.montanacolors.com/en/productos/mtn-pro-plastic-primer-spray/"
+    },
+    "checkedAt": "2026-11-10"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "montana-colors-sant-vicenc": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "odassia-meknes": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "industrias-sambara-paracuellos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "fremplast-guarulhos": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -11943,6 +11972,67 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "montana-colors-sant-vicenc": {
+    "website": "https://www.montanacolors.com/",
+    "contactPage": "https://www.montanacolors.com/en/about-montana/",
+    "address": "Carrer del Clot del Tufau, 29, 08295 Sant Vicenç de Castellet, Barcelona, Spain. Coordinates are an approximate city marker, not a factory-gate position.",
+    "generalEmail": "montana@montanacolors.com",
+    "generalEmailEvidence": {
+      "company": "Montana Colors S.L.",
+      "value": "montana@montanacolors.com",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Montana Colors official MTN WEPRO PP/EPDM Plastic Primer",
+          "url": "https://www.montanacolors.com/en/productos/mtn-pro-plastic-primer-spray/",
+          "summary": "The official company business footer names MONTANA COLORS S.L., its Spanish address and montana@montanacolors.com as the public contact mailbox."
+        },
+        {
+          "label": "Montana Colors official Barcelona production and company business footer",
+          "url": "https://www.montanacolors.com/en/about-montana/",
+          "summary": "The official company business footer names MONTANA COLORS S.L., its Spanish address and montana@montanacolors.com as the public contact mailbox."
+        }
+      ],
+      "verifiedAt": "2026-11-10"
+    },
+    "generalPhone": "+34 93 833 27 87",
+    "generalPhoneEvidence": {
+      "company": "Montana Colors S.L.",
+      "value": "+34 93 833 27 87",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Montana Colors official MTN WEPRO PP/EPDM Plastic Primer",
+          "url": "https://www.montanacolors.com/en/productos/mtn-pro-plastic-primer-spray/",
+          "summary": "The official company business footer publishes Tel: (+34) 93 833 27 87 for Montana Colors S.L.; no WhatsApp route inferred."
+        },
+        {
+          "label": "Montana Colors official Barcelona production and company business footer",
+          "url": "https://www.montanacolors.com/en/about-montana/",
+          "summary": "The official company business footer publishes Tel: (+34) 93 833 27 87 for Montana Colors S.L.; no WhatsApp route inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-10"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Montana Colors official MTN WEPRO PP/EPDM Plastic Primer",
+        "url": "https://www.montanacolors.com/en/productos/mtn-pro-plastic-primer-spray/"
+      },
+      {
+        "label": "Montana Colors official Barcelona production and company business footer",
+        "url": "https://www.montanacolors.com/en/about-montana/"
+      },
+      {
+        "label": "Briolf official Aerosols/MTN WEPRO group and divisions",
+        "url": "https://briolf.com/en/"
+      }
+    ]
+  },
   "odassia-meknes": {
     "website": "https://odassia.com/",
     "contactPage": "https://odassia.com/la-marque/",
@@ -36808,6 +36898,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "montana-colors-sant-vicenc",
   "odassia-meknes",
   "industrias-sambara-paracuellos",
   "fremplast-guarulhos",
