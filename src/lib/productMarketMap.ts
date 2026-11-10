@@ -11467,11 +11467,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-10"
   },
+  {
+    "id": "durall-sfax",
+    "company": "DURALL",
+    "productId": "elo",
+    "country": "Tunisia",
+    "countryZh": "突尼斯",
+    "city": "Sfax（城市级示意点）",
+    "latitude": 34.74,
+    "longitude": 10.76,
+    "legacyCompanyDescription": "DURALL在突尼斯斯法克斯制造建筑、地坪和工业涂料；其DURAPRIME 110为用于钢材和混凝土的双组分聚酰胺固化环氧底漆。",
+    "fit": "可开发候选",
+    "signal": "DURALL在突尼斯斯法克斯制造建筑、地坪和工业涂料；其DURAPRIME 110为用于钢材和混凝土的双组分聚酰胺固化环氧底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-10",
+      "conclusion": "已读官方制造介绍、工业涂层总览、十款工业成品目录、具体环氧底漆、主要类别和业务咨询页。业务为建筑、地坪及工业成品涂料；在该有限范围未识别ELO、ESBO、环氧化植物油或相近增塑改性原料外售。未声称审计全部SKU或SDS。SAVEP为官网披露的历史名称，DURALL按一个账户收录；同名DURAFLOOR不构成与墨西哥Nervion的集团关联证据。搜索索引与实际读取页的产品名称、数量和页脚存在差异，保留原始版本，不推定型号更名或当前供货；两类证据均指向同一斯法克斯涂料制造商。"
+    },
+    "contact": {
+      "label": "官网业务咨询页与公开电话；邮箱待核验",
+      "phone": "+216 24 905 072",
+      "contactUrl": "https://durall.tn/devis"
+    },
+    "source": {
+      "label": "Official DURAPRIME 110 epoxy primer",
+      "url": "https://durall.tn/product/industrielle/duraprime-110"
+    },
+    "checkedAt": "2026-11-10"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "durall-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "montana-colors-sant-vicenc": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "odassia-meknes": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "industrias-sambara-paracuellos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -11972,6 +12000,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "durall-sfax": {
+    "website": "https://durall.tn/",
+    "contactPage": "https://durall.tn/devis",
+    "address": "Sfax, Tunisia. Approximate city marker; street address not independently verified in the retrieved primary pages.",
+    "generalPhone": "+216 24 905 072",
+    "generalPhoneEvidence": {
+      "company": "DURALL",
+      "value": "+216 24 905 072",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "Official manufacturer history and public phone",
+          "url": "https://durall.tn/",
+          "summary": "Official homepage explicitly publishes +216 24 905 072 as its company contact number."
+        }
+      ],
+      "verifiedAt": "2026-11-10"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official industrial coatings manufacturer overview",
+        "url": "https://durall.tn/gamme-industrielle"
+      },
+      {
+        "label": "Official manufacturer history and public phone",
+        "url": "https://durall.tn/"
+      },
+      {
+        "label": "Official industrial finished-coating catalogue",
+        "url": "https://durall.tn/industrielle"
+      },
+      {
+        "label": "Official DURAPRIME 110 epoxy primer",
+        "url": "https://durall.tn/product/industrielle/duraprime-110"
+      },
+      {
+        "label": "Official main product categories",
+        "url": "https://durall.tn/categories"
+      },
+      {
+        "label": "Official business enquiry page",
+        "url": "https://durall.tn/devis"
+      }
+    ]
+  },
   "montana-colors-sant-vicenc": {
     "website": "https://www.montanacolors.com/",
     "contactPage": "https://www.montanacolors.com/en/about-montana/",
@@ -36898,6 +36974,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "durall-sfax",
   "montana-colors-sant-vicenc",
   "odassia-meknes",
   "industrias-sambara-paracuellos",
