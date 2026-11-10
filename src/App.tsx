@@ -34,6 +34,10 @@ const navigation: Array<{ id: Page; label: string; icon: typeof LayoutDashboard 
 
 function getPage(): Page {
   const requested = window.location.hash.replace(/^#\/?/, '').split('/')[0]
+  if (!window.location.hash.replace(/^#\/?/, '') && marketIntelligenceEnabled) {
+    window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + '#market-intelligence/follow-up')
+    return 'market-intelligence'
+  }
   if (requested === 'learning') return 'practice'
   return (requested !== 'market-intelligence' || marketIntelligenceEnabled) && (navigation.some((item) => item.id === requested) || requested === 'settings') ? requested as Page : 'dashboard'
 }
