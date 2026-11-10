@@ -92,6 +92,26 @@ dataset_version: 2026-10-26-r3
 `
 
 describe('priority ledger with an embedded historical snapshot', () => {
+  it('sorts internal follow-up dates before priority and keeps each task linked to its own source row', () => {
+    const schedule = `---
+dataset_id: schedule-test
+default_sort_field: next_follow_up_date
+---
+## 一、优先联系与处理总表
+| 顺序 | 下次跟进日期 | 客户／联系人 · 产品 | 联系优先级 | 最近邮件处理日期 | 当前进展 | 这次具体做什么 |
+|---|---|---|---|---|---|---|
+| 1 | 2026-11-11 | 客户乙 · 乳液 <!-- customer_id: C03 --> | 等待 | 2026-11-05 13:27（邮件显示） | 已回复 | 核收件 |
+| 4 | 2026-11-10 | 客户甲 · 乳液 <!-- customer_id: C01 --> | 先查 | 待核 | 未核 | 核物流 |
+| 2 | 2026-11-10 | 客户丙 · 树脂 <!-- customer_id: C02 --> | 先核 | 2026-11-07 | 已回复 | 核资料 |
+| 3 | 触发后再跟进 | 客户丁 · 树脂 <!-- customer_id: C04 --> | 暂停 | 2026-11-09 | 暂停 | 等回复 |
+`
+    const d = parseFollowup(schedule)
+    expect(d.customers.map(c => c.id)).toEqual(['C02', 'C01', 'C03', 'C04'])
+    expect(d.customers[1].tasks[0]).toMatchObject({ action: '核物流', dateNature: '2026-11-10 · 内部跟进安排' })
+    expect(d.customers[1].tasks[0].source.raw).toContain('customer_id: C01')
+    expect(d.customers[2].lastEmailProcessedDate).toBe('2026-11-05')
+    expect(d.customers[3]).toMatchObject({ actionDate: null, actionLabel: '触发后再跟进' })
+  })
   it('uses explicit customer IDs rather than ordinal headings, retaining stable identities and priority', () => {
     const d = parseFollowup(source)
     expect(d.customers.map(c => c.id)).toEqual(['C01', 'C06'])

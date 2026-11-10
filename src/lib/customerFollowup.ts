@@ -59,6 +59,7 @@ function validDate(value: string): string | null {
 export function mailProcessingDate(value: string): string | null {
   const label = value.trim()
   if (/^20\d{2}-\d{2}-\d{2}(?:（[^）]*）)?$/.test(label)) return validDate(label)
+  if (/^20\d{2}-\d{2}-\d{2} (?:[01]\d|2[0-3]):[0-5]\d（邮件显示）$/.test(label)) return validDate(label)
   if (/^20\d{2}-\d{2}-\d{2}（[^）]*）[；;](?:20\d{2}-)?\d{2}-\d{2}为(?:上一轮|此前|历史)/.test(label)) return validDate(label)
   if (/^20\d{2}-\d{2}-\d{2}[，,]用户确认已发$/.test(label)) return validDate(label)
   // The source may explicitly distinguish an outbound-mail date from a later
@@ -73,6 +74,10 @@ export function sortByMailProcessing(rows: FollowupCustomer[]): FollowupCustomer
 
 export function sortByContactPriority(rows: FollowupCustomer[]): FollowupCustomer[] {
   return [...rows].sort((a, b) => (a.contactPriorityRank ?? Infinity) - (b.contactPriorityRank ?? Infinity) || a.sourceOrder - b.sourceOrder)
+}
+
+export function sortByNextFollowup(rows: FollowupCustomer[]): FollowupCustomer[] {
+  return sortByContactPriority(rows).sort((a, b) => (a.actionDate ?? '9999').localeCompare(b.actionDate ?? '9999'))
 }
 
 function parseDocument(markdown: string): FollowupDocument {
@@ -131,12 +136,14 @@ function parseDocument(markdown: string): FollowupDocument {
   const index = (pattern: RegExp) => headers.findIndex(header => pattern.test(header))
   const exactCustomerIndex = index(/^(?:客户(?:\s*\/\s*地区)?|国家及原档客户信息)$/)
   const customerIndex = exactCustomerIndex >= 0 ? exactCustomerIndex : index(/^客户(?!公司|显示|编号)/), productIndex = index(/^产品|^项目$/), dateIndex = index(/下一次跟进|建议.*日期|建议行动|跟进日/)
+  const hasNextSchedule = headers[dateIndex] === '下次跟进日期'
   const progressIndex = index(/最新.*进度|最近有据可查|当前进展/), statusIndex = index(/当前状态|当前阶段|目前阶段|当前进展/), nextIndex = index(/具体下一步|^下一步|这次具体做什么/)
   const processingIndex = index(/^最近邮件处理日期$/), processingActionIndex = index(/^最近处理内容[／/]发送状态$/)
   let customers = (summary?.rows ?? []).map((row, n) => {
     const get = (i: number) => i < 0 ? '' : visibleFollowupText(markdownText(row[i] ?? ''))
     const idValue = row.find(value => internalFollowupKey(value)) ?? get(0), id = internalFollowupKey(idValue) || identities.find(i => i.displayName === visibleFollowupText(idValue))?.id || (/^C?\d+$/.test(idValue) ? 'C' + idValue.replace(/^C/, '').padStart(2, '0') : `row-${n}`)
-    const actionLabel = get(dateIndex), actionDate = validDate(actionLabel)
+    const actionLabel = get(dateIndex)
+    const actionDate = hasNextSchedule && !/^20\d{2}-\d{2}-\d{2}$/.test(actionLabel) ? null : validDate(actionLabel)
     const processingDateLabel = get(processingIndex) || '待核', lastEmailProcessedDate = mailProcessingDate(processingDateLabel)
     const rankText = get(index(/^顺序$/)), contactPriorityRank = /^[1-9]\d*$/.test(rankText) ? Number(rankText) : null
     const identity = identities.find(i => i.id === id)
@@ -160,7 +167,8 @@ function parseDocument(markdown: string): FollowupDocument {
   if (processingIndex < 0 && customers.length && !customers.some(row => row.actionDate)) warnings.push('此版本未注明可识别的建议跟进日期，保留原表顺序。')
   // Versioned datasets own their row order, including ties. Retain the legacy
   // date ordering only for older ledgers without a dataset contract.
-  if (metadata.default_sort_field === 'contact_priority_rank') customers = sortByContactPriority(customers)
+  if (metadata.default_sort_field === 'next_follow_up_date') customers = sortByNextFollowup(customers)
+  else if (metadata.default_sort_field === 'contact_priority_rank') customers = sortByContactPriority(customers)
   else if (processingIndex >= 0) customers = sortByMailProcessing(customers)
   else if (!metadata.dataset_id) customers.sort((a, b) => (a.actionDate ?? '9999').localeCompare(b.actionDate ?? '9999'))
   const events: FollowupEvent[] = [], tasks: FollowupTask[] = []
@@ -206,10 +214,13 @@ function parseDocument(markdown: string): FollowupDocument {
       else if (b.kind === 'text' && belongs(b.raw, c)) c.sources.push(sourceScope(b))
     }
     if (summary) {
-      const i = summary.rows.findIndex(row => row.some(value => internalFollowupKey(value) === c.id) || identities.find(i => i.displayName === visibleFollowupText(row[0]))?.id === c.id || (customerIndex !== 1 && (row[0].replace(/^C/, '').padStart(2, '0')) === c.id.slice(1)))
+      const i = c.sourceOrder
       if (i >= 0) {
         if (processingIndex >= 0) c.processingSources.unshift(rowSource(summary, i))
-        tasks.push({ id: `${c.id}-suggested-L${summary.rowLines[i]}`, customerId: c.id, project: c.product, action: c.next || '原文未提供', waiting: c.waiting || '待确认', dateNature: processingIndex >= 0 ? '下一次实际排期待确认；旧建议仅在详情历史参考中保留' : `${c.actionLabel} · ${c.dateNature || '原表建议，非已确认排期'}`, status: /暂停|暂不供货/.test(`${c.actionLabel} ${c.status}`) ? '暂停／条件触发；处理情况待核' : '建议行动，处理情况待核', evidence: '原文未提供完成依据，未自动标完成', source: rowSource(summary, i) })
+        const dateNature = hasNextSchedule
+          ? `${c.actionLabel} · 内部跟进安排`
+          : processingIndex >= 0 ? '下一次实际排期待确认；旧建议仅在详情历史参考中保留' : `${c.actionLabel} · ${c.dateNature || '原表建议，非已确认排期'}`
+        tasks.push({ id: `${c.id}-suggested-L${summary.rowLines[i]}`, customerId: c.id, project: c.product, action: c.next || '原文未提供', waiting: c.waiting || '待确认', dateNature, status: /暂停|暂不供货|触发后再跟进/.test(`${c.actionLabel} ${c.status}`) ? '暂停／条件触发；处理情况待核' : '建议行动，处理情况待核', evidence: '原文未提供完成依据，未自动标完成', source: rowSource(summary, i) })
       }
     }
   }
@@ -223,7 +234,7 @@ function parseDocument(markdown: string): FollowupDocument {
     } else if (b.headers[0] === '任务编号' || taskId) {
       const id = taskId || cells[0]
       tasks.push({ id, customerId: id.split('-')[0], project: customers.find(c => c.id === id.split('-')[0])?.product ?? '待确认', action: cells[1], waiting: cells[2], dateNature: cells[3], status: cells[4], evidence: cells[5], source })
-    } else if (!source.historical && /新增.*事件/.test(b.section) && b.headers[0] === '日期') {
+    } else if (!source.historical && /新增.*事件/.test(b.section) && /^(日期|事件日期)$/.test(b.headers[0])) {
       const customerId = followupReferenceIds(row[1] ?? '', identities)[0]
       if (customerId) events.push({ id: `${customerId}-history-L${source.start}`, customerId, project: identities.find(c => c.id === customerId)?.product ?? '待确认', time: cells[0], precision: timePrecision(cells[0]), type: '新增／纠正记录（按原文）', content: b.headers.map((h, k) => `${h}：${cells[k] ?? ''}`).join('\n'), source })
     } else if (!source.historical && /新增.*事件/.test(b.section) && b.headers[0] === '项目' && b.headers[1] === '最新进展') {
