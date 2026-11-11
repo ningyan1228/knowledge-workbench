@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"casimper-torres-vedras": "Your Cascor Velatura is a water-based wood stain designed to preserve the appearance of the wood grain.",
   "evochem-fyli": "Your MINOS Plastic & Multi Surface Primer prepares polypropylene surfaces for painting with compatible topcoats.",
   "durall-sfax": "Your industrial range includes two-component epoxy primers for protecting steel and concrete in industrial and coastal environments.",
   "montana-colors-sant-vicenc": "Your MTN WEPRO Plastic Primer provides an anchoring layer for painting polypropylene modified with EPDM.",

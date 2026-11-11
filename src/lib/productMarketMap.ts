@@ -11522,11 +11522,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-10"
   },
+  {
+    "id": "casimper-torres-vedras",
+    "company": "Casimper",
+    "productId": "nl-w1201",
+    "country": "Portugal",
+    "countryZh": "葡萄牙",
+    "city": "Torres Vedras（城市级示意点）",
+    "latitude": 39.09,
+    "longitude": -9.26,
+    "legacyCompanyDescription": "Casimper在葡萄牙Torres Vedras设有自有工厂并由内部化学团队开发配方；Cascor Velatura为用于木材的水性着色涂料。",
+    "fit": "可开发候选",
+    "signal": "Casimper在葡萄牙Torres Vedras设有自有工厂并由内部化学团队开发配方；Cascor Velatura为用于木材的水性着色涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-11",
+      "conclusion": "独立核读已取得的官网公司、成品目录、建筑添加剂与Resicimp正文。公司明确内部配方开发及自有Torres Vedras工厂；Cascor Velatura在目录明确为水性木器涂料。Resicimp说明刷涂/辊涂及单位面积用量，为建筑粘结用途；PP纤维为砂浆增强材料，不据这些名称推定同类PO/CPO分散体。有限已读范围未识别水性聚烯烃乳液、PO/CPO分散体或同类附着促进原料外售，不声称审计全部SDS。目录返回至734行而声明793行，产品描述已读，不声称完整HTML；Cascor单品页CacheMiss未当原文成功。公司历史名称、当前Casimper Distribuição Lda页脚及品牌按一个经营账户处理，不宣称工商继承关系已审计，不拆品牌/经销商新增。正式库、线上502条、完整私有队列及frontier无该主体；历史CASCOREZ为无关词段。累计6次含1失败，余0停止，不重置。公开通用邮箱和公司电话有来源，不猜具名采购或WhatsApp；仅潜在材料评估。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及公司联系区",
+      "email": "geral@casimper.com",
+      "phone": "+351 261 323 384",
+      "contactUrl": "https://www.casimper.com/empresa"
+    },
+    "source": {
+      "label": "Official Cascor Velatura water-based wood stain catalogue",
+      "url": "https://www.casimper.com/produtos"
+    },
+    "checkedAt": "2026-11-11"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"casimper-torres-vedras": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "evochem-fyli": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "durall-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "montana-colors-sant-vicenc": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -12029,6 +12058,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"casimper-torres-vedras": {
+  "website": "https://www.casimper.com/",
+  "contactPage": "https://www.casimper.com/empresa",
+  "address": "Rua Manuel Martinho Nº22, Zona Industrial Cruz do Barro, 2560-241 Torres Vedras, Portugal Coordinates are a city-level illustration, not a verified factory gate.",
+  "generalEmail": "geral@casimper.com",
+  "generalPhone": "+351 261 323 384",
+  "generalEmailEvidence": {
+    "company": "Casimper",
+    "value": "geral@casimper.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official company page business contact section",
+        "url": "https://www.casimper.com/empresa",
+        "summary": "Same company page gives own factory and public general email, business telephone and Torres Vedras address; not a named purchasing contact."
+      }
+    ],
+    "verifiedAt": "2026-11-11"
+  },
+  "generalPhoneEvidence": {
+    "company": "Casimper",
+    "value": "+351 261 323 384",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official company page business contact section",
+        "url": "https://www.casimper.com/empresa",
+        "summary": "Same company page gives own factory and public general email, business telephone and Torres Vedras address; not a named purchasing contact."
+      }
+    ],
+    "verifiedAt": "2026-11-11"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Cascor Velatura water-based wood stain catalogue",
+      "url": "https://www.casimper.com/produtos"
+    },
+    {
+      "label": "Own factory and internal formula development",
+      "url": "https://www.casimper.com/empresa"
+    },
+    {
+      "label": "Building additives catalogue",
+      "url": "https://www.casimper.com/produtos/aditivos"
+    },
+    {
+      "label": "Resicimp brush/roller application",
+      "url": "https://www.casimper.com/produtos/aditivos/resicimp"
+    }
+  ]
+},
   "evochem-fyli": {
     "website": "https://www.evochem.gr/",
     "contactPage": "https://www.evochem.gr/en/contact.html",
@@ -37066,6 +37150,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"casimper-torres-vedras",
   "evochem-fyli",
   "durall-sfax",
   "montana-colors-sant-vicenc",
