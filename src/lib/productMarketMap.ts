@@ -11494,11 +11494,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-10"
   },
+  {
+    "id": "evochem-fyli",
+    "company": "EVOCHEM S.A.",
+    "productId": "cpp-cpo",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Fyli, Attica（城市级示意点）",
+    "latitude": 38.1,
+    "longitude": 23.67,
+    "legacyCompanyDescription": "EVOCHEM在希腊生产涂料、胶粘剂及喷雾产品；MINOS Plastic & Multi Surface Primer用于聚丙烯等塑料表面，为后续面漆提供底涂。",
+    "fit": "可开发候选",
+    "signal": "EVOCHEM在希腊生产涂料、胶粘剂及喷雾产品；MINOS Plastic & Multi Surface Primer用于聚丙烯等塑料表面，为后续面漆提供底涂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-10",
+      "conclusion": "已读官方制造介绍、MINOS聚丙烯底漆、品牌、底漆目录、ADHESIL及联系页。在有限范围未识别CPP/CPO或同类改性聚烯烃原料外售。ADHESIL说明直接薄涂并干燥后再上涂层，为成品底漆；环氧树脂品类不等同CPP/CPO供应。未声称完成全部SKU或SDS审计。MERCOLA、SWAN、MINOS、PGP按EVOCHEM同一账户，不按品牌重复计数；潜在适配不代表已确认采购。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话和联系表单",
+      "email": "info@evochem.gr",
+      "phone": "+30 210 5590460",
+      "contactUrl": "https://www.evochem.gr/en/contact.html"
+    },
+    "source": {
+      "label": "Official MINOS Plastic & Multi Surface Primer",
+      "url": "https://www.evochem.gr/en/product/minos-spray/minos-diy/minos-plastic-multi-surface-primer.html"
+    },
+    "checkedAt": "2026-11-10"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+  "evochem-fyli": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "durall-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
   "montana-colors-sant-vicenc": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "odassia-meknes": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12000,6 +12029,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+  "evochem-fyli": {
+    "website": "https://www.evochem.gr/",
+    "contactPage": "https://www.evochem.gr/en/contact.html",
+    "address": "Thesi Tzaverdella - 13341 Fyli, Attica. Coordinates are an approximate city marker.",
+    "generalEmail": "info@evochem.gr",
+    "generalEmailEvidence": {
+      "company": "EVOCHEM S.A.",
+      "value": "info@evochem.gr",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "EVOCHEM official business contact",
+          "url": "https://www.evochem.gr/en/contact.html",
+          "summary": "Official company contact page explicitly publishes info@evochem.gr as its general business mailbox."
+        }
+      ],
+      "verifiedAt": "2026-11-10"
+    },
+    "generalPhone": "+30 210 5590460",
+    "generalPhoneEvidence": {
+      "company": "EVOCHEM S.A.",
+      "value": "+30 210 5590460",
+      "kind": "general",
+      "publicBusiness": true,
+      "sources": [
+        {
+          "label": "EVOCHEM official business contact",
+          "url": "https://www.evochem.gr/en/contact.html",
+          "summary": "Official contact page publishes +30 210 5590460 as the company business telephone; no WhatsApp inferred."
+        }
+      ],
+      "verifiedAt": "2026-11-10"
+    },
+    "contacts": [],
+    "departmentEmails": [],
+    "sources": [
+      {
+        "label": "Official MINOS polypropylene primer",
+        "url": "https://www.evochem.gr/en/product/minos-spray/minos-diy/minos-plastic-multi-surface-primer.html"
+      },
+      {
+        "label": "Official manufacturing activity",
+        "url": "https://www.evochem.gr/en/our-company/activity.html"
+      },
+      {
+        "label": "Official business contact",
+        "url": "https://www.evochem.gr/en/contact.html"
+      },
+      {
+        "label": "Official brand portfolio",
+        "url": "https://www.evochem.gr/en/our-company/brands.html"
+      },
+      {
+        "label": "Official primers catalogue",
+        "url": "https://www.evochem.gr/en/products/primers.html"
+      },
+      {
+        "label": "Official ADHESIL finished primer",
+        "url": "https://www.evochem.gr/en/product/primers/adhesil.html"
+      }
+    ]
+  },
   "durall-sfax": {
     "website": "https://durall.tn/",
     "contactPage": "https://durall.tn/devis",
@@ -36974,6 +37066,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+  "evochem-fyli",
   "durall-sfax",
   "montana-colors-sant-vicenc",
   "odassia-meknes",
