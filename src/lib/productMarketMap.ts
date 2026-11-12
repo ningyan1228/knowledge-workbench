@@ -11606,11 +11606,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-12"
   },
+  {
+    "id": "hest-skopje",
+    "company": "HEST",
+    "productId": "elo",
+    "country": "North Macedonia",
+    "countryZh": "北马其顿",
+    "city": "Skopje（城市级示意点）",
+    "latitude": 42,
+    "longitude": 21.43,
+    "legacyCompanyDescription": "HEST官网确认其在Skopje设有液体装饰及工业涂料生产车间，并由团队开发涂料配方；Anticorrosive Zero是用于钢结构及机器的醇酸树脂/磷酸锌防腐底漆。",
+    "fit": "可开发候选",
+    "signal": "HEST官网确认其在Skopje设有液体装饰及工业涂料生产车间，并由团队开发涂料配方；Anticorrosive Zero是用于钢结构及机器的醇酸树脂/磷酸锌防腐底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-12",
+      "conclusion": "独立核读官网首页、Anticorrosive Zero单品、About与Contact四份完整业务正文；About重定向保守计额外一次，HEST累计5次、余1，本组六范围来源额度用满后停止，不重置。首页明确自有装饰/工业涂料工厂并列AbripRustica/Aquatone/AcrylEmajl/AnticorrosiveZero；About进一步明确粉体材料与液体涂料两个车间及团队配方开发。单品原文明示醇酸树脂和磷酸锌防腐底漆，为刷/辊/喷/浸涂成品。已读四正文和有限首页范围未识别外售ELO、ESBO、环氧化植物油或同类生物基增塑原料；不宣称完整SKU/SDS或集团隐藏业务审计，也不把名称Acryl/Aqua等当未读配方证据。About明示长期代理Hempel船舶涂料，保留其成品经销角色，但自有工厂/单品证据不归于Hempel代理；不宣称两者股权关联或将Hempel重复新增。Hest/ХЕСТ/hest.mk与工厂/门店按一个公司跨产品去重；此前精确域名和明确公司名历史检索无公司原文/正式库/队列/索引记录，泛词hest命中Chesterfield等无关词段。完整main505条、root519条、queue/frontier公司品牌域名去重无相同主体。ELO仅依用户TDS涂料/树脂改性作潜在材料评估，不宣称其当前使用、采购、相容、耐蚀改善或性能保证。公开Hest_2000@hotmail.com原样保留大小写，为官网重复披露的公司工厂/门店通用业务邮箱，非私人收集或具名采购人；工厂电话单独有来源，不猜WhatsApp或邮箱。历史1990创立及网站copyright不作新投产日或产能审计。"
+    },
+    "contact": {
+      "label": "官网工厂通用业务邮箱及工厂电话",
+      "email": "Hest_2000@hotmail.com",
+      "phone": "+38922551188",
+      "contactUrl": "https://hest.mk/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82/"
+    },
+    "source": {
+      "label": "Official Anticorrosive Zero alkyd/zinc-phosphate protective primer",
+      "url": "https://hest.mk/%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B8-%D0%B8-%D0%B7%D0%B0%D0%B2%D1%80%D1%88%D0%BD%D0%B8-%D0%BF%D1%80%D0%B5%D0%BC%D0%B0%D0%B7%D0%B8-%D0%B7%D0%B0-%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BD%D0%B8/%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D0%B2-%D0%B7%D0%B5%D1%80%D0%BE/"
+    },
+    "checkedAt": "2026-11-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"hest-skopje": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "uniform-industries-greater-noida": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "megatti-promet-kiseljak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "casimper-torres-vedras": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12116,6 +12145,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"hest-skopje": {
+  "website": "https://hest.mk/",
+  "contactPage": "https://hest.mk/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82/",
+  "address": "Factory: Street 1632 No.36, Skopje, North Macedonia. Store: Skupi BB, Skopje. Coordinates indicate the city, not a surveyed factory gate.",
+  "generalEmail": "Hest_2000@hotmail.com",
+  "generalPhone": "+38922551188",
+  "generalEmailEvidence": {
+    "company": "HEST",
+    "value": "Hest_2000@hotmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official HEST factory contact section",
+        "url": "https://hest.mk/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82/",
+        "summary": "Publicly disclosed factory and store business email; no named buyer."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "generalPhoneEvidence": {
+    "company": "HEST",
+    "value": "+38922551188",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official HEST factory contact section",
+        "url": "https://hest.mk/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82/",
+        "summary": "Exact public factory business telephone; no WhatsApp claim."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Own manufacturing home",
+      "url": "https://hest.mk/"
+    },
+    {
+      "label": "Factory divisions and own formulation",
+      "url": "https://hest.mk/%d0%b7%d0%b0-%d0%bd%d0%b0%d1%81/"
+    },
+    {
+      "label": "Exact protective primer",
+      "url": "https://hest.mk/%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B8-%D0%B8-%D0%B7%D0%B0%D0%B2%D1%80%D1%88%D0%BD%D0%B8-%D0%BF%D1%80%D0%B5%D0%BC%D0%B0%D0%B7%D0%B8-%D0%B7%D0%B0-%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BD%D0%B8/%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D0%B2-%D0%B7%D0%B5%D1%80%D0%BE/"
+    },
+    {
+      "label": "Official factory business contacts",
+      "url": "https://hest.mk/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82/"
+    }
+  ]
+},
 "uniform-industries-greater-noida": {
   "website": "https://ufindustries.com/",
   "contactPage": "https://ufindustries.com/contact/",
@@ -37349,6 +37433,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"hest-skopje",
 "uniform-industries-greater-noida",
 "megatti-promet-kiseljak",
 "casimper-torres-vedras",
