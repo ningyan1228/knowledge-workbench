@@ -11578,11 +11578,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-12"
   },
+  {
+    "id": "uniform-industries-greater-noida",
+    "company": "Uniform Industries",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Greater Noida（城市级示意点）",
+    "latitude": 28.47,
+    "longitude": 77.5,
+    "legacyCompanyDescription": "Uniform Industries官网确认在印度Greater Noida自主配制并制造油墨和涂层；UNIPAD-12PP明确为用于未处理聚丙烯的双组分溶剂型移印油墨。",
+    "fit": "可开发候选",
+    "signal": "Uniform Industries官网确认在印度Greater Noida自主配制并制造油墨和涂层；UNIPAD-12PP明确为用于未处理聚丙烯的双组分溶剂型移印油墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-12",
+      "conclusion": "独立核读同一官网六份原文：PP专用移印墨、Our Purpose、R&D、Products、Contact和Primers，6来源均返回可用正文，未观察重定向/失败，终身6STOP。Products明确Greater Noida自主配制制造；UNIPAD-12PP原文明列two-component solvent-based及untreated polypropylene，不把基材处理建议或医学/食品用途转作我方认证。Our Purpose泛称resins/coatings；研发说binder chemistry developed in-house，为内部研发而非同类CPP/CPO原料外售证明。Primers完整原文说明UniPrimer/Unimer为涂布于纸板/薄膜的成品底涂，含丙烯酸乳液、PUD、UV丙烯酸和PEI anchor-coat路线，按薄膜/纸板干涂布量及涂布机应用供货；不是因出现dispersion/adhesion单词就认定其销售CPP/CPO原料。实际六正文及十四类目录未识别氯化聚烯烃、氯化聚丙烯或同类MAH改性原料供货；结论限已读范围，不宣称全部138个TDS/SDS审计、油墨现用CPP或外购。网页TPO-free为UV光引发剂语境，不与CPP应用的TPO基材混淆。早期两份native-search-raw仅发现痕迹已核对，无以前公司原文请求；全文正式库、线上504条、队列、frontier/index及research/src查名称域名无正式或集团重复。Uniform/ufindustries/UNIPAD/UniPrimer/Unimer全部同公司跨产品共享预算，不拆品牌新增。Contact公开sales/marketing/purchase邮箱，purchase为采购部门入口非具名采购人，未测送达、不猜WhatsApp。用户CPP指南及既有独立CPO油墨市场扩展只支持PP附着原料评估，不确认现用配方、需求、牌号相容、性能、认证或采购时机。"
+    },
+    "contact": {
+      "label": "官网采购部门邮箱及公司业务联系页",
+      "email": "purchase@ufindustries.com",
+      "phone": "+91-8750051884",
+      "contactUrl": "https://ufindustries.com/contact/"
+    },
+    "source": {
+      "label": "Official UNIPAD-12PP solvent-based PP pad printing ink",
+      "url": "https://ufindustries.com/pad-printing-inks-for-pp/"
+    },
+    "checkedAt": "2026-11-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"uniform-industries-greater-noida": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "megatti-promet-kiseljak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "casimper-torres-vedras": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "evochem-fyli": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -12087,6 +12116,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"uniform-industries-greater-noida": {
+  "website": "https://ufindustries.com/",
+  "contactPage": "https://ufindustries.com/contact/",
+  "address": "E-105, GNEPIP, Industrial Area Site-5, Greater Noida, Uttar Pradesh 201306, India. Coordinates show the city, not a verified factory gate.",
+  "generalEmail": "sales@ufindustries.com",
+  "generalPhone": "+91-8750051884",
+  "generalEmailEvidence": {
+    "company": "Uniform Industries",
+    "value": "sales@ufindustries.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official business contact page",
+        "url": "https://ufindustries.com/contact/",
+        "summary": "Public general sales business email, not a named person."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "generalPhoneEvidence": {
+    "company": "Uniform Industries",
+    "value": "+91-8750051884",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official business contact page",
+        "url": "https://ufindustries.com/contact/",
+        "summary": "Public business telephone; not inferred WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Procurement",
+      "email": "purchase@ufindustries.com",
+      "source": {
+        "label": "Official Contact procurement email",
+        "url": "https://ufindustries.com/contact/"
+      },
+      "emailEvidence": {
+        "company": "Uniform Industries",
+        "value": "purchase@ufindustries.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official business contact page",
+            "url": "https://ufindustries.com/contact/",
+            "summary": "Official contact page publicly lists purchase@ufindustries.com; procurement department route, no named buyer."
+          }
+        ],
+        "verifiedAt": "2026-11-12"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Official pad-printing-inks-for-pp/",
+      "url": "https://ufindustries.com/pad-printing-inks-for-pp/"
+    },
+    {
+      "label": "Official our-purpose/",
+      "url": "https://ufindustries.com/our-purpose/"
+    },
+    {
+      "label": "Official research-and-development/",
+      "url": "https://ufindustries.com/research-and-development/"
+    },
+    {
+      "label": "Official products/",
+      "url": "https://ufindustries.com/products/"
+    },
+    {
+      "label": "Official contact/",
+      "url": "https://ufindustries.com/contact/"
+    },
+    {
+      "label": "Official functional-coatings/primers/",
+      "url": "https://ufindustries.com/functional-coatings/primers/"
+    }
+  ]
+},
 "megatti-promet-kiseljak": {
   "website": "https://www.megatti.com/",
   "contactPage": "https://www.megatti.com/o-nama/",
@@ -37234,6 +37349,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"uniform-industries-greater-noida",
 "megatti-promet-kiseljak",
 "casimper-torres-vedras",
   "evochem-fyli",
