@@ -11550,11 +11550,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-11"
   },
+  {
+    "id": "megatti-promet-kiseljak",
+    "company": "MEGATTI PROMET",
+    "productId": "elo",
+    "country": "Bosnia and Herzegovina",
+    "countryZh": "波斯尼亚和黑塞哥维那",
+    "city": "Kiseljak（城市级示意点）",
+    "latitude": 43.94,
+    "longitude": 18.08,
+    "legacyCompanyDescription": "MEGATTI PROMET官网确认自主生产木材与金属涂料；SINTIKOR BRZOSUŠIVI为改性醇酸树脂基的快干金属防腐底漆。",
+    "fit": "可开发候选",
+    "signal": "MEGATTI PROMET官网确认自主生产木材与金属涂料；SINTIKOR BRZOSUŠIVI为改性醇酸树脂基的快干金属防腐底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-12",
+      "conclusion": "独立核读官网O Nama、Naši Proizvodi第一页、SINTIKOR单品及Megatti Promet Kiseljak四份原文。官网正面确认涂料制造、生产技术及从原料储存至包装的生产过程；确切产品为改性醇酸树脂配方的金属防腐底漆。已读目录为成品木器/金属涂层、底漆、清漆、稀释剂；未识别ELO、ESBO、环氧化植物油或同类生物基增塑原料对外销售，成品溶剂稀释剂不据此当同类原料。此为有限公开范围检查，不宣称完整SKU/SDS审计：目录第二页CacheMiss、专用联系页超时，均如实计失败。关于页自身完整披露info@megatti.com及Kiseljak地址电话，联系来源仍充分。另页描述历史克罗地亚Zagreb母厂及Ilijaš生产基地，历史建设/人数不当2026新投产或最新产能；Megatti/Megatti Promet/Kiseljak/Ilijaš/Zagreb均按一个关联经营账户处理，不拆工厂或国家新增，不宣称工商股权审计。完整正式库、线上503条、私有队列、frontier/index及research/src名称域名扫描未发现此前账户。累计6次实际来源，4原文2失败，余0STOP。ELO仅按TDS涂料/树脂改性潜在评估，不断言现用ELO、采购意向、相容性、防腐改善或性能保证。"
+    },
+    "contact": {
+      "label": "官网关于页公开通用业务邮箱及电话",
+      "email": "info@megatti.com",
+      "phone": "+387 30 719 220",
+      "contactUrl": "https://www.megatti.com/o-nama/"
+    },
+    "source": {
+      "label": "Official SINTIKOR modified-alkyd anticorrosive primer",
+      "url": "https://www.megatti.com/sintikor-brzosusivi-temeljna-antikorozivna-boja/"
+    },
+    "checkedAt": "2026-11-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"megatti-promet-kiseljak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "casimper-torres-vedras": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
   "evochem-fyli": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
   "durall-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12058,6 +12087,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"megatti-promet-kiseljak": {
+  "website": "https://www.megatti.com/",
+  "contactPage": "https://www.megatti.com/o-nama/",
+  "address": "Han Ploča 209, 71250 Kiseljak, Bosnia and Herzegovina. Coordinates indicate the city, not a verified factory gate.",
+  "generalEmail": "info@megatti.com",
+  "generalPhone": "+387 30 719 220",
+  "generalEmailEvidence": {
+    "company": "MEGATTI PROMET",
+    "value": "info@megatti.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official manufacturing overview footer",
+        "url": "https://www.megatti.com/o-nama/",
+        "summary": "Footer identifies MEGATTI PROMET Kiseljak and public general company email; not a named procurement contact."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "generalPhoneEvidence": {
+    "company": "MEGATTI PROMET",
+    "value": "+387 30 719 220",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official manufacturing overview footer",
+        "url": "https://www.megatti.com/o-nama/",
+        "summary": "Public company business telephone."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Manufacturing overview and public contacts",
+      "url": "https://www.megatti.com/o-nama/"
+    },
+    {
+      "label": "Finished products page1",
+      "url": "https://www.megatti.com/nasi-proizvodi/"
+    },
+    {
+      "label": "Exact anticorrosive primer",
+      "url": "https://www.megatti.com/sintikor-brzosusivi-temeljna-antikorozivna-boja/"
+    },
+    {
+      "label": "Associated manufacturing history",
+      "url": "https://www.megatti.com/o-nama/megatti-kiseljak/"
+    }
+  ]
+},
 "casimper-torres-vedras": {
   "website": "https://www.casimper.com/",
   "contactPage": "https://www.casimper.com/empresa",
@@ -37150,6 +37234,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"megatti-promet-kiseljak",
 "casimper-torres-vedras",
   "evochem-fyli",
   "durall-sfax",
