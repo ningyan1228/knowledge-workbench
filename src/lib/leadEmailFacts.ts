@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"wadaan-group-ras-al-khaimah": "Your WP series includes solvent-based screen printing inks for untreated polypropylene buckets, jars and battery cases.",
 "hest-skopje": "Your Anticorrosive Zero is an alkyd-resin and zinc-phosphate primer for steel structures and machinery.",
 "uniform-industries-greater-noida": "Your UNIPAD-12PP is a solvent-based pad printing ink formulated for untreated polypropylene.",
 "megatti-promet-kiseljak": "Your SINTIKOR BRZOSUŠIVI is a fast-drying anticorrosive metal primer based on modified alkyd resins.",

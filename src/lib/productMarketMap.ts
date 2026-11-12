@@ -11634,11 +11634,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-12"
   },
+  {
+    "id": "wadaan-group-ras-al-khaimah",
+    "company": "Wadaan Group",
+    "productId": "cpp-cpo",
+    "country": "United Arab Emirates",
+    "countryZh": "阿联酋",
+    "city": "Ras Al-Khaimah（城市级示意点）",
+    "latitude": 25.79,
+    "longitude": 55.94,
+    "legacyCompanyDescription": "Wadaan集团官网说明自有油墨涂料制造与内部实验室开发；WP系列明确为未处理PP容器等用途的单/双组分溶剂型丝印油墨，集团总部位于阿联酋Ras Al-Khaimah。",
+    "fit": "可开发候选",
+    "signal": "Wadaan集团官网说明自有油墨涂料制造与内部实验室开发；WP系列明确为未处理PP容器等用途的单/双组分溶剂型丝印油墨，集团总部位于阿联酋Ras Al-Khaimah。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-12",
+      "conclusion": "独立核读已取得五份官网业务正文：WP聚丙烯油墨、集团About、Products、Contact及玻纤色浆。Services CacheMiss为真实失败计预算，总计6次/5正文/1失败/余0STOP，无跨品牌、国家或供应商重置。About制造范围明确含溶剂型PP及移印体系、内部实验室和定制开发；Products实际返回旧版页明确自2005年在阿联酋制造UV/UVLED油墨及涂层并列PP油墨。保留新旧网页展示差异，不把UV制造表述扩成每一国分支均生产PP墨、也不声称每张PDF/SDS已读。WP原文直接支持untreatedPP与single/twocomponent solvent screen inks，不以UV配方替代证据。玻纤原文为聚酯颜料色浆、用途着色gelcoat/resin/FRP，虽是配方色料输入，不是CPP/CPO或同功能MAH改性附着树脂原料；reducers/retarders为油墨配套溶剂。五份实际业务范围未识别氯化聚烯烃/氯化聚丙烯/同类MAH树脂原料外售，有限公开排除通过，不宣称全部隐藏SKU或集团股权审计。WadaanGroup/WadaanIndustriesLLC/UAE、Saudi/Pakistan/UK实体及Roztar/Unicoat等品牌按一个集团账户，集团联系页明示UAE总部，Pakistan为branch，因此国家按总部阿联酋，不假称巴基斯坦新厂或拆出分支新增。正式库506条、root520条、完整queue/frontier/index和research/src域名/品牌/公司名核对无正式重复，旧发现Search保留不当已请求公司原文。用户指南PP附着+已保存独立CPO油墨市场扩展仅支持原料评估，不证明现用CPP/CPO、采购意向、相容、医疗/食品认证或性能。info@wadaangroup.com与+97172438260为官网总部业务入口，非具名采购人或WhatsApp，未测送达。 同名核对：已有墨西哥Pinturas y Recubrimientos UNICOAT SA de CV/unicoat.mx，与本次Wadaan集团自述实体及wadaangroup.com域名分别记录；仅品牌词相同不证明集团关联。已保留该墨西哥旧客户不变，不宣称终极股权审计。"
+    },
+    "contact": {
+      "label": "官网集团总部通用业务邮箱和电话",
+      "email": "info@wadaangroup.com",
+      "phone": "+971 7 243 8260",
+      "contactUrl": "https://wadaangroup.com/contact/"
+    },
+    "source": {
+      "label": "Official WP solvent-based PP screen printing ink",
+      "url": "https://wadaangroup.com/products/solvent-based-polypropylene-inks/"
+    },
+    "checkedAt": "2026-11-12"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"wadaan-group-ras-al-khaimah": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "hest-skopje": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "uniform-industries-greater-noida": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "megatti-promet-kiseljak": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12145,6 +12174,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"wadaan-group-ras-al-khaimah": {
+  "website": "https://wadaangroup.com/",
+  "contactPage": "https://wadaangroup.com/contact/",
+  "address": "Group head office: Wadaan Industries LLC, PO Box 86496, Ras Al-Khaimah, UAE. City-level illustration, not a surveyed factory gate.",
+  "generalEmail": "info@wadaangroup.com",
+  "generalPhone": "+971 7 243 8260",
+  "generalEmailEvidence": {
+    "company": "Wadaan Group",
+    "value": "info@wadaangroup.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official group head-office contact",
+        "url": "https://wadaangroup.com/contact/",
+        "summary": "Public group business inbox listed with UAE head office and branches; no named buyer."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "generalPhoneEvidence": {
+    "company": "Wadaan Group",
+    "value": "+971 7 243 8260",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official group head-office contact",
+        "url": "https://wadaangroup.com/contact/",
+        "summary": "Exact public UAE head-office business telephone; no WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-12"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Exact WP PP ink",
+      "url": "https://wadaangroup.com/products/solvent-based-polypropylene-inks/"
+    },
+    {
+      "label": "Group manufacturing scope and R&D",
+      "url": "https://wadaangroup.com/aboutus/"
+    },
+    {
+      "label": "Products manufacturing statement and range",
+      "url": "https://wadaangroup.com/products/"
+    },
+    {
+      "label": "Head office and group contacts",
+      "url": "https://wadaangroup.com/contact/"
+    },
+    {
+      "label": "Pigment-paste boundary check",
+      "url": "https://wadaangroup.com/products/pigment-paste-fibreglass/"
+    }
+  ]
+},
 "hest-skopje": {
   "website": "https://hest.mk/",
   "contactPage": "https://hest.mk/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82/",
@@ -37433,6 +37521,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"wadaan-group-ras-al-khaimah",
 "hest-skopje",
 "uniform-industries-greater-noida",
 "megatti-promet-kiseljak",
