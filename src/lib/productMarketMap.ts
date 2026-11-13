@@ -11746,11 +11746,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-13"
   },
+  {
+    "id": "norson-lahore",
+    "company": "Norson Chemical Industries Pvt. Ltd.",
+    "productId": "elo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore（城市级示意点）",
+    "latitude": 31.5204,
+    "longitude": 74.3587,
+    "legacyCompanyDescription": "Norson官网明确自主生产涂料及工业防护体系；HOMEX Brilliant Chrome Aluminium Paint为用于表面防腐的工业涂层，另有锌磷底漆及2K环氧成品体系。",
+    "fit": "可开发候选",
+    "signal": "Norson官网明确自主生产涂料及工业防护体系；HOMEX Brilliant Chrome Aluminium Paint为用于表面防腐的工业涂层，另有锌磷底漆及2K环氧成品体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "三份官网原文完整独立读取Products49行/Home76行/IndustrialPaint70行；Products明确NCI produces paints/varnishes/lacquers/protective coatings及工业配方生产，Industrial页说明自主研发工业涂层，支持下游配方制造身份。HOMEX BrilliantChromeAluminiumPaint为自身工业成品防护finish，说明保护表面免受腐蚀；名称中的Aluminium不当基材证明或精确颜料配方，泛称chlorinated rubber不当CPP/CPO原料。Industrial完整实际可见七项为锌磷底漆、2K环氧清/色漆、热塑路标漆、氯化橡胶漆、铝银finish、油性清漆及1512NC用成品稀释剂；不声称只卖油漆或无任何配套投入。以上主营三体系及七项范围未见对外供应ELO/ESBO/环氧化植物油/同类生物增塑稳定和树脂改性原料，有限公开范围排除通过；未读全部建筑漆叶页/隐藏SKU/SDS/全球控股清单，未取得外购同类原料例外证据，不需要编造例外。ELO按用户TDS涂料/树脂改性潜在评估，不据客户成品宣传转移耐腐蚀、耐热、耐化学品或相容/采购保证。Norson/NCI/Homex及Lahore/Peshawar两地点按一账户；新见Homex名后已暂停额外原件，先查完整510/root524/front998/index291/excluded9/queue及全部历史，旧Homex只Search两档、无原文；同域名/品牌/日期不重置。Lahore562SundarIndustrialEstate为官网业务地址，不额外宣称厂门/所有权；地图Lahore城市示意。通用info@norson.com.pk和+92-42-35297799由Products/Industrial/footer明确披露，只作为公司路线，不补具名采购、可投递或WhatsApp。三次原文均成功、无披露额外跳转，prior0/current3/lifetime3/rem3；与Rainbow3合计本范围6STOP，不追加来源。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话",
+      "email": "info@norson.com.pk",
+      "phone": "+92-42-35297799",
+      "contactUrl": "https://www.norson.com.pk/products"
+    },
+    "source": {
+      "label": "Official HOMEX Brilliant Chrome Aluminium industrial protective finish",
+      "url": "https://www.norson.com.pk/industrial-paint"
+    },
+    "checkedAt": "2026-11-13"
+  },
+  {
+    "id": "rainbow-paints-dhaka",
+    "company": "Rainbow Paints (RFL Group)",
+    "productId": "elo",
+    "country": "Bangladesh",
+    "countryZh": "孟加拉国",
+    "city": "Dhaka（城市级示意点）",
+    "latitude": 23.8103,
+    "longitude": 90.4125,
+    "legacyCompanyDescription": "Rainbow官网说明Danga Industrial Park自有工厂及研发团队的配方、研磨、生产和灌装；当前防护涂层系列列Red Oxide Primer金属防腐底漆。",
+    "fit": "可开发候选",
+    "signal": "Rainbow官网说明Danga Industrial Park自有工厂及研发团队的配方、研磨、生产和灌装；当前防护涂层系列列Red Oxide Primer金属防腐底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "三份当前官网原文完整独立读取ProtectiveCoatings164行/Home400行/Manufacturing204行；Manufacturing明确DangaIndustrialParkNarsingdi工厂、自有R&D、原料检查/按配方预混/研磨分散/调色/QC/灌装六步，支持真实下游配方制造。防护系列实际可见EpoxyPrimer标注FloorPrimer、HammerPaint、StovingPaint、Durokoat粉末体系及RedOxidePrimer金属防腐底漆，不把floorprimer改成金属底漆，也不把粉末烘烤条件或成品性能迁给ELO。Manufacturing十二类成品范围包含水乳胶漆、primer/sealer/putty、溶剂enamel、水泥漆、环氧/PU地坪、粉末/船舶/路标/木器/喷漆、防水admixture及汽车修补；防水掺合材料是实际配套业务，不能笼统称无添加剂。所读完整公开主营导航、十二生产类别及五项防护成品范围未见ELO/ESBO/环氧化植物油/同类生物增塑稳定或树脂改性输入外销，有限范围排除通过，不声称逐项SDS/全部33产品叶页或整个跨行业RFL全球隐含SKU均已审计。PRAN-RFL/RFLGroup关联由本人官网页脚及制造页明确，作为同一集团账户和累计来源预算；完整510/root524/front998/index291/excluded9/queue及PRAN/RFL/Rangpur/域名历史无既有同集团账户或原文请求，不能按地区/产品/法人与工厂分拆客户。印度RainbowIndustries已有正式账户为不同域名/国家自述，不因Rainbow词相同合并；不据此声称完整工商最终股权审计。Dhaka总部与Narsingdi制造地址区分，地图为Dhaka城市级示意。2022喷漆首创/投资额、33产品/容量/项目/客户满意度/环保/性能/工期保证均只保留公司自述，未当独立审计或我方保证。crd@prangroup.com是Rainbow自身官网公开的集团共享通用业务入口，不因不同域名就猜邮箱或冒充采购/技术部门；08007777777原格式热线保留，不补+880或个人号码。页面有WhatsApp按钮但此次provider文本未给出可核对完整href，故不拼接wa.me链接、不把电话当WhatsApp；未点击按钮/表单/报价/订阅/拷贝发送动作。三次原文成功、无披露额外跳转，prior0/current3/lifetime3/rem3；本范围与Norson3合计6STOP。ELO仅按TDS涂料/树脂改性潜在评估，不推其红氧底漆树脂种类、ELO现用采购、相容、抗腐或用量时机。"
+    },
+    "contact": {
+      "label": "Rainbow官网公开集团共享通用邮箱及热线",
+      "email": "crd@prangroup.com",
+      "phone": "08007777777",
+      "contactUrl": "https://rainbowpaintsbd.com/"
+    },
+    "source": {
+      "label": "Official Red Oxide Primer anti-corrosive metal primer",
+      "url": "https://rainbowpaintsbd.com/industrial/protective-coatings"
+    },
+    "checkedAt": "2026-11-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"rainbow-paints-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+"norson-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "apollo-paints-bengaluru": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "daylux-tirana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "fertpro-dinmore": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
@@ -12261,6 +12319,108 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"rainbow-paints-dhaka": {
+  "website": "https://rainbowpaintsbd.com/",
+  "contactPage": "https://rainbowpaintsbd.com/",
+  "address": "Head office: PRAN-RFL Centre,105 Middle Badda,Dhaka1212,Bangladesh. Own manufacturing described at Danga Industrial Park,Narsingdi; city-level illustration, not a surveyed factory gate.",
+  "generalEmail": "crd@prangroup.com",
+  "generalPhone": "08007777777",
+  "generalEmailEvidence": {
+    "company": "Rainbow Paints (RFL Group)",
+    "value": "crd@prangroup.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Current official company business contact",
+        "url": "https://rainbowpaintsbd.com/industrial/protective-coatings",
+        "summary": "Exact group-shared corporate email publicly provided for Rainbow; company route, not a named buyer or inferred technical department."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Rainbow Paints (RFL Group)",
+    "value": "08007777777",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Current official company business contact",
+        "url": "https://rainbowpaintsbd.com/industrial/protective-coatings",
+        "summary": "Exact domestic hotline displayed for Rainbow; preserve without guessing country prefix or WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Five visible protective products including Red Oxide Primer and group contact",
+      "url": "https://rainbowpaintsbd.com/industrial/protective-coatings"
+    },
+    {
+      "label": "Current full business portfolio, RFL relationship and HQ",
+      "url": "https://rainbowpaintsbd.com/"
+    },
+    {
+      "label": "Own factory, in-house formulation and twelve production categories",
+      "url": "https://rainbowpaintsbd.com/about/manufacturing"
+    }
+  ]
+},
+"norson-lahore": {
+  "website": "https://www.norson.com.pk/",
+  "contactPage": "https://www.norson.com.pk/products",
+  "address": "562 Sundar Industrial Estate, Lahore53801, Pakistan. Public business address; city-level illustration, not a surveyed factory gate.",
+  "generalEmail": "info@norson.com.pk",
+  "generalPhone": "+92-42-35297799",
+  "generalEmailEvidence": {
+    "company": "Norson Chemical Industries Pvt. Ltd.",
+    "value": "info@norson.com.pk",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Current official company business contact",
+        "url": "https://www.norson.com.pk/products",
+        "summary": "Exact published Lahore general company email, not a named procurement or technical mailbox."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Norson Chemical Industries Pvt. Ltd.",
+    "value": "+92-42-35297799",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Current official company business contact",
+        "url": "https://www.norson.com.pk/products",
+        "summary": "Exact published Lahore business phone; no named person or WhatsApp inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Manufacturing business and complete visible three-system range",
+      "url": "https://www.norson.com.pk/products"
+    },
+    {
+      "label": "Current NCI and Homex identity and corporate business route",
+      "url": "https://www.norson.com.pk/"
+    },
+    {
+      "label": "Seven visible finished industrial products and selected protective finish",
+      "url": "https://www.norson.com.pk/industrial-paint"
+    }
+  ]
+},
 "apollo-paints-bengaluru": {
   "website": "https://apollopaintsindia.com/",
   "contactPage": "https://apollopaintsindia.com/about-us/",
@@ -37792,6 +37952,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"rainbow-paints-dhaka",
+"norson-lahore",
 "apollo-paints-bengaluru",
 "daylux-tirana",
 "fertpro-dinmore",

@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"rainbow-paints-dhaka": "Your Red Oxide Primer is listed as an anti-corrosive metal primer in your protective coatings range.",
+"norson-lahore": "Your HOMEX Brilliant Chrome Aluminium Paint is an industrial finish formulated to protect surfaces from corrosion.",
 "apollo-paints-bengaluru": "Your Aqua Wood Primer is a water-based primer formulated for wooden surfaces.",
 "daylux-tirana": "Your ANTICOR product is an anticorrosive primer for interior and exterior metal surfaces.",
 "fertpro-dinmore": "Your Colour King Urea technical sheet identifies Fertpro as the manufacturer of polymer-coated controlled-release urea granules.",
