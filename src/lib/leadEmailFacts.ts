@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"daylux-tirana": "Your ANTICOR product is an anticorrosive primer for interior and exterior metal surfaces.",
 "fertpro-dinmore": "Your Colour King Urea technical sheet identifies Fertpro as the manufacturer of polymer-coated controlled-release urea granules.",
 "wadaan-group-ras-al-khaimah": "Your WP series includes solvent-based screen printing inks for untreated polypropylene buckets, jars and battery cases.",
 "hest-skopje": "Your Anticorrosive Zero is an alkyd-resin and zinc-phosphate primer for steel structures and machinery.",

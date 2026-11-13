@@ -11690,11 +11690,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-13"
   },
+  {
+    "id": "daylux-tirana",
+    "company": "Daylux sh.p.k",
+    "productId": "elo",
+    "country": "Albania",
+    "countryZh": "阿尔巴尼亚",
+    "city": "Tirana（城市级示意点）",
+    "latitude": 41.3275,
+    "longitude": 19.8187,
+    "legacyCompanyDescription": "官网确认自主制漆及工厂发展历史；现行产品目录的ANTICOR为用于内外金属表面的防腐底漆，构成ELO涂料/树脂改性的潜在配方评估场景。",
+    "fit": "可开发候选",
+    "signal": "官网确认自主制漆及工厂发展历史；现行产品目录的ANTICOR为用于内外金属表面的防腐底漆，构成ELO涂料/树脂改性的潜在配方评估场景。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "独立完整审读现行Home117行、InteriorUse118行、RrethNesh190行与Shop123行四份官网原文；非Search片段。About自述化学人员、自主制漆、历史进口De-La shpk至DAYLUX制造发展、厂房/生产线建设和出口区域，支持下游制造身份；人数、日产能、1994/1998/2002/2004/2008/2014等历史节点均只作公司自述，未转成当前产能审计、当前新投产、认证或我方性能。Shop第一页明确ANTICOR为用于内外金属表面的防腐底漆，另有DIRECT3in1金属成品底/面漆；未读其独立TDS/SDS，不推定环氧、醇酸、ELO现用、配方相容、树脂牌号、外购需求或防腐改善。ELO按用户TDS既有coatings/树脂改性用途作潜在材料评估，不将防腐科研扩展或客户成品性能当ELO防腐保证。Home完整五大成品类别与InteriorUse七款介绍、Shop实际首16/64项，所读范围为成品涂料、底漆、色浆和清洁配套；EmulsionColorant是涂料调色色浆，非ELO/ESBO/环氧化植物油或同类生物基增塑稳定输入。所读公开业务未发现所选同类输入供应，有限范围排除通过；明确未读后48项、其他类别叶页、全部SDS/全球隐含业务/最终股权登记，不声称全目录排除。De-La/Daylux及Gjirokaster制造历史、Tirana联系地址、Kosovo/Montenegro/Macedonia/Cyprus/Greece出口网络按同一账户及累计来源预算，不拆地区、城市、产品或旧名新增；页面未披露母集团，未据文案相似推定与Vechro/其他希腊品牌同属集团或已核清最终股权。Tirana为公开业务联系地址，不当作已确认厂址；地图城市级示意。完整public508/root522/front993/index286/excluded8/queue及旧名称/域名/品牌历史检索无同账户或既有原文请求，旧Daylux仅Search发现；AQUAXYL旧印尼/希腊结果为异品牌词，不属于Daylux或Faben原文。info@daylux.eu及电话+355(0)42454856由官网当前页明确公开，通用公司入口，不构造采购负责人/个人邮箱/WhatsApp；号码保留原显示不猜转换。公司累计4成功原文/剩2；本NL-W1201发现范围同时Faben2次（1失败），范围6/6STOP，不追加请求。由于NLW精确水性木器体系仍不够，不把Daylux硬归NLW；本次跨产品独立复核ELO沿用同一证据与预算，不另开范围、重置额度或推进下一ELO轮换。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话",
+      "email": "info@daylux.eu",
+      "phone": "+355(0)42454856",
+      "contactUrl": "https://daylux.eu/"
+    },
+    "source": {
+      "label": "Official current ANTICOR metal anticorrosive primer",
+      "url": "https://daylux.eu/shop/"
+    },
+    "checkedAt": "2026-11-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"daylux-tirana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "fertpro-dinmore": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
 "wadaan-group-ras-al-khaimah": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "hest-skopje": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12203,6 +12232,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"daylux-tirana": {
+  "website": "https://daylux.eu/",
+  "contactPage": "https://daylux.eu/",
+  "address": "Nr.5, Rr. Dritan Hoxha, Laprake 1029, Tirane, Albania. Public business address; city-level illustration, not a surveyed factory gate.",
+  "generalEmail": "info@daylux.eu",
+  "generalPhone": "+355(0)42454856",
+  "generalEmailEvidence": {
+    "company": "Daylux sh.p.k",
+    "value": "info@daylux.eu",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Daylux current homepage business contact",
+        "url": "https://daylux.eu/",
+        "summary": "Exact info@daylux.eu is publicly listed as the company email; no named employee or purchasing role."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Daylux sh.p.k",
+    "value": "+355(0)42454856",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Daylux current homepage business contact",
+        "url": "https://daylux.eu/",
+        "summary": "Exact publicly displayed Phone +355(0)42454856 preserved, without inferring WhatsApp or individual ownership."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Current downstream manufacturing business and corporate contact",
+      "url": "https://daylux.eu/"
+    },
+    {
+      "label": "Own factory and manufacturing history including De-La",
+      "url": "https://daylux.eu/rreth-nesh/"
+    },
+    {
+      "label": "ANTICOR finished metal primer, visible catalogue page1of64items",
+      "url": "https://daylux.eu/shop/"
+    },
+    {
+      "label": "Current interior coatings and business categories",
+      "url": "https://daylux.eu/interior-use/?lang=en"
+    }
+  ]
+},
 "fertpro-dinmore": {
   "website": "https://fertpro.com.au/",
   "contactPage": "https://fertpro.com.au/",
@@ -37624,6 +37708,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"daylux-tirana",
 "fertpro-dinmore",
 "wadaan-group-ras-al-khaimah",
 "hest-skopje",
