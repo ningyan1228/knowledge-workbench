@@ -11718,11 +11718,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-13"
   },
+  {
+    "id": "apollo-paints-bengaluru",
+    "company": "Apollo Paints Pvt. Ltd.",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Bengaluru（城市级示意点）",
+    "latitude": 12.9716,
+    "longitude": 77.5946,
+    "legacyCompanyDescription": "Apollo官网明确在Dabaspet自主制造涂料；Aqua Wood Primer为用于木材表面的水性底漆，构成NL-W1201木材/底涂附着评估场景。",
+    "fit": "可开发候选",
+    "signal": "Apollo官网明确在Dabaspet自主制造涂料；Aqua Wood Primer为用于木材表面的水性底漆，构成NL-W1201木材/底涂附着评估场景。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "独立完整审读当前官网AquaWoodPrimer88行、Home128行、AboutUs70行及Woodcare58行，四份provider提取业务原文；GoGreen系列一次UnexpectedStatusCode失败计额度，未重试。Product直接明确水性木材底漆，Home/About正面说明公司自主制造及DabaspetIndustrialCorridor制造厂、自动生产过程和自有Aqua水性木材/金属底漆，区别于只卖代理成品。所读Home全部五类导航、About可见成品业务范围（内外墙乳胶漆、PU/丙烯酸enamel、水性木器/金属底漆、地坪和防水漆）及Woodcare两项成品PU木器涂层，未发现对外供应水性聚烯烃乳液、CPO/PO分散体或同类附着力促进原料；有限公开业务范围同行排除通过，不声称读遍GoGreen失败目录、全部叶页/配方/SDS/最终集团隐藏业务。水性木器底漆明确匹配NL-W1201用户TDS木材范围；不把客户的AquaMetalPrimer泛化为所有金属适用，不假定我方材料已适配、提高附着/覆盖率、低VOC/抗菌/零废水或当前采购。生产能力、ISO/环保标签和BMBaleri创始/MD职务均只作官网自述，没有认证独立核验或当前采购负责人证明，不转为我方性能或个人联系。官网少量图片/认证ReadMore指向迁站临时域名，未访问该host/远程视频/JS/独立PDF，当前产品及公司正文来源仍为apollopaintsindia.com。Peenya地址为公开业务联系地址；Dabaspet为官网描述制造地，地图用Bengaluru城市级示意，不把两处当同一厂门或两个客户。ApolloPaintsPvtLtd、ApolloPaintsIndia、Aqua/AquaTuf/GoGreen、Peenya/Dabaspet/Bengaluru及BMBaleri按一个账户及同一来源预算，未声称最终工商股权审计。肯尼亚ApolloPaints只见旧KAM目录Search、apollopaints.co.ke/Nairobi独立地理域名线索，未并入印度公司或借同名制造新增；正式509/root523/front997/index290/excluded9/完整queue及扩展创始名/厂址/域名历史无既有印度账户或旧定向原文。info@apollopaintsindia.com与原格式电话+91 80 2839 4211 / 2839 5911由实际产品/公司页公开，均通用公司业务，不猜具名采购、邮箱可投递或WhatsApp。累计0prior+5current=5/rem1，四业务原文一失败；停止本轮后续来源，余1保留跨日期/域名/产品/provider，不重置。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话",
+      "email": "info@apollopaintsindia.com",
+      "phone": "+91 80 2839 4211 / 2839 5911",
+      "contactUrl": "https://apollopaintsindia.com/about-us/"
+    },
+    "source": {
+      "label": "Official own Aqua Wood Primer water-based wood application",
+      "url": "https://apollopaintsindia.com/aqua-wood-primer/"
+    },
+    "checkedAt": "2026-11-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"apollo-paints-bengaluru": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "daylux-tirana": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "fertpro-dinmore": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
 "wadaan-group-ras-al-khaimah": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12232,6 +12261,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"apollo-paints-bengaluru": {
+  "website": "https://apollopaintsindia.com/",
+  "contactPage": "https://apollopaintsindia.com/about-us/",
+  "address": "Business contact: Plot No.51, 4th Main Road, 3rd Phase, Peenya Industrial Area, Bangalore560058, India. Own manufacturing described at Dabaspet; coordinates illustrate Bengaluru city, not a surveyed gate.",
+  "generalEmail": "info@apollopaintsindia.com",
+  "generalPhone": "+91 80 2839 4211 / 2839 5911",
+  "generalEmailEvidence": {
+    "company": "Apollo Paints Pvt. Ltd.",
+    "value": "info@apollopaintsindia.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Aqua Wood Primer company footer",
+        "url": "https://apollopaintsindia.com/aqua-wood-primer/",
+        "summary": "Exact published general corporate email in ApolloPaintsPvtLtd footer; no named employee or purchasing identity."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Apollo Paints Pvt. Ltd.",
+    "value": "+91 80 2839 4211 / 2839 5911",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Aqua Wood Primer company footer",
+        "url": "https://apollopaintsindia.com/aqua-wood-primer/",
+        "summary": "Exact combined phone string publicly displayed; preserved without inferring another country prefix, named owner or WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Water-based wood primer product and general business route",
+      "url": "https://apollopaintsindia.com/aqua-wood-primer/"
+    },
+    {
+      "label": "Current company and Dabaspet manufacturing operation",
+      "url": "https://apollopaintsindia.com/"
+    },
+    {
+      "label": "Separate manufacturing history and current product range",
+      "url": "https://apollopaintsindia.com/about-us/"
+    },
+    {
+      "label": "Visible two-item finished woodcare coatings range",
+      "url": "https://apollopaintsindia.com/wood-finishes/"
+    }
+  ]
+},
 "daylux-tirana": {
   "website": "https://daylux.eu/",
   "contactPage": "https://daylux.eu/",
@@ -37708,6 +37792,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"apollo-paints-bengaluru",
 "daylux-tirana",
 "fertpro-dinmore",
 "wadaan-group-ras-al-khaimah",
