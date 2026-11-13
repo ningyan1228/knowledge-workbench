@@ -11802,11 +11802,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-13"
   },
+  {
+    "id": "hindustan-flex-kanpur",
+    "company": "Hindustan Flex Ltd.",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Kanpur（城市级示意点）",
+    "latitude": 26.4499,
+    "longitude": 80.3319,
+    "legacyCompanyDescription": "官网确认Kanpur自主制造液体油墨；Monostar为用于已处理/未处理HDPE/PP织物及PP覆膜袋的溶剂型柔印油墨。",
+    "fit": "可开发候选",
+    "signal": "官网确认Kanpur自主制造液体油墨；Monostar为用于已处理/未处理HDPE/PP织物及PP覆膜袋的溶剂型柔印油墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "独立完整审读官网Monostar102行/About80行/PrintingInkDivision79行。Division明确在Kanpur自主制造液体印刷油墨，现有业务为溶剂型包装油墨及水性油墨；About提供制造、技术和生产团队说明。Monostar明确Flexography、treated/untreated HDPE/PP fabric及PP laminatedbags，SolventSystem列HFL reducer/retarder；据此按PP溶剂型油墨下游准入，不把CPP薄膜名等同CPP化学树脂、不指定现用树脂。实际读到业务页脚仅PrintingInk/Container两division，油墨范围为Gravure/Flexographic/WaterbaseHydra/CI Flexo，Monostar页列PolyPremium、TwoPack、Monostar、PolyFresh四个成品系列及Monotop/FertilizerHDPE配套成品。三份完整当前业务原文所见范围未发现CPP/CPO、MAH改性聚烯烃附着树脂或同类原料外售，有限公开业务范围同行排除通过。Division泛称specialtychemicalproducts不直接当同类CPP/CPO原料销售证明；也不抹去该表述或宣称全部产品只有油墨。InkSelectionChart第四次CacheMiss，真实失败计额度；未读全SKU/SDS/容器division或隐藏控股目录，不凭失败补写完整目录清查。原料用途只据用户七牌号指南PP附着与既有独立NipponPaper CPO油墨市场扩展，未确认客户现用CPP/CPO、外购需求、食品认证、相容或性能改善。HFL/HindustanFlex/HindustanMonochem/Monostar及Kanpur地点按一账户；About称2015合并，Division称2006收购，保留时间表述差异，不自定收购年。查全正式512/root526/front1000/index293/excluded9/完整queue和所有research别名/域名历史，旧命中仅搜索发现，无此前公司定向请求。公开info@hindustanflex.com与+91 93368 49754由产品及About/Division正文分项核对，只作通用公司业务；官网人员页未交叉确认现职或个人邮箱，不写具名联系人、不猜WhatsApp。注册联系地址119/449DarshanPurwaKanpur为办公室，不当实测厂门；工厂只按官网Kanpur，地图城市级示意。公司0prior+4current(3body1failure)=4/rem2，与HiTech2(1body1failure)合计scope6STOP，跨品牌/日期/产品不重置。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话",
+      "email": "info@hindustanflex.com",
+      "phone": "+91 93368 49754",
+      "contactUrl": "https://hindustanflex.com/hindustan-flex/about"
+    },
+    "source": {
+      "label": "Official Monostar HDPE/PP flexographic ink",
+      "url": "https://hindustanflex.com/hindustan-flex/monostar-inks"
+    },
+    "checkedAt": "2026-11-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"hindustan-flex-kanpur": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "rainbow-paints-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "norson-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "apollo-paints-bengaluru": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12319,6 +12348,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"hindustan-flex-kanpur": {
+  "website": "https://hindustanflex.com/hindustan-flex/about",
+  "contactPage": "https://hindustanflex.com/hindustan-flex/about",
+  "address": "Registered office: 119/449 Darshan Purwa, Kanpur208012, UttarPradesh, India. Manufacturing disclosed in Kanpur; city-level coordinates, not a surveyed factory gate.",
+  "generalEmail": "info@hindustanflex.com",
+  "generalPhone": "+91 93368 49754",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Monostar specific product, substrate and solvent system",
+      "url": "https://hindustanflex.com/hindustan-flex/monostar-inks"
+    },
+    {
+      "label": "Company manufacturing and alias disclosure",
+      "url": "https://hindustanflex.com/hindustan-flex/about"
+    },
+    {
+      "label": "Kanpur manufacture and visible business/product scope",
+      "url": "https://hindustanflex.com/hindustan-flex/about-ink-division"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Hindustan Flex Ltd.",
+    "value": "info@hindustanflex.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Monostar corporate business route",
+        "url": "https://hindustanflex.com/hindustan-flex/monostar-inks",
+        "summary": "Exact public general corporate inbox in company product and About/Division pages; no named buyer or deliverability assertion."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Hindustan Flex Ltd.",
+    "value": "+91 93368 49754",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Monostar corporate business route",
+        "url": "https://hindustanflex.com/hindustan-flex/monostar-inks",
+        "summary": "Exact public business telephone; not a named buyer or verified WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  }
+},
 "rainbow-paints-dhaka": {
   "website": "https://rainbowpaintsbd.com/",
   "contactPage": "https://rainbowpaintsbd.com/",
@@ -37952,6 +38032,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"hindustan-flex-kanpur",
 "rainbow-paints-dhaka",
 "norson-lahore",
 "apollo-paints-bengaluru",
