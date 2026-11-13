@@ -11662,11 +11662,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-12"
   },
+  {
+    "id": "fertpro-dinmore",
+    "company": "Fertpro Manufacturing Pty Ltd",
+    "productId": "fertilizer-coating",
+    "country": "Australia",
+    "countryZh": "澳大利亚",
+    "city": "Dinmore, Queensland（城市级示意点）",
+    "latitude": -27.6,
+    "longitude": 152.83,
+    "legacyCompanyDescription": "官网现行说明自主肥料制造及定制混配；Colour King Urea官方TDS明确聚合物包衣、控缓释2–4mm颗粒，并标注由Fertpro在Dinmore制造。",
+    "fit": "可开发候选",
+    "signal": "官网现行说明自主肥料制造及定制混配；Colour King Urea官方TDS明确聚合物包衣、控缓释2–4mm颗粒，并标注由Fertpro在Dinmore制造。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "原始TDS两页文本及渲染均已独立读取，制造商框与聚合物包衣/控缓释颗粒在同一产品文件，补齐Muse阶段仅混配或外购包膜粒的归属缺口。六页制造服务手册全部674行已读，现行官网102行已读；手册文件名2019、TDS URL目录2017是文档线索，不当作2026投产时间或当前认证审计。TDS的30%及100%宣传未转为我方功能、释放率或试验结论。制造服务手册与官网所读范围为肥料成品、混配/包装、有机加工、矿物/微量元素及物流，未发现对外销售聚氨酯包膜树脂、相关反应型原料或同类肥料包衣剂，有限范围同行排除通过，不声称读遍全部隐藏SKU或掌握其配方。聚合物包衣为客户成品事实，具体聚合物类型、反应路线、工艺设备、原料外购和采购时机仍未确认，不推定PU或我方材料适配。生产部门邮箱由当前公开可下载的原TDS明示，官网另列通用邮箱和业务电话；手册旧具名经理不整理为当前任职/采购人。公司及Colour King/Carbon King/Pro-Tech相关品牌按同一账户及来源预算处理，不按产品另增，未作最终股权登记审计。Muse两次已占额，Codex本次四次中一次CacheMiss计失败、一次六页PDF、一份TDS直接HTTP200和一次现行主页，累计6STOP剩0；缓存同PDF分页阅读不新增公司URL请求，未再请求原网页/PDF。"
+    },
+    "contact": {
+      "label": "官网公开生产部门邮箱与业务电话",
+      "email": "production@fertpro.com.au",
+      "phone": "+61 7 3282 0761",
+      "contactUrl": "https://fertpro.com.au/"
+    },
+    "source": {
+      "label": "Colour King Urea official product TDS and named manufacturer",
+      "url": "https://fertpro.com.au/wp-content/uploads/2017/04/Colour-King-Urea.pdf"
+    },
+    "checkedAt": "2026-11-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"fertpro-dinmore": {"targetCompanyTypeId":"polymer-coated-urea-manufacturer","applicationLayer":"tds-verified","applicationId":"coated-urea"},
 "wadaan-group-ras-al-khaimah": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "hest-skopje": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "uniform-industries-greater-noida": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12174,6 +12203,80 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"fertpro-dinmore": {
+  "website": "https://fertpro.com.au/",
+  "contactPage": "https://fertpro.com.au/",
+  "address": "Lot 66 Chum Street (TDS also prints Chum Rd), Dinmore QLD 4303, Australia; city-level illustration, not a surveyed plant gate.",
+  "generalEmail": "fertpromedia@gmail.com",
+  "generalPhone": "+61 7 3282 0761",
+  "generalEmailEvidence": {
+    "company": "Fertpro Manufacturing Pty Ltd",
+    "value": "fertpromedia@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Fertpro current official homepage",
+        "url": "https://fertpro.com.au/",
+        "summary": "Official homepage footer publicly displays this mailbox with Fertpro company identity; general route, no named procurement person or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Fertpro Manufacturing Pty Ltd",
+    "value": "+61 7 3282 0761",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Fertpro homepage and Colour King Urea business details",
+        "url": "https://fertpro.com.au/",
+        "summary": "Homepage displays 07 3282 0761, cross-checked against the exact local number in official TDS. Australian international format only; no WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Production",
+      "email": "production@fertpro.com.au",
+      "source": {
+        "label": "Public production mailbox in official Colour King Urea TDS",
+        "url": "https://fertpro.com.au/wp-content/uploads/2017/04/Colour-King-Urea.pdf"
+      },
+      "emailEvidence": {
+        "company": "Fertpro Manufacturing Pty Ltd",
+        "value": "production@fertpro.com.au",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Colour King Urea TDS header",
+            "url": "https://fertpro.com.au/wp-content/uploads/2017/04/Colour-King-Urea.pdf",
+            "summary": "Both product pages explicitly print production@fertpro.com.au beside Fertpro Manufacturing PTY LTD and Dinmore business address. Public department route; document issue date and present named role-holder not established."
+          }
+        ],
+        "verifiedAt": "2026-11-13"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Polymer-coated controlled-release product and manufacturer",
+      "url": "https://fertpro.com.au/wp-content/uploads/2017/04/Colour-King-Urea.pdf"
+    },
+    {
+      "label": "Manufacturing facility, product range and services brochure",
+      "url": "https://fertpro.com.au/wp-content/uploads/2019/03/Fertpro-Tech-Brochure-2019.pdf"
+    },
+    {
+      "label": "Current manufacturing business and general contact routes",
+      "url": "https://fertpro.com.au/"
+    }
+  ]
+},
 "wadaan-group-ras-al-khaimah": {
   "website": "https://wadaangroup.com/",
   "contactPage": "https://wadaangroup.com/contact/",
@@ -37521,6 +37624,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"fertpro-dinmore",
 "wadaan-group-ras-al-khaimah",
 "hest-skopje",
 "uniform-industries-greater-noida",
