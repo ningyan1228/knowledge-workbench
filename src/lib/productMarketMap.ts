@@ -12132,11 +12132,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "printochem-dhaka",
+    "company": "Printochem Limited (ORIENT)",
+    "productId": "cpp-cpo",
+    "country": "Bangladesh",
+    "countryZh": "孟加拉国",
+    "city": "Dhaka（商务地址所在城市级示意点）",
+    "latitude": 23.8103,
+    "longitude": 90.4125,
+    "legacyCompanyDescription": "自主制造凹版及柔版液体油墨与涂层；产品包括PET/BOPP薄膜反印复合用醇溶性CI柔印墨及PP表印墨。",
+    "fit": "可开发候选",
+    "signal": "自主制造凹版及柔版液体油墨与涂层；产品包括PET/BOPP薄膜反印复合用醇溶性CI柔印墨及PP表印墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立完整读取Products127/Home67/About45/Contact66行共四份原始返回。Home/About明确Printochem Ltd由Dhaka当地创业者设立、生产液体油墨及涂层，品牌ORIENT，涉及凹版/柔版、水及溶剂体系；Products的醇溶性CI柔印PET/BOPP反印复合墨与PP表印类别支持所选CPP油墨市场扩展。不得把WATER BASE GRADE明确underR&D的PET/BOPP反印墨说成现有商业制造，也不从About一般水性体系推其具体PP水墨资格。网站Home/About一致称2001起步，页脚copyright1994差异保留，不据页脚改写成立年或做另一公司。完整Products十六类均为成品油墨/清漆/封口和木器涂层，含PU复合墨、2K PU木器涂料、UV清漆及热封涂层；这些不是CPP/CPO树脂原料，已读完整可见产品及企业经营范围未见CPP/CPO/MAH聚烯烃或同类附着促进树脂原料外售，有限所见同行排查通过，未读全部配方/SDS/未公开业务或完整最终股权。Printochem Limited/Ltd、ORIENT油墨品牌及Dhaka销售办公室为同账户，ORIENT通用品牌不据此认作其他Orient油漆集团，第三方go4WorldBusiness泛化采购条目不证明特定CPP采购/需求。全公开524/root538/front1025/index321/excluded9及历史来源/队列查重无旧正式/旧GET。四来源均成功，公司4/rem2停止且保留余额，不凑六次、不按产品/品牌/工具重置。About自述产能/质量管理不推当期采购或独立认证。info@printochemltd.com和第一总机+8802 58315900由当前Contact直接公开且三页页脚一致，分开记录邮箱/电话证据，无具名采购或WhatsApp猜测；表单成功/失败文字是模板状态，不当已提交或实测投递。地图为Dhaka公司商务地址所在城市级示意，不是未核实工厂位置。按既有独立NipponPaperCPO油墨扩展和用户CPP指南作潜在原料评估，不声称客户现用CPO、配方相容、耐热/食品包装认证或性能保证。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司总机",
+      "email": "info@printochemltd.com",
+      "phone": "+8802 58315900",
+      "contactUrl": "https://printochemltd.com/contact/"
+    },
+    "source": {
+      "label": "Official Printochem alcohol-soluble CI flexographic PET/BOPP and PP ink product range",
+      "url": "https://printochemltd.com/products/"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"printochem-dhaka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "sakret-rumbula": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colorado-casablanca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "indotech-dar-es-salaam": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12661,6 +12690,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"printochem-dhaka": {
+  "website": "https://printochemltd.com/",
+  "contactPage": "https://printochemltd.com/contact/",
+  "address": "Printochem Ltd., Chowdhury Centre, 23-Ka, New Eskaton Road, Dhaka-1000, Bangladesh. City-level map point for corporate business address, not a verified factory gate.",
+  "generalEmail": "info@printochemltd.com",
+  "generalPhone": "+8802 58315900",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official complete returned sixteen-grade finished ink/coating range; water-base PET/BOPP expressly under R&D",
+      "url": "https://printochemltd.com/products/"
+    },
+    {
+      "label": "Official own manufacturing and ORIENT brand identity",
+      "url": "https://printochemltd.com/"
+    },
+    {
+      "label": "Official local company manufacturing scope and history",
+      "url": "https://printochemltd.com/about-us/"
+    },
+    {
+      "label": "Official exact public general business inbox and switchboard",
+      "url": "https://printochemltd.com/contact/"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Printochem Limited (ORIENT)",
+    "value": "info@printochemltd.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official current Printochem corporate contact page",
+        "url": "https://printochemltd.com/contact/",
+        "summary": "Exact general company mailbox repeated in own product/home/about footer; no named person or deliverability assertion."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Printochem Limited (ORIENT)",
+    "value": "+8802 58315900",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official current Printochem corporate contact page",
+        "url": "https://printochemltd.com/contact/",
+        "summary": "First exact public company switchboard beside Dhaka corporate address; no WhatsApp or private mobile inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "sakret-rumbula": {
   "website": "https://sakret.lv/",
   "contactPage": "https://sakret.lv/par-mums/kontakti/",
@@ -38844,6 +38928,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"printochem-dhaka",
 "sakret-rumbula",
 "colorado-casablanca",
 "indotech-dar-es-salaam",
