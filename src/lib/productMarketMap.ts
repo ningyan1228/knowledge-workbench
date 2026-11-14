@@ -12078,11 +12078,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "colorado-casablanca",
+    "company": "Colorado",
+    "productId": "nl-w1201",
+    "country": "Morocco",
+    "countryZh": "摩洛哥",
+    "city": "Casablanca（行政办公室所在城市级示意）",
+    "latitude": 33.5731,
+    "longitude": -7.5898,
+    "legacyCompanyDescription": "自有水性涂料工厂及研发生产；公开VERNIS DEKEAU技术表列有水性丙烯酸清漆和木材、混凝土及PVC用途。",
+    "fit": "可开发候选",
+    "signal": "自有水性涂料工厂及研发生产；公开VERNIS DEKEAU技术表列有水性丙烯酸清漆和木材、混凝土及PVC用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立读取官网VernisDekeau技术表55行、Home230、Corporate149、Contact162、History225、Architectural101行，六份返回均完整。历史明确自有水性涂料工厂及研发生产，2004投产、2008新厂建设和2020实验室记录保留原年份，不冒充2026扩产。官网目前公开的DEKEAU表为2020年7月版，明确纯丙烯酸水性清漆及木材/混凝土/PVC用途，未称新版、现货或客户使用NL-W1201。选木材TDS应用作潜在底涂/附着原料评估，不外推所有矿物基材、不保证混配相容或效果。已读Home完整可见成品介绍、三类业务及Architectural建筑成品导航、公司制造范围和具体清漆表中未见水性聚烯烃/CPO/PO乳液或同类附着促进原料外售，有限所见范围同行排查通过；Architectural只列内墙/外墙/调色三入口，不能称全SKU目录或全部SDS已审。History的2010/2012 Valspar成品合作按业务合作保留，不推股权；Colorado摩洛哥、DarBouazza/Casablanca、各展厅及VernisDekeau同一账户，未核实完整最终股权。既有Colortech/Levitikal Nigeria仅旧私有未核线索，不借合作关系声明另一正式集团客户。全公开522/root536与front1022/index317/excluded9及历史搜索/原始来源查重无旧正式Colorado；旧记录仅Search，不把TDS搜索摘要当原文。六来源累计6/rem0STOP，不按语言/地区/品牌重置。联系页真实公开商务表单和原格式总机+212(0)522352335，仅核对呈现未提交或测试投递，无公开邮箱、具名采购或WhatsApp，不猜地址/账号。地图采用行政办公室所在Casablanca城市级示意，不是DarBouazza实测厂门。潜在下游客户不等于采购需求、现有原料或性能/认证保证。"
+    },
+    "contact": {
+      "label": "官网商务联系表单及公司总机（无已核验邮箱）",
+      "phone": "+212 (0) 522 35 23 35",
+      "contactUrl": "https://www.colorado.ma/en/contact-us"
+    },
+    "source": {
+      "label": "Official Colorado water-based acrylic varnish for wood and other specified substrates",
+      "url": "https://www.colorado.ma/sites/default/files/documents/vernis_dekeau_1.pdf"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"colorado-casablanca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "indotech-dar-es-salaam": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "tmcs-avero-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "supraten-chisinau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12605,6 +12633,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"colorado-casablanca": {
+  "website": "https://www.colorado.ma/",
+  "contactPage": "https://www.colorado.ma/en/contact-us",
+  "address": "Headquarters: Road Mly Thami Km 15, rural commune Oulad Azouz, Dar Bouaâza (Nouacer province), Morocco. Administration: 5, Orchidées Alley, Ain Sebaâ, Casablanca. City-level map point for Casablanca administration, not a surveyed factory gate.",
+  "generalPhone": "+212 (0) 522 35 23 35",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official VERNIS DEKEAU technical sheet, July 2020 edition",
+      "url": "https://www.colorado.ma/sites/default/files/documents/vernis_dekeau_1.pdf"
+    },
+    {
+      "label": "Official current finished-coating business overview",
+      "url": "https://www.colorado.ma/"
+    },
+    {
+      "label": "Official corporate activity and R&D overview",
+      "url": "https://www.colorado.ma/corporate/en"
+    },
+    {
+      "label": "Official public business contact form and telephone",
+      "url": "https://www.colorado.ma/en/contact-us"
+    },
+    {
+      "label": "Official own water-based coating manufacturing history",
+      "url": "https://www.colorado.ma/corporate/en/history"
+    },
+    {
+      "label": "Official architectural finished-coating category overview, three category entries only",
+      "url": "https://www.colorado.ma/en/categorie/architectural"
+    }
+  ],
+  "generalPhoneEvidence": {
+    "company": "Colorado",
+    "value": "+212 (0) 522 35 23 35",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Colorado business contact page",
+        "url": "https://www.colorado.ma/en/contact-us",
+        "summary": "Same published general business number for headquarters and Casablanca administration; no WhatsApp assertion."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "indotech-dar-es-salaam": {
   "website": "https://indotech.co.tz/",
   "contactPage": "https://indotech.co.tz/",
@@ -38692,6 +38768,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"colorado-casablanca",
 "indotech-dar-es-salaam",
 "tmcs-avero-sfax",
 "supraten-chisinau",
