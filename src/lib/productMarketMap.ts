@@ -12216,11 +12216,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "gocolors-seeta",
+    "company": "Gocolors Paint Uganda Ltd",
+    "productId": "nl-w1201",
+    "country": "Uganda",
+    "countryZh": "乌干达",
+    "city": "Seeta / Greater Kampala（区域级示意点）",
+    "latitude": 0.3476,
+    "longitude": 32.5825,
+    "legacyCompanyDescription": "在乌干达自主研发制造涂料；GO WoodStain Aqua明确为水性木材着色剂，用于室内外木材天然纹理效果。",
+    "fit": "可开发候选",
+    "signal": "在乌干达自主研发制造涂料；GO WoodStain Aqua明确为水性木材着色剂，用于室内外木材天然纹理效果。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立审读WoodCoatings144/About142/Products126/Contact93四份完整provider文字，加WoodStainAqua普通TLS HTTP200原始HTML97345bytes和完整可见文字；Aqua首次nativeCacheMiss计失败1，六次终身6/rem0STOP，不继续TDS、分页、社媒或其他产品。About明确Ugandanowned、manufacturing/supply/application、研发团队配方及自有productionfacility，木器及清漆属其制造范围，不把施工/分销或泛建筑标签当唯一制造证据。2021成立/12000kg日能力/200产品/UNBS为官网自述，不当独立产能审计、认证或2026采购，紧急电话+88012365499是模板残留不采用。具体Aqua原文TechnicalNameWaterBasedWoodStain，penetratingcolorant用于interior/exterior自然木纹，已证水性+木材，不单靠Aqua名字、waterresistant或把不同分类拼接；RecommendedAreas11B模板/代码未解释，不据此猜基材。目录Wood16项仅第1页9SKU读过，Products完整13个分类入口及About制造业务、所读木器成品与Aqua均为下游涂层/着色剂，未见聚烯烃分散体/CPO乳液或同类附着促进原料外售。页脚Stainers&Additives实际链接为页首锚点，不当已读添加剂目录，也不臆断其化学组成；有限已读业务范围同行排除通过，不称全部200SKU/SDS审计或最终股权登记审计。About当地owned自述、Seeta商务地址和公司名与全公开527/root541/front1028/index330/excluded10、私有队列及全本地历史查重未有旧正式/旧GET，Gocolors/GO品牌同一账户，不泛同名GO品牌或肯尼亚/卢旺达市场拆新增。按NLW用户TDS木材及底涂/附着促进方向潜在评估，不把NLW分散体当客户现有成分、着色剂相容/渗透/颜色/附着性能保证或采购确认。Contact直接公开info@gocolorspaint.com和+256786354940，邮箱/电话分项归属公司商务；不用模板紧急号，不把电话或未读取目标的WhatsApp文字冒作已核WhatsApp，不猜采购负责人/邮箱投递性，不提交表单。地图为Seeta/GreaterKampala区域示意，不是未披露工厂精确坐标。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司公开电话",
+      "email": "info@gocolorspaint.com",
+      "phone": "+256 786 354 940",
+      "contactUrl": "https://gocolorspaint.com/contact-us/"
+    },
+    "source": {
+      "label": "Official GO WoodStain Aqua water-based wood stain",
+      "url": "https://gocolorspaint.com/product/go-woodstain-aqua/"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"gocolors-seeta": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hitech-inks-kampala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "goldstar-paints-dar-es-salaam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "printochem-dhaka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12748,6 +12777,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"gocolors-seeta": {
+  "website": "https://gocolorspaint.com/",
+  "contactPage": "https://gocolorspaint.com/contact-us/",
+  "address": "Seeta Town, Uganda. Greater Kampala regional map illustration for disclosed business location; not a verified factory gate or precise Seeta coordinates.",
+  "generalEmail": "info@gocolorspaint.com",
+  "generalPhone": "+256 786 354 940",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official first wood-coatings catalogue page, nine of sixteen products; second page not read",
+      "url": "https://gocolorspaint.com/product-category/wood-coatings/"
+    },
+    {
+      "label": "Official own R&D formulation, manufacturing and production-facility scope",
+      "url": "https://gocolorspaint.com/about-us/"
+    },
+    {
+      "label": "Official exact Water-Based Wood Stain description, interior/exterior natural wood-grain use",
+      "url": "https://gocolorspaint.com/product/go-woodstain-aqua/"
+    },
+    {
+      "label": "Official complete returned thirteen finished-coating category entries; footer Additives is not an audited input catalogue",
+      "url": "https://gocolorspaint.com/our-products/"
+    },
+    {
+      "label": "Official business email, phone and Seeta company contact location",
+      "url": "https://gocolorspaint.com/contact-us/"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Gocolors Paint Uganda Ltd",
+    "value": "info@gocolorspaint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Gocolors contact page",
+        "url": "https://gocolorspaint.com/contact-us/",
+        "summary": "Exact support/company inbox disclosed with Seeta company address; no named buyer or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Gocolors Paint Uganda Ltd",
+    "value": "+256 786 354 940",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Gocolors contact page",
+        "url": "https://gocolorspaint.com/contact-us/",
+        "summary": "Exact public business number appears in Quick Contact and company contact footer; not the unrelated emergency template number, no WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "hitech-inks-kampala": {
   "website": "https://hitechinksuganda.com/",
   "contactPage": "https://hitechinksuganda.com/contact-us",
@@ -39096,6 +39184,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"gocolors-seeta",
 "hitech-inks-kampala",
 "goldstar-paints-dar-es-salaam",
 "printochem-dhaka",
