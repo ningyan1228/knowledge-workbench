@@ -12050,11 +12050,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "indotech-dar-es-salaam",
+    "company": "Indotech Tanzania Limited",
+    "productId": "cpp-cpo",
+    "country": "Tanzania",
+    "countryZh": "坦桑尼亚",
+    "city": "Dar es Salaam（城市级示意点）",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "legacyCompanyDescription": "在达累斯萨拉姆自主制造印刷油墨；BOPP挤出包装墨及NC/PU墨用于薄膜包装，并列有配套溶剂体系。",
+    "fit": "可开发候选",
+    "signal": "在达累斯萨拉姆自主制造印刷油墨；BOPP挤出包装墨及NC/PU墨用于薄膜包装，并列有配套溶剂体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立完整读取Ink270行、Home161行、Agro229行，Home明确2021设InkManufacturingUnit及自制BOPP挤出/NCPU墨；Ink明确BOPP包装/凹柔印及MEK/toluene/IPA等配套溶剂，按既有独立cpp-pp-printing-ink市场扩展评估，不把BOPP薄膜简称当CPP原料或推客户现用树脂。页面存在paid-searchFAQ/ContactFormDemo/外链模板残留、BOPP被误列在CompatibleSolvents及coffee误分类，保留质量限制，不据这些错误作技术事实或联系表单可用性。标准局TBS公开名单普通apexHTTPS证书host不匹配失败1、原生find超时1均计额；最后按错误中明确证书DNSwww.tbs.go.tz普通HTTPS读相同名单路径200，无禁用TLS/代理/登录/自动跳转。原HTML1752860bytes完整保存，仅标题/表头和Indotech第599行及邻接上下文实际审读，不称全名单已审。该行明确IndotechTanzaniaLtd和HRInk/WaterBaseInk/BOPPInk，995及2026-09-15/2027-09-14日期原列保留，不把官方listedfoodwrappers用途/KS810:2013推我方食品合规或客户所有配方认证。共6来源（3完整自有业务体、1政府名单局部读取、2失败）/rem0STOP，单范围6封顶无第7请求。已见完整两业务入口、Ink成品与SpecialisedSolvents全可见范围及Agro豆类/坚果/种子原料贸易中未见CPP/CPO/MAH改性聚烯烃或同类附着促进树脂原料外售，有限经营范围同行排除通过；NC/PU成品油墨、溶剂、油籽不当CPP原料，未审所有配方/隐藏业务/最终股权。Indotech域名/数字咨询模板副本/HR/JF/NCPU/BOPP与DarEsSalaam一公司预算，完整公开521/root535/front1021/index316/excluded9/queue/history无旧正式，旧cpp-oct30zz仅Search痕迹；不借同名印度IT企业或图片LinkedIn人物作为所有者/采购。公司业务地址Plot79Hai/NyerereRoadKiwalani由Home/Ink/Agro共同明示，地图城市级非实测厂门。info邮箱及+255759729903是原格式通用业务入口，无具名买家/WhatsApp推测；官网存在Demo表单不当有效表单，选实际邮箱/电话路线。潜在原料评估不代表采购、配方相容、提升附着、防热/retort或食品认证保证。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与电话",
+      "email": "info@indotech.co.tz",
+      "phone": "+255 759 729 903",
+      "contactUrl": "https://indotech.co.tz/"
+    },
+    "source": {
+      "label": "Official Indotech BOPP film ink and manufacturing division",
+      "url": "https://indotech.co.tz/ink/"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"indotech-dar-es-salaam": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "tmcs-avero-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "supraten-chisinau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "naqaa-altharaa-tripoli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12576,6 +12605,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"indotech-dar-es-salaam": {
+  "website": "https://indotech.co.tz/",
+  "contactPage": "https://indotech.co.tz/",
+  "address": "Indotech Tanzania Limited, Plot No 79, Hai/Nyerere Road, Kiwalani, Dar es Salaam, Tanzania. P.O. Box 71433. City-level map point, not a surveyed factory gate.",
+  "generalEmail": "info@indotech.co.tz",
+  "generalPhone": "+255 759 729 903",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official company manufacturing unit, BOPP ink and business identity",
+      "url": "https://indotech.co.tz/"
+    },
+    {
+      "label": "Official complete ink product portfolio and public business routes",
+      "url": "https://indotech.co.tz/ink/"
+    },
+    {
+      "label": "Official other Agro division commodity-business boundary",
+      "url": "https://indotech.co.tz/agro/"
+    },
+    {
+      "label": "Tanzania Bureau of Standards public product list; exact Indotech row read",
+      "url": "https://www.tbs.go.tz/certified-product-companies"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Indotech Tanzania Limited",
+    "value": "info@indotech.co.tz",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Indotech public business contact footer",
+        "url": "https://indotech.co.tz/",
+        "summary": "Exact public general business inbox repeated on own Ink and Agro pages; no named person or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Indotech Tanzania Limited",
+    "value": "+255 759 729 903",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Indotech public business contact footer",
+        "url": "https://indotech.co.tz/",
+        "summary": "Exact first published company telephone, repeated on Ink and Agro; no WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "tmcs-avero-sfax": {
   "website": "https://www.avero.tn/",
   "contactPage": "https://www.avero.tn/index.php/presentation-avero-peinture-batiment-industrie-tunisie",
@@ -38608,6 +38692,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"indotech-dar-es-salaam",
 "tmcs-avero-sfax",
 "supraten-chisinau",
 "naqaa-altharaa-tripoli",

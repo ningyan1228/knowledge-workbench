@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"indotech-dar-es-salaam": "Your ink division manufactures BOPP extrusion inks and NC/PU inks for flexible film packaging.",
 "tmcs-avero-sfax": "Your VERNISOL MONO acrylic coating protects metal structures, concrete and floors.",
 "supraten-chisinau": "Your own water-based coating range includes applications for wooden windows and frames.",
 "naqaa-altharaa-tripoli": "Your Tripoli factory develops and manufactures industrial protective coatings alongside architectural and automotive paint systems.",
