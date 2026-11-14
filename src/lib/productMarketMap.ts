@@ -11940,11 +11940,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "el-madina-coatings-benghazi",
+    "company": "El-Madina Coatings Company (MCC)",
+    "productId": "elo",
+    "country": "Libya",
+    "countryZh": "利比亚",
+    "city": "Benghazi（城市级示意点）",
+    "latitude": 32.1194,
+    "longitude": 20.0868,
+    "legacyCompanyDescription": "在班加西和米苏拉塔自有工厂配方制造涂料，Primer 6110为用于新金属构件的合成醇酸防腐底漆。",
+    "fit": "可开发候选",
+    "signal": "在班加西和米苏拉塔自有工厂配方制造涂料，Primer 6110为用于新金属构件的合成醇酸防腐底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立完整读取Manufacturing284行、Products83行和Primer6110共212行，3/6剩3；无失败/披露额外跳转，停止本范围。制造页明确两厂水/溶剂/粉末涂料研发、配料和生产；48项九类完整可见总览为下游涂料/防水/胶/填料，Oil&Enamel的MatteOil/varnish为成品，不反推ELO原料。具体Primer6110明确Synthetic(alkyd)、新金属/钢构防腐底漆。所见公开业务未见ELO/ESBO/环氧化植物油或同类生物增塑稳定原料外售，有限同行排除通过；未声明隐藏配方、未读PDF/全部叶页或最终工商股权均审计。官网批次原料采购描述不是已购我方材料或公开RFQ。ISO/专利/1986/服务点/食接触产品F700FG均为官网自述，不作我方认证或性能。Benghazi/Misrata/AlKarareem/17服务点只计一公司；旧ElMadina2004目录Search与1986官网年份不同，不捏造统一年或采用目录具名联系人/旧电话。info邮箱和East电话来自实际制造/产品页脚；制造页本身含公开业务联系块，可作联系入口，未冒称读取独立Contact页或投递/WhatsApp。ELO只按TDS涂料/树脂改性潜在评估，不推客户现用ELO、配方相容/改善防腐或采购意愿。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及电话",
+      "phone": "+218 913 682 537",
+      "contactUrl": "https://www.elmadinacoatings.com/manufacturing",
+      "email": "info@elmadinacoatings.com"
+    },
+    "source": {
+      "label": "Official El-Madina Coatings Company (MCC) manufacturing, protective-coating business and public contact",
+      "url": "https://www.elmadinacoatings.com/products/primer-6110"
+    },
+    "checkedAt": "2026-11-14"
+  },
+  {
+    "id": "naqaa-altharaa-tripoli",
+    "company": "Naqaa Altharaa Paint Manufacturing",
+    "productId": "elo",
+    "country": "Libya",
+    "countryZh": "利比亚",
+    "city": "Tripoli（城市级示意点）",
+    "latitude": 32.8872,
+    "longitude": 13.1913,
+    "legacyCompanyDescription": "在的黎波里Ain Zarah自有工厂开发配方，制造工业防护涂层、建筑漆和汽车修补涂料。",
+    "fit": "可开发候选",
+    "signal": "在的黎波里Ain Zarah自有工厂开发配方，制造工业防护涂层、建筑漆和汽车修补涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立完整读取About188行和Contact76行，Products目录一次CacheMiss计额，共3/6剩3、本范围停止。About明确Tripoli/AinZarah自有制造、每种配方内部开发及工业防护涂层产品范围，具体生产/配方角色已证；不把未读取目录或推荐证言当逐SKU技术证明。所读完整公司经营说明及联系页公开产品导航均为内外墙/工业防护/装饰/汽车/木器成品，未列ELO/ESBO/环氧化植物油/同类增塑稳定原料销售；有限已见经营范围同行排除通过，明确未审失败产品目录、全部叶页/SDS或完整最终股权。原料来自供应商的概述不证明采购ELO；25年/200产品/5000客户/认证/推荐人名字均不作独立认证或采购人，也不据空动态计数推零年经营。公开联系表单和业务电话真实可见，邮箱未找到，不猜info或WhatsApp；不入批量邮件名单。NaqaaAltharaa/阿文名/AinZarah/Tripoli一账户，与MCC不同名字、地点、域名及公开电话，无已知集团关联证据；不宣称工商终局审计。ELO按TDS涂料/树脂改性潜在评估，不承诺已有采购、相容、抗腐蚀或认证性能。"
+    },
+    "contact": {
+      "label": "官网联系表单及业务电话；未核验公开邮箱",
+      "phone": "+218 91 990 9979",
+      "contactUrl": "https://www.naqaa-ly.com/contact"
+    },
+    "source": {
+      "label": "Official Naqaa Altharaa Paint Manufacturing manufacturing, protective-coating business and public contact",
+      "url": "https://www.naqaa-ly.com/about"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"naqaa-altharaa-tripoli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+"el-madina-coatings-benghazi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "gulf-paints-amman": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
 "propaint-inovation-tashkent": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "royal-paints-gampaha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12462,6 +12519,89 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"naqaa-altharaa-tripoli": {
+  "website": "https://www.naqaa-ly.com/about",
+  "contactPage": "https://www.naqaa-ly.com/contact",
+  "address": "Official factory/business location: Ain Zarah, Tripoli, Libya. City-level map point, not independently surveyed factory gate coordinates.",
+  "generalPhone": "+218 91 990 9979",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Naqaa Altharaa Paint Manufacturing manufacturing, protective-coating business and public contact",
+      "url": "https://www.naqaa-ly.com/about"
+    },
+    {
+      "label": "Official Naqaa Altharaa Paint Manufacturing manufacturing, protective-coating business and public contact",
+      "url": "https://www.naqaa-ly.com/contact"
+    }
+  ],
+  "generalPhoneEvidence": {
+    "company": "Naqaa Altharaa Paint Manufacturing",
+    "value": "+218 91 990 9979",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official public company business route",
+        "url": "https://www.naqaa-ly.com/contact",
+        "summary": "Exact publicly disclosed corporate telephone; not a named person or inferred WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
+"el-madina-coatings-benghazi": {
+  "website": "https://www.elmadinacoatings.com/manufacturing",
+  "contactPage": "https://www.elmadinacoatings.com/manufacturing",
+  "address": "Published headquarters: Benghazi, Libya; second plant Misrata / Al-Karareem. City-level map point, not a surveyed factory gate.",
+  "generalPhone": "+218 913 682 537",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official El-Madina Coatings Company (MCC) manufacturing, protective-coating business and public contact",
+      "url": "https://www.elmadinacoatings.com/manufacturing"
+    },
+    {
+      "label": "Official El-Madina Coatings Company (MCC) manufacturing, protective-coating business and public contact",
+      "url": "https://www.elmadinacoatings.com/products"
+    },
+    {
+      "label": "Official El-Madina Coatings Company (MCC) manufacturing, protective-coating business and public contact",
+      "url": "https://www.elmadinacoatings.com/products/primer-6110"
+    }
+  ],
+  "generalPhoneEvidence": {
+    "company": "El-Madina Coatings Company (MCC)",
+    "value": "+218 913 682 537",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official public company business route",
+        "url": "https://www.elmadinacoatings.com/manufacturing",
+        "summary": "Exact publicly disclosed corporate telephone; not a named person or inferred WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalEmail": "info@elmadinacoatings.com",
+  "generalEmailEvidence": {
+    "company": "El-Madina Coatings Company (MCC)",
+    "value": "info@elmadinacoatings.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official company business contact block",
+        "url": "https://www.elmadinacoatings.com/manufacturing",
+        "summary": "Exact public general company inbox; no named buyer or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "gulf-paints-amman": {
   "website": "https://www.gulfpaints.net/ar/",
   "contactPage": "https://www.gulfpaints.net/ar/",
@@ -38320,6 +38460,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"naqaa-altharaa-tripoli",
+"el-madina-coatings-benghazi",
 "gulf-paints-amman",
 "propaint-inovation-tashkent",
 "royal-paints-gampaha",

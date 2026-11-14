@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"naqaa-altharaa-tripoli": "Your Tripoli factory develops and manufactures industrial protective coatings alongside architectural and automotive paint systems.",
+"el-madina-coatings-benghazi": "Your Primer 6110 is a synthetic alkyd anti-corrosion primer for new metalwork and steel structures.",
 "gulf-paints-amman": "Your water-thinnable wall putty lists adhesion to glass and preparation of wooden surfaces.",
 "propaint-inovation-tashkent": "Your Antipas EZOTEK primer is formulated for corrosion protection of metal structures before finishing enamels.",
 "royal-paints-gampaha": "Your REOLUX range includes water-based and solvent wood care products for wood finishing applications.",
