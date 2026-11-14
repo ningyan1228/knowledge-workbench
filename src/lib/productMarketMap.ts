@@ -11995,11 +11995,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "supraten-chisinau",
+    "company": "SUPRATEN S.A.",
+    "productId": "nl-w1201",
+    "country": "Moldova",
+    "countryZh": "摩尔多瓦",
+    "city": "Chișinău（城市级示意点）",
+    "latitude": 47.0105,
+    "longitude": 28.8638,
+    "legacyCompanyDescription": "在摩尔多瓦自主制造水性涂料；自产产品覆盖木窗、木框，并列有LAZURA木材清漆。",
+    "fit": "可开发候选",
+    "signal": "在摩尔多瓦自主制造水性涂料；自产产品覆盖木窗、木框，并列有LAZURA木材清漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "原生制造页已读业务段1559–1677及About1556–1640，明确SUPRATEN自有工厂制造涂料、自产涂料为水性，应用包括木窗和木框，列有LAZURA木材清漆。首份制造页只返回0–624导航，不能当全文已读；普通HTTPS完整HTML读取403验证页无业务正文，失败计额且未绕过。共4公司来源（3原生返回，1失败）/剩2；其中2份返回有可用业务正文，2个不同业务URL，范围另Coramet2共6STOP。制造页8个自产下游成品类别（涂料、清漆、腻子、底涂、防水、装饰、胶黏剂、木材保护）和About成品制造及业务范围中未见外售水性聚烯烃/CPO分散体或同类聚烯烃附着促进原料，有限公开范围同行排除通过；不声称查遍数千零售SKU、SDS、隐藏配方或终局股权。网站也有代理零售，Sadolin/OSKAR等不作为SUPRATEN自制证据；全局导航塑料管、PPE保温、塑化剂分类不等于已证实外售PO/CPO附着投入，亦不借未读类别作ELO资格。德国技术及原料进口声明不推定客户现用PO、供应商、采购或技术保证。集团/品牌/语言及域名只计一账户；当前公开519/root533/既有front1016和index311、队列及历史预检无已有正式或旧定向公司请求。SUPRATEN/SA及其品牌不拆客户，关联经销商和工程客户不新增。电话+373 22 268 000和Petricani84是官网公开业务联系地点，不当已测量工厂门；坐标为Chișinău城市示意。未核验公开邮箱、具名采购或WhatsApp，不进批量邮件名单；未请求独立联系页，不声称有已核验联系表单。NL-W1201仅依TDS木材及水性表面处理用途作潜在评估，非客户采购、配方相容、性能、环保或认证结论。"
+    },
+    "contact": {
+      "label": "官网制造说明页及公开业务电话；未核验邮箱",
+      "phone": "+373 22 268 000",
+      "contactUrl": "https://supraten.md/lakokrasocnie-materiali"
+    },
+    "source": {
+      "label": "Official SUPRATEN own manufacture and company information",
+      "url": "https://supraten.md/lakokrasocnie-materiali"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"supraten-chisinau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "naqaa-altharaa-tripoli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "el-madina-coatings-benghazi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "gulf-paints-amman": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
@@ -12519,6 +12547,38 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"supraten-chisinau": {
+  "website": "https://supraten.md/",
+  "contactPage": "https://supraten.md/lakokrasocnie-materiali",
+  "address": "Moldova, Chișinău, str. Petricani, 84. Published business location; city-level map point, not a surveyed factory gate.",
+  "generalPhone": "+373 22 268 000",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official SUPRATEN coatings manufacture and published business phone",
+      "url": "https://supraten.md/lakokrasocnie-materiali"
+    },
+    {
+      "label": "Official SUPRATEN S.A. company and factory description",
+      "url": "https://supraten.md/despre-compania"
+    }
+  ],
+  "generalPhoneEvidence": {
+    "company": "SUPRATEN S.A.",
+    "value": "+373 22 268 000",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official SUPRATEN public business footer on own manufacturing page",
+        "url": "https://supraten.md/lakokrasocnie-materiali",
+        "summary": "Exact general company telephone in official footer; independently repeated on About page; no named buyer or WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "naqaa-altharaa-tripoli": {
   "website": "https://www.naqaa-ly.com/about",
   "contactPage": "https://www.naqaa-ly.com/contact",
@@ -38460,6 +38520,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"supraten-chisinau",
 "naqaa-altharaa-tripoli",
 "el-madina-coatings-benghazi",
 "gulf-paints-amman",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"supraten-chisinau": "Your own water-based coating range includes applications for wooden windows and frames.",
 "naqaa-altharaa-tripoli": "Your Tripoli factory develops and manufactures industrial protective coatings alongside architectural and automotive paint systems.",
 "el-madina-coatings-benghazi": "Your Primer 6110 is a synthetic alkyd anti-corrosion primer for new metalwork and steel structures.",
 "gulf-paints-amman": "Your water-thinnable wall putty lists adhesion to glass and preparation of wooden surfaces.",
