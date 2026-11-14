@@ -11912,11 +11912,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "gulf-paints-amman",
+    "company": "Gulf Paints (أصباغ الخليج)",
+    "productId": "nl-w1201",
+    "country": "Jordan",
+    "countryZh": "约旦",
+    "city": "Amman（城市级示意点）",
+    "latitude": 31.9539,
+    "longitude": 35.9106,
+    "legacyCompanyDescription": "在约旦安曼自主制漆；水稀释墙面腻子列明玻璃附着，以及木材孔隙和裂缝填补用途。",
+    "fit": "可开发候选",
+    "signal": "在约旦安曼自主制漆；水稀释墙面腻子列明玻璃附着，以及木材孔隙和裂缝填补用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立读取同一官方单页三段原始返回，覆盖公司/九类产品/具体产品/联系内容；首次原生0–751行、续读503–1191和1115–1774行，未声称每次返回均为1775行全篇。另普通HTTPS重复读取406无业务体计1，共4来源/剩2，停止本范围。阿文明确约旦安曼AlJuweida制漆及研发；WallPutty可用水稀释，列明对玻璃/陶瓷等表面附着，及木材孔隙裂缝填补。按NL-W1201既有玻璃附着/水性表面处理应用评估，不把腻子改写成玻璃底漆或水性木器漆；木工白胶不借为未经证实胶黏剂扩展。所读九类成品及说明为水/油性漆、装饰/汽车涂层、防水、油墨、木工胶、蜡/亚麻油木材保护品及水泥研磨助剂；PolyBond为可直接涂覆的乳胶防水/水泥添加配方，不据通用latex反推为聚烯烃/CPO分散原料。所见范围未见水性PO/CPO分散体或同类聚烯烃附着促进原料外售，有限公开同行排除通过；不声称全球隐藏配方或最终股权审计。亚麻油木保护品不当我方ELO且不据此转ELO客户。GulfPaints/阿文名/同页UniversalPaints英文logo及约旦总部/沙特联络只一账户；正式516/root530/全部front/index/queue及research历史域名和别名无正式重复或已往定向请求。官网1999和14年自述/2014页脚是旧文，不冒称2026扩产；邮箱info@gulfpaints.net真实公开通用，不猜采购姓名、投递率或WhatsApp。电话保持阿文原页面962795016400+原格式，不按方向猜改；坐标仅安曼城市示意。潜在评估不代表采购、已用聚烯烃、相容、性能、认证或客户需求。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、原格式电话及联系入口",
+      "phone": "962795016400+",
+      "email": "info@gulfpaints.net",
+      "contactUrl": "https://www.gulfpaints.net/ar/"
+    },
+    "source": {
+      "label": "Official Gulf Paints public product and company page",
+      "url": "https://www.gulfpaints.net/ar/"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"gulf-paints-amman": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
 "propaint-inovation-tashkent": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "royal-paints-gampaha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "nimro-paint-kurunegala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12433,6 +12462,49 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"gulf-paints-amman": {
+  "website": "https://www.gulfpaints.net/ar/",
+  "contactPage": "https://www.gulfpaints.net/ar/",
+  "address": "Amman – Al Juweida, beside the grain silos, Jordan. Published business location; map point is city-level, not a surveyed factory gate.",
+  "generalPhone": "962795016400+",
+  "generalEmail": "info@gulfpaints.net",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Gulf Paints public company, product specification and business contact page",
+      "url": "https://www.gulfpaints.net/ar/"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Gulf Paints (أصباغ الخليج)",
+    "value": "info@gulfpaints.net",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Gulf Paints business contact block",
+        "url": "https://www.gulfpaints.net/ar/",
+        "summary": "Exact published general company inbox; no named buyer or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Gulf Paints (أصباغ الخليج)",
+    "value": "962795016400+",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Gulf Paints business contact block",
+        "url": "https://www.gulfpaints.net/ar/",
+        "summary": "Exact originally displayed phone string including trailing plus in Arabic page; no reformatting or WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "propaint-inovation-tashkent": {
   "website": "https://ezotek.uz/",
   "contactPage": "https://ezotek.uz/ru/contacts",
@@ -38248,6 +38320,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"gulf-paints-amman",
 "propaint-inovation-tashkent",
 "royal-paints-gampaha",
 "nimro-paint-kurunegala",
