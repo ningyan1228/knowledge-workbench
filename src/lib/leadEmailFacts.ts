@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"royal-paints-gampaha": "Your REOLUX range includes water-based and solvent wood care products for wood finishing applications.",
+"nimro-paint-kurunegala": "Your Water Base Primer is listed in your Water Based Sirius wood care range.",
 "hindustan-flex-kanpur": "Your Monostar inks are formulated for flexographic printing on treated or untreated HDPE/PP fabric and PP laminated bags.",
 "rainbow-paints-dhaka": "Your Red Oxide Primer is listed as an anti-corrosive metal primer in your protective coatings range.",
 "norson-lahore": "Your HOMEX Brilliant Chrome Aluminium Paint is an industrial finish formulated to protect surfaces from corrosion.",

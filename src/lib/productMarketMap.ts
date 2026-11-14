@@ -11830,11 +11830,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-13"
   },
+  {
+    "id": "nimro-paint-kurunegala",
+    "company": "Nimro Paint Industries Pvt Ltd (Nimlac Paints)",
+    "productId": "nl-w1201",
+    "country": "Sri Lanka",
+    "countryZh": "斯里兰卡",
+    "city": "Kurunegala（城市级示意点）",
+    "latitude": 7.4863,
+    "longitude": 80.3647,
+    "legacyCompanyDescription": "在Kurunegala自有工厂生产Nimlac涂料；Water Base Primer属于Water Based Sirius水性木器底漆系列。",
+    "fit": "可开发候选",
+    "signal": "在Kurunegala自有工厂生产Nimlac涂料；Water Base Primer属于Water Based Sirius水性木器底漆系列。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "独立完整读取WaterBasePrimer124行及About106行。具体产品分类WaterBasedSirius/WoodCarePaints，导航WoodCare→WaterBasedforMDF列WaterBasePrimer/Paint及WaterBasedWoodCoating；Usage字段为空，未捏造使用工艺或MDF相容测试。About明确自有HeraliyawalaIndustrialPark Kurunegala工厂、定制涂层及生产目标，页脚法名NimroPaintIndustriesPvtLtd对应Nimlac品牌，支持自有下游制漆而非仅经销。实际两页完整产品导航包括装饰漆、水/溶剂型填料底漆、木器、水性/NC/MDF漆、防水体系、溶剂、NimfixAdhesive和车用/金属修补成品；NCThinner/Turpentine为配套溶剂，Nimfix为下游胶，不等于水性PO/CPO原料。所读可见业务范围未见水性聚烯烃/CPO-PO分散体或同类附着树脂原料外售，有限公开同行排除通过；未声称全部叶页/SDS/隐藏集团均审计。About18/20年及二期在建为旧文自述，未当2026扩产已投产；不借ISO/奖项/客户案例保证我方性能。Nimro/Nimlac/Sirius及Kurunegala同一账户；最新正式513/root527/front1002/index295/excluded9/完整queue及全部research/src历史无已有此公司或定向原件。Nimro模糊检索旧两文件分别Axalta的Imron目录及Imroatul人名，为字符/转义误匹配，离线核清非本公司，不计新请求。info@nimlacpaints.lk和0374690517/0372232516来自两份实际正文，精确原格式电话不自行补+94、不猜WhatsApp或具名采购。地址为官网Office/Factory披露工业园，不宣称测绘厂门，坐标城市级。NL-W1201只按用户TDS木材/水性底涂及附着促进潜在评估，不推现用PO、采购、MDF实测相容或性能。prior0/current2/lifetime2/rem4；与Royal4合计scope6STOP，品牌/产品/日期/provider不重置。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、电话及联系页",
+      "phone": "037 469 0517 / 037 223 2516",
+      "contactUrl": "https://nimlacpaints.lk/about-us/",
+      "email": "info@nimlacpaints.lk"
+    },
+    "source": {
+      "label": "Official Nimlac water-based wood primer and separate Nimro factory declaration",
+      "url": "https://nimlacpaints.lk/product/water-base-primer/"
+    },
+    "checkedAt": "2026-11-13"
+  },
+  {
+    "id": "royal-paints-gampaha",
+    "company": "Royal Paints Lanka (Pvt) Ltd",
+    "productId": "nl-w1201",
+    "country": "Sri Lanka",
+    "countryZh": "斯里兰卡",
+    "city": "Gampaha（城市级示意点）",
+    "latitude": 7.0873,
+    "longitude": 80.0144,
+    "legacyCompanyDescription": "自主制造REOLUX品牌水性及溶剂型木器护理产品，产品范围包括木器漆、装饰漆和工业涂料。",
+    "fit": "可开发候选",
+    "signal": "自主制造REOLUX品牌水性及溶剂型木器护理产品，产品范围包括木器漆、装饰漆和工业涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-13",
+      "conclusion": "独立完整读取About64行/Products58行/Contact89行/WoodCare64行。About明确RoyalPaintsLanka自主制漆、REOLUX品牌及自制WaterBased&SolventWoodCareProducts，属于下游配方制造；四制造地/175员工/认证为官网自述，不当独立工商或认证审计。Products完整六主营类为装饰/工业/底漆/特种/地板/木器；About还列防水、沥青焦油、溶剂及胶。WoodCare可见六成品BrightAluminium、ChineseLacquer、PolyurathaneVarnish、SuperFrenchPolish、SuperGlossEnamel、WoodMetalPrimer；未把任何一个SKU擅自标水性，水性木器制造依据单独About明确分类。所读实际完整业务范围未见水性聚烯烃/CPO-PO分散体或同类附着树脂原料外售，有限公开同行排除通过，不宣称全隐藏SKU/SDS/最终股权已审计；About的BASF/Hohm&PUM技术顾问不当客户当前原料供方或我方案例。NL-W1201用户TDS木材/底涂附着为潜在评估，未确认客户现用体系、采购、相容、环保/食品认证或附着改善。RoyalPaintsLanka/REOLUX按一账户，按全正式513/root527/front1002/index295/excluded9/完整queue及research/src全历史核对无正式重复或以前定向原件。联系页有公开公司联系表单及总部电话+94(33)2237513；原文仅[email protected]邮箱遮蔽，未解码、猜邮箱、填个人、将模板Thankyou/Sending/FormError当实际提交或送达。保留实际联系页及精确总部公用电话，不自动发消息/表单，不将电话当WhatsApp；页内具名Sales/InternationalOps无独立现职/邮箱核验，不采作个人联系。Gampaha地址为总部联系地址，四制造地未逐一定位，不拆多家，城市示意坐标。prior0/current4/lifetime4/rem2，与Nimro2合计scope6STOP，未读叶页/原始HTML/脚本/保护邮箱新URL。"
+    },
+    "contact": {
+      "label": "官网联系页及总部业务电话；邮箱遮蔽未核验",
+      "phone": "+94 (33) 223 7513",
+      "contactUrl": "https://www.royalpaintslanka.com/contact"
+    },
+    "source": {
+      "label": "Official Royal Paints manufacturing and water-based wood-care range",
+      "url": "https://www.royalpaintslanka.com/about"
+    },
+    "checkedAt": "2026-11-13"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"royal-paints-gampaha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+"nimro-paint-kurunegala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hindustan-flex-kanpur": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "rainbow-paints-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "norson-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12348,6 +12405,93 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"royal-paints-gampaha": {
+  "website": "https://www.royalpaintslanka.com/about",
+  "contactPage": "https://www.royalpaintslanka.com/contact",
+  "address": "Head office: No.271/1 Isuru Uyana, Batapotha/Madelgamuwa, Gampaha, Sri Lanka. Manufacturing facilities not separately located; city-level map only.",
+  "generalPhone": "+94 (33) 223 7513",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Royal Paints manufacturing and water-based wood-care range / 1",
+      "url": "https://www.royalpaintslanka.com/about"
+    },
+    {
+      "label": "Official Royal Paints manufacturing and water-based wood-care range / 2",
+      "url": "https://www.royalpaintslanka.com/products"
+    },
+    {
+      "label": "Official Royal Paints manufacturing and water-based wood-care range / 3",
+      "url": "https://www.royalpaintslanka.com/contact"
+    },
+    {
+      "label": "Official Royal Paints manufacturing and water-based wood-care range / 4",
+      "url": "https://www.royalpaintslanka.com/products/wood-care-products"
+    }
+  ],
+  "generalPhoneEvidence": {
+    "company": "Royal Paints Lanka (Pvt) Ltd",
+    "value": "+94 (33) 223 7513",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official company business contact route",
+        "url": "https://www.royalpaintslanka.com/contact",
+        "summary": "Exact published general business telephone; no personal ownership or WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  }
+},
+"nimro-paint-kurunegala": {
+  "website": "https://nimlacpaints.lk/about-us/",
+  "contactPage": "https://nimlacpaints.lk/about-us/",
+  "address": "Official Office / Factory: Nimro Paint Industries Pvt Ltd, Heraliyawala Industrial Park, Kurunegala60000, Sri Lanka. City-level illustration, not surveyed factory gate.",
+  "generalPhone": "037 469 0517 / 037 223 2516",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Nimlac water-based wood primer and separate Nimro factory declaration / 1",
+      "url": "https://nimlacpaints.lk/product/water-base-primer/"
+    },
+    {
+      "label": "Official Nimlac water-based wood primer and separate Nimro factory declaration / 2",
+      "url": "https://nimlacpaints.lk/about-us/"
+    }
+  ],
+  "generalEmail": "info@nimlacpaints.lk",
+  "generalEmailEvidence": {
+    "company": "Nimro Paint Industries Pvt Ltd (Nimlac Paints)",
+    "value": "info@nimlacpaints.lk",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official company business contact route",
+        "url": "https://nimlacpaints.lk/about-us/",
+        "summary": "Exact public corporate inbox; no named employee or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  },
+  "generalPhoneEvidence": {
+    "company": "Nimro Paint Industries Pvt Ltd (Nimlac Paints)",
+    "value": "037 469 0517 / 037 223 2516",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official company business contact route",
+        "url": "https://nimlacpaints.lk/about-us/",
+        "summary": "Exact published general business telephone; no personal ownership or WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-13"
+  }
+},
 "hindustan-flex-kanpur": {
   "website": "https://hindustanflex.com/hindustan-flex/about",
   "contactPage": "https://hindustanflex.com/hindustan-flex/about",
@@ -38032,6 +38176,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"royal-paints-gampaha",
+"nimro-paint-kurunegala",
 "hindustan-flex-kanpur",
 "rainbow-paints-dhaka",
 "norson-lahore",
