@@ -12160,11 +12160,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "goldstar-paints-dar-es-salaam",
+    "company": "Goldstar Paints Tanzania Limited",
+    "productId": "elo",
+    "country": "Tanzania",
+    "countryZh": "坦桑尼亚",
+    "city": "Dar es Salaam（城市级示意点）",
+    "latitude": -6.7924,
+    "longitude": 39.2083,
+    "legacyCompanyDescription": "自主制造涂料；Goldstar Red Oxide Primer为用于低碳钢及铁的醇酸金属底漆，目录另列海洋及工业涂料。",
+    "fit": "可开发候选",
+    "signal": "自主制造涂料；Goldstar Red Oxide Primer为用于低碳钢及铁的醇酸金属底漆，目录另列海洋及工业涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "原生网页读取About及RedOxide各超时一次均计额，随后普通TLS的Node HTTPS重试同两URL及真实链接Shop/Contacts四页全部HTTP200，实际HTML和完整可见文字均保存并读取；累计6/rem0STOP，不继续PDF、分页、分支、域名或其他工具请求。About明确制造paint products和总部/工厂106MwakalingaStreet，RedOxide原文虽有alkyd-bases menta拼写错误，明确alkyd、mildsteel/iron的自有品牌金属底漆；不把泛建筑行业或政府采购索引当自营生产证据，不重复广告防锈/附着效果，不推客户现用ELO、原料外购、相容或采购。Shop完整首屏12项和全部11个分类导航已读，目录共8页但仅第一页已取，不能声称全部85SKU/SDS。11类为建筑、汽车、特种、木器、屋顶地坪、海洋工业、纹理、底漆封闭及底涂、稀释剂、固化剂、胶黏剂；所见GSBond/2KSupacrylicPrimer/NCStain/RustConverter和建筑饰面均为下游成品，相关可见业务未见ELO/ESBO/环氧植物油或同类生物增塑改性添加剂外售，有限所读范围同行排查通过。Hardener4/Thinner9只是分类数量，不猜其组成、不泛称它们均为ELO竞争原料，也不声称审过它们的SKU及SDS。按用户ELO TDS涂料及树脂改性功能作潜在评估，不许诺防腐、柔韧改善幅度或实际配方适配。About的1988起步及早年Dulux SouthAfrica技术合作保留为历史自述，技术合作不是股权关系或同一集团证明；不把搜索词Motisun当已证母公司，也不把1988发起人认作现行采购负责人。当前525公开/root539/front1026/index326/excluded10、队列及全本地历史检索未见GoldstarPaints/goldstarpaints.com/.co.tz/Motisun旧账户或旧公司GET；历史GoldstarFarmTrading菲律宾肥料贸易与本公司无关。各坦桑尼亚分支按同一制造账户，不拆国家/分店新增，未做最终股权登记审计。当前Contact分别明示通用info@goldstarpaints.co.tz及公司总机+255222865222，分开证据；不据旧2022交货单info@goldstarpaints.com替换当前邮箱，不猜采购人、WhatsApp或邮箱投递能力，不提交表单。Contact多地点地图相同链接和页脚Mwanza的+288错误不采用；地图为DarEsSalaam城市示意而非实测厂门。ISO/无铅等仅网站自述，本次不升级独立认证结论。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公司总机",
+      "email": "info@goldstarpaints.co.tz",
+      "phone": "+255 22 2865222",
+      "contactUrl": "https://goldstarpaints.co.tz/contacts/"
+    },
+    "source": {
+      "label": "Official Goldstar Red Oxide Primer and own paint manufacture",
+      "url": "https://goldstarpaints.co.tz/product/red-oxide-primer/"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"goldstar-paints-dar-es-salaam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "printochem-dhaka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "sakret-rumbula": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colorado-casablanca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12690,6 +12719,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"goldstar-paints-dar-es-salaam": {
+  "website": "https://goldstarpaints.co.tz/",
+  "contactPage": "https://goldstarpaints.co.tz/contacts/",
+  "address": "106 Mwakalinga Street, Chang’ombe, P.O. Box 909, Dar es Salaam, Tanzania. City-level map point, not a surveyed factory gate.",
+  "generalEmail": "info@goldstarpaints.co.tz",
+  "generalPhone": "+255 22 2865222",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official own paint manufacture, corporate history and headquarters/factory",
+      "url": "https://goldstarpaints.co.tz/about-us/"
+    },
+    {
+      "label": "Official alkyd Red Oxide Primer for mild steel and iron",
+      "url": "https://goldstarpaints.co.tz/product/red-oxide-primer/"
+    },
+    {
+      "label": "Official first catalogue page, twelve listed products and eleven category navigation entries; other seven pages not fetched",
+      "url": "https://goldstarpaints.co.tz/shop/"
+    },
+    {
+      "label": "Official current corporate business inbox, switchboard and headquarters contact",
+      "url": "https://goldstarpaints.co.tz/contacts/"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Goldstar Paints Tanzania Limited",
+    "value": "info@goldstarpaints.co.tz",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official current Goldstar corporate contact page",
+        "url": "https://goldstarpaints.co.tz/contacts/",
+        "summary": "Exact public company mailbox in contact header and Headquarters & Factory section; no named person or deliverability assertion."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Goldstar Paints Tanzania Limited",
+    "value": "+255 22 2865222",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official current Goldstar corporate contact page",
+        "url": "https://goldstarpaints.co.tz/contacts/",
+        "summary": "First exact company switchboard in Headquarters & Factory contact block; general business phone, no WhatsApp or private ownership inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "printochem-dhaka": {
   "website": "https://printochemltd.com/",
   "contactPage": "https://printochemltd.com/contact/",
@@ -38928,6 +39012,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"goldstar-paints-dar-es-salaam",
 "printochem-dhaka",
 "sakret-rumbula",
 "colorado-casablanca",
