@@ -12022,11 +12022,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "tmcs-avero-sfax",
+    "company": "Tunisia Multicoat System (TMCS / AVERO)",
+    "productId": "elo",
+    "country": "Tunisia",
+    "countryZh": "突尼斯",
+    "city": "Sfax（城市级示意点）",
+    "latitude": 34.7398,
+    "longitude": 10.76,
+    "legacyCompanyDescription": "在突尼斯斯法克斯自主制漆；VERNISOL MONO为用于金属结构、混凝土及地坪的丙烯酸保护饰面。",
+    "fit": "可开发候选",
+    "signal": "在突尼斯斯法克斯自主制漆；VERNISOL MONO为用于金属结构、混凝土及地坪的丙烯酸保护饰面。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立读取先前NLW的Presentation32行、Vernis目录40行及VERNISOLMONO89行，随后在ELO轮换读取Products48行、Divers48行及Divers第二页44行，跨产品同公司累计3+3=6/6STOP，当前范围3/6，均完整业务正文，无失败或披露额外跳转。TMCS明确自有制漆，实际VERNISOLMONO是丙烯酸金属/混凝土/地坪保护饰面并使用纤维素稀释剂；真实ELOTDS涂料/树脂改性潜在场景，不借水性建筑漆证明木器水性，也不把本轮ELO转成NLW资格。Products全六类导航为建筑、工业、道路、地坪、清漆与Divers；总目录13页仅首6项已读，未声称全SKU。完整Divers两页10项为五类稀释剂、除氧钝化、松节油、LAZUREDECO、FLACONAVERO和TEINTEAVERO，Vernis三项为成品清漆。已读制造经营范围及这些分类/实际商品中未见ELO/ESBO/环氧化植物油或同类生物增塑稳定原料外售，有限公开范围同行排除通过；稀释剂和松节油不当同类ELO投入，FLACON名称未读配方不猜内容，未读13页全产品或全部SDS/隐藏业务/终局股权。按TunisiaMulticoatSystem/TMCS/AVERO、Sfax同地址/业务邮箱/域名及既有公开520/root534/历史front/index/queue去重，一家一计；underbrand/licence措辞差异保留，不推AVERO商标终局所有权或新增品牌客户。原Presentation及产品/分类页业务块反复公开contact和info邮箱、两号码及传真，选contact通用业务邮箱与主号(+216)74830136，保留原格式，不绑定个人、不猜WhatsApp、不使用传真当电话；没有独立Contact页读取或实际投递率结论。地图Sfax城市级点，真实业务地址RouteMahdiaKM10/3069，不声称独立测量厂门。公司工艺参数和涂料性能不借为我方效果，ELO现用/采购/相容及改善防腐均未确认，共享发送状态unknown不当未发。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱与主电话",
+      "email": "contact@avero.tn",
+      "phone": "(+216) 74 830 136",
+      "contactUrl": "https://www.avero.tn/index.php/presentation-avero-peinture-batiment-industrie-tunisie"
+    },
+    "source": {
+      "label": "Official TMCS / AVERO specific protective-coating formulation",
+      "url": "https://www.avero.tn/index.php/wpcproduct/vernisol-mono"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"tmcs-avero-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "supraten-chisinau": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "naqaa-altharaa-tripoli": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "el-madina-coatings-benghazi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12547,6 +12576,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"tmcs-avero-sfax": {
+  "website": "https://www.avero.tn/",
+  "contactPage": "https://www.avero.tn/index.php/presentation-avero-peinture-batiment-industrie-tunisie",
+  "address": "Route de Mahdia KM 10 - 3069 Sfax - Tunisie. Published business location; map point is city-level, not a surveyed factory gate.",
+  "generalEmail": "contact@avero.tn",
+  "generalPhone": "(+216) 74 830 136",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official TMCS / AVERO manufacturing and public business contact",
+      "url": "https://www.avero.tn/index.php/presentation-avero-peinture-batiment-industrie-tunisie"
+    },
+    {
+      "label": "Official VERNISOL MONO acrylic protective coating and solvent specification",
+      "url": "https://www.avero.tn/index.php/wpcproduct/vernisol-mono"
+    },
+    {
+      "label": "Official downstream product-category overview; first of13pages only",
+      "url": "https://www.avero.tn/index.php/produits-avero-peinture-batiment-industrie-tunisie"
+    },
+    {
+      "label": "Official complete Divers first page",
+      "url": "https://www.avero.tn/index.php/wpccategories/5"
+    },
+    {
+      "label": "Official complete Divers second page",
+      "url": "https://www.avero.tn/index.php/wpccategories/5?page=2"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Tunisia Multicoat System (TMCS / AVERO)",
+    "value": "contact@avero.tn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official TMCS / AVERO business contact footer on manufacture page",
+        "url": "https://www.avero.tn/index.php/presentation-avero-peinture-batiment-industrie-tunisie",
+        "summary": "Exact publicly disclosed general business inbox; no named purchasing person or deliverability claim."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Tunisia Multicoat System (TMCS / AVERO)",
+    "value": "(+216) 74 830 136",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official TMCS / AVERO business contact footer on manufacture page",
+        "url": "https://www.avero.tn/index.php/presentation-avero-peinture-batiment-industrie-tunisie",
+        "summary": "Exact first published corporate phone; fax and second number not conflated, no WhatsApp inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "supraten-chisinau": {
   "website": "https://supraten.md/",
   "contactPage": "https://supraten.md/lakokrasocnie-materiali",
@@ -38520,6 +38608,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"tmcs-avero-sfax",
 "supraten-chisinau",
 "naqaa-altharaa-tripoli",
 "el-madina-coatings-benghazi",
