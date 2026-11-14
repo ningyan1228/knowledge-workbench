@@ -9,7 +9,7 @@ const countriesByContinent: Partial<Record<Continent, string[]>> = {
   欧洲: ['Albania', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Italy', 'Kosovo', 'Latvia', 'Lithuania', 'Luxembourg', 'Moldova', 'Netherlands', 'North Macedonia', 'Poland', 'Portugal', 'Romania', 'Russia', 'Serbia', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
   北美洲: ['Canada', 'Dominican Republic', 'Guatemala', 'Mexico', 'United States'],
   南美洲: ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Peru', 'Uruguay'],
-  非洲: ['Ethiopia', 'Ghana', 'Kenya', 'Libya', 'Morocco', 'Namibia', 'Nigeria', 'Senegal', 'South Africa', 'Tanzania', 'Tunisia', 'Zambia', 'Zimbabwe'],
+  非洲: ['Ethiopia', 'Ghana', 'Kenya', 'Libya', 'Morocco', 'Namibia', 'Nigeria', 'Senegal', 'South Africa', 'Tanzania', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'],
   大洋洲: ['Australia', 'New Zealand'],
 }
 

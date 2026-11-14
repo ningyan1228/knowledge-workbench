@@ -12188,11 +12188,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "hitech-inks-kampala",
+    "company": "Hi-Tech Inks & Coating Ltd Uganda",
+    "productId": "cpp-cpo",
+    "country": "Uganda",
+    "countryZh": "乌干达",
+    "city": "Kampala（商务地址所在城市级示意点）",
+    "latitude": 0.3476,
+    "longitude": 32.5825,
+    "legacyCompanyDescription": "自主研发制造凹版及柔版油墨；HI PP Woven Sack Inks用于PP编织袋及处理过的PP袋表面溶剂型柔印。",
+    "fit": "可开发候选",
+    "signal": "自主研发制造凹版及柔版油墨；HI PP Woven Sack Inks用于PP编织袋及处理过的PP袋表面溶剂型柔印。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "四份官网原始provider文字About76/PrintingInks76/Contact58/PPWoven90行完整存档和独立审读，非HTML二进制或全站抓取；工具注明缓存爬取2周至2个月，本日为读取核验日，不说实时取证或新投产。About明确自称Uganda自主制造凹版/柔版墨、开发油墨及测试技术能力，2014起步段落同时提先做分销，不把该年当已证明的制墨线投产日。PrintingInks完整九行成品表和全部导航、PPWoven详情明确stack/drumflexo表印及PP编织袋/treatedPPbags，溶剂稀释/retarder和NButanol等支持溶剂体系；不把bag用途误当包膜肥制造，不把CPP薄膜简称当CPP树脂。About泛称toluene/ketonefree与PP详情允许toluene稀释存在范围差异，保留限制，不能声称所有系列无甲苯/食品接触认证；ProbBh拼写未扩成未知化学品，不照抄宣传附着/耐磨/寿命作为我方性能。完整可见产品表为成品油墨、水性纸墨、复合/柔凹印和PP袋墨，About业务为制墨/开发/技术服务；所读范围未见CPP/CPO/MAH聚烯烃或同类附着树脂原料外售，稀释剂建议及lamination用途不是树脂销售证据，有限范围同行排查通过，不称审过全SDS或隐藏配方。用户CPP选型指南和既有独立NipponPaperCPO油墨扩展仅支持潜在原料评估，现用binder、CPO采购、我方牌号相容/食品合规均未确认。当前526公开/root540、front1027/index329/excluded10及队列全查无Uganda域名旧正式/公司请求，仅过去Search发现；Siegwerk为既有德国账户，印度HiTech收购搜索不能直接当Uganda集团事实。Uganda官网明确本地公司名称/2014Kampala起步、BomboRoad地址和AliNaqvi100%所有者自述，与印度域名Techlam待核记录不同；共同HiTech字样本身不证明同一集团，所读四页未出现Siegwerk/印度关联，不虚构完整最终股权独立审计。About同时列AliRehbarCeoFounder和2000起算21年旧文，不合并两姓名、不当2026当前具名采购人或精确股权证明。为防未来名称归属有新证据，在所有权未作最终登记审计时，印度旧2实际请求与Uganda本轮4实际请求保守共用6上限并STOP；各主体实际请求分别记2和4，不把印度旧2冒记为Uganda原文、不按国家/域名新给六次。仅Uganda本地制造业务作一个账户，本轮印度未入库。Contact明示info@hitechinksuganda.com、contact及gmail和电话+256-756077883，选第一通用邮箱并对邮箱/电话分开证据，未推具名买家、WhatsApp或可投递性，不提交表单。地图为Kampala商务地址城市点，不称厂门或已核实制造厂坐标。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及公开公司电话",
+      "email": "info@hitechinksuganda.com",
+      "phone": "+256-756077883",
+      "contactUrl": "https://hitechinksuganda.com/contact-us"
+    },
+    "source": {
+      "label": "Official HI PP Woven Sack Inks for PP woven sacks and treated PP bags",
+      "url": "https://hitechinksuganda.com/hi-pp-woven-sack-ink"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"hitech-inks-kampala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "goldstar-paints-dar-es-salaam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "printochem-dhaka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "sakret-rumbula": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12719,6 +12748,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"hitech-inks-kampala": {
+  "website": "https://hitechinksuganda.com/",
+  "contactPage": "https://hitechinksuganda.com/contact-us",
+  "address": "Plot No. 183, Bombo Road, Kawempe, P.O. Box 26348, Kampala, Uganda. City-level business-address point, not a verified manufacturing factory gate.",
+  "generalEmail": "info@hitechinksuganda.com",
+  "generalPhone": "+256-756077883",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official own ink manufacture, development, local company history and disclosed ownership claims with retained limitations",
+      "url": "https://www.hitechinksuganda.com/about-us"
+    },
+    {
+      "label": "Official complete nine-row finished printing ink range and product navigation",
+      "url": "https://hitechinksuganda.com/printing-inks"
+    },
+    {
+      "label": "Official exact general business inbox and company phone",
+      "url": "https://hitechinksuganda.com/contact-us"
+    },
+    {
+      "label": "Official PP woven and treated PP bag surface ink, flexographic machines and solvent dilution",
+      "url": "https://hitechinksuganda.com/hi-pp-woven-sack-ink"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Hi-Tech Inks & Coating Ltd Uganda",
+    "value": "info@hitechinksuganda.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Hi-Tech Uganda contact page",
+        "url": "https://hitechinksuganda.com/contact-us",
+        "summary": "First exact general business inbox in Email Us section for Kampala company; no named contact or mailbox deliverability assertion."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "Hi-Tech Inks & Coating Ltd Uganda",
+    "value": "+256-756077883",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official Hi-Tech Uganda contact page",
+        "url": "https://hitechinksuganda.com/contact-us",
+        "summary": "Exact public number under Call Us beside company business address; no person identity, WhatsApp or private-number inference."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "goldstar-paints-dar-es-salaam": {
   "website": "https://goldstarpaints.co.tz/",
   "contactPage": "https://goldstarpaints.co.tz/contacts/",
@@ -39012,6 +39096,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"hitech-inks-kampala",
 "goldstar-paints-dar-es-salaam",
 "printochem-dhaka",
 "sakret-rumbula",

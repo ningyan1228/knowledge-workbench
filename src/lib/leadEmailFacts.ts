@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"hitech-inks-kampala": "You manufacture HI PP Woven Sack Inks for solvent-based flexographic surface printing on PP woven and treated bags.",
 "goldstar-paints-dar-es-salaam": "You manufacture Goldstar Red Oxide Primer, an alkyd-based metal primer for mild steel and iron.",
 "printochem-dhaka": "You manufacture alcohol-soluble CI flexographic inks for reverse printing and lamination on PET and BOPP films.",
 "sakret-rumbula": "Your AntiRust technical sheet describes an alkyd anticorrosive primer for metal surfaces.",
