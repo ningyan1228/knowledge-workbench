@@ -11885,11 +11885,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-13"
   },
+  {
+    "id": "propaint-inovation-tashkent",
+    "company": "OOO PROPAINT INOVATION (EZOTEK)",
+    "productId": "elo",
+    "country": "Uzbekistan",
+    "countryZh": "乌兹别克斯坦",
+    "city": "Tashkent（城市级示意点）",
+    "latitude": 41.2995,
+    "longitude": 69.2401,
+    "legacyCompanyDescription": "在塔什干自有生产线上制造涂料；Antipas EZOTEK为金属构件、管材及钢框防腐用底漆。",
+    "fit": "可开发候选",
+    "signal": "在塔什干自有生产线上制造涂料；Antipas EZOTEK为金属构件、管材及钢框防腐用底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立完整核读五个不同官网页面：Primer318行/About217行/Contact186行/Antipas250行/Home298行；另一次Catalogue点击实际返回原Primer318行，照常计第5次请求，绝不当第二份独立目录，合计6providerops/6正文返回/5unique/0失败，剩0STOP。Primer明确自有Tashkent生产场地和制造底漆，About说明2021首生产线和自有Ezotek生产，Home同证factory及制造。About/Home也明示进口及本地产品混售，未把全部SKU和经销网络当自制，更不把所有同目录品牌当本公司自有。Antipas原文独立列uralkydvarnish基料、金属构件/栅栏/门/管材/钢框及设备防腐底涂，成分泛称specialadditives不是ELO使用证据。所读Home完整八主营类为enamels/paints、solvents、epoxycoatings、primers、protectivevarnishes、decorativecoatings、wateremulsionpaints、furniturecoatings；Wateremulsion正文实为建筑装饰水性成品漆，不当原料乳液。Primer可见八底漆和Antipas相关成品/配套稀释剂，未见ELO/ESBO/环氧植物油/同类生物增塑稳定或树脂改性输入原料外售，有限公开业务同行排除通过；未读全部叶页/SDS/非标SKU或最终股权，不宣称原料例外外购已证。无须也未把一般成品uralkydvarnish配方基料词当外售ELO同类原料。用户ELO TDS涂料/树脂改性仅为潜在材料评估，客户防腐/附着/寿命/欧洲技术宣传不转成我方承诺。Primer的NC039木材500摄氏度等宣传参数未经独立验证且与本次Antipas事实无关，未采用。页脚OOOPROPAINTINOVATION原拼写保留，对应EZOTEK一个账户；Navoi/Khorezm/Bukhara门店不拆新增，OQQO/UNIQ只作同站目录品牌，未推股权。全正式515/root529/front1004/index297/excluded9/完整queue及全部research/src扩展名/域名核对无已入库此主体或旧定向请求；旧OQQO字符命中仅葡萄牙SollacPDF搜索URL追踪码Ooqqos，不是本公司来源，不重置历史。官网Contact的Tashkent地址Бектемирскийрайон МФИМиришкор ул.НабережнаяЧирчик дом5只作公开联系地，制造地Tashkent城市级示意非实测厂门。+998(77)707-40-04是所有读页公开商务路线，通用业务非具名采购；各页另有95/71callcentre差异保留不拼造号码。六次读取未找到可核验邮箱，不构造info@、不反查私人账号。联系页公开可用，Telegram只看到t.me链接标签，具体账号未另取，未存猜测账号、LinkedIn或WhatsApp，未发送/提交任何东西。公司累计6/6STOP，重复、跨语言/域名/品牌/产品/日期/provider不重置。"
+    },
+    "contact": {
+      "label": "官网联系页和公开商务电话；未核验邮箱",
+      "phone": "+998 (77) 707-40-04",
+      "contactUrl": "https://ezotek.uz/ru/contacts"
+    },
+    "source": {
+      "label": "Official Antipas EZOTEK anti-corrosion metal primer",
+      "url": "https://ezotek.uz/ru/catalog/primer/antipas-ezotek"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"propaint-inovation-tashkent": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "royal-paints-gampaha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "nimro-paint-kurunegala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hindustan-flex-kanpur": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12405,6 +12433,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"propaint-inovation-tashkent": {
+  "website": "https://ezotek.uz/",
+  "contactPage": "https://ezotek.uz/ru/contacts",
+  "address": "Public Tashkent contact: Bektemir district, MFY Mirishkor, Naberezhnaya Chirchik street5, Uzbekistan. Factory disclosed in Tashkent; city-level map only, not surveyed gate.",
+  "generalPhone": "+998 (77) 707-40-04",
+  "generalPhoneEvidence": {
+    "company": "OOO PROPAINT INOVATION (EZOTEK)",
+    "value": "+998 (77) 707-40-04",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official EZOTEK Tashkent business contact",
+        "url": "https://ezotek.uz/ru/contacts",
+        "summary": "Exact publicly listed corporate Tashkent business telephone; no named buyer or WhatsApp attribution."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Independent EZOTEK original business page 1",
+      "url": "https://ezotek.uz/ru/catalog/primer"
+    },
+    {
+      "label": "Independent EZOTEK original business page 2",
+      "url": "https://ezotek.uz/ru/about-us"
+    },
+    {
+      "label": "Independent EZOTEK original business page 3",
+      "url": "https://ezotek.uz/ru/contacts"
+    },
+    {
+      "label": "Independent EZOTEK original business page 4",
+      "url": "https://ezotek.uz/ru/catalog/primer/antipas-ezotek"
+    },
+    {
+      "label": "Independent EZOTEK original business page 5",
+      "url": "https://ezotek.uz/"
+    }
+  ]
+},
 "royal-paints-gampaha": {
   "website": "https://www.royalpaintslanka.com/about",
   "contactPage": "https://www.royalpaintslanka.com/contact",
@@ -38176,6 +38248,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"propaint-inovation-tashkent",
 "royal-paints-gampaha",
 "nimro-paint-kurunegala",
 "hindustan-flex-kanpur",

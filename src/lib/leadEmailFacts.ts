@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"propaint-inovation-tashkent": "Your Antipas EZOTEK primer is formulated for corrosion protection of metal structures before finishing enamels.",
 "royal-paints-gampaha": "Your REOLUX range includes water-based and solvent wood care products for wood finishing applications.",
 "nimro-paint-kurunegala": "Your Water Base Primer is listed in your Water Based Sirius wood care range.",
 "hindustan-flex-kanpur": "Your Monostar inks are formulated for flexographic printing on treated or untreated HDPE/PP fabric and PP laminated bags.",
