@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"sakret-rumbula": "Your AntiRust technical sheet describes an alkyd anticorrosive primer for metal surfaces.",
 "colorado-casablanca": "Your VERNIS DEKEAU technical sheet describes a water-based acrylic varnish for wood, concrete and PVC.",
 "indotech-dar-es-salaam": "Your ink division manufactures BOPP extrusion inks and NC/PU inks for flexible film packaging.",
 "tmcs-avero-sfax": "Your VERNISOL MONO acrylic coating protects metal structures, concrete and floors.",

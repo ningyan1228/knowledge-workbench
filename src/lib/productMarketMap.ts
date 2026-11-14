@@ -12105,11 +12105,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "sakret-rumbula",
+    "company": "SIA SAKRET (Baltic group / SAKRET PLUS)",
+    "productId": "elo",
+    "country": "Latvia",
+    "countryZh": "拉脱维亚",
+    "city": "Rīga / Rumbula（区域级示意点）",
+    "latitude": 56.9496,
+    "longitude": 24.1052,
+    "legacyCompanyDescription": "在Rumbula制造建筑化学品，集团设涂料及底漆生产部门；公开AntiRust技术表列有醇酸金属防腐底漆。",
+    "fit": "可开发候选",
+    "signal": "在Rumbula制造建筑化学品，集团设涂料及底漆生产部门；公开AntiRust技术表列有醇酸金属防腐底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立读官网AntiRust两页技术表81行、Home309、About200、Industrial170、Buvkimija181、Contact221行，全部原始返回完整保存和读取。About明确Rumbula自有干式及即用建筑化学品生产，2006设SAKRET PLUS专门生产涂料与底漆并持续发展，不把单纯砂浆制造冒充制漆；2004建厂/2007邻国厂/2023太阳能均保留原年份，不说2026新扩产。AntiRust表2015文件及15 08 21标识原样保留，明确醇酸树脂/防腐颜料/溶剂型金属底漆、干燥室内钢构及配TopLak；是公开历史技术资料，不声称最新版本、现货、客户现用ELO或所有成品自产。当前Industrial返回仅标题无SKU，不把空列表说成全工业目录已审。完整Home可见业务导航、About制造范围、所读成品表及Buvkimija全部六个条目（AF防冻、AF本厂产品用量说明、CLEAN清洗、FR防菌藻、HF/HFR表面疏水保护）未见ELO/ESBO/环氧植物油及同类生物增塑改性原料外售，有限所见相关投入同行排查通过，不把砂浆矿物粘结剂、混凝土添加剂或成品表面保护品泛称ELO同行；未审全部SKU/SDS/未公开配方，HF/HFR不猜具体成分。按ELO用户TDS涂料/树脂改性潜在评估，不承诺醇酸相容、防腐效果、附着/寿命或认证。SIA SAKRET、SAKRET PLUS、AS SAKRET HOLDINGS、UAB SAKRET LT及OU SAKRET按已披露波罗的海关联一个账户/6来源STOP，不拆国家或工厂；取得全球SAKRET许可证是商标许可，不把全球各加盟商认作已验证股权子公司，旧ASBRO CENI/SCHWENK是人员过去雇主不推当前集团关系。全公开523/root537、front1024/index320/excluded9及历史来源/队列查重无旧正式或旧GET，仅两份搜索出现。旧PDF info@sakret.lv虽明确，现行HTML实际值被遮蔽，未把旧署名升级为现行已核邮箱；只保留当前Contact官网业务入口及总机+371 67803650，无具名采购/个人电话或WhatsApp猜测，无表单提交、发信或CRM。地图为大里加区域示意点，不是实测Rumbula厂门。"
+    },
+    "contact": {
+      "label": "官网商务联系页及公司总机（无已核验现行邮箱）",
+      "phone": "+371 67803650",
+      "contactUrl": "https://sakret.lv/par-mums/kontakti/"
+    },
+    "source": {
+      "label": "Official SAKRET AntiRust technical sheet and Baltic paint/primer manufacturing history",
+      "url": "https://sakret.lv/wp-content/uploads/2015/08/TDL-AntiRust-2015-LV.pdf"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sakret-rumbula": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colorado-casablanca": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "indotech-dar-es-salaam": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "tmcs-avero-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12633,6 +12661,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sakret-rumbula": {
+  "website": "https://sakret.lv/",
+  "contactPage": "https://sakret.lv/par-mums/kontakti/",
+  "address": "SIA SAKRET, Ritvari, Rumbula, Stopiņu pagasts, Ropažu novads, LV-2121, Latvia. Map point is a Riga-region illustration, not a surveyed factory gate.",
+  "generalPhone": "+371 67803650",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official AntiRust two-page technical sheet, 2015 file; exact edition mark retained",
+      "url": "https://sakret.lv/wp-content/uploads/2015/08/TDL-AntiRust-2015-LV.pdf"
+    },
+    {
+      "label": "Official current business and legal contact overview",
+      "url": "https://sakret.lv/"
+    },
+    {
+      "label": "Official Rumbula manufacturing and SAKRET PLUS paint/primer history",
+      "url": "https://sakret.lv/par-mums/"
+    },
+    {
+      "label": "Official industrial coating category, no SKU list returned",
+      "url": "https://sakret.lv/categories/krasas/industrialie-parklajumi/"
+    },
+    {
+      "label": "Official full returned construction-chemical category: six entries only",
+      "url": "https://sakret.lv/categories/buvkimija-1/"
+    },
+    {
+      "label": "Official current local corporate business contacts and switchboard",
+      "url": "https://sakret.lv/par-mums/kontakti/"
+    }
+  ],
+  "generalPhoneEvidence": {
+    "company": "SIA SAKRET (Baltic group / SAKRET PLUS)",
+    "value": "+371 67803650",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Official current SIA SAKRET business contact page",
+        "url": "https://sakret.lv/par-mums/kontakti/",
+        "summary": "Exact general company switchboard beside Ritvari Rumbula address, consistent with current homepage; no named buyer or WhatsApp assertion."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "colorado-casablanca": {
   "website": "https://www.colorado.ma/",
   "contactPage": "https://www.colorado.ma/en/contact-us",
@@ -38768,6 +38844,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sakret-rumbula",
 "colorado-casablanca",
 "indotech-dar-es-salaam",
 "tmcs-avero-sfax",
