@@ -12272,11 +12272,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "queen-chemical-new-damietta",
+    "company": "Queen Chemical Industries / Queen for Printing Inks",
+    "productId": "cpp-cpo",
+    "country": "Egypt",
+    "countryZh": "埃及",
+    "city": "New Damietta（城市级示意）",
+    "latitude": 31.4347,
+    "longitude": 31.675,
+    "legacyCompanyDescription": "在埃及新达米埃塔制造印刷油墨，QR 系列用于 BOPP 和 CPP 薄膜的溶剂型柔印与凹印复合印刷。",
+    "signal": "在埃及新达米埃塔制造印刷油墨，QR 系列用于 BOPP 和 CPP 薄膜的溶剂型柔印与凹印复合印刷。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-15",
+      "conclusion": "读取官网产品目录、公司介绍和应用页三份完整原始返回。公司名为 Queen Chemical Industries，Queen for Printing Inks 为公开品牌写法。公司介绍明确原料入生产前实验室检查、成品质量测试与 New Damietta 工厂，Giza 为总部。QR 为 NC 溶剂型配方，指定 BOPP、CPP 薄膜的柔印和凹印复合用途；QR Mono 另属凹印。所读成品目录含油墨、上光及直接处理薄膜/铝箔用底涂。QS UNTFP 公开描述为用溶剂和聚合物材料配制、直接施涂于未处理聚合物薄膜的成品预涂，未以可加入油墨的附着促进剂或 CPP/CPO 树脂投入品销售；已读目录未见同类 CPO 或 MAH 改性聚烯烃原料。该范围不外推未披露化学组成、全面采购需求或牌号兼容。官网公开通用邮箱及销售电话；无具名收件人。以法定名称、品牌、域名、地址、公开电话全库核对，无已入库关联，未推定未披露最终股权。主页一次缓存失败计入来源账。地图为新达米埃塔城市示意。"
+    },
+    "contact": {
+      "label": "官网公开通用邮箱及销售电话",
+      "email": "info@queeninks.com",
+      "phone": "+20 122 648 1190",
+      "contactUrl": "https://www.queeninks.com/Products.php"
+    },
+    "source": {
+      "label": "官网 QR 溶剂型 BOPP/CPP 油墨",
+      "url": "https://www.queeninks.com/Products.php"
+    },
+    "checkedAt": "2026-11-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"queen-chemical-new-damietta": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "clq-colorquimica-la-estrella": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "gocolors-seeta": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hitech-inks-kampala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12806,6 +12835,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"queen-chemical-new-damietta": {
+  "website": "https://www.queeninks.com/",
+  "contactPage": "https://www.queeninks.com/Products.php",
+  "address": "Parts 2 & 3/19, Extent of Industrial Zone, New Damietta, Egypt (factory, city-level map marker). Giza head office is separate.",
+  "generalEmail": "info@queeninks.com",
+  "generalPhone": "+20 122 648 1190",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "官网 QR 溶剂型 BOPP/CPP 油墨",
+      "url": "https://www.queeninks.com/Products.php"
+    },
+    {
+      "label": "官网公司介绍与新达米埃塔工厂",
+      "url": "https://www.queeninks.com/Comp.Profile.html"
+    },
+    {
+      "label": "官网柔印及凹印应用入口",
+      "url": "https://www.queeninks.com/application.html"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "Queen Chemical Industries / Queen for Printing Inks",
+    "value": "info@queeninks.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网公开通用业务邮箱",
+        "url": "https://www.queeninks.com/Products.php",
+        "summary": "官网页脚 Contact US 企业通用邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  "generalPhoneEvidence": {
+    "company": "Queen Chemical Industries / Queen for Printing Inks",
+    "value": "+20 122 648 1190",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网公开销售电话",
+        "url": "https://www.queeninks.com/Products.php",
+        "summary": "官网页脚 Sales 所列首个公司销售电话号码，未指定具名持有人。"
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  }
+},
 "clq-colorquimica-la-estrella": {
   "website": "https://colorquimica.com.co/",
   "contactPage": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/",
@@ -39268,6 +39348,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"queen-chemical-new-damietta",
 "clq-colorquimica-la-estrella",
 "gocolors-seeta",
 "hitech-inks-kampala",

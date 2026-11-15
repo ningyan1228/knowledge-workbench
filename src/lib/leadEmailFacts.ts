@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"queen-chemical-new-damietta": "Your QR series includes solvent-based inks for flexographic and gravure lamination printing on BOPP and CPP films.",
 "clq-colorquimica-la-estrella": "You formulate solvent-based flexographic inks for BOPP film and offer SOLFLEX AA for printing on untreated polyolefins.",
 "gocolors-seeta": "You manufacture GO WoodStain Aqua, a water-based wood stain for natural grain effects on interior and exterior timber.",
 "hitech-inks-kampala": "You manufacture HI PP Woven Sack Inks for solvent-based flexographic surface printing on PP woven and treated bags.",
