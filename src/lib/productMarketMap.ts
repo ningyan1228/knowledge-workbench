@@ -12300,11 +12300,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-15"
   },
+  {
+    "id": "sapeint-bordj-bou-arreridj",
+    "company": "S.A.PEINT (Société Algérienne de Peinture)",
+    "productId": "elo",
+    "country": "Algeria",
+    "countryZh": "阿尔及利亚",
+    "city": "Bordj Bou Arreridj（城市级示意点）",
+    "latitude": 36.0739,
+    "longitude": 4.7614,
+    "legacyCompanyDescription": "自主制造工业涂料和清漆；SAPANTIROUILLE 是用于金属构件防护的醇酸防锈漆，官网将其用于低腐蚀性工业等环境。",
+    "fit": "可开发候选",
+    "signal": "自主制造工业涂料和清漆；SAPANTIROUILLE 是用于金属构件防护的醇酸防锈漆，官网将其用于低腐蚀性工业等环境。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-15",
+      "conclusion": "完整读取三次 TinyFetch 原始工具返回中的正文、标题与可见导航。官网首页明确自主制造工业涂料和清漆，产品页明确自有 SAPANTIROUILLE 的醇酸体系与金属构件防护用途，限公司资料所述环境，不把它写成重腐蚀或海上认证。官网首页可见业务目录为成品涂料、底涂、木器防护及稀释剂等。联系页 FAQ 一般讨论稀释剂、催干剂和消光剂，不据此推定公司供应同类环氧植物油。已读业务范围未见 ELO、ESBO、环氧植物油或相近生物基改性增塑剂的商业供应，限所读范围完成同行排查。官网联系页明示商业公共邮箱和总机及工业区地址。页面中的缩写姓名未独立核验当前身份，不录入个人联系人。官网正文列出的产能数字口径不一致，本记录不采用。当前正式530条、工作区客户数据、前沿、排除索引和研究队列无该主体；历史只有搜索返回，无已知公司来源请求。Bordj Bou Arreridj 使用城市级示意标点。ELO 按用户资料的涂料/树脂改性作潜在评估，未核实其配方使用、采购或相容性。"
+    },
+    "contact": {
+      "label": "官网商务通用邮箱和公司电话",
+      "email": "commercial@sapeint.dz",
+      "phone": "+213 35 873 856",
+      "contactUrl": "https://www.sapeint.dz/contact/"
+    },
+    "source": {
+      "label": "S.A.PEINT official SAPANTIROUILLE product page",
+      "url": "https://www.sapeint.dz/produits/sapantirouille-peinture-antirouille/"
+    },
+    "checkedAt": "2026-11-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sapeint-bordj-bou-arreridj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "queen-chemical-new-damietta": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "clq-colorquimica-la-estrella": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "gocolors-seeta": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -12835,6 +12864,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sapeint-bordj-bou-arreridj": {
+  "website": "https://www.sapeint.dz/",
+  "contactPage": "https://www.sapeint.dz/contact/",
+  "address": "Zone Industrielle, Bordj Bou Arreridj, Algeria. City-level map point.",
+  "generalEmail": "commercial@sapeint.dz",
+  "generalPhone": "+213 35 873 856",
+  "generalEmailEvidence": {
+    "company": "S.A.PEINT (Société Algérienne de Peinture)",
+    "value": "commercial@sapeint.dz",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "S.A.PEINT official contact page",
+        "url": "https://www.sapeint.dz/contact/",
+        "summary": "The company contact page lists this general commercial inbox in the main business contact block."
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  "generalPhoneEvidence": {
+    "company": "S.A.PEINT (Société Algérienne de Peinture)",
+    "value": "+213 35 873 856",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "S.A.PEINT official contact page",
+        "url": "https://www.sapeint.dz/contact/",
+        "summary": "The company lists +213 (0) 35 873 856 in the main business contact block; the international form drops the domestic trunk zero."
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official SAPANTIROUILLE page for alkyd metal protection",
+      "url": "https://www.sapeint.dz/produits/sapantirouille-peinture-antirouille/"
+    },
+    {
+      "label": "Official S.A.PEINT own manufacturing statement",
+      "url": "https://www.sapeint.dz/"
+    },
+    {
+      "label": "Official business contact and industrial-zone location",
+      "url": "https://www.sapeint.dz/contact/"
+    }
+  ]
+},
 "queen-chemical-new-damietta": {
   "website": "https://www.queeninks.com/",
   "contactPage": "https://www.queeninks.com/Products.php",
@@ -39348,6 +39428,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sapeint-bordj-bou-arreridj",
 "queen-chemical-new-damietta",
 "clq-colorquimica-la-estrella",
 "gocolors-seeta",
