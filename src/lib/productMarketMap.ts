@@ -12244,11 +12244,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-14"
   },
+  {
+    "id": "clq-colorquimica-la-estrella",
+    "company": "CLQ / Colorquímica S.A.S.",
+    "productId": "cpp-cpo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "La Estrella / Greater Medellín（区域示意）",
+    "latitude": 6.2442,
+    "longitude": -75.5812,
+    "legacyCompanyDescription": "在哥伦比亚自主研发制造柔印油墨，溶剂型系列用于 BOPP 等薄膜，SOLFLEX AA 用于未处理聚烯烃。",
+    "signal": "在哥伦比亚自主研发制造柔印油墨，溶剂型系列用于 BOPP 等薄膜，SOLFLEX AA 用于未处理聚烯烃。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-14",
+      "conclusion": "独立保留官网印刷与包装300行、企业介绍183行、塑料与橡胶133行、涂料与建筑266行四份完整工具返回，核对制造、具体产品、已披露原料和公开总部入口。Acerca de nosotros 明确现行自主制造销售及 La Estrella 总部，历史段有树脂、油墨及分散体生产。印刷页列 BOPP、PE、PVC 溶剂型柔印应用，SOLFLEX AA 用于未处理聚烯烃，普通 SOLFLEX 另列已处理聚烯烃。NC-PU 与 PU 是不同成品系列，不能从分类推定任一实际配方使用 CPP/CPO，也不把 BOPP 或 CPP 薄膜当树脂投入。同行边界按所读范围确认：涂料产品的 ULTRACRYL 为丙烯酸、苯丙和乙烯基丙烯酸类，LANCRYL 为增稠、分散、消泡配套，塑料橡胶页展示颜料、溶剂色料及多元醇／颜料分散体。印刷页另列纸包装胶、涂层、颜料浓缩物及清洗产品。已读明确品类未见同类 CPO、MAH 改性聚烯烃或原料级 PP 附着促进剂供应，保留企业同时销售其他化学原料的事实，不声称穷尽未公开配方和全市场。官网同页明确 info@clq.com.co 及总部 +57 604 302 1717，伦理热线及人员邮箱未用于开发。按 CLQ、Colorquímica、两个域名及哥伦比亚 La Estrella 主体去重，意大利 Colorchimica Pescantina 自有不同域名和制造地址，其旧审阅已明确区分哥伦比亚同名企业。未审计未披露最终股权。Nippon Paper 独立油墨应用支持可能的评估相关性，原料采购和实际牌号适配均待确认。地图为大麦德林区域示意，官网总部地址为 La Estrella。四次公司来源均成功，当前范围与 Grafi 共用六次已用满，CLQ 公司仍保留两次终身余量。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱及总部总机",
+      "email": "info@clq.com.co",
+      "phone": "+57 604 302 1717",
+      "contactUrl": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/"
+    },
+    "source": {
+      "label": "官网 BOPP 与 SOLFLEX 溶剂型柔印墨",
+      "url": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/"
+    },
+    "checkedAt": "2026-11-14"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"clq-colorquimica-la-estrella": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "gocolors-seeta": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hitech-inks-kampala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "goldstar-paints-dar-es-salaam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12777,6 +12806,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"clq-colorquimica-la-estrella": {
+  "website": "https://colorquimica.com.co/",
+  "contactPage": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/",
+  "address": "Cra 53 Nº 78 sur-59, La Estrella, Antioquia, Colombia. Greater Medellín regional map marker.",
+  "generalEmail": "info@clq.com.co",
+  "generalPhone": "+57 604 302 1717",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "官网 BOPP 与 SOLFLEX 溶剂型柔印墨",
+      "url": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/"
+    },
+    {
+      "label": "官网制墨及 La Estrella 总部历史",
+      "url": "https://colorquimica.com.co/acerca-de-nosotros/"
+    },
+    {
+      "label": "官网颜料、色料及分散体产品",
+      "url": "https://colorquimica.com.co/mercados-atendidos/plastico-y-caucho/"
+    },
+    {
+      "label": "官网披露的树脂及助剂品类",
+      "url": "https://colorquimica.com.co/mercados-atendidos/pinturas-y-recubrimientos/"
+    }
+  ],
+  "generalEmailEvidence": {
+    "company": "CLQ / Colorquímica S.A.S.",
+    "value": "info@clq.com.co",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网总部公开邮箱",
+        "url": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/",
+        "summary": "企业官网页脚 Sede principal 明示通用业务邮箱，归属 CLQ / Colorquímica S.A.S."
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  "generalPhoneEvidence": {
+    "company": "CLQ / Colorquímica S.A.S.",
+    "value": "+57 604 302 1717",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网总部总机",
+        "url": "https://colorquimica.com.co/mercados-atendidos/impresion-y-empaques/",
+        "summary": "企业官网页脚 Sede principal 明示 PBX 公司总机。"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  }
+},
 "gocolors-seeta": {
   "website": "https://gocolorspaint.com/",
   "contactPage": "https://gocolorspaint.com/contact-us/",
@@ -39184,6 +39268,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"clq-colorquimica-la-estrella",
 "gocolors-seeta",
 "hitech-inks-kampala",
 "goldstar-paints-dar-es-salaam",
