@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"brighto-paints-lahore": "Your Brighto Red Oxide Primer is formulated to protect iron and steel surfaces from rust.",
 "colorcroma-piliyandala": "Your range includes solvent-based flexographic inks for PP film carrier bags.",
 "zahra-peinture-kouinine": "Your ZAHRA ANTIROULLE is an alkyd anticorrosion paint for metal structures.",
 "sippec-abidjan": "Your SIPPEC Antirouille Primaire is an alkyd anticorrosion primer for metal surfaces.",

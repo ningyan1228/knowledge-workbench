@@ -12410,11 +12410,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "brighto-paints-lahore",
+    "company": "Brighto Paints (Pvt.) Limited",
+    "productId": "elo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore（城市级示意点）",
+    "latitude": 31.55,
+    "longitude": 74.34,
+    "legacyCompanyDescription": "Brighto 自主制造涂料，Red Oxide Primer 用于铁与钢表面的防锈防护。",
+    "fit": "可开发候选",
+    "signal": "Brighto 自主制造涂料，Red Oxide Primer 用于铁与钢表面的防锈防护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取官方About完整193行、RedOxidePrimer产品166行及BrightoChemicals原始HTML。About明确Lahore自有制漆厂及集团BrightoChemicals、合并SikkaEnterprises和UAE工厂，保守归为一个集团研究账户，海外分支不拆新增。集团化工页公开范围为建筑化学品、水泥基饰面、色浆、碳酸钙浆、通用色剂、醇酸树脂、粉末涂料和腻子；所读公开范围未见ELO、ESBO、环氧植物油或同类生物基改性增塑投入外售。普通大豆植物油用于自制醇酸树脂不等于销售环氧植物油，亦不证明实际采用ELO；有限范围同行排查通过，不称审过全部隐藏SKU或完整股权。RedOxidePrimer页明确铁钢防锈用途，不从自有醇酸厂推该底漆配方粘结料，也不照抄性能营销保证。About与产品页头部实际公布info@brightopaints.com及08000-1973，为公司通用入口，不冠以具名采购或WhatsApp；使用实际已读About页作为业务入口，不猜独立联系页URL。旧搜索提及保留，正式534条/私有源索引及Brighto/Sikka品牌域名查重无重复。坐标为Lahore城市级示意，不是厂门。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱及热线",
+      "email": "info@brightopaints.com",
+      "phone": "08000-1973",
+      "contactUrl": "https://brightopaints.com/pages/about-us"
+    },
+    "source": {
+      "label": "Official Brighto Red Oxide Primer product page",
+      "url": "https://brightopaints.com/products/brighto-red-oxide-primer"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"brighto-paints-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colorcroma-piliyandala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "zahra-peinture-kouinine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sippec-abidjan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12949,6 +12978,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"brighto-paints-lahore": {
+  "website": "https://brightopaints.com/",
+  "contactPage": "https://brightopaints.com/pages/about-us",
+  "address": "Lahore, Pakistan. Headquarters city stated in the company overview; map point is an approximate city-level illustration, not a verified factory entrance.",
+  "generalEmail": "info@brightopaints.com",
+  "generalEmailEvidence": {
+    "company": "Brighto Paints (Pvt.) Limited",
+    "value": "info@brightopaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Brighto official company overview header",
+        "url": "https://brightopaints.com/pages/about-us",
+        "summary": "Exact publicly displayed company general email in the official About header and corroborated by its own product-page header; no personal identity asserted."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "08000-1973",
+  "generalPhoneEvidence": {
+    "company": "Brighto Paints (Pvt.) Limited",
+    "value": "08000-1973",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Brighto official company overview header",
+        "url": "https://brightopaints.com/pages/about-us",
+        "summary": "Exact public business hotline displayed in the official company About header; preserve original format, no WhatsApp claim."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Brighto official own manufacturing and group history",
+      "url": "https://brightopaints.com/pages/about-us"
+    },
+    {
+      "label": "Brighto official Red Oxide Primer for iron and steel",
+      "url": "https://brightopaints.com/products/brighto-red-oxide-primer"
+    },
+    {
+      "label": "Brighto Chemicals official related-company product and business range",
+      "url": "https://brightochemicals.com/"
+    }
+  ]
+},
 "colorcroma-piliyandala": {
   "website": "https://www.colorcroma.lk/",
   "contactPage": "https://www.colorcroma.lk/contact.html",
@@ -39644,6 +39724,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"brighto-paints-lahore",
 "colorcroma-piliyandala",
 "zahra-peinture-kouinine",
 "sippec-abidjan",
