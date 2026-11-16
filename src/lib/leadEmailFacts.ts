@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"pak-japan-ink-karachi": "Your company profile lists PP woven-bag inks alongside solvent-based flexographic and rotogravure ink production.",
 "brighto-paints-lahore": "Your Brighto Red Oxide Primer is formulated to protect iron and steel surfaces from rust.",
 "colorcroma-piliyandala": "Your range includes solvent-based flexographic inks for PP film carrier bags.",
 "zahra-peinture-kouinine": "Your ZAHRA ANTIROULLE is an alkyd anticorrosion paint for metal structures.",

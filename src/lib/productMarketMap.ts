@@ -12438,11 +12438,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "pak-japan-ink-karachi",
+    "company": "Pak Japan Ink Corporation",
+    "productId": "cpp-cpo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Karachi（城市级示意点）",
+    "latitude": 24.86,
+    "longitude": 67.01,
+    "legacyCompanyDescription": "公开公司页自述在 Karachi 制造 PP 编织袋油墨，专注溶剂型柔印和凹印墨。",
+    "fit": "可开发候选",
+    "signal": "公开公司页自述在 Karachi 制造 PP 编织袋油墨，专注溶剂型柔印和凹印墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "实际读取102行完整公开LinkedIn公司页，About逐项明确manufacturer of polypropylene woven-bag inks及solvent flexo/rotogravure production，并披露Karachi企业业务地址；非把ChemicalManufacturing行业标签或搜索片段当生产证据。公开About及Specialties为成品油墨、溶剂涂层、NC清漆/糊及凹印墨，所读公开范围未见CPP/CPO、MAH改性聚烯烃或同类附着促进树脂原料外售；NC清漆/糊不直接等同CPP树脂。有限公开范围排查通过，不声称查看了完整隐藏目录、配方或SDS。按PakJapanInkCorporation/PJIC和公开地址跨产品去重无正式重复，名称Japan不推日本总部，LinkedIn推荐企业不当集团成员。公司页作为真实公开业务入口，未核验独立官网、邮箱、电话、具名人员当前任职或账号私信功能；不补造这些字段，不将LinkedIn根域名当公司官网，不把页面列出的员工转为采购联系人。核验日为本次独立读取日，provider注明缓存两个月，不推新投产、认证、实际采购或性能保证。坐标为Karachi城市级示意。"
+    },
+    "contact": {
+      "label": "公开 LinkedIn 公司页入口（无已核验邮箱或电话）",
+      "contactUrl": "https://pk.linkedin.com/company/pak-japan-ink-corporation"
+    },
+    "source": {
+      "label": "Pak Japan Ink Corporation public LinkedIn company About and specialties",
+      "url": "https://pk.linkedin.com/company/pak-japan-ink-corporation"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pak-japan-ink-karachi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "brighto-paints-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colorcroma-piliyandala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "zahra-peinture-kouinine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12978,6 +13005,20 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pak-japan-ink-karachi": {
+"website": undefined,
+  "linkedIn": "https://pk.linkedin.com/company/pak-japan-ink-corporation",
+  "contactPage": "https://pk.linkedin.com/company/pak-japan-ink-corporation",
+  "address": "Plot C28/C SherShah Road, Est Avenue, Maripur Road, Karachi, Sindh 75700, Pakistan. Address disclosed on the public company page; map point is approximate city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Pak Japan Ink Corporation public LinkedIn company About and specialties",
+      "url": "https://pk.linkedin.com/company/pak-japan-ink-corporation"
+    }
+  ]
+},
 "brighto-paints-lahore": {
   "website": "https://brightopaints.com/",
   "contactPage": "https://brightopaints.com/pages/about-us",
@@ -39724,6 +39765,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pak-japan-ink-karachi",
 "brighto-paints-lahore",
 "colorcroma-piliyandala",
 "zahra-peinture-kouinine",
