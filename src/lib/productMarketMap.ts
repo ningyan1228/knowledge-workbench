@@ -12603,11 +12603,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "prisma-industries-dakar",
+    "company": "Prisma Industries",
+    "productId": "elo",
+    "country": "Senegal",
+    "countryZh": "塞内加尔",
+    "city": "Dakar（城市级示意点）",
+    "latitude": 14.69,
+    "longitude": -17.45,
+    "legacyCompanyDescription": "Prisma 在塞内加尔自营制漆并设研发实验室；PRISMAFER 2 合 1 为醇酸基磷酸锌金属防锈底/面漆。",
+    "fit": "可开发候选",
+    "signal": "Prisma 在塞内加尔自营制漆并设研发实验室；PRISMAFER 2 合 1 为醇酸基磷酸锌金属防锈底/面漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取自有 PRISMAFER 2 合 1 产品、Contact 和 About 三页完整 HTML。About 的 Fabrication Locale 明确塞内加尔制造、自己的研发实验室及生产单元，产品页明确 Prisma 品牌、金属用途、磷酸锌和溶液型醇酸树脂，非仅凭商店销售判制造。已读业务/产品范围为成品涂料、底漆、腻子及稀释剂，未见 ELO、ESBO、环氧植物油或同类生物基增塑/改性投入品外售，有限公开范围排查通过，不声称审完未读取的所有 SKU、PDF 或隐藏集团业务。AkzoNobel 的独家合作和 Dulux/International 成品经销关系不证明股权归属，也不将其产品制造归为 Prisma；Prisma Industries/Prisma Industrie/PRISMAFER/同域名合并一个塞内加尔账户，不与墨西哥 Tintas para Impresión Prisma 按名称混并。当前线上541条、root、frontier、历史来源索引和队列查无此主体；保留旧发现与已核清 prior0 记录，不重设额度。邮箱 Info@prismaindustries.sn 与电话 +221 33 825 75 00 由实际读取的 HTTPS 联系页分别核验，保留公开原始格式，通用渠道不造具名采购人，电话不转 WhatsApp。ELO 仅作涂料柔韧/树脂改性潜在评估；实际用料、采购、配方相容和防腐改善均未知。Sodida 地址为公开商店/业务入口，城市级坐标不冒充厂门。共享发送记录未知，不作为未发送或可发批次。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、业务电话及联系页",
+      "email": "Info@prismaindustries.sn",
+      "phone": "+221 33 825 75 00",
+      "contactUrl": "https://www.prismaindustries.sn/contact-us/"
+    },
+    "source": {
+      "label": "Prisma official PRISMAFER 2-in-1 metal coating",
+      "url": "https://www.prismaindustries.sn/boutique-peinture-qualite/prisma-prismafer-2-en-1/"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"prisma-industries-dakar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "viet-specialty-polymers-nhon-trach": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "greentech-coatings-bien-hoa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "arirang-chemical-bien-hoa": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13149,6 +13178,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"prisma-industries-dakar": {
+  "website": "https://www.prismaindustries.sn/",
+  "contactPage": "https://www.prismaindustries.sn/contact-us/",
+  "generalEmail": "Info@prismaindustries.sn",
+  "generalEmailEvidence": {
+    "company": "Prisma Industries",
+    "value": "Info@prismaindustries.sn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Prisma Industries official Contact business email",
+        "url": "https://www.prismaindustries.sn/contact-us/",
+        "summary": "Actual HTTPS Contact page explicitly publishes Info@prismaindustries.sn. General company business channel; no named person or purchasing responsibility inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "+221 33 825 75 00",
+  "generalPhoneEvidence": {
+    "company": "Prisma Industries",
+    "value": "+221 33 825 75 00",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Prisma Industries official Contact business phone",
+        "url": "https://www.prismaindustries.sn/contact-us/",
+        "summary": "Actual HTTPS Contact page explicitly publishes +221 33 825 75 00. General company business channel; no named person or purchasing responsibility inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Prisma Store, Zone Industrielle Sodida, Avenue Bourguiba, Dakar, Senegal. Official business/store address; not a verified factory entrance. Map point is approximate city-level.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Prisma own local manufacturing, R&D and production unit",
+      "url": "https://www.prismaindustries.sn/qui-sommes-nous/"
+    },
+    {
+      "label": "Prisma PRISMAFER 2-in-1 metal application, alkyd binder and zinc phosphate",
+      "url": "https://www.prismaindustries.sn/boutique-peinture-qualite/prisma-prismafer-2-en-1/"
+    },
+    {
+      "label": "Prisma public business email, telephone and contact form",
+      "url": "https://www.prismaindustries.sn/contact-us/"
+    }
+  ]
+},
 "viet-specialty-polymers-nhon-trach": {
   "website": "https://vietspecialtypolymers.vn/",
   "contactPage": "https://vietspecialtypolymers.vn/",
@@ -40165,6 +40245,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"prisma-industries-dakar",
 "viet-specialty-polymers-nhon-trach",
 "greentech-coatings-bien-hoa",
 "arirang-chemical-bien-hoa",
