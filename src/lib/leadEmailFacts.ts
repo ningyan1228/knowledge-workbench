@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"rainbow-paints-ratnanagar": "Your Raino Gold is a water-based metallic coating for primed surfaces, including wood.",
 "prisma-industries-dakar": "Your PRISMAFER 2-in-1 is an alkyd-based zinc-phosphate anticorrosive primer and finish for metal surfaces.",
 "viet-specialty-polymers-nhon-trach": "Your W1600F waterborne wood-finishing system includes V-SAND sanding sealer alongside V-STAIN, V-MATT and V-GLOSS.",
 "greentech-coatings-bien-hoa": "Your Clear Water-Based Wood Primer 11.009 is a basecoat for wood furniture, MDF/HDF and veneer.",

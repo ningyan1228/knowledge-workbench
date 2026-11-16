@@ -12631,11 +12631,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "rainbow-paints-ratnanagar",
+    "company": "Rainbow Paints Nepal",
+    "productId": "nl-w1201",
+    "country": "Nepal",
+    "countryZh": "尼泊尔",
+    "city": "Ratnanagar（城市级示意点）",
+    "latitude": 27.617,
+    "longitude": 84.5,
+    "legacyCompanyDescription": "在尼泊尔自主制造水性及油性涂料；Raino Gold 为可用于经底层处理木材的水性丙烯酸金属效果装饰漆。",
+    "fit": "可开发候选",
+    "signal": "在尼泊尔自主制造水性及油性涂料；Raino Gold 为可用于经底层处理木材的水性丙烯酸金属效果装饰漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取RainoGold、About、Contact、完整20项Products及HomeProof五页HTML。About明确尼泊尔制造和水性/油性成品配方；RainoGold原页明确water-based、modified acrylic polymers、木材用途和须先做底层处理，不把金色效果当真实黄金成分，不推塑料具体树脂或未经底层木材效果。完整目录为成品乳胶/底漆/珐琅/装饰色/腻子/色浆调色机及混凝土助剂；单独读取HomeProof，明确用于混凝土施工并由Rainbow制配，不把提高混凝土粘结的营销表述误当目标PO/CPO附着促进原料。有限已读范围未见聚烯烃/CPO水性分散体或同类附着促进投入外售，不声称审完未读逐SKU配方或隐藏工商股权。rainbowpaints.com.np、Nepal、Ratnanagar/Pithuwa/Chitwan和Raino/SupremeMax/Maxell品牌合并一个主体；与孟加拉RFL Rainbow及印度RainbowIndustries按不同域名、国家和地址区分，当前正式542条/root/frontier/来源及排除索引/队列无此尼泊尔主体，不据同名推集团关系。About原文2074未标历法，不转换或采用为公历成立年份。邮箱在已读HTML中遮蔽，不解码或猜测；真实联系页表单和9855031577通用业务电话已核验，未造人名、邮箱或WhatsApp。NL-W1201按TDS木材表面处理/底涂附着促进方向作潜在评估，不推直接添加进RainoGold、配方相容、采购、耐候或附着增幅。地图为Ratnanagar城市级示意点，非16号区或厂门GPS。共享已发状态未知，不当未发送。"
+    },
+    "contact": {
+      "label": "官网联系表单及公司通用业务电话；邮箱未核验",
+      "phone": "9855031577",
+      "contactUrl": "https://rainbowpaints.com.np/contact-us/"
+    },
+    "source": {
+      "label": "Rainbow Nepal official Raino Gold water-based wood application",
+      "url": "https://rainbowpaints.com.np/our_products/raino-gold/"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"rainbow-paints-ratnanagar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "prisma-industries-dakar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "viet-specialty-polymers-nhon-trach": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "greentech-coatings-bien-hoa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13178,6 +13206,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"rainbow-paints-ratnanagar": {
+  "website": "https://rainbowpaints.com.np/",
+  "contactPage": "https://rainbowpaints.com.np/contact-us/",
+  "generalPhone": "9855031577",
+  "generalPhoneEvidence": {
+    "company": "Rainbow Paints Nepal",
+    "value": "9855031577",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Rainbow Paints Nepal official Contact general inquiry number",
+        "url": "https://rainbowpaints.com.np/contact-us/",
+        "summary": "Contact Information explicitly labels General Inquiry: 9855031577. Preserve published national format; no WhatsApp, named buyer or email inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Ratnanagar Municipality-16, Pithuwa, Chitwan, Nepal. Published business location. Coordinates are approximate municipality-level, not a verified factory gate or ward-16 point.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Raino Gold water-based coating and primed-wood application",
+      "url": "https://rainbowpaints.com.np/our_products/raino-gold/"
+    },
+    {
+      "label": "Official Nepal manufacturing and business range",
+      "url": "https://rainbowpaints.com.np/about/"
+    },
+    {
+      "label": "Official company contact form, phone and address",
+      "url": "https://rainbowpaints.com.np/contact-us/"
+    },
+    {
+      "label": "Official complete 20-item finished-product catalogue",
+      "url": "https://rainbowpaints.com.np/products/"
+    },
+    {
+      "label": "Official Home Proof concrete admixture boundary",
+      "url": "https://rainbowpaints.com.np/our_products/home-proof-admixture/"
+    }
+  ]
+},
 "prisma-industries-dakar": {
   "website": "https://www.prismaindustries.sn/",
   "contactPage": "https://www.prismaindustries.sn/contact-us/",
@@ -40245,6 +40317,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"rainbow-paints-ratnanagar",
 "prisma-industries-dakar",
 "viet-specialty-polymers-nhon-trach",
 "greentech-coatings-bien-hoa",
