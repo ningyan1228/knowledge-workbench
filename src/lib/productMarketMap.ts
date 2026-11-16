@@ -12491,11 +12491,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "rivershine-im-industrials-accra",
+    "company": "Rivershine Paint / I.M Industrials Ltd",
+    "productId": "elo",
+    "country": "Ghana",
+    "countryZh": "加纳",
+    "city": "Accra（城市级示意点）",
+    "latitude": 5.56,
+    "longitude": -0.2,
+    "legacyCompanyDescription": "I.M Industrials 在 Accra 自产涂料并通过 Rivershine 销售；Iron Proof 是用于金属屋面板的防锈涂层。",
+    "fit": "可开发候选",
+    "signal": "I.M Industrials 在 Accra 自产涂料并通过 Rivershine 销售；Iron Proof 是用于金属屋面板的防锈涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取 About、完整 Metal Paint 分类目录及 Iron Proof 产品页三份完整 HTML。About 明确 Rivershine 为 I.M Industrials Ltd 的零售部门且在 Accra 自产乳胶、油性、纹理、防水涂料和底漆；不是仅凭网店销售认定制造。Metal Paint 页完整显示两款产品，Iron Proof 页明确金属屋面板防锈用途和不加水稀释；不据 no water dilution 推定醇酸、聚氨酯或环氧配方，不把产品自身防锈营销转成 ELO 效果。已读产品分类和公司范围为成品涂料、底漆、胶黏剂、腻子、瓷砖辅料、溶剂/稀释剂；未见 ELO、ESBO、环氧植物油或同类生物基改性增塑原料外售。有限公开范围排查通过，不声称读过未请求的所有 SKU、SDS 或隐藏目录。About 的 I.M Industrials Ltd 与页脚 IM Industrial LTD 作为同站制造商拼写别名合并一个账户，不声称工商登记名称已另行核验；Rivershine/IM/Graphic Road 跨产品及正式 537 条去重无匹配。About 与产品页实际公开公司通用 Gmail、原格式业务电话；WhatsApp 仅采用页面明确的 wa.me/233594047042，不把语音电话自动当 WhatsApp，正文另列号码的歧义不生成额外渠道。共享已发送状态未读，不当未发送。ELO 只作涂料柔韧性/树脂改性潜在评估，采购、具体树脂、相容性和耐蚀提升未知。坐标为 Accra 城市级示意，非厂门定位。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、业务电话及公开 WhatsApp 链接",
+      "email": "rivershinepaint@gmail.com",
+      "phone": "054 441 1111",
+      "contactUrl": "https://rivershinepaint.com/about/"
+    },
+    "source": {
+      "label": "Rivershine official Iron Proof protective metal-roof paint",
+      "url": "https://rivershinepaint.com/product/iron-proof-paint/"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"rivershine-im-industrials-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tayf-ink-dilovasi": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
 "pak-japan-ink-karachi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "brighto-paints-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13033,6 +13062,58 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"rivershine-im-industrials-accra": {
+  "website": "https://rivershinepaint.com/",
+  "contactPage": "https://rivershinepaint.com/about/",
+  "generalEmail": "rivershinepaint@gmail.com",
+  "generalEmailEvidence": {
+    "company": "Rivershine Paint / I.M Industrials Ltd",
+    "value": "rivershinepaint@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Rivershine official About public business contacts",
+        "url": "https://rivershinepaint.com/about/",
+        "summary": "Official About footer explicitly publishes rivershinepaint@gmail.com; corroborated on the product page. General corporate channel, no named procurement identity."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "054 441 1111",
+  "generalPhoneEvidence": {
+    "company": "Rivershine Paint / I.M Industrials Ltd",
+    "value": "054 441 1111",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Rivershine official About public business contacts",
+        "url": "https://rivershinepaint.com/about/",
+        "summary": "Official About footer explicitly labels Phone: 054 441 1111. Preserve national format; separate WhatsApp link is not inferred from this voice telephone."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "whatsapp": "https://wa.me/233594047042",
+  "address": "Graphic Road, Accra, Ghana. The company About page identifies its own Accra production plant and Graphic Road location. Map point is approximate city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Rivershine own manufacturer relationship and official public business contacts",
+      "url": "https://rivershinepaint.com/about/"
+    },
+    {
+      "label": "Rivershine complete Metal Paint category, two products",
+      "url": "https://rivershinepaint.com/product-category/metal-paint/"
+    },
+    {
+      "label": "Rivershine Iron Proof product application",
+      "url": "https://rivershinepaint.com/product/iron-proof-paint/"
+    }
+  ]
+},
 "tayf-ink-dilovasi": {
   "website": "https://tayfink.com",
   "contactPage": "https://tayfink.com/contact?lang=en",
@@ -39852,6 +39933,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"rivershine-im-industrials-accra",
 "tayf-ink-dilovasi",
 "pak-japan-ink-karachi",
 "brighto-paints-lahore",
