@@ -12658,11 +12658,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "chromatic-paints-kampala",
+    "company": "Chromatic Paints (U) Ltd",
+    "productId": "elo",
+    "country": "Uganda",
+    "countryZh": "乌干达",
+    "city": "Kampala（城市级示意点）",
+    "latitude": 0.35,
+    "longitude": 32.58,
+    "legacyCompanyDescription": "在乌干达Namanve自营配制及生产涂料；公开产品组合包含工业漆和海事漆，工业涂料方向包括防腐。",
+    "fit": "可开发候选",
+    "signal": "在乌干达Namanve自营配制及生产涂料；公开产品组合包含工业漆和海事漆，工业涂料方向包括防腐。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取About、Industrial、ProductPortfolio和Contact四份HTML。About明确ChromaticPaints(U)Ltd/CPUL配方生产、2023年11月自Kasubi迁至Namanve生产场地；ProductPortfolio的FAQ明确we also manufacture automotive paints, marine paints, wood finishes, industrial paints等，About工业涂料段明确corrosion resistance。以公司实际制造产品组合及工厂建立需求链，不捏造未公开具体牌号、醇酸/PU/环氧粘结料、现用ELO或采购。Industrial页只有导航和Showing all8Products，没有产品正文，不作八款产品原件或完整目录证明。已读公司范围为成品装饰/工业/汽车/海事/地坪屋面/木器/路标涂料及稀释剂，有限范围未见ELO、ESBO、环氧植物油或同类生物基增塑改性投入品外售，不声称审完未读SKU、SDS或隐藏股权。按Chromatic/CPUL/chromaticpaintsug.com/chromaticug.com/Namanve和当前543条/root/frontier/来源索引/排除索引/队列查重，无同一主体；两个邮箱域名在同站披露，合并一个账户，不拆厂址。仅采用Contact正文及mailto共同公开的info@chromaticug.com和公开电话+256758524737；其他模板邮箱及Portfolio另一组号码不扩成额外联系人，通用邮箱不造采购姓名。WhatsApp虽有字样/号码描述，未核得可用公开跳转链接，不造wa.me或账号；LinkedIn后台管理URL不发布。ELO仅作工业/海事涂料柔韧和树脂改性潜在评估，不承诺防腐或相容改善。地图为Kampala城市级示意点，不冒充Namanve厂门。共享发送状态未知，不当未发。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、电话及联系表单",
+      "email": "info@chromaticug.com",
+      "phone": "+256758524737",
+      "contactUrl": "https://www.chromaticpaintsug.com/contact-us/"
+    },
+    "source": {
+      "label": "Chromatic official industrial and marine paint manufacture",
+      "url": "https://www.chromaticpaintsug.com/product-portfolio/"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chromatic-paints-kampala": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rainbow-paints-ratnanagar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "prisma-industries-dakar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "viet-specialty-polymers-nhon-trach": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13206,6 +13235,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chromatic-paints-kampala": {
+  "website": "https://www.chromaticpaintsug.com/",
+  "contactPage": "https://www.chromaticpaintsug.com/contact-us/",
+  "generalEmail": "info@chromaticug.com",
+  "generalEmailEvidence": {
+    "company": "Chromatic Paints (U) Ltd",
+    "value": "info@chromaticug.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chromatic official Contact corporate email",
+        "url": "https://www.chromaticpaintsug.com/contact-us/",
+        "summary": "Official Contact body explicitly publishes info@chromaticug.com; email is corroborated by literal mailto on that same page. General business route, no named procurement person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "+256758524737",
+  "generalPhoneEvidence": {
+    "company": "Chromatic Paints (U) Ltd",
+    "value": "+256758524737",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chromatic official Contact corporate phone",
+        "url": "https://www.chromaticpaintsug.com/contact-us/",
+        "summary": "Official Contact body explicitly publishes +256758524737; email is corroborated by literal mailto on that same page. General business route, no named procurement person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Plot 1435, Block 113, Kampala Industrial & Business Park, Namanve, P.O. Box 100522, Kampala, Uganda. Official production/business address. Map marker is approximate Kampala city-level, not a verified Namanve factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official own paint formulation, production and Namanve plant relocation",
+      "url": "https://www.chromaticpaintsug.com/about-us/"
+    },
+    {
+      "label": "Official portfolio and FAQ expressly manufacture industrial and marine paints",
+      "url": "https://www.chromaticpaintsug.com/product-portfolio/"
+    },
+    {
+      "label": "Official company business email, phone and contact form",
+      "url": "https://www.chromaticpaintsug.com/contact-us/"
+    }
+  ]
+},
 "rainbow-paints-ratnanagar": {
   "website": "https://rainbowpaints.com.np/",
   "contactPage": "https://rainbowpaints.com.np/contact-us/",
@@ -40317,6 +40397,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chromatic-paints-kampala",
 "rainbow-paints-ratnanagar",
 "prisma-industries-dakar",
 "viet-specialty-polymers-nhon-trach",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"chromatic-paints-kampala": "You manufacture industrial and marine paints at your Namanve production facility in Uganda.",
 "rainbow-paints-ratnanagar": "Your Raino Gold is a water-based metallic coating for primed surfaces, including wood.",
 "prisma-industries-dakar": "Your PRISMAFER 2-in-1 is an alkyd-based zinc-phosphate anticorrosive primer and finish for metal surfaces.",
 "viet-specialty-polymers-nhon-trach": "Your W1600F waterborne wood-finishing system includes V-SAND sanding sealer alongside V-STAIN, V-MATT and V-GLOSS.",
