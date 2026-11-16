@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"colorcroma-piliyandala": "Your range includes solvent-based flexographic inks for PP film carrier bags.",
 "zahra-peinture-kouinine": "Your ZAHRA ANTIROULLE is an alkyd anticorrosion paint for metal structures.",
 "sippec-abidjan": "Your SIPPEC Antirouille Primaire is an alkyd anticorrosion primer for metal surfaces.",
 "sapeint-bordj-bou-arreridj": "You manufacture SAPANTIROUILLE, an alkyd anticorrosion paint for protecting metal structures in mildly corrosive industrial settings.",

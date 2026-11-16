@@ -12383,11 +12383,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "colorcroma-piliyandala",
+    "company": "Colorcroma (Pvt) Ltd",
+    "productId": "cpp-cpo",
+    "country": "Sri Lanka",
+    "countryZh": "斯里兰卡",
+    "city": "Piliyandala（城市级示意点）",
+    "latitude": 6.8,
+    "longitude": 79.92,
+    "legacyCompanyDescription": "官网自述在斯里兰卡制造油墨并进行生产质控，集团产品含 PP 薄膜用溶剂型柔印墨。",
+    "fit": "可开发候选",
+    "signal": "官网自述在斯里兰卡制造油墨并进行生产质控，集团产品含 PP 薄膜用溶剂型柔印墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "实际独立读取官方About、Products、Services及Contact四份原始provider正文。About明确油墨制造及内部质量团队控制制造过程，产品范围列入PP薄膜购物袋用溶剂型柔印墨，并说明由姐妹公司Asianchem协助提供；按Colorcroma/Asianchem一个集团研究与需求侧账户保守合并，不声称已证明哪一个法人独立生产每个系列或最终股权。所读业务范围为成品油墨、涂层、印刷化学品与技术服务，未见CPP/CPO、MAH改性聚烯烃或同类附着促进树脂原料对外销售，同行排除结论限已读公开范围。Contact公布电话0094 11 4923154及表单入口，未见邮箱，不猜邮箱或WhatsApp，不造具名采购人。Colorcroma/Clorcroma/Asianchem别名、国家、域名、地址及旧研究/正式533条全查无正式重复；仅过去搜索提及。Flupack PDF工具返回零可读行、直接下载超时，均计额度且不采用其名称或技术参数作准入证据；实际采用About的PP溶剂墨事实。终身集团6/6 STOP，指南不当完整逐牌号TDS，PP薄膜不当CPP树脂。城市级近似点不称厂门坐标；实际原料、采购、相容性、性能均未确认。"
+    },
+    "contact": {
+      "label": "官网联系表单与公开商务电话（无已核验邮箱）",
+      "phone": "0094 11 4923154",
+      "contactUrl": "https://www.colorcroma.lk/contact.html"
+    },
+    "source": {
+      "label": "Official Colorcroma manufacturing and PP solvent flexographic ink overview",
+      "url": "https://www.colorcroma.lk/about.html"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"colorcroma-piliyandala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "zahra-peinture-kouinine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sippec-abidjan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sapeint-bordj-bou-arreridj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -12921,6 +12949,46 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"colorcroma-piliyandala": {
+  "website": "https://www.colorcroma.lk/",
+  "contactPage": "https://www.colorcroma.lk/contact.html",
+  "address": "No. 218/1B, Makuluduwa Road, Bokundara, Piliyandala 10300, Sri Lanka. City-level approximate map point; not a verified factory entrance.",
+  "generalPhone": "0094 11 4923154",
+  "generalPhoneEvidence": {
+    "company": "Colorcroma (Pvt) Ltd",
+    "value": "0094 11 4923154",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Colorcroma official contact page",
+        "url": "https://www.colorcroma.lk/contact.html",
+        "summary": "Public general company business phone shown as Phone:0094 11 4923154; no named person or WhatsApp asserted."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Colorcroma official manufacturing and group PP solvent ink portfolio",
+      "url": "https://www.colorcroma.lk/about.html"
+    },
+    {
+      "label": "Colorcroma official visible product categories",
+      "url": "https://www.colorcroma.lk/services.html"
+    },
+    {
+      "label": "Colorcroma official technical and ink processing services",
+      "url": "https://www.colorcroma.lk/services1.html"
+    },
+    {
+      "label": "Colorcroma official contact page",
+      "url": "https://www.colorcroma.lk/contact.html"
+    }
+  ]
+},
 "zahra-peinture-kouinine": {
   "website": "https://zahrapeinture.dz/",
   "contactPage": "https://zahrapeinture.dz/contact/",
@@ -39576,6 +39644,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"colorcroma-piliyandala",
 "zahra-peinture-kouinine",
 "sippec-abidjan",
 "sapeint-bordj-bou-arreridj",
