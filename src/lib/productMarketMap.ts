@@ -12355,11 +12355,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-15"
   },
+  {
+    "id": "zahra-peinture-kouinine",
+    "company": "SARL Zahra Peinture",
+    "productId": "elo",
+    "country": "Algeria",
+    "countryZh": "阿尔及利亚",
+    "city": "Kouinine / El Oued（城市级示意点）",
+    "latitude": 33.4,
+    "longitude": 6.85,
+    "legacyCompanyDescription": "SARL Zahra Peinture 自主制漆，ZAHRA ANTIROULLE 为用于金属结构防腐的醇酸防锈漆。",
+    "fit": "可开发候选",
+    "signal": "SARL Zahra Peinture 自主制漆，ZAHRA ANTIROULLE 为用于金属结构防腐的醇酸防锈漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取官方单页防锈漆TDS及公司介绍、完整可见产品目录、联系页原始HTML。公司明确阿尔及利亚自有工厂生产；所读目录为成品涂料、腻子、定色/底涂产品及木工胶，未见ELO、ESBO、环氧植物油或同类改性增塑投入外售，结论限已读公开业务范围。官网公司名称、国家、Kouinine/El Oued地址、域名和品牌与现行532条公开数据及私有源索引查重，无正式重复，不以营销或联系人资料推采购。TDS上Yahoo邮箱及电话属于旧资料渠道，采用现行联系页明确公布的通用商务邮箱contact@zahrapeinture.dz和原格式电话0560445689；不创建具名采购人、不把电话当WhatsApp。坐标为城市级近似示意，不声称精确厂址。六次公司请求包含两次超时，累计6/6停止。"
+    },
+    "contact": {
+      "label": "官网通用商务邮箱与公司电话",
+      "email": "contact@zahrapeinture.dz",
+      "phone": "0560445689",
+      "contactUrl": "https://zahrapeinture.dz/contact/"
+    },
+    "source": {
+      "label": "Official Zahra ANTIROULLE technical data sheet",
+      "url": "https://zahrapeinture.dz/wp-content/uploads/2025/04/FT-a-base-de-solvant-copy_0002-0002.pdf"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"zahra-peinture-kouinine": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sippec-abidjan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sapeint-bordj-bou-arreridj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "queen-chemical-new-damietta": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12892,6 +12921,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"zahra-peinture-kouinine": {
+  "website": "https://zahrapeinture.dz/",
+  "contactPage": "https://zahrapeinture.dz/contact/",
+  "address": "Zone industrielle Kouinine, Wilaya El Oued, Algeria. Map point is an approximate city-level illustration, not a verified factory entrance.",
+  "generalEmail": "contact@zahrapeinture.dz",
+  "generalEmailEvidence": {
+    "company": "SARL Zahra Peinture",
+    "value": "contact@zahrapeinture.dz",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Zahra official contact page",
+        "url": "https://zahrapeinture.dz/contact/",
+        "summary": "Exact public company business email displayed under Email on the official contact page; a general company route, no named person asserted."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "0560445689",
+  "generalPhoneEvidence": {
+    "company": "SARL Zahra Peinture",
+    "value": "0560445689",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Zahra official contact page",
+        "url": "https://zahrapeinture.dz/contact/",
+        "summary": "Exact original-format business telephone displayed under Téléphone on the official contact page; no WhatsApp capability asserted."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official Zahra ANTIROULLE technical data sheet",
+      "url": "https://zahrapeinture.dz/wp-content/uploads/2025/04/FT-a-base-de-solvant-copy_0002-0002.pdf"
+    },
+    {
+      "label": "Zahra official factory and manufacturing presentation",
+      "url": "https://zahrapeinture.dz/presentation/"
+    },
+    {
+      "label": "Zahra official complete visible finished-product catalogue",
+      "url": "https://zahrapeinture.dz/nos-produits/"
+    },
+    {
+      "label": "Zahra official contact page",
+      "url": "https://zahrapeinture.dz/contact/"
+    }
+  ]
+},
 "sippec-abidjan": {
   "website": "https://www.sippec.ci/",
   "contactPage": "https://www.sippec.ci/peintures/contacts",
@@ -39492,6 +39576,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"zahra-peinture-kouinine",
 "sippec-abidjan",
 "sapeint-bordj-bou-arreridj",
 "queen-chemical-new-damietta",
