@@ -12519,11 +12519,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "arirang-chemical-bien-hoa",
+    "company": "Arirang Chemical Co., Ltd.",
+    "productId": "cpp-cpo",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Bien Hoa（城市级示意点）",
+    "latitude": 10.95,
+    "longitude": 106.82,
+    "legacyCompanyDescription": "在越南自主生产凹印墨；COSMOS OPP 薄膜油墨明确列有乙烯基、CPP、EVA 树脂体系及溶剂型选项。",
+    "fit": "可开发候选",
+    "signal": "在越南自主生产凹印墨；COSMOS OPP 薄膜油墨明确列有乙烯基、CPP、EVA 树脂体系及溶剂型选项。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取 Gravure Ink 产品页、官网首页和越南语介绍页三份完整 HTML；另一次介绍页无尾斜杠请求实际返回301，随后目标单独计一次，共四个来源单位。介绍原文明确在越南生产凹印墨、柔印墨、色母及碳酸钙填充粒。官网导航公开产品家族为成品凹印墨、柔印墨和母粒；COSMOS 列 Vinyl/CPP/EVA resin base ink，CPP 是下游油墨体系成分，不等于对外销售 CPP 树脂。所读公开范围未见 CPP/CPO、MAH 改性聚烯烃或同类附着促进树脂原料外售；色母/填充母粒及泛称 chemical 不自动等同目标树脂同行。有限公开范围排查通过，不声称读过隐藏目录、全部母粒 SKU、SDS 或工商股权。Arirang/AIC、英文名与越南语 Công ty TNHH Liên Doanh Hóa Chất Arirang 及 Loteco 地址作为同一越南账户跨产品去重，现行538条正式客户无匹配；韩国技术不推韩国母公司或新分支。公开公司 Gmail 不按 shin 字样捏造具名负责人；原文电话为 (+84) 251 3993 334 ~ 7，只保留该范围中明确写出的首个完整号码，不展开或猜分机/WhatsApp。以实际已读介绍页作为公开业务入口。COSMOS 的 LRS/Non-toluene 选项不代表全部系列同一溶剂，更不作为我方食品接触、无甲苯、牌号相容或性能承诺。无当前采购证据，仍为潜在评估账户。坐标是 Bien Hoa 城市级示意，不是工厂门口实测。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱及公开电话",
+      "email": "arirangshin@gmail.com",
+      "phone": "+84 251 3993 334",
+      "contactUrl": "https://arirangchemical.com/gioi-thieu/"
+    },
+    "source": {
+      "label": "Arirang official gravure ink products, COSMOS OPP resin system",
+      "url": "https://arirangchemical.com/gravure-ink-en/"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"arirang-chemical-bien-hoa": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "rivershine-im-industrials-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tayf-ink-dilovasi": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
 "pak-japan-ink-karachi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13062,6 +13091,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"arirang-chemical-bien-hoa": {
+  "website": "https://arirangchemical.com/",
+  "contactPage": "https://arirangchemical.com/gioi-thieu/",
+  "generalEmail": "arirangshin@gmail.com",
+  "generalEmailEvidence": {
+    "company": "Arirang Chemical Co., Ltd.",
+    "value": "arirangshin@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Arirang official introduction company business contact footer",
+        "url": "https://arirangchemical.com/gioi-thieu/",
+        "summary": "The official introduction footer explicitly publishes arirangshin@gmail.com as company email, corroborated on the gravure product page. No named mailbox ownership inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "+84 251 3993 334",
+  "generalPhoneEvidence": {
+    "company": "Arirang Chemical Co., Ltd.",
+    "value": "+84 251 3993 334",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Arirang official introduction company business contact footer",
+        "url": "https://arirangchemical.com/gioi-thieu/",
+        "summary": "Original public range: (+84) 251 3993 334 ~ 7. Store only the explicitly written first complete telephone +84 251 3993 334; no invented extra numbers, extensions or WhatsApp."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Lot D-11.2, Road 5, Loteco Industrial Zone, Bien Hoa City, Dong Nai, Vietnam. Official company address; map point is approximate city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Arirang own Vietnam gravure/flexo ink manufacturing",
+      "url": "https://arirangchemical.com/gioi-thieu/"
+    },
+    {
+      "label": "Arirang COSMOS OPP ink CPP resin system",
+      "url": "https://arirangchemical.com/gravure-ink-en/"
+    },
+    {
+      "label": "Arirang official home product navigation and business identity",
+      "url": "https://arirangchemical.com/"
+    }
+  ]
+},
 "rivershine-im-industrials-accra": {
   "website": "https://rivershinepaint.com/",
   "contactPage": "https://rivershinepaint.com/about/",
@@ -39933,6 +40013,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"arirang-chemical-bien-hoa",
 "rivershine-im-industrials-accra",
 "tayf-ink-dilovasi",
 "pak-japan-ink-karachi",

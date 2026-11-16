@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"arirang-chemical-bien-hoa": "Your COSMOS gravure ink for OPP film lists vinyl, CPP and EVA resin systems, with solvent-based options.",
 "rivershine-im-industrials-accra": "Your Iron Proof paint is an anti-rust coating for restoring metal roofing sheets.",
 "tayf-ink-dilovasi": "Your PolyTone TP series is a water-based flexographic ink for PE-coated cups and laminated packaging.",
 "pak-japan-ink-karachi": "Your company profile lists PP woven-bag inks alongside solvent-based flexographic and rotogravure ink production.",
