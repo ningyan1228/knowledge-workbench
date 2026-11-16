@@ -12686,11 +12686,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "peruvian-colors-ventanilla",
+    "company": "Peruvian Colors",
+    "productId": "cpp-cpo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Ventanilla（城市级示意点）",
+    "latitude": -11.86,
+    "longitude": -77.07,
+    "legacyCompanyDescription": "在秘鲁自主研发制造丝印墨；POLIFLEX为用于预处理PP/PE薄膜、塑料袋及编织袋的溶剂型丝印墨。",
+    "fit": "可开发候选",
+    "signal": "在秘鲁自主研发制造丝印墨；POLIFLEX为用于预处理PP/PE薄膜、塑料袋及编织袋的溶剂型丝印墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "POLIFLEX原页明确serigráficas base solvente及PE/PP pretratados，不推未处理膜效果。Home明确研发、配方、自制丝印墨和图文/纺织成品系列；27年/环保/Intertek/食品接触等自述不作认证或我方合规事实。Complementos完整可见内容列干燥缓凝/加速、清洗、消光/增稠/珠光及配墨清漆，未见CPP/CPO/MAH聚烯烃或同类附着树脂外售；普通溶剂、配墨基料/清漆和丝印感光产品不自动等同CPP原料，有限范围排查通过，不宣称审过未读逐项TDS、配方及全部隐藏业务。三个原文页均公开通用邮箱及原格式电话；同页产品询问表单仅作入口，未提交。没有具名采购人或WhatsApp链接，不造人名/账号。地图按已读Ventanilla区位资料取两位小数示意，不作厂门定位。 沿用既有NipponPaper/SUPERCHLON独立CPP油墨应用扩展，MAH改性CPP/CPO仅潜在PP附着/粘度/溶剂体系逐牌号评估；客户现用树脂、我方牌号相容、采购和性能未确认，不转用NL-W1201或ELO功能，不推未处理PP、无卤或食品接触认证。共享发送台账未知，不当未发送。"
+    },
+    "contact": {
+      "label": "公司通用业务邮箱、电话及公开询问入口",
+      "email": "info@peruviancolors.com.pe",
+      "phone": "(511) 534 8393",
+      "contactUrl": "https://peruviancolors.com.pe/poliflex/"
+    },
+    "source": {
+      "label": "Peruvian Colors official PP solvent printing ink",
+      "url": "https://peruviancolors.com.pe/poliflex/"
+    },
+    "checkedAt": "2026-11-16"
+  },
+  {
+    "id": "corporacion-prismacolor-lima",
+    "company": "Corporación Prismacolor S.A. (CORPRISA)",
+    "productId": "cpp-cpo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Lima（城市级示意点）",
+    "latitude": -12.05,
+    "longitude": -77.04,
+    "legacyCompanyDescription": "在秘鲁自主研发制造图文油墨；Flexopol为含醇/酯类溶剂、用于PP/PE等薄膜的柔印墨。",
+    "fit": "可开发候选",
+    "signal": "在秘鲁自主研发制造图文油墨；Flexopol为含醇/酯类溶剂、用于PP/PE等薄膜的柔印墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "Productos原HTML的两个独立tab已分开核验：Hidroflex为水性纸基，pH8.5–9.5属于该水墨；Flexopol独立tab明确synthetic resins、alcoholes y acetatos及PP/PE，不把水墨参数或纸基事实拼进溶剂墨。Nosotros明确desarrollo/fabricación及设备、生产质控，页脚与联系页同属CorporaciónPrismacolor。完整可见经营内容为溶剂/水性柔印成品墨、胶印墨、PU泡沫着色色浆、配墨/罩光清漆、钴催干及辊清洗剂；Aditivos通用标题不等于已证外售CPP/CPO附着树脂，所读范围未见同类原料，有限范围排查通过，不声称审完未公开化学成分或所有SKU。PU着色色浆不当PP基材证明，synthetic resins是油墨配方描述，不是对外树脂原料销售。当前联系页公开corprisa@及+5113238673，页脚DJr/T/E为排版前缀不拼成地址/电话/邮箱，通用业务渠道不造负责人。与墨西哥TintasPrisma、塞内加尔PrismaIndustries、摩洛哥prismacolor.ma按国家/域名/地址区分，不靠名称混并，不推隐藏股权已审。 沿用既有NipponPaper/SUPERCHLON独立CPP油墨应用扩展，MAH改性CPP/CPO仅潜在PP附着/粘度/溶剂体系逐牌号评估；客户现用树脂、我方牌号相容、采购和性能未确认，不转用NL-W1201或ELO功能，不推未处理PP、无卤或食品接触认证。共享发送台账未知，不当未发送。"
+    },
+    "contact": {
+      "label": "公司通用业务邮箱、电话及公开询问入口",
+      "email": "corprisa@corprisa.com.pe",
+      "phone": "+511 323 8673",
+      "contactUrl": "https://www.corprisa.com.pe/contactenos.html"
+    },
+    "source": {
+      "label": "Corporación Prismacolor S.A. (CORPRISA) official PP solvent printing ink",
+      "url": "https://www.corprisa.com.pe/productos.html"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"corporacion-prismacolor-lima": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
+"peruvian-colors-ventanilla": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chromatic-paints-kampala": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rainbow-paints-ratnanagar": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "prisma-industries-dakar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13235,6 +13293,108 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"corporacion-prismacolor-lima": {
+  "website": "https://www.corprisa.com.pe/",
+  "contactPage": "https://www.corprisa.com.pe/contactenos.html",
+  "generalEmail": "corprisa@corprisa.com.pe",
+  "generalEmailEvidence": {
+    "company": "Corporación Prismacolor S.A. (CORPRISA)",
+    "value": "corprisa@corprisa.com.pe",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Corporación Prismacolor S.A. (CORPRISA) official corporate email",
+        "url": "https://www.corprisa.com.pe/contactenos.html",
+        "summary": "This actual official page explicitly publishes corprisa@corprisa.com.pe as the company business channel. No named person or procurement role inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "+511 323 8673",
+  "generalPhoneEvidence": {
+    "company": "Corporación Prismacolor S.A. (CORPRISA)",
+    "value": "+511 323 8673",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Corporación Prismacolor S.A. (CORPRISA) official corporate phone",
+        "url": "https://www.corprisa.com.pe/contactenos.html",
+        "summary": "This actual official page explicitly publishes +511 323 8673 as the company business channel. No named person or procurement role inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Jr. Augusto Durand 2485, San Luis, Lima, Peru. Official published business location. Map coordinates are approximate Lima city-level, not a verified factory gate.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Corporación Prismacolor S.A. (CORPRISA) independently read official original",
+      "url": "https://www.corprisa.com.pe/productos.html"
+    },
+    {
+      "label": "Corporación Prismacolor S.A. (CORPRISA) independently read official original",
+      "url": "https://www.corprisa.com.pe/nosotros.html"
+    },
+    {
+      "label": "Corporación Prismacolor S.A. (CORPRISA) independently read official original",
+      "url": "https://www.corprisa.com.pe/contactenos.html"
+    }
+  ]
+},
+"peruvian-colors-ventanilla": {
+  "website": "https://peruviancolors.com.pe/",
+  "contactPage": "https://peruviancolors.com.pe/poliflex/",
+  "generalEmail": "info@peruviancolors.com.pe",
+  "generalEmailEvidence": {
+    "company": "Peruvian Colors",
+    "value": "info@peruviancolors.com.pe",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Peruvian Colors official corporate email",
+        "url": "https://peruviancolors.com.pe/poliflex/",
+        "summary": "This actual official page explicitly publishes info@peruviancolors.com.pe as the company business channel. No named person or procurement role inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "(511) 534 8393",
+  "generalPhoneEvidence": {
+    "company": "Peruvian Colors",
+    "value": "(511) 534 8393",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Peruvian Colors official corporate phone",
+        "url": "https://peruviancolors.com.pe/poliflex/",
+        "summary": "This actual official page explicitly publishes (511) 534 8393 as the company business channel. No named person or procurement role inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Calle río Apurímac 03-04, agrupación poblacional Casa Huerta Virgen de las Mercedes, Ventanilla, Peru. Published business address; map coordinates are rounded district-level, not a verified factory gate.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Peruvian Colors independently read official original",
+      "url": "https://peruviancolors.com.pe/poliflex/"
+    },
+    {
+      "label": "Peruvian Colors independently read official original",
+      "url": "https://peruviancolors.com.pe/"
+    },
+    {
+      "label": "Peruvian Colors independently read official original",
+      "url": "https://peruviancolors.com.pe/complementos/"
+    }
+  ]
+},
 "chromatic-paints-kampala": {
   "website": "https://www.chromaticpaintsug.com/",
   "contactPage": "https://www.chromaticpaintsug.com/contact-us/",
@@ -40397,6 +40557,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"corporacion-prismacolor-lima",
+"peruvian-colors-ventanilla",
 "chromatic-paints-kampala",
 "rainbow-paints-ratnanagar",
 "prisma-industries-dakar",

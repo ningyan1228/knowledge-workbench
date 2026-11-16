@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"corporacion-prismacolor-lima": "Your Flexopol solvent-based flexographic inks list polypropylene among their printable substrates.",
+"peruvian-colors-ventanilla": "Your POLIFLEX solvent-based screen printing inks are made for pretreated polyethylene and polypropylene flexible materials.",
 "chromatic-paints-kampala": "You manufacture industrial and marine paints at your Namanve production facility in Uganda.",
 "rainbow-paints-ratnanagar": "Your Raino Gold is a water-based metallic coating for primed surfaces, including wood.",
 "prisma-industries-dakar": "Your PRISMAFER 2-in-1 is an alkyd-based zinc-phosphate anticorrosive primer and finish for metal surfaces.",
