@@ -12464,11 +12464,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "tayf-ink-dilovasi",
+    "company": "TAYF Matbaa Mürekkepleri A.Ş.",
+    "productId": "nl-w1201",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Dilovası（城市级示意点）",
+    "latitude": 40.78,
+    "longitude": 29.54,
+    "legacyCompanyDescription": "在 Dilovası 自主生产水性柔印墨；PolyTone TP 明确用于 PE 涂层杯及 PE 覆面复合包装印刷。",
+    "fit": "可开发候选",
+    "signal": "在 Dilovası 自主生产水性柔印墨；PolyTone TP 明确用于 PE 涂层杯及 PE 覆面复合包装印刷。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "独立读取官网 About、PolyTone、Contact、MicroPaste/Varmix、Lacquers 五页完整 HTML；生产历史、土耳其 Dilovası 工厂与阿尔及利亚生产据点同属 Tayf 一个账户。PolyTone TP 明确为 PE 涂层包装水性柔印墨，不把纸张水墨与另一款溶剂塑料墨拼接。已读相关业务范围为成品水性柔印墨、色浆/调墨清漆和纸包装光油及辅助化学品；MicroPaste/Varmix 是调墨色浆与清漆，不据泛称 varnish 将其认定为同类聚烯烃分散体。所读页面未见 PO/CPO 水性分散体、NL-W1201 同类聚烯烃附着促进原料外售，有限公开范围排查通过；不声称核查未读取的全部逐型号 TDS、隐藏配方或 SDS。沿用 ICHEMCO 已有独立扩展作 PE 水性油墨底涂评估，不推直接加入油墨相容、未处理膜效果或食品接触批准。tayfink.com、历史 tayf.biz、Tayf/TAYF 品牌与阿尔及利亚工厂跨产品合并去重，现行 536 条正式数据无匹配；不把相似拼写 Tiflex 合并。邮箱和电话为公司通用业务渠道，不冒称采购负责人或 WhatsApp。坐标仅 Dilovası 城市级示意，非工厂定位。"
+    },
+    "contact": {
+      "label": "公司通用业务邮箱及官网联系入口",
+      "email": "info@tayfink.com",
+      "contactUrl": "https://tayfink.com/contact?lang=en"
+    },
+    "source": {
+      "label": "Tayf PolyTone TP water-based flexographic ink for PE-coated packaging",
+      "url": "https://tayfink.com/polytone?lang=en"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"tayf-ink-dilovasi": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
 "pak-japan-ink-karachi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "brighto-paints-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colorcroma-piliyandala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13005,6 +13033,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"tayf-ink-dilovasi": {
+  "website": "https://tayfink.com",
+  "contactPage": "https://tayfink.com/contact?lang=en",
+  "generalEmail": "info@tayfink.com",
+  "generalEmailEvidence": {
+    "company": "TAYF Matbaa Mürekkepleri A.Ş.",
+    "value": "info@tayfink.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Tayf official head office and factory business contacts",
+        "url": "https://tayfink.com/contact?lang=en",
+        "summary": "Contact 页为总部和工厂均公开 info@tayfink.com，属于通用公司邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "+90 (212) 486 18 88",
+  "generalPhoneEvidence": {
+    "company": "TAYF Matbaa Mürekkepleri A.Ş.",
+    "value": "+90 (212) 486 18 88",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Tayf official head office and factory business contacts",
+        "url": "https://tayfink.com/contact?lang=en",
+        "summary": "Contact 页为总部和工厂公开同一公司业务电话；不推 WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Factory: Dilovası 4th Organized Industrial Zone, Karasu Street No: 7/1, Dilovası / Kocaeli / Türkiye. Head office: İmrahor Street, Kervansaray Avenue, Maksem Business Center No: 30, Floor: 1, Sütlüce / Beyoğlu / Istanbul / Türkiye. Map point is approximate city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Tayf own water-based ink manufacturing history",
+      "url": "https://tayfink.com/about"
+    },
+    {
+      "label": "Tayf PolyTone TP PE packaging ink",
+      "url": "https://tayfink.com/polytone?lang=en"
+    },
+    {
+      "label": "Tayf official public business contact page",
+      "url": "https://tayfink.com/contact?lang=en"
+    },
+    {
+      "label": "Tayf dispensing pigment paste and ink varnish scope",
+      "url": "https://tayfink.com/micropaste-varmix?lang=en"
+    },
+    {
+      "label": "Tayf final-print lacquer scope",
+      "url": "https://tayfink.com/varnishes-and-lacks?lang=en"
+    }
+  ]
+},
 "pak-japan-ink-karachi": {
 "website": undefined,
   "linkedIn": "https://pk.linkedin.com/company/pak-japan-ink-corporation",
@@ -39765,6 +39852,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"tayf-ink-dilovasi",
 "pak-japan-ink-karachi",
 "brighto-paints-lahore",
 "colorcroma-piliyandala",
