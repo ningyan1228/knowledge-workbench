@@ -12328,11 +12328,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-15"
   },
+  {
+    "id": "sippec-abidjan",
+    "company": "SIPPEC",
+    "productId": "elo",
+    "country": "Côte d’Ivoire",
+    "countryZh": "科特迪瓦",
+    "city": "Abidjan（城市级示意点）",
+    "latitude": 5.309,
+    "longitude": -4.012,
+    "legacyCompanyDescription": "SIPPEC 自主制造涂料，Antirouille Primaire 为自有品牌的金属用醇酸防锈底漆。",
+    "fit": "可开发候选",
+    "signal": "SIPPEC 自主制造涂料，Antirouille Primaire 为自有品牌的金属用醇酸防锈底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-15",
+      "conclusion": "实际完整读取官网产品、公司及联络页三个原始返回。公司介绍列出涂料生产业务及覆盖涂料生产的历史质量体系描述，未据此推定当前认证状态。Antirouille Primaire 归 SIPPEC 品牌，是用于金属的醇酸型防锈底漆。公司可见业务还涉及成品管材、塑料配件、成品涂料、木器产品、酸类和通用色浆；在该公开导航、公司范围及相关产品所读内容中未见 ELO、ESBO、环氧植物油或同类改性增塑剂作为外售材料，不对未公开的全量产品作范围外断言。采购部和总机有公开电话及联系页；官网邮件经过遮蔽，未作为可用收件地址。采购部一般性的原料供应入口不表示有该原料的具体采购。公司与 SIPPEC 品牌和官网按一主体，科特迪瓦最新正式库、新旧研究和域名查重无重复。Abidjan 标点是城市级示意。ELO 潜在配方评估不意味着现用、采购、相容性或防腐性能保证。"
+    },
+    "contact": {
+      "label": "官网采购部联系入口及公司总机",
+      "phone": "+225 27 23 53 64 64",
+      "contactUrl": "https://www.sippec.ci/peintures/contacts"
+    },
+    "source": {
+      "label": "Official SIPPEC Antirouille Primaire product page",
+      "url": "https://www.sippec.ci/peintures/les-solutions-pour-lexterieur/anticorrosion/les-antirouilles/antirouille-primaire"
+    },
+    "checkedAt": "2026-11-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sippec-abidjan": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sapeint-bordj-bou-arreridj": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "queen-chemical-new-damietta": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "clq-colorquimica-la-estrella": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -12864,6 +12892,42 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sippec-abidjan": {
+  "website": "https://www.sippec.ci/",
+  "contactPage": "https://www.sippec.ci/peintures/contacts",
+  "address": "Abidjan, Côte d’Ivoire. City-level map point.",
+  "generalPhone": "+225 27 23 53 64 64",
+  "generalPhoneEvidence": {
+    "company": "SIPPEC",
+    "value": "+225 27 23 53 64 64",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SIPPEC official help and contact block",
+        "url": "https://www.sippec.ci/peintures/contacts",
+        "summary": "Published public general help/switchboard phone (+225) 27 23 53 64 64 under Aide & Contact."
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Official SIPPEC Antirouille Primaire product page",
+      "url": "https://www.sippec.ci/peintures/les-solutions-pour-lexterieur/anticorrosion/les-antirouilles/antirouille-primaire"
+    },
+    {
+      "label": "Official SIPPEC manufacturing and company presentation",
+      "url": "https://www.sippec.ci/peintures/presentation"
+    },
+    {
+      "label": "Official SIPPEC contact page and public corporate switchboard",
+      "url": "https://www.sippec.ci/peintures/contacts"
+    }
+  ]
+},
 "sapeint-bordj-bou-arreridj": {
   "website": "https://www.sapeint.dz/",
   "contactPage": "https://www.sapeint.dz/contact/",
@@ -39428,6 +39492,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sippec-abidjan",
 "sapeint-bordj-bou-arreridj",
 "queen-chemical-new-damietta",
 "clq-colorquimica-la-estrella",
