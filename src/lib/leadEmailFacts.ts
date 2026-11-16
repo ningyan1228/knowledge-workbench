@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"viet-specialty-polymers-nhon-trach": "Your W1600F waterborne wood-finishing system includes V-SAND sanding sealer alongside V-STAIN, V-MATT and V-GLOSS.",
+"greentech-coatings-bien-hoa": "Your Clear Water-Based Wood Primer 11.009 is a basecoat for wood furniture, MDF/HDF and veneer.",
 "arirang-chemical-bien-hoa": "Your COSMOS gravure ink for OPP film lists vinyl, CPP and EVA resin systems, with solvent-based options.",
 "rivershine-im-industrials-accra": "Your Iron Proof paint is an anti-rust coating for restoring metal roofing sheets.",
 "tayf-ink-dilovasi": "Your PolyTone TP series is a water-based flexographic ink for PE-coated cups and laminated packaging.",

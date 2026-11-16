@@ -12547,11 +12547,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "greentech-coatings-bien-hoa",
+    "company": "GreenTech Coatings Corporation",
+    "productId": "nl-w1201",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Bien Hoa（城市级示意点）",
+    "latitude": 10.95,
+    "longitude": 106.82,
+    "legacyCompanyDescription": "在越南自主生产水性木器涂料；11.009 透明水性底漆用于木家具、MDF/HDF 及木皮。",
+    "fit": "可开发候选",
+    "signal": "在越南自主生产水性木器涂料；11.009 透明水性底漆用于木家具、MDF/HDF 及木皮。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "官网首页明确制造商及两处工厂、企业自报税号0315824554；完整Products页列1–60项，包括11.009透明木器底漆、木器/水泥/Poly-PU体系、色浆、木材腻子、水性稀释剂和H200聚异氰酸酯固化剂。有限已读范围未见PO/CPO分散体或同类聚烯烃附着促进原料外售；色浆、普通稀释剂及异氰酸酯固化剂不等同目标PO分散体。第三次Colorants/Additives页只有导航壳，不作完整助剂目录证明。Poly/PU分类不推PP基材，主页Acrylic/PU概述与具体底漆modified polysiloxane说明不拼成统一客户配方；不引用主页全系列无异氰酸酯等营销断言。官网工厂及税号为其公开自述，未声称另查工商、股权或所有隐藏SKU。通用邮箱由实际文字及正常mailto再次证实，另有mailto:mailto双前缀错误不复制为邮箱；电话是Hotline/Zalo，不转为WhatsApp。两个工厂一个账户。 按公司/工厂/品牌/税号/邮箱跨产品核对现行539条公开客户及私有历史，无同一正式账户；地图仅城市级示意。"
+    },
+    "contact": {
+      "label": "公司通用业务邮箱及公开电话",
+      "email": "info@greentechcoatings.vn",
+      "phone": "+84 90 2662 877",
+      "contactUrl": "https://greentechcoatings.vn/en/"
+    },
+    "source": {
+      "label": "GreenTech Coatings Corporation official water-based wood coating evidence",
+      "url": "https://greentechcoatings.vn/en/products/"
+    },
+    "checkedAt": "2026-11-16"
+  },
+  {
+    "id": "viet-specialty-polymers-nhon-trach",
+    "company": "Viet Specialty Polymers (VSP)",
+    "productId": "nl-w1201",
+    "country": "Vietnam",
+    "countryZh": "越南",
+    "city": "Nhon Trach（城市级示意点）",
+    "latitude": 10.75,
+    "longitude": 106.9,
+    "legacyCompanyDescription": "在 Nhon Trach 3 自主合成树脂并配制水性木器涂料；W1600F 体系含 V-SAND 砂光底漆。",
+    "fit": "可开发候选",
+    "signal": "在 Nhon Trach 3 自主合成树脂并配制水性木器涂料；W1600F 体系含 V-SAND 砂光底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-16",
+      "conclusion": "单份完整官网含双语制造/树脂合成、工厂和实验室、W1600F/V-SAND木器体系及内嵌技术/安全摘要、联系入口。公开合成树脂家族为Acrylic、PUD、PUA，W1600F为PU/Acrylic hybrid；不把PU/Acrylic粘结料或polycarbonate-base PU当成polyolefin/CPO分散体，也不因泛称specialty polymers就断言供应目标原料。已读公开业务范围未见同类PO/CPO附着促进分散体外售，有限范围排查通过，不称审计隐藏目录或工厂。VSP、同页Eco Polymers称谓及其自述CT Polymer Nhon Trach 3历史工厂保守合并一个账户，不推其他同名CT企业。搜索片段称2003，当前原文称2006，原始版本并存且不采用为入库事实；Dulux色号只是打样参照，不推Akzo所有权/合作。邮箱原始mailto有完整support@地址，展示断词不是邮箱猜测；电话无WhatsApp链接不转WhatsApp。单页已实际提供制造、木器底漆、相关业务范围和联系完整链，不设置任意最少来源页数。未另下载其PDF、图片、视频，不把内嵌摘要说成独立PDF原件。 按公司/工厂/品牌/税号/邮箱跨产品核对现行539条公开客户及私有历史，无同一正式账户；地图仅城市级示意。"
+    },
+    "contact": {
+      "label": "公司通用业务邮箱及公开电话",
+      "email": "support@vietspecialtypolymers.vn",
+      "phone": "083 777 2978",
+      "contactUrl": "https://vietspecialtypolymers.vn/"
+    },
+    "source": {
+      "label": "Viet Specialty Polymers (VSP) official water-based wood coating evidence",
+      "url": "https://vietspecialtypolymers.vn/"
+    },
+    "checkedAt": "2026-11-16"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"viet-specialty-polymers-nhon-trach": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+"greentech-coatings-bien-hoa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "arirang-chemical-bien-hoa": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "rivershine-im-industrials-accra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tayf-ink-dilovasi": {"targetCompanyTypeId":"waterborne-ink-manufacturer","applicationLayer":"market-extended","applicationId":"waterborne-ink-anchorage-on-pp-pe"},
@@ -13091,6 +13149,100 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"viet-specialty-polymers-nhon-trach": {
+  "website": "https://vietspecialtypolymers.vn/",
+  "contactPage": "https://vietspecialtypolymers.vn/",
+  "generalEmail": "support@vietspecialtypolymers.vn",
+  "generalEmailEvidence": {
+    "company": "Viet Specialty Polymers (VSP)",
+    "value": "support@vietspecialtypolymers.vn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Viet Specialty Polymers (VSP) official published business contact",
+        "url": "https://vietspecialtypolymers.vn/",
+        "summary": "Exact published corporate email from official business contact text and mailto; no named person or purchasing role inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "083 777 2978",
+  "generalPhoneEvidence": {
+    "company": "Viet Specialty Polymers (VSP)",
+    "value": "083 777 2978",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Viet Specialty Polymers (VSP) official published business contact",
+        "url": "https://vietspecialtypolymers.vn/",
+        "summary": "Exact public business phone displayed on the official page. No WhatsApp claim or guessed account."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Plant & laboratory: Lot A10, Nhon Trach 3 Industrial Park, Nhon Trach, Dong Nai, Vietnam. Office: L17-11, 17th floor, Vincom Center, 72 Le Thanh Ton Street, Sai Gon Ward, Ho Chi Minh City, Vietnam. Addresses disclosed on the official page; map point is approximate city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Viet Specialty Polymers (VSP) actual official source",
+      "url": "https://vietspecialtypolymers.vn/"
+    }
+  ]
+},
+"greentech-coatings-bien-hoa": {
+  "website": "https://greentechcoatings.vn/en/",
+  "contactPage": "https://greentechcoatings.vn/en/",
+  "generalEmail": "info@greentechcoatings.vn",
+  "generalEmailEvidence": {
+    "company": "GreenTech Coatings Corporation",
+    "value": "info@greentechcoatings.vn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "GreenTech Coatings Corporation official published business contact",
+        "url": "https://greentechcoatings.vn/en/",
+        "summary": "Exact published corporate email from official business contact text and mailto; no named person or purchasing role inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "generalPhone": "+84 90 2662 877",
+  "generalPhoneEvidence": {
+    "company": "GreenTech Coatings Corporation",
+    "value": "+84 90 2662 877",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "GreenTech Coatings Corporation official published business contact",
+        "url": "https://greentechcoatings.vn/en/",
+        "summary": "Exact public business phone displayed on the official page. No WhatsApp claim or guessed account."
+      }
+    ],
+    "verifiedAt": "2026-11-16"
+  },
+  "address": "Head office: 124/12/6B Street No. 6, Quarter 4, Tam Binh Ward, Ho Chi Minh City, Vietnam. Factory 1: 1596 Bui Huu Nghia Street, Bien Hoa Ward, Dong Nai City, Vietnam. Factory 2: Lot 144, N1 Road, Tan Hanh 4 Quarter, Tan Hanh Ceramic Industrial Cluster, Bien Hoa Ward, Dong Nai City, Vietnam. Map point is approximate city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "GreenTech Coatings Corporation actual official source",
+      "url": "https://greentechcoatings.vn/en/"
+    },
+    {
+      "label": "GreenTech Coatings Corporation actual official source",
+      "url": "https://greentechcoatings.vn/en/products/"
+    },
+    {
+      "label": "GreenTech Coatings Corporation actual official source",
+      "url": "https://greentechcoatings.vn/colorants-additives/"
+    }
+  ]
+},
 "arirang-chemical-bien-hoa": {
   "website": "https://arirangchemical.com/",
   "contactPage": "https://arirangchemical.com/gioi-thieu/",
@@ -40013,6 +40165,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"viet-specialty-polymers-nhon-trach",
+"greentech-coatings-bien-hoa",
 "arirang-chemical-bien-hoa",
 "rivershine-im-industrials-accra",
 "tayf-ink-dilovasi",
