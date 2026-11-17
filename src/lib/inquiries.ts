@@ -37,5 +37,7 @@ export async function setInquiryStatus(ownerId:string,row:Inquiry,status:Inquiry
   const db=await client(ownerId)
   const {data,error}=await db.rpc('set_inquiry_status',{p_id:row.id,p_status:status,p_expected_version:row.version})
   if(error)throw error
-  return data as Inquiry
+  const result = Array.isArray(data) ? data[0] : data
+  if (!result || result.id !== row.id || result.status !== status || typeof result.version !== 'number') throw new Error('状态返回格式异常，请刷新后核对，勿重复标记。')
+  return result as Inquiry
 }
