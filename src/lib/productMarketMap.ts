@@ -12742,11 +12742,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-16"
   },
+  {
+    "id": "pinturas-sega-guatemala",
+    "company": "Pinturas Sega",
+    "productId": "elo",
+    "country": "Guatemala",
+    "countryZh": "危地马拉",
+    "city": "Guatemala（区域级示意点）",
+    "latitude": 14.6,
+    "longitude": -90.54,
+    "legacyCompanyDescription": "在危地马拉自有工厂制造水性及溶剂型涂料；Color Anticorrosiva Tradicional为用于金属等基材的醇酸防腐漆。",
+    "fit": "可开发候选",
+    "signal": "在危地马拉自有工厂制造水性及溶剂型涂料；Color Anticorrosiva Tradicional为用于金属等基材的醇酸防腐漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-17",
+      "conclusion": "原Home明确自有Guatemala工厂和生产，Productos完整可见五类目录列成品建筑/工业/木器/汽车漆、清漆、底漆、胶及施工辅助品，原ColorAnticorrosivaTradicional明确barrera alquídica、metal及室内外，不用首页泛称替代具体产品。目录中的Traffic合成橡胶是道路成品涂料；Secante、Mateante为配漆施工辅助目录项，不能无化学证据等同ELO/ESBO或环氧植物油/生物基增塑投入品。所读完整可见经营范围未见同类ELO/ESBO/环氧植物油/生物基增塑剂外售，有限范围排查通过，不声称审完未读SDS/隐藏产品或所有辅助品化学。四个原页均发布同一公司邮箱和电话，通用客户服务入口不造采购人。Home/Contact完整原HTML的LocalBusiness JSON-LD披露zone12LaReformita地址及14.600796/-90.543714，地图仅两位小数示意；不是定位核实厂门。QuimicosSega旧协会目录名仅留去重别名，不冒充本轮原页证实法人全称；Colorshop/门户/品牌按同一账户保守合并，不拆分新增。 ELO TDS的coatings/树脂改性应用仅作涂料柔韧及树脂改性潜在评估，不推当前使用环氧植物油、客户采购、配方相容、防腐改善或性能保证；不把客户醇酸或未公开化学体系说成我方材料已兼容。共享已发送台账未知，不视为未发送，不创建可发送或批量导出稿。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱、电话和表单入口",
+      "email": "servicioalcliente@pinturassega.com",
+      "phone": "+502 6629-7877",
+      "contactUrl": "https://pinturassega.com/contacto/"
+    },
+    "source": {
+      "label": "Pinturas Sega official anticorrosive coatings",
+      "url": "https://pinturassega.com/productos/color-anticorrosiva-tradicional/"
+    },
+    "checkedAt": "2026-11-17"
+  },
+  {
+    "id": "pinturas-pinsal-san-salvador",
+    "company": "Pinturas Pinsal",
+    "productId": "elo",
+    "country": "El Salvador",
+    "countryZh": "萨尔瓦多",
+    "city": "San Salvador（城市级示意点）",
+    "latitude": 13.7,
+    "longitude": -89.19,
+    "legacyCompanyDescription": "在萨尔瓦多自主生产建筑、工业及喷雾涂料；官方防腐底漆目录列PREMIA、EASY COLOR及MAGICOLOR系列。",
+    "fit": "可开发候选",
+    "signal": "在萨尔瓦多自主生产建筑、工业及喷雾涂料；官方防腐底漆目录列PREMIA、EASY COLOR及MAGICOLOR系列。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-17",
+      "conclusion": "Nosotros原页明确生产使命、1956FunesHartmann办厂、1975生产场地扩建，当前自有官网仍运营；这些历史日期不冒充本轮投产或扩产。当前防腐底漆类别原页显示完整3条PREMIA/EASYCOLOR/MAGICOLOR；不以类别标题推未读SKU的醇酸、环氧、金属基材/配方或性能。两页完整可见菜单为建筑成品漆/木器清漆/工业漆/气雾漆系列，未见ELO/ESBO/环氧植物油或类似生物基增塑投入品销售，有限范围排查通过，不声称读过其全部成分/TDS或隐藏经营。官网页脚明确CalleelMatazanoSanSalvador、电话及ecommerce业务邮箱；商务部门入口不冒称采购或具名技术人员。Colorama与PinsalGuatemala官网历史显示专属经销分支，连同本品牌保守一个账户不另新增；Saclac1970战略合作不自动证明股权或制造主体相同，与现有正式账户未发现同一主体关系。HTML注释里的WhatsApp静态链接不当可用公开入口；当前可见joinchat只有配置手机号，未获直接公开跳转，不猜wa.me、不发布WhatsApp。地图依独立地理资料13.69889/-89.19139取两位小数，与公司厂门无关。 ELO TDS的coatings/树脂改性应用仅作涂料柔韧及树脂改性潜在评估，不推当前使用环氧植物油、客户采购、配方相容、防腐改善或性能保证；不把客户醇酸或未公开化学体系说成我方材料已兼容。共享已发送台账未知，不视为未发送，不创建可发送或批量导出稿。"
+    },
+    "contact": {
+      "label": "官网电商业务部门邮箱及公开公司电话",
+      "email": "ecommerce@pinsal.com.sv",
+      "phone": "(503) 2500-1700",
+      "contactUrl": "https://pinsal.com.sv/nosotros/"
+    },
+    "source": {
+      "label": "Pinturas Pinsal official anticorrosive coatings",
+      "url": "https://pinsal.com.sv/product-category/arquitectonico-residencial/bases/anticorrosivos/"
+    },
+    "checkedAt": "2026-11-17"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-pinsal-san-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+"pinturas-sega-guatemala": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "corporacion-prismacolor-lima": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "peruvian-colors-ventanilla": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chromatic-paints-kampala": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13293,6 +13351,108 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-pinsal-san-salvador": {
+  "website": "https://pinsal.com.sv/nosotros/",
+  "contactPage": "https://pinsal.com.sv/nosotros/",
+  "generalEmail": "ecommerce@pinsal.com.sv",
+  "generalEmailEvidence": {
+    "company": "Pinturas Pinsal",
+    "value": "ecommerce@pinsal.com.sv",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Pinsal official published business email",
+        "url": "https://pinsal.com.sv/nosotros/",
+        "summary": "This independently read official page explicitly discloses ecommerce@pinsal.com.sv as a corporate business channel. No procurement or named person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-17"
+  },
+  "generalPhone": "(503) 2500-1700",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Pinsal",
+    "value": "(503) 2500-1700",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Pinsal official published business phone",
+        "url": "https://pinsal.com.sv/nosotros/",
+        "summary": "This independently read official page explicitly discloses (503) 2500-1700 as a corporate business channel. No procurement or named person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-17"
+  },
+  "address": "Calle el Matazano, San Salvador, El Salvador. Official published business address. Map is approximate San Salvador city-level, not a verified factory entrance.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Pinturas Pinsal independently read official original",
+      "url": "https://pinsal.com.sv/nosotros/"
+    },
+    {
+      "label": "Pinturas Pinsal independently read official original",
+      "url": "https://pinsal.com.sv/product-category/arquitectonico-residencial/bases/anticorrosivos/"
+    }
+  ]
+},
+"pinturas-sega-guatemala": {
+  "website": "https://pinturassega.com/",
+  "contactPage": "https://pinturassega.com/contacto/",
+  "generalEmail": "servicioalcliente@pinturassega.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas Sega",
+    "value": "servicioalcliente@pinturassega.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Sega official published business email",
+        "url": "https://pinturassega.com/contacto/",
+        "summary": "This independently read official page explicitly discloses servicioalcliente@pinturassega.com as a corporate business channel. No procurement or named person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-17"
+  },
+  "generalPhone": "+502 6629-7877",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Sega",
+    "value": "+502 6629-7877",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Sega official published business phone",
+        "url": "https://pinturassega.com/contacto/",
+        "summary": "This independently read official page explicitly discloses +502 6629-7877 as a corporate business channel. No procurement or named person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-17"
+  },
+  "address": "10 avenida 17-07, zona 12, colonia La Reformita, Guatemala 01012, Guatemala. Address and coordinates disclosed in official-page JSON-LD; map coordinates rounded to area-level, not a verified factory gate.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Pinturas Sega independently read official original",
+      "url": "https://pinturassega.com/"
+    },
+    {
+      "label": "Pinturas Sega independently read official original",
+      "url": "https://pinturassega.com/producto/"
+    },
+    {
+      "label": "Pinturas Sega independently read official original",
+      "url": "https://pinturassega.com/productos/color-anticorrosiva-tradicional/"
+    },
+    {
+      "label": "Pinturas Sega independently read official original",
+      "url": "https://pinturassega.com/contacto/"
+    }
+  ]
+},
 "corporacion-prismacolor-lima": {
   "website": "https://www.corprisa.com.pe/",
   "contactPage": "https://www.corprisa.com.pe/contactenos.html",
@@ -40557,6 +40717,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-pinsal-san-salvador",
+"pinturas-sega-guatemala",
 "corporacion-prismacolor-lima",
 "peruvian-colors-ventanilla",
 "chromatic-paints-kampala",
