@@ -1,8 +1,9 @@
+import { Inquiries } from './features/inquiries/Inquiries'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { User } from '@supabase/supabase-js'
 import {
   Archive, ArrowUpRight, BookOpen, CheckCircle2, ChevronRight, CircleAlert, Clipboard,
-  FileUp, Globe2, GraduationCap, LayoutDashboard, Menu, Moon, PanelLeftClose, PanelLeftOpen, Plus,
+  FileUp, Globe2, GraduationCap, LayoutDashboard, Mail, Menu, Moon, PanelLeftClose, PanelLeftOpen, Plus,
   Search, Send, Settings, Sparkles, Sun, UserRound, X,
 } from 'lucide-react'
 import { publicLeads } from './lib/productMarketMap'
@@ -20,7 +21,7 @@ import { useAccountSession, type AccountSessionState } from './lib/accountSessio
 import './SidebarLayout.css'
 import { TodayWorkspace } from './features/account/TodayWorkspace'
 
-type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
+type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings' | 'inquiries'
 type Draft = { title: string; body: string; translation: string; productName: string; savedAt: string }
 const marketIntelligenceEnabled = import.meta.env.VITE_FEATURE_MARKET_INTELLIGENCE !== 'false'
 
@@ -32,6 +33,7 @@ const navigation: Array<{ id: Page; label: string; icon: typeof LayoutDashboard 
   { id: 'practice', label: '外贸学习', icon: GraduationCap },
   { id: 'assistant', label: '回复助手', icon: Sparkles },
   { id: 'studio', label: '内容工作室', icon: Clipboard },
+  { id: 'inquiries', label: '询盘往来', icon: Mail },
 ]
 
 function getPage(): Page {
@@ -82,7 +84,7 @@ export function App() {
   return <div className={`app-shell${sidebarCollapsed ? ' sidebar-collapsed' : ''}`}>
     <aside className={`sidebar ${sidebarOpen ? 'is-open' : ''}`} aria-label="主导航">
       <div className="brand"><div className="brand-mark" title="阳光心材料 · 知识工作台">NL</div><div className="brand-copy"><strong>阳光心材料</strong><span>知识工作台</span></div><button className="icon-button mobile-only" onClick={() => setSidebarOpen(false)} aria-label="关闭导航"><X size={18} /></button></div>
-      <nav id="app-navigation" aria-label="工作台导航">{['dashboard','market-intelligence','followup','products'].filter(id=>marketIntelligenceEnabled || !['market-intelligence','followup'].includes(id)).map(id=>{const item=navigation.find(n=>n.id===id);const label=item?.label ?? '客户跟进';const Icon=item?.icon ?? Clipboard;const active=id==='followup'?followup:page===id&&!followup;return <button key={id} className={active?'nav-item active':'nav-item'} title={label} aria-label={label} aria-current={active?'page':undefined} onClick={()=>{if(id==='followup'){window.location.hash='market-intelligence/follow-up';setSidebarOpen(false)}else navigate(id as Page)}}><Icon size={18}/><span className="nav-label">{label}</span></button>})}<details className="nav-tools" open={['intelligence','practice','assistant','studio'].includes(page)||undefined}><summary className="nav-item" title="更多工具"><Menu size={18}/><span className="nav-label">更多工具</span></summary>{navigation.filter(item=>['intelligence','practice','assistant','studio'].includes(item.id)).map(({id,label,icon:Icon})=><button key={id} className={page===id?'nav-item active':'nav-item'} title={label} aria-label={label} aria-current={page===id?'page':undefined} onClick={()=>navigate(id)}><Icon size={18}/><span className="nav-label">{label}</span></button>)}</details></nav>
+      <nav id="app-navigation" aria-label="工作台导航">{['dashboard','market-intelligence','followup','inquiries','products'].filter(id=>marketIntelligenceEnabled || !['market-intelligence','followup'].includes(id)).map(id=>{const item=navigation.find(n=>n.id===id);const label=item?.label ?? '客户跟进';const Icon=item?.icon ?? Clipboard;const active=id==='followup'?followup:page===id&&!followup;return <button key={id} className={active?'nav-item active':'nav-item'} title={label} aria-label={label} aria-current={active?'page':undefined} onClick={()=>{if(id==='followup'){window.location.hash='market-intelligence/follow-up';setSidebarOpen(false)}else navigate(id as Page)}}><Icon size={18}/><span className="nav-label">{label}</span></button>})}<details className="nav-tools" open={['intelligence','practice','assistant','studio'].includes(page)||undefined}><summary className="nav-item" title="更多工具"><Menu size={18}/><span className="nav-label">更多工具</span></summary>{navigation.filter(item=>['intelligence','practice','assistant','studio'].includes(item.id)).map(({id,label,icon:Icon})=><button key={id} className={page===id?'nav-item active':'nav-item'} title={label} aria-label={label} aria-current={page===id?'page':undefined} onClick={()=>navigate(id)}><Icon size={18}/><span className="nav-label">{label}</span></button>)}</details></nav>
       <div className="sidebar-footer"><div className="sidebar-expanded-account"><AccountStatusCard account={account} onSettings={() => navigate('settings')} /></div><button type="button" className="icon-button sidebar-compact-account" title={compactAccountTitle} aria-label={compactAccountTitle} onClick={() => navigate('settings')}><UserRound size={18} aria-hidden="true" /><span className={`sidebar-account-dot account-${account.status}`} /></button><button className={page === 'settings' ? 'nav-item active' : 'nav-item'} title="资料与设置" aria-label="资料与设置" aria-current={page === 'settings' ? 'page' : undefined} onClick={() => navigate('settings')}><Settings size={18} aria-hidden="true" /><span className="nav-label">资料与设置</span></button></div>
     </aside>
     {sidebarOpen && <button className="scrim" aria-label="关闭导航遮罩" onClick={() => setSidebarOpen(false)} />}
@@ -97,6 +99,7 @@ export function App() {
         {page === 'market-intelligence' && marketIntelligenceEnabled && <MarketIntelligence />}
         {page === 'practice' && <LearningWorkspace />}
         {page === 'assistant' && <Assistant key={selectedProduct.id} product={selectedProduct} onSelect={setSelectedProductId} />}
+        {page === 'inquiries' && <Inquiries />}
         {page === 'studio' && <Studio product={selectedProduct} />}
         {page === 'settings' && <SettingsPage account={account} onNotice={setNotice} />}
       </section>
@@ -192,3 +195,4 @@ function SourceManager({ user, onNotice }: { user: User; onNotice: (message: str
 }
 
 function SearchDialog({ value, results, onChange, onClose, onSelect }: { value: string; results: ProductSummary[]; onChange: (value: string) => void; onClose: () => void; onSelect: (id: string) => void }) { const clients = value.trim() ? publicLeads.filter(l => [l.company, l.contact.label, JSON.stringify(l.profile.contacts ?? [])].join(' ').toLowerCase().includes(value.trim().toLowerCase())).slice(0, 30) : []; useEffect(() => { const input = document.getElementById('global-search'); input?.focus() }, []); return <div className="dialog-backdrop" role="presentation" onMouseDown={onClose}><section className="search-dialog" role="dialog" aria-modal="true" aria-label="全局搜索" onMouseDown={(event) => event.stopPropagation()}><div><Search size={19} /><input id="global-search" value={value} onChange={(event) => onChange(event.target.value)} placeholder="输入产品、公司名、公开联系人或 CAS" /><button className="icon-button" onClick={onClose}><X size={17} /></button></div>{clients.length > 0 && <ul aria-label="客户搜索结果">{clients.map(l => <li key={l.id}><button onClick={() => { window.location.hash = `market-intelligence/leads/${encodeURIComponent(l.id)}`; onClose() }}><span><strong>{l.company}</strong><small>{l.countryZh} · {l.contact.label}</small></span><ChevronRight size={16}/></button></li>)}</ul>}{value ? results.length ? <ul>{results.map((product) => <li key={product.id}><button onClick={() => onSelect(product.id)}><span><strong>{product.name}</strong><small>{product.englishName} · {product.grade || product.category}</small></span><ChevronRight size={16} /></button></li>)}</ul> : <p className="search-empty">{clients.length ? '客户结果最多显示 30 条，请缩小关键词。' : '没有匹配项。请缩短关键词或改用公司英文名。'}</p> : <p className="search-empty">可搜索四类产品及公开客户公司名、联系人；私人台账请使用客户跟进页搜索。</p>}</section></div> }
+
