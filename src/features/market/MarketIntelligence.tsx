@@ -66,6 +66,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const navigationRef = useRef<CompanyDetailNavigation>(null)
   const workspaceRef = useRef<HTMLDivElement>(null)
   const didSelect = useRef(false)
+  const approvedSelection = useRef(false)
   const [wide, setWide] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width:1101px)').matches)
   useEffect(() => {
     const media = window.matchMedia('(min-width:1101px)')
@@ -103,7 +104,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   }
   useEffect(() => { setFilters((current) => ({ ...current, industry: 'all', application: 'all' })); resetFocus() }, [productId])
   useEffect(() => {
-    if (view === 'leads' && wide && !didSelect.current && (!navigationRef.current || navigationRef.current.canLeave())) {
+    if (view === 'leads' && wide && !didSelect.current && (approvedSelection.current || !navigationRef.current || navigationRef.current.canLeave())) {
       didSelect.current = true
       const first = matching[0] ?? null; setDetailLead(first); setSelectedLead(first)
     }
@@ -122,7 +123,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     if (selectedLead && !matching.some((lead) => lead.id === selectedLead.id)) setSelectedLead(null)
     if (hoveredLead && !matching.some((lead) => lead.id === hoveredLead.id)) setHoveredLead(null)
   }, [matching, selectedLead, hoveredLead])
-  const showAll = () => { if (navigationRef.current && !navigationRef.current.canLeave()) return; onProduct('all'); setContinent('all'); setCountry('all'); setDay('all'); setOrder('newest'); setFilters({ ...emptyBusinessFilters }); resetFocus() }
+  const showAll = () => { if (navigationRef.current && !navigationRef.current.canLeave()) return; approvedSelection.current = true; onProduct('all'); setContinent('all'); setCountry('all'); setDay('all'); setOrder('newest'); setFilters({ ...emptyBusinessFilters }); resetFocus() }
   const returnAllRegions = () => { setContinent('all'); setCountry('all'); resetFocus() }
   const selectCountry = (value: string) => { setCountry(value); resetFocus() }
   const regionLabel = country !== 'all' ? options.countries.find((item) => item.value === country)?.label ?? country : continent !== 'all' ? continent : '全部地区'
@@ -169,7 +170,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     finally { setDownloading(false) }
   }
   return <section className="market-map-workspace">
-    <LeadBusinessControls sortControls={<label>排序<select aria-label="客户排序" value={filters.sort === 'priority' ? 'priority' : order} onChange={e=>{if(navigationRef.current && !navigationRef.current.canLeave())return;setFilters({...filters,sort:e.target.value==='priority'?'priority':'time'});setOrder(e.target.value==='oldest'?'oldest':'newest');resetFocus()}}><option value="newest">首次收录由新到旧</option><option value="oldest">首次收录由旧到新</option><option value="priority">开发优先级</option></select></label>} viewControls={viewControls} allCustomerCount={new Set(data.leads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { if (navigationRef.current && !navigationRef.current.canLeave()) return; setFilters(value); resetFocus() }} work={work} ledger={ledger}
+    <LeadBusinessControls sortControls={<label>排序<select aria-label="客户排序" value={filters.sort === 'priority' ? 'priority' : order} onChange={e=>{if(navigationRef.current && !navigationRef.current.canLeave())return;approvedSelection.current=true;setFilters({...filters,sort:e.target.value==='priority'?'priority':'time'});setOrder(e.target.value==='oldest'?'oldest':'newest');resetFocus()}}><option value="newest">首次收录由新到旧</option><option value="oldest">首次收录由旧到新</option><option value="priority">开发优先级</option></select></label>} viewControls={viewControls} allCustomerCount={new Set(data.leads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { if (navigationRef.current && !navigationRef.current.canLeave()) return; approvedSelection.current = true; setFilters(value); resetFocus() }} work={work} ledger={ledger}
       primaryFilters={<div className="market-scope-controls"><div className="market-product-row"><span>产品</span><ProductPicker value={productId} onChange={onProduct} /></div>
     <div className="lead-geography-filters" role="group" aria-label="按地区筛选"><label>大洲<select aria-label="大洲" value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label><label>国家／地区<select aria-label="国家／地区" value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label></div>
     </div>}
