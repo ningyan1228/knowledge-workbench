@@ -17,27 +17,24 @@ import { LearningWorkspace } from './features/learning/Learning'
 import { AccountStatusCard } from './features/account/AccountStatusCard'
 import { useAccountSession, type AccountSessionState } from './lib/accountSession'
 import './SidebarLayout.css'
+import { TodayWorkspace } from './features/account/TodayWorkspace'
 
 type Page = 'dashboard' | 'products' | 'intelligence' | 'market-intelligence' | 'practice' | 'assistant' | 'studio' | 'settings'
 type Draft = { title: string; body: string; translation: string; productName: string; savedAt: string }
 const marketIntelligenceEnabled = import.meta.env.VITE_FEATURE_MARKET_INTELLIGENCE !== 'false'
 
 const navigation: Array<{ id: Page; label: string; icon: typeof LayoutDashboard }> = [
-  { id: 'dashboard', label: '今日工作台', icon: LayoutDashboard },
-  { id: 'products', label: '产品知识库', icon: BookOpen },
+  { id: 'dashboard', label: '今日待办', icon: LayoutDashboard },
+  { id: 'products', label: '产品资料', icon: BookOpen },
   { id: 'intelligence', label: '行业情报', icon: Globe2 },
-  { id: 'market-intelligence', label: '市场情报', icon: Globe2 },
+  { id: 'market-intelligence', label: '客户开发', icon: Globe2 },
   { id: 'practice', label: '外贸学习', icon: GraduationCap },
-  { id: 'assistant', label: '资料问答', icon: Sparkles },
+  { id: 'assistant', label: '回复助手', icon: Sparkles },
   { id: 'studio', label: '内容工作室', icon: Clipboard },
 ]
 
 function getPage(): Page {
   const requested = window.location.hash.replace(/^#\/?/, '').split('/')[0]
-  if (!window.location.hash.replace(/^#\/?/, '') && marketIntelligenceEnabled) {
-    window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + '#market-intelligence/follow-up')
-    return 'market-intelligence'
-  }
   if (requested === 'learning') return 'practice'
   return (requested !== 'market-intelligence' || marketIntelligenceEnabled) && (navigation.some((item) => item.id === requested) || requested === 'settings') ? requested as Page : 'dashboard'
 }
@@ -54,6 +51,7 @@ function EmptyState({ title, description, action }: { title: string; description
 export function App() {
   const account = useAccountSession()
   const [page, setPage] = useState<Page>(getPage)
+  const [followup, setFollowup] = useState(() => window.location.hash.startsWith('#market-intelligence/follow-up'))
   const [dark, setDark] = useState(() => localStorage.getItem('nl-theme') === 'dark')
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(() => { try { return localStorage.getItem('nl-sidebar-collapsed') === '1' } catch { return false } })
@@ -63,7 +61,7 @@ export function App() {
   const [notice, setNotice] = useState<string | null>(null)
 
   useEffect(() => {
-    const onHashChange = () => setPage(getPage())
+    const onHashChange = () => { setPage(getPage()); setFollowup(window.location.hash.startsWith('#market-intelligence/follow-up')) }
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
@@ -82,7 +80,7 @@ export function App() {
   return <div className={`app-shell${sidebarCollapsed ? ' sidebar-collapsed' : ''}`}>
     <aside className={`sidebar ${sidebarOpen ? 'is-open' : ''}`} aria-label="主导航">
       <div className="brand"><div className="brand-mark" title="阳光心材料 · 知识工作台">NL</div><div className="brand-copy"><strong>阳光心材料</strong><span>知识工作台</span></div><button className="icon-button mobile-only" onClick={() => setSidebarOpen(false)} aria-label="关闭导航"><X size={18} /></button></div>
-      <nav id="app-navigation" aria-label="工作台导航">{navigation.filter((item) => item.id !== 'market-intelligence' || marketIntelligenceEnabled).map(({ id, label, icon: Icon }) => <button key={id} className={page === id ? 'nav-item active' : 'nav-item'} title={label} aria-label={label} aria-current={page === id ? 'page' : undefined} onClick={() => navigate(id)}><Icon size={18} aria-hidden="true" /><span className="nav-label">{label}</span></button>)}</nav>
+      <nav id="app-navigation" aria-label="工作台导航">{['dashboard','market-intelligence','followup','products'].filter(id=>marketIntelligenceEnabled || !['market-intelligence','followup'].includes(id)).map(id=>{const item=navigation.find(n=>n.id===id);const label=item?.label ?? '客户跟进';const Icon=item?.icon ?? Clipboard;const active=id==='followup'?followup:page===id&&!followup;return <button key={id} className={active?'nav-item active':'nav-item'} title={label} aria-label={label} aria-current={active?'page':undefined} onClick={()=>{if(id==='followup'){window.location.hash='market-intelligence/follow-up';setSidebarOpen(false)}else navigate(id as Page)}}><Icon size={18}/><span className="nav-label">{label}</span></button>})}<details className="nav-tools" open={['intelligence','practice','assistant','studio'].includes(page)||undefined}><summary className="nav-item" title="更多工具"><Menu size={18}/><span className="nav-label">更多工具</span></summary>{navigation.filter(item=>['intelligence','practice','assistant','studio'].includes(item.id)).map(({id,label,icon:Icon})=><button key={id} className={page===id?'nav-item active':'nav-item'} title={label} aria-label={label} aria-current={page===id?'page':undefined} onClick={()=>navigate(id)}><Icon size={18}/><span className="nav-label">{label}</span></button>)}</details></nav>
       <div className="sidebar-footer"><div className="sidebar-expanded-account"><AccountStatusCard account={account} onSettings={() => navigate('settings')} /></div><button type="button" className="icon-button sidebar-compact-account" title={compactAccountTitle} aria-label={compactAccountTitle} onClick={() => navigate('settings')}><UserRound size={18} aria-hidden="true" /><span className={`sidebar-account-dot account-${account.status}`} /></button><button className={page === 'settings' ? 'nav-item active' : 'nav-item'} title="资料与设置" aria-label="资料与设置" aria-current={page === 'settings' ? 'page' : undefined} onClick={() => navigate('settings')}><Settings size={18} aria-hidden="true" /><span className="nav-label">资料与设置</span></button></div>
     </aside>
     {sidebarOpen && <button className="scrim" aria-label="关闭导航遮罩" onClick={() => setSidebarOpen(false)} />}
@@ -91,8 +89,8 @@ export function App() {
       <header className="topbar"><div className="topbar-left"><button type="button" className="icon-button sidebar-collapse-toggle" onClick={() => setSidebarCollapsed(value => !value)} aria-label={sidebarCollapsed ? '展开侧边导航' : '收起侧边导航'} title={sidebarCollapsed ? '展开侧边导航' : '收起侧边导航'} aria-expanded={!sidebarCollapsed} aria-controls="app-navigation">{sidebarCollapsed ? <PanelLeftOpen size={19} /> : <PanelLeftClose size={19} />}</button><button className="icon-button mobile-menu" onClick={() => setSidebarOpen(true)} aria-label="打开导航"><Menu size={20} /></button><button className="search-box" onClick={() => setSearchOpen(true)}><Search size={17} /><span>搜索产品、参数、CAS 或术语</span><kbd>⌘ K</kbd></button></div><div className="topbar-actions"><button className="icon-button" onClick={() => setDark(!dark)} aria-label="切换深色模式">{dark ? <Sun size={18} /> : <Moon size={18} />}</button><button className="avatar" onClick={() => navigate('settings')} aria-label="打开设置">NL</button></div></header>
       {!hasSupabaseConfig && <div className="preview-banner"><CircleAlert size={17} /><span><strong>本地预览模式：</strong>四类产品学习资料已更新；原始附件与参数审批记录需登录私人资料库核对。</span><button onClick={() => navigate('settings')}>完成连接</button></div>}
       <section className="page-content">
-        {page === 'dashboard' && <Dashboard onNavigate={navigate} onSelectProduct={(id) => { setSelectedProductId(id); navigate('products') }} />}
-        {page === 'products' && <ProductLibrary selected={selectedProduct} onSelect={setSelectedProductId} onNotice={setNotice} />}
+        {page === 'dashboard' && <TodayWorkspace key={account.status === 'authenticated' ? account.user.id : account.status} />}
+        {page === 'products' && <><button className="text-button" onClick={() => navigate('assistant')}>用当前产品资料打开回复助手 →</button><ProductLibrary selected={selectedProduct} onSelect={setSelectedProductId} onNotice={setNotice} /></>}
         {page === 'intelligence' && <Intelligence />}
         {page === 'market-intelligence' && marketIntelligenceEnabled && <MarketIntelligence />}
         {page === 'practice' && <LearningWorkspace />}
@@ -106,22 +104,10 @@ export function App() {
   </div>
 }
 
-function Dashboard({ onNavigate, onSelectProduct }: { onNavigate: (page: Page) => void; onSelectProduct: (id: string) => void }) {
-  return <><div className="page-heading"><div><p className="eyebrow">Asia/Shanghai · {new Intl.DateTimeFormat('zh-CN', { dateStyle: 'full' }).format(new Date())}</p><h1>今天，先把一件事弄清楚。</h1><p>从可核对的产品资料开始，再去理解行业与客户问题。</p></div><button className="primary-button" onClick={() => onNavigate('assistant')}><Sparkles size={17} />问一个客户问题</button></div>
-    <div className="metric-grid"><Metric value="0" label="今日新增资讯" hint="尚未配置采集来源" /><Metric value="3" label="产品学习资料已更新" hint="产品介绍、参数解读与询盘判断" /><Metric value={String(products.reduce((sum, product) => sum + product.reviewTasks.length, 0))} label="工厂核对清单" hint="先向工厂核对再对外使用" /></div>
-    <div className="content-grid"><section className="card span-2"><div className="card-heading"><div><p className="eyebrow">今日精选</p><h2>暂无重要更新</h2></div><button className="text-button" onClick={() => onNavigate('intelligence')}>查看行业情报 <ChevronRight size={16} /></button></div><EmptyState title="等你启用来源" description="正式采集完成后，这里只显示有原始链接、发布日期和中文摘要的内容。" action={<button className="secondary-button" onClick={() => onNavigate('settings')}>管理来源</button>} /></section>
-      <section className="card"><div className="card-heading"><div><p className="eyebrow">今日学习</p><h2>从一笔订单的角色开始</h2></div><GraduationCap size={19} /></div><p className="muted">40 节外贸核心课：先阅读，再提交练习和确认已读；答案仅保存到你的私人资料库。</p><button className="text-button" onClick={() => onNavigate('practice')}>打开外贸学习 <ChevronRight size={16} /></button></section>
-      <section className="card span-2"><div className="card-heading"><div><p className="eyebrow">工厂待确认</p><h2>先问清楚，再写进邮件</h2></div><button className="text-button" onClick={() => onNavigate('products')}>查看全部</button></div><div className="task-list">{products.flatMap((product) => product.reviewTasks.slice(0, 1).map((task) => <div className="task" key={product.id}><span className="task-dot" /><div><strong>{product.name}</strong><p>{task}</p></div><StatusPill status="待确认" /></div>))}</div></section>
-      <section className="card"><div className="card-heading"><div><p className="eyebrow">下一步</p><h2>完成首次设置</h2></div></div><ol className="step-list"><li><span>1</span>连接 Supabase</li><li><span>2</span>上传三份原始资料</li><li><span>3</span>验证至少三个来源</li></ol><button className="primary-button full-width" onClick={() => onNavigate('settings')}>开始设置</button></section>
-    </div></>
-}
-
-function Metric({ value, label, hint }: { value: string; label: string; hint: string }) { return <div className="metric"><strong>{value}</strong><span>{label}</span><small>{hint}</small></div> }
-
 function ProductLibrary({ selected, onSelect, onNotice }: { selected: ProductSummary; onSelect: (id: string) => void; onNotice: (message: string) => void }) {
   const uploader = useRef<HTMLInputElement>(null)
-  return <><div className="page-heading"><div><p className="eyebrow">产品知识库</p><h1>每个参数，都能回到原文。</h1><p>已更新三款核心产品的介绍、参数解读、应用与询盘学习手册。</p></div><button className="primary-button" onClick={() => uploader.current?.click()}><FileUp size={17} />上传 TDS / DOCX</button><input ref={uploader} hidden type="file" accept=".pdf,.docx" onChange={(event) => { const file = event.target.files?.[0]; if (file) onNotice(`已选择“${file.name}”。请先完成 Supabase 配置，文件会直传到私人存储后再解析。`); event.currentTarget.value = '' }} /></div>
-    <div className="library-layout"><aside className="product-list"><div className="filter-label">3 款核心产品 · 学习资料已更新</div>{products.map((product) => <button key={product.id} className={selected.id === product.id ? 'product-item selected' : 'product-item'} onClick={() => onSelect(product.id)}><span className="product-icon">{product.name.slice(0, 1)}</span><span><strong>{product.name}</strong><small>{product.category}</small></span><StatusPill status={product.status} /></button>)}</aside>
+  return <><div className="page-heading"><div><p className="eyebrow">产品知识库</p><h1>每个参数，都能回到原文。</h1><p>已更新四类核心产品的介绍、参数解读、应用与询盘学习手册。</p></div><button className="primary-button" onClick={() => uploader.current?.click()}><FileUp size={17} />上传 TDS / DOCX</button><input ref={uploader} hidden type="file" accept=".pdf,.docx" onChange={(event) => { const file = event.target.files?.[0]; if (file) onNotice(`已选择“${file.name}”。请先完成 Supabase 配置，文件会直传到私人存储后再解析。`); event.currentTarget.value = '' }} /></div>
+    <div className="library-layout"><aside className="product-list"><div className="filter-label">{products.length} 类核心产品 · 学习资料已更新</div>{products.map((product) => <button key={product.id} className={selected.id === product.id ? 'product-item selected' : 'product-item'} onClick={() => onSelect(product.id)}><span className="product-icon">{product.name.slice(0, 1)}</span><span><strong>{product.name}</strong><small>{product.category}</small></span><StatusPill status={product.status} /></button>)}</aside>
       <article className="product-detail"><div className="detail-title"><div><div className="title-row"><h2>{selected.name}</h2><StatusPill status={selected.status} /></div><p>{selected.englishName} {selected.grade ? `· ${selected.grade}` : '· 牌号待填写'}</p></div><button className="secondary-button" onClick={() => onNotice('本地预览不创建正式笔记。连接 Supabase 后，笔记会按当前登录账户保存。')}>添加笔记</button></div>
         <div className="callout warning"><CircleAlert size={18} /><div><strong>产品介绍 · 学习资料摘录</strong><p>{selected.description}</p></div></div>
         <div className="detail-section"><h3>技术参数 <span>按学习手册摘录 · 待原件复核</span></h3><div className="table-wrap"><table><thead><tr><th>字段</th><th>原始值（按摘录保留）</th><th>条件 / 备注</th><th>状态</th></tr></thead><tbody>{selected.specs.map((spec) => <tr key={spec.name}><td>{spec.name}</td><td className="mono">{spec.originalValue}</td><td>{[spec.condition, spec.note].filter(Boolean).join('；') || '—'}</td><td><StatusPill status="待确认" /></td></tr>)}</tbody></table></div></div>
@@ -156,7 +142,7 @@ function Assistant({ product }: { product: ProductSummary }) {
       setAnswer(`客户意图：${response.customer_intent || '请核对以下资料。'}\n\n中文解释：${response.explanation_zh || '—'}\n\n已知信息：\n${(response.known_information || []).map((item) => `- ${item}`).join('\n') || '- —'}\n\n缺失信息：\n${(response.missing_information || []).map((item) => `- ${item}`).join('\n') || '- —'}\n\n英文草稿：\n${response.english_draft || '—'}\n\n中文对照：\n${response.translation_zh || '—'}\n\n引用：\n${(response.citations || []).map((item) => `- ${item.source_id}${item.page ? `，第 ${item.page} 页` : ''}${item.section ? `，${item.section}` : ''}${item.locator ? `，${item.locator}` : ''}`).join('\n') || '- 无有效引用，结果不应对外使用。'}`)
     } catch (error) { setAnswer(`未生成正式问答：${error instanceof Error ? error.message : '未知错误'}\n\n请检查 AI/代理配置、登录状态和已解析的产品资料。`) }
   }
-  return <><div className="page-heading"><div><p className="eyebrow">资料问答 · 当前产品：{product.name}</p><h1>不确定，就坦诚地问清楚。</h1><p>默认只检索你可访问的知识库；未找到证据时不会编造答案。</p></div></div><div className="assistant-layout"><section className="ask-card"><label htmlFor="question">客户问题（可输入中文或粘贴英文）</label><textarea id="question" value={question} onChange={(event) => setQuestion(event.target.value)} placeholder="例如：Can this be used on untreated PP?" rows={7} /><div className="ask-options"><label>回复形式<select value={tone} onChange={(event) => setTone(event.target.value as ReplyTone)}><option>商务邮件</option><option>简短即时消息</option><option>解释简单一点</option></select></label><label className="checkbox"><input type="checkbox" disabled />联网补充 <small>配置后可用</small></label></div><button className="primary-button" onClick={ask}><Send size={17} />基于当前资料整理回答</button></section><section className="answer-card">{answer ? <><div className="card-heading"><div><p className="eyebrow">回答草稿</p><h2>证据不足时的安全回复</h2></div><button className="text-button" onClick={() => navigator.clipboard.writeText(answer)}>复制纯文本</button></div><pre>{answer}</pre></> : <EmptyState title="输入一个真实问题" description="结果会列出已知、缺失信息、英文草稿及引用；没有证据时会明确提示资料不足。" />}</section></div></> }
+  return <><div className="page-heading"><div><p className="eyebrow">回复助手 · 当前产品：{product.name}</p><h1>不确定，就坦诚地问清楚。</h1><p>默认只检索你可访问的知识库；未找到证据时不会编造答案。</p></div></div><div className="assistant-layout"><section className="ask-card"><label htmlFor="question">客户问题（可输入中文或粘贴英文）</label><textarea id="question" value={question} onChange={(event) => setQuestion(event.target.value)} placeholder="例如：Can this be used on untreated PP?" rows={7} /><div className="ask-options"><label>回复形式<select value={tone} onChange={(event) => setTone(event.target.value as ReplyTone)}><option>商务邮件</option><option>简短即时消息</option><option>解释简单一点</option></select></label><label className="checkbox"><input type="checkbox" disabled />联网补充 <small>配置后可用</small></label></div><button className="primary-button" onClick={ask}><Send size={17} />基于当前资料整理回答</button></section><section className="answer-card">{answer ? <><div className="card-heading"><div><p className="eyebrow">回答草稿</p><h2>证据不足时的安全回复</h2></div><button className="text-button" onClick={() => navigator.clipboard.writeText(answer)}>复制纯文本</button></div><pre>{answer}</pre></> : <EmptyState title="输入一个真实问题" description="结果会列出已知、缺失信息、英文草稿及引用；没有证据时会明确提示资料不足。" />}</section></div></> }
 
 function Studio({ product }: { product: ProductSummary }) {
   const [topic, setTopic] = useState('')

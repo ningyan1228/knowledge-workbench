@@ -29,6 +29,7 @@ import './CompactMarketHeader.css'
 import './CompactCustomerCards.css'
 import './MarketVisualSystem.css'
 import './CalmWorkspace.css'
+import './DiscoveryPolish.css'
 
 const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources' | 'results' | 'follow-up'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'follow-up', label: '客户跟进' }, { id: 'results', label: '开发结果' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
