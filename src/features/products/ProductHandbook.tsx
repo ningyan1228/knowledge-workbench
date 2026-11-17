@@ -27,11 +27,11 @@ export function HandbookText({ text }: { text: string }) {
   })}</div>
 }
 
-function Sections({ body }: { body: string }) {
+function Sections({ body, compactParameters = false }: { body: string; compactParameters?: boolean }) {
   const [intro, ...sections] = body.split(/^### /m)
   return <>{intro.trim() && <HandbookText text={intro} />}{sections.map((section, index) => {
     const newline = section.indexOf('\n')
-    return <details className="handbook-section" key={index} open={index === 0}><summary>{section.slice(0, newline)}</summary><HandbookText text={section.slice(newline + 1)} /></details>
+    return <details className="handbook-section" key={index} open={index === 0}><summary>{section.slice(0, newline)}</summary><HandbookText text={compactParameters && /^(2\.3|3\.4|4\.3) /.test(section) ? section.slice(newline + 1).replace(/(?:^\|.*\n?)+/gm, '参数数值、含义与核验状态统一见上方技术参数表。') : section.slice(newline + 1)} /></details>
   })}</>
 }
 
@@ -46,5 +46,5 @@ function download() {
 
 export function ProductHandbook({ productId }: { productId: string }) {
   const chapter = getProductChapter(productId)
-  return <section className="detail-section" key={productId} id="product-handbook"><h3>产品学习手册 <span>2026年11月3日 · 产品资料整理</span></h3><p className="muted">按章节展开：产品原理、参数含义、应用判断、包装储存、英文介绍和询盘问题。</p>{['cpp-cpo', 'nl-w1201'].includes(productId) && <Sections body={handbookChapters.find((item) => item.title.startsWith('十二、'))?.body ?? ''} />}{chapter && <Sections body={chapter.body} />}<details className="handbook-section"><summary>产品总览与共同学习资料</summary>{handbookChapters.filter((item) => !/^(?:二|三|四|十一)、/.test(item.title)).map((item) => <details className="handbook-section" key={item.title}><summary>{item.title}</summary>{item.body.includes('### ') ? <Sections body={item.body} /> : <HandbookText text={item.body} />}</details>)}</details><button className="secondary-button" onClick={download}>下载完整学习手册</button></section>
+  return <section className="detail-section" key={productId} id="product-handbook"><h3>产品学习手册 <span>2026年11月3日 · 产品资料整理</span></h3><p className="muted">按章节展开：产品原理、参数含义、应用判断、包装储存、英文介绍和询盘问题。</p>{['cpp-cpo', 'nl-w1201'].includes(productId) && <Sections body={handbookChapters.find((item) => item.title.startsWith('十二、'))?.body ?? ''} />}{chapter && <Sections body={chapter.body} compactParameters />}<details className="handbook-section"><summary>产品总览与共同学习资料</summary>{handbookChapters.filter((item) => !/^(?:二|三|四|十一)、/.test(item.title)).map((item) => <details className="handbook-section" key={item.title}><summary>{item.title}</summary>{item.body.includes('### ') ? <Sections body={item.body} /> : <HandbookText text={item.body} />}</details>)}</details><button className="secondary-button" onClick={download}>下载完整学习手册</button></section>
 }

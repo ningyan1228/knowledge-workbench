@@ -17,7 +17,7 @@ export function TodayWorkspace() {
   const due = work.status === 'ready' ? publicLeads.filter(lead => followUpDue(work.records[outreachCompanyKey(lead)], today)).sort((a,b) => work.records[outreachCompanyKey(a)].followUpOn.localeCompare(work.records[outreachCompanyKey(b)].followUpOn)) : []
   const favorites = work.status === 'ready' ? publicLeads.filter(lead => work.records[outreachCompanyKey(lead)]?.favorite) : []
   return <div className="today-workspace">
-    <header className="today-hero"><div><p className="eyebrow">{today} · 今日待办</p><h1>把客户的下一步，往前推进。</h1><p>先处理到期跟进，再开始新的客户开发。</p></div><a className="primary-button" href="#market-intelligence">开始客户开发 <ArrowUpRight size={17}/></a></header>
+    <header className="today-hero"><div><p className="eyebrow">{today} · 今日待办</p><h1>把客户的下一步，往前推进。</h1><p>先处理到期跟进，再开始新的客户开发。</p></div></header>
     <div className="today-shortcuts"><a href="#market-intelligence/follow-up"><span>01 / 客户跟进</span><strong>报价、样品与业务进展</strong><small>查看共享台账中的下一步与完整历史</small></a><a href="#market-intelligence"><span>02 / 客户开发</span><strong>寻找下一位潜在客户</strong><small>按产品、市场和联系渠道筛选</small></a><a href="#products"><span>03 / 产品资料</span><strong>带着依据，回答客户</strong><small>{products.length} 类产品 · 应用、参数与原始资料</small></a></div>
     <div className="today-columns"><section className="today-panel"><header><div><p className="eyebrow">今天要处理</p><h2>我的到期跟进 {work.status === 'ready' && <span>{due.length}</span>}</h2></div><button className="text-button" onClick={()=>void work.refresh()}><RefreshCw size={15}/>刷新</button></header>
       <p className="today-caption">来自当前账号在客户开发中设置的跟进日期；共享客户台账请从“客户跟进”查看。</p>

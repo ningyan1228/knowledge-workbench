@@ -30,12 +30,13 @@ export function LeadPreparationShortcuts({ leads, filters, onChange, ledger, wor
     <span>{label}</span>{options.map(option => {
       const unavailable = key === 'sendStatus' && option.id !== 'all' && option.id !== 'unknown' && sends === null
       const values = { [key]: option.id } as Partial<BusinessFilters>
+      if (unavailable) return null
       return <button key={option.id} type="button" data-dimension={key} data-filter={option.id} aria-pressed={filters[key] === option.id} disabled={unavailable} onClick={() => onChange({ ...filters, ...values })}><span>{option.label}</span><b>{unavailable ? '—' : count(values)}</b></button>
     })}
   </div>
   return <div className="work-preparation-compact">
     <button type="button" className="work-dimensions-open" aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={() => setOpen(true)}><SlidersHorizontal size={15} />筛选{selected.length + extraFilterCount > 0 && <b>{selected.length + extraFilterCount}</b>}</button>
-    <div className="work-preparation-quick" role="group" aria-label="发送记录快捷筛选"><span>发送记录</span>{([{id:'all',label:'全部'},{id:'sent',label:'已记录发送'},{id:'unsent',label:'未查到发送记录'}] as const).map(option => <button key={option.id} type="button" data-quick-send={option.id} aria-pressed={filters.sendStatus === option.id} disabled={option.id !== 'all' && sends === null} title={option.id === 'unsent' ? '共享台账中没有有效记录，不代表确定未发送。' : undefined} onClick={() => onChange({ ...filters, sendStatus:option.id, preparation:'all' })}>{option.label}</button>)}</div>
+    <div className="work-preparation-quick" role="group" aria-label="发送记录快捷筛选"><span>发送记录</span>{([{id:'all',label:'全部'},{id:'sent',label:'已记录发送'},{id:'unsent',label:'未查到发送记录'}] as const).map(option => <button key={option.id} type="button" data-quick-send={option.id} aria-pressed={filters.sendStatus === option.id} disabled={option.id !== 'all' && sends === null} title={sends === null && option.id !== 'all' ? '连接共享发送记录后可筛选；当前不能判断是否发送' : option.id === 'unsent' ? '共享台账中没有有效记录，不代表确定未发送。' : undefined} onClick={() => onChange({ ...filters, sendStatus:option.id, preparation:'all' })}>{option.label}</button>)}</div>
     {selected.map(item => <button key={item.key} type="button" className="work-dimension-chip" aria-label={`移除筛选：${item.label}`} onClick={() => onChange({ ...filters, [item.key]:'all' })}>{item.label}<X size={12} /></button>)}
     {filters.sendStatus === 'unknown' && <button type="button" className="work-dimension-chip" aria-label="移除筛选：记录待确认" onClick={() => onChange({ ...filters, sendStatus:'all' })}>记录待确认<X size={12} /></button>}
     {ledger.status === 'error' && <button type="button" className="work-dimension-error" onClick={() => setOpen(true)}>发送记录读取失败</button>}

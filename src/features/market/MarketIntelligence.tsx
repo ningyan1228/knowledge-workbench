@@ -31,7 +31,7 @@ import './MarketVisualSystem.css'
 import './CalmWorkspace.css'
 import './DiscoveryPolish.css'
 
-const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources' | 'results' | 'follow-up'; label: string }> = [{ id: 'customers', label: '客户开发' }, { id: 'follow-up', label: '客户跟进' }, { id: 'results', label: '开发结果' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
+const tabs: Array<{ id: 'customers' | 'overview' | 'products' | 'sources' | 'results' | 'follow-up'; label: string }> = [{ id: 'customers', label: '客户库' }, { id: 'follow-up', label: '团队台账' }, { id: 'results', label: '开发结果' }, { id: 'overview', label: '总览' }, { id: 'products', label: '产品匹配' }, { id: 'sources', label: '来源与核验' }]
 
 function setHash(value: string) { window.location.hash = value }
 function productOf(id: MarketProduct['id']) { return marketProducts.find((product) => product.id === id)! }
@@ -95,18 +95,21 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   const today = shanghaiDay(new Date().toISOString())
   const businessLeads = useMemo(() => filterWorkbenchLeads(regionalLeads, filters, records, sends, today, order), [regionalLeads, filters, records, sends, today, order])
   const matching = useMemo(() => timelineLeads(businessLeads, order, day, today).sort((a, b) => businessLeads.indexOf(a) - businessLeads.indexOf(b)), [businessLeads, order, day, today])
-  const resetFocus = () => { setSelectedLead(null); setHoveredLead(null); setOverviewToken((value) => value + 1) }
+  const deepLinkId = route()[2]
+  const resetFocus = () => { didSelect.current = false; setSelectedLead(null); setHoveredLead(null); setOverviewToken((value) => value + 1) }
   const openLeadDetail = (lead: PublicLead, target?: CompanyDetailOpenTarget, approved = false) => {
     if (!approved && detailLead?.id !== lead.id && navigationRef.current && !navigationRef.current.canLeave()) return
     setDetailRequest(value => value + 1); setDetailTarget(target); setHoveredLead(null); setSelectedLead(lead); setDetailLead(lead)
   }
   useEffect(() => { setFilters((current) => ({ ...current, industry: 'all', application: 'all' })); resetFocus() }, [productId])
   useEffect(() => {
-    if (view === 'leads' && wide && matching.length && !didSelect.current) {
+    if (view === 'leads' && wide && !didSelect.current && (!navigationRef.current || navigationRef.current.canLeave())) {
       didSelect.current = true
-      setDetailLead(matching[0]); setSelectedLead(matching[0])
+      const first = matching[0] ?? null; setDetailLead(first); setSelectedLead(first)
     }
   }, [view, wide, matching])
+  useEffect(() => { const lead = leads.find(l => l.id === deepLinkId); if (lead && (!navigationRef.current || navigationRef.current.canLeave())) { didSelect.current = true; setFilters({...emptyBusinessFilters}); setDay('all'); setCountry('all'); setContinent('all'); setDetailLead(lead); setSelectedLead(lead) } }, [deepLinkId, leads])
+
   useEffect(() => {
     setFilters((current) => {
       const listMissing = current.list !== 'all' && current.list !== 'favorites' && !work.lists.some((list) => list.id === current.list)
@@ -119,7 +122,7 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     if (selectedLead && !matching.some((lead) => lead.id === selectedLead.id)) setSelectedLead(null)
     if (hoveredLead && !matching.some((lead) => lead.id === hoveredLead.id)) setHoveredLead(null)
   }, [matching, selectedLead, hoveredLead])
-  const showAll = () => { onProduct('all'); setContinent('all'); setCountry('all'); setDay('all'); setOrder('newest'); setFilters({ ...emptyBusinessFilters }); resetFocus() }
+  const showAll = () => { if (navigationRef.current && !navigationRef.current.canLeave()) return; onProduct('all'); setContinent('all'); setCountry('all'); setDay('all'); setOrder('newest'); setFilters({ ...emptyBusinessFilters }); resetFocus() }
   const returnAllRegions = () => { setContinent('all'); setCountry('all'); resetFocus() }
   const selectCountry = (value: string) => { setCountry(value); resetFocus() }
   const regionLabel = country !== 'all' ? options.countries.find((item) => item.value === country)?.label ?? country : continent !== 'all' ? continent : '全部地区'
@@ -166,19 +169,19 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
     finally { setDownloading(false) }
   }
   return <section className="market-map-workspace">
-    <LeadBusinessControls viewControls={viewControls} allCustomerCount={new Set(publicLeads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { setFilters(value); resetFocus() }} work={work} ledger={ledger}
+    <LeadBusinessControls sortControls={<label>排序<select aria-label="客户排序" value={filters.sort === 'priority' ? 'priority' : order} onChange={e=>{if(navigationRef.current && !navigationRef.current.canLeave())return;setFilters({...filters,sort:e.target.value==='priority'?'priority':'time'});setOrder(e.target.value==='oldest'?'oldest':'newest');resetFocus()}}><option value="newest">首次收录由新到旧</option><option value="oldest">首次收录由旧到新</option><option value="priority">开发优先级</option></select></label>} viewControls={viewControls} allCustomerCount={new Set(data.leads.map(outreachCompanyKey)).size} allCustomersActive={!hasActiveFilters} onShowAll={showAll} leads={regionalLeads} preparationLeads={preparationLeads} filters={filters} onChange={(value) => { if (navigationRef.current && !navigationRef.current.canLeave()) return; setFilters(value); resetFocus() }} work={work} ledger={ledger}
       primaryFilters={<div className="market-scope-controls"><div className="market-product-row"><span>产品</span><ProductPicker value={productId} onChange={onProduct} /></div>
     <div className="lead-geography-filters" role="group" aria-label="按地区筛选"><label>大洲<select aria-label="大洲" value={continent} onChange={(event) => { setContinent(event.target.value); setCountry('all'); resetFocus() }}><option value="all">全部大洲</option>{options.continents.map((item) => <option key={item.value} value={item.value}>{item.value} · {item.count} 家</option>)}</select></label><label>国家／地区<select aria-label="国家／地区" value={country} onChange={(event) => selectCountry(event.target.value)}><option value="all">全部国家／地区</option>{options.countries.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.count} 家</option>)}</select></label></div>
     </div>}
-      advancedContent={<LeadTimelineControls refreshControl={<LeadDataRefresh data={data} onRefresh={refreshData} />} embedded leads={businessLeads} order={order} day={day} onOrder={setOrder} onDay={(value) => { setDay(value); resetFocus() }} />}
+      advancedContent={<LeadTimelineControls hideOrder refreshControl={<LeadDataRefresh data={data} onRefresh={refreshData} />} embedded leads={businessLeads} order={order} day={day} onOrder={(value) => { setOrder(value); resetFocus() }} onDay={(value) => { setDay(value); resetFocus() }} />}
       extraFilterCount={Number(day !== 'all') + Number(order !== 'newest') + Number(productId !== 'all') + Number(continent !== 'all' || country !== 'all')}
       extraActiveFilters={<>{productId !== 'all' && <button type="button" onClick={() => onProduct('all')} aria-label="移除产品筛选">{productOf(productId as MarketProduct['id']).name}<X size={12} /></button>}{(continent !== 'all' || country !== 'all') && <button type="button" onClick={returnAllRegions} aria-label="移除地区筛选">{regionLabel}<X size={12} /></button>}{day !== 'all' && <button type="button" onClick={() => { setDay('all'); resetFocus() }} aria-label="移除收录日期筛选"><span>{timelineFilterLabel(day, today)}</span><X size={12} /></button>}{order !== 'newest' && <button type="button" onClick={() => setOrder('newest')} aria-label="恢复默认收录排序"><span>首次收录由旧到新</span><X size={12} /></button>}</>} />
-    <div className="market-results-bar compact-customer-results"><span className="market-result-count" role="status"><strong>{companyCount} 家公司</strong> · {new Set(matching.map(lead => lead.country)).size} 个国家／地区{matching.length > companyCount && <small> · {matching.length} 条产品记录</small>}</span>
+    <div className="market-results-bar compact-customer-results"><span className="market-result-count" role="status"><strong>{companyCount} 家公司</strong> · {new Set(matching.map(lead => lead.country)).size} 个国家／地区 <small title="按当前筛选统计来源链接及核验日期齐全的公开记录；不代表已确认采购。">· 来源与日期齐全 {matching.filter(l=>l.source.url && l.checkedAt).length} 条</small>{matching.length > companyCount && <small> · {matching.length} 条产品记录</small>}</span>
       <div className="customer-result-actions"><LeadDataRefresh data={data} onRefresh={refreshData}/><button type="button" className="customer-export-action" disabled={ledger.status !== 'ready' || downloading || !unsentEmails.length} onClick={() => void downloadEmails()} title="下载前重新核对记录；下载不会标记已发送"><FileText size={14} />{downloading ? '核对发送记录…' : '下载开发信'}{ledger.status === 'ready' && <span>{unsentEmails.length}</span>}</button></div>
     </div>
     <div ref={workspaceRef} className={view === 'map' ? 'customer-map-view' : 'work-list-view customer-split-workspace'}>
       {view === 'map' ? <CustomerMapWorkspace dataRevision={data.revision} leads={matching} selectedLead={selectedLead} hoveredLead={hoveredLead} onSelectLead={setSelectedLead} onHighlight={setHoveredLead} onOpenDetail={openLeadDetail} detailOpen={Boolean(detailLead)} overviewToken={overviewToken} onOverview={resetFocus} onReturnRegions={continent !== 'all' || country !== 'all' ? returnAllRegions : undefined} ledger={ledger} work={work} /> : matching.length > 0 && <CustomerBrowseList leads={matching} selectedLead={detailLead} onHighlight={() => {}} onSelect={(lead) => openLeadDetail(lead, 'overview')} onOpenDetail={openLeadDetail} ledger={ledger} work={work} />}
-      {!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选没有符合条件的客户</strong><span>可调整业务条件、日期或地区，或点击“清除筛选”。</span></div>}
+      {!matching.length && <div className="empty-state"><Search size={25} /><strong>当前筛选没有符合条件的客户</strong><span>可调整业务条件、日期或地区。</span><button onClick={showAll}>清除筛选</button></div>}
       {view === 'leads' && <CompanyDetail requestId={detailRequest} embedded={wide} navigationRef={navigationRef} initialTarget={detailTarget} initialSection={filters.preparation === 'ready' || filters.preparation === 'sent' ? 'outreach' : filters.preparation === 'needs-email' ? 'overview' : undefined} key={work.ownerId ?? work.status} lead={detailLead} onClose={() => setDetailLead(null)} ledger={ledger} work={work} leads={matching} onNavigate={(lead, target) => openLeadDetail(lead, target, true)} />}
       {view === 'leads' && !detailLead && <div className="customer-work-placeholder"><Building2 size={30} /><h2>选择一家客户</h2><p>查看联系理由、公开渠道，或准备开发信。</p></div>}
     </div>
@@ -187,9 +190,9 @@ function LeadsWorkspace({ productId, leads, onProduct, ledger, work, view, onVie
   </section>
 }
 
-function ProductsView({ productId, onProduct }: { productId: string; onProduct: (id: string) => void }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">TDS-DRIVEN TARGETING</p><h2>产品如何变成开发名单</h2><p>系统把 TDS 已验证应用、市场扩展应用和目标公司类型分开存储。市场扩展项必须带独立公开来源、来源名称和核验日期。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><div className="product-detail-grid">{marketProducts.filter((product) => productId === 'all' || product.id === productId).map((product) => { const tdsApplications = tdsVerifiedApplications.filter((item) => item.productId === product.id); const extensions = marketExtendedApplications.filter((item) => item.productId === product.id); const targets = targetCompanyTypes.filter((item) => item.productId === product.id && item.kind === 'target'); return <article className="product-detail" key={product.id}><i style={{ background: product.color }} /><h3>{product.name}</h3><p>{product.tdsScope}</p><h4>TDS 已验证应用</h4><div className="chip-row">{tdsApplications.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>目标公司类型</h4><div className="chip-row">{targets.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>市场扩展应用</h4>{extensions.length ? <div className="extension-list">{extensions.map((item) => <a key={item.id} href={item.sourceUrl} target="_blank" rel="noreferrer"><span>{item.nameEn}</span><small>{item.sourceName} · {item.verifiedAt}</small><ExternalLink size={13} /></a>)}</div> : <p className="detail-empty">暂无；不会仅因材料性质推测新增。</p>}<h4>检索逻辑</h4><p className="product-search-logic">{product.searchLogic}</p><h4>建议检索词</h4><ul>{product.searchTerms.map((term) => <li key={term}>{term}</li>)}</ul></article> })}</div></section> }
+function ProductsView({ productId, onProduct }: { productId: string; onProduct: (id: string) => void }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">TDS-DRIVEN TARGETING</p><h2>产品如何变成开发名单</h2><p>系统把 TDS 已验证应用、市场扩展应用和目标公司类型分开存储。市场扩展项必须带独立公开来源、来源名称和核验日期。</p></div></div><ProductPicker value={productId} onChange={onProduct} /><p>当前匹配 {marketProducts.filter(p=>productId==='all'||p.id===productId).length} / {marketProducts.length} 类产品</p><div className="product-detail-grid">{marketProducts.filter((product) => productId === 'all' || product.id === productId).map((product) => { const tdsApplications = tdsVerifiedApplications.filter((item) => item.productId === product.id); const extensions = marketExtendedApplications.filter((item) => item.productId === product.id); const targets = targetCompanyTypes.filter((item) => item.productId === product.id && item.kind === 'target'); return <article className="product-detail" key={product.id}><i style={{ background: product.color }} /><h3>{product.name}</h3><p>{product.tdsScope}</p><h4>TDS 已验证应用</h4><div className="chip-row">{tdsApplications.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>目标公司类型</h4><div className="chip-row">{targets.map((item) => <span key={item.id} className="chip">{item.nameEn}</span>)}</div><h4>市场扩展应用</h4>{extensions.length ? <div className="extension-list">{extensions.map((item) => <a key={item.id} href={item.sourceUrl} target="_blank" rel="noreferrer"><span>{item.nameEn}</span><small>{item.sourceName} · {item.verifiedAt}</small><ExternalLink size={13} /></a>)}</div> : <p className="detail-empty">暂无；不会仅因材料性质推测新增。</p>}<h4>检索逻辑</h4><p className="product-search-logic">{product.searchLogic}</p><h4>建议检索词</h4><ul>{product.searchTerms.map((term) => <li key={term}>{term}</li>)}</ul></article> })}</div></section> }
 
-function SourcesView({ leads }: { leads: PublicLead[] }) { return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">EVIDENCE TRAIL</p><h2>来源与使用边界</h2><p>线索卡只展示公司官网上公开的业务描述和联系方式。官网的存在不证明其正在采购本产品；发信前先核对联系人是否仍在职、采购职责和具体项目。</p></div></div><div className="source-evidence-list">{leads.map((lead) => <article key={lead.id}><span>{productOf(lead.productId).name}</span><div><strong>{lead.company}</strong><p>{lead.signal}</p><a href={lead.source.url} target="_blank" rel="noreferrer">{lead.source.label} · {sourceHost(lead.source.url)} <ExternalLink size={14} /></a></div><small>核验：{lead.checkedAt}</small></article>)}</div><div className="callout warning"><TriangleAlert size={18} /><div><strong>使用前必做两步</strong><p>第一步，打开每条来源确认网页与联系方式仍有效；第二步，仅向与业务相关的公开业务邮箱或官网表单发送一封个性化 B2B 开发信，并遵守目的地的反垃圾邮件规则。</p></div></div></section> }
+function SourcesView({ leads }: { leads: PublicLead[] }) { const [query,setQuery]=useState(''), [product,setProduct]=useState('all'), [limit,setLimit]=useState(50); const filtered=leads.filter(l=>(product==='all'||l.productId===product)&&[l.company,l.signal,l.source.label,l.countryZh].join(' ').toLowerCase().includes(query.trim().toLowerCase())); return <section className="market-data-section"><div className="section-heading"><div><p className="eyebrow">EVIDENCE TRAIL</p><h2>来源与使用边界</h2><p>线索卡只展示公司官网上公开的业务描述和联系方式。官网的存在不证明其正在采购本产品；发信前先核对联系人是否仍在职、采购职责和具体项目。</p></div></div><label>搜索来源 <input value={query} onChange={e=>{setQuery(e.target.value);setLimit(50)}} placeholder="公司、国家或来源" /></label><ProductPicker value={product} onChange={id=>{setProduct(id);setLimit(50)}}/><p>{filtered.length} / {leads.length} 条来源 · 已显示 {Math.min(limit,filtered.length)} 条</p><div className="source-evidence-list">{filtered.slice(0,limit).map((lead) => <article key={lead.id}><span>{productOf(lead.productId).name}</span><div><strong>{lead.company}</strong><p>{lead.signal}</p><a href={lead.source.url} target="_blank" rel="noreferrer">{lead.source.label} · {sourceHost(lead.source.url)} <ExternalLink size={14} /></a></div><small>核验：{lead.checkedAt}</small></article>)}</div>{filtered.length>limit && <button className="secondary-button" onClick={()=>setLimit(limit+50)}>再显示 50 条</button>}{!filtered.length && <p>没有匹配来源。<button onClick={()=>{setQuery('');setProduct('all')}}>清除筛选</button></p>}<div className="callout warning"><TriangleAlert size={18} /><div><strong>使用前必做两步</strong><p>第一步，打开每条来源确认网页与联系方式仍有效；第二步，仅向与业务相关的公开业务邮箱或官网表单发送一封个性化 B2B 开发信，并遵守目的地的反垃圾邮件规则。</p></div></div></section> }
 
 export function MarketIntelligence() {
   const [currentRoute, setRoute] = useState(route())
@@ -201,6 +204,7 @@ export function MarketIntelligence() {
   useEffect(() => { const listener = () => setRoute(route()); window.addEventListener('hashchange', listener); return () => window.removeEventListener('hashchange', listener) }, [])
   const tab = marketTabForRoute(currentRoute[1], preferredView)
   useEffect(() => { if (tab === 'map' || tab === 'leads') { rememberLeadView(tab); setPreferredView(tab) } }, [tab])
+  useEffect(() => { if (currentRoute[2] || currentRoute[1] === 'overview') setProductId('all') }, [currentRoute])
   const filteredLeads = useMemo(() => data.leads.filter((lead) => productId === 'all' || lead.productId === productId), [productId, data.leads])
   const openTab = (next: MarketTab) => setHash(`market-intelligence/${next}`)
   const customerView = tab === 'map' || tab === 'leads'
@@ -211,7 +215,7 @@ export function MarketIntelligence() {
     {tab === 'overview' && <Overview productId={productId} leads={filteredLeads} onProduct={setProductId} onOpenMap={() => openTab('map')} />}
     {customerView && <LeadsWorkspace data={data} productId={productId} leads={filteredLeads} onProduct={setProductId} ledger={ledger} work={work} view={tab as 'map' | 'leads'} onView={openTab} />}
     {tab === 'products' && <ProductsView productId={productId} onProduct={setProductId} />}
-    {tab === 'sources' && <SourcesView leads={filteredLeads} />}
+    {tab === 'sources' && <SourcesView leads={data.leads} />}
     {tab === 'results' && <OutreachResults key={work.ownerId ?? work.status} leads={data.leads} ledger={ledger} work={work} />}
     {tab === 'follow-up' && <CustomerFollowUp />}
   </div>

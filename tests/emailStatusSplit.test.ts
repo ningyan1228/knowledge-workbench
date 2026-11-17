@@ -54,7 +54,7 @@ describe('sending records are independent of the current inbox', () => {
     expect(markup).toContain('未查到发送记录')
     expect(markup).toContain('邮箱待补')
     expect(markup).not.toContain('待补邮箱（未发）')
-    expect(render('error')).toMatch(/data-dimension="sendStatus" data-filter="unsent"[^>]*disabled/)
+    expect(render('error')).not.toMatch(/data-dimension="sendStatus" data-filter="unsent"/)
     expect(render('error')).not.toMatch(/data-dimension="completeness" data-filter="needs-email"[^>]*disabled/)
   })
 })

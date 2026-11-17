@@ -9,7 +9,9 @@ import re
 import sqlite3
 import uuid
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
+from typing import Literal
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.parse import quote
 
@@ -31,6 +33,15 @@ class SnapshotInput(BaseModel):
 
 class RestoreInput(BaseModel):
     expected_current_id: str | None
+
+
+class ActionInput(BaseModel):
+    id: uuid.UUID
+    customer_id: str = Field(pattern=r'^[A-Za-z0-9-]{1,80}$')
+    kind: Literal['done', 'postpone']
+    action_date: date
+    note: str = Field(min_length=1, max_length=2000)
+    expected_last_id: str | None
 
 
 class MemberInput(BaseModel):
@@ -87,6 +98,11 @@ class FollowupStore:
                 );
                 CREATE TABLE IF NOT EXISTS followup_state (id INTEGER PRIMARY KEY CHECK(id=1), current_id TEXT);
                 INSERT OR IGNORE INTO followup_state(id,current_id) VALUES(1,NULL);
+                CREATE TABLE IF NOT EXISTS followup_actions (
+                    seq INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT UNIQUE NOT NULL,
+                    version_id TEXT NOT NULL, customer_id TEXT NOT NULL, kind TEXT NOT NULL,
+                    action_date TEXT NOT NULL, note TEXT NOT NULL, actor TEXT NOT NULL, created_at TEXT NOT NULL
+                );
                 CREATE TABLE IF NOT EXISTS followup_members (
                     email TEXT PRIMARY KEY, invited_at TEXT NOT NULL, invited_by TEXT NOT NULL
                 );
@@ -229,6 +245,38 @@ def create_followup_router(supabase_url: str, publishable_key: str, store: Follo
     def restore(version_id: uuid.UUID, body: RestoreInput, user: dict = Depends(owner)):
         source = store.read(str(version_id))
         return {'id': store.publish(source['filename'], source['markdown'], user['email'], body.expected_current_id, str(version_id), source_base64=source['source_base64'])}
+
+    @router.get('/versions/{version_id}/actions')
+    def actions(version_id: uuid.UUID, _user: dict = Depends(member)):
+        store.read(str(version_id))
+        with store.connection() as db:
+            return [dict(row) for row in db.execute('SELECT * FROM followup_actions WHERE version_id=? ORDER BY seq', (str(version_id),))]
+
+    @router.post('/versions/{version_id}/actions')
+    def add_action(version_id: uuid.UUID, body: ActionInput, user: dict = Depends(owner)):
+        source = store.read(str(version_id))
+        key = re.escape(body.customer_id)
+        if not re.search(r'(?:customer_id:\s*|^#{1,6}\s*|^\|\s*)' + key + r'(?=[;\s｜／|]|-->)', source['markdown'], re.M):
+            raise HTTPException(422, '本版未找到该客户编号，请刷新核对。')
+        if not body.note.strip():
+            raise HTTPException(422, '请填写处理说明。')
+        today = datetime.now(ZoneInfo('Asia/Shanghai')).date()
+        if (body.kind == 'postpone' and body.action_date <= today) or (body.kind == 'done' and body.action_date > today):
+            raise HTTPException(422, '推迟日期须晚于今天，实际跟进日期不能在未来。')
+        with store.connection() as db:
+            db.execute('BEGIN IMMEDIATE')
+            existing = db.execute('SELECT * FROM followup_actions WHERE id=?', (str(body.id),)).fetchone()
+            if existing:
+                if (existing['version_id'], existing['customer_id'], existing['kind'], existing['action_date'], existing['note'], existing['actor']) != (str(version_id), body.customer_id, body.kind, body.action_date.isoformat(), body.note.strip(), user['email']):
+                    raise HTTPException(409, '操作编号已使用，请重新打开操作。')
+                return dict(existing)
+            if db.execute('SELECT current_id FROM followup_state WHERE id=1').fetchone()[0] != str(version_id):
+                raise HTTPException(409, '仅可操作当前版本，请刷新台账。')
+            last = db.execute('SELECT id FROM followup_actions WHERE version_id=? AND customer_id=? ORDER BY seq DESC LIMIT 1', (str(version_id), body.customer_id)).fetchone()
+            if (last['id'] if last else None) != body.expected_last_id:
+                raise HTTPException(409, '该客户已有新操作，请刷新后核对。')
+            db.execute('INSERT INTO followup_actions(id,version_id,customer_id,kind,action_date,note,actor,created_at) VALUES(?,?,?,?,?,?,?,?)', (str(body.id), str(version_id), body.customer_id, body.kind, body.action_date.isoformat(), body.note.strip(), user['email'], datetime.now(timezone.utc).isoformat()))
+            return dict(db.execute('SELECT * FROM followup_actions WHERE id=?', (str(body.id),)).fetchone())
 
     @router.get('/members')
     def members(_user: dict = Depends(owner)):

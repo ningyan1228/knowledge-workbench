@@ -7,6 +7,7 @@ import { FollowupMarkdown } from './FollowupMarkdown'
 import { FollowupDatePicker } from './FollowupDatePicker'
 import { FollowupContent, followupViews, type FollowupView } from './FollowupViews'
 import './CustomerFollowUp.css'
+import { FollowupActions } from './FollowupActions'
 
 // Display alias only. Uploaded bytes and download checksums remain unchanged.
 function colleagueDisplay(value: string) {
@@ -87,7 +88,7 @@ function FollowupWorkspace({ userId }: { userId: string }) {
       <p className="followup-footnote">数据版本 {document.metadata.dataset_version || loaded.snapshot.id} · 文件整理日 {document.metadata.updated_date || loaded.snapshot.source_date || '待确认'} · {document.metadata.timezone || '时区按原文'} · 原文 SHA-256 {loaded.snapshot.content_hash}</p>
 <p className="followup-footnote">{document.coverage.total} 个非空正文块已保留 · 未保留 {document.coverage.unretained}</p>{document.warnings.map(warning => <p className="followup-warning" key={warning}>{warning}</p>)}</details>
       <div className="followup-list-toolbar followup-search-bar"><label className="followup-search"><Search size={16} /><input aria-label="搜索跟进客户" placeholder="搜索客户、联系人、产品或进度" value={query} onChange={event => setQuery(event.target.value)} /></label>{query && <button className="followup-text-button" onClick={() => setQuery('')}>清除搜索</button>}</div>
-      <FollowupContent key={loaded.snapshot.id} document={document} markdown={colleagueDisplay(loaded.snapshot.markdown)} view={view} query={query} expanded={expanded} setExpanded={setExpanded} onSource={onSource} sourceLine={sourceLine} />
+      <FollowupActions key={loaded.snapshot.id} userId={userId} versionId={loaded.snapshot.id} writable={owner && !historical} refreshKey={loaded}><FollowupContent key={loaded.snapshot.id} document={document} markdown={colleagueDisplay(loaded.snapshot.markdown)} view={view} query={query} expanded={expanded} setExpanded={setExpanded} onSource={onSource} sourceLine={sourceLine} /></FollowupActions>
     </>}
     {panel === 'upload' && loaded && owner && <UploadDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onSaved={() => { setPanel(null); toCurrent(); setMessage('台账已更新，同事打开后将看到最新版。') }} />}
     {panel === 'history' && loaded && <HistoryDialog userId={userId} loaded={loaded} onClose={() => setPanel(null)} onOpen={id => { setPanel(null); selectVersion(id) }} onRestored={() => { setPanel(null); toCurrent() }} />}

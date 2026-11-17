@@ -130,5 +130,32 @@ class FollowupTest(unittest.TestCase):
         self.assertEqual(self.store.read(failed.json()['id'])['markdown'], '新原文待解析')
 
 
+
+    def test_followup_actions_are_private_append_only_and_version_scoped(self):
+        version = self.publish(MARKDOWN + '\n### C01 客户\n<!-- customer_id: C01 -->').json()['id']
+        path = '/follow-up/versions/' + version + '/actions'
+        body = {'id': str(uuid.uuid4()), 'customer_id': 'C01', 'kind': 'done', 'action_date': '2026-01-01', 'note': '实际沟通已完成', 'expected_last_id': None}
+        self.assertEqual(self.client.get(path).status_code, 401)
+        saved = self.client.post(path, headers=self.headers, json=body)
+        self.assertEqual(saved.status_code, 200, saved.text)
+        self.assertEqual(self.client.post(path, headers=self.headers, json=body).status_code, 200)
+        self.assertEqual(len(self.client.get(path, headers=self.headers).json()), 1)
+        conflict = dict(body, id=str(uuid.uuid4()))
+        self.assertEqual(self.client.post(path, headers=self.headers, json=conflict).status_code, 409)
+        unknown = dict(body, id=str(uuid.uuid4()), customer_id='C99')
+        self.assertEqual(self.client.post(path, headers=self.headers, json=unknown).status_code, 422)
+        postponed = dict(body, id=str(uuid.uuid4()), kind='postpone', action_date='2099-01-01', expected_last_id=body['id'])
+        self.assertEqual(self.client.post(path, headers=self.headers, json=postponed).status_code, 200)
+        self.assertEqual(self.store.read(version)['markdown'], MARKDOWN + '\n### C01 客户\n<!-- customer_id: C01 -->')
+        self.client.post('/follow-up/members', headers=self.headers, json={'email': READER})
+        self.user['email'] = READER
+        self.assertEqual(self.client.get(path, headers=self.headers).status_code, 200)
+        self.assertEqual(self.client.post(path, headers=self.headers, json=body).status_code, 403)
+        self.user['email'] = OWNER
+        newer = self.publish(MARKDOWN + '\n### C01 新版', version).json()['id']
+        self.assertEqual(self.client.get('/follow-up/versions/' + newer + '/actions', headers=self.headers).json(), [])
+        stale = dict(body, id=str(uuid.uuid4()), expected_last_id=postponed['id'])
+        self.assertEqual(self.client.post(path, headers=self.headers, json=stale).status_code, 409)
+
 if __name__ == '__main__':
     unittest.main()
