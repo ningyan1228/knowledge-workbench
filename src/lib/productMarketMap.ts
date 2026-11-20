@@ -13423,11 +13423,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "htd-ultra-nashik",
+    "company": "HTD ULTRA Solutions LLP",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Nashik（城市级示意，非厂门坐标）",
+    "latitude": 19.9975,
+    "longitude": 73.789806,
+    "legacyCompanyDescription": "印度Nashik工业防护涂层制造与研发企业，提供环氧底漆、衬里及聚氨酯面漆。",
+    "signal": "在Nashik自主制造并研发工业防护涂料，提供环氧底漆、环氧衬里及聚氨酯面漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "官网公开制造与研发资料说明其在Nashik自有生产、按批次制漆并开展内部配方与测试；可见目录包含19项环氧、聚氨酯、乙烯基酯、醇酸及其他成品防护涂层。该有限经营范围未见ELO、ESBO、环氧化植物油或相近生物增塑稳定原料外售，通过本次所读范围的同行排除；未穷尽所有配方、SKU或股权。ELO仅作为涂层环氧功能及树脂改性的潜在实验室评估材料，现用原料、相容性和采购需求均未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司销售邮箱及业务电话；未核得具名采购",
+      "email": "sales@htdultra.com",
+      "contactUrl": "https://htdultra.com/"
+    },
+    "source": {
+      "label": "HTD ULTRA官网公开制造、研发及成品涂层目录",
+      "url": "https://htdultra.com/assets/index-BXFD44lY.js"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"htd-ultra-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "reliable-paints-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ink-anon-ahmedabad": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "kempro-paints-coimbatore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13999,6 +14027,53 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"htd-ultra-nashik": {
+  "website": "https://htdultra.com/",
+  "contactPage": "https://htdultra.com/",
+  "generalEmail": "sales@htdultra.com",
+  "generalEmailEvidence": {
+    "company": "HTD ULTRA Solutions LLP",
+    "value": "sales@htdultra.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网公开联系内容与页脚一致销售邮箱",
+        "url": "https://htdultra.com/assets/index-BXFD44lY.js",
+        "summary": "官网公开内容在Contact信息和页脚分别直接列出sales@htdultra.com及一致mailto；公司销售入口，非具名采购，不做投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 97639 83515",
+  "generalPhoneEvidence": {
+    "company": "HTD ULTRA Solutions LLP",
+    "value": "+91 97639 83515",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网公开公司联系号码",
+        "url": "https://htdultra.com/assets/index-BXFD44lY.js",
+        "summary": "公开Contact信息及页脚均显示+91 97639 83515及tel:+919763983515，是公司业务号码；无公开WhatsApp直链，不推私人号码或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Shinde MIDC, Nashik, Maharashtra, India. Published company location; map uses city representative coordinates, not an independently verified factory gate.",
+  "sources": [
+    {
+      "label": "官网首页与公开内容入口",
+      "url": "https://htdultra.com/"
+    },
+    {
+      "label": "官网公开的制造、实验室、19项成品及业务联系内容",
+      "url": "https://htdultra.com/assets/index-BXFD44lY.js"
+    }
+  ]
+},
 "reliable-paints-vadodara": {
   "website": "https://reliablepaints.com/",
   "contactPage": "https://reliablepaints.com/",
@@ -42589,6 +42664,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"htd-ultra-nashik",
 "reliable-paints-vadodara",
 "ink-anon-ahmedabad",
 "kempro-paints-coimbatore",

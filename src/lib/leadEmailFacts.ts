@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"htd-ultra-nashik": "I noticed that HTD ULTRA Solutions LLP manufactures epoxy primers and polyurethane finishes for industrial asset protection.",
 "reliable-paints-vadodara": "I noticed that Reliable Paints manufactures epoxy and polyurethane coatings for industrial pipeline protection.",
 "ink-anon-ahmedabad": "I noticed that Ink-Anon formulates and manufactures solvent-based flexographic inks for PP and HDPE woven sacks.",
 "kempro-paints-coimbatore": "I noticed that Kempro Paints manufactures two-pack epoxy primers and protective finishes for structural steel and industrial equipment.",
