@@ -13450,11 +13450,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "chaiyaboon-brothers-lam-luk-ka",
+    "company": "Chaiyaboon Brothers Group Co., Ltd.",
+    "productId": "cpp-cpo",
+    "country": "Thailand",
+    "countryZh": "泰国",
+    "city": "Lam Luk Ka, Pathum Thani（区县级示意，非厂门坐标）",
+    "latitude": 13.9325,
+    "longitude": 100.74944,
+    "legacyCompanyDescription": "泰国丝网印刷油墨制造与配色企业，同时经营丝印材料和耗材。",
+    "signal": "制造NPPN单组分溶剂型丝印油墨，用于未处理及预处理PP容器，并提供配色服务。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "NPPN具体技术页明确由本集团制造，并提供配色服务；产品为用于未处理及预处理PP容器的单组分溶剂型丝印油墨。所读官网主营、成品油墨目录、NPPN体系及网框胶业务中未见CPP/CPO或聚烯烃粘结树脂原料对外销售；网框胶为铝制丝印网框用配套胶与催化剂，NPPN的透明基墨/光油是该油墨系列条目，不能仅凭这些名称认定为CPP树脂原料。排除结论限实际所读经营范围，不代表已审全部SKU、SDS、配方或股权。现用树脂、我方牌号相容性和采购需求均未确认。"
+    },
+    "contact": {
+      "label": "官网集团通用邮箱、公司业务电话及实际联系页；未核得具名采购",
+      "email": "info@chaiyaboon.com",
+      "contactUrl": "https://www.chaiyaboon.com/contact"
+    },
+    "source": {
+      "label": "Chaiyaboon官方NPPN PP溶剂型油墨技术页及制造归属",
+      "url": "https://www.chaiyaboon.com/nppn"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chaiyaboon-brothers-lam-luk-ka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "htd-ultra-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "reliable-paints-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ink-anon-ahmedabad": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -14027,6 +14055,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chaiyaboon-brothers-lam-luk-ka": {
+  "website": "https://www.chaiyaboon.com/",
+  "contactPage": "https://www.chaiyaboon.com/contact",
+  "generalEmail": "info@chaiyaboon.com",
+  "generalEmailEvidence": {
+    "company": "Chaiyaboon Brothers Group Co., Ltd.",
+    "value": "info@chaiyaboon.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chaiyaboon官网集团页脚公开通用邮箱",
+        "url": "https://www.chaiyaboon.com/contact",
+        "summary": "已读取实际Contact页；页脚以Chaiyaboon Brothers Group Co., Ltd.名义精确公开info@chaiyaboon.com，About/NPPN亦一致。公司通用入口，非具名采购，不声称已验证投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+66 2533 2533",
+  "generalPhoneEvidence": {
+    "company": "Chaiyaboon Brothers Group Co., Ltd.",
+    "value": "+66 2533 2533",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chaiyaboon实际官网联系页及公司页脚电话",
+        "url": "https://www.chaiyaboon.com/contact",
+        "summary": "页脚直接列+66 2533 2533，联系正文为+66-2-533-2533并有tel:+6625332533，为同一公司业务号码；不推WhatsApp或个人归属。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "26/17 M.3 Lumlukka Road, Lat Sawai, Lumlukka, Pathum Thani 12150, Thailand. Published Head Office; district representative coordinates, not an independently verified factory gate.",
+  "sources": [
+    {
+      "label": "NPPN具体体系、制造署名及配色服务",
+      "url": "https://www.chaiyaboon.com/nppn"
+    },
+    {
+      "label": "公司业务与集团公开署名",
+      "url": "https://www.chaiyaboon.com/about-us"
+    },
+    {
+      "label": "实际读取的溶剂墨目录（未采信推测性文案）",
+      "url": "https://www.chaiyaboon.com/solventbasedink"
+    },
+    {
+      "label": "网框胶及催化剂的丝印网框用途",
+      "url": "https://www.chaiyaboon.com/frame-adhesive"
+    },
+    {
+      "label": "公司公开总部地址、邮箱与电话",
+      "url": "https://www.chaiyaboon.com/contact"
+    }
+  ]
+},
 "htd-ultra-nashik": {
   "website": "https://htdultra.com/",
   "contactPage": "https://htdultra.com/",
@@ -42664,6 +42751,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chaiyaboon-brothers-lam-luk-ka",
 "htd-ultra-nashik",
 "reliable-paints-vadodara",
 "ink-anon-ahmedabad",
