@@ -13181,11 +13181,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "anupam-paints-howrah",
+    "company": "Anupam Paints (Anupam Enterprises)",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Howrah（城市级示意，非厂门坐标）",
+    "latitude": 22.58,
+    "longitude": 88.32944,
+    "legacyCompanyDescription": "印度 Howrah 自主研发制造工业防护涂料的企业；集装箱涂层体系包括双组分环氧磷酸锌底漆和高膜厚环氧涂料。",
+    "signal": "在 Howrah 自有工厂研发制造涂料；集装箱防护体系明确列出双组分环氧磷酸锌底漆与高膜厚环氧涂料。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "官网明确在 Howrah 自有工厂内研发制造涂料，集装箱与货运防护体系包括双组分环氧磷酸锌底漆、高膜厚环氧涂料及脂肪族PU面漆。所读 Home、About、工业分类静态说明、Contact 与集装箱涂层体系原文覆盖建筑、工业防护、铁路、海工及特种成品涂料；自有醇酸树脂制造明确用于内部配方控制，不直接等同对外销售ELO或同类环氧化植物油。有限已读经营与成品体系中未发现ELO、ESBO、环氧化植物油或相近生物增塑稳定输入外售，同行排除仅限这些资料。工业分类实际显示产品加载中，未读取其动态完整目录、全部TDS/SDS或隐藏股权，不声称全SKU已审。Anupam Paints与Anupam Enterprises及Howrah工厂/Kolkata办公室按一个账户；官网自述1972历史、产能、认证与客户名单未作独立工商或有效性确认。ELO仅按用户资料作涂料配方/树脂改性潜在实验室评估，不证明现用ELO、配方相容、采购需求，亦不保证防腐、寿命或认证性能。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱及总机，非具名采购",
+      "email": "care@anupampaints.com",
+      "phone": "033-22651204",
+      "contactUrl": "https://anupampaints.com/contact"
+    },
+    "source": {
+      "label": "Anupam 官方集装箱防护涂层体系及自身制造说明",
+      "url": "https://anupampaints.com/solutions/containers"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"anupam-paints-howrah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chanda-paints-kalyani": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tinsul-tintas-ouro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "produscreen-pindamonhangaba": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13748,6 +13777,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"anupam-paints-howrah": {
+  "website": "https://anupampaints.com/",
+  "contactPage": "https://anupampaints.com/contact",
+  "generalEmail": "care@anupampaints.com",
+  "generalEmailEvidence": {
+    "company": "Anupam Paints (Anupam Enterprises)",
+    "value": "care@anupampaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Anupam 官网 Get in Touch 公司公开业务联系",
+        "url": "https://anupampaints.com/contact",
+        "summary": "官网技术咨询/报价/经销咨询联系页明确列care@anupampaints.com，属于公司通用邮箱；不冒称具名采购，不代表已测试可投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "033-22651204",
+  "generalPhoneEvidence": {
+    "company": "Anupam Paints (Anupam Enterprises)",
+    "value": "033-22651204",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Anupam 官网 Get in Touch 公司公开业务联系",
+        "url": "https://anupampaints.com/contact",
+        "summary": "官网Phone栏直接公开033-22651204和033-22651205，选第一常规公司总机并保留原格式；不猜国际码、WhatsApp或个人归属。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Factory: Plot No. 5/27, Foundry Park, Laskarpur, Ranihati Amta Road, Howrah – 711414, West Bengal, India. Head office: Poddar Point, 113 Park Street, 5th Floor, Block-B, Kolkata – 700016. Map uses Howrah city representative coordinates, not a geocoded factory gate.",
+  "sources": [
+    {
+      "label": "官网主营涂料类别及内部树脂制造",
+      "url": "https://anupampaints.com/"
+    },
+    {
+      "label": "官网自有Howrah工厂、配方开发和品牌主体说明",
+      "url": "https://anupampaints.com/about"
+    },
+    {
+      "label": "官网工业防护类别静态说明；动态产品列表未取得",
+      "url": "https://anupampaints.com/products/industrial"
+    },
+    {
+      "label": "官网集装箱/货运防护涂层体系",
+      "url": "https://anupampaints.com/solutions/containers"
+    },
+    {
+      "label": "官网业务联系邮箱、总机和工厂/办公室地址",
+      "url": "https://anupampaints.com/contact"
+    }
+  ]
+},
 "chanda-paints-kalyani": {
   "website": "https://www.chandapaints.com/",
   "contactPage": "https://www.chandapaints.com/contact-us/",
@@ -41884,6 +41972,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"anupam-paints-howrah",
 "chanda-paints-kalyani",
 "tinsul-tintas-ouro",
 "produscreen-pindamonhangaba",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"anupam-paints-howrah": "I noticed that Anupam Paints manufactures two-pack epoxy zinc phosphate primers and high-build epoxy coatings for container protection.",
 "chanda-paints-kalyani": "I noticed that Chanda Paints manufactures Edelpoxy ZPPR 103 and other epoxy primers for industrial protective coatings.",
 "tinsul-tintas-ouro": "I noticed that Tinsul Tintas manufactures Verniz Sintético Base Água Transparente Brilhante, a water-based varnish for wooden furniture, doors and windows.",
 "produscreen-pindamonhangaba": "I noticed that Produscreen manufactures APP, a two-component solvent-based screen-printing ink whose listed substrates include PP.",
