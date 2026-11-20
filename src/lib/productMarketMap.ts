@@ -13127,11 +13127,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "tinsul-tintas-ouro",
+    "company": "Tinsul Tintas — Indústria de Tintas Ouro Ltda",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Ouro（城市级示意，非厂门坐标）",
+    "latitude": -27.341,
+    "longitude": -51.618,
+    "legacyCompanyDescription": "巴西 Ouro 涂料制造企业，研发制造涂料和清漆；官方技术文件明确水性透明木器清漆。",
+    "signal": "自主研发制造涂料和清漆；Verniz Sintético Base Água Transparente Brilhante 明确为水性配方，适用于木材、家具和门窗。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立核读Home105行、官方清漆技术文件1页26行、Sobre104行、Products371行、Contato95行及Complementos/Revestimentos321行，6请求均为完整原文，无失败或披露跳转，累计6/余0。Sobre明示开发制造涂料、清漆和配套品；该官方文件明确VernizSintéticoBaseÁguaTransparenteBrilhante为水性透明清漆，含改性醇酸树脂、添加剂及水，明确木材/家具/门窗用途；不是将普通水性墙漆拼接溶剂木漆。该文件Rev04/2021保留为资料版本，不冒称2026新品或有效认证，不借其VOC/涂布/干燥/耐性数字为我方材料背书。已核九类完整导航及实际可见Products第一页12成品、Complementos第一页12项，实际包括墙面底涂、液体防水、肌理、装饰效果、木材底漆和标为光亮/保护/抗菌的多用途丙烯酸树脂涂饰成品；不能把成品ResinaAcrílicaMultiúso或含添加剂配方误认水性聚烯烃原料销售。有限已读主营/分类/配套品与具体配方范围未发现NL-W1201同类水性聚烯烃乳液、PO/CPO分散体或原料级聚烯烃附着促进剂外售，排除通过限实际资料；Products另五页及Complementos另两页、全部SKU/SDS及未公开控制关系未审计，不声称已穷尽。Tinsul/TinsulTintas/IndústriadeTintasOuroLtda/tinsultintas.com.br/tinsul.net按一主体，官网/footer与PDF法定主体和Ouro地址一致；旧.net是原文件网站不拆新客户，网页制作Lovatel/客户登录EME4非母公司证据。正式560、root未发、frontier/index/excluded/queue及整个research精确商号/法定名/域名去重无旧主体，历史只本轮搜索/六原文，无旧专用GET。Contato为真实公司业务咨询表单非招聘，未提交；原文电子邮件被保护未读出，2021PDF的旧.net邮箱不作为当前已单独确认邮箱，不猜邮箱、具名采购、LinkedIn或WhatsApp。当前电话+55(49)3555-1758与地址RodoviaSC467200/OuroSC由Contato直接支持。城市示意坐标由通用地理资料取得，非厂门GPS。NL-W1201仅按用户木材底涂/附着促进用途作潜在材料评估，不推客户现用聚烯烃、改性醇酸配方已相容、采购意愿或性能保证。"
+    },
+    "contact": {
+      "label": "官网业务联系表单；公开业务总机；邮箱待单独核验",
+      "contactUrl": "https://tinsultintas.com.br/contato"
+    },
+    "source": {
+      "label": "Tinsul 官方水性透明木器清漆技术文件及自身制造说明",
+      "url": "https://tinsultintas.com.br/uploads/arquivos_boletim/BT_TINSUL_VERNIZ_SINT%C3%89TICO_BASE_%C3%81GUA_TRANSPARENTE_BRILHANTE1.pdf"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"tinsul-tintas-ouro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "produscreen-pindamonhangaba": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "pinturas-uxell-burzaco": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "tekno-argentina-gran-mendoza": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13692,6 +13719,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"tinsul-tintas-ouro": {
+  "website": "https://tinsultintas.com.br/",
+  "contactPage": "https://tinsultintas.com.br/contato",
+  "generalPhone": "+55 (49) 3555-1758",
+  "generalPhoneEvidence": {
+    "company": "Tinsul Tintas — Indústria de Tintas Ouro Ltda",
+    "value": "+55 (49) 3555-1758",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Tinsul 官网 Fale Conosco 公司业务联系页",
+        "url": "https://tinsultintas.com.br/contato",
+        "summary": "官网公开公司业务总机，与Home/About主体地址一致；不将普通电话推定为WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Rodovia SC 467, N° 200, Ouro, Santa Catarina, CEP 89663-000, Brazil. Published company address; map uses approximate Ouro city coordinates, not a factory gate.",
+  "sources": [
+    {
+      "label": "官网自身开发制造",
+      "url": "https://tinsultintas.com.br/sobre"
+    },
+    {
+      "label": "官方水性透明木器清漆技术文件 Rev04/2021",
+      "url": "https://tinsultintas.com.br/uploads/arquivos_boletim/BT_TINSUL_VERNIZ_SINT%C3%89TICO_BASE_%C3%81GUA_TRANSPARENTE_BRILHANTE1.pdf"
+    },
+    {
+      "label": "官网主营分类",
+      "url": "https://tinsultintas.com.br/"
+    },
+    {
+      "label": "官网产品分类及实际可见第一页",
+      "url": "https://tinsultintas.com.br/produtos"
+    },
+    {
+      "label": "官网配套成品分类及实际可见第一页",
+      "url": "https://tinsultintas.com.br/produtos/linha/18/complementosrevestimentos"
+    },
+    {
+      "label": "官网业务咨询表单及公开总机",
+      "url": "https://tinsultintas.com.br/contato"
+    }
+  ]
+},
 "produscreen-pindamonhangaba": {
   "website": "https://www.produscreen.com.br/",
   "contactPage": "https://www.produscreen.com.br/",
@@ -41721,6 +41796,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"tinsul-tintas-ouro",
 "produscreen-pindamonhangaba",
 "pinturas-uxell-burzaco",
 "tekno-argentina-gran-mendoza",
