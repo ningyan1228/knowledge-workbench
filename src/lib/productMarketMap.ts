@@ -13074,11 +13074,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "pinturas-uxell-burzaco",
+    "company": "Pinturas Uxell",
+    "productId": "nl-w1201",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Burzaco（城市级示意，非厂门坐标）",
+    "latitude": -34.817,
+    "longitude": -58.367,
+    "legacyCompanyDescription": "阿根廷 Burzaco 涂料制造企业，自有工厂生产涂料和清漆；Hidrobarniz 属水性木器清漆。",
+    "signal": "自有 Burzaco 涂料工厂；Hidrobarniz 为水性木器清漆，产品页明确家具、门窗等木材用途及水稀释。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立核读六份官网完整原文：Nosotros105行、Hidrobarniz138行、Home154行、Contact103行、Industrial107行、Fondos119行；无披露跳转或失败，累计6STOP。公司历史/基础设施明确自有Burzaco制漆厂，Hidrobarniz明确水性木器类别、水清洗稀释及家具/门窗用途，构成自主制造与精确下游应用对应，不用普通水漆拼接溶剂木漆。产品页导语泛称内外用但正文说室内，保留范围冲突，不精选室外适用、性能保证或其干燥/涂布数字。已查公司主营与可见完整分类导航为木器、水性木器、底漆、脱漆剂、浸渍剂、环氧/PU瓷漆、建筑乳胶/肌理与道路工业成品；Industrial明确道路标线/路面漆/快干瓷漆，Fondos写含附着促进剂的成品底漆并列除锈转化底漆、SuperFondo和木器白底，不把conpromotoresdeadh­erencia误读成对外销售聚烯烃原料。所读有限范围未发现NL-W1201同类水性聚烯烃乳液、PO/CPO分散体或原料级聚烯烃附着促进剂销售；排除通过限这六份实际资料，不冒称全SKU/SDS或未披露集团审计。Uxell/Üxell/PinturasUxell及同域产品按一户，ValentinAlsina/Temperley旧址与Burzaco现址不拆计；官网JorgeColas/ClaudioIturralde仅历史创办叙述，不作现任采购人。Tekno记录中的Uxell只为旧范围未读取说明，不证明同集团；Genas/Gênesis及其他近名不强行合并。最新main558、root其他未发、frontier/index/excluded/queue精确名称域名及公开厂址/创办人离线查重无同主体，历史命中仅旧搜索和范围说明，无旧Uxell专用GET预算。公司法定后缀未查明，仅采用公开商号PinturasUxell，不虚构SA/SRL；2019版权和2021新闻不改写2026成立/扩产，环境/认证宣传不冒称当前有效。Contact明确通用info@pinturasuxell.com.ar及常规总机+541142389355，邮箱为公司通用非具名采购；0800与产品记忆号码未采用，传真不作电话，电话不推WhatsApp。表单未提交，不猜具名/LinkedIn。Planta明示Cafferata1351EsqMarcosSastre/Burzaco，地图-34.817/-58.367只为另核地理资料城市示意，不是厂门GPS。NL-W1201仅按用户TDS木材底涂/附着促进水性配方潜在评估，不推客户现用聚烯烃、采购时机、相容保证或客户产品耐候/附着性能等同我方。"
+    },
+    "contact": {
+      "label": "官网公开公司通用邮箱及联系表单",
+      "email": "info@pinturasuxell.com.ar",
+      "contactUrl": "https://pinturasuxell.com.ar/contacto.html"
+    },
+    "source": {
+      "label": "Uxell官方Hidrobarniz水性木器清漆及自身工厂说明",
+      "url": "https://pinturasuxell.com.ar/hidrobarniz.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-uxell-burzaco": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "tekno-argentina-gran-mendoza": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "dimacon-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sipco-dammam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13637,6 +13665,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-uxell-burzaco": {
+  "website": "https://pinturasuxell.com.ar/",
+  "contactPage": "https://pinturasuxell.com.ar/contacto.html",
+  "generalEmail": "info@pinturasuxell.com.ar",
+  "generalEmailEvidence": {
+    "company": "Pinturas Uxell",
+    "value": "info@pinturasuxell.com.ar",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Uxell 官网 Contacto 公开公司业务联系",
+        "url": "https://pinturasuxell.com.ar/contacto.html",
+        "summary": "官网联系页公开公司通用邮箱，不代表具名采购人或已验证投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+54 11 4238-9355",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Uxell",
+    "value": "+54 11 4238-9355",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Uxell 官网 Contacto 公开公司业务联系",
+        "url": "https://pinturasuxell.com.ar/contacto.html",
+        "summary": "官网联系页公开常规业务总机；不用另列0800号码、传真或产品页记忆号码，不推断WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Planta: Cafferata 1351 Esq Marcos Sastre, Burzaco, Buenos Aires, Republica Argentina. Published factory address; map uses Burzaco city representative coordinates, not a geocoded factory gate.",
+  "sources": [
+    {
+      "label": "官网工厂及公司历史",
+      "url": "https://pinturasuxell.com.ar/nosotros.html"
+    },
+    {
+      "label": "官网Hidrobarniz水性木器清漆",
+      "url": "https://pinturasuxell.com.ar/hidrobarniz.html"
+    },
+    {
+      "label": "官网业务分类与产品制造",
+      "url": "https://pinturasuxell.com.ar/index.html"
+    },
+    {
+      "label": "官网工厂地址及公开业务联系",
+      "url": "https://pinturasuxell.com.ar/contacto.html"
+    },
+    {
+      "label": "官网工业成品涂料范围",
+      "url": "https://pinturasuxell.com.ar/industrial.html"
+    },
+    {
+      "label": "官网含附着促进剂的成品底漆分类",
+      "url": "https://pinturasuxell.com.ar/linea_fondos.html"
+    }
+  ]
+},
 "tekno-argentina-gran-mendoza": {
   "website": "https://pinturastekno.com.ar/",
   "contactPage": "https://pinturastekno.com.ar/contacto/",
@@ -41566,6 +41657,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-uxell-burzaco",
 "tekno-argentina-gran-mendoza",
 "dimacon-lagos",
 "sipco-dammam",
