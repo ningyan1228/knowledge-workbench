@@ -13396,11 +13396,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "reliable-paints-vadodara",
+    "company": "Reliable Paints",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Vadodara（城市级示意，非厂门坐标）",
+    "latitude": 22.3,
+    "longitude": 73.2,
+    "legacyCompanyDescription": "印度Gujarat工业防护涂层制造与研发企业，提供管道用环氧、聚氨酯和酚醛环氧涂层。",
+    "signal": "在Gujarat自主研发制造工业防护涂料，提供管道用环氧、聚氨酯、酚醛环氧及玻璃鳞片涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "当前五次普通单次禁跳转HTTPSGET，Home62774/About28243/Pipeline41352/RD31844字符四份完整HTTP200原HTML；第五Contact409仅83字符要求cookie及reload的脚本验证，不执行/不设置cookie/不重试/不换域绕过，也不当已读联系页。失败计额，既往0+当前5=5/余1，当前范围5/余1，不为凑额补第6次。About明确自制工业有机屏障漆/涂层/衬里，Home明确Gujarat制造设施和内部研发/定制配方，RD明确自有环氧/PU/水性及聚合物涂层研发；不把polymerdevelopment泛词直接当原料树脂销售。Pipeline实读七个成品条目RELIPOXY342、RELITHANE151、RELIPOXY333、REPOXYLINE300/374、RELIPOXY342GF、RELIBIT1001，具体为环氧/PU/酚醛环氧/玻片/沥青工业管道防护涂层，不仅行业标签。自有成品制造、定制配方及七管道体系的有限实际经营范围未见ELO/ESBO/环氧化植物油或相近生物增塑稳定原料外售；同行排除限实读四份主营资料与该七条目，非所有五市场分支SKU/TDS/SDS/隐含组成/股权穷尽，无虚构已知外购使用例外。ELO只按用户涂层/环氧功能与树脂改性潜在实验室评估，不确认客户现用、相容、固化/防腐/柔韧改善、食品/饮用水合规或采购需求。AWWA/WRAS/NSF/FDA/CFTRI等均客户成品页自述未独立验证，不借作我方认证或客户案例；TDS下载需姓名/手机/邮箱表单，未提交、未获得任何PDF，不编TDS参数或牌号实际成分。Home残留住宅布局舒适宣传不当工业公司业务事实，2007/18years/2026、60000sqft/700KL/员工/客户满意度/项目照片均自述不独立背书或当新订单。正式570、root14无关未发、frontier1134/index含Prolac冻结445及queue名称/域名/品牌RELIPOXY/REPOXYLINE/RELITHANE与55AAlindra地址去重无同户；历史精确Reliable仅旧Search，无公司GET或冻结。通用Patel姓不与Ramdev/Gujarat其他制造商乱并，不编Ltd/CIN/GST或最终股权。当前About/Home/RD地址和公司名/域名一致，首页与RD及Pipeline明确sales@reliablepaints.com和mailto为公司通用销售邮箱，不当采购个人；+91 90990 97470实际公开公司电话，无WA直链不猜，根级Facebook/Instagram/LinkedIn不是已核公司账号。公开联系入口使用真正已读Home，不把失败contact-us.php写成已核表单。Home55AAlindraExtensionManjusarGIDCVadodara391775为公开地址，未独立核厂门，城市22.300/73.200来自一次通用地理。共享发送未知，仅条件生成检查未来确认未发，不创建就绪稿/导出或外联。"
+    },
+    "contact": {
+      "label": "官网已读首页公开公司销售邮箱及电话；未核得具名采购",
+      "email": "sales@reliablepaints.com",
+      "contactUrl": "https://reliablepaints.com/"
+    },
+    "source": {
+      "label": "Reliable官方工业管道防护涂层与自有制造研发",
+      "url": "https://reliablepaints.com/pipeline.php"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"reliable-paints-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ink-anon-ahmedabad": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "kempro-paints-coimbatore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "spico-printing-inks-chennai": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13971,6 +13999,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"reliable-paints-vadodara": {
+  "website": "https://reliablepaints.com/",
+  "contactPage": "https://reliablepaints.com/",
+  "generalEmail": "sales@reliablepaints.com",
+  "generalEmailEvidence": {
+    "company": "Reliable Paints",
+    "value": "sales@reliablepaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Reliable official Home — published sales mailbox and matching mailto",
+        "url": "https://reliablepaints.com/",
+        "summary": "已读取首页Header/Footer直接公布sales@reliablepaints.com并有相同mailto，为公司通用销售入口，不冒称具名采购/技术负责人，未做投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 90990 97470",
+  "generalPhoneEvidence": {
+    "company": "Reliable Paints",
+    "value": "+91 90990 97470",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Reliable official Home — company public phone",
+        "url": "https://reliablepaints.com/",
+        "summary": "已读取首页Header/Footer精确公开+91 90990 97470；不据电话猜WhatsApp或个人归属。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "55-A, Alindra Extension, Manjusar GIDC, Vadodara - 391775, Gujarat, India. Published company location; map uses city representative coordinates, not an independently verified factory gate.",
+  "sources": [
+    {
+      "label": "公司自述工业涂层制造",
+      "url": "https://reliablepaints.com/about-us.php"
+    },
+    {
+      "label": "七项工业管道防护成品体系",
+      "url": "https://reliablepaints.com/pipeline.php"
+    },
+    {
+      "label": "自身环氧/PU及定制涂层研发",
+      "url": "https://reliablepaints.com/research-development.php"
+    },
+    {
+      "label": "实际已读制造概况与分项公司邮箱/电话来源",
+      "url": "https://reliablepaints.com/"
+    }
+  ]
+},
 "ink-anon-ahmedabad": {
   "website": "https://www.ink-anon.in/",
   "contactPage": "https://www.ink-anon.in/enquiry.html",
@@ -42506,6 +42589,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"reliable-paints-vadodara",
 "ink-anon-ahmedabad",
 "kempro-paints-coimbatore",
 "spico-printing-inks-chennai",
