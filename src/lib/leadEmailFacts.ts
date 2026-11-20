@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"xetex-industries-mumbai": "Your CETEX WS is a water-based wood sealer that can also serve as a base for paints.",
 "pinturas-pinsal-san-salvador": "Your PREMIA, EASY COLOR and MAGICOLOR ranges include anticorrosive primers in your architectural paint portfolio.",
 "pinturas-sega-guatemala": "Your Color Anticorrosiva Tradicional uses an alkyd barrier system for protecting metal and other surfaces.",
 "corporacion-prismacolor-lima": "Your Flexopol solvent-based flexographic inks list polypropylene among their printable substrates.",

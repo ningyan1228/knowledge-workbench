@@ -12798,11 +12798,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-17"
   },
+  {
+    "id": "xetex-industries-mumbai",
+    "company": "Xetex Industries Private Limited",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai（城市级示意点）",
+    "latitude": 19.08,
+    "longitude": 72.88,
+    "legacyCompanyDescription": "自主开发制造防水及表面处理化学品；CETEX WS为可兑水刷涂或喷涂、用于木材封闭及涂漆底层的水性成膜产品。",
+    "fit": "可开发候选",
+    "signal": "自主开发制造防水及表面处理化学品；CETEX WS为可兑水刷涂或喷涂、用于木材封闭及涂漆底层的水性成膜产品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "四份完整原HTML核验WoodSealer、About、Contact、BondingAgent。WoodSealer明确CETEXWS浓缩水性热塑性树脂乳液、木材、兑水刷/喷及baseforpaints，不推客户树脂具体化学、固含或我方配方相容。About明确开发制造产品，BondingAgent明确Xetex manufactures waterproofing chemicals，配合WoodSealer具体自有CETEX品牌构成自主下游制造链。完整可见经营分类为硅酸盐、纳米/胶体硅、PP建筑增强纤维、混凝土外加剂/养护/硬化、防水封闭及SBR/丙烯酸建筑粘结剂。专读BondingAgent确认SBR与ACRYLICBOND用于新旧混凝土/砂浆/瓷砖粘结，不能因bonding字样就等同同类聚烯烃分散体；PP纤维是增强填料不是PO分散树脂。在所读范围未见对外销售CPO/CPP/聚烯烃水性分散体或同类基材附着原料，有限范围排查通过，不声称审过全部未读TDS/隐藏SKU。About公开WALTAR ENTERPRISES为sister concern，Xetex/Waltar/CETEX保守一个研究账户和来源预算，不拆品牌/厂址；未独立读Waltar官网或核股权。旧oct27aq-av Search6只在TradeIndia目录片段提CETEXAS，未公司定向读取，不抹除发现史；全域名/独立词/别名及548正式、root/frontier/index/excluded/队列核对无同主体。Contact公开Mumbai办公室地址及通用contact@邮箱、两号码；只发布一个明确业务号码，不造采购人、具名邮箱或WhatsApp。Mumbai坐标沿用正式库的城市示意取两位小数，不作厂门；领导名不扩为具名联系。NL-W1201仅水性聚烯烃分散体底涂/附着潜在评估，木材是TDS方向，不借PP性能保证木材效果，不推客户采购/相容/认证或防水改善。共享发送状态未知不当未发。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱、电话及联系表单",
+      "email": "contact@xetex.in",
+      "phone": "+91 99877 99688",
+      "contactUrl": "https://www.xetex.in/contact"
+    },
+    "source": {
+      "label": "Xetex official water-based wood sealer",
+      "url": "https://www.xetex.in/waterproofing-chemical/wood-sealer"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"xetex-industries-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-pinsal-san-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-sega-guatemala": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "corporacion-prismacolor-lima": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13351,6 +13380,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"xetex-industries-mumbai": {
+  "website": "https://www.xetex.in/xetex-industries",
+  "contactPage": "https://www.xetex.in/contact",
+  "generalEmail": "contact@xetex.in",
+  "generalEmailEvidence": {
+    "company": "Xetex Industries Private Limited",
+    "value": "contact@xetex.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Xetex official company business email",
+        "url": "https://www.xetex.in/contact",
+        "summary": "The independently read Contact body explicitly publishes contact@xetex.in as the company business channel. No named procurement recipient inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 99877 99688",
+  "generalPhoneEvidence": {
+    "company": "Xetex Industries Private Limited",
+    "value": "+91 99877 99688",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Xetex official company business phone",
+        "url": "https://www.xetex.in/contact",
+        "summary": "The independently read Contact body explicitly publishes +91 99877 99688 as the company business channel. No named procurement recipient inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "address": "DBS House, Prescott Road, Opp. Cathedral Sr. School, Fort, Mumbai 400 001, India. Official business-office address; map uses approximate Mumbai city-level coordinates from the existing formal city mapping, not a factory gate.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Xetex independently read original company evidence",
+      "url": "https://www.xetex.in/waterproofing-chemical/wood-sealer"
+    },
+    {
+      "label": "Xetex independently read original company evidence",
+      "url": "https://www.xetex.in/xetex-industries"
+    },
+    {
+      "label": "Xetex independently read original company evidence",
+      "url": "https://www.xetex.in/contact"
+    },
+    {
+      "label": "Xetex independently read original company evidence",
+      "url": "https://www.xetex.in/bonding-agent"
+    }
+  ]
+},
 "pinturas-pinsal-san-salvador": {
   "website": "https://pinsal.com.sv/nosotros/",
   "contactPage": "https://pinsal.com.sv/nosotros/",
@@ -40717,6 +40801,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"xetex-industries-mumbai",
 "pinturas-pinsal-san-salvador",
 "pinturas-sega-guatemala",
 "corporacion-prismacolor-lima",
