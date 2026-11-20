@@ -13289,11 +13289,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "asmira-paint-mumbai",
+    "company": "Asmira Paint Mfg. Pvt. Ltd.",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai（城市级示意，非厂门坐标）",
+    "latitude": 19.07611,
+    "longitude": 72.8775,
+    "legacyCompanyDescription": "印度Mumbai工业防护涂层制造企业，官网明确自有工厂、研发实验室和双组分环氧体系。",
+    "signal": "在Mumbai自有工厂研发制造工业防护涂层，提供金属防腐漆、双组分环氧体系和PU面涂。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "五次普通单次HTTPSGET均200，禁自动跳转/重试/远程JS执行：About27586字符、Industrial21676、Resins20515、Contact21778、Products39025，完整原HTML本地去标签审读；既往0+当前5=5/余1，当前范围余1，不为凑额重读分类锚点。About明确自有MumbaiPowai工厂、自动分散/调色/灌装设备、研发实验室和定制配方；Industrial明确工业金属防腐、双组分环氧体系、PU面涂及锌富集涂层，支持下游涂层制造，未取得具体牌号TDS或项目采购证明。独立检查所披露ResinsBinders原料业务，明确三类为短/中/长油醇酸、液体/固体环氧树脂、PU多元醇/异氰酸酯组分；不把一切醇酸/环氧/PU树脂一概当ELO或环氧化植物油，也不编液体环氧树脂具体组成/DGEBA牌号。实际主要经营与Products全可见四大类15子类及树脂原文中未见ELO、ESBO、环氧化植物油或相近生物基增塑/稳定添加剂外售，所选投入同行排除限此有限资料；不是全部40余SKU/原料成分/SDS/TDS/隐藏股权无同类原料保证，也不虚构已知外购使用例外。Products只有分类资料及一个装饰产品计数，不称全40SKU已读；实际品类仍是5装饰/4工业/3海工/3树脂。自身配方/树脂业务是潜在ELO下游评估方向，未推已经使用ELO、采购、体系相容、防腐寿命或性能。五原文Header/Footer/Contact公司名、PowaiMumbai和domain一致，AsmiraPaintMfg/Manufacturing及旧about.html/www/nonwww按单账户，当前566公开/root未发/frontier1127/index437/excluded13/队列及整research仅旧Search，无旧定向GET/冻结；未从Zauba搜索地址邻居推股权或独立核实工商登记/最终控制。About1996与28years、2026copyright自述不当当前经营年数，ISOgrade并非有效ISO认证，40products/15clients/宣传不为我方背书。Contact真实业务表单有TechnicalSupport/CustomFormulation等主题，只观察未提交；公开公司邮箱在已下载HTML的data-cfemail和href字段本地惰性解码，五页17载体均为info@asmirapaint.com，无猜址、远程JS、保护页请求、登录或验证码调用。只是通用公司邮箱，不冒称具名采购/研发个人，未做投递验证。Contact原文总机+91-22-2857-0685与tel相符，另一个总机不必重复精选；未见实际WhatsApp直链，不从电话猜WA，StaffLogin不访问。办公地址2ndFloorZahoorPalaceSakiViharRoadPowaiMumbai400072不是已核厂门，Mumbai城市19.07611/72.8775由一次通用城市原文取得。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及技术咨询表单；未核得具名采购",
+      "email": "info@asmirapaint.com",
+      "contactUrl": "https://asmirapaint.com/contact/"
+    },
+    "source": {
+      "label": "Asmira 官方Industrial Coatings及自身Mumbai制造说明",
+      "url": "https://asmirapaint.com/products/industrial/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"asmira-paint-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ciacollor-maringa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hardex-india-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rebrilhar-leme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13860,6 +13888,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"asmira-paint-mumbai": {
+  "website": "https://asmirapaint.com/",
+  "contactPage": "https://asmirapaint.com/contact/",
+  "generalEmail": "info@asmirapaint.com",
+  "generalEmailEvidence": {
+    "company": "Asmira Paint Mfg. Pvt. Ltd.",
+    "value": "info@asmirapaint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Asmira 官方Contact公司联系区",
+        "url": "https://asmirapaint.com/contact/",
+        "summary": "公司Contact页公开公司Email的HTML data-cfemail/href编码，惰性本地解码与全部五原文17载体一致为info@asmirapaint.com；是公司通用联系邮箱，非具名采购或个人邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91-22-2857-0685",
+  "generalPhoneEvidence": {
+    "company": "Asmira Paint Mfg. Pvt. Ltd.",
+    "value": "+91-22-2857-0685",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Asmira 官方Contact公司电话",
+        "url": "https://asmirapaint.com/contact/",
+        "summary": "公司联系页直接发布+91-22-2857-0685，tel:+912228570685一致；是公司业务总机，不从电话推断WhatsApp或个人归属。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "2nd Floor, Zahoor Palace, Saki Vihar Road, Powai, Mumbai 400072, Maharashtra, India. Published company office; map uses approximate Mumbai city coordinates, not a verified factory gate.",
+  "sources": [
+    {
+      "label": "自有Mumbai工厂、设备、研发和定制配方",
+      "url": "https://asmirapaint.com/about/"
+    },
+    {
+      "label": "工业防腐与双组分环氧体系",
+      "url": "https://asmirapaint.com/products/industrial/"
+    },
+    {
+      "label": "所披露醇酸／环氧／PU树脂范围",
+      "url": "https://asmirapaint.com/products/resin/"
+    },
+    {
+      "label": "实际四大类15子类目录，非全部40余SKU",
+      "url": "https://asmirapaint.com/products/"
+    },
+    {
+      "label": "真实业务咨询表单及分项邮箱／电话证据",
+      "url": "https://asmirapaint.com/contact/"
+    }
+  ]
+},
 "ciacollor-maringa": {
   "website": "https://www.ciacollor.com.br/",
   "contactPage": "https://www.ciacollor.com.br/contato",
@@ -42192,6 +42279,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"asmira-paint-mumbai",
 "ciacollor-maringa",
 "hardex-india-pune",
 "rebrilhar-leme",

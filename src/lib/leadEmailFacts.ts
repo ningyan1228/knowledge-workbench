@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"asmira-paint-mumbai": "I noticed that Asmira Paint manufactures two-component epoxy coatings and anti-corrosive paints for heavy industry.",
 "ciacollor-maringa": "I noticed that Tintas Ciacollor manufactures Verniz Copal Base Água, a water-based varnish for indoor wooden surfaces.",
 "hardex-india-pune": "I noticed that Hardex India manufactures Marine Epoxy 2K coatings for protecting steel and concrete structures.",
 "rebrilhar-leme": "I noticed that Rebrilhar manufactures Verniz Classic, a water-based varnish for residential wooden floors.",
