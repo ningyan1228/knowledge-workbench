@@ -13047,11 +13047,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "tekno-argentina-gran-mendoza",
+    "company": "Tekno Argentina S.A. (Pinturas Tekno)",
+    "productId": "nl-w1201",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Gran Mendoza（公开服务区域，城市级示意）",
+    "latitude": -32.88972,
+    "longitude": -68.84444,
+    "legacyCompanyDescription": "阿根廷水性及溶剂型涂料制造企业，HIDROTEK 水性丙烯酸清漆用于木材；公开服务范围为 Gran Mendoza。",
+    "signal": "自主制造 HIDROTEK 水性丙烯酸清漆，官网及技术资料明确用于新木材和已涂清漆木材表面。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立审读六份官网原文：Home294行、HIDROTEK产品194行、完整可见产品目录316行、Contact63行、HIDROTEK三页技术资料76行、PlastificanteHidrosoluble157行，六来源均有业务正文、无披露跳转/失败，终身6STOP，不读取分销portal或另给Uxell预算来绕过本范围上限。官网现行首页及目录销售HIDROTEK水性木器清漆，产品明确modifiedacrylicpolymers、木材、水稀释及刷辊喷；技术资料标题FABRICADEPINTURAS/TEKNOARGENTINASA，并明确nospermitenfabricarBarnizAlAgua，构成自身制造与产品对应证据，非将墙面水漆拼接木器溶剂漆。PDF URL含2025/08但印刷Rev0/RELAB15生效12Jun2017，保留真实旧版本，不说2025新研发或2026新投产。完整目录列建筑乳胶/防水/清漆/瓷漆/防锈底面/地坪泳池/表面准备成品；PlastificanteMaderas首页明确硝基合成木器涂层，额外Hidrosoluble原文明示丙烯酸乳液+流变/消泡剂配制的刷涂成膜保护涂层、可按水稀释用于砖石木材，不凭plastificante或surfaceprep标题误当NL-W1201原料级聚烯烃/CPO分散体。配方中丙烯酸树脂和普通清漆polymer文字不推未披露组成/外购例外。六份实际范围未观察水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料外售，有限排查通过，不称所有隐藏SKU/SDS/全球关联业务/股权均已审。TeknoArgentinaSA/PinturasTekno、pinturastekno域及官网指向的tekno.com.ar分销portal、Hidrotek/Goleta/ZTPro/Teknoplast等自有显示品牌按一个账户，未证明隐藏最终所有者，也不凭相似名字并入北欧TeknosHelsinki。最新main557、root其他未发、frontier/index/excluded及queue名称/域名离线无重，历史域名命中仅搜索未发现旧公司原文读取；不按品牌/省区店铺增加。Contact明确Compras采购部门compras@pinturastekno.com.ar、Technicaltecnico及info通用邮箱，均公司同域公开，不冒称具名负责人，不验证投递可达；优先实际采购部门入口。Contact表单仅观察未提交，产品页WhatsApp社交分享按钮不当已核验客户聊天入口，未公开可用电话不猜。首页公开GranMendoza送货/门店自提区域；六页未核出厂门街址，地图为Mendoza城市中心-32.88972/-68.84444代表公开服务区域，不宣称制造厂位于市中心或虚构街址。NL-W1201只按用户TDS木材底涂/附着促进水性配方潜在评估，不称客户现用PO、已有采购、清漆可直接混加、UV/盐雾/防水/干燥或环保性能保证，客户技术数值不迁给我方。"
+    },
+    "contact": {
+      "label": "官网公开采购部门邮箱及联系表单",
+      "email": "compras@pinturastekno.com.ar",
+      "contactUrl": "https://pinturastekno.com.ar/contacto/"
+    },
+    "source": {
+      "label": "Tekno官方HIDROTEK水性木器清漆产品页",
+      "url": "https://pinturastekno.com.ar/portfolio/barniz-al-agua-hidrotek/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"tekno-argentina-gran-mendoza": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "dimacon-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sipco-dammam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pintesint-ramos-mejia": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13609,6 +13637,99 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"tekno-argentina-gran-mendoza": {
+  "website": "https://pinturastekno.com.ar/",
+  "contactPage": "https://pinturastekno.com.ar/contacto/",
+  "generalEmail": "info@pinturastekno.com.ar",
+  "generalEmailEvidence": {
+    "company": "Tekno Argentina S.A. (Pinturas Tekno)",
+    "value": "info@pinturastekno.com.ar",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Tekno Argentina 官网联系页按部门公开业务邮箱",
+        "url": "https://pinturastekno.com.ar/contacto/",
+        "summary": "联系页 Información General 明确公司通用邮箱；非采购具名个人。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Procurement",
+      "email": "compras@pinturastekno.com.ar",
+      "source": {
+        "label": "Tekno 官网 Contacto：Compras",
+        "url": "https://pinturastekno.com.ar/contacto/"
+      },
+      "emailEvidence": {
+        "company": "Tekno Argentina S.A. (Pinturas Tekno)",
+        "value": "compras@pinturastekno.com.ar",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Tekno Argentina 官网联系页按部门公开业务邮箱",
+            "url": "https://pinturastekno.com.ar/contacto/",
+            "summary": "联系页 Compras 明确公开采购部门邮箱，不含具名采购人；部门归属与邮箱同页核验。"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      }
+    },
+    {
+      "department": "Technical",
+      "email": "tecnico@pinturastekno.com.ar",
+      "source": {
+        "label": "Tekno 官网 Contacto：Consultas Técnicas",
+        "url": "https://pinturastekno.com.ar/contacto/"
+      },
+      "emailEvidence": {
+        "company": "Tekno Argentina S.A. (Pinturas Tekno)",
+        "value": "tecnico@pinturastekno.com.ar",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Tekno Argentina 官网联系页按部门公开业务邮箱",
+            "url": "https://pinturastekno.com.ar/contacto/",
+            "summary": "联系页 Consultas Técnicas 明确公开技术部门邮箱；旧技术资料亦写技术部门，不冒称个人。"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      }
+    }
+  ],
+  "address": "Gran Mendoza, Argentina: published delivery and branch-collection service area. Factory street address not independently verified; map uses Mendoza city centre as a service-area illustration.",
+  "sources": [
+    {
+      "label": "官网现行产品及GranMendoza服务范围",
+      "url": "https://pinturastekno.com.ar/"
+    },
+    {
+      "label": "官网HIDROTEK水性木器产品",
+      "url": "https://pinturastekno.com.ar/portfolio/barniz-al-agua-hidrotek/"
+    },
+    {
+      "label": "官网完整可见成品目录",
+      "url": "https://pinturastekno.com.ar/productos/"
+    },
+    {
+      "label": "官网丙烯酸成膜保护涂层释义",
+      "url": "https://pinturastekno.com.ar/portfolio/plastificante-hidrosoluble-tekno/"
+    },
+    {
+      "label": "官网印刷2017修订的自制清漆技术资料",
+      "url": "https://pinturastekno.com.ar/wp-content/uploads/2025/08/HOJA_TECNICA_BARNIZ_HIDROTEK.pdf"
+    },
+    {
+      "label": "官网通用及采购/技术部门联系页",
+      "url": "https://pinturastekno.com.ar/contacto/"
+    }
+  ]
+},
 "dimacon-lagos": {
   "website": "https://dimaconpaints.com/",
   "contactPage": "https://dimaconpaints.com/contact/",
@@ -41445,6 +41566,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"tekno-argentina-gran-mendoza",
 "dimacon-lagos",
 "sipco-dammam",
 "pintesint-ramos-mejia",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"tekno-argentina-gran-mendoza": "Your HIDROTEK water-based acrylic varnish is specified for coating new wood and previously varnished wooden surfaces.",
 "dimacon-lagos": "Your marine and protective coating range includes steel epoxy primers, high-build epoxy barrier coatings and epoxy tank linings.",
 "sipco-dammam": "Your protective coating range includes epoxy primers, tank linings and SIPOXY-SHIELD epoxy coatings for industrial service.",
 "pintesint-ramos-mejia": "Your Sericor PP is a solvent-based screen-printing ink developed for untreated corrugated polypropylene sheets.",
