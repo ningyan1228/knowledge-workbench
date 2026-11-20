@@ -13370,11 +13370,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "ink-anon-ahmedabad",
+    "company": "Ink-Anon",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ahmedabad（城市级示意，非厂门坐标）",
+    "latitude": 23.0225,
+    "longitude": 72.57139,
+    "legacyCompanyDescription": "印度Ahmedabad印刷油墨配方制造企业，公司发布微站明确自有制墨单元及PP/HDPE编织袋用溶剂型柔印墨。",
+    "signal": "在Ahmedabad自主配方制造印刷油墨，提供PP/HDPE编织袋用溶剂型柔印墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "六次普通单次禁跳转HTTPSGET全200，SolventBased76563/About61025/Flexographic90032/总目录66565/Enquiry49563/AntiFoaming70941字符原HTML完整审读，既往0+当前6=6/余0，范围6满STOP；未重试/跳转/执行远程JS/读PDF。当前域名为Ink-Anon在IndiaMART托管管理的公司发布微站，属于公司自述原文，不冒称独立官网工厂审计或平台认证制造。About不只是Manufacturer标签，明确自身制墨机器/制造单元、专家配方、研发及测试人员，主营ManufacturingandTradingofPrintingInks；工商Partner/GST自述只用于同一账户识别，不称已独立验证GST登记或法人。Search旧solvent-based-ink.html标PP墨，而当前此页实际为SolventBaseFlexographicInkRetarder，保留版本差异，绝不用旧片段补原文；新实际flexographic-ink.html第三产品P.PFlexoPrintingInk明确BaseSolventBased及PP/HDPEWovenSacks，结构表SubstrateHDPE也原样保留，不把同页水性纸/纸巾墨偷换成PP溶剂墨。总目录完整可见25分类，除成品墨亦有retarder/reducers、pigmentpaste、pHbuffer、消泡剂和双面胶带；不将全部目录当成品或全部SKU技术资料已读。第六原文消泡剂明确BaseTypeSiliconeEmulsion/DefoamerTypeSilicon，属于消泡用途而非凭泛称乳液误认CPP/CPO同类附着促进原料。retarder当前原文是控制溶剂挥发/干燥，其他reducers/色浆/buffer/成品双面胶角色与所选CPP/CPO区分；有限已读自述、目录和具体相关助剂未见CPP/CPO/MAH氯化聚烯烃或同类聚烯烃附着促进原料外售，同行排除限实际披露角色范围，不作隐藏配方/全部助剂成分/SDS/股权穷尽保证，也不虚构外购使用例外。569正式公开、root14无关未发、frontier1130/index440及queue对InkAnon/Ink-Anon/ink-anon.in/GST24AAGFA5279H1ZF查重无既有；wholeResearch仅旧搜索无定向GET/预算冻结，PrakashPatel近名不并其他Patel企业。ATInks的atinks.com与chemicoatinks.com字串不能当集团关联；不并或拆既有HindustanFlex/Spico等正式。Contact实际同公司/GST/地址业务咨询表单，字段姓名/手机/邮箱/消息，Email是访客输入不是公司邮箱，五六原文没有明文业务邮箱；080平台转接号不当已核公司直线，不猜邮箱/WA，社交分享链接不是公司账号。页内YourEnquiryhasbeensentsuccessfully只是静态状态文本，无实际提交或联系；公司未有邮箱不阻止表单渠道正文资格，但批量邮件名单排除。About的PrakashPatelCEO/owner只官网自述，不核具名当前采购或个人邮箱；1972/33years历史叙述及QualityTestingNo与实验室宣传差异保留，不做成立年数、现行认证/产能或独立工厂真实性背书。公开NrPoliceChowkyNarodaRoadSahijpurBoghaAhmedabad382345为注册地址描述，不编街号厂门，Ahmedabad23.02250/72.57139仅通用城市示意。CPP关联沿用2026-11-02独立NipponPaperSUPERCHLON油墨binder/additive引用及用户七牌号选型指南，指南非完整七TDS；仅PP附着/粘度/溶剂体系潜在评估，不确认现用、相容、性能或采购。共享发送未知，无就绪稿/导出或外联。"
+    },
+    "contact": {
+      "label": "公司公开业务咨询表单（IndiaMART托管）；未核得业务邮箱或公司直线",
+      "contactUrl": "https://www.ink-anon.in/enquiry.html"
+    },
+    "source": {
+      "label": "Ink-Anon公司发布PP/HDPE溶剂型柔印墨与自身制造说明",
+      "url": "https://www.ink-anon.in/flexographic-ink.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ink-anon-ahmedabad": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "kempro-paints-coimbatore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "spico-printing-inks-chennai": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "asmira-paint-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13944,6 +13971,39 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ink-anon-ahmedabad": {
+  "website": "https://www.ink-anon.in/",
+  "contactPage": "https://www.ink-anon.in/enquiry.html",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "INK Anon, Nr. Police Chowky, Naroda Road, Sahijpur Bogha, Ahmedabad - 382345, Gujarat, India. Published company address; map uses Ahmedabad city representative coordinates, not an independently geocoded factory gate.",
+  "sources": [
+    {
+      "label": "公司自述制墨单元、配方与研发，平台托管非独立工厂审计",
+      "url": "https://www.ink-anon.in/about-us.html"
+    },
+    {
+      "label": "当前P.P Flexo Printing Ink明确溶剂型PP/HDPE编织袋",
+      "url": "https://www.ink-anon.in/flexographic-ink.html"
+    },
+    {
+      "label": "完整可见25分类目录及非全部SKU核验的有限范围",
+      "url": "https://www.ink-anon.in/printing-inks.html"
+    },
+    {
+      "label": "当前Solvent Based分类为缓干剂，保留与搜索版本差异",
+      "url": "https://www.ink-anon.in/solvent-based-ink.html"
+    },
+    {
+      "label": "消泡剂明确Silicone Emulsion，不误认CPP/CPO原料",
+      "url": "https://www.ink-anon.in/anti-foaming-agent.html"
+    },
+    {
+      "label": "实际公司业务咨询表单，无已核业务邮箱或直线",
+      "url": "https://www.ink-anon.in/enquiry.html"
+    }
+  ]
+},
 "kempro-paints-coimbatore": {
   "website": "https://kempropaints.in/",
   "contactPage": "https://kempropaints.in/contact.html",
@@ -42446,6 +42506,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ink-anon-ahmedabad",
 "kempro-paints-coimbatore",
 "spico-printing-inks-chennai",
 "asmira-paint-mumbai",
