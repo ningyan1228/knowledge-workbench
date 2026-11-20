@@ -12992,11 +12992,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "sipco-dammam",
+    "company": "Saudi Industrial Paint Company Ltd. (SIPCO)",
+    "productId": "elo",
+    "country": "Saudi Arabia",
+    "countryZh": "沙特阿拉伯",
+    "city": "Dammam（城市级示意点）",
+    "latitude": 26.433,
+    "longitude": 50.1,
+    "legacyCompanyDescription": "沙特防护及工业涂料制造企业，提供环氧底漆、SIPOXY-SHIELD 涂层与储罐衬里；Kaizen Paint Middle East 集团账户。",
+    "signal": "沙特自主涂料制造商，防护及工业系列包括环氧底漆、SIPOXY-SHIELD 环氧涂层、储罐衬里和醇酸防腐底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立完整审读本轮五份来源：官网About28行、Protective140行、Architectural55行、Construction28行，另AmericanCoatingsAssociation2025-03-14收购新闻159行。About直接自称SaudiIndustrialPaintCompanyLimited为沙特制造商，自1982运营；Protective为本品牌自有防护范围，列环氧底漆/SIPOXY-SHIELD/储罐衬里/醇酸底面/富锌/聚氨酯/硅酮耐热/氯化橡胶等下游成品及配套thinner、degreaser、surfaceprep、mastic/mortar，不将成品环氧、清洗附着预处理或矿物修补料泛称当ELO同类原料。Architectural列乳胶、瓷漆、墙面腻子/底漆/罩光、地坪和纹理成品；Construction明确轻钢及轻质混凝土建造系统及2020工厂，不伪装涂料新投产，也不作肥料包膜身份。按四份实际可见完整主营范围未观察ELO/ESBO/环氧化植物油/同类生物增塑改性原料对外供应，有限范围排查通过，不宣称所有SKU/SDS/隐藏配方或集团所有关联业务均已审。About写2017KPME收购；已读ACA新闻明确当前KaizenPaintMiddleEast(KPME)子公司SIPCO在2025收购PremiumPaintsCompany(PPC)全部股权，该公司此前为RedSeaBuildingMaterials与SherwinWilliams合资。SIPCO/KPME/Kaizen/PPC按一个保守当前集团账户，PPC不另新增；不把此前合资关系当收购后Sherwin当前控制，也不把缩写KPME直接扩展为日本Kansai。现有KansaiJapan/Helios私有bio-flexibilizer缺口保持，当前没有证据证明该账户属于Kansai，不虚构历史转让年份或隐藏股权；已读原文确定的是Kaizen名称而非仅搜索猜测。当前main555、root其他待发、frontier/index/excluded及完整queue的公司/域名/Kaizen/PPC名称离线核对无同一已收录账户；历史同域扫描仅发现搜索，不见旧定向读源，不以品牌/国家重置。官网四业务页公开info@sipco.com.sa及+966(0)138472299，同公司页脚匹配，公用而非采购/具名邮箱；号码保留原格式，不猜WhatsApp。About作为实际已读业务联系入口，未读独立Contact不假称表单可用；FirstIndustrialCityPOBox5795Dammam31432是公开业务邮寄位置，不当精测涂料厂门，26.433/50.100为另查城市级示意。ELO仅TDS涂料/环氧功能及树脂改性潜在评估，不声称现用、采购、相容、防腐提升、工业认证或借客户涂层性能给我方。公司当前累计5原始来源（4官网业务1协会身份新闻）/6剩1，本范围同用5/6剩1，不为用满预算另抓。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话",
+      "email": "info@sipco.com.sa",
+      "phone": "+966 (0) 13 847 2299",
+      "contactUrl": "https://www.sipco.com.sa/about.html"
+    },
+    "source": {
+      "label": "SIPCO官方防护及工业涂料系列和自主制造声明",
+      "url": "https://www.sipco.com.sa/protective_and_industrial.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sipco-dammam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pintesint-ramos-mejia": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "saak-jeddah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "kemichal-trebaseleghe": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13552,6 +13581,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sipco-dammam": {
+  "website": "https://www.sipco.com.sa/about.html",
+  "contactPage": "https://www.sipco.com.sa/about.html",
+  "generalEmail": "info@sipco.com.sa",
+  "generalPhone": "+966 (0) 13 847 2299",
+  "generalEmailEvidence": {
+    "company": "Saudi Industrial Paint Company Ltd. (SIPCO)",
+    "value": "info@sipco.com.sa",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SIPCO官网公司介绍及页脚公开业务联系信息",
+        "url": "https://www.sipco.com.sa/about.html",
+        "summary": "SIPCO公司介绍及三业务页脚共同明确公开公司通用业务邮箱；不是具名采购，不推投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhoneEvidence": {
+    "company": "Saudi Industrial Paint Company Ltd. (SIPCO)",
+    "value": "+966 (0) 13 847 2299",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SIPCO官网公司介绍及页脚公开业务联系信息",
+        "url": "https://www.sipco.com.sa/about.html",
+        "summary": "公司页脚精确公用业务电话，保留原格式，不推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "First Industrial City, PO Box 5795, Dammam 31432, Kingdom of Saudi Arabia. Published business/postal address; city-level 26.433/50.100, not surveyed paint-factory gate.",
+  "sources": [
+    {
+      "label": "官网自主涂料制造及业务联系",
+      "url": "https://www.sipco.com.sa/about.html"
+    },
+    {
+      "label": "官网防护及工业成品目录",
+      "url": "https://www.sipco.com.sa/protective_and_industrial.html"
+    },
+    {
+      "label": "美国涂料协会Kaizen/KPME及Premium Paints收购身份新闻",
+      "url": "https://www.paint.org/sipco-acquires-premium-paints/"
+    },
+    {
+      "label": "官网建筑成品涂料业务",
+      "url": "https://www.sipco.com.sa/architectural_coatings.html"
+    },
+    {
+      "label": "官网轻钢及轻质混凝土系统",
+      "url": "https://www.sipco.com.sa/construction_portfolio.html"
+    }
+  ]
+},
 "pintesint-ramos-mejia": {
   "website": "https://www.pintesint.com/pintesint.php",
   "contactPage": "https://www.pintesint.com/pintesint.php",
@@ -41289,6 +41377,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sipco-dammam",
 "pintesint-ramos-mejia",
 "saak-jeddah",
 "kemichal-trebaseleghe",
