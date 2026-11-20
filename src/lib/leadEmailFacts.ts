@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"hardex-india-pune": "I noticed that Hardex India manufactures Marine Epoxy 2K coatings for protecting steel and concrete structures.",
 "rebrilhar-leme": "I noticed that Rebrilhar manufactures Verniz Classic, a water-based varnish for residential wooden floors.",
 "anupam-paints-howrah": "I noticed that Anupam Paints manufactures two-pack epoxy zinc phosphate primers and high-build epoxy coatings for container protection.",
 "chanda-paints-kalyani": "I noticed that Chanda Paints manufactures Edelpoxy ZPPR 103 and other epoxy primers for industrial protective coatings.",

@@ -13235,11 +13235,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "hardex-india-pune",
+    "company": "Hardex India Private Limited",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Pune（制造城市示意，非厂门坐标）",
+    "latitude": 18.52111,
+    "longitude": 73.85528,
+    "legacyCompanyDescription": "印度Pune工业及建筑防护涂料制造企业，公开自有制造设施、研发与海工环氧防护体系。",
+    "signal": "官网明确Pune自有生产和研发；Marine Epoxy 2K HE500防护体系用于钢与混凝土结构。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "六次普通单次HTTPS GET均HTTP200，禁自动跳转/重试/脚本执行：Home16135字符、Protective18656、wwwAbout6990、Products27621、实际引用products-data.js25525、site-config.js4950。完整原文独立审读前三业务体；Products HTML只有11范围检索壳，未把壳当100SKU已读。对实际引用公开静态目录仅用本地可信TypeScript AST提取25项字面量，不import/eval/vm执行下载脚本；25项逐项核读，归档静态JSON与完整源体。Home明确自主制造建筑化学品和工业涂层、inhousefacility及法定商号，About明确自有Pune制造及R&D，同时自述UKbased，品牌/IndiaPrivateLimited/hardexindia.com/hardex.me及所披露hardex-uk.com按单账户保守关联，未独立核实UK法律母公司/最终控制或工商注册。公司资料与官网配置Kochi城市描述均保留，配置文件标注更新提示/街址空白，不将Kochi替作Pune厂址，不编制造街号。具体Protective正文列MarineEpoxy2K HE500、HC710金属底漆及HE400面涂，适用于钢与混凝土；98至99%和100%固含、干湿膜厚、20至25年/ASTMB117/ISO等自述不转为我方认证性能或独立测试事实。目录实际25项主要为成品环氧地坪/墙漆/锌环氧钢底漆、PU地坪和面涂、防水、地面硬化剂、SBR与丙烯酸混凝土粘结/砂浆改性、修补砂浆/铺路装饰漆；EpoxyPigmentPaste为环氧体系着色，T102Diluent原文用途为调黏和工具清洗，未取得其SDS，不扩写为已确认非反应成分，也不凭稀释剂/颜料浆标题就认定ELO/同类环氧油原料供应。当前Home/About/具体防护体系及25个静态当前产品所述范围未见ELO、ESBO、环氧化植物油或相近生物增塑稳定原料外售，有限同行排除通过，不声称全部100余产品、未读archived/pipeline目录、全部TDS/SDS/配方及隐藏股权全审；无外购例外或客户现用ELO证明。官网实际Home明文mailto info@hardexindia.com为公司通用咨询邮箱，配置中技术标注含updateifseparate故不冒称采购或独立技术部门；support@hardex-uk.com不精选为印度采购，未读联系方式不猜。没有已核具名人员、业务电话或真实WhatsApp直链，配置注释社交占位链接不精选。首页Bob聊天只说明未调用，不提交表单/聊天/询价或样品请求。1980/营收Top20等宣传未独立核验不作采购或规模证明。ELO仅按用户涂层配方/环氧功能及树脂改性潜在实验室评估，不担保相容、防腐、寿命或采购；Pune城市示意坐标非厂门GPS。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱；未核得具名采购联系人",
+      "email": "info@hardexindia.com",
+      "contactUrl": "https://hardexindia.com/"
+    },
+    "source": {
+      "label": "Hardex 官方 Marine Epoxy 2K 防护体系及Pune自身制造说明",
+      "url": "https://hardexindia.com/solution-protective-coatings.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"hardex-india-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rebrilhar-leme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "anupam-paints-howrah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chanda-paints-kalyani": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13804,6 +13832,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"hardex-india-pune": {
+  "website": "https://hardexindia.com/",
+  "contactPage": "https://hardexindia.com/",
+  "generalEmail": "info@hardexindia.com",
+  "generalEmailEvidence": {
+    "company": "Hardex India Private Limited",
+    "value": "info@hardexindia.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Hardex 官方首页 Email 联系区",
+        "url": "https://hardexindia.com/",
+        "summary": "官网Email联系区明文及mailto重复发布info@hardexindia.com，用于技术支持、样品及配方咨询的公司通用入口，不作具名采购邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Pune, India — manufacturing location explicitly stated on the official About page; manufacturing street address not established. Site configuration separately mentions Kochi and a UK-based brand. Map uses approximate Pune city coordinates, not a factory gate.",
+  "sources": [
+    {
+      "label": "官网自营制造及公开公司业务邮箱",
+      "url": "https://hardexindia.com/"
+    },
+    {
+      "label": "官网UK品牌描述及自有Pune生产/R&D",
+      "url": "https://www.hardexindia.com/about.html"
+    },
+    {
+      "label": "具体Marine Epoxy 2K钢/混凝土防护体系",
+      "url": "https://hardexindia.com/solution-protective-coatings.html"
+    },
+    {
+      "label": "实际公开产品目录入口及11范围检索",
+      "url": "https://hardexindia.com/products.html"
+    },
+    {
+      "label": "目录实际引用的25项公开静态产品资料；只读字面量",
+      "url": "https://hardexindia.com/config/products-data.js?v=2"
+    }
+  ]
+},
 "rebrilhar-leme": {
   "website": "https://rebrilhar.com.br/",
   "contactPage": "https://rebrilhar.com.br/",
@@ -42032,6 +42104,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"hardex-india-pune",
 "rebrilhar-leme",
 "anupam-paints-howrah",
 "chanda-paints-kalyani",
