@@ -12909,11 +12909,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "kemichal-trebaseleghe",
+    "company": "Kemichal S.r.l.",
+    "productId": "nl-w1201",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Trebaseleghe（城市级示意点）",
+    "latitude": 45.583,
+    "longitude": 12.05,
+    "legacyCompanyDescription": "意大利水性及溶剂型木器涂料制造商，提供室内外涂饰及 KEMILAC 调色体系。",
+    "signal": "在意大利自主制造木器涂料，室内及室外系列明确包含水性木器漆；KEMILAC 系统提供水性及溶剂型调色涂装体系。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立复核本轮五份完整官网业务返回：Products75行、Interior80行、SpecialProducts72行、KEMILAC90行、Contact92行；第六KEMIGRIP叶页CacheMiss真实失败计额，不重试。Products/Interior/Contact明确Kemichal自身生产木器涂料、颜色和配套稀释剂，室内列表直接列VerniciallAcquaperInterni，室外列水性木器涂饰，并非把墙面水漆与另一个木器溶剂产品拼接。已读主营六类为室内、室外、特殊木器涂饰、KEMILAC调色、KEMIART效果漆及KEMIMETAL金属漆。KEMILAC实际原文明确水/溶剂色浆加入converter调色基料形成漆，基料有白/透明、哑/亮及喷枪/airless/刷辊应用版本，属于涂装成品配套；不能仅凭basi/converter/色浆当成水性PO/CPO分散体原料，亦不推其未披露成分。按这五份实际可见经营范围未发现W1201同类水性聚烯烃乳液、CPO/PO分散体或原料级聚烯烃附着促进剂外售，有限范围同行排查通过，不宣称全部隐藏SKU/SDS/股权/添加剂配方皆已审。SpecialProducts仅列Kemipolish/KEMIYACHT/KEMILACFIRERETARDANT/KEMIGRIP标题；KEMIGRIP叶页未读，不以标题推同类原料，也不将未读配方写成无供应证据，不借该条目主张应用/性能。Kemichal/KEMILAC/KEMIART/KEMIMETAL、意葡等多语言页面及VAT00398340281按一个Trebaseleghe经营账户；最新main552条、root、frontier/index/excluded和发现队列的名称/域名/VAT/品牌离线核对无已知同主体，不以语言页或品牌拆新增，未声称审计隐藏最终股权。Contact实际公开表单及公司公用号码+390499385648；邮箱正文倒序ti.lahcimek@ofni不解码/反转/猜邮箱，不登记已核验邮箱或具名采购，不进入批量邮件名单。地址ViaDellArtigianato2Trebaseleghe是公开业务地址，坐标45.583/12.050仅城市示意，不当测绘厂门。NL-W1201仅按用户TDS木材/底涂附着用途作潜在材料评估，不推现用PO、采购、相容、实际工艺或性能提升。来源终身6/6STOP（5业务原文1失败），不因切换产品/品牌/日期/provider重置。"
+    },
+    "contact": {
+      "label": "官网联系表单及公开业务电话；邮箱未核验",
+      "phone": "+39 049 9385648",
+      "contactUrl": "https://www.kemichal.it/it/contatti.html"
+    },
+    "source": {
+      "label": "Kemichal 官方水性木器涂料及自主制造声明",
+      "url": "https://www.kemichal.it/it/vernici/prodotti-per-interno-7.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"kemichal-trebaseleghe": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "american-paints-bharatpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tinpes-itagui": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "amanecer-luque": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13466,6 +13494,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"kemichal-trebaseleghe": {
+  "website": "https://www.kemichal.it/it/vernici.html",
+  "contactPage": "https://www.kemichal.it/it/contatti.html",
+  "generalPhone": "+39 049 9385648",
+  "generalPhoneEvidence": {
+    "company": "Kemichal S.r.l.",
+    "value": "+39 049 9385648",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网联系页公开公司业务号码",
+        "url": "https://www.kemichal.it/it/contatti.html",
+        "summary": "Kemichal公司联系页明确的首个公用业务号码，非具名采购、私人号码或WhatsApp；不将第二个未标用途号码猜为传真。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Via dell'Artigianato, 2, 35010 Trebaseleghe (PD), Italy. Public business address; city-level 45.583/12.050, not surveyed factory gate.",
+  "sources": [
+    {
+      "label": "官网自主制漆及完整可见产品大类",
+      "url": "https://www.kemichal.it/it/vernici.html"
+    },
+    {
+      "label": "官网室内水性木器涂料系列",
+      "url": "https://www.kemichal.it/it/vernici/prodotti-per-interno-7.html"
+    },
+    {
+      "label": "官网特殊木器涂饰目录（仅可见标题）",
+      "url": "https://www.kemichal.it/it/vernici/prodotti-speciali-11.html"
+    },
+    {
+      "label": "官网 KEMILAC 调色基料及色浆用途",
+      "url": "https://www.kemichal.it/it/vernici/kemilac-color-system-10.html"
+    },
+    {
+      "label": "官网联系表单及公用业务号码",
+      "url": "https://www.kemichal.it/it/contatti.html"
+    }
+  ]
+},
 "american-paints-bharatpur": {
   "website": "https://americanpaintsnepal.com.np/",
   "contactPage": "https://americanpaintsnepal.com.np/",
@@ -41037,6 +41109,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"kemichal-trebaseleghe",
 "american-paints-bharatpur",
 "tinpes-itagui",
 "amanecer-luque",
