@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"produscreen-pindamonhangaba": "I noticed that Produscreen manufactures APP, a two-component solvent-based screen-printing ink whose listed substrates include PP.",
 "pinturas-uxell-burzaco": "I noticed that Pinturas Uxell manufactures Hidrobarniz, a water-based varnish for wooden furniture, windows and doors.",
 "tekno-argentina-gran-mendoza": "Your HIDROTEK water-based acrylic varnish is specified for coating new wood and previously varnished wooden surfaces.",
 "dimacon-lagos": "Your marine and protective coating range includes steel epoxy primers, high-build epoxy barrier coatings and epoxy tank linings.",

@@ -13101,11 +13101,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "produscreen-pindamonhangaba",
+    "company": "Produscreen",
+    "productId": "cpp-cpo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Pindamonhangaba（城市级示意，非厂门坐标）",
+    "latitude": -22.92389,
+    "longitude": -45.46167,
+    "legacyCompanyDescription": "巴西 Pindamonhangaba 丝印油墨研发制造企业；APP 为 PP 等塑料基材用双组分溶剂型丝印油墨。",
+    "signal": "巴西 Pindamonhangaba 自有工业设施研发制造丝印油墨；APP 明确为双组分溶剂型，基材列 PE、PP、PET 并列处理及试印要求。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立核读公司页48行和首页224行，确认Pindamonhangaba自有工业设施、丝印油墨制造及研发，首页完整可见目录五类为溶剂型乙烯基、聚乙烯、环氧、EVA/乳胶和APP聚氨酯成品丝印墨。APP native读取报404后，另一次禁跳转普通GET得到HTTP200原HTML685219字符，完整产品正文明确双组分溶剂型丝印墨及PE/PP/PET处理要求和实验试印，不能以UV/水性或单纯塑料制造代替PP溶剂墨。UseUtilizacao第五次native404计入失败，无正文不作依据，失败不退额度；合计4native操作其中2成功2失败加1raw成功，5单位/余1；没有第6次、不用其他品牌或新范围重置。公司/完整可见五成品线导航/APP正文的有限经营范围未发现CPP/CPO、MAH改性氯化聚烯烃或同类附着促进原料外售，不把成品PU/环氧/聚乙烯墨按化学名误认原料供应，也不声称所有隐藏SKU/SDS/股权全审。Produscreen及APP自有产品一账户，Pindamonhangaba同一地址不拆；TecScreen/TupiScreen、Gênesis/Fremplast和M2Brasilia网站制作方无已证同集团关系，不凭Screen近名并户或拆户。最新main559、root其他未发、frontier/index/excluded及queue精确名称域名地址离线查重无既有主体，历史Produscreen只有先前CPP搜索发现及本组搜索，无旧定向GET或冻结预算；未核工商后缀，采用公开商号，不编法人形式。Home联系表单实际列姓名/邮箱/电话/感兴趣油墨/消息，只观察不提交；Email字段是访客输入，不是公司邮箱。未找到可采业务邮箱或具名采购人，仍可通过官网表单和原始APP页面明确QueroRevender的公开WhatsApp链接联系。WhatsApp仅HTML实体解码保留原URL，不从电话猜账号；常规总机按原文(12)3644-1550保留，不补国际码或把总机等同WhatsApp。公开AvAlexandrinadasChagasMoreira540为公司地址，城市坐标-22.92389/-45.46167只示意非厂门GPS；©2020不作2026投产/成立，internationalstandards宣传不当有效认证。CPP/CPO关联只使用既有独立NipponPaperSUPERCHLON油墨binder/additive类别与用户七牌号PP附着指南，指南不冒充完整逐牌号TDS；不确认APP现用CPO、我方牌号在双组分PU中的相容、溶剂适配、反应/干燥/附着性能或采购需求。"
+    },
+    "contact": {
+      "label": "官网联系表单及公开 WhatsApp；业务邮箱待补",
+      "contactUrl": "https://www.produscreen.com.br/"
+    },
+    "source": {
+      "label": "Produscreen官方APP溶剂型丝印墨及自身工业设施说明",
+      "url": "https://www.produscreen.com.br/poliuretanica"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"produscreen-pindamonhangaba": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "pinturas-uxell-burzaco": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "tekno-argentina-gran-mendoza": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "dimacon-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13665,6 +13692,43 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"produscreen-pindamonhangaba": {
+  "website": "https://www.produscreen.com.br/",
+  "contactPage": "https://www.produscreen.com.br/",
+  "generalPhone": "(12) 3644-1550",
+  "generalPhoneEvidence": {
+    "company": "Produscreen",
+    "value": "(12) 3644-1550",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Produscreen官网公开公司总机及地址",
+        "url": "https://www.produscreen.com.br/",
+        "summary": "首页公开常规业务总机(12)3644-1550；不是具名人，不补国际码，不等同另一个公开WhatsApp号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "whatsapp": "https://api.whatsapp.com/send?phone=5512997277386&text=ol%C3%A1",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Av. Alexandrina das Chagas Moreira, 540 - Distrito Industrial, Pindamonhangaba - SP, 12412-800, Brazil. Published company address; map uses city representative coordinates, not independently geocoded factory gate.",
+  "sources": [
+    {
+      "label": "官网自身工业设施与研发制造",
+      "url": "https://www.produscreen.com.br/empresa"
+    },
+    {
+      "label": "官网五类成品目录及实际联系表单",
+      "url": "https://www.produscreen.com.br/"
+    },
+    {
+      "label": "官网APP双组分溶剂型PP丝印墨及明确WhatsApp链接",
+      "url": "https://www.produscreen.com.br/poliuretanica"
+    }
+  ]
+},
 "pinturas-uxell-burzaco": {
   "website": "https://pinturasuxell.com.ar/",
   "contactPage": "https://pinturasuxell.com.ar/contacto.html",
@@ -41657,6 +41721,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"produscreen-pindamonhangaba",
 "pinturas-uxell-burzaco",
 "tekno-argentina-gran-mendoza",
 "dimacon-lagos",
