@@ -13316,11 +13316,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "spico-printing-inks-chennai",
+    "company": "SPICO Printing Inks P Ltd.",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Chennai（城市级示意，非厂门坐标）",
+    "latitude": 13.0825,
+    "longitude": 80.275,
+    "legacyCompanyDescription": "印度Chennai凹印及柔印油墨制造企业；FLEXO.PP.WOVEN SACK INKS为PP编织袋及集装袋用溶剂型柔印墨。",
+    "signal": "在Chennai自有场地制造凹印及柔印油墨，提供IPA/NBA/TOL溶剂体系的PP编织袋与集装袋柔印墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "接续同一私有Spico记录，复读既有Home12505及Products27484字符原HTML，本范围仅新增普通单次GET Contacts7387字符200；禁自动跳转/重试/远程JS，既往2+当前1=终身3/余3，当前范围1/余5，不重置预算。Home明确SPICO Printing Inks P Ltd.及旧The Superior Printing Ink Company，Ambattur Chennai自有场地、液体凹印/柔印墨制造设备、dyno mills及实验室，Puducherry Tirubuvanai为同公司分支不拆新增。Products开头明确自主制造，21.FLEXO.PP.WOVEN SACK INKS明确IPA/NBA/TOL溶剂、PP sacks、PP woven sacks含未处理薄膜及Jumbo Bags柔印；另列PP/BOPP溶剂薄膜墨和成品涂层。28导航与24编号技术块及其他成品标题不全一一对应，保留原编号，不冒称全部SKU/TDS/SDS已读。三实际原文所披露自有成品墨/涂层及稀释缓干使用说明未见CPP/CPO或MAH改性氯化聚烯烃同类附着促进原料外售，同行排除限此有限经营资料，不当全部成分/隐藏目录/股权保证；不把成品PU墨或溶剂配比当原料生产/外售，也不编客户外购CPP使用例外。当前main567公开/root其他未发/原frontier1128/index438/旧排除记录与队列查重，只有同一Spico私有记录，按原researchId原位更新，不因别名/Chennai与Pondicherry分支重计；未核工商CIN和最终控制，不补注册后缀或根据旧中国工作经历推中国母公司。Contacts标题printing links拼写与Home inks有差异，使用Home明确公开商号，不创第二主体。公开Email Link明确spico98@spicoindia.in，按公司通用业务邮箱独立保留，不冒称采购个人；其他具名邮箱不据近名做采购归属，spico98@gmail.co疑似缺字不修补不采用，无投递验证。HO总机原文+91 44 - 42152114 / 15保留，不精选个人手机号/WhatsApp或Pondicherry支线电话。页面可见姓名/邮箱/消息业务表单，仅观察未提交未验证送达；R.Sridharan/ManagingDirector和B.Bhaskaran/DirectorTechnical仅官网自述，未独立核当前任职及命名邮箱对应，contacts不生成具名采购人。地址136SIDCOIndustrialEstateAmbatturChennai600098为公开HO，不声称厂门独立定位；Chennai13.0825/80.275为通用城市示意。1975/2002/产能/南印度第一/ISO9001:2015since2010年代异常保留，不做现行产能或独立认证。CPP关联使用用户七牌号选型指南及原2026-11-02独立NipponPaperSUPERCHLON油墨应用引用，指南非完整七牌号TDS；仅PP附着、粘度/溶剂体系潜在评估，不确认现用CPP/CPO、相容、附着改善或采购。共享发送未知，条件生成检查仅未来确认未发送，不创建就绪稿/导出或外联。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及联系页；未核得具名采购",
+      "email": "spico98@spicoindia.in",
+      "contactUrl": "https://www.spicoindia.in/contacts.html"
+    },
+    "source": {
+      "label": "SPICO官方PP编织袋溶剂型柔印墨及自身制造说明",
+      "url": "https://www.spicoindia.in/products.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"spico-printing-inks-chennai": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "asmira-paint-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ciacollor-maringa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hardex-india-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13888,6 +13916,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"spico-printing-inks-chennai": {
+  "website": "https://www.spicoindia.in/home.html",
+  "contactPage": "https://www.spicoindia.in/contacts.html",
+  "generalEmail": "spico98@spicoindia.in",
+  "generalEmailEvidence": {
+    "company": "SPICO Printing Inks P Ltd.",
+    "value": "spico98@spicoindia.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SPICO official Contacts — Email Link",
+        "url": "https://www.spicoindia.in/contacts.html",
+        "summary": "官方联系页Email Link直接列spico98@spicoindia.in；公司通用业务邮箱，未认定具名采购归属或投递有效。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 44 - 42152114 / 15",
+  "generalPhoneEvidence": {
+    "company": "SPICO Printing Inks P Ltd.",
+    "value": "+91 44 - 42152114 / 15",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SPICO official Contacts — HO telephone",
+        "url": "https://www.spicoindia.in/contacts.html",
+        "summary": "HO ADDRESS下公开公司总机，按原始写法保留；不等同WhatsApp，不采具名个人手机。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "136, SIDCO Industrial Estate, Ambattur, Chennai - 600098, India. Published head-office address; map uses Chennai city representative coordinates, not an independently geocoded factory gate.",
+  "sources": [
+    {
+      "label": "自有Chennai场地、设备、实验室及同公司Puducherry分支",
+      "url": "https://www.spicoindia.in/home.html"
+    },
+    {
+      "label": "自制成品墨目录及21号PP编织袋溶剂柔印墨",
+      "url": "https://www.spicoindia.in/products.html"
+    },
+    {
+      "label": "公开业务邮箱、HO总机及业务表单",
+      "url": "https://www.spicoindia.in/contacts.html"
+    }
+  ]
+},
 "asmira-paint-mumbai": {
   "website": "https://asmirapaint.com/",
   "contactPage": "https://asmirapaint.com/contact/",
@@ -42279,6 +42358,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"spico-printing-inks-chennai",
 "asmira-paint-mumbai",
 "ciacollor-maringa",
 "hardex-india-pune",
