@@ -13611,11 +13611,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "satva-coating-ahmedabad",
+    "company": "Satva Coating Private Limited",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ahmedabad（城市级示意，非厂门坐标）",
+    "latitude": 23.0225,
+    "longitude": 72.57139,
+    "legacyCompanyDescription": "印度Ahmedabad自主制造工业及防护涂料的配方企业，设有涂料检测实验室。",
+    "signal": "在Vatva、Ahmedabad自有设施制造并检测涂料；具体防护目录列有高膜厚环氧面漆、锌磷酸盐及富锌环氧底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "官网明确在Ahmedabad的Vatva制造工业及防护涂料，并设检测实验室。实际防护目录包括环氧面漆、锌磷酸盐和富锌环氧底漆及聚氨酯成品；主页和产品目录另列工业、地坪及建筑涂料。在已读主营与有限成品目录中，未见ELO、ESBO、环氧植物油或同类生物增塑稳定原料的制造销售。该结论限已读业务范围，非全部SKU、配方、SDS或股权审计。Satva Coating及官网明确的Private Limited名称、产品品牌与披露制造设施按同一账户去重；不拆产品或厂址计数。成品底漆属于下游涂料，不仅凭primer名称认定为原料同行。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱和电话",
+      "email": "info@satvacoatings.com",
+      "contactUrl": "https://satvacoatings.com/"
+    },
+    "source": {
+      "label": "Satva 官方防腐环氧面漆及锌磷酸盐、富锌底漆产品",
+      "url": "https://satvacoatings.com/protective-coatings.html"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"satva-coating-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ogrady-coatings-middelburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "zeen-inks-umbergaon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "lukmani-paint-virar-dahej": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14194,6 +14222,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"satva-coating-ahmedabad": {
+  "website": "https://satvacoatings.com/",
+  "contactPage": "https://satvacoatings.com/",
+  "generalEmail": "info@satvacoatings.com",
+  "generalEmailEvidence": {
+    "company": "Satva Coating Private Limited",
+    "value": "info@satvacoatings.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Satva 官网公开公司邮箱",
+        "url": "https://satvacoatings.com/",
+        "summary": "主页与两个产品原文Header/Footer均明确info@satvacoatings.com，作为公司通用业务入口，不冒称具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "+91 84600 05161",
+  "generalPhoneEvidence": {
+    "company": "Satva Coating Private Limited",
+    "value": "+91 84600 05161",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Satva 官网公开业务电话",
+        "url": "https://satvacoatings.com/",
+        "summary": "三页Footer公开+91 84600 05161，Header tel:+918460005161一致；为公司业务电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "UNIT – I, Plot No 2406, Phase – 4, Nr. Ramol Police Chowki, G.I.D.C., Vatva, Ahmedabad, Gujarat – 382445, India. Published company address; map uses an approximate Ahmedabad city marker, not a surveyed factory gate.",
+  "sources": [
+    {
+      "label": "自有Vatva制造设施、涂料检测实验室及公司业务渠道",
+      "url": "https://satvacoatings.com/"
+    },
+    {
+      "label": "具体防护环氧面漆、锌磷酸盐和富锌底漆成品",
+      "url": "https://satvacoatings.com/protective-coatings.html"
+    },
+    {
+      "label": "公开工业、防护、地坪及建筑成品目录",
+      "url": "https://satvacoatings.com/products.html"
+    }
+  ]
+},
 "ogrady-coatings-middelburg": {
   "website": "https://ogrady.co.za/",
   "contactPage": "https://ogrady.co.za/contact-us/",
@@ -43126,6 +43205,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"satva-coating-ahmedabad",
 "ogrady-coatings-middelburg",
 "zeen-inks-umbergaon",
 "lukmani-paint-virar-dahej",
