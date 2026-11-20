@@ -13477,11 +13477,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "unilux-jaboatao-dos-guararapes",
+    "company": "Tintas Unilux",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Jaboatão dos Guararapes（城市级示意，非厂门坐标）",
+    "latitude": -8.11222,
+    "longitude": -35.01556,
+    "legacyCompanyDescription": "巴西Pernambuco自有工厂制漆企业，PintaLux ECO为明确适用于木材的水性瓷漆。",
+    "signal": "自有工厂制造涂料；PintaLux ECO为用于木材的水性瓷漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立审读官网Home完整正文及PintaLux ECO具体页：Home明确Fabricamos和Jaboatão dos Guararapes自有fábrica，列PintaCorPremium/Piso、MasterPLUS、Rende+、Complementos、MasterLux、PintaLux、Madeiras、ECO等建筑/木器成品路线，以及用于水性涂料调色的Corantes。PintaLux ECO同一具体原文明确水性瓷漆及木材、PVC、铝基材；本次只用木材TDS方向，不从metais泛称扩展所有金属。不把普通水性墙漆与其他溶剂木漆拼接。所读主营成品/调色和ECO未见PO/CPO分散体、聚烯烃附着促进剂同类原料制造外售；普通着色剂不是PO原料。排除限这两正文的有限业务范围，未审全部SKU、配方、SDS、所有分类叶或隐藏股权。官网未见法定后缀/CNPJ，不编造；Unilux、PintaLux、PintaCor、Uniplus按同一官网业务户处理。全量573正式库、root未发、frontier1143/index455、queue及research名称/域名/品牌复核无同一业务主体；旧Unilux黎巴嫩电器和Silibro/Pintalux同名漆只是不同来源命中，无证据不合并。公司页面15年/2010、100%满意、性能/干燥和气味均自述，不作我方性能、认证、相容或现用原料证明。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、公开总机及实际WhatsApp入口",
+      "email": "contato@tintasunilux.com.br",
+      "contactUrl": "https://www.tintasunilux.com.br/"
+    },
+    "source": {
+      "label": "Unilux 官方 PintaLux ECO 水性木材瓷漆及自有制造说明",
+      "url": "https://www.tintasunilux.com.br/pintalux-eco/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"unilux-jaboatao-dos-guararapes": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "chaiyaboon-brothers-lam-luk-ka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "htd-ultra-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "reliable-paints-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14055,6 +14083,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"unilux-jaboatao-dos-guararapes": {
+  "website": "https://www.tintasunilux.com.br/",
+  "contactPage": "https://www.tintasunilux.com.br/",
+  "generalEmail": "contato@tintasunilux.com.br",
+  "generalEmailEvidence": {
+    "company": "Tintas Unilux",
+    "value": "contato@tintasunilux.com.br",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Unilux 官方首页及ECO页公开邮箱",
+        "url": "https://www.tintasunilux.com.br/",
+        "summary": "官网Header明文及mailto:contato@tintasunilux.com.br一致；为公司通用业务入口，不冒采购人。FAQ另有vendas公司销售邮箱，本次不伪装为采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "81 3471-8836",
+  "generalPhoneEvidence": {
+    "company": "Tintas Unilux",
+    "value": "81 3471-8836",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Unilux 官方首页及ECO页公司电话",
+        "url": "https://www.tintasunilux.com.br/",
+        "summary": "两页Footer明确公开81 3471-8836；保留原格式，不从电话号码推定WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "whatsapp": "https://wa.me/5581999633375?text=Entre%20em%20contato%20",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Rua professora Maria do Carmo, 20; homepage identifies its factory in Jaboatão dos Guararapes, Pernambuco, Brazil. Published company address; approximate city coordinates, not a verified factory gate.",
+  "sources": [
+    {
+      "label": "自有工厂制造、有限成品业务、公司邮箱/电话和实际WhatsApp链接",
+      "url": "https://www.tintasunilux.com.br/"
+    },
+    {
+      "label": "同一具体ECO产品明确水性与木材用途",
+      "url": "https://www.tintasunilux.com.br/pintalux-eco/"
+    }
+  ]
+},
 "chaiyaboon-brothers-lam-luk-ka": {
   "website": "https://www.chaiyaboon.com/",
   "contactPage": "https://www.chaiyaboon.com/contact",
@@ -42751,6 +42827,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"unilux-jaboatao-dos-guararapes",
 "chaiyaboon-brothers-lam-luk-ka",
 "htd-ultra-nashik",
 "reliable-paints-vadodara",
