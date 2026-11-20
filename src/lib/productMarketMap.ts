@@ -13584,11 +13584,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "ogrady-coatings-middelburg",
+    "company": "O’Grady Coatings Group",
+    "productId": "nl-w1201",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Middelburg, Mpumalanga（城市级示意，非厂门坐标）",
+    "latitude": -25.76806,
+    "longitude": 29.45472,
+    "legacyCompanyDescription": "南非自主配制制造涂料企业，在Mpumalanga及Western Cape设制造设施，并提供水性丙烯酸木器清漆。",
+    "signal": "在南非自行配制制造涂料，并提供适用于木材的水性丙烯酸清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "核对官网公司制造说明、当前产品导航、Enviro水性木器清漆、Speciality Range完整12项可见成品目录及公司联系页：公司在Mpumalanga和Western Cape自行配制制造涂料；具体清漆页同时明确waterbased和用于wood。有限主营及特别成品涂层范围未发现PO/CPO乳液、聚烯烃分散体或同类附着促进原料制造销售。结论限实际所读公开页面，不代表全部SKU、叶页、配方、SDS或股权穷尽审计。O’Grady品牌、Coatings Group及Enviro/Sutherland产品路线、各门店和两区域制造设施按同一业务户处理，无已有正式重复记录；不把产品路线拆公司，不编未核法定后缀或登记号。公司SABS审厂、协会身份、Agrement及产品耐候/环保等属于其自述，不作为我方认证、相容性或性能证明。联系页info@ogrady.co.za及013 246 2570为公司通用业务入口，不冒具名采购，未公开WhatsApp则不猜。Middelburg门店地址为公司公开业务位置，地图采用城市点，不声称已核厂门。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、联系页及公开业务电话",
+      "email": "info@ogrady.co.za",
+      "contactUrl": "https://ogrady.co.za/contact-us/"
+    },
+    "source": {
+      "label": "O’Grady 官方水性丙烯酸木器清漆及自有制造说明",
+      "url": "https://ogrady.co.za/product/enviro-waterbased-varnish/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ogrady-coatings-middelburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "zeen-inks-umbergaon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "lukmani-paint-virar-dahej": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pearl-coating-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14166,6 +14194,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ogrady-coatings-middelburg": {
+  "website": "https://ogrady.co.za/",
+  "contactPage": "https://ogrady.co.za/contact-us/",
+  "generalEmail": "info@ogrady.co.za",
+  "generalEmailEvidence": {
+    "company": "O’Grady Coatings Group",
+    "value": "info@ogrady.co.za",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "O’Grady 官方Contact Us公司邮箱",
+        "url": "https://ogrady.co.za/contact-us/",
+        "summary": "当前官网联系页明确Email contact info@ogrady.co.za，五正文Footer一致，为公司通用业务邮箱，非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "013 246 2570",
+  "generalPhoneEvidence": {
+    "company": "O’Grady Coatings Group",
+    "value": "013 246 2570",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "O’Grady 官方Contact Us公司电话",
+        "url": "https://ogrady.co.za/contact-us/",
+        "summary": "联系页Phone call与Middelburg门店/各页Footer一致013 246 2570，保留原发布格式，不补国际码或推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "30 celcius street, Middelburg, South Africa. Published store/business address from current About and Contact Us pages; group states manufacturing plants in Mpumalanga and Western Cape. Map uses approximate Middelburg, Mpumalanga city coordinates, not independently verified factory gate.",
+  "sources": [
+    {
+      "label": "当前官网产品主业/路线与公司业务联系",
+      "url": "https://ogrady.co.za/"
+    },
+    {
+      "label": "Mpumalanga及Western Cape自有配制制造说明",
+      "url": "https://ogrady.co.za/about/"
+    },
+    {
+      "label": "具体水性丙烯酸清漆用于木材的原文",
+      "url": "https://ogrady.co.za/product/enviro-waterbased-varnish/"
+    },
+    {
+      "label": "Speciality完整12项成品目录",
+      "url": "https://ogrady.co.za/product-category/paint-by-range/speciality-range/"
+    },
+    {
+      "label": "公司通用邮箱、业务电话与门店地址",
+      "url": "https://ogrady.co.za/contact-us/"
+    }
+  ]
+},
 "zeen-inks-umbergaon": {
   "website": "https://www.z-inks.com/",
   "contactPage": "https://www.z-inks.com/",
@@ -43039,6 +43126,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ogrady-coatings-middelburg",
 "zeen-inks-umbergaon",
 "lukmani-paint-virar-dahej",
 "pearl-coating-pune",
