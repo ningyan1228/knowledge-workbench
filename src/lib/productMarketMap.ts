@@ -12826,11 +12826,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "amanecer-luque",
+    "company": "Amanecer S.A.",
+    "productId": "elo",
+    "country": "Paraguay",
+    "countryZh": "巴拉圭",
+    "city": "Luque（城市级示意点）",
+    "latitude": -25.27,
+    "longitude": -57.49,
+    "legacyCompanyDescription": "在Luque自有工厂生产合成瓷漆和清漆；Stain为以矿物松节油稀释、用于木材表面保护的成品涂层。",
+    "fit": "可开发候选",
+    "signal": "在Luque自有工厂生产合成瓷漆和清漆；Stain为以矿物松节油稀释、用于木材表面保护的成品涂层。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "此前11月15日四份官网完整provider正文已离线复核，保留实际读取日期：Productos全可见目录、Barnizalagua、Empresa工厂及Stain技术页。Empresa明确Luque自有工厂/实验室、syntheticenamel/varnish生产；Stain明确合成树脂木材保护涂层及矿物松节油稀释，木材底涂不水性，因此此前NL-W1201 hold正确，不删除历史。ELO涂料/树脂改性TDS可支持该自主保护涂层的潜在原料评估，不能套用NLW水性功能。目录另有EpoxiMastic/工业漆，但本轮原叶页返回502，只作已发现产品标题，不补配方、性能或保证。11月20日AceitedeLino原页明确新木材封闭、松节油稀释、刷/辊/喷施工及成品包装，是直接使用的木器涂装产品，不凭名称推外售ELO/ESBO/环氧化植物油；原始植物油与环氧化油原料不同，在已读可见成品装饰/工业/木器涂料、溶剂和施工辅助经营范围未见同类ELO/ESBO/环氧化油或生物基增塑改性输入供应，有限范围排查通过，不宣称读完未公开成分或全部SKU。公开商标类别的泛称rawresins不等于当前实际原料销售证据，不依商标注册准入。AmanecerParaguay、Luque工厂、Brillalux/Amalux等品牌保守一账户；不混GrupoSolid/Transocean许可网络，未声称隐藏股权已审。公司通用邮箱及电话来自11月15日原目录/公司页，未在20日重抓，不重写成当日新核验联系，不造具名采购或WhatsApp。此前4+本轮2（含502失败1）=6/rem0STOP，跨产品不重置。ELO仅潜在涂料柔韧和树脂改性评估，不推客户现用环氧油、采购、相容、防腐/抗UV改善或认证。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、电话及业务网站",
+      "email": "info@amanecer.com.py",
+      "phone": "+595-21-642-470",
+      "contactUrl": "https://www.amanecer.com.py/productos.php"
+    },
+    "source": {
+      "label": "Amanecer official wood protective coating and own manufacturing",
+      "url": "https://www.amanecer.com.py/ficha_tecnica.php?id=38"
+    },
+    "checkedAt": "2026-11-15"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"amanecer-luque": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "xetex-industries-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-pinsal-san-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-sega-guatemala": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13380,6 +13409,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"amanecer-luque": {
+  "website": "https://www.amanecer.com.py/la-empresa.php",
+  "contactPage": "https://www.amanecer.com.py/productos.php",
+  "generalEmail": "info@amanecer.com.py",
+  "generalEmailEvidence": {
+    "company": "Amanecer S.A.",
+    "value": "info@amanecer.com.py",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Amanecer official business email in saved original product catalogue",
+        "url": "https://www.amanecer.com.py/productos.php",
+        "summary": "Original official Products footer read on 2026-11-15 explicitly publishes info@amanecer.com.py. Original response independently reviewed offline on 2026-11-20; no new retrieval or named person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  "generalPhone": "+595-21-642-470",
+  "generalPhoneEvidence": {
+    "company": "Amanecer S.A.",
+    "value": "+595-21-642-470",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Amanecer official business phone in saved original product catalogue",
+        "url": "https://www.amanecer.com.py/productos.php",
+        "summary": "Original official Products footer read on 2026-11-15 explicitly publishes +595-21-642-470. Original response independently reviewed offline on 2026-11-20; no new retrieval or named person inferred."
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  "address": "Ruta Gral. Aquino 1731, km 11 1/2, Luque, Paraguay. Original official corporate page identifies Luque factory and published business address; map uses city-level -25.27/-57.49 from a separate geographic reference, not a verified factory gate.",
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "Own Luque factory and laboratory (original read 2026-11-15)",
+      "url": "https://www.amanecer.com.py/la-empresa.php"
+    },
+    {
+      "label": "Own full visible finished coating catalogue (original read 2026-11-15)",
+      "url": "https://www.amanecer.com.py/productos.php"
+    },
+    {
+      "label": "Wood protector Stain technical sheet (original read 2026-11-15)",
+      "url": "https://www.amanecer.com.py/ficha_tecnica.php?id=38"
+    },
+    {
+      "label": "Linseed wood finishing product (original read 2026-11-20)",
+      "url": "https://www.amanecer.com.py/ficha_tecnica.php?id=37"
+    }
+  ]
+},
 "xetex-industries-mumbai": {
   "website": "https://www.xetex.in/xetex-industries",
   "contactPage": "https://www.xetex.in/contact",
@@ -40801,6 +40885,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"amanecer-luque",
 "xetex-industries-mumbai",
 "pinturas-pinsal-san-salvador",
 "pinturas-sega-guatemala",

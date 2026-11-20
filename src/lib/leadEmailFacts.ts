@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"amanecer-luque": "Your Stain wood protector is made with synthetic resins and is thinned with mineral spirits.",
 "xetex-industries-mumbai": "Your CETEX WS is a water-based wood sealer that can also serve as a base for paints.",
 "pinturas-pinsal-san-salvador": "Your PREMIA, EASY COLOR and MAGICOLOR ranges include anticorrosive primers in your architectural paint portfolio.",
 "pinturas-sega-guatemala": "Your Color Anticorrosiva Tradicional uses an alkyd barrier system for protecting metal and other surfaces.",
