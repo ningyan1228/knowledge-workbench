@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"zeen-inks-umbergaon": "I noticed that Z-INKS manufactures Z-INKS SURFACE solvent-based printing inks for polypropylene and raffia bags.",
 "lukmani-paint-virar-dahej": "I noticed that Lukmani Paint manufactures two-pack epoxy protective coatings and zinc-rich primers at its Dahej unit.",
 "pearl-coating-pune": "I noticed that Pearl Coating manufactures structural anticorrosive epoxy coatings, zinc-rich primers and high-build epoxy coatings.",
 "unilux-jaboatao-dos-guararapes": "I noticed that Unilux manufactures PintaLux ECO, a water-based enamel for wood and other surfaces.",

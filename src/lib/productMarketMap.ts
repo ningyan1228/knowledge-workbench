@@ -13558,11 +13558,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "zeen-inks-umbergaon",
+    "company": "Zeen Inks India Pvt Ltd (Z-INKS)",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Umbergaon / Umargam（城市级示意，非厂门坐标）",
+    "latitude": 20.17444,
+    "longitude": 72.76722,
+    "legacyCompanyDescription": "印度Umbergaon自有工厂制造凹印、柔印油墨与成品涂层，SURFACE系列为PP/RAFIA袋用溶剂型油墨。",
+    "signal": "自有Umbergaon工厂制造凹印、柔印油墨，产品包括PP/RAFIA袋用溶剂型油墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "核对官网制造说明、溶剂油墨分类（含PP/RAFIA袋用SURFACE）、具体SURFACE产品及TRANSCOAT INK/PRIMER/TOPCOAT成品页：公司采购树脂、颜料等原料自主制墨；所读有限成品范围未发现CPP/CPO同类原料制造或外售。TRANSCOAT属于转移印刷成品体系，不能仅因primer名称认定其销售CPO原料。结论限实际所读公开页面，不代表全部配方、SDS、SKU或股权审计。Zeen公司、Z-INKS品牌与www/apex域名按同一业务户去重，无已有正式重复记录。FactoryAddress写Gujarat而复用About页脚写Maharashtra，保留此不一致，地图仅城市示意。食品、ISO、低VOC和性能为该公司自述，不作为我方认证、相容性或采购证明。实际业务表单和有效WhatsApp链接有原文；公开人名邮箱的职责尚未核实，不精选收件人或推定采购职责。"
+    },
+    "contact": {
+      "label": "官网业务咨询表单及已公开 WhatsApp；邮箱归属职责待补",
+      "contactUrl": "https://www.z-inks.com/"
+    },
+    "source": {
+      "label": "Z-INKS 官方溶剂系列中SURFACE PP/RAFIA袋用油墨原文",
+      "url": "https://www.z-inks.com/solvent-based-liquid-inks.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"zeen-inks-umbergaon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "lukmani-paint-virar-dahej": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pearl-coating-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "unilux-jaboatao-dos-guararapes": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14139,6 +14166,32 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"zeen-inks-umbergaon": {
+  "website": "https://www.z-inks.com/",
+  "contactPage": "https://www.z-inks.com/",
+  "whatsapp": "https://api.whatsapp.com/send?phone=+919833010018&text=Hello%20Zinks",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Plot No. 9, Old Rev. Survey No. 151/2/Paiki, New Rev. Survey No. 2735, Phase 3, Near Sohoni Metal, Behind Doms Industries, Umbergaon, Valsad, Gujarat 396171, India. Published company factory address; repeated About footer inconsistently says Maharashtra. Map uses approximate Umargam/Umbergaon city coordinates, not independently verified factory gate.",
+  "sources": [
+    {
+      "label": "自有制造、公司业务表单及实际WhatsApp链接",
+      "url": "https://www.z-inks.com/"
+    },
+    {
+      "label": "明确溶剂类别及SURFACE PP/RAFIA系列、原料采购与质检",
+      "url": "https://www.z-inks.com/solvent-based-liquid-inks.html"
+    },
+    {
+      "label": "PP/RAFIA袋用SURFACE/HR具体成品",
+      "url": "https://www.z-inks.com/surface-printing-inks.html"
+    },
+    {
+      "label": "TRANSCOAT转移印刷用INK/PRIMER/TOPCOAT成品范围",
+      "url": "https://www.z-inks.com/transcoat-series.html"
+    }
+  ]
+},
 "lukmani-paint-virar-dahej": {
   "website": "https://www.lukmanipaint.com/",
   "contactPage": "https://www.lukmanipaint.com/index.html/products.html",
@@ -42986,6 +43039,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"zeen-inks-umbergaon",
 "lukmani-paint-virar-dahej",
 "pearl-coating-pune",
 "unilux-jaboatao-dos-guararapes",
