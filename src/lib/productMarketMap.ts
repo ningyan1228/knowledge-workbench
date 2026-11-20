@@ -12854,11 +12854,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-15"
   },
+  {
+    "id": "tinpes-itagui",
+    "legacyCompanyDescription": "哥伦比亚自主配方制造丝印油墨；Superflex 溶剂型系列用于经处理 PP／PE。",
+    "company": "TINPES",
+    "productId": "cpp-cpo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Itagüí（大麦德林区域示意）",
+    "latitude": 6.2442,
+    "longitude": -75.5812,
+    "signal": "在哥伦比亚自主配方制造丝印油墨；现行 Superflex 溶剂型油墨用于经处理的 PP／PE，技术资料明确同一应用。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "逐一离线复核本轮六次原始来源返回：官网首页明确自主制造、研发、自有配方及颜料研磨；现行图文系列仍列 Superflex，官方旧版技术资料（2017年11月，不能冒充2026版）与现行目录共同支持经处理PP/PE的溶剂型丝印墨。同行边界按实际读取的首页、完整图文系列、添加剂九项及辅助品八项核对：Clear7211–7220是含树脂/助剂/溶剂的成品油墨配套，Ref.790明确为即用、用刷/布/海绵直接涂在待印基材上的成品表面处理剂；Ref.762是印花台黏布用途的乙烯基丙烯酸成品胶，感光乳液用于制版，均不能仅凭名称当作CPP/CPO原料供应。已读具体范围未见氯化/MAH改性聚烯烃树脂、原料级CPP/CPO或其分散体对外供应；不把Ref.790未披露配方猜成CPO，也不声称穷尽全部SKU或股权。TINPES/TIN PES、Superflex及本网站产品品牌按一个Itagüí制造账户；未读到与CLQ、Sun Chemical等既有账户的关联，不推定未披露最终股权。官网域名、名称及品牌在最新main对应550家、root额外记录、私人frontier/index/excluded及发现队列离线查重，无该账户正式或私有研究记录；历史搜索片段只作发现。官网有公开技术联系入口及明确业务电话(+57)3245924380；未核验邮箱、具名采购人或WhatsApp精确目标URL，不猜邮箱/号码链接，不使用页脚网站制作人的电话。地图只沿用大麦德林区域示意坐标，官网地址另列Itagüí。仅为MAH改性CPP/CPO在PP油墨配方中的潜在材料评估，客户现用树脂、相容性及采购均未知。"
+    },
+    "contact": {
+      "label": "官网公开技术联系入口及业务电话；邮箱未核验",
+      "phone": "(+57) 324 592 43 80",
+      "contactUrl": "https://tinpes.com.co/"
+    },
+    "source": {
+      "label": "官网现行 Superflex 溶剂型 PP 丝印墨目录",
+      "url": "https://tinpes.com.co/serigrafia-artes-graficas/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"tinpes-itagui": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "amanecer-luque": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "xetex-industries-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-pinsal-san-salvador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13409,6 +13437,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"tinpes-itagui": {
+  "website": "https://tinpes.com.co/",
+  "contactPage": "https://tinpes.com.co/",
+  "generalPhone": "(+57) 324 592 43 80",
+  "generalPhoneEvidence": {
+    "company": "TINPES",
+    "value": "(+57) 324 592 43 80",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网图文系列页顶部公开业务电话",
+        "url": "https://tinpes.com.co/serigrafia-artes-graficas/",
+        "summary": "顶部TINPES/Itagüí地址旁明确公开公司业务号码；不使用页脚网站制作人的号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Calle 81 # 52D – 175, Itagüí, Antioquia, Colombia. Greater Medellín regional map marker, not factory-gate coordinates.",
+  "sources": [
+    {
+      "label": "官网自主制造及研发、公开技术联系入口",
+      "url": "https://tinpes.com.co/"
+    },
+    {
+      "label": "官网现行 Superflex 溶剂型 PP 丝印墨目录",
+      "url": "https://tinpes.com.co/serigrafia-artes-graficas/"
+    },
+    {
+      "label": "Superflex 官方技术资料（版本10，2017年11月）",
+      "url": "https://tinpes.com.co/wp-content/uploads/2020/12/SUPERFLEX.pdf"
+    },
+    {
+      "label": "官网图文油墨添加剂及 Clear 成品配套",
+      "url": "https://tinpes.com.co/serigrafia-artes-graficas/aditivos/"
+    },
+    {
+      "label": "官网辅助品及 Ref.790 成品基材处理剂",
+      "url": "https://tinpes.com.co/serigrafia-artes-graficas/auxiliares-ag/"
+    }
+  ]
+},
 "amanecer-luque": {
   "website": "https://www.amanecer.com.py/la-empresa.php",
   "contactPage": "https://www.amanecer.com.py/productos.php",
@@ -40885,6 +40957,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"tinpes-itagui",
 "amanecer-luque",
 "xetex-industries-mumbai",
 "pinturas-pinsal-san-salvador",

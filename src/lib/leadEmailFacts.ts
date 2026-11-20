@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"tinpes-itagui": "Your Superflex solvent-based screen-printing inks are designed for treated polyethylene and polypropylene.",
 "amanecer-luque": "Your Stain wood protector is made with synthetic resins and is thinned with mineral spirits.",
 "xetex-industries-mumbai": "Your CETEX WS is a water-based wood sealer that can also serve as a base for paints.",
 "pinturas-pinsal-san-salvador": "Your PREMIA, EASY COLOR and MAGICOLOR ranges include anticorrosive primers in your architectural paint portfolio.",
