@@ -13262,11 +13262,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "ciacollor-maringa",
+    "company": "Tintas Ciacollor — Vinicolor Ltda",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Maringá（城市级示意，非厂门坐标）",
+    "latitude": -23.4,
+    "longitude": -51.917,
+    "legacyCompanyDescription": "巴西Maringá涂料制造企业，官网明确自有工厂和用于室内木材的水性清漆。",
+    "signal": "在Maringá自有工厂开发制造涂料；Verniz Copal Base Água是用于室内木材的水性清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "六次普通单次HTTPSGET均200，禁自动跳转/重试/远程JS执行：VernizCopalBaseAgua产品27139字符、Home54343、Sobre28118、Contato42139、水性配套34457、溶剂配套30148字符，全文原HTML本地去标签独立审读，累计0+6=6/余0，6STOP。Sobre明确自身MaringaParana涂料工厂、产品开发及建筑涂料业务，具体产品原文明确水性清漆用于室内木材；不是将普通水性墙漆和溶剂木漆拼接，也不从Copal名字推树脂成分/相容。产品导航18类，已读水性配套完整可见16成品及溶剂配套10成品，主要为腻子/干墙填料、遮蔽成品、墙面/涂层底漆、丙烯酸封闭/清漆、镀锌底涂、木材封闭/找平底涂、松节油及硅酮防水成品，未见PO/CPO乳液/分散体或聚烯烃附着促进剂原料外售。所选NL-W1201同行排除限这些实际主营、分类与具体产品资料，不声称全部SKU/配方/SDS/TDS/隐藏股权已审，也不把成品底漆/封闭剂名称当原料。原文明确法定名VINICOLORINDECOMDETINTASTEXTURAEGRAFIATOLTDA、CNPJ07.855.544/0001-84与Ciacollor品牌一致；新披露Vinicolor/CNPJ在当前565正式公开、root未发、frontier1126/index436/excluded13/queue及整research扩展查重无旧主体请求，只有当前两原文/搜索，保持同一公司预算，不拆品牌。Home客户/经销商赞言、GrupoCiatintas/TopTintas等是经销伙伴叙述，不能据此推同集团/独立案例验证/现购；2020版权、20/23年新闻、15millionL/100员工、PSQ/ABRAFATI/PBQP-h/NBR分类自述不作当前独立认证/产能或我方性能。Contato真实业务表单有Compras等部门选择，未提交；不是newsletter或职位申请。Footer明文sac@ciacollor.com.br为公司SAC/通用业务邮箱，非采购个人；公开总机(44)3032.7900保留原格式，不猜国际号。实际wa.me/554430327900在官网多原文直接出现，独立于总机确认，仅保存未打开/发送。未精选大量各区代表姓名/手机号为采购负责人，未核具名个人邮箱。公开RuaAlexandrinaLopesDeSouza451JdNilzaMaringaParana87065-205是公司业务地址，地图-23.4/-51.917来自一次通用城市参考，非厂门GPS。NL-W1201仅按用户木材底涂/附着促进用途作潜在实验室评估，不推客户现用聚烯烃、清漆树脂类型、采购需求、已相容、光泽/低气味/耐候/防腐等性能。六STOP未取已观察PDF技术文件或SDS，不以搜索摘要当原文。"
+    },
+    "contact": {
+      "label": "官网SAC公司业务邮箱；采购部门联系表单及公开总机／WhatsApp",
+      "email": "sac@ciacollor.com.br",
+      "contactUrl": "https://www.ciacollor.com.br/contato"
+    },
+    "source": {
+      "label": "Ciacollor 官方 Verniz Copal Base Água 水性室内木器清漆及自身制造说明",
+      "url": "https://www.ciacollor.com.br/produto/163/verniz-copal-base-agua"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ciacollor-maringa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "hardex-india-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rebrilhar-leme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "anupam-paints-howrah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13832,6 +13860,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ciacollor-maringa": {
+  "website": "https://www.ciacollor.com.br/",
+  "contactPage": "https://www.ciacollor.com.br/contato",
+  "generalEmail": "sac@ciacollor.com.br",
+  "generalEmailEvidence": {
+    "company": "Tintas Ciacollor — Vinicolor Ltda",
+    "value": "sac@ciacollor.com.br",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ciacollor 官方Contato及公司页脚",
+        "url": "https://www.ciacollor.com.br/contato",
+        "summary": "公司业务联系页Footer明文sac@ciacollor.com.br，与法定名及CNPJ同栏；是公司SAC/通用联系入口，不冒称采购或具名个人邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "(44) 3032.7900",
+  "generalPhoneEvidence": {
+    "company": "Tintas Ciacollor — Vinicolor Ltda",
+    "value": "(44) 3032.7900",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ciacollor 官方Contato公司总机",
+        "url": "https://www.ciacollor.com.br/contato",
+        "summary": "公司联系页Geral明确(44)3032.7900；保留发布格式，不补国际码，也不从电话猜WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "whatsapp": "https://wa.me/554430327900",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Rua Alexandrina Lopes De Souza, 451, Jd Nilza, Maringá, Paraná, CEP 87065-205, Brazil. Published company business address; map uses approximate Maringá city coordinates, not a verified factory gate.",
+  "sources": [
+    {
+      "label": "官网Maringá自有制造及产品开发",
+      "url": "https://www.ciacollor.com.br/sobre"
+    },
+    {
+      "label": "水性室内木材清漆具体产品原文",
+      "url": "https://www.ciacollor.com.br/produto/163/verniz-copal-base-agua"
+    },
+    {
+      "label": "官网真实业务表单（可选Compras）、SAC邮箱、总机与实际WhatsApp",
+      "url": "https://www.ciacollor.com.br/contato"
+    },
+    {
+      "label": "完整可见水性配套16项",
+      "url": "https://www.ciacollor.com.br/produtos/6/complementos-base-agua"
+    },
+    {
+      "label": "完整可见溶剂配套10项",
+      "url": "https://www.ciacollor.com.br/produtos/10/complementos-base-solvente"
+    }
+  ]
+},
 "hardex-india-pune": {
   "website": "https://hardexindia.com/",
   "contactPage": "https://hardexindia.com/",
@@ -42104,6 +42192,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ciacollor-maringa",
 "hardex-india-pune",
 "rebrilhar-leme",
 "anupam-paints-howrah",
