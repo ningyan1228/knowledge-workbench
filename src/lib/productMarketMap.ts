@@ -13504,11 +13504,67 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "pearl-coating-pune",
+    "company": "Pearl Coating",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Pune（城市级示意，非厂门坐标）",
+    "latitude": 18.52111,
+    "longitude": 73.85528,
+    "legacyCompanyDescription": "印度Pune自有制造与研发工业涂层企业，产品包括结构防腐环氧、锌粉底漆及高膜厚环氧成品。",
+    "signal": "在Pune自主制造并研发工业涂料，提供结构防腐环氧、锌粉底漆及高膜厚环氧涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立复读既有公司LinkedIn215行、实际公开HTTP到HTTPSwww再apex两次301（均计额），接续三次单次禁跳转GET Home320985/Epoxy306366/Misc272240字符全200，累计3+3=6STOP。Home明确Pune制造设施及内部研发定制配方，Epoxy明确自身制造结构防腐1K/2K/DTM、化学耐受环氧、锌粉底漆/高膜厚环氧及地坪，Misc为耐热漆/道路漆/地坪/航空成品漆/绝缘清漆。Home六类成品经营及上述实际产品范围未见ELO/ESBO/环氧植物油或相近生物增塑稳定原料制造外售；绝缘清漆称epoxy/alkyd树脂是其成膜体系描述，不等环氧植物油原料销售。LinkedIn称一般原料从供应商采购，不扩大为已知外购ELO例外。所选投入同行排除限所读业务/有限成品范围，非全部配方/SDS/TDS/隐藏股权穷尽。官网PearlCoating、旧PearlCoatings及同一Pune地址、pearlcoating.in/www保守一户，旧公司profile拼写pearlcoatingspune与首页另一个pearlcoatingpune链接不拆实体；后者未读不当个人或独立企业验证。#pearlpolymers仅原文hashtag无具体法律控制实体，不并入同名PET/原料公司，也不据此编无关联证明。未从YouTube的pvt.ltd.1753账号字符串创造法定后缀。全量574公开、root未发及全部队列和research扩展查重无正式同户，原研究ID原位转正式。350tpa、年数1995/31年、旧profile2021扩建、客户名单、HAL/航空资质、C4/C5、ASTM/SST时数、90%锌等均自述，不为我方性能/认证背书。info@和+919822068834为同页Header/Footer公司入口，无公开WA不猜；管理人历史不精选采购。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、公开业务电话及实际咨询表单",
+      "email": "info@pearlcoating.in",
+      "contactUrl": "https://pearlcoating.in/"
+    },
+    "source": {
+      "label": "Pearl 官方结构防腐环氧、锌粉底漆及高膜厚环氧产品原文",
+      "url": "https://pearlcoating.in/technology/epoxy-coatings/"
+    },
+    "checkedAt": "2026-11-20"
+  },
+  {
+    "id": "lukmani-paint-virar-dahej",
+    "company": "Lukmani Paint",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Virar（城市级示意，非厂门坐标）",
+    "latitude": 19.47,
+    "longitude": 72.8,
+    "legacyCompanyDescription": "印度自有Virar与Dahej制造单元的涂料企业，Dahej配制生产工业双组分环氧、防护底漆及聚氨酯成品。",
+    "signal": "自有Virar和Dahej工厂配制制造涂料；Dahej产品包括双组分防护环氧及锌粉底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立完整审读实际Products22745/Manufacturing11239/About13396字符三个200原文，三次普通GET禁自动跳转/重试/脚本执行，当前0+3=3/rem3；与Pearl当前3合计范围6满，余3保留不凑额。Products明确每个列出产品自主配制生产、工业成品由Dahej单元制造；Manufacturing明确Virar/Dahej两实际运营单元和树脂/颜料/添加剂外购检查、批次配方混分散及质检。About明确1975零售起点、1985进入制造，不能把1975说成已造漆起始，愿景Fortune500不当现有世界500强。实际八成品类25编号项目含内外墙漆、防水、成品底漆/木金属面漆、四工业防护和三地坪成品；未见ELO/ESBO/环氧植物油或类似生物增塑稳定原料制造销售，普通树脂外购不等ELO采购证据。同行排除限实际主营/有限成品范围，非全部SKU/配方/SDS/股权穷尽；不把聚脲地坪或成品底涂误当原料。Lukmani两厂/七分支和Mulani家族品牌按同一业务户，不拆厂增数；未公开CIN/法定后缀不编造。N.K./M.K.Mulani、实际厂址M/233/H及域名扩展全史仅旧发现搜索和当前原文，正式574/root未发/queue/frontier/index无同户。公司渠道sales@、support@与02245728401在三页一致，本次保存公司销售邮箱与landline，不把董事/行政手机号精选采购或猜WA。source路径index.html/products.html为真实命中，另两是实际相对链接解析；未读取contact.html就不冒称已读专门联系页，Products Footer确有公开业务邮箱入口。成品环保/抗菌/干燥/耐候等自述不当我方认证、相容或性能。"
+    },
+    "contact": {
+      "label": "官网公开公司销售邮箱及业务总机",
+      "email": "sales@lukmanipaint.com",
+      "contactUrl": "https://www.lukmanipaint.com/index.html/products.html"
+    },
+    "source": {
+      "label": "Lukmani 官方自主制造的双组分环氧防护及锌粉底漆产品原文",
+      "url": "https://www.lukmanipaint.com/index.html/products.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"lukmani-paint-virar-dahej": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+"pearl-coating-pune": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "unilux-jaboatao-dos-guararapes": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "chaiyaboon-brothers-lam-luk-ka": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "htd-ultra-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14083,6 +14139,109 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"lukmani-paint-virar-dahej": {
+  "website": "https://www.lukmanipaint.com/",
+  "contactPage": "https://www.lukmanipaint.com/index.html/products.html",
+  "generalEmail": "sales@lukmanipaint.com",
+  "generalEmailEvidence": {
+    "company": "Lukmani Paint",
+    "value": "sales@lukmanipaint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Lukmani 三页公开公司销售邮箱",
+        "url": "https://www.lukmanipaint.com/index.html/products.html",
+        "summary": "实际Products/Manufacturing/About Header及Footer明文与mailto一致sales@lukmanipaint.com，为公司销售业务入口，不是采购个人；support另存原始正文不冒采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "022 4572 8401",
+  "generalPhoneEvidence": {
+    "company": "Lukmani Paint",
+    "value": "022 4572 8401",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Lukmani 三页公开 Landline",
+        "url": "https://www.lukmanipaint.com/index.html/products.html",
+        "summary": "三实际原文Header/Footer均标Landline:022 4572 8401，保留明文格式，不从董事或行政手机号推定采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Unit 1: Gala 13, 14, 15 & 16, HDIL Industrial Park, Chandansar Road, Virar East, Maharashtra 401305, India. Unit 2: Plot No. M/233/H, Dahej SEZ-II, Vaghra Village, Dahej, Bharuch 392130, Gujarat, India. Both published company manufacturing addresses; map uses approximate Virar city coordinates, not an independently surveyed factory gate.",
+  "sources": [
+    {
+      "label": "八成品类25编号项目及Dahej工业涂层制造、公司业务邮箱总机",
+      "url": "https://www.lukmanipaint.com/index.html/products.html"
+    },
+    {
+      "label": "Virar和Dahej自有制造、原料检查/配方混分散/质检",
+      "url": "https://www.lukmanipaint.com/index.html/manufacturing.html"
+    },
+    {
+      "label": "家族沿革及同一公司经营范围",
+      "url": "https://www.lukmanipaint.com/index.html/about.html"
+    }
+  ]
+},
+"pearl-coating-pune": {
+  "website": "https://pearlcoating.in/",
+  "contactPage": "https://pearlcoating.in/",
+  "generalEmail": "info@pearlcoating.in",
+  "generalEmailEvidence": {
+    "company": "Pearl Coating",
+    "value": "info@pearlcoating.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pearl 官方首页及产品页公开邮箱",
+        "url": "https://pearlcoating.in/",
+        "summary": "三原文Header/Footer mailto与明文info@pearlcoating.in一致，通用公司业务邮箱非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 98220 68834",
+  "generalPhoneEvidence": {
+    "company": "Pearl Coating",
+    "value": "+91 98220 68834",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pearl 官方首页及产品页公开公司电话",
+        "url": "https://pearlcoating.in/",
+        "summary": "Header/Footer及tel明确+91 98220 68834，为公司业务号码，不从手机推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Plot No-3, S No 70A/2A/A, Wanowari Industrial Estate, Off Salunke Vihar Road, Wanowrie, Pune, Maharashtra 411040, India. Published company address; map uses approximate Pune city coordinates, not independently verified factory gate.",
+  "sources": [
+    {
+      "label": "Pune自有制造及研发、公开公司渠道和业务咨询表单",
+      "url": "https://pearlcoating.in/"
+    },
+    {
+      "label": "结构防腐环氧/锌粉底漆/高膜厚环氧成品",
+      "url": "https://pearlcoating.in/technology/epoxy-coatings/"
+    },
+    {
+      "label": "其他成品涂层/绝缘清漆经营范围",
+      "url": "https://pearlcoating.in/technology/miscellaneous/"
+    }
+  ],
+  "linkedIn": "https://in.linkedin.com/company/pearlcoatingspune"
+},
 "unilux-jaboatao-dos-guararapes": {
   "website": "https://www.tintasunilux.com.br/",
   "contactPage": "https://www.tintasunilux.com.br/",
@@ -42827,6 +42986,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"lukmani-paint-virar-dahej",
+"pearl-coating-pune",
 "unilux-jaboatao-dos-guararapes",
 "chaiyaboon-brothers-lam-luk-ka",
 "htd-ultra-nashik",
