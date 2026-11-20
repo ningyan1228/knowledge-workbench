@@ -13153,11 +13153,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "chanda-paints-kalyani",
+    "company": "Chanda Paints (P C CHANDA & COMPANY (P) LIMITED)",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Kalyani（城市级示意，非厂门坐标）",
+    "latitude": 22.975,
+    "longitude": 88.43444,
+    "legacyCompanyDescription": "印度 Kalyani 自有工厂和研发设施的工业防护涂料制造企业；Edelpoxy 系列含环氧工业底漆。",
+    "signal": "自有 Kalyani 涂料制造和研发设施；Edelpoxy ZPPR 103 等环氧工业底漆列于官方实际产品目录。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立核读Home419行、About271行、Contact127行三份完整原文；Primers原生CacheMiss后一次普通GET取得HTTP200原HTML87159字符/净文本6507字符，Thinners一次普通GET取得HTTP200原HTML83256字符/净文本5788字符，均禁跳转/自动重试/脚本执行。六次请求含一失败，五完整业务正文，6STOP。About明确自有Kalyani制造设施、实验室及研发配方；实际Primer第一页列EdelpoxyZPPR103等十二项Epoxy工业成品底漆及配比/固含参数，不以搜索片段/普通涂装施工身份代制造。Home/目录六类为底漆、中间漆、稀释剂、地坪、瓷砖胶和沥青成品；Thinners实际十二项GP/Bitu/Epoxy/PU/Chloro/NC/Syn/Stove/HR/Edelsil/ZincSilicate辅助品及正文明确配套溶剂减黏/工具清洗，不把epoxythinner误认为ELO/ESBO塑化原料。所读有限主营/具体成品/辅助品范围未见ELO、ESBO、环氧化植物油或同类生物增塑稳定输入外售；有限同行排除通过，不声称全500SKU、未读Primer另两页/Thinner另页、全部SDS或隐藏集团审计。ThinnerGP参数行疑似沿用漆膜模板、Contact面包屑残留模板及HomeR&D配图说明泛化，均不用于技术事实；不据此否定实际制造，也不精选客户性能/配比/认证数字为我方保证。About公开Chanda为PCChanda品牌、RaviAutoGroup关联，法定主体/CIN仅官网披露不作工商独立确认；创办1932宣传不等1969法定成立日期。RaviPoddar/SushilChangia不录现任采购，客户logo不作我方客户或当前订单，WebIdeaSolution为制作方非母公司。现main561、root其他未发、frontier/index/excluded/全queue与整research按Chanda/PCChanda/RaviAuto/RaviPoddar/CIN/两域查重无旧正式或旧专用GET，Chanda/商号/集团/两个地址只计一户；Ramcoat已属正式Ramdev品牌未抓取不重计。Contact明确info@chandapaints.com和办公室总机+913322272525，按公司通用渠道分别留来源，不冒称具名采购；工厂kalyani@及手机未精选，普通电话不猜WhatsApp。K2KalyaniIndustrialGrowthCentrePhaseI为工厂地址，RaviAutoHouse103ParkStreet为办公室，不拆计；22.975/88.43444是通用地理城市示意非工厂GPS。ELO仅依用户TDS涂料/环氧功能/树脂改性方向潜在实验室评估，不称客户现用ELO或有采购，不保证相容、固化、防腐、环保/饮水/海工认证或性能；不指导成品现场掺入。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱及总机，非具名采购",
+      "email": "info@chandapaints.com",
+      "phone": "+91 33 2227 2525",
+      "contactUrl": "https://www.chandapaints.com/contact-us/"
+    },
+    "source": {
+      "label": "Chanda 官方环氧工业底漆目录及自有制造研发说明",
+      "url": "https://www.chandapaints.com/products/category/primers/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chanda-paints-kalyani": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tinsul-tintas-ouro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "produscreen-pindamonhangaba": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "pinturas-uxell-burzaco": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13719,6 +13748,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chanda-paints-kalyani": {
+  "website": "https://www.chandapaints.com/",
+  "contactPage": "https://www.chandapaints.com/contact-us/",
+  "generalEmail": "info@chandapaints.com",
+  "generalEmailEvidence": {
+    "company": "Chanda Paints (P C CHANDA & COMPANY (P) LIMITED)",
+    "value": "info@chandapaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chanda 官网 Contact Us 公司公开业务联系",
+        "url": "https://www.chandapaints.com/contact-us/",
+        "summary": "官网联系页将info@chandapaints.com列为注册办公室公司通用邮箱；非具名采购，不代表已验证可投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 33 2227 2525",
+  "generalPhoneEvidence": {
+    "company": "Chanda Paints (P C CHANDA & COMPANY (P) LIMITED)",
+    "value": "+91 33 2227 2525",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chanda 官网 Contact Us 公司公开业务联系",
+        "url": "https://www.chandapaints.com/contact-us/",
+        "summary": "注册办公室公开总机+91 33 2227 2525；与公司/地址对应，不将总机或另列工厂手机号推为WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Factory: K2, Kalyani Industrial Growth Centre Phase – I, P.O. Gayeshpur, Kalyani, Nadia-741234, West Bengal, India. Registered office: Ravi Auto House, 103, Park Street, Kolkata-700016. Map uses Kalyani city representative coordinates, not a geocoded factory gate.",
+  "sources": [
+    {
+      "label": "官网制造工厂及自身主营",
+      "url": "https://www.chandapaints.com/"
+    },
+    {
+      "label": "官网自有研发、制造与品牌集团关系",
+      "url": "https://www.chandapaints.com/about-us/"
+    },
+    {
+      "label": "官网真实环氧工业底漆目录第一页",
+      "url": "https://www.chandapaints.com/products/category/primers/"
+    },
+    {
+      "label": "官网配套稀释剂目录第一页及溶剂用途",
+      "url": "https://www.chandapaints.com/products/category/thinners/"
+    },
+    {
+      "label": "官网公司业务邮箱、总机、办公室及工厂地址",
+      "url": "https://www.chandapaints.com/contact-us/"
+    }
+  ]
+},
 "tinsul-tintas-ouro": {
   "website": "https://tinsultintas.com.br/",
   "contactPage": "https://tinsultintas.com.br/contato",
@@ -41796,6 +41884,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chanda-paints-kalyani",
 "tinsul-tintas-ouro",
 "produscreen-pindamonhangaba",
 "pinturas-uxell-burzaco",
