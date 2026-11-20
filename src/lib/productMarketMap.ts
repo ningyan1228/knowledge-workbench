@@ -12936,11 +12936,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "saak-jeddah",
+    "company": "SAAK For Industry (مصنع ساك للصناعة)",
+    "productId": "elo",
+    "country": "Saudi Arabia",
+    "countryZh": "沙特阿拉伯",
+    "city": "Jeddah（城市级示意点）",
+    "latitude": 21.54333,
+    "longitude": 39.17278,
+    "legacyCompanyDescription": "沙特吉达自主制造建筑化学品和涂料的工厂，提供钢材及混凝土保护用双组分环氧涂层。",
+    "signal": "在沙特吉达自主制造建筑化学品及涂料；S520 为保护钢材和混凝土表面的双组分环氧涂层，产品目录另列钢结构维护涂层及富锌底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立读取六份完整官网业务原文：Home207行、S520产品155行、About131行、全产品110行、Epoxy165行、Construction99行。Home及全产品页明确在沙特吉达开发制造建筑化学品和涂料，S520直接说明100%固含双组分环氧成品涂层，用于钢及混凝土保护；不是把施工服务或代理进口当制造。全产品页三大业务为建筑化学品、成品涂料及AdBlue；建筑类列瓷砖胶/勾缝、防水、混凝土修补/粘结、环氧、防伸缩缝及表面准备；Epoxy原文列11种终端施工体系，包括六地坪、四钢铁/储罐保护及一种修补腻子。S520的树脂17kg加固化剂3kg是配套施工成品包装，不据此认作外售ELO类原料；678描述多元醇/聚氨酯也是地坪面漆，混凝土bond为旧新混凝土粘结成品，不推未公开配方。按六份实际可见经营范围未观察到ELO/ESBO/环氧化植物油/生物基增塑改性原料对外销售，有限范围同行排查通过；不声称全部隐藏SKU/SDS或上游采购已审。SAAK、SAK Manufacturing Plant、阿文 مصنع ساك للصناعة、www及无www、Jeddah工厂和总部按一个经营账户；当前main553条、root含其他待发布记录、frontier/index/excluded及发现队列名称/域名离线核对无已知同主体，不凭英文近似名拆分集团或推隐藏股权。官网实际公开通用邮箱info@saak.com.sa、公用号码920008148和+966 56 157 2802，以及首页询盘表单；不虚构具名采购、邮箱投递或当前采购。官网虽标WhatsApp链接，但当前留档仅显wa.me域及按钮，未核实完整跳转URL，因此不拼造账号或发布WhatsApp地址。公开工厂地址为SecondIndustrialCity,Jeddah，21.54333/39.17278仅另查城市示意，不是厂门。ELO仅按用户TDS涂料/环氧功能及树脂改性作潜在评估，不移接S520现有100%固含、抗腐蚀、化学耐受或水箱声明为我方性能/认证，不保证相容或释放性能。六次来源全部业务原文，零失败/零已披露跳转加额，终身6STOP，品牌/国家/产品/日期不重置。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、询盘表单及公开电话",
+      "email": "info@saak.com.sa",
+      "phone": "920008148",
+      "contactUrl": "https://www.saak.com.sa/ar/"
+    },
+    "source": {
+      "label": "SAAK官方S520钢材／混凝土保护环氧涂层及自主制造声明",
+      "url": "https://saak.com.sa/ar/component/content/article/%D8%B3%D8%A7%D9%83-%D8%A7%D9%8A%D8%A8%D9%88%D9%83%D8%B3%D9%8A-%D8%A7%D8%B3%D8%AA%D9%8A%D9%84-s520?Itemid=266&catid=18"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"saak-jeddah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "kemichal-trebaseleghe": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "american-paints-bharatpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tinpes-itagui": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -13494,6 +13523,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"saak-jeddah": {
+  "website": "https://www.saak.com.sa/ar/",
+  "contactPage": "https://www.saak.com.sa/ar/",
+  "generalEmail": "info@saak.com.sa",
+  "generalPhone": "920008148",
+  "generalEmailEvidence": {
+    "company": "SAAK For Industry (مصنع ساك للصناعة)",
+    "value": "info@saak.com.sa",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SAAK官网首页公开业务联系信息",
+        "url": "https://www.saak.com.sa/ar/",
+        "summary": "首页页脚明确公开公司通用业务邮箱；不是具名采购，不推已确认需求或投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhoneEvidence": {
+    "company": "SAAK For Industry (مصنع ساك للصناعة)",
+    "value": "920008148",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SAAK官网首页公开业务联系信息",
+        "url": "https://www.saak.com.sa/ar/",
+        "summary": "首页公用业务号码，保留原格式；不把电话推为WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Second Industrial City, Jeddah, Kingdom of Saudi Arabia. Factory location published by company; city-level 21.54333/39.17278, not surveyed factory gate.",
+  "sources": [
+    {
+      "label": "官网自主制造声明及业务联系入口",
+      "url": "https://www.saak.com.sa/ar/"
+    },
+    {
+      "label": "官网S520双组分环氧保护涂层",
+      "url": "https://saak.com.sa/ar/component/content/article/%D8%B3%D8%A7%D9%83-%D8%A7%D9%8A%D8%A8%D9%88%D9%83%D8%B3%D9%8A-%D8%A7%D8%B3%D8%AA%D9%8A%D9%84-s520?Itemid=266&catid=18"
+    },
+    {
+      "label": "官网工厂简介",
+      "url": "https://www.saak.com.sa/ar/%D9%86%D8%A8%D8%B0%D8%A9-%D8%B9%D9%86%D8%A7"
+    },
+    {
+      "label": "官网三大业务及完整可见分类",
+      "url": "https://www.saak.com.sa/ar/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%86%D8%A7"
+    },
+    {
+      "label": "官网11项环氧施工成品体系",
+      "url": "https://www.saak.com.sa/ar/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%86%D8%A7/%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%86%D8%A7%D8%A1%D9%85%D9%86-%D8%B3%D8%A7%D9%83/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D9%8A%D8%A8%D9%88%D9%83%D8%B3%D9%8A"
+    },
+    {
+      "label": "官网建筑化学品业务范围",
+      "url": "https://www.saak.com.sa/ar/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%86%D8%A7/%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%86%D8%A7%D8%A1%D9%85%D9%86-%D8%B3%D8%A7%D9%83"
+    }
+  ]
+},
 "kemichal-trebaseleghe": {
   "website": "https://www.kemichal.it/it/vernici.html",
   "contactPage": "https://www.kemichal.it/it/contatti.html",
@@ -41109,6 +41201,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"saak-jeddah",
 "kemichal-trebaseleghe",
 "american-paints-bharatpur",
 "tinpes-itagui",

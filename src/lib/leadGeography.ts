@@ -5,7 +5,7 @@ export type Continent = typeof continents[number]
 type LocatedLead = Pick<PublicLead, 'country' | 'countryZh'>
 
 const countriesByContinent: Partial<Record<Continent, string[]>> = {
-  亚洲: ['Armenia', 'Azerbaijan', 'Bangladesh', 'China', 'India', 'Indonesia', 'Israel', 'Japan', 'Jordan', 'Malaysia', 'Nepal', 'Pakistan', 'Philippines', 'Singapore', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'United Arab Emirates', 'Uzbekistan', 'Vietnam'],
+  亚洲: ['Armenia', 'Azerbaijan', 'Bangladesh', 'China', 'India', 'Indonesia', 'Israel', 'Japan', 'Jordan', 'Malaysia', 'Nepal', 'Pakistan', 'Philippines', 'Saudi Arabia', 'Singapore', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'United Arab Emirates', 'Uzbekistan', 'Vietnam'],
   欧洲: ['Albania', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Italy', 'Kosovo', 'Latvia', 'Lithuania', 'Luxembourg', 'Moldova', 'Netherlands', 'North Macedonia', 'Poland', 'Portugal', 'Romania', 'Russia', 'Serbia', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
   北美洲: ['Canada', 'Dominican Republic', 'El Salvador', 'Guatemala', 'Mexico', 'United States'],
   南美洲: ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Paraguay', 'Peru', 'Uruguay'],

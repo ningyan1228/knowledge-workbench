@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"saak-jeddah": "Your S520 two-component epoxy coating is offered for protecting steel and concrete surfaces in chemically aggressive environments.",
 "kemichal-trebaseleghe": "Your interior wood-coating range includes water-based finishes alongside polyurethane and nitrocellulose coatings.",
 "american-paints-bharatpur": "Your Wood and Metal Primer is part of the paint range you manufacture in Nepal.",
 "tinpes-itagui": "Your Superflex solvent-based screen-printing inks are designed for treated polyethylene and polypropylene.",
