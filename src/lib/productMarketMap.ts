@@ -12964,11 +12964,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "pintesint-ramos-mejia",
+    "company": "Pintesint S.A.I.C.Y.F.",
+    "productId": "cpp-cpo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Ramos Mejía（城市级示意点）",
+    "latitude": -34.65,
+    "longitude": -58.567,
+    "legacyCompanyDescription": "阿根廷自主研发制造丝印及移印油墨企业，Sericor PP 溶剂型丝印墨明确用于未处理瓦楞聚丙烯板。",
+    "signal": "在阿根廷自主研发配方并制造印刷油墨；Sericor PP 明确为用于未处理瓦楞 PP 板的溶剂型丝印油墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立复读原存SericorPP完整147行，并读取本轮Quimicos101/Emulsiones92/Auxiliares96/About91行。SericorPP直接说明溶剂型油墨用于未处理瓦楞PP板，注释明确PintesintSAICyF自身配方及配套产品制造；About同时说明自身油墨研发及生产质量管理，不以经销商服务代替制造。原页PrimerGel为非瓦楞未处理PP表面先行丝网涂布的成品mordant，不能据未披露组成当CPP/CPO原料或推客户现用树脂；Poliprint明确另用于正确处理过的PP，不与未处理SericorPP场景混同。所查Quimicos为丝网清洗、脱膜、脱脂、屏幕封堵和贴版/定位胶等工艺成品；Emulsiones列Diazo/双固化/光聚合物感光制版乳剂，不能因emulsion一词等同水性聚烯烃或CPO输入。Auxiliares实际列醇酸罩光/调色基料、成品油墨，明确外售铝浆/金铜粉用于金属色及泛称Nivelante/Antiespuma；保留这些投入品销售事实，但未发现所选同类CPP/CPO/MAH改性聚烯烃树脂或其分散体外售。有限五业务原文可见范围同行排查通过，不宣称所有隐藏SKU/SDS或泛称助剂配方已审，也不因销售不同种类原料自动认作所选同类同行。PintesintSAICyF/SericorPP/PrimerGel/Poliprint及www/无www一个RamosMejia经营账户；现行main554条、root其他记录、excluded及完整发现队列无正式同主体，frontier/index各一个旧2/6研究项本次补核转换，不另加私有公司计数，不按品牌或全球搜索所涉意西国家制造新增。原about使用60周年历史文案，不当2026新开工/产能/认证有效性。官网各已读页脚公开通用邮箱info@pintesint.com、公用电话+54 11 4654.0060和地址Rondeau1200RamosMejia；只作公司业务渠道，传真不混电话，不猜采购负责人/WhatsApp。Home此前Timeout失败计额，官网业务入口使用已成功读取的About，未读独立Contact页不声称有表单。坐标-34.650/-58.567为通用城市示意，不当厂门。产品适配仅用户七牌号CPP/CPO指南PP附着功能加既有NipponPaperSUPERCHLON油墨类别独立市场扩展，不以指南冒充逐牌号TDS，不保证与客户溶剂/PP/配方相容、粘结改善、食品接触或采购需求。旧2（1正文1HomeTimeout）+本轮4全部正文=终身6/6STOP；本CPP范围用4/6余2，不为用满而另抓。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及电话",
+      "email": "info@pintesint.com",
+      "phone": "+54 11 4654.0060",
+      "contactUrl": "https://www.pintesint.com/pintesint.php"
+    },
+    "source": {
+      "label": "Pintesint官方Sericor PP溶剂型未处理瓦楞PP油墨",
+      "url": "https://www.pintesint.com/sericor_pp.php"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pintesint-ramos-mejia": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "saak-jeddah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "kemichal-trebaseleghe": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "american-paints-bharatpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13523,6 +13552,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pintesint-ramos-mejia": {
+  "website": "https://www.pintesint.com/pintesint.php",
+  "contactPage": "https://www.pintesint.com/pintesint.php",
+  "generalEmail": "info@pintesint.com",
+  "generalPhone": "+54 11 4654.0060",
+  "generalEmailEvidence": {
+    "company": "Pintesint S.A.I.C.Y.F.",
+    "value": "info@pintesint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pintesint官网公司介绍页公开业务联系信息",
+        "url": "https://www.pintesint.com/pintesint.php",
+        "summary": "公司介绍页正文页脚精确公开通用邮箱；不推采购部门、个人归属或投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhoneEvidence": {
+    "company": "Pintesint S.A.I.C.Y.F.",
+    "value": "+54 11 4654.0060",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pintesint官网公司介绍页公开业务联系信息",
+        "url": "https://www.pintesint.com/pintesint.php",
+        "summary": "官网公用业务电话原格式；不使用传真，不推为WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Rondeau 1200 (B1704COZ), Ramos Mejía, Buenos Aires, Argentina. Public business address; city-level -34.650/-58.567, not surveyed factory gate.",
+  "sources": [
+    {
+      "label": "官网Sericor PP应用及自主配方制造",
+      "url": "https://www.pintesint.com/sericor_pp.php"
+    },
+    {
+      "label": "官网丝网清洗与化学品目录",
+      "url": "https://www.pintesint.com/serigrafia_quimicos.php"
+    },
+    {
+      "label": "官网感光制版乳剂目录",
+      "url": "https://www.pintesint.com/serigrafia_emulsiones.php"
+    },
+    {
+      "label": "官网油墨配套及辅助产品目录",
+      "url": "https://www.pintesint.com/serigrafia_auxiliares.php"
+    },
+    {
+      "label": "官网自主研发制造介绍及公开联系",
+      "url": "https://www.pintesint.com/pintesint.php"
+    }
+  ]
+},
 "saak-jeddah": {
   "website": "https://www.saak.com.sa/ar/",
   "contactPage": "https://www.saak.com.sa/ar/",
@@ -41201,6 +41289,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pintesint-ramos-mejia",
 "saak-jeddah",
 "kemichal-trebaseleghe",
 "american-paints-bharatpur",
