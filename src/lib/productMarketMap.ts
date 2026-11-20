@@ -12881,11 +12881,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "american-paints-bharatpur",
+    "company": "American Paints Pvt. Ltd.",
+    "productId": "elo",
+    "country": "Nepal",
+    "countryZh": "尼泊尔",
+    "city": "Bharatpur（城市级示意点）",
+    "latitude": 27.683,
+    "longitude": 84.433,
+    "legacyCompanyDescription": "尼泊尔自主制漆企业，生产木器／金属底漆、合成瓷漆及其他成品涂料。",
+    "signal": "在尼泊尔自主制造涂料，公开成品范围包含 Wood and Metal Primer 木器／金属底漆及 Synthetic Emanel 合成瓷漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立完整复核本轮官网首页160行、Wood and Metal Primer97行、完整成品目录129行。首页明确自称Nepal的paint/primer manufacturer并写明we have been producing，支持本地自主下游制漆身份；不以空白About页补造工厂细节。About仅Updatingcontent占位，独立联系页Timeout和Chairman页双斜杠URLCachemiss全部保留，不改URL重试、不补具名联系人或工厂规模。已读产品目录九类均为下游成品：AcrylicWashableDistemper、ExteriorEmulsion、ExteriorPrimer、InteriorEmulsion、CementPrimer、AluminiumPaint、SyntheticEmanel、CheerySyntheticEmanel、WoodandMetalPrimer；未见同类ELO/ESBO/环氧化植物油/生物基增塑改性原料对外供应，有限可见范围同行排除通过，不宣称全部隐藏SKU、SDS或最终股权已审。水性只明确出现在墙面/水泥底漆等条目，不能移接为WoodandMetalPrimer的水性证据，NL-W1201链不通过。ELO按用户TDS涂料/树脂改性大类独立评估该自制具体底漆，不冒称重防腐/海工体系、现用环氧油、采购、相容或防腐改善。AmericanPaintsNepal及本官网品牌保守一个Bharatpur账户，域名/公司名/品牌与最新main551条、root其他记录、frontier/index/excluded/发现队列及历史公司源扫描无同主体；旧搜索提及保留，不与美国同名品牌或既有RainbowNepal按英文名/地区强行合并，未推定隐藏股权。官网首页明确通用邮箱info@americanpaintsnepal.com.np和公用电话056-526624；独立联系页失败故实际公开联系入口使用成功原首页，不猜国际区号、WhatsApp或采购负责人。官网地址Bharatpur-5 Lanku Chitwan为公开业务位置，不当厂门核验；27.683/84.433为另查城市级坐标。prior0/current6/lifetime6/rem0STOP：三业务原文、一个占位及两失败均计额，跨产品不重置，原水性木器缺口保留。"
+    },
+    "contact": {
+      "label": "官网通用业务邮箱、公开电话及业务网站",
+      "email": "info@americanpaintsnepal.com.np",
+      "phone": "056-526624",
+      "contactUrl": "https://americanpaintsnepal.com.np/"
+    },
+    "source": {
+      "label": "American Paints 官方 Wood and Metal Primer 及自主制造声明",
+      "url": "https://americanpaintsnepal.com.np/view/post/16"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"american-paints-bharatpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tinpes-itagui": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "amanecer-luque": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "xetex-industries-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13437,6 +13466,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"american-paints-bharatpur": {
+  "website": "https://americanpaintsnepal.com.np/",
+  "contactPage": "https://americanpaintsnepal.com.np/",
+  "generalEmail": "info@americanpaintsnepal.com.np",
+  "generalPhone": "056-526624",
+  "generalEmailEvidence": {
+    "company": "American Paints Pvt. Ltd.",
+    "value": "info@americanpaintsnepal.com.np",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网首页公开公司业务邮箱",
+        "url": "https://americanpaintsnepal.com.np/",
+        "summary": "公司首页MailUs公开精确通用业务邮箱；不推定具名采购或投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhoneEvidence": {
+    "company": "American Paints Pvt. Ltd.",
+    "value": "056-526624",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网首页公用业务电话",
+        "url": "https://americanpaintsnepal.com.np/",
+        "summary": "官网CallUs公开精确公用业务号码，保留原格式，不猜WhatsApp或国际区号。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "sources": [
+    {
+      "label": "官网自主制漆声明及公开业务邮箱电话",
+      "url": "https://americanpaintsnepal.com.np/"
+    },
+    {
+      "label": "官网 Wood and Metal Primer 成品页",
+      "url": "https://americanpaintsnepal.com.np/view/post/16"
+    },
+    {
+      "label": "官网完整可见九类成品涂料目录",
+      "url": "https://americanpaintsnepal.com.np/view/products"
+    }
+  ],
+  "address": "Bharatpur -5, Lanku, Chitwan, Nepal. Published business location; city-level 27.683/84.433, not surveyed factory-gate coordinates."
+},
 "tinpes-itagui": {
   "website": "https://tinpes.com.co/",
   "contactPage": "https://tinpes.com.co/",
@@ -40957,6 +41037,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"american-paints-bharatpur",
 "tinpes-itagui",
 "amanecer-luque",
 "xetex-industries-mumbai",
