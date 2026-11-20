@@ -13209,11 +13209,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "rebrilhar-leme",
+    "company": "Rebrilhar Resinas e Vernizes Ltda",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Leme（城市级示意，非厂门坐标）",
+    "latitude": -22.18611,
+    "longitude": -47.39056,
+    "legacyCompanyDescription": "巴西Leme木地板清漆制造企业，官网明确自有研发及水性清漆产品。",
+    "signal": "自有研发实验室并制造木地板树脂和清漆；Verniz Classic 产品页明确水性住宅木器清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "本轮公司请求5次：原生Home与Site-Rebrilhar.pdf各Timeout，普通Home HTTP200完整111875字符、VernizClassic产品页HTTP200完整41377字符，普通同PDF读取Timeout。失败均计额，终身0+5=5/余1，当前范围余1；零披露跳转/自动重试/远程JS执行。两份完整原HTML全文本地去标签独立审读；PDF实际原生及普通两次读取均失败，没有取得PDF正文，不以搜索摘要代替PDF内容。首页明确fabricacao de resinas e vernizes para acabamentos em pisos de madeira，自有研发实验室及水性木器清漆开发；具体产品标题Verniz Classic和正文明确住宅水性清漆及木材，实际URL却为verniz-alto-trafego，保留标题/slug不一致，不把Classic写成高流量双组分体系或推其成分。首页完整六项成品为ColaTaco PVA木地板胶、POLI-PU-10成品木器清漆、双组分UreiaFormol清漆、Classic封闭底涂、Classic水性清漆、高流量水性清漆。树脂/清漆明确木地板涂饰业务，不能因resinas或PU字样误认为水性聚烯烃/PO/CPO原料供应。有限当前经营及六成品摘要/Classic详情范围未见NL-W1201同类水性聚烯烃乳液、PO/CPO分散体、原料级聚烯烃附着促进剂外售；同行排除限实读资料，不称全SKU/SDS/未读PDF/隐藏股权审计或原料外购证明。Home和产品Footer商号法定名、LemeSP地址与真实公开WhatsApp链接一致，未独立工商/最终控制核验，未将建站者或用户评价并为集团。首页2010创办/15年与用户18年使用等时间表述不作当前经营年数/成立认证，质量宣传及环保/无味/耐磨等不移植给我方。官网只有领取地板施工手册的营销表单，不能冒称业务询盘表单，未提交或下载。无实际公开邮箱/具名采购，不猜；选真实官方Sales WhatsApp供用户自行联系，号码来源是原链接非从总机推定。公开销售电话(19)3518-6900按原格式，不补国际码，不用财务私人路线或并列手机号充作采购。NL-W1201仅按用户木材底涂/附着促进方向作潜在实验室评估，不推客户现用聚烯烃、已相容、采购或保护性能；地图仅Leme城市中心非厂门。"
+    },
+    "contact": {
+      "label": "官网公开销售WhatsApp及销售电话；未核得公开业务邮箱",
+      "contactUrl": "https://rebrilhar.com.br/"
+    },
+    "source": {
+      "label": "Rebrilhar 官方 Verniz Classic 水性木器清漆及自身制造说明",
+      "url": "https://rebrilhar.com.br/produto/verniz-alto-trafego/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"rebrilhar-leme": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "anupam-paints-howrah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chanda-paints-kalyani": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "tinsul-tintas-ouro": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13777,6 +13804,39 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"rebrilhar-leme": {
+  "website": "https://rebrilhar.com.br/",
+  "contactPage": "https://rebrilhar.com.br/",
+  "generalPhone": "(19) 3518-6900",
+  "generalPhoneEvidence": {
+    "company": "Rebrilhar Resinas e Vernizes Ltda",
+    "value": "(19) 3518-6900",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Rebrilhar 官方首页销售联系及页脚",
+        "url": "https://rebrilhar.com.br/",
+        "summary": "首页Vendas/页脚销售电话明确(19)3518-6900；是公开公司销售路线，不作具名采购电话或推定WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "whatsapp": "https://api.whatsapp.com/send/?phone=%2B5519992211257&text=Ol%C3%A1%21+Tenho+interesse+em+%23mudarparaRebrilhar",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Rua Luiz de Moraes Rego, 505, Jardim do Bosque, Leme/SP, Brazil. Published company business address; map uses approximate Leme city coordinates, not a verified factory gate.",
+  "sources": [
+    {
+      "label": "官网自身制造、研发、完整六项成品及公开销售WhatsApp",
+      "url": "https://rebrilhar.com.br/"
+    },
+    {
+      "label": "Verniz Classic 水性木器清漆原文；路径名与标题不一致照录",
+      "url": "https://rebrilhar.com.br/produto/verniz-alto-trafego/"
+    }
+  ]
+},
 "anupam-paints-howrah": {
   "website": "https://anupampaints.com/",
   "contactPage": "https://anupampaints.com/contact",
@@ -41972,6 +42032,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"rebrilhar-leme",
 "anupam-paints-howrah",
 "chanda-paints-kalyani",
 "tinsul-tintas-ouro",
