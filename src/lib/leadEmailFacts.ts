@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"kempro-paints-coimbatore": "I noticed that Kempro Paints manufactures two-pack epoxy primers and protective finishes for structural steel and industrial equipment.",
 "spico-printing-inks-chennai": "I noticed that SPICO manufactures solvent-based flexographic inks for PP woven sacks and jumbo bags.",
 "asmira-paint-mumbai": "I noticed that Asmira Paint manufactures two-component epoxy coatings and anti-corrosive paints for heavy industry.",
 "ciacollor-maringa": "I noticed that Tintas Ciacollor manufactures Verniz Copal Base Água, a water-based varnish for indoor wooden surfaces.",

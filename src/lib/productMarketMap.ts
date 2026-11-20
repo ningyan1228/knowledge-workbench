@@ -13343,11 +13343,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "kempro-paints-coimbatore",
+    "company": "Kempro Paints",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Coimbatore（城市级示意，非厂门坐标）",
+    "latitude": 11.00083,
+    "longitude": 76.96333,
+    "legacyCompanyDescription": "印度Coimbatore工业防护涂料配方制造企业，提供环氧底漆、中间漆和防腐面漆；Nagav为关联施工业务。",
+    "signal": "在Coimbatore自主配方制造工业防护涂料，提供钢结构用双组分环氧底漆、MIO中间漆及防腐面漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "五次普通单次禁跳转HTTPSGET全部200：Home35998/ About34315/ Products25460/ Contact26904字符完整原HTML，以及产品页显式加载的公开kempro-catalog-data.js17101字符静态目录，既往0+当前5=5/余1，范围5/余1，未重试/跳转/执行远程JS，不为凑额重读锚点。第五数据源由本机已安装TypeScript可信AST解析器仅提取KEMPRO_CATALOG字面数组/对象/字符串，不eval/import/require任何下载代码；提取五分类62叶节点并完整审读所有名称/描述，不当62独立SKU/配方/TDS/SDS已核。About明确Coimbatore自身制造、化学技术人员管理生产、自主配方和定制制造；NagavIndustrialCoats为相同所有权的施工姊妹业务，同账户不拆新增。产品目录明确钢结构用双组分环氧底漆、MIO中间漆、工业防腐面涂、海工环氧PU及地坪涂层，支持ELO涂层/环氧功能与树脂改性潜在实验室评估，不推现用ELO、特定硬化体系/溶剂相容、改善幅度、防腐寿命或采购。独立审查五分类62条目及Thinners/OtherProducts：EpoxyPigments明确调色颜料浆，SBR为混凝土修补粘结防水组分，Thinners为体系稀释/清洗溶剂混合物，TurpentineOil为传统天然溶剂，RustPreventiveOils为金属存储/运输表面防护油涂层；不将这些名称误认ELO/ESBO/环氧化植物油或相近生物基增塑/稳定原料供应。有限实际自述及目录未见所选同类原料外售，同行排除限已披露角色和范围，不保证所有隐藏SKU/成分/全部SDS/未公开集团股权，无虚构外购使用例外。正式568、root无关未发、frontier1129/index439及queue公司/域名/品牌/姊妹Nagav查重无既有；全部research精确Kempro仅旧Search和未执行计划，Nagav只三个Search，未见旧定向GET/冻结，不按网站近名Kempro或客户logo推其他集团。使用官网公开商号KemproPaints，不编Ltd/CIN。About叙述2009而事实表2016存在冲突，保留不选成立年份；FounderMDA.NagaGanesh未分项核当前个人渠道，不生成采购联系人。ISO9001:2015/IS/defence、750cities/1000projects与客户logo均官网自述，未独立认证或验证项目，不为我方背书。Contact明确kempropaints@gmail.com及mailto公司通用邮箱，nagavcoats@gmail.com仅关联施工邮箱不作第二客户或采购部门；电话+919894384783按显示+91 98943 84783保留，实际WA直链https://wa.me/919894384783存在，不从电话猜。咨询表单只观察未提交，输入Emailoptional不是公司邮箱来源；WorksOffice公开地址SFNo390/2B1D2ndCrossVijayakumarLayoutAgarvalSchoolRoadKNGPudurPirivuSomayampalayamCoimbatore641108，不声称独立厂门测绘，城市11.00083/76.96333来自一次通用城市资料。共享发送状态未知；仅条件生成核对未来确认未发，不创建就绪稿/导出，不外联。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱及实际WhatsApp；未核得具名采购",
+      "email": "kempropaints@gmail.com",
+      "contactUrl": "https://kempropaints.in/contact.html"
+    },
+    "source": {
+      "label": "Kempro官方自身制造及工业防护涂料目录",
+      "url": "https://kempropaints.in/products.html"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"kempro-paints-coimbatore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "spico-printing-inks-chennai": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "asmira-paint-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ciacollor-maringa": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -13916,6 +13944,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"kempro-paints-coimbatore": {
+  "website": "https://kempropaints.in/",
+  "contactPage": "https://kempropaints.in/contact.html",
+  "generalEmail": "kempropaints@gmail.com",
+  "generalEmailEvidence": {
+    "company": "Kempro Paints",
+    "value": "kempropaints@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Kempro official Contact — company email and matching mailto",
+        "url": "https://kempropaints.in/contact.html",
+        "summary": "公司Works and office联系区与mailto明确kempropaints@gmail.com；通用业务入口，不冒称采购个人，未做投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "generalPhone": "+91 98943 84783",
+  "generalPhoneEvidence": {
+    "company": "Kempro Paints",
+    "value": "+91 98943 84783",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Kempro official Contact — company sales line",
+        "url": "https://kempropaints.in/contact.html",
+        "summary": "官网Contact电话及一致tel:+919894384783；公司业务销售线，非具名采购个人。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "whatsapp": "https://wa.me/919894384783",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "SF No. 390/2B1D, 2nd Cross, Vijayakumar Layout, Agarval School Road, KNG Pudur Pirivu, Somayampalayam, Coimbatore - 641108, India. Published works and office address; map uses city representative coordinates, not an independently geocoded factory gate.",
+  "sources": [
+    {
+      "label": "自有制造与生产管理、Nagav同所有权施工业务",
+      "url": "https://kempropaints.in/about.html"
+    },
+    {
+      "label": "工业防护涂料及五分类产品页",
+      "url": "https://kempropaints.in/products.html"
+    },
+    {
+      "label": "产品页链接的静态62条目录，仅惰性阅读不执行",
+      "url": "https://kempropaints.in/assets/js/kempro-catalog-data.js"
+    },
+    {
+      "label": "主要经营和成品涂层范围",
+      "url": "https://kempropaints.in/"
+    },
+    {
+      "label": "分项邮箱／电话及明确WhatsApp入口",
+      "url": "https://kempropaints.in/contact.html"
+    }
+  ]
+},
 "spico-printing-inks-chennai": {
   "website": "https://www.spicoindia.in/home.html",
   "contactPage": "https://www.spicoindia.in/contacts.html",
@@ -42358,6 +42446,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"kempro-paints-coimbatore",
 "spico-printing-inks-chennai",
 "asmira-paint-mumbai",
 "ciacollor-maringa",
