@@ -13020,11 +13020,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-20"
   },
+  {
+    "id": "dimacon-lagos",
+    "company": "Dimacon Industries Ltd",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Lagos（城市级示意点）",
+    "latitude": 6.45611,
+    "longitude": 3.39361,
+    "legacyCompanyDescription": "尼日利亚自主海洋与工业防护涂料制造企业，产品包括钢材环氧底漆、屏障涂层及储罐衬里。",
+    "signal": "尼日利亚自主涂料制造商，产品目录明确列出钢结构用环氧底漆、高膜厚环氧屏障涂层及环氧储罐衬里。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-20",
+      "conclusion": "独立审读官网About45行、Home135行、Contact65行、OurProducts194行四份完整主营正文；服务页native CacheMiss及一次禁跳转普通GET的HTTP404均计入，合计6来源、0剩余、STOP，无披露跳转，不重置。About明确DimaconIndustriesLtd自1988注册并自有制造汽车/海洋防护/建筑/地坪/金属包装/道路/塑料鞋材/防水/热封/卷材等涂料，技术董事自述配方研发和生产经历。完整DIMACON PRODUCT LIST明确钢材Supreme2pkEpoxyZincPhosphatePrimer、ZincRichEpoxyPrimer、HighBuildEpoxyBarrierCoating和EpoxyTankLining，正文明确平台、船舶、储罐、管道及工业设施防护；不是只凭海洋行业标签。Home地坪系统为环氧/PU/硅烷/PMMA成品，Products列建筑/瓷漆/木器/腻子/道路/汽车/卷材/清洗与硅烷防水成品及配套稀释剂；末段Epoxies/Polyamides/Polyaspartics等在此明确属于海洋防护涂层类型，不据孤立化学名推上游原料销售，也不推隐藏配方。按实际四份完整可见主营范围未观察ELO/ESBO/环氧化植物油/同类生物增塑或柔韧添加原料外售，有限范围同行排除通过；不是全SKU/SDS/股权或隐藏业务无同行保证，不编外购例外。无已证子母公司，DimaconLtd/Limited/域名及地域销售点按一个账户，未将Kaduna/Enugu/Abuja/Owerri/PortHarcourt分拆。正式556、root其他待发、frontier/index/excluded及queue精确名称/域名离线均无重复；旧全历史只找到本次搜索，不见旧公司定向读源。Contact公开info@dimaconpaints.com（另列公司gmail，仅采用同域通用邮箱）及表单，未提交；无具名采购、WhatsApp或投递可达声明。Contact主体07082275299与页脚070822752999不一致，因此不收录电话也不自动修正。404原文暴露导航OurProducts后才读取真实产品页；模板外链codeskdhaka和文字Lagos而目标Dhaka的Google地图均不作为本公司身份/地址/工厂证据且未点击，未作假站定论。About的ISO9001.2005文字与首页ISO9001:2015表述不作当前有效认证，MANCAP/ASTM同为客户自述非我方认证或性能。公开Lagos办公地址保留，地图6.45611/3.39361来自另查Lagos城市坐标，非工厂门定位。ELO仅TDS涂料/环氧功能及树脂改性潜在评估，不断言客户使用/采购ELO、体系相容、防腐提高或耐久保证。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及联系表单",
+      "email": "info@dimaconpaints.com",
+      "contactUrl": "https://dimaconpaints.com/contact/"
+    },
+    "source": {
+      "label": "Dimacon官网完整产品目录及自主制造声明",
+      "url": "https://dimaconpaints.com/our-products/"
+    },
+    "checkedAt": "2026-11-20"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"dimacon-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sipco-dammam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pintesint-ramos-mejia": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "saak-jeddah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -13581,6 +13609,46 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"dimacon-lagos": {
+  "website": "https://dimaconpaints.com/",
+  "contactPage": "https://dimaconpaints.com/contact/",
+  "generalEmail": "info@dimaconpaints.com",
+  "generalEmailEvidence": {
+    "company": "Dimacon Industries Ltd",
+    "value": "info@dimaconpaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Dimacon官网联系页公开通用业务邮箱",
+        "url": "https://dimaconpaints.com/contact/",
+        "summary": "Contact主体和页脚均明确同域公司通用邮箱，与About/Home一致；不是具名采购邮箱，不推投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-20"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Plot C69, Crystal Glass Close (formerly Jay Momoh Close), off Oba Kayode Akinyemi Way, Amuwo-Odofin Industrial Estate, Lagos, Nigeria. Published office address; city-level marker, not surveyed plant gate. The website map target points to Dhaka and is not used.",
+  "sources": [
+    {
+      "label": "官网自主涂料制造及研发声明",
+      "url": "https://dimaconpaints.com/about/"
+    },
+    {
+      "label": "官网完整建筑及海洋工业防护成品目录",
+      "url": "https://dimaconpaints.com/our-products/"
+    },
+    {
+      "label": "官网业务范围及地坪防护系统",
+      "url": "https://dimaconpaints.com/"
+    },
+    {
+      "label": "官网通用邮箱及联系入口",
+      "url": "https://dimaconpaints.com/contact/"
+    }
+  ]
+},
 "sipco-dammam": {
   "website": "https://www.sipco.com.sa/about.html",
   "contactPage": "https://www.sipco.com.sa/about.html",
@@ -41377,6 +41445,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"dimacon-lagos",
 "sipco-dammam",
 "pintesint-ramos-mejia",
 "saak-jeddah",
