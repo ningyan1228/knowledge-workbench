@@ -13638,11 +13638,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "navi-gold-paints-new-delhi",
+    "company": "Navi Gold Paints Corporation",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "New Delhi（官网公开位置点，未核厂门）",
+    "latitude": 28.6215,
+    "longitude": 77.11929,
+    "legacyCompanyDescription": "印度New Delhi涂料制造及批发企业，公开Navi Plast溶剂型聚丙烯底漆和PP/ABS塑料成品涂料。",
+    "signal": "企业官网自述制造Navi Plast溶剂型PP底漆及塑料涂料；资料页披露制造业务、制造单元和制造设施。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "公司托管官网明确将Navi Plast溶剂型聚丙烯底漆及PP/ABS塑料涂料列为制造产品，资料页披露制造业务与制造设施栏目。主页、PP底漆、公司资料、专用化学品、工业化学品和Navi Gold成品涂料原文中，已见溶剂、消光剂、纤维素类、木器及塑料涂料等经营；未见CPP/CPO、MAH改性氯化聚烯烃或同类聚烯烃附着促进原料对外销售。一般溶剂、消光剂和纤维素商品不自动等于所选CPP/CPO原料；成品PP底漆也不只凭primer名称认定为原料。结论限实际已读有限业务目录，非全部SKU、配方、SDS或股权审计；制造依据为企业公开披露，未做现场工厂审计。公司名的Panits拼写、Navi Plast/Nixolite/Nixol产品线与相同GST和Delhi地址按同一账户处理，不拆品牌计数。公开个人角色披露未独立核实，不作具名采购人；不推定当前采购、既用树脂、我方牌号相容性或成品性能。"
+    },
+    "contact": {
+      "label": "公司公开产品咨询表单（IndiaMART托管，未提交）",
+      "contactUrl": "https://www.navigoldpaint.com/polypropylene-primer.html"
+    },
+    "source": {
+      "label": "Navi Gold 官方Navi Plast溶剂型PP底漆与成品制造目录",
+      "url": "https://www.navigoldpaint.com/polypropylene-primer.html"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"navi-gold-paints-new-delhi": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "satva-coating-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ogrady-coatings-middelburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "zeen-inks-umbergaon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -14222,6 +14249,39 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"navi-gold-paints-new-delhi": {
+  "website": "https://www.navigoldpaint.com/",
+  "contactPage": "https://www.navigoldpaint.com/polypropylene-primer.html",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "C 107, Mayapuri Industrial Area, Phase II, New Delhi – 110064, Delhi, India. Company-published business address; map point is disclosed by the seller and is not an independently surveyed factory gate.",
+  "sources": [
+    {
+      "label": "溶剂型NaviPlast PP底漆与公开产品咨询表单",
+      "url": "https://www.navigoldpaint.com/polypropylene-primer.html"
+    },
+    {
+      "label": "企业自述制造业务、制造单元及设施栏目",
+      "url": "https://www.navigoldpaint.com/profile.html"
+    },
+    {
+      "label": "专用化学品目录：稀释剂、消光剂、纤维素",
+      "url": "https://www.navigoldpaint.com/speciality-chemicals.html"
+    },
+    {
+      "label": "公司制造经营及品牌概况",
+      "url": "https://www.navigoldpaint.com/"
+    },
+    {
+      "label": "工业化学品：乙醇及芳烃/纤维素溶剂",
+      "url": "https://www.navigoldpaint.com/industrial-chemicals.html"
+    },
+    {
+      "label": "制造的木器及PP/ABS塑料成品涂料",
+      "url": "https://www.navigoldpaint.com/navi-gold-paint.html"
+    }
+  ]
+},
 "satva-coating-ahmedabad": {
   "website": "https://satvacoatings.com/",
   "contactPage": "https://satvacoatings.com/",
@@ -43205,6 +43265,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"navi-gold-paints-new-delhi",
 "satva-coating-ahmedabad",
 "ogrady-coatings-middelburg",
 "zeen-inks-umbergaon",

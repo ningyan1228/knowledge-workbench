@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"navi-gold-paints-new-delhi": "I noticed that Navi Gold Paints Corporation lists Navi Plast solvent-based primers for polypropylene substrates among its manufactured products.",
 "satva-coating-ahmedabad": "I noticed that Satva Coating manufactures high-build epoxy topcoats, zinc phosphate primers and zinc-rich primers at its Ahmedabad facility.",
 "ogrady-coatings-middelburg": "I noticed that O’Grady manufactures Enviro Waterbased Varnish, a pure acrylic varnish for wood.",
 "zeen-inks-umbergaon": "I noticed that Z-INKS manufactures Z-INKS SURFACE solvent-based printing inks for polypropylene and raffia bags.",
