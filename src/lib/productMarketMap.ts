@@ -13880,11 +13880,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "chemifabrik-santa-anita",
+    "company": "Chemifabrik",
+    "productId": "elo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Santa Anita，Lima（官网业务地址；Lima城市级示意，非厂门）",
+    "latitude": -12.05,
+    "longitude": -77.04,
+    "legacyCompanyDescription": "秘鲁工业防护涂料开发制造企业，BONN工业线提供锌磷酸盐增强的环氧防腐涂层。",
+    "signal": "Chemifabrik 自制工业涂料；BONN EPOXI 720 ZnP 为锌磷酸盐增强的环氧涂层，明确用于自底涂防腐。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "现行公司介绍明确 Chemifabrik 在秘鲁开发、制造和销售工业涂料，拥有实验室及水性漆、溶剂漆、稀释剂、腻子四条生产线，并披露2023办公分址和2024生产/仓储扩充。BONN为其工业品牌，选定 BONN EPOXI720ZnP 具体页明确为锌磷酸盐增强的环氧聚氨基酰胺/脂环族涂层及自底涂防腐用途。实际所读主营、完整可见目录分类树、首屏12/125项、两个具体工业产品及联系页未见 ELO、ESBO、环氧植物油或同类生物基增塑稳定原料外售；溶剂/稀释剂、成品A/B组分及普通epoxy/resin词不自动等ELO。未读其余113项、其它叶页、PDF/SDS、全部配方和隐藏股权，结论仅限所读范围，不称完整125项审计。另BONNEpoxiZincromato页有N/A及通用PropósitoDiluyente模板冲突，未把它作为选定720ZnP技术数据；旧/新公司页重复25/30年及1998/1999历史日期差异保留，不捏单一年份。BONN/GAMAX/COLORMAX/DRYMAX/LUX/MAX、SantaAnita工厂及SanIsidro办公室同一账户；经销商和零售合作不作子公司。ELO仅环氧功能/树脂改性潜在评估，现用配方、采购、相容性、耐蚀改善、食品接触及认证未确认。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱（非具名采购）",
+      "email": "info@chemifabrik.com.pe",
+      "contactUrl": "https://chemifabrik.com.pe/contacto/"
+    },
+    "source": {
+      "label": "Chemifabrik BONN EPOXI720ZnP 官方工业防腐涂层",
+      "url": "https://chemifabrik.com.pe/producto/bonn-epoxi-720-znp/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chemifabrik-santa-anita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "miro-lacas-san-justo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "quimprex-villa-zagala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "revesta-florida-oeste": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14473,6 +14501,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chemifabrik-santa-anita": {
+  "website": "https://chemifabrik.com.pe/quienes-somos/",
+  "contactPage": "https://chemifabrik.com.pe/contacto/",
+  "generalEmail": "info@chemifabrik.com.pe",
+  "generalEmailEvidence": {
+    "company": "Chemifabrik",
+    "value": "info@chemifabrik.com.pe",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chemifabrik 当前官网公开公司业务邮箱",
+        "url": "https://chemifabrik.com.pe/contacto/",
+        "summary": "联系页及另五份官方原文页脚明文一致info@chemifabrik.com.pe；仅公司通用业务入口，无具名采购、部门职责或可投递已测断言。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "478-1148",
+  "generalPhoneEvidence": {
+    "company": "Chemifabrik",
+    "value": "478-1148",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chemifabrik 官网informes通用电话",
+        "url": "https://chemifabrik.com.pe/contacto/",
+        "summary": "公开联系页明文informes:478-1148，与各页脚一致；保留原格式，不猜国际号、个人手机或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "CalleGilbertoEspinoza120,SantaAnita,Lima,Peru (current public business address, not independently surveyed gate). Current company history separately mentions SanIsidro commercial/technical/admin offices from2023; one account. Coarse Lima city marker reused from existing verified public data, not SantaAnita factory coordinates.",
+  "sources": [
+    {
+      "label": "旧公司介绍及工厂四线；历史重复差异保留",
+      "url": "https://chemifabrik.com.pe/quienes-somos-2/"
+    },
+    {
+      "label": "当前产品目录分类及首12/125项，未读其余页",
+      "url": "https://chemifabrik.com.pe/tienda/"
+    },
+    {
+      "label": "另一具体环氧防锈产品；空值和通用模板字段不作技术证据",
+      "url": "https://chemifabrik.com.pe/producto/bonn-epoxi-zincromato/"
+    },
+    {
+      "label": "现行自有制造、实验室、工厂及2023/2024沿革",
+      "url": "https://chemifabrik.com.pe/quienes-somos/"
+    },
+    {
+      "label": "选定BONN EPOXI720ZnP工业环氧防腐涂层",
+      "url": "https://chemifabrik.com.pe/producto/bonn-epoxi-720-znp/"
+    },
+    {
+      "label": "公开业务联系表单、邮箱、电话与地址",
+      "url": "https://chemifabrik.com.pe/contacto/"
+    }
+  ]
+},
 "miro-lacas-san-justo": {
   "website": "https://mirosrl.com/acerca/nosotros",
   "contactPage": "https://mirosrl.com/form/contact",
@@ -43935,6 +44026,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chemifabrik-santa-anita",
 "miro-lacas-san-justo",
 "quimprex-villa-zagala",
 "revesta-florida-oeste",

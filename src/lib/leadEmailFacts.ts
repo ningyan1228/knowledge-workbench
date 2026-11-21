@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"chemifabrik-santa-anita": "I noticed that Chemifabrik manufactures BONN EPOXI 720 ZnP, a zinc-phosphate-reinforced epoxy coating for anticorrosive protection.",
 "miro-lacas-san-justo": "I noticed that Miró Lacas y Barnices manufactures HIDROLAKE water-based polyurethane coatings for protecting and finishing interior wood surfaces.",
 "quimprex-villa-zagala": "I noticed that Quimprex manufactures Uniprex solvent-based inks for polypropylene and polyethylene laminates, including BOPP printing applications.",
 "revesta-florida-oeste": "I noticed that Revesta manufactures industrial anticorrosive coatings, including REVESTA 340 high-solids epoxy polyamide coatings for marine and industrial service.",
