@@ -13745,11 +13745,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "bepro-coatings-palmira",
+    "company": "BePro Coatings",
+    "productId": "elo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Palmira（官网披露工厂城市；城市级示意，非厂门）",
+    "latitude": 3.583,
+    "longitude": -76.25,
+    "legacyCompanyDescription": "Pintech Colombia 旗下哥伦比亚涂料制造品牌，官网披露 Palmira 自有工厂，提供工业环氧底漆、屏障涂层及其他防护成品。",
+    "signal": "在 Palmira 自有工厂制造 BePro 工业涂料；PrimeTech HS Epoxy 为环氧磷酸锌底漆／屏障涂层，另有 EASYTECH 环氧聚酰胺涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "官网公司介绍明确其沿革从 Pinturas San Pedro 至 Pintech Colombia，当前以 BePro Coatings 品牌在 Palmira 自有工厂制造涂料，同时保留其他品牌销售与分销业务；不将分销品牌当自产或推定股权。当前完整可见产品目录列出47项建筑、地坪、汽车及工业产品，含 PrimeTech HS Epoxy 环氧磷酸锌底漆/屏障涂层、EASYTECH 环氧聚酰胺、醇酸防锈底漆及PU成品，并有对应催化剂/硬化剂和黏度调整剂。所读 Home、公司介绍及完整可见目录未见 ELO、ESBO、环氧植物油或同类生物基增塑稳定添加剂外售；普通丙烯酸树脂表述、成品A/B组分、酸性表面处理和溶剂调整剂不自动等环氧植物油。结论限所读公开业务范围，未审计全部配方、未下载的PDF/SDS、未披露关联或工厂实际过程。BePro、Pintech、旧商号及 Cali/Neiva 门店按一个账户。客户的NACE、VOC、防腐寿命、耐化学等自述不转为我方ELO效果、认证或适配保证；当前采购及使用未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司通用邮箱（非具名采购）",
+      "email": "info@pintech.com.co",
+      "contactUrl": "https://beprocoatings.com/home"
+    },
+    "source": {
+      "label": "BePro 官方完整产品目录与工业环氧防护产品",
+      "url": "https://beprocoatings.com/productos"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"bepro-coatings-palmira": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "allchem-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "mepco-duque-de-caxias": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "alvonil-sao-paulo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14333,6 +14361,58 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"bepro-coatings-palmira": {
+  "website": "https://beprocoatings.com/home",
+  "contactPage": "https://beprocoatings.com/home",
+  "generalEmail": "info@pintech.com.co",
+  "generalEmailEvidence": {
+    "company": "BePro Coatings",
+    "value": "info@pintech.com.co",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "BePro/Pintech 当前官网公开业务邮箱",
+        "url": "https://beprocoatings.com/home",
+        "summary": "官网页脚Cali公司联络区公开email-protection链接。对原文十六进制片段离线XOR解码得到info@pintech.com.co，三个实际页面分别一致；未执行站点脚本或访问解码服务。About明确BePro为Pintech自制品牌；通用公司入口，非具名采购，未测试投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "317 404 1993",
+  "generalPhoneEvidence": {
+    "company": "BePro Coatings",
+    "value": "317 404 1993",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "BePro 官网Cali业务联系电话",
+        "url": "https://beprocoatings.com/home",
+        "summary": "官网Cali业务联络区明确317 404 1993且实际tel:+573174041993。仅公司业务入口，不冒称采购、工厂直线或私人号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/573174041993",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Palmira, Valle del Cauca, Colombia (officially disclosed own manufacturing city; factory street/gate not independently verified). Business branches: Cali, Calle 23 # 17-100; Neiva, Calle 4 # 2-06. One account; municipality marker only.",
+  "sources": [
+    {
+      "label": "品牌、工厂城市、业务渠道与实际WhatsApp链接",
+      "url": "https://beprocoatings.com/home"
+    },
+    {
+      "label": "Pintech沿革、BePro当前自产与Palmira自有工厂",
+      "url": "https://beprocoatings.com/nosotros"
+    },
+    {
+      "label": "完整可见47项成品/配套目录及工业防护环氧产品",
+      "url": "https://beprocoatings.com/productos"
+    }
+  ]
+},
 "allchem-ciudad-mexico": {
   "website": "https://www.allchem.com.mx/es/",
   "contactPage": "https://www.allchem.com.mx/es/",
@@ -43508,6 +43588,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"bepro-coatings-palmira",
 "allchem-ciudad-mexico",
 "mepco-duque-de-caxias",
 "alvonil-sao-paulo",

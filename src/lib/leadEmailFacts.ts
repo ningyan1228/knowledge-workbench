@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"bepro-coatings-palmira": "I noticed that BePro Coatings manufactures industrial epoxy primers and barrier coatings at its Palmira plant.",
 "allchem-ciudad-mexico": "I noticed that Allchem offers RA26MOD, a two-component epoxy-polyamide coating for anticorrosive protection of tanks, pipes and industrial facilities.",
 "mepco-duque-de-caxias": "I noticed that MEPCO manufactures Esmalte Base D’Água for wood, with preparation instructions for new wood and repainting.",
 "alvonil-sao-paulo": "I noticed that Alvonil manufactures water-based enamel for wood, using a styrene-acrylic copolymer emulsion in its listed formulation.",
