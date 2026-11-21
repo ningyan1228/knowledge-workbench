@@ -13799,11 +13799,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "revesta-florida-oeste",
+    "company": "Revesta S.A.I.C.",
+    "productId": "elo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Florida Oeste（官网联系城市；城市级示意，非厂门）",
+    "latitude": -34.533,
+    "longitude": -58.5,
+    "legacyCompanyDescription": "阿根廷工业防腐涂料开发制造企业，提供高固体环氧聚酰胺等工业与海洋防护涂层。",
+    "signal": "Revesta 自主开发制造工业防腐涂料；目录中的 REVESTA 340 为用于海洋和工业环境的高固体环氧聚酰胺中间涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "官网首页及工业公司介绍明确 Revesta 自主开发、制造和销售工业防腐涂料；实际工业产品目录完整可见高固体环氧、醇酸、聚氨酯、锌基、无溶剂、乙烯基酯及配套清洁成品。REVESTA 340 明确为海洋及工业环境的高固体环氧聚酰胺中间涂层。另一完整可见 Línea 4000 目录为面向家庭、工业和船舶的涂料、密封胶、环氧胶及配套稀释剂。对其中 REVESTA 4970 Aceite para teca 另读具体页，明确1/4升单组分木材涂装成品，用刷子施工后擦去表面余料；不把该成品油、普通 epoxy/resin 或成品A/B组分名称自动当 ELO 原料。以上实际所读主营、两目录及具体产品未见 ELO、ESBO、环氧植物油或同类生物基增塑稳定添加剂外售；结论限所读公开业务范围，未审全部配方、未读PDF/SDS或隐藏股权。Ameron/Dudick历史生产许可不自动推当前股权关系；Sponge-Jet清洁设备及Charcoat代理不作自产，Revesta阿根廷与其自述智利业务保守一个账户，不拆国家新增。其成品耐蚀、FDA、ISO、VOC、抗菌等自述不转为我方ELO认证或性能；现用原料、相容性、采购需求及评估时机未确认。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱（非具名采购）",
+      "email": "pinturas@revesta.com.ar",
+      "contactUrl": "https://www.revesta.com.ar/ind_contacto"
+    },
+    "source": {
+      "label": "Revesta 官方工业防护涂料产品目录",
+      "url": "https://www.revesta.com.ar/ind_lstandard_productos"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"revesta-florida-oeste": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colortek-dombivli": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
 "bepro-coatings-palmira": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "allchem-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14389,6 +14417,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"revesta-florida-oeste": {
+  "website": "https://www.revesta.com.ar/",
+  "contactPage": "https://www.revesta.com.ar/ind_contacto",
+  "generalEmail": "pinturas@revesta.com.ar",
+  "generalEmailEvidence": {
+    "company": "Revesta S.A.I.C.",
+    "value": "pinturas@revesta.com.ar",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Revesta 官方工业联系页通用业务邮箱",
+        "url": "https://www.revesta.com.ar/ind_contacto",
+        "summary": "Atención general及Casa Central公开pinturas@revesta.com.ar，原文含相同mailto；公司通用业务入口，无具名采购/部门职责或可投递性断言。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "(+54 11) 4760-5167",
+  "generalPhoneEvidence": {
+    "company": "Revesta S.A.I.C.",
+    "value": "(+54 11) 4760-5167",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Revesta 官方 Atención general / Casa Central 电话",
+        "url": "https://www.revesta.com.ar/ind_contacto",
+        "summary": "工业联系页明确(+54 11) 4760-5167，与总部页脚一致；仅公司公开通用业务电话，不冒称采购或个人手机。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/5491168130871?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20sobre%20productos%20Revesta.",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Atención general / Casa Central: Av. Bartolomé Mitre1249, Florida Oeste, (B1604AKE) Buenos Aires, Argentina. Footer abbreviates this as Av.Mitre1249, Florida. Public business address, not an independently verified factory gate. City-level marker-34.533,-58.500.",
+  "sources": [
+    {
+      "label": "官网自有开发制造、历史许可及业务渠道",
+      "url": "https://www.revesta.com.ar/"
+    },
+    {
+      "label": "工业公司介绍、制造角色及阿根廷/智利业务关联",
+      "url": "https://www.revesta.com.ar/ind_nosotros_quienes-somos"
+    },
+    {
+      "label": "完整可见工业防护涂料目录及REVESTA340",
+      "url": "https://www.revesta.com.ar/ind_lstandard_productos"
+    },
+    {
+      "label": "完整可见Línea4000成品及配套目录",
+      "url": "https://www.revesta.com.ar/pint_l4000_productos"
+    },
+    {
+      "label": "工业通用业务联系入口与明确FloridaOeste地址",
+      "url": "https://www.revesta.com.ar/ind_contacto"
+    },
+    {
+      "label": "REVESTA4970直接施工的木材保护成品油，非原料级环氧油销售证据",
+      "url": "https://www.revesta.com.ar/productos/revesta-4970"
+    }
+  ]
+},
 "colortek-dombivli": {
   "website": "https://colortek.in/about/",
   "contactPage": "https://colortek.in/faq/",
@@ -43680,6 +43772,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"revesta-florida-oeste",
 "colortek-dombivli",
 "bepro-coatings-palmira",
 "allchem-ciudad-mexico",
