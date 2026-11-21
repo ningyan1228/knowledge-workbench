@@ -13907,11 +13907,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "quimicos-valperu-la-victoria",
+    "company": "Químicos Valperú SAC",
+    "productId": "cpp-cpo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "La Victoria，Lima（官网业务地址；地图为Lima城市示意点，非厂门）",
+    "latitude": -12.05,
+    "longitude": -77.04,
+    "legacyCompanyDescription": "秘鲁图文印刷化学产品制造与研发企业，Seriflex PP溶剂型丝印墨用于处理过的PE/PP；网页当前标注缺货。",
+    "signal": "Químicos Valperú 自制图文印刷化学产品；Seriflex PP 为用于处理过的 PE、PP 刚性及柔性塑料的溶剂型丝印油墨，网页当前标注缺货。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "官网Home与Nosotros明确家族图文印刷化学产品制造、研发部门I+D+I，历史为1987 PigmentosIndustriales及2004 QuímicosValperú，一户保留；页面35/36年旧年数字不冒充2026注册或现年年限。具体SeriflexPP详细原文明确serigrafíaabase de solvente和处理过的polietilenos/polipropilenos刚性及柔性塑料。当前页明确noquedanexistencias，保留缺货，不断言正在生产该批次、补货采购或评估时机。有限实际所读Home可见经营分类、About、选定墨及完整可见Aditivos四项：Acriflock纺织基料/添加剂、TF水性纺织基料增稠剂、TH纺织水性墨耐洗固色用液体树脂、印花台固定衣物胶；这些明确终端用途不能单凭resina/aditivo词自动等CPP/CPO，也不猜TH具体丙烯酸/聚氨酯/聚烯烃化学组成。未识别CPP/CPO、MAH改性聚烯烃或同类PP原料级附着促进树脂外售，同行排除结论仅限实际经营和所选范围；未读各添加剂叶页、其它墨/稀释剂/丝网感光乳剂完整SKU、PDF/SDS或隐藏控制，不声称穷尽全部配方。独立NipponPaper公开CPO丝印墨binder/additive来源只支持市场扩展，不转其性能/食品接触到我方牌号。官网公开公司邮箱、通用电话和业务地址同四页明文一致；官网WhatsApp短链只保留原文未跟踪，未由电话猜WhatsApp。现实外购、材料相容性、采购、用量及附着改善均未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱（非具名采购）",
+      "email": "ventasquimicosvalperu@gmail.com",
+      "contactUrl": "https://www.quimicosvalperu.com/"
+    },
+    "source": {
+      "label": "Químicos Valperú Seriflex PP官方溶剂型丝印油墨",
+      "url": "https://www.quimicosvalperu.com/producto/tinta-seriflex-pp/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"quimicos-valperu-la-victoria": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chemifabrik-santa-anita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "miro-lacas-san-justo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "quimprex-villa-zagala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -14501,6 +14529,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"quimicos-valperu-la-victoria": {
+  "website": "https://www.quimicosvalperu.com/",
+  "contactPage": "https://www.quimicosvalperu.com/",
+  "generalEmail": "ventasquimicosvalperu@gmail.com",
+  "generalEmailEvidence": {
+    "company": "Químicos Valperú SAC",
+    "value": "ventasquimicosvalperu@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Químicos Valperú 官网明文公司业务邮箱",
+        "url": "https://www.quimicosvalperu.com/",
+        "summary": "Home及另外三份官方原文页脚明文并mailto一致ventasquimicosvalperu@gmail.com；为公司业务入口，不当具名采购或验证投递成功。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "323 1905",
+  "generalPhoneEvidence": {
+    "company": "Químicos Valperú SAC",
+    "value": "323 1905",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Químicos Valperú 官网公开通用电话",
+        "url": "https://www.quimicosvalperu.com/",
+        "summary": "四份实际原文Contáctenos一致3231905，精确保留显示323 1905；href另明示+5113231905为同号，无采购职责或WhatsApp推断。另961027952不选作具名私人电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Jr. Huánuco 2026a Int 201, La Victoria, Lima, Peru (public business/store pickup address, not independently verified factory gate). Reused coarse Lima city point -12.05,-77.04; not exact La Victoria or factory coordinates.",
+  "sources": [
+    {
+      "label": "当前制造及可见主营分类与业务联系",
+      "url": "https://www.quimicosvalperu.com/"
+    },
+    {
+      "label": "选定SeriflexPP溶剂丝印PE/PP，缺货说明保留",
+      "url": "https://www.quimicosvalperu.com/producto/tinta-seriflex-pp/"
+    },
+    {
+      "label": "家族制造及I+D+I；1987前身与2004现名历史",
+      "url": "https://www.quimicosvalperu.com/nosotros/"
+    },
+    {
+      "label": "实际完整可见Aditivos四项，非各叶页/配方审计",
+      "url": "https://www.quimicosvalperu.com/aditivos/"
+    }
+  ]
+},
 "chemifabrik-santa-anita": {
   "website": "https://chemifabrik.com.pe/quienes-somos/",
   "contactPage": "https://chemifabrik.com.pe/contacto/",
@@ -44026,6 +44109,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"quimicos-valperu-la-victoria",
 "chemifabrik-santa-anita",
 "miro-lacas-san-justo",
 "quimprex-villa-zagala",
