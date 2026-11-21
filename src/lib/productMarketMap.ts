@@ -13961,11 +13961,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "ecuabarnices-guayaquil",
+    "company": "Ecuabarnices S.A.",
+    "productId": "elo",
+    "country": "Ecuador",
+    "countryZh": "厄瓜多尔",
+    "city": "Guayaquil（官网业务城市；城市级示意点，非Km24.5厂门）",
+    "latitude": -2.19,
+    "longitude": -79.8875,
+    "legacyCompanyDescription": "厄瓜多尔自有金属包装涂层研发制造企业，提供工业金属容器内外保护清漆及定制技术服务。",
+    "signal": "Ecuabarnices 自主研发制造金属包装涂层；工业产品包括用于涂料、润滑剂、胶黏剂及金属桶等非食品容器的保护清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "累计六次定向来源跨产品不重置：上轮Home/完整可见Products两200和2024产品图表PDF下载超时，本轮About/Services/Contact三200。实际About说明1976成立、自己生产金属包装涂层及现有设施；Home明确研发定制制造、Products明确外部环境保护清漆及用于涂料/润滑剂/农化/胶黏剂/金属桶的工业容器涂层，Services有清漆制造与组分/应用测试技术支持。因此本次只选工业非食品金属容器保护涂层作为ELO潜在评估方向，不将木器词或水性缺口转为已证。完整可见主营/产品segment/公司/技术服务/联系范围仅识别内外包装成品清漆/搪瓷/印后涂层/siza及定制服务，未识别ELO/ESBO/环氧植物油或同类生物基增塑稳定原料外售；BPA/BPANI或传统树脂成品名不自动等ELO输入。未逐项审读自称300多产品、全部配方/SDS、PDF、隐藏控制或关联法人，同行排除仅限实际公开经营范围，不捏外购或原料全内部自用。食品/FDA/BPANI/环境牌照/容量/出口客户等为公司营销不当我方食品接触合规、性能或采购证明。上轮NLW水性媒介尚未证实的结论继续保留；同一私有研究ID/域名/邮箱/Guayaquil账户转正式ELO，不新增第二NLW公司，不按产品/品牌/出口地重计。关于filiales的隐私模板并无具名控股方，不声称穷尽股权；Search出现Fadesa/Enlit只是金属包装制造，未从同业/近似价值观推所有权或合并预算。公开info@公司业务邮箱与电话一致，隐私权利专用通讯地址含ecubarnices拼写差异不选作商业邮箱。Contact虽含Proveedores/机会栏目并非正在采购ELO，未提交任何表单或招聘材料。业务地址Km24.5viaDauleGuayaquil按官网记录，地图是独立Guayaquil城市代表点非厂门。ELO仅资料支持的环氧功能/树脂改性潜在评估；现用化学体系、采购、相容、耐蚀改善、食品认证及时机未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱（非具名采购）",
+      "email": "info@ecuabarnices.com.ec",
+      "contactUrl": "https://ecuabarnices.com/contacto/"
+    },
+    "source": {
+      "label": "Ecuabarnices 官方工业金属容器保护涂层目录",
+      "url": "https://ecuabarnices.com/productos/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ecuabarnices-guayaquil": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chemisa-trapiche": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "quimicos-valperu-la-victoria": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chemifabrik-santa-anita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14557,6 +14585,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ecuabarnices-guayaquil": {
+  "website": "https://ecuabarnices.com/",
+  "contactPage": "https://ecuabarnices.com/contacto/",
+  "generalEmail": "info@ecuabarnices.com.ec",
+  "generalEmailEvidence": {
+    "company": "Ecuabarnices S.A.",
+    "value": "info@ecuabarnices.com.ec",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ecuabarnices 当前联系页公开业务邮箱",
+        "url": "https://ecuabarnices.com/contacto/",
+        "summary": "Contact与另四份已读自有业务HTML页脚明文/mailto一致info@ecuabarnices.com.ec；.com网站与.com.ec邮箱按自己明示对应，仅公司通用入口，不称具名采购或投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "+593 4 500 5410 Ext: 600 - 623",
+  "generalPhoneEvidence": {
+    "company": "Ecuabarnices S.A.",
+    "value": "+593 4 500 5410 Ext: 600 - 623",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ecuabarnices 当前官网公司业务电话",
+        "url": "https://ecuabarnices.com/contacto/",
+        "summary": "五份实际原文明示Teléfono:+59345005410Ext600-623，保留原显示格式及分机区间，不猜采购部门或由电话推WhatsApp。隐私段落另一数字排列不用于拨号。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "linkedIn": "https://ec.linkedin.com/company/ecuabarnices",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Guayaquil - Ecuador, Km. 24.5 vía a Daule (official published business address). Map uses separately sourced Guayaquil city representative point -2.19,-79.8875; not surveyed Km24.5 factory gate. About says facility30minutesfromcity; no administrative district or hidden corporate relocation inferred.",
+  "sources": [
+    {
+      "label": "自有开发制造与商业主体/联系信息；旧HTML复读无新GET",
+      "url": "https://ecuabarnices.com/"
+    },
+    {
+      "label": "实际内外包装成品涂层及工业非食品容器保护产品范围",
+      "url": "https://ecuabarnices.com/productos/"
+    },
+    {
+      "label": "本轮当前设施、自主制造及公司介绍",
+      "url": "https://ecuabarnices.com/nosotros/"
+    },
+    {
+      "label": "本轮清漆制造/组分与应用测试技术服务",
+      "url": "https://ecuabarnices.com/servicios/"
+    },
+    {
+      "label": "本轮公开业务联系表单/邮箱/电话/地址",
+      "url": "https://ecuabarnices.com/contacto/"
+    }
+  ]
+},
 "chemisa-trapiche": {
   "website": "https://chemisa.com.pe/",
   "contactPage": "https://chemisa.com.pe/contacto/",
@@ -44201,6 +44289,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ecuabarnices-guayaquil",
 "chemisa-trapiche",
 "quimicos-valperu-la-victoria",
 "chemifabrik-santa-anita",
