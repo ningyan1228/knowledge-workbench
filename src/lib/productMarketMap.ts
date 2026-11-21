@@ -14042,11 +14042,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "pinturas-promet-montevideo",
+    "company": "Pinturas Promet S.A.",
+    "productId": "elo",
+    "country": "Uruguay",
+    "countryZh": "乌拉圭",
+    "city": "Montevideo（官网工厂地址；城市示意点，非厂门）",
+    "latitude": -34.90556,
+    "longitude": -56.18417,
+    "legacyCompanyDescription": "乌拉圭Promet自主研发制造工业醇酸防腐涂料；蒙得维的亚自有工厂和实验室生产其工业DTM等成品。",
+    "signal": "Pinturas Promet在蒙得维的亚设有自有制漆工厂及实验室；Esmalte sintético industrial DTM为改性醇酸工业防腐底漆/自底面漆，用于金属制品和工业维护。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "独立核读Promet的Nosotros、产品目录首页、Contact、目录真实下一页、工业DTM具体产品、Home六份完整200HTML，累计6STOP，无失败、跳转或自动重试。公司明确自有工业工厂/实验室及制漆研发，1998创办、2010厂房和年产能力只是历史公司自述，不称2026新投产或实测产能。实际DTM正文为改性醇酸树脂、颜料和附着力助剂组成的工业防腐成品涂层，可作底漆或自底面漆，用于工业机械/金属制品及维护安装；按ELO资料coatings/树脂改性潜在评估，不推现用ELO、兼容、固化、防腐改善、替代、需求或采购时机。目录两页实际共29条成品，第一15条和第二14条均读，第二只余返回较新页；包括乳胶漆、建筑膜、工业醇酸防腐漆/底漆、木器清漆保护剂及合成面漆。产品中promotores de adherencia为成品配方成分，既不能据此当其外售CPP/CPO原料，也不能推其正在采购我方材料；蜡/PU清漆/稀释溶剂说明不是ELO/ESBO原料销售证据。在已读六页经营和可见29产品范围内未见ELO、ESBO、环氧植物油、生物基增塑稳定剂及同功能输入对外销售，限定已读范围，未审全部SDS/PDF/隐藏配方/股权，不编外购例外。官网页脚明确PINTURAS PROMET S.A，按同一保守账户收录；www与非www同域不拆。公开LinkedIn搜索提Carboline代理仅作关系待确认线索，不作已独立核实所有权/当前代理合同，也不把Carboline产品归自产；本次以官网自有醇酸DTM独立准入。与已收录Bosnia MEGATTI PROMET同名词无共同域名/地址/经营身份，未发现同集团证据，不以Promet词相同合并。公开联系方式只取自身Contact/Home一致promet@pinturaspromet.com.uy及Tel/Fax(598)23560700，通用业务邮箱非具名采购；无公开WhatsApp不猜，表单未提交、GoogleDrive技术/安全资料未打开不冒已读。工厂地址Av.Sayago1332Montevideo12900依官网；地图另取Montevideo城市代表坐标，不声称厂门定位。对外效果、耐蚀、抗菌、干燥/膜厚/耐温等客户宣传未移作我方性能。完整正式/根目录/私有/排除及历史源文件名称域名检查未见前史，搜索/计划命中不冒原始公司请求；六次终身预算后停止。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱（非具名采购）",
+      "email": "promet@pinturaspromet.com.uy",
+      "contactUrl": "https://pinturaspromet.com.uy/contacto"
+    },
+    "source": {
+      "label": "Pinturas Promet 当前工业DTM改性醇酸防腐涂料产品原文",
+      "url": "https://pinturaspromet.com.uy/pinturas/fondo-industrial-gris-claro-7dmxx"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-promet-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "brillo-tintas-santa-cruz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "monopol-bolivia-la-paz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ecuabarnices-guayaquil": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14641,6 +14669,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-promet-montevideo": {
+  "website": "https://pinturaspromet.com.uy/",
+  "contactPage": "https://pinturaspromet.com.uy/contacto",
+  "generalEmail": "promet@pinturaspromet.com.uy",
+  "generalEmailEvidence": {
+    "company": "Pinturas Promet S.A.",
+    "value": "promet@pinturaspromet.com.uy",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Promet官网Contact与Home公开业务邮箱",
+        "url": "https://pinturaspromet.com.uy/contacto",
+        "summary": "Contact在Administración y Planta industrial块明确E-mail: promet@pinturaspromet.com.uy，Home同值交叉核对，页脚同一PINTURAS PROMET S.A；通用公司入口，非具名采购/未测试投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "(598) 2356 0700",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Promet S.A.",
+    "value": "(598) 2356 0700",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Promet官网Contact工厂/行政业务Tel/Fax",
+        "url": "https://pinturaspromet.com.uy/contacto",
+        "summary": "Contact与Home公开Tel/Fax:(598)23560700，保留公司电话/传真组合标签，不冒私人采购或WhatsApp，也未实际拨打。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Administración y Planta industrial: Av. Sayago 1332, Montevideo, 12900, Uruguay. Map uses independently read Montevideo city representative point -34.90556,-56.18417, not a measured factory gate.",
+  "sources": [
+    {
+      "label": "自有制漆工厂、实验室与工业醇酸防腐研发",
+      "url": "https://pinturaspromet.com.uy/nosotros"
+    },
+    {
+      "label": "当前产品目录第一页15条成品",
+      "url": "https://pinturaspromet.com.uy/pinturas"
+    },
+    {
+      "label": "公开工厂业务邮箱/电话及地址",
+      "url": "https://pinturaspromet.com.uy/contacto"
+    },
+    {
+      "label": "实际下一页14条成品、有限经营范围排除",
+      "url": "https://pinturaspromet.com.uy/pinturas?offset=1578664451224"
+    },
+    {
+      "label": "具体工业DTM防腐底/面漆正文，技术文件未读",
+      "url": "https://pinturaspromet.com.uy/pinturas/fondo-industrial-gris-claro-7dmxx"
+    },
+    {
+      "label": "公司Home自有防腐业务、联系交叉核对及法人页脚",
+      "url": "https://pinturaspromet.com.uy/"
+    }
+  ]
+},
 "brillo-tintas-santa-cruz": {
   "website": "https://brillogroup.com.bo/brillotintas/",
   "contactPage": "https://brillogroup.com.bo/contactanos/",
@@ -44465,6 +44556,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-promet-montevideo",
 "brillo-tintas-santa-cruz",
 "monopol-bolivia-la-paz",
 "ecuabarnices-guayaquil",
