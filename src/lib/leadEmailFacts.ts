@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"mepco-duque-de-caxias": "I noticed that MEPCO manufactures Esmalte Base D’Água for wood, with preparation instructions for new wood and repainting.",
+"alvonil-sao-paulo": "I noticed that Alvonil manufactures water-based enamel for wood, using a styrene-acrylic copolymer emulsion in its listed formulation.",
 "navi-gold-paints-new-delhi": "I noticed that Navi Gold Paints Corporation lists Navi Plast solvent-based primers for polypropylene substrates among its manufactured products.",
 "satva-coating-ahmedabad": "I noticed that Satva Coating manufactures high-build epoxy topcoats, zinc phosphate primers and zinc-rich primers at its Ahmedabad facility.",
 "ogrady-coatings-middelburg": "I noticed that O’Grady manufactures Enviro Waterbased Varnish, a pure acrylic varnish for wood.",

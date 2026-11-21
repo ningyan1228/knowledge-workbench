@@ -13664,11 +13664,67 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "alvonil-sao-paulo",
+    "company": "Alvonil Indústria de Tintas e Vernizes Ltda",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "São Paulo（城市级示意，非厂门坐标）",
+    "latitude": -23.55,
+    "longitude": -46.633,
+    "legacyCompanyDescription": "巴西São Paulo自主制造建筑及木器涂料的企业，具有明确水性木器瓷漆技术说明。",
+    "signal": "自主制造涂料并开发水性瓷漆；原始三页技术说明将同一水性苯乙烯丙烯酸共聚乳液瓷漆用于木材，明确排除海洋胶合板。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "当前公司介绍明确自有生产设施、制造设备和涂料开发，原始三页水性瓷漆技术说明在第1/2页明确木材用途（排除海洋胶合板）及苯乙烯丙烯酸共聚乳液成品配方。主页、公司介绍及该技术说明所见为建筑、木器、特种涂层和配套成品，未见聚烯烃/氯化聚烯烃分散体或同类附着促进原料对外销售；配方中使用乳液不等于销售该原料。排除结论限已读有限经营及成品资料，非全部SKU、SDS或股权审计。公司名称、Chico/Oliveira家族沿革与Alvonil品牌按同一账户处理，不拆品牌或厂址。技术说明第3页有墙面/其他涂料复用段落，不借作木材施工依据。当前官网与技术说明披露不同邮箱/电话，保留原始差异；所选通用渠道仅依据当前官网，不冒具名采购。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱、电话及实际WhatsApp",
+      "email": "alvonil@alvonil.com",
+      "contactUrl": "https://alvonil.com.br/"
+    },
+    "source": {
+      "label": "Alvonil 原始三页水性瓷漆技术说明与自主制造介绍",
+      "url": "https://alvonil.com.br/wp-content/uploads/2025/03/BOLETIM-TECNICO-Esmalte-base-agua.pdf"
+    },
+    "checkedAt": "2026-11-21"
+  },
+  {
+    "id": "mepco-duque-de-caxias",
+    "company": "MEPCO do Brasil Industrial de Aditivos Químicos Ltda",
+    "productId": "nl-w1201",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Duque de Caxias, RJ（城市级示意，非厂门坐标）",
+    "latitude": -22.78583,
+    "longitude": -43.31194,
+    "legacyCompanyDescription": "巴西Duque de Caxias自有涂料工厂与实验室的制造企业，Esmalte Base D’Água明确用于木材。",
+    "signal": "官网披露自有制造工厂与实验室；Esmalte Base D’Água具体成品正文明确用于木材，并分别列出新木和木材重涂准备方法。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "主页正文明确自有制造工厂和实验室，Esmalte Base D’Água具体产品正文明确水性及木材用途，并列新木/木材重涂准备与自有制造、实验室测试说明。主页可见工业、建筑、汽车、船舶、地坪、溶剂、润滑/脱模、添加剂和防水密封等产品路线，已读添加剂目录具体为清洁和冷却液等；未见聚烯烃/氯化聚烯烃分散体或同类附着促进原料对外销售。普通acrylic resin、颜色binder及成品塑料封闭底涂名称不自动等于聚烯烃原料，也不推定其未读叶页化学组成。结论限已读有限经营目录，非全SKU、配方、SDS或股权审计。MEPCO Industrial、MEPCO do Brasil和Top产品线按一户处理；与其他国家同名金属粉品牌不凭近似名字并户。自述工厂面积、认证、成品防霉/不黄变和施工性能不作为我方材料验证或采购证据。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱、电话及实际WhatsApp",
+      "email": "comercial@mepco.com.br",
+      "contactUrl": "https://mepco.com.br/"
+    },
+    "source": {
+      "label": "MEPCO 自有工厂与具体水性木器瓷漆产品原文",
+      "url": "https://mepco.com.br/esmalte-base-dagua/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"mepco-duque-de-caxias": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
+"alvonil-sao-paulo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "navi-gold-paints-new-delhi": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "satva-coating-ahmedabad": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "ogrady-coatings-middelburg": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14249,6 +14305,110 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"mepco-duque-de-caxias": {
+  "website": "https://mepco.com.br/",
+  "contactPage": "https://mepco.com.br/",
+  "generalEmail": "comercial@mepco.com.br",
+  "generalEmailEvidence": {
+    "company": "MEPCO do Brasil Industrial de Aditivos Químicos Ltda",
+    "value": "comercial@mepco.com.br",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前公司官网公开业务邮箱",
+        "url": "https://mepco.com.br/",
+        "summary": "当前Home及两个实际页面Footer明确comercial@mepco.com.br，为公司通用商业业务邮箱，非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "(21) 3654-7603",
+  "generalPhoneEvidence": {
+    "company": "MEPCO do Brasil Industrial de Aditivos Químicos Ltda",
+    "value": "(21) 3654-7603",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前公司官网公开业务电话",
+        "url": "https://mepco.com.br/",
+        "summary": "官网Footer明确公布此公司业务号码，保留原文格式；WhatsApp仅依据实际链接而非电话推断。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/552136547603",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Avenida Calombé, 1373, Chácara Rio-Petrópolis, Duque de Caxias, RJ, CEP 25230-050, Brazil. Published company business address; approximate city map marker, not a surveyed factory gate.",
+  "sources": [
+    {
+      "label": "自有工厂与实验室、主营目录及公司业务渠道",
+      "url": "https://mepco.com.br/"
+    },
+    {
+      "label": "同一水性瓷漆成品木材应用及施工准备",
+      "url": "https://mepco.com.br/esmalte-base-dagua/"
+    },
+    {
+      "label": "实际流体及添加剂目录：清洁剂和冷却液",
+      "url": "https://mepco.com.br/fluidos-e-aditivos/"
+    }
+  ]
+},
+"alvonil-sao-paulo": {
+  "website": "https://alvonil.com.br/",
+  "contactPage": "https://alvonil.com.br/",
+  "generalEmail": "alvonil@alvonil.com",
+  "generalEmailEvidence": {
+    "company": "Alvonil Indústria de Tintas e Vernizes Ltda",
+    "value": "alvonil@alvonil.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前公司官网公开业务邮箱",
+        "url": "https://alvonil.com.br/",
+        "summary": "当前Home/About Footer明确Email: alvonil@alvonil.com；原样保留.com，不静默替换为技术说明另列的.com.br，不冒称具名采购或验证送达。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "(11) 2741-8435",
+  "generalPhoneEvidence": {
+    "company": "Alvonil Indústria de Tintas e Vernizes Ltda",
+    "value": "(11) 2741-8435",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前公司官网公开业务电话",
+        "url": "https://alvonil.com.br/",
+        "summary": "官网Footer明确公布此公司业务号码，保留原文格式；WhatsApp仅依据实际链接而非电话推断。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://web.whatsapp.com/send?phone=551127418435&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!s!",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Av. Líder, 125/145, Cidade Líder, São Paulo, SP, CEP 03586-000, Brazil. Published technical-bulletin business address; approximate city map marker, not a surveyed factory gate.",
+  "sources": [
+    {
+      "label": "当前产品路线和公司公开业务渠道",
+      "url": "https://alvonil.com.br/"
+    },
+    {
+      "label": "自主制造、设备和产品开发沿革",
+      "url": "https://alvonil.com.br/sobre/"
+    },
+    {
+      "label": "实际三页水性瓷漆技术说明：木材及成品配方",
+      "url": "https://alvonil.com.br/wp-content/uploads/2025/03/BOLETIM-TECNICO-Esmalte-base-agua.pdf"
+    }
+  ]
+},
 "navi-gold-paints-new-delhi": {
   "website": "https://www.navigoldpaint.com/",
   "contactPage": "https://www.navigoldpaint.com/polypropylene-primer.html",
@@ -43265,6 +43425,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"mepco-duque-de-caxias",
+"alvonil-sao-paulo",
 "navi-gold-paints-new-delhi",
 "satva-coating-ahmedabad",
 "ogrady-coatings-middelburg",
