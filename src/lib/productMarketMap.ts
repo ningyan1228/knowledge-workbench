@@ -14149,11 +14149,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "pinturas-nice-guatemala-city",
+    "company": "Pinturas Nice",
+    "productId": "elo",
+    "country": "Guatemala",
+    "countryZh": "危地马拉",
+    "city": "Ciudad de Guatemala（官网Bolivar销售地址；城市示意点，非厂门）",
+    "latitude": 14.633,
+    "longitude": -90.5,
+    "legacyCompanyDescription": "危地马拉自有制漆企业，AnticorrosivoFastDry为户外金属结构用醇酸防腐漆。",
+    "signal": "Pinturas Nice在危地马拉自有制漆生产与研发；Anticorrosivo Fast Dry为醇酸树脂防护漆，明确户外金属结构用途。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "独立核读Home、目录HTML、目录实际引用的公开客户端文件（仅静态文本/25项产品数据，不执行）及具体AnticorrosivoFastDry四次200原始响应，前史0+4/rem2，无跳转失败自动重试/PDF/公司JS执行。Home明确自身制造、生产厂、持续研发与工业保护产品，不以行业标签或销售点作制造证。实际目录HTML只有框架，未假称其有完整产品；按真实script.src读公开25项静态产品数据，未猜API/拿密钥/登录/绕过权限。由代码已明示catalogo和产品ID构造具体详情地址，实际200正文明确AnticorrosivoFastDry、Resinaalquidica、户外/金属结构保护、Thinnerlaca；不凭JS字面量单独放行，更不把醇酸说为环氧树脂。ELO只按TDS涂料柔韧性/树脂改性潜在评估，不承诺防腐改善、相容、替代或已采购。实际25项静态目录全文及Home可见范围涵盖建筑/油漆/丙烯酸/可洗/防腐普通及快干/防水/清漆/交通泳池/腻子/锌铬底漆/汽车漆/玻纤修补树脂/玻纤及干燥催化配套/合成醇酸漆/Faxtil/Antigrava/PU底漆透明漆及稀释催化/木器封闭剂；普通玻纤修补树脂、PU催化硬化配套与溶剂不是原文已证ELO/ESBO/环氧化植物油或生物增塑输入，未见所选同类输入外售。结论限实际已读25项数据及三个HTML，未读其他24个详情/SDS/图片、隐藏全目录/工商股权，不将Faxtil水性名称与Thinner矛盾归一或借用其性能。Home主Contact及三个同公司HTML的公开服务端页面数据直接写Email:pinturasnice@hotmail.com，未从保护占位猜邮箱、未解码Cloudflare或执行远程脚本；Hotmail为实际公开公司一般业务渠道而非具名采购/投递有效保证。主电话+50230460414与真实wa.me/50230460414分别页面明示，不由电话猜账号，不开聊天或发送。catalog名PinturasNiceSA、NiceColor/AutoNice与同域和七销售点按一个保守账户；其他国家泛称Nice不凭同名合并，不推隐藏集团。Home有一个生产厂自述但七点均Puntodeventa，Bolivar地址2AVENIDAZona838-53CiudaddeGuatemala是销售业务地址而非已知厂址；城市代表14.633,-90.500来自此前已实际读原始Guatemala参考L414-415，不新增取源/抄别家公司坐标，不当厂门。10年/5k/100%与页脚2026只是网页自述，不作人数、认证或2026投产。客户现用ELO、采购、参数适配及性能未知；发送台账未知，无就绪信件、外联或CRM。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱（非具名采购）",
+      "email": "pinturasnice@hotmail.com",
+      "contactUrl": "https://pinturasnice.com.gt/#contact"
+    },
+    "source": {
+      "label": "Nice当前AnticorrosivoFastDry具体醇酸金属防护漆原文",
+      "url": "https://pinturasnice.com.gt/catalogo/productos/anticorrosivo-fast-dry"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-nice-guatemala-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "distribuidora-el-mosaico-guatemala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "dicolor-alajuela": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ramalux-barros-blancos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14752,6 +14780,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-nice-guatemala-city": {
+  "website": "https://pinturasnice.com.gt/",
+  "contactPage": "https://pinturasnice.com.gt/#contact",
+  "generalEmail": "pinturasnice@hotmail.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas Nice",
+    "value": "pinturasnice@hotmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Nice官网公开Contact/页脚服务端页面数据原样邮箱",
+        "url": "https://pinturasnice.com.gt/",
+        "summary": "Home Contact及目录、具体产品三个公开原始HTML响应的服务端页面数据直接写Email:pinturasnice@hotmail.com；可见邮箱为保护占位，未解码/猜地址或执行代码，非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "+502 3046 0414",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Nice",
+    "value": "+502 3046 0414",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Nice官网主Contact一般业务电话",
+        "url": "https://pinturasnice.com.gt/#contact",
+        "summary": "Home主联系块及页脚明确+50230460414，并与Bolivar销售点对应；其他六销售点各自号码不混拼，不冒工厂/采购专线。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/50230460414",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Bolivar punto de venta: 2 AVENIDA Zona 8 38-53, Ciudad de Guatemala, Guatemala. Published sales business address, not a verified factory location. Map uses independently read city representative point 14.633,-90.500.",
+  "sources": [
+    {
+      "label": "明确自己制漆/生产厂/研发与主Contact和销售点",
+      "url": "https://pinturasnice.com.gt/"
+    },
+    {
+      "label": "实际目录框架/公司名称，非产品正文",
+      "url": "https://pinturasnice.com.gt/catalogo/productos/"
+    },
+    {
+      "label": "公开目录文件25项静态产品经营数据；仅审读未执行",
+      "url": "https://pinturasnice.com.gt/_next/static/chunks/app/catalogo/productos/page-663d90c77c67849d.js"
+    },
+    {
+      "label": "实际具体快干醇酸防腐漆/户外金属结构用途",
+      "url": "https://pinturasnice.com.gt/catalogo/productos/anticorrosivo-fast-dry"
+    }
+  ]
+},
 "distribuidora-el-mosaico-guatemala": {
   "website": "https://www.distelmosaico.com/",
   "contactPage": "https://www.distelmosaico.com/contacto.html",
@@ -44791,6 +44875,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-nice-guatemala-city",
 "distribuidora-el-mosaico-guatemala",
 "dicolor-alajuela",
 "ramalux-barros-blancos",
