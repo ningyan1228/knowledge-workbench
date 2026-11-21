@@ -14123,11 +14123,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "distribuidora-el-mosaico-guatemala",
+    "company": "Distribuidora El Mosaico",
+    "productId": "nl-w1201",
+    "country": "Guatemala",
+    "countryZh": "危地马拉",
+    "city": "Guatemala（国家示意点；城市/厂址未公开）",
+    "latitude": 15.5,
+    "longitude": -90.25,
+    "legacyCompanyDescription": "危地马拉自制木器染色产品企业；TintesAgua明确水稀释用于新木材和人造木板。",
+    "signal": "El Mosaico在危地马拉制造水稀释木器染色产品；Tintes Agua明确用于新木材、durpanel和plywood，水稀释后涂覆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "独立核读Nosotros、Home、具体TintesAgua、Contacto、FAQGenerales五完整200HTML，前史0/本轮5/rem1，无失败跳转自动重试/PDF/公司脚本执行。Nosotros明确自己制作水性/油性木器染色产品、粉末漆、彩色porcelanas和金属粉，并反复说明自己制造/生产流程，FAQ称目录外可询问制造时间；不因名称Distribuidora标签排除真实下游制造，也不将销售愿景单独当自产。TintesAgua真实具体正文为新木材/durpanel/plywood染色，1oz加2.5L水后刷/喷/wipe，干后再上封闭剂/清漆；这是水稀释木器表面染色产品，不称液体丙烯酸/聚氨酯成膜清漆、聚烯烃配方、现用NLW或需直接往现售染色剂加料。NLW仅木材底涂/表面处理及附着促进潜在评估，不作相容/性能/客户需求保证。五页实际完整可见经营分类为上述五类，未见对外售同类水性PO/CPO乳液/聚烯烃分散体或附着促进输入；普通色粉/金属粉/木器色剂不自动等所选PO输入。这是限定实际五页可见范围，不称已读其余四具体产品页、隐藏全目录/配方SDS或工商股权；FAQ明说部分产品不在目录，未知范围保持边界，不编外购例外。公司/LaEstrella自有品牌/实际distelmosaico域名及页面明确distribuidoraelmosaico链接一个保守账户，不把泛称LaEstrella的其他国家公司合并，不猜法人后缀。Contacto表单在移除HTML注释后仍为真实POSTcontacto.php表单，未提交/探测后台；谢谢/成功消息模板不当实际联系已发生。WhatsApp为五页实际socicon-whatsapp锚链https://wa.link/ruhke2，未展开短链/发消息/猜手机号。FAQ最后明确投诉跟进66401901选原格式一般业务渠道，不冒采购或WhatsApp；仅说可发邮件不构造未披露邮箱，公开邮箱缺项。未公开城市/街道/工厂地址，地图仅用独立Guatemala国家代表点15.5,-90.25，不复制首都或别家公司坐标，不称厂门。100%guatemalteca为本土自述非国有/股权核验；20年/2020页脚不作2026投产或认证。发送台账未知，无可投递就绪稿，仅正式后检查条件生成。"
+    },
+    "contact": {
+      "label": "官网联系表单及公开WhatsApp（未披露业务邮箱）",
+      "contactUrl": "https://www.distelmosaico.com/contacto.html"
+    },
+    "source": {
+      "label": "El Mosaico当前具体TintesAgua木器水稀释染色产品原文",
+      "url": "https://www.distelmosaico.com/tintesagua.html"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"distribuidora-el-mosaico-guatemala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "dicolor-alajuela": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ramalux-barros-blancos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-promet-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14725,6 +14752,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"distribuidora-el-mosaico-guatemala": {
+  "website": "https://www.distelmosaico.com/",
+  "contactPage": "https://www.distelmosaico.com/contacto.html",
+  "generalPhone": "66401901",
+  "generalPhoneEvidence": {
+    "company": "Distribuidora El Mosaico",
+    "value": "66401901",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "El Mosaico官网FAQ一般业务跟进电话",
+        "url": "https://www.distelmosaico.com/faqsgenerales.html",
+        "summary": "FAQ最后明示markar al66401901联系其顾问跟进，保留原格式，非采购专线/具名人/WhatsApp号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.link/ruhke2",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "City, street and factory address were not disclosed in the five own pages read. Map uses Guatemala country representative point 15.5,-90.25, not an office/factory or asserted Guatemala City location.",
+  "sources": [
+    {
+      "label": "明确自有制造与LaEstrella品牌、实际经营类别",
+      "url": "https://www.distelmosaico.com/nosotros.html"
+    },
+    {
+      "label": "首页完整可见五类产品及真实导航",
+      "url": "https://www.distelmosaico.com/"
+    },
+    {
+      "label": "具体水稀释木材染色用途及使用说明",
+      "url": "https://www.distelmosaico.com/tintesagua.html"
+    },
+    {
+      "label": "移除注释后真实联系表单与实际WhatsApp锚链",
+      "url": "https://www.distelmosaico.com/contacto.html"
+    },
+    {
+      "label": "目录外制造自述与一般业务电话",
+      "url": "https://www.distelmosaico.com/faqsgenerales.html"
+    }
+  ]
+},
 "dicolor-alajuela": {
   "website": "https://dicolorcr.com/",
   "contactPage": "https://dicolorcr.com/dicolor_contacto.html",
@@ -44719,6 +44791,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"distribuidora-el-mosaico-guatemala",
 "dicolor-alajuela",
 "ramalux-barros-blancos",
 "pinturas-promet-montevideo",
