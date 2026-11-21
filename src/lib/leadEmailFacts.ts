@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"monopol-bolivia-la-paz": "I noticed that Monopol Bolivia manufactures water-based Latex coatings for wood and other building surfaces.",
 "ecuabarnices-guayaquil": "I noticed that Ecuabarnices manufactures protective coatings for industrial metal containers used for paints, lubricants and adhesives.",
 "chemisa-trapiche": "I noticed that Chemisa manufactures industrial coatings and lists ANTICORROSIVO EPOXICO CH-50 in its industrial range.",
 "quimicos-valperu-la-victoria": "I noticed that Químicos Valperú manufactures Seriflex PP solvent-based screen-printing ink for treated rigid and flexible polypropylene and polyethylene.",

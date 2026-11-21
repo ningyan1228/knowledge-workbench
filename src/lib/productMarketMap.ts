@@ -13988,11 +13988,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "monopol-bolivia-la-paz",
+    "company": "Monopol Ltda. (Pinturas Monopol, Bolivia)",
+    "productId": "nl-w1201",
+    "country": "Bolivia",
+    "countryZh": "玻利维亚",
+    "city": "La Paz（官网业务城市；城市级示意点，非Villa Fátima厂门）",
+    "latitude": -16.49583,
+    "longitude": -68.13333,
+    "legacyCompanyDescription": "玻利维亚本地制漆企业，生产水性建筑漆及其他涂料；水性Látex系列明确包含木材用途。",
+    "signal": "Monopol Bolivia 自制涂料；官网列出 Látex Tradicional 等水性漆，并明确适用于木材等建筑表面。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "实际六次定向请求不重置：Calidad/Empresa/Products/Contact/具体水性防腐产品五份200HTML，木材分类一次GET失败无正文亦计额，累计6STOP。Calidad原文明确从原料控制到成品包装的制漆流程，并在NB1021水性建筑漆标题下列LátexTradicional/2000/Satinado/Superlátex/Tropical，紧接说明适用于madera及其他建筑表面；本次NL-W1201只采用这组实际水性漆的木材用途。Empresa为Bolivia自身1948Reznicek兄弟起源、LaPaz/SantaCruz/Cochabamba工厂及2021醇酸树脂反应器沿革，保留真实树脂制造和工业/汽车品牌代理，不虚构仅销售成品或所有树脂内部自用。具体ANTICORROSIVAACRÍLICOALAGUA确为水性，但其正文仅galvanizadas/metálicasengeneral，导航Aluminio和相关ANTICORROSIVAALUMINIO商品名不能补该产品铝材；不将NLW铝材TDS泛化铁/镀锌，也不把工业防腐性能转给我方。Products实际page1共18/74项及完整可见主营导航、公司和质量/联系范围未见PO/CPO乳液、聚烯烃分散体或同类附着促进原料外售；醇酸树脂/一般丙烯酸成品不等所选PO输入。同行排除限定实际五份业务原文，未读余56商品详情、全部配方/SDS、所有代表品牌子站、失败分类及具体PDF，未审隐藏股权，不保证所有未披露SKU或编外购例外。BoliviaMonopolLtda/pinturasmonopol.com、Reznicek历史、Pintec/ExpertColor/工业汽车子站及多城市分支一账户；已正式瑞士MonopolAG/monopol-colors.ch为另一已核公开主体，不凭近似名称误并，也不声称穷尽全球同名股权。2014Pintuco明确商业联盟，不能据此推Pintuco/Akzo控股或独立新集团；公开材料未披露其他母公司，保留未知。公开asesoria@为客户服务通用业务邮箱，800-10-1400为真实显示呼叫中心号码，tel:+591800101400仅原始href不改写号码。实际wa.me/+59178888585可见，非由电话猜WhatsApp。只观察未提交联系、商城、招工、ConectaPintor或CRM投诉入口；创始人不当当前采购。ISO/IBNORCA/认证十项/施工安全/环保无铅铬/无需WashPrimer/模板20kproducts和访客数不作独立认证、我方性能或需求；NLW仅木材底涂/附着促进潜在评估，客户现用PO材料、相容、采购和时机均未确认。VillaFátimaCalleCovendo1为官网业务地址，地图为另读LaPaz城市代表点非厂门。"
+    },
+    "contact": {
+      "label": "官网公开客户服务通用业务邮箱（非具名采购）",
+      "email": "asesoria@pinturasmonopol.com",
+      "contactUrl": "https://www.pinturasmonopol.com/contacto/"
+    },
+    "source": {
+      "label": "Monopol Bolivia 官方水性Látex系列及木材用途/自身制漆流程",
+      "url": "https://www.pinturasmonopol.com/calidad/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"monopol-bolivia-la-paz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ecuabarnices-guayaquil": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chemisa-trapiche": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "quimicos-valperu-la-victoria": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -14585,6 +14613,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"monopol-bolivia-la-paz": {
+  "website": "https://www.pinturasmonopol.com/",
+  "contactPage": "https://www.pinturasmonopol.com/contacto/",
+  "generalEmail": "asesoria@pinturasmonopol.com",
+  "generalEmailEvidence": {
+    "company": "Monopol Ltda. (Pinturas Monopol, Bolivia)",
+    "value": "asesoria@pinturasmonopol.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Monopol Bolivia 当前官网Servicio al Cliente业务邮箱",
+        "url": "https://www.pinturasmonopol.com/contacto/",
+        "summary": "Contact明文ServicioalCliente与mailto一致asesoria@pinturasmonopol.com，另四实际业务页footer一致。通用客户服务/技术咨询入口，不称具名采购或已测投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "800-10-1400",
+  "generalPhoneEvidence": {
+    "company": "Monopol Ltda. (Pinturas Monopol, Bolivia)",
+    "value": "800-10-1400",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Monopol Bolivia 当前官网Call Center公开业务电话",
+        "url": "https://www.pinturasmonopol.com/contacto/",
+        "summary": "Contact与其他四业务页均显示800-10-1400；仅保留实际显示，原tel:+591800101400不用于猜改本地免费号码或采购个人。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/+59178888585",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Villa Fátima, Calle Covendo #1, La Paz, Bolivia (official published business address and own plant-history city). Map uses independently sourced La Paz city representative point -16.49583,-68.13333; not surveyed factory gate or exact street geocode.",
+  "sources": [
+    {
+      "label": "当前水性Látex系列、明确木材用途及制漆质量流程",
+      "url": "https://www.pinturasmonopol.com/calidad/"
+    },
+    {
+      "label": "玻利维亚自身制造沿革、醇酸树脂反应器和代理业务",
+      "url": "https://www.pinturasmonopol.com/empresa/"
+    },
+    {
+      "label": "实际本页18/74商品及可见主营导航，未声称全SKU审读",
+      "url": "https://www.pinturasmonopol.com/productos/"
+    },
+    {
+      "label": "公开业务邮箱、CallCenter、真实WhatsApp及地址",
+      "url": "https://www.pinturasmonopol.com/contacto/"
+    },
+    {
+      "label": "独立水性防腐成品，仅通用金属/镀锌表述，不拼成木材或铝材证据",
+      "url": "https://www.pinturasmonopol.com/producto/anticorrosiva-acrilico-al-agua/"
+    }
+  ]
+},
 "ecuabarnices-guayaquil": {
   "website": "https://ecuabarnices.com/",
   "contactPage": "https://ecuabarnices.com/contacto/",
@@ -44289,6 +44377,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"monopol-bolivia-la-paz",
 "ecuabarnices-guayaquil",
 "chemisa-trapiche",
 "quimicos-valperu-la-victoria",

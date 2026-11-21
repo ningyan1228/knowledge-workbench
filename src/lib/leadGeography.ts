@@ -8,7 +8,7 @@ const countriesByContinent: Partial<Record<Continent, string[]>> = {
   亚洲: ['Armenia', 'Azerbaijan', 'Bangladesh', 'China', 'India', 'Indonesia', 'Israel', 'Japan', 'Jordan', 'Malaysia', 'Nepal', 'Pakistan', 'Philippines', 'Saudi Arabia', 'Singapore', 'South Korea', 'Sri Lanka', 'Taiwan', 'Thailand', 'United Arab Emirates', 'Uzbekistan', 'Vietnam'],
   欧洲: ['Albania', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Italy', 'Kosovo', 'Latvia', 'Lithuania', 'Luxembourg', 'Moldova', 'Netherlands', 'North Macedonia', 'Poland', 'Portugal', 'Romania', 'Russia', 'Serbia', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
   北美洲: ['Canada', 'Dominican Republic', 'El Salvador', 'Guatemala', 'Mexico', 'United States'],
-  南美洲: ['Argentina', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Paraguay', 'Peru', 'Uruguay'],
+  南美洲: ['Argentina', 'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Paraguay', 'Peru', 'Uruguay'],
   非洲: ['Algeria', 'Côte d’Ivoire', 'Egypt', 'Ethiopia', 'Ghana', 'Kenya', 'Libya', 'Morocco', 'Namibia', 'Nigeria', 'Senegal', 'South Africa', 'Tanzania', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'],
   大洋洲: ['Australia', 'New Zealand'],
 }
