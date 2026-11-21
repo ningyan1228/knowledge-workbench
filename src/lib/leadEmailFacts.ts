@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"chemisa-trapiche": "I noticed that Chemisa manufactures industrial coatings and lists ANTICORROSIVO EPOXICO CH-50 in its industrial range.",
 "quimicos-valperu-la-victoria": "I noticed that Químicos Valperú manufactures Seriflex PP solvent-based screen-printing ink for treated rigid and flexible polypropylene and polyethylene.",
 "chemifabrik-santa-anita": "I noticed that Chemifabrik manufactures BONN EPOXI 720 ZnP, a zinc-phosphate-reinforced epoxy coating for anticorrosive protection.",
 "miro-lacas-san-justo": "I noticed that Miró Lacas y Barnices manufactures HIDROLAKE water-based polyurethane coatings for protecting and finishing interior wood surfaces.",

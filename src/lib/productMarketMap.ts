@@ -13934,11 +13934,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "chemisa-trapiche",
+    "company": "Chemisa",
+    "productId": "elo",
+    "country": "Peru",
+    "countryZh": "秘鲁",
+    "city": "Trapiche（官网地图查询名，行政区未核验；地图为秘鲁国家级示意）",
+    "latitude": -10,
+    "longitude": -76,
+    "legacyCompanyDescription": "Chemisa/CHEMICAL MINING S.A. 自述涂料工厂与工业环氧防腐产品目录；CH-50独立详情页无产品正文。",
+    "signal": "Chemisa 官网自述自有涂料工厂，工业产品目录列有 ANTICORROSIVO EPOXICO CH-50 等环氧防腐涂料；独立CH-50详情页无产品正文。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "实际Home将Chemisa与CHEMICALMININGS.A.1982历史相连，并用现在时说明当前工厂涂料制造，工业目录以实际文本列CH50/CH60环氧防腐及多项ChemiEpoxy产品。选定CH50独立叶页200但只有标题metadata与共用导航/页脚，无产品正文；故公司事实明确来源Home目录，不捏具体组分、性能或已读TDS。实际外售LíneaQuímica公开列醇酸/聚酯/马来酸/丙烯酸/聚合油/环氧酯/三聚氰胺系列，含一个pruebaproducto测试条目不当真实材料。定向核实两个可能混淆条目：EPOXIRESEPOM60明确是以蓖麻油共轭脂肪酸为基础的环氧酯树脂，GZ4明确来自鱼油热聚合；不是凭epoxi/aceite字样推为环氧植物油，也不把鱼油改写成亚麻油。制造涂料并外售常规成膜树脂本身不等同外售ELO/ESBO/环氧植物油或同类生物基增塑稳定输入；有限实际所读主营、完整可见化学目录及两项油/环氧酯说明未识别该类所选输入外售。未审其余树脂逐项配方、两DOC、其它PDF/全SKU/隐藏控制，同行排除限实际经营范围，不声称穷尽审计或确认外购。Chemisa/CHEMICALMININGS.A.各系列同一账户，客户logo不当子公司；历史chemical/mininginput三个命中只是旧行业词非该公司原文。实际一般联系表单、六原文一致公开通用邮箱/手机号与Home明示WhatsApp链接保留，无具名采购或投递测试。地图查询原文CHEMISA,93,Trapiche不当完整街道/行政区或厂门，采用独立地理来源秘鲁国家点10S76W，非Lima/Comas猜测。ELO仅环氧功能与树脂改性潜在材料评估；现用ELO、需求、配方相容、耐蚀效果、用量、采购时机和认证均未确认。"
+    },
+    "contact": {
+      "label": "官网公开公司通用业务邮箱（非具名采购）",
+      "email": "chemisa@chemisa.com.pe",
+      "contactUrl": "https://chemisa.com.pe/contacto/"
+    },
+    "source": {
+      "label": "Chemisa 当前官网自有工厂及工业防腐产品目录",
+      "url": "https://chemisa.com.pe/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chemisa-trapiche": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "quimicos-valperu-la-victoria": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chemifabrik-santa-anita": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "miro-lacas-san-justo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14529,6 +14557,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chemisa-trapiche": {
+  "website": "https://chemisa.com.pe/",
+  "contactPage": "https://chemisa.com.pe/contacto/",
+  "generalEmail": "chemisa@chemisa.com.pe",
+  "generalEmailEvidence": {
+    "company": "Chemisa",
+    "value": "chemisa@chemisa.com.pe",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chemisa 当前联系页明文公开业务邮箱",
+        "url": "https://chemisa.com.pe/contacto/",
+        "summary": "联系页与另五份官方原文一致chemisa@chemisa.com.pe，mailto一致；仅公司通用入口，无具名采购/研发邮箱或投递成功断言。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "+51 988 830 267",
+  "generalPhoneEvidence": {
+    "company": "Chemisa",
+    "value": "+51 988 830 267",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Chemisa 当前公开公司业务电话",
+        "url": "https://chemisa.com.pe/contacto/",
+        "summary": "联系页和另五份官方原文明确+51 988830267，并有tel:+51988830267；保留显示格式，不称个人/采购负责人。其它合并固定电话href不强拆或猜部门。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://api.whatsapp.com/send?phone=51988830267&text=Deseo%20informaci%C3%B3n%20sobre%20los%20productos%20de%20Chemisa",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Official Contact map embed query/title: CHEMISA, 93, Trapiche. This is a map search label, not an independently verified full street address or factory gate. Administrative district/city not original-confirmed; country Peru evidenced by own .com.pe business site, +51 published phone and local map label. Map deliberately uses separately sourced Peru country representative point -10,-76, not Comas/Lima/factory coordinates.",
+  "sources": [
+    {
+      "label": "当前工厂自述与工业CH50等防腐成品目录",
+      "url": "https://chemisa.com.pe/"
+    },
+    {
+      "label": "实际化学原料目录分类，非全配方/SDS审计",
+      "url": "https://chemisa.com.pe/quimico/productos-quimicos/"
+    },
+    {
+      "label": "EPOM60蓖麻油脂肪酸环氧酯原文，非推定环氧植物油",
+      "url": "https://chemisa.com.pe/producto-quimico/epoxires-epom-60/"
+    },
+    {
+      "label": "GZ4鱼油热聚合原文，不改写亚麻油",
+      "url": "https://chemisa.com.pe/producto-quimico/aceite-polimerizado-g-z-4/"
+    },
+    {
+      "label": "CH50叶页200但无产品正文，仅标题/共用壳，非技术详情证据",
+      "url": "https://chemisa.com.pe/servicio/anticorrosivo-epoxico-ch-50-2/"
+    },
+    {
+      "label": "实际一般联系表单/邮箱/电话及Trapiche地图查询名",
+      "url": "https://chemisa.com.pe/contacto/"
+    }
+  ]
+},
 "quimicos-valperu-la-victoria": {
   "website": "https://www.quimicosvalperu.com/",
   "contactPage": "https://www.quimicosvalperu.com/",
@@ -44109,6 +44201,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chemisa-trapiche",
 "quimicos-valperu-la-victoria",
 "chemifabrik-santa-anita",
 "miro-lacas-san-justo",
