@@ -14096,11 +14096,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "dicolor-alajuela",
+    "company": "Pinturas Dicolor",
+    "productId": "nl-w1201",
+    "country": "Costa Rica",
+    "countryZh": "哥斯达黎加",
+    "city": "Alajuela（官网Coyol业务地址；城市示意点，非厂门）",
+    "latitude": 10.017,
+    "longitude": -84.217,
+    "legacyCompanyDescription": "哥斯达黎加Dicolor自有制漆和研发企业，Prooftec水性丙烯酸清漆明确用于室内外木材等表面。",
+    "signal": "Dicolor是哥斯达黎加自有制漆及研发企业；Prooftec为水性丙烯酸清漆，明确用于室内外木材等表面的保护和装饰。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "独立核读DicolorNosotros、具体ProoftecBarniz、Home、Contacto四份完整200HTML，无失败/跳转/自动重试，前史0、本轮4/rem2。公司明确1991开始自产油性/水性漆和醇酸防腐漆，自有DepartamentoInvestigacionDesarrollo开发配方，当前为CostaRica制造企业且含木器线；不是从单一经销/服务标签推自产。Prooftec真实正文BaseAcrilica和barnizbaseagua，说明高性能乳液、水和助剂且明确木材/混凝土、室内外使用，本次NLW只按水性木材底涂/附着促进潜在评估，不猜乳液就是聚烯烃，不泛化混凝土/所有金属为NLW已验证用途。四页完整可见分类和Home约15特色卡覆盖建筑/防水/防腐/底漆密封/路标地坪/涂料稀释溶剂/特种/质感/木器清漆色漆/MasterLac配套/工业表面处理和成品体系；保留基于树脂/助剂的成品，不凭emulsion/PU/硅字样归同类POCPO原料。在实际已读可见经营范围未见PO/CPO乳液、聚烯烃分散体或同类附着促进输入外售；这是限定四页公开范围，不声称读完100余产品叶页/全部配方SDS/隐蔽股权，未读StofireH具体叶页或所有特殊产品，不编内部自用或外购例外。Prooftec/Omegga/DLujo/Galvatex/Platinum/MasterLac/IMC/Acryltop/Aquapox/Corropox和www/非www/业务邮箱连字符域名按一个CostaRica账户去重，通用名和其他国家同名无股权推断；官网未明示确切法人后缀不猜。Contacto主OFICINAS和footer均公开ventas@dicolor-cr.com，虽邮箱域名与网站dicolorcr.com不同也有自身原文明确对应，不改为猜测地址；不是具名采购。主联系块电话(506)2433-2727为选定原格式，页眉另2433-2828矛盾保留原文未混拼/宣称唯一号码，WhatsApp+(506)6263-5923及实际api链接单独验证，非由手机猜账号；不打开聊天或拨号。Nosotros公开创始/管理HeidyPicadoMayorga与EdgarRodriguez，不据此猜具名邮箱或采购权限，设计者LinkedIn不是买家。地址BarrioLaPlywood/INA150mSur75mEste/CoyolAlajuela为官方OFICINAS业务地址，城市Alajuela独立代表点不是工厂门/行政界实测。ProoftecFichaTecnica按钮为申请而非已读PDF，HojaSeguridad/使用指南未取，不凭本页低VOC/附着/耐久/迅速干燥/担保/免费配送/访客0计数或1991-2025页脚作我方性能和2026投产认证。真实需求/现用PO/采购和相容均未知；无邮件/表单/聊天/CRM，不生成可投递就绪稿，正式入库后只做条件功能生成核对。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱（非具名采购）",
+      "email": "ventas@dicolor-cr.com",
+      "contactUrl": "https://dicolorcr.com/dicolor_contacto.html"
+    },
+    "source": {
+      "label": "Dicolor当前Prooftec水性木材清漆具体产品原文",
+      "url": "https://dicolorcr.com/producto_para_madera_base_agua_prooftec_barniz.html"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"dicolor-alajuela": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ramalux-barros-blancos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-promet-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "brillo-tintas-santa-cruz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14697,6 +14725,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"dicolor-alajuela": {
+  "website": "https://dicolorcr.com/",
+  "contactPage": "https://dicolorcr.com/dicolor_contacto.html",
+  "generalEmail": "ventas@dicolor-cr.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas Dicolor",
+    "value": "ventas@dicolor-cr.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Dicolor官网Contacto主OFICINAS及footer原样邮箱",
+        "url": "https://dicolorcr.com/dicolor_contacto.html",
+        "summary": "官网明确Correo electrónico:ventas@dicolor-cr.com，四页同一公司亦公开相同地址；邮箱域名连字符差异有自身对应证据，不猜同域邮箱/具名采购/投递有效。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "(506) 2433-2727",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Dicolor",
+    "value": "(506) 2433-2727",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Dicolor官网Contacto主办公室业务电话",
+        "url": "https://dicolorcr.com/dicolor_contacto.html",
+        "summary": "主OFICINAS和footer均明确(506)2433-2727；页眉另有2433-2828保留原文，不拼改或称唯一电话；WhatsApp6263-5923是另一明确业务渠道。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://api.whatsapp.com/send?phone=50662635923",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "OFICINAS: Barrio La Plywood, del Instituto Nacional de Aprendizaje (INA) 150 m Sur y 75 m Este, Coyol, Alajuela, Costa Rica. Map uses independently read Alajuela city representative point 10.017,-84.217, not measured factory gate.",
+  "sources": [
+    {
+      "label": "明确自产制漆、配方研发和木器经营线",
+      "url": "https://www.dicolorcr.com/dicolor_nosotros.html"
+    },
+    {
+      "label": "当前Prooftec具体水性丙烯酸木材清漆",
+      "url": "https://dicolorcr.com/producto_para_madera_base_agua_prooftec_barniz.html"
+    },
+    {
+      "label": "当前可见成品/配套分类及约15特色产品卡",
+      "url": "https://dicolorcr.com/"
+    },
+    {
+      "label": "主OFICINAS业务联系、邮箱/电话/实际WhatsApp及地址",
+      "url": "https://dicolorcr.com/dicolor_contacto.html"
+    }
+  ]
+},
 "ramalux-barros-blancos": {
   "website": "https://www.ramalux.com.uy/index.html",
   "contactPage": "https://www.ramalux.com.uy/plantas.html",
@@ -44635,6 +44719,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"dicolor-alajuela",
 "ramalux-barros-blancos",
 "pinturas-promet-montevideo",
 "brillo-tintas-santa-cruz",

@@ -6,6 +6,7 @@ describe('customer map geography', () => {
   it('classifies every current customer location and handles new countries explicitly', () => {
     for (const lead of publicLeads) expect(continentOf(lead.country)).not.toBe('未分类')
     expect(continentOf('Mexico')).toBe('北美洲')
+    expect(continentOf('Costa Rica')).toBe('北美洲')
     expect(continentOf('Israel')).toBe('亚洲')
     expect(continentOf('Unknown')).toBe('未分类')
   })
