@@ -13772,11 +13772,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "colortek-dombivli",
+    "company": "Colortek (Colourtech Coating (India) Pvt. Ltd.)",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Dombivli（官网总部与工厂城市；城市级示意，非厂门）",
+    "latitude": 19.218433,
+    "longitude": 73.086718,
+    "legacyCompanyDescription": "印度特种涂层制造企业，Dombivli设有工厂及研发；AQUATRAP为玻璃容器及餐具用水性热固清漆。",
+    "signal": "在 Dombivli 自主配制、混合及制造涂层；AQUATRAP 是用于香水、酒类玻璃瓶及玻璃餐具的水性热固清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "实际读取当前FAQ、About、完整可见Products平台目录、Glass、Plastics及3D六页：公司明确在Dombivli内部配制、混合、测试并制造涂层，玻璃页将AQUATRAP明确为水性热固清漆，而ISOTRAP另为溶剂型，未将两者混用。About披露关键原料内部生产，保留这项事实，不猜未披露的原料成分或笼统称无原料业务。所读产品范围为玻璃、塑料、金属、陶瓷涂层及珠宝3D打印铸造树脂，实际塑料页的UVAC为施工底/面涂，3D页RACHAK为打印铸造用途；这些不因primer/resin字样自动等同向涂料配方厂供应聚烯烃或附着促进原料。所查可见经营范围未列水性聚烯烃乳液、PO/CPO分散体或同类原料级附着促进剂对外供应；结论限实际公开范围，不声称穷尽未披露配方、内部原料化学、SDS、金属/陶瓷未读叶页或最终股权。Colortek、Colourtech Coating、2007公司形式沿革、Dombivli工厂/研发及UAE办公室按一个账户，不能凭通用Colortek名称合并其他国家同名企业。客户的ISO/SGS/REACH/TSCA/FDA、耐酒精/耐水/低VOC及安全自述未独立审证，也不转为NL-W1201的认证、食品接触许可、配方相容或附着改善保证。"
+    },
+    "contact": {
+      "label": "官网公司通用业务邮箱（非具名采购）",
+      "email": "info@colortek.in",
+      "contactUrl": "https://colortek.in/faq/"
+    },
+    "source": {
+      "label": "Colortek官方AQUATRAP水性玻璃涂层及制造资料",
+      "url": "https://colortek.in/glass/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"colortek-dombivli": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
 "bepro-coatings-palmira": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "allchem-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "mepco-duque-de-caxias": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14361,6 +14389,70 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"colortek-dombivli": {
+  "website": "https://colortek.in/about/",
+  "contactPage": "https://colortek.in/faq/",
+  "generalEmail": "info@colortek.in",
+  "generalEmailEvidence": {
+    "company": "Colortek (Colourtech Coating (India) Pvt. Ltd.)",
+    "value": "info@colortek.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Colortek当前官网公开公司业务邮箱",
+        "url": "https://colortek.in/faq/",
+        "summary": "实际FAQ及全部所读页面页眉/页脚明确info@colortek.in，且mailto一致；页脚明确Colourtech Coating (India) Pvt. Ltd.，是公司通用业务入口，不猜具名采购或投递成功。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "+91 98193 62380",
+  "generalPhoneEvidence": {
+    "company": "Colortek (Colourtech Coating (India) Pvt. Ltd.)",
+    "value": "+91 98193 62380",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Colortek当前官网公开业务电话",
+        "url": "https://colortek.in/faq/",
+        "summary": "实际FAQ页首及Footer明确+91 98193 62380，tel:+919819362380一致；保留公开格式，未认定个人或采购职责。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/919819362380?text=Hi%20Colortek%2C%20I%20have%20a%20question.",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "B-37, MIDC Phase I, Kalyan Road, Golavali, Shilphata, Dombivli (E), 421 203, Maharashtra, India. Officially disclosed head office and plant; municipality marker, not a surveyed factory gate. UAE regional office is the same account.",
+  "sources": [
+    {
+      "label": "公司公开FAQ：制造、经营地与真实业务渠道",
+      "url": "https://colortek.in/faq/"
+    },
+    {
+      "label": "现行公司主体、自有配方制造及内部原料生产披露",
+      "url": "https://colortek.in/about/"
+    },
+    {
+      "label": "玻璃涂层完整分类及AQUATRAP水性热固体系",
+      "url": "https://colortek.in/glass/"
+    },
+    {
+      "label": "当前完整可见产品平台和配方制造流程",
+      "url": "https://colortek.in/products/"
+    },
+    {
+      "label": "塑料涂层与施工底/面涂实际用途",
+      "url": "https://colortek.in/plastics/"
+    },
+    {
+      "label": "RACHAK珠宝3D打印铸造树脂实际用途",
+      "url": "https://colortek.in/3d/"
+    }
+  ]
+},
 "bepro-coatings-palmira": {
   "website": "https://beprocoatings.com/home",
   "contactPage": "https://beprocoatings.com/home",
@@ -43588,6 +43680,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"colortek-dombivli",
 "bepro-coatings-palmira",
 "allchem-ciudad-mexico",
 "mepco-duque-de-caxias",
