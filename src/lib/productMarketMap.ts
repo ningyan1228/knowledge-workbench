@@ -14069,11 +14069,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "ramalux-barros-blancos",
+    "company": "Ramalux Pinturas",
+    "productId": "nl-w1201",
+    "country": "Uruguay",
+    "countryZh": "乌拉圭",
+    "city": "Barros Blancos–Canelones（官网工厂区域；城市示意点，非厂门）",
+    "latitude": -34.75417,
+    "longitude": -56.00417,
+    "legacyCompanyDescription": "乌拉圭自有丙烯酸及合成涂料制造商，Unika与Policasa产品线包含明确用于木材的水性UNIMUR漆。",
+    "signal": "Ramalux在Canelones自有工厂制造丙烯酸及合成涂料；UNIMUR PREMIUM CON ALGUICIDA为明确可用于木材和建筑表面的水性漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "独立核读Ramalux的Plantas、完整Productos、Empresa三份实际200HTML，无失败/重定向，累计3/rem3，不为用满额度多抓。Empresa明确自2002年自主制造丙烯酸和合成涂料、Unika及Policasa自有产品线、为客户制造特种产品并提供技术开发；Plantas明确两自有制漆厂在BarrosBlancos与JoaquinSuarez，实际业务是自产，不用“有工厂”泛称替代制造。当前完整目录中UNIKA水性Premium下具体UNIMUR PREMIUM CON ALGUICIDA明确Pinturaalagua和madera/建筑外表面，故NLW只采用此精确水性木材应用；该漆同时列一般金属不将NLW铝材泛化全部金属，目录独立LineaMadera的Protector为合成醇酸、BarnizPU等不能拼成水性木器清漆。产品原文22110字符完整阅读；自有水性/合成面漆、建筑防水膜、木器清漆、道路/泳池漆、底漆固色和稀释剂等成品及STR调色系统范围保留。STR实际是供自己水性成品的颜料/色浆和两基色调色系统，非原文已证PO/CPO分散体或附着促进原料；其“无需与合成体系乳化”是色浆机制，不能借词推聚烯烃乳液或先排除所有化工助剂。三页完整已读经营/目录中未见所选PO/CPO乳液、聚烯烃分散体或同类附着促进输入外售，限定已读范围，未审隐藏股权、全部配方/SDS/未公开原料交易，不编全部自产原料内部用或外购例外。Ramalux/Unika/Policasa/STR、www非www和两工厂为同一保守账户，不拆品牌厂址新计；官网没有明确法人后缀不猜。2002和3200平方米历史自述不当2026新产能投产/实测审厂，国有资本100%本土表述按其自述非工商股权验证。三页一致公开ventas@ramalux.com.uy及工厂电话22882157/22891071/22891899，仅选择首个原格式公开总机，无具名采购或WhatsApp推断。Plantas本身为公开业务联系来源且真实邮箱对应同域。Primary工厂Ruta8km23.500PuebloCapArtigasCanelones依官网，地图另读BarrosBlancos城市代表点，非厂门或独立行政界调查。NLW仅底涂/附着促进潜在评估，不保证水性木材体系兼容、附着提升、抗菌、耐候、性能或采购。无脚本执行、表单、邮件、消息、CRM、报价/样品请求，发送台账未知保持，不生成就绪稿。"
+    },
+    "contact": {
+      "label": "官网公开公司销售邮箱（非具名采购）",
+      "email": "ventas@ramalux.com.uy",
+      "contactUrl": "https://www.ramalux.com.uy/plantas.html"
+    },
+    "source": {
+      "label": "Ramalux完整当前目录中UNIMUR水性漆及明确木材用途",
+      "url": "https://ramalux.com.uy/productos.html"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ramalux-barros-blancos": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-promet-montevideo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "brillo-tintas-santa-cruz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "monopol-bolivia-la-paz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14669,6 +14697,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ramalux-barros-blancos": {
+  "website": "https://www.ramalux.com.uy/index.html",
+  "contactPage": "https://www.ramalux.com.uy/plantas.html",
+  "generalEmail": "ventas@ramalux.com.uy",
+  "generalEmailEvidence": {
+    "company": "Ramalux Pinturas",
+    "value": "ventas@ramalux.com.uy",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ramalux官方Plantas公开业务邮箱，Empresa/Productos交叉一致",
+        "url": "https://www.ramalux.com.uy/plantas.html",
+        "summary": "官网Plantas工厂业务块明确e-mail:ventas@ramalux.com.uy，与公司及目录页相同；公司销售公共入口，不是具名采购/投递测试。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "22882157",
+  "generalPhoneEvidence": {
+    "company": "Ramalux Pinturas",
+    "value": "22882157",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ramalux官网工厂公共业务电话",
+        "url": "https://www.ramalux.com.uy/plantas.html",
+        "summary": "原文Tels.:22882157-22891071-22891899，采用首个原格式电话22882157，属于工厂公开总机，不猜WhatsApp/私人采购或另拼号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Planta industrial Nº1: Ruta 8 km 23.500, Pueblo Cap. Artigas, Canelones, C.P.15500, Uruguay. Official plant page places its factories in Barros Blancos and Joaquín Suárez. Map uses independently read Barros Blancos city representative point -34.75417,-56.00417, not measured factory gate.",
+  "sources": [
+    {
+      "label": "自有两工厂、实际制漆及公开联系",
+      "url": "https://www.ramalux.com.uy/plantas.html"
+    },
+    {
+      "label": "完整当前产品目录，UNIMUR水性木材应用和STR调色经营边界",
+      "url": "https://ramalux.com.uy/productos.html"
+    },
+    {
+      "label": "自有制造与特种配方开发、Unika/Policasa身份",
+      "url": "https://www.ramalux.com.uy/empresa.html"
+    }
+  ]
+},
 "pinturas-promet-montevideo": {
   "website": "https://pinturaspromet.com.uy/",
   "contactPage": "https://pinturaspromet.com.uy/contacto",
@@ -44556,6 +44635,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ramalux-barros-blancos",
 "pinturas-promet-montevideo",
 "brillo-tintas-santa-cruz",
 "monopol-bolivia-la-paz",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"ramalux-barros-blancos": "I noticed that Ramalux manufactures UNIMUR PREMIUM CON ALGUICIDA, a water-based coating listed for wood and exterior building surfaces.",
 "pinturas-promet-montevideo": "I noticed that Pinturas Promet develops modified-alkyd DTM coatings for protecting metal products and maintaining industrial equipment.",
 "brillo-tintas-santa-cruz": "I noticed that Brillo Tintas develops BRILLODUR PU (2K) coatings for protecting weather-exposed metal surfaces.",
 "monopol-bolivia-la-paz": "I noticed that Monopol Bolivia manufactures water-based Latex coatings for wood and other building surfaces.",
