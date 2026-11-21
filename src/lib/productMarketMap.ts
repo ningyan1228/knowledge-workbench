@@ -13853,11 +13853,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "miro-lacas-san-justo",
+    "company": "Miró Lacas y Barnices",
+    "productId": "nl-w1201",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "San Justo（官网地名及城市级元信息坐标，非厂门实测）",
+    "latitude": -34.6802,
+    "longitude": -58.56,
+    "legacyCompanyDescription": "阿根廷木器漆自主制造商，研发水性系列并提供室内木材用HIDROLAKE水性聚氨酯涂层。",
+    "signal": "Miró 自制木器涂料并研发水性系列；HIDROLAKE 为用于室内木材保护和饰面的水性聚氨酯涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "官网公司沿革明确 Miró Lacas y Barnices 自主制造木器涂料及内部研发，2003年开发水性地板体系、2005年加入家具系列；当前 HIDROLAKE 具体原文为室内木材保护及饰面用水性聚氨酯成品，不将地板和家具时间线拼成该产品的特定工艺。实际完整可见产品线概览列硝基、脲基、丙烯酸、PU、UV、聚酯、合成、水性、着色/填孔、稀释剂及配套，另含环氧胶、金属底涂、海用清漆、脱漆和3M砂纸/PPE；这些成品名称及泛称polyurethane/raw materials不自动等聚烯烃原料。所读制造介绍、可见主营线、具体水性木器成品和联系原文未见 PO/CPO乳液、分散体或同类附着促进原料外售；限实际所读范围，未审全部配方/SDS/其他叶页及隐藏股权。Miró/MIRO与mirosrl.com及同SanJusto地址按一户，不由域名猜工商后缀，也不与美国Simiron按近似名合并。实际公开og:email元信息为ventas@mirosrl.com，四页一致；不冒称正文邮箱、具名采购或可投递已测。NL-W1201仅木材底涂/附着促进潜在评估，现用原料、相容、采购和时机未确认；客户成品耐磨、快干、低气味、紫外和耐候自述不转为我方性能保证。"
+    },
+    "contact": {
+      "label": "官网元信息公开通用业务邮箱（非具名采购）",
+      "email": "ventas@mirosrl.com",
+      "contactUrl": "https://mirosrl.com/form/contact"
+    },
+    "source": {
+      "label": "Miró HIDROLAKE 官方室内水性木器涂料页",
+      "url": "https://mirosrl.com/catalogo-de-productos/hidrolake-para-madera-brillante-1817"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"miro-lacas-san-justo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "quimprex-villa-zagala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "revesta-florida-oeste": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colortek-dombivli": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
@@ -14445,6 +14473,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"miro-lacas-san-justo": {
+  "website": "https://mirosrl.com/acerca/nosotros",
+  "contactPage": "https://mirosrl.com/form/contact",
+  "generalEmail": "ventas@mirosrl.com",
+  "generalEmailEvidence": {
+    "company": "Miró Lacas y Barnices",
+    "value": "ventas@mirosrl.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Miró 官网公开公司业务邮箱元信息",
+        "url": "https://mirosrl.com/form/contact",
+        "summary": "公开HTML的og:email明确ventas@mirosrl.com，与og:street_address、og:locality及og:phone_number一起标识公司业务资料；四个实际官网页面一致。不是可见页脚或具名采购人，不从域名猜测，未测投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "011 4482-0438",
+  "generalPhoneEvidence": {
+    "company": "Miró Lacas y Barnices",
+    "value": "011 4482-0438",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Miró 官网Ponete en contacto公开公司电话",
+        "url": "https://mirosrl.com/form/contact",
+        "summary": "联系页可见Ponete en contacto列0114482-0438及0114651-8785，前者作为当前通用业务电话，未冒称采购个人。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://wa.me/+5491149910528",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Esnaola3524,SanJusto,BuenosAires,Argentina; public company address, factory gate not independently surveyed. HTML geo.position:-34.6802;-58.5600 used as city-level illustration. Embedded map viewport has different centre; not asserted as measured address coordinates.",
+  "sources": [
+    {
+      "label": "HIDROLAKE室内水性聚氨酯木器涂料、公开渠道及元信息",
+      "url": "https://mirosrl.com/catalogo-de-productos/hidrolake-para-madera-brillante-1817"
+    },
+    {
+      "label": "自有制造研发与水性系列沿革",
+      "url": "https://mirosrl.com/acerca/nosotros"
+    },
+    {
+      "label": "完整可见木器/涂装产品线概览及配套经营",
+      "url": "https://mirosrl.com/nuestros_productos"
+    },
+    {
+      "label": "公开联系表单、公司业务元信息、地址和电话",
+      "url": "https://mirosrl.com/form/contact"
+    }
+  ]
+},
 "quimprex-villa-zagala": {
   "website": "https://www.quimprex.com.ar/productos.html",
   "contactPage": "https://www.quimprex.com.ar/uniprex.html",
@@ -43851,6 +43935,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"miro-lacas-san-justo",
 "quimprex-villa-zagala",
 "revesta-florida-oeste",
 "colortek-dombivli",
