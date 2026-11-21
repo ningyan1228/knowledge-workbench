@@ -13718,11 +13718,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "allchem-ciudad-mexico",
+    "company": "Allchem México",
+    "productId": "elo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Ciudad de México（公开目录业务城市；城市级示意，非厂门）",
+    "latitude": 19.433,
+    "longitude": -99.133,
+    "legacyCompanyDescription": "墨西哥工业涂料及地坪产品企业，官网披露制造业务并提供用于管道、储罐防腐的RA26MOD环氧聚酰胺成品。",
+    "signal": "公司官网质量政策披露制造涂料与工业地坪业务；RA26MOD为用于管道、储罐及工业设施防腐的双组分环氧聚酰胺工业涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "当前官网质量政策明确制造、商业及分销涂料/地坪/胶黏剂/composites；RA26MOD具体成品页面明确双组分环氧聚酰胺体系和管道、储罐、钢材及工业设施防腐用途。主页、公司介绍及该具体成品原文的有限产品范围包括地坪、工业漆、成品底漆/中间漆/面漆、防水及施工配套，未见ELO、ESBO、环氧植物油或同类生物基增塑稳定添加剂外售。普通epoxy resin/hardener类别或成品A/B组件名称不自动等于环氧植物油，不推定未读叶页的化学组成；排除限已读业务范围，非全SKU、配方、SDS或股权审计。BRUZKO明确为经销施工工具，不能当自产或同集团，也不因工具经销否定官网披露的涂料制造。Allchem México当前商号、目录Allchem AG名称和各分支/门店按一户处理；目录法人后缀仅披露、不冒工商审计。认证、耐腐、耐盐及成品性能均为客户自述，不能转为我方ELO效果、相容或采购证据。"
+    },
+    "contact": {
+      "label": "官网公开compras业务邮箱（具体收件职责及人员未核）",
+      "email": "compras@allchem.com.mx",
+      "contactUrl": "https://www.allchem.com.mx/es/"
+    },
+    "source": {
+      "label": "Allchem 官方RA26MOD环氧聚酰胺工业防腐涂层",
+      "url": "https://allchem.com.mx/es/recubrimientos-industriales/recubrimientos-intermedios/intermedio-industrial-ra26mod"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"allchem-ciudad-mexico": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "mepco-duque-de-caxias": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "alvonil-sao-paulo": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "navi-gold-paints-new-delhi": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -14305,6 +14333,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"allchem-ciudad-mexico": {
+  "website": "https://www.allchem.com.mx/es/",
+  "contactPage": "https://www.allchem.com.mx/es/",
+  "generalEmail": "compras@allchem.com.mx",
+  "generalEmailEvidence": {
+    "company": "Allchem México",
+    "value": "compras@allchem.com.mx",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Allchem当前官网公开compras业务邮箱",
+        "url": "https://www.allchem.com.mx/es/",
+        "summary": "当前HTTPS主页、About和具体产品页Footer的Email列表及mailto均明确compras@allchem.com.mx；为公司公开业务入口，具体部门监控职责/个人收件人未独立核实，不冒具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "5526085810",
+  "generalPhoneEvidence": {
+    "company": "Allchem México",
+    "value": "5526085810",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Allchem官方公开总机第一线路",
+        "url": "https://www.allchem.com.mx/es/",
+        "summary": "三个官网原文Footer标示2 Líneas de conmutador，第一线路5526085810且tel一致，非私人手机或具名采购号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Ciudad de México, Mexico. Public business-directory city; current street address and factory gate not independently confirmed on the official pages reviewed. Branch stores are one account; approximate municipality marker only.",
+  "sources": [
+    {
+      "label": "真实目录中的公司商号、城市与HTTP官网线索（仅身份辅助）",
+      "url": "https://quierounnegocio.com/proveedor/allchem-ag"
+    },
+    {
+      "label": "当前HTTPS官网产品经营与公开业务渠道",
+      "url": "https://www.allchem.com.mx/es/"
+    },
+    {
+      "label": "官网质量政策的制造业务披露",
+      "url": "https://allchem.com.mx/es/quienes-somos"
+    },
+    {
+      "label": "具体双组分环氧聚酰胺工业防腐成品",
+      "url": "https://allchem.com.mx/es/recubrimientos-industriales/recubrimientos-intermedios/intermedio-industrial-ra26mod"
+    }
+  ]
+},
 "mepco-duque-de-caxias": {
   "website": "https://mepco.com.br/",
   "contactPage": "https://mepco.com.br/",
@@ -43425,6 +43508,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"allchem-ciudad-mexico",
 "mepco-duque-de-caxias",
 "alvonil-sao-paulo",
 "navi-gold-paints-new-delhi",
