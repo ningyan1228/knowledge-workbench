@@ -14015,11 +14015,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "brillo-tintas-santa-cruz",
+    "company": "Brillo Tintas (Brillo Group)",
+    "productId": "elo",
+    "country": "Bolivia",
+    "countryZh": "玻利维亚",
+    "city": "Santa Cruz–Warnes（官网业务区域；Santa Cruz城市示意点，非Km23厂门）",
+    "latitude": -17.8,
+    "longitude": -63.183,
+    "legacyCompanyDescription": "玻利维亚BrilloGroup自有制漆研发业务，生产BRILLODUR双组分聚氨酯表面保护涂层及其他涂装制品。",
+    "signal": "Brillo Tintas 是 Brillo Group 的制漆与研发业务；BRILLODUR PU (2K) 为用于户外金属等表面保护的双组分聚氨酯涂层。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "独立读取BrilloTintasHome、BRILLODURPU2K当前产品页、集团Home、集团Contact、About五份完整原始200HTML，累计5/rem1，无失败跳转或自动重试。集团明确BrilloTintas为自身涂料生产线，品牌首页明确该业务承担涂料研发，About自述自2007年制造、以本地及进口原料生产；不将泛原料进口扩写为ELO采购。当前BRILLODURPU2K正文明确双组分聚氨酯涂层，保护暴露户外的金属/玻纤/木材。本次只按ELO资料支持的coatings和具体金属表面保护涂层评估，不推现用ELO、同化学体系、相容、耐候/耐蚀改善或汽车OEM认证。产品类别Automotiva和PU缩写不单独作制造或需求证据，页面FichaTecnica标题写BrilloLaca而链接PU文件，该PDF未请求未读，不称核验其2022配方/生产法人。集团完整可见七业务为涂料、家居气雾剂/杀虫、派对泡沫、罐装酱料、化妆品、金属包装制造、包装出口/代工；涂料首页实际列26产品，含涂料/腻子/木器/溶剂稀释剂/配套固化剂及成品Lubrimax维护润滑剂。保留这些经营范围；普通润滑剂、硅护理气雾剂、涂料配套及食品化妆品不凭oil/bio字样归ELO/ESBO原料。在实际五页所读经营/成品产品和集团范围内未见ELO、ESBO、环氧化植物油、生物基增塑稳定剂或同类输入对外供应，限定已读范围，未审所有配方/SDS/PDF/其他品牌叶页/未披露股权，不断言原料全内部使用或编外购例外。BrilloTintas/BrilloGroup/brillogroup.com.bo/brillotintas.com、Lubrimax/Rocio/Killer/Fulminante/EspumaFiesta/Cayetana/Nua/Sariri及SantaCruz/LaPazElAlto/Cochabamba/Tarija/Sucre业务入口保守一个账户；未从未读PDF或社交名猜法律后缀，不拆七条业务/分支新增。前史原始公司请求0，旧匹配均Search/计划，跨品牌产品预算不重置。公开ventas@brillogroup.com.bo为集团业务销售邮箱，Contact同时明示ventas@brillotintas.com同域关系但只选前者一入口；五页一致总机/业务号码，实际api.whatsapp.com链接仅解码HTMLamp实体，不猜账号、不打开聊天。分支邮箱仅原文未整理具名采购。地址Km23aWarnesSantaCruz按官网，地图为独立SantaCruz城市代表点，未断言Km23行政市界或厂门实测。ISO/出口规范/高品质/环保/耐UV/耐化学/具体包装容量等客户宣传不转给我方，不提交表单/评论/地图/商城/消息；采购人、需求和时机未知。"
+    },
+    "contact": {
+      "label": "官网公开集团销售业务邮箱（非具名采购）",
+      "email": "ventas@brillogroup.com.bo",
+      "contactUrl": "https://brillogroup.com.bo/contactanos/"
+    },
+    "source": {
+      "label": "Brillo Tintas 当前BRILLODUR PU2K户外表面保护涂层产品原文",
+      "url": "https://brillogroup.com.bo/brillotintas/producto/brillo-dur/"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"brillo-tintas-santa-cruz": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "monopol-bolivia-la-paz": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ecuabarnices-guayaquil": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chemisa-trapiche": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14613,6 +14641,66 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"brillo-tintas-santa-cruz": {
+  "website": "https://brillogroup.com.bo/brillotintas/",
+  "contactPage": "https://brillogroup.com.bo/contactanos/",
+  "generalEmail": "ventas@brillogroup.com.bo",
+  "generalEmailEvidence": {
+    "company": "Brillo Tintas (Brillo Group)",
+    "value": "ventas@brillogroup.com.bo",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Brillo Group 当前官方联系页公开ventas业务邮箱",
+        "url": "https://brillogroup.com.bo/contactanos/",
+        "summary": "Contact及其余四实际官网业务原文明示ventas@brillogroup.com.bo，Contact同时列ventas@brillotintas.com，当前只采用前者为集团公共销售入口；不是具名采购或已测投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "(+591) 74962646",
+  "generalPhoneEvidence": {
+    "company": "Brillo Tintas (Brillo Group)",
+    "value": "(+591) 74962646",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Brillo Group 当前联系页公开公司业务电话",
+        "url": "https://brillogroup.com.bo/contactanos/",
+        "summary": "联系页Telefono及五页footer明确(+591)74962646，另一个77615789不拼为同一号码，不冒称私人采购手机；实际WhatsApp另有明确链接。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "whatsapp": "https://api.whatsapp.com/send?phone=59174962646&text=%20Bienvenido%20estamos%20a%20tu%20servicio,%20cúal%20es%20tu%20consulta?",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Km. 23 a Warnes, Santa Cruz, Bolivia (official published business/production location). Map uses independently sourced Santa Cruz de la Sierra city representative point -17.8,-63.183; not the measured Km23 factory gate or an independently checked municipal boundary.",
+  "sources": [
+    {
+      "label": "BrilloTintas自身研发业务及本页26项涂料/配套成品",
+      "url": "https://brillogroup.com.bo/brillotintas/"
+    },
+    {
+      "label": "当前BRILLODUR PU2K保护户外金属等表面正文，PDF未读",
+      "url": "https://brillogroup.com.bo/brillotintas/producto/brillo-dur/"
+    },
+    {
+      "label": "集团七条生产业务、品牌及制造范围",
+      "url": "https://brillogroup.com.bo/"
+    },
+    {
+      "label": "当前业务联系、邮箱域名对应、地址和明确WhatsApp",
+      "url": "https://brillogroup.com.bo/contactanos/"
+    },
+    {
+      "label": "自身制造历史及本地/进口原料用于生产的笼统事实",
+      "url": "https://brillogroup.com.bo/sobre-nosotros/"
+    }
+  ]
+},
 "monopol-bolivia-la-paz": {
   "website": "https://www.pinturasmonopol.com/",
   "contactPage": "https://www.pinturasmonopol.com/contacto/",
@@ -44377,6 +44465,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"brillo-tintas-santa-cruz",
 "monopol-bolivia-la-paz",
 "ecuabarnices-guayaquil",
 "chemisa-trapiche",
