@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"quimprex-villa-zagala": "I noticed that Quimprex manufactures Uniprex solvent-based inks for polypropylene and polyethylene laminates, including BOPP printing applications.",
 "revesta-florida-oeste": "I noticed that Revesta manufactures industrial anticorrosive coatings, including REVESTA 340 high-solids epoxy polyamide coatings for marine and industrial service.",
 "colortek-dombivli": "I noticed that Colortek manufactures AQUATRAP, a water-based lacquer for perfume, wine and liquor glass containers.",
 "bepro-coatings-palmira": "I noticed that BePro Coatings manufactures industrial epoxy primers and barrier coatings at its Palmira plant.",

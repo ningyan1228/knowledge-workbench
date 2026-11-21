@@ -13826,11 +13826,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "quimprex-villa-zagala",
+    "company": "Quimprex S.A.",
+    "productId": "cpp-cpo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Villa Zagala, Buenos Aires（官网地址；地图为国家级示意点）",
+    "latitude": -38.4,
+    "longitude": -63.6,
+    "legacyCompanyDescription": "阿根廷柔印与凹印油墨制造商，Uniprex 溶剂型硝化棉墨用于PP/PE层压及BOPP印刷。",
+    "signal": "Quimprex 自制柔印和凹印油墨；Uniprex 为用于 PP/PE 层压结构的溶剂型硝化棉油墨，明确列出 BOPP 应用。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-21",
+      "conclusion": "创办人介绍明确 Quimprex S.A. 制造柔印和凹印液体油墨，产品目录说明内部实验室开发，Uniprex 原文明确为 PP/PE 层压结构的溶剂型硝化棉成品墨并列 BOPP 应用。实际所读业务与目录仅见油墨开发及11个墨系列链接：Flexoprex、Poliprex、Poliprex Rafia、Uniprex、Megaprex PR、Neoprex及RL/RT、Vinilprex、Aquaprex及PE；目录系列文字主要在图片中，未读图片字样或未打开叶页，不能据此断言各系列化学配方。所读制造说明、可见墨系列入口和具体Uniprex未见 CPP、CPO、MAH改性聚烯烃或同类附着促进树脂原料外售；结论限实际公开范围，非全部SKU、配方、SDS或隐藏股权审核。硝化棉成品油墨及客户层压性能说明不当我方材料或已相容证明。公司、品牌系列和VillaZagala地址按一个账户；创办人历史署名不当当前采购负责人。页面公开邮箱编码离线解码三次一致；正文电话+54 11 7547 4815保留，实际tel:+1234567890为冲突占位链接不使用。潜在CPP/CPO附着及溶剂体系评估，不断言客户现用CPP/CPO、采购、食品接触合规或性能提升。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱（非具名采购）",
+      "email": "tintas@quimprex.com.ar",
+      "contactUrl": "https://www.quimprex.com.ar/uniprex.html"
+    },
+    "source": {
+      "label": "Quimprex Uniprex 官方PP/PE溶剂型油墨",
+      "url": "https://www.quimprex.com.ar/uniprex.html"
+    },
+    "checkedAt": "2026-11-21"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"quimprex-villa-zagala": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "revesta-florida-oeste": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "colortek-dombivli": {"targetCompanyTypeId":"coating-manufacturer","applicationLayer":"tds-verified","applicationId":"glass-adhesion-promotion"},
 "bepro-coatings-palmira": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14417,6 +14445,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"quimprex-villa-zagala": {
+  "website": "https://www.quimprex.com.ar/productos.html",
+  "contactPage": "https://www.quimprex.com.ar/uniprex.html",
+  "generalEmail": "tintas@quimprex.com.ar",
+  "generalEmailEvidence": {
+    "company": "Quimprex S.A.",
+    "value": "tintas@quimprex.com.ar",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Quimprex 官方产品页公开公司邮箱",
+        "url": "https://www.quimprex.com.ar/uniprex.html",
+        "summary": "产品页Email区公开email-protection href，对已取得HTML十六进制片段仅离线XOR解码为tintas@quimprex.com.ar；另两官网原文分别一致，无远程解码、脚本或投递测试，通用业务入口非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "generalPhone": "+54 11 7547 4815",
+  "generalPhoneEvidence": {
+    "company": "Quimprex S.A.",
+    "value": "+54 11 7547 4815",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Quimprex 官方页脚可见Tel/Fax号码",
+        "url": "https://www.quimprex.com.ar/uniprex.html",
+        "summary": "三个原文正文明确Tel/Fax:+54 11 7547 4815。href另为tel:+1234567890占位，不采用该链接号码；仅公司通用电话，无采购职责或WhatsApp推断。"
+      }
+    ],
+    "verifiedAt": "2026-11-21"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Diagonal31(Mendoza)1290,(1651)VillaZagala,BuenosAires,Argentina. Public company address, not independently verified factory gate. Map deliberately uses existing Argentina country-level marker-38.4,-63.6; not asserted to locate VillaZagala.",
+  "sources": [
+    {
+      "label": "Uniprex溶剂型硝化棉PP/PE层压墨、BOPP及公开业务渠道",
+      "url": "https://www.quimprex.com.ar/uniprex.html"
+    },
+    {
+      "label": "公司实验室开发及11个实际油墨系列入口，图片内文字未读",
+      "url": "https://www.quimprex.com.ar/productos.html"
+    },
+    {
+      "label": "QuimprexS.A.自有柔印/凹印液体墨制造声明",
+      "url": "https://www.quimprex.com.ar/carta.html"
+    }
+  ]
+},
 "revesta-florida-oeste": {
   "website": "https://www.revesta.com.ar/",
   "contactPage": "https://www.revesta.com.ar/ind_contacto",
@@ -43772,6 +43851,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"quimprex-villa-zagala",
 "revesta-florida-oeste",
 "colortek-dombivli",
 "bepro-coatings-palmira",
