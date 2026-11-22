@@ -81,7 +81,7 @@ import type { CompanyContact, EmailEvidence, PhoneEvidence } from './contactEvid
 export type { CompanyContact } from './contactEvidence.ts'
 
 export type DepartmentEmail = {
-  department: 'Sales' | 'Procurement' | 'Technical' | 'Production' | 'General'
+  department: 'Sales' | 'Procurement' | 'Technical' | 'Production' | 'General' | 'Customer Service'
   email: string
   source?: { label: string; url: string }
   emailEvidence?: EmailEvidence
@@ -14255,11 +14255,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-22"
   },
+  {
+    "id": "midi-peinture-oujda",
+    "company": "MIDI PEINTURE",
+    "productId": "nl-w1201",
+    "country": "Morocco",
+    "countryZh": "摩洛哥",
+    "city": "Oujda（官网工厂总部业务城市；城市示意点，非工厂定位）",
+    "latitude": 34.68667,
+    "longitude": -1.91139,
+    "legacyCompanyDescription": "摩洛哥自有制漆企业，MAT BÂTIMENT 420为适用木材的水性丙烯酸面漆。",
+    "signal": "MIDI PEINTURE在摩洛哥自制涂料；其MAT BÂTIMENT 420为水性丙烯酸面漆，原始TDS明确适用木材并列木材施工工序。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-22",
+      "conclusion": "原始MATBÂTIMENT420二页PDF单HTTPS200下载255982字节及SHA保留，全文提取并本地渲染两页逐格读，页码6/7、印刷Fév2025为资料原日期，不当2026新修订或网站投产。第1页明确水性丙烯酸面漆、水稀释清理及Bois基材，第2页Plâtreetbois施工准备/MIDIPRIM并列MATBATIMENT420面漆，不能说成只做木器或客户当前PO配方。当前Home142行和Présentation104行完整native原文已读，About明确自有配方和gammes fabriquéesauMaroc，原始TDS自名MIDIPEINTURE及Usineetsiègesocial/Oujda地址互证制造。Home全主营导航为水性/装饰/生态/准备/防水/醇酸油性/防锈/特殊成品漆、清漆、施工器材及调色机；已读经营范围与具体成品TDS未见水性聚烯烃乳液、PO/CPO分散体或同类配方附着促进原料外售，丙烯酸乳液为面漆组成不当原料供应商。有限公开范围同行排除通过，不冒全部SKU/SDS/最终股权已审；水性类别及FicheTechnique两个不同URI各nativeTimeout，均无正文照计，不重试或换提供者补读。公司累计5/rem1，本范围最后一来源无法限制native跳转则保留不花。官网实际原文短代码year_plan_desc只做离线Base64及URI解码，Home和About都还原相同客户服务邮箱service-clientele@midipeinture.com、工厂总部地址及合写电话05 36 68 70 17/18；原始PDF同列该邮箱和+212 5 36 68 70 17/18，.com邮箱与.ma官网不擅改。客户服务部门入口非具名采购/通用负责人，电话合写后缀保持不猜独立号，不造WhatsApp；contactPage用已读About业务页脚，不声称存在可投递表单。Oujda工厂总部和Casablanca分支一户，LespeinturesduMidi为自身About名称，不加未核SARL/SA或与法国同名企业推集团。全正式602/根目录616/队列/front1218/index530/excluded15和全部确切域名/.com/名称历史只有旧Search无旧公司原读；不将既有O’DASSIA或其他Midi同名合并或新增。地图独立Oujda城市34.68667/-1.91139，不当工厂门GPS；另地理请求1单列。NLW仅用户资料木材/底涂及附着促进潜在评估，不推其现有丙烯酸相容、直接现场掺加、性能/认证/采购。无邮件/表单/消息/CRM，发送台账未知仅未来条件功能审计，无就绪发送稿。"
+    },
+    "contact": {
+      "label": "官网及原始TDS公开客户服务部门邮箱（非具名采购）",
+      "email": "service-clientele@midipeinture.com",
+      "contactUrl": "https://midipeinture.ma/presentation/"
+    },
+    "source": {
+      "label": "MAT BÂTIMENT 420原始两页TDS，木材适用水性丙烯酸面漆",
+      "url": "https://midipeinture.ma/wp-content/uploads/2025/06/FV-FT-MAT-BATIMENT-420.pdf"
+    },
+    "checkedAt": "2026-11-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"midi-peinture-oujda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "edgechem-kingston-jamaica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "diamond-paint-kingston-jamaica": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-tropical-santo-domingo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14862,6 +14890,76 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"midi-peinture-oujda": {
+  "website": "https://midipeinture.ma/",
+  "contactPage": "https://midipeinture.ma/presentation/",
+  "generalPhone": "+212 5 36 68 70 17/18",
+  "generalPhoneEvidence": {
+    "company": "MIDI PEINTURE",
+    "value": "+212 5 36 68 70 17/18",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "MIDI原始TDS工厂/总部公开业务电话，与当前官网页脚互证",
+        "url": "https://midipeinture.ma/wp-content/uploads/2025/06/FV-FT-MAT-BATIMENT-420.pdf",
+        "summary": "两页PDF明确MIDIPEINTURE/Usineetsiègesocial/Oujda和+212 5 36 68 70 17/18，保留合写格式不猜号；当前About页脚解码同一本地号。"
+      }
+    ],
+    "verifiedAt": "2026-11-22"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Customer Service",
+      "email": "service-clientele@midipeinture.com",
+      "emailEvidence": {
+        "company": "MIDI PEINTURE",
+        "value": "service-clientele@midipeinture.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "当前官网About业务页脚公开客户服务邮箱（原短代码离线还原，与原始PDF互证）",
+            "url": "https://midipeinture.ma/presentation/",
+            "summary": "实际year_plan_desc解码得service-clientele@midipeinture.com；当前Home同值，2025-02原始MATBATIMENT420两页同列同公司/工厂/邮箱。.com邮箱非猜测或改为.ma。"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      }
+    }
+  ],
+  "address": "Usine et siège social: Zone Industrielle, BP 334, Oujda, Maroc. Casablanca branch is the same account. Map is an independently read Oujda city representative, not a surveyed factory gate.",
+  "sources": [
+    {
+      "label": "原始两页MATBÂTIMENT420 TDS，印刷2025-02日期及当前公开托管",
+      "url": "https://midipeinture.ma/wp-content/uploads/2025/06/FV-FT-MAT-BATIMENT-420.pdf"
+    },
+    {
+      "label": "当前完整主营成品导航和业务页脚",
+      "url": "https://midipeinture.ma/"
+    },
+    {
+      "label": "当前自有摩洛哥制造与公开客户服务入口",
+      "url": "https://midipeinture.ma/presentation/"
+    }
+  ],
+  "generalEmail": "service-clientele@midipeinture.com",
+  "generalEmailEvidence": {
+    "company": "MIDI PEINTURE",
+    "value": "service-clientele@midipeinture.com",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前官网About业务页脚公开客户服务邮箱（原短代码离线还原，与原始PDF互证）",
+        "url": "https://midipeinture.ma/presentation/",
+        "summary": "实际year_plan_desc解码得service-clientele@midipeinture.com；当前Home同值，2025-02原始MATBATIMENT420两页同列同公司/工厂/邮箱。.com邮箱非猜测或改为.ma。"
+      }
+    ],
+    "verifiedAt": "2026-11-22"
+  }
+},
 "edgechem-kingston-jamaica": {
   "website": "https://edgechem.com/",
   "contactPage": "https://edgechem.com/contact-us/",
@@ -45128,6 +45226,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"midi-peinture-oujda",
 "edgechem-kingston-jamaica",
 "diamond-paint-kingston-jamaica",
 "pinturas-tropical-santo-domingo",
