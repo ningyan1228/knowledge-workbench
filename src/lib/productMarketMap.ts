@@ -14229,11 +14229,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-22"
   },
+  {
+    "id": "edgechem-kingston-jamaica",
+    "company": "EdgeChem Jamaica Limited",
+    "productId": "elo",
+    "country": "Jamaica",
+    "countryZh": "牙买加",
+    "city": "Kingston（官网公司业务城市；城市示意点，非工厂定位）",
+    "latitude": 17.97139,
+    "longitude": -76.79306,
+    "legacyCompanyDescription": "牙买加自有制漆企业，Industrial Metal Primer为金属用防腐底漆。",
+    "signal": "EdgeChem在牙买加自制汽车、工业、装饰及家具涂料；自有Industrial Metal Primer为用于金属表面的防腐底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-22",
+      "conclusion": "独立完整审读About180行、Industrial165行、具体IndustrialMetalPrimer103行、Products171行、Contact129行五份官网native业务正文；末次首页单HTTPS手动跳转GET返回403挑战页，没有业务原文且不绕过或重试，失败计入累计6STOP。About明确We manufacture Automotive, Industrial, Decorative and Furniture Coatings并分列associated products分销，实际叶页点名Edgechem Industrial Metal Primer为内外金属表面防腐底漆，自有产品事实与制造角色相连。About同时明示AkzoNobelSikkens/Carboline/Pentrilo合作，Carboline重工业代理产品不归自产；合作分销不当股权，EdgeChem创始人及现行同域名法名保守一户，未发现与既有正式账户同主体，不假称工商/隐藏股权全审。已读主营和完整类别导航仅成品汽车/工业/装饰/家具漆、硬化剂/稀释剂、底漆/封闭剂/着色剂等，所读一般产品首分页8项与工业首分页8项中未见ELO、ESBO、环氧植物油、生物增塑稳定原料外售。工业有第二页、一般目录共8分页、具体TDS链接存在但未读取；不冒充所有分页/SDS/配方已查，不从hardener/reducer或成品底漆名推为所选ELO同类投入。所查经营范围和实际叶页支持有限同行排除，仅按用户ELO涂料/树脂改性及柔韧潜在评估，不声称现用ELO、醇酸/环氧化学体系、相容、抗腐蚀改善、采购或需求时机。Contact有真实LeaveAMessage业务表单、公司地址和两业务电话，只采用原文主号1-876-937-3831，备用3834不拼接；邮箱呈保护占位、WhatsAppUs仅标签未得实际公开跳转，不猜/解码邮箱或由电话造WA，未打开聊天/提交表单。DoreenFrankson为公司历史创始叙述不作为当前采购联系人。地图复用上轮独立Kingston城市17.97139/-76.79306，不当18CariftaAvenue工厂精确坐标。全正式601/根目录615、front1215/index527/excluded15及原始历史查重；两份历史同源Canada协会目录只含edgechem域链接，并非旧公司定向正文，不重复扣预算。零新增地理/行业原读，无下载代码执行，发送状态未知无就绪稿或外联。"
+    },
+    "contact": {
+      "label": "官网业务联系表单及公开业务电话；邮箱待核",
+      "contactUrl": "https://edgechem.com/contact-us/"
+    },
+    "source": {
+      "label": "EdgeChem自有Industrial Metal Primer具体官网产品页",
+      "url": "https://edgechem.com/product/industrial-metal-primer/"
+    },
+    "checkedAt": "2026-11-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"edgechem-kingston-jamaica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "diamond-paint-kingston-jamaica": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-tropical-santo-domingo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-nice-guatemala-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14835,6 +14862,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"edgechem-kingston-jamaica": {
+  "website": "https://edgechem.com/",
+  "contactPage": "https://edgechem.com/contact-us/",
+  "generalPhone": "1-876-937-3831",
+  "generalPhoneEvidence": {
+    "company": "EdgeChem Jamaica Limited",
+    "value": "1-876-937-3831",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "EdgeChem官网Contact业务电话",
+        "url": "https://edgechem.com/contact-us/",
+        "summary": "Contact ComeTalkWithUs/CallUs明确1-876-937-3831与3834；仅采用第一个公开业务主号，非具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-22"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "18 Carifta Avenue, Nanse Pen Industrial Estate, Kingston 11, Jamaica. Official corporate business address; independently read Kingston city representative reused for map, not a surveyed factory gate.",
+  "sources": [
+    {
+      "label": "当前自有制造、产品研发及代理合作边界",
+      "url": "https://edgechem.com/about-us/"
+    },
+    {
+      "label": "工业成品目录首分页8项，第二页未读",
+      "url": "https://edgechem.com/product-category/industrial/"
+    },
+    {
+      "label": "自有金属防腐底漆实际产品正文，所链TDS未读",
+      "url": "https://edgechem.com/product/industrial-metal-primer/"
+    },
+    {
+      "label": "四类主营及产品首分页8项，其余分页未读",
+      "url": "https://edgechem.com/products/"
+    },
+    {
+      "label": "当前官网联系表单、地址和业务电话，无可核邮箱/WA原链",
+      "url": "https://edgechem.com/contact-us/"
+    }
+  ]
+},
 "diamond-paint-kingston-jamaica": {
   "website": "https://www.diamondpaintsja.com/",
   "contactPage": "https://www.diamondpaintsja.com/contact",
@@ -45057,6 +45128,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"edgechem-kingston-jamaica",
 "diamond-paint-kingston-jamaica",
 "pinturas-tropical-santo-domingo",
 "pinturas-nice-guatemala-city",
