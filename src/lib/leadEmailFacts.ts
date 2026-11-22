@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"diamond-paint-kingston-jamaica": "I noticed that Diamond Paint manufactures Diamond Wood Sealer, a water-based sealer for interior and exterior wood.",
 "pinturas-tropical-santo-domingo": "I noticed that Pinturas Tropical manufactures industrial maintenance coatings, with Rust Arrest listed in its anticorrosive range.",
 "pinturas-nice-guatemala-city": "I noticed that Pinturas Nice manufactures Anticorrosivo Fast Dry, an alkyd protective coating for exterior metal structures.",
 "distribuidora-el-mosaico-guatemala": "I noticed that El Mosaico manufactures water-dilutable wood stains for new wood and plywood.",

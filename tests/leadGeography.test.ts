@@ -7,6 +7,7 @@ describe('customer map geography', () => {
     for (const lead of publicLeads) expect(continentOf(lead.country)).not.toBe('未分类')
     expect(continentOf('Mexico')).toBe('北美洲')
     expect(continentOf('Costa Rica')).toBe('北美洲')
+    expect(continentOf('Jamaica')).toBe('北美洲')
     expect(continentOf('Israel')).toBe('亚洲')
     expect(continentOf('Unknown')).toBe('未分类')
   })

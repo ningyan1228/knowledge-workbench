@@ -14202,11 +14202,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-22"
   },
+  {
+    "id": "diamond-paint-kingston-jamaica",
+    "company": "Diamond Paint MFG Co Ltd",
+    "productId": "nl-w1201",
+    "country": "Jamaica",
+    "countryZh": "牙买加",
+    "city": "Kingston（官网总部业务城市；城市示意点，非工厂定位）",
+    "latitude": 17.97139,
+    "longitude": -76.79306,
+    "legacyCompanyDescription": "牙买加自有涂料制造企业，DiamondWoodSealer为内外木器用水性丙烯酸封闭剂。",
+    "signal": "牙买加Diamond Paint MFG Co Ltd自主制造涂料；当前目录及原始TDS明确Diamond Wood Sealer为内外木材用水性丙烯酸封闭剂，可再涂清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-22",
+      "conclusion": "六次累计来源包括一失败：产品筛选页nativeCacheMiss，随后独立的具体PDF、Home、完整当前产品页、Contact及SureBond叶页各单次有界HTTPS200，无跟随跳转或重试失败URI。PDF原始79195字节和SHA保留，一页全文提取并本地渲染逐项阅读；元数据创建年2006、页面未印修订日期，不当2026新TDS。当前Products页仍明确水性DiamondWoodSealer并链接同一PDF，Home明确Jamaicanmanufacturer及自身制造漆/抹灰材料，制造与当前产品链交叉成立。具体TDS为acrylic、水为稀释清理介质、内外木器底层封闭/可再涂清漆，不把厂家防霉/覆盖/干燥/防腐剂说成我方性能。当前产品页声明23项但产品卡只首分页9项，另外完整技术资料面板共22份题名/描述实际读取，未读其余21PDF或其他产品分页，不假称全23叶审计。公开范围主要成品漆/地坪/抹灰/修补/防水/封闭/建筑粘结剂；SureBond明确PVAC乳液配制的水泥/新旧混凝土粘结成品兼admixture，与所选聚烯烃/CPO分散体原料业务区分，未见PO/CPO原料、用于油墨/涂料配方的附着促进原料外售，不凭emulsion或adhesion单词认同类，结论限所查目录及该叶页。NL-W1201只作资料支持的水性聚烯烃底涂/附着促进在木器体系的潜在评估，不推客户现用PO、丙烯酸相容或性能保证。Contact去除HTML注释后sales@和info@均为明确mailto，Sales为部门业务入口、无具名采购；PDF旧diamondpaints@cwjamaica.com不作为现行技术邮箱。现行MainOffice电话与页脚另一3030号分别保留，不混拼；WhatsApp是当前未注释头部真实wa.me原链，不由电话猜号，不打开聊天。Kingston总部与MontegoBay分支一个账户，DiamondVogel或巴基斯坦同名品牌无已证同集团关系，不凭Diamond同名混合；不声称隐藏股权已穷尽。地图独立Kingston城市代表17.97139,-76.79306，67WalthamParkRoad是官网公司业务地址，不当精确厂门GPS。公司来源6/6停止，发送状态未知，无可发送稿、邮件/表单/消息或CRM。"
+    },
+    "contact": {
+      "label": "官网销售部门公开业务邮箱（非具名采购）",
+      "email": "sales@diamondpaintsja.com",
+      "contactUrl": "https://www.diamondpaintsja.com/contact"
+    },
+    "source": {
+      "label": "当前公司目录及DiamondAcrylicWoodSealer原始一页TDS",
+      "url": "https://www.diamondpaintsja.com/pdf/ACRYLIC%20WOOD%20SEALER.pdf"
+    },
+    "checkedAt": "2026-11-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"diamond-paint-kingston-jamaica": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pinturas-tropical-santo-domingo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-nice-guatemala-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "distribuidora-el-mosaico-guatemala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14807,6 +14835,85 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"diamond-paint-kingston-jamaica": {
+  "website": "https://www.diamondpaintsja.com/",
+  "contactPage": "https://www.diamondpaintsja.com/contact",
+  "generalEmail": "info@diamondpaintsja.com",
+  "generalEmailEvidence": {
+    "company": "Diamond Paint MFG Co Ltd",
+    "value": "info@diamondpaintsja.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Diamond当前官网公开一般业务邮箱",
+        "url": "https://www.diamondpaintsja.com/contact",
+        "summary": "当前Contact原始HTML去除注释后明确mailto:info@diamondpaintsja.com，非旧PDF技术邮箱或推测。"
+      }
+    ],
+    "verifiedAt": "2026-11-22"
+  },
+  "generalPhone": "+1-876-901-3031",
+  "generalPhoneEvidence": {
+    "company": "Diamond Paint MFG Co Ltd",
+    "value": "+1-876-901-3031",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Diamond当前官网MainOffice公开业务电话",
+        "url": "https://www.diamondpaintsja.com/contact",
+        "summary": "当前Contact及头部未注释tel:+1-876-901-3031；MainOffice原文为8769013031，页脚3030另保留，不冒采购或与WhatsApp混拼。"
+      }
+    ],
+    "verifiedAt": "2026-11-22"
+  },
+  "whatsapp": "https://wa.me/18763268734/?text=Hi%20I%20would%20like%20to%20find%20out%20about",
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Sales",
+      "email": "sales@diamondpaintsja.com",
+      "emailEvidence": {
+        "company": "Diamond Paint MFG Co Ltd",
+        "value": "sales@diamondpaintsja.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Diamond当前官网Sales部门业务邮箱",
+            "url": "https://www.diamondpaintsja.com/contact",
+            "summary": "当前Contact原始HTML去注释后明确mailto:sales@diamondpaintsja.com，部门商业入口，未提供具名采购身份。"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      }
+    }
+  ],
+  "address": "67 Waltham Park Road, Kingston 11, Jamaica W.I. (current corporate business address, not independently surveyed factory GPS). Montego Bay branch: Unit J Sagicor Complex, Freeport. Map uses an independently read Kingston city representative point.",
+  "sources": [
+    {
+      "label": "当前自有制造及公司/分支地址",
+      "url": "https://www.diamondpaintsja.com/"
+    },
+    {
+      "label": "当前产品目录与22份技术资料题名描述（产品卡仅首分页）",
+      "url": "https://www.diamondpaintsja.com/products"
+    },
+    {
+      "label": "一页原始水性丙烯酸木器封闭剂TDS，当前目录仍链接",
+      "url": "https://www.diamondpaintsja.com/pdf/ACRYLIC%20WOOD%20SEALER.pdf"
+    },
+    {
+      "label": "当前公开Sales/General业务邮箱、电话和真实WhatsApp原链",
+      "url": "https://www.diamondpaintsja.com/contact"
+    },
+    {
+      "label": "SureBond为PVAC水泥/混凝土建筑粘结成品，非已证所选PO/CPO原料",
+      "url": "https://www.diamondpaintsja.com/sure-bond-concrete-bonding-agent"
+    }
+  ]
+},
 "pinturas-tropical-santo-domingo": {
   "website": "https://pinturastropical.com.do/",
   "contactPage": "https://pinturastropical.com.do/contacto",
@@ -44950,6 +45057,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"diamond-paint-kingston-jamaica",
 "pinturas-tropical-santo-domingo",
 "pinturas-nice-guatemala-city",
 "distribuidora-el-mosaico-guatemala",
