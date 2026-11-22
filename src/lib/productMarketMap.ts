@@ -14176,11 +14176,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-21"
   },
+  {
+    "id": "pinturas-tropical-santo-domingo",
+    "company": "Pinturas Tropical",
+    "productId": "elo",
+    "country": "Dominican Republic",
+    "countryZh": "多米尼加共和国",
+    "city": "Santo Domingo（官网销售业务城市；城市示意点，非工厂定位）",
+    "latitude": 18.4625,
+    "longitude": -69.9361,
+    "legacyCompanyDescription": "多米尼加共和国自有制漆企业，工业维护漆及AAA、OXIDO ROJO53、RUSTARREST防腐系列。",
+    "signal": "Pinturas Tropical在多米尼加共和国自有涂料生产设备，制造工业维护漆；其防腐系列明确列有AAA、OXIDO ROJO 53及RUST ARREST。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-22",
+      "conclusion": "独立核读官网Home、ColorWood、AcrilicaMatePlus、防腐系列、Contacto及安全政策六个来源，公司跨产品累计6/6停止；当前两次是公开联系页native原文及有界单次HTTPS200政策原始HTML，无自动重试/跟随跳转/脚本执行。Home明确自身制漆生产设备及工业维护、建筑、汽车和木器涂料；安全政策原文再次说明fabricación/distribución/ventas de pinturas，制造角色不由代理品牌或零售标签推定。实际防腐类别完整列AAA/OXIDO ROJO53/RUSTARREST三产品，只证明自有成品防腐漆经营，未读三个叶页/TDS/SDS，不猜其醇酸或环氧配方、金属细分基材、性能或认证。ELO按用户资料的coatings/树脂改性与柔韧评估潜在联系准入，不承诺防腐改善、相容、替代或已采购。ColorWood为慢干醇酸木器渗透染色剂，普通AcrilicaMatePlus页未证水性木器，不借此收录NL-W1201。所读六页可见经营菜单涵盖成品建筑漆、底漆、防腐/海洋工业漆、木器家具漆、溶剂、汽车修补及地坪；未见ELO/ESBO/环氧植物油/类似生物基增塑投入外售，结论限实际原文菜单和所读产品，不称全部隐藏目录/股权审计。Contacto实际有咨询表单和销售电话分机，邮箱为防垃圾保护占位，未解码、执行JS或猜地址；表单中的电话/WhatsApp字段不是公开WhatsApp账号，不发布跳转。仅用实际业务品牌一个账户，不宣称法名或股权，潜在关联主体保守去重不另计品牌/厂址。官网区分圣多明各销售办公室与AvRomuloBetancourt/IsabelAguiar工厂地址，页脚另拼Aguilar，原样保留；地图取独立城市代表18.4625,-69.9361，不是厂门坐标。客户当前原料、需求和采购时机未确认；共享发送记录未知，未创建可发送稿或实施外联。"
+    },
+    "contact": {
+      "label": "官网公开业务咨询表单（未核验公开邮箱）",
+      "contactUrl": "https://pinturastropical.com.do/contacto"
+    },
+    "source": {
+      "label": "Pinturas Tropical官网实际防腐系列三产品",
+      "url": "https://pinturastropical.com.do/productos/categoria/anticorrosivos"
+    },
+    "checkedAt": "2026-11-22"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-tropical-santo-domingo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-nice-guatemala-city": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "distribuidora-el-mosaico-guatemala": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "dicolor-alajuela": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14780,6 +14807,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-tropical-santo-domingo": {
+  "website": "https://pinturastropical.com.do/",
+  "contactPage": "https://pinturastropical.com.do/contacto",
+  "generalPhone": "(809) 227-3000 Ext: 1131",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Tropical",
+    "value": "(809) 227-3000 Ext: 1131",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas Tropical官网销售部门公开业务电话",
+        "url": "https://pinturastropical.com.do/contacto",
+        "summary": "Contacto原文明确Ventas(809)227-3000Ext1131；同页另列工厂接待/发运/人事/账款号码，不混拼，也不冒称采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-22"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Sales office: Av. Núñez de Cáceres esq. Calle 1, San Gerónimo, Santo Domingo, República Dominicana. Factory as separately published: Ave. Romulo Betancourt esq. Isabel Aguiar (footer spells Aguilar). City representative map point only, not a factory geocode.",
+  "sources": [
+    {
+      "label": "自有生产设备及工业维护涂料制造",
+      "url": "https://pinturastropical.com.do/"
+    },
+    {
+      "label": "实际三项防腐成品漆目录",
+      "url": "https://pinturastropical.com.do/productos/categoria/anticorrosivos"
+    },
+    {
+      "label": "官网商务咨询表单与销售部门电话",
+      "url": "https://pinturastropical.com.do/contacto"
+    },
+    {
+      "label": "安全政策再次明确制造/分销/销售涂料",
+      "url": "https://pinturastropical.com.do/nosotros-1/politica-de-seguridad"
+    },
+    {
+      "label": "ColorWood原文为醇酸木器染色；不冒充水性",
+      "url": "https://pinturastropical.com.do/productos/categoria/prod-p-muebles-y-maderas/item/color-wood"
+    },
+    {
+      "label": "AcrilicaMatePlus普通建筑漆，不据此推水性木器",
+      "url": "https://pinturastropical.com.do/productos/categoria/plus/item/acrilica-mate-plus"
+    }
+  ]
+},
 "pinturas-nice-guatemala-city": {
   "website": "https://pinturasnice.com.gt/",
   "contactPage": "https://pinturasnice.com.gt/#contact",
@@ -44875,6 +44950,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-tropical-santo-domingo",
 "pinturas-nice-guatemala-city",
 "distribuidora-el-mosaico-guatemala",
 "dicolor-alajuela",
