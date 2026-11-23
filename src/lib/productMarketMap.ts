@@ -14335,11 +14335,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-23"
   },
+  {
+    "id": "kndeco-el-yachir",
+    "company": "KNDECO",
+    "productId": "nl-w1201",
+    "country": "Algeria",
+    "countryZh": "阿尔及利亚",
+    "city": "El Yachir / El Achir（官网业务城市；城市示意点，非工厂定位）",
+    "latitude": 36.06667,
+    "longitude": 4.63333,
+    "legacyCompanyDescription": "阿尔及利亚自有制漆企业，FOND BOIS M648为用于MDF和木材的水性底漆。",
+    "signal": "KNDECO在阿尔及利亚自有工厂研发生产涂料；FOND BOIS M648为适用于MDF及木材的水性底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-23",
+      "conclusion": "独立重读既存木器目录92行/M648叶138行/About124行，并补当前Contact97行及.dz目录单GET200原始HTML227232字符。About明确自有阿尔及利亚工厂/RD/生产，M648原文明示水性MDF与木材底漆，不由目录全局水性过滤器推全部七木器产品，不猜其树脂或把M43催化剂用量转给NLW。当前原始目录38份技术表链接/10产品类的可见名称和摘要完整审读，包含六木器技术表、厨房水性漆、腻子、内外墙、隔水、金属、Primer四项、ROC及Solutions；.com木器类别另有M765而38表索引未列，不称38表涵盖全部SKU或实际下载38PDF。RUSTREMOVER实际摘要为即用去锈成品，DECOPRIM/MicroFix/Fixateur为下游施工底涂/固结成品，不能因adhesion/durcisseur字样说成同类聚烯烃原料，也不猜全部配方。已读主要成品经营/木器产品与38表可见摘要未见水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料外售，有限公开范围同行排查通过，未声明所有隐藏SDS/集团或PDF均查完。Contact真实表单及一般业务电话+213560823187由本次原文和当前.dz页头页脚/旧M648木器页互证；旧About另号+213560988899保留差异未精选，不冒具名采购/WhatsApp。原始HTML序列化数据出现contact@kndeco.dz及示例karim@exemple.dz，但可见目录/Contact未显示真实收件邮箱，不从非可见配置或示例拼邮箱，公开profile保留邮箱缺项，实际表单可供用户自行投递。新.dz与.com同品牌/产品编号/完整Lachbour地址/现行电话互证为一个保守账户，不另给六来源、不拆公司；Spiver代理仅旧Search未原读，不推股权/全部代理SKU归自产。前沿已有研究项按相同ID升级，不制造新增重复；全605正式及根含14无关待发/前沿1227/来源539/排除15和确切双域别名查验无其他同户，.dz历史只当前Search/单GET，最终工商法名未猜。旧三native正文加单GETHome网络失败4，本轮Contactnative+最后有界单GET目录2，累计6STOP剩0，失败不重试、无披露跳转、PDF/远程JS执行或隐藏客户端请求。独立英文城市页仅确认位置无坐标，真实法语链接第二页给36°04′N4°38′E，转换36.06667/4.63333仅ElYachir城市示意非厂门。NLW仅按用户资料聚烯烃分散体/木材底涂附着促进潜在评估，不推已用PO、MDF改善幅度、相容、认证、采购或需求时机。发送台账未知不当未发送，无就绪稿/外联。"
+    },
+    "contact": {
+      "label": "官网真实业务联系表单及公开电话；未核实可见业务邮箱",
+      "contactUrl": "https://kndeco.com/contact"
+    },
+    "source": {
+      "label": "FOND BOIS M648具体水性木器底漆",
+      "url": "https://kndeco.com/produits/fond-bois-m648"
+    },
+    "checkedAt": "2026-11-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"kndeco-el-yachir": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "peinture-midy-ii-zeralda": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "monopol-peintures-maroc-had-soualem": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "midi-peinture-oujda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14945,6 +14972,46 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"kndeco-el-yachir": {
+  "website": "https://kndeco.com/",
+  "contactPage": "https://kndeco.com/contact",
+  "generalPhone": "+213 560 82 31 87",
+  "generalPhoneEvidence": {
+    "company": "KNDECO",
+    "value": "+213 560 82 31 87",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "KNDECO当前Contact原文及同品牌.dz技术目录页头页脚一致业务电话",
+        "url": "https://kndeco.com/contact",
+        "summary": "实际Contact97行明确+213 560 82 31 87和Lachbour/EL Yachir地址，与当前原始目录及M648页一致，非具名个人/WhatsApp；旧About其他号码未精选。"
+      }
+    ],
+    "verifiedAt": "2026-11-23"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Lachbour Section 07 ilot 20, commune EL Yachir, Bordj Bou Arréridj, Algérie. Same official brand/product/address/current phone on kndeco.com and kndeco.dz; city marker, not surveyed factory gate.",
+  "sources": [
+    {
+      "label": "具体M648水性MDF/木材底漆",
+      "url": "https://kndeco.com/produits/fond-bois-m648"
+    },
+    {
+      "label": "自有工厂及研发生产",
+      "url": "https://kndeco.com/a-propos"
+    },
+    {
+      "label": "完整38表链接索引及主要成品摘要，PDF未下载",
+      "url": "https://kndeco.dz/catalogue"
+    },
+    {
+      "label": "当前真实业务表单及公开电话",
+      "url": "https://kndeco.com/contact"
+    }
+  ]
+},
 "peinture-midy-ii-zeralda": {
   "website": "https://peinturemidy2.com/",
   "contactPage": "https://peinturemidy2.com/",
@@ -45387,6 +45454,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"kndeco-el-yachir",
 "peinture-midy-ii-zeralda",
 "monopol-peintures-maroc-had-soualem",
 "midi-peinture-oujda",
