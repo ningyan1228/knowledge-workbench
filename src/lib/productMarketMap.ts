@@ -14282,11 +14282,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-22"
   },
+  {
+    "id": "monopol-peintures-maroc-had-soualem",
+    "company": "Monopol Peintures Maroc",
+    "productId": "elo",
+    "country": "Morocco",
+    "countryZh": "摩洛哥",
+    "city": "Had Soualem（官网工厂城市；地图为摩洛哥国家级概略点，非工厂定位）",
+    "latitude": 28.5,
+    "longitude": -10,
+    "legacyCompanyDescription": "摩洛哥自有工厂制漆企业，TECHNOPAINT含防腐底漆和保护涂层体系；自述COPRODES子公司。",
+    "signal": "Monopol Peintures Maroc在Had Soualem自有工厂制造工业液体涂料；TECHNOPAINT系列明确含防腐底漆及防腐保护体系。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-23",
+      "conclusion": "独立完整审读官网Home67行和TECHNOPAINT86行原文，Home明示发展/制造工业液体漆与特种产品、100%在HadSoualem自有厂生产，并自述自2007起为COPRODES子公司；不把静态历史日期当2026投产或独立工商股权审计。实际TECHNOPAINT页面列金属防锈漆、防腐底漆、保护体系以及醇酸/纤维素/环氧/PU/丙烯酸/聚酰胺等成品系列，TECHNOPRIME是底漆系列、TECHNOCOAT是面漆系列，未读具体SKU/TDS/施工参数，不猜任何具体产品化学组成或将全部系列说成同一环氧配方。Home已读完整主营分类为工业成品漆、工业车身、木器装饰及特种产品，工业实际细项为底面漆、固化剂、清漆、涂料稀释与清洗溶剂；木器范围列PU/丙烯酸/纤维素成品体系、催化剂/稀释剂，不从hardener/catalyst或原料字样自动排除，也不隐去这些经营。实际已读主要业务和工业产品范围未见ELO/ESBO/环氧植物油/同类生物基增塑稳定改性投入外售，有限公开范围排查通过，不称读完全部隐藏业务/SDS/所有配方。About详页及通用Products两不同URI报502、Contact页Timeout，三失败无原始正文均计入当前累计5/rem1，不重试同URI或换镜像/提供者绕过。工业页自身有Demanderundevis真实公司业务表单与同Home公开电话+212(0)5.22.44.93.62，contactPage即该已读工业页，不冒失败Contact页已读；原表单未提交。官网原文邮箱contact@www.monopol.ma保留在原档，含www的异常写法不擅改成contact@monopol.ma，也不选作已核实收件邮箱，因表单和电话渠道足够、不猜个人或WhatsApp。名称按MonopolPeinturesMaroc和FooterMonopolePeintures同一自有摩洛哥主体，COPRODES自述集团作为本账户关联记录；全603正式/根617/front1219/index531/excluded15及全史域名/母集团/品牌去重无旧同组账户。瑞士MonopolAG与BoliviaMonopolLtda按既有独立域名/厂址/已核身份保留，未发现与COPRODES同集团证据，不凭Monopol相似词合并，也不声称隐藏股权尽查；CINMonopol仅旧Search关联未冒事实。HadSoualem城市地理原读429一次无坐标，未重试；另外GeoNames国家资料和真实链接坐标页两次独立读，地图仅国家级概略28.5/-10，明确非HadSoualem城市或厂门定位。公司原读发生2026-11-22，独立档案复核2026-11-23，不虚称今日重新抓公司或新增产线。ELO仅涂料/树脂改性及柔韧潜在评估，不推现用材料、配方相容、防腐改善、认证、采购或采购时机。发送台账未知无就绪稿、无邮件/表单/消息/CRM，剩一来源保留。"
+    },
+    "contact": {
+      "label": "官网工业产品页业务表单和电话；异常原文邮箱未选用",
+      "contactUrl": "https://www.monopol.ma/produits/technopaint/"
+    },
+    "source": {
+      "label": "TECHNOPAINT自有工业防腐涂料系列及业务表单",
+      "url": "https://www.monopol.ma/produits/technopaint/"
+    },
+    "checkedAt": "2026-11-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"monopol-peintures-maroc-had-soualem": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "midi-peinture-oujda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "edgechem-kingston-jamaica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "diamond-paint-kingston-jamaica": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -14890,6 +14917,38 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"monopol-peintures-maroc-had-soualem": {
+  "website": "https://www.monopol.ma/",
+  "contactPage": "https://www.monopol.ma/produits/technopaint/",
+  "generalPhone": "+212(0)5.22.44.93.62",
+  "generalPhoneEvidence": {
+    "company": "Monopol Peintures Maroc",
+    "value": "+212(0)5.22.44.93.62",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网Home与TECHNOPAINT同列公开业务总机",
+        "url": "https://www.monopol.ma/produits/technopaint/",
+        "summary": "工业页及Home均明确+212(0)5.22.44.93.62与周一至周五营业时段，保留国际(0)原写法；非具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-23"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Factory explicitly disclosed in HAD SOUALEM, Morocco; exact street/factory gate not returned. COPRODES subsidiary since2007 per current company Home narrative. Map uses GeoNames country-level representative28.5,-10 and is not a city or factory location.",
+  "sources": [
+    {
+      "label": "官网自有工厂/制造及COPRODES自述关联",
+      "url": "https://www.monopol.ma/"
+    },
+    {
+      "label": "TECHNOPAINT具体防腐成品系列、业务表单与公开电话",
+      "url": "https://www.monopol.ma/produits/technopaint/"
+    }
+  ]
+},
 "midi-peinture-oujda": {
   "website": "https://midipeinture.ma/",
   "contactPage": "https://midipeinture.ma/presentation/",
@@ -45226,6 +45285,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"monopol-peintures-maroc-had-soualem",
 "midi-peinture-oujda",
 "edgechem-kingston-jamaica",
 "diamond-paint-kingston-jamaica",

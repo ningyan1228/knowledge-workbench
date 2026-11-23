@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"monopol-peintures-maroc-had-soualem": "I noticed that Monopol Peintures Maroc manufactures TECHNOPAINT industrial coatings, including anti-corrosion primers and protective coating systems.",
 "midi-peinture-oujda": "I noticed that MIDI PEINTURE manufactures MAT BÂTIMENT 420, a water-based acrylic finishing paint suitable for wood.",
 "edgechem-kingston-jamaica": "I noticed that EdgeChem manufactures Industrial Metal Primer, an anti-corrosive primer for metal surfaces.",
 "diamond-paint-kingston-jamaica": "I noticed that Diamond Paint manufactures Diamond Wood Sealer, a water-based sealer for interior and exterior wood.",
