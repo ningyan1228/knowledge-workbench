@@ -14308,11 +14308,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-23"
   },
+  {
+    "id": "peinture-midy-ii-zeralda",
+    "company": "Peinture Midy II",
+    "productId": "elo",
+    "country": "Algeria",
+    "countryZh": "阿尔及利亚",
+    "city": "Zéralda（官网商业联系城市；城市示意点，非Hadjout工厂定位）",
+    "latitude": 36.717,
+    "longitude": 2.85,
+    "legacyCompanyDescription": "阿尔及利亚自有制漆企业，Metal Protect为金属结构和工业设备用防护面漆。",
+    "signal": "Peinture Midy II在阿尔及利亚自有生产涂料；Metal Protect为用于金属结构及工业设备的工业防护面漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-23",
+      "conclusion": "独立完整审读自有历史133行、MetalProtect具体成品70行、首页135行、主目录48行及工业目录65行。历史明确自有配方/制造及Hadjout生产基地，1990起步、1992公司成立和2021工厂为公司叙述的不同事件，不改成2026投产；93000吨、550人、领先与认证等未作独立审计或采购依据。首页及主目录六个成品类为建筑、工业、汽车修补、木器、装饰、LUXURYmidy；工业目录实际13成品含防锈黑/灰、MidyFer、MidyFlex、LC3、MetalProtect及装饰金属色，首页HoggarAdditifSilver/Gold只见装饰产品名称，不把Additif词自动认作ELO原料或猜化学组成。具体MetalProtect明确工业金属结构/设备保护用途，不猜其树脂/配方，更不把其防腐、快干、附着或成本宣传转给ELO。已读完整主要业务分类与工业成品范围未见ELO、ESBO、环氧化植物油或同功能生物基增塑稳定原料外售；有限公开范围同行排查通过，未读所有其他分类SKU/TDS/SDS或隐藏经营，也未证明其原料外购。五份原文Servicecommercial同列精确Peinture.midy@yahoo.com及0770402214，明确公司商业部门归属；原Yahoo域名不擅改，不冒个人邮箱、WhatsApp或具名采购。Serviceexport另有World.Export@peinturemidy2.com及两个电话，仅原文保留，不将出口办公室另算客户。当前业务地址Zeralda与历史Hadjout工厂按一账户保留，地图采用独立Zeralda城市示意36.717/2.85，不当Hadjout厂门。全604正式/根公开含14无关待发/前沿1223/来源535/排除15及确切域名、SARLPeintureMidy2、MidyII别名无旧账户，早期命中仅Search；摩洛哥MIDIPEINTURE有独立域名和Oujda工厂证据，不凭近似名称合并或借其技术资料。SARLPeintureMidy历史与当前Midy2一户，不推最终隐藏股权。五公司来源无披露跳转/失败/PDF/脚本执行、累计5/rem1；地理原读另1。ELO只按用户资料提出涂料环氧功能、树脂改性及柔韧潜在评估，不推现用材料、相容、腐蚀改善、采购需求或时机。共享发送台账未知，不视未发送、不创建可发送稿或外联。"
+    },
+    "contact": {
+      "label": "官网商业部门邮箱与电话（非具名采购）",
+      "email": "Peinture.midy@yahoo.com",
+      "contactUrl": "https://peinturemidy2.com/"
+    },
+    "source": {
+      "label": "Metal Protect具体工业防护面漆",
+      "url": "https://peinturemidy2.com/produits_details.php?id=54&produit=Metal+Protect"
+    },
+    "checkedAt": "2026-11-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"peinture-midy-ii-zeralda": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "monopol-peintures-maroc-had-soualem": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "midi-peinture-oujda": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "edgechem-kingston-jamaica": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14917,6 +14945,80 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"peinture-midy-ii-zeralda": {
+  "website": "https://peinturemidy2.com/",
+  "contactPage": "https://peinturemidy2.com/",
+  "generalEmail": "Peinture.midy@yahoo.com",
+  "generalEmailEvidence": {
+    "company": "Peinture Midy II",
+    "value": "Peinture.midy@yahoo.com",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网Service commercial商业部门邮箱，五份自有原文一致",
+        "url": "https://peinturemidy2.com/",
+        "summary": "首页及具体产品/制造历史/目录页页脚均在Service commercial下明确Peinture.midy@yahoo.com；虽为Yahoo域名，但公司自有站反复公开归属，保留精确大小写，不冒具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-23"
+  },
+  "generalPhone": "0770 402 214",
+  "generalPhoneEvidence": {
+    "company": "Peinture Midy II",
+    "value": "0770 402 214",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "官网Service commercial公开商业部门电话",
+        "url": "https://peinturemidy2.com/",
+        "summary": "首页及另四原文Servicecommercial下均明确0770 402 214，按本地格式保留，不推WhatsApp或具名负责人。"
+      }
+    ],
+    "verifiedAt": "2026-11-23"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Sales",
+      "email": "Peinture.midy@yahoo.com",
+      "emailEvidence": {
+        "company": "Peinture Midy II",
+        "value": "Peinture.midy@yahoo.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "官网Service commercial商业部门邮箱，五份自有原文一致",
+            "url": "https://peinturemidy2.com/",
+            "summary": "首页及具体产品/制造历史/目录页页脚均在Service commercial下明确Peinture.midy@yahoo.com；虽为Yahoo域名，但公司自有站反复公开归属，保留精确大小写，不冒具名采购。"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      }
+    }
+  ],
+  "address": "Service commercial: Zone d’activité lot n°07, Zéralda, Wilaya d’Alger, Algeria. Own history describes Hadjout (Tipaza) production unit inaugurated in2021; same company. Map uses Zeralda city representative, not the plant gate.",
+  "sources": [
+    {
+      "label": "自有制造/公司历史与Hadjout生产基地",
+      "url": "https://peinturemidy2.com/presentation.php"
+    },
+    {
+      "label": "Metal Protect具体工业防护面漆",
+      "url": "https://peinturemidy2.com/produits_details.php?id=54&produit=Metal+Protect"
+    },
+    {
+      "label": "完整主营六类与商业部门公开联系入口",
+      "url": "https://peinturemidy2.com/"
+    },
+    {
+      "label": "工业十三成品目录",
+      "url": "https://peinturemidy2.com/produits_categories.php?cat=Industrie&id=3"
+    }
+  ]
+},
 "monopol-peintures-maroc-had-soualem": {
   "website": "https://www.monopol.ma/",
   "contactPage": "https://www.monopol.ma/produits/technopaint/",
@@ -45285,6 +45387,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"peinture-midy-ii-zeralda",
 "monopol-peintures-maroc-had-soualem",
 "midi-peinture-oujda",
 "edgechem-kingston-jamaica",
