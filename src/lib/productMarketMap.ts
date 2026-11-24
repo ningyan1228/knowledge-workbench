@@ -14585,11 +14585,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "philaac-bogota",
+    "company": "PHILAAC S.A.S.",
+    "productId": "nl-w1201",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Bogotá D.C.（官网业务地址；沿用哥伦比亚近似示意点，非地址地理编码）",
+    "latitude": 4.6,
+    "longitude": -74.1,
+    "legacyCompanyDescription": "哥伦比亚PHILAAC自主配方制造涂料，Acuapro水性丙烯酸磁漆明确用于木材；同公司门店合并。",
+    "signal": "PHILAAC在Bogotá自主配方制造涂料；Acuapro为水性丙烯酸磁漆，其同款产品用途明确包括木材。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "PHILAAC官方完整Home原始HTML明确其在Bogotá自主开发、制造和销售涂料，Fórmulas propias fabricadas en Bogotá；选定同款Acuapro卡片及被动读取template明确100%丙烯酸、水性、可用水稀释并列木材，不把分开的墙漆和木器业务拼成同款证据。两次请求仅一个独立URL：native实际返回0–847/970行并非全目录，随后一次成功URI的完整原始HTML单GET补全359575字符，逐一离线读取34张成品/配套品卡片的名称说明用途，无远程JS、隐藏API、PDF下载或失败URI绕过。34可见项目包括成品Wash Primer双组分非铁金属表面底漆、成品氯化橡胶涂料及thinner配套，不能因附着促进名称或氯字就冒NLW聚烯烃/CPO水性原料同行；已读经营范围未见PO/CPO分散体、聚烯烃乳液或同类附着原料外售，不冒全SKU/SDS/完整化学配方审计。公司一般销售邮箱ventas@philaac.com.co、固定业务电话+57 601 424 9310由首方JSON-LD及可见页脚对应，WhatsApp使用页脚实际完整href，另几个促销/门店号码不混入，不猜具名采购。PHILAAC S.A.S.名称为自身页脚/Organization标注，非独立政府证照或隐藏股权审计；门店不拆户。正式库614、根14未发布、私有前沿/来源/排除表、队列及旧原读名称/域名无重复，保留全产品一账户预算2/rem4。Bogotá/Carrera68B业务地址和Bogotá制造自述分别记录，不把街道地址冒厂门GPS；地图仅复用既有已部署哥伦比亚4.6/-74.1近似示意点，明确非地址地理编码或新核城市坐标，原文未提供geo，不额外抓取超出本范围6来源。NLW只提出木材水性底涂/附着促进的潜在评估，不称该丙烯酸配方已相容、已用聚烯烃、已有采购或性能保证；70年/NTC/低VOC/促销属于对方自述，不移作我方承诺。"
+    },
+    "contact": {
+      "label": "官网公司一般销售邮箱、固定业务电话及明确公开WhatsApp入口",
+      "email": "ventas@philaac.com.co",
+      "phone": "+57 601 424 9310",
+      "contactUrl": "https://philaac.com.co/"
+    },
+    "source": {
+      "label": "PHILAAC官方34项产品目录、Acuapro完整用途及自主配方制造说明",
+      "url": "https://philaac.com.co/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"philaac-bogota": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "solintex-maracay": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-huten-carabobo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "floripaint-barquisimeto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15204,6 +15233,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"philaac-bogota": {
+  "website": "https://philaac.com.co/",
+  "contactPage": "https://philaac.com.co/",
+  "whatsapp": "https://wa.me/573104891875?text=Hola%20PHILAAC%2C%20necesito%20asesor%C3%ADa.",
+  "generalEmail": "ventas@philaac.com.co",
+  "generalEmailEvidence": {
+    "company": "PHILAAC S.A.S.",
+    "value": "ventas@philaac.com.co",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "PHILAAC官方公司业务页脚及Organization销售联系邮箱",
+        "url": "https://philaac.com.co/",
+        "summary": "可见页脚实际mailto与Organization email同时明确ventas@philaac.com.co，为公司一般销售联系入口，非具名采购人。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+57 601 424 9310",
+  "generalPhoneEvidence": {
+    "company": "PHILAAC S.A.S.",
+    "value": "+57 601 424 9310",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "PHILAAC官方Organization及业务页脚固定电话",
+        "url": "https://philaac.com.co/",
+        "summary": "Organization telephone明确+57 601 424 9310，可见Bogotá页脚列601 424 9310及实际tel链接；另列WhatsApp +57 310 489 1875，不把固定电话猜为WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Carrera 68 B N° 17-26, Bogotá D.C., Colombia (published business contact address; company separately states own formulas manufactured in Bogotá). Marker reuses the existing deployed Colombia approximate display point, not independently geocoded business address or factory GPS.",
+  "sources": [
+    {
+      "label": "官方Acuapro同款水性/木材产品说明、34可见成品及制造声明",
+      "url": "https://philaac.com.co/"
+    },
+    {
+      "label": "官方页脚明确WhatsApp实际链接（未发送）",
+      "url": "https://wa.me/573104891875?text=Hola%20PHILAAC%2C%20necesito%20asesor%C3%ADa."
+    }
+  ]
+},
 "solintex-maracay": {
   "website": "https://solintexdevenezuela.com.ve/",
   "contactPage": "https://solintexdevenezuela.com.ve/contacto/",
@@ -46121,6 +46198,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"philaac-bogota",
 "solintex-maracay",
 "pinturas-huten-carabobo",
 "floripaint-barquisimeto",
