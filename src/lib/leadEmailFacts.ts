@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"pro-inks-johannesburg": "I noticed that Pro Inks manufactures solvent-based screen-printing inks and lists UniPrint/BioPrint for polypropylene, HDPE, aluminium foil and polyethylene.",
 "qualycolor-itaguai": "I noticed that Qualycolor manufactures industrial coatings, including anticorrosive epoxy primers, and lists epoxy, polyurethane, alkyd and acrylic product ranges.",
 "polimeros-pinturas-alsa-tlajomulco": "I noticed that ALSA formulates ADHIPLAST, a ready-to-apply adhesion primer for PP and PE automotive plastic parts.",
 "pinturas-descar-general-rodriguez": "I noticed that Pinturas Descar manufactures anti-rust paints and operates its own industrial plant in General Rodríguez.",

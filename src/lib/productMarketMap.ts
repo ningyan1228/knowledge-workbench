@@ -14861,11 +14861,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "pro-inks-johannesburg",
+    "company": "Pro Inks",
+    "productId": "cpp-cpo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Johannesburg, Gauteng（城市示意点，非工厂定位）",
+    "latitude": -26.20444,
+    "longitude": 28.04556,
+    "legacyCompanyDescription": "南非PP溶剂型丝印油墨制造商",
+    "signal": "在Johannesburg自述制造溶剂型丝印油墨；UniPrint／BioPrint成品明确用于PP、HDPE、铝箔和PE。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "五次实际公司native原文完整156/32/34/156/54行，四不同URL、Products菜单点击实际回到Home且照计一次，不冒独立完整目录或披露跳转。0失败/披露跳转/原HTMLGET/PDF/自动重试/远程JS，累计0+5=5/rem1；另独立城市1，CPP范围6/6停。Home直接The Solvent Based Printing Inks we make并把UniPrint用于Polypropylene/HDPE/铝箔/PE；UniPrint/BioPrint实际叶页再次列PolyPropylene，About自述manufacturers且位于南非Johannesburg。是自身成品PP溶剂丝印油墨，不是只有印刷行业/包装基材或UV相关性；不从商品BioPrint一词推生物基、水性、环保认证、无氯或客户现用CPP。实际公开业务菜单四成品油墨家族VinylPrint/ProTec/CorriPrint/UniPrintBioPrint、About成品清漆、实际已读Home/About/UniPrint/Contact及回到Home的Products表示，未见CPP/CPO/改性聚烯烃树脂或同类附着原料对外销售；同行排除限实际这些经营内容与所选PP成品，不冒未读三叶页/Portfolio/全SKU/TDS/SDS/化学配方或隐藏股权。ProInks/PROINKS/UniPrint/BioPrint及同域同Office一户，法定后缀/CIPC/母公司未披露不编造；同名词与其他国家印刷厂不无证合并。Contact TheOffice原文地址不是工厂证书或定位；城市Johannesburg -26.20444/28.04556来自独立市镇页标题306/信息框333一致，只作城市示意，1257行城市文章只读取返回范围及有关信息不冒通篇核验，无Google/地理再请求。官网OurTeam当前列表直接Johnny/OperationsDirector与johnny@proinks.co.za，身份证据和精确具名业务邮箱归属分别保存同一真正支持两项的AboutURL；只有Johnny公开名，不扩姓、不冒采购/技术权限/独立劳动登记或LinkedIn交叉确认。版权2018保留，不改成2026任职或投产事件。电话0616264746在Contact办公电话和Team双方旁重复，只精选公司一般办公业务电话，不绑定Johnny个人、不猜WhatsApp或+27格式。Monique顶部可见邮箱文字monique而hrefmonica不一致，虽About有MD/文本email也不精选其收件地址，不修拼写、不自动发信测试；联系人只Johnny一位。Contact真实姓名邮箱主题消息字段未提交，24小时回复仅客户宣传不承诺。CPP应用用已存NipponPaper SUPERCHLON类别扩展及用户七牌号指南，功能仅潜在PP附着/溶剂体系材料评估，不冒NL牌号已相容、客户现用或采购、预处理状态、粘结/耐性/性能保证。"
+    },
+    "contact": {
+      "label": "官网具名业务邮箱（Johnny／Operations Director）、办公电话及联系表单；未确认采购职责",
+      "email": "johnny@proinks.co.za",
+      "phone": "061 626 4746",
+      "contactUrl": "https://proinks.co.za/contacts.html"
+    },
+    "source": {
+      "label": "Pro Inks官方制造说明及UniPrint／BioPrint PP溶剂型油墨",
+      "url": "https://proinks.co.za/uniprint.html"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pro-inks-johannesburg": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "qualycolor-itaguai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "polimeros-pinturas-alsa-tlajomulco": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "pinturas-descar-general-rodriguez": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15490,6 +15519,84 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pro-inks-johannesburg": {
+  "generalEmail": "",
+  "website": "https://proinks.co.za/",
+  "contactPage": "https://proinks.co.za/contacts.html",
+  "generalPhone": "061 626 4746",
+  "generalPhoneEvidence": {
+    "company": "Pro Inks",
+    "value": "061 626 4746",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pro Inks官方Contact The Office公开办公电话",
+        "url": "https://proinks.co.za/contacts.html",
+        "summary": "The Office直接列Phone: 061 626 4746；About两位人员均旁列此号，只按公司办公电话，不冒具名个人或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [
+    {
+      "name": "Johnny",
+      "title": "Operations Director",
+      "department": "Other",
+      "email": "johnny@proinks.co.za",
+      "identityEvidence": {
+        "company": "Pro Inks",
+        "name": "Johnny",
+        "title": "Operations Director",
+        "responsibilities": "The current official Our Team section lists Johnny as Operations Director. Specific duties, purchasing responsibility and selected-material authority are not disclosed. Current website listing verified; no independent employment registry or LinkedIn confirmation.",
+        "currentEmployment": true,
+        "sources": [
+          {
+            "label": "Pro Inks官方Our Team：Johnny及Operations Director",
+            "url": "https://proinks.co.za/about.html",
+            "summary": "同一官网About直接列Johnny Operations Director；只保留公开名，不补姓或采购职责。"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      "emailEvidence": {
+        "company": "Pro Inks",
+        "value": "johnny@proinks.co.za",
+        "kind": "named-business",
+        "personName": "Johnny",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Pro Inks官方Our Team：Johnny精确具名业务邮箱",
+            "url": "https://proinks.co.za/about.html",
+            "summary": "Johnny Operations Director条目直接公开Email: johnny@proinks.co.za；该邮箱归属不靠通用域名或猜测。"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      }
+    }
+  ],
+  "departmentEmails": [],
+  "address": "Unit 6, 104 Side Rd, West Turffontein, Johannesburg South, 2058, South Africa. Company-published Office address, not an independently surveyed factory. Marker is an independent city representative point only.",
+  "sources": [
+    {
+      "label": "官方Home：自身制造的溶剂型四系列油墨及PP用途",
+      "url": "https://proinks.co.za/"
+    },
+    {
+      "label": "官方UniPrint／BioPrint：明确PolyPropylene基材",
+      "url": "https://proinks.co.za/uniprint.html"
+    },
+    {
+      "label": "官方About：自身制造及Our Team分项身份邮箱",
+      "url": "https://proinks.co.za/about.html"
+    },
+    {
+      "label": "官方Contact：Office地址电话及真实业务表单",
+      "url": "https://proinks.co.za/contacts.html"
+    }
+  ]
+},
 "qualycolor-itaguai": {
   "website": "https://qualycolor.com.br/",
   "contactPage": "https://qualycolor.com.br/#contatos",
@@ -46886,6 +46993,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pro-inks-johannesburg",
 "qualycolor-itaguai",
 "polimeros-pinturas-alsa-tlajomulco",
 "pinturas-descar-general-rodriguez",
