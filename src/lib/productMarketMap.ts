@@ -14805,11 +14805,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "polimeros-pinturas-alsa-tlajomulco",
+    "company": "Polímeros y Pinturas ALSA, S.A. de C.V.",
+    "productId": "cpp-cpo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Tlajomulco de Zúñiga, Jalisco（城市示意点，非工厂定位）",
+    "latitude": 20.47361,
+    "longitude": -103.44306,
+    "legacyCompanyDescription": "墨西哥汽车修补涂料及PP塑料底涂配方制造商",
+    "signal": "官网自述涂料及涂层制造商；署名自有实验室的ADHIPLAST 67-050用于PP／PE塑料修补底涂。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "五次实际公司native定向读取，5不同URL：ADHIPLAST产品65行、官方当前链接技术文件2页112行、Home44行、总Products返回0业务行、Automotiva第一页97行。空正文也计额且未换provider/原始GET/API/镜像重试该URI；累计5/rem1，0披露跳转、0原始HTML/PDF二进制/远程JS。Home官方标题明确涂料与涂层制造商，自述GrupoAlsa四终端市场及配方开发/质量控制；所选ADHIPLAST技术文件署名PolimerosyPinturasAlsaSAdeCV及自有实验室研究，直接列PP/PE塑料附着底涂、即用无稀释、后施底漆/面漆且含溶剂，为实际终端修补用配制底涂，不将原料乳液或普通塑料制件当客户。Home为制造商自述非独立厂房勘察，所列AntiguoCaminoaTlajomulco7/SantaCruzdelasFlores明确公司办公室，不冒工厂。资料Rev01/21Mar2018和上传路径2025/09分别保留，不当2026新配方/认证；第6施工步写ADHIFLEX而本文件ADHIPLAST，保留名称不一致，不自行纠错或借0.5mm/固含/VOC/耐性数字保证我方性能。实际读Home四市场、Automotiva第一页15个汽车修补成品/催化剂/清漆/底涂及所选PP底涂两页技术体，有限范围未见CPP/CPO、MAH改性聚烯烃树脂或同类原料附着促进剂外售；成品修补底涂不是原料销售，企业Polimeros名称也不单独证明原料同行。总Products空白、Automotiva第二页及其他三类叶页/SDS/完整配方/未披露股权未审，同行排除限实际已读经营及所选产品范围，不声称完整目录已查。GrupoAlsa/ALSA/PolimerosyPinturasAlsa/ADHIPLAST/PLATINVM为同一经营资料内品牌/成品，网页与该原始PDF显示旧alsa.mx及新alsa.com.mx同名同址关联，保守同户同预算，不拆域名/厂址或区域仓库/经销商。未读取旧alsa.mx搜索PDF，不编最终母公司或独立采购主体。Home/产品/分类三页直接公开ventas@alsa.com.mx和(01-33)3684-8487，与技术文件法定主体/公司办公室相对应；一般销售邮箱和总机，非具名采购，无SMTP投递或WhatsApp归属验证，不猜国际格式/账号。联系入口用实际有邮箱电话的Home，不猜未打开Contact页URL或提交表单。额外一个独立城市参考，当前CPP范围5公司+1城市=6/6，城市20.47361/-103.44306仅市镇示意，非办公室/厂门GPS；无地图短链/Google请求。CPP应用采用已存2026Nov2NipponPaper类别扩展及用户选型指南PP附着，不从客户PE、溶剂安全或宣传推我方所有牌号PE/TPO适配/汽车认证/现用CPP/外购需求或配方相容。"
+    },
+    "contact": {
+      "label": "公开公司销售邮箱、总机和官网业务联系区",
+      "email": "ventas@alsa.com.mx",
+      "phone": "(01-33) 3684-8487",
+      "contactUrl": "https://alsa.com.mx/"
+    },
+    "source": {
+      "label": "ALSA官方ADHIPLAST 67-050 PP／PE塑料底涂技术文件及制造商自述",
+      "url": "https://alsa.com.mx/wp-content/uploads/2025/09/TDS-Alsa_-Adhiplast-67-050.pdf"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"polimeros-pinturas-alsa-tlajomulco": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "pinturas-descar-general-rodriguez": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "simba-durekol-santa-fe": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "corquimica-estancia-velha": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15432,6 +15461,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"polimeros-pinturas-alsa-tlajomulco": {
+  "website": "https://alsa.com.mx/",
+  "contactPage": "https://alsa.com.mx/",
+  "generalEmail": "ventas@alsa.com.mx",
+  "generalEmailEvidence": {
+    "company": "Polímeros y Pinturas ALSA, S.A. de C.V.",
+    "value": "ventas@alsa.com.mx",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "ALSA官方Home销售联系区",
+        "url": "https://alsa.com.mx/",
+        "summary": "制造商官网GrupoAlsa联系区公开ventas@alsa.com.mx；地址与同站当前链接的法定主体技术文件一致，是公司销售入口非具名采购邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "(01-33) 3684-8487",
+  "generalPhoneEvidence": {
+    "company": "Polímeros y Pinturas ALSA, S.A. de C.V.",
+    "value": "(01-33) 3684-8487",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "ALSA官方Home公司总机及办公室",
+        "url": "https://alsa.com.mx/",
+        "summary": "公开(01-33)3684-8487，保留原格式，不改成独立确认的国际号/WhatsApp或个人采购电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Antiguo Camino a Tlajomulco #7, Santa Cruz de Las Flores, Tlajomulco de Zúñiga, Jalisco, C.P. 45640, Mexico. Official corporate-office address, not independently verified factory; map uses town/municipal representative.",
+  "sources": [
+    {
+      "label": "自身制造商自述和四终端市场",
+      "url": "https://alsa.com.mx/"
+    },
+    {
+      "label": "官方PP／PE塑料底涂及所属修补体系",
+      "url": "https://alsa.com.mx/producto/alsa-adhiplast/"
+    },
+    {
+      "label": "实验室署名、法定主体及PP／PE用途，Rev2018",
+      "url": "https://alsa.com.mx/wp-content/uploads/2025/09/TDS-Alsa_-Adhiplast-67-050.pdf"
+    },
+    {
+      "label": "实际汽车修补目录第一页15成品，非全两页",
+      "url": "https://alsa.com.mx/categoria-producto/automotiva/"
+    }
+  ]
+},
 "pinturas-descar-general-rodriguez": {
   "website": "https://www.pinturasdescar.com/",
   "contactPage": "https://www.pinturasdescar.com/contacto/",
@@ -46725,6 +46809,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"polimeros-pinturas-alsa-tlajomulco",
 "pinturas-descar-general-rodriguez",
 "simba-durekol-santa-fe",
 "corquimica-estancia-velha",
