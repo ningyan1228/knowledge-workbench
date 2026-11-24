@@ -14529,11 +14529,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "pinturas-huten-carabobo",
+    "company": "Pinturas Hüten",
+    "productId": "elo",
+    "country": "Venezuela",
+    "countryZh": "委内瑞拉",
+    "city": "具体城市未披露（Carabobo州；官网公开业务位置示意，非工厂定位）",
+    "latitude": 10.1884515,
+    "longitude": -67.961966,
+    "legacyCompanyDescription": "委内瑞拉Hüten配方加工工业涂料，Fondo + Esmalte防锈磁漆用于钢结构、机械、储罐及管道。",
+    "signal": "Hüten在委内瑞拉进行涂料配方平衡和加工；Fondo + Esmalte为用于钢结构、工业机械、金属储罐和管道的合成防锈涂料。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Hüten官方Nosotros明确Fabricantes de pinturas industriales en Venezuela及工程师配方，并具体说明进口的是组分，在委内瑞拉进行envasados, balanceados y perfeccionados，不把这些表述误判为成品进口经销，也不声称已独立参观工厂或证实上游原料采购。实际Fondo + Esmalte产品页明确为合成防锈磁漆，用于钢结构、工业机械、金属储罐、暴露管道及船体，对应ELO工业防护涂料潜在材料评估；网页未明确醇酸树脂，故不编为醇酸配方或已用ELO。完整Home179951字符及112/213行两首方正文独立核读：所见为单一Fondo+Esmalte成品、RAL颜色和五行业用途，未见ELO/ESBO、环氧植物油或同类生物增塑稳定原料外售；颜色不是独立产品或客户，有限可见范围不冒全SKU/SDS/隐藏配方审计。About所谓德国工业启发/工程师经验不推德国母公司或已知集团关联，未编C.A.法人/政府登记；2020仅网站自述，不当法定成立证明。干燥30分钟/两小时、一层/2-3遍有不同文案，未用这些冲突性能、50%节时、降本/耐蚀/环保宣传放行或转作我方承诺，具体制造和工业成品用途有明确一致文字。官网业务区及实际mailto公开一般公司邮箱，虽邮箱域名为.com、官网为.com.ve仍由该首方明确归属；一般电话与实际WhatsApp href分别核对，未冒采购部门或个人。全正式库、根源、前沿/来源/排除表/历史原读及队列按品牌、无重音别名和两个域名去重，无既有同户，不拆颜色或行业新增。地址仅Parque Industrial Castillito, Carabobo, Venezuela，未披露城市，不据区号或坐标猜Valencia/SanDiego；地图采用当前首方JSON-LD明确公开业务点，非独立厂门定位，原hasMap未打开。ELO只环氧功能、柔韧/树脂改性潜在评估，无当前采购、相容或性能保证。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、一般电话及明确WhatsApp入口",
+      "email": "info@pinturashuten.com",
+      "phone": "+58 414-4089439",
+      "contactUrl": "https://pinturashuten.com.ve/"
+    },
+    "source": {
+      "label": "Pinturas Hüten官方Fondo + Esmalte工业防护涂料与Nosotros配方加工说明",
+      "url": "https://pinturashuten.com.ve/productos/fondo-esmalte"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-huten-carabobo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "floripaint-barquisimeto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pindeveca-los-guayos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-top-caracas": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15146,6 +15175,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-huten-carabobo": {
+  "website": "https://pinturashuten.com.ve/",
+  "contactPage": "https://pinturashuten.com.ve/",
+  "whatsapp": "https://wa.me/584144089439?text=Hola%2C%20tengo%20preguntas%20sobre%20sus%20productos",
+  "generalEmail": "info@pinturashuten.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas Hüten",
+    "value": "info@pinturashuten.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Hüten官网公司业务邮箱及实际mailto",
+        "url": "https://pinturashuten.com.ve/",
+        "summary": "官方Contact及报价咨询区明确info@pinturashuten.com，原始HTML含相同mailto；官网.com.ve首方明确关联该.com公司邮箱，无具名身份或采购部门推定。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+58 414-4089439",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Hüten",
+    "value": "+58 414-4089439",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Hüten官网一般业务电话",
+        "url": "https://pinturashuten.com.ve/",
+        "summary": "官网业务区公开+58 414-4089439；WhatsApp为独立实际wa.me链接，未按号码猜测账号。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Parque Industrial Castillito, Carabobo, Venezuela (published business address; city not disclosed). Marker is the current company-published JSON-LD business location, not independently surveyed factory GPS.",
+  "sources": [
+    {
+      "label": "委内瑞拉配方、进口组分平衡加工及公司业务联系",
+      "url": "https://pinturashuten.com.ve/nosotros"
+    },
+    {
+      "label": "Fondo + Esmalte合成防锈成品的具体工业用途",
+      "url": "https://pinturashuten.com.ve/productos/fondo-esmalte"
+    },
+    {
+      "label": "完整经营产品导航、公开联系及首方结构化业务位置",
+      "url": "https://pinturashuten.com.ve/"
+    },
+    {
+      "label": "实际公开WhatsApp链接（未发送消息）",
+      "url": "https://wa.me/584144089439?text=Hola%2C%20tengo%20preguntas%20sobre%20sus%20productos"
+    }
+  ]
+},
 "floripaint-barquisimeto": {
   "website": "https://floripaint.com/",
   "contactPage": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/",
@@ -45956,6 +46041,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-huten-carabobo",
 "floripaint-barquisimeto",
 "pindeveca-los-guayos",
 "pinturas-top-caracas",
