@@ -14697,11 +14697,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "sherwood-products-santiago",
+    "company": "Sherwood Products S.A.",
+    "productId": "nl-w1201",
+    "country": "Chile",
+    "countryZh": "智利",
+    "city": "Santiago（官网厂址位于Peñalolén；圣地亚哥城市示意点，非工厂定位）",
+    "latitude": -33.4375,
+    "longitude": -70.65,
+    "legacyCompanyDescription": "智利木器水性清漆及艺术涂料制造商",
+    "signal": "自主研发制造木器涂料；Wet-Lac为用于室内家具、门及抛光木材的水性透明清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "SherwoodProductsSA自有公司页明确发明研发、测试和制造全流程及逐项自制产品，具体Wet-Lac页同款明确水性透明清漆、室内抛光木材/家具/门，不从行业标签、零售店或电话区号猜生产。首方公开CruzAlmeyda1060/Peñalolén/Santiago的Fábrica和Apoquindo6502/LasCondes销售店为同一公司两个场所，不拆新户；WetProof/Wetcril/Sol&Lluvia/ElSeco成品线及wood.cl/barniz.cl/edificacion.cl/artesanias.cl搜索同文域名关联保守去重，不推隐含股权、与美国同名Sherwood或SherwinWilliams关系。公司经营、完整返回可见目录树和成品名称、Wet-Lac及Medium原文已读；Medium明确为画作/壁画/手工艺调色、纹理用配制丙烯酸画材媒介，不因base ligante或dispersiones一词判成对外工业聚烯烃分散体原料，也不编其具体PO含量或配方。所读有限经营及目录范围未见聚烯烃/CPO分散体、NLW同类附着促进原料外售；未读全部叶页/SDS/配方/未披露集团业务，结论限实际读到的木器建筑清漆和艺术成品路线。官网Contact明确技术/销售询问表单和公司一般电话，factory电话+56 22 226 1278归属清楚；Email标签只链接Contact页，未见精确公开邮箱，不猜info@/sales@，无具名采购或WhatsApp账号。Contact原文同时返回Gracias已发送/错误提示，系静态页面模板，当前仅GET未填表/按发送/POST，不当实际发出消息。公司环保/无毒/防霉/寿命/60年历史和Wet-Lac无需稀释与首道1:1施工说明差异保留，不转为我方性能、认证或相容承诺。四完整native348/378/329/376行，0原始HTML/PDF二进制/视觉PDF页/远程JS/API；加1独立Santiago城市参考412/414/420/423–426行，取-33.4375/-70.65为城市示意，首部信息框同值，不当Peñalolén厂门定位。618已部署、根14未发、frontier/来源/排除/队列及旧原始记录按法人/域名/产品线查重无已计主体；四产品同一1000目标，公司4/rem2，本范围5/6，未凑额。仅为NL-W1201在木器水性配方中的潜在底涂/附着促进评估，现用化学体系、NL牌号相容、采购需求、效果和时机未确认。"
+    },
+    "contact": {
+      "label": "官网业务联系表单及公开工厂一般电话；未取得公开邮箱",
+      "phone": "+56 22 226 1278",
+      "contactUrl": "https://www.wetproof.com/contacto.html"
+    },
+    "source": {
+      "label": "Sherwood Wet-Lac水性室内木材清漆及公司自有制造原文",
+      "url": "https://www.wetproof.com/barniz-wetlac-wetproof.html"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sherwood-products-santiago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "quimica-marel-zapopan": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "qtec-rionegro": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "gricoat-itagui": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15320,6 +15348,46 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sherwood-products-santiago": {
+  "website": "https://www.wetproof.com/",
+  "contactPage": "https://www.wetproof.com/contacto.html",
+  "generalPhone": "+56 22 226 1278",
+  "generalPhoneEvidence": {
+    "company": "Sherwood Products S.A.",
+    "value": "+56 22 226 1278",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sherwood官方Contact工厂一般业务电话",
+        "url": "https://www.wetproof.com/contacto.html",
+        "summary": "Fábrica/Cruz Almeyda1060/Peñalolén/Santiago明确对应+56 22 226 1278；非具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Fábrica: Cruz Almeyda 1060, Peñalolén, Santiago, Chile. Sales showroom: Av. Apoquindo 6502, Las Condes, Santiago, Chile. Published business locations, not independent site survey; map uses Santiago city representative, not factory GPS.",
+  "sources": [
+    {
+      "label": "自有研发制造、工厂与销售地址及成品经营目录",
+      "url": "https://www.wetproof.com/empresa.html"
+    },
+    {
+      "label": "Wet-Lac水性室内木材清漆同款",
+      "url": "https://www.wetproof.com/barniz-wetlac-wetproof.html"
+    },
+    {
+      "label": "公司业务联系表单/公开电话，无精确公开邮箱",
+      "url": "https://www.wetproof.com/contacto.html"
+    },
+    {
+      "label": "Wetcril Medium为配制艺术丙烯酸媒介，角色单独核读",
+      "url": "https://www.wetproof.com/medium-wetcril.html"
+    }
+  ]
+},
 "quimica-marel-zapopan": {
   "website": "https://quimicamarel.com.mx/",
   "contactPage": "https://quimicamarel.com.mx/marel/",
@@ -46448,6 +46516,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sherwood-products-santiago",
 "quimica-marel-zapopan",
 "qtec-rionegro",
 "gricoat-itagui",
