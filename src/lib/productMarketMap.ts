@@ -14944,11 +14944,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "chenics-gimpo",
+    "company": "Chenics Co., Ltd. / CHENICS",
+    "productId": "elo",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Gimpo, Gyeonggi-do（城市示意点，非工厂定位）",
+    "latitude": 37.7,
+    "longitude": 126.6,
+    "legacyCompanyDescription": "韩国工业防护涂料制造商",
+    "signal": "在韩国金浦自主制造工业涂料；金属系列包含用于钢结构的快干丙烯酸防腐底漆及苯乙烯改性醇酸防护漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Chenics/CHENICS/주식회사케닉스/chenics.co.kr/137-81-36492原NLW私有同户晋级ELO，不新建第二研究身份；四旧原文离线复核加两当前原文，共6不同URL、六完整native185/96/84/66/89/80行，4+2=6STOP/rem0，0失败/披露跳转/原HTML/PDF/远程JS。CompanyInfo明确2001年成立、Gimpo公司与生产设施同地址、自主制造木器、水性建筑、环氧地坪、聚氨酯防水、金属及特种成品涂料；MetalSteel同款QuickDryingAcrylicPrimer明确钢结构防腐底漆，QuickDryingEnamel是苯乙烯改性醇酸成品防护漆，并非仅施工经销或普通行业标签。有限六首方来源、六成品家族总览及四实际系列表（木器、水性建筑、特种、金属）未见ELO/ESBO/环氧植物油/同类生物基增塑稳定输入对外销售。成品丙烯酸乳液漆、PU防水和环氧地坪不等原料分散体/环氧植物油；配套普通thinner不冒ELO同行，也不声称所有SKU/SDS/配方/未披露股权均审。PureEcoCoat只见PET覆膜施工系统概要，不把PET膜当我方料或相容证据。13个出口市场不是13个子公司；未披露母公司不编控制关系。全627正式基线/root14未发/fr/index/excluded/queue和历史名域营业号邮箱核对，仅同一原NLW私有记录，不把跨产品研发新计数；原NLW水性木器同款仍未证，不从ELO通过反推。当前一般业务chenicskorea@naver.com和固定031-981-5722由公司资料页和六页页脚分项公开，不绑定CEO为具名采购，不推个人邮箱或WhatsApp。Inquiry只观察导航，未打开或验证实际表单，不称表单可提交。公司自述11-1GocheokroWolgotmyeonGimpo为总部/生产设施地址，但未勘察或核产权；地图37.7/126.6来自独立Gimpo城市页两处一致坐标，仅城市示意非厂门GPS。历史ISO/NICE文件只公司自述有副本，未验证当前有效性，客户产品性能/认证不转为我方ELO保证。ELO依用户TDS涂料环氧功能及树脂改性/柔韧潜在评估，不声称现用、采购、相容、抗腐蚀改善或固化反应。"
+    },
+    "contact": {
+      "label": "官网公司资料页一般业务邮箱及固定电话；无具名采购、已核WhatsApp或已核表单",
+      "email": "chenicskorea@naver.com",
+      "phone": "031-981-5722",
+      "contactUrl": "https://www.chenics.co.kr/en/about/company"
+    },
+    "source": {
+      "label": "CHENICS官方自主制造与钢结构防腐底漆产品",
+      "url": "https://www.chenics.co.kr/en/products/steel"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chenics-gimpo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rangaved-maharashtra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "american-colour-vapi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pro-inks-johannesburg": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -15576,6 +15605,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chenics-gimpo": {
+  "website": "https://www.chenics.co.kr/en",
+  "contactPage": "https://www.chenics.co.kr/en/about/company",
+  "generalEmail": "chenicskorea@naver.com",
+  "generalEmailEvidence": {
+    "company": "Chenics Co., Ltd. / CHENICS",
+    "value": "chenicskorea@naver.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "CHENICS公司资料页一般业务邮箱",
+        "url": "https://www.chenics.co.kr/en/about/company",
+        "summary": "当前公司资料页和页脚直接披露chenicskorea@naver.com，属于本公司一般业务邮箱，不是具名CEO/采购；未验证投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "031-981-5722",
+  "generalPhoneEvidence": {
+    "company": "Chenics Co., Ltd. / CHENICS",
+    "value": "031-981-5722",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "CHENICS公司资料页固定业务电话",
+        "url": "https://www.chenics.co.kr/en/about/company",
+        "summary": "CompanyInfo Tel及页脚明示031-981-5722；031-981-5725为传真不混入，电话不自动等WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "11-1, Gocheok-ro, Wolgot-myeon, Gimpo-si, Gyeonggi-do, Republic of Korea (10022). Company-published head office and production facility; not independently surveyed. Marker is an independent city representative point, not factory GPS.",
+  "sources": [
+    {
+      "label": "官方公司/总部与生产设施资料及公开业务联系方式",
+      "url": "https://www.chenics.co.kr/en/about/company"
+    },
+    {
+      "label": "官方Metal & Steel成品防腐底漆系列",
+      "url": "https://www.chenics.co.kr/en/products/steel"
+    },
+    {
+      "label": "官方六成品家族与自主制造总览",
+      "url": "https://www.chenics.co.kr/en"
+    }
+  ]
+},
 "rangaved-maharashtra": {
   "website": "https://rangaved.com/",
   "contactPage": "https://rangaved.com/?lang=hi#contact",
@@ -47139,6 +47219,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chenics-gimpo",
 "rangaved-maharashtra",
 "american-colour-vapi",
 "pro-inks-johannesburg",
