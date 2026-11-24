@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"pinturas-top-caracas": "I noticed that Pinturas TOP manufactures Hidroesmalte, a water-based acrylic coating for interior and exterior wood surfaces.",
 "italpaint-ecuador": "I noticed that Pinturas Italpaint manufactures ITAL CROM, an alkyd anticorrosive coating for interior and exterior metal surfaces.",
 "sotach-sfax": "I noticed that SOTACH manufactures ANTIROUILLE A SECHAGE RAPIDE, an anticorrosion primer for ferrous-metal structures.",
 "fleurtex-sfax": "I noticed that FLEURTEX manufactures AQUA VERNIS, a water-based acrylic varnish for interior and exterior wood and wall surfaces.",

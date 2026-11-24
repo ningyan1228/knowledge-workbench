@@ -14445,11 +14445,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "pinturas-top-caracas",
+    "company": "Pinturas TOP",
+    "productId": "nl-w1201",
+    "country": "Venezuela",
+    "countryZh": "委内瑞拉",
+    "city": "Caracas（官网办公及工厂城市；城市示意点，非工厂定位）",
+    "latitude": 10.50611,
+    "longitude": -66.91444,
+    "legacyCompanyDescription": "委内瑞拉Pinturas TOP自制水性涂料，Hidroesmalte用于室内外木材。",
+    "signal": "Pinturas TOP自有水性涂料生产线；TOP品牌Hidroesmalte为适用于室内外木材的水性丙烯酸涂料。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "官网Home明确自有水性涂料生产线及Caracas工厂；Hidroesmalte实际产品页为水性丙烯酸涂料，适用于室内外木材。原始产品HTML的FICHA链接经实际301披露至PDF，六页原始技术资料已渲染视觉核读，第3页清楚显示TOP品牌Hidroesmalte及木材/水性用途，结合自身工厂声明通过具体产品归属复核。公开目录15项（前轮私有笔记误记14，本轮按原始条目校正）含3项Montó品牌成品，不当其自产或集团股权；TOP六页资料11项自有成品及已读目录内未见PO/CPO水性分散体、聚烯烃乳液或同类附着促进原料外售，限定有限可见经营，不冒全部SKU/SDS/隐藏配方审计，Thinner不是所选聚烯烃原料。官网主办公室明确公司业务邮箱、一般电话及实际业务表单；同一邮箱也列于招聘，不据此冒具名经理或采购部门。GrupoLaFloresta图标不推法律控制，未编法人后缀或政府登记。正式库、根源、前沿/来源和队列名称域名去重，唯一旧私有TOP项本次晋级，不新增第二研究账户。NL-W1201只评估木材水性底涂/附着促进，不把客户丙烯酸体系说成已用我方产品或承诺相容/改善。Caracas城市点取独立地理参考，非LaYaguara厂门GPS。"
+    },
+    "contact": {
+      "label": "官网主办公室公司业务邮箱、一般电话及联系表单",
+      "email": "gerencia@pinturastop.com",
+      "phone": "0412-639-2996",
+      "contactUrl": "https://www.pinturastop.com/"
+    },
+    "source": {
+      "label": "Pinturas TOP官方Hidroesmalte水性木材涂料产品及TOP品牌技术资料",
+      "url": "https://www.pinturastop.com/product-page/hidroesmalte"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-top-caracas": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "italpaint-ecuador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sotach-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "fleurtex-sfax": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15059,6 +15088,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-top-caracas": {
+  "website": "https://www.pinturastop.com/",
+  "contactPage": "https://www.pinturastop.com/",
+  "generalEmail": "gerencia@pinturastop.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas TOP",
+    "value": "gerencia@pinturastop.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas TOP官网Oficina Principal公司邮箱",
+        "url": "https://www.pinturastop.com/",
+        "summary": "主办公室LasMinasdeBaruta Caracas列gerencia@pinturastop.com，与业务咨询表单及一般电话同区；同一邮箱用于招聘不冒具名采购或具名经理。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "0412-639-2996",
+  "generalPhoneEvidence": {
+    "company": "Pinturas TOP",
+    "value": "0412-639-2996",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pinturas TOP官网联系及报价一般业务电话",
+        "url": "https://www.pinturastop.com/",
+        "summary": "实际业务咨询及Cotizaciones o presupuestos明确0412-639-2996；保留公开原值，不猜国际格式或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Oficina Principal: Las Minas de Baruta, Caracas, Venezuela. Fábrica: La Yaguara, Caracas, Venezuela. Map marker is an independently sourced Caracas city representative, not surveyed factory coordinates.",
+  "sources": [
+    {
+      "label": "自有水性制漆线与Caracas工厂及业务联系区",
+      "url": "https://www.pinturastop.com/"
+    },
+    {
+      "label": "具体水性丙烯酸木材产品原文",
+      "url": "https://www.pinturastop.com/product-page/hidroesmalte"
+    },
+    {
+      "label": "15项可见成品目录含3项Montó品牌，不混同自产",
+      "url": "https://www.pinturastop.com/pinturas-1"
+    },
+    {
+      "label": "实际公开TOP品牌六页技术资料，第3页Hidroesmalte",
+      "url": "https://www.pinturastop.com/_files/ugd/d69237_2965c62ace9f4da89bdd5730919fda1f.pdf"
+    }
+  ]
+},
 "italpaint-ecuador": {
   "website": "https://pinturasitalpaint.com/",
   "contactPage": "https://pinturasitalpaint.com/contactos/",
@@ -45710,6 +45794,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-top-caracas",
 "italpaint-ecuador",
 "sotach-sfax",
 "fleurtex-sfax",
