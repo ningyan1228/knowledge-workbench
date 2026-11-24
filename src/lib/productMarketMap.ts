@@ -15083,11 +15083,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "meta-chem-nashik",
+    "company": "Meta-Chem Paints & Adhesives Pvt. Ltd.",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Nashik / Nasik（注册地址城市示意点，非工厂定位）",
+    "latitude": 19.9975,
+    "longitude": 73.789806,
+    "legacyCompanyDescription": "印度金属防护涂料配方制造商",
+    "signal": "印度自主研发制造热塑性接枝共聚物防护涂料；Meta-Chem 701同款明确用于金属表面防腐，包括铁路及汽车钢弹簧。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "实际独立核读公司Home195行、AntiCorrosivePaint119行、CompanyProfile65行、Contact71行，四完整native原文、四独立URL，0失败/披露跳转/原GET/PDF/公司脚本。0+4=4/rem2；另Nashik城市参考1，本范围5/6。公司自述自主研发接枝共聚物并以其制造防腐及防水成品，不抹除自主聚合物开发；同款701明确金属防护，未从普通墙漆/混合品牌推制漆。有限实际经营总览为防腐漆、钢筋涂层、Polycoat602和603W纸张施工涂层四产品导航，Home给出两个纸涂层直接辊涂/凹版/上光施工用途，AntiCorrosive页完整列八牌号701/701S/701HighBuild/703/706/709/716/717。所读经营和产品范围未见ELO/ESBO/环氧化植物油/同类生物基增塑添加剂对外供应；自主接枝共聚物或纸涂层不自动等ELO原料同行。未读Rebar和两个纸涂层叶页/全SKU/SDS/真实接枝化学/最终股权，不声称全站/全原料审计。客户自述2000小时盐雾、450%伸长、耐酸碱/温度、食品饮水、BIS/ISO及联名案例没有独立复验，不转为我方ELO性能、合规、相容或采购保证。产品总述称全部等级合规，但细项排除717；另717为聚合物改性沥青，不能移植701的树脂说明；差异保留，不借其认证或成分给ELO。1994起始和2006转私营有限公司是同一沿革账户；Maruti/GM/Hindustan/Eicher联名客户不是已证母公司或新研究客户。公开info为一般业务邮箱，固定电话02532350498采用原格式，不绑MD B.Panja或虚构采购。公开另+919822040266未推WhatsApp；Contact可见QuickEnquiry输入框及验证码，未提交/测试发送，Googleiframe未额外读取。Nashik/Nasik官方注册地址按一户，坐标19.9975/73.789806为城市头部/信息框参考，非厂门或生产地址独立测绘。全632正式、根14未发、私有frontier/source/excluded/队列及包含gitignore私有档案的全史名域邮箱去重；旧搜索发现不是公司抓取，不重置预算。ELO只依据用户TDS涂料/树脂改性与柔韧方向作潜在配方评估，不断言其接枝共聚物已相容、现用ELO或有采购需求。"
+    },
+    "contact": {
+      "label": "官方一般业务邮箱、固定电话及可见咨询入口；无具名采购或已核WhatsApp",
+      "email": "info@metachempaints.com",
+      "phone": "0253 2350498",
+      "contactUrl": "https://www.metachempaints.com/contact-us/"
+    },
+    "source": {
+      "label": "Meta-Chem官方701金属防护成品及自主研发制造资料",
+      "url": "https://www.metachempaints.com/products/anticorrosive-paint/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"meta-chem-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chemilite-naturelite-alappuzha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "sungbo-ink-siheung": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "nae-woi-korea-seongnam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15720,6 +15749,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"meta-chem-nashik": {
+  "website": "https://www.metachempaints.com/",
+  "contactPage": "https://www.metachempaints.com/contact-us/",
+  "generalEmail": "info@metachempaints.com",
+  "generalEmailEvidence": {
+    "company": "Meta-Chem Paints & Adhesives Pvt. Ltd.",
+    "value": "info@metachempaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Meta-Chem官方Contact公开一般业务邮箱",
+        "url": "https://www.metachempaints.com/contact-us/",
+        "summary": "Email区及页脚明确info@metachempaints.com，为公司一般业务邮箱；不绑定MD姓名或采购职务，未验证投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "0253 2350498",
+  "generalPhoneEvidence": {
+    "company": "Meta-Chem Paints & Adhesives Pvt. Ltd.",
+    "value": "0253 2350498",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Meta-Chem官方Contact公开固定业务电话",
+        "url": "https://www.metachempaints.com/contact-us/",
+        "summary": "Phone原文+91 9822040266, 0253 2350498；采用原文固定电话0253 2350498，未自行添加国际前缀或推WhatsApp/个人归属。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "G-34/3, MIDC, Satpur, Behind Hotel Ginger, Nashik - 422007, Maharashtra, India. Company Profile calls this registered office. Company-published address, not independently surveyed or verified factory GPS. Marker is an independent Nashik city representative point.",
+  "sources": [
+    {
+      "label": "官方701金属防护成品和八牌号",
+      "url": "https://www.metachempaints.com/products/anticorrosive-paint/"
+    },
+    {
+      "label": "官方自主研发/制造及1994至2006主体沿革",
+      "url": "https://www.metachempaints.com/company-profile/"
+    },
+    {
+      "label": "公司业务联系入口",
+      "url": "https://www.metachempaints.com/contact-us/"
+    },
+    {
+      "label": "官方经营总览及两个纸涂层的实际施工用途",
+      "url": "https://www.metachempaints.com/"
+    }
+  ]
+},
 "chemilite-naturelite-alappuzha": {
   "website": "https://naturelitepaints.com/",
   "contactPage": "https://naturelitepaints.com/products/nature-wood-clear-coat/",
@@ -47532,6 +47616,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"meta-chem-nashik",
 "chemilite-naturelite-alappuzha",
 "sungbo-ink-siheung",
 "nae-woi-korea-seongnam",
