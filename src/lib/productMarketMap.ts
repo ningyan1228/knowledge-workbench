@@ -14389,11 +14389,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-23"
   },
+  {
+    "id": "sotach-sfax",
+    "company": "SOTACH",
+    "productId": "elo",
+    "country": "Tunisia",
+    "countryZh": "突尼斯",
+    "city": "Sfax（官网业务城市；城市示意点，非工厂定位）",
+    "latitude": 34.74,
+    "longitude": 10.76,
+    "legacyCompanyDescription": "突尼斯SOTACH自主制造涂料，工业目录有面向铁基金属结构及储罐的防锈底漆。",
+    "signal": "SOTACH自主制造工业涂料；ANTIROUILLE A SECHAGE RAPIDE为面向铁基金属结构、储罐等用途的单组分防锈底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "五个官网原文63/120/50/43/47行完整独立审读。Home明确1981成立并制造建筑、家具、工业和装饰漆，MONDIALE为品牌，Solvants页自述SOTACH SARL与同一Sfax地址；不把1981或2011新闻当2026投产/证书。工业表面处理原文明确ANTIROUILLE A SECHAGE RAPIDE为单组分醇酸类/烃树脂防锈底漆，用于金属结构、储罐、桥梁及容器等铁基金属；选择此具体下游涂料，不把WASH PRIMER明确有限的临时保护/磷化用途说成完整防腐涂层。主要五类为建筑漆、木器处理、工业漆、车身漆及溶剂/固化剂；专门读取实际溶剂/固化剂类和完整固化剂页，Brillant为脂肪族异氰酸酯、Mat为芳香族异氰酸酯，用于双组分PU/丙烯酸漆清漆交联，与ELO/ESBO或环氧化植物油/生物基增塑稳定剂分清；不因durcisseur统称而误判同类ELO同行。在实际已读主要经营及已披露投入类别未见上述ELO同类原料外售，有限公开范围同行排除通过；未声称全部溶剂子页、各成品叶/SDS/配方均审计。真实Contact页明确一般业务邮箱sotach.ch@planet.tn（保留原planet.tn，不改造自有域邮箱）、首个业务电话+216.74.454.900及备用号，并有姓名/邮箱/主题/消息业务表单；不冒具名采购或WhatsApp，不把传真当电话，备用号未精选。全607正式、根含14无关待发、1235前沿/547来源、队列及SOTACH/MONDIALE/公司全称精确匹配未见同户；SARL是公司首方披露而非政府登记核验，未编隐藏股权，品牌不拆户。当前五native无失败/披露跳转/PDF或JS执行，终身5/rem1不因以后切产品重置。Sfax示意34.74/10.76复用既有正式城市点，不当Route de Gabes厂门GPS。ELO仅按涂料柔韧/树脂改性的潜在材料评估，未推客户已用ELO、已验证相容、现有采购、固化或防腐改善；不把客户配方/参数/性能给我方，发送记录未知无就绪稿或外联。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、联系表单及一般电话",
+      "email": "sotach.ch@planet.tn",
+      "phone": "+216.74.454.900",
+      "contactUrl": "https://sotach.com/contact/"
+    },
+    "source": {
+      "label": "SOTACH工业表面处理目录中的具体快速干燥防锈底漆",
+      "url": "https://sotach.com/produits/peintures-industrielles/peintures-traitement-de-surfaces/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sotach-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "fleurtex-sfax": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "kndeco-el-yachir": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "peinture-midy-ii-zeralda": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15001,6 +15030,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sotach-sfax": {
+  "website": "https://sotach.com/",
+  "contactPage": "https://sotach.com/contact/",
+  "generalEmail": "sotach.ch@planet.tn",
+  "generalEmailEvidence": {
+    "company": "SOTACH",
+    "value": "sotach.ch@planet.tn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SOTACH官方Contact公司业务邮箱",
+        "url": "https://sotach.com/contact/",
+        "summary": "Contact/Email原文明确sotach.ch@planet.tn，为公司公开业务入口，无具名或采购职责声明。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+216.74.454.900",
+  "generalPhoneEvidence": {
+    "company": "SOTACH",
+    "value": "+216.74.454.900",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SOTACH官方Contact首个一般业务电话",
+        "url": "https://sotach.com/contact/",
+        "summary": "Contact/Tel明确+216.74.454.900，与Home和Solvants企业栏一致；未主张WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Route de Gabes km 5 BP 180, 3000 Sfax, Tunisia. City representative marker, not surveyed factory coordinates.",
+  "sources": [
+    {
+      "label": "自有制漆与SOTACH MONDIALE品牌",
+      "url": "https://sotach.com/"
+    },
+    {
+      "label": "具体工业金属防锈底漆原文",
+      "url": "https://sotach.com/produits/peintures-industrielles/peintures-traitement-de-surfaces/"
+    },
+    {
+      "label": "溶剂与固化剂实际经营范围",
+      "url": "https://sotach.com/produits/solvants-et-durcisseurs/"
+    },
+    {
+      "label": "固化剂为异氰酸酯体系的原文",
+      "url": "https://sotach.com/produits/solvants-et-durcisseurs/durcisseurs/"
+    },
+    {
+      "label": "实际公开邮箱/电话和业务表单",
+      "url": "https://sotach.com/contact/"
+    }
+  ]
+},
 "fleurtex-sfax": {
   "website": "https://www.fleurtex.com.tn/",
   "contactPage": "https://www.fleurtex.com.tn/contacts/",
@@ -45538,6 +45626,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sotach-sfax",
 "fleurtex-sfax",
 "kndeco-el-yachir",
 "peinture-midy-ii-zeralda",

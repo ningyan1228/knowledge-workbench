@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"sotach-sfax": "I noticed that SOTACH manufactures ANTIROUILLE A SECHAGE RAPIDE, an anticorrosion primer for ferrous-metal structures.",
 "fleurtex-sfax": "I noticed that FLEURTEX manufactures AQUA VERNIS, a water-based acrylic varnish for interior and exterior wood and wall surfaces.",
 "kndeco-el-yachir": "I noticed that KNDECO manufactures FOND BOIS M648, a water-based primer for MDF and wood.",
 "peinture-midy-ii-zeralda": "I noticed that Peinture Midy II manufactures Metal Protect, an industrial finishing paint for metal structures and equipment.",
