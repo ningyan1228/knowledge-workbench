@@ -14361,11 +14361,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-23"
   },
+  {
+    "id": "fleurtex-sfax",
+    "company": "SOTUFAP / FLEURTEX",
+    "productId": "nl-w1201",
+    "country": "Tunisia",
+    "countryZh": "突尼斯",
+    "city": "Sfax（官网Chihya业务地址；Sfax城市示意点，非工厂定位）",
+    "latitude": 34.74,
+    "longitude": 10.76,
+    "legacyCompanyDescription": "突尼斯SOTUFAP自有制漆企业；AQUA VERNIS为用于木材和墙面的水性丙烯酸清漆。",
+    "signal": "SOTUFAP自主制造FLEURTEX涂料；AQUA VERNIS官网技术正文明确为水性丙烯酸清漆，适用于室内外木材与墙面。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-23",
+      "conclusion": "官网Home明确SOTUFAP于1974年建立并自主制造FLEURTEX品牌涂料、更新设备及制造工艺；AQUA VERNIS完整技术正文明确水性丙烯酸清漆、溶剂为水、用于墙面与木材，并有木材施工说明及自有实验室测试声明。独立读取Home165行、产品216行、Contact109行、特殊产品类87行，完整主要13类均为成品漆、腻子、底涂、防水、木器及施工配套；木器栏有亚麻油与催干剂，不等同NL-W1201所选聚烯烃原料。特殊类本次只有DECAPANT FLEURTEX一项可见产品标题，未读叶正文，不宣称全部SDS或所有配方审计。在已读主要经营及特殊类范围未见水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料外售，有限公开范围同行排除通过。Contact正文直接公开公司商务邮箱、一般电话和含姓名/邮箱/主题/消息的业务表单；页脚单邮箱订阅框不冒业务表单，没有具名采购人或WhatsApp。SOTUFAP与FLEURTEX为公司/品牌一户，页脚create in MTD-Group为网站制作署名，不据此推集团控制；全606正式、根含14无关待发、1234前沿/546来源及队列精确公司品牌域名查无已入库同户，不推未知股权。四次原生公司来源正文完整，无失败或披露跳转，无PDF/远程JS/隐藏接口或外联。木材用途支持NL-W1201底涂/附着促进的潜在材料评估，不代表客户已采用PO、现有采购、已验证相容或性能改善；不把该清漆37%固含或任何性能转给我方。地图复用已正式Sfax城市示意34.74/10.76，非Chihya厂门GPS。"
+    },
+    "contact": {
+      "label": "官网公开公司商务邮箱、联系表单及一般业务电话",
+      "email": "commercial@fleurtex.com.tn",
+      "phone": "(+216) 74 84 65 00",
+      "contactUrl": "https://www.fleurtex.com.tn/contacts/"
+    },
+    "source": {
+      "label": "FLEURTEX AQUA VERNIS水性丙烯酸木器清漆技术正文",
+      "url": "https://www.fleurtex.com.tn/block_projects/aqua-vernis-fleurtex/"
+    },
+    "checkedAt": "2026-11-23"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"fleurtex-sfax": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "kndeco-el-yachir": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "peinture-midy-ii-zeralda": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "monopol-peintures-maroc-had-soualem": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -14972,6 +15001,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"fleurtex-sfax": {
+  "website": "https://www.fleurtex.com.tn/",
+  "contactPage": "https://www.fleurtex.com.tn/contacts/",
+  "generalEmail": "commercial@fleurtex.com.tn",
+  "generalEmailEvidence": {
+    "company": "SOTUFAP / FLEURTEX",
+    "value": "commercial@fleurtex.com.tn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "FLEURTEX官方Contact商务邮箱",
+        "url": "https://www.fleurtex.com.tn/contacts/",
+        "summary": "Contact/e-mail公开commercial@fleurtex.com.tn，作为公司商务入口，不冒具名或已核采购部门。"
+      }
+    ],
+    "verifiedAt": "2026-11-23"
+  },
+  "generalPhone": "(+216) 74 84 65 00",
+  "generalPhoneEvidence": {
+    "company": "SOTUFAP / FLEURTEX",
+    "value": "(+216) 74 84 65 00",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "FLEURTEX官方Contact一般业务电话",
+        "url": "https://www.fleurtex.com.tn/contacts/",
+        "summary": "Contact/phone明确(+216) 74 84 65 00，与自有产品和Home页脚一致；无WhatsApp声明。"
+      }
+    ],
+    "verifiedAt": "2026-11-23"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Route de Téniour Chihya 3041 Sfax, Tunisia. Sfax city representative marker, not surveyed factory coordinates.",
+  "sources": [
+    {
+      "label": "具体水性木材清漆技术正文",
+      "url": "https://www.fleurtex.com.tn/block_projects/aqua-vernis-fleurtex/"
+    },
+    {
+      "label": "SOTUFAP自有制漆及制造工艺",
+      "url": "https://www.fleurtex.com.tn/"
+    },
+    {
+      "label": "真实业务表单、商务邮箱及电话",
+      "url": "https://www.fleurtex.com.tn/contacts/"
+    },
+    {
+      "label": "主要成品类别和当前特殊类",
+      "url": "https://www.fleurtex.com.tn/block_project_type/produits-speciaux/"
+    }
+  ]
+},
 "kndeco-el-yachir": {
   "website": "https://kndeco.com/",
   "contactPage": "https://kndeco.com/contact",
@@ -45454,6 +45538,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"fleurtex-sfax",
 "kndeco-el-yachir",
 "peinture-midy-ii-zeralda",
 "monopol-peintures-maroc-had-soualem",
