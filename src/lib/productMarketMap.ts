@@ -14752,11 +14752,38 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "simba-durekol-santa-fe",
+    "company": "SIMBA S.A. (Durekol)",
+    "productId": "cpp-cpo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Santa Fe（官网嵌入地图视窗中心示意，非工厂定位）",
+    "latitude": -31.60006,
+    "longitude": -60.69382,
+    "legacyCompanyDescription": "阿根廷PP塑料表面底漆及工业涂料制造商",
+    "signal": "自主生产Durekol工业涂料；PP单组分表面底漆可在其后施涂丙烯酸或聚氨酯面漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "官网Home/Empresa明确SIMBA S.A.自主生产Durekol涂料、研发实验室和自有工厂；PP底漆原文明示单组分成品表面底漆，喷涂5–10微米后覆丙烯酸或聚氨酯面漆，1/4/20升及200升包装，是下游制漆而非把成品底漆冒原料树脂。Empresa确实披露自制树脂，保留该事实；所读未说明树脂为CPP/CPO或聚烯烃附着原料，也未证明此类原料对外供应，不能由泛称resinas判定竞争者或编外购例外。排除结论限首方四终端家族及全部返回子类、选定PP底漆、制造介绍、联系页和历史第三方四成品目录，未审所有叶页/SDS/完整配方/未披露股权。chlorinated rubber道路成品漆不等原料CPO销售。SIMBA/Durekol/同域名一个账户，NicoSal网页制作非母公司；Allbiz旧地址电话不当现行首方厂址或合格电话。无已确认采购、现用CPP/CPO、我方牌号相容、汽车项目、性能或认证。"
+    },
+    "contact": {
+      "label": "官网公开业务表单及公开WhatsApp；未取得精确业务邮箱或固定电话",
+      "contactUrl": "https://www.durekol.com.ar/contacto.php"
+    },
+    "source": {
+      "label": "Durekol官方PP单组分表面底漆",
+      "url": "https://www.durekol.com.ar/producto/99-primer-para-polipropileno.html"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"simba-durekol-santa-fe": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "corquimica-estancia-velha": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sherwood-products-santiago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "quimica-marel-zapopan": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -15377,6 +15404,36 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"simba-durekol-santa-fe": {
+  "website": "https://www.durekol.com.ar/",
+  "contactPage": "https://www.durekol.com.ar/contacto.php",
+  "whatsapp": "https://api.whatsapp.com/send?phone=5493425025771&text=Hola DUREKOL desde la web!",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Santa Fe, Argentina（官网地域元信息及Durekol嵌入地图、历史目录城市交叉支持）。未取得当前首方街道地址；地图仅取官网地图视窗中心，不是厂门GPS。第三方历史Av. Aristóbulo Del Valle 7400地址未核为现行厂址。",
+  "sources": [
+    {
+      "label": "PP成品底漆及施涂用途",
+      "url": "https://www.durekol.com.ar/producto/99-primer-para-polipropileno.html"
+    },
+    {
+      "label": "自主制漆和内部实验室、公开WhatsApp实际href、官网地图",
+      "url": "https://www.durekol.com.ar/"
+    },
+    {
+      "label": "SIMBA S.A.制造及自制树脂事实",
+      "url": "https://www.durekol.com.ar/empresa.php"
+    },
+    {
+      "label": "公开业务联系表单，未提交",
+      "url": "https://www.durekol.com.ar/contacto.php"
+    },
+    {
+      "label": "Allbiz历史SIMBA/Durekol目录和SantaFe城市，非当前厂址/首方联系证据",
+      "url": "https://3494-ar.all.biz/goods"
+    }
+  ]
+},
 "corquimica-estancia-velha": {
   "website": "https://corquimica.com.br/en/",
   "contactPage": "https://corquimica.com.br/en/products/lacquers/",
@@ -46604,6 +46661,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"simba-durekol-santa-fe",
 "corquimica-estancia-velha",
 "sherwood-products-santiago",
 "quimica-marel-zapopan",
