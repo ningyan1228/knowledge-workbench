@@ -14724,11 +14724,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "corquimica-estancia-velha",
+    "company": "Corquímica Indústria e Comércio Ltda.",
+    "productId": "elo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Estância Velha, Rio Grande do Sul（城市示意点，非工厂定位）",
+    "latitude": -29.65,
+    "longitude": -51.183,
+    "legacyCompanyDescription": "巴西工业丙烯酸色漆及UV涂料配方制造商",
+    "signal": "自主研发制造工业涂料；丙烯酸色漆用于塑料、金属和家具部件，并按项目定制颜色。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Corquímica原4份公司原文重新离线独立核读，保留原日期hash、不重抓/换语言重置；Home/About明确EstânciaVelha自有UV涂料/色漆制造、定制配方和内部实验室。新增第5份葡语3D树脂页完整136行明确供打印部件原型、刚性/半刚性/柔性三版本成品，不从resina字样猜ELO/ESBO/环氧植物油或原料增塑剂销售，也不猜全部树脂配方无植物油。第6份Lacquers142行直接明确自主制造用于塑料/金属/家具部件的丙烯酸色漆及定制颜色，四表列版本、与内部配制溶剂配套；是实际下游成品涂料配方制造而非仅经销。已读经营范围、全部8主家族/版本概述、具体UVBaseCoat/3D原型树脂/丙烯酸色漆范围未见ELO/ESBO/环氧植物油/同类生物基增塑稳定输入外售；不冒其余叶页、所有SKU/SDS、完整配方或未披露股权审计，普通丙烯酸/UV/3D成品树脂或色料不自动同类ELO原料。六不同公司URL共6/6含旧4新2，0失败/跳转/原始HTML/PDF二进制/远程JS/API，公司预算用尽停止；新范围只有当前2公司+1城市=3/6。旧CPP独立PPprimer自制/UV路线未闭合仍false，ELO直接采用用户TDS涂料应用及自主色漆制造，不以ELO通过反推CPP合格或我方ELO可在UV光固化/金属化中直接相容；不把原PPUVBaseCoat当普通溶剂型油墨。公司vendas@corquimica.com.br及固定+55 51 3594-8004由当前色漆/3D页和旧公司页分项对应，均一般商业入口、非具名采购；WhatsApp文字/手机号未取得精确href，不猜wa.me跳转，未精选其为渠道。公司页的1997/+100客户/100吨/October2026更新和成品耐醇/干燥/光泽/层间相容/节约自述不借为本牌号性能、产量核验、食品/化妆品认证或采购。Av.WalterKlein1442/LagoAzul/EstânciaVelha业务地址与生产自述保留非独立厂门勘察；城市参考134/141–145/150行-29.650/-51.183首部信息框同值，仅城市点。619公开、根14未发、全部正式/队列/来源/排除及旧原档按域名公司名集团查重，原私有研究RID同户晋级为一ELO正式，不另建第二研究记录，葡英网页/产品线/欧洲亚洲技术伙伴不拆新增或造股权。无具名采购、当前需求、现用ELO、替代/固化/耐蚀提升或配方相容保证。"
+    },
+    "contact": {
+      "label": "公司一般销售邮箱、固定电话和官网联系入口",
+      "email": "vendas@corquimica.com.br",
+      "phone": "+55 51 3594-8004",
+      "contactUrl": "https://corquimica.com.br/en/products/lacquers/"
+    },
+    "source": {
+      "label": "Corquímica官方自制工业丙烯酸色漆及定制配方原文",
+      "url": "https://corquimica.com.br/en/products/lacquers/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"corquimica-estancia-velha": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sherwood-products-santiago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "quimica-marel-zapopan": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "qtec-rionegro": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -15348,6 +15377,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"corquimica-estancia-velha": {
+  "website": "https://corquimica.com.br/en/",
+  "contactPage": "https://corquimica.com.br/en/products/lacquers/",
+  "generalEmail": "vendas@corquimica.com.br",
+  "generalEmailEvidence": {
+    "company": "Corquímica Indústria e Comércio Ltda.",
+    "value": "vendas@corquimica.com.br",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Corquímica官方Lacquers销售段及公司页脚",
+        "url": "https://corquimica.com.br/en/products/lacquers/",
+        "summary": "Contact sales和公司制造商页脚公开vendas@corquimica.com.br，为一般公司销售邮箱，非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+55 51 3594-8004",
+  "generalPhoneEvidence": {
+    "company": "Corquímica Indústria e Comércio Ltda.",
+    "value": "+55 51 3594-8004",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Corquímica官方产品销售与厂址页脚固定电话",
+        "url": "https://corquimica.com.br/en/products/lacquers/",
+        "summary": "Phone与Corquímica公司地址并列公开+55 51 3594-8004，另WA标识手机号不是此固定电话，不猜其精确跳转。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Av. Walter Klein, 1442, Lago Azul, Estância Velha, Rio Grande do Sul, 93612-280, Brazil. Published manufacturing/business location, not independently surveyed; map uses city representative rather than factory GPS.",
+  "sources": [
+    {
+      "label": "公司自主制造和按客户配方、内部实验室",
+      "url": "https://corquimica.com.br/en/"
+    },
+    {
+      "label": "公司法律署名/EstânciaVelha地址/自主制造",
+      "url": "https://corquimica.com.br/en/about/"
+    },
+    {
+      "label": "全8家族可见目录概述，非全部叶页/SDS",
+      "url": "https://corquimica.com.br/en/products/"
+    },
+    {
+      "label": "3D树脂为打印原型用成品，角色单独核读",
+      "url": "https://corquimica.com.br/produtos/resinas-3d/"
+    },
+    {
+      "label": "自制工业丙烯酸色漆及实际一般业务邮箱电话",
+      "url": "https://corquimica.com.br/en/products/lacquers/"
+    }
+  ]
+},
 "sherwood-products-santiago": {
   "website": "https://www.wetproof.com/",
   "contactPage": "https://www.wetproof.com/contacto.html",
@@ -46516,6 +46604,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"corquimica-estancia-velha",
 "sherwood-products-santiago",
 "quimica-marel-zapopan",
 "qtec-rionegro",
