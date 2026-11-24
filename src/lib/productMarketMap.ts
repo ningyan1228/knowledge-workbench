@@ -15167,11 +15167,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "lider-ink-gebze",
+    "company": "Lider Ink Solvent Based Food Packaging Inks Corp.",
+    "productId": "cpp-cpo",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Gebze, Kocaeli（城市示意点，非工厂定位）",
+    "latitude": 40.8,
+    "longitude": 29.433,
+    "legacyCompanyDescription": "土耳其PP薄膜溶剂型包装油墨生产商",
+    "signal": "土耳其Gebze自主生产柔印／凹版包装油墨；官方溶剂型油墨目录LT／Betalam明确列有BOPP、CPP薄膜基材。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "独立读取Lider官方About22行、Products64行、Contact47行，三个完整native原文，0失败/跳转/原GET/PDF/公司脚本，公司0+3=3/rem3；另Gebze独立城市1，本CPP范围4/6，不为用满额度补抓。About明确自制柔印/凹版溶剂型油墨及5000m2厂房自述，Products同一SolventBasedFoodPackagingInks组LT/Betalam列BOPP、CPP、铝基材，不能把CPP薄膜标签误当CPP树脂供货或默认未处理PP适配。完整可见四墨系列LT/PT/LF/UV及成品热封HS3064/65、HS3900、HS2000、HS2002、冷封/底涂/罩光漆，为有限经营与所选原料排除范围；其中LK0950底涂与HS热封为具体基材上涂布使用的成品系统，不因adhesion/primer/lacquer单词等同MAH改性CPP/CPO原料。所读成品经营未见CPP/CPO或同类MAH聚烯烃原料对外销售；不猜真实粘结树脂/固化剂或声称所有SKU/SDS/股权已审。LiderKimya1983、UretenKimyaAS1986及2013LiderInk结构演变按一保守账户去重，不拆旧公司/品牌/厂址；2013法律继承未独立登记核验。About2023SakataINX技术许可及2024UV系列销售是已披露合作，许可不自动等同控股或集团子公司，也未声称已核最终股东；Sakata既有账户不重计。历史ASCO文件中SliderLinks命中是字段名，与Lider无关；全正式635/根14未发/私有/排除/队列/忽略原档查无真实同户旧公司GET，旧Search不作原文来源。Contact精确info@liderink.com.tr为通用邮箱、+90(262)7510191为业务电话，传真7511194不混用；无具名采购、WA、投递确认。ContactFormSubmitted是初始静态页面文案，不是本轮提交，未操作表单或外联。地址GebzeOrganizeSanBolgesi1800CadNo1804为公司自述，不冒厂门实测；地图40.800/29.433为Gebze独立页面头部/信息框同值城市示意，非工厂GPS。用户指南PP附着及溶剂适配仅潜在原料评估，不断言客户现用/采购、食品认证、耐热幅度、无卤或相容保证。"
+    },
+    "contact": {
+      "label": "官方一般业务邮箱、电话及联系页；无具名采购或已核WhatsApp",
+      "email": "info@liderink.com.tr",
+      "phone": "+90 (262) 751 01 91",
+      "contactUrl": "https://www.liderink.com.tr/en/contact.html"
+    },
+    "source": {
+      "label": "Lider官方LT／Betalam溶剂型BOPP／CPP油墨及自制工厂说明",
+      "url": "https://www.liderink.com.tr/en/products.html"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"lider-ink-gebze": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "asco-nahr-el-mott-metn": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "alex-india-nagpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "meta-chem-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15807,6 +15836,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"lider-ink-gebze": {
+  "website": "https://www.liderink.com.tr/en/",
+  "contactPage": "https://www.liderink.com.tr/en/contact.html",
+  "generalEmail": "info@liderink.com.tr",
+  "generalEmailEvidence": {
+    "company": "Lider Ink Solvent Based Food Packaging Inks Corp.",
+    "value": "info@liderink.com.tr",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Lider官方Contact一般业务邮箱",
+        "url": "https://www.liderink.com.tr/en/contact.html",
+        "summary": "ContactL19精确公开info@liderink.com.tr，页面题头为LiderInkSolventBasedFoodPackagingInksCorp；为公司通用入口，不绑定个人/采购或验证投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+90 (262) 751 01 91",
+  "generalPhoneEvidence": {
+    "company": "Lider Ink Solvent Based Food Packaging Inks Corp.",
+    "value": "+90 (262) 751 01 91",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Lider官方Contact业务电话",
+        "url": "https://www.liderink.com.tr/en/contact.html",
+        "summary": "L15明确Phone:+90(262)7510191，L17另列Fax7511194；采用Phone原格式，不推WhatsApp或具名负责人。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Gebze Organize San. Bölgesi, 1800 Cad.No:1804 Gebze Kocaeli, Turkey. Company-published business/factory location, not independently surveyed factory GPS. Marker is an independent Gebze city representative point (40.800, 29.433).",
+  "sources": [
+    {
+      "label": "官方自制油墨/工厂、旧名及Sakata许可关系",
+      "url": "https://www.liderink.com.tr/en/about.html"
+    },
+    {
+      "label": "完整四墨系列及封口/底涂/罩光成品目录",
+      "url": "https://www.liderink.com.tr/en/products.html"
+    },
+    {
+      "label": "公司一般业务邮箱/电话及地址，表单未提交",
+      "url": "https://www.liderink.com.tr/en/contact.html"
+    }
+  ]
+},
 "asco-nahr-el-mott-metn": {
   "website": "https://www.ascopaints.com/",
   "contactPage": "https://www.ascopaints.com/",
@@ -47780,6 +47860,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"lider-ink-gebze",
 "asco-nahr-el-mott-metn",
 "alex-india-nagpur",
 "meta-chem-nashik",

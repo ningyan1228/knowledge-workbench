@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"lider-ink-gebze": "I noticed Lider manufactures solvent-based LT (Betalam) printing inks for BOPP and CPP packaging surfaces.",
 "asco-nahr-el-mott-metn": "I noticed ASCO produces customized industrial paints and lists Epoxy Primer in its metal coatings range.",
 "alex-india-nagpur": "I noticed ALEX manufactures PREBOND-220, a single-component direct-to-metal coating for structural steel and industrial equipment.",
 "meta-chem-nashik": "I noticed Meta-Chem manufactures protective coatings and lists its 701 paint for metal surfaces, including steel springs.",
