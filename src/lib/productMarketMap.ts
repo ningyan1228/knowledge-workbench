@@ -15195,11 +15195,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "bma-paints-nahr-el-mot",
+    "company": "BMA Paints",
+    "productId": "nl-w1201",
+    "country": "Lebanon",
+    "countryZh": "黎巴嫩",
+    "city": "Nahr El Mot（借用Metn区域示意点，非工厂定位）",
+    "latitude": 33.8967,
+    "longitude": 35.5778,
+    "legacyCompanyDescription": "黎巴嫩自有水性木器涂料制造商",
+    "signal": "黎巴嫩BMA官网原始页面明确自制涂料并提供定制配方；木器目录列有WB水性清漆、封闭底漆、色漆、色浆与木器着色剂。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "公司四次读取：木器目录native显示897行但实际仅L0-840且provider标记rewritten summary，原入口披露跳转1收费；随后成功canonical木器目录、Home、实际Milestone链接各一次原始HTTPS200，共三完整原HTML513651/224748/153028字节，未自动跟跳/重试/抓或执行公司JS/PDF。公司0+5=5/rem1，另地理provider409失败1共范围6/6STOP。水性木器归属及制造/业务结论来自实际完整原HTML，不以重写或截断作唯一证据。Home明确BMA在黎巴嫩自有全系列生产、批次质检及private-label/customformulation，也代表部分国际品牌；木器目录八系统37项，WB组五项明确为水性木器成品，不能把其他PU/NC/epoxy配方或参数拼给WB。WB五项明确未附TDS，保留此缺项，不虚构具体树脂/固含/干燥/附着/认证。已读九主要产品类及完整木器37项/主营制造范围未见聚烯烃分散体、CPO/PO乳液或同类NLW原料外售；成品polyester/PU hardener、封闭底漆、颜料浆不凭名称当聚烯烃原料。仅有限经营与产品范围核对，未全审其余目录/SDS、最终股权或全部代表品牌，旧Milesi/Clever/Pulver第三方搜索不等当前控制或BMA自产之外系列已核。官网0动画计数/45与46年/5000产品/30国/ISO等自述不当独立认证，不把Home全产品有TDS宣传压过WB明确无TDS。BMA品牌/域名/总部联系点一户，不猜未原文核验的法定后缀/创始人；全636正式/根14未发/私有排除及队列与原档显式去重，旧Search不计原文请求。原Home公开info@bmapaints.com及首个+9611885385为一般业务，不绑定采购，不由手机/Chat字样推定WA精确目标。NahrElMot为公司总部地点，不声称厂门位置；地图借用当日已核Matn/Metn区域33.8967/35.5778原档，旧独立ASCO地址也将同名NahrElMott关联Metn但不作为BMA工厂归属证据。本次Wiki请求409仅provider内部冲突，无当前正文，明确计额/停止而不重取；复读既有同日原档零网络操作，非把失败返回当坐标。地理原档顶部/底部同一页重复坐标，不是城市/厂门精确坐标或infobox双源。NL-W1201按用户TDS木材/聚烯烃水性分散体底涂附着方向仅潜在配方评估，不断言客户现用/采购、WB化学组成或相容性能保证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱和公开电话；无具名采购或已核WhatsApp目标",
+      "email": "info@bmapaints.com",
+      "phone": "+961 1 885 385",
+      "contactUrl": "https://www.bmapaints.com/"
+    },
+    "source": {
+      "label": "BMA官方木器WB水性产品及自主制造原始HTML",
+      "url": "https://www.bmapaints.com/categories/wood"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"bma-paints-nahr-el-mot": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "lider-ink-gebze": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "asco-nahr-el-mott-metn": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "alex-india-nagpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15836,6 +15865,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"bma-paints-nahr-el-mot": {
+  "website": "https://www.bmapaints.com/",
+  "contactPage": "https://www.bmapaints.com/",
+  "generalEmail": "info@bmapaints.com",
+  "generalEmailEvidence": {
+    "company": "BMA Paints",
+    "value": "info@bmapaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "BMA原始Home一般业务邮箱",
+        "url": "https://www.bmapaints.com/",
+        "summary": "LOCATION & CONTACT及页脚明确info@bmapaints.com，木器与Milestone原HTML同值；公司一般业务入口，非具名采购或可投递确认。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+961 1 885 385",
+  "generalPhoneEvidence": {
+    "company": "BMA Paints",
+    "value": "+961 1 885 385",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "BMA原始Home首个业务电话",
+        "url": "https://www.bmapaints.com/",
+        "summary": "LOCATION & CONTACT公开+961 1 885 385；页脚另以+961 01格式书写，采用首个精确原格式，不推WA或个人采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published headquarters/contact locality: Lebanon — Nahr El Mot. Factory premises have not been independently surveyed. Marker borrows the independently published Metn/Matn regional representative point (33.8967, 35.5778) from the same-day cached geography original, not precise company/factory coordinates.",
+  "sources": [
+    {
+      "label": "原始Home自有生产、批次质检、定制配方和公开联系",
+      "url": "https://www.bmapaints.com/"
+    },
+    {
+      "label": "完整原始木器37项及WB五项目录，无WB具体TDS",
+      "url": "https://www.bmapaints.com/categories/wood"
+    },
+    {
+      "label": "原始Milestone制造自述及总部信息",
+      "url": "https://www.bmapaints.com/about-bma/milestone"
+    }
+  ]
+},
 "lider-ink-gebze": {
   "website": "https://www.liderink.com.tr/en/",
   "contactPage": "https://www.liderink.com.tr/en/contact.html",
@@ -47860,6 +47940,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"bma-paints-nahr-el-mot",
 "lider-ink-gebze",
 "asco-nahr-el-mott-metn",
 "alex-india-nagpur",
