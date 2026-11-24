@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
+import { useCallback, useMemo, useEffect, useRef, useState, type ReactNode } from 'react'
 import { Download, FileText, History, LockKeyhole, RefreshCw, Search, Upload, Users, X } from 'lucide-react'
 import { useAccountSession } from '../../lib/accountSession'
 import { compareFollowup, parseFollowup } from '../../lib/customerFollowup'
@@ -55,21 +55,23 @@ function FollowupWorkspace({ userId }: { userId: string }) {
     window.addEventListener('focus', focus)
     return () => { request.current++; abort.current?.abort(); window.clearInterval(timer); window.removeEventListener('focus', focus) }
   }, [refresh])
-  const document = loaded?.snapshot ? parseFollowup(colleagueDisplay(loaded.snapshot.markdown)) : null
+  const document = useMemo(() => loaded?.snapshot ? parseFollowup(colleagueDisplay(loaded.snapshot.markdown)) : null, [loaded?.snapshot])
   const historical = Boolean(loaded?.snapshot && loaded.snapshot.id !== loaded.index.current_id)
   const owner = loaded?.access.role === 'owner'
   const selectVersion = (id: string) => { setExpanded(null); setQuery(''); setSourceLine(null); setMessage(''); void refresh(id) }
   const toCurrent = () => { selectedId.current = null; setExpanded(null); setQuery(''); setMessage(''); void refresh(null) }
   const onSource = (line: number) => { setSourceLine(line); setView('original') }
-  const download = async () => {
+  const download = async (packageFile = false) => {
     if (!loaded?.snapshot) return
     try {
       const snapshot = await followupRequest<FollowupSnapshot>(userId, `/versions/${loaded.snapshot.id}`)
-      const bytes = snapshot.source_base64 ? Uint8Array.from(atob(snapshot.source_base64), c => c.charCodeAt(0)) : new TextEncoder().encode(snapshot.markdown)
+      const original = packageFile ? snapshot.package : snapshot
+      if (!original) throw new Error('本版未附JSON数据包')
+      const bytes = original.source_base64 ? Uint8Array.from(atob(original.source_base64), c => c.charCodeAt(0)) : new TextEncoder().encode(snapshot.markdown)
       const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))).map(b => b.toString(16).padStart(2, '0')).join('')
-      if (digest !== snapshot.content_hash) throw new Error('下载校验失败，未生成文件。请刷新后重试。')
-      const url = URL.createObjectURL(new Blob([bytes], { type: 'text/markdown;charset=utf-8' }))
-      const anchor = window.document.createElement('a'); anchor.href = url; anchor.download = snapshot.filename; anchor.click()
+      if (digest !== original.content_hash) throw new Error('下载校验失败，未生成文件。请刷新后重试。')
+      const url = URL.createObjectURL(new Blob([bytes], { type: packageFile ? 'application/json;charset=utf-8' : 'text/markdown;charset=utf-8' }))
+      const anchor = window.document.createElement('a'); anchor.href = url; anchor.download = original.filename; anchor.click()
       window.setTimeout(() => URL.revokeObjectURL(url), 1000)
       setMessage('原文件下载校验通过 · SHA-256 ' + digest)
     } catch (cause) { setMessage(cause instanceof Error ? cause.message : '下载失败') }
@@ -83,7 +85,7 @@ function FollowupWorkspace({ userId }: { userId: string }) {
     {loaded && !loaded.snapshot && <div className="followup-empty"><FileText size={30} /><h2>团队台账还没有内容</h2><p>{owner ? '上传一份 Markdown 台账，先预览，再更新给同事查看。' : '负责人上传后，你就可以在这里查看最新跟进。'}</p></div>}
     {loaded?.snapshot && document && <>
       {historical && <div className="followup-history-notice" role="status"><span>正在查看历史版本 · {loaded.snapshot.source_date ?? loaded.snapshot.filename}</span><button type="button" onClick={toCurrent}>返回最新版</button></div>}
-      <div className="followup-toolbar"><div className="followup-document-meta"><FollowupDatePicker index={loaded.index} selectedId={loaded.snapshot.id} busy={refreshing} onSelect={selectVersion} /><span>上传于 {dateTime(loaded.snapshot.created_at)}（北京时间）</span></div><div className="followup-read-actions"><div className="followup-view-switch" aria-label="阅读方式">{followupViews.map(([id, label]) => <button key={id} type="button" aria-pressed={view === id} onClick={() => { setSourceLine(null); setView(id) }}>{label}</button>)}</div><button type="button" className="secondary-button" onClick={download}><Download size={14} />下载 .md</button></div></div>
+      <div className="followup-toolbar"><div className="followup-document-meta"><FollowupDatePicker index={loaded.index} selectedId={loaded.snapshot.id} busy={refreshing} onSelect={selectVersion} /><span>上传于 {dateTime(loaded.snapshot.created_at)}（北京时间）</span></div><div className="followup-read-actions"><div className="followup-view-switch" aria-label="阅读方式">{followupViews.map(([id, label]) => <button key={id} type="button" aria-pressed={view === id} onClick={() => { setSourceLine(null); setView(id) }}>{label}</button>)}</div><button type="button" className="secondary-button" onClick={() => void download()}><Download size={14} />下载 .md</button>{loaded.snapshot.package && <button type="button" className="secondary-button" onClick={() => void download(true)}><Download size={14} />下载 JSON</button>}</div></div>
       <details className="followup-version-details"><summary>版本详情 · {document.metadata.dataset_version || loaded.snapshot.source_date}</summary>
       <p className="followup-footnote">数据版本 {document.metadata.dataset_version || loaded.snapshot.id} · 文件整理日 {document.metadata.updated_date || loaded.snapshot.source_date || '待确认'} · {document.metadata.timezone || '时区按原文'} · 原文 SHA-256 {loaded.snapshot.content_hash}</p>
 <p className="followup-footnote">{document.coverage.total} 个非空正文块已保留 · 未保留 {document.coverage.unretained}</p>{document.warnings.map(warning => <p className="followup-warning" key={warning}>{warning}</p>)}</details>
@@ -110,7 +112,7 @@ function UploadDialog({ userId, loaded, onClose, onSaved }: { userId: string; lo
     if (!file) return
     try {
       if (!/\.(md|markdown)$/i.test(file.name)) throw new Error('请选择 .md 或 .markdown 文件。')
-      if (file.size > 524288) throw new Error('文件不能超过 512 KB。')
+      if (file.size > 4 * 1024 * 1024) throw new Error('文件不能超过 4 MB。')
       const bytes = new Uint8Array(await file.arrayBuffer())
       const markdown = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes)
       const source_base64 = btoa(Array.from(bytes, b => String.fromCharCode(b)).join(''))
@@ -125,7 +127,7 @@ function UploadDialog({ userId, loaded, onClose, onSaved }: { userId: string; lo
     catch (cause) { setError(cause instanceof Error ? cause.message : '上传失败，请重试。') }
     finally { setBusy(false) }
   }
-  return <Dialog title="上传台账更新" onClose={onClose} busy={busy}><p className="followup-dialog-intro">上传完整的 Markdown 台账，预览后更新团队可见版本。历史版本会保留。</p><label className="followup-upload-target"><Upload size={26} /><strong>选择 .md 文件</strong><span>UTF-8 · 最大 512 KB</span><input type="file" accept=".md,.markdown,text/markdown" disabled={busy} onChange={event => void choose(event.target.files?.[0])} /></label>{draft && next && change && <div className="followup-upload-preview"><strong>{draft.filename}</strong><p>识别到 {next.customers.length} 条客户 / 询盘主档</p><p>与当前版本按编号比较：新增 {change.added} · 内容变化 {change.changed} · 未出现在本版 {change.removed}</p>{change.removed > 0 && <p className="followup-warning">本版少了 {change.removed} 条主档。更新会以本版完整内容为准；旧版记录仍可查阅。</p>}{next.warnings.map(w => <p key={w} className="followup-warning">{w}</p>)}<p>最近邮件处理日期：{next.customers.filter(c => c.lastEmailProcessedDate).length} 条有日期 · {next.customers.filter(c => !c.lastEmailProcessedDate).length} 条待核；未知不以客户来信或上传日回填。</p><p>明确业务事件 {next.events.filter(e => !e.id.includes('-history-')).length} 条；相比当前版新增事件键 {next.events.filter(e => !e.id.includes('-history-') && !previous?.events.some(old => old.id === e.id)).length} 条。既有客户与任务仍按内部键关联。</p><p>数据集 {next.metadata.dataset_id || '未注明'} · 版本 {next.metadata.dataset_version || '未注明'} · 事件 {next.events.length} · 任务 {next.tasks.length} · 未保留正文块 {next.coverage.unretained}</p><label className="followup-confirm"><input type="checkbox" checked={allowRevision} onChange={e => setAllowRevision(e.target.checked)} /><span>若同版本号内容不同，显式追加修订快照（原版保留）</span></label><details><summary>预览完整原文</summary><FollowupMarkdown markdown={colleagueDisplay(draft.markdown)} /></details><label className="followup-confirm"><input type="checkbox" checked={confirmed} disabled={busy} onChange={event => setConfirmed(event.target.checked)} /><span>我已核对客户状态及日期，确认以这份完整台账更新团队版本。</span></label></div>}{error && <p role="alert" className="followup-error">{error}</p>}<footer><button type="button" className="secondary-button" disabled={busy} onClick={onClose}>取消</button><button type="button" className="primary-button" disabled={!draft || !confirmed || busy} onClick={() => void save()}>{busy ? '正在保存…' : next?.failed ? '仅保存原文，不替换当前版本' : '确认更新'}</button></footer></Dialog>
+  return <Dialog title="上传台账更新" onClose={onClose} busy={busy}><p className="followup-dialog-intro">上传完整的 Markdown 台账，预览后更新团队可见版本。历史版本会保留。</p><label className="followup-upload-target"><Upload size={26} /><strong>选择 .md 文件</strong><span>UTF-8 · 最大 4 MB</span><input type="file" accept=".md,.markdown,text/markdown" disabled={busy} onChange={event => void choose(event.target.files?.[0])} /></label>{draft && next && change && <div className="followup-upload-preview"><strong>{draft.filename}</strong><p>识别到 {next.customers.length} 条客户 / 询盘主档</p><p>与当前版本按编号比较：新增 {change.added} · 内容变化 {change.changed} · 未出现在本版 {change.removed}</p>{change.removed > 0 && <p className="followup-warning">本版少了 {change.removed} 条主档。更新会以本版完整内容为准；旧版记录仍可查阅。</p>}{next.warnings.map(w => <p key={w} className="followup-warning">{w}</p>)}<p>最近邮件处理日期：{next.customers.filter(c => c.lastEmailProcessedDate).length} 条有日期 · {next.customers.filter(c => !c.lastEmailProcessedDate).length} 条待核；未知不以客户来信或上传日回填。</p><p>明确业务事件 {next.events.filter(e => !e.id.includes('-history-')).length} 条；相比当前版新增事件键 {next.events.filter(e => !e.id.includes('-history-') && !previous?.events.some(old => old.id === e.id)).length} 条。既有客户与任务仍按内部键关联。</p><p>数据集 {next.metadata.dataset_id || '未注明'} · 版本 {next.metadata.dataset_version || '未注明'} · 事件 {next.events.length} · 任务 {next.tasks.length} · 未保留正文块 {next.coverage.unretained}</p><label className="followup-confirm"><input type="checkbox" checked={allowRevision} onChange={e => setAllowRevision(e.target.checked)} /><span>若同版本号内容不同，显式追加修订快照（原版保留）</span></label><details><summary>预览完整原文</summary><FollowupMarkdown markdown={colleagueDisplay(draft.markdown)} /></details><label className="followup-confirm"><input type="checkbox" checked={confirmed} disabled={busy} onChange={event => setConfirmed(event.target.checked)} /><span>我已核对客户状态及日期，确认以这份完整台账更新团队版本。</span></label></div>}{error && <p role="alert" className="followup-error">{error}</p>}<footer><button type="button" className="secondary-button" disabled={busy} onClick={onClose}>取消</button><button type="button" className="primary-button" disabled={!draft || !confirmed || busy} onClick={() => void save()}>{busy ? '正在保存…' : next?.failed ? '仅保存原文，不替换当前版本' : '确认更新'}</button></footer></Dialog>
 }
 
 function HistoryDialog({ userId, loaded, onClose, onOpen, onRestored }: { userId: string; loaded: LoadedState; onClose: () => void; onOpen: (id: string) => void; onRestored: () => void }) {

@@ -90,7 +90,7 @@ class FollowupTest(unittest.TestCase):
         self.assertEqual(reopened.versions()['current_id'], restored)
 
     def test_validation_never_writes_invalid_snapshots(self):
-        for filename, text in [('../escape.md', MARKDOWN), ('ledger.html', MARKDOWN), ('ledger.md', '\x00'), ('ledger.md', '中文' * 180000)]:
+        for filename, text in [('../escape.md', MARKDOWN), ('ledger.html', MARKDOWN), ('ledger.md', '\x00'), ('ledger.md', '中文' * 800000)]:
             response = self.client.post('/follow-up/versions', headers=self.headers, json={'filename': filename, 'markdown': text, 'expected_current_id': None})
             self.assertEqual(response.status_code, 422)
         self.assertEqual(self.store.versions()['versions'], [])
@@ -159,3 +159,4 @@ class FollowupTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

@@ -19,14 +19,14 @@ import httpx
 from fastapi import APIRouter, Depends, Header, HTTPException, Response
 from pydantic import BaseModel, Field
 
-MAX_MARKDOWN_BYTES = 524_288
+MAX_MARKDOWN_BYTES = 4_194_304
 
 
 class SnapshotInput(BaseModel):
     filename: str = Field(min_length=1, max_length=200)
     markdown: str = Field(min_length=1, max_length=MAX_MARKDOWN_BYTES)
     expected_current_id: str | None
-    source_base64: str | None = Field(default=None, max_length=700_000)
+    source_base64: str | None = Field(default=None, max_length=5_600_000)
     allow_revision: bool = False
     activate: bool = True
 
@@ -59,7 +59,7 @@ def snapshot_metadata(filename: str, markdown: str) -> dict:
     if '/' in filename or '\\' in filename or not filename.lower().endswith(('.md', '.markdown')):
         raise HTTPException(422, '请选择 Markdown 文件，文件名不能包含路径。')
     if len(markdown.encode('utf-8')) > MAX_MARKDOWN_BYTES or '\x00' in markdown:
-        raise HTTPException(422, '台账须为 UTF-8 文本，大小不超过 512 KB。')
+        raise HTTPException(422, '台账须为 UTF-8 文本，大小不超过 4 MB。')
     if not markdown.strip() or '\ufffd' in markdown:
         raise HTTPException(422, '文件为空或编码无法识别，请另存为 UTF-8 后重试。')
     title = next((line.lstrip('# ').strip() for line in markdown.splitlines() if line.startswith('# ')), filename)
@@ -103,6 +103,9 @@ class FollowupStore:
                     version_id TEXT NOT NULL, customer_id TEXT NOT NULL, kind TEXT NOT NULL,
                     action_date TEXT NOT NULL, note TEXT NOT NULL, actor TEXT NOT NULL, created_at TEXT NOT NULL
                 );
+                CREATE TABLE IF NOT EXISTS followup_packages (
+                    version_id TEXT PRIMARY KEY, filename TEXT NOT NULL, content_hash TEXT NOT NULL, source_bytes BLOB NOT NULL
+                );
                 CREATE TABLE IF NOT EXISTS followup_members (
                     email TEXT PRIMARY KEY, invited_at TEXT NOT NULL, invited_by TEXT NOT NULL
                 );
@@ -138,6 +141,9 @@ class FollowupStore:
             result = dict(row)
             raw = result.pop('source_bytes')
             result['source_base64'] = base64.b64encode(raw if raw is not None else result['markdown'].encode('utf-8')).decode('ascii')
+            package = db.execute('SELECT * FROM followup_packages WHERE version_id=?', (version_id,)).fetchone()
+            if package:
+                result['package'] = {'filename': package['filename'], 'content_hash': package['content_hash'], 'source_base64': base64.b64encode(package['source_bytes']).decode('ascii')}
             return result
 
     def publish(self, filename: str, markdown: str, actor: str, expected: str | None, restored_from: str | None = None, source_base64: str | None = None, allow_revision: bool = False, activate: bool = True) -> str:
