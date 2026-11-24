@@ -15027,11 +15027,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "sungbo-ink-siheung",
+    "company": "SUNGBO INK Co., Ltd.",
+    "productId": "cpp-cpo",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Siheung, Gyeonggi-do（城市示意点，非工厂定位）",
+    "latitude": 37.37986,
+    "longitude": 126.802887,
+    "legacyCompanyDescription": "韩国PP溶剂型印刷油墨制造商",
+    "signal": "韩国凹版油墨生产商；Surface Printing系列包含未处理PP用成品油墨，同一表格列明PP基材及甲苯／乙酸乙酯稀释体系。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "独立核读Sungbo官方SurfacePrinting原文42行及同成功URI原HTML8765bytes、实际logo所链/eng首页native36行和其成功最终/eng/原HTML5967bytes。四次公司实际读取+首页披露的一次跳转=五来源单位，0+5=5/rem1；另Siheung城市1，本CPP范围6/6，0失败，两个rawGET均manual不自动跟跳，未抓/执行远程公司JS。首页native被provider标为rewritten summary，制造句以同一未失败canonical首页真实原HTML交叉核对，不单凭改写摘要；原HTML明确Since1978自主生产高质量凹版油墨，当前同品牌PP成品表明确UntreatedPPPrintingInk、PP与TOL100%或TOL:EA7:3，不从别的产品拼溶剂或把CPP薄膜名冒CPP树脂。实际原HTML完整可见八终端家族导航为RecyclablePackaging/EcoFriendly/Shrink/Reverse/Surface/Special印刷墨、PUlamination成品胶和AdhesiveTapes；实际Surface三成品表为treatedPE/untreatedPP/SBPEP(PEPP)。有限自身经营总览及三成品规格范围未见CPP/CPO、MAH改性聚烯烃或同类附着树脂原料外售。配套稀释剂、成品PU复合胶/胶带不自动等于CPP原料同行；其他七技术目录、公司/设备/全部SKU/SDS/配方/最终股权未读，不能声称全审，未借JS导航猜路径或额外搜索。表中MinorAdhesion措辞原样保留，不自行修译或移植客户油墨性能为我方保证。copyright2021与Since1978不当2026新投产或当前产能/认证。公司、sungboink域名、SUNGBOINK和所列Siheung地址按一账户，未披露控制关系不编母公司；全630正式/root14未发/完整私有队列及历史名域邮箱最终去重，不把旧Search提及当新抓取预算或集团新户。一般sungboink@paran.com由产品和首页页脚明确公开，不冒采购个人邮箱；TEL原文031-432-7521~5，本记录仅保留明确的起始号031-432-7521，不推算其余号，传真7526排除，未推WA/表单/具名负责人。地址203OkguchenseoroSihwaIndustrialComplexSiheung为自述业务地址，未实地核厂/产权；坐标37.37986/126.802887来自Siheung城市头部/信息框，仅城市示意非厂门。MAH改性CPP/CPO只按指南PP附着和所选牌号溶剂评估，不保证客户现用/采购/相容、食品合规、无卤或附着提升。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱及电话；电话只采用所列范围起始号，无具名采购或已核WhatsApp/表单",
+      "email": "sungboink@paran.com",
+      "phone": "031-432-7521",
+      "contactUrl": "https://sungboink.co.kr/eng/product5.php"
+    },
+    "source": {
+      "label": "Sungbo官方PP表面印刷成品油墨和制造自述",
+      "url": "https://sungboink.co.kr/eng/product5.php"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sungbo-ink-siheung": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "nae-woi-korea-seongnam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "hs-chemical-bucheon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chenics-gimpo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15662,6 +15691,53 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sungbo-ink-siheung": {
+  "website": "https://sungboink.co.kr/eng/",
+  "contactPage": "https://sungboink.co.kr/eng/product5.php",
+  "generalEmail": "sungboink@paran.com",
+  "generalEmailEvidence": {
+    "company": "SUNGBO INK Co., Ltd.",
+    "value": "sungboink@paran.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sungbo官方SurfacePrinting页脚一般邮箱",
+        "url": "https://sungboink.co.kr/eng/product5.php",
+        "summary": "公司页脚直接公开sungboink@paran.com，产品和首页原HTML同值；为公司一般业务入口，未绑定任何采购个人，未验证投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "031-432-7521",
+  "generalPhoneEvidence": {
+    "company": "SUNGBO INK Co., Ltd.",
+    "value": "031-432-7521",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sungbo官方SurfacePrinting页脚电话范围起始号",
+        "url": "https://sungboink.co.kr/eng/product5.php",
+        "summary": "TEL原文031-432-7521~5；仅保留其中明确显示的起始号031-432-7521，未展开推算其余号码；031-432-7526为传真，不推个人归属或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "1DA 402-1 SIHWA INDUSTRIAL COMPLEX, 203, OKGUCHEONSEO-RO, SIHEUNG-SI, GYEONGGI-DO, KOREA. Company-published business address, not independently surveyed or verified factory GPS. Marker is an independent Siheung city representative point.",
+  "sources": [
+    {
+      "label": "官方SurfacePrinting PP成品规格/溶剂与一般联系",
+      "url": "https://sungboink.co.kr/eng/product5.php"
+    },
+    {
+      "label": "官方原HTML自主凹版油墨生产自述及八终端家族导航",
+      "url": "https://sungboink.co.kr/eng/"
+    }
+  ]
+},
 "nae-woi-korea-seongnam": {
   "website": "https://naewoi.gobizkorea.com/mini/site/miniSiteMain.do?domn_id=naewoi",
   "contactPage": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S1000100040000&goodsNms=Nano-Hybrid-Water-based-Technology-Coating-NWK-742&goods_no=GS20180317156571&upperCode=M1000100000000",
@@ -47380,6 +47456,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sungbo-ink-siheung",
 "nae-woi-korea-seongnam",
 "hs-chemical-bucheon",
 "chenics-gimpo",

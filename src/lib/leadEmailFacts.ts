@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"sungbo-ink-siheung": "I noticed that Sungbo Ink produces gravure inks and lists an untreated-PP surface ink with toluene/ethyl-acetate diluents.",
 "nae-woi-korea-seongnam": "I noticed that Nae Woi Korea manufactures functional coatings and lists NWK742Metal for industrial metal protection.",
 "hs-chemical-bucheon": "I noticed that HS CHEMICAL develops screen-printing inks and lists a one-component PP ink with solvent and drying specifications.",
 "chenics-gimpo": "I noticed that Chenics manufactures industrial coatings and lists a quick-drying acrylic anticorrosion primer for steel structures.",
