@@ -14417,11 +14417,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "italpaint-ecuador",
+    "company": "Pinturas Italpaint / Italtintes S.A.S.",
+    "productId": "elo",
+    "country": "Ecuador",
+    "countryZh": "厄瓜多尔",
+    "city": "城市未披露（官网地图示意点，非工厂测绘坐标）",
+    "latitude": -0.112879,
+    "longitude": -78.4690745,
+    "legacyCompanyDescription": "厄瓜多尔自制涂料企业；ITAL CROM为醇酸树脂金属防护漆。",
+    "signal": "官网明确自有制漆；ITAL CROM为用于室内外金属表面的醇酸树脂防锈漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "官网Home披露PINTURAS ITALPAINT ECUADOR ITALTINTES S.A.S.，并明确fábrica ecuatoriana自有制造。实际ITAL CROM产品正文为醇酸树脂金属防护漆，用于室内外金属表面。已读Home展示12项产品及建筑漆、道路漆、磁漆、防锈漆、除锈剂、腻子、防水材料七类经营；在该有限成品范围未见ELO、ESBO、环氧化植物油或同类生物基增塑稳定原料外售，不冒全SKU/SDS或全配方审计。官网联系页公开一般商务邮箱、电话及真实业务表单；无具名采购人或WhatsApp声明。ITALTINTES主体与ITALPAINT品牌按同一客户处理；全正式库、根文件、私有研究及队列名称域名去重未见同户，不推定未知股权。国家Ecuador为官网自述；工厂街道按原文保留，城市未披露，不从02区号猜Quito；地图经纬度仅为官网嵌入地图视图中心，不是工厂测绘点。产品PDF实际仅一页色卡，不当TDS。ELO只作为涂料环氧功能、柔韧与树脂改性的潜在评估，不代表已使用ELO、已确认采购、体系相容或防腐性能改善。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、联系表单及一般电话",
+      "email": "info@pinturasitalpaint.com",
+      "phone": "02 2807525",
+      "contactUrl": "https://pinturasitalpaint.com/contactos/"
+    },
+    "source": {
+      "label": "Pinturas Italpaint官方ITAL CROM具体醇酸金属防锈漆产品正文",
+      "url": "https://pinturasitalpaint.com/producto/ital-crom/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"italpaint-ecuador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sotach-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "fleurtex-sfax": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "kndeco-el-yachir": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15030,6 +15059,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"italpaint-ecuador": {
+  "website": "https://pinturasitalpaint.com/",
+  "contactPage": "https://pinturasitalpaint.com/contactos/",
+  "generalEmail": "info@pinturasitalpaint.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas Italpaint / Italtintes S.A.S.",
+    "value": "info@pinturasitalpaint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Italpaint官方Contact公司业务邮箱",
+        "url": "https://pinturasitalpaint.com/contactos/",
+        "summary": "联系页工厂栏明确info@pinturasitalpaint.com，与Home及产品页一致；无具名或采购职责声明。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "02 2807525",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Italpaint / Italtintes S.A.S.",
+    "value": "02 2807525",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Italpaint官方Contact一般业务电话",
+        "url": "https://pinturasitalpaint.com/contactos/",
+        "summary": "工厂业务栏明确02 2807525；保留原国内号码，不猜国际格式、城市或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "FÁBRICA: Calle de los Arupos E9-18 y Pasaje E, Ecuador. City not disclosed in the pages read. Marker is the view centre of the company embedded map, not surveyed factory coordinates.",
+  "sources": [
+    {
+      "label": "自有制造、ITALTINTES主体与七类成品经营范围",
+      "url": "https://pinturasitalpaint.com/"
+    },
+    {
+      "label": "具体醇酸金属防护漆产品原文",
+      "url": "https://pinturasitalpaint.com/producto/ital-crom/"
+    },
+    {
+      "label": "实际业务邮箱、电话、表单及嵌入地图",
+      "url": "https://pinturasitalpaint.com/contactos/"
+    },
+    {
+      "label": "ITAL CROM一页产品色卡，非TDS",
+      "url": "https://pinturasitalpaint.com/wp-content/uploads/2021/07/italcrom.pdf"
+    }
+  ]
+},
 "sotach-sfax": {
   "website": "https://sotach.com/",
   "contactPage": "https://sotach.com/contact/",
@@ -45626,6 +45710,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"italpaint-ecuador",
 "sotach-sfax",
 "fleurtex-sfax",
 "kndeco-el-yachir",
