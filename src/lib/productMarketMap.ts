@@ -14917,11 +14917,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "rangaved-maharashtra",
+    "company": "Rangaved Paints and Chemicals Pvt. Ltd.",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Maharashtra（仅披露邦；邦级示意点，非具体城市或工厂定位）",
+    "latitude": 18.97,
+    "longitude": 72.82,
+    "legacyCompanyDescription": "印度工业防锈底漆配方及制造企业",
+    "signal": "自主配方制造醇酸红氧化铁防锈底漆，用于钢结构、棚架、格栅及金属构件；官网说明在马哈拉施特拉邦设施网络生产。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Rangaved两次公司来源：完整258行native首页和相同已成功URI单次原始HTML200/33563字符，累计2/rem4，0失败/披露跳转/自动重试/远程脚本执行。实际单页Products/Why/Industries/Contact及页脚被动独立审读，公开四自制成品和两经销成品：自制RedOxidePrimer明确alkyd、anti-corrosive structural steel；另Hammertone/醇酸enamel/聚酯环氧粉末漆，自述own industrial coatings、written formulations、配方生产测试批次追踪及Maharashtra设施网络。所选自制底漆符合涂料配方制造需求侧；没有把仅供应PU/天然distemper说成自制，也不把设施网络说成自有厂产权。实际完整可见单页成品范围无ELO/ESBO/环氧植物油/同类生物基增塑稳定输入外售，成品epoxy粉末漆不自动等环氧油原料；未审全SKU/SDS/配方或隐藏股权，不推配方无植物油。全库正式/root14未发/frontier/sourceIndex/excluded/queue及全research历史精确名域查重无同户，一Rangaved品牌法名/域/邦区合一户，不从历史化学师20年或Mumbai region推具名负责人、具体城市/厂址/新设时间。官网Contact/footer与mailto直接公开info@rangaved.com公司一般业务邮箱，有业务联系表单。WhatsApp所有实际href均#占位，不执行JS追账号、不采；9876543210及name@company.com是表单输入示例，非公司电话/邮箱。未公开具体城市和街道地址，明确保留未知。地图18.97/72.82仅独立Maharashtra州条目标题/信息框给定的邦级示意参考点，不声称州几何中心、公司位于Mumbai或工厂GPS。用户TDS涂料/树脂改性与柔韧性只作潜在ELO材料评估，不承诺醇酸直接相容、固化反应、防腐改善、采购、现用或认证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱及业务联系表单；无具名采购、公开业务电话或有效WhatsApp链接",
+      "email": "info@rangaved.com",
+      "contactUrl": "https://rangaved.com/?lang=hi#contact"
+    },
+    "source": {
+      "label": "Rangaved官方自制工业防锈底漆与配方生产流程",
+      "url": "https://rangaved.com/?lang=hi"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"rangaved-maharashtra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "american-colour-vapi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pro-inks-johannesburg": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "qualycolor-itaguai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15548,6 +15576,39 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"rangaved-maharashtra": {
+  "website": "https://rangaved.com/",
+  "contactPage": "https://rangaved.com/?lang=hi#contact",
+  "generalEmail": "info@rangaved.com",
+  "generalEmailEvidence": {
+    "company": "Rangaved Paints and Chemicals Pvt. Ltd.",
+    "value": "info@rangaved.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Rangaved官网Contact与footer一般业务邮箱",
+        "url": "https://rangaved.com/?lang=hi#contact",
+        "summary": "Contact/footer正文和实际mailto明确info@rangaved.com，非具名采购、非表单输入示例；未测试投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Maharashtra, India. Exact city and street/factory address are not disclosed on the read official page. State-entry representative map point only; not company location.",
+  "sources": [
+    {
+      "label": "官方自制防锈底漆、制造流程与所披露邦区",
+      "url": "https://rangaved.com/?lang=hi"
+    },
+    {
+      "label": "官方业务邮箱及联系表单",
+      "url": "https://rangaved.com/?lang=hi#contact"
+    }
+  ]
+},
 "american-colour-vapi": {
   "website": "https://www.americancolour.com/",
   "contactPage": "https://www.americancolour.com/american_colour_contact",
@@ -47078,6 +47139,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"rangaved-maharashtra",
 "american-colour-vapi",
 "pro-inks-johannesburg",
 "qualycolor-itaguai",
