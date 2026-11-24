@@ -14833,11 +14833,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "qualycolor-itaguai",
+    "company": "Qualycolor",
+    "productId": "elo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Itaguaí, Rio de Janeiro（城市示意点，非工厂定位）",
+    "latitude": -22.85194,
+    "longitude": -43.775,
+    "legacyCompanyDescription": "巴西工业防腐涂料制造商",
+    "signal": "在巴西自主生产工业防腐涂料；公开环氧防腐底漆及聚氨酯、醇酸和丙烯酸成品系列。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Qualycolor实际两公司来源：完整187行native首页与单次HTTPS GET200/87494字符原HTML，0失败/跳转/自动重试/下载代码执行，累计0+2=2/rem4。原始HTML被动本地全文审读，顶层Home/Servicos/Sobre/Contatos均同页锚点，无另公开产品分页/原料目录/TDS/SDS链接。公司直接自述A QUALYCOLOR produz diversos segmentos de tintas，并说明原料采购至成品漆、生产过程；实际成品范围环氧（防腐底漆/中间漆/面漆/双功能/地坪）、聚氨酯（底漆/面漆/地坪）、醇酸合成漆（底漆/面漆）和丙烯酸（底漆/面漆/划线），用于工业结构/船舶/墙面/地坪。既有涂装服务说明不抹去明确成品制造正面；不从环氧系列推现用ELO、具体配方、固化剂、已验证相容或防腐改善。有限全部实际公开单页业务和四成品系列未见ELO/ESBO/环氧植物油/同类生物基增塑稳定输入外售；epoxis/poliuretanos为实际成品分类，不自动等原料供应，也不冒全部SKU/配方/隐藏关联股权审计。公开品牌Qualycolor/QUALYCOLOR和qualycolor.com.br及同一Chaperó/Itaguaí业务地址按一户；官网未披露法定后缀/CNPJ/母公司，保留未知而不编造，InovaSites为建站服务商非母公司。正式/root14未发/frontier/index/excluded/queue及精确历史名域核对无同户，未从近似拼写合并其他Quali/Qualy颜色公司。首页顶部contato@empresa.com.br为模板且mailto为空，明确剔除；Facebook/Instagram仅#占位不采。Contato区五个自己域邮箱真实公开，仅精选contato@一般业务，另商业/销售/财务/管理路由不冒具名采购。公开(21)97674-1417且其WhatsApp有实际api.whatsapp.com明确链接，保存原href实体解码值，未点开/预填发送/表单提交；没有具名负责人。RuaJoseMaiadeOliveira944/Chapero/Itaguai/RJ地址为官网发布，未核工厂产权/独立勘察。城市-22.85194/-43.77500由一独立市镇页标题及信息框一致坐标作示意，不是工厂GPS，原嵌入Google仅文本地址无坐标，未请求Google。ELO按用户TDS涂料/树脂改性/柔韧性潜在评估，不声称采购、现用、认证、相容性或性能保证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱、明确WhatsApp及业务联系表单；无具名采购",
+      "email": "contato@qualycolor.com.br",
+      "phone": "(21) 97674-1417",
+      "contactUrl": "https://qualycolor.com.br/#contatos"
+    },
+    "source": {
+      "label": "Qualycolor官方自主生产说明及四类工业防腐成品系列",
+      "url": "https://qualycolor.com.br/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"qualycolor-itaguai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "polimeros-pinturas-alsa-tlajomulco": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "pinturas-descar-general-rodriguez": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "simba-durekol-santa-fe": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -15461,6 +15490,54 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"qualycolor-itaguai": {
+  "website": "https://qualycolor.com.br/",
+  "contactPage": "https://qualycolor.com.br/#contatos",
+  "generalEmail": "contato@qualycolor.com.br",
+  "generalEmailEvidence": {
+    "company": "Qualycolor",
+    "value": "contato@qualycolor.com.br",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Qualycolor官网Contato一般业务邮箱",
+        "url": "https://qualycolor.com.br/#contatos",
+        "summary": "真实业务联系区和对应mailto直接公开contato@qualycolor.com.br；排除顶部模板邮箱，非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "(21) 97674-1417",
+  "generalPhoneEvidence": {
+    "company": "Qualycolor",
+    "value": "(21) 97674-1417",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Qualycolor官网Contato公开业务电话及明确WhatsApp链接",
+        "url": "https://qualycolor.com.br/#contatos",
+        "summary": "联系区直接公开(21)97674-1417且存在指向5521976741417的明确WhatsApp链接；非具名个人或采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "whatsapp": "https://api.whatsapp.com/send?phone=5521976741417&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos%20da%20Qualycolor!%20",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Rua José Maia de Oliveira, 944 - Chaperó - Itaguaí - RJ. CEP: 23.812-261, Brazil. Company-published business address; not an independently surveyed factory. Marker is an independent city representative point only.",
+  "sources": [
+    {
+      "label": "官方自主生产、四类工业防腐成品及应用",
+      "url": "https://qualycolor.com.br/"
+    },
+    {
+      "label": "官方实际业务联系区，非顶部模板或社交占位",
+      "url": "https://qualycolor.com.br/#contatos"
+    }
+  ]
+},
 "polimeros-pinturas-alsa-tlajomulco": {
   "website": "https://alsa.com.mx/",
   "contactPage": "https://alsa.com.mx/",
@@ -46809,6 +46886,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"qualycolor-itaguai",
 "polimeros-pinturas-alsa-tlajomulco",
 "pinturas-descar-general-rodriguez",
 "simba-durekol-santa-fe",
