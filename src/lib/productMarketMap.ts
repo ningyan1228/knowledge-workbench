@@ -14501,11 +14501,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "floripaint-barquisimeto",
+    "company": "Pinturas Floripaint",
+    "productId": "nl-w1201",
+    "country": "Venezuela",
+    "countryZh": "委内瑞拉",
+    "city": "Barquisimeto（官网业务地址城市；城市示意点，非工厂定位）",
+    "latitude": 10.06361,
+    "longitude": -69.33472,
+    "legacyCompanyDescription": "委内瑞拉Floripaint自主研发制造涂料，Caucho Tipo A水性丙烯酸产品明确适用于已打底木材。",
+    "signal": "Floripaint在委内瑞拉自主配方生产涂料；Caucho Tipo A为水性改性丙烯酸涂料，其完整产品说明明确可用于已打底木材。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Floripaint官网实际产品页明确在委内瑞拉自主研发、配方及生产涂料，并标注Producto Floripaint/Hecho en Venezuela。选定Caucho Tipo A为水性改性丙烯酸乳胶漆，完整成品目录和其实际产品HTML中的当前产品excerpt、OG描述及静态目录JSON均明确包括madera debidamente fondeada，即已打底木材；不从普通墙漆名称猜木材，也不把其醇酸木器清漆当水性。产品页可见摘录截短，本轮以一次完整原始HTML离线JSON字面量解析补齐，未执行网站JS、调用搜索API或隐藏接口。20项可见成品名称、描述及用途独立核读，包含建筑/工业成品、环氧及溶剂封闭底漆，但未见PO/CPO水性分散体、聚烯烃乳液或同类附着促进原料外售；成品环氧漆不自动判NLW原料同行，不冒全SKU/SDS或配方审计。部分卡片通用描述重复且可洗性文案有冲突，未借这些性能、认证或保证放行或做我方承诺，所选水性/木材只使用同款当前excerpt和对应目录明确文字；Ficha pendiente不冒已取得TDS。公开业务页脚明确公司一般邮箱、电话和WhatsApp，实际href匹配页脚号码；另一个页头WhatsApp号码不混为该电话或具名采购，未点击发消息。全正式库/根源/私有前沿及来源/排除表/历史原读与队列名称域名去重，无旧户/已知集团重复，不编C.A.法人、政府登记、隐藏股权或把全国分店拆户。Barquisimeto为业务地址城市，坐标取独立城市参考，非厂门；未把联系地址冒已核实制造厂址。NLW只提出木材水性底涂及附着促进潜在材料评估，不称当前采购、已用我方材料、丙烯酸配方已相容或保证性能改善。"
+    },
+    "contact": {
+      "label": "官网公司业务邮箱、一般电话及明确公开WhatsApp入口",
+      "email": "Pinturas@floripaint.com",
+      "phone": "(0251) 8861222",
+      "contactUrl": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/"
+    },
+    "source": {
+      "label": "Floripaint官方Caucho Tipo A完整产品描述及20项成品目录",
+      "url": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"floripaint-barquisimeto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pindeveca-los-guayos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-top-caracas": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "italpaint-ecuador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15117,6 +15146,58 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"floripaint-barquisimeto": {
+  "website": "https://floripaint.com/",
+  "contactPage": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/",
+  "whatsapp": "https://wa.me/584122100923",
+  "generalEmail": "Pinturas@floripaint.com",
+  "generalEmailEvidence": {
+    "company": "Pinturas Floripaint",
+    "value": "Pinturas@floripaint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Floripaint官方产品页公司业务邮箱",
+        "url": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/",
+        "summary": "页头及业务联系页脚公开Pinturas@floripaint.com，与Barquisimeto公司地址及业务电话同区，不归属具名采购或个人。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "(0251) 8861222",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Floripaint",
+    "value": "(0251) 8861222",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Floripaint官方产品页一般业务电话",
+        "url": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/",
+        "summary": "页头及公司联系区明确(0251) 8861222；WhatsApp另列+58 412 2100923且原始HTML有对应wa.me实际链接，未把固定电话冒WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Barquisimeto, Edo. Lara, Venezuela; Entre calle 1 y 2, cr 2 (published business contact address, not independently verified factory location). Marker is an independently sourced city representative, not factory GPS.",
+  "sources": [
+    {
+      "label": "Caucho Tipo A当前完整产品描述、自主研发制造及业务联系页脚",
+      "url": "https://floripaint.com/p/caucho-tipo-a-pintura-venezuela/"
+    },
+    {
+      "label": "20项成品目录及所选产品水性/已打底木材用途",
+      "url": "https://floripaint.com/productos-floripaint/"
+    },
+    {
+      "label": "明确公开公司WhatsApp实际链接（未发送消息）",
+      "url": "https://wa.me/584122100923"
+    }
+  ]
+},
 "pindeveca-los-guayos": {
   "website": "https://pindeveca.com/",
   "contactPage": "https://pindeveca.com/",
@@ -45875,6 +45956,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"floripaint-barquisimeto",
 "pindeveca-los-guayos",
 "pinturas-top-caracas",
 "italpaint-ecuador",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"floripaint-barquisimeto": "I noticed that Floripaint manufactures Caucho Tipo A, a water-based acrylic coating whose listed substrates include primed wood.",
 "pindeveca-los-guayos": "I noticed that PINDEVECA manufactures Master Fondo Alquídico Industrial, an anticorrosive primer for metal structures, tanks and pipes.",
 "pinturas-top-caracas": "I noticed that Pinturas TOP manufactures Hidroesmalte, a water-based acrylic coating for interior and exterior wood surfaces.",
 "italpaint-ecuador": "I noticed that Pinturas Italpaint manufactures ITAL CROM, an alkyd anticorrosive coating for interior and exterior metal surfaces.",
