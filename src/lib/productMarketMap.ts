@@ -14613,11 +14613,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "gricoat-itagui",
+    "company": "GRICOAT de Colombia SAS",
+    "productId": "elo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Itagüí, Antioquia（官网业务地址城市；城市示意点，非工厂定位）",
+    "latitude": 6.167,
+    "longitude": -75.617,
+    "legacyCompanyDescription": "哥伦比亚Gricoat自主设计制造工业树脂及涂料，PU磁漆用于汽车和工业表面涂装。",
+    "signal": "GRICOAT自主设计制造涂料；其PU enamels为用于汽车及工业表面涂装的双组分聚氨酯磁漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "GRICOAT首方About明确自主设计制造涂料与工业树脂研发配方；选定PU enamels原文明确双组分聚氨酯体系用于汽车和工业表面，不把普通经销、喷涂服务或包装加工当制造厂。五不同公司URL完整native356/272/586/322/266行返回，实际业务正文和汽车目录名称独立核读；全产品总览显示汽车、Grimader木器、包装三路线，本轮没有把未读木器/包装子目录或所有SDS当已审计。汽车目录成品、颜色、配套活化剂/硬化剂/调整剂/清洁剂/色浆等项目限可见名称范围；另单独读取PS0080改性剂，明确为不同化学性质树脂的混合物用于金属效果颜料取向/flop调节，并非按改性剂一词判ELO原料同行，也不猜其中完全不含植物油。所读公司/三路线总览/汽车目录/具体PU成品和PS0080范围未见ELO、ESBO、环氧植物油或同类生物增塑稳定输入外售，普通树脂/PU成品/色浆/活化剂不自动等环氧植物油供应商；结论限实际已读经营范围，不冒隐藏配方或完整树脂/包装业务审计。一般marketing@gricoat.com.co虽域名不同于官网gricoatdecolombia.com仍由各页公司联系区明确对应；固定电话原值+57(604)6046129单独保留，另公开手机+573102333923不猜WhatsApp，Hola按钮不冒已核WA。无具名采购、需求、现用ELO、相容或PU性能承诺；对方UV/耐候/干燥自述不转作我方效果。全615正式、根14未发、frontier/来源/排除表、队列及旧原读按Gricoat两域名/Grimader/Coatmixer/Soltepin关联核查无既有户；Soltepin只明确并列付款入口，不编法律股权，保留关联提醒未来不拆新户，门店颜色工具不另计。Itagüí/Antioquia/Colombia为首方业务地址，不冒实际厂门调查；城市参考158/164/166/167/188行给6.167/-75.617，作为业务城市示意非厂门GPS。五公司+一城市=本范围6/6，公司累计5/rem1，不重置跨产品预算；无原始二进制TDS/SDS下载、远程JS、付款、表单或外联。"
+    },
+    "contact": {
+      "label": "官网公司一般市场业务邮箱、固定业务电话及联系入口",
+      "email": "marketing@gricoat.com.co",
+      "phone": "+57 (604) 604 6129",
+      "contactUrl": "https://gricoatdecolombia.com/en/quienes-somos/"
+    },
+    "source": {
+      "label": "Gricoat官方PU enamels具体产品及About自主设计制造说明",
+      "url": "https://gricoatdecolombia.com/en/productos/linea-automotriz/esmaltes-poliuretano/esmaltes-pu/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"gricoat-itagui": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "philaac-bogota": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "solintex-maracay": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-huten-carabobo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15233,6 +15262,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"gricoat-itagui": {
+  "website": "https://gricoatdecolombia.com/",
+  "contactPage": "https://gricoatdecolombia.com/en/quienes-somos/",
+  "generalEmail": "marketing@gricoat.com.co",
+  "generalEmailEvidence": {
+    "company": "GRICOAT de Colombia SAS",
+    "value": "marketing@gricoat.com.co",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Gricoat官网公司Contact details公开市场业务邮箱",
+        "url": "https://gricoatdecolombia.com/en/quienes-somos/",
+        "summary": "About及实际产品页共同公开marketing@gricoat.com.co，与GRICOAT de Colombia SAS及Itagüí业务地址同区；两个域名由首方明确联系，不冒具名采购或个人邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+57 (604) 604 6129",
+  "generalPhoneEvidence": {
+    "company": "GRICOAT de Colombia SAS",
+    "value": "+57 (604) 604 6129",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Gricoat官网Contact Us固定业务电话",
+        "url": "https://gricoatdecolombia.com/en/quienes-somos/",
+        "summary": "首方联系区明确+57 (604) 604 6129；另列+57 310 2333923为Phone，未把任一电话或Hola按钮当WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "77A Street #45A-90, Itagüí – Antioquia, Colombia (published business contact address; exact manufacturing facility street location not independently verified). Marker is an independently sourced city representative, not factory GPS.",
+  "sources": [
+    {
+      "label": "自主设计制造涂料及工业树脂研发、公司公开联系",
+      "url": "https://gricoatdecolombia.com/en/quienes-somos/"
+    },
+    {
+      "label": "三产品路线公开总览",
+      "url": "https://gricoatdecolombia.com/en/productos/"
+    },
+    {
+      "label": "完整可见汽车成品和配套品目录",
+      "url": "https://gricoatdecolombia.com/en/linea-automotriz/"
+    },
+    {
+      "label": "PU enamels双组分汽车及工业成品用途",
+      "url": "https://gricoatdecolombia.com/en/productos/linea-automotriz/esmaltes-poliuretano/esmaltes-pu/"
+    },
+    {
+      "label": "PS0080树脂混合型效果颜料取向改性剂边界",
+      "url": "https://gricoatdecolombia.com/en/productos/linea-automotriz/complementarios/aditivo-modificador-ps0080/"
+    }
+  ]
+},
 "philaac-bogota": {
   "website": "https://philaac.com.co/",
   "contactPage": "https://philaac.com.co/",
@@ -46198,6 +46286,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"gricoat-itagui",
 "philaac-bogota",
 "solintex-maracay",
 "pinturas-huten-carabobo",

@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"gricoat-itagui": "I noticed that Gricoat designs and manufactures coatings, including two-component polyurethane enamels for automotive and industrial finishes.",
 "philaac-bogota": "I noticed that PHILAAC manufactures Acuapro, a water-based acrylic enamel whose listed substrates include wood, with formulas made in Bogotá.",
 "solintex-maracay": "I noticed that Solintex manufactures CROMATO DE ZINC 780, an anticorrosive coating for iron and steel industrial structures.",
 "pinturas-huten-carabobo": "I noticed that Hüten formulates Fondo + Esmalte, an anticorrosive coating for steel structures, industrial machinery, metal tanks and pipes.",
