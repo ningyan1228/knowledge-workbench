@@ -15111,11 +15111,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "alex-india-nagpur",
+    "company": "ALEX (INDIA)",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Nagpur（城市Zero Mile Stone示意点，非工厂定位）",
+    "latitude": 21.1498,
+    "longitude": 79.0806,
+    "legacyCompanyDescription": "印度工业金属防护涂料制造商",
+    "signal": "印度Nagpur自主制造工业防护涂料；PREBOND-220为单组分Si-PU直接涂金属成品，明确用于结构钢、设备和管道。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "实际独立读取alexindia.in的PREBOND220产品180行、About65行、完整Products31行及另一实际公司域alex-india.in的About130行，共四完整native原文/四URL，0失败/跳转/原GET/PDF/公司脚本。0+4=4/rem2；另Nagpur城市参考1，本范围5/6。新站About的manufacturer标签不是唯一制造依据：旧公司页明确KhadgaonRoadWadiNagpur制造地点及使用ownmanufacturingchemicals/coatings提供施工，产品PREBOND220与一般业务邮箱在两域一致，Weblink管理的公司自述页面不冒第三方工厂审计。旧页虽Search题头ServiceProvider，实际正文是制造兼施工，并给出SoleProprietorship/GST27CVVPD8742C1Z9自述；登记/ISO/MSME/GEM未独立验证。PREBOND220同款明确SiPU单组分金属防护和钢结构用途，不能由水性58/110推其水性或确定所有牌号的树脂化学。完整可见九项产品概述为220防护漆、58水性除锈防锈液、350金属清漆、CR金属底漆、HR高温铝漆、110单宁酸水性锈转化液、RCC700混凝土SiPU成品、BC400热保护黑漆及DT400成品地坪涂层，均为施工成品或表面处理用途；有限经营与九概述/220技术范围未见ELO/ESBO/环氧化植物油或同类生物基增塑添加剂外售，施工底漆/除锈液/泛称polymer不自动为ELO同行。其他八详情、全部SKU/SDS/真正聚合物组成/最终股权未读，不称全站审计。旧页6000C高温字样与当前目录600°C并存不修订；220覆盖率07至08一涂和35至40两涂自述差异保留，盐雾/酸浸/寿命/化学/食品/耐温/质保不独立验证或转ELO保证。acidproofpaint旧Search硅改性醇酸与现SiPU描述、市场平台Exporter/Trader题头只作未读历史发现，不借片段更改真实配方或把服务标签压过制造原文。两实际域及同PREBOND邮箱按一个保守账户，PRECISE与FERONIX近名发现没有原文控制关系，不据此拆新客户或合并不明主体。公开alexindia20@gmail.com及第一业务电话+919011926733来自现站产品页，旧页同邮箱；作为公司通用渠道不绑定CEOArpitBDokras或采购，不解锁旧页ViewMobileNumber或猜WhatsApp。旧页YourEnquirySent是页面模板非实际提交；当前Contact表单未读，不称已验证表单或可投递。官网旧页House297/Plot4855地址与制造所在KhadgaonRoad分开保留，不声称厂门实测；Nagpur21.1498/79.0806来自独立城市信息框ZeroMileStone单个坐标展示，只作城市示意非厂门，不虚构双处坐标一致。全633正式、根14未发、私有frontier/source/excluded/队列及显式包含gitignore私有原档的全历史去重；旧Search/计划提及不计公司请求，不按新旧域/产品重置预算。ELO按用户TDS涂料/树脂改性与柔韧潜在评估，不断言其SiPU已相容或现用/采购我方材料，也不保证客户防腐表现。"
+    },
+    "contact": {
+      "label": "官方公司一般业务邮箱与公开电话；无具名采购或已核WhatsApp/表单",
+      "email": "alexindia20@gmail.com",
+      "phone": "+91-9011926733",
+      "contactUrl": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint"
+    },
+    "source": {
+      "label": "ALEX官方PREBOND220金属防护成品及独立制造归属原文",
+      "url": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"alex-india-nagpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "meta-chem-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chemilite-naturelite-alappuzha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "sungbo-ink-siheung": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -15749,6 +15778,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"alex-india-nagpur": {
+  "website": "https://alexindia.in/",
+  "contactPage": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint",
+  "generalEmail": "alexindia20@gmail.com",
+  "generalEmailEvidence": {
+    "company": "ALEX (INDIA)",
+    "value": "alexindia20@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "ALEX官方产品页一般业务邮箱",
+        "url": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint",
+        "summary": "ContactUs区明确alexindia20@gmail.com，About/Products及公司旧alex-india.in制造页相同；为公司一般业务邮箱，不绑定CEO/采购或验证投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+91-9011926733",
+  "generalPhoneEvidence": {
+    "company": "ALEX (INDIA)",
+    "value": "+91-9011926733",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "ALEX官方产品页第一业务电话",
+        "url": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint",
+        "summary": "公司ContactUs区公开+91-9011926733和另一个+91-9307742241；采用首个精确原格式，不推个人、采购、WhatsApp或解锁旧网站隐藏手机。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published manufacturing locality: Khadgaon Road, Wadi, Nagpur-440023, Maharashtra, India. Legacy business contact: House No.297, Plot No.48,55, Matsyagandha Gruh Nirman Society, Unnamed Road, U R Logistics, Lava Wadi, Nagpur-440023. These descriptions are not independently surveyed factory GPS. Marker is an independent Nagpur city infobox Zero Mile Stone representative point.",
+  "sources": [
+    {
+      "label": "现站220完整金属防护技术说明及一般联系",
+      "url": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint"
+    },
+    {
+      "label": "现站公司经营自述",
+      "url": "https://alexindia.in/about"
+    },
+    {
+      "label": "公司旧域制造地点与自产涂料施工、主体及相同邮箱",
+      "url": "https://www.alex-india.in/about-us.htm"
+    },
+    {
+      "label": "完整九项防护涂料/表面处理成品概述",
+      "url": "https://alexindia.in/products"
+    }
+  ]
+},
 "meta-chem-nashik": {
   "website": "https://www.metachempaints.com/",
   "contactPage": "https://www.metachempaints.com/contact-us/",
@@ -47616,6 +47700,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"alex-india-nagpur",
 "meta-chem-nashik",
 "chemilite-naturelite-alappuzha",
 "sungbo-ink-siheung",

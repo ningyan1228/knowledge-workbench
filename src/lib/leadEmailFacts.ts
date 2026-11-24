@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"alex-india-nagpur": "I noticed ALEX manufactures PREBOND-220, a single-component direct-to-metal coating for structural steel and industrial equipment.",
 "meta-chem-nashik": "I noticed Meta-Chem manufactures protective coatings and lists its 701 paint for metal surfaces, including steel springs.",
 "chemilite-naturelite-alappuzha": "I noticed Naturelite manufactures paints in Kerala and offers Nature Wood Clear Coat, a water-based transparent coating for wood.",
 "sungbo-ink-siheung": "I noticed that Sungbo Ink produces gravure inks and lists an untreated-PP surface ink with toluene/ethyl-acetate diluents.",
