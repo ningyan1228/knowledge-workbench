@@ -15139,11 +15139,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "asco-nahr-el-mott-metn",
+    "company": "ASCO sal",
+    "productId": "elo",
+    "country": "Lebanon",
+    "countryZh": "黎巴嫩",
+    "city": "Nahr el Mott, Metn（Metn区域示意点，非工厂定位）",
+    "latitude": 33.8967,
+    "longitude": 35.5778,
+    "legacyCompanyDescription": "黎巴嫩定制工业漆及金属底漆生产商",
+    "signal": "黎巴嫩ASCO官网明确生产定制工业漆，金属漆目录列有Epoxy Primer及合成底漆/面漆；业务联系地址位于Nahr el Mott、Metn。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "独立读取ASCO官方Home178行、Semi-finished117行、MetalCoatings183行，均完整native编号正文，非搜索摘要/provider重写。公司0+3=3/rem3，0失败/跳转/原GET/PDF/公司脚本。Home及目录明确生产定制工业漆，Metal具体列EpoxyPrimer、440xxxHammerPaint及底面漆，不以普通行业标签当制造。金属目录仅1至9/11，第二页/具体配方/TDS/SDS未读；九产品家族导航和实际完整三项半成品PigmentPastes、MattingPastes、NitrocelluloseSolutions为有限输入经营范围，未见ELO/ESBO/环氧化植物油/同类生物基增塑添加剂外售。颜料浆/消光浆/硝化棉溶液不自动等同所选ELO同行；其他Hardeners/Solvents/SpecialCoatings只导航，不猜其化学或称全SKU/最终股权已审。1937/86年/1000客户/20国为自述不独立认证；跨designersidhost模板slider不当公司证据或集团。ASCO sal及www/裸域一账户，KenyaBasco/bascopaints.com只是子串相似，不合并或继承来源；正式全库/14根未发/私有/队列/排除/含忽略原档去重。公开info@ascopaints.com及GeneralQueries电话+96176766255为一般业务非具名采购；不推电话为WA，金属页WA图标精确目标未核，表单未提交。联系处NahrElMottIndustrialValleyMetn为office地点，不当厂门实测。33.8967/35.5778为独立MatnDistrict顶部L133/底部L299同一区域坐标重复，非精确城镇/厂门，也非infobox双源一致。ELO按用户TDS涂料/树脂改性与环氧功能/柔韧方向供潜在评估，不断言其EpoxyPrimer配方相容、现用/采购、替代计划或性能提高。本范围Chemical旧户1请求+1跳转共2单位、ASCO3、Metn地理1合计6/6STOP，Chemical同户6/6冻结且重写目录仍私有，不借其预算。"
+    },
+    "contact": {
+      "label": "官网GeneralQueries一般业务邮箱与电话；无具名采购或已核WhatsApp",
+      "email": "info@ascopaints.com",
+      "phone": "+961 76766255",
+      "contactUrl": "https://www.ascopaints.com/"
+    },
+    "source": {
+      "label": "ASCO官方金属漆EpoxyPrimer目录及定制工业漆生产说明",
+      "url": "https://www.ascopaints.com/shop.php?cid=52"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"asco-nahr-el-mott-metn": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "alex-india-nagpur": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "meta-chem-nashik": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "chemilite-naturelite-alappuzha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15778,6 +15807,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"asco-nahr-el-mott-metn": {
+  "website": "https://www.ascopaints.com/",
+  "contactPage": "https://www.ascopaints.com/",
+  "generalEmail": "info@ascopaints.com",
+  "generalEmailEvidence": {
+    "company": "ASCO sal",
+    "value": "info@ascopaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "ASCO官网GeneralQueries邮箱",
+        "url": "https://www.ascopaints.com/",
+        "summary": "HomeL163至167标注GeneralQueries及info@ascopaints.com，两个目录重复精确地址。公司一般业务入口，非具名采购或投递确认。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+961 76766255",
+  "generalPhoneEvidence": {
+    "company": "ASCO sal",
+    "value": "+961 76766255",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "ASCO官网GeneralQueries业务电话",
+        "url": "https://www.ascopaints.com/",
+        "summary": "HomeL163至165明确GeneralQueries Phone:+96176766255，按原文空格格式保存，不推个人/采购/WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published office/contact location: Nahr el Mott, Industrial Valley, Metn, Lebanon. This is not independently surveyed factory GPS. Map marker uses the independent Matn/Metn district regional representative point (33.8967, 35.5778), not precise Nahr el Mott premises.",
+  "sources": [
+    {
+      "label": "官网工业漆生产、九产品家族和一般业务联系",
+      "url": "https://www.ascopaints.com/"
+    },
+    {
+      "label": "完整三项半成品目录",
+      "url": "https://www.ascopaints.com/shop.php?cid=48"
+    },
+    {
+      "label": "金属漆第一页九项含EpoxyPrimer，非完整11项",
+      "url": "https://www.ascopaints.com/shop.php?cid=52"
+    }
+  ]
+},
 "alex-india-nagpur": {
   "website": "https://alexindia.in/",
   "contactPage": "https://alexindia.in/products/prebond-220-acid-alkali-corrosion-resistant-paint",
@@ -47700,6 +47780,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"asco-nahr-el-mott-metn",
 "alex-india-nagpur",
 "meta-chem-nashik",
 "chemilite-naturelite-alappuzha",
