@@ -14669,11 +14669,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "quimica-marel-zapopan",
+    "company": "Química Marél",
+    "productId": "cpp-cpo",
+    "country": "Mexico",
+    "countryZh": "墨西哥",
+    "city": "Zapopan, Jalisco（官网业务地址城市；城市示意点，非工厂定位）",
+    "latitude": 20.717,
+    "longitude": -103.4,
+    "legacyCompanyDescription": "墨西哥Marél研发制造工业涂料，BARQUIM QM PPA为PP/TPO塑料用溶剂型成品底漆。",
+    "signal": "Marél自主研发制造工业涂料；BARQUIM QM PPA是用于TPO及PP混合塑料的溶剂型底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "QuímicaMarél首方Marél公司页明确持续研发及制造自有涂料产品、专用研发和测试实验室、定制配方及工业涂装业务，不从经销页面或产业年限单独猜制造。选定BARQUIM QM PPA同款产品表格明确Primario/Plástico/BaseSolvente，正文明确TPO及PP混合塑料上的底漆/附着促进与制造线表面施涂；这是面向底材施工的成品底漆，不是按promotor一词认定对外卖CPP/CPO树脂原料，也不猜客户现有CPO化学、未经处理PP条件或汽车具体项目。原公司活动范围、全部返回主分类、目录实际前12项成品名称及当前具体成品读完，范围内未见CPP/CPO树脂、聚烯烃黏结树脂或同类原料附着输入外售；明确118结果仅前12可见，剩106项、全部SDS/配方/隐藏股权未审计，不把有限范围排除说成全部目录审计。五公司请求三完整native87/103/362行业务正文；显示全部?per_page=-1第四次超时，随后第五次独立成功URI的具体产品原始HTML补读网络失败，两失败计账，无失败URI重试、镜像、隐藏API或远程JS，不借失败结果补全目录。两个失败没有冲掉前三份真实制造、特定PP/TPO溶剂型成品及联系证据，结论限已读活动和产品范围。公共业务页脚明确ventasdigitales@quimicamarel.com.mx及固定33 3633 2271；页头hola@empresa.com.mx/零号码为占位不使用。页脚另有WhatsApp文字与号码，但未取得精确href，不猜wa.me链接或账号，无具名采购/需求。公司名用首方QuímicaMarél品牌，不造SAdeCV法人或政府登记，Barquim/Alquimar/Devise成品品牌不拆独立客户；1966/认证/72小时交付/环保等对方自述不借为当前独立认证或我方承诺。全617正式、根14无关未发、frontier/来源/排除表、全部旧原读及队列按名称域名品牌去重无既有主体；旧GrafiColor3/rem3的TAAA00212原料角色缺口保留不因新搜索正面重置或放行。Zapopan/Jalisco/México及IndustriaAceitera2436为首方业务地址，不当独立厂门定位；独立城市参考232/242/243/244/245/246行，取20.717/-103.4作城市点，信息框另一坐标变体保留。五公司+一城市=范围6/6，公司5/rem1含两失败。CPP/CPO只按用户指南PP附着、低黏度及特定酯溶级别方向提出材料评估；已有NipponPaper独立CPO类别引用支持PP/TPO塑料底漆路线，不把类别文献说成NL牌号验证，不保证客户溶剂相容、性能、食品认证或采购。无PDF下载、实际WA跳转、表单、邮件或CRM。"
+    },
+    "contact": {
+      "label": "官网公司一般销售邮箱、固定电话及业务联系入口",
+      "email": "ventasdigitales@quimicamarel.com.mx",
+      "phone": "33 3633 2271",
+      "contactUrl": "https://quimicamarel.com.mx/marel/"
+    },
+    "source": {
+      "label": "Marél官方BARQUIM QM PPA同款PP/TPO溶剂型底漆和自有研发制造说明",
+      "url": "https://quimicamarel.com.mx/productos/general/barquim-qm-ppa/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"quimica-marel-zapopan": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "qtec-rionegro": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "gricoat-itagui": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "philaac-bogota": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15291,6 +15320,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"quimica-marel-zapopan": {
+  "website": "https://quimicamarel.com.mx/",
+  "contactPage": "https://quimicamarel.com.mx/marel/",
+  "generalEmail": "ventasdigitales@quimicamarel.com.mx",
+  "generalEmailEvidence": {
+    "company": "Química Marél",
+    "value": "ventasdigitales@quimicamarel.com.mx",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Marél官方产品页及公司页真实业务页脚销售邮箱",
+        "url": "https://quimicamarel.com.mx/productos/general/barquim-qm-ppa/",
+        "summary": "与Zapopan公司地址和固定电话同区公开ventasdigitales@quimicamarel.com.mx，为一般公司销售入口，非具名采购；不使用页头hola@empresa.com.mx占位。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "33 3633 2271",
+  "generalPhoneEvidence": {
+    "company": "Química Marél",
+    "value": "33 3633 2271",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Marél官方业务页脚固定电话",
+        "url": "https://quimicamarel.com.mx/productos/general/barquim-qm-ppa/",
+        "summary": "真实公司Contacto明确33 3633 2271，未使用页头零号码；另一33 3636 7059为WhatsApp文字入口但精确href未核，不按号码猜账号。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Industria Aceitera #2436, Fracc. Industrial, Zapopan, Jalisco, México, C.P.45130 (published business address, not independently surveyed manufacturing facility). Marker is an independently sourced city representative, not factory GPS.",
+  "sources": [
+    {
+      "label": "同款PPA溶剂型PP/TPO表面底漆及业务联系",
+      "url": "https://quimicamarel.com.mx/productos/general/barquim-qm-ppa/"
+    },
+    {
+      "label": "自有产品研发制造、专用开发与测试实验室",
+      "url": "https://quimicamarel.com.mx/marel/"
+    },
+    {
+      "label": "主分类和实际前12项产品目录，118总结果不冒全部已读",
+      "url": "https://quimicamarel.com.mx/productos/"
+    }
+  ]
+},
 "qtec-rionegro": {
   "website": "https://qtecinks.com/",
   "contactPage": "https://qtecinks.com/es/about",
@@ -46368,6 +46448,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"quimica-marel-zapopan",
 "qtec-rionegro",
 "gricoat-itagui",
 "philaac-bogota",
