@@ -14557,11 +14557,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "solintex-maracay",
+    "company": "Solintex de Venezuela, S.A.",
+    "productId": "elo",
+    "country": "Venezuela",
+    "countryZh": "委内瑞拉",
+    "city": "Maracay（官网办公地址城市；城市示意点，非工厂定位）",
+    "latitude": 10.24694,
+    "longitude": -67.59611,
+    "legacyCompanyDescription": "委内瑞拉Solintex自主制造涂料；CROMATO DE ZINC 780用于铁钢工业结构防护。",
+    "signal": "Solintex在委内瑞拉自主制造工业及家用涂料；CROMATO DE ZINC 780用于铁、钢及工业建筑结构的防锈保护。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Solintex公司页实际正文明确Fabricamos y comercializamos工业/家用水性乳液及有机溶剂涂料，并描述既有生产过程质量控制，不把愿景中的未来自动化投资当已投产新工厂。原完整目录明确CROMATO DE ZINC 780为铁及钢的工业建筑结构防锈防护成品，也列FondoHerrería及AluminioIndustrial等，对应ELO工业防护涂料的潜在材料评估；未披露所选成品树脂化学，不编醇酸或已用ELO。目录完整12项及公司页独立核读，水性4/溶剂5/工业3为成品涂料、木器清漆及底漆/腻子等，已读范围未见ELO/ESBO/环氧植物油或同类生物增塑稳定输入外售；结论限实际页面，不冒全SKU/SDS/PDF或隐藏配方审计。原NLW研究水性Plástica未点木材，Barniz400归溶剂且木材教程的水只是清洁用水，仍不认NLW水性木材，不以本次ELO晋级覆盖该历史不确定。旧SuperAcrilica页挑战一行无原文，失败照计且未重试/镜像绕过/执行JS；保留旧4+当前Empresa与Contact2=6STOP，不跨产品重置额度。公司联系页明确一般业务邮箱、多个电话与Maracay办公地址、公司询问表单；选择明确国际格式+58 243-2458096，不修正另一号码范围的异常文字，也不把+58 412手机或ScanCode聊天插件猜WhatsApp账号，无具名采购。S.A.取自自有目录，不冒政府注册；ClasicaPublicidad为开发者而非股权，正式库/根源/前沿来源/排除表/历史及队列按同名域名去重，唯一旧私有项晋级，不能新造第二账户。Maracay为办公地址城市，坐标取独立城市参考作示意，未核实制造厂街道或厂门。ELO只作环氧功能、柔韧/树脂改性潜在评估，无当前采购、相容、防腐或性能改善保证。"
+    },
+    "contact": {
+      "label": "官网公司业务邮箱、一般电话及业务咨询表单",
+      "email": "info@solintexdevenezuela.com.ve",
+      "phone": "+58 243-2458096",
+      "contactUrl": "https://solintexdevenezuela.com.ve/contacto/"
+    },
+    "source": {
+      "label": "Solintex官方完整目录CROMATO DE ZINC 780工业铁钢防护涂料及Empresa制造声明",
+      "url": "https://solintexdevenezuela.com.ve/productos/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"solintex-maracay": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-huten-carabobo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "floripaint-barquisimeto": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pindeveca-los-guayos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15175,6 +15204,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"solintex-maracay": {
+  "website": "https://solintexdevenezuela.com.ve/",
+  "contactPage": "https://solintexdevenezuela.com.ve/contacto/",
+  "generalEmail": "info@solintexdevenezuela.com.ve",
+  "generalEmailEvidence": {
+    "company": "Solintex de Venezuela, S.A.",
+    "value": "info@solintexdevenezuela.com.ve",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Solintex官方Contact公司业务邮箱",
+        "url": "https://solintexdevenezuela.com.ve/contacto/",
+        "summary": "公司Contáctanos区明确info@solintexdevenezuela.com.ve，与Maracay办公室及电话同区，非订阅输入框的example占位或具名采购邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+58 243-2458096",
+  "generalPhoneEvidence": {
+    "company": "Solintex de Venezuela, S.A.",
+    "value": "+58 243-2458096",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Solintex官方Contact一般业务电话",
+        "url": "https://solintexdevenezuela.com.ve/contacto/",
+        "summary": "原文独立列+58 243-2458096，和国内0243 245.80.96一致；未纠正异常范围电话，也不猜WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Edf. Torre del Centro, Ofic. P.H 902, Calle López Aveledo Sur, Maracay, Edo. Aragua, Venezuela (published office address, not independently verified factory address). Marker is an independently sourced Maracay city representative, not factory GPS.",
+  "sources": [
+    {
+      "label": "公司自主制造工业/家用涂料和生产过程质量控制",
+      "url": "https://solintexdevenezuela.com.ve/empresa/"
+    },
+    {
+      "label": "完整12项成品目录及CROMATO DE ZINC 780工业铁钢保护用途",
+      "url": "https://solintexdevenezuela.com.ve/productos/"
+    },
+    {
+      "label": "公司一般邮箱、电话、Maracay办公地址及真实业务咨询表单",
+      "url": "https://solintexdevenezuela.com.ve/contacto/"
+    }
+  ]
+},
 "pinturas-huten-carabobo": {
   "website": "https://pinturashuten.com.ve/",
   "contactPage": "https://pinturashuten.com.ve/",
@@ -46041,6 +46121,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"solintex-maracay",
 "pinturas-huten-carabobo",
 "floripaint-barquisimeto",
 "pindeveca-los-guayos",
