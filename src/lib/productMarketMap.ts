@@ -14473,11 +14473,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "pindeveca-los-guayos",
+    "company": "PINDEVECA / Pindeveca C.A.",
+    "productId": "elo",
+    "country": "Venezuela",
+    "countryZh": "委内瑞拉",
+    "city": "Los Guayos（官网工厂城市；城市示意点，非工厂定位）",
+    "latitude": 10.17558,
+    "longitude": -67.91942,
+    "legacyCompanyDescription": "委内瑞拉PINDEVECA自制工业防护涂料，Master醇酸防锈底漆用于金属机械、储罐及管道。",
+    "signal": "PINDEVECA自主配方制造涂料；Master Fondo Alquídico Industrial为用于金属机械、储罐及管道的单组分醇酸防锈底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "官网明确LosGuayos委内瑞拉自有工厂，配方、分散、灌装及质检在同一厂内完成。实际Master Fondo Alquídico Industrial为单组分醇酸金属防锈底漆，用于机械、储罐和管道；选择此具体工业成品对应ELO涂料柔韧/树脂改性评估，不把成品防腐、食品接触、固化或性能自述转成我方保证。原生目录提取只到742/1239行，已以原始HTML补全，25项成品的名称、描述和用途全部核读：工业15项、建筑10项；有限公开经营范围未见ELO/ESBO、环氧植物油或同类生物增塑稳定原料外售，环氧/PU/醇酸成品不自动等同ELO原料同行，不冒全部SKU/SDS或隐藏配方审计。Home及原始HTML明确公司业务邮箱、一般电话和实际WhatsApp href，非具名采购；业务表单是转WhatsApp，未提交或发消息。Pindeveca C.A.为官网页脚自述，Master/Supreme/Standard/Colore/Glam按一个制造账户，10N Works为网站开发署名，不推股权或政府登记。全正式库、根源、前沿/来源与队列域名品牌去重，唯一旧私有项本次晋级，不新增第二研究户。LosGuayos城市地理原文取独立Mapcarta的OSM城市点，不把示意点当厂门；旧失败Wikipedia未重试。本轮公司请求0，原五次来源及剩余一次预算保持，未确认现有ELO采购、使用或相容。"
+    },
+    "contact": {
+      "label": "官网公司业务邮箱、一般电话及明确公开WhatsApp入口",
+      "email": "pindeveca@gmail.com",
+      "phone": "0412-0688009",
+      "contactUrl": "https://pindeveca.com/"
+    },
+    "source": {
+      "label": "PINDEVECA完整原始目录中的Master Fondo Alquídico Industrial工业防锈底漆",
+      "url": "https://pindeveca.com/catalogo"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pindeveca-los-guayos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pinturas-top-caracas": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "italpaint-ecuador": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sotach-sfax": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15088,6 +15117,58 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pindeveca-los-guayos": {
+  "website": "https://pindeveca.com/",
+  "contactPage": "https://pindeveca.com/",
+  "whatsapp": "https://wa.me/584120688009",
+  "generalEmail": "pindeveca@gmail.com",
+  "generalEmailEvidence": {
+    "company": "PINDEVECA / Pindeveca C.A.",
+    "value": "pindeveca@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "PINDEVECA官网Hablemos de tu proyecto业务邮箱",
+        "url": "https://pindeveca.com/",
+        "summary": "公司工厂和业务联系区明确Correo pindeveca@gmail.com，原始HTML有同一mailto；不归属具名采购或个人。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "0412-0688009",
+  "generalPhoneEvidence": {
+    "company": "PINDEVECA / Pindeveca C.A.",
+    "value": "0412-0688009",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "PINDEVECA官网一般业务电话与公开WhatsApp声明",
+        "url": "https://pindeveca.com/",
+        "summary": "Teléfono y WhatsApp明确0412-0688009；原始HTML确有wa.me/584120688009。电话号码保留原始公开国内格式，WhatsApp只取实际href。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Planta: Urb. Industrial La Caracarita, calle 1, parcela F6-BC2A, Centro Empresarial Francisqui, galpón 20, Los Guayos, Carabobo, Venezuela. Map marker is a city representative from an independent city gazetteer, not surveyed factory GPS.",
+  "sources": [
+    {
+      "label": "自有配方、分散、灌装、质检与工厂及业务联系",
+      "url": "https://pindeveca.com/"
+    },
+    {
+      "label": "完整25项原始成品目录与具体Master工业醇酸防锈底漆",
+      "url": "https://pindeveca.com/catalogo"
+    },
+    {
+      "label": "明确公开公司WhatsApp链接（未发送消息）",
+      "url": "https://wa.me/584120688009"
+    }
+  ]
+},
 "pinturas-top-caracas": {
   "website": "https://www.pinturastop.com/",
   "contactPage": "https://www.pinturastop.com/",
@@ -45794,6 +45875,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pindeveca-los-guayos",
 "pinturas-top-caracas",
 "italpaint-ecuador",
 "sotach-sfax",
