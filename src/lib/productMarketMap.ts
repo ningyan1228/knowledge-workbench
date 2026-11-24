@@ -14889,11 +14889,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "american-colour-vapi",
+    "company": "American Colour (R.R International / M/S Ralston Polycoats)",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Vapi, Gujarat（城市示意点，非工厂定位）",
+    "latitude": 20.372,
+    "longitude": 72.917,
+    "legacyCompanyDescription": "印度水性木材涂层及工业涂料制造商",
+    "signal": "在Vapi通过自有Ralston Polycoats制造设施生产涂料；2K水性成品明确列有木材和玻璃用途。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "五公司来源：2K产品168行/About255行/1K产品162行/Contact160行四完整native业务原文，加Contact单次HTTPS GET200/51969字符原HTML，四不同URL，累计0+5=5/rem1，0失败/披露跳转/自动重试/远程代码；另独立Vapi城市1合NLW范围6/6停。About直接公司R.R International虽为dealer也明确own manufacturing plant M/S Ralston Polycoats，QualityPolicy说明every product we manufacture及自有设施生产涂料；AmericanColour当前2K水性成品页明确wood/glass用途、water thinner、两组分9:1，不因dealer一词抹去其明确制造正面，也不把代理BirlaOpus品牌当自制。只取2K木材用途支持NLW用户TDS木材范围。真实1K页主要混凝土/砌体墙面，不能拼为1K木器漆；2K文档标题元数据错写1K而正文2K、PUD名称同时列Acrylic resin PartA/AliphaticisocyanatePartB、保质12个月与6个月冲突均保留，不修客户配方/比例/保质期或推我方已相容。客户金属泛称不当我方所有金属适用，混凝土/抗菌/防腐/医药食品场景不扩到我方。已读About、两水性成品、Contact及原HTML完整可见导航为气雾漆/环氧地坪与底面漆/PU成品/内外墙乳胶/1K2K水性成品和BirlaOpus成品经销；有限该公开业务范围未见水性聚烯烃乳液、CPO/PO分散体或同类附着输入外售。父辈resin industry履历不等当前输入供应，不从PUD成品名称推外售原PU分散体；未读其他大量单品、ProductFeatures、Gallery、配方/SDS、隐藏关联业务，不冒完整全站审计。AmericanColour/AmericanColours/R.RInternational/M/SRalstonPolycoats/同Vapi地址与RasikMarkna及VilasMarkna已扩展正式/root14未发/frontier/index/excluded/queue和全研究名域去重；一经营账户不拆品牌工厂。Ralston荷兰VanWijhe同名字词不代表关联，未声明最终工商股权核验，印度营业法人后缀/登记号未知不编。官网OfficePlot242/GIDC/SardarChowk(Chawk)地址照原文保留，不冒工厂产权/实地定位；城市20.372/72.917源独立Vapi标题135及信息框143，仅示意非厂门。Contact/Footer及精确mailto公开amecolvapi@gmail.com，作为公司一般业务，不猜邮箱可投递或个人归属。rasik@与FounderRasikMarkna虽同页未直接逐人绑定邮箱职责，未精选具名收件人或采购。公开业务Mobile+919909924407按原文本，公司WhatsApp实际href含+及空格，保留原href并只用标准URL空格编码用于跳转，未补号改账号/打开/发消息/验证账号；公开号不自动当私人电话。Contact姓名电话邮箱验证码字段未提交，不破解CAPTCHA或执行脚本。NLW只是水性聚烯烃分散体的底涂/附着力促进潜在评估，不冒水性CPP/PUD原料、客户现用或采购、2K固化相容、性能提升/低VOC/认证或效果保证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱、公开业务电话、原文WhatsApp链接及联系表单；无已核验具名采购",
+      "email": "amecolvapi@gmail.com",
+      "phone": "+91 9909924407",
+      "contactUrl": "https://www.americancolour.com/american_colour_contact"
+    },
+    "source": {
+      "label": "American Colour官方2K水性木材用途及自有涂料制造设施说明",
+      "url": "https://www.americancolour.com/american_colour_product_pp2k"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"american-colour-vapi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pro-inks-johannesburg": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "qualycolor-itaguai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "polimeros-pinturas-alsa-tlajomulco": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
@@ -15519,6 +15548,62 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"american-colour-vapi": {
+  "website": "https://www.americancolour.com/",
+  "contactPage": "https://www.americancolour.com/american_colour_contact",
+  "generalEmail": "amecolvapi@gmail.com",
+  "generalEmailEvidence": {
+    "company": "American Colour (R.R International / M/S Ralston Polycoats)",
+    "value": "amecolvapi@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "American Colour官方Contact一般业务邮箱及对应mailto",
+        "url": "https://www.americancolour.com/american_colour_contact",
+        "summary": "Contact Email Address及页脚公开amecolvapi@gmail.com，并有精确mailto；为公司一般业务邮箱，不推具名采购或邮箱可投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+91 9909924407",
+  "generalPhoneEvidence": {
+    "company": "American Colour (R.R International / M/S Ralston Polycoats)",
+    "value": "+91 9909924407",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "American Colour官方Contact公开业务Mobile",
+        "url": "https://www.americancolour.com/american_colour_contact",
+        "summary": "Contact Mobile直接公开+91 9909924407，原HTML同号tel链接；公司公开业务路由，非具名个人电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "whatsapp": "https://api.whatsapp.com/send?phone=+91%209909924407&text=Hi,%20I%20am%20contacting%20you%20from%20your%20website%20American%20Colour%20Vapi",
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "PLOT NO-242, Sardar Chowk (also written Chawk), GIDC VAPI-396195, Gujarat, India. Company-published Office address, not an independently surveyed factory. Marker is an independent city representative point only.",
+  "sources": [
+    {
+      "label": "官方2K水性成品木材及玻璃用途，技术矛盾保留",
+      "url": "https://www.americancolour.com/american_colour_product_pp2k"
+    },
+    {
+      "label": "官方About及Quality Policy自有Ralston Polycoats涂料制造设施",
+      "url": "https://www.americancolour.com/american_colour_aboutus"
+    },
+    {
+      "label": "官方1K混凝土墙面成品，未拼成1K木材用途",
+      "url": "https://www.americancolour.com/american_colour_product_pp1k"
+    },
+    {
+      "label": "官方业务邮箱电话表单和明确原文WhatsApp链接",
+      "url": "https://www.americancolour.com/american_colour_contact"
+    }
+  ]
+},
 "pro-inks-johannesburg": {
   "generalEmail": "",
   "website": "https://proinks.co.za/",
@@ -46993,6 +47078,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"american-colour-vapi",
 "pro-inks-johannesburg",
 "qualycolor-itaguai",
 "polimeros-pinturas-alsa-tlajomulco",
