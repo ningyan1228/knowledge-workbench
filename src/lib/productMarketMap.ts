@@ -15000,11 +15000,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "nae-woi-korea-seongnam",
+    "company": "Nae Woi Korea Co., Ltd.",
+    "productId": "elo",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Seongnam, Gyeonggi-do（城市示意点，非工厂定位）",
+    "latitude": 37.433,
+    "longitude": 127.15,
+    "legacyCompanyDescription": "韩国工业金属防护涂层配方制造商",
+    "signal": "韩国功能涂层自主研发制造商；公开 NWK742Metal 为用于金属表面的单组分水性混合聚合物防护涂层，并列防腐用途。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "NaeWoiKorea/内外韩文내외코리아/NWK/naewoi.gobizkorea.com与所链tirelife.co.kr原NLW私有同户晋级ELO，不另建研究账户；六旧原档独立离线复核（五完整92/467/68/36/453行及一tirelife502失败），公司本轮0新请求，6+0=6STOP/rem0，另一个独立Seongnam城市读取本ELO范围1/6。Gobiz是KOSME运营的公司自述商店/技术产品/公司资料平台，不冒当前成功读独立公司官网或平台独立验证认证。Home明确研发制造CoatingSolution，Profile列功能漆制造历史和Manufacturer；同一NWK742产品原文的Metal小节明确混合聚合物金属防护及防腐用途，非把普通行业标签/施工服务冒自主配方制造。有限五正文、ALL3成品目录和两个实际技术产品范围未见ELO/ESBO/环氧植物油/同类生物基增塑稳定原料对外销售；NWK742水性硅氧烷混合矿物成品、NWK800无机漆、NWK850H/870成品和电气配电设备业务不自动等环氧植物油输入同行。目录另一NWK742Floor条目未逐读，800PrincipalIngredients只是图片标题未取图/OCR，不称全部SKU/SDS/配方或最终股权审计。保留20um与nano名称、无VOC与max30PPM、自述17年/57国与旧页脚年龄差异，不转为本原料性能/认证或2026新投产证据。ELO按用户TDS涂料及树脂改性/柔韧潜在评估，不把siloxane成品说成客户现用ELO、已证水性相容、防腐改善或采购需求。原NLW同款TDS基材缺口仍未闭合：一般木材/玻璃概述、742楼面/一般metal、800MDF室内污染原因不可拼成水性木材/玻璃/铝，不从ELO通过反推。实际产品页公开ToNaeWoi公司询盘界面，可作公开业务联系入口，可能需平台登录，未登录/测试提交能力；无公开业务邮箱，SellerMail是标签不是邮箱，不能进入批量邮件名单。公司资料82-317340350是一般业务电话，传真351排除；CheolHoYang仅公开personincharge，无当前职位职责独立核验，不作具名采购或电话归属，未推WA。业务地址9-22Pangyoro255beongilBundangSeongnam由资料与产品页一致披露，非独立工厂勘察或产权；地图37.433/127.15来自Seongnam城市头部及页底一致坐标，仅城市示意。tirelife失败URI冻结，不因产品/平台/语言/协议再给第7。全正式629/根14未发/完整私有队列/排除和历史别名域名查重只允许同一原私有记录；未披露母公司不编关联，NWK系列不拆客户。"
+    },
+    "contact": {
+      "label": "Gobiz公司公开询盘界面（可能需平台登录）及一般电话；未公开业务邮箱",
+      "phone": "82-317340350",
+      "contactUrl": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S1000100040000&goodsNms=Nano-Hybrid-Water-based-Technology-Coating-NWK-742&goods_no=GS20180317156571&upperCode=M1000100000000"
+    },
+    "source": {
+      "label": "Nae Woi公司自述 NWK742Metal 防护成品与制造资料",
+      "url": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S1000100040000&goodsNms=Nano-Hybrid-Water-based-Technology-Coating-NWK-742&goods_no=GS20180317156571&upperCode=M1000100000000"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"nae-woi-korea-seongnam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "hs-chemical-bucheon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chenics-gimpo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rangaved-maharashtra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15634,6 +15662,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"nae-woi-korea-seongnam": {
+  "website": "https://naewoi.gobizkorea.com/mini/site/miniSiteMain.do?domn_id=naewoi",
+  "contactPage": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S1000100040000&goodsNms=Nano-Hybrid-Water-based-Technology-Coating-NWK-742&goods_no=GS20180317156571&upperCode=M1000100000000",
+  "generalEmail": "",
+  "generalPhone": "82-317340350",
+  "generalPhoneEvidence": {
+    "company": "Nae Woi Korea Co., Ltd.",
+    "value": "82-317340350",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Nae Woi公司自述GobizProfile一般业务电话",
+        "url": "https://naewoi.gobizkorea.com/mini/site/companyProfile.do",
+        "summary": "Factory/BranchOffice公司资料Telephone明确82-317340350，保留原格式；351为传真。非具名采购电话或WhatsApp，未验证拨通。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "9-22 Pangyo-ro 255beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do (13486), Republic of Korea. Company-published business address, not independently surveyed or verified factory GPS. Marker is an independent Seongnam city representative point.",
+  "sources": [
+    {
+      "label": "公司自述自主研发制造与NWK成品业务",
+      "url": "https://naewoi.gobizkorea.com/mini/site/miniSiteMain.do?domn_id=naewoi"
+    },
+    {
+      "label": "NWK742Metal原文、金属防护成品和公司询盘界面",
+      "url": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S1000100040000&goodsNms=Nano-Hybrid-Water-based-Technology-Coating-NWK-742&goods_no=GS20180317156571&upperCode=M1000100000000"
+    },
+    {
+      "label": "公司制造资料、一般电话和业务地址",
+      "url": "https://naewoi.gobizkorea.com/mini/site/companyProfile.do"
+    },
+    {
+      "label": "公开ALL3成品目录（有限范围）",
+      "url": "https://naewoi.gobizkorea.com/mini/site/productList.do"
+    },
+    {
+      "label": "NWK800无机成品漆原文（组成图片未读）",
+      "url": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S1000100040000&goodsNms=Nonflammable-Deodorization-and-Preventing-Condensation-Mineral-Paint-NWK800&goods_no=GS20180317181819&upperCode=M1000100000000"
+    }
+  ]
+},
 "hs-chemical-bucheon": {
   "website": "https://hs-chem.co.kr/",
   "contactPage": "https://hs-chem.co.kr/",
@@ -47307,6 +47380,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"nae-woi-korea-seongnam",
 "hs-chemical-bucheon",
 "chenics-gimpo",
 "rangaved-maharashtra",
