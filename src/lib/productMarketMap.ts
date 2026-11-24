@@ -14972,11 +14972,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "hs-chemical-bucheon",
+    "company": "HS CHEMICAL CO., LTD.",
+    "productId": "cpp-cpo",
+    "country": "South Korea",
+    "countryZh": "韩国",
+    "city": "Bucheon, Gyeonggi-do（城市示意点，非工厂定位）",
+    "latitude": 37.5,
+    "longitude": 126.783,
+    "legacyCompanyDescription": "韩国PP溶剂型丝网印刷油墨配方制造商",
+    "signal": "在韩国自主研发丝网印刷油墨；PP 잉크为用于PP等塑料的单组分成品油墨，同一产品列出标准溶剂和自然／热风干燥条件。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "独立核读HS CHEMICAL/에이치에스케미칼/HS케미칼同一官网五份完整原文：工业成品油墨202行、Home28行、公司概况71行、设备69行、Solvent89行；五次五URL，0失败/披露跳转/原始GET/PDF/远程JS，预算0+5=5/rem1，另一个独立Bucheon城市参考使本范围6/6。公司明确以自身技术研发并上市多种油墨，拥有roll mill、pin mill、液压三辊、DISSOLVER II及XRF/FTIR/DSC检测，证明自主配方及加工能力，不仅是经销标签。工业PP 잉크同一产品明示PP等塑料、单组分、标准溶剂아농/专用稀释剂和自然/热风干燥，未推断树脂化学组成或未处理PP。有限工业成品表及六Solvent系列、六产品家族导航未见CPP/CPO、MAH改性聚烯烃或同类附着树脂原料外售；配套稀释剂、PU/丙烯酸/乙烯基成品墨、UV固化墨不等我方原料同行。Mirror/Functional/Bio/UV独立目录只见导航，不称其所有SKU/SDS/配方/隐藏业务及最终股权均审。工业G-1单/双组分、G-2双/单组分及NY500类型/基材描述矛盾保留；不借其他成品性能为我方担保。概况叙述2008开始和约15年历程，法定开业日期2009-05-19，不自行统一年份或当2026新投产。营业号130-86-42547、法定名称、域名、Bucheon地址和公司邮箱同户，未披露母公司不编控制关系，需全正式628/根14未发/私有队列/名域营业号邮箱最终去重；产品或房间地址不拆客户。hsc@hs-chem.co.kr和(032)624-4480为公开通用业务入口，代表者이현곤不等具名采购或邮箱所有人，传真4482不当电话，未核WhatsApp/表单。公司自述BucheonTechnoPark楼室地址非独立勘察工厂，地图37.5/126.783为Bucheon城市示意，非厂门GPS。用途按用户七牌号指南及既有NipponPaper油墨市场扩展，只评估MAH改性CPP/CPO的PP附着与所选牌号溶剂体系，不声称客户现用、外购、采购需求、相容、性能保证、食品或其他认证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱及固定电话；无具名采购或已核WhatsApp/表单",
+      "email": "hsc@hs-chem.co.kr",
+      "phone": "(032) 624-4480",
+      "contactUrl": "https://hs-chem.co.kr/"
+    },
+    "source": {
+      "label": "HS CHEMICAL官方PP成品溶剂型工业油墨与自主研发设备资料",
+      "url": "https://hs-chem.co.kr/?page_id=3905"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"hs-chemical-bucheon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "chenics-gimpo": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rangaved-maharashtra": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "american-colour-vapi": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15605,6 +15634,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"hs-chemical-bucheon": {
+  "website": "https://hs-chem.co.kr/",
+  "contactPage": "https://hs-chem.co.kr/",
+  "generalEmail": "hsc@hs-chem.co.kr",
+  "generalEmailEvidence": {
+    "company": "HS CHEMICAL CO., LTD.",
+    "value": "hsc@hs-chem.co.kr",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "HS CHEMICAL官方Home公司一般业务邮箱",
+        "url": "https://hs-chem.co.kr/",
+        "summary": "官网页脚明确公开hsc@hs-chem.co.kr，与法定公司、营业号、地址一致；属于通用业务邮箱，不绑定代表人或采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "(032) 624-4480",
+  "generalPhoneEvidence": {
+    "company": "HS CHEMICAL CO., LTD.",
+    "value": "(032) 624-4480",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "HS CHEMICAL官方Home公司电话",
+        "url": "https://hs-chem.co.kr/",
+        "summary": "Tel明确(032)624-4480，保留官网原格式；4482是传真，电话不推WhatsApp或具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "경기도 부천시 오정구 석천로 397 부천테크노파크 쌍용3차 아이티(IT) 302동 1104호. Company-published business address, not independently surveyed or verified factory GPS. Marker is a Bucheon city representative point.",
+  "sources": [
+    {
+      "label": "官方PP及其他工业成品油墨",
+      "url": "https://hs-chem.co.kr/?page_id=3905"
+    },
+    {
+      "label": "官方自主技术研发及法定公司概况",
+      "url": "https://hs-chem.co.kr/?page_id=74"
+    },
+    {
+      "label": "官方研磨分散与检测设备",
+      "url": "https://hs-chem.co.kr/?page_id=3218"
+    },
+    {
+      "label": "官方六Solvent成品油墨系列",
+      "url": "https://hs-chem.co.kr/?page_id=1955"
+    },
+    {
+      "label": "官方Home公司与一般业务联系方式",
+      "url": "https://hs-chem.co.kr/"
+    }
+  ]
+},
 "chenics-gimpo": {
   "website": "https://www.chenics.co.kr/en",
   "contactPage": "https://www.chenics.co.kr/en/about/company",
@@ -47219,6 +47307,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"hs-chemical-bucheon",
 "chenics-gimpo",
 "rangaved-maharashtra",
 "american-colour-vapi",
