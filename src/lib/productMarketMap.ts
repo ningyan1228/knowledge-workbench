@@ -15055,11 +15055,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "chemilite-naturelite-alappuzha",
+    "company": "Chemilite Coatings Private Limited (Naturelite Paints)",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Thamarakulam, Alappuzha district（借用区府城市示意点，非工厂或所在镇定位）",
+    "latitude": 9.49,
+    "longitude": 76.33,
+    "legacyCompanyDescription": "印度自有水性木器清漆制造商",
+    "signal": "印度Chemilite旗下Naturelite自主制漆；Nature Wood Clear Coat同款明确为水性透明木器涂层，用于室内外木材。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "独立读取官方NatureWoodClearCoat原文231行、About native202行与其成功canonical原HTML49914bytes。三次公司读取加About披露一次跳转=四来源单位，0+4=4/rem2；另Alappuzha区府城市参考一次，本范围共5/6，0失败。About被provider标记rewritten summary，原HTML独立核实ChemiliteCoatingsPrivateLimited持有运营Naturelite品牌、Kerala厂内研发与自主制造；不以改写摘要作为唯一制造证据。产品原文同款明确water-based透明木器清漆及木材，不拼接别的产品或从品牌生态宣传推配方。已读两业务页面共同可见48个终端/配套涂料导航条目，包括建筑墙漆、木器清漆/底漆/填料、金属成品、地坪和防水配套；所选NLW输入排除限该实际经营总览及所选产品技术说明，未见聚烯烃乳液/CPO或PO分散体/同类原料外售。未读其余47条技术正文、全部SKU/SDS/真实配方/最终股权，不能称全站审计；同款客户树脂组成及与NLW相容待验证，不称其使用或采购我方材料。官网自述2008起步、2011注册及2017产品线节点保留，不当2026新投产/产能或独立认证。一般care邮箱和所标ManufacturingUnit电话+919048955444明确来自公司页脚，不冒采购个人、WhatsApp或邮箱可投递测试；未读Contact或验证表单，Cochin行政办公室不另拆客户。法人与品牌、域名/GSTIN32AAECC6840M1ZK及两个地址按一账户，GSTIN仅官网披露未向政府核验，未推未披露股权。Thamarakulam为官网工厂地址中地点，地图借用Alappuzha区府城市9.49/76.33示意，不是厂门/所在镇坐标。参考文章头部/信息框同值，但地理正文另有9.54/76.40矛盾已记录，未称全文坐标一致。全631正式/root14未发/完整私有队列和名域邮箱全历史去重；来源预算跨产品与集团不重置。NLW仅依据用户TDS聚烯烃水性分散体及底涂/附着用途提供木材体系潜在评估，实际采购、相容及效果未确认。"
+    },
+    "contact": {
+      "label": "官网公司一般业务邮箱与所列制造单位电话；无具名采购或已核WhatsApp/表单",
+      "email": "care@naturelitepaints.com",
+      "phone": "+91 90489 55444",
+      "contactUrl": "https://naturelitepaints.com/products/nature-wood-clear-coat/"
+    },
+    "source": {
+      "label": "Naturelite官方水性木器清漆产品及Chemilite制造自述",
+      "url": "https://naturelitepaints.com/products/nature-wood-clear-coat/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chemilite-naturelite-alappuzha": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "sungbo-ink-siheung": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "nae-woi-korea-seongnam": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "hs-chemical-bucheon": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -15691,6 +15720,53 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chemilite-naturelite-alappuzha": {
+  "website": "https://naturelitepaints.com/",
+  "contactPage": "https://naturelitepaints.com/products/nature-wood-clear-coat/",
+  "generalEmail": "care@naturelitepaints.com",
+  "generalEmailEvidence": {
+    "company": "Chemilite Coatings Private Limited (Naturelite Paints)",
+    "value": "care@naturelitepaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Naturelite官方产品页脚一般业务邮箱",
+        "url": "https://naturelitepaints.com/products/nature-wood-clear-coat/",
+        "summary": "页脚公司地址区明确列出care@naturelitepaints.com；About原HTML相同。公司一般联系邮箱，无个人归属、采购职务或可投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+91 90489 55444",
+  "generalPhoneEvidence": {
+    "company": "Chemilite Coatings Private Limited (Naturelite Paints)",
+    "value": "+91 90489 55444",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Naturelite官方所列制造单位电话",
+        "url": "https://naturelitepaints.com/products/nature-wood-clear-coat/",
+        "summary": "Manufacturing Unit的Alappuzha地址后明确公开+91 90489 55444；为公司业务公开电话，未推具名个人或WhatsApp。另Cochin行政办公室电话未混入厂址号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Manufacturing Unit: TP V/890, Chemilite Industrial Lane, Chathiyara, Thamarakulam P.O., Alappuzha, Kerala, India, 690530. Administrative Office: KINFRA Export Promotion Park, Park Centre No. IX/159A, 2nd Floor, Info Park P.O., Cochin, Kerala, India, 682042. Company-published addresses, not independently surveyed. Marker reuses Alappuzha district-headquarters city representative coordinates, not the factory or Thamarakulam town location.",
+  "sources": [
+    {
+      "label": "官方同款水性木器清漆及一般业务联系",
+      "url": "https://naturelitepaints.com/products/nature-wood-clear-coat/"
+    },
+    {
+      "label": "官方原HTML：品牌法人、自有研发制造和经营产品总览",
+      "url": "https://naturelitepaints.com/about/"
+    }
+  ]
+},
 "sungbo-ink-siheung": {
   "website": "https://sungboink.co.kr/eng/",
   "contactPage": "https://sungboink.co.kr/eng/product5.php",
@@ -47456,6 +47532,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chemilite-naturelite-alappuzha",
 "sungbo-ink-siheung",
 "nae-woi-korea-seongnam",
 "hs-chemical-bucheon",

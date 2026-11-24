@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"chemilite-naturelite-alappuzha": "I noticed Naturelite manufactures paints in Kerala and offers Nature Wood Clear Coat, a water-based transparent coating for wood.",
 "sungbo-ink-siheung": "I noticed that Sungbo Ink produces gravure inks and lists an untreated-PP surface ink with toluene/ethyl-acetate diluents.",
 "nae-woi-korea-seongnam": "I noticed that Nae Woi Korea manufactures functional coatings and lists NWK742Metal for industrial metal protection.",
 "hs-chemical-bucheon": "I noticed that HS CHEMICAL develops screen-printing inks and lists a one-component PP ink with solvent and drying specifications.",
