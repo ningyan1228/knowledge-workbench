@@ -14778,11 +14778,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "pinturas-descar-general-rodriguez",
+    "company": "Pinturas Descar S.R.L.",
+    "productId": "elo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "General Rodríguez, Buenos Aires（官网嵌入地图视窗中心示意，非工厂定位）",
+    "latitude": -34.61769,
+    "longitude": -58.91333,
+    "legacyCompanyDescription": "阿根廷防锈漆及工业涂料制造商",
+    "signal": "在General Rodríguez自有工业厂房制造涂料；由稀释剂生产扩展至防锈漆产品线。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "实际5公司来源：Empresa完整19行、Home完整15行、Contact完整38行三次native，另Home200/88342字符与Contact200/63030字符两次普通单次HTTPSGET原HTML，3不同URL，0失败/披露跳转/自动重试/远程代码执行，累计5/余1。Empresa直接PinturasDescarSRL，自述GeneralRodriguez自有工业厂房、起自thinners/diluyentes制造并增加防锈漆产品线，后续产品扩充；明确下游成品涂料制造，非仅相关行业或施工商。未读任何具体防锈SKU/TDS/SDS，不从antioxidos推醇酸/环氧/金属颜料/水性配方，1972/创始人/厂房4000m2/2ha及历史工程客户均公司自述，不冒独立工商、当前产能、认证或我方案例。原HTML被动全文本地去标签独立审读，实际官网完整顶层导航仅Home/Empresa/Contacto；公开Home只墙面乳胶及合成面漆图示文案，About列普通稀释剂/溶剂及自有防锈漆制造，Contact业务表单；有限全部实际返回的三页经营信息未见ELO/ESBO/环氧植物油或同类生物基增塑稳定输入外售。普通thinner/diluent溶剂生产不自动等ELO同行；该结论限已读公开经营范围，不冒完整SKU/配方/SDS、未公开工业原料业务或隐藏股权审计，不猜隐藏目录/API或执行cdn-cgi/远程脚本。法定名PinturasDescarSRL、DESCAR/PinturasDescar/同域和GeneralRodriguez工厂一个账户，网站制作Fanger不是母公司证据；无已知公开集团并购，未审隐藏控制。真实官网Contact表单含姓名/电话/email/Message，data-statusinit，未提交；邮箱为email protected，无明文mailto，不解码保护或猜邮箱/采购人/LinkedIn/WhatsApp；公开业务总机(0237)484-1628按原格式精选，其他电话传真不冒采购或WA。公开Ruta5(exRuta7)Km48.500/GeneralRodriguez为公司地址自述非勘察。地图严格取已存ContactHTML的Google嵌入视窗中心原值-34.617690165745316/-58.91333298433821，5位四舍五入-34.61769/-58.91333，仅近似示意非独立城市或厂门GPS，无额外地图/城市请求或Google跳转。ELO只按用户TDS涂料用途提出环氧功能、柔韧性/树脂改性潜在评估，不推现用ELO、采购、固化/溶剂相容、防腐/耐候/抗菌等性能保证。"
+    },
+    "contact": {
+      "label": "官网业务联系表单和公开总机；无已核验明文公开邮箱",
+      "phone": "(0237) 484-1628",
+      "contactUrl": "https://www.pinturasdescar.com/contacto/"
+    },
+    "source": {
+      "label": "Descar官方Empresa法定名称、工业厂房及防锈漆制造说明",
+      "url": "https://www.pinturasdescar.com/empresa/"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pinturas-descar-general-rodriguez": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "simba-durekol-santa-fe": {"targetCompanyTypeId":"cpp-plastic-primer-formulator","applicationLayer":"market-extended","applicationId":"cpp-pp-tpo-primer"},
 "corquimica-estancia-velha": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sherwood-products-santiago": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15404,6 +15432,42 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pinturas-descar-general-rodriguez": {
+  "website": "https://www.pinturasdescar.com/",
+  "contactPage": "https://www.pinturasdescar.com/contacto/",
+  "generalPhone": "(0237) 484-1628",
+  "generalPhoneEvidence": {
+    "company": "Pinturas Descar S.R.L.",
+    "value": "(0237) 484-1628",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Descar官方Contacto公开总机",
+        "url": "https://www.pinturasdescar.com/contacto/",
+        "summary": "公司地址和业务联系表单旁直接公开(0237)484-1628，为一般业务总机，非具名采购、个人电话或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Ruta 5 (ex Ruta 7), Km. 48,500, C.P. 1748, General Rodríguez, Buenos Aires, Argentina. Company-published business/manufacturing location; no independent address survey. Marker uses embedded-map viewport center only.",
+  "sources": [
+    {
+      "label": "官方法定名称、自有工业厂房和防锈漆制造",
+      "url": "https://www.pinturasdescar.com/empresa/"
+    },
+    {
+      "label": "完整实际首页及三页顶层导航，非隐藏SKU目录",
+      "url": "https://www.pinturasdescar.com/"
+    },
+    {
+      "label": "真实业务表单、公开总机和嵌入地图视窗",
+      "url": "https://www.pinturasdescar.com/contacto/"
+    }
+  ]
+},
 "simba-durekol-santa-fe": {
   "website": "https://www.durekol.com.ar/",
   "contactPage": "https://www.durekol.com.ar/contacto.php",
@@ -46661,6 +46725,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pinturas-descar-general-rodriguez",
 "simba-durekol-santa-fe",
 "corquimica-estancia-velha",
 "sherwood-products-santiago",

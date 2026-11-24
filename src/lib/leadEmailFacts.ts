@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"pinturas-descar-general-rodriguez": "I noticed that Pinturas Descar manufactures anti-rust paints and operates its own industrial plant in General Rodríguez.",
 "simba-durekol-santa-fe": "I noticed that Durekol manufactures a one-component primer for polypropylene, applied before acrylic or polyurethane topcoats.",
 "corquimica-estancia-velha": "I noticed that Corquímica manufactures acrylic lacquers for plastic, metal and furniture parts, including custom colours.",
 "sherwood-products-santiago": "I noticed that Sherwood Products manufactures Wet-Lac, a water-based clear finish for indoor wooden furniture and doors.",
