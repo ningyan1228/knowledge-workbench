@@ -14641,11 +14641,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "qtec-rionegro",
+    "company": "Qtec Smart Inks",
+    "productId": "elo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Rionegro, Antioquia（官网生产地址城市；城市示意点，非工厂定位）",
+    "latitude": 6.155,
+    "longitude": -75.38,
+    "legacyCompanyDescription": "哥伦比亚Qtec自主配方制造柔印/凹印油墨，Rionegro生产；五成品家族包含溶剂型柔包体系。",
+    "signal": "Qtec在哥伦比亚Rionegro自主配方、制造柔版及凹版印刷油墨，目录明确提供溶剂型柔性包装油墨体系。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-24",
+      "conclusion": "Qtec首方About明确Rionegro/Antioquia自主配方柔印及凹印油墨、化学与技术团队和ZonaFranca生产，InkFinder明确自身溶剂型柔性包装油墨体系及五成品家族；以油墨制造/配方形成用户ELO TDS油墨应用链，不要求也不伪称已解决原CPP同款PP/BOPP溶剂归属。旧五来源四URL完整native132/126/117/153行及一次同成功InkFinder原始HTML27675字符，本轮再次离线独立核读原业务文本、完整目录正文、实际联系href与FAQ JSON-LD；原始日期/hash保留，本轮0公司新请求，不把离线读计新Fetch或补第六来源。已读为柔印表印/复合、凹印表印/复合及浓缩基墨/成品光油五家族，无所见ELO/ESBO/环氧植物油或同类生物增塑稳定原料外售；基墨/配套光油不因base字样就等环氧油供应商。结论限实际已读经营范围，不冒全部SKU/SDS/隐藏配方或全球集团股权审计。原CPP具体PP与溶剂同款缺口原样保留false，不借ELO入库倒推已用CPP、特定树脂相容或已采购。外部QtecColours供应案例仅旧Search发现未原读，不借其作法律身份/控制/采购证据；公司按自身公开QtecSmartInks品牌记录，不造SAS法名、具名采购或20年法定登记。公司info@qtecinks.com与固定电话+576043222704由各页业务页脚明确，实际原始HTMLmailto/tel与WhatsApp https://wa.me/573188858168 分项核对；另一手机+573148858168与WA号码不同，不混入，不猜账号/职责。RionegroAntioquia及Bodega216ZonaFranca为首方生产地址自述；独立城市参考169/172/173/193/209行给城市所属Colombia/Antioquia及6.155/-75.38作示意，页面首部/信息框另有坐标变体，均不冒厂门GPS或独立现场审计。ELO仅按TDS环氧功能/油墨柔韧性潜在配方试验，不把食品包装用途、耐脂/耐碱/节省/低停机等对方自述写成我方食品接触认证、性能、兼容或当前需求。全616正式/根14未发/私有前沿来源排除表及队列名称域名最终去重，晋级原研究ID一户，不因产品/英文西文/工厂换计；累计5/rem1保持。本轮仅1通用城市参考、0公司/0失败重试/PDF/远程JS/API/外联。"
+    },
+    "contact": {
+      "label": "官网公司一般业务邮箱、固定电话及明确公开WhatsApp入口",
+      "email": "info@qtecinks.com",
+      "phone": "+57 604 322 2704",
+      "contactUrl": "https://qtecinks.com/es/about"
+    },
+    "source": {
+      "label": "Qtec官方油墨目录与About自主配方、制造及生产地址说明",
+      "url": "https://qtecinks.com/es/inks"
+    },
+    "checkedAt": "2026-11-24"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"qtec-rionegro": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "gricoat-itagui": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "philaac-bogota": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "solintex-maracay": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15262,6 +15291,59 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"qtec-rionegro": {
+  "website": "https://qtecinks.com/",
+  "contactPage": "https://qtecinks.com/es/about",
+  "whatsapp": "https://wa.me/573188858168",
+  "linkedIn": "https://www.linkedin.com/company/qtecinks",
+  "generalEmail": "info@qtecinks.com",
+  "generalEmailEvidence": {
+    "company": "Qtec Smart Inks",
+    "value": "info@qtecinks.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Qtec官网业务页脚和实际mailto公司邮箱",
+        "url": "https://qtecinks.com/es/inks",
+        "summary": "InkFinder及About公开info@qtecinks.com，原始HTMLmailto完全对应；公司一般业务邮箱，无具名采购、个人或部门职责推定。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "generalPhone": "+57 604 322 2704",
+  "generalPhoneEvidence": {
+    "company": "Qtec Smart Inks",
+    "value": "+57 604 322 2704",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Qtec官网Colombia y Latinoamérica固定业务电话",
+        "url": "https://qtecinks.com/es/inks",
+        "summary": "页脚明确+57 604 322 2704且原始HTMLtel对应；WhatsApp明确另号3188858168，另一个3148858168为普通电话，未按电话猜WA。"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Bodega 216, Zona Franca Rionegro, Rionegro, Antioquia, Colombia (own disclosed production-plant address, not independently surveyed). Marker is a city representative from the independent reference, not factory GPS.",
+  "sources": [
+    {
+      "label": "自主制墨配方、化学技术团队和ZonaFranca生产",
+      "url": "https://qtecinks.com/es/about"
+    },
+    {
+      "label": "五油墨成品家族、溶剂型柔包体系及业务联系",
+      "url": "https://qtecinks.com/es/inks"
+    },
+    {
+      "label": "实际公开WhatsApp href（未发送）",
+      "url": "https://wa.me/573188858168"
+    }
+  ]
+},
 "gricoat-itagui": {
   "website": "https://gricoatdecolombia.com/",
   "contactPage": "https://gricoatdecolombia.com/en/quienes-somos/",
@@ -46286,6 +46368,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"qtec-rionegro",
 "gricoat-itagui",
 "philaac-bogota",
 "solintex-maracay",
