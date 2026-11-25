@@ -15418,11 +15418,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "global-inks-chemicals-lahore",
+    "company": "Global Inks & Chemicals (Pvt.) Ltd.",
+    "productId": "cpp-cpo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore（官网总部城市；城市示意，非厂门）",
+    "latitude": 31.54972,
+    "longitude": 74.34361,
+    "legacyCompanyDescription": "巴基斯坦溶剂型柔版与凹版油墨自主制造商",
+    "signal": "GIC 自主生产溶剂型柔版与凹版油墨；U Flex 系列用于未处理的 PP 编织袋印刷。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "四次完整native原文Home21/Products33/Contact53/Mission16行，0+4=4/rem2，0失败/披露跳转/原GET/PDF/公司JS/API；本范围4/6，不为耗满额度抓无关页。Home明确自主制造溶剂型凹印/柔印墨、自定义配方及研发；Products十五个成品系列逐项可见基材、印刷方式和稀释体系，U Flex同款明确未处理PP编织袋及IPA，独立支持PP溶剂型油墨；不把GWB水性纸箱墨混作PP水性证据。有限Home产品经营范围、十五成品墨系列及OPV/底涂成品未见CPP/CPO/MAH改性树脂或同功能附着原料外售；NC/PU/Polyamide树脂基墨与配套溶剂稀释剂不是同类聚烯烃输入，不冒全部SKU/SDS/隐配方/外购树脂或最终股权审计。Omega/G-Lam宣称不用adhesion promoter只是其特定配方自述，不删异同、不移植U Flex、不承诺我方在该系列有需求或相容。GIC商标/法人、Lahore总部和Karachi办公点、十五系列一账户；Products页脚dynamicpkgs.com.pk技术维护邮箱只保留未核关联，非已证母子关系/第二客户/采购入口，两个标识已做全量正式与私有去重。2008起步/版权及性能/食品包装/耐热温度等自述不独立审证或转我方认证性能。Contact实际URI为contect.html，由Home链接读取，不纠错猜contact路径；一般info@gichem.com明确在总部及分部，选Karachi公开固定+922135051636并标分部，不拼拆Lahore范围号码。HaqNawaz/UsamaRafique具名Sales/TechnicalSales仅原档未跨源身份核验，不编采购、精选个人联系方式或WhatsApp；webmaster邮箱不选作客户业务邮箱。地图依据明确Lahore总部城市及同日旧Lahore通用原档460/1670行，头部L308/信息框L321同值31.54972/74.34361，离线新城市请求0，不借其他公司的制造联系证据、不冒厂门GPS。CPP七牌号指南PP附着方向及已核NipponPaper油墨应用只支持潜在材料评估；当前采购/现用CPP/CPO/基材预处理选择、配方相容和改善幅度均待确认。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱与Karachi分部固定电话；非具名采购/WhatsApp",
+      "email": "info@gichem.com",
+      "phone": "+92 21 35051636",
+      "contactUrl": "https://www.gichem.com/contect.html"
+    },
+    "source": {
+      "label": "GIC官方十五成品油墨系列及PP基材/稀释体系",
+      "url": "https://www.gichem.com/product.html"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"global-inks-chemicals-lahore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "omkar-industries-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "crystal-inks-vapi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "khamir-industries-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16067,6 +16096,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"global-inks-chemicals-lahore": {
+  "website": "https://www.gichem.com/",
+  "contactPage": "https://www.gichem.com/contect.html",
+  "generalEmail": "info@gichem.com",
+  "generalEmailEvidence": {
+    "company": "Global Inks & Chemicals (Pvt.) Ltd.",
+    "value": "info@gichem.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "GIC官方Contact一般业务邮箱",
+        "url": "https://www.gichem.com/contect.html",
+        "summary": "总部及Karachi办公点均明确info@gichem.com，作为公司一般业务入口，非具名采购或已测试可投递邮箱；webmaster和具名销售邮箱不混用。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+92 21 35051636",
+  "generalPhoneEvidence": {
+    "company": "Global Inks & Chemicals (Pvt.) Ltd.",
+    "value": "+92 21 35051636",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "GIC官方Contact Karachi办公点固定电话",
+        "url": "https://www.gichem.com/contect.html",
+        "summary": "Karachi Office明确Ph +92 21 35051636；与Lahore总部同一公司，保留分部归属，不当WhatsApp或个人采购电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Corporate head office: 22 Km Off Ferozepur Road, Raj Industrial Park, Shami Street, Lahore, Pakistan. Separate Karachi office: Plot #240, Sector 24, Korangi Industrial Area, Karachi. Map marker uses independent Lahore city coordinates (31.54972, 74.34361), not surveyed factory GPS or an entrance; selected general phone belongs to the Karachi office.",
+  "sources": [
+    {
+      "label": "自主制墨、溶剂型系列、配方和研发",
+      "url": "https://www.gichem.com/"
+    },
+    {
+      "label": "U Flex未处理PP编织袋同款IPA体系及十五成品系列",
+      "url": "https://www.gichem.com/product.html"
+    },
+    {
+      "label": "总部/分部与公开公司业务邮箱和固定电话",
+      "url": "https://www.gichem.com/contect.html"
+    }
+  ]
+},
 "omkar-industries-vadodara": {
   "website": "https://omkarpaints.in/",
   "contactPage": "https://omkarpaints.in/",
@@ -48512,6 +48592,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"global-inks-chemicals-lahore",
 "omkar-industries-vadodara",
 "crystal-inks-vapi",
 "khamir-industries-mumbai",
