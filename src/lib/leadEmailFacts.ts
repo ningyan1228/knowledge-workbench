@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"sartas-boya-istanbul": "I noticed Sartaş manufactures two-component epoxy anticorrosive primers for marine, petrochemical and structural maintenance applications.",
 "global-inks-chemicals-lahore": "I noticed Global Inks & Chemicals manufactures solvent-based flexographic inks, including U Flex for printing on untreated woven polypropylene bags.",
 "omkar-industries-vadodara": "I noticed Omkar Industries manufactures industrial anticorrosive paints and epoxy coal tar coatings, supported by its own testing laboratory.",
 "crystal-inks-vapi": "I noticed Crystal Inks & Coatings manufactures solvent-based inks and offers BOPP Non Lamination Ink for flexographic and rotogravure printing.",

@@ -15446,11 +15446,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "sartas-boya-istanbul",
+    "company": "Sartaş Boya Vernik San. ve Tic. A.Ş.",
+    "productId": "elo",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Istanbul（官网Kartal办公地址城市；都市示意，非厂门）",
+    "latitude": 41.01361,
+    "longitude": 28.955,
+    "legacyCompanyDescription": "土耳其防护涂料及环氧防腐底漆自主制造商",
+    "signal": "Sartaş 生产双组分环氧防腐底漆，用于海事、石化以及桥梁建筑等防护和维护。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "Sartaş三份完整native原文Home180行、About126行、1219-1220技术PDF一页35行，0+3=3/rem3；另本范围Roots两次502计2、Istanbul独立城市1共6/6STOP，不将他家失败或通用城市计成Sartaş公司预算。0跳转/改写/原GET/公司JS/隐藏API/重试。About明确研究开发及涂料生产，Home自有公司品牌与八成品导航，PDF同款明确双组分磷酸锌环氧防腐底漆及海事、石化、化工、桥梁建筑新建/腐蚀维护用途，不把泛行业标签当制造。技术文件一页全部35行原读，未印版本日期，Search7.8年前索引年龄不冒2026修订或产能；DGEBA粘结料、5:1和20+5kg等只是客户自述，不转ELO配方相容、添加比例、性能/认证或当前采购。Home/About八类成品油水性/底漆/耐燃漆及实际选定防腐成品与环氧稀释施工信息为有限所选输入排查范围，未见ELO/ESBO/环氧化植物油/同类生物基增塑稳定原料外售；普通颜料/环氧树脂基成品及配套thinner不是ELO同行，不冒450计数器为450已读SKU、全SDS/隐藏配方/集团股权已审。公司名沿Home自述SartaşBoyaVernikSan.veTic.A.Ş.，不凭缩写或Search编工商核验；DoctorBacter等成品品牌、Kartal办公室与Tuzla旧Search技术地址均一账户，不拆新公司、混入未读PDF地址或推工厂产权。实际公开联系入口取已读Home，info@sartasboya.com.tr和+90(216)5930913在Home/About均明确，为一般业务非具名采购；只有WhatsApp文字无已核账号href，不推电话为WA，不访问账户/银行/订阅或提交表单，不伪称读过专用Contact。当前Home/About明示KordonboyuMah/AnkaraCad/IstmarinaAVM/147A/26层Kartal/Istanbul办公地址；独立Istanbul原文仅返回460/1633行，头部L381/信息框L391一致41.01361/28.955，是都市示意非Kartal精确地理或厂门GPS。1980、医院案例、客户订单/450产品/0TL模板、环保/抗菌/耐火/认证等自述不作我方证据。全库跨产品公司/域/品牌/邮箱/历史原读去重无旧户，ELO仅用户TDS涂料树脂改性/环氧功能/柔韧潜在评估，不称现用、需求已确认或防腐效果改善。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱与电话；非具名采购或WhatsApp",
+      "email": "info@sartasboya.com.tr",
+      "phone": "+90 (216) 593 09 13",
+      "contactUrl": "https://www.sartasboya.com.tr/"
+    },
+    "source": {
+      "label": "Sartaş双组分环氧防腐底漆官方一页技术文件",
+      "url": "https://www.sartasboya.com.tr/tema/genel/uploads/urunler/dokuman/1219-1220-SARTA%C5%9E-EPOKS%C4%B0-ANT%C4%B0KOROZ%C4%B0F-ASTAR-BOYA-UBF.pdf"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sartas-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "global-inks-chemicals-lahore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "omkar-industries-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "crystal-inks-vapi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -16096,6 +16125,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sartas-boya-istanbul": {
+  "website": "https://www.sartasboya.com.tr/",
+  "contactPage": "https://www.sartasboya.com.tr/",
+  "generalEmail": "info@sartasboya.com.tr",
+  "generalEmailEvidence": {
+    "company": "Sartaş Boya Vernik San. ve Tic. A.Ş.",
+    "value": "info@sartasboya.com.tr",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sartaş官方Home一般业务邮箱",
+        "url": "https://www.sartasboya.com.tr/",
+        "summary": "实际Home页首和页脚公开info@sartasboya.com.tr，并与About一致；公司一般业务邮箱，不编具名采购或投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+90 (216) 593 09 13",
+  "generalPhoneEvidence": {
+    "company": "Sartaş Boya Vernik San. ve Tic. A.Ş.",
+    "value": "+90 (216) 593 09 13",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sartaş官方Home一般业务电话",
+        "url": "https://www.sartasboya.com.tr/",
+        "summary": "Home和About明示+90 (216) 593 09 13；仅一般业务电话，WhatsApp文字未给可核账号链接，不推采购个人/WA。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published business office: Kordonboyu Mah., Ankara Cad., Istmarina AVM A Blok No:147A, Kat:26, Kartal/Istanbul, Turkey. Marker uses independent Istanbul metropolitan coordinates (41.01361, 28.95500), not surveyed factory GPS or precise Kartal/office entrance. Search-only older Tuzla technical-address text is not curated as a current factory address.",
+  "sources": [
+    {
+      "label": "自有涂料生产及研发叙述",
+      "url": "https://www.sartasboya.com.tr/icerik/hakkimizda"
+    },
+    {
+      "label": "双组分磷酸锌环氧防腐底漆及工业维护用途",
+      "url": "https://www.sartasboya.com.tr/tema/genel/uploads/urunler/dokuman/1219-1220-SARTA%C5%9E-EPOKS%C4%B0-ANT%C4%B0KOROZ%C4%B0F-ASTAR-BOYA-UBF.pdf"
+    },
+    {
+      "label": "公司品牌、成品业务范围与一般联系入口",
+      "url": "https://www.sartasboya.com.tr/"
+    }
+  ]
+},
 "global-inks-chemicals-lahore": {
   "website": "https://www.gichem.com/",
   "contactPage": "https://www.gichem.com/contect.html",
@@ -48592,6 +48672,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sartas-boya-istanbul",
 "global-inks-chemicals-lahore",
 "omkar-industries-vadodara",
 "crystal-inks-vapi",
