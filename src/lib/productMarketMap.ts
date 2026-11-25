@@ -15363,11 +15363,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "crystal-inks-vapi",
+    "company": "Crystal Inks & Coatings",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Vapi（官网联系城市；城市示意，非厂门）",
+    "latitude": 20.372,
+    "longitude": 72.917,
+    "legacyCompanyDescription": "印度溶剂型柔印／凹印及BOPP油墨自主制造商",
+    "signal": "Crystal官网明确自主制造溶剂型柔印和凹印液墨，并有研发生产及检测实验室；同款BOPP Non Lamination Ink用于BOPP薄膜、珠光及金属化BOPP的非复合印刷。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "六次完整native原文Home161/BOPP总页54/NonLamination86/About122/About相对Contact122/Home实际Contact81行，0失败/披露跳转/原GET/公司JS/PDF。About明确自身制墨基础设施、R&D生产和QC实验室，Home/About主营溶剂型柔印/凹印液墨；同款BOPPNonLamination正文明确BOPP/珠光及金属化BOPP、非复合印刷及柔凹印工艺，符合PP溶剂墨潜在评估。不是将总页单标题或单独宽泛塑料行业当具体产品；同款正文无独立溶剂配比，以公司明确核心溶剂墨体系与自有同目录产品关联，不造树脂成分/食品合规/现用CPO/相容采购。实际完整导航三墨类和十子类型、Home/About自制成品业务及一款详细墨页，所读有限范围未见MAHCPP/CPO/氯化聚烯烃或同类附着树脂原料外售，输入原料检验/技术资质不等于外售，不冒另九SKU/完整SDS/隐藏组分或最终股权审计。GST24AAIFC3943J1ZF/Partnership/AmitKumbhakar为自述识别，不当工商认证/当前采购人；2012与2013、Sarigam/Valsad与Vapi地址差异保留，不造成立年数或移植工厂GPS；客户logo/评价与所有性能保证不当我方效果。第五次About页的相对Contact链接真实解析到AboutUs/ContactUs，正文仍About，计一且不作联系证据；第六次首次点原Home Contact明确真实ContactUs表单，不手工猜修地址、不重试失败URI或假称一次读取两独立联系源。实际公开姓名/邮箱/电话/主题/验证码表单和同主体一般电话+919924985395，未填写、解码验证码、提交或打电话；邮箱只emailprotected占位，不解码保护、不猜邮箱；无具名采购、WA或批量邮件资格。独立Vapi城市20.372/72.917只对应已公开联系城市，不当厂门，2026-11-24通用城市原档离线只核坐标L135/L143同页一致，非两独立源或全篇审读；当前城市请求0。公司6STOP/rem0与范围6/6严格停止，不能因缺邮箱/换产品/工厂/域名另开。用户七牌号选型指南非完整逐牌号TDS，现有NipponPaper CPO油墨用途扩展支持潜在PP附着/粘度/溶剂体系评估，不承诺实际体系适配或采购。"
+    },
+    "contact": {
+      "label": "官网业务表单与公开电话；邮箱未核实",
+      "phone": "+91 9924985395",
+      "contactUrl": "https://www.crystalinks.in/Contact-Us/"
+    },
+    "source": {
+      "label": "Crystal同款BOPP非复合油墨及自主溶剂墨制造原文",
+      "url": "https://www.crystalinks.in/Product-Detail/Bopp-Non-Lamination-Ink/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"crystal-inks-vapi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "khamir-industries-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "unico-paints-karachi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "jsw-paints-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16010,6 +16038,46 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"crystal-inks-vapi": {
+  "website": "https://www.crystalinks.in/",
+  "contactPage": "https://www.crystalinks.in/Contact-Us/",
+  "generalPhone": "+91 9924985395",
+  "generalPhoneEvidence": {
+    "company": "Crystal Inks & Coatings",
+    "value": "+91 9924985395",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Crystal官方实际Contact Us一般业务电话",
+        "url": "https://www.crystalinks.in/Contact-Us/",
+        "summary": "Phone明示+91 9924985395，同主体Vapi地址及业务咨询表单；不推具名采购或WhatsApp，emailprotected不是已核邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published contact address: Plot No. C1/6120, 4th Phase, GIDC, Vapi, Gujarat 396195, India. Home separately describes Sarigam manufacture and About Valsad location; no address equivalence or plant GPS inferred. Marker uses independent Vapi city coordinates (20.372, 72.917), not surveyed factory GPS or a verified entrance.",
+  "sources": [
+    {
+      "label": "自营溶剂柔印/凹印液墨业务及完整导航",
+      "url": "https://www.crystalinks.in/"
+    },
+    {
+      "label": "同款BOPP非复合墨详细基材和工艺",
+      "url": "https://www.crystalinks.in/Product-Detail/Bopp-Non-Lamination-Ink/"
+    },
+    {
+      "label": "自主制造/R&D/生产及QC实验室、原料与成品检验",
+      "url": "https://www.crystalinks.in/About-Us/"
+    },
+    {
+      "label": "原Home链接实际业务表单、公开一般电话及Vapi地址",
+      "url": "https://www.crystalinks.in/Contact-Us/"
+    }
+  ]
+},
 "khamir-industries-mumbai": {
   "website": "https://khamirindustries.in/",
   "contactPage": "https://khamirindustries.in/contact-us/",
@@ -48368,6 +48436,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"crystal-inks-vapi",
 "khamir-industries-mumbai",
 "unico-paints-karachi",
 "jsw-paints-mumbai",
