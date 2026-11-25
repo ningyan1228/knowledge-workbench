@@ -15307,11 +15307,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "unico-paints-karachi",
+    "company": "UNICO Paint Industries (Pvt) Ltd",
+    "productId": "elo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Karachi（官网城市标注；城市示意，非厂门）",
+    "latitude": 24.86,
+    "longitude": 67.01,
+    "legacyCompanyDescription": "巴基斯坦卡拉奇工业涂料及防护底漆自主制造商",
+    "signal": "UNICO官网明确在卡拉奇自营工业涂料制造及配方研发；NE ZP Epoxy High Build Zinc Phosphate Primer同款产品明确用于储罐、海事及工业防护。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "独立读UNICO四完整官网原文：About155/AntiCorrosive327/Index347/SpecialIndustrial455行，0失败/跳转/原GET/公司JS/API/PDF。明确Karachi自营工业涂料制造及配方/R&D，NE ZP同款环氧磷酸锌底漆明确储罐/海事等防护用途；不是把一般工业标签推成特定配方，也不推ELO现用。实际9大成品导航和工业9分类/可见成品及配套稀释剂有限经营范围未见ELO/ESBO/环氧化植物油或同类生物基添加剂外售；环氧成品、色漆/清漆、OEM封胶或工业稀释剂名称不当上游环氧植物油供货，不冒全500SKU/SDS/最终股权审计。UNICO与官网NICO系列按一户，非把墨西哥既有Unicoat仅同前缀当关联；无额外品牌/工厂/母子账户，原历史只有Search。1981/45年、客户好评、案例、96%锌/VOCFree、盐雾/寿命/标准全部是客户页自述，不独立认证、不移植我方、不当NEZP体系必含ELO或已有采购需求。原Contact链接实际展示Index原页联系块，不伪造独立contact.html或猜锚点，静态MessageSent文字不是提交结果；无表单输入提交/登录/注册。公开unicopaints@gmail.com及+92 333 2116155由官网同主体联系块直接建立一般业务归属，Gmail不猜个人采购；电话不推WhatsApp/具名研发。About/Index明确KorangiCreekIndustrialPark GA60-A7 Karachi Sindh74900 Pakistan；独立Karachi代表坐标24.86/67.01，非厂门GPS，城市原文实际449/1708行，顶部与信息框同页重复非两个独立源。UNICO4/rem2；本范围另RamcoatAboutTimeout1/rem5原失败URI冻结及城市1，合计6/6停止。ELO仅TDS涂料/树脂改性及环氧功能/柔韧方向潜在评估，不保证防腐效果/相容/采购或使用。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱与电话；非具名采购或WhatsApp",
+      "email": "unicopaints@gmail.com",
+      "phone": "+92 333 2116155",
+      "contactUrl": "https://www.unicoproduct.com/index.html"
+    },
+    "source": {
+      "label": "UNICO NE ZP环氧磷酸锌防护底漆及自营工业涂料制造原文",
+      "url": "https://www.unicoproduct.com/anti-corrosive.html"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"unico-paints-karachi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "jsw-paints-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "sbl-specialty-lalru": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pegasus-britex-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15952,6 +15981,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"unico-paints-karachi": {
+  "website": "https://www.unicoproduct.com/",
+  "contactPage": "https://www.unicoproduct.com/index.html",
+  "generalEmail": "unicopaints@gmail.com",
+  "generalEmailEvidence": {
+    "company": "UNICO Paint Industries (Pvt) Ltd",
+    "value": "unicopaints@gmail.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "UNICO官方Index联系块一般业务邮箱",
+        "url": "https://www.unicoproduct.com/index.html",
+        "summary": "Get In Touch的产品资料/技术支持询问区明确unicopaints@gmail.com，且About同主体页脚一致；为公司公开Gmail业务邮箱，不冒个人采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+92 333 2116155",
+  "generalPhoneEvidence": {
+    "company": "UNICO Paint Industries (Pvt) Ltd",
+    "value": "+92 333 2116155",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "UNICO官方Index联系块公开一般电话",
+        "url": "https://www.unicoproduct.com/index.html",
+        "summary": "Phone明确+92 333 2116155，保留原格式；不因移动号推WhatsApp或采购身份。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Official company-published: Korangi Creek Industrial Park, GA 60-A7, Karachi, Sindh 74900, Pakistan. The representative marker uses the independent Karachi city coordinates (24.86, 67.01), not surveyed factory GPS or a verified industrial-park entrance.",
+  "sources": [
+    {
+      "label": "自营工业涂料制造、配方/R&D及Pakistan主体",
+      "url": "https://www.unicoproduct.com/about.html"
+    },
+    {
+      "label": "同款NE ZP环氧磷酸锌底漆储罐/海事用途",
+      "url": "https://www.unicoproduct.com/anti-corrosive.html"
+    },
+    {
+      "label": "实际Index一般业务邮箱/电话/地址与联系块",
+      "url": "https://www.unicoproduct.com/index.html"
+    },
+    {
+      "label": "实际工业成品9分类及可见成品/稀释剂有限排查",
+      "url": "https://www.unicoproduct.com/special-industrial-coatings.html"
+    }
+  ]
+},
 "jsw-paints-mumbai": {
   "website": "https://www.jswpaints.in/",
   "contactPage": "https://www.jswpaints.in/contact-us",
@@ -48204,6 +48288,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"unico-paints-karachi",
 "jsw-paints-mumbai",
 "sbl-specialty-lalru",
 "pegasus-britex-lahore",
