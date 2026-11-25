@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"sbl-specialty-lalru": "I noticed SBL manufactures industrial coatings for metal products, mechanical parts and construction machinery.",
 "pegasus-britex-lahore": "I noticed Pegasus manufactures industrial coatings under Britex and offers an epoxy zinc-rich primer for steel structures.",
 "bma-paints-nahr-el-mot": "I noticed BMA manufactures paints in Lebanon and lists WB lacquers and sealers in its wood-coating range.",
 "lider-ink-gebze": "I noticed Lider manufactures solvent-based LT (Betalam) printing inks for BOPP and CPP packaging surfaces.",

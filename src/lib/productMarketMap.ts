@@ -15251,11 +15251,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "sbl-specialty-lalru",
+    "company": "SBL Specialty Coatings Private Limited (Berger Paints India)",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Lalru（官网地址标注；城市示意，非厂门）",
+    "latitude": 30.48667,
+    "longitude": 76.80056,
+    "legacyCompanyDescription": "印度自主研发制造工业涂料企业；Berger Paints India子公司，原Saboo Coatings",
+    "signal": "SBL官网明确自营工业涂料制造及研发；General Industry正文列出金属制品、机械零件和建筑机械等用途，1204.00具体产品另明确NC风干底漆/面漆可用于木材及金属。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "独立复读原5公司档：1204.00完整71行、About261行、工业导航48行、WaterBasedPU分类55行及该成功分类的一次原HTML27593字节/可见2176字符；本轮仅补读GeneralIndustry197行，集团累计6/6停止。About明确自营工业涂料工厂、研发及代工，原Saboo与100%母公司BergerPaintsIndia按同集团；德国既有BergerSeidle仅同词不据此合并。GeneralIndustry正文明确金属/机械零件/建筑机械/列车等工业涂层；1204.00是同款NC风干木材/工艺品/金属底面涂，不是水性，也不据此声称重防腐等级。实际23工业成品化学类别及所读制造范围未见ELO/ESBO/环氧化植物油/同类生物基增塑添加剂外售；自制丙烯酸/醇酸树脂明确内部消耗，非已证对外ELO添加剂供货，不冒全SKU/SDS/最终股权审计。NLW同款水性与支持基材缺口保留：下拉选项不等于产品，未解析JS模板不抓取，未执行公司脚本/资产/API。一般info邮箱及完整首号+91.1762.284201原样核验，不把缩略尾号拼全、不指名采购/CEO、不推WA。公司明确VillageBasoli,Lalru,TehsilDerabassi,Punjab,India；独立Lalru城市原文224行同页顶部/信息框坐标30.48667/76.80056一致，仅城市示意非厂门。TDS支持ELO涂料/树脂改性潜在评估，不证明采购/使用、NC相容、现配方含ELO或防腐/其他性能改善。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱及原格式完整首号；无具名采购或已核WhatsApp目标",
+      "email": "info@sblcoatings.com",
+      "phone": "+91.1762.284201",
+      "contactUrl": "https://www.sblcoatings.com/about-us"
+    },
+    "source": {
+      "label": "SBL官方工业金属/机械涂层用途及自营制造说明",
+      "url": "https://www.sblcoatings.com/market-segment/general-industry"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sbl-specialty-lalru": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pegasus-britex-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "bma-paints-nahr-el-mot": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "lider-ink-gebze": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -15894,6 +15923,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sbl-specialty-lalru": {
+  "website": "https://www.sblcoatings.com/",
+  "contactPage": "https://www.sblcoatings.com/about-us",
+  "generalEmail": "info@sblcoatings.com",
+  "generalEmailEvidence": {
+    "company": "SBL Specialty Coatings Private Limited (Berger Paints India)",
+    "value": "info@sblcoatings.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SBL官方About一般业务邮箱",
+        "url": "https://www.sblcoatings.com/about-us",
+        "summary": "官网About页脚明确info@sblcoatings.com，为公司一般业务入口，未绑定采购或具名人员。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+91.1762.284201",
+  "generalPhoneEvidence": {
+    "company": "SBL Specialty Coatings Private Limited (Berger Paints India)",
+    "value": "+91.1762.284201",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SBL官方GeneralIndustry完整首个电话",
+        "url": "https://www.sblcoatings.com/market-segment/general-industry",
+        "summary": "页脚原样+91.1762.284201；其他缩略尾号不拼接，不推WhatsApp或个人采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published: SBL Specialty Coatings Private Limited, Village Basoli, Lalru, Tehsil Derabassi -140 501, Punjab (INDIA). Marker uses the independent Lalru town representative coordinates (30.48667, 76.80056), not surveyed factory GPS or a verified factory entrance.",
+  "sources": [
+    {
+      "label": "SBL自主工业涂料制造/研发、Saboo原名及BergerIndia母公司",
+      "url": "https://www.sblcoatings.com/about-us"
+    },
+    {
+      "label": "工业金属与机械涂层用途",
+      "url": "https://www.sblcoatings.com/market-segment/general-industry"
+    },
+    {
+      "label": "1204.00 NC同款底面涂；不作水性证据",
+      "url": "https://www.sblcoatings.com/products-details/1204-00-series"
+    },
+    {
+      "label": "实际23工业成品化学类别有限排查",
+      "url": "https://www.sblcoatings.com/industrial-landing"
+    },
+    {
+      "label": "水性PU分类仅控件，不作同款配方证据",
+      "url": "https://www.sblcoatings.com/industrial-landing/water-based-pu"
+    }
+  ]
+},
 "pegasus-britex-lahore": {
   "website": "https://britexpaints.com/",
   "contactPage": "https://britexpaints.com/contact/",
@@ -48028,6 +48116,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sbl-specialty-lalru",
 "pegasus-britex-lahore",
 "bma-paints-nahr-el-mot",
 "lider-ink-gebze",
