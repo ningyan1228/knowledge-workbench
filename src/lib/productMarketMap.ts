@@ -15474,11 +15474,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "shivam-enterprises-nairobi",
+    "company": "Shivam Enterprises Limited",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Nairobi（官网制造及业务地址城市；城市示意，非厂门）",
+    "latitude": -1.28639,
+    "longitude": 36.81722,
+    "legacyCompanyDescription": "肯尼亚工业防护面漆与结构钢防锈底漆自主制造商",
+    "signal": "Shivam 自主制造机械金属用工业防护面漆及结构钢防锈底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "独立审读Shivam五份完整native原文About243、Industrial105、Portfolio142、Thinners112、Quote118行，共720行；0+5=5/rem1，另Nairobi独立城市原文1计本范围6/6STOP，不计公司预算。0失败/跳转/改写/原GET/PDF/公司脚本或隐藏API。About明确ShivamEnterprisesLimited在Nairobi IndustrialArea RoadC自有涂料生产设施、配方用原料外购和研发实验室，SHIVAM成品覆盖工业、木器、汽车等，不把经销网络当唯一制造证据。Industrial实际同页列IndustraCoatEnamel SH-IE-500机械金属重防护面漆与MetalShieldPrimer SH-MP-520结构钢防锈底漆；该底漆具体树脂未披露，不将About另列epoxy移植为该SKU环氧配方，也不虚构防腐寿命、认证或采购。Portfolio正文只展示六类并有ViewMore，About/导航12分类不冒12全部细项已读；另Thinners实际九种配套稀释清洗溶剂、About列一般硬化剂/胶/木器油等，有限已读业务未见ELO/ESBO/环氧化植物油或同类生物基增塑稳定输入外售。一般thinner/WhiteSpirit、成品木器油和汽车硬化剂不直接归作ELO同行，不称全SKU/SDS/隐藏配方或最终股权审计。ShivamEnterprisesLimited/LTD、SHIVAM/Euromax/Shivacryl成品和同一Nairobi地址一账户，不因经销商/市场拆户；其他同名Shivam主体不靠名字合并，官网未披露额外母公司，不编工商股权核验。Quote明确一般业务info@shivampaints.com、0731342141及报价表单与地址，邮箱电话分项归属公司，非采购个人，不测试投递。WhatsApp文字标0731342141而本次未核具体href账号，Portfolio wa.me目标未打开或提取，不构造WA入口；WaitTime12/医疗式模板标语/项目数量和2000色/2002沿革均不当采购或产能证明。Quote额外地标MombasaRoad保留来源，不另拼精确地址，统一采用重复原文RoadC/offEnterpriseRoad/Nairobi。独立Nairobi城市正文只返回453/1469行，L366及L377同页重复坐标-1.28639/36.81722，仅城市示意非工厂门址或两份独立地理来源。全库公司/域/品牌/邮箱与旧原读去重无旧户；ELO按用户TDS涂料树脂改性、环氧功能及柔韧潜在评估，现用材料、配方相容、防腐改进、采购需求和时间均未确认。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱、电话及联系表单；非具名采购",
+      "email": "info@shivampaints.com",
+      "phone": "0731 342 141",
+      "contactUrl": "https://shivampaints.com/request-quote"
+    },
+    "source": {
+      "label": "Shivam工业防护面漆及结构钢防锈底漆官方产品页",
+      "url": "https://shivampaints.com/products/industrial-coatings"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"shivam-enterprises-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sartas-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "global-inks-chemicals-lahore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "omkar-industries-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16125,6 +16154,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"shivam-enterprises-nairobi": {
+  "website": "https://shivampaints.com/",
+  "contactPage": "https://shivampaints.com/request-quote",
+  "generalEmail": "info@shivampaints.com",
+  "generalEmailEvidence": {
+    "company": "Shivam Enterprises Limited",
+    "value": "info@shivampaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Shivam官方Quote一般业务邮箱",
+        "url": "https://shivampaints.com/request-quote",
+        "summary": "实际Quote页Email及页脚明确info@shivampaints.com，与公司名和Nairobi地址一致；一般业务邮箱，非采购个人或投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "0731 342 141",
+  "generalPhoneEvidence": {
+    "company": "Shivam Enterprises Limited",
+    "value": "0731 342 141",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Shivam官方Quote一般业务电话",
+        "url": "https://shivampaints.com/request-quote",
+        "summary": "Quote实际Phone列表明确0731 342 141，按原显示值保存；一般业务电话，不猜具名采购或构造WhatsApp账号链接。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published manufacturing/business address: Road C, off Enterprise Road, Industrial Area, P.O. Box 786-00600, Nairobi, Kenya. Marker uses independently published Nairobi city coordinates (-1.28639, 36.81722), not surveyed factory or business entrance GPS. Additional Quote-page landmark wording is not combined into a newly inferred address.",
+  "sources": [
+    {
+      "label": "自有涂料制造、配方和研发设施",
+      "url": "https://shivampaints.com/about-shivam"
+    },
+    {
+      "label": "工业机械面漆与结构钢防锈底漆",
+      "url": "https://shivampaints.com/products/industrial-coatings"
+    },
+    {
+      "label": "当前展示六类产品及有限业务范围",
+      "url": "https://shivampaints.com/products"
+    },
+    {
+      "label": "九种配套稀释清洗溶剂",
+      "url": "https://shivampaints.com/products/thinners-solvents"
+    },
+    {
+      "label": "公司一般业务邮箱电话及联系表单",
+      "url": "https://shivampaints.com/request-quote"
+    }
+  ]
+},
 "sartas-boya-istanbul": {
   "website": "https://www.sartasboya.com.tr/",
   "contactPage": "https://www.sartasboya.com.tr/",
@@ -48672,6 +48760,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"shivam-enterprises-nairobi",
 "sartas-boya-istanbul",
 "global-inks-chemicals-lahore",
 "omkar-industries-vadodara",
