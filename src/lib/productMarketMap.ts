@@ -15390,11 +15390,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "omkar-industries-vadodara",
+    "company": "Omkar Industries",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Vadodara（官网业务地址城市；城市示意，非厂门）",
+    "latitude": 22.3,
+    "longitude": 73.2,
+    "legacyCompanyDescription": "印度工业防腐漆及环氧煤焦油涂料自主制造商",
+    "signal": "Omkar 生产工业防腐漆、底漆和环氧煤焦油涂料，并设有测试实验室及研发团队。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "四次native操作计五来源单位：About117行原文1；目录旧路径披露跳转并标重写摘要90行计1+1=2，非原始具体产品证明；P115技术表406失败1，未读正文/页数/参数且URI冻结；独立Home176行原文1，共5/rem1，0原GET/公司JS/API/重试。资格仅依据两份实际原始经营正文：About明确自制工业漆/底漆/环氧煤焦油及自有测试实验室和研发团队，Home明确自制AntiCorrosivePaint/EpoxyCoaltar及工业防护涂料系列；使用已核具体成品家族，不虚构P115牌号已核、配方/金属基材/适配/性能或现用ELO。两原文完整可见八成品业务导航及Home四产品卡/实验室和供应角色，有限已读范围未见ELO/ESBO/环氧化植物油或同类添加剂原料外售；EpoxyPaint/Primer/Coaltar成品与配套Thinners不是上游环氧植物油，不冒全部SKU/SDS/隐藏配方/最终股权穷尽审计。官网商号OmkarIndustries/Vadodara/omkarpaints.in一户，不编PvtLtd、不拆品牌或其他同名企业；.com/.co.in等只Search线索非已读当前控制关系，不作为新公司或借其制造/联系证据。1975/零计数器、Jotun比较/客户评价、证书图片/ISO与LoremIpsum/英国LondonEye模板地图均不当独立认证、精确年数、我方性能或实际公司地理。Home联系区Gmail与页脚Yahoo并列，选About和Home页脚均明确的omkarind01@yahoo.co.in为一般业务邮箱，非具名采购/个人邮箱归属；+919601268979为同主体公开电话，不推WhatsApp，不合并另一个估价号码为负责人。实际联系入口用已读Home业务联系块/询价字段，不伪造专用Contact页已读、锚点或提交结果。公司明确3AnandIndustrialEstate/OppYamunaMill/DabhoiRoad/VadodaraGujarat业务地址；独立城市22.3/73.2为示意非厂门，2026-11-20通用原档离线271/773行仅坐标L227/L237同页一致，非全篇或双独立源，本轮城市请求0。ELO仅按TDS工业涂料树脂改性、环氧功能/柔韧方向潜在评估，需求、使用、现配方相容和性能未确认。"
+    },
+    "contact": {
+      "label": "官网主页一般业务邮箱与电话；非具名采购或WhatsApp",
+      "email": "omkarind01@yahoo.co.in",
+      "phone": "+91 9601268979",
+      "contactUrl": "https://omkarpaints.in/"
+    },
+    "source": {
+      "label": "Omkar自主工业防腐漆及环氧煤焦油涂料原文",
+      "url": "https://omkarpaints.in/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"omkar-industries-vadodara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "crystal-inks-vapi": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "khamir-industries-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "unico-paints-karachi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16038,6 +16067,53 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"omkar-industries-vadodara": {
+  "website": "https://omkarpaints.in/",
+  "contactPage": "https://omkarpaints.in/",
+  "generalEmail": "omkarind01@yahoo.co.in",
+  "generalEmailEvidence": {
+    "company": "Omkar Industries",
+    "value": "omkarind01@yahoo.co.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Omkar官方Home页脚一般业务Yahoo邮箱",
+        "url": "https://omkarpaints.in/",
+        "summary": "Get in touch公开omkarind01@yahoo.co.in，并与About页脚一致；首页联系区另有Gmail，不推具名采购、个人归属或邮箱投递有效性。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+91 9601268979",
+  "generalPhoneEvidence": {
+    "company": "Omkar Industries",
+    "value": "+91 9601268979",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Omkar官方Home页脚一般业务电话",
+        "url": "https://omkarpaints.in/",
+        "summary": "同主体Get in touch明示+91 9601268979，About一致；不推WhatsApp或具名采购，另估价电话不混用。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published business address: 3, Anand Industrial Estate, Opp. Yamuna Mill, Dabhoi Road, Vadodara, Gujarat, India. Marker uses independent Vadodara city coordinates (22.300, 73.200), not surveyed factory GPS or a verified entrance. A London Eye map placeholder on About is not used as company location.",
+  "sources": [
+    {
+      "label": "自主工业防腐漆/环氧煤焦油涂料及公开联系块",
+      "url": "https://omkarpaints.in/"
+    },
+    {
+      "label": "自主制造、测试实验室与研发团队、一般业务邮箱电话",
+      "url": "https://omkarpaints.in/about-us/"
+    }
+  ]
+},
 "crystal-inks-vapi": {
   "website": "https://www.crystalinks.in/",
   "contactPage": "https://www.crystalinks.in/Contact-Us/",
@@ -48436,6 +48512,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"omkar-industries-vadodara",
 "crystal-inks-vapi",
 "khamir-industries-mumbai",
 "unico-paints-karachi",
