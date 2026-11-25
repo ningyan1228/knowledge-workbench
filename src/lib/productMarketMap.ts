@@ -15586,11 +15586,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "sylac-inofita",
+    "company": "SYLAC S.A.",
+    "productId": "nl-w1201",
+    "country": "Greece",
+    "countryZh": "希腊",
+    "city": "Inofita / Oinofyta（官网业务城市；城市示意，非厂门）",
+    "latitude": 38.3,
+    "longitude": 23.633,
+    "legacyCompanyDescription": "希腊水性木器及木地板涂料自主制造商",
+    "signal": "SYLAC 自主制造 P890/xx Sport+ 双组分水性聚氨酯木地板清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "三次实际公司native完整原文：WhoWeAre87/Home86/P89093行，共266行；0+3=3/rem3，另Oinofyta独立城市1，共范围4/6保留2，不为凑满任意最少页数追加。0失败/验证墙/披露跳转/改写/原GET/PDF/远程JS/重试。About明确SYLACSA/S.A.自有设计研发制造家具/地板/户外木器成品涂料及生产设施，Home也明确manufacture水性家具/地板/户外体系；P890/xxSport+同款明确WaterBorne、PUClearTopcoat、ParquetWoodCoating、Interior和2Kwaterbornepolyurethane，不拼接不同产品的水性与木材。网站自述1985创办/1996新厂/2014扩两处保留为历史，不冒2026新投产/人数/产能/现购需求；2014版权不单独当停止经营。所读主营为木材施工涂料、清漆、表底漆和UV/水性2K成品，P890四条相关成品为丙烯酸/PU面漆，仅名称和简要表格，不冒完整SKU/TDS。PU/聚氨酯和可见HighAdhesion/WaterBasedUV/纳米粒子为成品技术与性质，不等于PO/CPO聚烯烃分散体原料外售。在实际三份主业/家族/具体成品业务内未见水性PO/CPO分散体或同类原料级附着促进输入供货，有限范围同行排除通过，不声称全站全集团/隐藏树脂/SDS或最终股权审计。TDSEN链接未读，SDS明确需登录未请求、不登录或绕过；AddCompare/Subscribe/Login均未操作。公司自述SYLACSA与SylacS.A.为同账户，Sylaqua/Sport+/P890和家具地板外用类别/制造场地不拆新户；无已证集团控制关系，不将Sylacauga城市或其Harrells/Pursell误配SYLAC。原文customerservice@sylac.gr及+302262032331是一般客户服务业务入口，非具名采购或投递测试；career邮箱不作销售收件人，传真31709不作电话，无WhatsApp目标不猜链接。About和产品footer明确INOFITAVOIOTIAS/GR32011/Greece，仅业务邮政城市未披露街道，不造厂门。独立Oinofyta页348行含同一页L127/L133坐标38.300/23.633和Boeotia/32011，与InofitaVoiotias地名对应，非从邮编或22620电话单独猜地理；城市代表非厂门测绘。客户耐磨/硬度弹性/EN71-3玩具/ISO9001/化学抗性均不转NL-W1201保证。NL-W1201按用户TDS木材底涂/附着促进评估，以聚烯烃分散体功能作潜在关联，不称现配方直接相容/改善数值或客户现用/采购，不能将未处理PP效果转木材。未准备可发送稿/复制导出或改写发送历史，未发邮件表单消息CRM。"
+    },
+    "contact": {
+      "label": "官网一般客户服务业务邮箱和电话；非具名采购",
+      "email": "customerservice@sylac.gr",
+      "phone": "+30 22620 32331",
+      "contactUrl": "https://sylac.gr/company/history/"
+    },
+    "source": {
+      "label": "SYLAC P890/xx Sport+ 水性木地板清漆官方产品正文",
+      "url": "https://sylac.gr/product/p890xx/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sylac-inofita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ignite-paints-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rakam-ras-al-khaimah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "classiq-colours-cape-town": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -16241,6 +16270,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sylac-inofita": {
+  "website": "https://sylac.gr/",
+  "contactPage": "https://sylac.gr/company/history/",
+  "generalEmail": "customerservice@sylac.gr",
+  "generalEmailEvidence": {
+    "company": "SYLAC S.A.",
+    "value": "customerservice@sylac.gr",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SYLAC官方About一般客户服务业务邮箱",
+        "url": "https://sylac.gr/company/history/",
+        "summary": "About页头和公司SYLACSA页脚明确customerservice@sylac.gr；为公司客户服务业务入口，不冒具名采购或投递可达。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+30 22620 32331",
+  "generalPhoneEvidence": {
+    "company": "SYLAC S.A.",
+    "value": "+30 22620 32331",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "SYLAC官方About业务电话",
+        "url": "https://sylac.gr/company/history/",
+        "summary": "页头+3022620-32331和页脚T.+302262032331数字一致；传真+302262031709不作电话，不推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published business postal location: INOFITA VOIOTIAS, GR 32011, Greece. No street or factory entrance independently established. Oinofyta/Inofita city representative coordinates (38.300, 23.633), not surveyed factory GPS.",
+  "sources": [
+    {
+      "label": "自主设计研发制造木器涂料及一般业务联系",
+      "url": "https://sylac.gr/company/history/"
+    },
+    {
+      "label": "水性家具地板户外木器成品主营家族",
+      "url": "https://sylac.gr/"
+    },
+    {
+      "label": "P890/xxSport+同款水性PU木地板清漆",
+      "url": "https://sylac.gr/product/p890xx/"
+    }
+  ]
+},
 "ignite-paints-lagos": {
   "website": "https://ignitepaints.com/",
   "contactPage": "https://ignitepaints.com/contact-us/",
@@ -49004,6 +49084,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sylac-inofita",
 "ignite-paints-lagos",
 "rakam-ras-al-khaimah",
 "classiq-colours-cape-town",
