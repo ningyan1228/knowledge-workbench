@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"ignite-paints-lagos": "I noticed Ignite Paints manufactures Epoxyl, a two-part epoxy coating for steel structures, tanks and pipework.",
 "rakam-ras-al-khaimah": "I noticed RAKAM manufactures two-component epoxy zinc phosphate primers for new and maintenance metal-protection projects.",
 "classiq-colours-cape-town": "I noticed Classiq Colours manufactures solvent-based flexographic and gravure inks for orientated and co-extruded polypropylene.",
 "shivam-enterprises-nairobi": "I noticed Shivam manufactures protective enamels for machinery and anti-rust primers for structural steel.",

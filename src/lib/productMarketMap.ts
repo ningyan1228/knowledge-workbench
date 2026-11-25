@@ -15558,11 +15558,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "ignite-paints-lagos",
+    "company": "Ignite Paints",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Lagos（官网业务联系城市；城市示意，非厂门）",
+    "latitude": 6.45611,
+    "longitude": 3.39361,
+    "legacyCompanyDescription": "尼日利亚工业防护及建筑涂料自主制造商",
+    "signal": "Ignite Paints 自主制造 Epoxyl 双组分环氧涂料，用于钢结构、储罐和管路的工业防护。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "四次实际公司native请求：Epoxyl209/About232/Contact99三份完整原始业务正文共540行；Industrial分类第四次仅5行验证墙，无产品目录正文，provider isError=false不冒成功目录。0+4=4/rem2，另独立Lagos城市1，共当前范围5/6保留1。0披露跳转/改写/原GET/PDF/远程JS/重试；分类URI冻结，不换供应商、语言、协议、镜像、隐藏API或脚本恢复。实际About明确现代自有制造、使用原料生产、Lagos facility、自制产品家族和配方设计，产品页明确自有工厂质量检验，不由单纯油漆施工推制造。Epoxyl同款为双组分环氧成品涂料，明确混凝土与钢、结构/储罐/管路的工业保护，钢材用途独立于普通建筑漆。实际三个正文披露成品内外墙乳胶/纹理/防水/工业/地坪/定色及底漆/搪瓷/装饰家族；这些是施工成品而非ELO输入，环氧成品及配方含原料不自动判环氧化植物油同行。有限三正文的具体工业成品和主营范围未见ELO/ESBO/环氧化植物油或同类生物基增塑稳定原料外售，所选输入同行排除通过；未读验证墙后分类目录、完整30+SKU、TDS/SDS、隐藏配方或所有关联公司，不冒全目录/终局股权审计。仅用首方公开名称IgnitePaints，不因Search旧Limited后缀、客户案例品牌或分销点造法定主体/集团控制/新客户；全公开/root/私有/来源/排除/队列及历史精确域名去重无旧户，Epoxyl不同品牌同词不自动合并。Contact原文info@ignitepaints.com一般公司邮箱和+2349065743752业务电话、表单均明确，非具名采购、送达验证或当前原料询盘。Contact将两个号码明确标为WhatsApp且链接wa.me，但返回未披露精确目标href，保留原始观察不造跳转，不点击外联。About称Crescent、Contact称street的6SaheedAlagbada/AgboyiKetu/Lagos业务地址措辞差异保留，不冒实测厂门。独立Lagos地理原文仅359/1759行，L352/L371同页坐标6.45611/3.39361，城市示意不借Dimacon工厂定位。客户SON/低VOC/品牌案例/防腐耐磨/干燥数据/优惠价格/交付等均自述，不转ELO认证或性能；ELO只按用户TDS涂料树脂改性/环氧功能/柔韧潜在评估，不称现用、相容、替代、采购或改善幅度。未提交购物车、表单、订购、WhatsApp或账号消息，不写CRM，发送未知不当未发。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱、电话及联系表单；非具名采购",
+      "email": "info@ignitepaints.com",
+      "phone": "+234 906 574 3752",
+      "contactUrl": "https://ignitepaints.com/contact-us/"
+    },
+    "source": {
+      "label": "Ignite Paints Epoxyl 工业环氧涂料官方产品正文",
+      "url": "https://ignitepaints.com/product/epoxyl/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ignite-paints-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rakam-ras-al-khaimah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "classiq-colours-cape-town": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "shivam-enterprises-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16212,6 +16241,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ignite-paints-lagos": {
+  "website": "https://ignitepaints.com/",
+  "contactPage": "https://ignitepaints.com/contact-us/",
+  "generalEmail": "info@ignitepaints.com",
+  "generalEmailEvidence": {
+    "company": "Ignite Paints",
+    "value": "info@ignitepaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ignite Paints官方Contact一般业务邮箱",
+        "url": "https://ignitepaints.com/contact-us/",
+        "summary": "Contact Email Address明确info@ignitepaints.com，同公司About和Epoxyl直接链接此页；一般业务入口，非具名采购或投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+234 906 574 3752",
+  "generalPhoneEvidence": {
+    "company": "Ignite Paints",
+    "value": "+234 906 574 3752",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ignite Paints官方Contact业务电话",
+        "url": "https://ignitepaints.com/contact-us/",
+        "summary": "Contact Telephone Number明确Call +2349065743752；精确数字按原文，仅格式化空格，不由手机号自动猜WhatsApp目标。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published business contact: No 6, Saheed Alagbada street, Agboyi Ketu, Lagos, Nigeria. About describes the same named road as Crescent; wording difference retained. Lagos city representative coordinates (6.45611, 3.39361), not surveyed factory GPS.",
+  "sources": [
+    {
+      "label": "具体Epoxyl双组分环氧钢结构储罐管路防护用途",
+      "url": "https://ignitepaints.com/product/epoxyl/"
+    },
+    {
+      "label": "自有制造、配方设计及成品主营家族",
+      "url": "https://ignitepaints.com/about-us/"
+    },
+    {
+      "label": "一般业务邮箱、电话、表单及Lagos城市",
+      "url": "https://ignitepaints.com/contact-us/"
+    }
+  ]
+},
 "rakam-ras-al-khaimah": {
   "website": "https://www.rakam.ae/",
   "contactPage": "https://www.rakam.ae/contact-us/",
@@ -48924,6 +49004,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ignite-paints-lagos",
 "rakam-ras-al-khaimah",
 "classiq-colours-cape-town",
 "shivam-enterprises-nairobi",
