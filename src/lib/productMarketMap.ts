@@ -15223,11 +15223,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-24"
   },
+  {
+    "id": "pegasus-britex-lahore",
+    "company": "Pegasus Coating & Chemical Industry (Britex Paints)",
+    "productId": "elo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore（官网联系链接标注；城市示意，非厂门）",
+    "latitude": 31.54972,
+    "longitude": 74.34361,
+    "legacyCompanyDescription": "巴基斯坦Britex工业涂料及钢材防护底漆制造商",
+    "signal": "Pegasus官网明确以Britex、Top Star及Nano Koat品牌自制工业涂料；Britex Epoxy Zinc Rich Primer具体产品页明确双组分环氧富锌底漆及钢结构防护用途。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "独立读官方About558行、EpoxyCoating746行、具体EpoxyZincRichPrimer538行、Contact435行、Shop816行，五完整native原文，不是搜索片段/重写摘要；0失败/跳转/原GET/PDF/公司JS。Pegasus Coating & Chemical Industry及Britex/Top Star/Nano Koat按官网同一制造账户，2008/15年及2025页脚是页面自述不作注册沿革或新投产证明。About明确制造设施、原料处理到包装及自有QC/R&D；具体底漆明确环氧树脂和锌粉、钢材及管道/储罐/桥梁/船舶/重钢结构，不由一般工业类别推造用途。只用该同款底漆证据，不把其他成品树脂转移或推客户使用ELO。实际16类成品/配套导航、Epoxy目录11项及Shop当前16项有限输入经营范围未见ELO/ESBO/环氧化植物油或同类生物基增塑添加剂外售；About宽泛fine chemicals并非已证所选ELO原料供货，成品环氧色浆、2K配套固化剂/稀释剂、成品Paint/RustRemover不凭名字判ELO同行。Shop有LoadMore未加载，不冒全SKU/全部精细化学品/SDS/最终股权审计。产品页PDF仅标题没有已读取PDF，网页2-3Hours与施工4-6Hours各自保留，不择一造参数；防腐/耐候/ISO与客户好评是客户材料自述，不能移植为我方效果或已独立验证。全637正式/根14未发/私有/队列/排除及忽略历史去重；TopStar与旧模板BackToTopStart、BasatopStarter相似不当同集团，BRITEXCARPETCARE搜索命中非巴基斯坦涂料主体。公开info@britexpaints.com及03334378294为NeedHelp/Factory一般业务，不绑定CEO SaadMalik或采购，不拼国际区号/推WhatsApp。官网工厂文字9.5kmSheikhupuraRoadDosakoChowk与地图链接9kmDasacoChowkLahore不同表述照录，不独立解决厂址市界；地图采用联系链接标注Lahore的独立城市代表点31.54972/74.34361，不当厂门实测。五公司来源5/rem1，另Lahore城市1合计范围6/6STOP；地理原文实际仅相关前470/1670行，顶部/信息框同页重复坐标一致，未声称全文或两独立来源。ELO仅用户TDS涂料/树脂改性、环氧功能与柔韧评估潜在场景，不证明现购/使用、相容性、防腐改善或其他性能保证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱及原格式电话；无具名采购或已核WhatsApp目标",
+      "email": "info@britexpaints.com",
+      "phone": "03334378294",
+      "contactUrl": "https://britexpaints.com/contact/"
+    },
+    "source": {
+      "label": "Britex官方环氧富锌底漆钢材用途与Pegasus制造说明",
+      "url": "https://britexpaints.com/shop/industrial-paint/epoxy-coating/epoxy-zinc-rich-primer/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pegasus-britex-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "bma-paints-nahr-el-mot": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "lider-ink-gebze": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "asco-nahr-el-mott-metn": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15865,6 +15894,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pegasus-britex-lahore": {
+  "website": "https://britexpaints.com/",
+  "contactPage": "https://britexpaints.com/contact/",
+  "generalEmail": "info@britexpaints.com",
+  "generalEmailEvidence": {
+    "company": "Pegasus Coating & Chemical Industry (Britex Paints)",
+    "value": "info@britexpaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Britex官方Contact一般业务邮箱",
+        "url": "https://britexpaints.com/contact/",
+        "summary": "Contact的NeedHelp/Factory重复公开info@britexpaints.com，非具名采购或已核投递状态。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "03334378294",
+  "generalPhoneEvidence": {
+    "company": "Pegasus Coating & Chemical Industry (Britex Paints)",
+    "value": "03334378294",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Britex官方Contact一般业务电话",
+        "url": "https://britexpaints.com/contact/",
+        "summary": "NeedHelp及Factory均明确03334378294，保留精确国内原格式，不拼国际区号、不推WhatsApp或个人采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published Factory: 9.5 km Sheikhupura Road dosako chowk shell Pump, near lal din Rickshaw factory. The same contact page labels its map link \"9 km, Sheikhupura Road, Dasaco Chowk Lahore\"; the differing distance/locality wording and exact factory municipality have not been independently resolved. Marker uses the independently published Lahore city representative point (31.54972, 74.34361), not surveyed factory GPS.",
+  "sources": [
+    {
+      "label": "Pegasus自有制造/QC及三品牌业务原文",
+      "url": "https://britexpaints.com/about-us/"
+    },
+    {
+      "label": "Epoxy目录实际11项，非全SKU审计",
+      "url": "https://britexpaints.com/product-category/industrial-paint/epoxy-coating/"
+    },
+    {
+      "label": "同款环氧富锌底漆钢材防护原文",
+      "url": "https://britexpaints.com/shop/industrial-paint/epoxy-coating/epoxy-zinc-rich-primer/"
+    },
+    {
+      "label": "官方一般邮箱/电话/原样工厂地址",
+      "url": "https://britexpaints.com/contact/"
+    },
+    {
+      "label": "Shop当前16项及LoadMore，未加载后续",
+      "url": "https://britexpaints.com/shop/"
+    }
+  ]
+},
 "bma-paints-nahr-el-mot": {
   "website": "https://www.bmapaints.com/",
   "contactPage": "https://www.bmapaints.com/",
@@ -47940,6 +48028,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pegasus-britex-lahore",
 "bma-paints-nahr-el-mot",
 "lider-ink-gebze",
 "asco-nahr-el-mott-metn",
