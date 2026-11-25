@@ -15279,11 +15279,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "jsw-paints-mumbai",
+    "company": "JSW Paints Limited",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai（官网总部所在城市示意，非厂门）",
+    "latitude": 19.07611,
+    "longitude": 72.8775,
+    "legacyCompanyDescription": "印度JSW集团自有水性木器底漆及涂料制造商",
+    "signal": "JSW官网明确自营Vijayanagar及Vasind两处涂料制造设施；Aquaglo Wood Primer同款技术表明确为水性丙烯酸底漆，适用于木材表面。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "独立原读5公司来源：AquagloWoodPrimer技术表2页149行完整、Home实际1044/声明1123行部分、About264/Contact249/News525行完整；无失败/跳转/原GET/公司JS或API。About与Contact明确Vijayanagar和Vasind自营生产，PIS同款明确水性丙烯酸底漆及木材用途，非把普通水性墙漆与另一木器系列拼接。技术表版本明确01(10/2024)，URL目录2025-10不冒产品发布日期；客户高附着/低VOC/覆盖/认证/耐久等自述不转为我方参数或相容承诺。实际7类家装成品导航及所读木器底漆/制造范围未见NLW同类聚烯烃水分散体或底涂附着力原料外售；finished primer不当原料同行，未全SKU/工业门户/所有集团输入/SDS/最终股权审计。JSWGroup与JSWPaints按一户，官方News2025-06-27只说签约收购AkzoNobelIndia，不当交割完成或收购全球Akzo/SCHRAMM；现有德国SCHRAMM不是本印度JSW自有品牌制造主体，不拆印度拟收购公司/品牌/两厂重复计数，也不借其旧证据。公开ccpaints@jsw.in在Contact明确销售/订单及一般咨询；PIS另称反馈投诉，两用途照录，非具名采购/研发。原格式1800-121-5797为印度免费业务咨询电话，不拼国际区号、未推WhatsApp；页面营销授权文字不是WhatsApp公开账号。News媒体联系人未精选为材料收件人，未操作表单/登录/注册。总部公开BandraEastMumbai与旧PIS JindalMansionMumbai两个地址不强行同一办公点，地图只用独立Mumbai城市代表坐标19.07611/72.87750，非BKC办公室或两厂GPS；城市原文实际421/1669行，顶部信息框同页重复一致，不冒全文/双独立来源。NLW仅用户TDS聚烯烃分散体及底涂/附着力促进潜在评估，未证明客户采购/使用、与该丙烯酸体系相容或性能改善。公司5/rem1，另城市1，范围6/6停止。"
+    },
+    "contact": {
+      "label": "官网销售/订单及一般咨询邮箱与印度免费电话；非具名采购或WhatsApp",
+      "email": "ccpaints@jsw.in",
+      "phone": "1800-121-5797",
+      "contactUrl": "https://www.jswpaints.in/contact-us"
+    },
+    "source": {
+      "label": "JSW Aquaglo Wood Primer官方两页技术表及自营制造说明",
+      "url": "https://www.jswpaints.in/sites/default/files/2025-10/109661024_WOOD%20PRIMER%20AQUAGLO%20PIS.pdf"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"jsw-paints-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "sbl-specialty-lalru": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pegasus-britex-lahore": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "bma-paints-nahr-el-mot": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -15923,6 +15952,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"jsw-paints-mumbai": {
+  "website": "https://www.jswpaints.in/",
+  "contactPage": "https://www.jswpaints.in/contact-us",
+  "generalEmail": "ccpaints@jsw.in",
+  "generalEmailEvidence": {
+    "company": "JSW Paints Limited",
+    "value": "ccpaints@jsw.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "JSW官方Contact销售/订单及一般咨询邮箱",
+        "url": "https://www.jswpaints.in/contact-us",
+        "summary": "EMAIL明确Sales, order queries, colour and general advice及ccpaints@jsw.in；PIS另列反馈投诉，保留范围，不指名采购/研发。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "1800-121-5797",
+  "generalPhoneEvidence": {
+    "company": "JSW Paints Limited",
+    "value": "1800-121-5797",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "JSW官方Contact印度免费一般业务电话",
+        "url": "https://www.jswpaints.in/contact-us",
+        "summary": "PHONE明确销售、订单及一般咨询1800-121-5797，保留原格式，不加国际区号或推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Official current headquarters: JSW Centre, Near MMRDA Grounds, Kalivery Village, MMRDA Area, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051. Contact lists production at Vijayanagar (Kudligi Rd, Toranagallu, Karnataka 583123) and Vasind (Taluka Sahapur, Maharashtra 421604). The product PIS separately prints Jindal Mansion, 5A Dr. G. Deshmukh Marg, Mumbai 400026 for feedback; not assumed identical office. Marker uses independent Mumbai city representative coordinates (19.07611, 72.87750), not surveyed office or factory GPS.",
+  "sources": [
+    {
+      "label": "同款水性木材底漆完整两页PIS，版本10/2024",
+      "url": "https://www.jswpaints.in/sites/default/files/2025-10/109661024_WOOD%20PRIMER%20AQUAGLO%20PIS.pdf"
+    },
+    {
+      "label": "Home部分原文产品导航，非全SKU审计",
+      "url": "https://www.jswpaints.in/"
+    },
+    {
+      "label": "两处自营制造及JSW集团",
+      "url": "https://www.jswpaints.in/about-us"
+    },
+    {
+      "label": "公开一般业务邮箱、电话和总部/工厂地址",
+      "url": "https://www.jswpaints.in/contact-us"
+    },
+    {
+      "label": "JSW News含2025签约收购印度主体标题，非交割完成证据",
+      "url": "https://www.jswpaints.in/news-and-media"
+    }
+  ]
+},
 "sbl-specialty-lalru": {
   "website": "https://www.sblcoatings.com/",
   "contactPage": "https://www.sblcoatings.com/about-us",
@@ -48116,6 +48204,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"jsw-paints-mumbai",
 "sbl-specialty-lalru",
 "pegasus-britex-lahore",
 "bma-paints-nahr-el-mot",
