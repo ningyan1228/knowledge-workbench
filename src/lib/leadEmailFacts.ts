@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"khamir-industries-mumbai": "I noticed Khamir Industries manufactures industrial coatings and offers its EPOLIQ P93/H39 epoxy primer for metals exposed to corrosive environments.",
 "unico-paints-karachi": "I noticed UNICO manufactures industrial coatings and offers its NE ZP epoxy primer for storage tanks and marine applications.",
 "jsw-paints-mumbai": "I noticed JSW Paints manufactures paints at two Indian facilities and offers Aquaglo water-based primer for wooden surfaces.",
 "sbl-specialty-lalru": "I noticed SBL manufactures industrial coatings for metal products, mechanical parts and construction machinery.",

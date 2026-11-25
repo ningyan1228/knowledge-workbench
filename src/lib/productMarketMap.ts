@@ -15335,11 +15335,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "khamir-industries-mumbai",
+    "company": "Khamir Industries",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai（官网办公室所在城市；城市示意，非工厂）",
+    "latitude": 19.07611,
+    "longitude": 72.8775,
+    "legacyCompanyDescription": "印度工业防护涂料自主制造商；Mumbai办公室、Umbergaon工厂",
+    "signal": "Khamir官网明确在Umbergaon自营工业涂料制造及配方研发；其EPOLIQ P93/H39高膜厚环氧磷酸锌底漆用于腐蚀环境中的金属防护。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "独立读Khamir三完整官网原文Products234/Home116/Contact64行，0失败/跳转/原GET/公司JS/API/PDF。Home明确Umbergaon Gujarat自营涂料制造设备、批次生产及研发实验室；同款EPOLIQ P93/H39高膜厚环氧磷酸锌底漆明确用于腐蚀环境中的清洁或预处理金属。完整可见目录四成品业务大类和15产品说明段落为工业/地坪涂层、防水剂、胶黏剂及成品底漆/面漆/清漆/填充灌封；在实际已读Home/Products/Contact有限经营范围未见ELO/ESBO/环氧化植物油或同类添加剂原料外售。成品环氧胶/涂料、polyamide-polyamine固化说明及原料检验不是原料生产外售，未冒全SKU/SDS/上游供应链或最终股权审计。官网Khamir Industries商号和自有系列/两地点一户，不编PvtLtd或拆工厂/品牌计数。P301/H123重复对应不同底漆，选独立明确P93/H39，未混码；1973/近四十年/2026页脚时间不合并为现年数，ISO/耐腐蚀/耐热/UV/低VOC等均官网自述，不当我方功能、独立认证或ELO改善保证。Home低VOC/水性研发方向不当已核同款NLW水性木器产品。Contact与Home/Products同主体公开info@khamirindustries.in一般业务邮箱及+91-9136777152电话；aksharkhamir Gmail不推具名采购，官网另标WhatsApp号码但无明确wa.me链接，不拼跳转，不提交标Demo的表单或预约。Mumbai公司办公室与Umbergaon实际制造地址明确分开；地图只用独立Mumbai城市19.07611/72.87750代表办公室所在城市，不当厂门GPS。同日既有城市原档离线421/1669行，L342/L354同页两处一致，非全篇/双独立源；本轮0城市请求，绝不把JSW公司证据借给Khamir。公司3/rem3，本范围3/6，均未重置。ELO只作TDS涂料树脂改性、环氧功能/柔韧方向潜在评估，采购/使用、客户现配方适配和性能尚未确认。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱与电话；非具名采购或WhatsApp跳转",
+      "email": "info@khamirindustries.in",
+      "phone": "+91-9136777152",
+      "contactUrl": "https://khamirindustries.in/contact-us/"
+    },
+    "source": {
+      "label": "Khamir EPOLIQ P93/H39防护环氧底漆及自营制造原文",
+      "url": "https://khamirindustries.in/products/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"khamir-industries-mumbai": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "unico-paints-karachi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "jsw-paints-mumbai": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "sbl-specialty-lalru": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -15981,6 +16010,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"khamir-industries-mumbai": {
+  "website": "https://khamirindustries.in/",
+  "contactPage": "https://khamirindustries.in/contact-us/",
+  "generalEmail": "info@khamirindustries.in",
+  "generalEmailEvidence": {
+    "company": "Khamir Industries",
+    "value": "info@khamirindustries.in",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Khamir官方Contact一般业务邮箱",
+        "url": "https://khamirindustries.in/contact-us/",
+        "summary": "Our Corporate Office明确info@khamirindustries.in，Home/Products页脚同主体一致；公司一般业务邮箱，非具名采购或研发。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+91-9136777152",
+  "generalPhoneEvidence": {
+    "company": "Khamir Industries",
+    "value": "+91-9136777152",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Khamir官方Contact办公室一般电话",
+        "url": "https://khamirindustries.in/contact-us/",
+        "summary": "Corporate Office Phone明确+91-9136777152，与Home/Products一致；官网另列WhatsApp号码但不与此电话混用或拼账号链接。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Corporate office: Shop No.2, Tirupati Aparment, Akurli Cross Road No.1, Kandivali East, Mumbai 400101, Maharashtra, India. Manufacturing unit: Plot 296/1, Gidc, Umbergaon, Gujarat 396171, India. Marker uses independent Mumbai city coordinates (19.07611, 72.87750) for the disclosed office city, not surveyed factory GPS or either entrance.",
+  "sources": [
+    {
+      "label": "实际完整工业防护成品目录及P93/H39同款用途",
+      "url": "https://khamirindustries.in/products/"
+    },
+    {
+      "label": "Umbergaon自有制造设备与研发实验室、Mumbai办公室",
+      "url": "https://khamirindustries.in/"
+    },
+    {
+      "label": "同主体公开一般业务邮箱/电话及办公室和工厂地址",
+      "url": "https://khamirindustries.in/contact-us/"
+    }
+  ]
+},
 "unico-paints-karachi": {
   "website": "https://www.unicoproduct.com/",
   "contactPage": "https://www.unicoproduct.com/index.html",
@@ -48288,6 +48368,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"khamir-industries-mumbai",
 "unico-paints-karachi",
 "jsw-paints-mumbai",
 "sbl-specialty-lalru",
