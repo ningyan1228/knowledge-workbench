@@ -15530,11 +15530,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "rakam-ras-al-khaimah",
+    "company": "RAKAM L.L.C.",
+    "productId": "elo",
+    "country": "United Arab Emirates",
+    "countryZh": "阿联酋",
+    "city": "Ras Al Khaimah（官网业务联系城市；城市示意，非厂门）",
+    "latitude": 25.78861,
+    "longitude": 55.94306,
+    "legacyCompanyDescription": "阿联酋环氧防腐底漆及建筑防护材料自主制造商",
+    "signal": "RAKAM 自主制造用于金属结构新建和维护的双组分环氧磷酸锌防腐底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "实际四次公司/公开关联集团native原文：专用EpoxyZincPhosphatePrimer266/WhoWeAre43/Contact36/STGroupHome172行，共517行；prior0/current4/lifetime4/rem2，另独立RasAlKhaimah城市1共范围5/6，保留1不强行读未知canonical链接。0失败/重写/披露跳转/原GET/PDF/远程JS/隐藏API/重试。RAKAM官方自身名L.L.C.、制造和配方研发实验室明确，实际同款原文为双组分聚酰胺固化环氧磷酸锌防腐底漆，明确钢及金属结构/框架/管道/机械的新建或维护；不是由单纯行业标签或施工服务推制造。产品页面完整技术/施工正文已读，未读另链TDS/SDS文件；Category误放StuccoPutty不覆盖实际技术正文，静态AddedtoCart/ThankYou不当购物或询盘提交。实际所读成品业务七导航家族为地坪贴砖、防水、粘结、密封修补、特种、涂料及腻子，About自述建筑成品与清洁等用途；本底漆/PU面漆和epoxy thinner是下游施工体系，不据epoxy/primer/bonding词自动判ELO/ESBO原料同行。在这三份RAKAM原文和实际linked集团主营范围未见ELO/ESBO/环氧化植物油或同类生物基增塑稳定投入外售；有限范围排查通过，不声称已读各家族叶页、Speciality目录、全SKU/SDS/全部集团子公司/隐藏配方或最终股权登记。RAKAM站实际链接stgroup.ae并有Group管理栏目；链接STGroup原文说明UAE多行业业务/制造/贸易，按公开关联保守合并一个账户及四次预算，不另增STGroup/品牌/施工或地点，也不编公司名单/精确持股、把集团1975沿革当RAKAM制漆线投产或把计数器1当人数/子公司数量。STGroup Dubai与RAK集团办公室不是RAKAM工厂地址；实际Contact只取RAKAM POBox11005/RasAlKhaimah/UAE和业务邮箱电话，不虚构街道或从9717/RAK缩写单独猜城市。跨产品全公开/根/私有/来源/排除/队列/历史域名品牌和集团身份去重未见旧户，名中Prakash等误匹配不当RAK关联。Contact明确sales@rakam.ae及+97172668383，邮箱电话分项归属一般销售业务，非具名采购；传真2668853不作电话，手机未作WhatsApp，网页WhatsApp文字无已核目标href不造账号/跳转。未提交表单/reCaptcha/聊天/购物车或收集Group领导为采购。独立城市页仅返回439/568行，L172/L181同页重复25.78861/55.94306，为城市代表非厂门测绘/两独立来源。客户52%固含、4:1、VOC、寿命/防腐、ISO/认可等不转ELO数据或性能；ELO按用户TDS涂料树脂改性/环氧功能/柔韧潜在评估，现用材料、配方相容、改善幅度、采购需求/时间均未确认。"
+    },
+    "contact": {
+      "label": "官网一般销售业务邮箱、电话及联系表单；非具名采购",
+      "email": "sales@rakam.ae",
+      "phone": "+971 7 2668383",
+      "contactUrl": "https://www.rakam.ae/contact-us/"
+    },
+    "source": {
+      "label": "RAKAM环氧磷酸锌防腐底漆官方产品与技术正文",
+      "url": "https://www.rakam.ae/product/rakam-epoxy-zinc-phosphate-primer/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"rakam-ras-al-khaimah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "classiq-colours-cape-town": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "shivam-enterprises-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sartas-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16183,6 +16212,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"rakam-ras-al-khaimah": {
+  "website": "https://www.rakam.ae/",
+  "contactPage": "https://www.rakam.ae/contact-us/",
+  "generalEmail": "sales@rakam.ae",
+  "generalEmailEvidence": {
+    "company": "RAKAM L.L.C.",
+    "value": "sales@rakam.ae",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "RAKAM官方Contact一般销售业务邮箱",
+        "url": "https://www.rakam.ae/contact-us/",
+        "summary": "实际Contact和同公司产品页公开sales@rakam.ae，一般销售业务入口，非具名采购或投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+971 7 2668383",
+  "generalPhoneEvidence": {
+    "company": "RAKAM L.L.C.",
+    "value": "+971 7 2668383",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "RAKAM官方Contact一般业务电话",
+        "url": "https://www.rakam.ae/contact-us/",
+        "summary": "Contact明确Phone +971 7 2668383；另列Fax +971 7 2668853不采用，手机与WhatsApp文字不当已核账号。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published business postal route: P.O. Box 11005, Ras Al Khaimah, United Arab Emirates. No street or factory-gate coordinates independently established. Marker uses Ras Al Khaimah city coordinates (25.78861, 55.94306), not surveyed factory GPS or the linked ST Group Dubai office.",
+  "sources": [
+    {
+      "label": "具体双组分环氧防腐底漆、金属结构用途与技术正文",
+      "url": "https://www.rakam.ae/product/rakam-epoxy-zinc-phosphate-primer/"
+    },
+    {
+      "label": "自有制造及研发实验室",
+      "url": "https://www.rakam.ae/who-we-are/"
+    },
+    {
+      "label": "公司公开销售业务邮箱、电话、联系表单及城市",
+      "url": "https://www.rakam.ae/contact-us/"
+    },
+    {
+      "label": "官网直接链接STGroup公开业务与关联去重",
+      "url": "https://www.stgroup.ae/"
+    }
+  ]
+},
 "classiq-colours-cape-town": {
   "website": "https://classiqcoatings.com/classiq-colours/",
   "contactPage": "https://classiqcoatings.com/classiq-colours/",
@@ -48840,6 +48924,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"rakam-ras-al-khaimah",
 "classiq-colours-cape-town",
 "shivam-enterprises-nairobi",
 "sartas-boya-istanbul",
