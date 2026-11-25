@@ -15502,11 +15502,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "classiq-colours-cape-town",
+    "company": "Classiq Colours",
+    "productId": "cpp-cpo",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town（官网Paarden Eiland制造城市；城市示意，非厂门）",
+    "latitude": -33.92528,
+    "longitude": 18.42389,
+    "legacyCompanyDescription": "南非PP溶剂型柔印及凹印油墨自主制造商",
+    "signal": "Classiq Colours 在开普敦自制用于定向、共挤 PP 的溶剂型柔印和凹印表印／复合油墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-25",
+      "conclusion": "五次实际公司native请求完整保留：classiqcolours独立站Home429与关联站具体solvent-coatings429两失败各计1、两个URI冻结；关联站ClassiqColours96/Home116/Products91三完整原文共303行，0+5=5/rem1。另CapeTown独立城市1计范围6/6STOP，不计公司预算。未重试失败URI、镜像/协议/www/原GET/PDF/隐藏API/远程JS，0披露跳转/改写。专门ClassiqColours页自述privatelyowned InkManufacturingCompany、PaardenEiland自有modernmanufacturingplant与实验室，明确同一行自制溶剂表印/复合油墨用于PE、定向及共挤PP的柔印凹印；不是只凭包装行业或把不同水性/PP产品拼接。关联ClassiqCoatings Home与Products自述UV/LED清漆、水性涂层制造配方和研发，实际正文成品类别为primer/sealer/release/barrier/topcoat、热封/吸塑/防雾/篷布及复合胶；这些是直接涂覆成品，不自动CPP/CPO树脂原料。Colors页所说Chimigraf技术与chips/concentrates为明确颜料分散体采购关联，不推共同股权、CPP树脂配方或外购所选材料例外。已读三份主营及特定PP溶剂成品范围未见CPP/CPO/MAH改性聚烯烃或同类附着树脂原料外售；有限业务排查通过，不冒失败solvent叶、全SKU/SDS或隐藏股权审计。ClassiqColours/ClassiqCoatings和两个域名按一个公开关联账户共用五次预算，仅新增Colors制墨业务一次，不声称法律母子股权或未公开法定后缀；Chimigraf技术/颜料供货非已证集团控制，既有CHIMTINTAS5/rem1与SMGraf6STOP均保持不重置，若未来证明控制关系需合并核对。实际ClassiqColours专页自身列一般联系表单及ClassiqCoatings域info邮箱、+27[0]215105811与13NatalStreet/PaardenEiland/CapeTown业务地址，作为该专页公开的关联业务联系路由，不虚构Colors独立所有邮箱、采购人或投递验证。专用Contact页未读不冒已读；Home中(719)4452808模板号忽略，未见已核WhatsApp账号，不猜电话即WA。地址为站点公开业务路由，不称Colors厂门精确地址。独立CapeTown页只返回468/2165行，头部L385与信息框L401同页重复-33.92528/18.42389，城市代表非两独立来源或PaardenEiland/厂门测绘。ISO/BEE、2002、150年合计经验及性能/食品包装文字均客户自述，不转我方认证、年限或食品接触承诺。七牌号指南的PP附着与黏度/溶剂选型、已存NipponPaper SUPERCHLON油墨类别扩展只支持潜在材料评估，不称NL逐牌号TDS、客户现用CPP、现配方相容/采购或预处理状态已确认。"
+    },
+    "contact": {
+      "label": "Classiq Colours官网关联业务专页的一般邮箱、电话和联系表单；非具名采购",
+      "email": "info@classiqcoatings.com",
+      "phone": "+27 [0]21 510 5811",
+      "contactUrl": "https://classiqcoatings.com/classiq-colours/"
+    },
+    "source": {
+      "label": "Classiq Colours官方制墨工厂及PP溶剂型柔印凹印用途",
+      "url": "https://classiqcoatings.com/classiq-colours/"
+    },
+    "checkedAt": "2026-11-25"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"classiq-colours-cape-town": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "shivam-enterprises-nairobi": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sartas-boya-istanbul": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "global-inks-chemicals-lahore": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -16154,6 +16183,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"classiq-colours-cape-town": {
+  "website": "https://classiqcoatings.com/classiq-colours/",
+  "contactPage": "https://classiqcoatings.com/classiq-colours/",
+  "generalEmail": "info@classiqcoatings.com",
+  "generalEmailEvidence": {
+    "company": "Classiq Colours",
+    "value": "info@classiqcoatings.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Classiq Colours官方关联业务页公开邮箱",
+        "url": "https://classiqcoatings.com/classiq-colours/",
+        "summary": "ClassiqColours专页自身公开info@classiqcoatings.com，与关联站共用一般业务联系路由；不称Colors独立所有邮箱或采购人，不作投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "generalPhone": "+27 [0]21 510 5811",
+  "generalPhoneEvidence": {
+    "company": "Classiq Colours",
+    "value": "+27 [0]21 510 5811",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Classiq Colours官方关联业务页公开电话",
+        "url": "https://classiqcoatings.com/classiq-colours/",
+        "summary": "专页实际CallUs及页脚重复+27 [0]21 510 5811；关联一般业务路由，非采购个人或WhatsApp，忽略Home另见模板号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-25"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Site-published associated business contact address: 13 Natal Street, Paarden Eiland, Cape Town 7405, South Africa. Classiq Colours own text places its manufacturing plant in Paarden Eiland; this shared contact address is not independently established as its factory gate. Marker uses Cape Town city coordinates (-33.92528, 18.42389), not surveyed factory or business entrance GPS.",
+  "sources": [
+    {
+      "label": "Classiq Colours自有工厂、具体PP溶剂印墨和公开关联业务联系入口",
+      "url": "https://classiqcoatings.com/classiq-colours/"
+    },
+    {
+      "label": "关联ClassiqCoatings制造及业务范围",
+      "url": "https://classiqcoatings.com/"
+    },
+    {
+      "label": "实际成品清漆、涂层及复合胶主营范围",
+      "url": "https://classiqcoatings.com/our-products/"
+    }
+  ]
+},
 "shivam-enterprises-nairobi": {
   "website": "https://shivampaints.com/",
   "contactPage": "https://shivampaints.com/request-quote",
@@ -48760,6 +48840,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"classiq-colours-cape-town",
 "shivam-enterprises-nairobi",
 "sartas-boya-istanbul",
 "global-inks-chemicals-lahore",
