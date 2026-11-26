@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"fine-chemicals-nigeria-enpee": "I noticed Fine Chemicals manufactures printing inks for flexible packaging, tin printing, screen printing and offset printing.",
+"sren-chemicals-nigeria": "I noticed Sren manufactures flexographic and gravure inks for plastic bags and paper-based packaging in Nigeria.",
 "colourtrend-general-paints-celbridge": "I noticed Colourtrend formulates Waterbased Satin, an alkyd paint for interior and exterior wood.",
 "flexohub-djjg-accra": "I noticed FlexoHub manufactures water-based flexographic inks and develops colour recipes in its own laboratory in Ghana.",
 "pacacol-sango-ota": "I noticed Pacacol manufactures Excellence flexographic inks for PP sacks, BOPP films and corrugated paper in Nigeria.",

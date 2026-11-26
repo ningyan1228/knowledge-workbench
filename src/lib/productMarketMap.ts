@@ -15950,11 +15950,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "sren-chemicals-nigeria",
+    "company": "Sren Chemicals Ltd.",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Nigeria（国家示意点，非城市或工厂定位）",
+    "latitude": 10,
+    "longitude": 8,
+    "legacyCompanyDescription": "尼日利亚自主制造柔版、凹版成品油墨与工业涂层的企业",
+    "signal": "Sren Chemicals 在尼日利亚自主制造柔版及凹版油墨，应用包括塑料袋和纸基包装。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "离线重新独立读同日已有Home109/Products74/About77三份不同首方经营原文260行，另旧Sacks点击重复Products74行仍保留为一次已花费来源，不变4/rem2，本轮0公司/地理网络请求。Home与About明确2003起自制柔版/凹版等成品油墨、涂料及尼日利亚本土所有；Products所见八个成品家族Sacks/BottleLabels/CrownCaps/BagsCartons/Floor/Coil/Marine/Paints，卷材配方树脂名称不是原料外售明文。三份完整返回业务原文未见ELO/ESBO/环氧植物油/同类生物基增塑改性油外售，有限排除不是全SKU/TDS/SDS或终极工商股权审计。ELO按用户TDS油墨应用及环氧功能/柔韧性潜在配方评估，不推现用油、相容、食品接触/迁移认证、改善幅度、采购或替换。原CPP同款PP基材与溶剂体系缺口保留；泛plastic/polybag、PE/polyvinyl不能反向变成PP溶剂墨。按SrenChemicalsLtd一个尼日利亚主体，不由LynsonChemicalAvenue地址推股权、也不把模板外部motivoweb归客户。页头Australia地址、info@domain.com/example@domain.com与假电话是模板占位，不作联系。footer直接公开info@srenchemicals.com和(+234)7030423875，均公司一般业务入口，不造个人、采购或WhatsApp。Office仅OffKm38Lagos/AbeokutaExpresswayLynsonChemicalAvenue，未确证厂门或城市坐标；地图复用旧GeoNamesNigeria10/8国家代表点0新网络，非Lagos/Ogun工厂GPS。"
+    },
+    "contact": {
+      "label": "官网直接公开公司油墨业务邮箱和一般电话，非具名采购",
+      "email": "info@srenchemicals.com",
+      "phone": "(+234) 703 042 3875",
+      "contactUrl": "https://srenchemicals.com/"
+    },
+    "source": {
+      "label": "Sren Chemicals Ltd.自主油墨制造首方原文",
+      "url": "https://srenchemicals.com/"
+    },
+    "checkedAt": "2026-11-26"
+  },
+  {
+    "id": "fine-chemicals-nigeria-enpee",
+    "company": "Fine Chemicals Nigeria Limited (Enpee Group)",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Nigeria（国家示意点，非城市或工厂定位）",
+    "latitude": 10,
+    "longitude": 8,
+    "legacyCompanyDescription": "尼日利亚Enpee集团自主制造印刷油墨、涂层及包装配套产品的企业",
+    "signal": "Fine Chemicals Nigeria 自主制造用于柔包装、铁印、丝印及胶印的印刷油墨，属于 Enpee 集团。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "本轮六份完整首方原文FineHome280/About254/EnpeePackaging84/EnpeeChemicals73/PurechemManufacturingHome123/FinePrintingInks269共1083行。FineAbout明确SangoOtta自有基础设施制造油墨/涂层/色剂、印刷辊及流延PP薄膜，PrintingInks明确自制用于柔包装、铁印、丝印与胶印等墨；Henkel复合胶和Convertech刮刀仅经销，不能冒自制。Enpee双向母子关系与Purechem等主体已原读，对全库/队列/旧原档别名去重，Fine/Enpee/Purechem/Avon/Encept/Renewsys/PureHygiene/缆线体系按一个保守集团账户，不拆同址企业、董事、出口市场或厂址。已读集团Chemicals列Purechem成品工业/消费胶与建化、FineSoapColourants；PurechemHome实际WhiteGlue/PVCPipeGlue/StationeryGlue/BeerBottlingGlue及建化、电缆业务，不能把成品胶、一般色剂或电缆制造自动判ELO同行，也未借电缆制造创建未获独立扩展的PVC客户。六份实际经营原文及导航未见ELO/ESBO/环氧植物油或同类生物基增塑改性油外售，限实际范围，不声称未读工业胶逐SKU、隐藏SDS/全集团工商审计。CPP在该站明确CASTPOLYPROPYLENE薄膜，cpp@是薄膜业务邮箱，非MAHCPP/CPO树脂销售证据；泛olefinic及导航solvent墨不能拼出同款PP溶剂墨资格。ELO仅按用户TDS油墨用途作含环氧功能/柔韧性评估，不承诺配方相容、采购、食品/药品接触认证或性能。inks@finechemicalsltd.com与+2348129451965在实际Fine公司Contact页脚多页公开，选择油墨业务公司邮箱，无具名或技术采购角色推断；gmsales/cylinders/cpp同域其他入口未混为我方收件人，不借Purechem邮箱。公开办公联系地址AfprintCompoundSecondGate122/132OshodiApapaExpresswayIyanaIsoloLagos与About生产SangoOtta分别保留，地图仅Nigeria国家10/8非两地或厂门。集团累计6/rem0且本范围6/6停止，0失败/跳转/GET/PDF/JS/API/外联。"
+    },
+    "contact": {
+      "label": "官网直接公开公司油墨业务邮箱和一般电话，非具名采购",
+      "email": "inks@finechemicalsltd.com",
+      "phone": "+234 812 945 1965",
+      "contactUrl": "https://finechemicalsltd.com/page/22"
+    },
+    "source": {
+      "label": "Fine Chemicals Nigeria Limited (Enpee Group)自主油墨制造首方原文",
+      "url": "https://finechemicalsltd.com/page/22"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"fine-chemicals-nigeria-enpee": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
+"sren-chemicals-nigeria": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "colourtrend-general-paints-celbridge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "flexohub-djjg-accra": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "pacacol-sango-ota": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -16618,6 +16676,128 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"fine-chemicals-nigeria-enpee": {
+  "website": "https://finechemicalsltd.com/",
+  "contactPage": "https://finechemicalsltd.com/page/22",
+  "generalEmail": "inks@finechemicalsltd.com",
+  "generalEmailEvidence": {
+    "company": "Fine Chemicals Nigeria Limited (Enpee Group)",
+    "value": "inks@finechemicalsltd.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "实际公司原文直接公开业务邮箱",
+        "url": "https://finechemicalsltd.com/page/22",
+        "summary": "公司实际经营页脚直接公开inks@finechemicalsltd.com，与该制造主体对应，仅公司业务入口，不推个人/技术采购角色或送达。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+234 812 945 1965",
+  "generalPhoneEvidence": {
+    "company": "Fine Chemicals Nigeria Limited (Enpee Group)",
+    "value": "+234 812 945 1965",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "实际公司原文直接公开一般业务电话",
+        "url": "https://finechemicalsltd.com/page/22",
+        "summary": "所选+234 812 945 1965为直接公开的公司联系号码，不当WhatsApp、采购或个人电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business contact address: Afprint Compound, 2nd Gate, 122/132 Oshodi Apapa Expressway, Iyana-Isolo Bus Stop, Isolo, Lagos, Nigeria; PO Box 2701. About separately identifies manufacturing infrastructure at Sango-Otta near Lagos. Map deliberately reuses Nigeria country representative 10,8, not either business address or factory GPS.",
+  "sources": [
+    {
+      "label": "实际Home，制墨与直接公开公司业务渠道",
+      "url": "https://finechemicalsltd.com/"
+    },
+    {
+      "label": "自有SangoOtta制造与Henkel/Convertech经销边界",
+      "url": "https://finechemicalsltd.com/page/60"
+    },
+    {
+      "label": "Enpee包装子公司关系，CPP为流延聚丙烯膜",
+      "url": "https://enpee.com/our-businesses/packaging/"
+    },
+    {
+      "label": "Enpee所披露化学业务边界",
+      "url": "https://enpee.com/our-businesses/chemicals/"
+    },
+    {
+      "label": "Purechem同集团成品胶与建化业务，非独立新增",
+      "url": "https://www.purechemmanufacturing.com/"
+    },
+    {
+      "label": "自主成品墨四类用途与实际公开油墨邮箱",
+      "url": "https://finechemicalsltd.com/page/22"
+    },
+    {
+      "label": "离线复用尼日利亚国家代表坐标，非城市厂门",
+      "url": "https://www.geonames.org/2328926"
+    }
+  ]
+},
+"sren-chemicals-nigeria": {
+  "website": "https://srenchemicals.com/",
+  "contactPage": "https://srenchemicals.com/",
+  "generalEmail": "info@srenchemicals.com",
+  "generalEmailEvidence": {
+    "company": "Sren Chemicals Ltd.",
+    "value": "info@srenchemicals.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "实际公司原文直接公开业务邮箱",
+        "url": "https://srenchemicals.com/",
+        "summary": "公司实际经营页脚直接公开info@srenchemicals.com，与该制造主体对应，仅公司业务入口，不推个人/技术采购角色或送达。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "(+234) 703 042 3875",
+  "generalPhoneEvidence": {
+    "company": "Sren Chemicals Ltd.",
+    "value": "(+234) 703 042 3875",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "实际公司原文直接公开一般业务电话",
+        "url": "https://srenchemicals.com/",
+        "summary": "所选(+234) 703 042 3875为直接公开的公司联系号码，不当WhatsApp、采购或个人电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published Office: Off Km 38, Lagos/Abeokuta Expressway, Lynson Chemical Avenue, Nigeria. Exact city and factory-gate position are not independently established. Map deliberately reuses Nigeria country representative 10,8, not a Lagos/Ogun or factory GPS.",
+  "sources": [
+    {
+      "label": "已有Home原档，自制柔版凹版墨及真实页脚邮箱电话",
+      "url": "https://srenchemicals.com/"
+    },
+    {
+      "label": "已有Products完整返回八成品家族；旧锚点重复另计已用来源",
+      "url": "https://srenchemicals.com/products/"
+    },
+    {
+      "label": "已有About，2003自有制墨与尼日利亚所有；占位模板不采用",
+      "url": "https://srenchemicals.com/about-us/"
+    },
+    {
+      "label": "离线复用尼日利亚国家代表坐标，非城市厂门",
+      "url": "https://www.geonames.org/2328926"
+    }
+  ]
+},
 "colourtrend-general-paints-celbridge": {
   "website": "https://colourtrend.ie/",
   "contactPage": "https://colourtrend.ie/pages/about",
@@ -50127,6 +50307,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"fine-chemicals-nigeria-enpee",
+"sren-chemicals-nigeria",
 "colourtrend-general-paints-celbridge",
 "flexohub-djjg-accra",
 "pacacol-sango-ota",
