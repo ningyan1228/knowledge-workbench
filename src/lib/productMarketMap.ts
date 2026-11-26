@@ -15866,11 +15866,69 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "pacacol-sango-ota",
+    "company": "Pacacol Industries Limited (Excellence Inks)",
+    "productId": "elo",
+    "country": "Nigeria",
+    "countryZh": "尼日利亚",
+    "city": "Nigeria（国家示意点，非城市或工厂定位）",
+    "latitude": 10,
+    "longitude": 8,
+    "legacyCompanyDescription": "尼日利亚自主制造柔版、凹版及其他成品印刷油墨的企业",
+    "signal": "Pacacol 在尼日利亚自有工厂制造 Excellence Inks，产品包括用于 PP 编织袋、BOPP 薄膜的柔版油墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "独立重读同日已存Home140与CompanyOverview57，制造ExcellenceInks及自有SangoOta总部/工厂、化学员工和配方研发明确；本轮正常Contact64再次核业务邮箱和地址，旧Products36短码保留为不可用，不恢复。Home实际五类成品柔版/凹版/胶印/金属装饰/丝印墨及配套涂层；三份成功经营原文261行未见ELO/ESBO/环氧植物油/同类生物基改性油外售，有限排除不是全部SKU/SDS/所有Chemicals或股权审计。Overview的ReliableSourceofRawMaterials是企业供料能力表述，不冒原料外售或已确认采购我方材料。ELOTDS油墨用途可作含环氧功能的柔韧性配方评估，非现用ELO、配方相容、食品接触/迁移、附着提升、采购或替换承诺。原CPP的同款溶剂体系及其原料排除缺口仍保存，不能以本次ELO资格反向补CPP。按Pacacol/Excellence一尼日利亚主体；ContactKano为分支不新增，未见与本轮FlexoHub同集团证据。info@pacacol.com及clientinquiries下+2347089268363直接公开，选SangoOta业务电话而非Home带可选0的号码，非具名采购/WhatsApp；表单不提交。地址Plot5DayoBelloStreetArinkoSangoOtaOgun，地图仅Nigeria国家10/8，非城市或厂门。旧3含1模板＋新Contact1=4/rem2，原?page_id=8238保持冻结；当前一次原读不是重置，不把搜索片段当原文。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱和一般电话，非具名采购",
+      "email": "info@pacacol.com",
+      "phone": "+234 708 926 8363",
+      "contactUrl": "https://pacacol.com/?page_id=1279"
+    },
+    "source": {
+      "label": "Pacacol Industries Limited (Excellence Inks)自主油墨制造及配方原文",
+      "url": "https://pacacol.com/"
+    },
+    "checkedAt": "2026-11-26"
+  },
+  {
+    "id": "flexohub-djjg-accra",
+    "company": "FlexoHub (DJJ & G Investments Limited)",
+    "productId": "elo",
+    "country": "Ghana",
+    "countryZh": "加纳",
+    "city": "Ghana（国家示意点，非城市或工厂定位）",
+    "latitude": 8.1,
+    "longitude": -1.2,
+    "legacyCompanyDescription": "加纳自主制造水性柔版油墨并开展配方研发的企业",
+    "signal": "FlexoHub 在加纳自有设施制造水性柔版油墨，并通过实验室开展颜色配方研发。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "About99行明确FlexoHub是DJJ&GInvestmentsLimited商标、自有水性柔版油墨处理生产设施、实验室/研发及生成配方；Tapes98行四类PlateMounting/Splicing/Process/Special成品胶带与同一公司公开业务渠道。ELOTDS油墨用途形成潜在含环氧功能/柔韧性试验方向，不推PP基材、现用ELO/配方相容、认证、食品接触/迁移或采购。About所述UV调色是混配能力，SolventInk仅导航，不冒已核自制全部溶剂墨或PP水墨；原料排除限两份成功原文197行及导航中成品墨、印版、刀模、胶带、刮刀等所见范围，未见ELO/ESBO/环氧植物油/同类生物基增塑改性油外售，非隐藏SKU/SDS/全股权审计。Chespa/Tesa/Flexofit为公开合作伙伴，原文未证控股，不按合作推集团，也不把伙伴/出口NigeriaTogoBenin拆新户。Contact邮箱contact@flexohub.com与公开(+233)303935242在两原文直接出现，仅一般业务入口，非具名采购、部门邮箱或WhatsApp。地址明确Office在CentralLinkRoadLedzokukuKroworAccraGZ1215972，不冒已核工厂门；地图用Ghana国家8.1/-1.2。PrintingInks详情实际TimeoutError但isErrorfalse，仍计失败1并冻结https://flexohub.com/index.php/service/printing-inks/，不变体/协议/GET/JS/API/其他路径恢复；独立胶带页只核输入业务，不替代失败油墨页。3请求=3/rem3含1失败、0跳转，资格依成功About的自有生产明文；GSA/EPA营销声称不当独立证书。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱和一般电话，非具名采购",
+      "email": "contact@flexohub.com",
+      "phone": "(+233) 303935242",
+      "contactUrl": "https://flexohub.com/index.php/about-us/"
+    },
+    "source": {
+      "label": "FlexoHub (DJJ & G Investments Limited)自主油墨制造及配方原文",
+      "url": "https://flexohub.com/index.php/about-us/"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"flexohub-djjg-accra": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
+"pacacol-sango-ota": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "fleetwood-paints-virginia": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "cstm-envol-senegal": {"targetCompanyTypeId":"adhesive-manufacturer","applicationLayer":"tds-verified","applicationId":"adhesives"},
 "aqua-paints-octagon-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16531,6 +16589,112 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"flexohub-djjg-accra": {
+  "website": "https://flexohub.com/",
+  "contactPage": "https://flexohub.com/index.php/about-us/",
+  "generalEmail": "contact@flexohub.com",
+  "generalEmailEvidence": {
+    "company": "FlexoHub (DJJ & G Investments Limited)",
+    "value": "contact@flexohub.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "公司原文直接公开一般业务邮箱",
+        "url": "https://flexohub.com/index.php/about-us/",
+        "summary": "同域公司经营原文直接公布contact@flexohub.com，公司主体和制造另有首方明文，仅一般业务渠道，不推个人/采购或送达有效性。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "(+233) 303935242",
+  "generalPhoneEvidence": {
+    "company": "FlexoHub (DJJ & G Investments Limited)",
+    "value": "(+233) 303935242",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "公司原文直接公开一般业务电话",
+        "url": "https://flexohub.com/index.php/about-us/",
+        "summary": "所选电话为直接公开的该公司业务入口，保留其公开格式；非已证WhatsApp、个人或采购负责人。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published office: Central Link Road, Ledzokuku Krowor, Accra, Ghana, GZ-121-5972. Own ink-processing facility is stated, but its exact factory location was not independently geocoded. Map deliberately uses Ghana country representative 8.1,-1.2, not Accra office or factory GPS.",
+  "sources": [
+    {
+      "label": "DJJ&G商标主体、自有水性油墨生产/研发及一般业务渠道",
+      "url": "https://flexohub.com/index.php/about-us/"
+    },
+    {
+      "label": "四类成品胶带与公开业务入口，非失败油墨页替代",
+      "url": "https://flexohub.com/index.php/service/tapes-adhesives/"
+    },
+    {
+      "label": "Ghana独立国家代表点，非城市厂门",
+      "url": "https://www.geonames.org/2300660"
+    }
+  ]
+},
+"pacacol-sango-ota": {
+  "website": "https://pacacol.com/",
+  "contactPage": "https://pacacol.com/?page_id=1279",
+  "generalEmail": "info@pacacol.com",
+  "generalEmailEvidence": {
+    "company": "Pacacol Industries Limited (Excellence Inks)",
+    "value": "info@pacacol.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "公司原文直接公开一般业务邮箱",
+        "url": "https://pacacol.com/?page_id=1279",
+        "summary": "同域公司经营原文直接公布info@pacacol.com，公司主体和制造另有首方明文，仅一般业务渠道，不推个人/采购或送达有效性。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+234 708 926 8363",
+  "generalPhoneEvidence": {
+    "company": "Pacacol Industries Limited (Excellence Inks)",
+    "value": "+234 708 926 8363",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "公司原文直接公开一般业务电话",
+        "url": "https://pacacol.com/?page_id=1279",
+        "summary": "所选电话为直接公开的该公司业务入口，保留其公开格式；非已证WhatsApp、个人或采购负责人。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Corporate Head Office / Factory: Plot 5, Dayo Bello Street, Arinko, Sango Ota, Ogun State, Nigeria. Kano is a separate listed branch, not a new company. Map deliberately uses Nigeria country representative 10,8, not Sango Ota, Lagos, Kano or factory GPS.",
+  "sources": [
+    {
+      "label": "已存同日Home成品油墨及公司制造，原档离线复读",
+      "url": "https://pacacol.com/"
+    },
+    {
+      "label": "已存自有SangoOta总部/工厂及配方制造，原档离线复读",
+      "url": "https://pacacol.com/?page_id=8042"
+    },
+    {
+      "label": "当前公司业务邮箱、SangoOta与Kano不同入口",
+      "url": "https://pacacol.com/?page_id=1279"
+    },
+    {
+      "label": "Nigeria独立国家代表点，非城市厂门",
+      "url": "https://www.geonames.org/2328926"
+    }
+  ]
+},
 "fleetwood-paints-virginia": {
   "website": "https://www.fleetwood.ie/",
   "contactPage": "https://www.fleetwood.ie/our-story/",
@@ -49871,6 +50035,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"flexohub-djjg-accra",
+"pacacol-sango-ota",
 "fleetwood-paints-virginia",
 "cstm-envol-senegal",
 "aqua-paints-octagon-dhaka",

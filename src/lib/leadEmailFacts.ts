@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"flexohub-djjg-accra": "I noticed FlexoHub manufactures water-based flexographic inks and develops colour recipes in its own laboratory in Ghana.",
+"pacacol-sango-ota": "I noticed Pacacol manufactures Excellence flexographic inks for PP sacks, BOPP films and corrugated paper in Nigeria.",
 "fleetwood-paints-virginia": "I noticed Fleetwood manufactures F408 water-based acrylic primer undercoat for new or bare wood in Ireland.",
 "cstm-envol-senegal": "I noticed CSTM manufactures COLUMBIA and KAROFIX wood, neoprene and industrial adhesives locally in Senegal.",
 "aqua-paints-octagon-dhaka": "I noticed Aqua Paints manufactures epoxy topcoats for structural steel, machinery, equipment and tanks.",
