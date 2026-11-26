@@ -15614,11 +15614,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-25"
   },
+  {
+    "id": "pentagon-paints-birkirkara",
+    "company": "Coleiro Group / Pentagon Paints Ltd.",
+    "productId": "elo",
+    "country": "Malta",
+    "countryZh": "马耳他",
+    "city": "Birkirkara（总部/展厅目录示意；非工厂定位）",
+    "latitude": 35.89497628761615,
+    "longitude": 14.47418907397551,
+    "legacyCompanyDescription": "马耳他工业、汽车及木器涂料制造集团",
+    "signal": "Coleiro 集团旗下 Pentagon 在马耳他制造工业涂料，并列有 AP45 双组分环氧底漆及配套环氧面漆体系。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "官网工厂页明确 Pentagon Paints 属于 Coleiro 集团，承接原 Trimite Malta 的生产业务，制造汽车、工业和木器涂料；AP45 为双组分环氧底漆，配套 A45/A46 环氧面漆。所读工厂成品目录及集团业务导航还包括油漆配套、表面预处理、润滑油和设备经销，不能将这些业务省略或一律视为环氧植物油原料供应。实际所读范围未发现 ELO、ESBO、环氧化植物油或同类生物增塑添加剂对外供货，排除结论限于这些公开业务，并非全部配方、SDS 或最终股权审计。Coleiro、Pentagon、其分店和历史 Trimite Malta 运营名称作为一个账户；现有英国 Trimite Global 的历史原文另行核读，当前马耳他制造运营归属以 Coleiro 的明确说明为据，不仅凭 Trimite 品牌或同型号产品合并或拆分。PPG、Cromology、Jotun 等列示合作或经销品牌，不据此认定集团控制关系。公开业务邮箱和电话属于 Coleiro 一般入口，不冒充具名采购；地图使用独立目录披露的 Birkirkara 总部和展厅位置，不是工厂坐标。客户现用原料、ELO 采购、配方相容性与性能均未确认。"
+    },
+    "contact": {
+      "label": "Coleiro 官网一般业务邮箱及总部电话；非具名采购",
+      "email": "info@coleiro.com",
+      "phone": "+356 2148 3131",
+      "contactUrl": "https://coleiro.com/factory/"
+    },
+    "source": {
+      "label": "Coleiro / Pentagon 官方工厂、工业涂料和 AP45 环氧底漆目录",
+      "url": "https://coleiro.com/factory/"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pentagon-paints-birkirkara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sylac-inofita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ignite-paints-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "rakam-ras-al-khaimah": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16270,6 +16299,53 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pentagon-paints-birkirkara": {
+  "website": "https://coleiro.com/",
+  "contactPage": "https://coleiro.com/factory/",
+  "generalEmail": "info@coleiro.com",
+  "generalEmailEvidence": {
+    "company": "Coleiro Group / Pentagon Paints Ltd.",
+    "value": "info@coleiro.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Coleiro 官方工厂页总部业务联系栏",
+        "url": "https://coleiro.com/factory/",
+        "summary": "官网总部与展厅联系栏公开的邮箱字段对应 info@coleiro.com；独立企业目录明文一致。一般公司邮箱，不是具名采购邮箱，未测试投递。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+356 2148 3131",
+  "generalPhoneEvidence": {
+    "company": "Coleiro Group / Pentagon Paints Ltd.",
+    "value": "+356 2148 3131",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Coleiro 官网总部和展厅业务电话",
+        "url": "https://coleiro.com/factory/",
+        "summary": "官方 Factory 页脚总部栏明确 (+356) 2148 3131；仅保留首个完整号码，不把传真、分店或手机当 WhatsApp 或采购人电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Official head office and showroom: Msida Valley, B’Kara BKR 9023, Malta. Independent directory: Triq Il-wied Ta’ L-imsida, Head Office and Showroom, Birkirkara, BKR 9023. Map uses the directory-published office point (35.89497628761615, 14.47418907397551), approximate and not factory GPS or an independent survey.",
+  "sources": [
+    {
+      "label": "Coleiro/Pentagon 自主生产、工业涂料及 AP45 环氧底漆",
+      "url": "https://coleiro.com/factory/"
+    },
+    {
+      "label": "独立目录确认同集团制造业务、总部城市和地图位置",
+      "url": "https://www.findit.mt/en/directory/listings/2073/coleiro-general-supplies-ltd"
+    }
+  ]
+},
 "sylac-inofita": {
   "website": "https://sylac.gr/",
   "contactPage": "https://sylac.gr/company/history/",
@@ -49084,6 +49160,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pentagon-paints-birkirkara",
 "sylac-inofita",
 "ignite-paints-lagos",
 "rakam-ras-al-khaimah",
