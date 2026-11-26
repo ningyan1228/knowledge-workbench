@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"ropar-rubbchem-palghar": "I noticed Ropar Rubbchem manufactures Antirust Protective Lacquer for the exterior welded joints of metal cans.",
 "optima-chimie-bouskoura": "I noticed Optima Chimie manufactures METALPROTEC, a rust-inhibiting primer for ferrous metal protection.",
 "viostik-nicosia": "I noticed Viostik manufactures wood coatings and lists clear primers and parquet varnishes in its interior water-based furniture range.",
 "pentagon-paints-birkirkara": "I noticed Pentagon lists AP45, a two-pack epoxy primer for protective coating systems with polyamide- or amine-cured epoxy finishes.",

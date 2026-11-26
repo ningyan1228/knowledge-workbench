@@ -15698,11 +15698,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "ropar-rubbchem-palghar",
+    "company": "Ropar Rubbchem Products Pvt. Ltd.",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Palghar（官网厂址所在城市示意点，非厂门定位）",
+    "latitude": 19.69693,
+    "longitude": 72.76543,
+    "legacyCompanyDescription": "印度自主配方制造金属罐保护漆、油墨及特殊涂层",
+    "signal": "Ropar Rubbchem 自主配方制造金属罐涂层；Antirust Protective Lacquer 是用于金属罐外部焊缝防护的单组分溶剂型漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "官网About/Home明确RoparRubbchemProductsPvtLtd自主配方制造油墨、特殊涂层和金属罐漆，拥有实验室及Palghar工厂；About称配方原料采购自供应商，不等同已证采购ELO。Products同一Antirust段明确金属罐外焊缝用单组分溶剂防锈漆，不借其他产品拼应用。实际18项公开目录包含7特殊涂层/胶、4金属罐漆、7油墨，有限已读范围未见ELO、ESBO、环氧植物油及相应生物基增塑/改性原料外售；PU复合胶、溶剂及未披露树脂化学不自动等同所选ELO原料供应业务。未宣称全部SKU/TDS/SDS/成分、实时目录或最终股权已审计。四次历史native522行含一次同页锚点重复，只有3不同URL；第五次原HTML失败无字节计账并冻结Products，本轮0公司请求，累计5/rem1不因ELO重置。与最新main、根正式库、私有队列/排除表及域名/品牌/公司别名核对，原CPP私有同一RID晋级一ELO客户；CPP同款PP溶剂缺口仍未闭，不另拆厂/办公室/产品。官网info邮箱与公司总机是一般业务渠道，非具名采购或投递验证；电话不猜WhatsApp。公司明确厂在VevoorPalghar，办公室在Bhayander/Thane；地图采用GeoNames公开Palghar城市代表点19.69693/72.76543，非厂门GPS。另读Wikipedia含AI文字警告和不同坐标、Wikidata返回重写加跳转均保留且未作所选坐标依据；3地理读取计4单位。ELO仅按TDS涂料柔韧/树脂改性评估，不推现用ELO、采购需求、具体树脂、相容、固化、防腐或食品接触保证；原文ISO9001-2000及旧页脚不冒当前认证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱和总机；非具名采购",
+      "email": "info@roparrubbchem.com",
+      "phone": "+91 22 28142783",
+      "contactUrl": "https://roparrubbchem.com/about-us.php"
+    },
+    "source": {
+      "label": "Ropar Antirust Protective Lacquer 官方产品及自有配方制造原文",
+      "url": "https://roparrubbchem.com/products.php"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"ropar-rubbchem-palghar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "optima-chimie-bouskoura": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "viostik-nicosia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pentagon-paints-birkirkara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16357,6 +16386,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"ropar-rubbchem-palghar": {
+  "website": "https://roparrubbchem.com/",
+  "contactPage": "https://roparrubbchem.com/about-us.php",
+  "generalEmail": "info@roparrubbchem.com",
+  "generalEmailEvidence": {
+    "company": "Ropar Rubbchem Products Pvt. Ltd.",
+    "value": "info@roparrubbchem.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ropar官网一般业务邮箱",
+        "url": "https://roparrubbchem.com/about-us.php",
+        "summary": "About/Home/Products页脚均明确info@roparrubbchem.com，为公司一般入口，非具名采购或投递测试。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+91 22 28142783",
+  "generalPhoneEvidence": {
+    "company": "Ropar Rubbchem Products Pvt. Ltd.",
+    "value": "+91 22 28142783",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Ropar官网公司总机",
+        "url": "https://roparrubbchem.com/about-us.php",
+        "summary": "官网明示+91-22-28142783，仅规范空格；另有手机但不推WhatsApp或个人负责人。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Factory published by company: Plot No.13, Survey No.40, Shed No.2, Siddarth Industrial Estate, Nandore Road, Vevoor, Palghar 401404, Maharashtra, India. Office: Gala No.5A/6B, G Wing, M.I. Udyog Nagar, Bhayander (E), Dist. Thane 401105. Map uses GeoNames Palghar city representative coordinates (19.69693, 72.76543), not a factory geocode.",
+  "sources": [
+    {
+      "label": "自有制造、配方实验室及一般业务联系",
+      "url": "https://roparrubbchem.com/about-us.php"
+    },
+    {
+      "label": "18项产品目录及金属罐Antirust保护漆",
+      "url": "https://roparrubbchem.com/products.php"
+    },
+    {
+      "label": "自有工厂和三类下游成品业务",
+      "url": "https://roparrubbchem.com/index.php"
+    },
+    {
+      "label": "Palghar城市代表点，非厂门GPS",
+      "url": "https://www.geonames.org/1260730"
+    }
+  ]
+},
 "optima-chimie-bouskoura": {
   "website": "https://optima-peintures.ma/",
   "contactPage": "https://optima-peintures.ma/la-marque/presentation/",
@@ -49328,6 +49412,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"ropar-rubbchem-palghar",
 "optima-chimie-bouskoura",
 "viostik-nicosia",
 "pentagon-paints-birkirkara",
