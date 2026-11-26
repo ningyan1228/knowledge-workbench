@@ -15782,11 +15782,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "aqua-paints-octagon-dhaka",
+    "company": "Aqua Paints (Octagon Fibres & Chemicals Ltd.)",
+    "productId": "elo",
+    "country": "Bangladesh",
+    "countryZh": "孟加拉国",
+    "city": "Dhaka（总部所在城市示意点，非 Tongi 工厂定位）",
+    "latitude": 23.7104,
+    "longitude": 90.40744,
+    "legacyCompanyDescription": "孟加拉国自主制造工业防护涂料及树脂的企业，Aqua为Octagon旗下品牌",
+    "signal": "Aqua Paints／Octagon 自主制造工业涂料；其环氧面漆为聚酰胺固化体系，用于结构钢、机械设备及储罐。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "五份完整首方原文Home416/Industrial32/实际环氧面漆详情42/WhyAqua35/About37共562行。About明确OctagonFibresandChemicals即Aqua涂料及特种化学品制造主体、2001年品牌及外购/自产原料；Why明确自有配方测试，产品详情同款明确polyamide-cured epoxy与结构钢/设备/储罐防护，不把water-resistant写成水性，也不把该面漆写为底漆。用户ELOTDS涂料/树脂改性用途作潜在评估，不推采购、现用ELO、固化相容或防腐提升。必须保留实际自产外售丙烯酸树脂及自制油性树脂业务，不称只有成品漆；这些树脂本身不等于ELO/ESBO/环氧植物油或相应生物基增塑改性油。五份实际经营原文含9主要成品名称及旧版业务页另2名称，未见所选环氧油类输入外售；仅有限经营排除，不审计未读AquaRefinery/隐藏SKU/SDS/全部股权，油性树脂化学不猜。OurFactory导航实际返回WhyAqua旧业务正文而非工厂页，URL/版本差异保留，不将链接名当工厂核验。Home当前列OctagonTongi工厂与Dhaka两总部，About披露ElitePaints家族传承/战略分离及EliteSteel/Garments/AquaRefinery家族导航，一个保守集团账户，不拆主体工厂品牌；未把客户logo当关联。最新main/根正式/私有/排除/队列及全史域名/法名/家族名去重仅原RID晋级，Naturelite印度的Elite子串不是孟加拉Elite，肯尼亚Octagon不同主体不强并；队列另两印度Aqua同名项为Maharashtra会员A213及Mysuru/aquapaintsindia.com，国家/域名/首方Octagon与Elite家族身份不同，未见同集团证据，原队列不改、不借其额度或来源。Home明确partnerships@aquapaints.com与一般电话，精选公司一般邮箱及原格式+88 02 41082173，不冒具名采购；公开WA锚点无完整目标不从电话猜链接。地图复用同日已存GeoNamesDhaka23.71040/90.40744城点代表总部所在城市，非Tongi工厂GPS，本轮0新城市请求。公司旧2+新3=5/rem1不重置，范围3/6余3，0失败/跳转/GET/PDF/脚本/外联；原NLW水性木器应用缺口保持。ISO/项目客户/历史/耐化学等客户宣传不当独立审计或我方保证。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱和公开电话；非具名采购",
+      "email": "partnerships@aquapaints.com",
+      "phone": "+88 02 41082173",
+      "contactUrl": "https://www.aquapaints.com/"
+    },
+    "source": {
+      "label": "Aqua官方环氧面漆产品与自有配方制造原文",
+      "url": "https://www.aquapaints.com/product-details/aqua-epoxy-enamel-topcoat"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"aqua-paints-octagon-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "nisan-paint-inks-keraniganj": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "swan-coatings-shah-alam": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "ropar-rubbchem-palghar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16444,6 +16473,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"aqua-paints-octagon-dhaka": {
+  "website": "https://www.aquapaints.com/",
+  "contactPage": "https://www.aquapaints.com/",
+  "generalEmail": "partnerships@aquapaints.com",
+  "generalEmailEvidence": {
+    "company": "Aqua Paints (Octagon Fibres & Chemicals Ltd.)",
+    "value": "partnerships@aquapaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Aqua官网公开公司业务邮箱",
+        "url": "https://www.aquapaints.com/",
+        "summary": "当前Home的ConnectWithAqua与AquaSouthHeadQuarter均明确该邮箱，About明确Octagon制造主体；partnerships保留为一般公司业务入口，不推个人、采购职能或送达有效性。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+88 02 41082173",
+  "generalPhoneEvidence": {
+    "company": "Aqua Paints (Octagon Fibres & Chemicals Ltd.)",
+    "value": "+88 02 41082173",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Aqua官网公开一般业务电话",
+        "url": "https://www.aquapaints.com/",
+        "summary": "Home Call及EliteNorthHeadQuarter均列+88 02 41082173，本数据保留原格式，不添加手机/WhatsApp身份或猜另一条号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Aqua headquarters: South Avenue Tower (2nd Floor), House 50, Road 3, 7 Gulshan Avenue, Gulshan-1, Dhaka-1212; Elite North headquarters: BTI Landmark (Level 10), 16 Gulshan Avenue, Dhaka-1212, Bangladesh. Published factory: Octagon Fibres & Chemicals Ltd., 128 Himerdighi, Tongi Industrial Area, Tongi, Gazipur-1710. Map uses Dhaka city representative coordinates (23.71040, 90.40744), not a factory geocode or verified Tongi factory entrance.",
+  "sources": [
+    {
+      "label": "当前公司业务渠道、总部和工厂地址",
+      "url": "https://www.aquapaints.com/"
+    },
+    {
+      "label": "环氧面漆具体产品与基材",
+      "url": "https://www.aquapaints.com/product-details/aqua-epoxy-enamel-topcoat"
+    },
+    {
+      "label": "配方测试与丙烯酸树脂生产外售，实际非工厂页",
+      "url": "https://www.aquapaints.com/why"
+    },
+    {
+      "label": "Octagon/Aqua制造主体及油性树脂业务",
+      "url": "https://www.aquapaints.com/about-us"
+    },
+    {
+      "label": "同日已存达卡城市代表点，非工厂定位",
+      "url": "https://www.geonames.org/1185241"
+    }
+  ]
+},
 "nisan-paint-inks-keraniganj": {
   "website": "https://www.nisaninks.com/",
   "contactPage": "https://www.nisaninks.com/contact",
@@ -49580,6 +49668,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"aqua-paints-octagon-dhaka",
 "nisan-paint-inks-keraniganj",
 "swan-coatings-shah-alam",
 "ropar-rubbchem-palghar",
