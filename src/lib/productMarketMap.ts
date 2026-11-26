@@ -15642,11 +15642,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "viostik-nicosia",
+    "company": "Viostik Chemicals Ltd. / National Paints Holding",
+    "productId": "nl-w1201",
+    "country": "Cyprus",
+    "countryZh": "塞浦路斯",
+    "city": "Nicosia（官网业务邮政城市；城市示意，非厂门）",
+    "latitude": 35.167,
+    "longitude": 33.367,
+    "legacyCompanyDescription": "塞浦路斯水性家具木器涂料自主制造商；National Paints Holding成员",
+    "signal": "Viostik 在塞浦路斯自主制造木器涂料；官网室内水性家具系列包括透明底漆、面漆和木地板清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "公司三次native原文Home88/WoodFinishes154/Adhesives85行，共327行；0+3=3/rem3，另Cyprus地理1，NLW范围4/6保留2。无失败/验证墙/披露跳转/改写/原GET/PDF/远程JS/重试。Home明确VIOSTIKCHEMICALSLTD自主制造木器涂料与胶黏剂及研发，木器目录同一InteriorWater-basedforfurniture标题下直接列ClearPrimers/ClearFinishes/ParquetVarnishes，户外水性另有清色/色漆表底涂；同一水性木器家族用途明确，不拼接独立类别、不冒具体SKU/TDS或已知树脂。1975创办为官网历史，意大利许可技术方未具名，不猜品牌/母公司或2026新厂。目录含NC/PU/UV/聚酯成品、PU配套固化剂、IMPA木器填料/稀释剂/清洗剂/泛称Additives/脱漆剂；泛additives未披露化学，不能宣称全站所有助剂不含PO，也不能凭泛词自动判NLW同行。胶黏剂页承认自主制造并代理NationalStarchandChemical/ImpaStuco/Norton；木工PVA/丙烯酸接触胶、National热熔封边胶、管材/纸品/泡沫/地板/鞋用成品粘接剂不自动当聚烯烃分散体原料。实际两主营家族及公司原文有限范围未见PO/CPO聚烯烃分散体或同类原料级附着促进输入供货，同行排除限此，不冒所有SKU/SDS/全集团经营/最终股权审计。三页都明确MemberofNationalPaintsHolding，按一个集团账户去重，不拆木器/胶/品牌/工厂；意大利技术许可和NationalStarch代理不等于已证股权，NationalStarch不因共享National字样当NationalPaints，Sayegh只作历史别名排查未由当前原文证实控制。KCCInternationalPaints旧HTML只是子串误命中，非本组旧源。公开info@viostik.com.cy/+35722425374为公司一般业务入口，不冒具名采购、投递或当前需求；+35722498195是传真，不推WA。Home联系表单只读，未提交。官网地址StrovolosIndustrialEstate/POBox22446/1521NicosiaCyprus，地图只用独立Cyprus文章L431–432明确标为首都Nicosia的35.167/33.367坐标，不用L417国家中心35/33，不凭电话/邮编或Google链接猜厂门。地理原读仅0–493共494/1426行，不冒全文，L490WestAsia支持新增Cyprus亚洲映射。NL-W1201仅用户TDS聚烯烃分散体木材底涂/附着促进潜在评估，不推现用材料、相容、性能增幅或采购，PP原始效果不套木材。共享发送状态未知，无就绪稿/复制导出/历史改写，无邮件表单消息CRM。"
+    },
+    "contact": {
+      "label": "官网公司一般业务邮箱和电话；非具名采购",
+      "email": "info@viostik.com.cy",
+      "phone": "+357 22425374",
+      "contactUrl": "https://www.viostik.com.cy/"
+    },
+    "source": {
+      "label": "Viostik 官方水性家具木器涂料目录及公司制造原文",
+      "url": "https://www.viostik.com.cy/products/wood-finishes"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"viostik-nicosia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pentagon-paints-birkirkara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sylac-inofita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "ignite-paints-lagos": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16299,6 +16328,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"viostik-nicosia": {
+  "website": "https://www.viostik.com.cy/",
+  "contactPage": "https://www.viostik.com.cy/",
+  "generalEmail": "info@viostik.com.cy",
+  "generalEmailEvidence": {
+    "company": "Viostik Chemicals Ltd. / National Paints Holding",
+    "value": "info@viostik.com.cy",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Viostik官网公司一般业务邮箱",
+        "url": "https://www.viostik.com.cy/",
+        "summary": "ContactUs明确ViostikChemicalsLtd./info@viostik.com.cy，与公司地址电话并列，L36/L56重复显示；非具名买家和投递测试。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+357 22425374",
+  "generalPhoneEvidence": {
+    "company": "Viostik Chemicals Ltd. / National Paints Holding",
+    "value": "+357 22425374",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Viostik官网公司业务电话",
+        "url": "https://www.viostik.com.cy/",
+        "summary": "Telephone明确+35722425374，L28/L48一致；传真22498195不作电话，无实际WhatsApphref不猜。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-published business address: Strovolos Industrial Estate; P.O. Box 22446, 1521 Nicosia, Cyprus. Published Nicosia capital-city representative coordinates (35.167, 33.367), not surveyed factory GPS or the Strovolos facility entrance.",
+  "sources": [
+    {
+      "label": "自主制造研发、National Paints Holding成员与公开业务联系",
+      "url": "https://www.viostik.com.cy/"
+    },
+    {
+      "label": "同一室内水性家具木器系列底漆和清漆",
+      "url": "https://www.viostik.com.cy/products/wood-finishes"
+    },
+    {
+      "label": "胶黏剂制造和代理成品业务边界",
+      "url": "https://www.viostik.com.cy/products/adhesives"
+    }
+  ]
+},
 "pentagon-paints-birkirkara": {
   "website": "https://coleiro.com/",
   "contactPage": "https://coleiro.com/factory/",
@@ -49160,6 +49240,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"viostik-nicosia",
 "pentagon-paints-birkirkara",
 "sylac-inofita",
 "ignite-paints-lagos",

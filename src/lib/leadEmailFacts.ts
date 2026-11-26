@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"viostik-nicosia": "I noticed Viostik manufactures wood coatings and lists clear primers and parquet varnishes in its interior water-based furniture range.",
 "pentagon-paints-birkirkara": "I noticed Pentagon lists AP45, a two-pack epoxy primer for protective coating systems with polyamide- or amine-cured epoxy finishes.",
 "sylac-inofita": "I noticed SYLAC manufactures P890/xx Sport+, a two-component waterborne polyurethane varnish for interior parquet wood floors.",
 "ignite-paints-lagos": "I noticed Ignite Paints manufactures Epoxyl, a two-part epoxy coating for steel structures, tanks and pipework.",
