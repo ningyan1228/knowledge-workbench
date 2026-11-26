@@ -15810,11 +15810,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "cstm-envol-senegal",
+    "company": "CSTM / Envol Afrique (Senegal)",
+    "productId": "elo",
+    "country": "Senegal",
+    "countryZh": "塞内加尔",
+    "city": "Senegal（国家示意点，非城市或工厂定位）",
+    "latitude": 14.5,
+    "longitude": -14.25,
+    "legacyCompanyDescription": "塞内加尔本地制造木工胶、氯丁胶及工业胶的企业，属Envol Afrique关联账户",
+    "signal": "CSTM 在塞内加尔通过自有化学部门制造 COLUMBIA、KAROFIX 品牌木工胶、氯丁胶及工业胶。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "当前QuiSommesNous164行与Catalogues106行明确CSTM化学部门本地制造COLUMBIA/KAROFIX木工胶、氯丁胶及纸箱/海报/装订/标签工业胶，Contact87行确认公司业务邮箱和电话；旧A-propos194行保留真实历史与主题占位。按ELOTDS胶黏剂用途作环氧功能、柔韧性及黏结评估，非已用ELO、配方相容、固化/性能保证或采购确认；不推木工胶水性，原NLW具体水性基材缺口保留。首方历史2004Envol收购、2008ISENCO胶业务并入、2010吸收SOSEMBAL及2018CSTMPeintures子公司建筑漆制造按一保守集团账户，不拆品牌/工厂；历史起源Pechiney不等于当前股权，未做终极股权审计。Hempel/GRACO明确成品经销，MAUVILAC/PAINTOR建筑漆由子公司生产销售，不把经销海事防腐漆当自制。当前业务总览覆盖铝炊具、金属屋面、PP包装袋、胶黏剂及涂料；四份成功经营原文中未见ELO/ESBO/环氧植物油或同类生物基增塑改性油外售，限实际已读范围，不声称所有SKU/SDS/原料配方穷尽。Catalogues两条炊具/结构宣传册未下载，具体胶黏剂目录旧Timeout页没有恢复，不以链接当已读。旧info@email.com及loremipsum等主题占位不作联系人/认证。当前Contact公开serviceclients@cstm.sn及+221338595200，邮箱为一般客户服务业务入口，非具名采购，不猜WhatsApp。地址仅Km4.5BCCD/rue6ZI，未独立核城市/厂门；地图采用GeoNames塞内加尔国家代表14.5/-14.25，非Dakar或工厂定位。旧2含1Timeout失败＋本轮3成功=5/rem1，公司失败URI持续冻结；独立国家原读1另记范围4/6余2，无重试/跳转/GET/PDF/脚本/外联。"
+    },
+    "contact": {
+      "label": "官网一般客户服务邮箱和公开电话；非具名采购",
+      "email": "serviceclients@cstm.sn",
+      "phone": "+221 33 859 52 00",
+      "contactUrl": "https://cstm.sn/contact/"
+    },
+    "source": {
+      "label": "CSTM官方公司业务与化学部门自主制造胶黏剂原文",
+      "url": "https://cstm.sn/qui-sommes-nous/"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"cstm-envol-senegal": {"targetCompanyTypeId":"adhesive-manufacturer","applicationLayer":"tds-verified","applicationId":"adhesives"},
 "aqua-paints-octagon-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "nisan-paint-inks-keraniganj": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "swan-coatings-shah-alam": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -16473,6 +16502,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"cstm-envol-senegal": {
+  "website": "https://cstm.sn/",
+  "contactPage": "https://cstm.sn/contact/",
+  "generalEmail": "serviceclients@cstm.sn",
+  "generalEmailEvidence": {
+    "company": "CSTM / Envol Afrique (Senegal)",
+    "value": "serviceclients@cstm.sn",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "CSTM官网公开一般客户服务邮箱",
+        "url": "https://cstm.sn/contact/",
+        "summary": "Contact正文及页脚均明确公开serviceclients@cstm.sn；同域当前公司介绍确认CSTM制造主体，仅作一般公司业务入口，不推个人或采购职责、送达有效性。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+221 33 859 52 00",
+  "generalPhoneEvidence": {
+    "company": "CSTM / Envol Afrique (Senegal)",
+    "value": "+221 33 859 52 00",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "CSTM官网公开一般业务电话",
+        "url": "https://cstm.sn/contact/",
+        "summary": "Contact正文及工厂页脚重复同一+221338595200，保留其公开格式；电话不是已证WhatsApp或具名采购直线。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published factory/business address: Km 4,5 BCCD rue 6 ZI, Senegal. City and factory entrance not independently verified. Map deliberately uses GeoNames Republic of Senegal country representative coordinates 14.5,-14.25; not a city location, address geocode or factory GPS.",
+  "sources": [
+    {
+      "label": "当前胶黏剂品牌、本地自主制造与业务范围",
+      "url": "https://cstm.sn/qui-sommes-nous/"
+    },
+    {
+      "label": "公司业务邮箱、电话及公开地址",
+      "url": "https://cstm.sn/contact/"
+    },
+    {
+      "label": "化学部门自制胶与建筑漆子公司归属；链接宣传册未下载",
+      "url": "https://cstm.sn/catalogues/"
+    },
+    {
+      "label": "历史并购与化学部门；含主题占位不采信",
+      "url": "https://cstm.sn/a-propos/"
+    },
+    {
+      "label": "塞内加尔国家代表点，非城市或厂门",
+      "url": "https://www.geonames.org/2245662"
+    }
+  ]
+},
 "aqua-paints-octagon-dhaka": {
   "website": "https://www.aquapaints.com/",
   "contactPage": "https://www.aquapaints.com/",
@@ -49668,6 +49756,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"cstm-envol-senegal",
 "aqua-paints-octagon-dhaka",
 "nisan-paint-inks-keraniganj",
 "swan-coatings-shah-alam",

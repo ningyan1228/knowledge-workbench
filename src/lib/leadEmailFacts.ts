@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"cstm-envol-senegal": "I noticed CSTM manufactures COLUMBIA and KAROFIX wood, neoprene and industrial adhesives locally in Senegal.",
 "aqua-paints-octagon-dhaka": "I noticed Aqua Paints manufactures epoxy topcoats for structural steel, machinery, equipment and tanks.",
 "nisan-paint-inks-keraniganj": "I noticed Nisan Paint & Inks manufactures solvent-based flexographic inks for polypropylene woven bags.",
 "swan-coatings-shah-alam": "I noticed Swan Coatings manufactures water-based flexographic inks and overprint varnishes for packaging.",
