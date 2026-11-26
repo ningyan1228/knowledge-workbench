@@ -3,6 +3,8 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"fenwick-tilbrook-norfolk": "I noticed Fenwick & Tilbrook formulates and makes water-based paints to order, including Interior Eggshell for woodwork and cabinetry.",
+"britannia-paints-middlewich": "I noticed Britannia develops its own formulations and manufactures roof, wall and floor coatings at its Cheshire factory.",
 "lakeland-paints-heysham": "I noticed Lakeland manufactures water-based paints in the UK, including its Interior/Exterior wood undercoat.",
 "fine-chemicals-nigeria-enpee": "I noticed Fine Chemicals manufactures printing inks for flexible packaging, tin printing, screen printing and offset printing.",
 "sren-chemicals-nigeria": "I noticed Sren manufactures flexographic and gravure inks for plastic bags and paper-based packaging in Nigeria.",

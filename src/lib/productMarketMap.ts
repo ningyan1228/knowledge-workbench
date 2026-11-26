@@ -16034,11 +16034,68 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "United Kingdom（国家示意点，非城市或工厂定位）",
+    "latitude": 54.75844,
+    "longitude": -2.69531,
+    "fit": "可开发候选",
+    "checkedAt": "2026-11-26",
+    "id": "britannia-paints-middlewich",
+    "company": "Britannia Paints Ltd",
+    "legacyCompanyDescription": "英国自有配方及Cheshire工厂屋顶、墙面和地坪涂料生产商",
+    "signal": "Britannia 在Cheshire自有工厂开发原始配方并制造屋顶、墙面和地坪涂料，同时提供水性及溶剂型自有配方代工。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "两份实际原文PrivateLabelling290行及Home315行共605行：Britannia自有Cheshire工厂、厂内化学人员、原始配方开发及英国水性/溶剂型屋顶墙面地坪成品涂料制造明确。代工服务包含原料采购，但不是已证对外销售ELO/ESBO/环氧植物油/生物基增塑剂；通用颜料分散体为不同材料类别，不因原料字样自动判ELO同行。返回导航所列为成品屋顶/墙面/地坪/运动场涂料、底漆/胶黏剂及配套品。所选输入排除限这两份实际经营原文和导航；未读取每个SKU、SDS或终极工商资料，不声称全产品无该成分。Home称family-run并明确Johnstone’s为formerly creators and owners历史关系，不能将当前PPG/Johnstone’s资产或Mipa/HMG推为Britannia当前母公司，也不拆历史品牌新户。一个现有Britannia品牌和官网法名账户，未在正式/根未发/私有表/排除/队列及全历史原档发现同户。Toll页面直接公开一般业务邮箱enquiries@britanniapaints.co.uk、TechnicalAdviceSales电话01606834015及业务地址Unit7/8KingStreetTradingEstateMiddlewichCheshireCW109LF。未核具名采购或WhatsApp。ELO按涂料/树脂改性TDS方向提潜在材料评估，不推客户现用环氧植物油或确有采购、与水性或溶剂型体系相容、保证防水/寿命/性能；不移植厂方认证。地图复用已核英国国家代表点54.75844/-2.69531，非Middlewich城市或厂门。公司2/rem4，当前英国范围与Fenwick合计6/6。"
+    },
+    "contact": {
+      "label": "公开一般业务邮箱及技术咨询/销售电话",
+      "email": "enquiries@britanniapaints.co.uk",
+      "phone": "01606 834015",
+      "contactUrl": "https://www.britanniapaints.co.uk/pages/toll-manufacturing"
+    },
+    "source": {
+      "label": "Britannia自有工厂、原始配方及水性/溶剂型成品制造",
+      "url": "https://www.britanniapaints.co.uk/pages/toll-manufacturing"
+    }
+  },
+  {
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "United Kingdom（国家示意点，非城市或工厂定位）",
+    "latitude": 54.75844,
+    "longitude": -2.69531,
+    "fit": "可开发候选",
+    "checkedAt": "2026-11-26",
+    "id": "fenwick-tilbrook-norfolk",
+    "company": "Fenwick & Tilbrook (Fenwick and Tilbrook Limited)",
+    "legacyCompanyDescription": "英国家族经营、自有配方并按订单制造水性装饰与木器涂料的企业",
+    "signal": "Fenwick & Tilbrook 自有配方并逐罐按单制造水性涂料，包括用于木器及橱柜的Interior Eggshell。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "四次请求共4/rem2，其中十周年文章实际401且providerIsErrorfalse，保存失败并冻结原URI，不重试/镜像/换协议/GET或脚本恢复。实际About280行、FAQ594/607行、Contact277行共1151行；FAQ末尾13行未返回，不冒整页607行完整读取，但制造配方/应用/业务联系核心段完整。About家族经营及2018恢复制造、FAQ明确按专家知识自有配方且每罐freshmade toorder、保留颜色formulation并可reformulate，闭合自身下游涂料配方/制造，不是纯经销推定。实际水性Eggshell木器/橱柜、PureMatt墙漆和Masonry成品用途明确；植物或自然颜料/原料为自身配方投入，未见对外销售ELO/ESBO/环氧植物油/生物基增塑剂，排除限三份实际经营原文和所见导航，不冒未读TDS/SDS及全SKU审计。多名设计师Partners合作范围不当已证母子集团；FenwickandTilbrookLimited、Fenwick&Tilbrook品牌、10271851按一账户，不拆设计系列。Contact真实产品咨询表单为可用非电话业务入口。邮箱仅显示[email protected]，本轮未解码、未补猜邮箱，不进入批量邮件名单；+44(0)1362684125为一般公司电话，非WA。ChurchFarmAttlebridge为公开业务地址，Cawston注册地址另列，不冒同一地址或精确工厂定位。ELO只按涂料/树脂改性TDS讨论环氧功能/柔韧潜在评估，不声称油性添加剂已适配其水性体系或客户采购、不移植环保/抗菌/VOC/耐久/认证为我方承诺。地图复用英国国家代表坐标，非Norfolk或工厂GPS。"
+    },
+    "contact": {
+      "label": "官网产品咨询表单及一般电话；邮箱被保护未核验",
+      "phone": "+44 (0)1362 684125",
+      "contactUrl": "https://www.fenwickandtilbrook.com/contact/"
+    },
+    "source": {
+      "label": "Fenwick自有配方、按单制造及水性成品FAQ原文",
+      "url": "https://www.fenwickandtilbrook.com/faqs/"
+    }
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"fenwick-tilbrook-norfolk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
+"britannia-paints-middlewich": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "lakeland-paints-heysham": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "fine-chemicals-nigeria-enpee": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "sren-chemicals-nigeria": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -16705,6 +16762,97 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"fenwick-tilbrook-norfolk": {
+  "website": "https://www.fenwickandtilbrook.com/",
+  "contactPage": "https://www.fenwickandtilbrook.com/contact/",
+  "generalPhone": "+44 (0)1362 684125",
+  "generalPhoneEvidence": {
+    "company": "Fenwick & Tilbrook (Fenwick and Tilbrook Limited)",
+    "value": "+44 (0)1362 684125",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Fenwick官网公开一般公司电话",
+        "url": "https://www.fenwickandtilbrook.com/contact/",
+        "summary": "实际Contact公开公司电话；未公开WhatsApp精确入口，不作为WA。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business address: Church Farm, Old Fakenham Road, Attlebridge, Norwich, Norfolk NR9 5ST, United Kingdom. Separately published registered office: 12A High Street, Cawston, Norwich NR10 4AA. Neither is an independently geocoded factory gate. Map uses cached GeoNames UK country representative coordinates 54.75844,-2.69531, not Norfolk city or factory GPS.",
+  "sources": [
+    {
+      "label": "当前家族经营、品牌及法名/公开注册号10271851",
+      "url": "https://www.fenwickandtilbrook.com/about-us/"
+    },
+    {
+      "label": "自身配方、逐罐制造及水性Eggshell/墙面涂料用途",
+      "url": "https://www.fenwickandtilbrook.com/faqs/"
+    },
+    {
+      "label": "实际产品咨询表单与一般电话，保护邮箱不猜测",
+      "url": "https://www.fenwickandtilbrook.com/contact/"
+    },
+    {
+      "label": "已核英国国家代表点，非城市厂门",
+      "url": "https://www.geonames.org/2635167"
+    }
+  ]
+},
+"britannia-paints-middlewich": {
+  "website": "https://www.britanniapaints.co.uk/",
+  "contactPage": "https://www.britanniapaints.co.uk/pages/toll-manufacturing",
+  "generalEmail": "enquiries@britanniapaints.co.uk",
+  "generalEmailEvidence": {
+    "company": "Britannia Paints Ltd",
+    "value": "enquiries@britanniapaints.co.uk",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Britannia公开业务邮箱",
+        "url": "https://www.britanniapaints.co.uk/pages/toll-manufacturing",
+        "summary": "PrivateLabelling页面直接公开公司一般业务邮箱，不冒具名采购或研发部门。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "01606 834015",
+  "generalPhoneEvidence": {
+    "company": "Britannia Paints Ltd",
+    "value": "01606 834015",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Britannia公开TechnicalAdviceSales电话",
+        "url": "https://www.britanniapaints.co.uk/pages/toll-manufacturing",
+        "summary": "按实际英国本地格式保留一般技术咨询及销售电话，非个人采购电话或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business address: Unit 7/8 King Street Trading Estate, Middlewich, Cheshire CW10 9LF, United Kingdom. Own manufacturing in Cheshire is stated separately. Map uses cached GeoNames UK country representative coordinates 54.75844,-2.69531; not a Middlewich city or factory-gate geocode.",
+  "sources": [
+    {
+      "label": "自有原始配方/Cheshire工厂及当前业务联系",
+      "url": "https://www.britanniapaints.co.uk/pages/toll-manufacturing"
+    },
+    {
+      "label": "当前家族经营及屋顶墙面地坪涂料，Johnstone’s为历史关系",
+      "url": "https://www.britanniapaints.co.uk/"
+    },
+    {
+      "label": "已核英国国家代表点，非城市厂门",
+      "url": "https://www.geonames.org/2635167"
+    }
+  ]
+},
 "lakeland-paints-heysham": {
   "website": "https://www.lakelandpaints.co.uk/",
   "contactPage": "https://www.lakelandpaints.co.uk/contacts",
@@ -50395,6 +50543,8 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"fenwick-tilbrook-norfolk",
+"britannia-paints-middlewich",
 "lakeland-paints-heysham",
 "fine-chemicals-nigeria-enpee",
 "sren-chemicals-nigeria",
