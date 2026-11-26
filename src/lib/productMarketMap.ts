@@ -15922,11 +15922,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "colourtrend-general-paints-celbridge",
+    "company": "Colourtrend (General Paints Group)",
+    "productId": "nl-w1201",
+    "country": "Ireland",
+    "countryZh": "爱尔兰",
+    "city": "Ireland（国家示意点，非 Celbridge 城市或工厂定位）",
+    "latitude": 53,
+    "longitude": -8,
+    "legacyCompanyDescription": "爱尔兰自主配方制造水性木器与装饰涂料的家族集团",
+    "signal": "Colourtrend 自主配方制造涂料；其 Waterbased Satin 为水性醇酸体系，明确用于室内外木材表面。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "五份完整首方原文Satin250/About261/GPGAbout180/Professionals279/GPGBrands97共1067行。Satin同款明确water-thinnable、water-based alkyd resin及interior/exterior wood，不能因集团纯丙烯酸历史把它改成丙烯酸产品；自身制造设施和化学团队配方有About明文，非只转售品牌。GPG原文明确爱尔兰OConnor家族独立经营、旗下Colourtrend和Curator两个装饰漆品牌及Cove&Co零售体系，一组一户；其门店售LittleGreene/Farrow&Ball/Dulux不等持有这些集团，英国美国荷兰市场及七门店不拆新增。五份实际经营原文及全部返回导航所见为成品装饰漆、颜色样本、刷具滚筒及零售服务，未见外售水性聚烯烃乳液、CPO/PO分散体或所选原料附着促进剂，排除限该已读范围，未称全部颜色/SKU/TDS/SDS、未读industrial bases或终极工商股权审计。GUILD CPO为协会图像文字，不是氯化聚烯烃原料产品。NL-W1201按用户TDS的聚烯烃分散体及木材底涂/附着促进方向提出潜在评估，不承诺可直接加入客户醇酸体系、相容、性能提升、替换、采购或现用材料。hello@colourtrend.ie和+35316288224在产品/公司页脚直接公开，均一般业务入口；GPG另有info@generalpaints.ie但不冒技术或采购部门。MichelleLee虽在GPGAbout公开为HeadOfTechnical，无直接公开邮箱，未猜邮箱或把通用邮箱挂名给个人；不造WhatsApp/采购人。地址仅HeadOffice MaynoothRoad Celbridge Kildare W23X7R8，不冒厂门定位；离线复读Fleetwood轮已存GeoNames爱尔兰53/-8国家代表坐标，0新地理网络，非Celbridge城市或工厂GPS。公司5/rem1，范围5/6余1，不为耗满补抓；没有失败/跳转/GET/PDF/JS/API/外联。"
+    },
+    "contact": {
+      "label": "公开一般业务邮箱和电话；未核具名采购或技术部门邮箱",
+      "email": "hello@colourtrend.ie",
+      "phone": "+353 1 628 8224",
+      "contactUrl": "https://colourtrend.ie/pages/about"
+    },
+    "source": {
+      "label": "Colourtrend官方Waterbased Satin水性木器漆及GPG自主制造原文",
+      "url": "https://colourtrend.ie/pages/satin"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"colourtrend-general-paints-celbridge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "flexohub-djjg-accra": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "pacacol-sango-ota": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "fleetwood-paints-virginia": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16589,6 +16618,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"colourtrend-general-paints-celbridge": {
+  "website": "https://colourtrend.ie/",
+  "contactPage": "https://colourtrend.ie/pages/about",
+  "generalEmail": "hello@colourtrend.ie",
+  "generalEmailEvidence": {
+    "company": "Colourtrend (General Paints Group)",
+    "value": "hello@colourtrend.ie",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Colourtrend官网同产品公开一般业务邮箱",
+        "url": "https://colourtrend.ie/pages/satin",
+        "summary": "WaterbasedSatin页脚Contact直接列hello@colourtrend.ie，About和Professionals再次公开，同属Colourtrend业务入口，非具名采购或技术部门邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+353 1 628 8224",
+  "generalPhoneEvidence": {
+    "company": "Colourtrend (General Paints Group)",
+    "value": "+353 1 628 8224",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Colourtrend官方产品与公司公开业务电话",
+        "url": "https://colourtrend.ie/pages/satin",
+        "summary": "Satin/About/Professionals页脚直接列+35316288224，GPGAbout/Brands同号码与总部地址一致，为一般业务电话，不当WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published Head Office: Maynooth Road, Celbridge, Kildare, W23 X7R8, Ireland. This is the stated head office, not independently established factory-gate GPS. Map uses cached GeoNames Ireland country representative coordinates 53,-8, not a Celbridge city geocode or factory location.",
+  "sources": [
+    {
+      "label": "WaterbasedSatin同款明确水性醇酸及室内外木材用途",
+      "url": "https://colourtrend.ie/pages/satin"
+    },
+    {
+      "label": "自身化学团队配方、制造设施及爱尔兰家族经营",
+      "url": "https://colourtrend.ie/pages/about"
+    },
+    {
+      "label": "GeneralPaintsGroup独立经营及Colourtrend/Curator集团关系",
+      "url": "https://generalpaintsgroup.com/about-us/"
+    },
+    {
+      "label": "Professionals及实际公开一般联系入口；未读TDS/SDS",
+      "url": "https://colourtrend.ie/pages/professionals"
+    },
+    {
+      "label": "两成品漆品牌与Cove&Co零售边界",
+      "url": "https://generalpaintsgroup.com/brands/"
+    },
+    {
+      "label": "离线复用爱尔兰国家代表坐标，非Celbridge或厂门",
+      "url": "https://www.geonames.org/2963597"
+    }
+  ]
+},
 "flexohub-djjg-accra": {
   "website": "https://flexohub.com/",
   "contactPage": "https://flexohub.com/index.php/about-us/",
@@ -50035,6 +50127,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"colourtrend-general-paints-celbridge",
 "flexohub-djjg-accra",
 "pacacol-sango-ota",
 "fleetwood-paints-virginia",
