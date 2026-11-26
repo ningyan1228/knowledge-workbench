@@ -15670,11 +15670,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "optima-chimie-bouskoura",
+    "company": "OPTIMA CHIMIE S.A. / Optima Peintures",
+    "productId": "elo",
+    "country": "Morocco",
+    "countryZh": "摩洛哥",
+    "city": "Casablanca（官网业务地址城市；城市示意，非 Bouskoura 厂门）",
+    "latitude": 33.6,
+    "longitude": -7.633,
+    "legacyCompanyDescription": "摩洛哥自有工厂制造铁金属防锈底漆及成品涂料",
+    "signal": "Optima Chimie 在自有工厂制造涂料；METALPROTEC 是用于铁金属防护的合成树脂防锈底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "官网公司原文明确OPTIMACHIMIE股份公司自主制造涂料及OuladSalahBouskoura自有工厂；METALPROTEC同款正文明确铁金属防锈底漆、合成甘油邻苯二甲酸树脂及WhiteSpirit稀释，不用普通制漆行业标签替代防护应用。公司历史乳液及制漆投入品制造销售事实保留，未推其乳液必为某种化学或无植物油。实际三页目录共31次展示、28不同名称，含成品漆/清漆/腻子/Colle分类胶/色浆及施工溶剂，未见ELO、ESBO、环氧植物油或相应生物基增塑/改性原料外售；所选ELO同行排除限已读经营范围。分页有3重名且两次native缓存年龄不同，不冒完整实时目录、全部助剂成分/叶页/SDS或最终股权审计。原三公司来源及本轮三次来源累计6STOP，不再追加；同厂仓库、METALPROTEC/METALPROTECT及Optima品牌不拆户，Midy与Ignite同名产品不当集团。一般业务邮箱和总机由同官网反复明示，非具名采购/投递测试，电话不猜WhatsApp。117RouteElJadidaCasablanca为公开业务地址，自厂在Bouskoura分开保留；地图采用独立城市信息框33.600/-7.633近似点，非厂门GPS，同参考页首33.533/-7.583不同坐标保留、不假称一致。ELO仅按用户TDS涂料/树脂改性及柔韧潜在评估，不推客户现用、采购、醇酸相容、环氧固化或防腐提升保证。"
+    },
+    "contact": {
+      "label": "官网公司一般业务邮箱和总机；非具名采购",
+      "email": "contact@optima-peintures.ma",
+      "phone": "+212 5 22 33 47 77",
+      "contactUrl": "https://optima-peintures.ma/la-marque/presentation/"
+    },
+    "source": {
+      "label": "Optima METALPROTEC 官方铁金属防锈底漆产品及自有制造原文",
+      "url": "https://optima-peintures.ma/product/antirouille/"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"optima-chimie-bouskoura": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "viostik-nicosia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "pentagon-paints-birkirkara": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sylac-inofita": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16328,6 +16357,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"optima-chimie-bouskoura": {
+  "website": "https://optima-peintures.ma/",
+  "contactPage": "https://optima-peintures.ma/la-marque/presentation/",
+  "generalEmail": "contact@optima-peintures.ma",
+  "generalEmailEvidence": {
+    "company": "OPTIMA CHIMIE S.A. / Optima Peintures",
+    "value": "contact@optima-peintures.ma",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Optima官网公司一般业务邮箱",
+        "url": "https://optima-peintures.ma/la-marque/presentation/",
+        "summary": "公司About明确contact@optima-peintures.ma，与地址电话并列；METALPROTEC及三页目录重复一致，非具名买家或投递验证。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+212 5 22 33 47 77",
+  "generalPhoneEvidence": {
+    "company": "OPTIMA CHIMIE S.A. / Optima Peintures",
+    "value": "+212 5 22 33 47 77",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Optima官网公司总机",
+        "url": "https://optima-peintures.ma/la-marque/presentation/",
+        "summary": "公司About及METALPROTEC/目录披露+212(0)522334777，国际格式仅移除可选国内前导0，不推WhatsApp或个人采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business address: 117, Route d’El Jadida, Casablanca, Morocco. Company states its headquarters/factory in Oulad Salah industrial zone, Bouskoura, with depots in Maârif/Casablanca and Agadir. Independent Casablanca infobox city representative (33.600, -7.633), not a factory geocode; same reference header displays a different city coordinate (33.533, -7.583).",
+  "sources": [
+    {
+      "label": "股份公司及自有工厂和公开业务联系",
+      "url": "https://optima-peintures.ma/la-marque/presentation/"
+    },
+    {
+      "label": "METALPROTEC防锈底漆铁金属应用",
+      "url": "https://optima-peintures.ma/product/antirouille/"
+    },
+    {
+      "label": "可见产品目录第一页",
+      "url": "https://optima-peintures.ma/nos-produits/"
+    },
+    {
+      "label": "可见产品目录第二页",
+      "url": "https://optima-peintures.ma/nos-produits/page/2/"
+    },
+    {
+      "label": "可见产品目录第三页原始HTML",
+      "url": "https://optima-peintures.ma/nos-produits/page/3/"
+    }
+  ]
+},
 "viostik-nicosia": {
   "website": "https://www.viostik.com.cy/",
   "contactPage": "https://www.viostik.com.cy/",
@@ -49240,6 +49328,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"optima-chimie-bouskoura",
 "viostik-nicosia",
 "pentagon-paints-birkirkara",
 "sylac-inofita",
