@@ -16089,11 +16089,40 @@ const rawPublicLeads: RawPublicLead[] = [
       "url": "https://www.fenwickandtilbrook.com/faqs/"
     }
   },
+  {
+    "id": "pamainke-argentina",
+    "company": "Pamainke S.A.",
+    "productId": "cpp-cpo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Argentina（国家示意点；市镇未核实，非工厂定位）",
+    "latitude": -34,
+    "longitude": -64,
+    "legacyCompanyDescription": "阿根廷自主开发制造柔印和凹印BOPP溶剂型油墨的企业",
+    "signal": "Pamainke 自主开发制造柔印/凹印油墨；其MicroPUR原始TDS明确同款聚氨酯成品墨用于BOPP层压包装，采用醇/酯或乙酸乙酯稀释。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "六份2026-11-25原始来源离线逐份重读、SHA及全历史原档核对，当前0公司请求，旧6STOP/rem0保持。Home69/Products82/Contact58/About44四完整HTML共253行，MicroPUR原始TDS39行一整页，SDS仅返回0–436共437/632行，含前8完整页和第9部分；合计729实际行，不冒15页SDS全读、二进制或视觉审查。About自述阿根廷企业开发制造柔印凹印墨、Contact自主制造、同一MicroPUR TDS生产者PamainkeSA及BOPP/PET/BOPA用途、醇酯或乙酸乙酯稀释，闭合同款BOPP溶剂型成品墨与自产归属，不从泛称溶剂或PU树脂推断。实际六成品家族MicroLam/MicroPUR/MicroPol/MicroR/MicroTec/MicroVin及四业务原文可见主营为成品墨/清漆及配套，未见CPP/CPO/MAH聚烯烃树脂或同类原料附着促进剂对外销售；有限范围输入排除，不把SDS保密/低于阈值/非危成分省略当已证配方无CPO，也不冒全SKU/全部SDS或终极股权审计。Pamainke/六墨系列/同域名一阿根廷主体，Colorlib网页模板非股权关系，不拆品牌或城市再计。复用原researchId晋级，保留历次私有核验与市镇未明事实。旧SDS地址仅FragataHeroína4840/CP1615/BsAs/Argentina，不能据另家Primaset1615/GrandBourg、邮编或电话区号补城市/工厂地址。按现有公开库允许明确国家示意点的标准，另读非公司GeoNames阿根廷国家原文397/446行，L69 -34/-64作为国家代表，非首都BuenosAires/GrandBourg/市镇/厂门；不声称原有市镇缺口已解析，也不为此第七次抓公司。公开联系使用2026-11-25真实Contact一般邮箱info@pamainke.com.ar及+5491165547521，不采用旧2019TDS与SDS不同电话或运输紧急电话，不冒具名采购/技术部门/WA。CPP/CPO仅沿用2026-11-02独立SUPERCHLON类别扩展及用户七牌号指南，潜在PP附着/溶剂体系材料评估，不证客户现用CPP/CPO、NL牌号相容、采购、食品接触或性能；TDS明确禁止直接食品/皮肤接触，不能把包装用途冒食品接触认证。shared发送未知，不生成就绪稿/批量导出或外联。"
+    },
+    "contact": {
+      "label": "真实公开一般公司业务邮箱与电话，非具名采购或WhatsApp",
+      "email": "info@pamainke.com.ar",
+      "phone": "+54 9 11 6554 7521",
+      "contactUrl": "https://www.pamainke.com.ar/contacto"
+    },
+    "source": {
+      "label": "Pamainke原始MicroPUR TDS：自制BOPP成品墨及溶剂稀释",
+      "url": "https://www.pamainke.com.ar/pdf/Hoja%20T%C3%A9cnica%20MicroPUR.pdf"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"pamainke-argentina": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "fenwick-tilbrook-norfolk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "britannia-paints-middlewich": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "lakeland-paints-heysham": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16762,6 +16791,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"pamainke-argentina": {
+  "website": "https://www.pamainke.com.ar/",
+  "contactPage": "https://www.pamainke.com.ar/contacto",
+  "generalEmail": "info@pamainke.com.ar",
+  "generalEmailEvidence": {
+    "company": "Pamainke S.A.",
+    "value": "info@pamainke.com.ar",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pamainke原始Contact公开一般业务邮箱",
+        "url": "https://www.pamainke.com.ar/contacto",
+        "summary": "2026-11-25原始Contact正文直接公开info@pamainke.com.ar，2026-11-26离线独立复核，仅一般业务入口，非具名采购或研发部门。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+54 9 11 6554 7521",
+  "generalPhoneEvidence": {
+    "company": "Pamainke S.A.",
+    "value": "+54 9 11 6554 7521",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Pamainke原始Contact公开一般公司电话",
+        "url": "https://www.pamainke.com.ar/contacto",
+        "summary": "2026-11-25原始Contact直接公开此号，与Home/About一致；未见WhatsApp链接，不推WA或采用旧TDS/SDS及运输紧急电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Address appearing in archived MicroPUR SDS: Fragata Heroína 4840 – CP 1615 – Bs. As – Argentina. Municipality and current factory address are not independently verified. No city is inferred from another company, postcode or telephone prefix. Map uses GeoNames Argentina country representative coordinates -34,-64, not a Buenos Aires capital, Grand Bourg city or factory-gate geocode.",
+  "sources": [
+    {
+      "label": "自有阿根廷企业开发和制造原文，原抓取2026-11-25",
+      "url": "https://www.pamainke.com.ar/nosotros"
+    },
+    {
+      "label": "六成品油墨家族可见范围，非全SKU/SDS审计",
+      "url": "https://www.pamainke.com.ar/productos"
+    },
+    {
+      "label": "MicroPUR原始TDS2019：同款BOPP及醇酯/乙酸乙酯稀释",
+      "url": "https://www.pamainke.com.ar/pdf/Hoja%20T%C3%A9cnica%20MicroPUR.pdf"
+    },
+    {
+      "label": "真实一般业务邮箱/电话/表单原文，2026-11-25抓取后独立复读",
+      "url": "https://www.pamainke.com.ar/contacto"
+    },
+    {
+      "label": "已读SDS部分地址，市镇及完整配方未核",
+      "url": "https://www.pamainke.com.ar/pdf/MSDS%20MicroPUR.pdf"
+    },
+    {
+      "label": "阿根廷独立国家示意坐标，非城市厂门",
+      "url": "https://www.geonames.org/3865483"
+    }
+  ]
+},
 "fenwick-tilbrook-norfolk": {
   "website": "https://www.fenwickandtilbrook.com/",
   "contactPage": "https://www.fenwickandtilbrook.com/contact/",
@@ -50543,6 +50635,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"pamainke-argentina",
 "fenwick-tilbrook-norfolk",
 "britannia-paints-middlewich",
 "lakeland-paints-heysham",
