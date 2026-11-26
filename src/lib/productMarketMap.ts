@@ -16006,11 +16006,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "lakeland-paints-heysham",
+    "company": "Lakeland Paints (TSL Group / ECOS UK)",
+    "productId": "nl-w1201",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "United Kingdom（国家示意点，非 Heysham 城市或工厂定位）",
+    "latitude": 54.75844,
+    "longitude": -2.69531,
+    "legacyCompanyDescription": "英国自主研发制造水性木器底层漆与装饰涂料的企业",
+    "signal": "Lakeland 在英国自主研发制造水性涂料；Interior/Exterior Undercoat 为其木材底层漆，官网整体配方说明明确采用水性黏结料。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "公司五请求含1失败=5/rem1，四份完整经营原文About96/Undercoat291/Contact83/HowTo181共651行。About明确IanWest与JohnAshworth开发漆及madeinUKbyus、TSL和ECOS水性产品范围，HowTo在WhatIsInLakelandProducts明列water与allwaterbasedbinders；同款Undercoat正文明确木材底层漆且属于该自有范围。水性依据为厂方About及统一配方说明，不采用顾客评论中的waterbased/塑料使用，也不把官网批评别家onecentralfactory句当Lakeland自己的厂址。原始UndercoatPDF点击实际403但providerIsErrorfalse，计失败1并冻结https://www.lakelandpaints.co.uk/pdf/pdf-data-sheets/Undercoat.pdf；无原始TDS字节/技术参数/精确树脂类型，不重试、换端点、镜像、GET或脚本恢复。独立已存在FAQ/联系导航页各单独计来源，不是失败PDF副本。所选为木材Undercoat，不推直接适用未底涂裸木或PP/PE；FAQ的PP/PE是包装罐材料，不是客户配方基材。四份实际经营原文及返回导航所见为自有成品涂料、木器底层漆/清漆、样品与装修服务，天然/合成黏结料及颜料/增稠剂/蜡为自身配方成分说明，不当对外原料业务；未见外售聚烯烃乳液/CPO或PO分散体/所选原料附着促进剂，排除限该范围，不冒所有SKU/未读TDS/SDS或终极工商审计。Galvadek及工业墨dips在About明确已停产，不当现行系列。Lakeland/ECOSUK/TSL及其自述2012Spartanburg设施按一保守账户，未独立核当前美国终极控制，不将ECOS/US厂或旧品牌拆新户；1988/1989历史年份差异保留不选作开发信事实。当前Contact直接公开一般AllEnquiries邮箱sales@lakelandpaints.co.uk及Ordering/页脚01524852371，非具名采购、技术部门或WhatsApp；注册号02348100为官网自述，不凭此补未读公司法名。Unit19HeyshamBusinessParkMiddletonRoadHeyshamLancashireLA33PP为公开业务/接待地址，未独立证厂门GPS；地图用GeoNames英国国家54.75844/-2.69531，非Heysham/Morecambe或工厂定位。国家原读1另计范围6/6停止。NL-W1201仅按用户TDS聚烯烃分散体、木材底涂/附着促进方向提潜在评估，不承诺加入该未披露树脂体系相容或性能/采购；厂方VOC/健康/环境/婴幼儿/认证和客户营销声称不移植为我方效果或保证。"
+    },
+    "contact": {
+      "label": "公开一般业务邮箱与电话，未核具名采购或技术部门邮箱",
+      "email": "sales@lakelandpaints.co.uk",
+      "phone": "01524 852 371",
+      "contactUrl": "https://www.lakelandpaints.co.uk/contacts"
+    },
+    "source": {
+      "label": "Lakeland自有英国制造、木器Undercoat及统一水性配方原文",
+      "url": "https://www.lakelandpaints.co.uk/paints-for-wood/undercoat-interior-exterior"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"lakeland-paints-heysham": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "fine-chemicals-nigeria-enpee": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "sren-chemicals-nigeria": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "colourtrend-general-paints-celbridge": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16676,6 +16705,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"lakeland-paints-heysham": {
+  "website": "https://www.lakelandpaints.co.uk/",
+  "contactPage": "https://www.lakelandpaints.co.uk/contacts",
+  "generalEmail": "sales@lakelandpaints.co.uk",
+  "generalEmailEvidence": {
+    "company": "Lakeland Paints (TSL Group / ECOS UK)",
+    "value": "sales@lakelandpaints.co.uk",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Lakeland实际Contact直接公开AllEnquiries业务邮箱",
+        "url": "https://www.lakelandpaints.co.uk/contacts",
+        "summary": "Contact在AllEnquiries下直接公开sales@lakelandpaints.co.uk，仅公司一般业务入口，不冒具名采购、技术部门或已送达。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "01524 852 371",
+  "generalPhoneEvidence": {
+    "company": "Lakeland Paints (TSL Group / ECOS UK)",
+    "value": "01524 852 371",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Lakeland实际公开一般/订货业务电话",
+        "url": "https://www.lakelandpaints.co.uk/contacts",
+        "summary": "ContactOrdering列01524852371，About/Undercoat/HowTo页脚同号；保留英国公开本地格式，非WhatsApp或个人采购电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business / reception address: Unit 19, Heysham Business Park, Middleton Road, Heysham, Lancashire, UK, LA3 3PP. This is the stated contact and shopping-reception address, not an independently verified factory gate. Map uses GeoNames United Kingdom country representative coordinates 54.75844,-2.69531, not a Heysham/Morecambe city geocode or factory GPS.",
+  "sources": [
+    {
+      "label": "自有英国研发制造及TSL/ECOS品牌关系",
+      "url": "https://www.lakelandpaints.co.uk/about-lakeland-paints-ecos"
+    },
+    {
+      "label": "同款Interior/Exterior木器Undercoat，顾客评论不作技术证据",
+      "url": "https://www.lakelandpaints.co.uk/paints-for-wood/undercoat-interior-exterior"
+    },
+    {
+      "label": "厂方统一产品成分明确water/allwaterbasedbinders",
+      "url": "https://www.lakelandpaints.co.uk/how-to"
+    },
+    {
+      "label": "当前AllEnquiries邮箱/电话/业务地址/官网注册号",
+      "url": "https://www.lakelandpaints.co.uk/contacts"
+    },
+    {
+      "label": "英国独立国家代表坐标，非城市厂门",
+      "url": "https://www.geonames.org/2635167"
+    }
+  ]
+},
 "fine-chemicals-nigeria-enpee": {
   "website": "https://finechemicalsltd.com/",
   "contactPage": "https://finechemicalsltd.com/page/22",
@@ -50307,6 +50395,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"lakeland-paints-heysham",
 "fine-chemicals-nigeria-enpee",
 "sren-chemicals-nigeria",
 "colourtrend-general-paints-celbridge",
