@@ -15754,11 +15754,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "nisan-paint-inks-keraniganj",
+    "company": "Nisan Paint & Inks Ltd",
+    "productId": "cpp-cpo",
+    "country": "Bangladesh",
+    "countryZh": "孟加拉国",
+    "city": "Keranigonj, Dhaka（达卡城市示意点，非工厂定位）",
+    "latitude": 23.7104,
+    "longitude": 90.40744,
+    "legacyCompanyDescription": "孟加拉国自主配方制造包装印刷油墨的企业",
+    "signal": "Nisan 官网明确自主制造 PP Woven INKS：用于聚丙烯编织袋的溶剂型柔版油墨，PP 基材、溶剂体系及制造归属在同一产品描述中列明。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "官网四份完整原文Home109/Products149/About111/Contact95行：About明确自主制造设施、配方研发，Products在同一PP Woven INKS描述明确Solvent-Based Flexographic Ink/聚丙烯编织片及Manufactured by NISAN Paint & Inks Ltd；不拼接另款PET/PE/铝箔产品。对应用户MAH改性CPP/CPO指南PP附着方向及既有独立CPO油墨用途来源，仅潜在材料评估，不证明现用CPO、替换或采购。实际16项成品油墨/罩光涂层及四原文中未见CPP/CPO/MAH改性氯化聚烯烃或同类聚烯烃附着原料外售；PU/聚酰胺是成品墨配方描述，不当原料商证据，排除限已读经营范围，非全SKU/SDS/股权审计。最新main/根公开/正式/私有/排除/队列及历史原档按Nisan/Nishan/法名/nisaninks.com/nishaninc.com去重，无原公司定向原读，BIMEA旧名录是发现而非先前公司来源；仅一孟加拉制造账户，不自动并入日本Fujifilm、Nissan或其他同音品牌。第三方目录旧拼写域名未采信为当前官网，不额外请求。Contact与四页页脚均明确info@nisaninks.com，公司公开电话+8801777646861仅规范空格；连接在一起的sales邮箱不另精选，表单JohnDoe/john@example/+1555为占位非联系人。可见真实表单及WhatsApp锚点，但当前返回未披露wa.me完整目标，不猜号码或发布跳转，无具名采购/LinkedIn。总部和制造设施地址为Road03/PlotA8,9&10/BSCIC/Ruhitpur/Keranigonj/Dhaka；独立GeoNames达卡23.71040/90.40744仅城市代表点，非Keranigonj工厂定位。ISO/食品/无迁移/耐温/JTI等客户营销声称不当我方认证、适配或性能保证。公司本轮4累计4/rem2，另城市1不计公司；范围5/6余1不再追链接，0失败/跳转/GET/PDF/脚本/外联，不重置来源。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、公开电话及联系表单；非具名采购",
+      "email": "info@nisaninks.com",
+      "phone": "+880 1777 646861",
+      "contactUrl": "https://www.nisaninks.com/contact"
+    },
+    "source": {
+      "label": "Nisan官网自制PP编织袋溶剂型柔版油墨原文",
+      "url": "https://www.nisaninks.com/products"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"nisan-paint-inks-keraniganj": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "swan-coatings-shah-alam": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "ropar-rubbchem-palghar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "optima-chimie-bouskoura": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16415,6 +16444,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"nisan-paint-inks-keraniganj": {
+  "website": "https://www.nisaninks.com/",
+  "contactPage": "https://www.nisaninks.com/contact",
+  "generalEmail": "info@nisaninks.com",
+  "generalEmailEvidence": {
+    "company": "Nisan Paint & Inks Ltd",
+    "value": "info@nisaninks.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Nisan官网公开公司业务邮箱",
+        "url": "https://www.nisaninks.com/contact",
+        "summary": "Contact及Home/Products/About页脚均明确公司名称与info@nisaninks.com；不把相邻sales文字拼成另一精选地址，不推具名采购或投递成功。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+880 1777 646861",
+  "generalPhoneEvidence": {
+    "company": "Nisan Paint & Inks Ltd",
+    "value": "+880 1777 646861",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Nisan官网公开业务电话",
+        "url": "https://www.nisaninks.com/contact",
+        "summary": "Contact CallUs明确+8801777646861，仅规范空格；表单+1555占位不是业务电话，WhatsApp实际锚点目标未披露，未从电话猜WA。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published headquarters/manufacturing contact address: Road No.03, Plot A-8, 9 & 10, BSCIC Industrial Area, Ruhitpur, Keranigonj, Dhaka, Bangladesh. Map uses Dhaka city representative coordinates (23.71040, 90.40744), not a factory geocode or verified Keranigonj factory entrance.",
+  "sources": [
+    {
+      "label": "自有制造设施和配方研发",
+      "url": "https://www.nisaninks.com/about"
+    },
+    {
+      "label": "16项成品及自制PP溶剂墨",
+      "url": "https://www.nisaninks.com/products"
+    },
+    {
+      "label": "公司邮箱、电话、联系表单及业务地址",
+      "url": "https://www.nisaninks.com/contact"
+    },
+    {
+      "label": "达卡城市代表点，非工厂定位",
+      "url": "https://www.geonames.org/1185241"
+    }
+  ]
+},
 "swan-coatings-shah-alam": {
   "website": "https://www.swancoatings.org/",
   "contactPage": "https://www.swancoatings.org/contact",
@@ -49496,6 +49580,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"nisan-paint-inks-keraniganj",
 "swan-coatings-shah-alam",
 "ropar-rubbchem-palghar",
 "optima-chimie-bouskoura",
