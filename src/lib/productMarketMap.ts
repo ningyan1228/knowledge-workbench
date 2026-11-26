@@ -15838,11 +15838,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "fleetwood-paints-virginia",
+    "company": "Fleetwood Paints (Doyle family, Ireland)",
+    "productId": "nl-w1201",
+    "country": "Ireland",
+    "countryZh": "爱尔兰",
+    "city": "Ireland（国家示意点，非 Virginia 城市或工厂定位）",
+    "latitude": 53,
+    "longitude": -8,
+    "legacyCompanyDescription": "爱尔兰Doyle家族自主制造水性木材底漆及装饰涂料的企业",
+    "signal": "Fleetwood 在爱尔兰自主制造涂料；F408 丙烯酸底漆为水性体系，适用于新木材或裸木表面。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "五份完整首方返回Home137/OurStory121/F408原始TDS155(3页)/Paints265/Preparation481共1159行。Story明确Doyle家族制造及Virginia厂历史与当前全部Fleetwood漆在爱尔兰生产，原始F408同款明确water-based acrylic、AcrylicEmulsion/Water和new/barewood，成品底漆而非原料乳液。TDS实际July2025Issue3，URL2024/09不是文档版本；不把另一油性传统底漆、Advanced产品搜索片段或颜色体系混到F408。NL-W1201按用户资料的木材底涂/附着促进用途提潜在评估，不保证可直接加入该丙烯酸体系、相容、附着提升、耐候或现有采购。Paints只读第1页28/499颜色条目，Preparation只读第1页44/97配套条目及全部返回导航；不是全站499配方或所有SKU/SDS审计。已见成品涂料、壁纸胶、填料、刷具/砂纸/胶带、清洁剂及通用溶剂，不因胶或原料名称自动认定PO/CPO同行；五份实际经营原文未见外售聚烯烃乳液、CPO/PO分散体或所选原料附着促进剂，限该已读范围。SherwinWilliams/Pantone等为TDS颜色集合，Tesco/Dunnes为旧代工品牌，Jamaica为历史工厂，不推当前集团股权或拆成新户；按Fleetwood/Doyle一家保守账户，未做终极股权审计。一般info与技术部门technical邮箱在Story/TDS直接公开，技术邮箱非具名采购；选择Technical部门为优先业务入口，电话+353498547209为原始TDS和当前Prep页脚对应的一般/技术共用电话，非WhatsApp，不造个人。VirginiaCoCavanA82N267为公开地址，地图用GeoNames爱尔兰国家53/-8，不是Virginia或工厂GPS。国家此前未在洲别映射，发布只补Ireland至Europe。公司五次native5/rem1另国家一次，范围6/6停止；无失败/跳转/GET/JS/API/额外原读。PDF缓存截图请求仅返回文字占位，无图像可核，不冒充完成视觉核验，技术依据为完整带页码原始文本；未补请求。"
+    },
+    "contact": {
+      "label": "公开技术部门邮箱；另有一般业务邮箱和电话，无具名采购",
+      "email": "technical@fleetwood.ie",
+      "phone": "+353 49 854 7209",
+      "contactUrl": "https://www.fleetwood.ie/our-story/"
+    },
+    "source": {
+      "label": "Fleetwood官方F408水性丙烯酸木材底漆TDS及自有制造原文",
+      "url": "https://www.fleetwood.ie/wp-content/uploads/2024/09/F408-Fleetwood-Acrylic-Primer-Undercoat.pdf"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"fleetwood-paints-virginia": {"targetCompanyTypeId":"waterbased-wood-primer-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "cstm-envol-senegal": {"targetCompanyTypeId":"adhesive-manufacturer","applicationLayer":"tds-verified","applicationId":"adhesives"},
 "aqua-paints-octagon-dhaka": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "nisan-paint-inks-keraniganj": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -16502,6 +16531,92 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"fleetwood-paints-virginia": {
+  "website": "https://www.fleetwood.ie/",
+  "contactPage": "https://www.fleetwood.ie/our-story/",
+  "generalEmail": "info@fleetwood.ie",
+  "generalEmailEvidence": {
+    "company": "Fleetwood Paints (Doyle family, Ireland)",
+    "value": "info@fleetwood.ie",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Fleetwood官网直接公开一般业务邮箱",
+        "url": "https://www.fleetwood.ie/our-story/",
+        "summary": "OurStory末段直接邀请通过info@fleetwood.ie联系，当前Preparation页脚及F408也印同一邮箱，未冒个人/采购或推送达。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+353 49 854 7209",
+  "generalPhoneEvidence": {
+    "company": "Fleetwood Paints (Doyle family, Ireland)",
+    "value": "+353 49 854 7209",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Fleetwood F408公开一般/技术业务电话",
+        "url": "https://www.fleetwood.ie/wp-content/uploads/2024/09/F408-Fleetwood-Acrylic-Primer-Undercoat.pdf",
+        "summary": "F408页1TechnicalAssistance/ColourAdvice及页3印+353498547209，当前Prep页脚国内0498547209一致；非已证WhatsApp或具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Technical",
+      "email": "technical@fleetwood.ie",
+      "source": {
+        "label": "Fleetwood F408 TDS technical assistance",
+        "url": "https://www.fleetwood.ie/wp-content/uploads/2024/09/F408-Fleetwood-Acrylic-Primer-Undercoat.pdf"
+      },
+      "emailEvidence": {
+        "company": "Fleetwood Paints (Doyle family, Ireland)",
+        "value": "technical@fleetwood.ie",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Fleetwood F408原始TDS技术服务邮箱",
+            "url": "https://www.fleetwood.ie/wp-content/uploads/2024/09/F408-Fleetwood-Acrylic-Primer-Undercoat.pdf",
+            "summary": "F408 July2025Issue3第1页TechnicalAssistance及第3页直接列technical@fleetwood.ie，归Fleetwood技术服务部门，不是具名采购或个人邮箱。"
+          }
+        ],
+        "verifiedAt": "2026-11-26"
+      }
+    }
+  ],
+  "address": "Published Fleetwood paint manufacturing address: Virginia, Co. Cavan, A82 N267, Ireland. Story identifies the Virginia County Cavan manufacturing site; F408 original TDS gives the same address. Map deliberately uses GeoNames Ireland country representative coordinates 53,-8, not a Virginia city geocode or factory GPS.",
+  "sources": [
+    {
+      "label": "当前公司概览与成品涂料范围",
+      "url": "https://www.fleetwood.ie/"
+    },
+    {
+      "label": "Doyle家族自制、Virginia厂及一般业务邮箱",
+      "url": "https://www.fleetwood.ie/our-story/"
+    },
+    {
+      "label": "F408 July2025Issue3，三页完整原文、水性木材底漆及技术部门",
+      "url": "https://www.fleetwood.ie/wp-content/uploads/2024/09/F408-Fleetwood-Acrylic-Primer-Undercoat.pdf"
+    },
+    {
+      "label": "颜色目录第1页28/499，未读后页",
+      "url": "https://www.fleetwood.ie/product-category/paints/"
+    },
+    {
+      "label": "配套准备品第1页44/97与当前业务页脚",
+      "url": "https://www.fleetwood.ie/product-category/accessories/preparation-accessories/"
+    },
+    {
+      "label": "爱尔兰国家代表点，非城市厂门",
+      "url": "https://www.geonames.org/2963597"
+    }
+  ]
+},
 "cstm-envol-senegal": {
   "website": "https://cstm.sn/",
   "contactPage": "https://cstm.sn/contact/",
@@ -49756,6 +49871,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"fleetwood-paints-virginia",
 "cstm-envol-senegal",
 "aqua-paints-octagon-dhaka",
 "nisan-paint-inks-keraniganj",
