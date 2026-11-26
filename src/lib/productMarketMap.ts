@@ -15726,11 +15726,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "swan-coatings-shah-alam",
+    "company": "Swan Coatings (M) Sdn. Bhd.",
+    "productId": "elo",
+    "country": "Malaysia",
+    "countryZh": "马来西亚",
+    "city": "Shah Alam（官网业务地址所在城市示意点，非厂门定位）",
+    "latitude": 3.08507,
+    "longitude": 101.53281,
+    "legacyCompanyDescription": "马来西亚自主制造水性柔版油墨、窄幅包装印刷墨及罩光清漆",
+    "signal": "Swan Coatings 在马来西亚自主制造水性柔版油墨及罩光清漆，产品包括包装印刷用金银油墨和窄幅印刷油墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-26",
+      "conclusion": "官网About明确马来西亚SwanCoatings(M)SdnBhd制造水性柔版油墨和清漆，Products再明确自主生产金银墨及窄幅包装印刷墨。所选ELO为用户TDS直接列明的油墨用途，非新造防腐/食品包装相容应用，也不将genericplastic/foil推PPPE或铝；原NLW具体基材缺口保留。两旧原文59/77行加本轮Contact58行，累计3/rem3；另户RYC来源和独立城市不计入本公司，不因国家/产品/品牌重置。已读17类公开成品墨/涂层/清漆/水性底涂及颜料分散产品中未见ELO、ESBO、环氧植物油或相应生物基增塑/改性原料外售；颜料分散非自动油类助剂，底涂不是聚烯烃原料证明。有限经营范围排除通过，不宣称全部SKU/TDS/SDS/树脂成分或最终股权审计。对最新main、根公开库、正式库/私有/排除/队列及法名域名查重，仅原私有RID晋级一客户，不以出口SriLanka/台湾或产品/工厂拆户。官网Contact明确公司邮箱general@swancoat.com.my与一般总机，且实际可见表单；页面静态Yourdetailsweresentsuccessfully并非本轮提交，未发送任何内容。总机采用原文第一完整号码+60357406033，仅规范空格，缩写尾号4/5及传真不猜扩展/WhatsApp。公司业务地址在ShahAlam，GeoNames城市代表点3.08507/101.53281非厂门GPS。ISO/SONY/foodgrade等自身营销未独立核证，不当我方认证、食品接触或性能保证。ELO只作油墨柔韧性潜在评估，不推现用ELO、采购需求、乳液稳定、固化、相容或防腐改善。"
+    },
+    "contact": {
+      "label": "官网一般业务邮箱、总机及联系表单；非具名采购",
+      "email": "general@swancoat.com.my",
+      "phone": "+60 3 5740 6033",
+      "contactUrl": "https://www.swancoatings.org/contact"
+    },
+    "source": {
+      "label": "Swan官方自制水性包装印刷油墨、清漆及公司原文",
+      "url": "https://www.swancoatings.org/products-services"
+    },
+    "checkedAt": "2026-11-26"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"swan-coatings-shah-alam": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "ropar-rubbchem-palghar": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "optima-chimie-bouskoura": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "viostik-nicosia": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16386,6 +16415,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"swan-coatings-shah-alam": {
+  "website": "https://www.swancoatings.org/",
+  "contactPage": "https://www.swancoatings.org/contact",
+  "generalEmail": "general@swancoat.com.my",
+  "generalEmailEvidence": {
+    "company": "Swan Coatings (M) Sdn. Bhd.",
+    "value": "general@swancoat.com.my",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Swan官网一般业务邮箱",
+        "url": "https://www.swancoatings.org/contact",
+        "summary": "Contact的公司名称/地址/总机旁明确general@swancoat.com.my，About与Products重复；不同官网域名与邮箱域名同由首方披露，不猜具名采购或投递有效。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "generalPhone": "+60 3 5740 6033",
+  "generalPhoneEvidence": {
+    "company": "Swan Coatings (M) Sdn. Bhd.",
+    "value": "+60 3 5740 6033",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Swan官网公司总机",
+        "url": "https://www.swancoatings.org/contact",
+        "summary": "Contact列Tel+603-57406033/4/5，仅保留首个完整号码并规范空格；短写4/5不扩写，传真不作电话，未推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-26"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business contact address: No.1 Jln Sg. Kayu Ara 32/39, Sek.32, 40460 Shah Alam, Malaysia. Map uses GeoNames Shah Alam city representative coordinates (3.08507, 101.53281), not a factory geocode or verified factory entrance.",
+  "sources": [
+    {
+      "label": "自有水性油墨和清漆制造",
+      "url": "https://www.swancoatings.org/about-us"
+    },
+    {
+      "label": "17类公开产品及自主制墨原文",
+      "url": "https://www.swancoatings.org/products-services"
+    },
+    {
+      "label": "业务邮箱、总机、联系表单及地址",
+      "url": "https://www.swancoatings.org/contact"
+    },
+    {
+      "label": "ShahAlam城市代表点，非厂门GPS",
+      "url": "https://www.geonames.org/1732903"
+    }
+  ]
+},
 "ropar-rubbchem-palghar": {
   "website": "https://roparrubbchem.com/",
   "contactPage": "https://roparrubbchem.com/about-us.php",
@@ -49412,6 +49496,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"swan-coatings-shah-alam",
 "ropar-rubbchem-palghar",
 "optima-chimie-bouskoura",
 "viostik-nicosia",

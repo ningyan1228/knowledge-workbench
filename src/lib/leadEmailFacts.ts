@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"swan-coatings-shah-alam": "I noticed Swan Coatings manufactures water-based flexographic inks and overprint varnishes for packaging.",
 "ropar-rubbchem-palghar": "I noticed Ropar Rubbchem manufactures Antirust Protective Lacquer for the exterior welded joints of metal cans.",
 "optima-chimie-bouskoura": "I noticed Optima Chimie manufactures METALPROTEC, a rust-inhibiting primer for ferrous metal protection.",
 "viostik-nicosia": "I noticed Viostik manufactures wood coatings and lists clear primers and parquet varnishes in its interior water-based furniture range.",
