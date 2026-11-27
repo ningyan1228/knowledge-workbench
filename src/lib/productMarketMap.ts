@@ -54560,4 +54560,114 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 80
     }
   }
+]).concat([
+  {
+    "id": "eastland-ink-industries-lahore",
+    "company": "Eastland Ink Industries (Pvt) Ltd.",
+    "productId": "nl-8260",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore (reused approximate city marker)",
+    "latitude": 31.5204,
+    "longitude": 74.3587,
+    "fit": "可开发候选",
+    "signal": "在巴基斯坦Lahore自研制造PP编织袋油墨，并设配方测试实验室。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "本轮按NL8260 TDS的PP/OPP油墨附着方向独立复核旧原文，不把CPP待核标签自动转正。旧Home189/Products107/About82共378native行业务原文明确自研制造PP编织袋油墨、配方实验室及进口原料检测；新Contact110/CEO80共190行确认同Lahore主体及公共公司业务路线，跨轮累计五完整业务原文568行含重复导航。另旧Driveviewer5行Loading/SignIn不含目录正文，仍未读TDS；不是六完整技术资料。SignIn链接不证明文件私有或必须登录，不经API/下载变体/镜像/账户绕过。Home实际PPwoven墨制造与五成品系列metal-decorating/flexo/gravure/lamination/特殊coatings支持下游配方，已读主要经营范围未见CPO/CPP/MAH/聚烯烃分散体或同类附着原料外售，有限所选输入同行排除通过，不把进口自用原料说成原料供货，也不声称未读全目录/隐藏SKU/SDS已审。PP墨精确水性/溶剂体系仍未明；用户NL8260 TDS明列PP/OPP油墨，不要求客户现有油墨全水性，故可按该直接应用提出实验室配方评估，不保证水性分散体直混溶剂/UV墨、稳定性/固化/印头相容或任何改善。CPP必须PP溶剂配对的缺口仍在，保持私有needs_evidence，不给CPP公开匹配；AquaBaseFlexo/tri-layer/epoxyphenolic/polyester/7500MT仍未来计划，不当当前水性墨或H860/1201匹配。largest排名、ISO自述及证言/降本营销未独立认证也不转我方。Maxbizz主题文字/Seattle411University/+1800/模板邮箱皆非本公司业务证据；三示例UI假回复/发送不是实际历史，不据此标发/未发。真实地址各页为Plot88-A/SundarIndustrialEstate/RaiwindRoadLahore；Contact正文Sunder/Punjab55150与footerLahore措辞保留，地图复用已有公开Lahore城市点31.5204/74.3587，非厂门。当前Contact手机正文+9231712422253与header/footer+923171242225不一致，不修正/精选；只选多页一致公司座机+924235297211和info@eastlandink.com通用入口，不冒具名采购或WhatsApp。CEO页自刊MirMuslehuddinZia仅主体线索，未将其视为收件人或用通用邮箱冒个人；最终工商/股东未独立核。旧KarachiEastlandIndustryCorporation/eastlandind.com ETP共溶剂OPP只有Search，关系未证，不借其技术/邮箱/人物判断本户CPP配方或拆第二客户；按潜在同组共享研究边界保守保留，不给另一域新预算。完整正式693/root707/front1425/index737/nestedqueue/excluded按两商号/域名/CEO/邮箱/座机/地址除本旧私有行无已知同组，旧1个private行升级不追加新公司行。旧4+新2=终身6STOP，含未读Driveviewer照计，不换产品/www/provider重置。草稿仅存参考，未知共享发送状态不当未发，无邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、座机和联系页",
+      "email": "info@eastlandink.com",
+      "phone": "+92 42 35297211",
+      "contactUrl": "https://eastlandink.com/contacts/"
+    },
+    "source": {
+      "label": "Own PP woven-bag ink manufacture and formulation laboratory",
+      "url": "https://eastlandink.com/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主配方制造PP编织袋油墨并检测外购原料，按NL8260用户TDS的PP/OPP油墨附着方向初评；未证现有水性/溶剂配方、采购我方材料或直接混拼相容，CPP溶剂配对仍待核。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "在巴基斯坦Lahore自研制造PP编织袋油墨，并设配方测试实验室。",
+      "sourceName": "Own current PP woven-bag ink manufacture, laboratory/raw material process and independently reread business identity",
+      "sourceUrl": "https://eastlandink.com/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://eastlandink.com/",
+      "contactPage": "https://eastlandink.com/contacts/",
+      "generalEmail": "info@eastlandink.com",
+      "generalPhone": "+92 42 35297211",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own PPwoven ink manufacture, laboratory and imported rawmaterial testing; futurewaterink not current",
+          "url": "https://eastlandink.com/"
+        },
+        {
+          "label": "Own visible fivefinishedink/coating families; linkedbrochure body wasnotobtained",
+          "url": "https://eastlandink.com/our-services/products/"
+        },
+        {
+          "label": "Own formulation and technicaldevelopment focus",
+          "url": "https://eastlandink.com/about-us/"
+        },
+        {
+          "label": "Current sameLahore businessaddress, companyemail and consistentlandlines; mobilediscrepancy retained",
+          "url": "https://eastlandink.com/contacts/"
+        },
+        {
+          "label": "Own CEOMirMuslehuddinZia asidentitycontextonly, no namedrecipient inferred",
+          "url": "https://eastlandink.com/ceos-message/"
+        }
+      ],
+      "address": "Plot No.88-A, Sundar Industrial Estate, Raiwind Road, Lahore, Pakistan. Contact body also writes Sunder Industrial Area/Punjab55150; wording retained without inferred factory geocode. Map reuses a published Lahore city marker, not a factory survey. Seattle/Maxbizz theme placeholders are excluded.",
+      "generalEmailEvidence": {
+        "company": "Eastland Ink Industries (Pvt) Ltd.",
+        "value": "info@eastlandink.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact MailUs field and repeated corporate footer/header",
+            "url": "https://eastlandink.com/contacts/",
+            "summary": "Exact published corporate business inbox, distinct from Maxbizz template email. No attribution to CEO or named procurement person; no deliverability or purchase claim."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Eastland Ink Industries (Pvt) Ltd.",
+        "value": "+92 42 35297211",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact companylandlines, repeated Home/About/Product/CEOfooter",
+            "url": "https://eastlandink.com/contacts/",
+            "summary": "Exact consistent public company landline. Mobile variants with extra trailingdigit are not corrected or selected; template US number and inferred WhatsApp routes are excluded."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "eastland-ink-industries-lahore",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Eastland Ink Industries (Pvt) Ltd. Team,\n\nYou manufacture polypropylene woven-bag inks and test imported raw materials in your formulation laboratory.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "You manufacture polypropylene woven-bag inks and test imported raw materials in your formulation laboratory.",
+      "evidenceUrl": "https://eastlandink.com/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 80
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

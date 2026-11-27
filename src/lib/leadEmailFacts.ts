@@ -696,4 +696,5 @@ export const leadEmailFacts: Record<string, string> = {
   'aravali-chemtex-udaipur': "Your Udaipur plant manufactures solvent-based flexographic inks for PP woven sacks, including untreated films.",
   'carmel-engineering-madurai': "Your Carmel-brand solvent-based flexographic ink is offered for polypropylene and BOPP substrates.",
   'pinturas-lider-pinlid-quito': "Your ESI Fast Dry alkyd enamel is listed for tank exteriors, overhead pipes and metal structures.",
+  'eastland-ink-industries-lahore': "You manufacture polypropylene woven-bag inks and test imported raw materials in your formulation laboratory.",
 }
