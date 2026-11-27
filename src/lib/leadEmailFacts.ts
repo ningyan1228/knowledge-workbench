@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"magpaint-europe-ulft": "I noticed MagPaint offers water-based wood and furniture paint development and production through its own Dutch paint factory.",
 "at-inks-rex-tone-india": "I noticed AT Inks manufactures solvent, water-based and UV-curable digital inks, with production and R&D facilities in Vadodara.",
 "korthals-groep-ijmuiden": "I noticed Korthals manufactures industrial wood coatings in water-based and solvent-based versions, supported by its own laboratory.",
 "kingfisher-building-products-uk": "I noticed Kingfisher develops and manufactures paints, coatings and sealers in the Lake District, and offers private-label production.",

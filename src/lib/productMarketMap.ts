@@ -16200,11 +16200,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "magpaint-europe-ulft",
+    "company": "MagPaint Europe",
+    "productId": "nl-w1201",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Netherlands（国家示意点，非城市或工厂定位）",
+    "latitude": 52.25,
+    "longitude": 5.75,
+    "legacyCompanyDescription": "荷兰自有工厂提供水性木器及家具漆开发制造和贴牌服务的企业",
+    "signal": "MagPaint在荷兰自有工厂提供水性漆配方开发、生产及贴牌服务，明确包含木器和家具漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "五份完整首方原文Contract144/Home58/SketchPaint目录77/White1L75/Products26共380返回行含页脚与cookie文字，0失败/跳转/GET/PDF/脚本。Contract明确荷兰自有工厂、内部配方技师、制造团队、按已有或新配方生产灌装贴牌，以及水性WoodFurnitureTrimPaints当前商业服务；木材应用依据为此具体代工服务，不虚构某批木漆订单、终端客户或现有采购。SketchPaintWhite1L同款明确水性室内成品，目录8规格仅为包装/色泽，不拆为8客户，也不把其墙面宣传当已核木器SKU。产品索引实际为MagnetPaint/SketchPaint/BlackboardPaint/GreenscreenPaint/BeamerPaint及Accessories，White1L页另列记号笔与清洁喷剂；属成品涂层和书写配套，已读范围未见NLW同类水性聚烯烃乳液、PO/CPO分散体或聚烯烃附着促进原料外售。排除限五页可见经营与代工范围，不称所有叶页/TDS/SDS/隐藏配方/终极股权审计。原文数据表为选择框无技术下载正文，未读PDF，绝不把数据框当已核完整TDS。官网自称MagPaintEurope及KVK42018953/税号，注册仅首方自述未独立查验，不擅补B.V法定后缀；magpaint与Search中荷兰magneetverf品牌网站保守同账户，全部成品品牌/颜色/包装和代工厂不拆。全正式672/root686含14无关未发、frontier1379/index691、17排除、queue与全部旧raw/full/normalized来源按名/域名/KVK/税号去重，只有当前5原读，无先前公司来源。Contact正文及页脚sales@magpaint.com是公开一般业务入口，未披露具名采购；采用general归属不从邮箱前缀猜负责人/部门。实际公司/联系人/产品/项目表单可用，未填写提交；公司电话+31315386473与传真分开，不造WhatsApp/LinkedIn。Riezenweg2/7071PRUlft是公开公司地址，不独立当厂门GPS；地图复用已核Netherlands52.25/5.75国家示意，非Ulft城市或厂门坐标，当前0新地理请求。NLW仅按用户木材底涂/附着促进用途潜在评估，不推现用PO、白板可擦性能、食品/儿童安全、零VOC认证、相容或性能保证。公司及范围5/rem1，资格闭合后停止，未为凑满额度再抓。"
+    },
+    "contact": {
+      "label": "公开一般业务邮箱、公司电话及实际代工咨询表单",
+      "email": "sales@magpaint.com",
+      "phone": "+31 315 38 64 73",
+      "contactUrl": "https://magpaint.com/private-label-contract-manufacturing/"
+    },
+    "source": {
+      "label": "MagPaint自有工厂水性木器家具漆开发制造服务原文",
+      "url": "https://magpaint.com/private-label-contract-manufacturing/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"magpaint-europe-ulft": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "at-inks-rex-tone-india": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "korthals-groep-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "kingfisher-building-products-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16877,6 +16906,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"magpaint-europe-ulft": {
+  "website": "https://magpaint.com/",
+  "contactPage": "https://magpaint.com/private-label-contract-manufacturing/",
+  "generalEmail": "sales@magpaint.com",
+  "generalPhone": "+31 315 38 64 73",
+  "generalEmailEvidence": {
+    "company": "MagPaint Europe",
+    "value": "sales@magpaint.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "MagPaint官网公开一般业务邮箱",
+        "url": "https://magpaint.com/private-label-contract-manufacturing/",
+        "summary": "PrivateLabel正文直接给sales@magpaint.com，页脚Contact重复，作为公司一般入口；没有具名采购或部门负责人证据。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhoneEvidence": {
+    "company": "MagPaint Europe",
+    "value": "+31 315 38 64 73",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "MagPaint官网一般业务电话",
+        "url": "https://magpaint.com/private-label-contract-manufacturing/",
+        "summary": "正文和页脚Tel均+31 315 38 64 73，Fax另列+31 315 74 52 00，不混作电话或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published company address: Riezenweg 2, 7071 PR Ulft, The Netherlands. Own paint factory is stated to be in the Netherlands, but this mailing address is not independently verified as its factory gate. Map uses cached GeoNames Netherlands country representative coordinates 52.25,5.75, not Ulft city or factory GPS.",
+  "sources": [
+    {
+      "label": "自有荷兰工厂、配方团队及水性木器家具漆代工",
+      "url": "https://magpaint.com/private-label-contract-manufacturing/"
+    },
+    {
+      "label": "当前水性成品涂层品牌",
+      "url": "https://magpaint.com/"
+    },
+    {
+      "label": "SketchPaint成品规格目录，非木材用途证据",
+      "url": "https://magpaint.com/products/paint/sketchpaint/"
+    },
+    {
+      "label": "White1L具体水性室内成品及配套",
+      "url": "https://magpaint.com/product/sketchpaint-white-1l/"
+    },
+    {
+      "label": "完整可见产品分类，有限投入品角色排查",
+      "url": "https://magpaint.com/products/"
+    },
+    {
+      "label": "已核荷兰国家代表点，非城市或厂门",
+      "url": "https://www.geonames.org/2750405"
+    }
+  ]
+},
 "at-inks-rex-tone-india": {
   "website": "https://www.atinks.com/",
   "contactPage": "https://www.atinks.com/contact-us/",
@@ -50932,6 +51024,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"magpaint-europe-ulft",
 "at-inks-rex-tone-india",
 "korthals-groep-ijmuiden",
 "kingfisher-building-products-uk",
