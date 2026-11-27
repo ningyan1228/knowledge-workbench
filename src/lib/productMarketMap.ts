@@ -53559,4 +53559,118 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 79
     }
   }
+]).concat([
+  {
+    "id": "bcm-inks-loveland",
+    "company": "BCM Inks USA",
+    "productId": "nl-h-860",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Loveland, Ohio published USA contact; reused US-level approximate map anchor, not company geocoding",
+    "latitude": 32.7765,
+    "longitude": -79.9311,
+    "fit": "可开发候选",
+    "signal": "家族独立经营的水性瓦楞包装油墨配方制造商；Eekoflex系列包括水性柔版油墨与光油，官网另确认生产、质检与研发实验室职责。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "完整核读Home235行、Inks/Varnishes166、WhoWeAre269、Contact162、Specialty203及Eekoflex206行，共1241行含重复导航。官网明确自有水性墨制造、定制配方、生产/质检/R&D实验室；不是瓦楞印刷服务或经销标签。当前主要供货为Eekoflex、Superflex、Xtra、Digital、Specialty成品墨/光油，配套色彩管理、软件、混配设备与培训；已读Specialty分UV光油、金属/珠光、Secure-a-Flex水性防伪、香味及导电成品，未识别外售水性CPO/CPP/聚烯烃分散体或同类附着输入，按所选原料通过有限同行排除。未登录客户门户、未索取SDS、不称所有SKU/机密配方或最终持股已审。Eekoflex纸浆来源及原厂宣称的法规、环保、印速、干燥、防护或认证不转移给我方；仅用用户NL-H-860 Rev01水性油墨润湿/渗透的配方初评，不推PP、现用、采购或相容。官网说明Callif家族独立经营、USA总部及墨西哥设施/智利经销；全正式684/root698、front1409/index721、nestedqueue与全历史按域名/品牌/地址/ColorConneXion等核查无同一已知集团，统一一个USA客户，墨/智不另新增。通用info@BCMInks.com与美国公司字段相连，保留原大小写，不拼具名邮箱/WhatsApp；MX邮箱不冒美国采购。地图复用既有美国国家级锚点，不声称Loveland工厂已地理定位。公司6/6STOP，未触发外联或CRM。"
+    },
+    "contact": {
+      "label": "官网美国公司通用邮箱、联系表单及总机",
+      "email": "info@BCMInks.com",
+      "phone": "(513) 469-0400",
+      "contactUrl": "https://www.bcminks.com/contact/"
+    },
+    "source": {
+      "label": "Own Eekoflex water-based flexographic ink/varnish range",
+      "url": "https://www.bcminks.com/premium-inks-and-varnishes/eekoflex-and-eekoflex-ii-inks-and-varnishes/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有水性油墨配方、生产与研发活动明确，符合NL-H-860水性油墨功能助剂方向；仅作颜料润湿/渗透相关初评，不证明有采购、现用CPP或配方相容。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "家族独立经营的水性瓦楞包装油墨配方制造商；Eekoflex系列包括水性柔版油墨与光油，官网另确认生产、质检与研发实验室职责。",
+      "sourceName": "Own Eekoflex with manufacture, production/lab and primary range corroboration",
+      "sourceUrl": "https://www.bcminks.com/premium-inks-and-varnishes/eekoflex-and-eekoflex-ii-inks-and-varnishes/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.bcminks.com/",
+      "contactPage": "https://www.bcminks.com/contact/",
+      "generalEmail": "info@BCMInks.com",
+      "generalPhone": "(513) 469-0400",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own water-based ink manufacture and independently operated business",
+          "url": "https://www.bcminks.com/"
+        },
+        {
+          "label": "Own finished ink/varnish primary portfolio and custom making",
+          "url": "https://www.bcminks.com/premium-inks-and-varnishes/"
+        },
+        {
+          "label": "Own family ownership, USA/Mexico/Chile relationship and production/R&D/quality responsibilities",
+          "url": "https://www.bcminks.com/who-we-are/"
+        },
+        {
+          "label": "Own complete visible specialty finished ink/varnish scope",
+          "url": "https://www.bcminks.com/premium-inks-and-varnishes/specialty-inks-and-varnishes/"
+        },
+        {
+          "label": "Own Eekoflex water-based flexographic range; no customer performance transfer",
+          "url": "https://www.bcminks.com/premium-inks-and-varnishes/eekoflex-and-eekoflex-ii-inks-and-varnishes/"
+        },
+        {
+          "label": "Own USA corporate email, form, switchboard and published contact address",
+          "url": "https://www.bcminks.com/contact/"
+        }
+      ],
+      "address": "BCM Inks USA:161 Commerce Blvd,Loveland,OH45140,USA. Own site separately lists Mexico facility and Chile distributorship; they are not additional company counts. Map point is a reused US country-level illustration, not factory-gate geocoding.",
+      "generalEmailEvidence": {
+        "company": "BCM Inks USA",
+        "value": "info@BCMInks.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact USA block",
+            "url": "https://www.bcminks.com/contact/",
+            "summary": "Exact info@BCMInks.com in BCM Inks USA contact block, separately from Mexico inbox. Corporate general route, not named buyer or proof of deliverability/purchasing."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "BCM Inks USA",
+        "value": "(513) 469-0400",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact USA block",
+            "url": "https://www.bcminks.com/contact/",
+            "summary": "Published USA company switchboard; no named or WhatsApp inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "bcm-inks-loveland",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi BCM Inks USA Team,\n\nYour Eekoflex range includes water-based flexographic inks and varnishes for corrugated packaging.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Eekoflex range includes water-based flexographic inks and varnishes for corrugated packaging.",
+      "evidenceUrl": "https://www.bcminks.com/premium-inks-and-varnishes/eekoflex-and-eekoflex-ii-inks-and-varnishes/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 79
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
