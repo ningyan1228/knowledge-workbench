@@ -698,4 +698,5 @@ export const leadEmailFacts: Record<string, string> = {
   'pinturas-lider-pinlid-quito': "Your ESI Fast Dry alkyd enamel is listed for tank exteriors, overhead pipes and metal structures.",
   'eastland-ink-industries-lahore': "You manufacture polypropylene woven-bag inks and test imported raw materials in your formulation laboratory.",
   'unistar-inks-durban': "Your Aquastar water-based inks are formulated for gravure and flexographic printing on Kraft paper and corrugated board.",
+  'ahs-trade-services-mumbai': "Your woven-sack inks are listed for flexographic printing on untreated and treated PP bags.",
 }

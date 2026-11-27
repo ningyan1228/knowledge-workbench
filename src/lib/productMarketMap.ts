@@ -54784,4 +54784,98 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 83
     }
   }
+]).concat([
+  {
+    "id": "ahs-trade-services-mumbai",
+    "company": "AHS Trade & Services Private Limited",
+    "productId": "nl-8260",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai corporate office; Kalyan contact location (approximate Mumbai city marker)",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "fit": "可开发候选",
+    "signal": "在印度自主制造印刷油墨，编织袋油墨明确用于未处理或处理的PP袋。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "五份完整公司自刊IndiaMART托管原文：PPWoven184/About183/可见主目录169/IndustrialChemicals241/Contact91，共868native行含重复导航，不等868独立事实或完整全站SDS。About明确自有制造单元、分工、质量测试、研发人员，非只Manufacturer标签；具体PP编织袋墨对应处理/未处理PP及柔印。按NL8260用户TDS PP/OPP油墨直接方向初评，不强加客户墨必须全水性，也不将Search中的Polyamide/溶剂标签补成当前同款技术事实；不加CPP或H860/1201匹配，不承诺水性CPO可直接混入溶剂/UV或改善附着数值。完整可见主营15分类含成品墨及IndustrialChemicals，不忽略化学品商贸；实际该化学品页三项为PrintingInkReducer(MaterialSolvent)、Toluene、EthylAcetate，功能为溶剂/稀释。未识别CPO/CPP/MAH/聚烯烃分散体附着促进原料外售，所选输入有限范围排除通过，不冒全部隐配方/SDS/其他分类隐藏SKU已审；不是把所有助剂/化学品都当成品或所有树脂视为同行。Toluene熔点/容量/价格/认证等页面参数未复核，不修正或转为我方事实。PPI品牌及PanoramaReducer按本公司实际刊载标签保留，不据名称推另一制造商/集团或PPI法律归属，也不拆品牌客户；制造归属另由About及具体产品自述证实。当前完整法名/GST27AAICA6506A1Z3/CINU51109MH2010PTC204239、域名、地址及公开管理姓名全库无已知正式/同组，初始13历史档含用户TDS二进制随机AHS/无关UK及日本AHS/旧Search，扩展10档仅旧Search+当前原读/预留/配置，逐档哈希核对，旧请求0；新GST/CIN只是公司自刊身份线索非政府工商独立验证。Contact标题有PrivateLimitedprivateLimit重复及And/&措辞差异，GST相同、同页公司办公室与About一致，视一主体不改造新法人。About/四页Mumbai办公地址10AshokaCenterLTMarg400001，当前Contact另列301CWingOmGokuldhamCHSMurbadRoadKalyan421301/Thane；HeadOffice只写Shantinagar不猜城市。保留多地址，非新厂/另一客户，地图复用已有AstraChemtech公开Mumbai城市19.076/72.8777表示公司办公室，非Kalyan厂门或生产地实测。共享ahstns@gmail.com由公司About明确同时SalesMarketing及Technical栏目刊载，按公司通用业务邮箱，不冒采购个人；rosy/shabbir名式邮箱及RajSManager/CEO/Partners仅原文，不精选当前采购或董事股权集团。080与079电话是平台Call入口，非已核直接公司电话，不存直线/猜WhatsApp。Contact YourEmail/YourMobile为访客输入；ThankyouYourEnquiryhasbeensentsuccessfully为静态UI，未提交/发送或判断用户已发。自称2010、ISO、员工数、出口国、产能/收益均非当前独立认证/工厂审计，也不转给我方。来源0+5=终身5/rem1，不因产品/日期/品牌/域名/托管平台重置；不为耗满抓图或隐藏API。保存草稿不标发，未知发送不当未发，无外联/CRM。"
+    },
+    "contact": {
+      "label": "公司公开技术/销售共享邮箱及联系页",
+      "email": "ahstns@gmail.com",
+      "contactUrl": "https://www.ahstns.com/enquiry.html"
+    },
+    "source": {
+      "label": "Own woven-sack inks for untreated and treated PP; flexographic printing",
+      "url": "https://www.ahstns.com/hdpe-woven-sacks-inks.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有制墨单元、研发和质检，具体编织袋墨用于处理/未处理PP柔印；按NL8260 TDS PP/OPP墨方向作附着配方初评。兼营溶剂/稀释剂不等于CPO/CPP原料供应，不确认现用我方产品、采购需求、配方相容或可直接混入溶剂/UV体系。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "在印度自主制造印刷油墨，编织袋油墨明确用于未处理或处理的PP袋。",
+      "sourceName": "Own PP woven-sack ink product and in-house manufacturing, R&D and testing description",
+      "sourceUrl": "https://www.ahstns.com/hdpe-woven-sacks-inks.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.ahstns.com/",
+      "contactPage": "https://www.ahstns.com/enquiry.html",
+      "generalEmail": "ahstns@gmail.com",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own specific woven-sack printing ink for untreated and treated PP",
+          "url": "https://www.ahstns.com/hdpe-woven-sacks-inks.html"
+        },
+        {
+          "label": "Own manufacturing unit, quality testing and R&D team; exact shared sales/technical business mailbox",
+          "url": "https://www.ahstns.com/profile.html"
+        },
+        {
+          "label": "Complete visible15category primary range, including finished inks and industrial chemicals",
+          "url": "https://www.ahstns.com/rotogravure-flexographic-inks.html"
+        },
+        {
+          "label": "Three actual industrial-chemical offerings: solvent reducer, toluene and ethyl acetate; bounded selected-input exclusion",
+          "url": "https://www.ahstns.com/industrial-chemicals.html"
+        },
+        {
+          "label": "Current sameGST contact, Mumbai corporate office and Kalyan location; form observed without submission",
+          "url": "https://www.ahstns.com/enquiry.html"
+        }
+      ],
+      "address": "Corporate office and registered-address description: 10, Ashoka Center / Ashoka Shopping Center, LT Marg / Lokmanya Tilak Marg, Lohar Chawl, Mumbai 400001. Current Contact also lists 301-C-Wing, Om Gokuldham CHS, Murbad Road, Kalyan 421301, Thane, Maharashtra; Head Office is only Shantinagar. These are one sameGST company, not verified separate factories. Map reuses an existing public Mumbai city illustration for the corporate office, not Kalyan/factory geocoding.",
+      "generalEmailEvidence": {
+        "company": "AHS Trade & Services Private Limited",
+        "value": "ahstns@gmail.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own About Clients/Customers sales/marketing and technical sections",
+            "url": "https://www.ahstns.com/profile.html",
+            "summary": "The exact same Gmail is publicly listed under both Sales/Marketing and Technical, supporting shared company business use. No named purchasing recipient, mailbox deliverability or current buying need inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "ahs-trade-services-mumbai",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi AHS Trade & Services Private Limited Team,\n\nYour woven-sack inks are listed for flexographic printing on untreated and treated PP bags.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your woven-sack inks are listed for flexographic printing on untreated and treated PP bags.",
+      "evidenceUrl": "https://www.ahstns.com/hdpe-woven-sacks-inks.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 81
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
