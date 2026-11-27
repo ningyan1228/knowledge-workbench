@@ -16172,11 +16172,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "at-inks-rex-tone-india",
+    "company": "A.T. Inks / Rex-Tone Industries Ltd.",
+    "productId": "elo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "India（国家示意点，非城市或工厂定位）",
+    "latitude": 22,
+    "longitude": 79,
+    "legacyCompanyDescription": "印度自主制造数码油墨并设有生产研发设施的企业",
+    "signal": "A.T.Inks／Rex-Tone在印度自主制造溶剂型、水性和UV数码油墨，并设有Vadodara生产及研发设施。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "沿用同一CPP私有researchId晋级，不创建另一ELO研究身份。五旧来源含4份完整经营原文545行及一份TDS符号28行；本轮唯1公司Contact247行，累计5+1=6STOP/rem0，792实际经营行。旧TDS未读技术正文且精确URI冻结，不因ELO、品牌/工厂/域名或日期重给额度，不用staging域恢复。公司概览明确ATInks为RexToneIndustries品牌、Mumbai总部和Vadodara自有生产研发，制造溶剂型、弱溶剂、水性、陶瓷、UV/LED固化数码墨；本轮Contact明确印度3工厂及研发中心。一公司多厂不拆计数。按用户ELOTDS直接列明油墨用途，选择成品数码墨配方柔韧性潜在评估，非ELO现用、UV/陶瓷固化相容、食品接触/法规/印刷性能或采购确认。原CPP同款PP溶剂墨/PP-TPO底涂缺口仍false，不由ELO准入倒推闭合。AP301MP原文为稀释后涂于玻璃/陶瓷/MDF/金属、用于UV数码墨的双组分成品底涂，泛adhesionpromoter名不自动CPO原料；所选ELO排查限实际5份经营正文、成品系列及5款底涂目录。Contact新增ATPigments颜料业务原样保留，颜料本身不等ELO/ESBO/环氧植物油或生物基聚合物增塑改性油，未读atpigments独立目录不冒全公司SKU/SDS/原料配方/终极股权穷尽审计；当前已读范围未见所选环氧油类输入外售，也不虚构外购例外。GloryChemicals在首方明确USDistributor，只作商业关联去重，不称已证子公司/最终控制，不另加美国客户。法名/ATInks/atinks.com/RexTone/atpigments/Glory等与正式671、root685含14未发、frontier1377/index689、17排除及queue核对，只原RID在两私有表中存在；InkAnon历史核验叙述提AT域名不代表同主体。Contact明确研发中心info@atinks.com与销售sales@atinks.com，按Technical及Sales分项部门邮箱保留，首选研发部门，均非具名采购；hr/press/美国分销邮箱不精选，联系人作者或客户评价人不冒采购。研发中心公开第一完整电话+919924177715作为部门业务入口，另尾号/其他部门号码不拼接、电话不猜WhatsApp；LinkedIn未核。页头NewYork/212是主题占位，不绑定主体或联系人。销售地址/研发中心/三工厂按Contact分开，Mumbai概览总部与当前销售地址差异保留；国家地图22/79来自独立GeoNames，非Vadodara/Mumbai城市或任一厂门GPS。公司当前1、范围另国家1=2/6余4，无公司重试/失败/跳转/GET/PDF/脚本；资格闭合后停止，不用余下范围额度突破公司6STOP。"
+    },
+    "contact": {
+      "label": "官网研发中心及销售部门邮箱、部门电话与联系表单",
+      "email": "info@atinks.com",
+      "phone": "+91 9924177715",
+      "contactUrl": "https://www.atinks.com/contact-us/"
+    },
+    "source": {
+      "label": "AT Inks自有数码油墨制造及生产研发原文",
+      "url": "https://www.atinks.com/company-overview/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"at-inks-rex-tone-india": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "korthals-groep-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "kingfisher-building-products-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pamainke-argentina": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
@@ -16848,6 +16877,114 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"at-inks-rex-tone-india": {
+  "website": "https://www.atinks.com/",
+  "contactPage": "https://www.atinks.com/contact-us/",
+  "generalPhone": "+91 9924177715",
+  "generalPhoneEvidence": {
+    "company": "A.T. Inks / Rex-Tone Industries Ltd.",
+    "value": "+91 9924177715",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "AT Inks官网研发中心公开业务电话",
+        "url": "https://www.atinks.com/contact-us/",
+        "summary": "R&D Centre公开+91 9924177715/9737955568，采用第一完整号码，仅移除排版空格；非具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Technical",
+      "email": "info@atinks.com",
+      "source": {
+        "label": "AT Inks官网R&D Centre",
+        "url": "https://www.atinks.com/contact-us/"
+      },
+      "emailEvidence": {
+        "company": "A.T. Inks / Rex-Tone Industries Ltd.",
+        "value": "info@atinks.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "AT Inks官网Technical公开部门业务邮箱",
+            "url": "https://www.atinks.com/contact-us/",
+            "summary": "Contact的R&D Centre明确info@atinks.com；为研发中心部门入口，非具名人员或采购确认。"
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    {
+      "department": "Sales",
+      "email": "sales@atinks.com",
+      "source": {
+        "label": "AT Inks官网Sales Inquiries",
+        "url": "https://www.atinks.com/contact-us/"
+      },
+      "emailEvidence": {
+        "company": "A.T. Inks / Rex-Tone Industries Ltd.",
+        "value": "sales@atinks.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "AT Inks官网Sales公开部门业务邮箱",
+            "url": "https://www.atinks.com/contact-us/",
+            "summary": "Contact的Sales Inquiries明确sales@atinks.com，为销售部门入口，非具名采购。"
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    }
+  ],
+  "address": "Published sales/Factory 2: C-1/351/4, GIDC Makarpura, Vadodara 390010, Gujarat, India. R&D Centre: 5th and 6th Floor, Urban II, Vasna Bhayli Main Road, Vadodara 391410. Official contact separately lists Factory 1 at Por Ramangamdi, Factory 3 at Masar and AT Pigments at Dabhasa; no addresses merged. Overview says Mumbai headquarters. Map uses GeoNames India country representative 22,79, not any city or factory GPS.",
+  "sources": [
+    {
+      "label": "自有数码墨制造、品牌及Vadodara生产研发",
+      "url": "https://www.atinks.com/company-overview/"
+    },
+    {
+      "label": "成品底涂及后涂层分类",
+      "url": "https://www.atinks.com/product-category/by-application/pre-and-post-coats/"
+    },
+    {
+      "label": "五款成品底涂目录",
+      "url": "https://www.atinks.com/product-category/by-application/pre-and-post-coats/primers-precoats/"
+    },
+    {
+      "label": "AP301MP具体成品底涂角色，非自动原料同行",
+      "url": "https://www.atinks.com/product/precoat-metals/"
+    },
+    {
+      "label": "研发及销售部门邮箱/电话、工厂及商业关联",
+      "url": "https://www.atinks.com/contact-us/"
+    },
+    {
+      "label": "印度国家代表坐标，非城市或工厂",
+      "url": "https://www.geonames.org/1269750"
+    }
+  ],
+  "generalEmail": "info@atinks.com",
+  "generalEmailEvidence": {
+    "company": "A.T. Inks / Rex-Tone Industries Ltd.",
+    "value": "info@atinks.com",
+    "kind": "department",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "AT Inks官网Technical公开部门业务邮箱",
+        "url": "https://www.atinks.com/contact-us/",
+        "summary": "Contact的R&D Centre明确info@atinks.com；为研发中心部门入口，非具名人员或采购确认。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  }
+},
 "korthals-groep-ijmuiden": {
   "website": "https://www.korthals.nl/",
   "contactPage": "https://www.korthals.nl/en/contact/",
@@ -50795,6 +50932,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"at-inks-rex-tone-india",
 "korthals-groep-ijmuiden",
 "kingfisher-building-products-uk",
 "pamainke-argentina",
