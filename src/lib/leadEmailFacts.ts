@@ -693,4 +693,5 @@ export const leadEmailFacts: Record<string, string> = {
   'techno-print-chemicals-hosur': "Your Aqueous Kraft flexographic ink is designed for paper and corrugated boxes.",
   'annapurna-printing-inks-balasore': "Your solvent gravure and poly inks are formulated for PP and HDPE woven sacks.",
   'nutec-digital-ink-cape-town': "Your Amethyst A50-RIG-OC technical sheet lists fluted polypropylene for rigid UV printing.",
+  'aravali-chemtex-udaipur': "Your Udaipur plant manufactures solvent-based flexographic inks for PP woven sacks, including untreated films.",
 }

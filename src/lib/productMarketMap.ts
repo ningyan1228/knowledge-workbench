@@ -54226,4 +54226,114 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 78
     }
   }
+]).concat([
+  {
+    "id": "aravali-chemtex-udaipur",
+    "company": "Aravali Chemtex Pvt Ltd (Aravali Group)",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Udaipur, Rajasthan (country-level illustrative marker)",
+    "latitude": 20.5004,
+    "longitude": 76.0306,
+    "fit": "可开发候选",
+    "signal": "在印度Udaipur自主制造PP编织袋用溶剂型柔版油墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立核读集团官网Chemtex产品/工厂85行（同一OurCompanies导航又返回此页85行，重复请求仍计额）、Home129、ADPL57、SMLLP88、Contact68。6次实际返回512行含重复85及导航，五份不同完整原文427行；不是六独立证据。Chemtex明确Udaipur自有溶剂墨工厂、实验室/R&D/matching center；独立FlexoPPWovenSack产品段明确IPA/NBA/TOL、PPsacks/未处理膜/jumbo bags，不将泛溶剂类别与其他基材拼接。PP溶剂墨按既有NipponPaper SUPERCHLON应用来源（2026-11-02）关联用户CPP指南PP附着方向，application为market-extended cpp-pp-printing-ink，非我方逐牌号TDS已验证油墨配方；客户原有树脂、CPP/CPO/MAH使用、外购、采购需求和相容性皆未确认。集团Home可见四大产品族为成品墨/稀释剂、色母/钙滑石填料、非金属矿物增量剂、金属废料及焊材。ADPL明确MicroInks、Clariant、JaiCorp、Maksteel、Stitchman、AstralAdhesives、Samsung分销；品牌代理不自动等于CPP/CPO原料代理。SMLLP与ChittorPolyfab合资，实列色母、CaCO3/滑石填料及UV/抗静电/强度等添加包，这些不自动当CPP/CPO或MAH聚烯烃附着输入；已读主营目录范围未发现所选同类原料外售，有限范围同行排除通过，不称全部关联公司叶页、隐藏SKU、添加包配方或所有SDS已审。集团八业务入口/现有SamarthMicrons与导航CalOlefin名称差异保留，单一集团账户；未读CMM/Minrocks/International/TARO细页，不补其配方或最终股权。自刊2020扩产/2025上市目标与Anyearold及©2019–20是历史表述，不冒当前产能/新工厂投产/上市完成。旧FCIAravaliGypsum、AravaliFence及AravaliPhosphate只在多公司名录/搜索中出现，未见本集团原请求；Phosphate名称不靠相近地址定集团，不制造重复或新预算。完整正式690/root704/front1421/index733、nestedqueue/excluded按集团/公司/JV/Chowdhary/域名/邮箱/电话无已知重复；原始历史98/7文件逐项排异审计保存。Contact明示集团HEAD OFFICE Udaipur及cmd邮箱、两电话，作为共享企业业务入口，不凭cmd前缀或Home管理层姓名冒董事个人/采购邮箱，不精选任何具名个人。地图点只取既有印度正式客户点的国家范围示意，不当Udaipur城市或工厂经纬度；办公室原地址保留。六次终身6STOP，不跨产品/关联公司/域名/provider重置；无外联/CRM，草稿保存不发送。"
+    },
+    "contact": {
+      "label": "集团官网公开业务邮箱、电话及联系页",
+      "email": "cmd@thearavaligroup.co.in",
+      "phone": "+91 9987501708",
+      "contactUrl": "https://www.thearavaligroup.co.in/contact.html"
+    },
+    "source": {
+      "label": "Own Udaipur solvent-ink plant and specific PP woven sack ink",
+      "url": "https://www.thearavaligroup.co.in/aravali-chemtex-pvt-ltd.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有Udaipur溶剂型油墨工厂，明确PP编织袋用柔版墨；按已有独立CPP/CPO油墨用途扩展进行PP附着配方初评，未确认采购、实际使用我方产品或配方相容。",
+    "targetCompanyTypeId": "cpp-solvent-ink-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "cpp-pp-printing-ink",
+      "statement": "在印度Udaipur自主制造PP编织袋用溶剂型柔版油墨。",
+      "sourceName": "Own Udaipur ink manufacturing facility and exact solvent PP woven-sack ink segment",
+      "sourceUrl": "https://www.thearavaligroup.co.in/aravali-chemtex-pvt-ltd.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.thearavaligroup.co.in/",
+      "contactPage": "https://www.thearavaligroup.co.in/contact.html",
+      "generalEmail": "cmd@thearavaligroup.co.in",
+      "generalPhone": "+91 9987501708",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own solvent ink plant, lab and specific PP woven sack product",
+          "url": "https://www.thearavaligroup.co.in/aravali-chemtex-pvt-ltd.html"
+        },
+        {
+          "label": "Own group business families and shared group identity",
+          "url": "https://www.thearavaligroup.co.in/"
+        },
+        {
+          "label": "Own ADPL distribution portfolio, actual brand list",
+          "url": "https://www.thearavaligroup.co.in/adpl-comp.html"
+        },
+        {
+          "label": "Own SMLLP colour/filler/additive masterbatches and Chittor Polyfab joint venture",
+          "url": "https://www.thearavaligroup.co.in/smllp-comp.html"
+        },
+        {
+          "label": "Own group head office and corporate business email/phone",
+          "url": "https://www.thearavaligroup.co.in/contact.html"
+        }
+      ],
+      "address": "Group head office: 4-A Circle View Apartment, 169, Fatehpura, Near Sukhadia Circle, Udaipur Rajasthan 313001, India. Ink plant is stated to be in Udaipur; exact factory address not published on read pages. Map uses an India-level illustrative marker derived from existing public markers, not Udaipur city or factory geocoding.",
+      "generalEmailEvidence": {
+        "company": "Aravali Chemtex Pvt Ltd (Aravali Group)",
+        "value": "cmd@thearavaligroup.co.in",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own group Contact Email field beside HEAD OFFICE",
+            "url": "https://www.thearavaligroup.co.in/contact.html",
+            "summary": "Exact public group business mailbox covering the listed Chemtex company. No attribution to any named director or purchasing manager; cmd prefix is not proof of personal ownership, deliverability or demand."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Aravali Chemtex Pvt Ltd (Aravali Group)",
+        "value": "+91 9987501708",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own group Contact field",
+            "url": "https://www.thearavaligroup.co.in/contact.html",
+            "summary": "Exact published business phone, first of two numbers. No inferred named individual or WhatsApp account."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "aravali-chemtex-udaipur",
+      "productId": "cpp-cpo",
+      "subject": "MAH-modified CPP/CPO — a brief introduction",
+      "body": "Hi Aravali Chemtex Pvt Ltd (Aravali Group) Team,\n\nYour Udaipur plant manufactures solvent-based flexographic inks for PP woven sacks, including untreated films.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply MAH-modified CPP/CPO for PP adhesion-formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Udaipur plant manufactures solvent-based flexographic inks for PP woven sacks, including untreated films.",
+      "evidenceUrl": "https://www.thearavaligroup.co.in/aravali-chemtex-pvt-ltd.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 77
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
