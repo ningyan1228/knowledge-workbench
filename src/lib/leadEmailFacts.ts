@@ -694,4 +694,5 @@ export const leadEmailFacts: Record<string, string> = {
   'annapurna-printing-inks-balasore': "Your solvent gravure and poly inks are formulated for PP and HDPE woven sacks.",
   'nutec-digital-ink-cape-town': "Your Amethyst A50-RIG-OC technical sheet lists fluted polypropylene for rigid UV printing.",
   'aravali-chemtex-udaipur': "Your Udaipur plant manufactures solvent-based flexographic inks for PP woven sacks, including untreated films.",
+  'carmel-engineering-madurai': "Your Carmel-brand solvent-based flexographic ink is offered for polypropylene and BOPP substrates.",
 }

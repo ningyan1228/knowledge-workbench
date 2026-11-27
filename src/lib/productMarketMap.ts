@@ -54336,4 +54336,114 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 77
     }
   }
+]).concat([
+  {
+    "id": "carmel-engineering-madurai",
+    "company": "Carmel Engineering",
+    "productId": "nl-8260",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Madurai, Tamil Nadu (approximate city marker)",
+    "latitude": 9.9252,
+    "longitude": 78.1198,
+    "fit": "可开发候选",
+    "signal": "在印度Madurai制造柔版油墨，Carmel溶剂墨列PP/BOPP基材。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立完整读取自有IndiaMART管理站具体油墨221行、CompanyBrief138、Products139及另一官网Home219，共四份业务原文717行含导航；另一个已发现深链404无正文仍计1，Madurai城市仅324/1055行局部地理来源，合计六来源6STOP，不冒五份完整业务文档或全城市文章。具体油墨页明文自称Manufacturer of flexographic ink及Carmel leading manufacturer of flexographic/rotogravure inks；独立第一产品规格同时列SolventBased、Carmel品牌、PP/BOPP及包装膜用途。公司简介/第二官网主要是自有印刷设备制造，不能拿机器制造、1500台宣传或R&D机器团队替代油墨制造证据；本次油墨制造只据产品页明确自述，自有品牌产品与同一主体范围交叉核对，未核单独油墨工厂生产线/现场/实际产量或外部采购。机器业务不自动抹掉具体自制墨明文，但这些信息不证明我方产品需求。IndiaMART系公司自有品牌/同GST公开站且平台管理，非独立工商或第三方工厂审计；profile自刊GST33ACAPT3625Q1Z9、IEC3597004407及Proprietorship只身份线索未读政府注册。两站同名、1988沿革及PlotNo5PenielNagarViraganurDamMadurai625009吻合，第二站公开flexo@carmelengg.in，邮件第三域名由公司.com正文明确披露，不猜域名邮箱、不另算公司。CEO/GSTPartnerGnaniahThangaraj及JoktanIsaac BusinessHead/旧目录MD称谓差异保留，不精选个人、采购身份或个人邮箱。全可见产品范围为成品柔版墨和印刷/吹膜/制袋/复合/分切/折边设备；所读主营范围未见CPO/CPP/MAH聚烯烃分散体或同类附着原料外售，有限所选同行排除通过，不称全部隐藏SKU/SDS或配方已审。产品页PolyFlexo泛科普[1,2]无参考链接，未借其聚酰胺/耐擦/电晕/相容或认证当我方参数；只按首项具体PP/BOPP用途与NL8260TDS油墨附着方向初评，TDS没有强制客户墨全水性，也不推水性CPO可直接加入溶剂墨/稳定/固化或改善保证，不新增CPP或1201匹配。source4精确404深链冻结，不变体/WWW/替代提供商重试；source5当前根主页是独立经营概览而非404页镜像。首次读取各网页静态ThankYou/Enquirysent/SENDSMS只模板文本，无提交/外联；WhatsappNow的链接指Products，不当有效WhatsApp，不据电话号码造跳转。集团/公司/品牌/GST/IEC/域名/邮箱/电话/地址/人名在正式691/root705/front1422/index734/nestedqueue/excluded无已知重复，30历史文件及追加身份名检索只有Search/本地记录无旧公司原请求，prior0审计保存；跨产品/两网站/邮箱域统一6STOP。地图9.9252/78.1198仅Madurai城市坐标，非PenielNagar工厂实测。公司公开业务邮箱/电话不冒具名采购或可达性；需求和配方适配待确认，草稿保存不发送，无CRM。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、电话和联系入口",
+      "email": "flexo@carmelengg.in",
+      "phone": "+91 93445 75075",
+      "contactUrl": "https://carmelengg.com/"
+    },
+    "source": {
+      "label": "Own Carmel-brand solvent flexographic ink for PP/BOPP substrates",
+      "url": "https://www.carmelindia.in/flexographic-ink.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "公司具体产品页明示制造柔版/凹版油墨，Carmel品牌溶剂墨同时列PP/BOPP；对应NL8260TDS的PP/OPP油墨附着方向作配方初评。设备制造业务单独保留，未确认采购、使用我方产品、水分散体与溶剂墨直接相容。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "在印度Madurai制造柔版油墨，Carmel溶剂墨列PP/BOPP基材。",
+      "sourceName": "Own explicit ink manufacturer description and specific Carmel solvent ink PP/BOPP specification",
+      "sourceUrl": "https://www.carmelindia.in/flexographic-ink.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.carmelindia.in/",
+      "contactPage": "https://carmelengg.com/",
+      "generalEmail": "flexo@carmelengg.in",
+      "generalPhone": "+91 93445 75075",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own specific solvent PP/BOPP ink and explicit ink-manufacturer statement",
+          "url": "https://www.carmelindia.in/flexographic-ink.html"
+        },
+        {
+          "label": "Own company/GST/proprietorship profile, equipment manufacture separately identified",
+          "url": "https://www.carmelindia.in/profile.html"
+        },
+        {
+          "label": "Own full visible equipment and finished ink catalogue",
+          "url": "https://www.carmelindia.in/products-and-services.html"
+        },
+        {
+          "label": "Second own website confirms same Madurai address and public corporate business email/phone",
+          "url": "https://carmelengg.com/"
+        },
+        {
+          "label": "Madurai city coordinates; partial city representation only, not factory geocoding",
+          "url": "https://en.wikipedia.org/wiki/Madurai"
+        }
+      ],
+      "address": "Plot No.5, Peniel Nagar, Viraganur Dam, Madurai 625009, Tamil Nadu, India. Same address on both own websites; GST/IEC self-published, not independently registry-verified. Map point is a Madurai city illustration, not a surveyed factory location.",
+      "generalEmailEvidence": {
+        "company": "Carmel Engineering",
+        "value": "flexo@carmelengg.in",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own carmelengg.com homepage Contact Us footer",
+            "url": "https://carmelengg.com/",
+            "summary": "Exact publicly disclosed company business mailbox flexo@carmelengg.in on same-name/address corporate website. The email uses .in while publisher uses .com; explicit first-party disclosure, no guessed alias or named-person attribution."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Carmel Engineering",
+        "value": "+91 93445 75075",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own carmelengg.com Contact Us footer",
+            "url": "https://carmelengg.com/",
+            "summary": "Exact published company business phone. IndiaMART routing numbers not selected; no personal buyer or WhatsApp inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "carmel-engineering-madurai",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Carmel Engineering Team,\n\nYour Carmel-brand solvent-based flexographic ink is offered for polypropylene and BOPP substrates.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Carmel-brand solvent-based flexographic ink is offered for polypropylene and BOPP substrates.",
+      "evidenceUrl": "https://www.carmelindia.in/flexographic-ink.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 75
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
