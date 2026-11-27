@@ -16144,11 +16144,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "korthals-groep-ijmuiden",
+    "company": "Korthals Groep B.V.",
+    "productId": "nl-w1201",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Netherlands（国家示意点，非城市或工厂定位）",
+    "latitude": 52.25,
+    "longitude": 5.75,
+    "legacyCompanyDescription": "荷兰自主配方研发制造工业木器涂层的企业",
+    "signal": "Korthals自主配方研发制造工业木器涂层，提供水性及溶剂型产品，并供应用于山毛榉、松木和樱桃木的Soens水性木材着色剂。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "本轮四份完整首方经营原文WoodCoating365/WaterborneStain309/Contact384/ProductDevelopment365共1423行，无失败/跳转/GET/PDF/远程脚本。WoodCoating同页明确工业木材涂层waterbased及solventbased版本与our own factory，ProductDevelopment明确自身R&D开发配方、实验室测试及1K/2K低溶剂或水性定制；不从单纯销售标签推自制。WaterborneStain同款Soens为水溶染料着色剂，明确山毛榉/松木/樱桃木及橡木起纤限制，不能将水溶染料说成PO分散体、丙烯酸/PU乳液或已相容配方。木器涂层为用户NLW1201TDS列明木材用途，潜在底涂/附着力评估，不把着色剂染料机理或客户防腐/耐水/防滑宣传转作我方保证。已读经营原文及目录覆盖工业成品漆/清漆、热指示/耐热/防护/烘烤/PU涂层、木材着色剂、粉末漆、底漆和地坪成品；未见NLW同类水性聚烯烃乳液、PO/CPO分散体或聚烯烃附着促进原料外售，排除限上述已读经营范围，非每个叶页、TDS/SDS、全部SKU或终极股权审计。Contact明确KorthalsGroepBV与34049090注册自述，Soens/Soens’s/Soen’s木材品牌及ThermOSignal按同一保守集团账户，不拆品牌产品和地点；无独立注册/股权认证。全正式/main670/root684含14未发、frontier1376/index688/17排除、队列及所有旧raw/full/normalized来源按法名/域名/品牌/注册号查重，只有当前四原读，无旧公司定向来源；0+4=4/rem2，不为语言/品牌/产品重置。一般邮箱office@korthals.nl、一般电话+31255533554和实际联系表单明确，非具名采购/技术邮箱；页面LinkedIn为蜜罐输入字段，不冒公司LinkedIn链接，不猜WhatsApp。产品开发页另一电话号码尾数533544与公共页头页脚533554不同，公开精选采用Contact及三原文一致的533554，未修造另号。Contact正文Maxwellstraat2/IJmuiden邮编1970AD与页脚1976AD冲突保留，公开业务地址不精选邮编，不推厂门地址。GeoNames荷兰52.25/5.75只国家示意，非IJmuiden或工厂GPS。认证/年限/绿色耐候等自述不当我方认证，当前采购、现用材料/相容、性能及替换需求均未确认。范围4公司+1独立国家=5/6余1停止，不为凑额度再抓。"
+    },
+    "contact": {
+      "label": "公开公司一般业务邮箱、官网联系表单及一般电话",
+      "email": "office@korthals.nl",
+      "phone": "+31 255 533 554",
+      "contactUrl": "https://www.korthals.nl/en/contact/"
+    },
+    "source": {
+      "label": "Korthals自有工厂工业水性木器涂层原文",
+      "url": "https://www.korthals.nl/en/wood-coating/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"korthals-groep-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "kingfisher-building-products-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pamainke-argentina": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "fenwick-tilbrook-norfolk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16819,6 +16848,65 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"korthals-groep-ijmuiden": {
+  "website": "https://www.korthals.nl/",
+  "contactPage": "https://www.korthals.nl/en/contact/",
+  "generalEmail": "office@korthals.nl",
+  "generalPhone": "+31 255 533 554",
+  "generalEmailEvidence": {
+    "company": "Korthals Groep B.V.",
+    "value": "office@korthals.nl",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Korthals官网公开一般公司邮箱",
+        "url": "https://www.korthals.nl/en/contact/",
+        "summary": "Contact明确office@korthals.nl为公司一般邮件入口，非具名采购/技术个人邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhoneEvidence": {
+    "company": "Korthals Groep B.V.",
+    "value": "+31 255 533 554",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Korthals官网公开一般业务电话",
+        "url": "https://www.korthals.nl/en/contact/",
+        "summary": "Contact页头及页脚均+31 255 533 554；产品开发正文另一尾号不同，不自动替换，不猜WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published visiting address: Maxwellstraat 2, IJmuiden, Netherlands. Contact body gives 1970 AD and footer gives 1976 AD; postal code remains unresolved and is not selected. Visiting address is not independently verified as a factory gate. Map uses GeoNames Netherlands country representative coordinates 52.25,5.75, not IJmuiden city or factory GPS.",
+  "sources": [
+    {
+      "label": "自有工厂及水性/溶剂型工业木器涂层",
+      "url": "https://www.korthals.nl/en/wood-coating/"
+    },
+    {
+      "label": "Soens水性木材染料着色剂及基材限制",
+      "url": "https://www.korthals.nl/en/varnishes/waterborne-stain/"
+    },
+    {
+      "label": "公司一般邮箱/电话/实际表单和法名",
+      "url": "https://www.korthals.nl/en/contact/"
+    },
+    {
+      "label": "自身研发配方及实验室、有限成品经营范围",
+      "url": "https://www.korthals.nl/en/product-development/"
+    },
+    {
+      "label": "荷兰国家代表坐标，非城市或工厂",
+      "url": "https://www.geonames.org/2750405"
+    }
+  ]
+},
 "kingfisher-building-products-uk": {
   "website": "https://www.kingfisheruk.com/",
   "contactPage": "https://www.kingfisheruk.com/contact",
@@ -50707,6 +50795,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"korthals-groep-ijmuiden",
 "kingfisher-building-products-uk",
 "pamainke-argentina",
 "fenwick-tilbrook-norfolk",

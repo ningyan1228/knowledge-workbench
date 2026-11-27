@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"korthals-groep-ijmuiden": "I noticed Korthals manufactures industrial wood coatings in water-based and solvent-based versions, supported by its own laboratory.",
 "kingfisher-building-products-uk": "I noticed Kingfisher develops and manufactures paints, coatings and sealers in the Lake District, and offers private-label production.",
 "pamainke-argentina": "I noticed Pamainke manufactures MicroPUR solvent-based flexographic and gravure inks for BOPP film used in laminated packaging.",
 "fenwick-tilbrook-norfolk": "I noticed Fenwick & Tilbrook formulates and makes water-based paints to order, including Interior Eggshell for woodwork and cabinetry.",
