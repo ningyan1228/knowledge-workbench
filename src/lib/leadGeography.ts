@@ -9,7 +9,7 @@ const countriesByContinent: Partial<Record<Continent, string[]>> = {
   欧洲: ['Albania', 'Belarus', 'Belgium', 'Bosnia and Herzegovina', 'Bulgaria', 'Croatia', 'Czech Republic', 'Denmark', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Kosovo', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Moldova', 'Netherlands', 'North Macedonia', 'Poland', 'Portugal', 'Romania', 'Russia', 'Serbia', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Switzerland', 'Turkey', 'Ukraine', 'United Kingdom'],
   北美洲: ['Canada', 'Costa Rica', 'Dominican Republic', 'El Salvador', 'Guatemala', 'Jamaica', 'Mexico', 'United States'],
   南美洲: ['Argentina', 'Bolivia', 'Brazil', 'Chile', 'Colombia', 'Ecuador', 'Paraguay', 'Peru', 'Uruguay', 'Venezuela'],
-  非洲: ['Algeria', 'Côte d’Ivoire', 'Egypt', 'Ethiopia', 'Ghana', 'Kenya', 'Libya', 'Morocco', 'Namibia', 'Nigeria', 'Senegal', 'South Africa', 'Tanzania', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'],
+  非洲: ['Madagascar', 'Algeria', 'Côte d’Ivoire', 'Egypt', 'Ethiopia', 'Ghana', 'Kenya', 'Libya', 'Morocco', 'Namibia', 'Nigeria', 'Senegal', 'South Africa', 'Tanzania', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'],
   大洋洲: ['Australia', 'New Zealand'],
 }
 

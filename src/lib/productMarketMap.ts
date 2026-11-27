@@ -53245,4 +53245,118 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedCppCpoLeads).concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads).concat(verifiedKubilayLeads).concat(verifiedOrhunLeads).concat(verifiedWaterborneLeads).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedCppCpoLeads).concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads).concat(verifiedKubilayLeads).concat(verifiedOrhunLeads).concat(verifiedWaterborneLeads).concat([
+  {
+    "id": "s2pc-toamasina",
+    "company": "S2PC (Société de Peintures et de Produits Chimiques)",
+    "productId": "elo",
+    "country": "Madagascar",
+    "countryZh": "马达加斯加",
+    "city": "Toamasina (Tamatave) factory/head office; Madagascar-level approximate marker",
+    "latitude": -18.77,
+    "longitude": 46.87,
+    "fit": "可开发候选",
+    "signal": "在马达加斯加自主制造及研发涂料；Antirouille 为金属及钢结构用单组分溶剂型醇酸底漆。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立审读About完整native307行及成功同URI原始HTML223009字节、NosPeintures292行、Divers216行及Antirouille188行；另首页Timeout一次仍计账，终身6/6STOP且首页冻结。原始About保留自有生产/2002研发实验室/2015烧碱生产及Tamatave工厂总部；计数器0和33年宣传不作产能或新项目证明。原HTML存在两条无关赌博推广，作为来源完整性异常私有留档，未跟随或采信，不抹去与native及产品原文一致的真实公司业务。完整主要导航为防腐、建筑、木器、屋顶、泳池、船舶、地坪、其他八家族；总店显示51款而仅读首页12款，不称全51SKU/SDS已审。实际Divers六款Ardoisine、Colfix、环氧稀释剂、PU稀释剂、二甲苯稀释剂、Vinkocide原目录全读；保留配套胶/杀菌/溶剂角色，不把环氧字样当ELO或ELO同行。所读主要经营及配套范围未识别ELO/ESBO/环氧化植物油或同类生物基增塑稳定输入外售，有限通过所选输入排除；不称全部集团/隐性控股/所有配方化学已核，未虚构外购例外。Antirouille原文为醇酸/富锌/溶剂型，不冒环氧漆；ELO仅采用用户TDS涂料功能方向的初步柔韧/树脂配方评估，不宣称我方防腐性能、与其醇酸漆相容、使用、采购或替代。公司/域名/厂址/公开邮箱/电话全正式681、本地695、私有1403、来源715、排除17和完整队列无同一已知公司集团；S2PC/Tamatave总部及Tana分店一户，不把未核SFEPI/AURLAC/SOMALAVAL强并或拆新。"
+    },
+    "contact": {
+      "label": "官网工厂总部商务部门邮箱及总机；无具名采购",
+      "email": "commercial@s2pc.mg",
+      "phone": "034 54 723 82",
+      "contactUrl": "https://s2pc.mg/a-propos/"
+    },
+    "source": {
+      "label": "Own Antirouille alkyd primer product original",
+      "url": "https://s2pc.mg/produit/antirouille/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "真实涂料制造及配方研发，Antirouille明确成品醇酸金属底漆，符合用户ELO TDS涂料功能添加剂方向；仅提出初步柔韧/树脂配方评估，需求与配方相容未确认。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在马达加斯加自主制造及研发涂料；Antirouille 为金属及钢结构用单组分溶剂型醇酸底漆。",
+      "sourceName": "Own Antirouille product with own manufacture and R&D corroboration",
+      "sourceUrl": "https://s2pc.mg/produit/antirouille/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://s2pc.mg/",
+      "contactPage": "https://s2pc.mg/a-propos/",
+      "generalPhone": "034 54 723 82",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "commercial@s2pc.mg",
+          "source": {
+            "label": "Own factory/head-office commercial contact",
+            "url": "https://s2pc.mg/a-propos/"
+          },
+          "emailEvidence": {
+            "company": "S2PC (Société de Peintures et de Produits Chimiques)",
+            "value": "commercial@s2pc.mg",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Own About factory and head-office commercial mailbox",
+                "url": "https://s2pc.mg/a-propos/",
+                "summary": "Exact commercial mailbox printed under USINE ET SIÈGE SOCIAL and repeated on three read product/catalogue originals; not a named procurement person or deliverability test."
+              }
+            ],
+            "verifiedAt": "2026-11-27"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "label": "Own company paint manufacture, formulation R&D and caustic-soda activity",
+          "url": "https://s2pc.mg/a-propos/"
+        },
+        {
+          "label": "Own eight product-family overview; first12 of51 products only",
+          "url": "https://s2pc.mg/nos-peintures/"
+        },
+        {
+          "label": "Own complete six-product ancillary category",
+          "url": "https://s2pc.mg/nos-peintures/?filter_category=divers"
+        },
+        {
+          "label": "Own specific solvent-based alkyd metal primer",
+          "url": "https://s2pc.mg/produit/antirouille/"
+        }
+      ],
+      "address": "Route de l'aéroport - BP.393 Salazamay - Tamatave 501, Madagascar. Own factory and head-office address; country-level approximate map anchor, not independent city or factory-gate geocoding.",
+      "generalPhoneEvidence": {
+        "company": "S2PC (Société de Peintures et de Produits Chimiques)",
+        "value": "034 54 723 82",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own About factory/head-office Standard phone",
+            "url": "https://s2pc.mg/a-propos/",
+            "summary": "Exact public switchboard shown under factory/head office, not finance number or WhatsApp."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "s2pc-toamasina",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi S2PC (Société de Peintures et de Produits Chimiques) Team,\n\nYour Antirouille is a solvent-based alkyd primer for steel and other metal structures.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Antirouille is a solvent-based alkyd primer for steel and other metal structures.",
+      "evidenceUrl": "https://s2pc.mg/produit/antirouille/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 80
+    }
+  }
+]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

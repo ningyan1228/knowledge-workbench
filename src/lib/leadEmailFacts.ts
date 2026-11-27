@@ -684,4 +684,5 @@ export const leadEmailFacts: Record<string, string> = {
   'fordon-paints-faridabad': 'Your Faridabad operation manufactures protective coating systems for industrial steel structures, including high-build epoxy primers and intermediate coats.',
   'ominent-igl-shah-alam': 'Your company develops and manufactures protective coatings, including IGL Aegis, an industrial anticorrosion coating system.',
   'isonic-ink-vapi': "Your water-based flexographic inks are formulated for kraft paper, duplex board and corrugated packaging.",
+  's2pc-toamasina': "Your Antirouille is a solvent-based alkyd primer for steel and other metal structures.",
 }
