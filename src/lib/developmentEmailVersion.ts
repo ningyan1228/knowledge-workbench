@@ -1,3 +1,4 @@
+import { primaryLeadForHistory } from './leadProductMatches'
 import type { PublicLead } from './productMarketMap'
 import { activeOutreachSend, type OutreachSend } from './outreachLedger'
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
@@ -9,10 +10,12 @@ export function developmentEmailVersion(lead: PublicLead, sends: OutreachSend[] 
   const state = sends === null ? 'unknown' : sent ? 'sent' : 'unsent'
   const style = state === 'unsent' ? 'concise' : 'legacy'
   const missingEmail = !selectBusinessRecipient(lead)
+  const email = createShortDevelopmentEmail(style === 'legacy' ? primaryLeadForHistory(lead) : lead, undefined, style)
+  const brief = email?.format === 'brief-introduction-20261127'
   return {
     state, style, sent,
-    email: createShortDevelopmentEmail(lead, undefined, style),
-    label: state === 'unsent' ? '简洁首封 · 未记录发送' : state === 'sent' ? '原版参考 · 已记录发送' : '原版参考 · 发送状态未确认',
+    email,
+    label: state === 'unsent' ? brief ? '开发信草稿 · 未记录发送' : '简洁首封 · 未记录发送' : state === 'sent' ? '原版参考 · 已记录发送' : '原版参考 · 发送状态未确认',
     note: state === 'unsent' ? `结合该公司的具体业务，温和询问材料是否相关；当前采购需求与时机仍待确认。${missingEmail ? '缺邮箱仍可正常复制主题、正文和整封开发信，供已公开的表单或私信渠道使用。' : ''}`
       : state === 'sent' ? '该公司已有发送记录，保留原版首封参考。此处没有保存实际已发邮件正文，跟进信另行准备。'
         : '连接共享发送记录后，未记录发送的公司会显示简洁版。',

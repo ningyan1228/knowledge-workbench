@@ -2,6 +2,18 @@ import type { PublicLead } from './productMarketMap'
 
 /** Saved application evidence supplies the topic; it never confirms a current purchase. */
 const contexts: Record<string, { application: string; subject: string }> = {
+  'nl8260-pp-opp-inks': { application: 'PP/OPP ink formulations', subject: 'PP/OPP ink adhesion evaluation' },
+  'nl8260-pp-tpo-coatings': { application: 'PP/TPO plastic coatings', subject: 'PP/TPO coating evaluation' },
+  'nl8260-pe-coatings': { application: 'PE plastic coatings', subject: 'PE coating evaluation' },
+  'nl8260-pvc-epdm-coatings': { application: 'PVC/EPDM coatings', subject: 'PVC/EPDM coating evaluation' },
+  'nl8260-paper-coatings': { application: 'paper coatings', subject: 'paper coating evaluation' },
+  'nl8260-adhesives': { application: 'adhesive formulations', subject: 'adhesive material evaluation' },
+  'nlh860-plastic-bonding': { application: 'plastic-bonding formulations', subject: 'plastic bonding evaluation' },
+  'nlh860-rubber-bonding': { application: 'rubber-bonding formulations', subject: 'rubber bonding evaluation' },
+  'nlh860-waterborne-inks': { application: 'water-based inks', subject: 'water-based ink evaluation' },
+  'nlh860-waterborne-varnishes': { application: 'water-based varnishes', subject: 'water-based varnish evaluation' },
+  'nlh860-industrial-paints': { application: 'water-based industrial paints', subject: 'industrial paint evaluation' },
+  'nlh860-wood-coatings': { application: 'water-based wood coatings', subject: 'wood coating evaluation' },
   'cpp-pp-tpo-primer': { application: 'PP plastic primers', subject: 'PP-primer material evaluation' },
   'cpp-pp-printing-ink': { application: 'PP printing inks', subject: 'PP-ink material evaluation' },
   'cpp-pp-tpo-adhesive': { application: 'PP laminating adhesives', subject: 'PP-adhesive material evaluation' },

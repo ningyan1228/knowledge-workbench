@@ -1,3 +1,5 @@
+import { buildBriefIntroductionDraft, validBriefIntroductionDraft } from './briefIntroductionDraft'
+import { selectedProductMatch, primaryLeadForHistory } from './leadProductMatches'
 import {
   marketExtendedApplications,
   marketProducts,
@@ -17,6 +19,7 @@ const verifiedDay = (value?: string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.t
 const publicSource = (value?: string) => Boolean(value && /^https:\/\//.test(value))
 
 export type ShortDevelopmentEmail = {
+  format?: 'brief-introduction-20261127'
   style: 'concise' | 'legacy'
   subject: string
   body: string
@@ -30,6 +33,8 @@ const productNames: Record<PublicLead['productId'], string> = {
   'nl-w1201': 'NL-W1201',
   elo: 'epoxidized linseed oil (ELO)',
   'cpp-cpo': 'MAH-modified CPP/CPO',
+  'nl-8260': 'NL-8260',
+  'nl-h-860': 'NL-H-860',
 }
 
 function positioningFor(lead: PublicLead) {
@@ -46,6 +51,8 @@ function positioningFor(lead: PublicLead) {
       ? 'a water-based surface treatment material for preliminary PP/PE adhesion-formulation evaluation'
       : 'a water-based surface treatment material for primer and adhesion-promoter formulation evaluation'
   }
+  if (lead.productId === 'nl-8260') return 'a waterborne chlorinated polyolefin dispersion for adhesion-formulation evaluation'
+  if (lead.productId === 'nl-h-860') return 'a water-based chlorinated polypropylene dispersion for bonding and water-based formulation evaluation'
   if (lead.productId === 'cpp-cpo') return 'a MAH-modified CPP/CPO raw material for PP adhesion-formulation evaluation'
   if (applicationId === 'elo-pvc-plasticizer') return 'a bio-based functional additive for preliminary plasticizer evaluation in PVC formulations'
   if (applicationId === 'coatings' || applicationId === 'elo-anticorrosion-coating-research') return 'a bio-based functional additive for preliminary coating-formulation evaluation'
@@ -60,6 +67,8 @@ function recipientFor(lead: PublicLead) {
 
 /** Pre-written, review-first first contact. It never asserts a purchase or product fit. */
 export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: string | null, style: ShortDevelopmentEmail['style'] = 'concise'): ShortDevelopmentEmail | null {
+  const history = style === 'legacy' ? primaryLeadForHistory(lead) : lead
+  if (history !== lead) return createShortDevelopmentEmail(history, recipientName, style)
   const evidence = lead.companyEvidence
   const targetType = targetCompanyTypes.find((item) => item.id === lead.targetCompanyTypeId)
   const application = (evidence.applicationLayer === 'tds-verified' ? tdsVerifiedApplications : marketExtendedApplications)
@@ -77,8 +86,15 @@ export function createShortDevelopmentEmail(lead: PublicLead, recipientName?: st
     || !(lead.profile.website || lead.profile.contactPage || lead.profile.linkedIn || lead.profile.generalEmail || lead.profile.generalPhone || lead.profile.departmentEmails.length)) return null
 
   const refreshed = refreshedLeadFact(lead)
-  const companyFact = refreshed ? style === 'legacy' ? refreshed.email : refreshed.concise : style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id)
+  const matchFact = style === 'concise' ? selectedProductMatch(lead)?.fact : undefined
+  const companyFact = matchFact ?? (refreshed ? style === 'legacy' ? refreshed.email : refreshed.concise : style === 'legacy' ? leadEmailFacts[lead.id] : conciseCompanyFact(lead.id))
   if (!companyFact) return null
+  if (lead.outreachDraft || ['nl-8260','nl-h-860'].includes(lead.productId)) {
+    let draft = lead.outreachDraft
+    try { if (!draft) draft = buildBriefIntroductionDraft(lead, companyFact) } catch { return null }
+    if (!validBriefIntroductionDraft(draft, lead, companyFact)) return null
+    return { style, format: draft.format, subject: draft.subject, body: draft.body, text: `Subject: ${draft.subject}\n\n${draft.body}`, evidenceUrl: draft.evidenceUrl, verifiedAt: draft.verifiedAt }
+  }
   const productName = productNames[lead.productId]
   const strategy = firstContactStrategy(lead, recipientName)
   const subject = style === 'legacy' ? `${productName} — a brief introduction` : strategy.subject

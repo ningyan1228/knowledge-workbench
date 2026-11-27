@@ -1,3 +1,4 @@
+import { matchedProductIds } from '../../lib/leadProductMatches'
 import { useState } from 'react'
 import { CalendarCheck, ChevronRight, ExternalLink, FileText, Globe2, Linkedin, Mail, MessageCircle, Phone, Star } from 'lucide-react'
 import { marketProducts, type PublicLead } from '../../lib/productMarketMap'
@@ -33,11 +34,13 @@ export function ContactChannels({ lead }: { lead: PublicLead }) {
 }
 
 function BusinessEvidence({ lead, showContacts = true }: { lead: PublicLead; showContacts?: boolean }) {
+  const matches = matchedProductIds(lead)
   const evidence = lead.companyEvidence
   const brief = leadCardBrief(lead)
   return <div className="customer-business-brief">
     <div className="customer-brief-row"><span className="customer-brief-label">联系理由</span><p className="customer-card-reason">{brief.fact}</p></div>
     <div className="customer-brief-row"><span className="customer-brief-label">评估材料</span><p className="customer-card-opportunity" title={brief.limits}><strong>可评估 {brief.product}</strong><span>{brief.evaluation}</span>{brief.extended && <small className="customer-extension-label">扩展应用</small>}</p></div>
+    {matches.length > 1 && <div className="customer-brief-row"><span className="customer-brief-label">已核验匹配</span><p>{matches.map(id => marketProducts.find(product => product.id === id)?.name).join(" · ")}</p></div>}
     {showContacts && <div className="customer-brief-row"><span className="customer-brief-label">联系渠道</span><ContactChannels lead={lead} /></div>}
     <details className="customer-business-evidence">
     <summary>

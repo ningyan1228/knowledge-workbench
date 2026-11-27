@@ -1,7 +1,9 @@
+import { waterborneProductSummaries } from './waterborneProductCatalog'
 import type { Article, ProductSummary } from './types'
 import { getFactoryTasks, getHandbookSpecs } from './productHandbook'
 
 export const products: ProductSummary[] = [
+  ...waterborneProductSummaries,
   {
   "id": "cpp-cpo",
   "name": "MAH 改性 CPP／CPO",

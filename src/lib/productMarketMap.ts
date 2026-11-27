@@ -1,3 +1,5 @@
+import { verifiedWaterborneLeads, verifiedAdditionalWaterborneMatches } from './verifiedWaterborneLeads.ts'
+import type { CompanyOutreachDraft } from './briefIntroductionDraft.ts'
 import { verifiedOrhunLeads } from './verifiedOrhunLead.ts'
 import { verifiedKubilayLeads } from './verifiedKubilayLead.ts'
 import { verifiedOnpaLeads } from './verifiedOnpaLead.ts'
@@ -19,8 +21,10 @@ import { verifiedMarindecLeads } from './verifiedMarindecLead.ts'
 
 import { verifiedCppCpoLeads } from './verifiedCppCpoLeads.ts'
 
+import { waterborneMarketProducts, waterborneApplications, waterborneTargetTypes } from './waterborneProductCatalog.ts'
+
 export type MarketProduct = {
-  id: 'fertilizer-coating' | 'nl-w1201' | 'elo' | 'cpp-cpo'
+  id: 'fertilizer-coating' | 'nl-w1201' | 'elo' | 'cpp-cpo' | 'nl-8260' | 'nl-h-860'
   name: string
   nameEn: string
   color: string
@@ -102,7 +106,23 @@ export type CompanyProfile = {
   sources: Array<{ label: string; url: string }>
 }
 
+export type VerifiedProductMatch = {
+  outreachDraft?: CompanyOutreachDraft
+  productId: MarketProduct['id']
+  targetCompanyTypeId: string
+  companyEvidence: CompanyEvidence
+  supplierCompetitorCheck: SupplierCompetitorCheck
+  demandSideReason: string
+  fact: string
+  checkedAt: string
+  sourceExcerpt: string
+  inputReviewSources: Array<{ label: string; url: string }>
+  verificationStatus: 'independently-qualified'
+}
+
 export type PublicLead = {
+  outreachDraft?: CompanyOutreachDraft
+  productMatches?: VerifiedProductMatch[]
   id: string
   productId: MarketProduct['id']
   company: string
@@ -154,9 +174,11 @@ export const marketProducts: MarketProduct[] = [
     searchTerms: ['heavy-duty anticorrosion coating manufacturer', 'industrial protective coating formulator epoxy', 'marine protective coating manufacturer', 'anti-corrosion paint manufacturer R&D'],
     tdsScope: '基于已提供英文 TDS：ELO 可作为聚合物添加剂，并用于涂料、胶黏剂、油墨、密封胶和树脂改性；适用性须由客户配方验证。',
   },
+  ...waterborneMarketProducts,
 ]
 
 export const tdsVerifiedApplications: TdsVerifiedApplication[] = [
+  ...waterborneApplications,
   { id: 'cpp-pp-adhesion', productId: 'cpp-cpo', name: 'PP 附着力', nameEn: 'PP adhesion', description: '七牌号选型指南列明 PP 附着方向；具体体系须验证。', sourceDocument: '用户提供：Neon Lion MAH Modified CPO Selection Guide NL Grades，2026-11-02 核对' },
   { id: 'cpo-pe-adhesion', productId: 'cpp-cpo', name: 'PE 附着力（NL-MS300）', nameEn: 'PE adhesion — NL-MS300', description: '仅 NL-MS300 明确列有 PE 附着，不泛化到全部牌号。', sourceDocument: '用户提供：MAH Modified CPO Selection Guide，第6页' },
   { id: 'cpp-elastomer-metal-adhesion', productId: 'cpp-cpo', name: '弹性体／金属附着（NL-MD100-20）', nameEn: 'Elastomer / metal adhesion — NL-MD100-20', description: '不等于已验证橡胶金属复合结构胶或防腐性能。', sourceDocument: '用户提供：MAH Modified CPO Selection Guide，第5页' },
@@ -197,6 +219,7 @@ export const marketExtendedApplications: MarketExtendedApplication[] = [
 ]
 
 export const targetCompanyTypes: TargetCompanyType[] = [
+  ...waterborneTargetTypes,
   { id: 'cpp-plastic-primer-formulator', productId: 'cpp-cpo', name: 'PP／TPO 塑料底漆配方商', nameEn: 'PP / TPO plastic primer formulator', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'cpp-pp-tpo-primer' }] },
   { id: 'cpp-solvent-ink-manufacturer', productId: 'cpp-cpo', name: 'PP 溶剂型油墨生产商', nameEn: 'PP solvent ink manufacturer', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'cpp-pp-printing-ink' }] },
   { id: 'cpp-laminating-adhesive-formulator', productId: 'cpp-cpo', name: 'PP／TPO 复合胶配方商', nameEn: 'PP / TPO laminating adhesive formulator', kind: 'target', applicationReferences: [{ layer: 'market-extended', applicationId: 'cpp-pp-tpo-adhesive' }] },
@@ -53222,4 +53245,4 @@ const previouslyVerifiedPublicLeads: PublicLead[] = rawPublicLeads.filter((lead)
   }
 ]).concat(independentlyVerifiedIndiaCoatingLeads).concat(independentlyVerifiedKanatLeads).concat(independentlyVerifiedTechnicalFinishesLeads).concat(independentlyVerifiedKossanLeads).concat(independentlyVerifiedThaiDonoLeads).concat(independentlyVerifiedVietnamProtectiveLeads).concat(independentlyVerifiedPentaPrimaLeads)
 
-export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedCppCpoLeads).concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads).concat(verifiedKubilayLeads).concat(verifiedOrhunLeads)
+export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(verifiedCppCpoLeads).concat(verifiedAnjoLeads).concat(verifiedMarindecLeads).concat(verifiedPolenLeads).concat(verifiedSkFormulationsLeads).concat(verifiedArofineLeads).concat(verifiedGenasLeads).concat(verifiedWehaLeads).concat(verifiedMumLeads).concat(verifiedFordonIglLeads).concat(verifiedSonTheHeMoiLeads).concat(verifiedKromaLeads).concat(verifiedTintasVinciLeads).concat(verifiedSesaBoyaLeads).concat(verifiedMylawLeads).concat(verifiedOnpaLeads).concat(verifiedKubilayLeads).concat(verifiedOrhunLeads).concat(verifiedWaterborneLeads).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

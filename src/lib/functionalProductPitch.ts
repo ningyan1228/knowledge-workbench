@@ -12,6 +12,15 @@ export type FunctionalProductPitch = {
  * evaluation topic is not evidence of a customer's problem or compatibility. */
 export function functionalProductPitch(lead: PublicLead): FunctionalProductPitch | null {
   const application = lead.companyEvidence.applicationId
+  if (lead.productId === 'nl-8260') {
+    const kind = application === 'nl8260-pp-opp-inks' ? 'ink' : application === 'nl8260-adhesives' ? 'adhesive' : 'coating'
+    return { introduction: 'We supply NL-8260, a waterborne chlorinated polyolefin dispersion for adhesion-promoting ' + kind + ' formulations.', cardEvaluation: '水性氯化聚烯烃分散体；所选基材附着评估', productFacts: ['The supplied NL-8260 TDS lists inks, coatings and adhesives.', 'The TDS describes adhesion to PP, PE, PVC, EPDM, paper and metal parts, and PP/TPO/OPP surface adhesion.'], limits: 'Formulation evaluation only; no solvent-system compatibility, customer usage, MAH modification, halogen-free status, food-contact or automotive approval claim.' }
+  }
+  if (lead.productId === 'nl-h-860') {
+    const bonding = application === 'nlh860-plastic-bonding' || application === 'nlh860-rubber-bonding'
+    const topic = application === 'nlh860-rubber-bonding' ? 'rubber-bonding' : 'plastic-bonding'
+    return { introduction: bonding ? 'We supply NL-H-860, a water-based chlorinated polypropylene dispersion for adhesion trials in ' + topic + ' formulations.' : 'We supply NL-H-860, a water-based chlorinated polypropylene dispersion for wetting and penetration trials in water-based formulations.', cardEvaluation: bonding ? '水性氯化聚丙烯分散体；粘接配方评估' : '水性功能助剂；润湿、渗透与配方稳定性评估', productFacts: ['Rev.01 lists plastic/rubber bonding and functional-additive uses in water-based inks, varnishes, industrial blended paints and wood coatings.', 'The TDS describes pigment wetting and penetration; final formulation stability requires verification.'], limits: 'No guaranteed compatibility or bond performance. No numerical activation temperature, chlorine content, ionic character, MAH or regulated-use approval is supplied. Do not substitute another product TDS.' }
+  }
   if (lead.productId === 'fertilizer-coating') {
     return {
       introduction: 'We supply a reactive raw material for polyurethane fertilizer coatings, compatible with drum and fluidized-bed coating processes.',

@@ -33,7 +33,7 @@ describe('ready-to-copy short development emails', () => {
       }
       expect(draft, lead.id).not.toBeNull()
       expect(draft!.body, lead.id).toContain(conciseCompanyFact(lead.id))
-      expect(draft!.body.indexOf(conciseCompanyFact(lead.id)!)).toBeLessThan(draft!.body.indexOf('I’m Zhiwu'))
+      expect(draft!.body.indexOf(conciseCompanyFact(lead.id)!)).toBeLessThan(draft!.body.search(/I[’']m Zhiwu/))
       expect(draft!.text).toContain('Ningbo Neon Lion Technology Co., Ltd.')
       expect(draft!.text).toContain('zhiwu@neonlion.cn')
       expect(draft!.text).not.toContain('+86 17852862361')
@@ -49,6 +49,15 @@ describe('ready-to-copy short development emails', () => {
       if (!draft) continue
       expect(draft.style).toBe('concise')
       expect(draft.body.split(/\s+/).length, lead.id).toBeLessThanOrEqual(95)
+      if (draft.format === 'brief-introduction-20261127') {
+        expect(draft.body.match(/\?/g), lead.id).toHaveLength(2)
+        expect(draft.body).toContain('review its TDS for an initial evaluation?')
+        expect(draft.body).toContain('could you point me to the right person?')
+        expect(draft.body.split(/\s+/).length).toBeGreaterThanOrEqual(55)
+        expect(draft.body.split('\n\n')).toHaveLength(6)
+        expect(lead.outreachDraft?.body).toBe(draft.body)
+        continue
+      }
       expect(draft.body.match(/\?/g), lead.id).toHaveLength(1)
       expect(draft.body).not.toMatch(/TDS|\bour catalog|catalog attached|quotation|target price|\bMOQ\b|free sample|lowest price|hydroxyl value|epoxy value/i)
       expect(draft.subject).not.toMatch(/TDS|\blowest\b|\bbest\b|^Re:/i)

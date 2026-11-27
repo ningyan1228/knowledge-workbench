@@ -1,3 +1,5 @@
+import { primaryLeadForHistory } from './leadProductMatches'
+import { marketProducts, tdsVerifiedApplications, marketExtendedApplications, targetCompanyTypes } from './productMarketMap'
 import { createShortDevelopmentEmail } from './shortDevelopmentEmail'
 import { selectBusinessRecipient } from './contactEvidence'
 import { firstContactStrategy } from './firstContactStrategy'
@@ -30,6 +32,8 @@ type ProductReference = {
 // product references. It intentionally contains only TDS-backed facts and
 // drafting guardrails so a copied prompt can be used without a local Skill.
 const productReferences: Record<MarketProduct['id'], ProductReference> = {
+  'nl-8260': { positioning: 'Waterborne chlorinated polyolefin adhesion promoter for the supplied TDS applications.', allowedFacts: ['Inks, coatings and adhesives; PP, PE, PVC, EPDM, paper, metal parts and PP/TPO/OPP adhesion directions.', 'Anionic; typical solids 30 +/- 1%; typical chlorine content 12-24%; actual specifications follow COA.'], prohibitedClaims: ['No MAH, halogen-free, direct substitution, customer compatibility, performance guarantee or regulated-use approval claim.', 'Do not present a waterborne dispersion as proven compatible with every solvent ink.'] },
+  'nl-h-860': { positioning: 'Water-Based Chlorinated Polypropylene Dispersion, supplied TDS Rev.01.', allowedFacts: ['Plastic and rubber bonding; polar and non-polar substrates.', 'Functional additive for water-based inks, varnishes, industrial blended paints and wood coatings.', 'Pigment wetting and penetration are supplier-TDS properties; final formulation stability requires verification.', 'Solids 60 +/- 2%; viscosity below 3000 mPa.s; recommended addition 1-3%, basis to confirm.'], prohibitedClaims: ['No numerical activation temperature, chlorine content, ionic character or MAH value is provided.', 'Do not claim customer compatibility, performance, food-contact, medical or automotive approval. Do not borrow NL-8260 or NL-W1201 values.'] },
   'cpp-cpo': {
     positioning: 'MAH-modified CPP/CPO for PP adhesion evaluation, based on the user-supplied grade selection guide.',
     allowedFacts: ['Low-viscosity grades include NL-MC50-22 and NL-MC50-30.', 'NL-MC50-30 lists propyl acetate; NL-MS10 lists ethyl acetate and propyl acetate.', 'NL-MB100-22 and NL-MD100-20 are described as low-chlorine grades.', 'High-molecular-weight NL-MS300 lists PP and PE adhesion.'],
@@ -145,7 +149,26 @@ export function createDevelopmentEmailPrompt({
   targetType: TargetCompanyType
   style?: 'concise' | 'legacy'
 }) {
+  const history = style === 'legacy' ? primaryLeadForHistory(lead) : lead
+  if (history !== lead) {
+    const referenceProduct = marketProducts.find(item => item.id === history.productId)
+    const referenceApplication = [...tdsVerifiedApplications, ...marketExtendedApplications].find(item => item.id === history.companyEvidence.applicationId && item.productId === history.productId)
+    const referenceTarget = targetCompanyTypes.find(item => item.id === history.targetCompanyTypeId && item.productId === history.productId)
+    if (!referenceProduct || !referenceApplication || !referenceTarget) return 'Not qualified for outreach'
+    return createDevelopmentEmailPrompt({ lead: history, product: referenceProduct, application: referenceApplication, targetType: referenceTarget, style })
+  }
   if (!createShortDevelopmentEmail(lead, undefined, style) || product.id !== lead.productId || application.id !== lead.companyEvidence.applicationId || application.productId !== lead.productId || targetType.id !== lead.targetCompanyTypeId || targetType.productId !== lead.productId) return 'Not qualified for outreach\n\nReason:\nThe verified product, application, demand-side evidence, supplier exclusion or recipient-email chain is incomplete or inconsistent.'
+  const reviewed = createShortDevelopmentEmail(lead, undefined, style)
+  if (reviewed?.format === 'brief-introduction-20261127') return `Use the saved, evidence-reviewed draft below. Do not send an email or submit any form.
+Company: ${lead.company}
+Evidence: ${lead.companyEvidence.statement}
+Source: ${reviewed.evidenceUrl}
+Verified: ${reviewed.verifiedAt}
+Application: ${application.nameEn}
+Product reference: ${productReferences[product.id].positioning}
+Keep 55–95 English words including greeting and the saved signature. Preserve four content paragraphs: company-specific sourced fact; self-introduction plus TDS-supported material function; gentle TDS initial-evaluation question; referral request if the reader does not handle raw-material evaluation. Keep the exact product-name subject and signature. Do not invent company needs, other company names, performance, certification, quotation or free samples. No attachment is implied.
+
+${reviewed.text}`
   const recipient = recipientFor(lead)
   const reference = productReferences[product.id]
   const strategy = firstContactStrategy(lead)

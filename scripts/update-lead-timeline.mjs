@@ -12,10 +12,11 @@ const git = (...args) => execFileSync('git', ['-c', `safe.directory=${repo.repla
 try {
   const shallow = git('rev-parse', '--is-shallow-repository').trim() === 'true'
   if (shallow) throw new Error('Full repository history is required; existing dates preserved')
-  const commits = git('log', '--reverse', '--format=%H|%cI', '--', 'src/lib/productMarketMap.ts').trim().split('\n').filter(Boolean)
+  const sourcePaths = ['src/lib/productMarketMap.ts', 'src/lib/verifiedWaterborneLeads.ts']
+  const commits = git('log', '--reverse', '--format=%H|%cI', '--', ...sourcePaths).trim().split('\n').filter(Boolean)
   for (const commit of commits) {
     const [sha, recordedAt] = commit.split('|')
-    const source = git('show', `${sha}:src/lib/productMarketMap.ts`)
+    const source = sourcePaths.map(file => { try { return git('show', `${sha}:${file}`) } catch { return '' } }).join('\n')
     // Accept both hand-written TS and JSON-formatted raw lead records.
     // Current public IDs prevent unrelated application IDs or removed companies
     // from becoming public timeline entries.

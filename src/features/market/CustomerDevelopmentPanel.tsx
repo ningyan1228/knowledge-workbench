@@ -1,3 +1,4 @@
+import { leadsForProduct } from '../../lib/leadProductMatches'
 import { useState } from 'react'
 import { publicLeads, marketProducts } from '../../lib/productMarketMap'
 import { developmentSnapshot, firstContactExport, firstContactPlan } from '../../lib/customerDevelopment'
@@ -12,7 +13,7 @@ export function CustomerDevelopmentPanel({ ledger, work, productId = 'fertilizer
   const [message, setMessage] = useState('')
   const selectedProduct = marketProducts.some(item => item.id === productId) ? productId : 'fertilizer-coating'
   const productName = marketProducts.find(item => item.id === selectedProduct)?.name ?? selectedProduct
-  const coating = publicLeads.filter((lead) => lead.productId === selectedProduct)
+  const coating = leadsForProduct(publicLeads, selectedProduct)
   const snapshot = developmentSnapshot(coating)
   const projects = verifiedProjectSignals.filter((item) => coating.some((lead) => lead.id === item.leadId))
   const plan = firstContactPlan(coating, ledger.status === 'ready' ? ledger.sends : null,20,undefined,true,work.status==='ready'?work.records:null)

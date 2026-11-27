@@ -1,3 +1,4 @@
+import { selectedProductMatch } from './leadProductMatches'
 import type { PublicLead } from './productMarketMap'
 import { qualifiedContactCompany, selectBusinessRecipient } from './contactEvidence'
 import { customerContactRoutes } from './contactRoutes'
@@ -7,12 +8,13 @@ import { savedLeadBusinessFact } from './leadBusinessFacts'
 import { refreshedLeadFact } from './publicLeadOverrides'
 
 export function leadCardBrief(lead: PublicLead) {
+  const selected = selectedProductMatch(lead)
   const pitch = qualifiedContactCompany(lead) ? functionalProductPitch(lead) : null
   const refreshed=refreshedLeadFact(lead)?.business
   const fact=readableBusinessFact(refreshed) ? refreshed : savedLeadBusinessFact(lead)
   return {
-    fact: presentBusinessFact(lead.companyEvidence.statement, fact),
-    product: ({ 'fertilizer-coating': '肥料包膜原料', 'nl-w1201': 'NL-W1201', elo: 'ELO 环氧化亚麻油', 'cpp-cpo': 'MAH 改性 CPP／CPO' })[lead.productId],
+    fact: selected?.companyEvidence.statement ?? presentBusinessFact(lead.companyEvidence.statement, fact),
+    product: ({ 'fertilizer-coating': '肥料包膜原料', 'nl-w1201': 'NL-W1201', elo: 'ELO 环氧化亚麻油', 'cpp-cpo': 'MAH 改性 CPP／CPO', 'nl-8260': 'NL-8260', 'nl-h-860': 'NL-H-860' })[lead.productId],
     evaluation: pitch?.cardEvaluation ?? '应用关联待补证据',
     limits: pitch?.limits,
     extended: lead.companyEvidence.applicationLayer === 'market-extended',

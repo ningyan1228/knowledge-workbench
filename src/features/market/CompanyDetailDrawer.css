@@ -5,3 +5,5 @@
 .company-detail-body { flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 20px 20px;scrollbar-gutter:stable }.company-detail-body>* { min-width:0 }.company-detail-body .match-path-steps { flex-wrap:wrap }
 @media(max-width:1100px) { .company-detail.company-detail-drawer { width:min(740px,90vw) } }
 @media(max-width:650px) { .company-detail.company-detail-drawer { width:100vw;border:0;border-radius:0 }.company-detail-drawer .company-detail-header { padding:16px 14px 12px }.company-detail-drawer .company-detail-header h2 { font-size:18px }.company-detail-navigation { padding:9px 14px }.company-detail-body { padding:0 14px 16px } }
+
+.company-product-matches{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 20px;max-height:180px;overflow:auto;flex-shrink:0}.company-product-matches:empty{display:none}.company-product-matches>span,.company-product-matches>small{color:var(--muted);font-size:12px}.company-product-matches button{max-width:100%;white-space:normal;text-align:left}.company-product-matches button[aria-pressed="true"]{color:var(--blue);border-color:var(--blue)}
