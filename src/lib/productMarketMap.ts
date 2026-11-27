@@ -53787,4 +53787,223 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 75
     }
   }
+]).concat([
+  {
+    "id": "lorikeet-inks-ladwa",
+    "company": "Lorikeet Inks",
+    "productId": "nl-h-860",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ladwa, Kurukshetra, Haryana (approximate city marker)",
+    "latitude": 29.99583,
+    "longitude": 77.04,
+    "fit": "可开发候选",
+    "signal": "在印度Ladwa自有工厂配制水性柔版油墨；LK-FLX-01系列用于牛皮纸及再生纸板箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立完整核读官网Home126/About92/Products150/Contact83行共451行业务原文（含重复导航），另Ladwa城市334行完整原文，仅用于城市级示意。首页明确Haryana自营生产设施，About明确Ladwa实验室配方及工厂批次测试；Products列五类自配水性柔版成品墨，LK-FLX-01用于kraft/recycled corrugated boards，非只打印/经销。已读主供货范围为纸箱、纸杯餐巾、文具、食品纸包装及其他纸制品用成品墨和定制配方服务，未识别外售CPO/CPP/聚烯烃分散体或同类附着原料，有限选定原料同行排除通过，不声称隐含配方/全部SKU/SDS已审。自研优化polymer resins是成品墨配方活动，非独立树脂原料供应证明。官方通用询盘及Lab重复邮箱lorikeetinks@gmail.com归公司，不冒采购个人；无具名联系人。官网仅给Lorikeet Inks商号，不补Private Limited/股东/母集团；未发现与正式686/root700、front1414/index726或nestedqueue同名域名邮箱电话实体，搜索/预查无历史原请求的prior0审计已存。按一家公司计数，技术实验室与plant不另造客户。用户H860 Rev.01水性油墨润湿/渗透方向，仅初评；客户以纸板为主不推PP配方、不增加1201。官网自称零VOC/FDA/ISO等未独立验证，不转移我方，不承诺食品接触、性能、耗量或兼容。5/6累计且范围共6，不继续耗源；地图29.99583/77.04为Ladwa城市，非厂门。"
+    },
+    "contact": {
+      "label": "官网公司公开邮箱、电话及联系入口",
+      "email": "lorikeetinks@gmail.com",
+      "phone": "+91 9255392811",
+      "contactUrl": "https://www.lorikeetinks.com/contact.html"
+    },
+    "source": {
+      "label": "Own water-based flexographic ink range",
+      "url": "https://www.lorikeetinks.com/products.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主配方制造水性柔版油墨，符合用户NL-H-860 Rev.01列明的水性油墨润湿/渗透助剂初评方向；仅材料实验室评估，未确认采购、使用我方产品或配方相容，纸/纸箱业务不冒塑料基材附着需求。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在印度Ladwa自有工厂配制水性柔版油墨；LK-FLX-01系列用于牛皮纸及再生纸板箱。",
+      "sourceName": "Own specific water-based ink product and independently checked in-house manufacturing",
+      "sourceUrl": "https://www.lorikeetinks.com/products.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.lorikeetinks.com/",
+      "contactPage": "https://www.lorikeetinks.com/contact.html",
+      "generalEmail": "lorikeetinks@gmail.com",
+      "generalPhone": "+91 9255392811",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own plant, in-house formulation and water-based ink manufacture",
+          "url": "https://www.lorikeetinks.com/"
+        },
+        {
+          "label": "Own formulation laboratory and batch production",
+          "url": "https://www.lorikeetinks.com/about.html"
+        },
+        {
+          "label": "Own five water-based ink categories; LK-FLX-01 corrugated boards",
+          "url": "https://www.lorikeetinks.com/products.html"
+        },
+        {
+          "label": "Own company inquiry / Lab Gmail and Haryana manufacturing-unit address",
+          "url": "https://www.lorikeetinks.com/contact.html"
+        },
+        {
+          "label": "Ladwa city coordinates only; not factory geocoding",
+          "url": "https://en.wikipedia.org/wiki/Ladwa"
+        }
+      ],
+      "address": "Ladwa,District Kurukshetra,Haryana136132,India. Official site publishes trade name Lorikeet Inks; legal suffix and ownership are not inferred. Map point is a city-level illustration, not factory geocoding.",
+      "generalEmailEvidence": {
+        "company": "Lorikeet Inks",
+        "value": "lorikeetinks@gmail.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact published company inquiry email, corroborated across own business pages",
+            "url": "https://www.lorikeetinks.com/contact.html",
+            "summary": "Exact public company-managed inbox. Corporate technical/general inquiry route only, not a named buyer, email deliverability or purchasing-intent proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Lorikeet Inks",
+        "value": "+91 9255392811",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact company telephone",
+            "url": "https://www.lorikeetinks.com/contact.html",
+            "summary": "Exact public company telephone. No WhatsApp or named purchasing-role inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "lorikeet-inks-ladwa",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Lorikeet Inks Team,\n\nYour LK-FLX-01 water-based inks are formulated for corrugated board converters.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your LK-FLX-01 water-based inks are formulated for corrugated board converters.",
+      "evidenceUrl": "https://www.lorikeetinks.com/products.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 76
+    }
+  },
+  {
+    "id": "techno-print-chemicals-hosur",
+    "company": "Techno Print Chemicals Private Limited",
+    "productId": "nl-h-860",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Hosur, Tamil Nadu (approximate city marker)",
+    "latitude": 12.7409,
+    "longitude": 77.8253,
+    "fit": "可开发候选",
+    "signal": "在印度Hosur自主配方制造柔版油墨；Aqueous Kraft水性墨用于纸张及瓦楞纸箱。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "本轮正常NLH860范围独立离线重读已存About60/Products202/Contact51/自有LinkedIn112行，共425行完整业务原文（含重复导航）；不是从旧CPP标签自动升级。About明确Hosur自有配方、制造设施、实验室；Products在FLEXO GRAPHIC INKS项下列AQUEOUS KRAFT、PAPER、Corrugated box，aqueous为水性词义，自己的LinkedIn另列Water Based Inks印证。完整可见主供货为凹版/柔版及复合油墨、成品OPV、基材BASE COAT和热封漆，未识别CPO/CPP/聚烯烃分散体原料外售，所选同类输入范围排除通过。成品底涂/热塑粘结涂料不能自动等同原料同行；PET/BOPP with additive不推客户外购同类原料例外。旧CPP因PP墨与溶剂体系精确对应仍未闭合，保留待核，不增CPP或1201匹配。旧Home/index.html验证页实耗1并冻结不绕过；本次仅新增Hosur城市来源386/456行部分原文，144/151–154行坐标与州清楚，可供城市示意，不称完整业务核读或厂门定位；跨产品终身6STOP。Contact邮箱末尾标点在About/footer多次无标点印证，technoprint912@gmail.com为公司通用Gmail，不因MD姓名在附近冒具名采购；固话04344-278917归公司，无WhatsApp推断。全正式686/root700及nestedqueue无同一公司；front/index同一个旧私有researchId只升级该行、不制造第二发现；Hosur/Bengaluru两地址和Pvt/P同公司，不以地点/简称拆分；LinkedIn类似页面不当母集团。仅H860 Rev.01水性墨润湿/渗透实验室初评，不承诺纸箱PP附着、食品/医疗认证、任何直接混拼或已有需求。"
+    },
+    "contact": {
+      "label": "官网公司公开邮箱、电话及联系入口",
+      "email": "technoprint912@gmail.com",
+      "phone": "04344 - 278917",
+      "contactUrl": "https://www.technoprintchemicals.in/contact.html"
+    },
+    "source": {
+      "label": "Own water-based flexographic ink range",
+      "url": "https://www.technoprintchemicals.in/products.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主配方制造水性柔版油墨，符合用户NL-H-860 Rev.01列明的水性油墨润湿/渗透助剂初评方向；仅材料实验室评估，未确认采购、使用我方产品或配方相容，纸/纸箱业务不冒塑料基材附着需求。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在印度Hosur自主配方制造柔版油墨；Aqueous Kraft水性墨用于纸张及瓦楞纸箱。",
+      "sourceName": "Own specific water-based ink product and independently checked in-house manufacturing",
+      "sourceUrl": "https://www.technoprintchemicals.in/products.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.technoprintchemicals.in/",
+      "contactPage": "https://www.technoprintchemicals.in/contact.html",
+      "generalEmail": "technoprint912@gmail.com",
+      "generalPhone": "04344 - 278917",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own Hosur manufacturing/formulation and testing departments",
+          "url": "https://www.technoprintchemicals.in/about.html"
+        },
+        {
+          "label": "Own Aqueous Kraft flexographic ink for paper and corrugated boxes; complete visible primary range",
+          "url": "https://www.technoprintchemicals.in/products.html"
+        },
+        {
+          "label": "Own corporate Gmail, public company phones and Hosur address",
+          "url": "https://www.technoprintchemicals.in/contact.html"
+        },
+        {
+          "label": "Own public LinkedIn confirms water-based inks and same Hosur company",
+          "url": "https://in.linkedin.com/company/techno-print-chemicals-private-limited"
+        },
+        {
+          "label": "Hosur approximate city coordinate, read relevant location portion only",
+          "url": "https://en.wikipedia.org/wiki/Hosur"
+        }
+      ],
+      "address": "N-27,S.I.D.C.O.Industrial Estate,Phase3,Hosur635126,Tamil Nadu,India. Own LinkedIn also lists a Bengaluru office; one company. Map point is a city-level illustration, not factory geocoding.",
+      "generalEmailEvidence": {
+        "company": "Techno Print Chemicals Private Limited",
+        "value": "technoprint912@gmail.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact published company inquiry email, corroborated across own business pages",
+            "url": "https://www.technoprintchemicals.in/contact.html",
+            "summary": "Exact public company-managed inbox. Corporate technical/general inquiry route only, not a named buyer, email deliverability or purchasing-intent proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Techno Print Chemicals Private Limited",
+        "value": "04344 - 278917",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact company telephone",
+            "url": "https://www.technoprintchemicals.in/contact.html",
+            "summary": "Exact public company telephone. No WhatsApp or named purchasing-role inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "techno-print-chemicals-hosur",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Techno Print Chemicals Private Limited Team,\n\nYour Aqueous Kraft flexographic ink is designed for paper and corrugated boxes.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Aqueous Kraft flexographic ink is designed for paper and corrugated boxes.",
+      "evidenceUrl": "https://www.technoprintchemicals.in/products.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 81
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

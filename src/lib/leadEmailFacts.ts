@@ -689,4 +689,6 @@ export const leadEmailFacts: Record<string, string> = {
   'ccm-coatings-auckland': "Your Auckland facility formulates and manufactures coatings, including the Novepoxy and ROOFRITE product ranges.",
   'bcm-inks-loveland': "Your Eekoflex range includes water-based flexographic inks and varnishes for corrugated packaging.",
   'satish-chemicals-ahmedabad': "Your Non Woven Ink is designed for printing on polypropylene-based non-woven materials.",
+  'lorikeet-inks-ladwa': "Your LK-FLX-01 water-based inks are formulated for corrugated board converters.",
+  'techno-print-chemicals-hosur': "Your Aqueous Kraft flexographic ink is designed for paper and corrugated boxes.",
 }
