@@ -53457,4 +53457,106 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 81
     }
   }
+]).concat([
+  {
+    "id": "ccm-coatings-auckland",
+    "company": "CCM Coatings (Commercial Coating Manufacturers Ltd)",
+    "productId": "elo",
+    "country": "New Zealand",
+    "countryZh": "新西兰",
+    "city": "Auckland manufacturer; reused New Zealand-level approximate map anchor, not company geocoding",
+    "latitude": -38.684,
+    "longitude": 176.07,
+    "fit": "可开发候选",
+    "signal": "在奥克兰自有设施配方生产涂料，为自有及其他品牌供货；官网列Novepoxy、ROOFRITE等产品与环氧、地坪、屋面及泳池涂料范围。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "逐项复核已保存的About、Home及独立PaintZone原文：自有奥克兰配方生产及实验室/涂料厂明确；主营为自有和OEM成品涂料。About列Novepoxy、ROOFRITE等品牌和环氧泳池涂料配方经验，Home列装饰、内外墙、环氧、地坪、高膜厚、屋面、泳池、着色剂、清洁剂十类。已读主要供货范围未识别外售ELO、ESBO、环氧植物油或同类生物基增塑输入，按所选ELO输入通过有限同行排除，不将所有环氧/化学品或OEM制造当原料同行。Products及Stains无可读产品正文、同址静态HTML仅壳；未宣称全SKU/SDS或最终持股已审。搜索发现Epoxy Bio Thinner仅称溶剂，未用片段推成ELO、增塑剂或已核产品化学；不把其他PaintZone品牌事实移给CCM。公司6次终身额度已满，本次ELO复核不增加请求或重置预算。ELO仅按用户TDS涂料/树脂改性方向供配方依赖的柔韧初评，不承诺耐腐蚀、相容、现用或采购。NL-W1201缺同一水性木器产品证据，仍未匹配。按法人、域名、品牌、电话与地址核对正式683条、root697、私有1408/来源720及全队列，无同一已知公司/集团；沿用同一私有研究记录，不另计研究项。搜索sales@与读取原文info@有版本差异，仅采用原文公开info@公司通用入口，不指为具名采购。地图复用既有NZ国家级示意点，不冒奥克兰厂址测绘。"
+    },
+    "contact": {
+      "label": "官网公开公司通用邮箱及总机",
+      "email": "info@ccmcoatings.com",
+      "phone": "+64 9 483 4833",
+      "contactUrl": "https://www.ccmcoatings.com/about"
+    },
+    "source": {
+      "label": "Own Auckland coating formulation/manufacture and Novepoxy/ROOFRITE range",
+      "url": "https://www.ccmcoatings.com/about"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "实际下游涂料配方制造商，可按用户ELO的涂料/树脂改性用途初评环氧功能及配方依赖柔韧性；不证明现有用油体系、相容、采购需求或耐腐蚀效果。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在奥克兰自有设施配方生产涂料，为自有及其他品牌供货；官网列Novepoxy、ROOFRITE等产品与环氧、地坪、屋面及泳池涂料范围。",
+      "sourceName": "Own About and Home manufacturing/range with independent trade corroboration",
+      "sourceUrl": "https://www.ccmcoatings.com/about",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.ccmcoatings.com/",
+      "contactPage": "https://www.ccmcoatings.com/about",
+      "generalEmail": "info@ccmcoatings.com",
+      "generalPhone": "+64 9 483 4833",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own Auckland formulation/production, brands, legal identity and business contact",
+          "url": "https://www.ccmcoatings.com/about"
+        },
+        {
+          "label": "Own current finished coating categories and OEM production scope",
+          "url": "https://www.ccmcoatings.com/"
+        },
+        {
+          "label": "Independent PaintZone supplier record: CCM own laboratory/manufacturing plant only",
+          "url": "https://paintzone.co.nz/mobile-suppliers.html"
+        }
+      ],
+      "address": "9 Bay Park Place, Birkdale, Auckland, New Zealand, as published on own About/Home. Map point is a reused New Zealand country-level illustration, not factory-gate geocoding.",
+      "generalEmailEvidence": {
+        "company": "CCM Coatings (Commercial Coating Manufacturers Ltd)",
+        "value": "info@ccmcoatings.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own About Contact section and repeated company footer",
+            "url": "https://www.ccmcoatings.com/about",
+            "summary": "Exact info@ccmcoatings.com corporate inbox in actually read original. Search-index sales@ variant is not used; no named buyer, deliverability or current purchasing inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "CCM Coatings (Commercial Coating Manufacturers Ltd)",
+        "value": "+64 9 483 4833",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own About Contact section",
+            "url": "https://www.ccmcoatings.com/about",
+            "summary": "Published corporate switchboard repeated on Home; not a named buyer or WhatsApp."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "ccm-coatings-auckland",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi CCM Coatings (Commercial Coating Manufacturers Ltd) Team,\n\nYour Auckland facility formulates and manufactures coatings, including the Novepoxy and ROOFRITE product ranges.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Auckland facility formulates and manufactures coatings, including the Novepoxy and ROOFRITE product ranges.",
+      "evidenceUrl": "https://www.ccmcoatings.com/about",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 79
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
