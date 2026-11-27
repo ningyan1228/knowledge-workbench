@@ -16312,11 +16312,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "sebek-inks-frasnes-lez-anvaing",
+    "company": "Sebek Inks",
+    "productId": "elo",
+    "country": "Belgium",
+    "countryZh": "比利时",
+    "city": "Frasnes-lez-Anvaing（官网所在地；地图为比利时既有示意点）",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "legacyCompanyDescription": "比利时自主研发制造丝印及柔印成品油墨的配方企业；地图为国家示意点，非工厂定位。",
+    "signal": "Sebek在比利时Frasnes-lez-Anvaing自主研发制造丝印及柔印油墨，Sebolith202为具体溶剂型印刷油墨系列。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立全文读取六份官网原文89/77/76/116/105/111共574返回行，含重复菜单页脚，并非574独立事实。About明确各产品在比利时Frasnes-lez-Anvaing自主开发制造与批次质控，经营丝印/柔印的水性、溶剂、UV、plastisol、silicone成品墨；OurProducts说明工业定制涂层/油墨开发。具体Sebolith202正文明确溶剂型成品墨及PVC/PS/ABS/PMMA/PC等用途；PP/PE须配Hardener100的客户条件保留，不推未经处理PP通用相容、不借百分比为我方推荐。ELO按用户TDS油墨用途独立评估，不依赖PVC compound扩展，也不声称客户已用ELO或CPP/CPO。已读主营六类总览、工业两款UV成品、Graphical九项、Specialties十二项以及Sebolith202详情；实际存在Fluo inks & pigments、LuminescentPaste、MatPaste、颜料浆、固化剂配套，不能假称纯成品。已读有限经营范围未见对外销售ELO、ESBO、环氧化植物油或同类生物基增塑稳定输入；颜料/消光浆/普通固化配套并不自动等同所选ELO原料，所选同行排除有限通过。未读全部纺织/标签/UV叶页、所有TDS/SDS、全部配方及隐藏关联业务，不能保证未披露SKU。官网使用SebekInks业务名称，Search第三方SRL/注册号未作为首方已核法人或最终股权；©Vulpo只保留页脚字样，未证为母集团或独立客户。Sebek/sebekinks.eu/公开所在地与676线上、690根含14未发、front1393/index705、队列及旧原读去重无旧同户；历史相关命中仅Search，六次终身预算无重置，其他SICO/Sap肥料/法国气雾同名不混合。info@sebekinks.eu与+3269590490由About及各原文页脚明确，为公司一般业务入口，不造具名采购/部门/WhatsApp；Contact与LinkedIn仅导航未打开，不冒表单已核。官网RueHenriLemaire9B/7911地址与Frasnes制造自述保留；地图仅复用已部署比利时50.8503/4.3517示意锚点，明确不是Frasnes城市坐标/地址地理编码/厂门GPS，不借Levasseur制造或联系人证据，未超六来源另抓地理。ELO仅环氧功能/柔韧性配方评估，具体采购、当前需求、相容性、性能和时机未知。未来核共享未发前仅条件生成器审计，无就绪稿、未发送/填表/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱及电话；无具名采购",
+      "email": "info@sebekinks.eu",
+      "phone": "+32 69 590 490",
+      "contactUrl": "https://sebekinks.eu/about-us/"
+    },
+    "source": {
+      "label": "Sebek官网自主制造说明及Sebolith202溶剂型成品油墨",
+      "url": "https://sebekinks.eu/about-us/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"sebek-inks-frasnes-lez-anvaing": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "advance-international-chemicals-lahore": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "chempro-peterka-libomysl": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "cronolin-paint-genemuiden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16993,6 +17022,69 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"sebek-inks-frasnes-lez-anvaing": {
+  "website": "https://sebekinks.eu/",
+  "contactPage": "https://sebekinks.eu/about-us/",
+  "generalEmail": "info@sebekinks.eu",
+  "generalEmailEvidence": {
+    "company": "Sebek Inks",
+    "value": "info@sebekinks.eu",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sebek About官网公开公司邮箱与业务电话",
+        "url": "https://sebekinks.eu/about-us/",
+        "summary": "实际About原文L30确认比利时自制，L51-56列公司地址、info@sebekinks.eu和+3269590490；均为一般公司业务入口，不是具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhone": "+32 69 590 490",
+  "generalPhoneEvidence": {
+    "company": "Sebek Inks",
+    "value": "+32 69 590 490",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Sebek About官网公开公司邮箱与业务电话",
+        "url": "https://sebekinks.eu/about-us/",
+        "summary": "实际About原文L30确认比利时自制，L51-56列公司地址、info@sebekinks.eu和+3269590490；均为一般公司业务入口，不是具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-disclosed address: Rue Henri Lemaire 9 B, 7911 Frasnes-lez-Anvaing, Belgium. Approximate map marker reuses a previously deployed Belgium illustration anchor (50.8503, 4.3517); NOT Frasnes city coordinates, address geocoding or factory GPS.",
+  "sources": [
+    {
+      "label": "自主开发制造、批次质控及公开业务入口",
+      "url": "https://sebekinks.eu/about-us/"
+    },
+    {
+      "label": "工业成品油墨/清漆两款概览",
+      "url": "https://sebekinks.eu/category/industrial-varnishes-inks/"
+    },
+    {
+      "label": "六类主营产品和定制开发说明",
+      "url": "https://sebekinks.eu/our-products/"
+    },
+    {
+      "label": "特效成品、颜料及配套十二项有限目录",
+      "url": "https://sebekinks.eu/category/specialties/"
+    },
+    {
+      "label": "Graphical九项油墨及颜料目录",
+      "url": "https://sebekinks.eu/category/graphical-inks/"
+    },
+    {
+      "label": "具体Sebolith202溶剂型油墨用途及配套",
+      "url": "https://sebekinks.eu/products/sebolith-202/"
+    }
+  ]
+},
 "advance-international-chemicals-lahore": {
   "website": "https://www.advancechemical.org/",
   "contactPage": "https://www.advancechemical.org/contact",
@@ -51307,6 +51399,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"sebek-inks-frasnes-lez-anvaing",
 "advance-international-chemicals-lahore",
 "chempro-peterka-libomysl",
 "cronolin-paint-genemuiden",
