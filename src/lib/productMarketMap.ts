@@ -54120,4 +54120,110 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 76
     }
   }
+]).concat([
+  {
+    "id": "nutec-digital-ink-cape-town",
+    "company": "NUtec Digital Ink (Pty) Ltd",
+    "productId": "nl-8260",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Cape Town (reused approximate city marker)",
+    "latitude": -33.925,
+    "longitude": 18.424,
+    "fit": "可开发候选",
+    "signal": "在南非开普敦自主配方制造数字油墨；Amethyst A50-RIG-OC技术单列PP中空板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "核读当前官网Home、About、Contact及自有Amethyst A50-RIG-OC技术单：公司自研自制数字墨，原单明确PP中空板用途。主供成品UV/水性/溶剂数字墨、清洗液、成品保护涂层及输墨设备，已读主要范围未识别CPO/CPP/MAH聚烯烃或同类附着输入外售，不声称隐藏配方及全部SKU已审。2021年由Crosse家族接手、当前联系页列欧洲关联公司，按同一账户去重；TechINK/HP为历史业务及人员沿革，不冒当前母公司。技术单为v1，标签样例2017生产/2019到期不当作TDS发布日期或当前库存；当前首页仍列Amethyst系列，但具体旧SKU可供状态待确认。仅按用户NL8260 TDS列明PP/OPP油墨附着方向初评，不保证水性分散体可直混UV墨、其固化/印头适配或任何认证性能。塑料页429未读且冻结，同一About重复读取也计来源，累计6STOP。公开邮箱为公司通用入口，采购需求未确认。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、电话及业务联系表单",
+      "email": "info@nutecdigital.com",
+      "phone": "+27 21 763 6990",
+      "contactUrl": "https://nutecdigital.com/contact/"
+    },
+    "source": {
+      "label": "Own Amethyst A50-RIG-OC v1 technical sheet; fluted PP application",
+      "url": "https://nutecdigital.com/wp-content/uploads/2018/03/NUtec-Amethyst-A50-RIG-OC.pdf"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有配方制造数字油墨，官网技术单明确PP中空板用UV墨；对应用户NL8260的PP/OPP油墨附着材料初评。仅潜在实验室评估，具体SKU可供、现有树脂、UV体系混拼/固化相容和采购均未确认。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "在南非开普敦自主配方制造数字油墨；Amethyst A50-RIG-OC技术单列PP中空板。",
+      "sourceName": "Own PP UV ink technical sheet and current company manufacturing overview",
+      "sourceUrl": "https://nutecdigital.com/wp-content/uploads/2018/03/NUtec-Amethyst-A50-RIG-OC.pdf",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://nutecdigital.com/",
+      "contactPage": "https://nutecdigital.com/contact/",
+      "generalEmail": "info@nutecdigital.com",
+      "generalPhone": "+27 21 763 6990",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Current own ink ranges and finished ancillary products",
+          "url": "https://nutecdigital.com/"
+        },
+        {
+          "label": "Own formulation, manufacture, laboratories and Crosse-family history",
+          "url": "https://nutecdigital.com/about-us/"
+        },
+        {
+          "label": "Own single-page Amethyst A50-RIG-OC v1 with fluted polypropylene and manufacturer",
+          "url": "https://nutecdigital.com/wp-content/uploads/2018/03/NUtec-Amethyst-A50-RIG-OC.pdf"
+        },
+        {
+          "label": "Current own company legal name, public business email, phone and Cape Town address",
+          "url": "https://nutecdigital.com/contact/"
+        }
+      ],
+      "address": "1 Clifford Street,Ottery,Cape Town,South Africa. Map point reuses an existing Cape Town city illustration, not this factory entrance. NUtec Europe named on own contact is treated within the same account; no separate European addition.",
+      "generalEmailEvidence": {
+        "company": "NUtec Digital Ink (Pty) Ltd",
+        "value": "info@nutecdigital.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Current own Contact company block",
+            "url": "https://nutecdigital.com/contact/",
+            "summary": "Exact company-published general inquiry email alongside legal name and Cape Town address. Not a named procurement buyer or deliverability/current-purchase proof. Older PDF technical support inbox is not curated as a current recipient."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "NUtec Digital Ink (Pty) Ltd",
+        "value": "+27 21 763 6990",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Current own Contact phone, corroborated in own technical sheet",
+            "url": "https://nutecdigital.com/contact/",
+            "summary": "Exact company public business telephone, not an inferred named buyer or WhatsApp account."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "nutec-digital-ink-cape-town",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi NUtec Digital Ink (Pty) Ltd Team,\n\nYour Amethyst A50-RIG-OC technical sheet lists fluted polypropylene for rigid UV printing.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Amethyst A50-RIG-OC technical sheet lists fluted polypropylene for rigid UV printing.",
+      "evidenceUrl": "https://nutecdigital.com/wp-content/uploads/2018/03/NUtec-Amethyst-A50-RIG-OC.pdf",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 78
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
