@@ -54670,4 +54670,118 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 80
     }
   }
+]).concat([
+  {
+    "id": "unistar-inks-durban",
+    "company": "Unistar Inks",
+    "productId": "nl-h-860",
+    "country": "South Africa",
+    "countryZh": "南非",
+    "city": "Durban, KwaZulu-Natal (approximate city marker)",
+    "latitude": -29.86,
+    "longitude": 31.02,
+    "fit": "可开发候选",
+    "signal": "在南非Durban自主配方制造水性油墨，Aquastar用于牛皮纸及瓦楞纸板。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "五份完整自有业务原文Products74/About47/WaterBased43/Services70/Contact45，共279native行含重复导航；另dtic政府186页3759行文档仅返回549行部分，Unistar案例2302–2328共27行在页索引114完整，不冒全文已读或六份完整公司原文。About明确南非Durban自制油墨，Services明确自有实验室及水性墨配方；具体Aquastar为水性凹版/柔版牛皮纸和瓦楞纸板墨，Labelstar水性标签/BOPP/PET是同页另款。政府原文独立印证Durban家庭企业自制水/溶剂墨；Riasha与Dasson Pillay、64岗位、持股/性别/BBBEE/IDC和当时UV试产均历史叙述，报告发布日期未核，不当2026股权/人数/认证或采购；当前20年与旧12年不推精确成立日期，邻页其他企业不当本集团。当前Products完整可见主营四族为成品溶剂墨/水性墨/UV墨/特种墨涂层，Services为定制成品墨配方和测试；未识别CPO/CPP/MAH/聚烯烃分散体同类原料外售，有限所选输入同行排除通过，不冒未打开Datasheets/PolicyCertificates/所有隐藏SKU已审。成品haptic/anti-mist/conductive涂层不自动等同同类树脂原料商。仅按用户H860 Rev.01水性油墨润湿渗透初评，不由纸板客户推塑料附着需求；不转移客户低VOC/食品安全/法规/附着/快干/防水性能，不承诺颜料相容、直接混拼、法规或我方已被采购。官网具体contact明示technical@unistarinks.com为共享技术业务邮箱，另info@及+27314613399和37AloefieldCrescentSpringfieldParkDurban4001多页一致，不冒具名采购、邮箱可达或WhatsApp。商号UnistarInks已证，未读工商法律后缀不添PtyLtd；旧Search180QualityStreet不是当前实核地址，不推第二工厂。对694正式/root708/front1425/index737/queue/excluded按商号域名当前地址电话及历史Riasha/DassonPillay全库去重无命中；不凭共同姓氏合并，SearchRiashaNaidu未读身份不冒当前已核别名。历史16档仅Search/规划无实际来源，原0+当前6=终身6STOP，不因产品/日期/域名/provider重置。地图复用已有正式VukaFloors公开Durban城市点-29.86/31.02，不新地理请求或冒厂门。草稿保存不标发，发送状态未知不当未发，无任何外联/CRM。"
+    },
+    "contact": {
+      "label": "官网公开技术业务邮箱、电话及联系页",
+      "email": "technical@unistarinks.com",
+      "phone": "+27 31 461 3399",
+      "contactUrl": "https://unistarinks.com/contact/"
+    },
+    "source": {
+      "label": "Own Aquastar water-based gravure/flexographic inks for Kraft paper and corrugated board",
+      "url": "https://unistarinks.com/products/water-based-inks/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主配方制造水性印刷油墨，具体Aquastar用于牛皮纸及瓦楞纸板，符合用户NL-H-860 Rev.01水性油墨润湿/渗透助剂初评方向。仅材料实验室评估，未确认采购、使用我方产品、配方相容或塑料附着需求。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在南非Durban自主配方制造水性油墨，Aquastar用于牛皮纸及瓦楞纸板。",
+      "sourceName": "Own specific Aquastar water-based ink, in-house Durban manufacturing and custom formulation",
+      "sourceUrl": "https://unistarinks.com/products/water-based-inks/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://unistarinks.com/",
+      "contactPage": "https://unistarinks.com/contact/",
+      "generalEmail": "technical@unistarinks.com",
+      "generalPhone": "+27 31 461 3399",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own current Durban ink manufacturer identity",
+          "url": "https://unistarinks.com/about/"
+        },
+        {
+          "label": "Complete visible primary finished ink/coating range; selected raw-input supplier check only",
+          "url": "https://unistarinks.com/products/"
+        },
+        {
+          "label": "Own specific Aquastar water-based gravure/flexographic ink for Kraft paper and corrugated board",
+          "url": "https://unistarinks.com/products/water-based-inks/"
+        },
+        {
+          "label": "Own in-house laboratories and custom water-based ink formulation",
+          "url": "https://unistarinks.com/services/"
+        },
+        {
+          "label": "Own current shared technical and general business mailboxes, telephone and Durban address",
+          "url": "https://unistarinks.com/contact/"
+        },
+        {
+          "label": "Historical dtic Unistar manufacturing case on page index114; only relevant entry and excerpt read, not current ownership or certification",
+          "url": "https://www.thedtic.gov.za/wp-content/uploads/PC-dtic-Black-Industrialist-Presentation.pdf"
+        }
+      ],
+      "address": "37 Aloefield Crescent, Springfield Park, Durban, 4001, South Africa. Map is an already published Durban city illustration reused from the verified public baseline; not factory geocoding. Older search-only 180 Quality Street listing is not asserted as a current factory.",
+      "generalEmailEvidence": {
+        "company": "Unistar Inks",
+        "value": "technical@unistarinks.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Current own Contact exact shared technical business mailbox",
+            "url": "https://unistarinks.com/contact/",
+            "summary": "Exact public technical@ mailbox alongside info@, company address and landline. Shared company department route only; no named purchaser, deliverability, current procurement or sending inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Unistar Inks",
+        "value": "+27 31 461 3399",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Current own Contact and repeated business footers",
+            "url": "https://unistarinks.com/contact/",
+            "summary": "Exact company public landline, consistently disclosed with the current Durban address. No WhatsApp or named-contact inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "unistar-inks-durban",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Unistar Inks Team,\n\nYour Aquastar water-based inks are formulated for gravure and flexographic printing on Kraft paper and corrugated board.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Aquastar water-based inks are formulated for gravure and flexographic printing on Kraft paper and corrugated board.",
+      "evidenceUrl": "https://unistarinks.com/products/water-based-inks/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 83
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
