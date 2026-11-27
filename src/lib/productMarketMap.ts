@@ -16117,11 +16117,39 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-26"
   },
+  {
+    "id": "kingfisher-building-products-uk",
+    "company": "Kingfisher Building Products Limited",
+    "productId": "elo",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "United Kingdom（国家示意点，非城市或工厂定位）",
+    "latitude": 54.75844,
+    "longitude": -2.69531,
+    "legacyCompanyDescription": "英国自主研发制造涂料、封闭剂及防水成品并提供代工的企业",
+    "signal": "Kingfisher 在英国Lake District自主研发制造涂料、封闭剂及结构防水系统，并提供自有英国代工及贴牌生产服务。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "当前四份完整经营原文Contract224/About229/MortarPlasticisers256/Contact256共965行，0公司失败跳转/GET/PDF/脚本。About明确私有企业团队自己研发制造paints/coatings/sealers及结构防水产品、MadeintheLakeDistrictUK；Contract明确英国tollmanufacture/private-label及液体包装，是实际下游成品涂料制造，不把空泛供货当自产。当前可见经营菜单覆盖屋面/墙面/环氧/防潮涂料、封闭剂、木材处理、胶黏剂、防水系统及建筑外加剂；所选ELO输入排查限这四原文和返回导航。专门Mortar页实际两种砂浆成品配方Admix015和EasiMix01C，说明加拌合水作水泥/砂浆施工工作液，保留其建材外加剂销售，不能仅因plasticiser或polymerchains泛称就认定ELO/ESBO/环氧植物油/生物基聚合物增塑剂同行，也不声称查明其具体化学配方。实际未见所选环氧植物油原料外售；未审每个叶页/SDS/全SKU/终极股权，不从网页营销推配方无ELO或外购材料。About自述私有，不虚构具体股东；CooperLaneUlverston与Glasgow办公室、品牌、贴牌按一保守账户，不拆两办公室。SIVAM旧Kingfisher为意大利既有着色/软件配套品牌，只有关键词相同；正式SIVAM名称/意大利经营及sivam.it不同于本UKBuildingProducts和kingfisheruk.com，未发现指向本主体的所有权证据，不将普通词命中当同一客户，也不冒完整股权无关联审计。CompaniesHouseSC249720仅搜索未原读，不补到公开法定注册字段。实际Contact产品/主题/消息表单及01229869100为一般业务入口，字段email@example.com、Aa/123均占位而非业务邮箱/联系人；未见可精选公开邮箱、具名采购/技术部门或WhatsApp。当前公开CooperLaneUlverstonLA129RA为HeadOffice，不当已证工厂地址；地图复用已核GeoNames英国国家54.75844/-2.69531，非Ulverston/Glasgow城市或厂门定位。ELO仅按用户TDS涂料/树脂改性、环氧功能及柔韧性潜在材料评估，不推防水/防霉/防腐/抗冻性能、ISO认证、现用体系相容或采购需求。一般英国代工服务不冒具体正在委外项目。公司4/rem2，当前ELO范围含Thorndown两失败合计6/6，旧Thorndown3+本轮2=5/rem1仍私有，Vintro3/rem3不变。"
+    },
+    "contact": {
+      "label": "实际官网产品咨询表单和一般公司电话；未核公开业务邮箱",
+      "phone": "01229 869100",
+      "contactUrl": "https://www.kingfisheruk.com/contact"
+    },
+    "source": {
+      "label": "Kingfisher自有涂料研发制造及英国代工原文",
+      "url": "https://www.kingfisheruk.com/about-kingfisher.html"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"kingfisher-building-products-uk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "pamainke-argentina": {"targetCompanyTypeId":"cpp-solvent-ink-manufacturer","applicationLayer":"market-extended","applicationId":"cpp-pp-printing-ink"},
 "fenwick-tilbrook-norfolk": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "britannia-paints-middlewich": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
@@ -16791,6 +16819,50 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"kingfisher-building-products-uk": {
+  "website": "https://www.kingfisheruk.com/",
+  "contactPage": "https://www.kingfisheruk.com/contact",
+  "generalPhone": "01229 869100",
+  "generalPhoneEvidence": {
+    "company": "Kingfisher Building Products Limited",
+    "value": "01229 869100",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Kingfisher实际官网公开一般业务电话",
+        "url": "https://www.kingfisheruk.com/contact",
+        "summary": "Contact正文phone01229869100、HeadOffice重复该号码；保留英国本地公开格式，非具名采购/技术电话或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published head office: Cooper Lane, Ulverston, LA12 9RA, United Kingdom. Glasgow office: 150 Shuna Street, G20 9ES. These are company office addresses, not independently verified factory gates. Map uses cached GeoNames United Kingdom country representative coordinates 54.75844,-2.69531, not Ulverston or Glasgow city or factory GPS.",
+  "sources": [
+    {
+      "label": "自有研发制造/私有团队及LakeDistrict英国制造",
+      "url": "https://www.kingfisheruk.com/about-kingfisher.html"
+    },
+    {
+      "label": "英国代工/贴牌/液体包装服务",
+      "url": "https://www.kingfisheruk.com/contract-manufacturing"
+    },
+    {
+      "label": "砂浆外加剂具体两配方，非自动ELO原料同行",
+      "url": "https://www.kingfisheruk.com/shop-admixtures/mortar-plasticisers-and-additives"
+    },
+    {
+      "label": "真实产品咨询表单/一般电话，占位邮箱不采用",
+      "url": "https://www.kingfisheruk.com/contact"
+    },
+    {
+      "label": "已核英国国家代表坐标，非城市厂门",
+      "url": "https://www.geonames.org/2635167"
+    }
+  ]
+},
 "pamainke-argentina": {
   "website": "https://www.pamainke.com.ar/",
   "contactPage": "https://www.pamainke.com.ar/contacto",
@@ -50635,6 +50707,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"kingfisher-building-products-uk",
 "pamainke-argentina",
 "fenwick-tilbrook-norfolk",
 "britannia-paints-middlewich",
