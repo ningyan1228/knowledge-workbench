@@ -691,4 +691,5 @@ export const leadEmailFacts: Record<string, string> = {
   'satish-chemicals-ahmedabad': "Your Non Woven Ink is designed for printing on polypropylene-based non-woven materials.",
   'lorikeet-inks-ladwa': "Your LK-FLX-01 water-based inks are formulated for corrugated board converters.",
   'techno-print-chemicals-hosur': "Your Aqueous Kraft flexographic ink is designed for paper and corrugated boxes.",
+  'annapurna-printing-inks-balasore': "Your solvent gravure and poly inks are formulated for PP and HDPE woven sacks.",
 }

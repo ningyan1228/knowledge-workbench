@@ -54006,4 +54006,118 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 81
     }
   }
+]).concat([
+  {
+    "id": "annapurna-printing-inks-balasore",
+    "company": "Annapurna Printing Inks Pvt. Ltd.",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Balasore, Odisha (approximate city marker)",
+    "latitude": 21.49694,
+    "longitude": 86.9225,
+    "fit": "可开发候选",
+    "signal": "在印度Balasore自主制造PP编织袋及BOPP薄膜用溶剂型油墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "本轮独立完整核读官网Home170/Products277/About164/Contact62及自有公开LinkedIn118，共791行业务原文含导航。About明确从颜料、树脂、助剂、溶剂经自有生产/质检制墨，首页列attritors/bead mills/连续生产；产品页Solvent-based独立段下Solvent gravure & poly inks明确PP/HDPE woven sacks和BOPP films，不用水性/溶剂与多基材混合清单拼出匹配。LinkedIn同名Balasore/Januganj、1987、Solvent/Water/Flexo/Poly墨制造和Bhatter姓名线索交叉印证；LinkedIn行业标签PrintingServices不抹掉其具体manufacturer原文。当前完整可见九族为成品柔/凹版墨、纸袋墨、CMYK、溶剂poly墨、ruling墨、水性OPV、reducer、press chemicals及coding/marking；press chemical明确anilox cleaner/defoamer及其他按需，其他细项未知如实保留，未识别独立外售CPO/CPP/MAH聚烯烃或同类附着输入，不把自用resins/additives说成原料供应，不称隐藏配方/全部SDS和按需SKU全已审，有限所选输入同行排除通过。用户CPP指南直接支持PP附着；PP溶剂型油墨使用已独立核验Nippon Paper SUPERCHLON用途的市场扩展cpp-pp-printing-ink（2026-11-02，非我方逐牌号TDS或客户配方适配证明），仅实验室牌号/溶剂/基材处理评估；未核客户实际树脂、是否含CPP/CPO/MAH、采购或任何性能相容，不把我方各牌号低黏/低氯/分子量/酯溶混作一牌。Home/About/Products照片为add your image占位，About Kolkata有setup note：这些是网页未完文本不作工厂/办公室证明，不执行其要求，不补写地址/联系人/电话；Kolkata只按同公司业务据原文不另计账户。自身TUV/ROHS/食品接触与产能磨细度等营销未独立认证，不转给我方。公司自刊CIN U24223OR1987PTC001873只作身份去重值不冒查过官方工商；全正式688/root702/front1416/index728和nestedqueue按名称、域名、CIN、邮箱、电话无已知同组客户。七历史搜索片段+当前config没有公司原文请求，真实prior0审计已存，现跨产品终身6STOP不换域/品牌/provider给新预算。Contact公司Gmail annapurnaprintinginks@gmail.com和公开电话归企业通用入口，不因董事姓名或号码猜具名采购；未见WhatsApp精确href不构造链接。最后城市来源仅返回402/623行，173/180坐标及Odisha直接可见；地图21.49694/86.9225为Balasore城市示意，不是厂门测绘。无外联、开发信仅存草稿，发送状态未知不当未发，不加1201或其他产品匹配。"
+    },
+    "contact": {
+      "label": "官网公司通用Gmail、电话及联系页",
+      "email": "annapurnaprintinginks@gmail.com",
+      "phone": "+91 84205 02991",
+      "contactUrl": "https://annapurnainks.in/contact.html"
+    },
+    "source": {
+      "label": "Own solvent gravure/poly inks for PP and HDPE woven sacks",
+      "url": "https://annapurnainks.in/products.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主制造用于PP/HDPE编织袋及BOPP薄膜的溶剂型油墨；用户CPP指南PP附着方向经已核验Nippon Paper CPO油墨用途扩展关联，按market-extended准入，仅实验室评估，未确认采购、使用我方牌号或配方相容。",
+    "targetCompanyTypeId": "cpp-solvent-ink-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "cpp-pp-printing-ink",
+      "statement": "在印度Balasore自主制造PP编织袋及BOPP薄膜用溶剂型油墨。",
+      "sourceName": "Own specific solvent PP ink product, manufacturing and independently hosted own LinkedIn",
+      "sourceUrl": "https://annapurnainks.in/products.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://annapurnainks.in/",
+      "contactPage": "https://annapurnainks.in/contact.html",
+      "generalEmail": "annapurnaprintinginks@gmail.com",
+      "generalPhone": "+91 84205 02991",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own in-house manufacture from pigments, resins, additives and solvents",
+          "url": "https://annapurnainks.in/"
+        },
+        {
+          "label": "Own production/formulation and quality processes; unfinished placeholders not evidence",
+          "url": "https://annapurnainks.in/about.html"
+        },
+        {
+          "label": "Own full nine visible finished ink/varnish and ancillary families; exact solvent PP product",
+          "url": "https://annapurnainks.in/products.html"
+        },
+        {
+          "label": "Own public LinkedIn confirms same Balasore/Januganj manufacturer",
+          "url": "https://in.linkedin.com/company/annapurna-printing-inks-pvt.-ltd"
+        },
+        {
+          "label": "Own corporate Gmail, public phone, factory/office address and self-published CIN",
+          "url": "https://annapurnainks.in/contact.html"
+        },
+        {
+          "label": "Balasore city coordinates; partial location representation, not factory geocoding",
+          "url": "https://en.wikipedia.org/wiki/Balasore"
+        }
+      ],
+      "address": "Januganj,On NH5,Balasore756019,Odisha,India. Self-published CIN U24223OR1987PTC001873, not independently checked in official registry. Kolkata office details are unpublished placeholders; not inferred. Map point is city-level illustration, not factory geocoding.",
+      "generalEmailEvidence": {
+        "company": "Annapurna Printing Inks Pvt. Ltd.",
+        "value": "annapurnaprintinginks@gmail.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Email field, repeated Home/About/Products footer",
+            "url": "https://annapurnainks.in/contact.html",
+            "summary": "Exact public company-managed general inquiry Gmail. No attribution as a director/procurement personal mailbox, no deliverability or current demand assertion."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Annapurna Printing Inks Pvt. Ltd.",
+        "value": "+91 84205 02991",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Phone field and repeated official header/footer",
+            "url": "https://annapurnainks.in/contact.html",
+            "summary": "Exact company-published public business phone; no named buyer or inferred WhatsApp URL."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "annapurna-printing-inks-balasore",
+      "productId": "cpp-cpo",
+      "subject": "MAH-modified CPP/CPO — a brief introduction",
+      "body": "Hi Annapurna Printing Inks Pvt. Ltd. Team,\n\nYour solvent gravure and poly inks are formulated for PP and HDPE woven sacks.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply MAH-modified CPP/CPO for PP adhesion-formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your solvent gravure and poly inks are formulated for PP and HDPE woven sacks.",
+      "evidenceUrl": "https://annapurnainks.in/products.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 76
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
