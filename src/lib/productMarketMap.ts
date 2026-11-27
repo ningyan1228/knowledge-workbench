@@ -16256,11 +16256,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "chempro-peterka-libomysl",
+    "company": "Chempro – Peterka s. r. o.",
+    "productId": "nl-w1201",
+    "country": "Czech Republic",
+    "countryZh": "捷克",
+    "city": "Czech Republic（国家示意点，非Libomyšl或工厂定位）",
+    "latitude": 49.75,
+    "longitude": 15,
+    "legacyCompanyDescription": "捷克自行制造水性木器着色剂及清漆的企业",
+    "signal": "Chempro–Peterka自行制造CHEMOXYL木器着色剂与清漆；Akrylátový为水性丙烯酸木器漆，用于室内家具、护墙板及木制品，并可定制颜色。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立原读当前具体Akrylátový66行及Home/About70行，136行完整返回：公司自称捷克企业，自1998年制造木器着色剂和清漆；具体同款明确水可稀释丙烯酸分散体系、木材家具/护墙板/配件用途、25常规颜色及按木样定制，自制角色非经销商标签或只借2018PDF片段。当前有限经营与全部可见菜单为酒精/水性/乡村木器着色剂、丙烯酸/乡村清漆、价格和技术资料；未见所选PO/CPO分散体或附着促进原料商品，丙烯酸树脂为该成品配方说明，不能倒置为原料外售。仅所选输入与两份实际原文有限排查，不宣称所有SDS/配方/股权穷尽。CHEMPRO-PETERKA/CHEMOXYL/域名/IC25661884/CZ25661884同一账户，注册C59080为官网自述，不冒独立注册或终极所有权审计；全正式674/root688/front1382/index694/queue及全史raw/full/normalized核无旧公司原读，仅当前Search与本组两页。当前官网明确chempro@chemoxyl.cz及+420603575346一般业务入口；旧2018Search中tiscali邮箱、旧固定电话均未作为当前联系。无具名采购、无WhatsApp/LinkedIn或实际联系表单推断，不把手机号自动当WhatsApp。Libomyšl1/26723Lochovice是原文业务地址，不自动作工厂门口；单独GeoNames3077311新原读577/821行含PCLI国家与49.75/15坐标，地图用CzechRepublic/Czechia同一国家代表点，不冒Libomyšl城市或GPS。公司2/rem4，范围含国家1共3/rem3，0失败/跳转/改写/GET/PDF/脚本；未读取2018技术PDF，未宣传NLW木器配方测试相容、附着提升或采购需求。"
+    },
+    "contact": {
+      "label": "公开公司邮箱与业务电话",
+      "email": "chempro@chemoxyl.cz",
+      "phone": "+420 603 575 346",
+      "contactUrl": "https://www.chemoxyl.cz/"
+    },
+    "source": {
+      "label": "CHEMOXYL官网Akrylátový水性丙烯酸木器漆及自身定制制造原文",
+      "url": "https://www.chemoxyl.cz/akrylatovy/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"chempro-peterka-libomysl": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "cronolin-paint-genemuiden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "magpaint-europe-ulft": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "at-inks-rex-tone-india": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -16935,6 +16964,57 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"chempro-peterka-libomysl": {
+  "website": "https://www.chemoxyl.cz/",
+  "contactPage": "https://www.chemoxyl.cz/",
+  "generalEmail": "chempro@chemoxyl.cz",
+  "generalPhone": "+420 603 575 346",
+  "generalEmailEvidence": {
+    "company": "Chempro – Peterka s. r. o.",
+    "value": "chempro@chemoxyl.cz",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前官网Kontakt明确的一般业务邮箱",
+        "url": "https://www.chemoxyl.cz/",
+        "summary": "Home/About及同款产品页Kontakt原文明列此邮箱；不冒具名采购或旧tiscali邮箱。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhoneEvidence": {
+    "company": "Chempro – Peterka s. r. o.",
+    "value": "+420 603 575 346",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "当前官网Kontakt明确的一般业务电话",
+        "url": "https://www.chemoxyl.cz/",
+        "summary": "原文Telefon业务电话，不绑定个人、不推WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Published business address: Libomyšl 1, 267 23 Lochovice, Czech Republic. Not independently geocoded as a factory gate. Map uses independently read GeoNames Czechia/Czech Republic country representative coordinates 49.75,15, not Libomyšl city or factory GPS.",
+  "sources": [
+    {
+      "label": "公司自制木器漆、商号/注册自述及当前业务联系",
+      "url": "https://www.chemoxyl.cz/"
+    },
+    {
+      "label": "CHEMOXYL官网Akrylátový水性丙烯酸木器漆及自身定制制造原文",
+      "url": "https://www.chemoxyl.cz/akrylatovy/"
+    },
+    {
+      "label": "GeoNames捷克国家代表坐标，非业务地址定位",
+      "url": "https://www.geonames.org/3077311"
+    }
+  ]
+},
 "cronolin-paint-genemuiden": {
   "website": "https://cronolin.nl/over-cronolin/",
   "contactPage": "https://cronolin.nl/over-cronolin/",
@@ -51153,6 +51233,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"chempro-peterka-libomysl",
 "cronolin-paint-genemuiden",
 "magpaint-europe-ulft",
 "at-inks-rex-tone-india",
