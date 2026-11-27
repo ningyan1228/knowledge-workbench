@@ -16368,11 +16368,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "glossy-1001-paints-delhi-noida",
+    "company": "Glossy Color and Paints / 1001 Paints",
+    "productId": "nl-w1201",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "New Delhi / Greater Noida（官网单位所在地；地图仅印度既有示意点）",
+    "latitude": 28.47,
+    "longitude": 77.5,
+    "legacyCompanyDescription": "自有生产及研发的印度涂料制造账户，1001系列包括水性木器清漆；多生产单位与商号合并去重。",
+    "signal": "Glossy自有生产团队与研发实验室制造涂料，1001 Glosspreg Multishield为用于木围栏、凉棚、窗框和门的水性透明清漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "六次官网原文读取累计6/6 STOP；实际返回3346行，其中已逐行核对产品/经营/联系正文区563行，其余2783行为重复导航等，非3346条独立业务事实。About557/Barrier780/Waterproof595的提供方返回分别526/718/544行，尾部重复菜单未完整返回；相关正文区均已返回，不冒全页/全册阅读。About明示自有制漆、化学师/工程师生产团队、研发及批次实验室，列New Delhi的Glossy Color & Paints单位、Greater Noida的两处Glossy Paints India单位及Sant Ram Nikka Mal商号和Anglo-Dutch历史，按同一账户/预算去重；不把1938/1948及80年等自述矛盾改为已审工商历史或2026股权。产品原文明确1001 Glosspreg Multishield为水性木器清漆，用于围栏/凉棚、窗框与门。Specialised Barrier实际14项为涂层、填料或底漆；Gloss-O-Guard为直接刷涂于砖/水泥/石材的防潮成品且明确不推荐木材，不能拿它代替所选木器应用。Infinity Binders为车漆修补混色体系的成品配套结合料，未披露全部化学组成；Ancillaries实际为聚异氰酸酯硬化剂、稀释剂、除油剂与改性丙烯酸Flip Controller汽车漆。不把这些硬化剂/颜料/铝浆粉/双煮亚麻油/艺术环氧业务抹去或全称为成品漆，也不因其原料字样自动认作NL-W1201同行。已读制造、选定产品、14项Barrier、Waterproof、Binders与Ancillaries及可见分类范围未见对外销售水性聚烯烃乳液、PO/CPO分散体或同类聚烯烃附着促进原料，所选NLW输入同行排除限此范围通过；未审全部SKU/SDS、其它关联商号站点或最终所有权，不编原料外购例外。采购入口purchase@glossypaints.com由官网To become a supplier明示，是部门邮箱非具名采购、当前RFQ或采购需求；sales@及电话另存一般业务证据，不猜WhatsApp或人名。NL-W1201仅按用户TDS木材/水性底涂和附着促进用途提出配方评估，不把客户耐候/湿附着/抗菌/环保声明移给我方，不确认现用PO、兼容、改善幅度或采购。地图仅印度既有示意点，非Glossy城市实测/厂门定位。早期Oct27搜索提及与预检保留为历史发现，不伪称首次发现；未识别此前实际公司原读，来源预算仍全集团共享。共享发送状态未知，仅未来未发条件生成器核对，不创建就绪开发信或外联。"
+    },
+    "contact": {
+      "label": "官网公开采购/供应商入口部门邮箱及一般业务电话",
+      "email": "purchase@glossypaints.com",
+      "phone": "+91-11-41321001",
+      "contactUrl": "https://www.glossypaints.com/1001-water-based-clear-varnish/"
+    },
+    "source": {
+      "label": "Glossy官网1001 Glosspreg Multishield水性木器清漆原文",
+      "url": "https://www.glossypaints.com/1001-water-based-clear-varnish/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"glossy-1001-paints-delhi-noida": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "valcolor-mouscron": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sebek-inks-frasnes-lez-anvaing": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "advance-international-chemicals-lahore": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -17051,6 +17080,88 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"glossy-1001-paints-delhi-noida": {
+  "website": "https://www.glossypaints.com/",
+  "contactPage": "https://www.glossypaints.com/1001-water-based-clear-varnish/",
+  "generalEmail": "sales@glossypaints.com",
+  "generalEmailEvidence": {
+    "company": "Glossy Color and Paints / 1001 Paints",
+    "value": "sales@glossypaints.com",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Glossy产品页公开公司一般销售邮箱",
+        "url": "https://www.glossypaints.com/1001-water-based-clear-varnish/",
+        "summary": "产品页L22公开sales@glossypaints.com；一般公司邮箱，不具名。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhone": "+91-11-41321001",
+  "generalPhoneEvidence": {
+    "company": "Glossy Color and Paints / 1001 Paints",
+    "value": "+91-11-41321001",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Glossy产品页公开一般销售电话",
+        "url": "https://www.glossypaints.com/1001-water-based-clear-varnish/",
+        "summary": "产品页L247-252为sales enquiries，原样+91-11-41321001；非采购个人号码或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [
+    {
+      "department": "Procurement",
+      "email": "purchase@glossypaints.com",
+      "emailEvidence": {
+        "company": "Glossy Color and Paints / 1001 Paints",
+        "value": "purchase@glossypaints.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Glossy官网供应商/采购部门入口",
+            "url": "https://www.glossypaints.com/1001-water-based-clear-varnish/",
+            "summary": "产品原文L303明确To become a supplier email at purchase@glossypaints.com，AboutL338与AncillariesL305亦一致；只证明公开部门邮箱，不证明当前采购。"
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    }
+  ],
+  "address": "Company-disclosed units: Glossy Color & Paints P Ltd, Najafgarh Road, Shivaji Marg, New Delhi 110015; Glossy Paints India P Ltd, Surajpur / Surajpur Industrial Area, Greater Noida, UP, India. Map uses a previously deployed India illustration anchor (28.47, 77.5); NOT Glossy city coordinates, address geocoding or factory GPS.",
+  "sources": [
+    {
+      "label": "水性木器清漆及采购/一般联系入口",
+      "url": "https://www.glossypaints.com/1001-water-based-clear-varnish/"
+    },
+    {
+      "label": "自有制造/研发与三个单位及商号关系",
+      "url": "https://www.glossypaints.com/about/"
+    },
+    {
+      "label": "14项Barrier成品用途范围",
+      "url": "https://www.glossypaints.com/specialised-barrier-range/"
+    },
+    {
+      "label": "Gloss-O-Guard防潮成品用途/木材限制",
+      "url": "https://www.glossypaints.com/gloss-o-guard-waterproof-polymer/"
+    },
+    {
+      "label": "Infinity汽车修补体系配套结合料",
+      "url": "https://www.glossypaints.com/infinity-binders/"
+    },
+    {
+      "label": "Infinity硬化剂/稀释/除油/丙烯酸漆实际范围",
+      "url": "https://www.glossypaints.com/infinity-ancillaries/"
+    }
+  ]
+},
 "valcolor-mouscron": {
   "website": "https://www.valcolor.com/",
   "contactPage": "https://www.valcolor.be/peintures/contact.html",
@@ -51473,6 +51584,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"glossy-1001-paints-delhi-noida",
 "valcolor-mouscron",
 "sebek-inks-frasnes-lez-anvaing",
 "advance-international-chemicals-lahore",
