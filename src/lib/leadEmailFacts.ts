@@ -704,4 +704,6 @@ export const leadEmailFacts: Record<string, string> = {
   'beautyflex-textile-inks-mumbai': "Your EML series includes ready-to-use water-based inks for textile screen printing.",
   'nasib-glory-paints-nairobi': "Your industrial range includes two-pack epoxy primers and enamels for protective coating applications.",
   'ideal-manufacturing-paints-kenya': "Your industrial range includes red oxide primers and bituminous composition paint for water tanks.",
+  'spring-inks-lahore': "Your water-based range includes liquid inks for flexographic and rotogravure printing.",
+  'besco-chemicals-faisalabad': "You manufacture water-based flexographic inks for paper, paperboard and corrugated packaging.",
 }

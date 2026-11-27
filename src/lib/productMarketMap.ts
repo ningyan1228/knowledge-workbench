@@ -55359,4 +55359,211 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 79
     }
   }
+]).concat([
+  {
+    "id": "spring-inks-lahore",
+    "company": "Spring Inks (Private) Ltd.",
+    "productId": "nl-h-860",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore (approximate city marker; not factory geocoding)",
+    "latitude": 31.5204,
+    "longitude": 74.3587,
+    "fit": "可开发候选",
+    "signal": "在Lahore自主研发制造工业印刷油墨，并提供水性柔印及凹印液体墨配方。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "四份完整公司业务原文：既有About120及本轮WaterBase104/InkAux87/Pressroom88共399native行含导航。About自述制造工业墨、研发设备/技术团队及消耗颜料binder；独立水性目录明确自有水性柔印/凹印液体墨并列2406S60/2414S50/24911S60/WFO21947/WMO9091，不依赖失败PrintingInk目录或PP应用来过NLH860水性墨直接TDS门槛。辅助品实际分类是tack/anti-skinning/干燥/墨水平衡调节，Pressroom为润版/清洗化学及ExcelBrown印版清洗成品；所读主营与辅料范围未识别CPP/CPO/MAH/PO分散体或同类原料供货，结论有限实际分类/目录正文，不冒11或12个隐藏SKU/SDS全读、全配方化学审计或任何客户相容保证。类别菜单计数非实际已读产品数量。未命名技术合作不推外方股权/集团，BESTONE只自有墨系列，孟加拉SEO供货页不另造制造企业/分支。实际公开sales邮箱/业务手机及HolidayParkLahore地址多原文重复，不冒具名买手/可投递/WA。原2来源含PrintingInkcategoryCacheMiss冻结，本轮另3不同水性/辅料原文=终身5/rem1，失败没有重试或换provider/镜像恢复。只匹配NLH860水性墨，不补NL8260/CPP/1201，无当前采购、性能、食品/环保认证或工厂现场审计断言。"
+    },
+    "contact": {
+      "label": "公司公开通用业务邮箱、电话及官网联系入口",
+      "email": "sales@springink.com",
+      "phone": "+92 320 788 9016",
+      "contactUrl": "https://springink.com/product-category/water-base-coating-pakistan/"
+    },
+    "source": {
+      "label": "Own water-based printing ink manufacturing and exact product range",
+      "url": "https://springink.com/product-category/water-base-coating-pakistan/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "实际自制水性油墨及对应产品/制造正文支持按用户NL-H-860 Rev.01作润湿、渗透与配方稳定性初评；不是确认现用CPP、颜料已相容、PP附着性能、合规认证或当前采购。所读主营与辅料范围未识别选定同类输入原料外售，边界限实际已读内容。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在Lahore自主研发制造工业印刷油墨，并提供水性柔印及凹印液体墨配方。",
+      "sourceName": "Own water-based ink range plus own manufacturing/R&D or controlled production process",
+      "sourceUrl": "https://springink.com/product-category/water-base-coating-pakistan/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://springink.com/",
+      "contactPage": "https://springink.com/product-category/water-base-coating-pakistan/",
+      "generalEmail": "sales@springink.com",
+      "generalPhone": "+92 320 788 9016",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Holiday Park Industrial Estate, Ali Raza Abad, 5-km Raiwind Road, Lahore, Pakistan. Own business-footer address; map reuses an existing Lahore city reference, not factory-door geocoding.",
+      "sources": [
+        {
+          "label": "Own manufacturer/R&D role; pigments and binders use; actual company business footer",
+          "url": "https://springink.com/about-us/"
+        },
+        {
+          "label": "Actual water-based flexo/gravure ink range and five named formulations",
+          "url": "https://springink.com/product-category/water-base-coating-pakistan/"
+        },
+        {
+          "label": "Actual ink auxiliary category: tack/anti-skinning/drying adjustments; not all hidden SKUs/SDS",
+          "url": "https://springink.com/product-category/ink-auxillaries/"
+        },
+        {
+          "label": "Actual pressroom consumables category and plate cleaner; bounded selected-input exclusion",
+          "url": "https://springink.com/product-category/pressroom-consumables/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Spring Inks (Private) Ltd.",
+        "value": "sales@springink.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Exact own general company mailbox beside actual Pakistan business address",
+            "url": "https://springink.com/product-category/water-base-coating-pakistan/",
+            "summary": "Repeated on independently read own company originals; not a named purchaser, inferred address or deliverability proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Spring Inks (Private) Ltd.",
+        "value": "+92 320 788 9016",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Exact own public company business telephone",
+            "url": "https://springink.com/product-category/water-base-coating-pakistan/",
+            "summary": "Published corporate business route; not a named/private buyer phone or inferred WhatsApp account."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "spring-inks-lahore",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Spring Inks (Private) Ltd. Team,\n\nYour water-based range includes liquid inks for flexographic and rotogravure printing.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your water-based range includes liquid inks for flexographic and rotogravure printing.",
+      "evidenceUrl": "https://springink.com/product-category/water-base-coating-pakistan/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 79
+    }
+  },
+  {
+    "id": "besco-chemicals-faisalabad",
+    "company": "Besco Chemicals Pvt. Ltd.",
+    "productId": "nl-h-860",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Faisalabad, Punjab (Pakistan reference marker only; not city or factory geocoding)",
+    "latitude": 30.053373333333337,
+    "longitude": 72.71854777777779,
+    "fit": "可开发候选",
+    "signal": "在巴基斯坦Faisalabad自制纸张、纸板及瓦楞包装用水性柔印墨，并披露原料筛选、受控生产及批次质检流程。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立复读Home201/About86/Contact59三完整公司原文共346native行含导航，明确WeManufacture水性柔印墨用于paper/paperboard/corrugated/Kraft/duplex，About披露从供应商选颜料/树脂/助剂、受控自制及每批颜色/干燥/流动/稳定性内检，不只包装印刷/经销自称。实际业务为成品水性柔印墨及调色/印刷技术支持；所读Home全部主营与About生产原料角色未识别CPP/CPO/MAH/PO分散体或同类输入原料外售，supplier原料筛选说明是配方端用料，不据之断言已采购我方或某特定CPP。结论限真实可见经营/制造正文，不冒隐藏全部配方/SDS/所有化学测试。PvtLtd为公司自刊名非独立工商核验；12/13年、三城市三单位/10人/2433客户等营销计数不采用为当前独立审计或多客户。图库明确stock/vecteezy/设备商/其他漆商外链，未当自有厂房照片或借其制造证据；Instagram shortcode、newsletter info.yourwebmail@gmail.com与LondonEye地图为模板，不精选为公司邮箱/英国场所/客户/证照。真实三原文生产基地FaisalabadPunjab及ink@bescochemicals.com/+923090638000一致，通用业务入口非具名采购/私号/可投递/猜WA；Contact未提交。无街道厂址，地图明确仅已发巴基斯坦客户坐标聚合参考，非Faisalabad城市定位/国家中心/厂门。全史初始5/真实身份11均Search/本轮3source及元数据，旧定向0；本3/rem3，无跨产品集团预算重置。只按H860润湿/渗透初评，不借纸包装推食品接触/无VOC/绿色认证、颜料相容、PP附着或采购。"
+    },
+    "contact": {
+      "label": "公司公开通用业务邮箱、电话及官网联系入口",
+      "email": "ink@bescochemicals.com",
+      "phone": "+92 309 0638000",
+      "contactUrl": "https://bescochemicals.com/contact/"
+    },
+    "source": {
+      "label": "Own water-based printing ink manufacturing and exact product range",
+      "url": "https://bescochemicals.com/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "实际自制水性油墨及对应产品/制造正文支持按用户NL-H-860 Rev.01作润湿、渗透与配方稳定性初评；不是确认现用CPP、颜料已相容、PP附着性能、合规认证或当前采购。所读主营与辅料范围未识别选定同类输入原料外售，边界限实际已读内容。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在巴基斯坦Faisalabad自制纸张、纸板及瓦楞包装用水性柔印墨，并披露原料筛选、受控生产及批次质检流程。",
+      "sourceName": "Own water-based ink range plus own manufacturing/R&D or controlled production process",
+      "sourceUrl": "https://bescochemicals.com/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://bescochemicals.com/",
+      "contactPage": "https://bescochemicals.com/contact/",
+      "generalEmail": "ink@bescochemicals.com",
+      "generalPhone": "+92 309 0638000",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Faisalabad, Punjab, Pakistan. Own company-disclosed production-base city; street address not published in the read originals. Map is a Pakistan reference illustration, not independently geocoded city/premises. The London Eye map widget is a template and is not company-location evidence.",
+      "sources": [
+        {
+          "label": "Own water-based flexo ink manufacturing and paper/corrugated/Kraft/duplex applications",
+          "url": "https://bescochemicals.com/"
+        },
+        {
+          "label": "Own supplier pigment/resin/additive selection, controlled manufacture and batch quality checks",
+          "url": "https://bescochemicals.com/about/"
+        },
+        {
+          "label": "Own actual Pakistan business city, general phone and company email; template London map rejected",
+          "url": "https://bescochemicals.com/contact/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Besco Chemicals Pvt. Ltd.",
+        "value": "ink@bescochemicals.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Exact own general company mailbox beside actual Pakistan business address",
+            "url": "https://bescochemicals.com/contact/",
+            "summary": "Repeated on independently read own company originals; not a named purchaser, inferred address or deliverability proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Besco Chemicals Pvt. Ltd.",
+        "value": "+92 309 0638000",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Exact own public company business telephone",
+            "url": "https://bescochemicals.com/contact/",
+            "summary": "Published corporate business route; not a named/private buyer phone or inferred WhatsApp account."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "besco-chemicals-faisalabad",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Besco Chemicals Pvt. Ltd. Team,\n\nYou manufacture water-based flexographic inks for paper, paperboard and corrugated packaging.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "You manufacture water-based flexographic inks for paper, paperboard and corrugated packaging.",
+      "evidenceUrl": "https://bescochemicals.com/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 79
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
