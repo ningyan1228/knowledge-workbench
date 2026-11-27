@@ -701,4 +701,5 @@ export const leadEmailFacts: Record<string, string> = {
   'ahs-trade-services-mumbai': "Your woven-sack inks are listed for flexographic printing on untreated and treated PP bags.",
   'awesome-inks-coatings-surat': "Your solvent-based flexographic ink is listed for polypropylene and BOPP packaging films.",
   'royal-inks-equipments-nashik': "Your Royal Poly Flexo Ink is formulated for flexographic printing on PP and BOPP films.",
+  'beautyflex-textile-inks-mumbai': "Your EML series includes ready-to-use water-based inks for textile screen printing.",
 }

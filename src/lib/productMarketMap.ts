@@ -55054,4 +55054,106 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 82
     }
   }
+]).concat([
+  {
+    "id": "beautyflex-textile-inks-mumbai",
+    "company": "Beautyflex Textile Printing Inks",
+    "productId": "nl-h-860",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Mumbai / Jogeshwari West (approximate Mumbai city marker)",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "fit": "可开发候选",
+    "signal": "在印度Mumbai自主生产纺织印花油墨，EML系列为水性印花墨，目录另列水性荧光墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "三份完整公司自刊原文About115/Products239/Contact111，共465native行含重复导航。About说明自主生产纺织丝印墨及其他专用品，具体ReadyToUse水性墨和EML水性系列分开列明；Products补充实际水性荧光系列，与普通Plastisol制造标签区分。按NLH860用户TDS水性油墨润湿/渗透方向初评，不把纺织油墨推成PP/塑料附着体系，不转用NL8260/CPP/已暂停1201匹配，不保证客户体系相容或渗透效果。实际经营目录为油性/Plastisol/水性/硅胶/特殊效果/金属/荧光等成品印花墨，另列高密度及Puff墨效果添加剂、硅胶浮雕胶/DenimCutter/热转印材料等，不忽略兼营添加剂，也不把所有添加剂或硅胶一概当CPO同行；所查具体公司与目录边界未识别CPP/CPO/MAH/PO分散体或同类附着促进原料对外销售。结论限真实已读主目录摘要和系列说明，不冒每个未读叶页/SDS/化学成分全审。源2 WATERBASED链接实际指service/logo-printing并超时，计额冻结，未假称读取细页；后续Products是独立全业务目录，不是失败细页的raw/provider/改路径重试。网站明显夹杂Printco文案/printco与support通用Gmail/55MainSrteetNewYork/+000123电话模板，均未精选为该公司身份、地址、邮箱、号码或美国客户；实际Contact正文Location/EmailUs/PhoneNo与About/Products本品牌页脚一致为Mumbai220AVeenaDalwai及beautyflextpi@gmail.com。公司通用业务邮箱与+91-98334 13855有实际自刊来源，不冒具名采购/邮箱可投递验证/WA。Beautyflex与版权Beautiflex拼写同站品牌，未读到独立法人全名/GST/股权，不自造Ltd或将模板Printco归为法律主体；起步1998、27年/48国、first/patent/awards/无PVC等自刊营销不作当前独立认证审计或我方性能。全正式/私有/队列/排除项及域名/品牌/业务邮箱/地址历史去重，初始5和扩展10档仅旧Search/当前首读/预留/本地预检，原公司请求0；未以missingIndex单独发新额度。原0+新4=终身4/rem2，本scope另Hindavi2共6已停止，不因公司未耗满超范围抓取；失败URI不返额。地图复用已发AstraChemtech Mumbai19.076/72.8777城市示意，非Jogeshwari楼址/工厂定位，无新地理来源。保存草稿不标发，未知共享发送不作未发，无邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "公司公开通用邮箱、业务电话及联系页",
+      "email": "beautyflextpi@gmail.com",
+      "phone": "+91-98334 13855",
+      "contactUrl": "https://beautyflextpi.com/contact-us/"
+    },
+    "source": {
+      "label": "Own EML water-based textile printing ink series and manufacturing description",
+      "url": "https://beautyflextpi.com/about-us/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "本公司自主生产纺织印花墨并列明EML及荧光水性系列，按NLH860 TDS水性油墨润湿/渗透方向作配方初评；并非已确认其采购/使用CPP、客户颜料或炭黑体系相容，也不承诺塑料附着或环保认证。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在印度Mumbai自主生产纺织印花油墨，EML系列为水性印花墨，目录另列水性荧光墨。",
+      "sourceName": "Own manufacturing description, EML water-based ready-to-use inks and water-based fluorescent series",
+      "sourceUrl": "https://beautyflextpi.com/about-us/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://beautyflextpi.com/",
+      "contactPage": "https://beautyflextpi.com/contact-us/",
+      "generalEmail": "beautyflextpi@gmail.com",
+      "generalPhone": "+91-98334 13855",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "220-A, Veena Dalwai Industrial Estate, Oshiwara, S.V. Road, Jogeshwari West, Mumbai 400102, Maharashtra, India. Company Contact正文与本品牌页脚一致；纽约占位模板地址/通用邮箱/虚拟电话不属于已核公司渠道。地图为Mumbai城市示意，非具体楼址或工厂定位。",
+      "sources": [
+        {
+          "label": "Complete own About: textile ink manufacturing, EML and ready-to-use water-based range; template footer excluded",
+          "url": "https://beautyflextpi.com/about-us/"
+        },
+        {
+          "label": "Complete own primary products: water-based fluorescent inks and bounded high-density/puff ink-effect additive range",
+          "url": "https://beautyflextpi.com/products/"
+        },
+        {
+          "label": "Actual Mumbai Location/EmailUs/PhoneNo contact body and consistent branded footer, no form submission",
+          "url": "https://beautyflextpi.com/contact-us/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Beautyflex Textile Printing Inks",
+        "value": "beautyflextpi@gmail.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Us actual Email Us section",
+            "url": "https://beautyflextpi.com/contact-us/",
+            "summary": "Actual Mumbai company Email Us section and matching branded footer publish this exact Gmail. Printco/support placeholder addresses excluded; not named purchasing or deliverability proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Beautyflex Textile Printing Inks",
+        "value": "+91-98334 13855",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Us actual Phone No section",
+            "url": "https://beautyflextpi.com/contact-us/",
+            "summary": "Exact company public business telephone in real Mumbai contact block; no named buyer, private-person or WhatsApp inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "beautyflex-textile-inks-mumbai",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Beautyflex Textile Printing Inks Team,\n\nYour EML series includes ready-to-use water-based inks for textile screen printing.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your EML series includes ready-to-use water-based inks for textile screen printing.",
+      "evidenceUrl": "https://beautyflextpi.com/about-us/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 79
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
