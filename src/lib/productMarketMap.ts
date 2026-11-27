@@ -16284,11 +16284,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "advance-international-chemicals-lahore",
+    "company": "Advance International Chemicals (Private) Limited",
+    "productId": "elo",
+    "country": "Pakistan",
+    "countryZh": "巴基斯坦",
+    "city": "Lahore（官网总部城市；独立城市示意点，非工厂定位）",
+    "latitude": 31.54972,
+    "longitude": 74.34361,
+    "legacyCompanyDescription": "巴基斯坦自有工厂制造MANSON丝印油墨及工业涂料的配方企业",
+    "signal": "AIC在自有工厂制造MANSON丝印油墨，实际OPP成品用于PU/PVC表面印刷。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "同一原CPP私有researchId晋级ELO，不新建公司身份。五旧完整原文93/74/396/491/589行独立离线再审，原日期/hash保留；本轮仅Contact171行，终身5+1=6STOP，当前171/累计1814经营返回行含重复菜单页脚，不是1814独立事实。WhatWeManufacture明确自有工厂制造MANSON丝印油墨、工业涂料和胶黏剂；实际MANSON OPP是OverPrintPlastic，用于PU/PVC，非聚丙烯。以ELO用户TDS已列油墨/配方应用独立准入，不依赖PP基材；原CPP同款PP溶剂墨缺口和generic附着促进剂化学/角色缺口均保留false，不倒推已使用CPP/CPO或ELO。已读总目录仅首9/66、实际完整17项颜料/树脂/固化剂/溶剂族与34项油墨族、制造/集团/联系范围；真实有R65丙烯酸树脂、HDI聚异氰酸酯、颜料、配套固化剂/溶剂缓干剂及润滑油黏指添加剂销售，不假称纯成品或无任何原料。所查有限公开经营范围未见ELO/ESBO/环氧植物油或同类生物基增塑稳定原料外售，所选ELO同行排查通过；不推generic附着剂完整化学，不声称审完全部66SKU/SDS/隐藏业务/配方或终极股权。首方集团BestPetroleum与AdvanceChemicals未来扩展共享同户6预算，未来厂不冒当前产能；官网/法名/MANSON/关联实体/地址/域名与675公开、root14未发、front1391/index703、17撤销和队列去重仅原RID。Contact明确法名、Lahore总部及制造实验室参观自述，160-DModelTown为总部，非已定位厂门。真实业务表单含General/Technical等选项，电话为公司通用，未公开邮箱；Leadership仅导航不访问第七来源，不编具名/部门邮箱、WhatsApp、LinkedIn或采购负责人。邮箱显式空、不可批量邮件，缺邮箱不阻止表单渠道正文评估。地图复用2026-11-25独立Lahore通用城市原文L308/L321同值31.54972/74.34361，本轮离线核hash/关键行、0新地理请求，不借其他公司的制造联系证据或冒工厂GPS。ELO只作环氧功能/油墨柔韧性配方试验方向，当前现用/采购/相容/效果与食品法规、ZDHC/SGS/盐雾等均未确认或移植；共享发送未知仅未来核未发生成器校验，无就绪稿/发送。"
+    },
+    "contact": {
+      "label": "官网业务询价表单与公司一般电话；未核公开邮箱",
+      "email": "",
+      "phone": "+92 42 3788 3020",
+      "contactUrl": "https://www.advancechemical.org/contact"
+    },
+    "source": {
+      "label": "AIC自有工厂制造说明及MANSON实际油墨目录",
+      "url": "https://www.advancechemical.org/business-model/what-we-manufacture"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"advance-international-chemicals-lahore": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "chempro-peterka-libomysl": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "cronolin-paint-genemuiden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "magpaint-europe-ulft": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16964,6 +16993,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"advance-international-chemicals-lahore": {
+  "website": "https://www.advancechemical.org/",
+  "contactPage": "https://www.advancechemical.org/contact",
+  "generalEmail": "",
+  "generalPhone": "+92 42 3788 3020",
+  "generalPhoneEvidence": {
+    "company": "Advance International Chemicals (Private) Limited",
+    "value": "+92 42 3788 3020",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "AIC官方Contact公司业务电话及总部",
+        "url": "https://www.advancechemical.org/contact",
+        "summary": "Contact原文L48/L50与总部L81-82明确公司法名、业务+924237883020和Lahore总部；一般公司电话，非具名采购/WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Corporate headquarters: 160-D Model Town, Lahore, Pakistan. Contact also describes a Lahore manufacturing complex and integrated R&D laboratory, without a separate factory address. Marker uses independent Lahore city coordinates (31.54972, 74.34361), not factory GPS or an entrance.",
+  "sources": [
+    {
+      "label": "自有工厂制造MANSON/涂料/胶黏剂",
+      "url": "https://www.advancechemical.org/business-model/what-we-manufacture"
+    },
+    {
+      "label": "公司披露集团与未来制造扩展",
+      "url": "https://www.advancechemical.org/about/group-companies"
+    },
+    {
+      "label": "实际17项原料商品族",
+      "url": "https://www.advancechemical.org/products?family=resins-colors"
+    },
+    {
+      "label": "实际34项丝印油墨/配套商品族",
+      "url": "https://www.advancechemical.org/products?family=printing-inks"
+    },
+    {
+      "label": "真实公司业务询价表单及公开电话/总部",
+      "url": "https://www.advancechemical.org/contact"
+    }
+  ]
+},
 "chempro-peterka-libomysl": {
   "website": "https://www.chemoxyl.cz/",
   "contactPage": "https://www.chemoxyl.cz/",
@@ -51233,6 +51307,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"advance-international-chemicals-lahore",
 "chempro-peterka-libomysl",
 "cronolin-paint-genemuiden",
 "magpaint-europe-ulft",

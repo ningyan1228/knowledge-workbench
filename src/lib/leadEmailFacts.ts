@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"advance-international-chemicals-lahore": "I noticed AIC manufactures its own MANSON screen-printing inks, including two-component over-printing inks for PU and PVC surfaces.",
 "chempro-peterka-libomysl": "Chempro–Peterka manufactures CHEMOXYL water-based acrylic wood finishes and offers custom shades for furniture and other interior woodwork.",
 "cronolin-paint-genemuiden": "I noticed Cronolin manufactures Aquaprimer DTMX, a one-component water-based primer for metal, alongside coatings developed in its own factory.",
 "magpaint-europe-ulft": "I noticed MagPaint offers water-based wood and furniture paint development and production through its own Dutch paint factory.",
