@@ -54446,4 +54446,118 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 75
     }
   }
+]).concat([
+  {
+    "id": "pinturas-lider-pinlid-quito",
+    "company": "Pinturas Líder PINLID Cía. Ltda.",
+    "productId": "elo",
+    "country": "Ecuador",
+    "countryZh": "厄瓜多尔",
+    "city": "Quito, Pichincha (approximate city marker)",
+    "latitude": -0.22,
+    "longitude": -78.5125,
+    "fit": "可开发候选",
+    "signal": "在厄瓜多尔Quito自主配制制造工业涂料，ESI Fast Dry列金属结构等工业用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "五份完整自有业务原文Home404/质量政策28/Metalmecanica目录143/ESIFastDry技术PDF106/Contact137=818native行含重复导航，城市只416/1199局部，合计6来源1234返回行不冒六业务或全城市文章。当前Home明确团队可调整配方；官网直接链接质量政策写fabricación y comercialización de pinturas，工业/建筑/维护涂料制造与商贸并存。政策正文签署2021-01-25，2025上传路径不冒签署日期/当前经理，ISO9001实施意向不冒官方注册或已查第三方认证；首页ISO/NACE/AMPP/IARCOR/25年保护/项目面积/小时等营销不转给我方。当前链接ESI技术单完整三页文本为自有PINLID工业醇酸面漆，用于储罐外壁/架空管/金属结构等中等暴露，明确不推荐连续浸泡/强腐蚀介质；不把其高强腐蚀限制抹掉，也不把别款epoxy高性能当ESI实际性能。客户醇酸配方不证明ELO可直混、参与固化、替代原料或提高防腐耐化学；仅按用户ELO TDS coatings方向柔韧/树脂改性初评，非anticorrosion研究市场扩展或保证。官网六自有Lider涂料线及CIN/AkzoInternational成品漆经销分列，Metalmecanica可见16成品涂层/底漆/氧化转化剂/稀释剂，所读主营范围未见ELO/ESBO/环氧植物油/同类功能增塑原料外售，有限所选原料同行排除通过，不声称全站其他类目/隐藏SKU/SDS全部已审。成品漆和稀释剂商贸不自动当所选ELO原料同行；同样不能只凭经销品牌推CIN/Akzo母子集团或另计其产品厂家。自有制造/配方由本公司政策和当前具体自有产品另证，非拿经销厂商制造替代。技术单自刊PINLIDCíaLtda身份、QuitoCarcelén地址及域名与当前站对应；旧Search目录G4752.02零售代码非政府登记原文，不忽略其商贸角色，也不据此否定已明确自制配方；未独立工商核最终股东。技术单MarianoCardenalN7375/JoséLRea/CarcelénAlto与当前ContactN73-75/JoséLarrea/CarcelénIndustrial措辞差异保留，不猜街名统一或当两个厂；地图Quito城市-0.22/-78.5125，非厂门。公开TDS calidad邮箱为共享质量业务入口不冒具名R&D/采购；当前Contactventas邮箱和业务电话验证同站，未从经理2021签名构造个人邮箱、采购或WhatsApp链接。站内虽明示WhatsApp标签及外链，本轮未解析精确href，不由电话猜深链，也未点击发送。完整正式692/root706/front1423/index735/queue/excluded按PINLID/商号/域名/地址/邮箱/电话无已知同组重复；15历史文件仅搜索/规划，4个lider命名来源实为土耳其LiderInk而非厄瓜多尔公司，逐档哈希排异，原土耳其3来源不重置不混组。本户prior0+当前6=终身6STOP，不换www/apex/品牌/产品/provider给预算。草稿保存不标发，未知共享发送状态不作未发，无邮件/表单/消息/CRM。"
+    },
+    "contact": {
+      "label": "官网技术单质量业务邮箱、公开电话及联系页",
+      "email": "calidad@pinturaslider.com.ec",
+      "phone": "+593 98 477 4783",
+      "contactUrl": "https://www.pinturaslider.com.ec/mapa-y-direccion-pinturas-lider-ecuador/"
+    },
+    "source": {
+      "label": "Own ESI Fast Dry alkyd industrial enamel for tank exteriors, pipes and metal structures",
+      "url": "https://www.pinturaslider.com.ec/wp-content/uploads/2025/08/Ficha-Tecnica-%E2%80%93-ESI-Fast-Dry.pdf"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有工业涂料制造/配方，具体ESI Fast Dry醇酸面漆用于储罐外壁、管道、金属结构；按ELO TDS涂料方向作柔韧性/树脂改性初评，未证实际采购、使用环氧植物油或配方/固化相容。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在厄瓜多尔Quito自主配制制造工业涂料，ESI Fast Dry列金属结构等工业用途。",
+      "sourceName": "Own manufacturing quality policy, current formulation capability and specific industrial enamel technical sheet",
+      "sourceUrl": "https://www.pinturaslider.com.ec/wp-content/uploads/2025/08/Ficha-Tecnica-%E2%80%93-ESI-Fast-Dry.pdf",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.pinturaslider.com.ec/",
+      "contactPage": "https://www.pinturaslider.com.ec/mapa-y-direccion-pinturas-lider-ecuador/",
+      "generalEmail": "calidad@pinturaslider.com.ec",
+      "generalPhone": "+593 98 477 4783",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Current own formulation capability and separate own/distributed finished coating lines",
+          "url": "https://www.pinturaslider.com.ec/"
+        },
+        {
+          "label": "Own manufacture and sale of industrial coatings; policy signed2021, not current named-recipient verification",
+          "url": "https://pinturaslider.com.ec/wp-content/uploads/2025/03/politica-de-calidad-signed.pdf"
+        },
+        {
+          "label": "Own complete visible16itemmetalmecanica finishedcoating/thinner range",
+          "url": "https://www.pinturaslider.com.ec/product-category/nuestros-productos-pinturas-lider-ecuador/linea-metalmecanica/"
+        },
+        {
+          "label": "Own specific alkyd enamel technicalsheet and exact quality businessmailbox; moderateexposurelimits preserved",
+          "url": "https://www.pinturaslider.com.ec/wp-content/uploads/2025/08/Ficha-Tecnica-%E2%80%93-ESI-Fast-Dry.pdf"
+        },
+        {
+          "label": "Current own Quito address, sales businessmailbox and phone",
+          "url": "https://www.pinturaslider.com.ec/mapa-y-direccion-pinturas-lider-ecuador/"
+        },
+        {
+          "label": "Quito city coordinates, partial representation only, not factory geocoding",
+          "url": "https://en.wikipedia.org/wiki/Quito"
+        }
+      ],
+      "address": "Current Contact: Mariano Cardenal N73-75 y José Larrea, Carcelén Industrial, Quito, Ecuador. Own TDS writes Mariano Cardenal N7375 y José L. Rea, Carcelén Alto; street/locality wording retained as a source variation, not guessed or treated as separate factories. Map is Quito city illustration, not factory survey.",
+      "generalEmailEvidence": {
+        "company": "Pinturas Líder PINLID Cía. Ltda.",
+        "value": "calidad@pinturaslider.com.ec",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own ESI Fast Dry technicalsheet INFORMACION DE CONTACTO",
+            "url": "https://www.pinturaslider.com.ec/wp-content/uploads/2025/08/Ficha-Tecnica-%E2%80%93-ESI-Fast-Dry.pdf",
+            "summary": "Exact publicly disclosed shared quality business mailbox beside own legalname andQuitoaddress. No namedtechnical/procurementperson, current buying need or deliverability inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Pinturas Líder PINLID Cía. Ltda.",
+        "value": "+593 98 477 4783",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Current own Contact businessphone and repeated companyheader",
+            "url": "https://www.pinturaslider.com.ec/mapa-y-direccion-pinturas-lider-ecuador/",
+            "summary": "Exact company business phone. The site labels phone/WhatsApp, but no exact messaging href was verified or invented and no messaging action occurred."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "pinturas-lider-pinlid-quito",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Pinturas Líder PINLID Cía. Ltda. Team,\n\nYour ESI Fast Dry alkyd enamel is listed for tank exteriors, overhead pipes and metal structures.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your ESI Fast Dry alkyd enamel is listed for tank exteriors, overhead pipes and metal structures.",
+      "evidenceUrl": "https://www.pinturaslider.com.ec/wp-content/uploads/2025/08/Ficha-Tecnica-%E2%80%93-ESI-Fast-Dry.pdf",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 80
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
