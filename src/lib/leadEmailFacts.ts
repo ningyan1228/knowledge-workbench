@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"radior-france-heudebouville": "Your LIQUISMART S/H 8710/13 is a silver printing ink for synthetic substrates with an ethyl acetate solvent and NC/AC base.",
 "glossy-1001-paints-delhi-noida": "Your 1001 Glosspreg Multishield water-based clear varnish is used on wood, including fences, pergolas, window frames and doors.",
 "valcolor-mouscron": "I noticed Valcolor manufactures industrial paints in Mouscron, including EX 840 epoxy primers for industrial bodywork and metal fabrication.",
 "sebek-inks-frasnes-lez-anvaing": "I noticed Sebek Inks develops and manufactures its inks in Belgium, including the Sebolith 202 solvent-based printing ink series.",

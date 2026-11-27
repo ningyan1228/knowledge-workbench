@@ -16396,11 +16396,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "radior-france-heudebouville",
+    "company": "RADIOR France SAS",
+    "productId": "elo",
+    "country": "France",
+    "countryZh": "法国",
+    "city": "Heudebouville（官网总部/生产地；地图仅法国既有示意点）",
+    "latitude": 46.6,
+    "longitude": 2.2,
+    "legacyCompanyDescription": "法国自有生产和配方研发的成品油墨制造商，同时外售金属颜料；法国、德国、意大利按同一集团账户去重。",
+    "signal": "RADIOR在法国Heudebouville自有生产及研发实验室配制油墨；LIQUISMART S/H 8710/13为用于合成基材的乙酸乙酯、NC/AC体系银色印刷墨。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "同一旧私有RADIOR账户在正常法国ELO范围独立复核升级，不新建集团账户或重置预算。旧Home547与FlexoSolvant480原文离线重读；本轮UVFlexo566和NotreEntreprise511完整原文，实际五native操作/六来源单位6STOP。旧NosProduits点击的conventional-offset→root English披露跳转并明确rewritten，计2单位、541摘要不采用，两精确URI继续冻结，本轮未恢复/重试。四份原文共2104返回行，经营联系正文375行，其余1729重复菜单等；本轮1077返回/229经营行，非数千独立事实。Home与About明确法国Heudebouville同址总部、制造、研发实验室及自主创建/调整油墨配方。选定LIQUISMARTS/H8710/13为乙酸乙酯、NC/AC体系的银色成品印刷墨，原文只说合成基材，不补PP/BOPP。UV柔印实际金属、铬银、刮刮、可见/不可见荧光和特殊黑白成品墨六类，特殊产品五项实际是黑白印刷墨；食品包装/低迁移、UV/LED及附着/光泽宣传仅客户产品条件，不移给ELO。Solvent页真实外售铜金/铝粉、颗粒与浆用于印厂自制墨，不能说只卖成品，也不因金属颜料就判ELO/ESBO/环氧植物油/同类增塑稳定原料同行。所查自制与配方业务、溶剂成品/颜料和完整UVFlexo六类及可见其它印刷工艺导航，未见上述所选ELO同类输入外售，有限范围排除通过；未读全部其它工艺/offset特殊品/SDS/全部隐含配方，不冒全集团全球无供应或原料外购证明。此前CPP同款PP和CPP输入范围缺口原样保留，不给CPP正式匹配。德国RADIORAG在Schwabach技术销售/库存、意大利RADIORItalia米兰办事处与法国一组一预算，不拆新客户；经销网络及OcéanCommunication网站服务方不当新工厂/母公司，最终股权/工商存续未独立审计。官网contact@radior.fr与原样+33(0)232504310为一般业务渠道，不具名采购/研发，不借意大利技术销售姓名为法国采购人，不猜WA。ELO只按用户TDS油墨类中环氧功能/柔韧评估，未确认客户现用ELO、相容、采购、性能、食品接触或低迁移认证；不把客户NC/AC配方改为环氧体系。地图仅既有法国示意点非Heudebouville城市实测/厂门定位。共享发送状态未知，仅未来未发条件生成器核对，无就绪稿、导出或任何外联。"
+    },
+    "contact": {
+      "label": "官网公开公司一般业务邮箱与电话；无具名采购",
+      "email": "contact@radior.fr",
+      "phone": "+33 (0)2 32 50 43 10",
+      "contactUrl": "https://radior.fr/fr/radior/"
+    },
+    "source": {
+      "label": "RADIOR官网LIQUISMART溶剂柔印墨原文及自有配方制造说明",
+      "url": "https://radior.fr/fr/fiche/flexographie-solvant/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"radior-france-heudebouville": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "glossy-1001-paints-delhi-noida": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "valcolor-mouscron": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sebek-inks-frasnes-lez-anvaing": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
@@ -17080,6 +17109,61 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"radior-france-heudebouville": {
+  "website": "https://radior.fr/fr/",
+  "contactPage": "https://radior.fr/fr/radior/",
+  "generalEmail": "contact@radior.fr",
+  "generalEmailEvidence": {
+    "company": "RADIOR France SAS",
+    "value": "contact@radior.fr",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "RADIOR Notre entreprise法国公司一般业务邮箱",
+        "url": "https://radior.fr/fr/radior/",
+        "summary": "原文L468-476同列法国总部/生产研发、RADIORFranceSAS、Heudebouville地址和contact@radior.fr；一般公司邮箱，非具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhone": "+33 (0)2 32 50 43 10",
+  "generalPhoneEvidence": {
+    "company": "RADIOR France SAS",
+    "value": "+33 (0)2 32 50 43 10",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "RADIOR Notre entreprise法国公司一般业务电话",
+        "url": "https://radior.fr/fr/radior/",
+        "summary": "原文L474精确公开+33 (0)2 32 50 43 10，与法国公司地址/邮箱同段；非WhatsApp或个人电话。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-disclosed French headquarters, ink production and R&D: RADIOR France SAS, ZI Ecoparc, 3 allée des Merisiers, 27400 Heudebouville, France. Map reuses a previously deployed France illustration anchor (46.6, 2.2); NOT Heudebouville city coordinates, address geocoding or factory GPS.",
+  "sources": [
+    {
+      "label": "法国自有制造/研发、海外办公室及原始联系入口",
+      "url": "https://radior.fr/fr/"
+    },
+    {
+      "label": "选定LIQUISMART溶剂成品墨与真实金属颜料外售范围",
+      "url": "https://radior.fr/fr/fiche/flexographie-solvant/"
+    },
+    {
+      "label": "完整UV柔印六类成品及特殊黑白油墨五项",
+      "url": "https://radior.fr/fr/fiche/flexographie-uv/"
+    },
+    {
+      "label": "自有配方实验室/制造及一般邮箱电话",
+      "url": "https://radior.fr/fr/radior/"
+    }
+  ]
+},
 "glossy-1001-paints-delhi-noida": {
   "website": "https://www.glossypaints.com/",
   "contactPage": "https://www.glossypaints.com/1001-water-based-clear-varnish/",
@@ -51584,6 +51668,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"radior-france-heudebouville",
 "glossy-1001-paints-delhi-noida",
 "valcolor-mouscron",
 "sebek-inks-frasnes-lez-anvaing",
