@@ -53673,4 +53673,118 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 79
     }
   }
+]).concat([
+  {
+    "id": "satish-chemicals-ahmedabad",
+    "company": "Satish Chemicals",
+    "productId": "nl-8260",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Ahmedabad（复用已有城市级示意点，非厂门坐标）",
+    "latitude": 23.0225,
+    "longitude": 72.57139,
+    "fit": "可开发候选",
+    "signal": "自主配方制造PP非织造材料及PP/HDPE编织袋用油墨，并生产水性纸印墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立完整核读About114/Home222/NonWoven169/Contact125/旧NET主页221/WovenSack168行，共1019行含重复导航。About明确自主配方、制造设施与质检，两个具体PP墨产品与基材正面；不把印刷、胶带经销或通用标签代替制造。Home/Contact将NonWoven及WovenSack列溶剂类，但NonWoven正文pH标水性，WovenSack正文也给水性选项及pH：保留同站分类/版本矛盾，不确认单一客户体系或把我方水分散体说成可直接加入其溶剂墨。用户NL8260原始TDS直接列PP/OPP及油墨，不强加NLW1201的目标全水性前提，仅准入PP油墨附着与配方实验室评估，混拼、基材处理、干燥与附着待测试。当前主站17可见项目包括成品墨、SYNTHOBOND胶、溶剂、清洗剂、缓干、消泡、促进干燥、pH缓冲及贴版胶带；旧NET另列染料、颜料乳浆、瓜尔胶、甲苯/丁醇等贸易，不把原料贸易身份隐去，但已读主要供货范围未识别CPO/CPP/聚烯烃附着输入外售，有限所选原料同行排除通过，不称所有SKU/SDS/隐含配方已审。两域同名及C1/1125GIDC4Naroda地址一致，统一一家；.com自称1990、旧NET1996及导师/负责人差异保留，不推创立年份或最终持股；.co.in仅搜索发现未原文审读，不造第二公司。全正式685/root699/front1413/index725、nestedqueue及原文历史无已知重复公司/集团；先前20命中仅搜索/预约/本地预查说明，真实prior0审计存档。采用主站公开info@satishchemicals.com公司通用入口，不冒具名采购；电话取清楚重复的总机，WhatsApp未读取精确href不构造链接。双方产品的FDA/EU、医疗、食品、印速、干燥、降本或附着幅度宣称不互相转移。6/6STOP，无对外联系；地图复用已有Ahmedabad城市级示意点，非工厂测绘。"
+    },
+    "contact": {
+      "label": "官网公司通用邮箱、总机及联系表单",
+      "email": "info@satishchemicals.com",
+      "phone": "+(91)-(79)-29092563",
+      "contactUrl": "https://www.satishchemicals.com/contact-us"
+    },
+    "source": {
+      "label": "Own PP Non Woven Ink; exact formulation base subject to verification",
+      "url": "https://www.satishchemicals.com/product/non-woven-ink"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主研发制造PP材料用油墨，符合用户NL-8260的PP/OPP油墨附着评估方向；仅潜在实验室材料评估，客户水性/溶剂分类存在差异，不能推定已用、采购、直接混拼或配方相容。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "自主配方制造PP非织造材料及PP/HDPE编织袋用油墨，并生产水性纸印墨。",
+      "sourceName": "Own specific PP ink with manufacturing/primary range and source discrepancies preserved",
+      "sourceUrl": "https://www.satishchemicals.com/product/non-woven-ink",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.satishchemicals.com/",
+      "contactPage": "https://www.satishchemicals.com/contact-us",
+      "generalEmail": "info@satishchemicals.com",
+      "generalPhone": "+(91)-(79)-29092563",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own formulation, manufacturing/quality facilities and primary ink business",
+          "url": "https://www.satishchemicals.com/about-us"
+        },
+        {
+          "label": "Own current17 visible product/ancillary families; category differences preserved",
+          "url": "https://www.satishchemicals.com/"
+        },
+        {
+          "label": "Own Non Woven Ink for polypropylene; body and category base discrepancy",
+          "url": "https://www.satishchemicals.com/product/non-woven-ink"
+        },
+        {
+          "label": "Own woven PP/HDPE ink with water-based options; solvent heading retained",
+          "url": "https://www.satishchemicals.com/product/woven-sack-bag-flexographic-inks"
+        },
+        {
+          "label": "Company-managed legacy NET range and identical Naroda address;1996 vs1990 retained",
+          "url": "https://www.satishchemicals.net/"
+        },
+        {
+          "label": "Own company general email, public phone and contact address",
+          "url": "https://www.satishchemicals.com/contact-us"
+        }
+      ],
+      "address": "C-1/1125,G.I.D.C.Estate,Phase4,Behind Gayatri Mandir,Naroda,Ahmedabad382330,Gujarat,India. Official published address; map reuses an existing Ahmedabad city-level representative point, not independently geocoded factory coordinates.",
+      "generalEmailEvidence": {
+        "company": "Satish Chemicals",
+        "value": "info@satishchemicals.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Email Support; repeated About Email Address",
+            "url": "https://www.satishchemicals.com/contact-us",
+            "summary": "Exact company inbox expressly published on official contact, repeated About. Corporate general route only; not a named buyer or deliverability/current-demand proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Satish Chemicals",
+        "value": "+(91)-(79)-29092563",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact footer and repeated company address blocks",
+            "url": "https://www.satishchemicals.com/contact-us",
+            "summary": "Exact clearly separated corporate switchboard, rather than the concatenated Direct Lines string; no named buyer/WhatsApp inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "satish-chemicals-ahmedabad",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Satish Chemicals Team,\n\nYour Non Woven Ink is designed for printing on polypropylene-based non-woven materials.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Non Woven Ink is designed for printing on polypropylene-based non-woven materials.",
+      "evidenceUrl": "https://www.satishchemicals.com/product/non-woven-ink",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 75
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

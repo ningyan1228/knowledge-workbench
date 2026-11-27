@@ -688,4 +688,5 @@ export const leadEmailFacts: Record<string, string> = {
   'protective-paints-east-tamaki': "Your 330 Durawood Aquawood is a penetrating water-based oil stain for timber.",
   'ccm-coatings-auckland': "Your Auckland facility formulates and manufactures coatings, including the Novepoxy and ROOFRITE product ranges.",
   'bcm-inks-loveland': "Your Eekoflex range includes water-based flexographic inks and varnishes for corrugated packaging.",
+  'satish-chemicals-ahmedabad': "Your Non Woven Ink is designed for printing on polypropylene-based non-woven materials.",
 }
