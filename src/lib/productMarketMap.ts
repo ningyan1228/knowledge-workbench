@@ -55156,4 +55156,207 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 79
     }
   }
+]).concat([
+  {
+    "id": "nasib-glory-paints-nairobi",
+    "company": "Nasib Industrial Products Limited (Glory Paints)",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Nairobi (approximate city marker; not factory geocoding)",
+    "latitude": -1.29,
+    "longitude": 36.82,
+    "fit": "可开发候选",
+    "signal": "在肯尼亚Nairobi自主制造Glory工业防护涂料，包括重防腐底漆与双组分环氧涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立复读三个完整公司自刊原文Home42/Industrial110/ThinnersAdhesives113=265native行含重复导航。Home明示Glory品牌由NasibIndustrialProductsLimited制造、有质量/研发人员，Industrial明确自主制造重防腐底漆，实际系列含2PackHiBuildEpoxyPrimer、2PackEpoxyEnamel及金属防护涂料，不仅通用装饰漆/施工/经销标签。ELO按用户TDS涂料直接方向，仅环氧功能/配方依赖的柔韧初评；不声称ELO带来客户现有防腐性能、可当固化剂、直接替代树脂、配方相容或当前采购。经营范围另有成品木器/汽车/粉末涂料、稀释剂及胶，实际后者为功能性溶剂稀释剂/WhiteSpirit/MethylatedSpirit和氯丁橡胶成品接触胶、木胶等；未识别所选ELO/ESBO/环氧植物油/类似生物增塑原料外售，不忽略兼营辅料，也不因ChlorinatedRubber或氯丁橡胶误判CPP/CPO/ELO原料同行。结论限真实已读类别及具体正文，未审全部隐藏SKU/SDS/未打开的Miscellaneous/glue化学或工厂现场。Nasib/Glory一户，旧CaparolKenya合作仅Search线索，不冒DAW股权/分支制造或另加Caparol客户；初始19/扩大Nasib及Caparol51/真实联系身份25档逐项核对，旧报告曾明确Nasib0GET，搜索/本地复制台账和MalaycubaNasib常用词/库二进制偶合不当公司请求或采购。当前正式/私有/队列/域名/邮箱/地址无已知重复，本主体旧0+本次3=3/rem3；不为用满抓联系人/地图/隐藏文件。公开ask@glorypaints.com及+254721496798、44EnterpriseRoad在三公司原文精确刊载，按通用业务入口，非采购个人/可投递/WA；未读Contact叶页，contactUrl用实际已读Home。首页2017排名、©2020、自称性能/无毒/食品场景不是当前独立认证/采购或我方保证。Nairobi城市坐标复用已发布Hermosa-1.29/36.82，非Enterprise厂门。共享发送unknown、草稿不标发，无外联/CRM。"
+    },
+    "contact": {
+      "label": "公司公开通用邮箱、业务电话及公司联系信息",
+      "email": "ask@glorypaints.com",
+      "phone": "+254 721 496 798",
+      "contactUrl": "https://www.glorypaints.com/"
+    },
+    "source": {
+      "label": "Own industrial protective coating products",
+      "url": "https://www.glorypaints.com/products/industrial-paints"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有制造及具体工业防护涂料证据支持按ELO TDS涂料方向作环氧功能/柔韧配方初评。不是确认现用ELO、配方相容、防腐/水箱认证或当前采购；兼营稀释剂/成品胶/工具不等同选定环氧植物油原料供应。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在肯尼亚Nairobi自主制造Glory工业防护涂料，包括重防腐底漆与双组分环氧涂料。",
+      "sourceName": "Own specific industrial coating range and own manufacturing/formulation role",
+      "sourceUrl": "https://www.glorypaints.com/products/industrial-paints",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.glorypaints.com/",
+      "contactPage": "https://www.glorypaints.com/",
+      "generalEmail": "ask@glorypaints.com",
+      "generalPhone": "+254 721 496 798",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "44 Enterprise Road, Industrial Area, Nairobi, Kenya. Manufacturer/operator disclosed as Nasib Industrial Products Limited; Glory is its paint brand. Map is an approximate Nairobi city illustration, not factory-door geocoding.",
+      "sources": [
+        {
+          "label": "Own manufacturer/operator and R&D role, primary business range and actual business channels",
+          "url": "https://www.glorypaints.com/"
+        },
+        {
+          "label": "Complete specific industrial protective coating range",
+          "url": "https://www.glorypaints.com/products/industrial-paints"
+        },
+        {
+          "label": "Actual thinners/auxiliary product range; bounded selected-input exclusion, not hidden all-SDS audit",
+          "url": "https://www.glorypaints.com/products/thinners-and-adhesives"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Nasib Industrial Products Limited (Glory Paints)",
+        "value": "ask@glorypaints.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own actual company business email beside operator/address",
+            "url": "https://www.glorypaints.com/",
+            "summary": "Exact company-published general business mailbox repeated on all three original company pages; not a named buyer or deliverability proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Nasib Industrial Products Limited (Glory Paints)",
+        "value": "+254 721 496 798",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own actual company business telephone beside address",
+            "url": "https://www.glorypaints.com/",
+            "summary": "Exact public company telephone, not a private-person, purchasing department or inferred WhatsApp account."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "nasib-glory-paints-nairobi",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Nasib Industrial Products Limited (Glory Paints) Team,\n\nYour industrial range includes two-pack epoxy primers and enamels for protective coating applications.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your industrial range includes two-pack epoxy primers and enamels for protective coating applications.",
+      "evidenceUrl": "https://www.glorypaints.com/products/industrial-paints",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 78
+    }
+  },
+  {
+    "id": "ideal-manufacturing-paints-kenya",
+    "company": "Ideal Manufacturing Company Limited (Ideal Paints)",
+    "productId": "elo",
+    "country": "Kenya",
+    "countryZh": "肯尼亚",
+    "city": "Kijenge Road / off Likoni Road, Kenya (Nairobi reference marker only; business city not explicit in read pages)",
+    "latitude": -1.29,
+    "longitude": 36.82,
+    "fit": "可开发候选",
+    "signal": "在肯尼亚自主制造工业涂料并设研发实验室，实际系列含金属底漆及水箱用沥青涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立复读三个完整公司自刊原文About79/Industrial190/Thinners117=386native行含重复导航。About披露自有油漆生产与fullfledged研发实验室及技术人员，不只供应商/目录标签；实际Industrial列RedOxidePrimer/BituminousCompositionPaintForWaterTanks/ChlorinatedRubberPrimer等具体工业涂料。ELO按用户TDS涂料直接方向作环氧功能/配方依赖柔韧初评，不保证沥青/氯化橡胶/底漆相容或防腐改善、水箱饮用水认证、替代固化剂/树脂或当前采购。原文Industrial界面ShowingAll2只指商城结果，下面还有完整静态工业产品列表，未把只两款当全范围，也不把产品名推未读TDS/固化化学。兼营HardwareTools运输/辅料不忽略；实际Thinners列12项WhiteSpirit/Standard/Epoxy/ChlorinatedRubber/RoadMarking/Stoving/QADthinners、Turpentine、PaintRustRemover、EtchingSolution等为成品辅助/溶剂类别，不将含Epoxy或Chlorinated词的稀释剂误作环氧植物油/CPP原料。所查经营与类别未识别ELO/ESBO/环氧植物油/同类生物增塑原料外售，限真实可见范围，不冒所有隐藏SKU/SDS化学组成全审。真实法律运营名IdealManufacturingCompanyLimited，1981饲料运输/2005漆生产为公司自述历史，72人/12车/CSR不冒当前审计。它与旧idealinks.co.ke的IdealInksAndCoatingsLimited在原文公司名、域名、邮箱、电话和场所均不同：本KijengeOffLikoni/info@idealpaints/+254717412588，对方SilverstoneOldMombasa/sales@idealinks/+254710474721及DarEsSalaam；无共同管理/股权/关联披露，不能只因Ideal通名字串合集团，也未借换域名重置旧IdealInks终身6STOP。旧10收据逐项核对保留旧6/rem0；当前初始3/展开8档只有Search/当前首读/预留/本地预检，旧请求0。全正式/私有/队列及新法人/域名/联系身份无已知重复。新3/rem3，scope含Glory3共6停止。实际About及两目录TalkToUs重复刊载info@idealpaints.co.ke/+254717412588和Kijenge地址，通用业务渠道非采购个人/可投递/WA；未读独立Contact叶页，联系用实际About。FREE SHIPPING $150/Newsletter/Chat购物模板非我方报价/发送行为，未填/点/发。原文地址未明示城市名，保留KijengeRoad/OffLikoni原地址并将客户ID用Kenya国家后缀；地图仅复用已发肯尼亚Nairobi参考点-1.29/36.82，不声称已核实该业务城市或厂门，也不当肯尼亚国土中心。共享发送unknown，草稿不标发，无外联/CRM。"
+    },
+    "contact": {
+      "label": "公司公开通用邮箱、业务电话及公司联系信息",
+      "email": "info@idealpaints.co.ke",
+      "phone": "+254 717 412 588",
+      "contactUrl": "https://idealpaints.co.ke/about-us/"
+    },
+    "source": {
+      "label": "Own industrial protective coating products",
+      "url": "https://idealpaints.co.ke/product-category/industrial-paints/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有制造及具体工业防护涂料证据支持按ELO TDS涂料方向作环氧功能/柔韧配方初评。不是确认现用ELO、配方相容、防腐/水箱认证或当前采购；兼营稀释剂/成品胶/工具不等同选定环氧植物油原料供应。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在肯尼亚自主制造工业涂料并设研发实验室，实际系列含金属底漆及水箱用沥青涂料。",
+      "sourceName": "Own specific industrial coating range and own manufacturing/formulation role",
+      "sourceUrl": "https://idealpaints.co.ke/product-category/industrial-paints/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://idealpaints.co.ke/",
+      "contactPage": "https://idealpaints.co.ke/about-us/",
+      "generalEmail": "info@idealpaints.co.ke",
+      "generalPhone": "+254 717 412 588",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Kijenge Road, off Likoni Road near Winners Chapel Church, Kenya. Own operator is Ideal Manufacturing Company Limited / Ideal Manufacturing Co. Ltd. Read originals do not explicitly name the city; map uses a previously published Kenyan Nairobi city reference, not an independently verified business city or premises location.",
+      "sources": [
+        {
+          "label": "Own manufacturer/operator and R&D role, primary business range and actual business channels",
+          "url": "https://idealpaints.co.ke/about-us/"
+        },
+        {
+          "label": "Complete specific industrial protective coating range",
+          "url": "https://idealpaints.co.ke/product-category/industrial-paints/"
+        },
+        {
+          "label": "Actual thinners/auxiliary product range; bounded selected-input exclusion, not hidden all-SDS audit",
+          "url": "https://idealpaints.co.ke/product-category/thinners/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Ideal Manufacturing Company Limited (Ideal Paints)",
+        "value": "info@idealpaints.co.ke",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own actual company business email beside operator/address",
+            "url": "https://idealpaints.co.ke/about-us/",
+            "summary": "Exact company-published general business mailbox repeated on all three original company pages; not a named buyer or deliverability proof."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Ideal Manufacturing Company Limited (Ideal Paints)",
+        "value": "+254 717 412 588",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own actual company business telephone beside address",
+            "url": "https://idealpaints.co.ke/about-us/",
+            "summary": "Exact public company telephone, not a private-person, purchasing department or inferred WhatsApp account."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "ideal-manufacturing-paints-kenya",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Ideal Manufacturing Company Limited (Ideal Paints) Team,\n\nYour industrial range includes red oxide primers and bituminous composition paint for water tanks.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your industrial range includes red oxide primers and bituminous composition paint for water tanks.",
+      "evidenceUrl": "https://idealpaints.co.ke/product-category/industrial-paints/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 79
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

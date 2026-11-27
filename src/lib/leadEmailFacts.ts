@@ -702,4 +702,6 @@ export const leadEmailFacts: Record<string, string> = {
   'awesome-inks-coatings-surat': "Your solvent-based flexographic ink is listed for polypropylene and BOPP packaging films.",
   'royal-inks-equipments-nashik': "Your Royal Poly Flexo Ink is formulated for flexographic printing on PP and BOPP films.",
   'beautyflex-textile-inks-mumbai': "Your EML series includes ready-to-use water-based inks for textile screen printing.",
+  'nasib-glory-paints-nairobi': "Your industrial range includes two-pack epoxy primers and enamels for protective coating applications.",
+  'ideal-manufacturing-paints-kenya': "Your industrial range includes red oxide primers and bituminous composition paint for water tanks.",
 }
