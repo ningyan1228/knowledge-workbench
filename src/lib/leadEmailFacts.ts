@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"valcolor-mouscron": "I noticed Valcolor manufactures industrial paints in Mouscron, including EX 840 epoxy primers for industrial bodywork and metal fabrication.",
 "sebek-inks-frasnes-lez-anvaing": "I noticed Sebek Inks develops and manufactures its inks in Belgium, including the Sebolith 202 solvent-based printing ink series.",
 "advance-international-chemicals-lahore": "I noticed AIC manufactures its own MANSON screen-printing inks, including two-component over-printing inks for PU and PVC surfaces.",
 "chempro-peterka-libomysl": "Chempro–Peterka manufactures CHEMOXYL water-based acrylic wood finishes and offers custom shades for furniture and other interior woodwork.",

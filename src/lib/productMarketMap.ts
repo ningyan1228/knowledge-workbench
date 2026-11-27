@@ -16340,11 +16340,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "valcolor-mouscron",
+    "company": "Valcolor",
+    "productId": "elo",
+    "country": "Belgium",
+    "countryZh": "比利时",
+    "city": "Mouscron（官网生产地；地图为比利时既有示意点）",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "legacyCompanyDescription": "比利时自有生产地制造工业防护及装饰成品涂料的企业；地图为国家示意点，非工厂定位。",
+    "signal": "Valcolor在比利时Mouscron自有生产地制造工业涂料，EX840为用于工业车身、铁艺及工业装配的双组分环氧底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立读取五份完整官网原文54/230/52/92/102合530返回行含重复导航页脚，另总目录PDF一次因18009095字节过大失败0正文，六次终身来源6STOP；isErrorfalse并不代表PDF成功，不编源站HTTP400、下载二进制、PDF页数或目录内容。首方Manufacturing明确Mouscron唯一生产地、自有分散混合设备、批次制漆、质控实验室和包装线；设备数量/4500m²/新线字样只保留其自述不作当前产能审计或我方承诺。工业Essentiels完整13项及装饰Essentiels完整5项实际阅读，EX840为聚酰胺交联的双组分环氧成品底漆，用于工业车身/城市家具/铁艺/土木/装配；其环氧树脂并非ELO现用证明，性能/混配/外覆PU条件不移给我方。PM184为改性醇酸与环氧酯成品底漆，AQUASOL水性环氧混凝土地坪、BOISPRIMER水分散木材底漆/BOISDECOR水性木材面漆，MURMAT墙面乳胶成品均按实际用途保留，不因epoxy/emulsion/primer等词当原料同行，也不把地坪或高温铝漆借NLW铝材泛化。所查实际制造与两成品系列、法务/联系及可见经营导航未见外售ELO、ESBO、环氧化植物油或同类生物基增塑/稳定输入，所选ELO同行排除限已读范围通过。未读失败总册、全部SKU/SDS、RAL气雾叶页和未披露关联业务，不宣称全产品/全部原料审计或编外购例外。PDF精确URI冻结，无.com别名/GET/JS/API/镜像重试。法务页列VALCOLOR、VATBE0454035719与responsabledepublicationValcolorsprl；保留旧式法务/©2014字样而不冒2026工商状态、最终股权审计或擅改SRL。RemixWeb明确网站出版/制作服务不当母公司或客户。Valcolor/.com/.be/法务名/VAT/地址和自有系列一账户，与677线上、691根含14未发、front1396/index708、队列和旧原读去重仅Guilmin注记Search线索，不另拆品牌/法域/生产线。Contact实际存在公司/职务/电话/主题/留言字段的业务表单，一般电话原样+32(0)56863300，未公开邮箱，邮箱空/无邮箱证据/不进批量邮件，不猜具名采购/WA/LinkedIn；未提交任何表单。地图仅复用已部署比利时50.8503/4.3517国家示意锚点，明确非Mouscron城市坐标/地理编码/厂门GPS，无新地理请求，不借他公司制造联系证据。ELO只按用户TDS涂料/树脂改性中环氧功能与柔韧性配方评估，客户现用、采购需求、相容、效果、食品/耐腐蚀认证或性能保证均未确认。共享发送未知仅未来核未发条件生成器审计，无就绪稿或外联。"
+    },
+    "contact": {
+      "label": "官网真实公司业务表单及一般电话；未核公开邮箱",
+      "email": "",
+      "phone": "+32 (0)56 86 33 00",
+      "contactUrl": "https://www.valcolor.be/peintures/contact.html"
+    },
+    "source": {
+      "label": "Valcolor自有制造原文及工业EX840环氧成品涂层系列",
+      "url": "https://www.valcolor.be/peintures/gamme-peintures-industrielles.html"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"valcolor-mouscron": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "sebek-inks-frasnes-lez-anvaing": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "advance-international-chemicals-lahore": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "chempro-peterka-libomysl": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -17022,6 +17051,51 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"valcolor-mouscron": {
+  "website": "https://www.valcolor.com/",
+  "contactPage": "https://www.valcolor.be/peintures/contact.html",
+  "generalEmail": "",
+  "generalPhone": "+32 (0)56 86 33 00",
+  "generalPhoneEvidence": {
+    "company": "Valcolor",
+    "value": "+32 (0)56 86 33 00",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Valcolor官网Contact与公司一般业务电话",
+        "url": "https://www.valcolor.be/peintures/contact.html",
+        "summary": "Contact原文L31-71为真实公司业务表单；L74-80列Valcolor、Mouscron地址及+32(0)56863300，一般公司电话原样保留，非具名采购或WhatsApp。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [],
+  "departmentEmails": [],
+  "address": "Company-disclosed manufacturing site: 2 Avenue de l'eau vive, 7700 Mouscron, Belgium. Approximate map marker reuses a previously deployed Belgium illustration anchor (50.8503, 4.3517); NOT Mouscron city coordinates, address geocoding or factory GPS.",
+  "sources": [
+    {
+      "label": "Mouscron自有生产与质控实验室",
+      "url": "https://www.valcolor.com/peintures/le-site-de-fabrication.html"
+    },
+    {
+      "label": "13项工业成品涂料实际范围及EX840用途",
+      "url": "https://www.valcolor.be/peintures/gamme-peintures-industrielles.html"
+    },
+    {
+      "label": "公司法务名/公开VAT及网站服务方边界",
+      "url": "https://www.valcolor.be/peintures/mentions-legales.html"
+    },
+    {
+      "label": "真实公司业务表单与一般电话",
+      "url": "https://www.valcolor.be/peintures/contact.html"
+    },
+    {
+      "label": "5项装饰成品范围，含水性木器底漆/面漆",
+      "url": "https://www.valcolor.be/peintures/gamme-peintures-decoration.html"
+    }
+  ]
+},
 "sebek-inks-frasnes-lez-anvaing": {
   "website": "https://sebekinks.eu/",
   "contactPage": "https://sebekinks.eu/about-us/",
@@ -51399,6 +51473,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"valcolor-mouscron",
 "sebek-inks-frasnes-lez-anvaing",
 "advance-international-chemicals-lahore",
 "chempro-peterka-libomysl",
