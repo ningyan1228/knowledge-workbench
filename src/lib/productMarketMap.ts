@@ -54878,4 +54878,74 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 81
     }
   }
+]).concat([
+  {
+    "id": "awesome-inks-coatings-surat",
+    "company": "Awesome Inks And Coatings",
+    "productId": "cpp-cpo",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Surat district / Abrama, Kamrej (approximate Surat city marker)",
+    "latitude": 21.205,
+    "longitude": 72.84,
+    "fit": "可开发候选",
+    "signal": "在印度Surat自主生产印刷油墨与涂层，具体柔版油墨明确为溶剂型并用于PP及BOPP。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立复读三份完整公司自刊原文：PrintingInk449/FlexographicInks360/About203，共1012native行含重复导航，实际同款FlexographicInk条目同时写SolventBased与Polypropylene/BOPP；About明确从事生产，Factory/Manufacturing及制造/测试栏目，不仅按Manufacturer标签准入。三页实际可见主分类及已读具体产品均为成品水性/UV/溶剂油墨、成品UV/水性/阻隔涂层及罩光清漆，未识别所选CPP/CPO/MAH改性聚烯烃树脂或其分散体原料外售；仅限已读公开业务边界，不声称全部隐藏SKU/SDS/配方已审。完整主目录products.html超时、独立enquiry.html为CacheMiss，均计额且停止重试；排除结论不把这两页当成功来源。公开业务入口采用成功读取的具体产品页内实际询盘表单，其Requirement/Name/Email/Mobile字段可见，非仅导航Contact链接或登录输入；未提交，未核到公开邮箱，不猜平台隐藏邮箱、电话或WhatsApp。CPP油墨方向为已保存独立市场扩展，客户现用树脂、未处理PP能力、MAH牌号相容性/改善幅度及采购需求均未确认，不因其他水性品种顺带新增NL8260/H860/已暂停1201匹配。AwesomePaintsAndInks是同GST网站产品标签，非另造品牌客户；法名/域名/GST24ABZFA7142H1Z4/地址及公开管理姓名按全量正式、私有队列、来源史查重，无已知旧主体或集团来源，旧Search和平台供应商推荐不当集团归属。About自刊Partnership与页脚Proprietor标签差异、2015起步与2022GST登记年份分别保留，非政府工商/当前股权审计；同地址注册邮编394150与联系块394185不强行修正、不拆另一工厂。地图21.205/72.84为独立Surat城市示意，非Abrama厂门定位。原0+本次6=终身6STOP，包含两失败和一份一般地理资料，不能称六份成功公司证据；不补联系人/图像/目录/API或换渠道返额。未知发送仍unknown，草稿不标发送，无外联/CRM。"
+    },
+    "contact": {
+      "label": "公司产品页内公开业务询盘表单（未核实公开邮箱）",
+      "contactUrl": "https://www.awesomeinksandcoatings.com/flexographic-inks.html"
+    },
+    "source": {
+      "label": "Own solvent-based flexographic ink for polypropylene and BOPP",
+      "url": "https://www.awesomeinksandcoatings.com/flexographic-inks.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主生产成品油墨与涂层，具体溶剂型柔印墨覆盖PP/BOPP包装基材；结合已保存CPO油墨市场扩展，仅为MAH改性CPP/CPO的PP附着配方初评对象，不确认其原料体系、牌号相容或当前采购。",
+    "targetCompanyTypeId": "cpp-solvent-ink-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "cpp-pp-printing-ink",
+      "statement": "在印度Surat自主生产印刷油墨与涂层，具体柔版油墨明确为溶剂型并用于PP及BOPP。",
+      "sourceName": "Own specific solvent PP/BOPP flexographic ink and own manufacturing description",
+      "sourceUrl": "https://www.awesomeinksandcoatings.com/flexographic-inks.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.awesomeinksandcoatings.com/",
+      "contactPage": "https://www.awesomeinksandcoatings.com/flexographic-inks.html",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Block No. 376, Farm LTG 3KW, Abrama / At-Abrama, Kamrej, Surat, Gujarat, India. Own About registered-address field uses 394150; its sameGST contact block uses 394185. Both retained as disclosed; no independent postal correction, legal-registration audit or separate-factory assertion. Map is an approximate Surat city illustration, not the Abrama premises.",
+      "sources": [
+        {
+          "label": "Complete own solvent-based flexographic ink range: same product names PP/BOPP; actual inline business enquiry form",
+          "url": "https://www.awesomeinksandcoatings.com/flexographic-inks.html"
+        },
+        {
+          "label": "Complete own About: producing printing inks/coatings, Factory/Manufacturing, same GST; legal/address labels retained without government audit",
+          "url": "https://www.awesomeinksandcoatings.com/profile.html"
+        },
+        {
+          "label": "Complete own printing-ink page and visible primary category list: finished inks/varnishes/coatings; additional actual enquiry form",
+          "url": "https://www.awesomeinksandcoatings.com/printing-ink.html"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "awesome-inks-coatings-surat",
+      "productId": "cpp-cpo",
+      "subject": "MAH-modified CPP/CPO — a brief introduction",
+      "body": "Hi Awesome Inks And Coatings Team,\n\nYour solvent-based flexographic ink is listed for polypropylene and BOPP packaging films.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply MAH-modified CPP/CPO for PP adhesion-formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your solvent-based flexographic ink is listed for polypropylene and BOPP packaging films.",
+      "evidenceUrl": "https://www.awesomeinksandcoatings.com/flexographic-inks.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 73
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

@@ -699,4 +699,5 @@ export const leadEmailFacts: Record<string, string> = {
   'eastland-ink-industries-lahore': "You manufacture polypropylene woven-bag inks and test imported raw materials in your formulation laboratory.",
   'unistar-inks-durban': "Your Aquastar water-based inks are formulated for gravure and flexographic printing on Kraft paper and corrugated board.",
   'ahs-trade-services-mumbai': "Your woven-sack inks are listed for flexographic printing on untreated and treated PP bags.",
+  'awesome-inks-coatings-surat': "Your solvent-based flexographic ink is listed for polypropylene and BOPP packaging films.",
 }
