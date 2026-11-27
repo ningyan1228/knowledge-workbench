@@ -16228,11 +16228,40 @@ const rawPublicLeads: RawPublicLead[] = [
     },
     "checkedAt": "2026-11-27"
   },
+  {
+    "id": "cronolin-paint-genemuiden",
+    "company": "Cronolin Paint B.V.",
+    "productId": "elo",
+    "country": "Netherlands",
+    "countryZh": "荷兰",
+    "city": "Netherlands（国家示意点，非城市或工厂定位）",
+    "latitude": 52.25,
+    "longitude": 5.75,
+    "legacyCompanyDescription": "荷兰自有工厂研发制造金属防护底漆及工业涂料的企业",
+    "signal": "Cronolin在Genemuiden自有工厂研发制造涂料；Aquaprimer DTMX为金属用单组分水性防护底漆。",
+    "fit": "可开发候选",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "当前4次native请求计5来源单位：Root报(400)TimeoutFetching/providerIsErrorfalse，未读正文计1冻结；独立About203行及具体AquaprimerDTMX103行是两份原始经营证据，共306可采信行；工业目录请求另有1次披露跳转及rewritten摘要，计2但88返回行不当原始资格证据。冻结root、无斜杠请求目录及带斜杠最终目录三URI，不重试/直接GET/镜像/脚本恢复；具体产品是已观察到的独立产品文档，不是重开目录路径。About明示自有Genemuiden工厂/实验室及自己开发制造成品漆，Cronolin/CroonVerf/Topdeq三品牌一家，公开法名CronolinPaintBV及KVK05038109仅首方自述，不声称独立注册或终极股权审计。工业防护应用由独立成功AquaprimerDTMX原文确认单组分水性金属防护底漆，不从未采信目录拼配。About当前成品范围为工业木器/家具/板材、专业漆/底漆/墙面/地坪及DIY成品漆、着色剂、油类；DIY成品油不是自动ELO/ESBO原油或生物基聚合物增塑改性油，所选环氧油输入排查限两份可信经营原文和可见导航，未见其外售，不作所有品牌叶页/TDS/SDS/隐藏配方穷尽。仅按用户ELOTDS涂料用途作环氧功能及柔韧潜在评估，不把客户防腐/附着/耐化学宣传转成我方保证，不推水性体系/固化已相容、采购、替换或新项目。全正式673/root687含14未发、frontier1380/index692/17排除及queue和全史raw/full/normalized按法名/域名/Croon/Topdeq/KVK/税号查重，无旧公司原读或正式，仅本轮一集团账户。About当前team公开B.Pleijsier、Inkoop岗位及inkoop@，只保存原始缩写姓名和采购身份；部门邮箱单独为Procurement，不冒个人业务邮箱，不扩展姓名或解析连在一起的固定/手机号。info@为一般公司MailOns；一般电话取+31(0)383855444，不猜WhatsApp。About有实际公司/主题/消息表单，未填写提交。Sisalstraat22为访客地址，Postbus148邮寄地址分开，不作厂门GPS；地图复用荷兰国家52.25/5.75而非Genemuiden。公司累计5/rem1（4请求+1跳转），范围5/6余1，0GET/PDF/脚本，不因有余量恢复冻结URI。"
+    },
+    "contact": {
+      "label": "公开采购部门邮箱、一般公司邮箱/电话及实际咨询表单",
+      "email": "inkoop@cronolin.nl",
+      "phone": "+31 (0)38 385 54 44",
+      "contactUrl": "https://cronolin.nl/over-cronolin/"
+    },
+    "source": {
+      "label": "Cronolin自制AquaprimerDTMX金属防护底漆原文",
+      "url": "https://cronolin.nl/producten/aquaprimer-dtmx/"
+    },
+    "checkedAt": "2026-11-27"
+  },
 ]
 
 type LeadQualification = Pick<CompanyEvidence, 'applicationLayer' | 'applicationId'> & { targetCompanyTypeId: string }
 
 const leadQualifications: Record<string, LeadQualification> = {
+"cronolin-paint-genemuiden": {"targetCompanyTypeId":"elo-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"coatings"},
 "magpaint-europe-ulft": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
 "at-inks-rex-tone-india": {"targetCompanyTypeId":"ink-manufacturer","applicationLayer":"tds-verified","applicationId":"inks"},
 "korthals-groep-ijmuiden": {"targetCompanyTypeId":"waterbased-wood-coating-manufacturer","applicationLayer":"tds-verified","applicationId":"wood-surface-treatment"},
@@ -16906,6 +16935,106 @@ function departmentFor(label: string): DepartmentEmail['department'] | undefined
 }
 
 const profileOverrides: Record<string, Pick<CompanyProfile, 'contacts' | 'departmentEmails'> & Partial<CompanyProfile>> = {
+"cronolin-paint-genemuiden": {
+  "website": "https://cronolin.nl/over-cronolin/",
+  "contactPage": "https://cronolin.nl/over-cronolin/",
+  "generalEmail": "info@cronolin.nl",
+  "generalPhone": "+31 (0)38 385 54 44",
+  "generalEmailEvidence": {
+    "company": "Cronolin Paint B.V.",
+    "value": "info@cronolin.nl",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Cronolin官网一般公司邮箱",
+        "url": "https://cronolin.nl/over-cronolin/",
+        "summary": "About正文MailOns及页脚明确info@cronolin.nl，为一般公司入口，不冒具名采购。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "generalPhoneEvidence": {
+    "company": "Cronolin Paint B.V.",
+    "value": "+31 (0)38 385 54 44",
+    "kind": "general",
+    "publicBusiness": true,
+    "sources": [
+      {
+        "label": "Cronolin官网一般公司电话",
+        "url": "https://cronolin.nl/over-cronolin/",
+        "summary": "About正文BelOns明确+31(0)38 385 54 44，与页脚同号码不同分组；保留原文格式，不拆采购条目连写号码。"
+      }
+    ],
+    "verifiedAt": "2026-11-27"
+  },
+  "contacts": [
+    {
+      "name": "B. Pleijsier",
+      "title": "Inkoop (Purchasing)",
+      "department": "Procurement",
+      "identityEvidence": {
+        "company": "Cronolin Paint B.V.",
+        "name": "B. Pleijsier",
+        "title": "Inkoop (Purchasing)",
+        "responsibilities": "Purchasing role, published as Inkoop in the current official company team; no specific material scope or current purchasing requirement asserted.",
+        "currentEmployment": true,
+        "sources": [
+          {
+            "label": "Cronolin官网当前团队的采购岗位",
+            "url": "https://cronolin.nl/over-cronolin/",
+            "summary": "About当前OnsTeam列明B.Pleijsier、Inkoop；保留姓名缩写，不推采购具体原料或扩展全名。"
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "source": {
+        "label": "Cronolin官网当前团队的采购岗位",
+        "url": "https://cronolin.nl/over-cronolin/"
+      },
+      "verifiedAt": "2026-11-27"
+    }
+  ],
+  "departmentEmails": [
+    {
+      "department": "Procurement",
+      "email": "inkoop@cronolin.nl",
+      "source": {
+        "label": "Cronolin官网Inkoop部门入口",
+        "url": "https://cronolin.nl/over-cronolin/"
+      },
+      "emailEvidence": {
+        "company": "Cronolin Paint B.V.",
+        "value": "inkoop@cronolin.nl",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Cronolin官网公开采购部门邮箱",
+            "url": "https://cronolin.nl/over-cronolin/",
+            "summary": "当前团队Inkoop条目明确inkoop@cronolin.nl；作为采购部门共享邮箱，非个人邮箱或采购需求确认。"
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    }
+  ],
+  "address": "Published visiting address: Sisalstraat 22, 8281 JJ Genemuiden, Netherlands. Separate postal address: Postbus 148, 8280 AC Genemuiden. Own factory is stated in Genemuiden; visiting address is not independently geocoded as its factory gate. Map uses cached GeoNames Netherlands country representative coordinates 52.25,5.75, not Genemuiden city or factory GPS.",
+  "sources": [
+    {
+      "label": "自有工厂/实验室、三品牌及公开采购岗位与部门邮箱",
+      "url": "https://cronolin.nl/over-cronolin/"
+    },
+    {
+      "label": "独立成功读取AquaprimerDTMX金属水性防护底漆",
+      "url": "https://cronolin.nl/producten/aquaprimer-dtmx/"
+    },
+    {
+      "label": "已核荷兰国家代表点，非城市或厂门",
+      "url": "https://www.geonames.org/2750405"
+    }
+  ]
+},
 "magpaint-europe-ulft": {
   "website": "https://magpaint.com/",
   "contactPage": "https://magpaint.com/private-label-contract-manufacturing/",
@@ -51024,6 +51153,7 @@ function profileFor(lead: RawPublicLead): CompanyProfile {
 // The map and Lead workflow accept demand-side companies only. Similar-material
 // suppliers are excluded until first-party evidence shows they buy and use our input.
 const demandSideLeadIds = new Set([
+"cronolin-paint-genemuiden",
 "magpaint-europe-ulft",
 "at-inks-rex-tone-india",
 "korthals-groep-ijmuiden",

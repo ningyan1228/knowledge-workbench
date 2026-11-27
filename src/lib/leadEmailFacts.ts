@@ -3,6 +3,7 @@
 // NL-W1201, or our coating material being purchased or used by the company.
 // A new lead must receive its own reviewed sentence before email export.
 export const leadEmailFacts: Record<string, string> = {
+"cronolin-paint-genemuiden": "I noticed Cronolin manufactures Aquaprimer DTMX, a one-component water-based primer for metal, alongside coatings developed in its own factory.",
 "magpaint-europe-ulft": "I noticed MagPaint offers water-based wood and furniture paint development and production through its own Dutch paint factory.",
 "at-inks-rex-tone-india": "I noticed AT Inks manufactures solvent, water-based and UV-curable digital inks, with production and R&D facilities in Vadodara.",
 "korthals-groep-ijmuiden": "I noticed Korthals manufactures industrial wood coatings in water-based and solvent-based versions, supported by its own laboratory.",
