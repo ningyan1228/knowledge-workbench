@@ -685,4 +685,5 @@ export const leadEmailFacts: Record<string, string> = {
   'ominent-igl-shah-alam': 'Your company develops and manufactures protective coatings, including IGL Aegis, an industrial anticorrosion coating system.',
   'isonic-ink-vapi': "Your water-based flexographic inks are formulated for kraft paper, duplex board and corrugated packaging.",
   's2pc-toamasina': "Your Antirouille is a solvent-based alkyd primer for steel and other metal structures.",
+  'protective-paints-east-tamaki': "Your 330 Durawood Aquawood is a penetrating water-based oil stain for timber.",
 }

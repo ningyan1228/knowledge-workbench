@@ -53359,4 +53359,102 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 80
     }
   }
+]).concat([
+  {
+    "id": "protective-paints-east-tamaki",
+    "company": "Protective Paints Limited (New Zealand)",
+    "productId": "nl-h-860",
+    "country": "New Zealand",
+    "countryZh": "新西兰",
+    "city": "East Tamaki manufacturer; reused New Zealand-level approximate map anchor, not company geocoding",
+    "latitude": -38.684,
+    "longitude": 176.07,
+    "fit": "可开发候选",
+    "signal": "在新西兰East Tamaki自有工厂及实验室研发制造涂料；330 Durawood Aquawood为木材用水性油基渗透着色剂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "独立完整核读6份自有官网native原表示：About249行、Timber286行、330产品319行、Contact283行、MiscIndustrial307行、Terms316行；共1760行，重复导航不冒生产证据，终身6/6STOP、无失败或重试。About明确EastTamaki工厂、配方/R&D/QC、自制PU树脂/固化剂/预聚物及成品工业/船舶/木器/装饰涂料；保留原料PU角色，不因化学相关或任意树脂都误判同类CPO/CPP/PO附着原料。实际木器6项标题区分水性330与原油性A072等；330原文明确waterbased oil stain及木材、着色颜料、NZ制造，不把其防霉/UV/干燥/渗透效果转给我方。主要供货导航与MiscIndustrial当前16个可见项目包含成品漆、锈转换、酸蚀/除油、Terebine干燥剂等配套，LoadMore保留为未展开，不称全店/SDS/所有树脂化学或股权已审。已读主要业务及配套范围未识别外售水性CPO/CPP/聚烯烃分散体或同类附着促进输入，有限通过所选原料排除，未虚构外购例外。仅依用户NL-H-860 Rev01水性木器配方功能助剂、颜料润湿/渗透描述作初步评估，不确认相容、现用、采购、改善或客户问题。Terms第1条明确ProtectivePaintsLimited，优先于页脚通用ProtectiveLLC；不借About唯一性宣传作独立认证。Contact主正文14DArwenPlace与重复页脚14B均保留来源差异，不混合为已定位厂门，地图复用旧NZ锚点作为国家层面示意。全正式682/root696、私有1406、来源718、排除17及全队列按法人/品牌/域名/电话/地址去重无同一已知集团；不与印度ExcelProtectivePaints、Resene/Altex、Handley或Durafine按名字强并，也不声称穷尽最终持股。"
+    },
+    "contact": {
+      "label": "官网联系表单及公司总机；已读原文未见公开邮箱",
+      "phone": "09 274 5606",
+      "contactUrl": "https://protectivepaints.co.nz/contact-us/"
+    },
+    "source": {
+      "label": "Own330 Durawood Aquawood waterbased wood stain product",
+      "url": "https://protectivepaints.co.nz/product/330-durawood-aquawood/"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有配方制造水性木器着色涂料，符合用户NL-H-860水性木器配方功能添加剂方向；仅为润湿/渗透相关实验室初评，不推定现用、采购、配方相容或附着改善。",
+    "targetCompanyTypeId": "nlh860-wood-coatings-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-wood-coatings",
+      "statement": "在新西兰East Tamaki自有工厂及实验室研发制造涂料；330 Durawood Aquawood为木材用水性油基渗透着色剂。",
+      "sourceName": "Own330 product with East Tamaki manufacture and laboratory corroboration",
+      "sourceUrl": "https://protectivepaints.co.nz/product/330-durawood-aquawood/",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://protectivepaints.co.nz/",
+      "contactPage": "https://protectivepaints.co.nz/contact-us/",
+      "generalPhone": "09 274 5606",
+      "contacts": [],
+      "departmentEmails": [],
+      "sources": [
+        {
+          "label": "Own East Tamaki manufacture, R&D and PU resin/prepolymer role",
+          "url": "https://protectivepaints.co.nz/about-us/"
+        },
+        {
+          "label": "Own timber range and waterborne/solvent distinctions",
+          "url": "https://protectivepaints.co.nz/product-category/decorative/timber-finishing/"
+        },
+        {
+          "label": "Own specific waterbased penetrating oil stain for timber",
+          "url": "https://protectivepaints.co.nz/product/330-durawood-aquawood/"
+        },
+        {
+          "label": "Own current visible industrial ancillary range; LoadMore unexpanded",
+          "url": "https://protectivepaints.co.nz/product-category/industrial/miscellaneous-industrial/"
+        },
+        {
+          "label": "Own public company contact form and switchboard",
+          "url": "https://protectivepaints.co.nz/contact-us/"
+        },
+        {
+          "label": "Own legal trading identity Protective Paints Limited",
+          "url": "https://protectivepaints.co.nz/terms-of-trade/"
+        }
+      ],
+      "address": "Contact main section:14D Arwen Place,East Tamaki,New Zealand; duplicated footer also says14B Arwen Place. Preserve both source versions; no independent factory-gate geocoding. Map reuses an existing New Zealand anchor only as a country-level illustration.",
+      "generalPhoneEvidence": {
+        "company": "Protective Paints Limited (New Zealand)",
+        "value": "09 274 5606",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Contact Us main contact info",
+            "url": "https://protectivepaints.co.nz/contact-us/",
+            "summary": "Exact business switchboard under company contact info and repeated all read originals; not a named buyer/direct mobile or WhatsApp."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "protective-paints-east-tamaki",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Protective Paints Limited (New Zealand) Team,\n\nYour 330 Durawood Aquawood is a penetrating water-based oil stain for timber.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your 330 Durawood Aquawood is a penetrating water-based oil stain for timber.",
+      "evidenceUrl": "https://protectivepaints.co.nz/product/330-durawood-aquawood/",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 81
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
