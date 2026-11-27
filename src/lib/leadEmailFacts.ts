@@ -700,4 +700,5 @@ export const leadEmailFacts: Record<string, string> = {
   'unistar-inks-durban': "Your Aquastar water-based inks are formulated for gravure and flexographic printing on Kraft paper and corrugated board.",
   'ahs-trade-services-mumbai': "Your woven-sack inks are listed for flexographic printing on untreated and treated PP bags.",
   'awesome-inks-coatings-surat': "Your solvent-based flexographic ink is listed for polypropylene and BOPP packaging films.",
+  'royal-inks-equipments-nashik': "Your Royal Poly Flexo Ink is formulated for flexographic printing on PP and BOPP films.",
 }

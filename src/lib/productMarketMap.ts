@@ -54948,4 +54948,110 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 73
     }
   }
+]).concat([
+  {
+    "id": "royal-inks-equipments-nashik",
+    "company": "Royal Inks & Equipments Pvt. Ltd.",
+    "productId": "nl-8260",
+    "country": "India",
+    "countryZh": "印度",
+    "city": "Nashik / Satpur factory and Nashik office (approximate city marker)",
+    "latitude": 19.9975,
+    "longitude": 73.789806,
+    "fit": "可开发候选",
+    "signal": "在印度Nashik自主制造油墨，Royal Poly Flexo Ink明确用于PP及BOPP薄膜柔印。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-27",
+      "conclusion": "四份完整公司自刊原文：Home166/PolyInk407/About167/Contact76，共816native行含重复导航，非四个独立机构证明。具体RoyalPolyFlexoInk说明由本公司配制并用于PP/BOPP，About说明生产过程、原料选用至成品质量管理，公布Nashik工厂及办公室，非仅机器可以打印PP袋或Manufacturer标签。按用户NL8260 TDS PP/OPP油墨直接方向初评；本公司另有水性Flexographic与溶剂Poly墨，不把不同系列拼成同款水性/保证水性CPO可直接混入溶剂，也不顺带加CPP/H860/已暂停1201匹配。实际四页可见五大业务分类及五种成品油墨是Marking/Flexographic/Poly/Lino/Offset，另为编码包装机械、成品包装材料及塑料容器；未识别所选CPO/CPP/MAH/PO分散体或附着促进原料对外销售。包装膜/BOPP胶带/HDPE瓶不按名称误判原料树脂同行；结论限已读主分类及具体产品/制造说明，完整inks.html目录CacheMiss计额冻结，未冒读该目录、隐藏SKU/SDS或所有配方。公开royalinks253@gmail.com和+91 8767350813在独立Contact及多份本公司原文精确自刊，按公司通用业务入口，不冒具名采购或邮箱可投递验证；其余手机/座机不精选，不把电话自动等于WhatsApp。Home有WA服务链接但未核其完整目标，不据电话编造账号。公司自刊GST27AAECR0992F1ZA/CINU74950MH2008PTC184707、CEO DheerajVadnere及1994成立/25+年是身份线索，非政府工商/当前股权/认证/采购负责人独立审计。FactoryA20NiceAreaMIDCSatpur422007与Office2/8VarunApartmentAsherEstateNashikPuneRoad422002同主体多地址，不拆新厂客户；Home现代版与Poly旧版布局不同但法名、域名、邮箱/电话和地址一致，不据版本差异造另一主体。初始119历史多为Search及旧研究元数据；34 Royal source名实际属肯尼亚RoyalPaints、埃及RoyalCoating及斯里兰卡RoyalPaintsLanka，非本Nashik油墨公司。扩展8档/36收据含当前源1及预留，新GST/CIN只当前About；全正式、私有、队列、集团/域名、邮箱、注册标识未见重复或本主体旧原文请求。SuratRoyalInks和孟加拉/埃及同名只Search发现，无共同域名/GST/管理身份关联，不把同名字串当集团，也不借其产品/联系/旧预算。地图复用已发布HTDUltra的Nashik城市19.9975/73.789806示意，不是Satpur工厂定位，无额外地理来源。本公司原0+新5=5/rem1，含一次目录失败，不称五份成功；不为用满抓图/WA/API/隐藏文件。未知共享发送仍unknown，保存草稿不标发送、未提交联系表单，无外联/CRM。"
+    },
+    "contact": {
+      "label": "公司公开通用邮箱、业务电话及联系页",
+      "email": "royalinks253@gmail.com",
+      "phone": "+91 8767350813",
+      "contactUrl": "https://www.royalinkandmachinery.com/contact-us.html"
+    },
+    "source": {
+      "label": "Own Royal Poly Flexo Ink formulated for PP and BOPP film printing",
+      "url": "https://www.royalinkandmachinery.com/poly-ink.html"
+    },
+    "checkedAt": "2026-11-27",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "实际生产/原料至成品质量管理和Nashik工厂披露，具体RoyalPolyFlexo墨覆盖PP/BOPP；按NL8260 TDS PP/OPP墨方向作附着配方初评，不确认现用树脂、当前采购或直接混合相容。机械及成品包装业务不构成CPO/CPP输入供货证据。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "在印度Nashik自主制造油墨，Royal Poly Flexo Ink明确用于PP及BOPP薄膜柔印。",
+      "sourceName": "Own PP/BOPP Royal Poly Flexo Ink, production-process quality description and Nashik factory",
+      "sourceUrl": "https://www.royalinkandmachinery.com/poly-ink.html",
+      "verifiedAt": "2026-11-27"
+    },
+    "profile": {
+      "website": "https://www.royalinkandmachinery.com/",
+      "contactPage": "https://www.royalinkandmachinery.com/contact-us.html",
+      "generalEmail": "royalinks253@gmail.com",
+      "generalPhone": "+91 8767350813",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Factory: A-20, Nice Area, MIDC, Satpur, Nashik 422007. Office: 2/8 Varun Apartment, Asher Estate, near Upnagar Bus Stop, Nashik-Pune Road, Nashik 422002, Maharashtra, India. One company with separately disclosed factory and office; map reuses a public Nashik city illustration, not premises geocoding.",
+      "sources": [
+        {
+          "label": "Own exact Royal Poly Flexo Ink formulated for PP/BOPP and specific packaging applications",
+          "url": "https://www.royalinkandmachinery.com/poly-ink.html"
+        },
+        {
+          "label": "Own production process and raw-material-to-finished-product quality management; company-published GST/CIN only",
+          "url": "https://www.royalinkandmachinery.com/about.html"
+        },
+        {
+          "label": "Complete visible primary business categories and five finished ink families; factory/office disclosure",
+          "url": "https://www.royalinkandmachinery.com/"
+        },
+        {
+          "label": "Actual public company email, business telephone, factory/office and contact form observed without submission",
+          "url": "https://www.royalinkandmachinery.com/contact-us.html"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Royal Inks & Equipments Pvt. Ltd.",
+        "value": "royalinks253@gmail.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Information and footer",
+            "url": "https://www.royalinkandmachinery.com/contact-us.html",
+            "summary": "Exact public company email beside factory/office and telephone; general business channel, no named purchasing role or deliverability assertion."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      },
+      "generalPhoneEvidence": {
+        "company": "Royal Inks & Equipments Pvt. Ltd.",
+        "value": "+91 8767350813",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact Information and footer",
+            "url": "https://www.royalinkandmachinery.com/contact-us.html",
+            "summary": "Exact public company business telephone, also in own Home/About; no private-person, department or WhatsApp inference."
+          }
+        ],
+        "verifiedAt": "2026-11-27"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "royal-inks-equipments-nashik",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Royal Inks & Equipments Pvt. Ltd. Team,\n\nYour Royal Poly Flexo Ink is formulated for flexographic printing on PP and BOPP films.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Royal Poly Flexo Ink is formulated for flexographic printing on PP and BOPP films.",
+      "evidenceUrl": "https://www.royalinkandmachinery.com/poly-ink.html",
+      "verifiedAt": "2026-11-27",
+      "bodyWordCount": 82
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
