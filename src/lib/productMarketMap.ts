@@ -56641,4 +56641,133 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 75
     }
   }
+]).concat([
+  {
+    "id": "alfa-adhesives-simalfa-oakland-nj",
+    "company": "Alfa Adhesives Inc. (Simalfa)",
+    "productId": "nl-8260",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Oakland, New Jersey (own U.S. headquarters/manufacture statement; country-level illustrative marker, not city or factory coordinates)",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "在美国新泽西州Oakland自制水性胶黏剂；321型明确用于泡沫等多孔材料与金属等非多孔基材粘接。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对美国官网可见31个胶黏剂系列入口、321具体水性配方用途及联系页；可见经营为成品水性／热反应胶、配套施胶产品及关联品牌，未识别所选CPO／CPP／水性聚烯烃附着原料外售。有限公开业务排除，非全部隐藏SKU或SDS审查；瑞士产品查询页未加载产品表，不把搜索中的73项或筛选标签当已核目录。321的金属粘接与用户NL-8260 TDS金属件／胶黏剂用途匹配，不将vinyl、泛称塑料／橡胶或喷枪PVC软管改写为PVC／PP／EPDM基材证明。仅作附着配方初评，不承诺相容、替代、快干、耐热、认证或客户采购。"
+    },
+    "contact": {
+      "label": "官网美国Customer Service部门邮箱、总部电话与询问页；非具名采购",
+      "email": "support@simalfa.com",
+      "phone": "+1-973-423-9266",
+      "contactUrl": "https://www.simalfa.com/company/contactus"
+    },
+    "source": {
+      "label": "Simalfa 321: one-part water-based adhesive for foams to non-porous substrates, including metal",
+      "url": "https://www.simalfa.com/products/321"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "美国官网明确产品在Oakland,NJ制造，321页明确一组分水性胶与金属等非多孔基材粘接。用户原始NL-8260 TDS列金属件和胶黏剂，符合nl8260-adhesives现有应用；只为潜在原料试配对象，未证相容、现用或采购。美瑞官网互列Alfa公司及同一美国地址电话，保守按一个跨国账户去重，不把瑞士型号归到美国生产线或虚构最终股权。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "在美国新泽西州Oakland自制水性胶黏剂；321型明确用于泡沫等多孔材料与金属等非多孔基材粘接。",
+      "sourceName": "Own U.S. manufacture statement and Simalfa321 water-based foam-to-metal bonding application",
+      "sourceUrl": "https://www.simalfa.com/products/321",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.simalfa.com/",
+      "contactPage": "https://www.simalfa.com/company/contactus",
+      "generalEmail": "support@simalfa.com",
+      "generalPhone": "+1-973-423-9266",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Customer Service",
+          "email": "support@simalfa.com",
+          "source": {
+            "label": "Official U.S. Customer Service department",
+            "url": "https://www.simalfa.com/company/contactus"
+          },
+          "emailEvidence": {
+            "company": "Alfa Adhesives Inc. (Simalfa)",
+            "value": "support@simalfa.com",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Official U.S. Contact: Customer Service department",
+                "url": "https://www.simalfa.com/company/contactus",
+                "summary": "Customer Service department mailbox published with the U.S. Headquarters address and phone, repeated in the contact-page footer. Departmental service route; no named buyer, procurement responsibility or deliverability inferred."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        }
+      ],
+      "address": "16 Thornton Rd, Oakland, NJ 07436, United States. Own U.S. Contact address, corroborated in the linked Swiss company footer. Country-level illustrative marker 39.8,-98.6; not Oakland city or factory coordinates.",
+      "sources": [
+        {
+          "label": "Own Home: all listed products made in Oakland,NJ; visible finished-adhesive menu",
+          "url": "https://www.simalfa.com/"
+        },
+        {
+          "label": "Own Simalfa321: one-part water-based adhesive, foams to metal and other non-porous substrates",
+          "url": "https://www.simalfa.com/products/321"
+        },
+        {
+          "label": "Own U.S. Contact: Customer Service inbox, exact headquarters phone/address and inquiry route",
+          "url": "https://www.simalfa.com/company/contactus"
+        },
+        {
+          "label": "Swiss group footer: AlfaKlebstoffe and same AlfaAdhesives U.S. name/address/phone; product table not loaded",
+          "url": "https://simalfa.ch/en/productfinder/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Alfa Adhesives Inc. (Simalfa)",
+        "value": "support@simalfa.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official U.S. Contact: Customer Service department",
+            "url": "https://www.simalfa.com/company/contactus",
+            "summary": "Customer Service department mailbox published with the U.S. Headquarters address and phone, repeated in the contact-page footer. Departmental service route; no named buyer, procurement responsibility or deliverability inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Alfa Adhesives Inc. (Simalfa)",
+        "value": "+1-973-423-9266",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official U.S. Headquarters contact",
+            "url": "https://www.simalfa.com/company/contactus",
+            "summary": "Exact +1-973-423-9266 is explicitly printed under U.S. Headquarters and repeated in the page footer. Company phone; no WhatsApp or named procurement contact inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "alfa-adhesives-simalfa-oakland-nj",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Alfa Adhesives Inc. (Simalfa) Team,\n\nYour Simalfa 321 is a water-based adhesive for bonding foams to non-porous substrates, including metal.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Simalfa 321 is a water-based adhesive for bonding foams to non-porous substrates, including metal.",
+      "evidenceUrl": "https://www.simalfa.com/products/321",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 80
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
