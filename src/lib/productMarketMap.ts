@@ -57065,4 +57065,253 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 71
     }
   }
+]).concat([
+  {
+    "id": "cattie-adhesives-quakertown",
+    "company": "Cattie Adhesives",
+    "productId": "nl-8260",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Quakertown, Pennsylvania (own published business contact city; manufacturing verified at U.S. level; country-level illustrative marker, not factory coordinates)",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "自主配方制造水性胶黏剂，8252型明确用于瓦楞纸／裱纸复合，另有纸盒和纸管等具体产品。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "自有Home明确美国制造及定制配方，WaterBased页有8252瓦楞／裱纸复合、8272折叠纸盒、8297信封、8364纸管等成品及制造陈述，Products完整可见分类为热熔、水性、PSA、PUR、热封／阻隔涂层、胶带薄膜和定制成品。列示PVA／VAE／丙烯酸／PUD／氯丁等水胶化学类别，不把PUD或氯丁胶等同CPO，也不将未披露8252具体binder写成现用CPP。所读公开范围未识别所选CPO／CPP／水性聚烯烃附着原料外售；有限范围排除，未读全部隐藏SKU或SDS。无纸盒食品接触、UV涂层相容、快干／高线速或客户采购保证。"
+    },
+    "contact": {
+      "label": "官网公开Sales商业部门邮箱及公司业务联系区；非具名采购",
+      "email": "sales@cattieadhesives.com",
+      "phone": "800-249-0337",
+      "contactUrl": "https://cattieadhesives.com/"
+    },
+    "source": {
+      "label": "Own WaterBased: manufacture,8252 corrugated/litho laminating and specific paper adhesive grades",
+      "url": "https://cattieadhesives.com/products/water-based-adhesive"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主配方制造水性胶黏剂，8252型明确用于瓦楞纸／裱纸复合，另有纸盒和纸管等具体产品。 用户原始NL-8260 TDS明确纸张基材及胶黏剂用途，属于水性纸用胶的潜在附着配方初评对象；未证其现用、需求、采购或配方相容。仅按实际公开成品业务作所选原料同行排除。来源为公司自身页面，通用销售邮箱不冒具名采购。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "自主配方制造水性胶黏剂，8252型明确用于瓦楞纸／裱纸复合，另有纸盒和纸管等具体产品。",
+      "sourceName": "Own WaterBased: manufacture,8252 corrugated/litho laminating and specific paper adhesive grades; own U.S. development/manufacture independently checked",
+      "sourceUrl": "https://cattieadhesives.com/products/water-based-adhesive",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://cattieadhesives.com/",
+      "contactPage": "https://cattieadhesives.com/",
+      "generalEmail": "sales@cattieadhesives.com",
+      "generalPhone": "800-249-0337",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "sales@cattieadhesives.com",
+          "source": {
+            "label": "Own public sales business mailbox",
+            "url": "https://cattieadhesives.com/products/water-based-adhesive"
+          },
+          "emailEvidence": {
+            "company": "Cattie Adhesives",
+            "value": "sales@cattieadhesives.com",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Official company Home and specific water-based adhesive product page",
+                "url": "https://cattieadhesives.com/products/water-based-adhesive",
+                "summary": "Exact sales mailbox repeatedly printed on own company originals with its company name, business address and phone. Public commercial department route; no named buyer, procurement/technical role, deliverability or current purchase requirement inferred."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Cattie Adhesives",
+        "value": "sales@cattieadhesives.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official company Home and specific water-based adhesive product page",
+            "url": "https://cattieadhesives.com/products/water-based-adhesive",
+            "summary": "Exact sales mailbox repeatedly printed on own company originals with its company name, business address and phone. Public commercial department route; no named buyer, procurement/technical role, deliverability or current purchase requirement inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Cattie Adhesives",
+        "value": "800-249-0337",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Home and water-based adhesive contact footer",
+            "url": "https://cattieadhesives.com/",
+            "summary": "Exact public company toll-free number; no international prefix, WhatsApp or named person inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "address": "PO Box 197, Quakertown, PA 18951. Own published mailing/business contact, not a production-plant street address. Company manufacturing statement is not independent factory-gate geocoding. 39.8,-98.6 is a UnitedStates country-level illustration. No external map request.",
+      "sources": [
+        {
+          "label": "Own Home: U.S. manufacture, chemists/custom formulation, visible finished business and public sales route",
+          "url": "https://cattieadhesives.com/"
+        },
+        {
+          "label": "Own WaterBased: manufacture,8252 corrugated/litho laminating and specific paper adhesive grades",
+          "url": "https://cattieadhesives.com/products/water-based-adhesive"
+        },
+        {
+          "label": "Own Products: full visible finished adhesive/coating/tape categories; no hidden-SKU audit",
+          "url": "https://cattieadhesives.com/products/"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "cattie-adhesives-quakertown",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Cattie Adhesives Team,\n\nYour 8252 water-based adhesive is specified for corrugated and litho laminating.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your 8252 water-based adhesive is specified for corrugated and litho laminating.",
+      "evidenceUrl": "https://cattieadhesives.com/products/water-based-adhesive",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 74
+    }
+  },
+  {
+    "id": "adhesive-compounders-des-moines",
+    "company": "Adhesive Compounders Inc.",
+    "productId": "nl-8260",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Des Moines, Iowa (own published business contact city; manufacturing verified at U.S. level; country-level illustrative marker, not factory coordinates)",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "美国自主配方制造工业胶黏剂；水性树脂胶具体用于纸箱／纸盒封合及期刊与书籍装订。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "自有Home七成品胶类别为茂金属／混合型／EVA热熔、PSA、PUR、水性糊精及水性树脂胶，WaterBasedResins明确直接用于纸箱纸盒封合及书籍装订的配方；FAQ明确内部化学师自配并在美国制造全部胶。该处resins为已配制水性树脂胶，不因标题resins推CPO输入树脂外售或其未披露聚合物。实际所读经营范围未识别所选CPO／CPP／水性聚烯烃附着原料外售；有限范围排除，未审全部隐藏技术叶／定制配方／股权。客户标签／PET／蜡纸等宣传不扩成我方相容或食品接触认证；不推其现用／购买CPP。"
+    },
+    "contact": {
+      "label": "官网公开Sales商业部门邮箱及公司业务联系区；非具名采购",
+      "email": "sales@adhesivecompounders.com",
+      "phone": "800-325-6630",
+      "contactUrl": "https://www.adhesivecompounders.com/"
+    },
+    "source": {
+      "label": "Own WaterBasedResins: formulated paper case/carton and magazine/bookbinding adhesives",
+      "url": "https://www.adhesivecompounders.com/water-based-resins"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "美国自主配方制造工业胶黏剂；水性树脂胶具体用于纸箱／纸盒封合及期刊与书籍装订。 用户原始NL-8260 TDS明确纸张基材及胶黏剂用途，属于水性纸用胶的潜在附着配方初评对象；未证其现用、需求、采购或配方相容。仅按实际公开成品业务作所选原料同行排除。来源为公司自身页面，通用销售邮箱不冒具名采购。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "美国自主配方制造工业胶黏剂；水性树脂胶具体用于纸箱／纸盒封合及期刊与书籍装订。",
+      "sourceName": "Own WaterBasedResins: formulated paper case/carton and magazine/bookbinding adhesives; own U.S. development/manufacture independently checked",
+      "sourceUrl": "https://www.adhesivecompounders.com/water-based-resins",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.adhesivecompounders.com/",
+      "contactPage": "https://www.adhesivecompounders.com/",
+      "generalEmail": "sales@adhesivecompounders.com",
+      "generalPhone": "800-325-6630",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "sales@adhesivecompounders.com",
+          "source": {
+            "label": "Own public sales business mailbox",
+            "url": "https://www.adhesivecompounders.com/water-based-resins"
+          },
+          "emailEvidence": {
+            "company": "Adhesive Compounders Inc.",
+            "value": "sales@adhesivecompounders.com",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Official company Home and specific water-based adhesive product page",
+                "url": "https://www.adhesivecompounders.com/water-based-resins",
+                "summary": "Exact sales mailbox repeatedly printed on own company originals with its company name, business address and phone. Public commercial department route; no named buyer, procurement/technical role, deliverability or current purchase requirement inferred."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Adhesive Compounders Inc.",
+        "value": "sales@adhesivecompounders.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official company Home and specific water-based adhesive product page",
+            "url": "https://www.adhesivecompounders.com/water-based-resins",
+            "summary": "Exact sales mailbox repeatedly printed on own company originals with its company name, business address and phone. Public commercial department route; no named buyer, procurement/technical role, deliverability or current purchase requirement inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Adhesive Compounders Inc.",
+        "value": "800-325-6630",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Home and water-based adhesive contact footer",
+            "url": "https://www.adhesivecompounders.com/",
+            "summary": "Exact public company toll-free number; no international prefix, WhatsApp or named person inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "address": "326 SW 5th St, Des Moines, IA 50309. Own repeated business contact address; manufacture verified at U.S. level, not independently at this street. Company manufacturing statement is not independent factory-gate geocoding. 39.8,-98.6 is a UnitedStates country-level illustration. No external map request.",
+      "sources": [
+        {
+          "label": "Own Home: seven finished adhesive categories, paper uses and exact Inc/business contact",
+          "url": "https://www.adhesivecompounders.com/"
+        },
+        {
+          "label": "Own WaterBasedResins: formulated paper case/carton and magazine/bookbinding adhesives",
+          "url": "https://www.adhesivecompounders.com/water-based-resins"
+        },
+        {
+          "label": "Own FAQ: in-house chemists, custom formulation and all adhesives U.S.-manufactured",
+          "url": "https://www.adhesivecompounders.com/faqs"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "adhesive-compounders-des-moines",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Adhesive Compounders Inc. Team,\n\nYour water-based resin adhesives serve case and carton sealing, magazine binding, and bookbinding.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your water-based resin adhesives serve case and carton sealing, magazine binding, and bookbinding.",
+      "evidenceUrl": "https://www.adhesivecompounders.com/water-based-resins",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 77
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

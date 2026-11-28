@@ -720,4 +720,6 @@ export const leadEmailFacts: Record<string, string> = {
   'mexar-newcastle-upon-tyne': "Your TEX1 aqueous pigment ink is developed and manufactured in the UK for textile inkjet printing.",
   'coverti-sumare': "Your Sumaré factory manufactures industrial coatings, including Vertipoxi PS 160 epoxy floor paint.",
   'agabe-sao-paulo': "Your TDC 8700 solvent-based screen-printing ink is specified for treated polypropylene, including BOPP.",
+  'cattie-adhesives-quakertown': "Your 8252 water-based adhesive is specified for corrugated and litho laminating.",
+  'adhesive-compounders-des-moines': "Your water-based resin adhesives serve case and carton sealing, magazine binding, and bookbinding.",
 }
