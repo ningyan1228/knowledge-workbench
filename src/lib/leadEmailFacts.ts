@@ -717,4 +717,5 @@ export const leadEmailFacts: Record<string, string> = {
   'color-inks-grand-bourg': "Your water-based flexographic inks for plastics and raffia are designed for surface printing on treated polypropylene and polyethylene.",
   'pintunal-manizales': "Your Manizales plant manufactures industrial coatings, including alkyd finishes for metal structures.",
   'alfa-adhesives-simalfa-oakland-nj': "Your Simalfa 321 is a water-based adhesive for bonding foams to non-porous substrates, including metal.",
+  'mexar-newcastle-upon-tyne': "Your TEX1 aqueous pigment ink is developed and manufactured in the UK for textile inkjet printing.",
 }

@@ -56770,4 +56770,106 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 80
     }
   }
+]).concat([
+  {
+    "id": "mexar-newcastle-upon-tyne",
+    "company": "Mexar Ltd",
+    "productId": "nl-h-860",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Newcastle upon Tyne (official company contact city; manufacture verified only at UK level; country-level illustrative marker, not factory coordinates)",
+    "latitude": 54,
+    "longitude": -2,
+    "fit": "可开发候选",
+    "signal": "在英国自主研发制造水性工业喷墨油墨；TEX1明确为纺织印花用水性颜料墨。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对自有制造说明、完整可见产品页和联系页：TEX1/TEX2/TEX3成品喷墨、PRE/POST纺织处理、装饰喷墨及DTF入口，未识别所选CPP／CPO／水性聚烯烃输入分散体对外销售。TEX1所述专有binder为该成品配方组分，不推外售原料；PRE/POST化学未公开，不据名称冒同类原料或已证相容。有限公开经营范围排除，未读全部隐藏SKU或下载TDS。用户Rev.01仅支持水性墨润湿／渗透初评，不保证喷头、粒径、稳定性、固化、耐洗或采购需求。"
+    },
+    "contact": {
+      "label": "官网How to Buy公开商业咨询邮箱及公司联系页；邮箱使用人身份未核实",
+      "email": "andy@mexar.co.uk",
+      "phone": "+44 (0) 191 447 3414",
+      "contactUrl": "https://www.mexar.co.uk/contact-us"
+    },
+    "source": {
+      "label": "Own TEX1 aqueous pigment textile ink and UK development/manufacture",
+      "url": "https://www.mexar.co.uk/products"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网具体TEX1系列明确水性颜料纺织喷墨，自有英国研发制造和按批测试有原文，符合用户NL-H-860 Rev.01的水性油墨功能助剂应用。仅为颜料润湿／渗透的潜在初评对象；未证客户现用、需要或采购CPP，也不保证喷头或成品配方相容。官网商业询问邮箱与联系地址归属同一Mexar域；不凭邮箱前缀构造姓名或职责。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在英国自主研发制造水性工业喷墨油墨；TEX1明确为纺织印花用水性颜料墨。",
+      "sourceName": "Own TEX1 aqueous pigment textile ink, UK manufacturing statement and business contact",
+      "sourceUrl": "https://www.mexar.co.uk/products",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.mexar.co.uk/",
+      "contactPage": "https://www.mexar.co.uk/contact-us",
+      "generalEmail": "andy@mexar.co.uk",
+      "generalPhone": "+44 (0) 191 447 3414",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Unit 4B, Whitehouse Road Industrial Estate, Whitehouse Road, Newcastle upon Tyne, NE15 6LN, UK. Own company contact address; manufacture verified at UK level, not a surveyed factory gate. Marker54,-2 is country-level illustration.",
+      "sources": [
+        {
+          "label": "Own Home: aqueous industrial inkjet formulation and UK development/manufacture",
+          "url": "https://www.mexar.co.uk/"
+        },
+        {
+          "label": "Own Products: TEX1 aqueous pigment ink; visible finished ink/treatment range and How to Buy mailbox",
+          "url": "https://www.mexar.co.uk/products"
+        },
+        {
+          "label": "Own Contact: MexarLtd, Newcastle business address and exact Telephone/Fax",
+          "url": "https://www.mexar.co.uk/contact-us"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Mexar Ltd",
+        "value": "andy@mexar.co.uk",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Products: published How to Buy commercial enquiry route",
+            "url": "https://www.mexar.co.uk/products",
+            "summary": "Exact andy@mexar.co.uk is expressly printed under How to Buy on Mexar own Products page. Stored as the unnamed company-published commercial enquiry route; no assertion that the inbox is shared, no personal name/title/current employment/procurement role inferred from its prefix. Company-team greeting only; no deliverability test."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Mexar Ltd",
+        "value": "+44 (0) 191 447 3414",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Contact: Telephone / Fax",
+            "url": "https://www.mexar.co.uk/contact-us",
+            "summary": "Exact +44 (0) 191 447 3414 printed under Telephone/Fax with MexarLtd Newcastle address. Company route; not a named buyer or WhatsApp."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "mexar-newcastle-upon-tyne",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Mexar Ltd Team,\n\nYour TEX1 aqueous pigment ink is developed and manufactured in the UK for textile inkjet printing.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your TEX1 aqueous pigment ink is developed and manufactured in the UK for textile inkjet printing.",
+      "evidenceUrl": "https://www.mexar.co.uk/products",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 82
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
