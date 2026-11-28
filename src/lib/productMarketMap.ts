@@ -55918,4 +55918,102 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 76
     }
   }
+]).concat([
+  {
+    "id": "chemique-adhesives-aldridge",
+    "company": "Chemique Adhesives & Sealants Ltd.",
+    "productId": "nl-8260",
+    "country": "United Kingdom",
+    "countryZh": "英国",
+    "city": "Aldridge, West Midlands (company-published UK office marker; not independently surveyed)",
+    "latitude": 52.6148345,
+    "longitude": -1.9310074,
+    "fit": "可开发候选",
+    "signal": "自行制造工业胶黏剂，Protak水性聚氨酯膜压胶明确用于将PVC膜粘接到木基材料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已核对自有制造及UK／US同一业务、可见成品胶系列、具体水性PVC膜压胶、金属双组分底涂及SABA合作系列。双组分底涂原文为配好后辊／喷涂有色金属的下游成品预处理，不编其化学组成；SABA为泡棉／家具水性胶和热熔胶合作供货，不推股权。所读范围未识别外售CPP／CPO／MAH树脂或同类聚烯烃分散体附着促进输入原料；不称全部隐藏SDS／SKU已审。只评估NL-8260对其水性PVC粘接配方的潜在相关性，不保证相容、热激活、固化或产品性能。"
+    },
+    "contact": {
+      "label": "公开公司业务电话及官网所列LinkedIn；官网说明不回复推销信息",
+      "phone": "+44 1922 459321",
+      "contactUrl": "https://www.linkedin.com/company/chemiqueadhesivesandsealants"
+    },
+    "source": {
+      "label": "Own Protak water-based PU membrane-press adhesive: PVC foils to wood substrates",
+      "url": "https://www.chemiqueadhesives.com/en/our-brands/protak-bedding-packaging-wood-adhesives/membrane-press-adhesives/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网完整原文将水性聚氨酯配方与PVC膜粘接列于同一Protak膜压胶，且明确自有制造、研发和采购原料，符合用户NL-8260 TDS胶黏剂／PVC基材方向初评。未把溶剂型PU或第三方SABA产品冒作这条自制应用；不代表使用我方材料、相容、现有采购需求或许可外联。官网说明不回复推销／营销信息，未将其表单或受保护邮箱列为开发入口；是否接受供方接洽仍待确认。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "自行制造工业胶黏剂，Protak水性聚氨酯膜压胶明确用于将PVC膜粘接到木基材料。",
+      "sourceName": "Own complete water-based PU/PVC membrane-press product and own UK/US industrial adhesive manufacture statement",
+      "sourceUrl": "https://www.chemiqueadhesives.com/en/our-brands/protak-bedding-packaging-wood-adhesives/membrane-press-adhesives/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.chemiqueadhesives.com/en/",
+      "linkedIn": "https://www.linkedin.com/company/chemiqueadhesivesandsealants",
+      "generalPhone": "+44 1922 459321",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Empire Close, Aldridge, West Midlands, WS9 8UR, United Kingdom. Company-published office map marker (52.6148345, -1.9310074), not independently surveyed. Contact page states solicitation or marketing messages will not receive a response; its form and protected email are not listed as development routes. Published business phone and own-linked company LinkedIn retained; supplier-enquiry acceptance is unconfirmed.",
+      "sources": [
+        {
+          "label": "Own ProAqua2 water-based two-component foam/plastic adhesive range",
+          "url": "https://www.chemiqueadhesives.com/en/our-brands/proaqua-foam-bonding-adhesives/proaqua2-two-part-water-based-adhesive/"
+        },
+        {
+          "label": "Own Protak water-based PU membrane adhesive explicitly bonds PVC foils to wood-based materials",
+          "url": "https://www.chemiqueadhesives.com/en/our-brands/protak-bedding-packaging-wood-adhesives/membrane-press-adhesives/"
+        },
+        {
+          "label": "Own UK manufacture, raw-material sourcing and US same-company expansion",
+          "url": "https://www.chemiqueadhesives.com/en/about-us/"
+        },
+        {
+          "label": "Own two-component primer as roller/spray applied non-ferrous metal pretreatment",
+          "url": "https://www.chemiqueadhesives.com/en/our-brands/solfre-laminating-adhesives/two-part-primer/"
+        },
+        {
+          "label": "Own SABA partnership: finished foam/furniture water-based and hot-melt adhesives; no equity inference",
+          "url": "https://www.chemiqueadhesives.com/en/our-brands/saba-adhesives/"
+        },
+        {
+          "label": "Own public company telephone, exact official LinkedIn link, UK office marker and no-response-to-marketing notice",
+          "url": "https://www.chemiqueadhesives.com/en/contact-page/"
+        }
+      ],
+      "generalPhoneEvidence": {
+        "company": "Chemique Adhesives & Sealants Ltd.",
+        "value": "+44 1922 459321",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact page: general company business telephone",
+            "url": "https://www.chemiqueadhesives.com/en/contact-page/",
+            "summary": "Exact UK company phone +44(0)1922459321. Emergency hotline and named sales mobiles not curated; no WhatsApp inferred. Company contact page warns marketing messages will not receive a response."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "chemique-adhesives-aldridge",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Chemique Adhesives & Sealants Ltd. Team,\n\nYour Protak water-based polyurethane adhesives bond PVC foils to wood-based materials in membrane pressing.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Protak water-based polyurethane adhesives bond PVC foils to wood-based materials in membrane pressing.",
+      "evidenceUrl": "https://www.chemiqueadhesives.com/en/our-brands/protak-bedding-packaging-wood-adhesives/membrane-press-adhesives/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 80
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

@@ -709,4 +709,5 @@ export const leadEmailFacts: Record<string, string> = {
   'nilkimtek-istanbul': "NILSEAL CS 2100 and CS 2105 are water-based latex cold-seal adhesives for corona-treated polypropylene films.",
   'tay-ink-badr-city': "You manufacture water-based printing inks for carton packaging in Badr City, Egypt.",
   'mpc-prokim-fouchana': "Your AGL 52 medium-oil alkyd resin lists refined linseed oil as its oil type.",
+  'chemique-adhesives-aldridge': "Your Protak water-based polyurethane adhesives bond PVC foils to wood-based materials in membrane pressing.",
 }
