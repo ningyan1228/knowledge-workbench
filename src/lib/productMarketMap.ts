@@ -56454,4 +56454,86 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 76
     }
   }
+]).concat([
+  {
+    "id": "color-inks-grand-bourg",
+    "company": "Color Inks SRL",
+    "productId": "nl-8260",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Grand Bourg, Buenos Aires (own disclosed business address cross-checked with public company LinkedIn; country-level approximate marker, not factory coordinates)",
+    "latitude": -38.4,
+    "longitude": -63.6,
+    "fit": "可开发候选",
+    "signal": "自主制造水性柔印油墨，拥有生产工厂与实验室；塑料与拉菲草油墨明确用于已处理PP／PE表印且仅用水稀释。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对官网全部可见三类成品水性油墨、制造／实验室／配方服务与公开联系区，及公司LinkedIn同域名同地址的制造说明。现有目录为窄幅、纸板及塑料／拉菲草柔印成品油墨，另述清漆与稀释剂；pigmentos/resinas/aditivos为其成品配方组分，不冒其对外销售输入树脂。实际所读业务未识别CPP／CPO／MAH或同类水性聚烯烃输入树脂外售；有限公开页面排除，不声称隐藏SKU/SDS/所有股权已核。客户明确已处理PP／PE，不能推未处理PP适用或取消前处理。我方NL-8260仅供PP油墨附着初评，不保证配方相容、不转客户抗磨／重金属等表述为我方性能或认证。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及联系区；非具名采购",
+      "email": "info@colorinks.com.ar",
+      "contactUrl": "https://www.colorinks.com.ar/"
+    },
+    "source": {
+      "label": "Own plastics/raffia flexo ink: treated PP/PE surface printing, water-only dilution; own plant and laboratory",
+      "url": "https://www.colorinks.com.ar/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "同一官网具体成品系列同时明确已处理PP／PE与仅用水稀释，自有生产工厂、实验室及定制开发有原文。用户原始NL-8260 TDS明确PP／PE基材和油墨附着用途；仅为潜在原料试配对象，未证现用或采购我方材料、配方已相容或可省略其前处理。公司LinkedIn互证同名、同官网与同地址，通用邮箱由官网自身证明；不以个人资料或相似名称推责任或集团归属。",
+    "targetCompanyTypeId": "nl8260-pp-opp-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-pp-opp-inks",
+      "statement": "自主制造水性柔印油墨，拥有生产工厂与实验室；塑料与拉菲草油墨明确用于已处理PP／PE表印且仅用水稀释。",
+      "sourceName": "Own same-series water-only flexographic inks for treated PP/PE, own factory/lab/formulation; public company LinkedIn cross-check",
+      "sourceUrl": "https://www.colorinks.com.ar/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.colorinks.com.ar/",
+      "contactPage": "https://www.colorinks.com.ar/",
+      "generalEmail": "info@colorinks.com.ar",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Fray Luis Beltrán 5082, Grand Bourg, Buenos Aires, CP1615, Argentina. Exact street/postcode also disclosed in public company LinkedIn. Country-level illustrative marker -38.4,-63.6 reuses existing public Argentina map convention (Cotigraf/Quimprex); not city/business/factory geocoding. No external Google/Bing request. Local-format phone and separately labelled WhatsApp number observed on Home; no normalized country/area prefix or WhatsApp URL guessed, no named employees curated. No founding-year or ownership assertion from snippets.",
+      "sources": [
+        {
+          "label": "Own complete visible Home: three finished water-ink applications, treated PP/PE water-only dilution, own factory/lab/formulation and public company mailbox/address",
+          "url": "https://www.colorinks.com.ar/"
+        },
+        {
+          "label": "Public company LinkedIn: manufacturer/formulation activity, same official website and exact street/postcode; employee profiles and login not accessed",
+          "url": "https://ar.linkedin.com/company/colorinks"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Color Inks SRL",
+        "value": "info@colorinks.com.ar",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own company Home Contact Mail block",
+            "url": "https://www.colorinks.com.ar/",
+            "summary": "Exact info@colorinks.com.ar in own Mail block with company name and Fray Luis Beltrán5082 Grand Bourg address. administracion@ and laboratorio@ also observed; no named buyer, procurement responsibility or deliverability inferred. LinkedIn identity source is not used to prove mailbox ownership."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "color-inks-grand-bourg",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Color Inks SRL Team,\n\nYour water-based flexographic inks for plastics and raffia are designed for surface printing on treated polypropylene and polyethylene.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for ink formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your water-based flexographic inks for plastics and raffia are designed for surface printing on treated polypropylene and polyethylene.",
+      "evidenceUrl": "https://www.colorinks.com.ar/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 82
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

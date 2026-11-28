@@ -714,4 +714,5 @@ export const leadEmailFacts: Record<string, string> = {
   'acm-italy-casorezzo': "Your VICEVERSA SPECIAL 2.0 water-based polyurethane adhesive is used for PVC and LVT flooring.",
   'eko-kolor-chojnow': "Your KOLORFOL water-based inks are designed for flexographic and gravure printing on PP, PE and PS substrates.",
   'cotigraf-lanus-oeste': "Your 60000 / PUFR inks use nitrocellulose modified with polyurethane resins for printing on polypropylene or polyethylene.",
+  'color-inks-grand-bourg': "Your water-based flexographic inks for plastics and raffia are designed for surface printing on treated polypropylene and polyethylene.",
 }
