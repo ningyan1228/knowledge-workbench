@@ -706,4 +706,5 @@ export const leadEmailFacts: Record<string, string> = {
   'ideal-manufacturing-paints-kenya': "Your industrial range includes red oxide primers and bituminous composition paint for water tanks.",
   'spring-inks-lahore': "Your water-based range includes liquid inks for flexographic and rotogravure printing.",
   'besco-chemicals-faisalabad': "You manufacture water-based flexographic inks for paper, paperboard and corrugated packaging.",
+  'nilkimtek-istanbul': "NILSEAL CS 2100 and CS 2105 are water-based latex cold-seal adhesives for corona-treated polypropylene films.",
 }

@@ -55566,4 +55566,156 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 79
     }
   }
+]).concat([
+  {
+    "id": "nilkimtek-istanbul",
+    "company": "Nilkimtek",
+    "productId": "nl-8260",
+    "country": "Turkey",
+    "countryZh": "土耳其",
+    "city": "Istanbul (approximate city marker; business-contact address, not factory geocoding)",
+    "latitude": 41.0092,
+    "longitude": 28.7867,
+    "fit": "可开发候选",
+    "signal": "自主开发配方并生产水性乳胶冷封胶，实际NILSEAL CS系列用于PP／OPP薄膜涂布。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已核对当前主营、配方／生产说明与冷封胶实际系列：公司自有配方、自制及批次控制，当前聚焦热封清漆和水性乳胶冷封胶。NILSEAL CS为施涂到包装薄膜的成品封口体系；在已读公开业务中未识别CPP／CPO／MAH或聚烯烃分散体附着促进原料外售。结论限所读业务、工艺及产品系列，不等于隐藏全部配方／SDS已审。冷封胶对自身的压力互粘与胶层对PP载体的附着须分别评估，不承诺我方乳胶相容、封口强度、食品或医疗合规。"
+    },
+    "contact": {
+      "label": "公司公开业务邮箱、技术部门、电话及明确WhatsApp",
+      "email": "info@nilkimtek.com",
+      "phone": "+90 543 893 77 67",
+      "contactUrl": "https://nilkimtek.com/tr/iletisim/"
+    },
+    "source": {
+      "label": "Own water-based latex cold-seal product range and PP/OPP substrates",
+      "url": "https://nilkimtek.com/en/products/cold-seal-adhesives/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "实际自主配方及生产水性乳胶冷封胶，产品明确施涂于PP／OPP载体薄膜，支持按用户NL-8260 TDS胶黏剂／PP附着方向作配方初评。仅讨论胶层对载体的附着试验，不把自粘封口机制当作已验证的CPO增益；不代表现用NL-8260、乳胶已相容、存在采购需求或食品／医疗认证。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "自主开发配方并生产水性乳胶冷封胶，实际NILSEAL CS系列用于PP／OPP薄膜涂布。",
+      "sourceName": "Own NILSEAL CS water-based latex product specifications plus own recipe/manufacturing/batch-control statement",
+      "sourceUrl": "https://nilkimtek.com/en/products/cold-seal-adhesives/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://nilkimtek.com/",
+      "contactPage": "https://nilkimtek.com/tr/iletisim/",
+      "whatsapp": "https://wa.me/905438937767",
+      "generalEmail": "info@nilkimtek.com",
+      "generalPhone": "+90 543 893 77 67",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Technical",
+          "email": "technical@nilkimtek.com",
+          "source": {
+            "label": "Own published technical department",
+            "url": "https://nilkimtek.com/tr/iletisim/"
+          },
+          "emailEvidence": {
+            "company": "Nilkimtek",
+            "value": "technical@nilkimtek.com",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Own Contact page: exact public corporate business route",
+                "url": "https://nilkimtek.com/tr/iletisim/",
+                "summary": "Explicit technical department mailbox for product selection, TDS/SDS and application tests; no named manager identity inferred."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        },
+        {
+          "department": "Sales",
+          "email": "sales@nilkimtek.com",
+          "source": {
+            "label": "Own published sales department",
+            "url": "https://nilkimtek.com/tr/iletisim/"
+          },
+          "emailEvidence": {
+            "company": "Nilkimtek",
+            "value": "sales@nilkimtek.com",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Own Contact page: exact public corporate business route",
+                "url": "https://nilkimtek.com/tr/iletisim/",
+                "summary": "Explicit sales/pricing business mailbox; not a named procurement person."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        }
+      ],
+      "address": "Hamidiye Mahallesi, Cendere Caddesi, Porta Vadi T2, Kağıthane/İstanbul, Turkey. Company-published business-contact address; a production site is not separately geocoded. Map reuses an existing Istanbul city illustration, not the office door or factory.",
+      "sources": [
+        {
+          "label": "Own current two-family business scope: heat-seal lacquers and water-based latex cold seals",
+          "url": "https://nilkimtek.com/tr/"
+        },
+        {
+          "label": "Own in-house formulation, resin/solvent/additive development, production and batch-control workflow",
+          "url": "https://nilkimtek.com/tr/hakkimizda/"
+        },
+        {
+          "label": "Actual CS 2100/2105 water-based latex formulations and corona-treated PP/OPP film route",
+          "url": "https://nilkimtek.com/en/products/cold-seal-adhesives/"
+        },
+        {
+          "label": "Exact general/technical/sales business emails, business phones, explicit WhatsApp and Istanbul contact address",
+          "url": "https://nilkimtek.com/tr/iletisim/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Nilkimtek",
+        "value": "info@nilkimtek.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact page: exact public corporate business route",
+            "url": "https://nilkimtek.com/tr/iletisim/",
+            "summary": "Exact company-published general business mailbox repeated across complete own originals; no personal buyer or deliverability inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Nilkimtek",
+        "value": "+90 543 893 77 67",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact page: exact public corporate business route",
+            "url": "https://nilkimtek.com/tr/iletisim/",
+            "summary": "Exact public company business mobile; WhatsApp is included only because the own page explicitly publishes its wa.me link."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "nilkimtek-istanbul",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Nilkimtek Team,\n\nNILSEAL CS 2100 and CS 2105 are water-based latex cold-seal adhesives for corona-treated polypropylene films.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "NILSEAL CS 2100 and CS 2105 are water-based latex cold-seal adhesives for corona-treated polypropylene films.",
+      "evidenceUrl": "https://nilkimtek.com/en/products/cold-seal-adhesives/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 77
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
