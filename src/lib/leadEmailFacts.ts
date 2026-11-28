@@ -725,4 +725,6 @@ export const leadEmailFacts: Record<string, string> = {
   'les-encres-3h-mirabel': "Your water-based ink range includes in-house Standard and Lightfast pigment dispersions.",
   'viking-paints-richfield': "Your Richfield factory makes TENACO two-component epoxy primers and protective coatings for metal.",
   'davis-paint-north-kansas-city': "Your industrial line includes phenolic alkyd primers for farm machinery, tanks, trailers, and heavy equipment.",
+  'capital-adhesives-mooresville': "Your water-based adhesives bond treated PP film for windows, labels, and film-laminated cartons.",
+  'spectrum-adhesives-memphis': "Your water-based adhesives include paper-to-foil laminating and tube-winding formulations.",
 }

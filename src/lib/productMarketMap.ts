@@ -57595,4 +57595,214 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 77
     }
   }
+]).concat([
+  {
+    "id": "capital-adhesives-mooresville",
+    "company": "Capital Adhesives, Inc.",
+    "productId": "nl-8260",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Mooresville, Indiana (country-level illustrative marker, not city or factory geocoding)",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "美国自主配方制造水性胶黏剂；WaterBased页明确处理PP薄膜用于窗口贴合、标签和覆膜纸盒，另列纸张复合与纸袋等用途。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "实际完整读取About、WaterBased、Contact三页。About明确自主配方、美国制造及内部实验室；当前业务分类为热熔胶、水性胶、水性涂层和定制配方成品。WaterBased具体处理PP薄膜用于窗口／标签／覆膜纸盒，纸板、纸袋、信封、复合等；VAE、PVA、淀粉、ResiDex混合胶、天然乳胶、PVOH、SBR及丙烯酸是所列成品胶化学类别，不等同CPO，也不猜特定PP胶的隐含binder。所读有限公开经营范围未识别所选CPO／CPP／水性聚烯烃附着原料外售，符合需求侧成品胶制造商；未审全部隐藏SKU/SDS/最终股权。处理PP不改写为未处理PP，不宣NL牌号相容、食品接触/FDA/ISO、低VOC、性能改善幅度、快线速度或采购。正式Contact表单访客Email输入不是公司邮箱，搜索里第三方Sales邮件/具名人未独立原文核验，不迁入公开联系记录。"
+    },
+    "contact": {
+      "label": "官网公开业务表单及电话；缺已核验公司邮箱，不进批量邮件名单",
+      "phone": "1-317-834-5415",
+      "contactUrl": "https://www.capitaladhesives.com/contact/"
+    },
+    "source": {
+      "label": "Own WaterBased: exact treated-PP film windows/labels/film-carton application and paper adhesive range",
+      "url": "https://www.capitaladhesives.com/water-based-adhesives/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "美国自主配方制造水性胶黏剂；WaterBased页明确处理PP薄膜用于窗口贴合、标签和覆膜纸盒，另列纸张复合与纸袋等用途。 用户原始NL8260 TDS明确PP、纸张及adhesives用途，作为水性胶附着配方初评对象；没有客户现用CPO、已确认需求、相容或采购证据。只按所读可见经营范围作所选输入同行排除，不把其他树脂化学品等同CPO。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "美国自主配方制造水性胶黏剂；WaterBased页明确处理PP薄膜用于窗口贴合、标签和覆膜纸盒，另列纸张复合与纸袋等用途。",
+      "sourceName": "Own WaterBased: exact treated-PP film windows/labels/film-carton application and paper adhesive range; own manufacture/formulation separately checked",
+      "sourceUrl": "https://www.capitaladhesives.com/water-based-adhesives/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.capitaladhesives.com/",
+      "contactPage": "https://www.capitaladhesives.com/contact/",
+      "generalPhone": "1-317-834-5415",
+      "contacts": [],
+      "departmentEmails": [],
+      "generalPhoneEvidence": {
+        "company": "Capital Adhesives, Inc.",
+        "value": "1-317-834-5415",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own public company business contact",
+            "url": "https://www.capitaladhesives.com/contact/",
+            "summary": "Exact published corporate/main business phone; no added country prefix, named person or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "address": "1260 South Old State Rd 67, Mooresville, IN 46158, United States. Own business-contact address. About separately confirms U.S. formulation/manufacture; this street is not independently surveyed as a factory gate. Marker39.8,-98.6 is U.S. country-level illustration, not independent factory coordinates;0externalmapGET.",
+      "sources": [
+        {
+          "label": "Own About: in-house laboratory/formulation, U.S. manufacture and finite finished business categories",
+          "url": "https://www.capitaladhesives.com/about-us/"
+        },
+        {
+          "label": "Own WaterBased: exact treated-PP film windows/labels/film-carton application and paper adhesive range",
+          "url": "https://www.capitaladhesives.com/water-based-adhesives/"
+        },
+        {
+          "label": "Own Contact: actual business enquiry form, exact main phone and Mooresville address; no verified company mailbox",
+          "url": "https://www.capitaladhesives.com/contact/"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "capital-adhesives-mooresville",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Capital Adhesives, Inc. Team,\n\nYour water-based adhesives bond treated PP film for windows, labels, and film-laminated cartons.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your water-based adhesives bond treated PP film for windows, labels, and film-laminated cartons.",
+      "evidenceUrl": "https://www.capitaladhesives.com/water-based-adhesives/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 77
+    }
+  },
+  {
+    "id": "spectrum-adhesives-memphis",
+    "company": "Spectrum Adhesives, Inc.",
+    "productId": "nl-8260",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Memphis, Tennessee (own corporate business address) (country-level illustrative marker, not city or factory geocoding)",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "自主配方制造工业胶；水性成品胶明确用于纸张与铝箔复合、纸管卷绕和蜂窝结构制造，CP Division及Carolina Region按同一家公司处理。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "实际完整读取Products、Home、About三页。Home明确自身制造和定制配方，Products完整可见范围为水性、溶剂型、糊精、PSA和定制胶；水性含纸张-箔复合、纸管及蜂窝用成品胶，另有包装／封箱／标签／纸窗。About列PVA、PUR、VAE纸/乙烯基包覆分散胶与泡沫用胶，这些不是CPO原料，不能由dispersion/PUR字样推所选CPP/CPO同行，也不能把客户SBR乳胶类比我方binder。当前所读有限经营范围未识别所选CPO／CPP／水性聚烯烃附着原料外售；不冒全隐藏SKU/SDS/股权已审。官网三处明确同一Spectrum及CP Division/sharedbrand，合并公司和终身额度，不拆Carolina/Ohio为新增。原TDS纸张及胶黏剂支持初评，不将纸-箔用途扩为我方所有金属适配、不保证共混相容、FDA/食品接触/耐水耐热/高线速或采购。"
+    },
+    "contact": {
+      "label": "官网公开Sales业务邮箱及公司业务联系区；非具名采购",
+      "email": "sales@spectrumadhesives.com",
+      "phone": "901-795-1943",
+      "contactUrl": "https://www.spectrumadhesives.com/"
+    },
+    "source": {
+      "label": "Own Products: formulated water-based paper/foil laminating, tube-winding adhesives and complete visible adhesive categories",
+      "url": "https://www.spectrumadhesives.com/products"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自主配方制造工业胶；水性成品胶明确用于纸张与铝箔复合、纸管卷绕和蜂窝结构制造，CP Division及Carolina Region按同一家公司处理。 用户原始NL8260 TDS明确PP、纸张及adhesives用途，作为水性胶附着配方初评对象；没有客户现用CPO、已确认需求、相容或采购证据。只按所读可见经营范围作所选输入同行排除，不把其他树脂化学品等同CPO。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "自主配方制造工业胶；水性成品胶明确用于纸张与铝箔复合、纸管卷绕和蜂窝结构制造，CP Division及Carolina Region按同一家公司处理。",
+      "sourceName": "Own Products: formulated water-based paper/foil laminating, tube-winding adhesives and complete visible adhesive categories; own manufacture/formulation separately checked",
+      "sourceUrl": "https://www.spectrumadhesives.com/products",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.spectrumadhesives.com/",
+      "contactPage": "https://www.spectrumadhesives.com/",
+      "generalEmail": "sales@spectrumadhesives.com",
+      "generalEmailEvidence": {
+        "company": "Spectrum Adhesives, Inc.",
+        "value": "sales@spectrumadhesives.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Products, Home and About repeatedly publish corporate Sales mailbox",
+            "url": "https://www.spectrumadhesives.com/",
+            "summary": "Exact sales mailbox printed by same corporate name/phone/address; company commercial route, no named purchasing person, technical title, deliverability or current demand inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhone": "901-795-1943",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "sales@spectrumadhesives.com",
+          "source": {
+            "label": "Own corporate Sales mailbox",
+            "url": "https://www.spectrumadhesives.com/"
+          },
+          "emailEvidence": {
+            "company": "Spectrum Adhesives, Inc.",
+            "value": "sales@spectrumadhesives.com",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Own Products, Home and About repeatedly publish corporate Sales mailbox",
+                "url": "https://www.spectrumadhesives.com/",
+                "summary": "Exact sales mailbox printed by same corporate name/phone/address; company commercial route, no named purchasing person, technical title, deliverability or current demand inferred."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        }
+      ],
+      "generalPhoneEvidence": {
+        "company": "Spectrum Adhesives, Inc.",
+        "value": "901-795-1943",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own public company business contact",
+            "url": "https://www.spectrumadhesives.com/",
+            "summary": "Exact published corporate/main business phone; no added country prefix, named person or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "address": "Corporate: 5611 Universal Drive, Memphis, TN 38118. Own additional Carolina Region at3815N.MainSt,GraniteFallsNC28630 and CP Division11047LambsLane,NewarkOH43055 are company business locations, not separately counted companies or independently geocoded factories. Marker39.8,-98.6 is U.S. country-level illustration, not independent factory coordinates;0externalmapGET.",
+      "sources": [
+        {
+          "label": "Own Products: formulated water-based paper/foil laminating, tube-winding adhesives and complete visible adhesive categories",
+          "url": "https://www.spectrumadhesives.com/products"
+        },
+        {
+          "label": "Own Home: actual manufacture/custom formulation and repeated company Sales/phone/contact locations",
+          "url": "https://www.spectrumadhesives.com/"
+        },
+        {
+          "label": "Own About: broader PVA/PUR/VAE/foam/packaging finished business, same CP Division and corporate public Sales route",
+          "url": "https://www.spectrumadhesives.com/about"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "spectrum-adhesives-memphis",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi Spectrum Adhesives, Inc. Team,\n\nYour water-based adhesives include paper-to-foil laminating and tube-winding formulations.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your water-based adhesives include paper-to-foil laminating and tube-winding formulations.",
+      "evidenceUrl": "https://www.spectrumadhesives.com/products",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 73
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
