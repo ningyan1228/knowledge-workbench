@@ -55828,4 +55828,94 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 82
     }
   }
+]).concat([
+  {
+    "id": "mpc-prokim-fouchana",
+    "company": "MPC PROKIM Industrie",
+    "productId": "elo",
+    "country": "Tunisia",
+    "countryZh": "突尼斯",
+    "city": "Fouchana (company contact-map viewport center; approximate, not surveyed facility coordinates)",
+    "latitude": 36.71894911569537,
+    "longitude": 10.176792368788652,
+    "fit": "可开发候选",
+    "signal": "自主制造醇酸、聚酯及丙烯酸树脂与水性乳液；AGL 52中油度醇酸树脂明确以精制亚麻油为油种。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已核对自有制造／研发说明、四大系列及全部可见分类、AGL52单款表和产品总表实际首12／82款：业务为涂料、胶黏剂与复材用配方树脂／乳液，未在所读范围识别ELO、ESBO、环氧植物油或同类增塑添加剂外售。醇酸树脂按油种列精制亚麻油／豆油／脂肪酸是聚合物配方组成，不冒称出售这些游离油或使用环氧化油。此为所读业务与分类的有限排除，不称82款或隐藏SDS全部已读。"
+    },
+    "contact": {
+      "label": "官网实际业务联系表单及公司电话；未核实公开邮箱",
+      "phone": "+216 31 304 070",
+      "contactUrl": "https://www.mpc-prokim-industrie.com/fr/nous-contacter"
+    },
+    "source": {
+      "label": "Own AGL 52 medium-oil alkyd resin specification: refined linseed oil",
+      "url": "https://www.mpc-prokim-industrie.com/fr/31-resines-alkydes-moyennes-en-huile-a-base-dhuile-de-lin-raffinee-"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有树脂制造与研发、具体亚麻油醇酸树脂配方系列成立，符合用户ELO TDS树脂改性应用及既有resin-modifier-formulator目标类型。仅供环氧功能／柔韧性相关配方初评，不把精制亚麻油当作ELO、不代表其现用或采购我方产品，不承诺直接替代、反应相容、固化或性能增益。虽供聚合物树脂原料，未见其供应所选同类环氧植物油添加剂；按树脂配方需求侧核验。",
+    "targetCompanyTypeId": "resin-modifier-formulator",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "resin-modification",
+      "statement": "自主制造醇酸、聚酯及丙烯酸树脂与水性乳液；AGL 52中油度醇酸树脂明确以精制亚麻油为油种。",
+      "sourceName": "Own resin manufacture/R&D statement, AGL52 refined-linseed-oil alkyd table and actually visible resin family taxonomy",
+      "sourceUrl": "https://www.mpc-prokim-industrie.com/fr/31-resines-alkydes-moyennes-en-huile-a-base-dhuile-de-lin-raffinee-",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.mpc-prokim-industrie.com/fr/",
+      "contactPage": "https://www.mpc-prokim-industrie.com/fr/nous-contacter",
+      "generalPhone": "+216 31 304 070",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Rue Mhamdia, Zone Industrielle Mghira BP 175, 2082 Fouchana, Tunisia. Own company Contact address; approximate marker uses the center of its published embedded map viewport, not independently surveyed plant or map-pin coordinates. No Google map or tag-manager request was made.",
+      "sources": [
+        {
+          "label": "Own manufacturer/R&D statement: alkyd, polyester, acrylic resins and aqueous emulsions for coatings/adhesives/composites",
+          "url": "https://www.mpc-prokim-industrie.com/fr/content/6-qui-sommes-nous"
+        },
+        {
+          "label": "Own AGL52 medium-oil alkyd specification explicitly lists refined linseed oil",
+          "url": "https://www.mpc-prokim-industrie.com/fr/31-resines-alkydes-moyennes-en-huile-a-base-dhuile-de-lin-raffinee-"
+        },
+        {
+          "label": "Own four-family taxonomy and actual first12 of82 product rows; later pagination and hidden SDS not read",
+          "url": "https://www.mpc-prokim-industrie.com/fr/58-gamme-de-produits"
+        },
+        {
+          "label": "Own company address, exact business phones and actual contact-form HTML; your@email.com is a placeholder, not curated",
+          "url": "https://www.mpc-prokim-industrie.com/fr/nous-contacter"
+        }
+      ],
+      "generalPhoneEvidence": {
+        "company": "MPC PROKIM Industrie",
+        "value": "+216 31 304 070",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact original: company business telephone",
+            "url": "https://www.mpc-prokim-industrie.com/fr/nous-contacter",
+            "summary": "Company-published (+216)31 304070; separate company phone (+216)79408222 also listed. No named buyer, WhatsApp or private mobile inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "mpc-prokim-fouchana",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi MPC PROKIM Industrie Team,\n\nYour AGL 52 medium-oil alkyd resin lists refined linseed oil as its oil type.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your AGL 52 medium-oil alkyd resin lists refined linseed oil as its oil type.",
+      "evidenceUrl": "https://www.mpc-prokim-industrie.com/fr/31-resines-alkydes-moyennes-en-huile-a-base-dhuile-de-lin-raffinee-",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 76
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

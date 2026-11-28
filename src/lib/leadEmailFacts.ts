@@ -708,4 +708,5 @@ export const leadEmailFacts: Record<string, string> = {
   'besco-chemicals-faisalabad': "You manufacture water-based flexographic inks for paper, paperboard and corrugated packaging.",
   'nilkimtek-istanbul': "NILSEAL CS 2100 and CS 2105 are water-based latex cold-seal adhesives for corona-treated polypropylene films.",
   'tay-ink-badr-city': "You manufacture water-based printing inks for carton packaging in Badr City, Egypt.",
+  'mpc-prokim-fouchana': "Your AGL 52 medium-oil alkyd resin lists refined linseed oil as its oil type.",
 }
