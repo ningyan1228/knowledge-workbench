@@ -57314,4 +57314,98 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 77
     }
   }
+]).concat([
+  {
+    "id": "les-encres-3h-mirabel",
+    "company": "Les Encres 3H",
+    "productId": "nl-h-860",
+    "country": "Canada",
+    "countryZh": "加拿大",
+    "city": "Mirabel, Québec (own business contact address; in-house manufacture verified, not independently factory-gate geocoded; country-level illustrative marker)",
+    "latitude": 56.1,
+    "longitude": -106.3,
+    "fit": "可开发候选",
+    "signal": "自主配方制造水性印刷油墨；Standard／Lightfast颜料分散体明确在内部由颜料配制制造，联系地址位于加拿大Mirabel。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对自有Home、Premium水墨、Construction水性技术涂层、Dispersionpigmentaire及实际Contact原文：业务列水性墨、Standard／Lightfast颜料分散、回收、清漆、建材技术涂层和定制制造。颜料分散页明确在水性体系分散颜料并自制toners，不因dispersion一词判为CPP／CPO／水性聚烯烃输入树脂同行；所读范围未识别所选输入树脂外售。有限可见经营范围排除，未审全部隐藏SKU／SDS或最后股权。仅按H860 Rev01水性墨颜料润湿／渗透方向初评，不承诺客户binder／颜料／喷头相容、耐光／耐候／稳定／认证或现用／采购。原生Contact超时仍计一次，最后普通同URL读取HTTP200取得实际表单，未执行脚本／CAPTCHA或提交。"
+    },
+    "contact": {
+      "label": "官网已核验业务询问表单及公开电话；未见公开业务邮箱，草稿供手动表单联系，不纳入批量邮件名单",
+      "phone": "450-915-3216",
+      "contactUrl": "https://www.encres3h.com/nous-contacter.php"
+    },
+    "source": {
+      "label": "Own Premium water-based ink: in-house Standard and Lightfast pigment dispersions",
+      "url": "https://www.encres3h.com/encre-base-eau-premium.php"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "Premium同页明确内部制造水性墨及Standard／Lightfast分散系列，Pigment页说明水性体系中内部配制分散并使用研磨设备；与用户H860 Rev01水性油墨／颜料润湿和渗透用途对应。只为潜在功能助剂初评对象，不推其现用CPP或客户具体配方相容／采购需求。实际读取公司业务询问表单即具备公开联系入口；缺邮箱不阻止存草稿，不猜邮箱。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "自主配方制造水性印刷油墨；Standard／Lightfast颜料分散体明确在内部由颜料配制制造，联系地址位于加拿大Mirabel。",
+      "sourceName": "Own internally manufactured water-based ink range and aqueous pigment-dispersion formulation",
+      "sourceUrl": "https://www.encres3h.com/encre-base-eau-premium.php",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.encres3h.com/",
+      "contactPage": "https://www.encres3h.com/nous-contacter.php",
+      "generalPhone": "450-915-3216",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "13035 du Parc, Mirabel, QC J7J 0W5, Canada. Own Home/Premium/Pigment/Contact repeated business address, not independently surveyed factory gate. Public trade name Les Encres3H; no legal suffix/registration inferred. 56.1,-106.3 is Canada country-level illustration, not Mirabel city or factory coordinates; no external map request.",
+      "sources": [
+        {
+          "label": "Own Home: ink formulation/manufacture and visible business menu",
+          "url": "https://www.encres3h.com/"
+        },
+        {
+          "label": "Own Premium: in-house Standard/Lightfast water-based ink dispersions",
+          "url": "https://www.encres3h.com/encre-base-eau-premium.php"
+        },
+        {
+          "label": "Own Construction: internally developed/manufactured water-based technical coatings",
+          "url": "https://www.encres3h.com/construction-materiaux-connexes.php"
+        },
+        {
+          "label": "Own Pigment: internal aqueous pigment dispersion; not a raw CPP/CPO input offering",
+          "url": "https://www.encres3h.com/dispersion-pigmentaire.php"
+        },
+        {
+          "label": "Own Contact complete static HTML: actual business enquiry form, address and exact phone; Courriel is a link to this form, no mailbox disclosed",
+          "url": "https://www.encres3h.com/nous-contacter.php"
+        }
+      ],
+      "generalPhoneEvidence": {
+        "company": "Les Encres 3H",
+        "value": "450-915-3216",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Contact and own product footers",
+            "url": "https://www.encres3h.com/nous-contacter.php",
+            "summary": "Exact 450-915-3216 repeatedly printed for the company with Mirabel contact address. Company business phone only; no added international prefix, WhatsApp or named procurement role."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "les-encres-3h-mirabel",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Les Encres 3H Team,\n\nYour water-based ink range includes in-house Standard and Lightfast pigment dispersions.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your water-based ink range includes in-house Standard and Lightfast pigment dispersions.",
+      "evidenceUrl": "https://www.encres3h.com/encre-base-eau-premium.php",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 78
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

@@ -722,4 +722,5 @@ export const leadEmailFacts: Record<string, string> = {
   'agabe-sao-paulo': "Your TDC 8700 solvent-based screen-printing ink is specified for treated polypropylene, including BOPP.",
   'cattie-adhesives-quakertown': "Your 8252 water-based adhesive is specified for corrugated and litho laminating.",
   'adhesive-compounders-des-moines': "Your water-based resin adhesives serve case and carton sealing, magazine binding, and bookbinding.",
+  'les-encres-3h-mirabel': "Your water-based ink range includes in-house Standard and Lightfast pigment dispersions.",
 }
