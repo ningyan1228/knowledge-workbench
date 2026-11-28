@@ -56016,4 +56016,118 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 80
     }
   }
+]).concat([
+  {
+    "id": "pan-egypt-6th-october",
+    "company": "Pan Egypt Group",
+    "productId": "elo",
+    "country": "Egypt",
+    "countryZh": "埃及",
+    "city": "6th of October City, Giza (company contact-map viewport center; approximate, not surveyed facility coordinates)",
+    "latitude": 29.915778799999995,
+    "longitude": 30.873061,
+    "fit": "可开发候选",
+    "signal": "自有制造用于涂料及油墨的醇酸树脂，官网三页35项可见产品中列有长油、中油、短油及定制醇酸树脂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已核对自有醇酸树脂制造说明及产品目录全部三页35项可见条目：自产长／中／短油及定制醇酸，另有树脂、颜料、溶剂、单体及一般助剂贸易。所读可见条目未识别ELO、ESBO、环氧植物油或同类生物基增塑添加剂外售。只审公开标题和制造说明，未称隐藏规格或未列SKU全部已审；一般醇酸树脂原料业务不自动等同所选环氧油同行。未核实其油种，不把长油度或甘油等原料名写成现用亚麻油／ELO。"
+    },
+    "contact": {
+      "label": "官网公开公司业务邮箱、电话与联系页；非具名采购",
+      "email": "info@pan-egypt.net",
+      "phone": "+20 100 442 5564",
+      "contactUrl": "https://www.pan-egypt.net/contact"
+    },
+    "source": {
+      "label": "Own long-, medium- and short-oil alkyd resin range, catalogue page3 of3",
+      "url": "https://www.pan-egypt.net/search?page=3"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网明确自有制造涂料／油墨用醇酸树脂，并在实际产品目录列具体油度系列，符合用户ELO TDS树脂改性应用及既有resin-modifier-formulator类型。仅提出环氧功能与配方柔韧性相关初评；不代表已使用或采购ELO、不推油种、相容、直接替代、固化或性能结果。制造与原料贸易按同一集团账户去重，所读有限目录未见所选同类环氧植物油外售。",
+    "targetCompanyTypeId": "resin-modifier-formulator",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "resin-modification",
+      "statement": "自有制造用于涂料及油墨的醇酸树脂，官网三页35项可见产品中列有长油、中油、短油及定制醇酸树脂。",
+      "sourceName": "Own alkyd resin manufacture statement and all three visible catalogue pages (35 entries)",
+      "sourceUrl": "https://www.pan-egypt.net/search?page=3",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.pan-egypt.net/",
+      "contactPage": "https://www.pan-egypt.net/contact",
+      "generalEmail": "info@pan-egypt.net",
+      "generalPhone": "+20 100 442 5564",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Plot 105 Extension of 6th Industrial Zone, 6th of October City, Giza, Egypt. Own Contact address; approximate marker uses center of its published embedded Pan Egypt map viewport, not independently surveyed plant or map-pin coordinates. No external Google map request made.",
+      "sources": [
+        {
+          "label": "Own group manufacturer/trader identity and business contact",
+          "url": "https://www.pan-egypt.net/"
+        },
+        {
+          "label": "Own manufacture of alkyd resins for paint and ink industries",
+          "url": "https://www.pan-egypt.net/service/manufacturing"
+        },
+        {
+          "label": "Own catalogue page1: entries1-12 of35",
+          "url": "https://www.pan-egypt.net/search"
+        },
+        {
+          "label": "Own catalogue page2: entries13-24 of35",
+          "url": "https://www.pan-egypt.net/search?page=2"
+        },
+        {
+          "label": "Own catalogue page3: entries25-35, including long/medium/short-oil and custom alkyd resins",
+          "url": "https://www.pan-egypt.net/search?page=3"
+        },
+        {
+          "label": "Own Contact page: business inbox, phone, address and embedded company map",
+          "url": "https://www.pan-egypt.net/contact"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Pan Egypt Group",
+        "value": "info@pan-egypt.net",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact page: public company business inbox",
+            "url": "https://www.pan-egypt.net/contact",
+            "summary": "Exact info@pan-egypt.net is printed in Get in Touch and company footer alongside Pan Egypt address and telephone; general business mailbox, no named procurement role inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Pan Egypt Group",
+        "value": "+20 100 442 5564",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact page: public company telephone",
+            "url": "https://www.pan-egypt.net/contact",
+            "summary": "Exact +201004425564 in Call Us company block; no named buyer or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "pan-egypt-6th-october",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Pan Egypt Group Team,\n\nYour range includes long-, medium- and short-oil alkyd resins for paint and ink manufacture.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your range includes long-, medium- and short-oil alkyd resins for paint and ink manufacture.",
+      "evidenceUrl": "https://www.pan-egypt.net/search?page=3",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 76
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
