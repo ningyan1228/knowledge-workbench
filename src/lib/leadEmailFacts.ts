@@ -713,4 +713,5 @@ export const leadEmailFacts: Record<string, string> = {
   'pan-egypt-6th-october': "Your range includes long-, medium- and short-oil alkyd resins for paint and ink manufacture.",
   'acm-italy-casorezzo': "Your VICEVERSA SPECIAL 2.0 water-based polyurethane adhesive is used for PVC and LVT flooring.",
   'eko-kolor-chojnow': "Your KOLORFOL water-based inks are designed for flexographic and gravure printing on PP, PE and PS substrates.",
+  'cotigraf-lanus-oeste': "Your 60000 / PUFR inks use nitrocellulose modified with polyurethane resins for printing on polypropylene or polyethylene.",
 }

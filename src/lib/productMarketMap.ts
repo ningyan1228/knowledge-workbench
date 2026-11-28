@@ -56359,4 +56359,99 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 85
     }
   }
+]).concat([
+  {
+    "id": "cotigraf-lanus-oeste",
+    "company": "Cotigraf S.A.",
+    "productId": "cpp-cpo",
+    "country": "Argentina",
+    "countryZh": "阿根廷",
+    "city": "Lanús Oeste, Buenos Aires (own disclosed business address; country-level approximate map marker, not factory coordinates)",
+    "latitude": -38.4,
+    "longitude": -63.6,
+    "fit": "可开发候选",
+    "signal": "自主制造柔印／凹印油墨；60000／PUFR为PP／PE表印用聚氨酯改性硝化棉油墨，明确溶于醇类与醋酸酯混合溶剂。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对官网自有制造／配方说明、完整可见油墨分类与10个列示结果、PU表印分类及同款60000／PUFR具体配方。目录为成品柔印／凹印油墨、水墨、聚酰胺／改性硝化棉／PU油墨，首页另列印刷清漆、稀释剂、Pantone与质检仪器；同款产品中的PU树脂是成品配方组分，不因含resinas判为原料供应商。实际所读范围未识别CPP／CPO／MAH输入树脂外售；有限页面排除，不声称10个SKU的技术叶或隐藏SDS全读。仅评估我方PP附着配方方向，不推其现用我方材料、NC／PU／醇酯配方相容、食品接触或迁移合规。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱及官网联系区；非具名采购",
+      "email": "info@cotigraf.com.ar",
+      "contactUrl": "https://cotigraf.com.ar/"
+    },
+    "source": {
+      "label": "Own 60000/PUFR PP/PE surface-printing ink explicitly soluble in alcohol/acetate mixtures",
+      "url": "https://cotigraf.com.ar/tienda/tintas-graficas/flexo-hueco/tintas-graficas-9/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网自有制造和配方服务，同款60000／PUFR产品同时明确PP／PE表印、PU改性硝化棉及醇类／醋酸酯混合溶剂。按既有独立CPO油墨应用来源连接用户七牌号指南的PP附着方向；选型指南不是完整逐牌号TDS，未把客户NC／PU或混合溶剂写成我方已验证相容。公司在阿根廷的公开业务地址和通用邮箱均有原文。不代表已采购、已使用我方或承诺性能／合规。",
+    "targetCompanyTypeId": "cpp-solvent-ink-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "cpp-pp-printing-ink",
+      "statement": "自主制造柔印／凹印油墨；60000／PUFR为PP／PE表印用聚氨酯改性硝化棉油墨，明确溶于醇类与醋酸酯混合溶剂。",
+      "sourceName": "Own same-product 60000/PUFR PP/PE ink with explicit NC/PU and alcohol/acetate solvent system plus own manufacture/formulation",
+      "sourceUrl": "https://cotigraf.com.ar/tienda/tintas-graficas/flexo-hueco/tintas-graficas-9/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://cotigraf.com.ar/",
+      "contactPage": "https://cotigraf.com.ar/",
+      "generalEmail": "info@cotigraf.com.ar",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "José I. Rucci 2533, Lanús Oeste, Buenos Aires, Argentina. Address is disclosed in own originals. Country-level illustrative marker -38.4,-63.6 reuses existing verified public Argentina map convention (Quimprex/KELCOT); not geocoded business/city/factory coordinates. No external map request made. Published local-format phone 2199-8289 / 7726-4753 has no country/area prefix in read originals; none invented or promoted to WhatsApp.",
+      "sources": [
+        {
+          "label": "Own manufacture of liquid flexo/gravure inks, varnishes and thinners, own formulation service, public legal company/address/general inbox",
+          "url": "https://cotigraf.com.ar/"
+        },
+        {
+          "label": "Own visible ink taxonomy and10 listed results, technical content of every SKU not claimed read",
+          "url": "https://cotigraf.com.ar/categoria-producto/tintas-graficas/"
+        },
+        {
+          "label": "Own PU-front-print ink category: one product explicitly listed",
+          "url": "https://cotigraf.com.ar/categoria-producto/tintas-graficas/flexo-hueco/tintas-poliuretanicas-frente/"
+        },
+        {
+          "label": "Own exact 60000/PUFR ink: PP/PE, modified NC/PU, soluble alcohol/acetate mixtures; generic business mailbox/address repeated",
+          "url": "https://cotigraf.com.ar/tienda/tintas-graficas/flexo-hueco/tintas-graficas-9/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Cotigraf S.A.",
+        "value": "info@cotigraf.com.ar",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own manufacturer Home and specific 60000/PUFR product footer",
+            "url": "https://cotigraf.com.ar/",
+            "summary": "Exact info@cotigraf.com.ar published with Cotigraf S.A. legal name and José I.Rucci2533 Lanús Oeste address, repeated on same-product original. Generic company inbox; no named purchasing/technical identity or deliverability inferred."
+          },
+          {
+            "label": "Own specific ink product company footer",
+            "url": "https://cotigraf.com.ar/tienda/tintas-graficas/flexo-hueco/tintas-graficas-9/",
+            "summary": "Same exact general inbox and legal company/address on product original; ventas@ is separately observed, not a named buyer."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "cotigraf-lanus-oeste",
+      "productId": "cpp-cpo",
+      "subject": "MAH-modified CPP/CPO — a brief introduction",
+      "body": "Hi Cotigraf S.A. Team,\n\nYour 60000 / PUFR inks use nitrocellulose modified with polyurethane resins for printing on polypropylene or polyethylene.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply MAH-modified CPP/CPO for PP adhesion-formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your 60000 / PUFR inks use nitrocellulose modified with polyurethane resins for printing on polypropylene or polyethylene.",
+      "evidenceUrl": "https://cotigraf.com.ar/tienda/tintas-graficas/flexo-hueco/tintas-graficas-9/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 76
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
