@@ -56536,4 +56536,109 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 82
     }
   }
+]).concat([
+  {
+    "id": "pintunal-manizales",
+    "company": "Pinturas Nacionales S.A.S. (Pintunal)",
+    "productId": "elo",
+    "country": "Colombia",
+    "countryZh": "哥伦比亚",
+    "city": "Manizales, Caldas (own production-plant and business address; country-level illustrative marker, not city or factory geocoding)",
+    "latitude": 4.57,
+    "longitude": -74.29,
+    "fit": "可开发候选",
+    "signal": "在Manizales自有工厂开发制造工业涂料，官网明确金属结构用底／中涂及醇酸、丙烯酸、环氧等成品面漆体系。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "实际读取自有About149及Home148行（均含页脚导航）：同名公司自有Manizales工厂开发制造，Home可见业务为金属底／中涂、面漆（含醇酸／丙烯酸／环氧／聚氨酯等成品体系）及涂装／被动防火服务；所读公开业务未识别ELO、ESBO、环氧植物油或同类生物基增塑输入添加剂外售。有限公开业务排除，不声称读完所有隐藏SKU、股权或SDS。两次PDF原生读取502、一次普通Home GET TypeError及一次Services Cachemiss均无可用原文、合计4失败仍收费，不把Search PDF片段当已读SDS或确切795配方。采用TDS一般coatings应用进行环氧功能／配方柔韧初评；不把客户防腐、耐候、寿命、认证等宣传转成我方功能，不声称ELO相容、固化、现用或采购。"
+    },
+    "contact": {
+      "label": "官网公开Comercial部门邮箱及联系区；非具名采购",
+      "email": "ccomercial@pintunal.com.co",
+      "contactUrl": "https://pintunal.com.co/nosotros/"
+    },
+    "source": {
+      "label": "Own Manizales production and finished industrial coating range, including alkyd metal finishes",
+      "url": "https://pintunal.com.co/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有About明确开发制造并有Manizales生产工厂，Home具体金属结构底／中涂及醇酸等成品面漆符合用户原始ELO TDS的coatings用途。只作环氧功能与配方柔韧性相关初评，非防腐研究扩展、非客户实际ELO使用或采购证明。原料同行仅按已读两页公开业务作有限排除；失败PDF／服务页不计成功证据，商业部门邮箱由两页原文明确归属同公司。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在Manizales自有工厂开发制造工业涂料，官网明确金属结构用底／中涂及醇酸、丙烯酸、环氧等成品面漆体系。",
+      "sourceName": "Own industrial metal primer/finish range and own Manizales manufacture/development",
+      "sourceUrl": "https://pintunal.com.co/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://pintunal.com.co/",
+      "contactPage": "https://pintunal.com.co/nosotros/",
+      "generalEmail": "ccomercial@pintunal.com.co",
+      "contacts": [],
+      "departmentEmails": [
+        {
+          "department": "Sales",
+          "email": "ccomercial@pintunal.com.co",
+          "source": {
+            "label": "Own Comercial mailbox, not a named buyer",
+            "url": "https://pintunal.com.co/nosotros/"
+          },
+          "emailEvidence": {
+            "company": "Pinturas Nacionales S.A.S. (Pintunal)",
+            "value": "ccomercial@pintunal.com.co",
+            "kind": "department",
+            "publicBusiness": true,
+            "sources": [
+              {
+                "label": "Own About and Home: Comercial business contact block",
+                "url": "https://pintunal.com.co/nosotros/",
+                "summary": "Exact ccomercial@pintunal.com.co is labelled Comercial in the company contact/footer block, repeated on Home beside its Manizales address. Departmental commercial inbox; no named procurement officer, sourcing responsibility or deliverability inferred."
+              }
+            ],
+            "verifiedAt": "2026-11-28"
+          }
+        }
+      ],
+      "address": "Km 12 vía al Magdalena, Manizales, Caldas, Colombia. Own About identifies production plant in Manizales; exact address is the company business contact, not independently surveyed factory gate. Country-level illustrative marker 4.57,-74.29, not city/business/factory coordinates. No external map/geocoding request. Published local phones, shortened bit.ly/wa.link entries and regional sales inboxes observed but not normalized, resolved or curated as additional contacts; no WhatsApp URL or named buyer guessed.",
+      "sources": [
+        {
+          "label": "Own About: Pinturas Nacionales/Pintunal identity, Manizales production/development and Comercial department mailbox",
+          "url": "https://pintunal.com.co/nosotros/"
+        },
+        {
+          "label": "Own complete visible Home: industrial metal primer/finish families, alkyd/acrylic/epoxy/PU finishes, application/fire-protection services and repeated business contact",
+          "url": "https://pintunal.com.co/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Pinturas Nacionales S.A.S. (Pintunal)",
+        "value": "ccomercial@pintunal.com.co",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own About and Home: Comercial business contact block",
+            "url": "https://pintunal.com.co/nosotros/",
+            "summary": "Exact ccomercial@pintunal.com.co is labelled Comercial in the company contact/footer block, repeated on Home beside its Manizales address. Departmental commercial inbox; no named procurement officer, sourcing responsibility or deliverability inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "pintunal-manizales",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Pinturas Nacionales S.A.S. (Pintunal) Team,\n\nYour Manizales plant manufactures industrial coatings, including alkyd finishes for metal structures.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Manizales plant manufactures industrial coatings, including alkyd finishes for metal structures.",
+      "evidenceUrl": "https://pintunal.com.co/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 75
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
