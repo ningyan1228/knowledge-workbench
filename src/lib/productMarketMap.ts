@@ -56959,4 +56959,110 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 79
     }
   }
+]).concat([
+  {
+    "id": "agabe-sao-paulo",
+    "company": "Agabê",
+    "productId": "cpp-cpo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "São Paulo (own published business address; specific manufacturing-site address not separately established; country-level illustrative marker)",
+    "latitude": -14.2,
+    "longitude": -51.9,
+    "fit": "可开发候选",
+    "signal": "自主开发制造丝印油墨及溶剂；TDC 8700溶剂型油墨官网明确适用于经处理的聚丙烯（BOPP）。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对自有Home明确开发制造丝印油墨／溶剂、TDC8700具体溶剂型BOPP产品、About及完整可见Químicos页：Agabê屏版制备／回收、框架成品胶、堵版剂、除油剂、去胶／去墨、乳剂硬化／催化及玻璃蚀刻；另列REMCO／SAATI成品清洗、除泡、沉降／絮凝和屏版处理品。实际可见经营范围未识别所选CPP／CPO／MAH输入树脂外售，不把屏版成品胶或乳剂催化剂自动当作同类原料。仅限所读范围，未称全部隐藏SKU／下载目录／SDS／乳剂技术叶已审。REMCO、SAATI、设备／Virus品牌是列示合作或代理品，不据此冒股权集团或新增账户。仅评估PP附着配方方向，不推我方可替代客户既有树脂、适用于其未公开溶剂／固化体系或已确认相容／采购。"
+    },
+    "contact": {
+      "label": "官网公开通用公司邮箱及业务联系区；非具名采购",
+      "email": "agabe@agabe.com",
+      "phone": "(11) 2813-4600",
+      "contactUrl": "https://www.agabe.com/home"
+    },
+    "source": {
+      "label": "Own TDC8700 solvent-based screen ink for treated polypropylene/BOPP",
+      "url": "https://www.agabe.com/produtos/tintas-agabe"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "Home质量政策明确自身开发制造丝印油墨及溶剂，产品页同一TDC8700明确有机溶剂油墨及经处理PP/BOPP基材。按既有独立CPO油墨应用来源连接用户七牌号选型指南的PP附着方向；指南不是完整逐牌号TDS，不保证客户双组分或具体溶剂相容。自有多个页面公开同一SãoPaulo公司联系地址／邮箱。潜在材料初评对象，非已采购或现用我方证明。",
+    "targetCompanyTypeId": "cpp-solvent-ink-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "market-extended",
+      "applicationId": "cpp-pp-printing-ink",
+      "statement": "自主开发制造丝印油墨及溶剂；TDC 8700溶剂型油墨官网明确适用于经处理的聚丙烯（BOPP）。",
+      "sourceName": "Own TDC8700 solvent BOPP screen ink; own Home development/manufacturing quality policy",
+      "sourceUrl": "https://www.agabe.com/produtos/tintas-agabe",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://www.agabe.com/home",
+      "contactPage": "https://www.agabe.com/home",
+      "generalEmail": "agabe@agabe.com",
+      "generalPhone": "(11) 2813-4600",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Rua Visconde de Inhomerim, 141, São Paulo - SP, 03120-000, Brazil. Own repeated business contact address; not asserted to be a separately verified production plant. Public trade name Agabê; legal suffix/registration not inferred. -14.2,-51.9 is Brazil country-level illustration, not SãoPaulo or factory geocoding. No map requests.",
+      "sources": [
+        {
+          "label": "Own TDC8700 specific solvent screen ink for treated PP/BOPP and exact corporate contact",
+          "url": "https://www.agabe.com/produtos/tintas-agabe"
+        },
+        {
+          "label": "Own About: chemical-product development, Brazilian business positioning and contact",
+          "url": "https://www.agabe.com/home/quem-somos"
+        },
+        {
+          "label": "Own complete visible Chemicals business: screen-preparation/recovery, finished adhesives and processing aids",
+          "url": "https://www.agabe.com/produtos/quimicos"
+        },
+        {
+          "label": "Own Home: explicit development and manufacture of screen inks and solvents",
+          "url": "https://www.agabe.com/home"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Agabê",
+        "value": "agabe@agabe.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official ink product and manufacturing Home footers",
+            "url": "https://www.agabe.com/produtos/tintas-agabe",
+            "summary": "Exact agabe@agabe.com appears with Agabê SãoPaulo business address and company phone on own product, About, Chemicals and Home. Corporate general route; no named buyer, role, deliverability or procurement intent inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Agabê",
+        "value": "(11) 2813-4600",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Home and ink product contact footers",
+            "url": "https://www.agabe.com/home",
+            "summary": "Exact displayed local company number (11)2813-4600, repeatedly printed with SãoPaulo address and corporate mailbox. No inferred international prefix, WhatsApp, named purchaser or identity."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "agabe-sao-paulo",
+      "productId": "cpp-cpo",
+      "subject": "MAH-modified CPP/CPO — a brief introduction",
+      "body": "Hi Agabê Team,\n\nYour TDC 8700 solvent-based screen-printing ink is specified for treated polypropylene, including BOPP.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply MAH-modified CPP/CPO for PP adhesion-formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your TDC 8700 solvent-based screen-printing ink is specified for treated polypropylene, including BOPP.",
+      "evidenceUrl": "https://www.agabe.com/produtos/tintas-agabe",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 71
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
