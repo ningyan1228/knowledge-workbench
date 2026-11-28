@@ -56249,4 +56249,114 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 78
     }
   }
+]).concat([
+  {
+    "id": "eko-kolor-chojnow",
+    "company": "Eko-Kolor Paczosik Kotarba Sp.k.",
+    "productId": "nl-h-860",
+    "country": "Poland",
+    "countryZh": "波兰",
+    "city": "Chojnów, Dolnośląskie (own Contact-map viewport center; approximate, not surveyed facility coordinates)",
+    "latitude": 51.2709328,
+    "longitude": 15.9510921,
+    "fit": "可开发候选",
+    "signal": "自主配方制造水性柔印油墨；KOLORFOL水性丙烯酸／苯丙系列明确用于PP／PE／PS低极性基材的柔印与凹印。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已读取自有制造与配方说明、具体KOLORFOL水性油墨、公开辅助剂清单及联系页。可见辅助剂为干燥调节、消泡、表面张力稳定、水性蜡分散体和清洗剂；水性蜡不是水性CPP树脂，未给化学名称的张力稳定剂不猜为CPO／CPP。所读页面未识别CPP／CPO／MAH或同类聚烯烃附着促进树脂输入原料外售；有限所读业务范围排除，不声称隐藏SKU／SDS已审。客户水性丙烯酸／苯丙体系不等于我方CPP已相容；我方NL-H-860仅按原始Rev.01 TDS作润湿／渗透初评，不转移客户食品接触等认证。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱、电话及联系页；非具名采购",
+      "email": "biuro@eko-kolor.pl",
+      "phone": "+48 768 188 200",
+      "contactUrl": "https://eko-kolor.pl/kontakt/"
+    },
+    "source": {
+      "label": "Own KOLORFOL water-based acrylic/styrene-acrylic inks for PP/PE/PS flexographic and gravure printing",
+      "url": "https://eko-kolor.pl/farby-drukarskie/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网明确自有油墨制造和配方责任，同款KOLORFOL系列明确水性体系及PP／PE／PS印刷应用，符合NL-H-860 Rev.01水性油墨功能添加剂的初评方向。旧s.c.与现Sp.k.沿用同域名／NIP按一个账户，不因法人名称变更计新增。潜在材料评估不代表已采购、现用我方材料或配方相容与性能保证。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "自主配方制造水性柔印油墨；KOLORFOL水性丙烯酸／苯丙系列明确用于PP／PE／PS低极性基材的柔印与凹印。",
+      "sourceName": "Own specific KOLORFOL water-based PP/PE/PS ink series and own formulation/manufacture statement",
+      "sourceUrl": "https://eko-kolor.pl/farby-drukarskie/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://eko-kolor.pl/",
+      "contactPage": "https://eko-kolor.pl/kontakt/",
+      "generalEmail": "biuro@eko-kolor.pl",
+      "generalPhone": "+48 768 188 200",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "ul. Okrzei 6, 59-225 Chojnów, woj. dolnośląskie, Poland. Own Contact address and legal identifiers NIP691-24-36-670 / REGON020956148 / KRS0000751549. Approximate map marker is company-published embedded-map viewport center, not independently surveyed factory/map-pin coordinates. No external Google/map requests made.",
+      "sources": [
+        {
+          "label": "Own manufacture of waterborne base/ready flexographic inks and Chojnów office-production building since2009",
+          "url": "https://eko-kolor.pl/"
+        },
+        {
+          "label": "Own finite visible printing auxiliaries: drying control, defoamers, tension stabilizer, water wax dispersions and cleaner; no unstated chemistry inferred",
+          "url": "https://eko-kolor.pl/srodki-pomocnicze/"
+        },
+        {
+          "label": "Own KOLORFOL water-based acrylic/styrene-acrylic ink series explicitly for PP/PE/PS flexographic and gravure printing",
+          "url": "https://eko-kolor.pl/farby-drukarskie/"
+        },
+        {
+          "label": "Own company Contact: exact general business mailbox, phone, address, NIP/REGON/KRS and embedded map viewport",
+          "url": "https://eko-kolor.pl/kontakt/"
+        },
+        {
+          "label": "Own production/formulation: combines pigments, polymers, solvents and additives; responsibility for correct ink formulation",
+          "url": "https://eko-kolor.pl/o-firmie/"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Eko-Kolor Paczosik Kotarba Sp.k.",
+        "value": "biuro@eko-kolor.pl",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own company Contact public business mailbox",
+            "url": "https://eko-kolor.pl/kontakt/",
+            "summary": "Exact biuro@eko-kolor.pl in company Contact alongside same legal name, NIP/REGON/KRS and Chojnów address; also repeated in own site footer. General office mailbox, no named purchaser or procurement responsibility inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Eko-Kolor Paczosik Kotarba Sp.k.",
+        "value": "+48 768 188 200",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own company Contact main business telephone",
+            "url": "https://eko-kolor.pl/kontakt/",
+            "summary": "Exact tel:+48 768 188 200 alongside company legal identity. No named buyer or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "eko-kolor-chojnow",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Eko-Kolor Paczosik Kotarba Sp.k. Team,\n\nYour KOLORFOL water-based inks are designed for flexographic and gravure printing on PP, PE and PS substrates.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your KOLORFOL water-based inks are designed for flexographic and gravure printing on PP, PE and PS substrates.",
+      "evidenceUrl": "https://eko-kolor.pl/farby-drukarskie/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 85
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
