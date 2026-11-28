@@ -55718,4 +55718,114 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 77
     }
   }
+]).concat([
+  {
+    "id": "tay-ink-badr-city",
+    "company": "Tay Industrial & Commercial Co. (Tay-Ink)",
+    "productId": "nl-h-860",
+    "country": "Egypt",
+    "countryZh": "埃及",
+    "city": "Badr City, Cairo (company-published plant marker; not independently surveyed)",
+    "latitude": 30.14334,
+    "longitude": 31.73848,
+    "fit": "可开发候选",
+    "signal": "在埃及Badr City自主制造水性纸盒印刷油墨，并自行筛选原料、混合配方及按批次检测。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已核对自有制造／配方及当前水性纸盒墨、既读溶剂型八款和官网首页列出的罐涂四款范围：公开业务为自制成品印刷墨、清漆和罐涂层，未在所读范围识别水性CPP／CPO／MAH或聚烯烃分散体附着促进原料外售。结论限已读业务、目录及制造说明，不等于隐藏配方或全部SDS已审。历史溶剂墨PP基材缺口保留，当前仅按NL-H-860水性墨功能助剂方向初评，不承诺颜料相容或客户现有配方性能。"
+    },
+    "contact": {
+      "label": "公司公开销售／技术通用邮箱及销售电话",
+      "email": "info@tay-ink.com",
+      "phone": "+20 122 777 0706",
+      "contactUrl": "https://tay-ink.com/contact"
+    },
+    "source": {
+      "label": "Own Water Based Ink catalogue: carton grade, water as main carrier",
+      "url": "https://tay-ink.com/products/water-based"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网完整水性类别明示以水为主溶剂、吸水基材及纸盒印刷牌号，制造页明示自有化学人员原料筛选、精确混合、过程与成品检测及定制配方。用户NL-H-860 Rev.01明列水性墨功能助剂，支持润湿／渗透配方初评；不表示已使用我方CPP、已确认采购、对PP适用、包装合规或现成体系相容。",
+    "targetCompanyTypeId": "nlh860-waterborne-inks-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nlh860-waterborne-inks",
+      "statement": "在埃及Badr City自主制造水性纸盒印刷油墨，并自行筛选原料、混合配方及按批次检测。",
+      "sourceName": "Own complete water-based carton ink category and own formulation/manufacturing quality workflow",
+      "sourceUrl": "https://tay-ink.com/products/water-based",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://tay-ink.com/",
+      "contactPage": "https://tay-ink.com/contact",
+      "generalEmail": "info@tay-ink.com",
+      "generalPhone": "+20 122 777 0706",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Company-published plant: Tay Industrial & Commercial Co., Manufacturing Area, Badr City, Cairo 12232, Egypt. Own Contact page publishes map coordinates 30.14334, 31.73848; marker follows that company statement and is not independently surveyed.",
+      "sources": [
+        {
+          "label": "Own full Home: current three finished-ink/coating families and Badr City manufacture",
+          "url": "https://tay-ink.com/"
+        },
+        {
+          "label": "Own solvent-based eight-grade catalogue previously read; PP substrate remains unverified for CPP qualification",
+          "url": "https://tay-ink.com/products/solvent-based"
+        },
+        {
+          "label": "Own complete water-based category: one carton printing ink grade and water carrier",
+          "url": "https://tay-ink.com/products/water-based"
+        },
+        {
+          "label": "Own chemist raw-material selection, precision mixing, batch quality and formulation development",
+          "url": "https://tay-ink.com/manufacturing"
+        },
+        {
+          "label": "Own exact business mailbox, sales/management telephone roles and published plant coordinates",
+          "url": "https://tay-ink.com/contact"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "Tay Industrial & Commercial Co. (Tay-Ink)",
+        "value": "info@tay-ink.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own current Contact original: exact company-published business route",
+            "url": "https://tay-ink.com/contact",
+            "summary": "Exact company mailbox explicitly labelled Sales and technical; no named buyer or deliverability inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "Tay Industrial & Commercial Co. (Tay-Ink)",
+        "value": "+20 122 777 0706",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own current Contact original: exact company-published business route",
+            "url": "https://tay-ink.com/contact",
+            "summary": "Explicit sales telephone; not assumed WhatsApp. Separate management telephone exists but no named procurement identity inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "tay-ink-badr-city",
+      "productId": "nl-h-860",
+      "subject": "water-based chlorinated polypropylene dispersion — a brief introduction",
+      "body": "Hi Tay Industrial & Commercial Co. (Tay-Ink) Team,\n\nYou manufacture water-based printing inks for carton packaging in Badr City, Egypt.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-H-860, a water-based CPP dispersion for wetting and penetration trials in water-based formulations.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "You manufacture water-based printing inks for carton packaging in Badr City, Egypt.",
+      "evidenceUrl": "https://tay-ink.com/products/water-based",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 82
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
