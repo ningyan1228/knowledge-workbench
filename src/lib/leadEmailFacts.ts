@@ -718,4 +718,5 @@ export const leadEmailFacts: Record<string, string> = {
   'pintunal-manizales': "Your Manizales plant manufactures industrial coatings, including alkyd finishes for metal structures.",
   'alfa-adhesives-simalfa-oakland-nj': "Your Simalfa 321 is a water-based adhesive for bonding foams to non-porous substrates, including metal.",
   'mexar-newcastle-upon-tyne': "Your TEX1 aqueous pigment ink is developed and manufactured in the UK for textile inkjet printing.",
+  'coverti-sumare': "Your Sumaré factory manufactures industrial coatings, including Vertipoxi PS 160 epoxy floor paint.",
 }

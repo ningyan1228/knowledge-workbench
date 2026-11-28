@@ -56872,4 +56872,91 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 82
     }
   }
+]).concat([
+  {
+    "id": "coverti-sumare",
+    "company": "Coverti do Brasil Indústria e Comércio LTDA.",
+    "productId": "elo",
+    "country": "Brazil",
+    "countryZh": "巴西",
+    "city": "Sumaré, São Paulo (own manufacturing and business-contact city; country-level illustrative marker, not factory geocoding)",
+    "latitude": -14.2,
+    "longitude": -51.9,
+    "fit": "可开发候选",
+    "signal": "在巴西Sumaré自有工厂研发制造工业涂料，官网明确Vertipoxi PS 160为工业地坪用环氧成品涂料。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "核对完整可见官网经营范围及联系原文：自有Sumaré制造、配方实验室和工业涂料生产；六项命名成品为Vertipoxi PS 160、Vertiflex HB 215、Covercoat DF 2001、Covercoat TK 238、Covercrill 3000、Aquaverti DTM 2026，另有按浸涂／基材定制成品业务。所读范围未识别ELO、ESBO或环氧植物油输入原料外售，符合下游涂料制造商身份；仅限实际可见业务排除，未审全隐藏SKU、SDS或股权。Portfólio PDF只返回4页元数据、0行正文，未用于产品／同行／联系人证据，不声称已读PDF。ELO按原TDS coatings用途作环氧功能／配方柔韧初评，不能将客户环氧地坪漆等同已用ELO或保证相容、固化、防腐、耐化学或采购。"
+    },
+    "contact": {
+      "label": "官网公开Comercial／WhatsApp及联系页；缺已核验业务邮箱，不纳入批量邮件名单",
+      "phone": "(19) 98401-4006",
+      "contactUrl": "https://coverti.com.br/contato.html"
+    },
+    "source": {
+      "label": "Own Sumaré manufacture and Vertipoxi PS 160 finished epoxy floor coating",
+      "url": "https://coverti.com.br/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网明确自有Sumaré工厂与实验室自主配方生产，并具体列出工业环氧地坪成品Vertipoxi PS 160；对应用户ELO原始TDS coatings一般用途。仅为配方相关环氧功能／柔韧性材料初评对象，未证已用或采购ELO，也不把双组分环氧体系与环氧植物油当作可直接替代。公开WhatsApp明确为商业渠道，缺邮箱不阻止存草稿；无具名采购推断。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "在巴西Sumaré自有工厂研发制造工业涂料，官网明确Vertipoxi PS 160为工业地坪用环氧成品涂料。",
+      "sourceName": "Own finished industrial floor-coating range and Sumaré formulation/manufacturing",
+      "sourceUrl": "https://coverti.com.br/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://coverti.com.br/",
+      "contactPage": "https://coverti.com.br/contato.html",
+      "generalPhone": "(19) 98401-4006",
+      "whatsapp": "https://wa.me/5519984014006?text=Ol%C3%A1%2C%20equipe%20Coverti.%20Gostaria%20de%20conversar%20sobre%20uma%20tinta%20industrial%20especial%20ou%20desenvolvida%20sob%20medida%20para%20meu%20processo.",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Rua Indalécio Rodrigues, 252/272, Parque Florença, Sumaré - SP. Own published CEP 13.777-461 retained verbatim without independently validating postal geography. Own manufacturing and contact city verified; -14.2,-51.9 is Brazil country-level illustration, not a city or surveyed factory gate. No external map request.",
+      "sources": [
+        {
+          "label": "Own Home: self-manufacture, laboratory, six finished coatings and industrial applications",
+          "url": "https://coverti.com.br/"
+        },
+        {
+          "label": "Own Contact: explicitly published commercial WhatsApp and company address",
+          "url": "https://coverti.com.br/contato.html"
+        },
+        {
+          "label": "Own Home static HTML: exact public commercial WhatsApp href; no business mailbox found",
+          "url": "https://coverti.com.br/"
+        }
+      ],
+      "generalPhoneEvidence": {
+        "company": "Coverti do Brasil Indústria e Comércio LTDA.",
+        "value": "(19) 98401-4006",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Official Home and Contact: Comercial / WhatsApp",
+            "url": "https://coverti.com.br/contato.html",
+            "summary": "Exact displayed local number (19) 98401-4006; corresponding wa.me/5519984014006 link independently read in same company original HTML. No inferred WhatsApp from phone alone, no named buyer or message sent."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "coverti-sumare",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Coverti do Brasil Indústria e Comércio LTDA. Team,\n\nYour Sumaré factory manufactures industrial coatings, including Vertipoxi PS 160 epoxy floor paint.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Sumaré factory manufactures industrial coatings, including Vertipoxi PS 160 epoxy floor paint.",
+      "evidenceUrl": "https://coverti.com.br/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 79
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
