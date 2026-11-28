@@ -723,4 +723,6 @@ export const leadEmailFacts: Record<string, string> = {
   'cattie-adhesives-quakertown': "Your 8252 water-based adhesive is specified for corrugated and litho laminating.",
   'adhesive-compounders-des-moines': "Your water-based resin adhesives serve case and carton sealing, magazine binding, and bookbinding.",
   'les-encres-3h-mirabel': "Your water-based ink range includes in-house Standard and Lightfast pigment dispersions.",
+  'viking-paints-richfield': "Your Richfield factory makes TENACO two-component epoxy primers and protective coatings for metal.",
+  'davis-paint-north-kansas-city': "Your industrial line includes phenolic alkyd primers for farm machinery, tanks, trailers, and heavy equipment.",
 }

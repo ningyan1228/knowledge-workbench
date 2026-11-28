@@ -57408,4 +57408,191 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 78
     }
   }
+]).concat([
+  {
+    "id": "viking-paints-richfield",
+    "company": "Viking Paints Inc.",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "Richfield, Minnesota (own manufacturing city); Minneapolis, MN 55423 is the own postal-contact label",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "官网明确在Richfield自有工厂制造并由内部研发部门配方，TENACO双组分环氧底漆／色漆具体用于金属防护。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "实际读取自有Home、Contact与Industrial全文。Home明确Richfield生产、内部研发与代工，列示Tenaco环氧、Vikron聚氨酯瓷漆、Viking醇酸／设备漆、Paulco填缝料、Revmaster、Vikatex外墙乳胶漆及Xotic Colours汽车成品；Industrial明确TENACO双组分环氧金属防护成品。所读可见成品业务未识别ELO、ESBO或环氧植物油输入原料外售，符合下游涂料制造商；仅限实际可见范围，不冒全隐藏SKU/SDS/最终股权已审。同品牌共享来源额度，肯尼亚同名Viking Paints Enterprises无证同集团，不串为同一公司。TDS仅作环氧功能／配方柔韧评估，不将客户环氧体系等同已用ELO，不承诺相容、固化、防腐、耐化学、认证或采购。"
+    },
+    "contact": {
+      "label": "官网公开通用业务邮箱、联系页及电话；非具名采购",
+      "email": "info@vikingpaints.com",
+      "phone": "612-866-1212",
+      "contactUrl": "https://vikingpaints.com/contact-us/"
+    },
+    "source": {
+      "label": "Own Industrial: TENACO two-component epoxy protective coatings for metal; public enquiry form",
+      "url": "https://vikingpaints.com/industrial-coatings/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网明确在Richfield自有工厂制造并由内部研发部门配方，TENACO双组分环氧底漆／色漆具体用于金属防护。 用户原始ELO TDS明确coatings一般用途，可作环氧功能与配方相关柔韧性材料初评；未证现用ELO、已确认需求、采购或配方相容。按实际可见成品业务排除所选输入原料同行；公开业务入口不冒具名负责人。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "官网明确在Richfield自有工厂制造并由内部研发部门配方，TENACO双组分环氧底漆／色漆具体用于金属防护。",
+      "sourceName": "Own Industrial: TENACO two-component epoxy protective coatings for metal; public enquiry form; own manufacture/formulation separately read",
+      "sourceUrl": "https://vikingpaints.com/industrial-coatings/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://vikingpaints.com/",
+      "contactPage": "https://vikingpaints.com/contact-us/",
+      "generalEmail": "info@vikingpaints.com",
+      "generalEmailEvidence": {
+        "company": "Viking Paints Inc.",
+        "value": "info@vikingpaints.com",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact: company name, exact general business mailbox, phone and postal address",
+            "url": "https://vikingpaints.com/contact-us/",
+            "summary": "Public info mailbox printed by own company; no named person, procurement role, technical department, deliverability or purchase requirement inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhone": "612-866-1212",
+      "contacts": [],
+      "departmentEmails": [],
+      "generalPhoneEvidence": {
+        "company": "Viking Paints Inc.",
+        "value": "612-866-1212",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own company Contact and business address",
+            "url": "https://vikingpaints.com/contact-us/",
+            "summary": "Exact displayed public business number; no international prefix, named contact or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "address": "100 W. 78th St., Minneapolis, MN 55423. Own contact page describes its factory and office along the north frontage road of Highway 494; own Home names Richfield, Minnesota as production city. Postal label and plant-city wording retained separately, without independent geocoding. Marker 39.8,-98.6 is U.S. country-level illustration, not city or factory coordinates. No external map request.",
+      "sources": [
+        {
+          "label": "Own Home: Richfield manufacture, in-house formulation and named finished coating lines",
+          "url": "https://vikingpaints.com/"
+        },
+        {
+          "label": "Own Contact: exact public general business mailbox, phone and postal address",
+          "url": "https://vikingpaints.com/contact-us/"
+        },
+        {
+          "label": "Own Industrial: TENACO two-component epoxy protective coatings for metal; public enquiry form",
+          "url": "https://vikingpaints.com/industrial-coatings/"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "viking-paints-richfield",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Viking Paints Inc. Team,\n\nYour Richfield factory makes TENACO two-component epoxy primers and protective coatings for metal.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your Richfield factory makes TENACO two-component epoxy primers and protective coatings for metal.",
+      "evidenceUrl": "https://vikingpaints.com/industrial-coatings/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 75
+    }
+  },
+  {
+    "id": "davis-paint-north-kansas-city",
+    "company": "Davis Paint Company",
+    "productId": "elo",
+    "country": "United States",
+    "countryZh": "美国",
+    "city": "North Kansas City, Missouri (own business contact city; U.S. manufacture, country-level illustrative marker)",
+    "latitude": 39.8,
+    "longitude": -98.6,
+    "fit": "可开发候选",
+    "signal": "官网明确自身制造及定制配方，工业产品线的酚醛改性醇酸底漆具体用于农业机械、罐体、挂车和重型设备。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "实际读取自有Home、Industrial与Contact全文。Home为自身制造与配方到成品、建筑／创意涂料、工业涂料、定制代工三类业务；Industrial列出酚醛改性醇酸底漆、双组分环氧／聚酰胺底漆、水性底漆、醇酸瓷漆、丙烯酸与聚氨酯面漆及专用防滑和运输润滑涂层，均为已配制成品，不因含epoxy/alkyd字样推原料ELO供应。所读可见业务未识别ELO、ESBO或环氧植物油输入原料外售；有限范围排除，未审全部隐藏SKU/SDS/股权。Sahara Oasis为自有网站列示泳池漆品牌，共享公司预算、不另计公司。原TDS coatings用途只支持环氧功能／配方柔韧初评，不把客户现有酚醛醇酸体系写成已用ELO，不承诺固化、防腐、相容、认证或采购。"
+    },
+    "contact": {
+      "label": "官网公开业务联系页及电话；未核到业务邮箱，不纳入批量邮件名单",
+      "phone": "1-800-821-2029",
+      "contactUrl": "https://davispaint.com/contact-davis-paint"
+    },
+    "source": {
+      "label": "Own Industrial: made-to-order formulation and specific phenolic alkyd industrial primers",
+      "url": "https://davispaint.com/davis-industrial-product-line"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "官网明确自身制造及定制配方，工业产品线的酚醛改性醇酸底漆具体用于农业机械、罐体、挂车和重型设备。 用户原始ELO TDS明确coatings一般用途，可作环氧功能与配方相关柔韧性材料初评；未证现用ELO、已确认需求、采购或配方相容。按实际可见成品业务排除所选输入原料同行；公开业务入口不冒具名负责人。",
+    "targetCompanyTypeId": "elo-coating-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "coatings",
+      "statement": "官网明确自身制造及定制配方，工业产品线的酚醛改性醇酸底漆具体用于农业机械、罐体、挂车和重型设备。",
+      "sourceName": "Own Industrial: made-to-order formulation and specific phenolic alkyd industrial primers; own manufacture/formulation separately read",
+      "sourceUrl": "https://davispaint.com/davis-industrial-product-line",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://davispaint.com/",
+      "contactPage": "https://davispaint.com/contact-davis-paint",
+      "generalPhone": "1-800-821-2029",
+      "contacts": [],
+      "departmentEmails": [],
+      "generalPhoneEvidence": {
+        "company": "Davis Paint Company",
+        "value": "1-800-821-2029",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own company Contact and business address",
+            "url": "https://davispaint.com/contact-davis-paint",
+            "summary": "Exact displayed public business number; no international prefix, named contact or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "address": "1311 Iron Street / PO Box 7589, North Kansas City, Missouri 64116. Own business contact and mailing address; Home states U.S./close-to-home manufacture but no independent factory-gate geocoding. Marker 39.8,-98.6 is U.S. country-level illustration, not city or factory coordinates. No external map request.",
+      "sources": [
+        {
+          "label": "Own Home: formulation-to-finished-product manufacture and visible finished business categories",
+          "url": "https://davispaint.com/"
+        },
+        {
+          "label": "Own Industrial: made-to-order formulation and specific phenolic alkyd industrial primers",
+          "url": "https://davispaint.com/davis-industrial-product-line"
+        },
+        {
+          "label": "Own Contact: invitation to enquire using company contact page and exact toll-free business phone; no verified mailbox",
+          "url": "https://davispaint.com/contact-davis-paint"
+        }
+      ]
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "davis-paint-north-kansas-city",
+      "productId": "elo",
+      "subject": "epoxidized linseed oil (ELO) — a brief introduction",
+      "body": "Hi Davis Paint Company Team,\n\nYour industrial line includes phenolic alkyd primers for farm machinery, tanks, trailers, and heavy equipment.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply ELO, an epoxy-functional additive for formulation-dependent flexibility trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your industrial line includes phenolic alkyd primers for farm machinery, tanks, trailers, and heavy equipment.",
+      "evidenceUrl": "https://davispaint.com/davis-industrial-product-line",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 77
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)
