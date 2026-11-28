@@ -56130,4 +56130,123 @@ export const publicLeads: PublicLead[] = previouslyVerifiedPublicLeads.concat(ve
       "bodyWordCount": 76
     }
   }
+]).concat([
+  {
+    "id": "acm-italy-casorezzo",
+    "company": "ACM Italy S.r.l.",
+    "productId": "nl-8260",
+    "country": "Italy",
+    "countryZh": "意大利",
+    "city": "Casorezzo, Milan (own company Contact-map viewport center; approximate, not surveyed facility coordinates)",
+    "latitude": 45.517269,
+    "longitude": 8.906898,
+    "fit": "可开发候选",
+    "signal": "自主制造胶黏剂和胶泥；VICEVERSA SPECIAL 2.0为用于PVC／LVT地板及墙材施工的单组分水性聚氨酯胶。",
+    "supplierCompetitorCheck": {
+      "checkedAt": "2026-11-28",
+      "conclusion": "已核对自有制造、完整公开产品分类、具体水性PU/PVC胶、地板前处理系列及当前所链三页TDS。PRIMER SP为墙／地面用水性丙烯酸成品底涂，PRIMER PU为水泥找平层防水／加固用改性PU成品，不因primer一词当同类CPO输入。所读业务与可见分类未识别CPP／CPO／MAH树脂或同类水性聚烯烃附着促进输入原料外售；不称所有隐藏SKU／登录SDS已审。当前2025年6月12日TDS与具体产品页一致，不以SPECIAL MS等水分散体系以外变体替换。只评估我方NL-8260的PVC胶配方相关性，不推PU相容、防水、耐湿、VOC认证或性能结果。"
+    },
+    "contact": {
+      "label": "官网公开销售部门业务邮箱、电话及联系页；非具名采购",
+      "email": "sales@acm-italy.com",
+      "phone": "+39 02 90361148",
+      "contactUrl": "https://acm-italy.com/it/contatti/"
+    },
+    "source": {
+      "label": "Own VICEVERSA SPECIAL2.0 water-based PU adhesive for PVC/LVT flooring and current-linked2025 original TDS",
+      "url": "https://acm-italy.com/it/product/viceversa-2-0/"
+    },
+    "checkedAt": "2026-11-28",
+    "commercialRole": "demand_side",
+    "leadEligible": true,
+    "demandSideReason": "自有制造说明与同款VICEVERSA SPECIAL2.0产品页／实际所链TDS均明确水性聚氨酯及PVC地板，符合用户NL-8260 TDS胶黏剂与PVC基材初评方向。意大利本部与俄罗斯／土耳其分支按同一公司集团计一户。不代表现用或采购我方材料，不推配方相容、固化、潮湿环境适用、认证或性能承诺。",
+    "targetCompanyTypeId": "nl8260-adhesives-manufacturer",
+    "companyEvidence": {
+      "applicationLayer": "tds-verified",
+      "applicationId": "nl8260-adhesives",
+      "statement": "自主制造胶黏剂和胶泥；VICEVERSA SPECIAL 2.0为用于PVC／LVT地板及墙材施工的单组分水性聚氨酯胶。",
+      "sourceName": "Own same-product waterborne PU/PVC adhesive page, original current-linked2025TDS, own manufacture statement",
+      "sourceUrl": "https://acm-italy.com/it/product/viceversa-2-0/",
+      "verifiedAt": "2026-11-28"
+    },
+    "profile": {
+      "website": "https://acm-italy.com/it/",
+      "contactPage": "https://acm-italy.com/it/contatti/",
+      "generalEmail": "sales@acm-italy.com",
+      "generalPhone": "+39 02 90361148",
+      "contacts": [],
+      "departmentEmails": [],
+      "address": "Viale Enrico Mattei, 8, 20010 Casorezzo (Milano), Italy. Own Contact address; approximate map marker uses the center of its published embedded company-map viewport, not independently surveyed factory or map-pin coordinates. Russia and Turkey branches belong to same account. No external Google/cookie/map requests made.",
+      "sources": [
+        {
+          "label": "Own VICEVERSA SPECIAL2.0 water-based polyurethane adhesive explicitly lists PVC/LVT flooring",
+          "url": "https://acm-italy.com/it/product/viceversa-2-0/"
+        },
+        {
+          "label": "Own manufacture since1973 and Italy/Russia/Turkey same-company offices; no procurement role inferred from named team",
+          "url": "https://acm-italy.com/it/chi-siamo/"
+        },
+        {
+          "label": "Own complete visible end-use product-category taxonomy; hidden SKUs/login SDS not read",
+          "url": "https://acm-italy.com/it/prodotti/"
+        },
+        {
+          "label": "Own public company sales department inbox, business phone, address and branch locations",
+          "url": "https://acm-italy.com/it/contatti/"
+        },
+        {
+          "label": "Own floor-preparation primers: water-based acrylic SP and modified PU for cement screed waterproofing/consolidation",
+          "url": "https://acm-italy.com/it/categoria-prodotto/adesivi-per-pavimenti/prodotti-per-la-preparazione-e-la-posa-di-pavimentazioni/"
+        },
+        {
+          "label": "Own actual current-linked three-page Italian VICEVERSA SPECIAL2.0 TDS, revised12June2025; not MS variant",
+          "url": "https://acm-italy.com/wp-content/uploads/2022/11/ST-VICEVERSA-SPECIAL-2.0-2025.pdf"
+        }
+      ],
+      "generalEmailEvidence": {
+        "company": "ACM Italy S.r.l.",
+        "value": "sales@acm-italy.com",
+        "kind": "department",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact page and About sales-manager team entry: shared sales department mailbox",
+            "url": "https://acm-italy.com/it/contatti/",
+            "summary": "Exact sales@acm-italy.com in ACM Italy company Contact block; About independently associates same role mailbox with sales manager. Department access, no named purchaser or procurement responsibility inferred."
+          },
+          {
+            "label": "Own About: company sales role mailbox",
+            "url": "https://acm-italy.com/it/chi-siamo/",
+            "summary": "Same sales@acm-italy.com explicitly shown for Sales manager; no private address guessing."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      },
+      "generalPhoneEvidence": {
+        "company": "ACM Italy S.r.l.",
+        "value": "+39 02 90361148",
+        "kind": "general",
+        "publicBusiness": true,
+        "sources": [
+          {
+            "label": "Own Contact and current-linked TDS company telephone",
+            "url": "https://acm-italy.com/it/contatti/",
+            "summary": "Exact +39 02 90361148 for Italy office, also printed in original product TDS. No named buyer or WhatsApp inferred."
+          }
+        ],
+        "verifiedAt": "2026-11-28"
+      }
+    },
+    "outreachDraft": {
+      "format": "brief-introduction-20261127",
+      "companyId": "acm-italy-casorezzo",
+      "productId": "nl-8260",
+      "subject": "waterborne chlorinated polyolefin adhesion promoter — a brief introduction",
+      "body": "Hi ACM Italy S.r.l. Team,\n\nYour VICEVERSA SPECIAL 2.0 water-based polyurethane adhesive is used for PVC and LVT flooring.\n\nI'm Zhiwu from Ningbo Neon Lion Technology Co., Ltd. We supply NL-8260, a waterborne CPO adhesion promoter for adhesive formulation trials.\n\nWould your technical or sourcing team review its TDS for an initial evaluation?\n\nIf you don't handle raw-material evaluation, could you point me to the right person?\n\nBest regards,\nZhiwu\nNingbo Neon Lion Technology Co., Ltd.\nEmail: zhiwu@neonlion.cn",
+      "companyFact": "Your VICEVERSA SPECIAL 2.0 water-based polyurethane adhesive is used for PVC and LVT flooring.",
+      "evidenceUrl": "https://acm-italy.com/it/product/viceversa-2-0/",
+      "verifiedAt": "2026-11-28",
+      "bodyWordCount": 78
+    }
+  }
 ]).map(lead => verifiedAdditionalWaterborneMatches[lead.id] ? {...lead, productMatches:verifiedAdditionalWaterborneMatches[lead.id]} : lead)

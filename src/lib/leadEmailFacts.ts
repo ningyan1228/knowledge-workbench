@@ -711,4 +711,5 @@ export const leadEmailFacts: Record<string, string> = {
   'mpc-prokim-fouchana': "Your AGL 52 medium-oil alkyd resin lists refined linseed oil as its oil type.",
   'chemique-adhesives-aldridge': "Your Protak water-based polyurethane adhesives bond PVC foils to wood-based materials in membrane pressing.",
   'pan-egypt-6th-october': "Your range includes long-, medium- and short-oil alkyd resins for paint and ink manufacture.",
+  'acm-italy-casorezzo': "Your VICEVERSA SPECIAL 2.0 water-based polyurethane adhesive is used for PVC and LVT flooring.",
 }
